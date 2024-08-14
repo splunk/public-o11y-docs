@@ -14,9 +14,9 @@ Verify platform compatibility
 
 #. Verify that you are using a supported processor architecture. See :ref:`dotnet-otel-requirements`.
 
-#. If you are instrumenting a Kubernetes cluster, verify that you are using a supported Kubernetes distribution. See :ref:`helm-chart-supported-distros`.
+#. If you are instrumenting applications in a Kubernetes cluster, verify that you are using a supported Kubernetes distribution. See :ref:`helm-chart-supported-distros`.
 
-#. If you are instrumenting a Kubernetes cluster, review the prerequisites and requirements for installing the instrumentation using the Helm chart. See :new-page:`Auto-instrumentation <https://github.com/signalfx/splunk-otel-collector-chart/blob/d08f989180bcb0e1ec79b63805d8951472b8d230/docs/auto-instrumentation-install.md#steps-for-setting-up-auto-instrumentation>` in the Splunk OpenTelemetry Collector for Kubernetes repository on GitHub.
+#. If you are instrumenting applications in a Kubernetes cluster, review the prerequisites and requirements for installing the instrumentation using the Helm chart. See :new-page:`Auto-instrumentation <https://github.com/signalfx/splunk-otel-collector-chart/blob/d08f989180bcb0e1ec79b63805d8951472b8d230/docs/auto-instrumentation-install.md#steps-for-setting-up-auto-instrumentation>` in the Splunk OpenTelemetry Collector for Kubernetes repository on GitHub.
 
 Verify .NET runtime compatibility
 =================================
@@ -26,7 +26,7 @@ Verify that you are using a supported version of .NET. See :ref:`dotnet-otel-ver
 Verify automatic discovery compatibility
 ========================================
 
-#. If you are instrumenting a Kubernetes cluster, verify automatic discovery compatibility between Kubernetes and .NET. See :ref:`k8s-backend-requirements`.
+#. If you are instrumenting applications in a Kubernetes cluster, verify automatic discovery compatibility between Kubernetes and .NET. See :ref:`k8s-backend-requirements`.
 
 #. Verify automatic discovery Windows back-end compatibility. See :ref:`windows-backend-auto-discovery`.
 

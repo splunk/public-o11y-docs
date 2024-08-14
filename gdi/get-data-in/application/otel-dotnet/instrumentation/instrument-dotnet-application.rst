@@ -11,14 +11,15 @@ The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET app
 
 You can install the .NET instrumentation manually or using the NuGet packages. The manual instructions include the option to use a guided setup. The NuGet packages are the best method for avoiding dependency version conflicts, but are not well-suited for instrumenting multiple applications running on the same machine. Review the :ref:`pre-checks <dotnet-pre-checks>` and the various installation procedures on this page to identify the best installation method for your application environment.
 
-To learn about automatic discovery, see :ref:`discovery_mode`.
-
 .. _otel-dotnet-nuget-pkg:
 
 Install the OpenTelemetry .NET instrumentation using the NuGet packages
 =======================================================================
 
 You can deploy the Splunk Distribution of the OpenTelemetry .NET instrumentation automatically using the official NuGet packages. Your instrumented application project must support NuGet packages.
+
+NuGet package installation considerations
+-----------------------------------------
 
 The following scenarios are ideal for using the NuGet packages:
 
@@ -27,11 +28,13 @@ The following scenarios are ideal for using the NuGet packages:
 * You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
 * You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
 
-However, you shouldn't use the NuGet packages if any of the following apply to your scenario:
+However, you shouldn't use the NuGet packages if any of the following apply to your environment:
 
 * You're unable to add the NuGet packages to the application project. This can be the case when instrumenting a third-party application.
 * You can't accommodate the increased disk use required by installing the NuGet packages separately for each instrumented application running on the same machine. 
 * You need to instrument a legacy application that can't be migrated to the SDK-style project. To verify whether your project is SDK style, see `Identify the project format <https://learn.microsoft.com/en-us/nuget/resources/check-project-format>`__ in the NuGet documentation.
+
+To install the distribution manually, see :ref:`otel-dotnet-manual-install`.
 
 .. note::
 
@@ -64,7 +67,7 @@ Alternatively, you can set the ``SkippedInstrumentation`` property from the term
 
    dotnet build -p:SkippedInstrumentations=StackExchange.Redis%3BMongoDB.Driver.Core
 
-To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``.
+To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. For more information, see :new-page:`.NET RID Catalog <https://learn.microsoft.com/en-us/dotnet/core/rid-catalog>` in the .NET documentation.
 
 Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
 
@@ -93,14 +96,34 @@ The instrumentation procedure in the previous section produces launch scripts in
      - Windows: ``splunk-launch.cmd dotnet <application>``.
      - Linux: ``splunk-launch.sh dotnet <application>``.
 
+.. _otel-dotnet-manual-install:
+
 Install the Splunk Distribution of OpenTelemetry .NET manually
 ==============================================================
 
 You can deploy the Splunk Distribution of OpenTelemetry .NET instrumentation manually, using either the guided setup or the step-by-step instructions below.
 
-The primary benefit to installing manually is that doing so enables you to instrument multiple .NET applications that run in the same environment. The primary limitation is that there is an increased likelihood of version conflicts between the dependencies used by the application and the automatic instrumentation.
+Manual installation considerations
+----------------------------------
+
+The following scenarios are ideal for manually installing the .NET instrumentation:
+
+* You're unable to add the NuGet packages to the application project. This can be the case when instrumenting a third-party application.
+* You can't accommodate the increased disk use required by installing the NuGet packages separately for each instrumented application running on the same machine. 
+* You need to instrument a legacy application that can't be migrated to the SDK-style project. To verify whether your project is SDK style, see `Identify the project format <https://learn.microsoft.com/en-us/nuget/resources/check-project-format>`__ in the NuGet documentation.
+
+However, you should consider using the NuGet packages if any of the following apply to your environment:
+
+* You control the application build but not the machine or container where the application is running.
+* You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
+* You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
+* You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
 
 To install the distribution using the official NuGet packages, see :ref:`otel-dotnet-nuget-pkg`.
+
+.. note::
+
+   For advanced configuration of the .NET automatic instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Generate customized instructions using the guided setup
 -------------------------------------------------------
