@@ -154,7 +154,7 @@ To assign a service name for an inferred HTTP service, Splunk APM does the follo
         #. ``http.host``
         #. ``http.url`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``url.full`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
         #. ``net.peer.name`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``server.address`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
-#. If step 2 is not true, looks for the service name in the following tags, in order. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
+#. If step 2 is not true, looks for the service name in the following tags, in order. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, Splunk APM does not consider the span to be related to an inferred HTTP service.
     #. ``http.host``: host name extracted as-is
     #. ``peer.hostname``: host name extracted as-is
     #. ``peer.address``: host name is extracted from the URL
@@ -172,13 +172,12 @@ When Splunk APM infers an RPC service, it means an instrumented service is makin
 
 To infer an RPC service, Splunk APM does the following:
 
-#. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.       
-#. Verify that the referring span contains the ``rpc.system`` span tag. This tag is used to identify the remote system, such as ``grpc``, ``java_rmi``, or ``wcf``. 
-#. Look for the service name in the following tags, in that order:
+#. Verifies that the ``span.kind`` of the referring span is equal to ``CLIENT``.       
+#. Verifies that the referring span contains the ``rpc.system`` span tag. This tag is used to identify the remote system, such as ``grpc``, ``java_rmi``, or ``wcf``. 
+#. Looks for the service name in the following tags, in the following order. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, Splunk APM does not consider the span to be related to an inferred RPC service.
     #. ``rpc.service``
     #. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, ``server.address``.
     #. ``rpc.system``
-#. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred RPC service.
 
 .. _generic-inf-logic:
 
