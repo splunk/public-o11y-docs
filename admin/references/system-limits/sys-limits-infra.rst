@@ -270,7 +270,7 @@ Subscription limits
 .. _other-limits:
 .. _time-series-limits:
 
-Time Series window limits
+Time Series Window API limits
 ================================================================================
 
 .. list-table::
