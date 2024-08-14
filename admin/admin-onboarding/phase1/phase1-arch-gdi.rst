@@ -1,9 +1,9 @@
 .. _phase1-arch-gdi:
 
-Onboarding part 2: Design your architecture and get data in
+Onboarding readiness part 2: Design your architecture and get data in
 *********************************************************************
 
-After completing :ref:`phase1-team-user-admin`, you are ready for the second part of the onboarding phase. In this part of the onboarding phase, you get familiar with important concepts, gather requirements, and begin integrating Splunk Observability Cloud into your existing environment. To design your architecture and get data in, complete the following tasks:
+After completing :ref:`phase1-team-user-admin`, you are ready for the second part of the onboarding readiness phase. In this part of the onboarding readiness phase, you get familiar with important concepts, gather requirements, and begin integrating Splunk Observability Cloud into your existing environment. To design your architecture and get data in, complete the following tasks:
 
 .. meta::
     :description: 

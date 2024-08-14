@@ -10,7 +10,7 @@ Admin guide for onboarding Splunk Observability Cloud
    :hidden:
    :maxdepth: 3
 
-   Phase 1: Onboarding <phase1/phase1>
+   Phase 1: Onboarding readiness <phase1/phase1>
    Phase 2: Pilot rollout <phase2/phase2>
    Phase 3: Expansion and optimization <phase3/phase3>
 
@@ -21,11 +21,11 @@ Follow these steps to onboard Splunk Observability Cloud in your organization. T
    :widths: 33 33 33
    :width: 100%
 
-   * - 1. Onboarding phase
+   * - 1. Onboarding readiness phase
      - 2. Pilot rollout phase
      - 3. Expansion and optimization phase   
      
-   * - Perform onboarding activities that connect Splunk Observability Cloud to your existing software framework.
+   * - Perform onboarding readiness activities that connect Splunk Observability Cloud to your existing software framework.
 
        Part 1: Configure your user and team administration
       
