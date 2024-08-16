@@ -65,7 +65,6 @@ Also, the customizations in the Splunk distribution include these additional fea
 * Discovery mode for metric sources
 * Automatic discovery and configuration
 * Fluentd for log capture, deactivated by default
-* Tools to support migration from SignalFx products
 
 .. raw:: html
 
