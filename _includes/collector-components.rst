@@ -1,4 +1,4 @@
-The Splunk Distribution of OpenTelemetry Collector has the following components and services:
+The Splunk Distribution of the OpenTelemetry Collector has the following components and services:
 
 * :ref:`Receivers <collector-components-receivers>`: Determine how you'll get data into the Collector.
 * :ref:`Processors <collector-components-processors>`: Configure which operations you'll perform on data before it's exported. For example, filtering.
