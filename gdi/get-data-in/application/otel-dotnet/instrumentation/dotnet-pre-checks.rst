@@ -7,16 +7,24 @@ Pre-checks
 .. meta::
     :description: A list of pre-checks for the user to complete before installing the .NET automatic instrumentation.
 
-Before installing the .NET automatic instrumentation, it can be useful to complete the following series of pre-checks.
+Before installing the .NET automatic instrumentation, complete the following pre-checks.
 
 Verify platform compatibility
 =============================
 
-#. Verify that you are using a supported processor architecture. See :ref:`dotnet-otel-requirements`.
+.. list-table::
+    :widths: 25 75
+    :width: 100
+    :header-rows: 1
 
-#. If you are instrumenting applications in a Kubernetes cluster, verify that you are using a supported Kubernetes distribution. See :ref:`helm-chart-supported-distros`.
+    * - Platform
+      - Pre-checks
+    * - All platforms
+      - * Verify that you are using a supported processor architecture. See :ref:`dotnet-otel-requirements`.
+    * - Kubernetes
+      - * Verify that you are using a supported Kubernetes distribution. See :ref:`helm-chart-supported-distros`.
 
-#. If you are instrumenting applications in a Kubernetes cluster, review the prerequisites and requirements for installing the instrumentation using the Helm chart. See :new-page:`Auto-instrumentation <https://github.com/signalfx/splunk-otel-collector-chart/blob/d08f989180bcb0e1ec79b63805d8951472b8d230/docs/auto-instrumentation-install.md#steps-for-setting-up-auto-instrumentation>` in the Splunk OpenTelemetry Collector for Kubernetes repository on GitHub.
+        * Review the prerequisites and requirements for installing the instrumentation using the Helm chart. See :new-page:`Auto-instrumentation <https://github.com/signalfx/splunk-otel-collector-chart/blob/d08f989180bcb0e1ec79b63805d8951472b8d230/docs/auto-instrumentation-install.md#steps-for-setting-up-auto-instrumentation>` in the Splunk OpenTelemetry Collector for Kubernetes repository on GitHub.
 
 Verify .NET runtime compatibility
 =================================
@@ -26,9 +34,19 @@ Verify that you are using a supported version of .NET. See :ref:`dotnet-otel-ver
 Verify automatic discovery compatibility
 ========================================
 
-#. If you are instrumenting applications in a Kubernetes cluster, verify automatic discovery compatibility between Kubernetes and .NET. See :ref:`k8s-backend-requirements`.
+.. list-table::
+    :widths: 25 75
+    :width: 100
+    :header-rows: 1
 
-#. Verify automatic discovery Windows back-end compatibility. See :ref:`windows-backend-auto-discovery`.
+    * - Platform
+      - Pre-check
+    * - Kubernetes
+      - Verify automatic discovery compatibility for Kubernetes. See :ref:`Automatic discovery and configuration for back-end applications in Kubernetes <k8s-backend-requirements>`.
+    * - Linux
+      - Verify automatic discovery compatibility for Linux. See :ref:`linux-backend-auto-discovery`.
+    * - Windows
+      - Verify automatic discovery compatibility for Windows. See :ref:`windows-backend-auto-discovery`.
 
 Review core dependencies
 ========================
@@ -47,6 +65,14 @@ Review supported libraries
 Verify networking requirements
 ==============================
 
-#. Verify that your firewall rules allow for communication with the elected Splunk Observability Cloud instance.
+.. list-table::
+    :widths: 25 75
+    :width: 100
+    :header-rows: 1
 
-#. Verify that the manager nodes have access to worker nodes on port ``9443/tcp``.
+    * - Platform
+      - Pre-check
+    * - All platforms
+      - Verify that your firewall rules allow for communication with the elected Splunk Observability Cloud instance.
+    * - Kubernetes
+      - Verify that the manager nodes have access to worker nodes on port ``9443/tcp``.
