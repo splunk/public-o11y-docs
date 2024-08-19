@@ -5,9 +5,9 @@ Collector deployment modes
 **********************************
 
 .. meta::
-      :description: The Splunk Distribution of OpenTelemetry Collector provides a single binary and two deployment methods. Both deployment methods can be configured using a default configuration.
+      :description: The Splunk Distribution of the OpenTelemetry Collector provides a single binary and two deployment methods. Both deployment methods can be configured using a default configuration.
 
-The Collector has two deployment modes: :ref:`host monitoring (agent) mode <collector-agent-mode>`, and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
+You can deploy the Splunk Distribution of the OpenTelemetry Collector in one of two deployment modes: :ref:`host monitoring (agent) mode <collector-agent-mode>` and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
 
 .. note:: See also the official OpenTelemetry project docs at :new-page:`Deployment: Patterns you can apply to deploy the OpenTelemetry Collector <https://opentelemetry.io/docs/collector/deployment/>`.
 
@@ -20,18 +20,19 @@ In host monitoring (agent) mode, the Collector runs with the application or on t
 
 The following image shows the architecture for the standalone mode:
 
-.. image:: /_images/gdi/splunk-otel-collector-standalone-arch.png 
-   :alt: This image shows the architecture for the standalone host monitoring (agent) mode.   
+.. mermaid::
 
-Host monitoring (agent) mode deployed with the installer script or Helm chart
---------------------------------------------------------------------------------------
+   flowchart LR
 
-The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector without Fluentd.
+      accTitle: Splunk Distribution of the OpenTelemetry Collector in agent mode diagram.
+      accDescr: The Splunk Distribution of the OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. 
 
-The architecure looks as follows:
+      A((applications)) --> S[agent OTel Collector]
+      B((hosts)) --> S[agent OTel Collector]
 
-.. image:: /_images/gdi/splunk-otel-collector-recommended-arch.png
-   :alt: This image shows the architecture for Helm chart and installer script deployments.    
+      S[agent OTel Collector] --> R((Splunk Observability Suite))
+
+Data flow depends on your environment. Learn more at :ref:`otel-intro`.
 
 When to use host monitoring (agent) mode
 -------------------------------------------------------------------------------
@@ -46,14 +47,27 @@ Use the host monitoring (agent) mode when you want to do these things:
 Data forwarding (gateway) mode
 ======================================================================
 
-Data forwarding (gateway) mode is typically deployed per cluster, data center, or region. The Collector in gateway mode collects data from one or more Collectors running in standalone agent mode and sends it to Splunk Observability Cloud. 
-
-For the default gateway config file see :new-page:`data forwarding (gateway) mode configuration in GitHub <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`.
+Data forwarding (gateway) mode is typically deployed per cluster, data center, or region. The Collector in gateway mode collects data from one or more Collectors running in standalone agent mode and sends it to Splunk Observability Cloud. For the default gateway config file see :new-page:`data forwarding (gateway) mode configuration in GitHub <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`.
 
 The following image shows the architecture for the data forwarding (gateway) mode:
 
-.. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
-   :alt: This image shows the architecture for the advanced mode.    
+.. mermaid::
+
+   flowchart LR
+
+      accTitle: Splunk Distribution of the OpenTelemetry Collector in gateway mode diagram.
+      accDescr: The Splunk Distribution of the OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. 
+
+      A((applications)) --> S[agent OTel Collector]
+      B((hosts)) --> S[agent OTel Collector]
+
+      S[agent OTel Collector] --> Q[Load Balancer] 
+
+      Q[Load Balancer] --> U[gateway OTel Collector]
+      Q[Load Balancer] --> V[gateway OTel Collector]
+
+      U[gateway OTel Collector] --> R((Splunk Observability Suite))
+      V[gateway OTel Collector] --> R((Splunk Observability Suite))
 
 .. note:: To forward metrics and metadata in data forwarding (gateway) mode, see :ref:`collector-gateway-metrics-issue`.
 
@@ -108,7 +122,7 @@ The main deployment modes are:
 By default, the ``agent`` daemonset deploys a pod running the OpenTelemetry Collector agent in each node of your Kubernetes cluster. The agent pods gather data from your applications, services, and other objects running in their respective nodes, then send the data to Splunk Observability Cloud.
 
 .. image:: /_images/gdi/k8s-daemonset.png
-   :width: 60%
+   :width: 40%
    :alt: This Kubernetes cluster contains three nodes. Each node contains an OpenTelemetry Collector agent pod that sends telemetry data to Splunk Observability Cloud.
 
 For more information on the components on each mode, see :ref:`helm-chart-components`.
