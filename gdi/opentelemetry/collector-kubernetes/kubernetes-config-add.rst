@@ -16,6 +16,8 @@ For other config options, see:
 * :ref:`kubernetes-config-logs`
 * :ref:`otel-kubernetes-config-advanced`
 
+For a practical example of how to configure the Collector for Kubernetes see :ref:`about-collector-configuration-tutorial-k8s`.
+
 .. _otel-kubernetes-config-add-components:
 
 Add additional components to the configuration

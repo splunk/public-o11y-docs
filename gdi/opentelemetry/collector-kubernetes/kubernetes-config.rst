@@ -16,6 +16,8 @@ Additionally, see:
 * :ref:`kubernetes-config-logs`
 * :ref:`otel-kubernetes-config-advanced`
 
+For a practical example of how to configure the Collector for Kubernetes see :ref:`about-collector-configuration-tutorial-k8s`.
+
 .. caution:: 
 
   The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file lists and explains all supported configurable parameters for the Helm chart components. See :ref:`helm-chart-components` for more information. :strong:`Review it to understand how to configure this chart`.
