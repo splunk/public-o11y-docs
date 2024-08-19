@@ -39,7 +39,7 @@ The Splunk OTel Java agent automatically adds the following mapped diagnostic co
 - Trace information: ``trace_id`` and ``span_id``
 - Trace flags
 
-The default behavior is to send the MDC fields to the Collector but not write them to the application log files. To include this information in the log files, you must set your logging framework output format to include MDC fields.
+The default behavior is to send the MDC fields to the Collector but not write them to the application log files. To include this information in the log files, you must set your logging framework output format to include MDC fields. To configure your logging framework, see :ref:`configure-logging-library`.
 
 The Collector sends the annotated logs through the OTLP exporter.
 
@@ -66,6 +66,8 @@ Before injecting attributes, you must make them available through the MDC by set
 .. code-block:: shell
 
    -Dotel.instrumentation.common.mdc.resource-attributes=service.name,deployment.environment
+
+.. _configure-logging-library:
 
 Configure your logging library
 --------------------------------------------------
