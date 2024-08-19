@@ -284,7 +284,7 @@ To delete an endpoint, follow these steps:
 Advanced configuration: AWS PrivateLink with VPC peering 
 ==========================================================================
 
-Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``AWS us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
+Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
 
 In this scenario, carry out the following steps:
 
