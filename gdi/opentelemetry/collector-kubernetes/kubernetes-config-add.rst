@@ -1,4 +1,4 @@
-.. _otel-kubernetes-config-add:
+.. _kubernetes-config-add:
 
 **********************************************************************************************
 Configure the Collector for Kubernetes with Helm: Add components and data sources

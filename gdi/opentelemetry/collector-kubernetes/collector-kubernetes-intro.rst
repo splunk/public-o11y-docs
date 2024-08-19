@@ -19,7 +19,7 @@ Get started with the Collector for Kubernetes
    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
    Configure with Helm <kubernetes-config.rst>
    Add components and data sources <kubernetes-config-add.rst>
-   Advanced config <kubernetes-config-advanced.rst>
+   Advanced configuration <kubernetes-config-advanced.rst>
    Configure logs and events <kubernetes-config-logs.rst>
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
    Upgrade <kubernetes-upgrade.rst>
