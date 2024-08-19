@@ -18,6 +18,7 @@ Get started with the Collector for Kubernetes
    Install with YAML manifests <install-k8s-manifests.rst>
    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
    Configure with Helm <kubernetes-config.rst>
+   Add components and data sources <kubernetes-config-add.rst>
    Advanced config <kubernetes-config-advanced.rst>
    Configure logs and events <kubernetes-config-logs.rst>
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
@@ -58,6 +59,7 @@ Optionally, you can also:
 To configure the Collector, see:
 
 * :ref:`otel-kubernetes-config`
+* :ref:`kubernetes-config-add`
 * :ref:`otel-kubernetes-config-advanced`
 * :ref:`kubernetes-config-logs`
 * :ref:`discovery-mode-k8s`
