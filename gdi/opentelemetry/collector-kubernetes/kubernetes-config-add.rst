@@ -7,7 +7,14 @@ Configure the Collector for Kubernetes with Helm: Add components and data source
 .. meta::
       :description: Optional configurations for the Splunk Distribution of OpenTelemetry Collector for Kubernetes: Add components or new data sources.
 
-After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, these are the available settings you can configure. Additionally, see also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` and :ref:`otel-kubernetes-config-logs`.
+Read on to learn how to add additional components or data sources to your Collector for Kubernetes config.
+
+For other config options, see:
+
+* :ref:`otel-kubernetes-config`
+* :ref:`discovery-mode-k8s`
+* :ref:`kubernetes-config-logs`
+* :ref:`otel-kubernetes-config-advanced`
 
 .. _otel-kubernetes-config-add-components:
 

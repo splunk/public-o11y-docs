@@ -7,7 +7,14 @@ Configure the Collector for Kubernetes with Helm
 .. meta::
       :description: Optional configurations for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
-After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, these are the available settings you can configure. Additionally, see also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` and :ref:`otel-kubernetes-config-logs`.
+After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, read on to learn which settings you can configure. 
+
+Additionally, see:
+
+* :ref:`kubernetes-config-add` 
+* :ref:`discovery-mode-k8s`
+* :ref:`kubernetes-config-logs`
+* :ref:`otel-kubernetes-config-advanced`
 
 .. caution:: 
 

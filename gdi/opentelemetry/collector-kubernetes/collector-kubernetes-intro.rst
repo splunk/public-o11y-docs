@@ -19,8 +19,8 @@ Get started with the Collector for Kubernetes
    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
    Configure with Helm <kubernetes-config.rst>
    Add components and data sources <kubernetes-config-add.rst>
-   Advanced configuration <kubernetes-config-advanced.rst>
    Configure logs and events <kubernetes-config-logs.rst>
+   Advanced configuration <kubernetes-config-advanced.rst>
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
    Upgrade <kubernetes-upgrade.rst>
    Uninstall <kubernetes-uninstall.rst>
@@ -56,13 +56,13 @@ Optionally, you can also:
     <h2>Configure the Collector for Kubernetes<a name="k8s-configure" class="headerlink" href="#k8s-configure" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To configure the Collector, see:
+To configure the Collector, including adding additional components or activating automatic discovery, see:
 
 * :ref:`otel-kubernetes-config`
-* :ref:`kubernetes-config-add`
-* :ref:`otel-kubernetes-config-advanced`
-* :ref:`kubernetes-config-logs`
+* :ref:`kubernetes-config-add` 
 * :ref:`discovery-mode-k8s`
+* :ref:`kubernetes-config-logs`
+* :ref:`otel-kubernetes-config-advanced`
 
 .. raw:: html
 
