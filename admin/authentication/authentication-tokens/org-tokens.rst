@@ -74,10 +74,10 @@ To manage your access (org) tokens:
    #. To update the token, select :guilabel:`Update`.
 
 
-View and copy access tokens
-==============================
+View and copy access token secrets
+====================================
 
-To view the value of an access token, select the token name and then select :guilabel:`Show Token`.
+To view the token secret, select the token name and then select :guilabel:`Show Token`.
 
 To copy the token value, select :guilabel:`Copy`. You don't need to be an administrator to view or copy an access token.
 
@@ -87,53 +87,66 @@ To copy the token value, select :guilabel:`Copy`. You don't need to be an admini
 Create an access token
 ==========================
 
+To create an access token, complete 
+
 .. note::
 
-   To do the following tasks, you must be an organization administrator.
+   You must be an organization administrator to create access tokens.
 
-To create an access token:
+#. Name the token and select the authorization scope
+-------------------------------------------------------------------------
+
+To get started with creating the token, enter a name and scope for the token. Complete the following steps:
 
 #. Open the Splunk Observability Cloud main menu.
 #. Select :menuselection:`Settings` and select :menuselection:`Access Tokens`.
-#. Select :guilabel:`New Token`. If your organization has a long list of access tokens, you might need to scroll down to the bottom of the list to access this button.
+#. Select :guilabel:`New Token`.
 #. Enter a unique token name. If you enter a token name that is already in use, even if the token is inactive, Splunk Observability Cloud doesn't accept the name.
-#. Select an authorization scope for the token from 1 of the following values:    
-   
-   .. note:: Assign only 1 authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
+#. Select an authorization scope. See the following table for information about the authorization scopes:
 
-   - :strong:`RUM Token`: Select this authorization scope to use the token to authenticate with RUM ingest endpoints. These endpoints use the following base URL: :code:`https://rum-ingest.<REALM>.signalfx.com/v1/rum`.
-      
-      .. caution::
-         RUM displays the RUM token in URIs that are visible in a browser. To preserve security, you can't assign the :strong:`Ingest` or :strong:`API` authorization scope to a RUM token.
+   .. list-table::
+      :header-rows: 1
 
-   - :strong:`Ingest Token`: Select this authorization scope to use the token to authenticate with data ingestion endpoints. These endpoints use the following base URLs:
+      * - Authorization scope
+        - Description
+      * - RUM token
+        - Use this scope to authenticate with RUM ingest endpoints. These endpoints use the following base URL: ``https://rum-ingest.<REALM>.signalfx.com/v1/rum``.
+      * - Ingest token
+        - Use this scope to authenticate with data ingestion endpoints and when using the Splunk Distribution of OpenTelemetry Collector. These endpoints use the following base URLs:
 
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint`
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint/otlp`
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint/otlp`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
 
-      For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+         For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+      * - API token
+        - Use this scope to authenticate with Splunk Observability Cloud API endpoints. These endpoints use the following base URLs:
 
-      .. note:: Use the ingest autorization scope for the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-intro`.
-   - :strong:`API Token`: Select this authorization scope to use the token to authenticate with Splunk Observability Cloud endpoints. Example use cases are Terraform, programmatic usage of the API for business objects, and so on. These endpoints use the following base URLs: 
-        
-        - :code:`https://api.<REALM>.signalfx.com`
-        - :code:`wss://stream.<REALM>.signalfx.com`
+          * :code:`https://api.<REALM>.signalfx.com`
+          * :code:`wss://stream.<REALM>.signalfx.com`
 
-      When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`roles-and-capabilities`.
+         When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`roles-and-capabilities`.
 
-      For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
+         For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
 
-#. Edit the visibility permissions:
+#. (Optional) Add a description for the token.
+#. Select :guilabel:`Next` to continue to the next step.
 
-   #. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
-      permission options appear:
+#. Determine who can view and use the token
+--------------------------------------------------------
+
+Next, configure token permissions so your organization's users and teams can use the token. Complete the following steps:
+
+#. Edit the visibility permissions. To display the available permissions, select the :guilabel:`Access Token Permissions` box. The following
+   permission options appear:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
       * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
-   #. To add permissions, select the arrow below :guilabel:`Access Token Permissions`.
+   
+   To add permissions, select the arrow below :guilabel:`Access Token Permissions`.
+
 #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
    #. Select :guilabel:`Add Team or User`. Splunk Observability Cloud displays a list of teams and users in your organization.
@@ -150,8 +163,17 @@ To create an access token:
          This message means that all users are able to join the team and then view or read the access token.
 
    #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
-#. To create the new token, select :guilabel:`Create`.
 
+#. Select :guilabel:`Next` to continue to the final step.
+
+#. Configure an expiration date
+-----------------------------------------------
+
+To finish creating the token, select an expiration date for the token. 
+
+#. In the :guilabel:`Expiration date` box, select a date at which the token will expire. The date can't be over 5 years from the token creation date.
+
+#. To create the new token, select :guilabel:`Create`.
 
 .. _access-token-rotate:
 
