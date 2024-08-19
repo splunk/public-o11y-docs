@@ -75,7 +75,8 @@ The following table shows which Kubernetes distributions support control plane m
 
 .. list-table::
   :header-rows: 1
-  :width: 60%
+  :width: 100%
+  :widths: 50 50
 
   * - Supported
     - Unsupported
@@ -134,6 +135,7 @@ The following example shows how to connect to a nonstandard API server that uses
                 useHTTPS: true
                 useServiceAccount: false
 
+.. _kubernetes-config-advanced-non-root:
 
 Run the container in non-root user mode
 ==================================================
@@ -151,6 +153,91 @@ To run the container in ``non-root`` user mode, use ``agent.securityContext`` to
 
 .. note:: Running the collector agent for log collection in non-root mode is not currently supported in CRI-O and OpenShift environments at this time. For more details, see the :new-page:`related GitHub feature request issue <https://github.com/signalfx/splunk-otel-collector-chart/issues/891>`.
 
+.. _kubernetes-config-advanced-tls-certificates:
+
+Configure custom TLS certificates
+==================================================
+
+If your organization requires custom TLS certificates for secure communication with the Collector, follow these steps: 
+
+1. Create a Kubernetes secret with the CA Certificate, k8ey, and Cert Files
+-----------------------------------------------------------------------------
+
+Store your custom CA certificate, key, and cert files in a Kubernetes secret in the same namespace as the your Splunk Helm chart. 
+
+For example, you can run this command:
+
+.. code-block:: bash
+
+  kubectl create secret generic my-custom-tls --from-file=ca.crt=/path/to/custom_ca.crt --from-file=apiserver.key=/path/to/custom_key.key --from-file=apiserver.crt=/path/to/custom_cert.crt -n <namespace>
+
+.. Note:: You are responsible for externally managing this secret, which is not part of the Splunk Helm chart deployment.  
+
+2. Mount the secret in the Splunk Helm Chart
+-----------------------------------------------------------------------------
+
+Apply this configuration to the ``agent``, ``clusterReceiver``, or ``gateway`` using the following Helm values:
+
+* ``agent.extraVolumes``, ``agent.extraVolumeMounts``
+* ``clusterReceiver.extraVolumes``, ``clusterReceiver.extraVolumeMounts``
+* ``gateway.extraVolumes``, ``gateway.extraVolumeMounts``
+
+Learn more about Helm components at :ref:`helm-chart-components`.
+
+For example:
+
+.. code-block:: yaml
+
+  agent:
+    extraVolumes:
+      - name: custom-tls
+        secret:
+          secretName: my-custom-tls
+    extraVolumeMounts:
+      - name: custom-tls
+        mountPath: /etc/ssl/certs/
+        readOnly: true
+
+  clusterReceiver:
+    extraVolumes:
+      - name: custom-tls
+        secret:
+          secretName: my-custom-tls
+    extraVolumeMounts:
+      - name: custom-tls
+        mountPath: /etc/ssl/certs/
+        readOnly: true
+
+  gateway:
+    extraVolumes:
+      - name: custom-tls
+        secret:
+          secretName: my-custom-tls
+    extraVolumeMounts:
+      - name: custom-tls
+        mountPath: /etc/ssl/certs/
+        readOnly: true
+
+3. Override yout TLS configuration
+-----------------------------------------------------------------------------
+
+Update the TLS configuration for specific Collector components, such as the agent's ``kubeletstatsreceiver``, to use the mounted certificate, key, and CA files. 
+
+For example:
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      receivers:
+        kubeletstats:
+          auth_type: "tls"
+          ca_file: "/etc/ssl/certs/custom_ca.crt"
+          key_file: "/etc/ssl/certs/custom_key.key"
+          cert_file: "/etc/ssl/certs/custom_cert.crt"
+          insecure_skip_verify: true
+
+.. note:: To skip certificate checks, you can disable TLS. This option is not recommended for production environments due to security standards.
 
 Collect network telemetry using eBPF
 ==================================================
