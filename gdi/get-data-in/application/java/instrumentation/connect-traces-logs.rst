@@ -41,7 +41,7 @@ The Splunk OTel Java agent automatically adds the following mapped diagnostic co
 
 The default behavior is to send the MDC fields to the Collector but not write them to the application log files. To include this information in the log files, you must set your logging framework output format to include MDC fields. To configure your logging framework, see :ref:`configure-logging-library`.
 
-The Collector sends the annotated logs through the OTLP exporter.
+The Collector sends the annotated logs using the OTLP exporter.
 
 Deactivate logs export
 ==================================
