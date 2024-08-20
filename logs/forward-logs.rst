@@ -93,6 +93,16 @@ If you already set up Log Observer Connect, you do not need to add the necessary
        | 34.250.243.212/32
        | 54.171.237.247/32
 
+   * - eu1
+     - | 3.73.240.7
+       | 18.196.129.64
+       | 3.126.181.171
+
+   * - eu2
+     - | 13.41.86.83
+       | 52.56.124.93
+       | 35.177.204.133
+
 .. _authenticate-hec:
 
 Authenticate the connection to HEC in Splunk Observability Cloud
