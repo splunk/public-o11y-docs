@@ -11,6 +11,7 @@ Connect your Azure account to Splunk Observability Cloud
   :hidden:
 
   Azure prerequisites <azure-prereqs>
+  Supported Azure services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-azure.html>
   Connect to Azure <azure-connect> 
   Azure metrics <azure-metrics>
   Send Azure logs to Splunk Platform <azure-logs-ingestion>
