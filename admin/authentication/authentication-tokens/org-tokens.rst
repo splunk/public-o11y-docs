@@ -87,20 +87,29 @@ To copy the token value, select :guilabel:`Copy`. You don't need to be an admini
 Create an access token
 ==========================
 
-To create an access token, complete 
+To get started with creating an access token, follow these steps: 
+
+#. Open the Splunk Observability Cloud main menu.
+#. Select :menuselection:`Settings` and select :menuselection:`Access Tokens`.
+#. Select :guilabel:`New Token`
+
+Next, complete each step in the access token creation guided setup:
+
+* :ref:`create-access-token-name`
+* :ref:`create-access-token-permissions`
+* :ref:`create-access-token-date`
 
 .. note::
 
    You must be an organization administrator to create access tokens.
+
+.. _create-access-token-name:
 
 #. Name the token and select the authorization scope
 -------------------------------------------------------------------------
 
 To get started with creating the token, enter a name and scope for the token. Complete the following steps:
 
-#. Open the Splunk Observability Cloud main menu.
-#. Select :menuselection:`Settings` and select :menuselection:`Access Tokens`.
-#. Select :guilabel:`New Token`.
 #. Enter a unique token name. If you enter a token name that is already in use, even if the token is inactive, Splunk Observability Cloud doesn't accept the name.
 #. Select an authorization scope. See the following table for information about the authorization scopes:
 
@@ -119,19 +128,21 @@ To get started with creating the token, enter a name and scope for the token. Co
           * POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
           * POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
 
-         For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+           For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
       * - API token
         - Use this scope to authenticate with Splunk Observability Cloud API endpoints. These endpoints use the following base URLs:
 
           * :code:`https://api.<REALM>.signalfx.com`
           * :code:`wss://stream.<REALM>.signalfx.com`
 
-         When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`roles-and-capabilities`.
+           When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`roles-and-capabilities`.
 
-         For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
+           For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
 
 #. (Optional) Add a description for the token.
 #. Select :guilabel:`Next` to continue to the next step.
+
+.. _create-access-token-permissions:
 
 #. Determine who can view and use the token
 --------------------------------------------------------
@@ -165,6 +176,8 @@ Next, configure token permissions so your organization's users and teams can use
    #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
 
 #. Select :guilabel:`Next` to continue to the final step.
+
+.. _create-access-token-date:
 
 #. Configure an expiration date
 -----------------------------------------------
