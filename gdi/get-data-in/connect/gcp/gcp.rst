@@ -10,6 +10,7 @@ Connect to Google Cloud Platform
 .. toctree::
    :hidden:
 
+   Supported GCP services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-gcp.html>
    gcp-metrics
    Send GCP logs to Splunk Platform <gcp-logs>   
 

@@ -11,7 +11,7 @@ Monitor Google Cloud Platform
   :hidden:
 
   Monitor GCP <gcp-infra-monitor>
-  Supported GCP services <https://docs.splunk.com/Observability/gdi/get-data-in/integrations.html#gcp>
+  Supported GCP services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-gcp.html>
   Available GCP metadata <gcp-infra-metadata>
 
 Infrastructure Monitoring imports data for the following :ref:`GCP services <gcp-integrations>`.
