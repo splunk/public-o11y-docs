@@ -238,7 +238,7 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
     <h3>Advanced install<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-The Splunk distribution of the OpenTelemetry Collector is supported on and packaged for a variety of platforms, including:
+The Splunk Distribution of the OpenTelemetry Collector is supported on and packaged for a variety of platforms, including:
 
 * :ref:`Collector for Kubernetes <collector-kubernetes-intro>`
 * :ref:`Collector for Linux <collector-linux-intro>`
