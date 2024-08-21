@@ -295,6 +295,9 @@ Automatic Discovery for back-end services
    * - ``--metrics-exporter <exporters>``
      - Comma-separated list of exporters for collected metrics by all activated SDKs, for example ``otlp,prometheus``. Set the value to ``none`` to disable collection and export of metrics. The value will be set to the ``OTEL_METRICS_EXPORTER`` environment variable. The default behavior is to defer to the default ``OTEL_METRICS_EXPORTER`` value for each activated SDK.
      -
+   * - ``--logs-exporter <exporter>``
+     - Set the exporter for collected logs by all activated SDKs, for example ``otlp``. Set the value to ``none`` to disable collection and export of logs. The value will be set to the ``OTEL_LOGS_EXPORTER`` environment variable. The default behavior is to defer to the default ``OTEL_LOGS_EXPORTER`` value for each activated SDK.
+     -
    * - ``--[enable|disable]-profiler``
      - Activate or deactivate AlwaysOn CPU Profiling for all activated SDKs that support the ``SPLUNK_PROFILER_ENABLED`` environment variable.
      - ``--disable-profiler``
