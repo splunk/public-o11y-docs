@@ -160,8 +160,8 @@ Configure custom TLS certificates
 
 If your organization requires custom TLS certificates for secure communication with the Collector, follow these steps: 
 
-1. Create a Kubernetes secret containing the Root CA certificate, TLS certificate, and private key Files
------------------------------------------------------------------------------
+1. Create a Kubernetes secret containing the Root CA certificate, TLS certificate, and private key files
+---------------------------------------------------------------------------------------------------------------------
 
 Store your custom CA certificate, key, and cert files in a Kubernetes secret in the same namespace as the your Splunk Helm chart. 
 
