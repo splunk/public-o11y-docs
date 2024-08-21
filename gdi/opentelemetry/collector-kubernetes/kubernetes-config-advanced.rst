@@ -218,7 +218,7 @@ For example:
         mountPath: /etc/ssl/certs/
         readOnly: true
 
-3. Override yout TLS configuration
+3. Override your TLS configuration
 -----------------------------------------------------------------------------
 
 Update the TLS configuration for specific Collector components, such as the agent's ``kubeletstatsreceiver``, to use the mounted certificate, key, and CA files. 
