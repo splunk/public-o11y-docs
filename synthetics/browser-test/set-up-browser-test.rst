@@ -409,15 +409,16 @@ When activated, this feature is used to enforce the validation of expired, inval
 Authentication
 --------------------------
 
-Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using concealed global variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
+Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. To use Authentication, a username and password need to be provided. The username can be entered as plain text or be defined by a global variable, but the password must be defined using a global variable. It is recommended to use a concealed global variable for your password to create an additional layer of security for your credentials. For more, see :ref:`concealed-gv`.
 
-The Authentication field is available for Browser tests in Chrome only. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+When executing the browser test, the Chrome browser is configured with the credentials defined in the test configuration. Authentication is not integrated at the OS level, it is only configured in the browser. At this time, Chrome supports the following authentication protocols:
 
 * Basic Authentication
 * NTLM
 * Kerberos
 * Digest
 
+More details on Chrome authentication are available :new-page:`here list <https://www.chromium.org/developers/design-documents/http-authentication/>`.
 
 .. Custom content
 
