@@ -32,6 +32,7 @@ For more information about runtimes, see :new-page:`Container runtime <https://k
 Troubleshoot the container runtime compatibility
 =============================================================================================
 
+
 To check if you're having compatibility issues with Kubernets and the container runtime, follow these steps:
 
 #. Run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. 
@@ -51,6 +52,11 @@ To check if you're having compatibility issues with Kubernets and the container 
   - :new-page:`Mirantis <https://docs.mirantis.com/container-cloud/latest/compat-matrix.html>`
 
 #. Check the integrity of your container stats. See how at :ref:`ts-k8s-stats`.
+
+#. Check that you have the right certificate.
+
+#. In non production environments, try skipping the certificate verification with the following command: 
+:code:`agent.config.receivers.kubeletstats.insecure_skip_verify=true`.
 
 .. _ts-k8s-stats:
 
