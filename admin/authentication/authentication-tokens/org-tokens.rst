@@ -22,9 +22,9 @@ Power users who have access to tokens in an organization see a banner, but only 
 Token expiry 
 ================
 
-Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires using the Splunk Observability Cloud API. For details, see :ref:`access-token-rotate`.
+By default, access tokens expire one year after the creation date. You can change the expiration date For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires. For details, see :ref:`access-token-rotate`.
 
-Every organization admin will receive an email 30 days before a token in their org expires. The email includes a link to Splunk Observability Cloud that displays a list of expiring tokens. You cannot customize the token expiration email. 
+Every organization admin receives an email 30 days before a token in their org expires. The email includes a link to Splunk Observability Cloud that displays a list of expiring tokens. You cannot customize the token expiration email. 
 
 The default access token
 ===========================
@@ -249,16 +249,47 @@ After you're finished rotating the token, update any of your OpenTelemetry Colle
 
 To learn more about this endpoint and to see more examples of requests and responses, see the :new-page:`Splunk developer documentation <https://dev.splunk.com/observability/reference/api/org_tokens/latest#endpoint-rotate-token-secret>`. 
 
+Edit an access token
+=========================
+
+You can edit details of your access token, such as the expiration date and permissions, using the token actions menu (|verticaldots|).
+
+Edit API roles (API tokens only)
+-----------------------------------------------------
+
+To edit the API roles for your token, open the token actions menu (|verticaldots|) and select :guilabel:`Edit API roles`. 
+
+Select the roles you want to associate with the token, and select :guilabel:`Update` to finish editing.
+
+Edit token permissions
+-------------------------
+
+To edit permissions, open the token actions menu (|verticaldots|) and select :guilabel:`Edit permissions`.
+
+To learn more about token permissions, see :ref:`create-access-token-permissions`.
+
+Select :guilabel:`Update` to finish editing.
+
+
+Edit token expiration date and alerts
+-------------------------------------
+
+To edit the token expiration alerts, open the token actions menu (|verticaldots|) and select :guilabel:`Expiration alert`. 
+
+To learn more about the expiration date and alert options, see :ref:`create-access-token-date`.
+
+Select :guilabel:`Update` to finish editing.
+
 Rename an access token
 =========================
 
 To rename a token:
 
-#. Select :menuselection:`Edit Token` from the token's actions menu (|more|).
+#. Select :menuselection:`Edit Token` from the token's actions menu (|verticaldots|).
 #. Enter a new name for the token.
 #. Select :guilabel:`OK`.
 
-Renaming a token does not affect the value of the token.
+Renaming a token does not affect the token's secret.
 
 .. note::
 
@@ -271,11 +302,8 @@ Deactivate or activate an access token
 
    You can't delete tokens. You can only deactivate them.
 
-To deactivate a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
-The line that displays the token has a shaded background, which indicates that the
-token is inactive. The UI displays deactivated tokens at the end of the tokens list,
-after the activated tokens.
+To deactivate a token, select :menuselection:`Deactivate` from the token's actions menu (|verticaldots| icon).
 
-To activate a deactivated token, select :menuselection:`Enable` from the deactivated
-token's actions menu (|more| icon). The line that displays the token has a light background,
-which indicates that the token is inactive.
+To activate a deactivated token, select :menuselection:`Activate` from the deactivated token's actions menu (|verticaldots| icon). 
+
+You can search for activated or deactivated tokens using the :guilabel:`Status` filter in the access tokens page.
