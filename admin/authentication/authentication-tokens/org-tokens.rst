@@ -36,45 +36,37 @@ By default, every organization has one organization-level access token. If you d
 Manage access tokens
 =======================
 
-To manage your access (org) tokens:
+To manage your access (org) tokens, follow these steps:
 
 #. Open the :guilabel:`Settings` menu.
-#. Select :menuselection:`Access Tokens`.
-#. To find the access token in a large list, use the :guilabel:`Status` and :guilabel:`Scope` filters or enter the token name in the search bar.
-#. To look at the details for an access token, select the expand icon next to the token name.
+#. Select :guilabel:`Access Tokens`.
+#. Find your token by using the :guilabel:`Status` and :guilabel:`Scope` filters or enter the token name in the search bar.
+#. Select the expand icon next to the token name. This displays details about the token.
 
    For information about the access token permissions allowed by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
 #. If you're an organization administrator, the actions menu (|verticaldots| icon) appears to the right side of the token listing. You can select token actions from this menu.
 
+#. See :ref:`change-token-permissions` and :ref:`change-token-expiration` to modify token permissions and token expiration settings, respectively.
+
+.. _change-token-permissions:
+
 Change token permissions
 -------------------------------------
 
-To change the token visibility, follow these steps:
+To change the token permissions, follow these steps:
 
-#. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
-   permission options appear:
+#. Select the :guilabel:`Access Token Permissions` box. Choose from the following permission options:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
       * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
+
 #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
-#. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
-
-      #. Select :guilabel:`Add Team or User`. Splunk Observability Cloud displays a list of teams and users in your organization.
-      #. To find the team or username in a large list, start entering the name in the search box. Splunk Observability Cloud returns matching results.
-         Select the user or team.
-      #. If you need to add more teams or users, select :guilabel:`Add Team or User` again.
-
-         .. note::
-
-            You might see the following message in the middle of the dialog:
-
-            You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and is  able to access this Access Token.
-
-            This message means that all users are able to join the team and then view or read the access token.
-
+#. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access.
 #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
 #. To update the token, select :guilabel:`Update`.
+
+.. _change-token-expiration:
 
 Change token expiration date and expiration alerts
 -------------------------------------------------------
