@@ -207,6 +207,8 @@ The following syntax is invalid:
 Default rules 
 ===========================
 
+.. Note::You need at least one matching domain rule and one matching path rule.  
+
 RUM has several default rules that you can find in the :guilabel:`RUM URL grouping` tab under :guilabel:`Data Management`. If you want to create a rule that conflicts with a default rule, you can deactivate the default rule globally, or by application. 
 
 Example
@@ -360,7 +362,7 @@ Manage URL grouping rules
 ===================================
 Host and path rules are combined to create the URL Name in the UI. Spans are retained for 8 days in Splunk RUM. For more, see :ref:`data-o11y`. Changes to any rules apply only to incoming data. 
 
-.. Note:: You need to create a domain rule first, then you can add a path rule. If you edit, deactive, or delete a rule your changes apply only to future data and not data that was realdy ingested by Splunk RUM. 
+.. Note:: You need to create a domain rule first, then you can add a path rule. If you edit, deactivate, or delete a rule your changes apply only to future data and not data that was already ingested by Splunk RUM. 
 
 
 Create a new rule 
