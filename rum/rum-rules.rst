@@ -207,7 +207,7 @@ The following syntax is invalid:
 Default rules 
 ===========================
 
-.. Note::You need at least one matching domain rule and one matching path rule.  
+.. Note:: You need at least one matching domain and path rule.  
 
 RUM has several default rules that you can find in the :guilabel:`RUM URL grouping` tab under :guilabel:`Data Management`. If you want to create a rule that conflicts with a default rule, you can deactivate the default rule globally, or by application. 
 
