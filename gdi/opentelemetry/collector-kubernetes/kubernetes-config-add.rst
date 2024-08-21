@@ -23,7 +23,7 @@ For a practical example of how to configure the Collector for Kubernetes see :re
 Add additional components to the configuration
 ======================================================
 
-To use any additional OTel component, integration or legacy monitor, add it the relevant sections of the configuration file. Depending on your requirements, you might want to include it in the ``agent`` or the ``clusterReceiver`` component section of the configuration. See more at :ref:`helm-chart-components`.
+To use any additional OTel component, integration or legacy monitor, add it the relevant configuration sections in the values.yaml file. Depending on your requirements, you might want to include it in the ``agent.config`` or the ``clusterReceiver.config`` section of the values.yaml. See more at :ref:`helm-chart-components`.
 
 For a full list of available components and how to configure them, see :ref:`otel-components`. For a list of available application integrations, see :ref:`monitor-data-sources`.
 
