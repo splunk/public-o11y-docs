@@ -237,7 +237,7 @@ For example:
           cert_file: "/etc/ssl/certs/custom_cert.crt"
           insecure_skip_verify: true
 
-.. note:: To skip certificate checks, you can disable TLS. This option is not recommended for production environments due to security standards.
+.. note:: To skip certificate checks, you can disable secure TLS checks per component. This option is not recommended for production environments due to security standards.
 
 Collect network telemetry using eBPF
 ==================================================
