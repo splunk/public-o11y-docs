@@ -44,18 +44,21 @@ To manage your access (org) tokens:
 #. To look at the details for an access token, select the expand icon next to the token name.
 
    For information about the access token permissions allowed by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
-#. If you're an organization administrator, the actions menu (|more| icon) appears to the right side of the token listing. You can select token actions from this menu.
+#. If you're an organization administrator, the actions menu (|verticaldots| icon) appears to the right side of the token listing. You can select token actions from this menu.
 
-#. To change the token visibility, follow these steps:
+Change token permissions
+-------------------------------------
 
-   #. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
-      permission options appear:
+To change the token visibility, follow these steps:
+
+#. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
+   permission options appear:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
       * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
-   #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
-   #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
+#. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
+#. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
       #. Select :guilabel:`Add Team or User`. Splunk Observability Cloud displays a list of teams and users in your organization.
       #. To find the team or username in a large list, start entering the name in the search box. Splunk Observability Cloud returns matching results.
@@ -70,9 +73,24 @@ To manage your access (org) tokens:
 
             This message means that all users are able to join the team and then view or read the access token.
 
-      #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
-   #. To update the token, select :guilabel:`Update`.
+#. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
+#. To update the token, select :guilabel:`Update`.
 
+Change token expiration date and expiration alerts
+-------------------------------------------------------
+
+To change the token expiration date and expiration alerts, follow these steps:
+
+#. In the token actions menu (|verticaldots|), select :guilabel:`Expiration date`.
+#. In the :guilabel:`Expiration date` box, select a new expiration date for the token.
+#. To change the visibility of the expiration alert, select from the following options:
+
+   * :menuselection:`Admins and users or teams with token permissions can receive alert`: Admins and anyone with token permissions receive an alert when the token is close to expiring.
+   * :menuselection:`Only admins can receive alert`: Only admins receive an alert when the token is close to expiring.
+
+#. Configure the type of alert that your recipients receive.
+#. Change the time at which recipients receive an alert. For example, a value of ``7d`` means recipients receive an alert 7 days before the token expires.
+#. Select :guilabel:`Update`.
 
 View and copy access token secrets
 ====================================
@@ -210,7 +228,7 @@ Rotate access tokens using the token menu
 To rotate a token using the access token menu, follow these steps:
 
 #. In Splunk Observability Cloud, select :guilabel:`Settings`.
-#. Select `Access tokens`. 
+#. Select :guilabel:`Access tokens`. 
 #. In the access tokens menu, select the token you want to rotate.
 #. Select :guilabel:`Rotate token`.
 #. Enter an expiration date for the new token secret, and optionally, a grace period for the current token secret. 
@@ -249,37 +267,6 @@ After you're finished rotating the token, update any of your OpenTelemetry Colle
 
 To learn more about this endpoint and to see more examples of requests and responses, see the :new-page:`Splunk developer documentation <https://dev.splunk.com/observability/reference/api/org_tokens/latest#endpoint-rotate-token-secret>`. 
 
-Edit an access token
-=========================
-
-You can edit details of your access token, such as the expiration date and permissions, using the token actions menu (|verticaldots|).
-
-Edit API roles (API tokens only)
------------------------------------------------------
-
-To edit the API roles for your token, open the token actions menu (|verticaldots|) and select :guilabel:`Edit API roles`. 
-
-Select the roles you want to associate with the token, and select :guilabel:`Update` to finish editing.
-
-Edit token permissions
--------------------------
-
-To edit permissions, open the token actions menu (|verticaldots|) and select :guilabel:`Edit permissions`.
-
-To learn more about token permissions, see :ref:`create-access-token-permissions`.
-
-Select :guilabel:`Update` to finish editing.
-
-
-Edit token expiration date and alerts
--------------------------------------
-
-To edit the token expiration alerts, open the token actions menu (|verticaldots|) and select :guilabel:`Expiration alert`. 
-
-To learn more about the expiration date and alert options, see :ref:`create-access-token-date`.
-
-Select :guilabel:`Update` to finish editing.
-
 Rename an access token
 =========================
 
@@ -302,8 +289,8 @@ Deactivate or activate an access token
 
    You can't delete tokens. You can only deactivate them.
 
-To deactivate a token, select :menuselection:`Deactivate` from the token's actions menu (|verticaldots| icon).
+To deactivate a token, select :menuselection:`Deactivate` from the token's actions menu (|verticaldots|).
 
-To activate a deactivated token, select :menuselection:`Activate` from the deactivated token's actions menu (|verticaldots| icon). 
+To activate a deactivated token, select :menuselection:`Activate` from the deactivated token's actions menu (|verticaldots|). 
 
 You can search for activated or deactivated tokens using the :guilabel:`Status` filter in the access tokens page.
