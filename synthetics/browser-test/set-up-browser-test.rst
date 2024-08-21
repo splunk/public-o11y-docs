@@ -374,34 +374,37 @@ There are many reasons why you might want to configure advanced settings for you
 
 
 
+.. _collect-interactive-metrics:
+
+Collect interactive metrics
+---------------------------------
+Interactive metrics are on by default. You can turn off interactive metrics in advanced settings to speed up test durations. If you turn off interactive metrics then some metrics might be missing from your test. These are the type of interactive metrics Splunk Synthetic Monitoring collects:
+
+* First CPU idle: Time until the page is minimally interactive and responds to user input.
+* Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increases this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
+* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See :new-page:`https://web.dev/vitals/` in the Google developer documentation to learn more about Lighthouse scoring.
+
+
+.. _auto-retry:
+
 Auto-retry
 ----------------
 
 Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like a network issue, timeouts, or other issues. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your subscription usage.  Auto-retry requires at least runner version 0.9.29.
 
+.. Security
 
-.. _browser-cookies:
+.. _browser-validation:
 
-Set cookies
--------------
-
-Set cookies in the browser before the test starts. For example, to circumvent a popup modal from randomly appearing and interfering with your test, you can set cookies. Any cookies that are set will apply to the domain of the starting URL of the check. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain.
-
-.. _browser-headers:
-
-Set custom headers
+TLS/SSL validation
 --------------------------
+When activated, this feature is used to enforce the validation of expired, invalid hostname, or untrusted issuer on TLS/SSL certificates.
 
-Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies.
-
-The default user agent is the given one for the selected device, which updates whenever the Chrome version changes for synthetic runners. You can customize the user agent header for specific domains by adding a custom header. If a domain is not specified, the top-level user agent setting takes precedence.
-
-
-
+.. note::
+ When testing pre-production environments that have self-signed or invalid certificates, it's best to leave TLS/SSL validation feature deactivated.
 
 
 .. _browser-auth:
-
 
 Authentication
 --------------------------
@@ -416,21 +419,30 @@ The Authentication field is available for Browser tests in Chrome only. Splunk S
 * Digest
 
 
-.. _browser-overrides:
+.. Custom content
+
+.. _browser-cookies:
+
+Cookies
+-------------
+
+Set cookies in the browser before the test starts. For example, to circumvent a popup modal from randomly appearing and interfering with your test, you can set cookies. Any cookies that are set will apply to the domain of the starting URL of the check. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain.
+
+.. _browser-headers:
+
+Custom headers
+--------------------------
+
+Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies.
+
+The default user agent is the given one for the selected device, which updates whenever the Chrome version changes for synthetic runners. You can customize the user agent header for specific domains by adding a custom header. If a domain is not specified, the top-level user agent setting takes precedence.
+
+
+.. _browser-host-overrides:
 
 Host overrides
 ---------------------------------------
 Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
-
-
-.. _browser-validation:
-
-Enforce SSL/TLS validation
---------------------------
-When activated, this feature is used to enforce the validation of expired, invalid hostname, or untrusted issuer on SSL/TLS certificates.
-
-.. note::
- When testing pre-production environments that have self-signed or invalid certificates, it's best to leave SSL/TLS validation feature deactivated.
 
 
 
@@ -491,16 +503,6 @@ Here are the limits for each type of wait time. The maximum limit for a run is 3
 
 
 
-
-.. _collect-interactive-metrics:
-
-Collect interactive metrics
----------------------------------
-Interactive metrics are on by default. You can turn off interactive metrics in advanced settings to speed up test durations. If you turn off interactive metrics then some metrics might be missing from your test. These are the type of interactive metrics Splunk Synthetic Monitoring collects:
-
-* First CPU idle: Time until the page is minimally interactive and responds to user input.
-* Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increases this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
-* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See :new-page:`https://web.dev/vitals/` in the Google developer documentation to learn more about Lighthouse scoring.
 
 
 
