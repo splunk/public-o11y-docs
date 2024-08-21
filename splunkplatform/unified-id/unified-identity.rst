@@ -21,7 +21,37 @@ When you integrate your Splunk Cloud Platform and Splunk Observability Cloud ins
 Who can access Single Sign On (SSO) and the benefits of Unified Identity?
 ==========================================================================================
  
-All customers who have both Splunk Cloud Platform and Splunk Observability Cloud can access Unified Identity. Users must be on Splunk Cloud Platform version 9.x and higher. The AWS region for your Splunk Cloud Platform instance must be the same as your Splunk Observability Cloud instance realm. Unified Identity is not supported in GovCloud regions.
+All customers who have both Splunk Cloud Platform and Splunk Observability Cloud can access Unified Identity. Users must be on Splunk Cloud Platform version 9.x and higher. The AWS region for your Splunk Cloud Platform instance must map to your Splunk Observability Cloud instance realm as shown in the following table:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 50
+
+   * - :strong:`Splunk Cloud Platform region`
+     - :strong:`Splunk Observability Cloud realm`
+
+   * - US East (N. Virginia)
+     - us0
+
+   * - US West (Oregon)
+     - us1
+
+   * - EU (Ireland)
+     - eu0
+
+   * - EU (Frankfurt)
+     - eu1
+
+   * - EU (London)
+     - eu2
+
+   * - Asia Pacific (Tokyo)
+     - jp0
+
+   * - Asia Pacific (Sydney)
+     - au0
+
+Unified Identity is not supported in GovCloud regions.
 
 
 .. _unified-identity-benefits:
