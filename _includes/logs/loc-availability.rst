@@ -1,3 +1,3 @@
-Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0, and in the GCP region us2. Splunk Log Observer Connect is compatible with Splunk Enterprise versions 9.0.1 and higher, and Splunk Cloud Platform versions 9.0.2209 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, eu1, eu2, jp0, and au0, and in the GCP region us2. Splunk Log Observer Connect is compatible with Splunk Enterprise versions 9.0.1 and higher, and Splunk Cloud Platform versions 9.0.2209 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
 
 You cannot access logs from a GovCloud environment through Log Observer Connect. However, you can use global data links to link from Log Observer Connect to your GovCloud environment where you can access your logs. For more information on global data links, see :ref:`link-metadata-to-content`.
