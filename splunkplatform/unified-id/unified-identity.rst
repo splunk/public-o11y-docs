@@ -7,7 +7,7 @@ Unified Identity: Splunk Cloud Platform and Splunk Observability Cloud
 .. meta::
    :description: This page describes Unified Identity between Splunk Cloud Platform and Splunk Observability Cloud, including how to set it up.
 
-.. note:: Splunk Cloud Platform offers Unified Identity with Splunk Observability Cloud.
+Splunk Cloud Platform offers Unified Identity with Splunk Observability Cloud.
 
 
 What is Unified Identity?
@@ -55,7 +55,7 @@ All customers who have both Splunk Cloud Platform and Splunk Observability Cloud
      - AWS AP Tokyo (ap-northeast-1)
      - 
 
-Unified Identity is not supported in GovCloud regions.
+.. note:: Unified Identity is not supported in GovCloud regions.
 
 
 .. _unified-identity-benefits:
