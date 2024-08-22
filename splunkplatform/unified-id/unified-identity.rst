@@ -55,7 +55,7 @@ All customers who have both Splunk Cloud Platform and Splunk Observability Cloud
      - AWS AP Tokyo (ap-northeast-1)
      - 
 
-.. note:: Unified Identity is not supported in GovCloud regions.
+Unified Identity is not supported in GovCloud regions.
 
 
 .. _unified-identity-benefits:
