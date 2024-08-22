@@ -795,6 +795,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3
+   
+   rum/rum-custom-indexed-tags
+
+.. toctree::
+   :maxdepth:   3
 
    rum/sample-app
 
