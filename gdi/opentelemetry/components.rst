@@ -64,15 +64,21 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`collectd-receiver` (``collectd``)
      - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
      - Metrics
-   * - :ref:`discovery-receiver` (``discovery``)
+   * - :ref:`discovery-receiver` (``discovery``) elasticsearch-receiver
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
+   * - :ref:`elasticsearch-receiver` (``elasticsearch``) 
+     - Queries the Elasticsearch node stats, cluster health and index stats endpoints to scrape metrics from a running Elasticsearch cluster.
+     - Metrics      
    * - :ref:`filelog-receiver` (``filelog``)
      - Tails and parses logs from files.
      - Logs
    * - :ref:`fluentd-receiver` (``fluentforward``)
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
+   * - :ref:`haproxy-receiver` (``haproxy``)
+     - Generates metrics by polling periodically the HAProxy process through a dedicated socket or HTTP URL. 
+     - Metrics
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics

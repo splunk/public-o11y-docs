@@ -1,13 +1,13 @@
 .. _otel-commands:
 
 ********************************************************************************************
-Splunk Distribution of OpenTelemetry Collector commands reference
+Collector for Kubernetes commands reference
 ********************************************************************************************
 
 .. meta::
   :description: The most commonly used commands for the Splunk Distribution of OpenTelemetry Collector.
 
-The following table lists all the commands and their usage in context of the Splunk Distribution of OpenTelemetry Collector. Select a command for a more detailed description and syntax examples.
+The following table lists all the commands and their usage in context of the Splunk Distribution of the OpenTelemetry Collector for Kubernetes. Select a command for a more detailed description and syntax examples.
 
 .. list-table::
   :header-rows: 1

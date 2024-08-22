@@ -6,8 +6,8 @@ Kubernetes scheduler
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Kubernetes scheduler monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``kubernetes-proxy`` monitor type to export Prometheus metrics from the
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
+``kubernetes-scheduler`` monitor type to export Prometheus metrics from the
 kube-scheduler.
 
 This monitor type is available on Kubernetes, Linux, and Windows.

@@ -26,7 +26,6 @@ Download the default :new-page:`values.yaml <https://github.com/signalfx/splunk-
 
 Take a moment to read through the values.yaml file and examine its structure. Notice how each section configures the Collector for different targets, such as Splunk Observability Cloud and Splunk Cloud Platform. The comments in the file contain useful indications as to which values you can use and what's their effect.
 
-
 Configure the Splunk HEC endpoint and token
 ============================================
 
@@ -156,7 +155,10 @@ This completes the tutorial. You created a local Kubernetes cluster, configured 
 
 To learn more about the Collector installation and components, see the following resources:
 
-- :ref:`otel-install-k8s`
-- :ref:`otel-kubernetes-config`
-- :ref:`splunk-hec-exporter`
+* :ref:`kubernetes-helm-architecture`
+* :ref:`otel-install-k8s`
+* :ref:`otel-kubernetes-config`
+* :ref:`kubernetes-config-add` 
+* :ref:`splunk-hec-exporter`
+
 

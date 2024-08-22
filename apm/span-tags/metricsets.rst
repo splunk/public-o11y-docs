@@ -72,7 +72,7 @@ MMS are available for the following APM components:
 
 - service.request
 - spans 
-- inferred.spans
+- inferred.services
 - traces
 - workflows (Workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.)
 

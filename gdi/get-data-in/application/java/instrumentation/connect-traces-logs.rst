@@ -5,9 +5,9 @@ Connect Java trace data with logs for Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
-   :description: The agent from the Splunk Distribution of OpenTelemetry Java automatically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk through the Collector.
+   :description: The Splunk Distribution of OpenTelemetry Java agent automatically captures application logs and sends them to the OpenTelemetry Collector using the OTLP exporter, annotating the log events with trace ID, span ID, and trace flags.
 
-The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk through the OpenTelemetry Collector.
+The Splunk Distribution of OpenTelemetry Java agent automatically captures application logs and sends them to the OpenTelemetry Collector using the OTLP exporter, annotating the log events with trace ID, span ID, and trace flags.
 
 If needed, you can configure your Java logging library to produce logs that include additional attributes provided automatically by the Splunk OTel Java agent, like the version of your service or the deployment environment.
 
@@ -34,13 +34,14 @@ The ``java.util.logging`` library is fully supported in all JDK versions that ar
 Trace metadata in log statements
 ===================================================
 
-The Splunk OTel Java agent automatically add the following attributes for logging libraries by default:
+The Splunk OTel Java agent automatically adds the following mapped diagnostic context (MDC) fields for logging libraries by default:
 
 - Trace information: ``trace_id`` and ``span_id``
 - Trace flags
 
-The Collector sends the annotated logs through the OTLP exporter.
+The default behavior is to send the MDC fields to the Collector but not write them to the application log files. To include this information in the log files, you must set your logging framework output format to include MDC fields. To configure your logging framework, see :ref:`configure-logging-library`.
 
+The Collector sends the annotated logs using the OTLP exporter.
 
 Deactivate logs export
 ==================================
@@ -60,11 +61,13 @@ For example, you can inject resource attributes in your log statements, such as 
 Define the resource attributes
 ---------------------------------------------------
 
-Before injecting attributes, you must make them available through the Mapped Diagnostic Context (MDC) by setting the ``mdc.resource-attributes`` property at runtime. For example:
+Before injecting attributes, you must make them available through the MDC by setting the ``mdc.resource-attributes`` property at runtime. For example:
 
 .. code-block:: shell
 
    -Dotel.instrumentation.common.mdc.resource-attributes=service.name,deployment.environment
+
+.. _configure-logging-library:
 
 Configure your logging library
 --------------------------------------------------

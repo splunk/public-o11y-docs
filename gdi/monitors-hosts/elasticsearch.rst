@@ -4,7 +4,7 @@ Elasticsearch stats
 ===================
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the ElasticSearch monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the Elasticsearch monitor. See benefits, install, configuration, and metrics
 
 The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Elasticsearch monitor type to collect node, cluster, and index level
