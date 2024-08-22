@@ -151,7 +151,7 @@ The following table shows required parameters for this installation:
 Install the eBPF Helm chart
 ----------------------------------------------------------
 
-After you've deployed the Splunk Distribution of OpenTelemetry Collector using the Helm chart, add the OpenTelemetry eBPF Helm chart by running these commands:
+After you've deployed the Splunk Distribution of the OpenTelemetry Collector using the Helm chart, add the OpenTelemetry eBPF Helm chart by running these commands:
 
 .. code-block:: shell
 
