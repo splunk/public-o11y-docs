@@ -9,4 +9,16 @@ MetricSets
 
 MetricSets are metric time series (MTS) you can use to track the performance of specific metrics over time. 
 
+Default tags
+-------------
+
+The following tags are automatically indexed during ingestion by default depending on the metric:
+
+       * url name
+       * operation
+       * HTTP Method and status code
+       * custom event name
+       * browser and version
+       * OS name and version
+       * city, region, country
 

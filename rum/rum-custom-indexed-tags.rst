@@ -28,20 +28,6 @@ Adding your own tags that are meaningful to your organization like custom tags, 
 
 
 
-Default tags
--------------
-
-The following tags are automatically indexed during ingestion by default depending on the metric:
-
-       * url name
-       * operation
-       * HTTP Method and status code
-       * custom event name
-       * browser and version
-       * OS name and version
-       * city, region, country
-
-
 Add custom tags to Tag Spotlight
 ========================================================
 
