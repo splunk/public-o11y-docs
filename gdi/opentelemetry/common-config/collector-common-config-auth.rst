@@ -1,34 +1,31 @@
 .. _collector-common-config-auth:
 
 *********************************************************************************
-Configure authentication
+Configure authentication 
 *********************************************************************************
 
+You can configure two types of authentication within the Collector:
 
+* Server type authentication takes place in incoming HTTP/gRPC requests and is typically used in :ref:`receivers <otel-components-receivers>`. Server type authenticators include:
 
+  * Basic Auth Extension
+  * Bearer Token Extension
+  * OIDC Extension
 
-Authentication configuration
-==========================================
+* Client type authentication takes place in outgoing HTTP/gRPC requests and is typically used in :ref:`exporters <otel-components-exporters>`.  
 
-This module defines necessary interfaces to implement server and client type authenticators:
+  * ASAP Client Authentication Extension
+  * Basic Auth Extension
+  * Bearer Token Extension
+  * OAuth2 Client Extension
+  * Sigv4 Extension
 
-Server type authenticators perform authentication for incoming HTTP/gRPC requests and are typically used in receivers.
-Client type authenticators perform client-side authentication for outgoing HTTP/gRPC requests and are typically used in exporters.
-The currently known authenticators are:
+.. note:: You can add new authenticators by creating a new extension with the appropriate interface, ``configauth.ServerAuthenticator`` or ``configauth.ClientAuthenticator``.
 
-Server Authenticators
+Example
+=============================================================================================
 
-Basic Auth Extension
-Bearer Token Extension
-OIDC Extension
-Client Authenticators
-
-ASAP Client Authentication Extension
-Basic Auth Extension
-Bearer Token Extension
-OAuth2 Client Extension
-Sigv4 Extension
-Examples:
+See the following example covering different auth options: 
 
 .. code-block:: yaml
 
@@ -72,8 +69,5 @@ Examples:
          auth:
             authenticator: oauth2client
 
-Creating an authenticator
-New authenticators can be added by creating a new extension that also implements the appropriate interface (configauth.ServerAuthenticator or configauth.ClientAuthenticator).
 
-Generic authenticators that may be used by a good number of users might be accepted as part of the contrib distribution. If you have an interest in contributing an authenticator, open an issue with your proposal. For other cases, you'll need to include your custom authenticator as part of your custom OpenTelemetry Collector, perhaps being built using the OpenTelemetry Collector Builder.
 
