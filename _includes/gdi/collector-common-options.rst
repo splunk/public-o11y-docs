@@ -2,3 +2,4 @@ The Splunk Distribution of the OpenTelemetry Collector has the following configu
 
 * :ref:`collector-common-config-auth`
 * :ref:`collector-common-config-grcp`
+* :ref:`collector-common-config-net`

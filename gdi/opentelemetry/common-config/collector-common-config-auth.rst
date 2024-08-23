@@ -6,18 +6,18 @@ Configure authentication
 
 You can configure two types of authentication within the Collector:
 
-* Server type authentication takes place in incoming HTTP/gRPC requests and is typically used in :ref:`receivers <otel-components-receivers>`. Server type authenticators include:
+* Server type authentication takes place in incoming HTTP/gRPC requests and is typically used by :ref:`receivers <otel-components-receivers>`. Server type authenticators include:
 
-  * Basic Auth Extension
+  * :ref:`Basic Auth Extension <basic-auth-extension>`
   * Bearer Token Extension
   * OIDC Extension
 
-* Client type authentication takes place in outgoing HTTP/gRPC requests and is typically used in :ref:`exporters <otel-components-exporters>`.  
+* Client type authentication takes place in outgoing HTTP/gRPC requests and is typically used by :ref:`exporters <otel-components-exporters>`. Client type authenticators include:  
 
   * ASAP Client Authentication Extension
-  * Basic Auth Extension
+  * :ref:`Basic Auth Extension <basic-auth-extension>`
   * Bearer Token Extension
-  * OAuth2 Client Extension
+  * :ref:`oauth2client-extension`
   * Sigv4 Extension
 
 .. note:: You can add new authenticators by creating a new extension with the appropriate interface, ``configauth.ServerAuthenticator`` or ``configauth.ClientAuthenticator``.
