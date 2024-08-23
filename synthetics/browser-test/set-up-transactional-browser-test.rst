@@ -46,7 +46,7 @@ A step doesn't generate its own dedicated metrics, but it counts toward the metr
 
 Types of steps you can include in your Browser Tests
 -----------------------------------------------------------
-The following table describes the types of steps you can include: 
+The following table describes the types of steps you can include for actions: 
 
 .. list-table::
    :header-rows: 1
@@ -58,14 +58,14 @@ The following table describes the types of steps you can include:
    * - Accept alert
      - Accept an alert that appears on the page.
 
-   * - Dismiss alert
-     - Dismiss an alert that appears on the page.
-
    * - Clear
      - Clear an element you identify under :guilabel:`Selector`. Optionally, wait for navigation. 
 
    * - Click
      - Click on an element you identify under :guilabel:`Selector`. Optionally, wait for navigation. 
+
+   * - Dismiss alert
+     - Dismiss an alert that appears on the page.
 
    * - Fill in field
      - Fill a field you identify under :guilabel:`Selector` with a value you provide under :guilabel:`Value`. Optionally, wait for navigation. For security and reusability, use a built-in, custom, or global variable to provide the value. See :ref:`global-variables` to learn more.
@@ -88,26 +88,43 @@ The following table describes the types of steps you can include:
    * - Switch to main
      - Switch focus back to the main frame of the webpage.
 
-   * - Wait for text present
-     - Wait until the text identified in the key-value pair under :guilabel:`Value` appears on the webpage.
+   * - Wait
+     - Wait a certain number of minutes. See, :ref:`configurable-wait-times`.
 
-   * - Wait for text present
-     - Wait until the text identified in the key-value pair under :guilabel:`Value` appears on the webpage.
+ 
 
-   * - Wait for text not present
-     - Wait until the text identified in the key-value pair under :guilabel:`Value` is not present on the webpage.
+The following table describes the types of steps you can include for Assertions: 
 
-   * - Wait for element present
-     - Wait until the element you identify under :guilabel:`Selector` is present on the webpage.
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
 
-   * - Wait for element not present
-     - Wait until the element you identify under :guilabel:`Selector` is not present on the webpage.
+   * - :strong:`Type of step`
+     - :strong:`Description`
 
-   * - Wait for element visible
-     - Wait until the element you identify under :guilabel:`Selector` is visible on the webpage.
+   * - Assert text present 
+     - 
 
-   * - Wait for element not visible
-     - Wait until the element you identify under :guilabel:`Selector` is not visible on the webpage.
+
+   * - Assert text not present 
+     - 
+
+   * - Assert element present 
+     -
+
+   * - Assert element not present 
+     - 
+
+
+   * - Assert element visible 
+     - 
+
+
+   * - Assert element not visible 
+     -
+
+   * - Assert text not present 
+     - 
 
 
 
