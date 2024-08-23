@@ -1,17 +1,17 @@
 .. _collector-common-config-grcp:
 
 *********************************************************************************
-Configure gRCP settings
+Configure gRCP 
 *********************************************************************************
 
 gRPC exposes a variety of settings you can adjust within individual receivers or exporters of the Collector. For more information, refer to :ref:`Golang's gRCP documentation <https://pkg.go.dev/google.golang.org/grpc>`.
 
+.. note:: To configure TLS, see :ref:`collector-collector-common-config-tls`.
+
 Client configuration
 =============================================================================================
 
-Exporters leverage client configuration.
-
-Note that client configuration supports TLS configuration, the configuration parameters are also defined under tls like server configuration. For more information, see configtls README.
+:ref:`Exporters <otel-components-exporters>` leverage client configuration.
 
 balancer_name: Default before v0.103.0 is pick_first, default for v0.103.0 is round_robin. See issue. To restore the previous behavior, set balancer_name to pick_first.
 compression: Compression type to use among gzip, snappy, zstd, and none.
@@ -29,18 +29,20 @@ Please note that per_rpc_auth which allows the credentials to send for every RPC
 
 Example:
 
-exporters:
-  otlp:
-    endpoint: otelcol2:55690
-    auth:
-      authenticator: some-authenticator-extension
-    tls:
-      ca_file: ca.pem
-      cert_file: cert.pem
-      key_file: key.pem
-    headers:
-      test1: "value1"
-      "test 2": "value 2"
+.. code-block:: yaml
+
+   exporters:
+      otlp:
+         endpoint: otelcol2:55690
+         auth:
+            authenticator: some-authenticator-extension
+         tls:
+            ca_file: ca.pem
+            cert_file: cert.pem
+            key_file: key.pem
+         headers:
+            test1: "value1"
+            "test 2": "value 2"
 
 Compression Comparison
 configgrpc_benchmark_test.go contains benchmarks comparing the supported compression algorithms. It performs compression using gzip, zstd, and snappy compression on small, medium, and large sized log, trace, and metric payloads. Each test case outputs the uncompressed payload size, the compressed payload size, and the average nanoseconds spent on compression.

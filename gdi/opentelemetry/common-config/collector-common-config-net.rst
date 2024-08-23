@@ -31,7 +31,6 @@ You can configure the following network settings:
 
 * ``dialer_timeout``. No timeout by default. The maximum amount of time a dial waits for a connect to complete. 
 
-
 .. note:: TCP receivers only require the ``endpoint`` configuration setting.
 
 
