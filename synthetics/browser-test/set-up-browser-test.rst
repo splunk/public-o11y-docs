@@ -378,11 +378,11 @@ There are many reasons why you might want to configure advanced settings for you
 
 Collect interactive metrics
 ---------------------------------
-Interactive metrics are on by default. You can turn off interactive metrics in advanced settings to speed up test durations. If you turn off interactive metrics then some metrics might be missing from your test. These are the type of interactive metrics Splunk Synthetic Monitoring collects:
+Interactive metrics are collected by default for each page in the test flow, but this can result in longer run durations depending on how long it takes for the page to become fully interactive. You can turn off interactive metrics in advanced settings to speed up run durations and see results faster. If you turn off interactive metrics then the following metrics might be missing from your test:
 
 * First CPU idle: Time until the page is minimally interactive and responds to user input.
-* Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increases this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
-* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See :new-page:`https://web.dev/vitals/` in the Google developer documentation to learn more about Lighthouse scoring.
+* Time to interactive: This measures the time until the page responds to user input quickly. It is used to identify when the page is actually usable, not just when the page load looks complete.
+* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v10 of the Lighthouse desktop scoring algorithm. See :new-page:`https://developer.chrome.com/docs/lighthouse/performance/performance-scoring#lighthouse_10` in the Google developer documentation to learn more about Lighthouse scoring.
 
 
 .. _auto-retry:
