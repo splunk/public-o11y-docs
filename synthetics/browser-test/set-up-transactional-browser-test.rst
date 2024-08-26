@@ -92,39 +92,7 @@ The following table describes the types of steps you can include for actions:
      - Wait a certain number of minutes. See, :ref:`configurable-wait-times`.
 
  
-
-The following table describes the types of steps you can include for Assertions: 
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30 70
-
-   * - :strong:`Type of step`
-     - :strong:`Description`
-
-   * - Assert text present 
-     - 
-
-
-   * - Assert text not present 
-     - 
-
-   * - Assert element present 
-     -
-
-   * - Assert element not present 
-     - 
-
-
-   * - Assert element visible 
-     - 
-
-
-   * - Assert element not visible 
-     -
-
-   * - Assert text not present 
-     - 
+ Assertions are checks to see what state an object exists in, for example if text is present or an element is visible.  
 
 
 
