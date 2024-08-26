@@ -449,7 +449,7 @@ Host overrides
 ---------------------------------------
 Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
 
-You can also indicate whether to retain the original HOST header by enabling "Keep host headers". If enabled, the original request's headers remain intact (recommended). If disabled, a change in the HOST header to the new host might occur, potentiallly leading to an internal direct (307). It is enabled by default.
+You can also indicate whether to retain the original HOST header by activating :strong:`Keep host headers`. If activated, the original request's headers remain intact (recommended). If deactivated, a change in the HOST header to the new host might occur, potentially leading to an internal direct (307). It is activated by default.
 
 .. _browser-wait-times:
 
