@@ -16,7 +16,7 @@ The following tags are automatically indexed during ingestion by default dependi
 
        * url name
        * operation
-       * HTTP Method and status code
+       * HTTP method and status code
        * custom event name
        * browser and version
        * OS name and version
