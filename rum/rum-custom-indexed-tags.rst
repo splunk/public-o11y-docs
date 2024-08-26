@@ -50,7 +50,7 @@ You need to be an admin to do this task. Follow these steps to add custom tags t
             :width: 20%
             :alt: Settings panel for adding metric sets. 
 
-   * From the left-nav, select :strong:`Settings`, then :strong:`MetricSets` then the :strong:`RUM` tab. 
+   * From the left navigation menu, select :strong:`Settings`, then :strong:`MetricSets` then the :strong:`RUM` tab. 
 
 
       .. image:: /_images/rum/metric-set-left-nav.png
