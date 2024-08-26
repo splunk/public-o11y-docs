@@ -422,21 +422,23 @@ More details on Chrome authentication are available :new-page:`here list <https:
 
 .. Custom content
 
+.. _browser-headers:
+
+Custom headers
+--------------------------
+
+Specify custom headers to send with each request. For example, you can add a header in your request to filter out data from back-end analytics. To add a custom header, a name and value are required. You may optionally provide a domain to scope the header to. If a domain is specified, only requests sent to that domain will include the header. Otherwise the header will be included in requests to all domains.
+
+You can also use headers to change the user agent. The default user agent is the given one for the selected device, which updates whenever the Chrome version changes for synthetic runners. To customize the user agent header for all domains, turn off the "Use device default" toggle next to the user agent field and then enter the new value. To change the user agent for specific domains, add a custom header and provide the domain you wish to apply that user agent to. If a domain is not specified, the top-level user agent setting takes precedence.
+
+Custom headers can be used to set cookies, but we recommend using the Cookies settings instead outlined in the section below.
+
 .. _browser-cookies:
 
 Cookies
 -------------
 
 Set cookies in the browser before the test starts. For example, to circumvent a popup modal from randomly appearing and interfering with your test, you can set cookies. Any cookies that are set will apply to the domain of the starting URL of the check. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain.
-
-.. _browser-headers:
-
-Custom headers
---------------------------
-
-Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies.
-
-The default user agent is the given one for the selected device, which updates whenever the Chrome version changes for synthetic runners. You can customize the user agent header for specific domains by adding a custom header. If a domain is not specified, the top-level user agent setting takes precedence.
 
 
 .. _browser-host-overrides:
