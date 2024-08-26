@@ -14,7 +14,7 @@ Default tags
 
 The following tags are automatically indexed during ingestion by default depending on the metric:
 
-       * url name
+       * URL name
        * operation
        * HTTP method and status code
        * custom event name
