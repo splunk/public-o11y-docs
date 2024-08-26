@@ -214,7 +214,7 @@ The following table shows customizable arguments for this detector. To learn how
      - Default value
    
    * - Trigger threshold
-     - Specifies trigger threshold in % for CPU utilization
+     - Specifies trigger threshold in % for disk utilization
      - ``80%``
 
    * - Trigger sensitivity
