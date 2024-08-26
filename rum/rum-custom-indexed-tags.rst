@@ -67,6 +67,6 @@ If the cardinality analysis fails, then you might have exceeded your entitlement
 
 Avoid high cardinality in MetricSets
 --------------------------------------
-Choose tags with a reasonable amount of cardinality. Tags like userID, or sessionID are inefficient choices because there could be a huge number of users in your organization and visitors to your application, so creating a troubleshooting MetricSet for each userID is not optimal for performance. For high cardinality ID based tags full-fidelity session search is a better option, see :ref:`rum-tag-search`.
+Choose tags with a reasonable amount of cardinality. Tags like userID, or sessionID have high cardinality because there is a unique value for users in your organization and visitors to your application. Creating a troubleshooting MetricSet for each userID is not optimal for performance. For high-cardinality, ID-based tags, full-fidelity session search is a better option, see :ref:`rum-tag-search`.
 
 High cardinality MetricSets can also affect your org limits :ref:`rum-limits`. Limits are determined by your subscription: enterprise and standard. For more information on each type of subscription, see :new-page:`Splunk RUM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-rum>`.
