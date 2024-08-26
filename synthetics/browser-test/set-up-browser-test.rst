@@ -438,7 +438,9 @@ Custom headers can be used to set cookies, but we recommend using the Cookies se
 Cookies
 -------------
 
-Set cookies in the browser before the test starts. For example, to circumvent a popup modal from randomly appearing and interfering with your test, you can set cookies. Any cookies that are set will apply to the domain of the starting URL of the check. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain.
+Set cookies in the browser before the test starts. For example, your site may respond to a cookie to circumvent a popup modal from randomly appearing and interfering with your test flow.
+
+To set a cookie, a key and value must be provided. A domain and path may optionally be provided to only apply the cookie to requests to the given domain and/or path. By default, the cookie will aply to the to the domain of the starting URL of the check and all paths on that domain. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain.
 
 
 .. _browser-host-overrides:
