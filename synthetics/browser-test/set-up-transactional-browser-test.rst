@@ -46,6 +46,7 @@ A step doesn't generate its own dedicated metrics, but it counts toward the metr
 
 Types of steps you can include in your Browser Tests
 -----------------------------------------------------------
+Assertions are checks to see what state an object exists in, for example if text is present or an element is visible.  
 The following table describes the types of steps you can include for actions: 
 
 .. list-table::
@@ -91,8 +92,6 @@ The following table describes the types of steps you can include for actions:
    * - Wait
      - Wait a certain number of minutes. See, :ref:`configurable-wait-times`.
 
- 
- Assertions are checks to see what state an object exists in, for example if text is present or an element is visible.  
 
 
 
