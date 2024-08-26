@@ -6,18 +6,23 @@ Configure gRCP
 
 gRPC exposes a variety of settings you can adjust within individual receivers or exporters of the Collector. For more information, refer to :ref:`Golang's gRCP documentation <https://pkg.go.dev/google.golang.org/grpc>`.
 
-.. note:: To configure TLS, see :ref:`collector-collector-common-config-tls`.
-
-Client configuration
+Configure clients 
 =============================================================================================
 
-:ref:`Exporters <otel-components-exporters>` leverage client configuration.
+To configure clients in :ref:`exporters <otel-components-exporters>` use this settings:
 
-balancer_name: Default before v0.103.0 is pick_first, default for v0.103.0 is round_robin. See issue. To restore the previous behavior, set balancer_name to pick_first.
-compression: Compression type to use among gzip, snappy, zstd, and none.
-endpoint: Valid value syntax available here
-tls
-headers: name/value pairs added to the request
+* ``balancer_name``. Defaults: ``pick_first`` before version 0.103.0, ``round_robin`` for v0.103.0 or higher. 
+
+  * Learn more at gRCP's :new-page:`Load Balancing README https://github.com/grpc/grpc-go/blob/master/examples/features/load_balancing/README.md`. 
+
+* ``compression``. Compression type. Vali values are ``gzip``, ``snappy``, ``zstd``, and ``none``.
+
+* ``endpoint``.: Valid value syntax available here
+
+* ``tls``. See :ref:`collector-collector-common-config-tls`.
+
+* ``headers``: name/value pairs added to the request
+
 keepalive
 permit_without_stream
 time
@@ -27,7 +32,7 @@ write_buffer_size
 auth
 Please note that per_rpc_auth which allows the credentials to send for every RPC is now moved to become an extension. Note that this feature isn't about sending the headers only during the initial connection as an authorization header under the headers would do: this is sent for every RPC performed during an established connection.
 
-Example:
+For example:
 
 .. code-block:: yaml
 
@@ -84,7 +89,11 @@ gzip is the only required compression algorithm required for OTLP servers, and i
 Server configuration
 =============================================================================================
 
-:ref:`Collector receivers <otel-components-receivers>` leverage server configuration using this settings:
+.. note:: 
+   
+   To configure transport, see :ref:`collector-common-config-net`.
+
+To configure servers in :ref:`collector receivers <otel-components-receivers>` use these settings:
 
 * keepalive
     * enforcement_policy
@@ -103,5 +112,5 @@ Server configuration
 * write_buffer_size
 * auth
 
-.. note:: To configure transport, see :ref:`collector-common-config-net`.
+
 
