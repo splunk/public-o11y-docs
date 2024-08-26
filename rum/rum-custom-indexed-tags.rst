@@ -10,7 +10,7 @@ Filter and troubleshoot with custom tags
    :description: words
 
 
-Create custom tags to improve filtering and troubleshooting capabilities in Tag Spotlight. First, create a custom span tag, then index it by adding a MetricSet to the span tag. Adding a MetricSet to a span tag gives you all of the features associated with indexed span tags.
+Create custom tags to improve filtering and troubleshooting capabilities in Tag Spotlight in Splunk RUM. First, create a custom span tag, then index it by adding a MetricSet to the span tag. Adding a MetricSet to a span tag gives you all of the features associated with indexed span tags.
 
 Key concepts
 ==================
