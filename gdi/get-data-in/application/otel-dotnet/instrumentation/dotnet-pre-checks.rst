@@ -73,6 +73,8 @@ Make sure that your target application uses supported libraries. Complete the fo
 Verify networking requirements
 ==============================
 
+Verify that your platform is configured according to the following networking requirements:
+
 .. list-table::
     :widths: 25 75
     :width: 100
