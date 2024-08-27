@@ -32,13 +32,13 @@ The following applies:
 
 * Data from all receivers is pushed to the first processor, which performs processing on it and then pushes it to the next processor and so on until the last processor in the pipeline uses a data fan-out connector to fan out (distribute) the data to multiple exporters.
 
-  * You can configure processors to "mutate" (duplicate) data before they pass it on to the next processor.
+  * Note that some types of processor "mutate" (duplicate) data before they pass it on to the next processor.
 
 * If a pipeline uses more than one exporter, each exporter receives a copy of each data element from the last processor.
   
   * In case of failure, the rest of exporters continue to work independently. 
 
-  * You can configure exporters to "mutate" (duplicate) the data they receive. Usually this option is not enabled. 
+  * You can configure exporters to "mutate" (duplicate) the data they receive. In the Splunk OTel Collector this option is not enabled. 
 
 Connect pipelines with connectors
 --------------------------------------------------------------------
