@@ -12,6 +12,8 @@ Before installing the .NET automatic instrumentation, complete the following pre
 Verify platform compatibility
 =============================
 
+Make sure that your platform is compatible with the OpenTelemetry Collector. See the following table for action items corresponding to your platform:
+
 .. list-table::
     :widths: 25 75
     :width: 100
@@ -34,6 +36,8 @@ Verify that you are using a supported version of .NET. See :ref:`dotnet-otel-ver
 Verify automatic discovery compatibility
 ========================================
 
+Make sure that your platform is compatible with automatic discovery. See the following table for details:
+
 .. list-table::
     :widths: 25 75
     :width: 100
@@ -51,12 +55,16 @@ Verify automatic discovery compatibility
 Review core dependencies
 ========================
 
+Make sure that your application's dependencies are compatible with the .NET instrumentation.
+
 #. Verify whether your target applications have the same dependencies as the automatic instrumentation. See :new-page:`OpenTelemetry.AutoInstrumentation <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation/OpenTelemetry.AutoInstrumentation.csproj>` and :new-page:`OpenTelemetry.AutoInstrumentation.AdditionalDeps <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation.AdditionalDeps/Directory.Build.props>`. If there are conflicts, consider installing using the NuGet packages. Otherwise, you must resolve all the dependencies before manually installing the instrumentation.
 
 #. Verify whether your target applications have the same dependencies as the NuGet packages. See the :new-page:`NuGet dependencies <https://www.nuget.org/packages/OpenTelemetry.AutoInstrumentation/#dependencies-body-tab>` in the NuGet documentation. If there are conflicts, you must resolve them before installing the instrumentation using the NuGet packages.
 
 Review supported libraries
 ==========================
+
+Make sure that your target application uses supported libraries. Complete the following steps:
 
 #. Review the list of automatically instrumented libraries supported by the Splunk distribution of the OpenTelemetry .NET instrumentation. See :ref:`supported-dotnet-otel-libraries`.
 

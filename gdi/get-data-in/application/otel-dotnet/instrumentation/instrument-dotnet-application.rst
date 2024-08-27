@@ -28,13 +28,13 @@ The following scenarios are ideal for using the NuGet packages:
 * You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
 * You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
 
-However, you shouldn't use the NuGet packages if any of the following apply to your environment:
+Don't use the NuGet packages if any of the following apply to your environment:
 
 * You're unable to add the NuGet packages to the application project. This can be the case when instrumenting a third-party application.
 * You can't accommodate the increased disk use required by installing the NuGet packages separately for each instrumented application running on the same machine. 
 * You need to instrument a legacy application that can't be migrated to the SDK-style project. To verify whether your project is SDK style, see `Identify the project format <https://learn.microsoft.com/en-us/nuget/resources/check-project-format>`__ in the NuGet documentation.
 
-To install the distribution manually, see :ref:`otel-dotnet-manual-install`.
+If your scenario isn't compatible with NuGet package installation, install the distribution manually. See :ref:`otel-dotnet-manual-install`.
 
 .. note::
 
@@ -78,7 +78,7 @@ The instrumentation procedure in the previous section produces launch scripts in
 
 #. Identify the launch script in your build output.
 
-#. Optional. If you want to verify that the instrumentation is working by viewing the telemetry data output in your console, set the following environment variables to ``true``:
+#. (Optional) If you want to verify that the instrumentation is working by viewing the telemetry data output in your console, set the following environment variables to ``true``:
 
    * ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
    * ``OTEL_DOTNET_AUTO_METRICS_CONSOLE_EXPORTER_ENABLED``
@@ -112,7 +112,7 @@ The following scenarios are ideal for manually installing the .NET instrumentati
 * You can't accommodate the increased disk use required by installing the NuGet packages separately for each instrumented application running on the same machine. 
 * You need to instrument a legacy application that can't be migrated to the SDK-style project. To verify whether your project is SDK style, see `Identify the project format <https://learn.microsoft.com/en-us/nuget/resources/check-project-format>`__ in the NuGet documentation.
 
-However, you should consider using the NuGet packages if any of the following apply to your environment:
+Consider using the NuGet packages if any of the following apply to your environment:
 
 * You control the application build but not the machine or container where the application is running.
 * You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
