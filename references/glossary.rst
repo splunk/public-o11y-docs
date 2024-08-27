@@ -23,6 +23,12 @@ A
    analytics
       Analytics are the mathematical functions that can be applied to a collection of data points. For a full list of analytics that can be applied in Splunk Infrastructure Monitoring, see the :ref:`analytics-ref`.
 
+   automatic discovery
+      Automatic discovery identifies the applications running in your environment and sends telemetry data from those applications to Splunk Application Performance Monitoring (APM). Automatic discovery is a feature of the Splunk distribution of the OpenTelemetry Collector and supports applications written in Java, Node.JS, and .NET. For more information, see :Ref:`discovery_mode`.
+
+   automatic instrumentation
+      Automatic instrumentation enables the collection of telemetry data without requiring the end user to modify application code. Automatic instrumentation is available for applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP and automatically collects telemetry data for code written using supported libraries in each language. For more information, see :ref:`get-started-application`.
+
 C
 ==
 
