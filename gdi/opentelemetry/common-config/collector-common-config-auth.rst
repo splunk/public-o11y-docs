@@ -15,12 +15,12 @@ You can configure two types of authentication for the Collector:
 * Client type authentication takes place in outgoing HTTP/gRPC requests and is typically used by :ref:`exporters <otel-components-exporters>`. Client type authenticators include:  
 
   * ASAP Client Authentication extension
-  * :ref:`Basic Auth Extension <basic-auth-extension>`
+  * :ref:`Basic Auth extension <basic-auth-extension>`
   * Bearer Token extension
   * :ref:`oauth2client-extension`
   * Sigv4 extension
 
-.. note:: You can add new authenticators by creating a new extension with the appropriate interface, ``configauth.ServerAuthenticator`` or ``configauth.ClientAuthenticator``.
+.. note:: For more details see :new-page:`Auth Configuration Settings https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth` in OTel's GitHub repo.
 
 Example
 =============================================================================================
