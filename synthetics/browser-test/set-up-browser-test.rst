@@ -472,9 +472,11 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
 .. image:: /_images/synthetics/wait-times-example.png
    :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then log in.
 
+.. _configurable-wait-times:
 
-Limits and defaults for configurable wait times
+Limits and defaults for configurable wait times 
 ------------------------------------------------------
+
 Here are the limits for each type of wait time. The maximum limit for a run is 30 minutes, after which it times out.
 
 
