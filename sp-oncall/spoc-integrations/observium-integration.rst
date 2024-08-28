@@ -37,6 +37,8 @@ Turn on the integration, then copy the service API endpoint to your clipboard.
 .. image:: /_images/spoc/Integrations-victorops-4.png
    :alt: API endpoint URL for Observium
 
+.. note:: The variable name at the end of the API service endpoint might vary. For example, ``$incident_alert`` instead of ``$routing_key``.
+
 Observium configuration
 =======================================
 
