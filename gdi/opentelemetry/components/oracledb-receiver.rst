@@ -43,6 +43,8 @@ following permissions to the database user:
 -  ``GRANT SELECT ON V_$RESOURCE_LIMIT TO <username>;``
 -  ``GRANT SELECT ON DBA_TABLESPACES TO <username>;``
 -  ``GRANT SELECT ON DBA_DATA_FILES TO <username>;``
+-  ``GRANT SELECT ON DBA_TABLESPACE_USAGE_METRICS TO <username>;``
+
 
 Sample configurations
 ----------------------

@@ -11,6 +11,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    :hidden:
 
    Requirements <dotnet-requirements>
+   Pre-checks <instrumentation/dotnet-pre-checks>
    Instrument your .NET application <instrumentation/instrument-dotnet-application>
    Instrument Azure Web Apps <instrumentation/azure-webapps>
    Instrument Azure Web Jobs <instrumentation/azure-webjobs>
