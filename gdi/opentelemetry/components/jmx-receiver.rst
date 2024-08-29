@@ -9,12 +9,14 @@ JMX receiver
 
 The JMX receiver works in conjunction with the :new-page:`OpenTelemetry JMX Metric Gatherer <https://github.com/open-telemetry/opentelemetry-java-contrib/blob/main/jmx-metrics/README.md>` to report metrics from an MBean server. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the Apache Web Server receiver yet, but are planned for a future release.
+
 This receiver launches a child JRE process which runs the JMX Metric Gatherer configured with your specified JMX connection information and target built-in OTel-helper Groovy script. It then reports metrics to an implicitly created OTLP receiver. 
 
 In order to use the JMX receiver:
 
-* Download the most recent release of the JMX Metric Gatherer JAR and configure the receiver with its path. 
-* JRE must be available on your system.
+* Download the most recent release of the JMX Metric Gatherer JAR and configure the receiver with its path 
+* JRE must be available on your system
 
 Get started
 ======================
