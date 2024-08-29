@@ -214,7 +214,7 @@ After you have created an alert message, continue to the next tab to specify whe
 Display custom properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you are creating a detector using the Splunk Observability Cloud API, you can convert custom properties of the detector to dimensions using the ``promote()`` method.
+If you are creating a detector using the Splunk Observability Cloud API, you can convert custom properties to dimensions using the ``promote()`` method.
 
 By converting a custom property to a dimension, you can display it in an alert message. To learn more, see the :new-page:`Developer documentation for the promote method <https://dev.splunk.com/observability/docs/signalflow/methods/promote_stream_method/>`.
 
