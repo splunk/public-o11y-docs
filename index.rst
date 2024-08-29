@@ -367,7 +367,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
+   Send alert notifications to other services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
    :maxdepth:   3
