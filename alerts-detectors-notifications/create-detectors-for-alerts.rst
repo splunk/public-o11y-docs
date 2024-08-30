@@ -218,7 +218,7 @@ If you are creating a detector using the Splunk Observability Cloud API, you can
 
 By converting a custom property to a dimension, you can display it in an alert message. To learn more, see the :new-page:`Developer documentation for the promote method <https://dev.splunk.com/observability/docs/signalflow/methods/promote_stream_method/>`.
 
-For more information about ``/detectors`` API, see :new-page:`Detectors <https://dev.splunk.com/observability/reference/api/detectors/latest>` Splunk Observability Cloud API reference.
+For more information about the ``/detector`` endpoints, see :new-page:`Detectors <https://dev.splunk.com/observability/reference/api/detectors/latest>` Splunk Observability Cloud API reference.
 
 .. _alert-recipients:
 
