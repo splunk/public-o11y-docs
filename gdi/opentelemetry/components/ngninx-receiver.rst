@@ -7,7 +7,7 @@ NGINX receiver
 .. meta::
       :description: The NGINX receiver fetches stats from a NGINX instance using the ``ngx_http_stub_status_module`` module's status endpoint.
 
-The NGINX receiver fetches stats from a NGINX instance using the ``ngx_http_stub_status_module`` module's status endpoint. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information. 
+The NGINX receiver fetches stats from a NGINX instance using the ``ngx_http_stub_status_module`` module's ``status`` endpoint. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information. 
 
 You need to configure NGINX to expose status information. To learn how, see the :new-page:`HTTP status module config guide <https://nginx.org/en/docs/http/ngx_http_stub_status_module.html>` in the NGINX documentation.
 
