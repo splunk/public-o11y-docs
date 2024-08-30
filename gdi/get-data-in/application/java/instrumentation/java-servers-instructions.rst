@@ -139,7 +139,7 @@ Add the path to the JVM agent to your Tomcat or TomEE startup script:
 
             set CATALINA_OPTS=%CATALINA_OPTS% -javaagent:"<Drive>:\path\to\splunk-otel-javaagent.jar"
 
-      .. note:: When running Tomcat as a Windows service, run the ``tomcat<version>w.exe`` utility as Administrator, and then add the ``-javaagent`` argument to the list of Java Options.  
+      .. note:: The setenv.bat script is not used when running Tomcat as a Windows service.  Instead, run the ``tomcat<version>w.exe`` utility as Administrator, and then add the ``-javaagent`` argument to the list of Java Options.  
 
 .. _weblogic-javaagent:
 
