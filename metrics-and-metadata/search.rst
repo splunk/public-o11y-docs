@@ -56,7 +56,7 @@ How to use observability search
 
 You can either search a specific term, or define what type of object you're looking for by using one of the supported prefixes to narrow the search to specific result types. This allows you to search for a specific object, if you know the type and name. Or, you can search by prefix type if you're unsure of the name. 
 
-#. Navigate to the top right-hand corner and locate the magnifying glass icon. You can also search using the keyboard shortcut :strong:`Ctrl+Shift+A`.
+#. Navigate to the top right-hand corner and locate the magnifying glass icon. You can also search using the keyboard shortcut Ctrl+Shift+A.
 #. Select the search icon (magnifying glass) to launch search. From there, enter the service name you want to search. The results include APM services, dashboards and more. Search displays results by category. 
 
     .. image:: /_images/images-ui/search-apm.png
