@@ -53,13 +53,9 @@ The following settings are available:
 
 * ``endpoint``. :strong:`Required`. ``http://localhost:80/status`` by default. The URL of the NGINX status endpoint.
 
-* ``collection_interval``. ``10s`` by default. This receiver runs on an interval. Each time it runs, it queries NGINX, creates metrics, and sends them to the next consumer. This option sets the duration between runs.
+.. include:: /_includes/gdi/collector-settings-collectioninterval.rst
 
-  * Must be a string readable by Golang's ``ParseDuration`` function, for example ``1h30m``. 
-  
-  * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
-
-* ``initial_delay``. ``1s`` by default. Defines how long this receiver waits before starting.
+.. include:: /_includes/gdi/collector-settings-initialdelay.rst
 
 Settings
 ======================
