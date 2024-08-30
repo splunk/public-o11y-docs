@@ -103,7 +103,7 @@ This example defines a pipeline for ``traces``, with three receivers, two proces
 Metadata transformations
 ============================================
 
-Metadata refers to the name/value pair added to telemetry data. Learn more at :ref:`otel-tags`.
+Metadata refers to the name/value pair added to telemetry data. In the OpenTelemetry data model, tags are provided as attributes. After Splunk Observability Cloud ingests traces with attributes, these are available as tags. Alternatively, you could use attributes to create Monitoring Metric Sets, which can be used to drive alerting. Learn more at :ref:`otel-tags`.
 
 .. _pipelines-next:
 
