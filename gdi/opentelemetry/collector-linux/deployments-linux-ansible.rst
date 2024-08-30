@@ -155,6 +155,18 @@ The following table shows the variables that you can configure for this Ansible 
    * - ``splunk_otel_auto_instrumentation_enable_metrics``
      - Activates or deactivates JVM metrics. 
      - ``false``
+   * - ``splunk_otel_auto_instrumentation_otlp_endpoint``
+     - Sets the OTLP endpoint for collected metrics, traces, and logs by all activated SDKs. Only applicable if ``splunk_otel_auto_instrumentation_version`` is ``latest`` or ``0.87.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
+   * - ``splunk_otel_auto_instrumentation_otlp_protocol_protocol``
+     - Sets the OTLP endpoint protocol for collected metrics, traces, and logs by all activated SDKs, for example ``grpc`` or ``http/protobuf``. Only applicable if ``splunk_otel_auto_instrumentation_version`` is ``latest`` or ``0.104.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
+   * - ``splunk_otel_auto_instrumentation_metrics_exporter``
+     - Comma-separated list of exporters for collected metrics by all activated SDKs, for example ``otlp,prometheus``. Set the value to ``none`` to disable collection and export of metrics. Only applicable if ``splunk_otel_auto_instrumentation_version`` is ``latest`` or ``0.104.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
+   * - ``splunk_otel_auto_instrumentation_logs_exporter``
+     - Sets the exporter for collected logs by all activated SDKs, for example ``otlp``. Set the value to ``none`` to disable collection and export of logs. Only applicable if ``splunk_otel_auto_instrumentation_version`` is ``latest`` or ``0.108.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
 
 Next steps
 ==================================
