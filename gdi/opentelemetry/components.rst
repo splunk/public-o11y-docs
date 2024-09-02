@@ -124,7 +124,7 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`mysql-receiver` (``mysql``)
      - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
      - Metrics      
-   * - :ref:`ngninx-receiver` (``ngninx``)
+   * - :ref:`nginx-receiver` (``nginx``)
      - Fetches stats from a NGINX instance using the ``ngx_http_stub_status_module`` module's status endpoint.
      - Metrics    
    * - :ref:`oracledb` (``oracledb``) |br|
