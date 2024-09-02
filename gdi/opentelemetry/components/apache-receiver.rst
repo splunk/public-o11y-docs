@@ -62,13 +62,9 @@ The following settings are required:
 
 The following settings are optional:
 
-* ``collection_interval``. ``10s`` by default. Sets the interval this receiver collects metrics on. 
-  
-  * This value must be a string readable by Golang's ``time.ParseDuration``. Learn more at Go's official documentation :new-page:`ParseDuration function <https://pkg.go.dev/time#ParseDuration>`.
-  
-  * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
+.. include:: /_includes/gdi/collector-settings-collectioninterval.rst
 
-* ``initial_delay``. ``1s`` by default. Determines how long this receiver waits before collecting metrics for the first time.
+.. include:: /_includes/gdi/collector-settings-initialdelay.rst
 
 Settings
 ======================

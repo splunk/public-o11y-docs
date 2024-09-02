@@ -11,6 +11,8 @@ The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent rece
 
 This integration is available on Linux and Windows.
 
+.. note:: To monitor NGINX instances with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`nginx-receiver`.
+
 Benefits
 --------
 
