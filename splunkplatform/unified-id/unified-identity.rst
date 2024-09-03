@@ -29,33 +29,22 @@ All customers who have both Splunk Cloud Platform and Splunk Observability Cloud
 
    * - :strong:`Splunk Observability Cloud realm`
      - :strong:`AWS Region`
-     - :strong:`GCP Region`
    * - us0
      - AWS US East Virginia (us-east-1)
-     - 
    * - us1
      - AWS US West Oregon (us-west-2)
-     - 
-   * - us2
-     - 
-     - GCP US Oregon (us-west-1)
    * - eu0
      - AWS EU Dublin (eu-west-1)
-     -
    * - eu1
      - AWS EU Frankfurt (eu-central-1)
-     -
    * - eu2
      - AWS EU London (eu-west-2)
-     -
    * - au0
      - AWS AP Sydney (ap-southeast-2)
-     - 
    * - jp0
      - AWS AP Tokyo (ap-northeast-1)
-     - 
 
-.. note:: Unified Identity is not supported in GovCloud regions.
+.. note:: Unified Identity is not supported in GovCloud or GCP regions.
 
 
 .. _unified-identity-benefits:
