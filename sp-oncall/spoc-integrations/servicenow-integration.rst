@@ -10,7 +10,7 @@ ServiceNow bidirectional integration for Splunk On-Call
    
    If you are upgrading from an old XML file to the new VictorOps Bidirectional Integration in the ServiceNow App store, you need to run the following script or reach out to the support team before installation: :new-page:`Script to deprecate initial VictorOps integration <https://github.com/victorops/monitoring_tool_releases/blob/master/Deprecate_Initial_VictorOps_Integration.xml>`
 
-Use the latest Splunk On-Call to ServiceNow bidirectional integration to respond to an ncident, collaborate in real time, and find faster resolutions.
+Use the latest Splunk On-Call to ServiceNow bidirectional integration to respond to an incident, collaborate in real time, and find faster resolutions.
 
 The Splunk On-Call ServiceNow bidirectional integration maintains incident and ticket history but doesn't distract you during a firefight. Use the detailed incident history to conduct thorough post-incident reviews and ensure on-call incident management gets better over time. Eliminate context-switching by working in a single application, focusing on the iƒssue at hand and spending less time organizing tickets.
 

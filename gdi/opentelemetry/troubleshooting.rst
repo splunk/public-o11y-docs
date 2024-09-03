@@ -25,7 +25,9 @@ Here are some common issues that you might encounter when using the OpenTelemetr
 * :ref:`otel-support-checklist`
 * :ref:`support`
 
-To troubleshoot the Collector for Kubernetes, see:
+To :ref:`troubleshoot-k8s-landing`, see:
 
 * :ref:`troubleshoot-k8s`
+* :ref:`troubleshoot-k8s-sizing`
+* :ref:`troubleshoot-k8s-missing-metrics`
 * :ref:`troubleshoot-k8s-container`

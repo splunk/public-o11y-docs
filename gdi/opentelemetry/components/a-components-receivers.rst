@@ -37,6 +37,7 @@ Collector components: Receivers
     mongodb-atlas-receiver
     mssql-server-receiver
     mysql-receiver
+    nginx-receiver
     oracledb-receiver
     otlp-receiver                
     postgresql-receiver

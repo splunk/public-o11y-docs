@@ -367,7 +367,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
+   Send alert notifications to other services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
    :maxdepth:   3
@@ -797,6 +797,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
    
    rum/rum-session-replay
+
+.. toctree::
+   :maxdepth:   3
+   
+   rum/rum-custom-indexed-tags
 
 .. toctree::
    :maxdepth:   3

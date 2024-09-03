@@ -37,7 +37,7 @@ Get started with the available options to install, deploy, and configure the Spl
     <h2>Install the Collector using packages and deployment tools<a name="collector-package-install" class="headerlink" href="#collector-package-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. Use one of the following packages to gather data for Splunk Observability Cloud:
+The Splunk Distribution of the OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. Use one of the following packages to gather data for Splunk Observability Cloud:
 
 * :ref:`collector-kubernetes-intro`
 * :ref:`collector-linux-intro`
@@ -107,7 +107,7 @@ Images are signed using ``cosign``. To verify them:
 .. raw:: html
 
   <embed>
-    <h2>Configure the Collector: Config files, auto-config, and other configuration sources<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+    <h2>Configure the Collector: Config files, auto discovery, and other configuration sources<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 Use these configurations to change the default settings in each Collector package:
@@ -116,7 +116,13 @@ Use these configurations to change the default settings in each Collector packag
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
 
-.. note:: Splunk Observability Cloud offers several options for no-hassle automatic discovery and configuraiton. Learn more at :ref:`discovery_mode`.
+.. raw:: html
+
+  <embed>
+    <h3>Automatic discovery<a name="otel-auto-config" class="headerlink" href="#otel-auto-config" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+Splunk Observability Cloud offers several options for no-hassle automatic discovery and configuration. Learn more at :ref:`discovery_mode`.
 
 .. _otel-config-multiple-files:
 

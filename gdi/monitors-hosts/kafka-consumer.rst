@@ -6,19 +6,15 @@ Kafka consumer
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd Java-based Kafka consumer monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
-``collectd/kafka_consumer`` monitor type to monitor a Java-based Kafka
-consumer. It has a set of built-in MBeans to pull metrics from the Kafka
-consumer's JMX endpoint.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``collectd/kafka_consumer`` monitor type to monitor a Java-based Kafka consumer. 
 
 .. note:: To monitor Kafka with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`kafkametrics-receiver`.
 
-This integration is only available on Kubernetes and Linux. It requires
-Kafka version 0.9.0.0 or higher and collects metrics from the new
-consumer API. Per-topic metrics are not available through the new
-consumer API in version 0.9.0.0 or lower, which can cause the logs to
-fill with warnings related to the MBean not being found. Use the
-``mBeansToOmit`` config option in such cases.
+This integration has a set of built-in MBeans to pull metrics from the Kafka consumer's JMX endpoint. For more information, see :new-page:`Kafka consumer MBeans <https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafkaconsumer/mbeans.go>` in GitHub.
+
+This integration is only available on Kubernetes and Linux, and requires Kafka version 0.9.0.0 or higher. 
+
+Per-topic metrics are not available through the new consumer API in version 0.9.0.0 or lower, which can cause the logs to fill with warnings related to the MBean not being found. Use the ``mBeansToOmit`` config option in such cases.
 
 Benefits
 --------

@@ -5,9 +5,9 @@ Process your data with pipelines
 *********************************************************************
 
 .. meta::
-      :description: Learn how to process data collected with the Splunk Distribution of OpenTelemetry Collector.
+      :description: Learn how to process data collected with the Splunk Distribution of the OpenTelemetry Collector.
 
-A pipeline defines the path the ingested data follows in the Collector, starting from reception, then further processing or modification, and finally when data exits the Collector through exporters. 
+Use pipelines in your Collector's config file to define the path you want your ingested data to follow. Specify which components you want to use, starting from data reception using :ref:`receivers <otel-components-receivers>`, then data processing or modification with :ref:`processors <otel-components-processors>`, until data finally exits the Collector through :ref:`exporters <otel-components-exporters>`. For an overview of all available components and theire behavior refer to :ref:`otel-components`.
 
 Pipelines operate on three data types: logs, traces, and metrics. To learn more about data in Splunk Observability Cloud, see :ref:`data-model`.
 
@@ -16,13 +16,36 @@ Pipelines operate on three data types: logs, traces, and metrics. To learn more 
 Define the pipeline
 =========================================
 
-The pipeline is constructed during Collector startup based on the pipeline definition. See :ref:`otel-components` to understand the behavior of each component. 
+The pipeline is constructed during Collector startup based on your Collector's config file. 
 
-To define the pipeline, first you need to specify a data type in your pipeline configuration. All the receivers, exporters, and processors you use in a pipeline must support the particular data type, otherwise you'll get the ``ErrDataTypeIsNotSupported`` error message when the configuration is loaded. 
+See more at:
 
-A pipeline can contain one or more receivers. Data from all receivers is pushed to the first processor, which performs processing on it and then pushes it to the next processor and so on until the last processor in the pipeline pushes the data to the exporters. Each exporter gets a copy of each data element. The last processor uses a data fan-out connector to fan out (distribute) the data to multiple exporters.
+* :ref:`Collector for Kubernetes <collector-kubernetes-intro>`
+* :ref:`Collector for Linux <collector-linux-intro>`
+* :ref:`Collector for Windows <collector-windows-intro>`   
 
-You can also use connectors to connect two pipelines: it consumes data as an exporter at the end of one pipeline and emits data as a receiver at the start of another pipeline. It may consume and emit data of the same data type, or of different data types. A connector may generate and emit data to summarize the consumed data, or it may simply replicate or route data. Learn more at:ref:`otel-components-connectors`.
+The following applies:
+
+* You need to specify a data type in your pipeline configuration. All the receivers, exporters, and processors you use in a pipeline must support the particular data type, otherwise you'll get the ``ErrDataTypeIsNotSupported`` error message when the configuration is loaded. 
+
+* A pipeline can contain one or more receivers. 
+
+* Data from all receivers is pushed to the first processor, which performs processing on it and then pushes it to the next processor and so on until the last processor in the pipeline uses a data fan-out connector to fan out (distribute) the data to multiple exporters.
+
+  * Note that some types of processor "mutate" (duplicate) data before they pass it on to the next processor.
+
+* If a pipeline uses more than one exporter, each exporter receives a copy of each data element from the last processor.
+  
+  * In case of failure, the rest of exporters continue to work independently. 
+
+  * You can configure exporters to "mutate" (duplicate) the data they receive. In the Splunk OTel Collector this option is not enabled. 
+
+Connect pipelines with connectors
+--------------------------------------------------------------------
+
+You can use connectors to connect two pipelines. Connectors consume data as an exporter at the end of one pipeline and emit data as a receiver at the start of another pipeline. They can consume and emit data of the same data type, or of different data types. Use connectors to generate and emit data which summarizes the data you've already consumed, or to simply replicate or route data. 
+
+Learn more at:ref:`otel-components-connectors`.
 
 Example of a pipeline configuration
 --------------------------------------------------------------------
@@ -40,7 +63,7 @@ A pipeline configuration typically looks like this:
         processors: [memory_limiter, batch]
         exporters: [otlp, splunk_hec, jaeger, zipkin]
 
-This example defines a pipeline for ``traces``, with three receivers, two processors, and four exporters. The following table describes the receivers, processors, and exporters used in this example. For more details, see :ref:`Collector components <otel-components>`.
+This example defines a pipeline for ``traces``, with three receivers, two processors, and four exporters. The following table describes the receivers, processors, and exporters used in this example. 
 
 .. list-table::
    :widths: 25 50 25
@@ -80,37 +103,7 @@ This example defines a pipeline for ``traces``, with three receivers, two proces
 Metadata transformations
 ============================================
 
-Metadata refers to the name/value pair added to telemetry data. OpenTelemetry calls this ``Attributes`` on ``Spans``, ``Labels`` on ``Metrics``, and ``Fields`` on ``Logs``. See :new-page:`Resource SDK <https://github.com/open-telemetry/opentelemetry-specification/blob/49c2f56f3c0468ceb2b69518bcadadd96e0a5a8b/specification/resource/sdk.md>`, :new-page:`Metrics API <https://github.com/open-telemetry/opentelemetry-specification/blob/49c2f56f3c0468ceb2b69518bcadadd96e0a5a8b/specification/metrics/api.md>`, and :new-page:`Trace Semantic Conventions <https://github.com/open-telemetry/opentelemetry-specification/blob/52cc12879e8c2d372c5200c00d4574fa73996369/specification/trace/semantic_conventions/README.md>` in GitHub for additional details.
-
-Attributes
---------------------------
-
-Attributes are a list of zero or more key-value pairs. An attribute must have the following properties:
-
-* The attribute key, which must be a non-null and non-empty string.
-* The attribute value, which is one of these types:
-
-  * A primitive type: string, boolean, double precision floating point (IEEE 754-1985) or signed 64-bit integer.
-  * An array of primitive type values. The array must be homogeneous. That is, it must not contain values of different types. For protocols that do not natively support array values, represent those values as JSON strings.
-
-Attribute values expressing a numerical value of zero, an empty string, or an empty array are considered meaningful and must be stored and passed on to processors or exporters.
-
-Attribute values of ``null`` are not valid and attempting to set a ``null`` value is undefined behavior.
-
-``null`` values are not allowed in arrays. However, if it is impossible to make sure that no ``null`` values are accepted (for example, in languages that do not have appropriate compile-time type checking), ``null`` values within arrays MUST be preserved as-is (that is, passed on to processors or exporters as ``null``). If exporters do not support exporting ``null`` values, you can replace those values by 0, ``false``, or empty strings. Changing these values is required for map and dictionary structures represented as two arrays with indices that are kept in sync (for example, two attributes ``header_keys`` and ``header_values``, both containing an array of strings to represent a mapping ``header_keys[i] -> header_values[i]``).
-
-Labels
------------------------------------------
-
-Labels are name/value pairs added to metric data points. Labels are deprecated from the OpenTelemetry specification. Use attributes instead of labels.
-
-Fields
----------------------------------------
-
-Fields are name/value pairs added to log records. Each record contains two kinds of fields:
-
-* Named top-level fields of specific type and meaning.
-* Fields stored as ``map<string, any>``, which can contain arbitrary values of different types. The keys and values for well-known fields follow semantic conventions for key names and possible values that allow all parties that work with the field to have the same interpretation of the data.
+Metadata refers to the name/value pair added to telemetry data. In the OpenTelemetry data model, tags are provided as attributes. After Splunk Observability Cloud ingests traces with attributes, these are available as tags. Alternatively, you could use attributes to create Monitoring Metric Sets, which can be used to drive alerting. Learn more at :ref:`otel-tags`.
 
 .. _pipelines-next:
 

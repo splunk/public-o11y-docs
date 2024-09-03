@@ -12,6 +12,7 @@ Connect AWS to Splunk Observability Cloud
   :maxdepth: 5
 
   AWS authentication and supported regions <aws-prereqs>
+  Supported Amazon services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-aws.html#cloud-aws>
   Compare connection options <aws-compare-connect>
   Connect via polling <aws-connect-polling>
   Connect with Splunk-managed Metrics Streams <aws-connect-ms>
@@ -74,6 +75,16 @@ See a comparison of the connection options at :ref:`aws-compare-connect`, and ch
   </embed>
 
 There are constraints to consider in terms of high data volume and filtering.
+
+.. _aws-integration-amount:
+
+.. raw:: html
+
+  <embed>
+    <h4>Number of installed AWS integrations <a name="aws-integration-amount" class="headerlink" href="#aaws-integration-amount" title="Permalink to this headline">¶</a></h4>
+  </embed>
+
+Splunk Observability Cloud doesn't limit the number of AWS service integrations you can configure. However, if you're planning to use over 100 AWS integrations, contact :ref:`support`.
 
 .. _aws-data-limits:
 
