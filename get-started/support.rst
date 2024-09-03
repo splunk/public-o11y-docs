@@ -9,9 +9,9 @@ Splunk Observability Cloud support
 
 Splunk Observability Cloud provides multiple ways to get help with the product. Use the method that best meets your need:
 
-- Submit a case in the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`
+- Submit a case in the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`
    - Available to Splunk Observability Cloud customers
-   - For more information, see :ref:`support-portal`.
+   - For more information, see :ref:`support-portal`
 
 - Call :new-page:`Splunk Customer Support <https://www.splunk.com/en_us/about-splunk/contact-us.html#customer-support>`
    - Available to Splunk Observability Cloud customers
@@ -32,7 +32,7 @@ To learn about even more support options, see :new-page:`Splunk Customer Success
 Use the Splunk Support Portal
 ===================================
 
-On March 17, 2022, the Splunk Observability Cloud (SignalFx) Support site joined the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`, where you can create new cases, update your open cases, and search the knowledge base. You'll continue to receive the same world-class support from your Splunk Observability Cloud support engineers.
+On March 17, 2022, the Splunk Observability Cloud (SignalFx) Support site joined the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`, where you can create new cases, update your open cases, and search the knowledge base. You'll continue to receive the same world-class support from your Splunk Observability Cloud support engineers.
 
 If you have an existing Splunk Observability Cloud (SignalFx) Support site account, here are some notable changes to the support process using the new Splunk Support Portal:
 
@@ -42,7 +42,7 @@ If you have an existing Splunk Observability Cloud (SignalFx) Support site accou
 
 - You can't use your existing Splunk Observability Cloud (SignalFx) Support site credentials to log in to the Splunk Support Portal. This also means that any single sign-on functionality that you used to log in to the Splunk Observability Cloud (SignalFx) Support site doesn't work to log you in to the Splunk Support Portal.
 
-     For example, if you select the :guilabel:`Splunk Support Portal` link on the Splunk Observability Cloud application home page or navigate to :menuselection:`Settings > Support` in the application, you aren't automatically logged in to the Splunk Support Portal.
+     For example, if you select the :guilabel:`Splunk Support Portal` link on the Splunk Observability Cloud application home page or navigate to :menuselection:`Settings` then :menuselection:`Support` in the application, you aren't automatically logged in to the Splunk Support Portal.
 
      To log in to the Splunk Support Portal, you must :ref:`create a Splunk account <create-splunk-account>`, if you don't already have one. You use your Splunk account credentials to log in to the Splunk Support Portal.
 
@@ -60,7 +60,7 @@ Create a Splunk account
 
 3. Select the verification link in the email to access a page where you can log in to your Splunk account.
 
-4. After you've logged in to your Splunk account, you can access the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`. You can manually navigate to the Splunk Support Portal by selecting :guilabel:`Support > Support Portal` on :new-page:`splunk.com <https://www.splunk.com/>`.
+4. After you've logged in to your Splunk account, you can access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`. You can manually navigate to the Splunk Support Portal by selecting :guilabel:`Support` then :guilabel:`Support Portal` on :new-page:`splunk.com <https://www.splunk.com/>`.
 
      It can take up to 24 hours after creating your Splunk account for your Splunk Support Portal experience to reflect the correct entitlements for the products and permissions you have access to. A Splunk Support Portal administrator sets the entitlements for you.
 
@@ -68,7 +68,7 @@ Create a Splunk account
 
 5. To check on the status of your entitlements:
 
-     1. Access the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`.
+     1. Access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/`.
 
      2. In the navigation menu, select :guilabel:`My Entitlements`.
 
@@ -80,6 +80,6 @@ Create a Splunk account
 Submit a Splunk Support Portal case
 ------------------------------------------
 
-1. Access the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`. You can also access the Splunk Support Portal from the Splunk Observability Cloud application home page or by navigating to :menuselection:`Settings > Support` in the application.
+1. Access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`. You can also access the Splunk Support Portal from the Splunk Observability Cloud application home page or by navigating to :menuselection:`Settings` then :menuselection:`Support` in the application.
 
 2. For detailed instructions about how to submit a case using the Splunk Support Portal, see "Submitting a Case via The Portal" in :new-page:`Working with Support <https://www.splunk.com/pdfs/support/working-with-support.pdf>`.
