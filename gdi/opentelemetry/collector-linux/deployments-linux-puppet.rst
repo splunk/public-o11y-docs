@@ -159,8 +159,17 @@ The following table shows the variables that you can configure for this Puppet m
      - Activates or deactivates exporting instrumentation metrics.
      - ``false``
    * - ``auto_instrumentation_otlp_endpoint``
-     - Sets the OTLP endpoint that receives traces. Only applicable if ``auto_instrumentation_version`` is ``0.87.0`` and higher.
-     - ``http://127.0.0.1:4317``
+     - Sets the OTLP endpoint for collected metrics, traces, and logs by all activated SDKs. Only applicable if ``auto_instrumentation_version`` is ``latest`` or ``0.87.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
+   * - ``auto_instrumentation_otlp_endpoint_protocol``
+     - Sets the OTLP endpoint protocol for collected metrics, traces, and logs by all activated SDKs, for example ``grpc`` or ``http/protobuf``. Only applicable if ``auto_instrumentation_version`` is ``latest`` or ``0.104.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
+   * - ``auto_instrumentation_metrics_exporter``
+     - Comma-separated list of exporters for collected metrics by all activated SDKs, for example ``otlp,prometheus``. Set the value to ``none`` to disable collection and export of metrics. Only applicable if ``auto_instrumentation_version`` is ``latest`` or ``0.104.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
+   * - ``auto_instrumentation_logs_exporter``
+     - Sets the exporter for collected logs by all activated SDKs, for example ``otlp``. Set the value to ``none`` to disable collection and export of logs. Only applicable if ``auto_instrumentation_version`` is ``latest`` or ``0.108.0`` and higher.
+     - ``''``, which defers to the default for each activated SDK.
    * - ``auto_instrumentation_java_agent_jar``
      - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node.
      - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
