@@ -204,7 +204,7 @@ However, depending on your application's logic, a ``4xx`` status code might repr
 
 For example, if Kai wants to alert on the rate of ``401`` errors returned by a given service, they do the following:
 
-1. Index ``http.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower. Or index ``http.response.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher. See :ref:`apm-index-span-tags`. `net.peer.name`` 
+1. Index ``http.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower. Or index ``http.response.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher. See :ref:`apm-index-span-tags`.
 2. Create a custom Monitoring MetricSet on the status code tag for the service's endpoints to get a time series for each status code. See :ref:`cmms`.
 3. Set up an alert on the rate of ``401`` errors as compared to all requests. See :ref:`apm-alerts`.
 
