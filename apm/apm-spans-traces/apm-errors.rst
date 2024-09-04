@@ -14,7 +14,7 @@ With Splunk APM error detection, you can isolate specific causes of errors in yo
 How Splunk APM detects error spans
 =========================================
 
-Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span to be an error span if the operation that the span captures results in an error. Splunk APM considers a span to be an error span when any of the following conditions are met: 
+Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span to be an error span if the operation that the span captures results in an error as defined by the following conditions: 
 
 * The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in the Splunk Distribution of the OpenTelemetry instrumentation using the native OTel field ``span.status``. ``span.status``, and subsequently ``otel.status_code``, are set based on either the HTTP status code or the gRPC status code.
   
