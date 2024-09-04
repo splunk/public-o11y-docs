@@ -11,14 +11,14 @@ With Splunk APM error detection, you can isolate specific causes of errors in yo
 
 .. _apm-error-detection:
 
-How error spans are detected
+How Splunk APM detects error spans
 =========================================
 
-Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span to be an error span if the operation that the span captures results in an error. A span is considered to be an error span when any of the following conditions are met: 
+Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span to be an error span if the operation that the span captures results in an error. Splunk APM considers a span to be an error span when any of the following conditions are met: 
 
 * The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in the Splunk Distribution of the OpenTelemetry instrumentation using the native OTel field ``span.status``. ``span.status``, and subsequently ``otel.status_code``, are set based on either the HTTP status code or the gRPC status code.
   
-   * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
+   * See :ref:`apm-http-status` to learn which status code values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
    * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
 * The ``error`` tag for the span is set to a truthy value, which is any value other than ``False`` or ``0``. 
 
@@ -204,8 +204,8 @@ However, depending on your application's logic, a ``4xx`` status code might repr
 
 For example, if Kai wants to alert on the rate of ``401`` errors returned by a given service, they do the following:
 
-1. Index ``http.status_code``. See :ref:`apm-index-span-tags`.
-2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service's endpoints to get a time series for each status code. See :ref:`cmms`.
+1. Index ``http.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower. Or index ``http.response.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher. See :ref:`apm-index-span-tags`. `net.peer.name`` 
+2. Create a custom Monitoring MetricSet on the status code tag for the service's endpoints to get a time series for each status code. See :ref:`cmms`.
 3. Set up an alert on the rate of ``401`` errors as compared to all requests. See :ref:`apm-alerts`.
 
 .. _5xx-error-logic:
