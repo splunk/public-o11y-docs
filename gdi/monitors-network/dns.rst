@@ -38,6 +38,8 @@ configuration:
        type: telegraf/dns
        ...  # Additional config
 
+.. note:: Make sure to include the required ``servers`` configuration setting. See the following section, :strong:`Configuration settings`, for more information.
+
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
@@ -47,6 +49,8 @@ section of your configuration file:
     pipelines:
       metrics:
         receivers: [smartagent/dns]
+
+.. _config-settings:
 
 Configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~
