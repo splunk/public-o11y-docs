@@ -56,7 +56,7 @@ Create a Splunk account
 
 1. Go to the :new-page:`Create Your Account page <https://www.splunk.com/page/sign_up>` and complete the form to register for a Splunk account. Make sure to sign up using your business email address.
 
-2. Check your email for a message from Splunk asking you to verify your email address. You must click the link in the email to verify your email address within 7 days or your account creation request expires. If you don't see the email in your inbox, make sure to check your spam folder.
+2. Check your email for a message from Splunk asking you to verify your email address. You must select the link in the email to verify your email address within 7 days or your account creation request expires. If you don't see the email in your inbox, make sure to check your spam folder.
 
 3. Select the verification link in the email to access a page where you can log in to your Splunk account.
 
@@ -68,7 +68,7 @@ Create a Splunk account
 
 5. To check on the status of your entitlements:
 
-     1. Access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/`.
+     1. Access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`.
 
      2. In the navigation menu, select :guilabel:`My Entitlements`.
 
