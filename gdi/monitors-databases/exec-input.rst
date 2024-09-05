@@ -6,7 +6,13 @@ Exec Input
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf Exec monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+.. caution:: 
+   
+   The Exec Input monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+
+   To monitor your system with Telegraf Exec you can use native OpenTelemetry instead. See more at :new-page:`OpenTelemetry Output Plugin <https://github.com/influxdata/telegraf/blob/master/plugins/outputs/opentelemetry/README.md>` in GitHub. 
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 Exec Input monitor type, an embedded form of the Telegraf Exec plugin,
 to receive metrics or logs from exec files.
 
