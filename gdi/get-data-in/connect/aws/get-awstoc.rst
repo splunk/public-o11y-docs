@@ -115,9 +115,17 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
 
 By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
 
+To manage the amount of data to import, see :ref:`aws-infra-import`.  
+
+.. raw:: html
+
+  <embed>
+    <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
 If you're polling data, by default Splunk Observability Cloud only imports AWS's recommended stats, which vary with the service. Look for your services' recommended stats in the official AWS docs. For example, :new-page:`CloudWatch metrics for your Classic Load Balancer <https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html>` or :new-page:`S3 monitoring with Amazon CloudWatch <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html>`.
 
-To manage the amount of data to import, see :ref:`aws-infra-import`.  
+.. caution:: Starting XXX, Splunk Observability Cloud retrieves less recommended stats from AWS integrations, reducing cost and latency. Make sure your existing charts and detectors do not pull dropped stats and continue to work properly.
 
 .. _aws-data-availability:
 
