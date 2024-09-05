@@ -1,7 +1,7 @@
 .. _exec-input:
 
-Exec Input
-==========
+Exec Input (deprecated)
+==============================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf Exec monitor. See benefits, install, configuration, and metrics

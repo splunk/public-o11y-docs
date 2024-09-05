@@ -1,7 +1,7 @@
 .. _nagios:
 
-Nagios
-======
+Nagios (deprecated)
+==============================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the nagios monitor. See benefits, install, configuration, and metrics
