@@ -135,7 +135,7 @@ example, the condition occurs when the state_message contains the phrase “esca
 
 In the “Transform these alert fields” portion, we'll create a new field called “vo-webhook-field” and populate it with part of the destination URL you're sending the webhook to.
 
-In this example, the full destination URL we're hoping to send to is “https://dev.oscato.com/2tn6xfh” so we'll put “oscato.com” as the vo-webhook-field value.
+In this example, the full destination URL we're hoping to send to is “\https://dev.oscato.com/2tn6xfh” so we'll put “oscato.com” as the vo-webhook-field value.
 
 Next, you'll navigate to Outgoing Webhooks under :guilabel:`Integrations`, then :guilabel:`Outgoing Webhooks`. Select :guilabel:`Add Webhook`.
 

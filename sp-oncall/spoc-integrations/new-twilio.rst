@@ -27,7 +27,7 @@ Requirements
 
 - A Twilio account
 - Splunk On-Call Versions: Getting Started, Growth, or Enterprise
-- At this time, trial Twilio accounts require all phone numbers the integration might end up calling. Follow the phone number verification process for all Splunk On-Call VictorOps users' phone numbers. See :new-page:`https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio`. To see how this integration works before verifying numbers or purchasing a Twilio phone number, contact Splunk On-Call Support.
+- At this time, trial Twilio accounts require all phone numbers the integration might end up calling. Follow the phone number verification process for all Splunk On-Call VictorOps users' phone numbers. Search "How to Add and Remove a Verified Phone Number or Caller ID with Twilio" in Twilio documentation. To see how this integration works before verifying numbers or purchasing a Twilio phone number, contact Splunk On-Call Support.
 
 Twilio integration overview
 ===============================
@@ -349,7 +349,7 @@ The caller hears "Trying next on-call representative, Trying next on-call repres
 This might be because a trial Twilio account is being used instead of a paid Twilio account. You have to verify phone numbers in Twilio before they can be
 called. Additionally, even with a paid Twilio account, phone numbers in certain countries (such as Slovakia) need to be verified in Twilio numbers before calling them.
 
-To verify the numbers you're calling, follow the documented steps in :new-page:`Add a Verified Caller ID via the Console Site<https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-verified-outbound-caller-ID-with-Twilio>`.
+To verify the numbers you're calling, search for "Add a Verified Caller ID via the Console Site" in Twillio documentaiton and follow the documented steps.
 
 Problem 2: There is a missing configuration value. Please contact your administrator to fix the problem.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

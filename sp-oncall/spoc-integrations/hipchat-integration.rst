@@ -125,7 +125,7 @@ by posting to this URL”. Copy this URL to your clipboard. The URL
 contains two items we will need to use in later parts of this article,
 the room ID and the authentication token. Find them in bold here:
 
-https://**YOUR_DOMAIN**.hipchat.com/v2/room/**ROOM_ID**/notification?auth_token=\ **AUTH_TOKEN_HERE**
+\https://**YOUR_DOMAIN**.hipchat.com/v2/room/**ROOM_ID**/notification?auth_token=\ **AUTH_TOKEN_HERE**
 
 Save your new custom integration.
 
@@ -165,8 +165,7 @@ created in the Rules Engine. For example:
 https://**YOUR_DOMAIN**.hipchat.com/v2/room/:math:`{{ALERT.room\_id}}/notification?auth\_token=`\ {{ALERT.auth_token}}
 
 For the payload section, you can add a number of different variables.
-For more information see the HipChat documentation
-`here <https://www.hipchat.com/docs/apiv2/method/send_room_notification>`__.
+For more information see the HipChat documentation.
 In our example we are sending a simple colored message that contains
 alert information found in the “entity_display_name” field.
 
