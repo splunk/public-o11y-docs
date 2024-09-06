@@ -139,6 +139,43 @@ For example, here is what a command might look like after you modify it to fit y
 
 
 
+Configuring Proxy Settings for Private Locations
+===================================================
+
+In environments where direct internet access is restricted, you can route synthetic test traffic through a proxy server by configuring the following environment variables:
+
+* HTTP_PROXY: Specifies the proxy server for HTTP traffic.
+
+    * Example: export HTTP_PROXY="http://proxy.example.com:8080"
+
+* HTTPS_PROXY: Specifies the proxy server for HTTPS traffic.
+
+    * Example: export HTTPS_PROXY="https://proxy.example.com:8443"
+
+* NO_PROXY: Specifies a comma-separated list of domains or IP addresses that should bypass the proxy.
+
+    * Example: export NO_PROXY="localhost,127.0.0.1,.internal-domain.com"
+
+For example, here is what a command might look like after you modify it to fit your environment:
+
+
+.. code:: yaml
+
+    docker run --cap-add NET_ADMIN -e "RUNNER_TOKEN=*****" quay.io/signalfx/splunk-synthetics-runner:latest -e NO_PROXY=".signalfx.com,.amazonaws.com"  -e HTTPS_PROXY="https://172.17.0.1:1234" -e HTTP_PROXY="http://172.17.0.1:1234"
+    
+In this example:
+
+HTTP_PROXY and HTTPS_PROXY are set to route traffic through a proxy at http://172.17.0.1:1234.
+
+NO_PROXY is configured to bypass the proxy for local addresses and specific domains like .signalfx.com and .amazonaws.com.
+
+Ensure that these variables are correctly configured to comply with your network policies. This setup allows the synthetic tests to communicate securely and efficiently in a controlled network environment.
+
+
+
+
+
+
 
 Assess the health of your private location
 ==============================================
