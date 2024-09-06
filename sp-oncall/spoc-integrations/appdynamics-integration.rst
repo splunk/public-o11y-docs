@@ -164,7 +164,7 @@ Configure the AppDynamics SaaS version
             "message_type":"${message_type}",
 
             #latestEvent.incident.id is the AppDynamics incident ID for the health rule. 1 incident can include multiple events.
-            "entity_id":"${latestEvent.incident.id}"
+            "entity_id":"${latestEvent.incident.id}",
             
             #latestEvent.id is the AppDynamics event ID for the triggering HTTP action.
             "event_id":"${latestEvent.id}",
