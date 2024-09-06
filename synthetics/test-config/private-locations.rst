@@ -146,11 +146,11 @@ In environments where direct internet access is restricted, you can route synthe
 
 * HTTP_PROXY: Specifies the proxy server for HTTP traffic.
 
-    * Example: export HTTP_PROXY="http://proxy.example.com:8080"
+    * Example: export HTTP_PROXY="\http://proxy.example.com:8080"
 
 * HTTPS_PROXY: Specifies the proxy server for HTTPS traffic.
 
-    * Example: export HTTPS_PROXY="https://proxy.example.com:8443"
+    * Example: export HTTPS_PROXY="\https://proxy.example.com:8443"
 
 * NO_PROXY: Specifies a comma-separated list of domains or IP addresses that should bypass the proxy.
 
@@ -165,7 +165,7 @@ For example, here is what a command might look like after you modify it to fit y
     
 In this example:
 
-HTTP_PROXY and HTTPS_PROXY are set to route traffic through a proxy at http://172.17.0.1:1234.
+HTTP_PROXY and HTTPS_PROXY are set to route traffic through a proxy at \http://172.17.0.1:1234.
 
 NO_PROXY is configured to bypass the proxy for local addresses and specific domains like .signalfx.com and .amazonaws.com.
 

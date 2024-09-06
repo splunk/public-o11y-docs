@@ -404,7 +404,7 @@ This message means the team attempting to be notified either doesn't exist, or h
 This might be because a trial Twilio account is being used instead of a paid Twilio account. You have to verify phone numbers in Twilio before they can be
 called. Additionally, even with a paid Twilio account, phone numbers in certain countries (such as Slovakia) need to be verified in Twilio numbers before calling them.
 
-To verify the numbers you're calling, follow the documented steps in :new-page:`Add a Verified Caller ID via the Console Site<https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-verified-outbound-caller-ID-with-Twilio>`.
+To verify the numbers you're calling, search for "Add a Verified Caller ID via the Console Site" in Twilio documentation and follow the documented steps.
 
 Problem 11: An application error has occurred. Goodbye.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

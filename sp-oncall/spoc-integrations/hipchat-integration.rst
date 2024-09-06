@@ -162,7 +162,7 @@ sending to multiple rooms based on alert type, you will need to replace
 the “room id” and “auth token” variables with the alert fields you
 created in the Rules Engine. For example:
 
-https://**YOUR_DOMAIN**.hipchat.com/v2/room/:math:`{{ALERT.room\_id}}/notification?auth\_token=`\ {{ALERT.auth_token}}
+\https://**YOUR_DOMAIN**.hipchat.com/v2/room/:math:`{{ALERT.room\_id}}/notification?auth\_token=`\ {{ALERT.auth_token}}
 
 For the payload section, you can add a number of different variables.
 For more information see the HipChat documentation.
