@@ -82,11 +82,12 @@ Create a detector using the API
 
 Using the API to create a detector provides a number of capabilities that are not available in the UI, letting you build detectors with more advanced rules and conditions. You can view these detectors in the UI. The program text appears in place of the signals displayed in standard detectors.
 
--  For general information on creating detectors using the API, see the :new-page:`Detect Anomalies with Detectors <https://dev.splunk.com/observability/docs/detectors/detectors_events_alerts/>` topic in the Splunk Observability Cloud Developer Guide.
+-  For general information on creating detectors using the API, see the :new-page:`Detect Anomalies with Detectors <https://dev.splunk.com/observability/docs/detectors>` topic in the Splunk Observability Cloud Developer Guide.
 
 -  For information on using the UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
 
-.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
+.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to 
+   view and edit the detector code and make changes to the detector rules.
 
 
 .. _build-rules:
