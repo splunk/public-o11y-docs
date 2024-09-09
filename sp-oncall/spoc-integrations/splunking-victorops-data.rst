@@ -456,7 +456,7 @@ all instance of <org_slug>.
 *Body*:
 
 { “sourcetype”: “\_json”, “event”: { “slug”: “<org_slug>”, “link”:
-“https://portal.victorops.com/client/<org_slug>/popoutIncident?incidentName=\ :math:`{{STATE.INCIDENT\_NAME}}",  "type": "incident",  "alertService": "`\ {{ALERT.service}}”,
+“\https://portal.victorops.com/client/<org_slug>/popoutIncident?incidentName=\ :math:`{{STATE.INCIDENT\_NAME}}",  "type": "incident",  "alertService": "`\ {{ALERT.service}}”,
 “hostName”:
 “:math:`{{ALERT.host\_name}}",  "service": "`\ {{ALERT.service}}”,
 “ENTITY_TYPE”:
