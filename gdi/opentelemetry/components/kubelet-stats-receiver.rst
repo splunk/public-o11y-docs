@@ -51,7 +51,7 @@ A kubelet runs on a Kubernetes node and has an API server to which the Kubelet s
 
 There are two ways to authenticate, as indicated by the ``auth_type`` field:
 
--  ``tls`` tells the receiver to use TLS for authentication and requires that the ``ca_file``, ``key_file``, and ``cert_file`` fields.
+-  ``tls`` tells the receiver to use TLS for authentication and requires that the ``ca_file``, ``key_file``, and ``cert_file`` fields. See more at :ref:`collector-common-config-tls`.
 -  ``ServiceAccount`` tells this receiver to use the default service account token to authenticate to the kubelet API.
 
 Configure TLS authentication

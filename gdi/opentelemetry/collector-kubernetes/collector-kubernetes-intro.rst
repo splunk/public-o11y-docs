@@ -64,6 +64,8 @@ To configure the Collector, including adding additional components or activating
 * :ref:`kubernetes-config-logs`
 * :ref:`otel-kubernetes-config-advanced`
 
+.. include:: /_includes/gdi/collector-common-options.rst
+
 .. raw:: html
 
   <embed>
