@@ -75,7 +75,8 @@ The following settings are required:
 * ``tls``. See :ref:`TLS Configuration Settings <otlp-exporter-settings>` in this document for the full set of available options. 
 
   * By default, ``tls: insecure`` is set to ``true``. 
-  * Mutual TLS (mTLS) is also supported. See more at :new-page:`TLS/mTLS configuration <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md#tls--mtls-configuration>` in GitHub.
+  * Mutual TLS (mTLS) is also supported. 
+  * See more at :ref:`collector-common-config-tls`.
 
 Configuration examples
 --------------------------------
@@ -101,7 +102,6 @@ Configure gzip compression
 By default, gzip compression is enabled. To turn it off, use the following configuration:
 
 .. code-block:: yaml
-
 
   exporters:
     otlp:
