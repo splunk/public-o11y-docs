@@ -114,7 +114,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 100%
          :alt: This screenshot shows the configuration of the Workload Rule.
 
-   The Workload Rule limits each Log Observer Connect search to 5 minutes.
+The Workload Rule limits each Log Observer Connect search to 5 minutes.
 
 .. _download-certificate:
 

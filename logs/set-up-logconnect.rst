@@ -112,7 +112,7 @@ In your Splunk Enterprise search head, follow the instructions in the guided set
          :width: 100%
          :alt: This screenshot shows the configuration of the Workload Rule.
 
-   The Workload Rule limits each Log Observer Connect search to 5 minutes.
+The Workload Rule limits each Log Observer Connect search to 5 minutes.
 
 9. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
 
