@@ -89,7 +89,7 @@ To allow the receiver to work with client extensions, add the following in the C
 * :new-page:`OIDC Authentication <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension>`
 * :new-page:`OAuth 2 client <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension>`
 
-For advanced users, you can implement your own authentication extension to fulfill your requirements using the :new-page:`open-telemetry auth Go package <https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth>` and the :new-page:`configauth Go package <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth>`.
+For advanced users, you can implement your own authentication extension to fulfill your requirements using the :new-page:`open-telemetry auth Go package <https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth>` and :ref:`collector-common-config-tls`.
 
 Settings
 ======================

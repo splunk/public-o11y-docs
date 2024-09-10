@@ -117,6 +117,8 @@ Use these configurations to change the default settings in each Collector packag
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
 
+.. include:: /_includes/gdi/collector-common-options.rst
+
 .. raw:: html
 
   <embed>
