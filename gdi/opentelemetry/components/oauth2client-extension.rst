@@ -77,7 +77,7 @@ The following settings are required to configure the extension:
 
   * If void, there is no timeout on the client.
 
-For more information on the client side TLS settings, see :ref:`collector-common-config-tls`.
+For more information on the client side TLS settings, see :new-page:`TLS configuration settings <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configtls>` in GitHub. 
 
 .. _oauth2client-extension-example:
 
