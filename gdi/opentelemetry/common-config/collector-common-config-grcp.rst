@@ -23,7 +23,7 @@ To configure gRCP clients in :ref:`exporters <otel-components-exporters>` use th
 
   * Learn more at gRCP's :new-page:`Load Balancing README https://github.com/grpc/grpc-go/blob/master/examples/features/load_balancing/README.md`. 
 
-* ``compression``. 
+* ``compression`` 
 
   * Compression type valid values are ``gzip``, ``snappy``, ``zstd``, and ``none``
 
