@@ -34,6 +34,8 @@ See the default settings and configuration options at:
 * :ref:`otel-windows-config`
 * By default, you'll obtain these :ref:`metrics <ootb-metrics-windows>` 
 
+.. include:: /_includes/gdi/collector-common-options.rst
+
 To upgrade or uninstall, see:
 
 * :ref:`otel-windows-upgrade`
