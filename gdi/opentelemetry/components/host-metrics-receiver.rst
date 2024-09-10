@@ -205,7 +205,26 @@ Process
      mute_process_io_error: <true|false>
      scrape_process_delay: <time>
 
-If you keep getting errors related to process reading, consider setting ``mute_process_name_error``, ``mute_process_exe_error``, or ``mute_process_io_error`` to ``true``.
+The following example demonstrates how to configure a process scraper that collects two metrics and uses a resource attribute to include the process owner in the collected data:
+
+.. code:: yaml
+
+   receivers:
+     hostmetrics:
+       scrapers:
+         process:
+           resource_attributes:
+             process.owner:
+               enabled: true
+           metrics:
+             process.memory.usage:
+               enabled: true
+             process.disk.io:
+               enabled: true
+
+For more information about enabling and disabling metrics and resource attributes using the process scraper, see :new=page:`hostmetricsreceiver/process <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md>` in the OpenTelemetry documentation.
+
+If you continuously see errors related to process reading, consider setting ``mute_process_name_error``, ``mute_process_exe_error``, or ``mute_process_io_error`` to ``true``.
 
 Filtering
 ----------------------
