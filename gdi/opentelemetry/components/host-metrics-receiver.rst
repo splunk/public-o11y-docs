@@ -205,7 +205,7 @@ Process
      mute_process_io_error: <true|false>
      scrape_process_delay: <time>
 
-The following example demonstrates how to configure a process scraper that collects two metrics and uses a resource attribute to include the process owner in the collected data:
+The following example demonstrates how to configure a process scraper that collects two metrics, in addition to the defaults, and uses a resource attribute to include the process owner in the collected data:
 
 .. code:: yaml
 
