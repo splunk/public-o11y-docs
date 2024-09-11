@@ -222,7 +222,7 @@ The following example demonstrates how to configure a process scraper that colle
              process.disk.io:
                enabled: true
 
-For more information about enabling and disabling metrics and resource attributes using the process scraper, see :new=page:`hostmetricsreceiver/process <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md>` in the OpenTelemetry documentation.
+For more information about enabling and disabling metrics and resource attributes using the process scraper, see :new-page:`hostmetricsreceiver/process <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md>` in the OpenTelemetry documentation.
 
 If you continuously see errors related to process reading, consider setting ``mute_process_name_error``, ``mute_process_exe_error``, or ``mute_process_io_error`` to ``true``.
 
