@@ -100,7 +100,7 @@ In your Splunk Enterprise search head, follow the instructions in the guided set
          :width: 100%
          :alt: This screenshot shows the Create user page in Splunk Enterprise where you can assign a user to the service account role.
 
-8. Add a Workload Rule in Splunk Cloud Platform to limit Log Observer Connect searches to 5 minutes. This limit maintains a responsive experience for Log Observer users and reduces the chances that Log Observer Connect searches are queued. Follow the guidance in :new-page:`Create a Workload Rule in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Admin/CreateWLMRules#Create_a_workload_rule_in_Splunk_Web>` and configure the rule as follows:
+8. Add a Workload Rule in Splunk Enterprise to limit Log Observer Connect searches to 5 minutes. This limit maintains a responsive experience for Log Observer users and reduces the chances that Log Observer Connect searches are queued. Follow the guidance in :new-page:`Create a Workload Rule in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Admin/CreateWLMRules#Create_a_workload_rule_in_Splunk_Web>` and configure the rule as follows:
 
 .. code-block:: none
 
