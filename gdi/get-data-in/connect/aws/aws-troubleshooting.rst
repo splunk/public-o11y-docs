@@ -23,37 +23,17 @@ The automatic attempt to validate a connection that you just configured fails, s
 Cause
 ^^^^^^
 
-The connection might fail due to mismatched Identity Access Management (IAM) policies. To diagnose connection failure, check the permissions or policies you set up and compare them to the permissions that AWS requires.
+The connection might fail due to invalid Identity Access Management (IAM) policy used by your AWS integration.
 
-Verify whether your error message looks similar to this example:
-
-.. code-block:: none
-
-   Error validating AWS / Cloudwatch credentials
-   Validation failed for following region(s):
-   us-east-1
-   [ec2] software.amazon.awssdk.services.ec2.model.Ec2Exception: You are not authorized to perform this operation.
-
-If you receive a similar error message, then the IAM policy that you created to connect AWS to Splunk Observability Cloud does not match the policy already in your AWS account.
-
-Similarly, if your AWS account uses a service control policy (SCP) or administrative features such as ``PermissionsBoundary``, then there might be limits on which calls can be made in your organization, even if those calls are covered by your AWS IAM policy.
+If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
+might impact the AWS IAM policy you're using to connect to Splunk Observability Cloud. 
 
 Solution
 ^^^^^^^^^
 
-Splunk Observability Cloud uses the following calls to validate whether it can accept data from the AWS Compute Optimizer tool to support CloudWatch metric streams:
+Ensure all :ref:`aws-required-permissions` are included in your IAM policy.
 
-.. code-block:: none
-
-   client.describeInstanceStatus(),
-   client.describeTags(),
-   client.describeReservedInstances(),
-   client.describeReservedInstancesModifications()
-   client.describeOrganization()
-
-To ensure that your AWS integration works as expected, revisit your configuration choices in Splunk Observability Cloud to verify that they match the permissions policy in your AWS management console. 
-
-A match ensures that conflicting permissions do not cause your AWS environment to block integrations. See the "Amazon CloudWatch permissions reference" in the Amazon documentation for details about the available permissions.
+Also review the AWS Organizations' policies and boundaries you're using.
 
 .. _aws-ts-cloud:
 
