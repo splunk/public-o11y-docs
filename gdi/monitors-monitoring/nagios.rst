@@ -1,12 +1,18 @@
 .. _nagios:
 
-Nagios
-======
+Nagios (deprecated)
+==============================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the nagios monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+.. caution:: 
+   
+   The Nagios monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+
+   To monitor your system you can use native OpenTelemetry components instead. See more at :ref:`otel-components`. 
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 Nagios monitor type to run existing Nagios status check scripts through
 the Collector, which acts as the Nagios Remote Plugin Executor (NRPE) or
 the Simple Network Management Protocol (SNMP) exec directive, and send
