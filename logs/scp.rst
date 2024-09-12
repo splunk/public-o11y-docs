@@ -102,7 +102,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :alt: The Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
 
-8. Add a Workload Rule in Splunk Cloud Platform to limit the amount of time that Log Observer Connect searches can run. This limit maintains a responsive experience for Log Observer users and reduces the chances that Log Observer Connect searches are queued. Follow the guidance in :new-page:`Create a Workload Rule in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Admin/CreateWLMRules#Create_a_workload_rule_in_Splunk_Web>` and configure the rule as follows:
+8. Add a Workload Rule in Splunk Cloud Platform to limit Log Observer Connect searches to 5 minutes. This limit maintains a responsive experience for Log Observer users and reduces the chances that Log Observer Connect searches are queued. Follow the guidance in :new-page:`Create a Workload Rule in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Admin/CreateWLMRules#Create_a_workload_rule_in_Splunk_Web>` and configure the rule as follows:
 
 .. code-block:: none
 
@@ -110,11 +110,11 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
    Schedule: Always on
    Action: Abort search
 
+After creating the Workload Rule, it appears in Workload Management on the Workload Rules tab as follows:
+
 .. image:: /_images/logs/WorkloadMgmt.png
          :width: 100%
-         :alt: This screenshot shows the configuration of the Workload Rule.
-
-The Workload Rule limits each Log Observer Connect search to 5 minutes.
+         :alt: This screenshot shows the configuration of the Workload Rule limiting Log Observer Connect searches to 5 minutes.
 
 .. _download-certificate:
 
