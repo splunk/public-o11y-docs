@@ -63,6 +63,8 @@ Browse the table below to learn how to carry out common tasks with the Splunk Di
       * :new-page:`Upstream changelog (Contrib) <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/CHANGELOG.md>`
       * :new-page:`Upstream changelog (Core) <https://github.com/open-telemetry/opentelemetry-collector/blob/main/CHANGELOG.md>`
 
+.. _collector-how-to-kubernetes:
+
 Tasks specific to Kubernetes environments
 ==========================================
 
