@@ -48,19 +48,20 @@ Follow these steps to create an SLO.
 
     To use a custom metric as the system health indicator for your SLI configuration, follow these steps:
 
-        .. list-table::
-          :header-rows: 1
-          :widths: 40 60
-          :width: 100%
+        #. For the :guilabel:`Metric type` field, select :guilabel:`Custom metric` from the dropdown menu. The SignalFlow editor appears.
+        #. In the SignalFlow editor, you can see the following placeholder text:
 
-          * - :strong:`Field name`
-            - :strong:`Actions`
-          * - :guilabel:`Metric type`
-            - Select :guilabel:`Custom metric` from the dropdown menu
-          * - :guilabel:`Good events (numerator)`
-            - Search for the metric you want to use for the success request count
-          * - :guilabel:`Total events (denominator)`
-            - Search for the metric you want to use for the total request count
+              .. code-block:: none
+
+                  G = data('good.metric', filter=filter('sf_error', 'false'))
+                  T = data('total.metric')
+              
+            * Line 1 defines the metric you want to use for the success request count as a variable named ``G``. Replace ``'good.metric'`` with the name of the metric you want to track.
+            * Line 2 defines the metric you want to use for the total request count as a variable named ``T``. Replace ``'total.metric'`` with the name of the metric you want to track.
+
+            You can also rename the variables.
+        
+        #. If you rename the variables, select new variable names for the :guilabel:`Good events (numerator)` and :guilabel:`Total events (numerator)` dropdown menus.
 
         .. note:: Custom metric SLO works by calculating the percentage of successful requests over a given compliance period. This calculation works better for counter and histogram metrics than for gauge metrics. Gauge metrics are not suitable for custom metric SLO, so you might get confusing data when selecting gauge metrics in your configuration.
 
