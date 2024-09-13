@@ -25,11 +25,11 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
           G = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check') and filter('success', 'true'))
           T = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check'))
 
-   While Kai uses the same metric name for both the ``G`` and ``T`` variables, they use the :strong:`success` dimension to count the number of successful requests for the Emby service on the Buttercup Games website.
+   While Kai uses the same metric name for both the ``G`` and ``T`` variables, they use the ``success`` dimension to count the number of successful requests for the Emby service on the Buttercup Games website.
 
       .. image:: /_images/images-slo/custom-metric-slo-scenario.png
-       :width: 100%
-       :alt: This image shows Kai's SLO configuration using the ``synthetics.run.count`` metric and appropriate filters.
+          :width: 100%
+          :alt: This image shows Kai's SLO configuration using the ``synthetics.run.count`` metric and appropriate filters.
 
     ..     :header-rows: 1
     ..     :widths: 10 20 30 40
