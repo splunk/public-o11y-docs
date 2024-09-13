@@ -51,7 +51,7 @@ Follow these steps to create an SLO.
         #. For the :guilabel:`Metric type` field, select :guilabel:`Custom metric` from the dropdown menu. The SignalFlow editor appears.
         #. In the SignalFlow editor, you can see the following placeholder text:
 
-              .. code-block:: none
+              .. code-block:: python
 
                   G = data('good.metric', filter=filter('sf_error', 'false'))
                   T = data('total.metric')

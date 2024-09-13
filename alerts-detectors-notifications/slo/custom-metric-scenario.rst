@@ -18,31 +18,41 @@ Use custom metric as service level indicator (SLI)
 From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a target for their SLO. Kai follows these steps: 
 
 #. Kai wants to use custom metrics as the system health indicators, so they select the :guilabel:`Custom metric` from the :guilabel:`Metric type` menu.
-#. Kai enters the custom metrics they want to measure in the following fields:
+#. Kai enters following into the SignalFlow editor:
 
-    .. list-table::
-        :header-rows: 1
-        :widths: 10 20 30 40
+      .. code-block:: python
 
-        * - Field
-          - Metric name
-          - Filters
-          - Description 
+          G = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check') and filter('success', 'true'))
+          T = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check'))
 
-        * - :guilabel:`Good events (numerator)`
-          - :strong:`synthetics.run.count`
-          - Kai adds the following filters for this metric:
+   While Kai uses the same metric name for both the ``G`` and ``T`` variables, they use the :strong:`success` dimension to count the number of successful requests for the Emby service on the Buttercup Games website.
+
+      .. image:: /_images/images-slo/custom-metric-slo-scenario.png
+       :width: 100%
+       :alt: This image shows Kai's SLO configuration using the ``synthetics.run.count`` metric and appropriate filters.
+
+    ..     :header-rows: 1
+    ..     :widths: 10 20 30 40
+
+    ..     * - Field
+    ..       - SignalFlow editor
+    ..       - Filters
+    ..       - Description 
+
+    ..     * - :guilabel:`Good events (numerator)`
+    ..       - :strong:`synthetics.run.count`
+    ..       - Kai adds the following filters for this metric:
             
-              * :strong:`test = Emby check`
-              * :strong:`success = true`
-          - Kai uses the :strong:`success = true` filter to count the number of successful requests for the Emby service on the Buttercup Games website.
+    ..           * :strong:`test = Emby check`
+    ..           * :strong:`success = true`
+    ..       - Kai uses the :strong:`success = true` filter to count the number of successful requests for the Emby service on the Buttercup Games website.
 
-        * - :guilabel:`Total events (denominator)`
-          - :strong:`synthetics.run.count`
-          - Kai adds the following filter for this metric:
+    ..     * - :guilabel:`Total events (denominator)`
+    ..       - :strong:`synthetics.run.count`
+    ..       - Kai adds the following filter for this metric:
 
-              * :strong:`test = Emby check`
-          - Kai uses the same metric name and the :strong:`test = Emby check` filter to track the same Synthetics Browser test. However, Kai doesn't include the :strong:`success = true` dimension filter in order to count the number of total requests for the Emby service on the Buttercup Games website.
+    ..           * :strong:`test = Emby check`
+    ..       - Kai uses the same metric name and the :strong:`test = Emby check` filter to track the same Synthetics Browser test. However, Kai doesn't include the :strong:`success = true` dimension filter in order to count the number of total requests for the Emby service on the Buttercup Games website.
 
 #. Kai enters the following fields to define a target for their SLO:
 
@@ -63,11 +73,6 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
           - Kai wants to track this SLO over the past 30 days.
 
 #. Kai subscribes to receive an alert whenever there is a breach event for the SLO target.
-
-.. image:: /_images/images-slo/custom-metric-slo-scenario.png
-    :width: 100%
-    :alt: This image shows Kai's SLO configuration using the ``synthetics.run.count`` metric and appropriate filters.
-
 
 Summary
 =======================
