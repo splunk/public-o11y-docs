@@ -56,7 +56,7 @@ Follow these steps to create an SLO.
                   G = data('good.metric', filter=filter('sf_error', 'false'))
                   T = data('total.metric')
               
-            * Line 1 defines the metric you want to use for the success request count as a variable named ``G``. Replace ``'good.metric'`` with the name of the metric you want to track.
+            * Line 1 defines the metric you want to use for the success request count as a variable named ``G``. Replace ``'good.metric'`` with the name of the metric you want to track. Replace the example filters with appropriate filters for the dimension that distinguishes success requests from total requests.
             * Line 2 defines the metric you want to use for the total request count as a variable named ``T``. Replace ``'total.metric'`` with the name of the metric you want to track.
 
             You can also rename the variables.
