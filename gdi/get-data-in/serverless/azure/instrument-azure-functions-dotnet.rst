@@ -260,9 +260,12 @@ After adding the dependencies, initialize OpenTelemetry in your function.
                   var tp = Sdk.CreateTracerProviderBuilder()
                      // Use Add[instrumentation-name]Instrumentation to instrument missing services
                      // Use Nuget to find different instrumentation libraries
-                     .AddHttpClientInstrumentation(opts => 
-                        // This filter prevents background (parent-less) http client activity
-                        opts.Filter = req => Activity.Current?.Parent != null)
+                     .AddHttpClientInstrumentation(opts =>
+                     {
+                         // This filter prevents background (parent-less) http client activity
+                         opts.FilterHttpRequestMessage = req => Activity.Current?.Parent != null;
+                         opts.FilterHttpWebRequest = req => Activity.Current?.Parent != null;
+                     })
                      .AddAspNetCoreInstrumentation()
                      // Use AddSource to add your custom DiagnosticSource source names
                      //.AddSource("My.Source.Name")
