@@ -6,10 +6,10 @@ Advanced configuration for IIS applications
 
 Follow these advanced configuration steps to make changes to specific application pools.
 
-Set resource attributes
-=======================
+Set environment variables
+=========================
 
-You can set the resource attributes for specific application pools in the ``environmentVariables`` block of the :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`.
+You can set environment variables for specific application pools in the ``environmentVariables`` block of the :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`.
 
 For example:
 
@@ -19,14 +19,16 @@ For example:
         <add name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
     </environmentVariables>
 
+For all IIS applications, consider setting common environment variables for W3SVC and WAS Windows Services. For more information, see :new-page:`Instrument a Windows Service running a .NET application <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/docs/windows-service-instrumentation.md>` in the OpenTelemetry documentation.
+
 .. note::
 
-   If you set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable in the ``environmentVariable`` block and in the web.config ``appSettings`` block, the value in the ``environmentVariables`` block takes precedence.
+   If the same environment variables are set in the ``environmentVariable`` block and in the web.config ``appSettings`` block, the value in the ``environmentVariables`` block takes precedence.
 
 Active or deactivate instrumentation
 =====================================
 
-Use the PowerShell module to activate or deactivate the instrumentation for specific application pools.
+For .NET Framework applications, use the PowerShell module to activate or deactivate the instrumentation for specific application pools.
 
 #. Import the PowerShell module:
   
