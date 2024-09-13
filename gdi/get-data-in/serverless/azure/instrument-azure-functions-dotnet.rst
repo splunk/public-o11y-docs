@@ -83,10 +83,11 @@ Add the following libraries using NuGet in Visual Studio:
       #. Activate the :strong:`Include prerelease` setting.
       #. Install the specified version of the following libraries:
    
-         - :new-page:`OpenTelemetry version 1.3.2 <https://www.nuget.org/packages/OpenTelemetry/1.3.2>`
-         - :new-page:`OpenTelemetry.Exporter.OpenTelemetryProtocol version 1.3.2 <https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol/1.3.2>`
-         - :new-page:`OpenTelemetry.Instrumentation.Http version 1.0.0-rc9.4 <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Http/1.0.0-rc9.4>`
-         - :new-page:`OpenTelemetry.Instrumentation.AspNetCore version 1.0.0-rc9.4 <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AspNetCore/1.0.0-rc9.4>`
+         - :new-page:`OpenTelemetry version 1.9.0 <https://www.nuget.org/packages/OpenTelemetry/1.9.0>`
+         - :new-page:`OpenTelemetry.Exporter.OpenTelemetryProtocol version 1.9.0 <https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol/1.9.0>`
+         - :new-page:`OpenTelemetry.Instrumentation.Http version 1.9.0 <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Http/1.9.0>`
+         - :new-page:`OpenTelemetry.Instrumentation.AspNetCore version 1.9.0 <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AspNetCore/1.9.0>`
+         - :new-page:`OpenTelemetry.Resources.Azure version 1.0.0-beta.8 <https://www.nuget.org/packages/OpenTelemetry.Resources.Azure/1.0.0-beta.8>`         
          - :new-page:`Microsoft.Azure.Functions.Extensions version 1.1.0 <https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0>`
 
       .. note:: Due to runtime dependencies, only the indicated versions are guaranteed to work when instrumenting in-process functions.
