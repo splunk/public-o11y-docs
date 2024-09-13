@@ -87,10 +87,10 @@ To skip these steps and use configured repos on the target system that provide t
 
 .. _collector-linux-with-docker:
 
-Use the Collector with Docker containers
+Use the Collector in a host with Docker
 ====================================================================
 
-If you're installing your Collector instance alongside Docker components, you need to configure a client to establish a connection with the daemon. Depending on your Docker installation and Collector deployment method, try one of these options:
+If you're installing your Collector instance in a host with Docker, you need to configure a client to establish a connection with the daemon. Depending on your Docker installation and Collector deployment method, try one of these options:
 
 1. If your daemon is listening to a domain socket (for example ``/var/run/docker.sock``), your Collector service or executable needs appropriate permissions and access. Add the ``splunk-otel-collector`` user to the Docker group as configured on your system:
 
