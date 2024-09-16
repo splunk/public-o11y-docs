@@ -128,13 +128,13 @@ Use auto discovery with containers
 
 If your Collector instance is running in a Docker container and the discovery targets are also containers, you need to share the Docker socket when launching the Collector container:
 
-  .. code-block:: bash
+.. code-block:: bash
 
   $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --group-add <socket_gid>
 
 To use host bindings, run this command:
 
-  .. code-block:: bash
+.. code-block:: bash
 
   --set=splunk.discovery.extensions.docker_observer.config.use_host_bindings=true
 
