@@ -2,7 +2,7 @@
 .. _kubernetes-config-logs:
 
 *********************************************************************************
-Configure logs and events for Kubernetes
+Collect logs and events for the Collector for Kubernetes
 *********************************************************************************
 
 .. meta::
