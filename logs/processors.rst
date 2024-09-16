@@ -41,6 +41,9 @@ Going forward after the transition to Log Observer Connect, you can process data
    * - Data Stream Processor
      - See :new-page:`Use the Data Stream Processor <https://docs.splunk.com/Documentation/DSP/1.4.2/User/About>`.
 
+   * - Ingest Processor
+     - See :new-page:`About Ingest Processor <https://docs.splunk.com/Documentation/SplunkCloud/latest/IngestProcessor/AboutIngestProcessorSolution>`.  
+
 
 Prepackaged processing rules
 =============================================================================
