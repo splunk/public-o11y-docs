@@ -286,3 +286,14 @@ To deactivate a token, select :menuselection:`Deactivate` from the token's actio
 To activate a deactivated token, select :menuselection:`Activate` from the deactivated token's actions menu (|verticaldots|). 
 
 You can search for activated or deactivated tokens using the :guilabel:`Status` filter in the access tokens page.
+
+Manage token limits
+=========================================
+
+To change limits for your access tokens, including host and container limits, follow these steps:
+
+#. Select the token that you want to edit. This opens the token detail page.
+#. Select the token actions menu (|verticaldots|), and select :guilabel:`Manage limits`. 
+#. In the :guilabel:`Manage limits` menu, add the new token limits. 
+
+To learn more about token limits, see :ref:`admin-manage-usage`.
