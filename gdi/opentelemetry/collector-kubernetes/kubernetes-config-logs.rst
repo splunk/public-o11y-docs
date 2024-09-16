@@ -94,7 +94,7 @@ For example, to send logs from the ``kube-system`` namespace to the ``k8s_events
 
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
 
-.. note:: Pod annotation takes precedence over namespace annotation when both are annotated.     
+.. note:: A pod annotation takes precedence over a namespace annotation when both are annotated.     
 
 Filter logs using pod or namespace annotations
 -----------------------------------------------------
