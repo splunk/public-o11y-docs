@@ -274,6 +274,7 @@ After adding the dependencies, initialize OpenTelemetry in your function.
                      .SetResourceBuilder(
                         ResourceBuilder.CreateDefault()
                         .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
+                        .AddAzureAppServiceDetector()
                         .AddAttributes(new Dictionary<string, object>() {
                            { "faas.instance", Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID") }
                         }))
