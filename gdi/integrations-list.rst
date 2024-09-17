@@ -152,7 +152,7 @@ These are the available Smart Agent monitors:
       <h2>Notification services<a name="notification-services" class="headerlink" href="#notification-services" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-These integrations let you send Splunk Observability Cloud alert notifications to the following third-party notification services:
+These integrations let you send Splunk Observability Cloud alert notifications to the following notification services:
 
 - Amazon EventBridge
 - BigPanda
@@ -163,6 +163,7 @@ These integrations let you send Splunk Observability Cloud alert notifications t
 - ServiceNow
 - Slack
 - Splunk On-Call
+- Splunk platform
 - Webhook
 - xMatters
 
