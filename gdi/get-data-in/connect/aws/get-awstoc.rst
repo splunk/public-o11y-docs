@@ -130,6 +130,14 @@ By default, Splunk Observability Cloud brings in data from all supported AWS ser
 
 To manage the amount of data to import, see :ref:`aws-infra-import`.  
 
+.. raw:: html
+
+  <embed>
+    <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with service. You can look for your services' recommended stats in the official AWS docs, for example :new-page:`CloudWatch metrics for your Classic Load Balancer <https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html>` or :new-page:`S3 monitoring with Amazon CloudWatch <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html>`.
+
 .. _aws-data-availability:
 
 .. raw:: html
