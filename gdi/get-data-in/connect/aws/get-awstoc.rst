@@ -123,9 +123,7 @@ To manage the amount of data to import, see :ref:`aws-infra-import`.
     <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-If you're polling data, by default Splunk Observability Cloud only imports AWS's recommended stats, which vary with the service. Look for your services' recommended stats in the official AWS docs. For example, :new-page:`CloudWatch metrics for your Classic Load Balancer <https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html>` or :new-page:`S3 monitoring with Amazon CloudWatch <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html>`.
-
-.. caution:: Starting XXX recommended stats includes less data, which helps reduce cost and latency. Make sure your existing charts and detectors do not use any data that is no longer included in recommended stats and continue to work properly.
+If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with service. You can look for your services' recommended stats in the official AWS docs, for example :new-page:`CloudWatch metrics for your Classic Load Balancer <https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html>` or :new-page:`S3 monitoring with Amazon CloudWatch <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html>`.
 
 .. _aws-data-availability:
 

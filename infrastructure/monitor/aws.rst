@@ -36,7 +36,7 @@ To monitor AWS resources:
 
 See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Splunk Observability Cloud provides <aws-infra-metadata>` for AWS.
 
-By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
+By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`aws-infra-import`.
 
 .. _aws-unique-id:
 
