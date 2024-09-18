@@ -90,7 +90,7 @@ To skip these steps and use configured repos on the target system that provide t
 Configure automatic discovery for back-end applications
 ==================================================================
 
-You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
+You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to configure receivers for each back-end application. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
 
 For more information on instrumentation, see: 
 
