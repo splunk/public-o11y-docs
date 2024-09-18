@@ -26,7 +26,7 @@ For all IIS applications, consider setting common environment variables for W3SV
    If the same environment variables are set in the ``environmentVariable`` block and in the web.config ``appSettings`` block, the value in the ``environmentVariables`` block takes precedence.
 
 Activate or deactivate instrumentation
-=====================================
+======================================
 
 For .NET Framework applications, use the PowerShell module to activate or deactivate the instrumentation for specific application pools.
 
