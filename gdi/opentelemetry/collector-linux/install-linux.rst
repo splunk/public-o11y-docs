@@ -85,10 +85,26 @@ To skip these steps and use configured repos on the target system that provide t
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- $SPLUNK_ACCESS_TOKEN
 
+.. _configure-auto-instrumentation:
+
+Configure automatic discovery for back-end applications
+==================================================================
+
+You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to configure receivers for each back-end application. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
+
+For more information on instrumentation, see: 
+
+* :ref:`get-started-java` 
+* :ref:`get-started-nodejs`
+* :ref:`get-started-dotnet-otel`    
+
 .. _collector-linux-with-docker:
 
-Use the Collector in a host with Docker
+Collector for Linux with Docker
 ====================================================================
+
+Install the Collector in a host with Docker
+--------------------------------------------------------------------
 
 If you're installing your Collector instance in a host with Docker, you need to configure a client to establish a connection with the daemon. Depending on your Docker installation and Collector deployment method, try one of these options:
 
@@ -107,18 +123,20 @@ If you're installing your Collector instance in a host with Docker, you need to 
     # or if specifying the user:group directly
     $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --user "splunk-otel-collector:$(stat -c '%g' /var/run/docker.sock)" quay.io/signalfx/splunk-otel-collector:latest <...>
 
-.. _configure-auto-instrumentation:
+Use auto discovery with containers 
+--------------------------------------------------------------------
 
-Configure automatic discovery for back-end applications
-==================================================================
+If your Collector instance is running in a Docker container and the discovery targets are also containers, you need to share the Docker socket when launching the Collector container:
 
-You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
+.. code-block:: bash
 
-For more information on instrumentation, see: 
+  $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --group-add <socket_gid>
 
-* :ref:`get-started-java` 
-* :ref:`get-started-nodejs`
-* :ref:`get-started-dotnet-otel`
+To use host bindings, run this command:
+
+.. code-block:: bash
+
+  --set=splunk.discovery.extensions.docker_observer.config.use_host_bindings=true
 
 .. _otel-installer-options-linux:
 
