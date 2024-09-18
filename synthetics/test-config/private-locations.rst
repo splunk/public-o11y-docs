@@ -214,3 +214,42 @@ The maximum number of runs in a queue is 100,000.
 Any runs older than one hour are removed from the queue. 
 
 
+
+
+
+
+Automatically Update Private Location Runners - Using Watchtower
+================================================================
+
+Synthetics will often publish updates to our private location docker images and it is critical that your organization automates the upgrade of your locations.
+
+Watchtower is entirely optional, but we do require that you have an auto-upgrade solution in place for the private location runner. Failing to automatically update our Docker container will result in inconsistent data and loss of functionality.
+
+`Watchtower <https://github.com/v2tec/watchtower>`_
+is a 3rd party open source Docker container that will connect to remote Docker repositories on a schedule and check for updates. When an updated image is found Watchtower will instruct your Docker host to pull the newest image from the repository, stop the container, and start it again. It will ensure that environment variables, network settings, and links between containers are intact. 
+
+On your Docker host, you can simply launch the Watchtower container via command line:
+
+.. code:: yaml
+
+  docker run -d \
+    --name watchtower \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    v2tec/watchtower --label-enable --cleanup
+
+.. Note:: Using the "label-enable" flag will ensure that only containers with the correct label, like the private location runner, will be auto-updated.
+
+To apply this in practice, you'd label the specific container you want Watchtower to update when you create or run it. For example:
+
+.. code:: yaml
+
+  docker run -d \
+    --name private-location-runner \
+    --label=com.centurylinklabs.watchtower.enable=true \
+    private-location/runner-image:latest
+
+In this case, Watchtower will only monitor and update the private-location-runner container because of the label com.centurylinklabs.watchtower.enable=true.
+
+There are additional options available in the `Watchtower documentation <https://github.com/v2tec/watchtower#options>`_ that you should explore, including auto-cleanup of old images to ensure that your Docker host does not hold on to outdated images.
+
+It is important to note that in order for Watchtower to issue commands to the Docker host, it requires the docker.sock volume or TCP connection and this provides Watchtower with full administrative access to your Docker host. This level of access should not be taken lightly and it is one of the reasons private-location decided to separate the auto-update procedure from the private-location agent. If you are uncomfortable with providing Watchtower with this level of access you are encouraged to explore other options.
