@@ -35,15 +35,19 @@ Before you set up the integration, choose a ServiceNow issue type from the follo
       :width: 100
 
       * - Issue type
-        - Role needed
+        - Role required
+        - ServiceNow endpoint
       * - Problem
         - ``user_admin``, ``itil``
+        - ``/api/now/v2/table/problem``
       * - Incident
         - ``user_admin``, ``itil``
+        - ``/api/now/v2/table/incident``
       * - Event
         - None
+        - ``/api/global/em/jsonv2``
 
-Make note of the role that corresponds to your issue type before proceeding with :ref:`servicenow2`.
+Make note of the role and receiving endpoint that corresponds to your issue type before proceeding with :ref:`servicenow2`.
 
 .. note:: The ``user_admin`` role is used to verify that ServiceNow has successfully created a Problem or Incident. The ``itil`` role is used to create Problems and Incidents when alerts are sent. 
 
