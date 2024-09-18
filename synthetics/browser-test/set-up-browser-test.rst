@@ -510,6 +510,24 @@ Here are the limits for each type of wait time. The maximum limit for a run is 3
 
 
 
+Chrome flags 
+----------------
+Google Chrome flags are a helpful tool for troubleshooting. You can activate browser features that are not available by default so that you can test:
+
+* new features
+* custom configurations like dark mode 
+* performance and privacy settings 
+
+For more, see 
+:new-page:`What are Chrome flags? <https://developer.chrome.com/docs/web-platform/chrome-flags>` in the Google Chrome Developer guide. 
+
+Note: Global variables are incompatible with chrome flags. 
+
+These are the flags available: 
+
+<insert table>
+
+
 
 
 
