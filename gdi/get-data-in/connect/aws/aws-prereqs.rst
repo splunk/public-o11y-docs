@@ -260,6 +260,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
+- ``"network-firewall:ListFirewalls"``
+- ``"network-firewall:DescribeFirewall"``
 - ``"rds:DescribeDBClusters"``
 - ``"rds:DescribeDBInstances"``
 - ``"rds:ListTagsForResource"``
@@ -349,6 +351,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "logs:DescribeLogGroups",
           "logs:DescribeSubscriptionFilters",
           "logs:PutSubscriptionFilter",
+          "network-firewall:ListFirewalls",
+          "network-firewall:DescribeFirewall",
           "organizations:DescribeOrganization",
           "rds:DescribeDBInstances",
           "rds:DescribeDBClusters",
