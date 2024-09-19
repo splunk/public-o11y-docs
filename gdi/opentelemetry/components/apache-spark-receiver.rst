@@ -11,12 +11,16 @@ The Apache Spark receiver metrics for an Apache Spark cluster through the Apache
 
 .. note:: Out-of-the-box dashboards and navigators aren't supported for the Apache Web Server receiver yet, but are planned for a future release.
 
+The receiver uses the following endpoints: ``/metrics/json``, ``/api/v1/applications/[app-id]/stages``, ``/api/v1/applications/[app-id]/executors``, and ``/api/v1/applications/[app-id]/jobs endpoints``.
+
+Purpose
+The purpose of this component is to allow monitoring of Apache Spark clusters and the applications running on them through the collection of performance metrics like memory utilization, CPU utilization, shuffle operations, garbage collection time, I/O operations, and more.
+
 Prerequisites
 ======================
 
-This receiver supports Apache Web Server version 2.4 or higher.
+This receiver supports Apache Spark versions 3.3.2 or higher.
 
-In order to receive server statistics, you must configure the server's ``httpd.conf`` file to enable status support. Learn more at Apache's official documentation :new-page:`Module mod_status <https://httpd.apache.org/docs/2.4/mod/mod_status.html>`.
 
 Get started
 ======================
@@ -35,14 +39,17 @@ Follow these steps to configure and activate the component:
 Sample configuration
 --------------------------------
 
-To activate the Apache Web Server receiver, add ``apache`` to the ``receivers`` section of your configuration file: 
+To activate the Apache Spark receiver, add ``apachespark`` to the ``receivers`` section of your configuration file: 
 
 .. code-block:: yaml
 
   receivers:
-    apache:
-      endpoint: "http://localhost:8080/server-status?auto"
-      collection_interval: 10s
+    apachespark:
+      collection_interval: 60s
+      endpoint: http://localhost:4040
+      application_names:
+      - PythonStatusAPIDemo
+      - PythonLR
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
@@ -51,29 +58,33 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
   service:
     pipelines:
       metrics:
-        receivers: [apache]
+        receivers: [apachespark]
 
 Configuration options
 -----------------------
 
-The following settings are required:
-
-* ``endpoint``. ``"http://localhost:8080/server-status?auto"`` by default. The URL of the httpd status endpoint.
-
 The following settings are optional:
 
-.. include:: /_includes/gdi/collector-settings-collectioninterval.rst
+* ``collection_interval``. ``60s`` by default. Sets the interval this receiver collects metrics on. 
+  
+  * This value must be a string readable by Golang's ``time.ParseDuration``. Learn more at Go's official documentation :new-page:`ParseDuration function <https://pkg.go.dev/time#ParseDuration>`.
+  
+  * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
 
-.. include:: /_includes/gdi/collector-settings-initialdelay.rst
+* .. include:: /_includes/gdi/collector-settings-initialdelay.rst
+
+* ``endpoint``. ``http://localhost:4040`` by default. Apache Spark endpoint to connect to in the form of ``[http][://]{host}[:{port}]``.
+
+* ``application_names``. An array of Spark application names for which metrics are collected from. If no application names are specified, metrics are collected for all Spark applications running on the cluster at the specified endpoint.
 
 Settings
 ======================
 
-The following table shows the configuration options for the Apache Web Server receiver:
+The following table shows the configuration options for the Apache Spark receiver:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/apache.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/apachespark.yaml"></div>
 
 Metrics
 ======================
@@ -84,7 +95,7 @@ The following metrics, resource attributes, and attributes are available.
 
 .. raw:: html
 
-  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/apachereceiver.yaml"></div>
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/apachesparkreceiver.yaml"></div>
 
 .. include:: /_includes/activate-deactivate-native-metrics.rst
 
