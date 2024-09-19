@@ -240,8 +240,8 @@ To create a VPC endpoint, follow these steps:
 
 7. Set the IP address type to ``IPv4``.
 
-8. Specify the security group or groups controlling inbound and outbound traffic for the endpoint, and set the outbound rule for the selected security groups open for port ``443``.
-
+8. Specify the security group controlling traffic for the endpoint. Set the inbound rule to HTTPS protocol and the ``443`` port.
+  
   The following image shows the security options for AWS PrivateLink: 
 
   .. image:: /_images/gdi/aws-privatelink-secgroups2.png
