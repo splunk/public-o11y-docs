@@ -72,11 +72,7 @@ The following settings are required:
   * gRPC supports DNS as the default name-system. To learn more about the valid name syntax, see :new-page:`gRCP Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>` in GitHub. 
   * If you're using a scheme of ``https``, then client transport security is enabled and overrides the ``insecure`` setting.
 
-* ``tls``. See :ref:`TLS Configuration Settings <otlp-exporter-settings>` in this document for the full set of available options. 
-
-  * By default, ``tls: insecure`` is set to ``true``. 
-  * Mutual TLS (mTLS) is also supported. 
-  * See more at :ref:`collector-common-config-tls`.
+* ``tls``. See the exporter's :ref:`otlp-exporter-settings` in this document for the full set of available options, and learn more at :ref:`collector-common-config-tls`.
 
 Configuration examples
 --------------------------------
