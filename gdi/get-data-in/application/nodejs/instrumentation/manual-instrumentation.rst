@@ -51,13 +51,13 @@ To send custom traces to Splunk Observability Cloud, add the required dependenci
 Custom metrics
 =====================================
 
-To send custom application metrics to Splunk Observability Cloud, add ``@opentelemetry/api-metrics`` to your dependencies:
+To send custom application metrics to Splunk Observability Cloud, add ``@opentelemetry/api`` to your dependencies:
 
 .. code-block:: javascript
 
    const { start } = require('@splunk/otel');
    const { Resource } = require('@opentelemetry/resources');
-   const { metrics } = require('@opentelemetry/api-metrics');
+   const { metrics } = require('@opentelemetry/api');
 
    // All fields are optional.
    start({
