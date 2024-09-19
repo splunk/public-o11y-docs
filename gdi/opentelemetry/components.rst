@@ -52,6 +52,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`apache-receiver` (``apache``) 
      - Fetches stats from a Apache Web Server.
      - Metrics
+   * - :ref:`apache-spark-receiver` (``apachespark``) 
+     - Fetches metrics for an Apache Spark cluster through the Apache Spark REST API. 
+     - Metrics
    * - :ref:`azureeventhub-receiver` (``azureeventhub``) 
      - Pulls logs from an Azure event hub.
      - Logs
