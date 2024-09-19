@@ -98,12 +98,14 @@ Regardless of the services you want to use, you need the following permissions:
 
 * ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are activated.
 * ``ec2:DescribeRegions``. Used to check if regions configured in the integration are enabled on the AWS account.
+* ``iam:ListAccountAliases``. Used to sync account aliases for AWS MTS.
 
 Tag and property sync permissions:
 
 * ``tag:GetResources``
 * ``cloudformation:ListResources``
 * ``cloudformation:GetResource``
+* ``roles/serviceusage.serviceUsageConsumer``
 
 Tag and property sync is always activated for the services configured in the integration. For some services, Splunk Observability Cloud uses either service-specific APIs or generic APIs such as the Resource Groups Tagging API or Cloud Control API. 
 
