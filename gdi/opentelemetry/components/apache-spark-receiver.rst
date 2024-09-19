@@ -9,7 +9,7 @@ Apache Spark receiver
 
 The Apache Spark receiver metrics for an Apache Spark cluster through the Apache Spark REST API. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-.. note:: Out-of-the-box dashboards and navigators aren't supported for the Apache Web Server receiver yet, but are planned for a future release.
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the Apache Spark receiver yet, but are planned for a future release.
 
 The receiver uses the following endpoints: ``/metrics/json``, ``/api/v1/applications/[app-id]/stages``, ``/api/v1/applications/[app-id]/executors``, and ``/api/v1/applications/[app-id]/jobs endpoints``.
 
