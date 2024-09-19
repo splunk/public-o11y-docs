@@ -240,7 +240,7 @@ To create a VPC endpoint, follow these steps:
 
 7. Set the IP address type to ``IPv4``.
 
-8. Specify the security group or groups controlling inbound and outbound traffic for the endpoint, and set the outbound rule for the selected security groups open for port ``443``. If you're using HTTPS, you need to configure inbound rules only.
+8. Specify the security group controlling traffic for the endpoint. Set the inbound rule to HTTPS protocol and the ``443`` port.
   
   The following image shows the security options for AWS PrivateLink: 
 
@@ -250,7 +250,7 @@ To create a VPC endpoint, follow these steps:
 
 9. Review the configuration details and select :guilabel:`Create Endpoint`.
 
-10.  Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has activated the endpoint urls.
+10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has activated the endpoint urls.
 
 .. _aws-privatelink-step4:
 
