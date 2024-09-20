@@ -95,8 +95,8 @@ The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HE
      - See :new-page:`Send data to HTTP Event Collector on Splunk Enterprise <https://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Send_data_to_HTTP_Event_Collector_on_Splunk_Enterprise>`
      - See :new-page:`Create an Event Collector token on Splunk Enterprise <https://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Enterprise>`
    * - Splunk Observability Cloud
-     - See :ref:`admin-org-tokens`.
      - ``https://ingest.<realm>.signalfx.com/v1/log``, where ``<realm>`` is the Splunk Observability Cloud realm, for example ``us0``.
+     - See :ref:`admin-org-tokens`.
 
 To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
