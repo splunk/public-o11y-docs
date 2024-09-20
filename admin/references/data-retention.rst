@@ -9,6 +9,12 @@ Data retention in Splunk Observability Cloud
 
 The following sections list the data retention for each product in Splunk Observability Cloud.
 
+.. note:: 
+
+  The data retention listed in each section applies to real-time metrics. Archived metrics have a retention period of 31 days, and this period doesn't depend on the Splunk Observability Cloud product.
+
+  To learn more about archived metrics, see :ref:`archived-metrics-intro`.
+
 .. _im-data-retention:
 
 Data retention in Infrastructure Monitoring
