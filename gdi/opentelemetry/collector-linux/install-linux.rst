@@ -185,7 +185,7 @@ Collector
      - Set the ingest endpoint URL explicitly instead of using the endpoint inferred from the specified realm.
      - ``https://ingest.REALM.signalfx.com``
    * - ``--memory <memory size>``
-     - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
+     - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. See :ref:`otel-sizing` for more information on how to scale and size the Collector.
      - ``512``
    * - ``--mode <agent|gateway>``
      - Configure the Collector service to run in host monitoring (``agent``) or data forwarding (``gateway``) mode. See :ref:`otel-deployment-mode` for more information.
