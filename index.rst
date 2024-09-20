@@ -896,7 +896,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>
+
+.. toctree::
+   :caption: Release notes
+   :maxdepth:   3
+
+   Release notes overview TOGGLE <release-notes/release-notes-overview.rst>   
 
 .. toctree::
    :caption: Reference and Legal

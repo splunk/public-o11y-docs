@@ -1,0 +1,86 @@
+.. _2024-10-01-rn:
+
+***************
+October 1, 2024
+***************
+
+Splunk Observability Cloud released the following new features and enhancements on October 1, 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned products and components, see the :ref:`list of changelogs <changelogs>`.
+
+.. _loc-2024-10-01:
+
+Log Observer Connect
+====================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - SVC optimization
+     - Use buttons in the UI to run log searches independently of setting log search filters. The default limit is 150,000 logs. 
+   * - Service account-level access control
+     - Splunk Platform admins can restrict user access at the service account-level to ensure data security for auditing and compliance.
+
+.. _rum-2024-10-01:
+
+RUM
+===
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - OTLP support for web browser and Android
+     - TBD
+
+.. _ingest-2024-20-01:
+
+Ingest
+======
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Kubernetes control plane metrics
+     - TBD
+
+.. _gdi-mngt-2024-10-01:
+
+GDI management
+==============
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Extended data retention for archived metrics
+     - TBD
+   * - Terraform implementation
+     - TBD
+
+.. _ae-2024-10-01:
+
+Admin experience
+================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Token management improvements
+     - Admin and power users access a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform.
