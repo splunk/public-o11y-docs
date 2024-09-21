@@ -12,13 +12,13 @@ Release notes overview
 
    2024-10-01-rn
 
-Keep up to date with the latest new features and enhancements to Splunk Observability Cloud products and components.
+Keep up to date with the latest new features and enhancements to Splunk Observability Cloud products and components. Splunk Observability Cloud comprises both SaaS products which release on a rolling basis and downloadable versioned components. Presented here are new feature and enhancement announcements for both SaaS and versioned offerings as well as links to detailed changelogs for versioned components.
 
 .. raw:: html
 
     <h2> What's new </h2>
 
-Each release date listed below includes new features and product enhancements for versioned and non-versioned products and components.
+Each release date listed below includes new features and enhancements for SaaS and versioned products and components.
 
 .. list-table::
    :widths: 1 2
@@ -40,7 +40,7 @@ Each release date listed below includes new features and product enhancements fo
 
     <h2> Changelogs </h2>
 
-For a detailed breakdown of changes in versioned products and components, see the following table:
+For a detailed breakdown of changes in versioned components, see the following table:
 
 .. list-table::
    :widths: 1 2
