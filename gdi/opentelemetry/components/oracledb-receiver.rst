@@ -84,7 +84,7 @@ configuration file. For example:
          receivers:
            - oracledb
 
-To configure the Oracle Database receiver for high availability, use:
+To configure the Oracle Database receiver for high availability use:
 
 .. code:: yaml
 
