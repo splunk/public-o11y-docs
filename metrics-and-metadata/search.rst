@@ -63,6 +63,6 @@ You can either search a specific term, or define what type of object you're look
        :width: 100%
        :alt: Search results for "“checkoutservice".
 
-#. (Optional) You can narrow the search to specific types of results using the following supported prefixes. Use prefeixes to focus search results to a single category. For details, see :ref:`prefix`.
+#. (Optional) You can narrow the search to specific types of results using the following supported prefixes. Use prefixes to focus search results to a single category. For details, see :ref:`prefix`.
 #. (Optional) Select a "more results" link to see more matching results in the search category. 
 #. Select one of the search results to be taken to that object.
