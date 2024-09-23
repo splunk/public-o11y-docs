@@ -2,7 +2,7 @@ If you are a Splunk Observability Cloud customer and are not able to see your da
 
 :strong:`Available to Splunk Observability Cloud customers`
 
-- Submit a case in the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`.
+- Submit a case in the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`.
 
 - Contact :new-page:`Splunk Support <https://www.splunk.com/en_us/about-splunk/contact-us.html>`.
 

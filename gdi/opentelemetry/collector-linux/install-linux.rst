@@ -84,101 +84,59 @@ To skip these steps and use configured repos on the target system that provide t
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- $SPLUNK_ACCESS_TOKEN
-    
-Collect logs for the Collector for Linux
-====================================================================
-
-Use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
-
-Fluentd is turned off by default. If you already installed Fluentd on a host, re-install the Collector without Fluentd using the ``--without-fluentd`` option. 
-
-.. _fluentd-manual-config-linux:
-
-Collect Linux logs with Fluentd
----------------------------------------
-
-If you have a Log Observer entitlement or want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector. For example:
-
-.. code-block:: bash
-
-   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-   sudo sh /tmp/splunk-otel-collector.sh --with-fluentd --realm $SPLUNK_REALM -- $SPLUNK_ACCESS_TOKEN
-
-When turned on, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then sends these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
-
-The following Fluentd plugins are also installed:
-
-* ``capng_c`` for activating Linux capabilities.
-* ``fluent-plugin-systemd`` for systemd journal log collection.
-
-Additionally, the following dependencies are installed as prerequisites for the Fluentd plugins:
-
-.. tabs:: 
-
-  .. tab:: Debian-based systems
-
-    * build-essential
-    * libcap-ng0
-    * libcap-ng-dev
-    * pkg-config
-
-  .. tab:: RPM-based systems
-
-    * Development Tools
-    * libcap-ng
-    * libcap-ng-devel
-    * pkgconfig
-
-You can specify the following parameters to configure the package to send log events to a custom Splunk HTTP Event Collector (HEC) endpoint URL:
-
-* ``--hec-url <URL>``
-* ``--hec-token <TOKEN>``
-
-HEC lets you send data and application events to a Splunk deployment over the HTTP and Secure HTTP (HTTPS) protocols. See :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/Splunk/8.2.1/Data/UsetheHTTPEventCollector>`.
-
-The main Fluentd configuration is installed to ``/etc/otel/collector/fluentd/fluent.conf``. Custom Fluentd source configuration files can be added to the ``/etc/otel/collector/fluentd/conf.d`` directory after installation.
-
-Note the following:
-
-* In this directory, all files with the .conf extension are automatically included by Fluentd.
-* The td-agent user must have permissions to access the configuration files and the paths defined within.
-* By default, Fluentd is configured to collect systemd journal log events from ``/var/log/journal``.
-
-After any configuration modification, run ``sudo systemctl restart td-agent`` to restart the td-agent service.
-
-If the td-agent package is upgraded after initial installation, you might need to set the Linux capabilities for the new version by performing the following steps for td-agent versions 4.1 or higher:
-
-#. Check for the activated capabilities:
-
-   .. code-block:: bash
-
-      sudo /opt/td-agent/bin/fluent-cap-ctl --get -f /opt/td-agent/bin/ruby
-      Capabilities in `` /opt/td-agent/bin/ruby`` ,
-      Effective:   dac_override, dac_read_search
-      Inheritable: dac_override, dac_read_search
-      Permitted:   dac_override, dac_read_search
-
-#. If the output from the previous command does not include ``dac_override`` and ``dac_read_search`` as shown above, run the following commands:
-
-   .. code-block:: bash
-
-      sudo td-agent-gem install capng_c
-      sudo /opt/td-agent/bin/fluent-cap-ctl --add "dac_override,dac_read_search" -f /opt/td-agent/bin/ruby
-      sudo systemctl daemon-reload
-      sudo systemctl restart td-agent
 
 .. _configure-auto-instrumentation:
 
 Configure automatic discovery for back-end applications
 ==================================================================
 
-You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
+You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to configure receivers for each back-end application. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
 
 For more information on instrumentation, see: 
 
 * :ref:`get-started-java` 
 * :ref:`get-started-nodejs`
-* :ref:`get-started-dotnet-otel`
+* :ref:`get-started-dotnet-otel`    
+
+.. _collector-linux-with-docker:
+
+Collector for Linux with Docker
+====================================================================
+
+Install the Collector in a host with Docker
+--------------------------------------------------------------------
+
+If you're installing your Collector instance in a host with Docker, you need to configure a client to establish a connection with the daemon. Depending on your Docker installation and Collector deployment method, try one of these options:
+
+1. If your daemon is listening to a domain socket (for example ``/var/run/docker.sock``), your Collector service or executable needs appropriate permissions and access. Add the ``splunk-otel-collector`` user to the Docker group as configured on your system:
+
+  .. code-block:: bash
+
+    $ usermod -aG docker splunk-otel-collector
+
+2. When using the :new-page:`quay.io/signalfx/splunk-otel-collector <https://quay.io/repository/signalfx/splunk-otel-collector>` image, add the default container user to the required group as configured on your system, and the bind and mount the domain socket:
+
+  .. code-block:: bash
+
+    $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --group-add $(stat -c '%g' /var/run/docker.sock) quay.io/signalfx/splunk-otel-collector:latest <...>
+    
+    # or if specifying the user:group directly
+    $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --user "splunk-otel-collector:$(stat -c '%g' /var/run/docker.sock)" quay.io/signalfx/splunk-otel-collector:latest <...>
+
+Use auto discovery with containers 
+--------------------------------------------------------------------
+
+If your Collector instance is running in a Docker container and the discovery targets are also containers, you need to share the Docker socket when launching the Collector container:
+
+.. code-block:: bash
+
+  $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --group-add <socket_gid>
+
+To use host bindings, run this command:
+
+.. code-block:: bash
+
+  --set=splunk.discovery.extensions.docker_observer.config.use_host_bindings=true
 
 .. _otel-installer-options-linux:
 
@@ -227,7 +185,7 @@ Collector
      - Set the ingest endpoint URL explicitly instead of using the endpoint inferred from the specified realm.
      - ``https://ingest.REALM.signalfx.com``
    * - ``--memory <memory size>``
-     - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
+     - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. See :ref:`otel-sizing` for more information on how to scale and size the Collector.
      - ``512``
    * - ``--mode <agent|gateway>``
      - Configure the Collector service to run in host monitoring (``agent``) or data forwarding (``gateway``) mode. See :ref:`otel-deployment-mode` for more information.

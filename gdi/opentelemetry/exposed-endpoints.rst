@@ -39,7 +39,7 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://localhost:8006``
     - Fluent forward receiver
   * - ``http(s)://0.0.0.0:9080``
-    - Smart Agent receiver with :new-page:`SignalFx Forwarder <https://docs.splunk.com/Observability/gdi/signalfx-forwarder/signalfx-forwarder.html>` monitor type (deprecated)
+    - Smart Agent receiver with the :ref:`signalfx-forwarder`  
   * - ``http(s)://0.0.0.0:9411/api/[v1|v2]/spans``
     - Zipkin receiver supporting V1 and V2
   * - ``http(s)://0.0.0.0:9943``
