@@ -171,7 +171,28 @@ NO_PROXY is configured to bypass the proxy for local addresses and specific doma
 
 Ensure that these variables are correctly configured to comply with your network policies. This setup allows the synthetic tests to communicate securely and efficiently in a controlled network environment.
 
+When using runner, it's important to correctly configure the proxy settings to avoid issues with browser-based tests. The following steps should be followed when setting up their environment:
 
+1. **Ensure Proper NO_PROXY Setup**:
+   
+   - When configuring ``NO_PROXY``, it is critical that the following addresses are **always included**:
+   
+     - ``127.0.0.1`` (for localhost communication)
+     - ``localhost`` (for resolving local tests)
+   
+   These addresses ensure that internal services and tests run correctly without routing through a proxy, preventing potential failures.
+
+2. **Merging HTTP_PROXY and http_proxy**:
+   
+   - The system automatically handles both ``HTTP_PROXY`` and ``http_proxy`` environment variables. If you define one of these, ensure the other is also set, or they will be automatically merged at start-up.
+
+3. **Dockerfile Defaults**:
+   
+   - By default, the runner will set the ``NO_PROXY`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``NO_PROXY``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
+
+4. **Startup Check**:
+   
+   - The runner includes a startup check to validate that ``NO_PROXY`` contains ``127.0.0.1`` and ``localhost``. If these are missing, you may encounter unexpected behavior in test execution.
 
 
 
