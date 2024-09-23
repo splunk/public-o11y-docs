@@ -57,7 +57,7 @@ configuration file, as shown in the following example:
    receivers:
      oracledb:
        # Refer to Oracle Go Driver go_ora documentation for full connection string options
-       datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+       datasource: "oracle://<username>:<password>@<host>:<port>/<database>"
 
 To add more than one instance of Oracle Database, add as many entries of
 the ``oracledb`` receiver as needed. For example:
@@ -67,11 +67,11 @@ the ``oracledb`` receiver as needed. For example:
    receivers:
      oracledb/aninstance:
        # Refer to Oracle Go Driver go_ora documentation for full connection string options
-       datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+       datasource: "oracle://<username>:<password>@<host>:<port>/<database>"
      
      oracledb/anotherinstance:
        # Refer to Oracle Go Driver go_ora documentation for full connection string options
-       datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+       datasource: "oracle://<username>:<password>@<host>:<port>/<database>"
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
@@ -83,6 +83,15 @@ configuration file. For example:
        metrics:
          receivers:
            - oracledb
+
+To configure the Oracle Database receiver in case for high availability, use the syntax as shown in the following example:
+
+.. code:: yaml
+
+   receivers:
+     oracledb:
+       # Refer to Oracle Go Driver go_ora documentation for full connection string options
+       datasource: "oracle://<username>:<password>@<host>:<port>/<service_name>?<server>=<host>:<port>"
 
 Settings
 ======================
