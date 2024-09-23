@@ -186,7 +186,7 @@ When using runner, it's important to correctly configure the proxy settings to a
    
    - The system automatically handles both ``HTTP_PROXY`` and ``http_proxy`` environment variables. If you define one of these, ensure the other is also set, or they will be automatically merged at start-up.
 
-3. :strong:Dockerfile Defaults`:
+3. :strong:`Dockerfile defaults`:
    
    - By default, the runner will set the ``NO_PROXY`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``NO_PROXY``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
 
