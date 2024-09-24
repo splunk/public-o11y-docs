@@ -61,7 +61,7 @@ Follow these steps to create an SLO.
 
             You can also rename the variables.
         
-        #. If you rename the variables, select new variable names for the :guilabel:`Good events (numerator)` and :guilabel:`Total events (numerator)` dropdown menus.
+        #. If you rename the variables, select new variable names for the :guilabel:`Good events (numerator)` and :guilabel:`Total events (denominator)` dropdown menus.
 
         .. note:: Custom metric SLO works by calculating the percentage of successful requests over a given compliance period. This calculation works better for counter and histogram metrics than for gauge metrics. Gauge metrics are not suitable for custom metric SLO, so you might get confusing data when selecting gauge metrics in your configuration.
 
