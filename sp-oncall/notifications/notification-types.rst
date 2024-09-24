@@ -72,6 +72,13 @@ incident number, entity_display_name, and response code if two-way SMS is suppor
 
 You may stop and start our SMS notification subscription by replying to the message with STOP or START. Although, it is best to manage your notifications from the personal profile page in Splunk On-Call.
 
+.. raw:: html
+
+  <embed>
+    <h2>WhatsApp</h2>
+  </embed>
+
+You can use WhatsApp notifications in your personal paging policy. To enable WhatsApp, download and configure the WhatsApp application from the Apple App Store or Google Play Store. Next, access your user profile in Splunk On-Call and enter and verify your mobile number. After verification, an :guilabel:`Enable WhatsApp` button will appear next to the number and you'll be able to use WhatsApp in your Paging Policy.
 
 .. raw:: html
 
