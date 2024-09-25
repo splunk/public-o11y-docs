@@ -18,22 +18,22 @@ If issues persist, you can also contact :ref:`support`.
 Error validating your AWS connection
 =========================================
 
-The automatic attempt to validate a connection that you just configured fails, so there is no connection between Splunk Observability Cloud and your AWS account.
+The automatic attempt to validate a connection that you just configured fails, so there is no connection between Splunk Observability Cloud and your AWS account. This can include failed API calls with ``400`` error codes.
 
 Cause
 ^^^^^^
 
-The connection might fail due to invalid Identity Access Management (IAM) policy used by your AWS integration.
+The connection might fail due to your AWS integration using invalid Identity Access Management (IAM) policies, or missing some of the required permissions. 
 
-If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
+If you use AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
 might impact the AWS IAM policy you're using to connect to Splunk Observability Cloud. 
 
 Solution
 ^^^^^^^^^
 
-Ensure all :ref:`aws-required-permissions` are included in your IAM policy.
+Make sure to include all the required policies to connect your AWS account to Splunk Observability Cloud, as described in :ref:`aws-required-permissions`. Note that required permissions depend on your connection method (polling or Metric Streams), and that tag collection requires specific permissions.
 
-Also review the AWS Organizations' policies and boundaries you're using.
+You also need to review the AWS Organizations' policies and boundaries you're using.
 
 .. _aws-ts-cloud:
 

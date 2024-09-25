@@ -101,7 +101,7 @@ After creating an AWS IAM policy and assigning it to a particular role through t
 Modify the scope of data collection
 --------------------------------------------------
 
-By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
+By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`, but only imports certain :ref:`recommended stats <aws-recommended-stats>` from each service.
 
 Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
@@ -112,7 +112,7 @@ Use the check box options in the guided setup to limit the scope of your data co
 
 To limit data collection, you can also:
 
-- Manage the amount of data to import. See :ref:`specify-data-metadata`. 
+- Manage the amount of data to import. See :ref:`aws-infra-import`.  
 - In the :guilabel:`Data Management` menu in Splunk Observability Cloud, edit any integration to limit data import.
 
   .. image:: /_images/gdi/aws-edit-data-limit.png

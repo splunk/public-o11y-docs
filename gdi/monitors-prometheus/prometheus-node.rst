@@ -170,7 +170,7 @@ The following table shows the configuration options for the
 Metrics
 -------
 
-The following metrics are available for this integration:
+The following metrics are available for this integration. All metrics are custom.
 
 .. raw:: html
  

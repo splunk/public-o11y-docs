@@ -72,7 +72,7 @@ Depending on your destination, you need:
    * ``splunkObservability.accessToken``. Your Splunk Observability Cloud org access token with ingest authorization scope. See :ref:`admin-org-tokens`.
    * ``splunkObservability.realm``. Splunk realm to send telemetry data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
 
-.. note:: The Collector for Kubernetes uses ``main`` as the default Splunk platform index.
+.. note:: The Collector for Kubernetes uses ``main`` as the default Splunk platform index. You can use annotations to send data to different indexes. See :ref:`kubernetes-config-logs-annotations-indexes` for more information. 
 
 Deploy the Helm chart
 ==============================================

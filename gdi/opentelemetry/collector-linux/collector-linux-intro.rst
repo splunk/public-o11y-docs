@@ -17,6 +17,7 @@ Get started with the Collector for Linux
    linux-config-ootb.rst
    Default Linux metrics <metrics-ootb-linux.rst>   
    linux-config.rst
+   linux-config-logs.rst
    linux-upgrade.rst   
    linux-uninstall.rst
    collector-configuration-tutorial/about-collector-config-tutorial.rst
@@ -30,8 +31,9 @@ To install and configure the Splunk Distribution of the OpenTelemetry Collector 
 See the default settings and configuration options at:
 
 * :ref:`linux-config-ootb`
-* :ref:`otel-linux-config`
 * By default, you'll obtain these :ref:`metrics <ootb-metrics-windows>` 
+* :ref:`otel-linux-config`
+* :ref:`linux-config-logs`
 
 .. include:: /_includes/gdi/collector-common-options.rst
 

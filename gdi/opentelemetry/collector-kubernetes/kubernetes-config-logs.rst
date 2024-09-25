@@ -2,12 +2,11 @@
 .. _kubernetes-config-logs:
 
 *********************************************************************************
-Configure logs and events for Kubernetes
+Collect logs and events for the Collector for Kubernetes
 *********************************************************************************
 
 .. meta::
       :description: Configure logs and events for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
-
 
 .. note:: See how to configure the Collector for Kubernetes at :ref:`otel-kubernetes-config` and :ref:`otel-kubernetes-config-advanced`.
 
@@ -77,16 +76,25 @@ To process multi-line logs, add the following section to your values.yaml config
 
 Use :new-page:`regex101 <https://regex101.com/ >` to find a Golang regex that works for your format and specify it in the config file for the config option ``firstEntryRegex``.
 
+.. _kubernetes-config-logs-annotations:
+
 Manage log ingestion using annotations
 ===========================================================================
 
-Use the ``splunk.com/index`` annotation on pods or namespaces to indicate which Splunk platform indexes you want to send logs to. Pod annotation will take precedence over namespace annotation when both are annotated. 
+.. _kubernetes-config-logs-annotations-indexes:
+
+Send logs to different indexes
+-----------------------------------------------------
+
+The Collector for Kubernetes uses ``main`` as the default Splunk platform index. Use the ``splunk.com/index`` annotation on pods or namespaces to indicate which Splunk platform indexes you want to send logs to. 
 
 For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
   
 .. code-block:: bash
 
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
+
+.. note:: A pod annotation takes precedence over a namespace annotation when both are annotated.     
 
 Filter logs using pod or namespace annotations
 -----------------------------------------------------

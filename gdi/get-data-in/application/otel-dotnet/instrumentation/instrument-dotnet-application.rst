@@ -238,16 +238,9 @@ Windows
 
             Start-Process "iisreset.exe" -NoNewWindow -Wait
 
-         You can also set the resource attributes for specific application pools in the ``environmentVariables`` block of the :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`. For example:
-
-         .. code-block:: xml
-
-            <environmentVariables>
-               <add name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
-            </environmentVariables>
-
          .. note::
-            If the ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
+
+            For advanced IIS application configuration options, see :ref:`advanced-config-iis-apps`.
 
       .. tab:: IIS (ASP.NET Core)
 
@@ -265,6 +258,10 @@ Windows
          .. code-block:: powershell
 
             Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+         .. note::
+
+            For advanced IIS application configuration options, see :ref:`advanced-config-iis-apps`.
 
       .. tab:: Windows service
 

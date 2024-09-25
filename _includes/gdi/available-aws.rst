@@ -447,6 +447,13 @@ You can collect data from the following AWS services:
     - :strong:`X`
     - :strong:`X`
 
+  * - AWS/NetworkFirewall
+    - AWS Network Firewall 
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
   * - AWS/OpsWorks
     - AWS OpsWorks
     - :strong:`X`

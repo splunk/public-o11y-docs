@@ -38,7 +38,7 @@ For example:
                 - key: k8s.pod.name
                   value: '^(podNameX)$'
       # Define the logs pipeline with the default values as well as your new processor component
-        service:
+      service:
         pipelines:
           logs:
             processors:

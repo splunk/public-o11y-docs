@@ -252,12 +252,6 @@ Subscription limits
    * - :ref:`custom-mts-entitlement`
      - Set by your contract entitlement
 
-   * - :ref:`high-resolution-custom-metrics-burstoverage-limit`
-     - Multiples of entitlement
-
-   * - :ref:`high-resolution-custom-metrics-entitlement`
-     - Set by your contract entitlement
-
    * - :ref:`host-burstoverage-limit`
      - Multiples of entitlement
 

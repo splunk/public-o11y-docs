@@ -24,6 +24,7 @@ Connect AWS to Splunk Observability Cloud
   Next steps <aws-post-install>
   Troubleshoot your AWS integration <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
+  aws-recommended-stats.rst
   GetMetricStatistics API deprecation notice <aws-api-notice>
   aws-tutorial/about-aws-tutorial.rst
 
@@ -129,6 +130,14 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
 By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
 
 To manage the amount of data to import, see :ref:`aws-infra-import`.  
+
+.. raw:: html
+
+  <embed>
+    <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
 
 .. _aws-data-availability:
 
