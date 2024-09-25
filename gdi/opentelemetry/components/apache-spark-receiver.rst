@@ -14,7 +14,7 @@ The Apache Spark receiver metrics for an Apache Spark cluster through the Apache
 The receiver uses the following endpoints: ``/metrics/json``, ``/api/v1/applications/[app-id]/stages``, ``/api/v1/applications/[app-id]/executors``, and ``/api/v1/applications/[app-id]/jobs endpoints``.
 
 Purpose
-The purpose of this component is to allow monitoring of Apache Spark clusters and the applications running on them through the collection of performance metrics like memory utilization, CPU utilization, shuffle operations, garbage collection time, I/O operations, and more.
+The purpose of this component is to monitor Apache Spark clusters and the applications running on them through the collection of performance metrics like memory utilization, CPU utilization, shuffle operations, and more.
 
 Prerequisites
 ======================
