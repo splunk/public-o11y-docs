@@ -21,7 +21,6 @@ Prerequisites
 
 This receiver supports Apache Spark versions 3.3.2 or higher.
 
-
 Get started
 ======================
 
