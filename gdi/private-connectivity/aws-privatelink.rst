@@ -281,8 +281,42 @@ To delete an endpoint, follow these steps:
 #. Select the VPC endpoint you want to delete.
 #. Confirm the deletion when prompted.
 
-Advanced configuration: AWS PrivateLink with VPC peering 
+Advanced configuration 
 ==========================================================================
+
+Use AWS PrivateLink with the Collector 
+--------------------------------------------------
+
+To use AWS PrivateLink URLs in your Collector instance, update the necessary variables in your Collector configuration to point to the given endpoint type: 
+
+.. list-table::
+  :header-rows: 1
+  :width: 100
+  :widths: 20, 40, 40
+
+  * - Endpoint type
+    - Endpoint URL
+    - Example
+
+  * - Metric ingest endpoint
+    - ``private-ingest.<REGION>.signalfx.com``
+    - ``private-ingest.us0.signalfx.com``
+
+  * - Traces ingest endpoint
+    - ``private-ingest.<REGION>.signalfx.com/v2/trace``
+    - ``private-ingest.us0.signalfx.com/v2/trace``
+
+  * - API endpoint URL
+  * ``http://<REGION>.signalfx.com``
+  - ``http://private-api.us0.signalfx.com``
+
+
+See all PrivateLink URLs at :ref:`aws-privatelink-endpoint-urls`.
+
+For information about the Collector's environment variables see :ref:`collector-env-var`.
+
+Use AWS PrivateLink with VPC peering 
+--------------------------------------------------
 
 Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
 
