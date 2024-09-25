@@ -6,6 +6,21 @@ October 1, 2024
 
 Splunk Observability Cloud released the following new features and enhancements on October 1, 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned products and components, see the :ref:`list of changelogs <changelogs>`.
 
+.. _sf-2024-10-01:
+
+SignalFlow
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Custom metrics SLOs in the SignalFlow editor
+     - Customers can now use the SignalFlow editor to create SLOs for any metric that they use Splunk Observability Cloud to monitor.
+
 .. _loc-2024-10-01:
 
 Log Observer Connect
@@ -19,29 +34,12 @@ Log Observer Connect
    * - New feature or enhancement
      - Description
    * - SVC optimization
-     - Use buttons in the UI to run log searches independently of setting log search filters. The default limit is 150,000 logs. 
-   * - Service account-level access control
-     - Splunk Platform admins can restrict user access at the service account-level to ensure data security for auditing and compliance.
-
-.. _rum-2024-10-01:
-
-RUM
-===
-
-.. list-table::
-   :header-rows: 1
-   :widths: 1 2
-   :width: 100%
-
-   * - New feature or enhancement
-     - Description
-   * - OTLP support for web browser and Android
-     - TBD
+     - You can now use buttons in the UI to run log searches independently of setting log search filters. The default limit is 150,000 logs. 
 
 .. _ingest-2024-20-01:
 
-Ingest
-======
+Data ingest
+===========
 
 .. list-table::
    :header-rows: 1
@@ -51,24 +49,7 @@ Ingest
    * - New feature or enhancement
      - Description
    * - Kubernetes control plane metrics
-     - TBD
-
-.. _gdi-mngt-2024-10-01:
-
-GDI management
-==============
-
-.. list-table::
-   :header-rows: 1
-   :widths: 1 2
-   :width: 100%
-
-   * - New feature or enhancement
-     - Description
-   * - Extended data retention for archived metrics
-     - TBD
-   * - Terraform implementation
-     - TBD
+     - In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are now available using OpenTelemetry Prometheus receivers that target Prometheus endpoints.
 
 .. _ae-2024-10-01:
 
@@ -83,4 +64,21 @@ Admin experience
    * - New feature or enhancement
      - Description
    * - Token management improvements
-     - Admin and power users access a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform.
+     - Admin and power users now access a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform.
+
+.. _gdi-mngt-2024-10-01:
+
+GDI management
+==============
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Data retention for archived metrics extended from 8 to 31 days
+     - To facilitate long-term data and historical trend analysis, you can now store archived metrics for up to 31 days. You can also customize your restoration time window when creating exception rules.
+   * - Terraform implementation
+     - You can now use Terraform to archive metrics and create exception rules, such as routing a subset of metrics to the real-time tier rather than the archival tier.

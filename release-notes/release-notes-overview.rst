@@ -28,11 +28,11 @@ Each release date listed below includes new features and enhancements for SaaS a
    * - Release
      - Changes by product or component
    * - :ref:`October 1, 2024 <2024-10-01-rn>`
-     - * :ref:`Log Observer Connect <loc-2024-10-01>`
-       * :ref:`RUM <rum-2024-10-01>`
-       * :ref:`Ingest <ingest-2024-20-01>`
-       * :ref:`GDI Management <gdi-mngt-2024-10-01>`
+     - * :ref:`SignalFlow <sf-2024-10-01>`
+       * :ref:`Log Observer Connect <loc-2024-10-01>`
+       * :ref:`Data ingest <ingest-2024-20-01>`
        * :ref:`Admin experience <ae-2024-10-01>`
+       * :ref:`GDI Management <gdi-mngt-2024-10-01>`
 
 .. _changelogs:
 
