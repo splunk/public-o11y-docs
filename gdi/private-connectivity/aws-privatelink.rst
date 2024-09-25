@@ -128,51 +128,59 @@ AWS PrivateLink service names
 .. list-table::
   :header-rows: 1
   :width: 100
-  :widths: 20, 20, 20, 20, 20
+  :widths: 10, 10, 20, 20, 20, 20
 
-  * - AWS region
+  * - Splunk Observability Cloud realm
+    - AWS region
     - Ingest endpoint service name
     - API endpoint service name
     - Backfill endpoint service name
     - Stream endpoint service name
 
-  * - ap-northeast-1
+  * - jp0
+    - AWS AP Tokyo (ap-northeast-1)
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-086c8167a74323e5a
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-06e1951072fcabaaa
     - Coming soon
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-0aebd0dfe769cc20b
 
-  * - ap-southeast-2
+  * - au0
+    - AWS AP Sydney (ap-southeast-2)
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-01e4e31c294754b6e
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-0d1d69a0b1bf003cd
     - Coming soon
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-006a9808c3bf97fc1
 
-  * - eu-central-1
+  * - eu1
+    - AWS EU Frankfurt (eu-central-1)
     - com.amazonaws.vpce.eu-central-1.vpce-svc-0163ebbf011db95fa
     - com.amazonaws.vpce.eu-central-1.vpce-svc-063722bf4a2e858a3
     - Coming soon
     - com.amazonaws.vpce.eu-central-1.vpce-svc-022080c55adaeac78
 
-  * - eu-west-1
+  * - eu0
+    - AWS EU Dublin (eu-west-1)
     - com.amazonaws.vpce.eu-west-1.vpce-svc-01c194b2265ecb86e
     - com.amazonaws.vpce.eu-west-1.vpce-svc-07b08296ff84e17a0
     - Coming soon
     - com.amazonaws.vpce.eu-west-1.vpce-svc-0d036df6dbc6ddadb
 
-  * - eu-west-2
+  * - eu2
+    - AWS EU London (eu-west-2)
     - com.amazonaws.vpce.eu-west-2.vpce-svc-0f7427a7b9ef925b0
     - com.amazonaws.vpce.eu-west-2.vpce-svc-0719f35de75c08514
     - Coming soon
     - com.amazonaws.vpce.eu-west-2.vpce-svc-0bc5b13127f2916ce
 
-  * - us-east-1
+  * - us0
+    - AWS US East Virginia (us-east-1)
     - com.amazonaws.vpce.us-east-1.vpce-svc-0336437d577075951
     - com.amazonaws.vpce.us-east-1.vpce-svc-089b68950f5be1c22
     - Coming soon
     - com.amazonaws.vpce.us-east-1.vpce-svc-0c7d803ea7ebe3157
 
-  * - us-west-2
+  * - us1
+    - AWS US West Oregon (us-west-2)
     - com.amazonaws.vpce.us-west-2.vpce-svc-06376c4a9be288ee9
     - com.amazonaws.vpce.us-west-2.vpce-svc-0da2bbb45fa4c3a6b
     - Coming soon
