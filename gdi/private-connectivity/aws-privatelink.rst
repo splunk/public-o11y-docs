@@ -62,51 +62,59 @@ AWS PrivateLink endpoint URLs
 .. list-table::
   :header-rows: 1
   :width: 100
-  :widths: 20, 20, 20, 20, 20
+  :widths: 10, 10, 20, 20, 20, 20
 
-  * - AWS region
+  * - Splunk Observability Cloud realm
+    - AWS region
     - Ingest endpoint URL
     - API endpoint URL
     - Backfill endpoint URL
     - Stream endpoint URL
 
-  * - ap-northeast-1
+  * - jp0
+    - AWS AP Tokyo (ap-northeast-1)
     - :new-page:`private-ingest.jp0.signalfx.com <http://private-ingest.jp0.signalfx.com/>`
     - :new-page:`private-api.jp0.signalfx.com <http://private-api.jp0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.jp0.signalfx.com <http://private-stream.jp0.signalfx.com/>`
 
-  * - ap-southeast-2
+  * - au0
+    - AWS AP Sydney (ap-southeast-2)
     - :new-page:`private-ingest.au0.signalfx.com <http://private-ingest.au0.signalfx.com/>`
     - :new-page:`private-api.au0.signalfx.com <http://private-api.au0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.au0.signalfx.com <http://private-stream.au0.signalfx.com/>`
 
-  * - eu-central-1
+  * - eu1
+    - AWS EU Frankfurt (eu-central-1)
     - :new-page:`private-ingest.eu1.signalfx.com <http://private-ingest.eu1.signalfx.com/>`
     - :new-page:`private-api.eu1.signalfx.com <http://private-api.eu1.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu1.signalfx.com <http://private-stream.eu1.signalfx.com/>`
 
-  * - eu-west-1
+  * - eu0
+    - AWS EU Dublin (eu-west-1)
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
     - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
 
-  * - eu-west-2
+  * - eu2
+    - AWS EU London (eu-west-2)
     - :new-page:`private-ingest.eu2.signalfx.com <http://private-ingest.eu2.signalfx.com/>`
     - :new-page:`private-api.eu2.signalfx.com <http://private-api.eu2.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu2.signalfx.com <http://private-stream.eu2.signalfx.com/>`
 
-  * - us-east-1
+  * - us0
+    - AWS US East Virginia (us-east-1)
     - :new-page:`private-ingest.us0.signalfx.com <http://private-ingest.us0.signalfx.com/>`
     - :new-page:`private-api.us0.signalfx.com <http://private-api.us0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.us0.signalfx.com <http://private-stream.us0.signalfx.com/>`
 
-  * - us-west-2
+  * - us1
+    - AWS US West Oregon (us-west-2)
     - :new-page:`private-ingest.us1.signalfx.com <http://private-ingest.us1.signalfx.com/>`
     - :new-page:`private-api.us1.signalfx.com <http://private-api.us1.signalfx.com/>`
     - Coming soon
