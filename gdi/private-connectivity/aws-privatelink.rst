@@ -307,8 +307,8 @@ To use AWS PrivateLink URLs in your Collector instance, update the necessary var
     - ``private-ingest.us0.signalfx.com/v2/trace``
 
   * - API endpoint URL
-  * ``http://<REGION>.signalfx.com``
-  - ``http://private-api.us0.signalfx.com``
+    - ``http://<REGION>.signalfx.com``
+    - ``http://private-api.us0.signalfx.com``
 
 
 See all PrivateLink URLs at :ref:`aws-privatelink-endpoint-urls`.
