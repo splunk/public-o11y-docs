@@ -17,7 +17,7 @@ Heartbeat Check alerts when a signal has not reported for some time. This might 
 Examples
 ============================================================================
 
-You have a detector that alerts you when the minimum number of logins being handled by each host goes below a specified value. If any host stops reporting, that detector isn't triggered if there is a problem. The Heartbeat Check condition notifies you if a host stops reporting.
+You have a detector that alerts you when the minimum number of logins being handled by each host goes below a specified value. If a host stops reporting, that detector isn't triggered if there is a problem. The Heartbeat Check condition notifies you if a host stops reporting, or if all hosts in a group stop reporting.
 
 
 Settings
@@ -35,7 +35,7 @@ Settings
 
    * - :strong:`Hasn't reported for`
      - Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w.
-     - How long it's been since the signal last reported. Longer time periods result in lower sensitivity and potentially fewer alerts. If you specify a value for :guilabel:`Group by` (below), how long it's been since any member of the group stopped reporting.
+     - How long it's been since the signal last reported. Longer time periods result in lower sensitivity and potentially fewer alerts. If you specify a value for :guilabel:`Group by` (below), how long it's been since all members of the group stopped reporting.
 
    * - (optional) :strong:`Group by`
      - Dimension or property chosen from dropdown menu
