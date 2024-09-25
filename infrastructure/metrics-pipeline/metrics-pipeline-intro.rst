@@ -42,7 +42,7 @@ Use metric pipeline management to control your data volume
 
 For each metric you send to Splunk Observability Cloud, MPM can help you configure how to ingest, keep, and manage the metric's data volume and cardinality.
 
-For example,  you can decide to route your low-value metrics to archived metrics, a low-cost data tier, or even entirely drop them. Meanwhile, your high-value metrics continue to be routed to the real-time tier for alerting and monitoring. To learn more, see :ref:`mpm-rule-routing`.
+For example, you can decide to route your low-value metrics to archived metrics, a low-cost data tier, or even entirely drop them. Meanwhile, your high-value metrics continue to be routed to the real-time tier for alerting and monitoring. To learn more, see :ref:`mpm-rule-routing`.
 
 You can also convert a high-cardinality metric into a low-cardinality metric by aggregating away the dimensions that are not needed. To learn more, see :ref:`mpm-rule-routing-exception`.
 
