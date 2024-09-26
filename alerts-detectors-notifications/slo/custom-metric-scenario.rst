@@ -18,7 +18,7 @@ Use custom metric as service level indicator (SLI)
 From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a target for their SLO. Kai follows these steps: 
 
 #. Kai wants to use a Synthetics metric as the system health indicators, so they select the :guilabel:`Custom metric` from the :guilabel:`Metric type` menu.
-#. Kai enters following into the SignalFlow editor:
+#. Kai enters following program into the SignalFlow editor:
 
       .. code-block:: python
 
