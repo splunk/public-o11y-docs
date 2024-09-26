@@ -98,6 +98,7 @@ Regardless of the services you want to use, you need the following permissions:
 
 * ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are activated.
 * ``ec2:DescribeRegions``. Used to check if regions configured in the integration are enabled on the AWS account.
+* ``iam:ListAccountAliases``. Used to sync account aliases for AWS MTS.
 
 Tag and property sync permissions:
 
