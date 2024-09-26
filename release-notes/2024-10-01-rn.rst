@@ -51,10 +51,10 @@ Data ingest
    * - Kubernetes control plane metrics
      - In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are available using OpenTelemetry Prometheus receivers that target Prometheus endpoints.
 
-.. _ae-2024-10-01:
+.. _auth-2024-10-01:
 
-Admin experience
-================
+Authentication
+==============
 
 .. list-table::
    :header-rows: 1
