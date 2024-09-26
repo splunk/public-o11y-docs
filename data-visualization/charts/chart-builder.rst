@@ -119,7 +119,7 @@ For more information on histogram function and supported methods, see :new-page:
 Use archived metrics in charts
 --------------------------------------
 
-Metrics pipeline management (MPM) in Splunk Observability Cloud lets you route your low-value metrics to archived metrics. When you select an archived metric as a signal in your chart, the archived metric can't be plotted.
+When you select an archived metric as a signal in your chart, the archived metric can't be plotted.
 
 To include an archived metric in charts, route them to real-time or create exception rules to make them available. For more information, see the :ref:`mpm-rule-routing-exception` section.
 
