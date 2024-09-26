@@ -114,7 +114,7 @@ Query logs to identify root causes :ref:`logs-intro-logconnect`
 .. rst-class:: newcard
 
 :strong:`Synthetic Monitoring`
-Proactively monitor the performance of web resources :ref:`welcome-synthmon`
+Proactively monitor the performance of web resources :ref:`intro-synthetics`
 
 .. rst-class:: newcard
 

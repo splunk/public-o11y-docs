@@ -33,50 +33,33 @@ For information about Splunk Observability Cloud packaging and pricing, see :new
 
 Start learning about how the following Splunk Observability Cloud products work to provide you with unified, end-to-end observability of your environment:
 
-- :ref:`welcome-imm`
-
-- :ref:`welcome-apm` (APM)
-
-- :ref:`welcome-rum` (RUM)
-
-- :ref:`welcome-synthmon`
-
-- :ref:`welcome-logobs`
-
-- :ref:`welcome-oncall`
-
-- :ref:`welcome-mobile`
-
-- :ref:`welcome-it`
-
-- :ref:`welcome-content-packs`
-
 .. note:: For a list of benefits and service terms of Splunk Observability Cloud, see :ref:`o11y-service-description`.
 
-.. _welcome-gdi:
-
-Get data in using supported integrations to hundreds of common data sources
-================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Get data in using supported integrations to hundreds of common data sources<a name="welcome-gdi" class="headerlink" href="#welcome-gdi" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 The first step toward full-stack observability is getting data from your environment into Splunk Observability Cloud. Get data in using any of our over 100 supported integrations to common data sources.
 
 For more information about getting data into Splunk Observability Cloud, see :ref:`get-started-get-data-in`.
 
-
-.. _welcome-imm:
-
-Splunk Infrastructure Monitoring
-================================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk Infrastructure Monitoring<a name="welcome-imm" class="headerlink" href="#welcome-imm" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Gain insights into and perform powerful, capable analytics on your infrastructure and resources across hybrid and multi-cloud environments with Splunk Infrastructure Monitoring. Infrastructure Monitoring offers support for a broad range of integrations for collecting all kinds of data, from system metrics for infrastructure components to custom data from your applications.
 
 For more information, see :ref:`wcidw-imm`
 
-
-.. _welcome-apm:
-
-Splunk Application Performance Monitoring
-=========================================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk Application Performance Monitoring<a name="welcome-apm" class="headerlink" href="#welcome-apm" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Collect traces and spans to monitor your distributed applications with Splunk APM. A trace is a collection of actions, or spans, that occur to complete a transaction. Splunk APM collects and analyzes every span and trace from each of the services that you have connected to Splunk Observability Cloud to give you full-fidelity access to all of your application data.
 
@@ -84,60 +67,61 @@ For more information, see :ref:`get-started-apm`
 
 For information about how APM can be used to address real-life scenarios, see :ref:`apm-scenarios-intro`.
 
-
-.. _welcome-rum:
-
-Splunk Real User Monitoring
-===========================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk Real User Monitoring<a name="welcome-rum" class="headerlink" href="#welcome-rum" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk Real User Monitoring provides insights about the performance and health of the front-end user experience of your application. Splunk RUM collects performance metrics, web vitals, errors, and other forms of data to allow you to detect and troubleshoot problems in your application, measure the health of your application, and assess the performance of your user experience.
 
 For more information, see :ref:`get-started-rum`.
 
-
-.. _welcome-synthmon:
-
-Splunk Synthetic Monitoring
-======================================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk Synthetic Monitoring<a name="welcome-synthmon" class="headerlink" href="#welcome-synthmon" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk Synthetics Monitoring is a platform to synthetically measure performance of your web-based properties. It offers features that provide insights that allow you to optimize uptime and performance of APIs, service endpoints, and end user experiences and prevent web performance issues.
 
 For more information, see the :ref:`intro-synthetics`.
 
-
-.. _welcome-logobs:
-
-Splunk Log Observer
-===================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk Log Observer Connect<a name="welcome-logobs" class="headerlink" href="#welcome-logobs" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Troubleshoot your application and infrastructure behavior using high-context logs in Splunk Observability Cloud. With Splunk Log Observer, you can perform codeless queries on logs to detect the source of problems in your systems. You can also extract fields from logs in Log Observer to set up log processing rules and transform your data as it arrives.
 
-For more information, see :ref:`LogObserverFeatures`.
+For more information, see :ref:`logs-intro-logconnect`.
 
-
-.. _welcome-oncall:
-
-Splunk On-Call
-=========================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk On-Call<a name="welcome-oncall" class="headerlink" href="#welcome-oncall" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk On-Call incident response software aligns log management, monitoring, chat tools, and more, for a single-pane of glass into system health. Splunk On-Call automates delivery of alerts to get the right alert, to the right person, at the right time.
 
 For more information, see the :new-page:`Splunk On-Call documentation <https://help.victorops.com/>`.
 
-
-.. _welcome-mobile:
-
-Splunk Observability Cloud for Mobile
-======================================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk Observability Cloud for Mobile<a name="welcome-mobile" class="headerlink" href="#welcome-mobile" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app to Splunk Observability Cloud. You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 
 For more information, see :ref:`intro-to-mobile`.
 
-.. _welcome-it:
-
-Splunk IT Essentials Work and Splunk IT Service Intelligence 
-===================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk IT Essentials Work and Splunk IT Service Intelligence <a name="welcome-it" class="headerlink" href="#welcome-it" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk IT Essentials Work (ITE Work) is a free application that helps you get started with monitoring and analyzing your IT infrastructure. 
 
@@ -145,11 +129,22 @@ Splunk IT Service Intelligence (ITSI) is a premium IT operations solution that p
 
 For more information about these applications, see the :new-page:`IT operations product overview <https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>`. 
 
-.. _welcome-content-packs:
-
-Splunk App for Content Packs
-======================================
+.. raw:: html
+  
+    <embed>
+      <h2>Splunk App for Content Packs<a name="welcome-content-packs" class="headerlink" href="#welcome-content-packs" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Quickly set up your IT Service Intelligence (ITSI) or IT Essentials Work (ITE Work) environment using prepackaged content such as KPI base searches, service templates, saved glass tables, and other knowledge objects. 
 
 For more information, see the :new-page:`Overview of the Splunk App for Content Packs <https://docs.splunk.com/Documentation/ContentPackApp/latest/Overview/Overview>`.
+
+.. raw:: html
+  
+    <embed>
+      <h2>Learn more <a name="welcome-more" class="headerlink" href="#welcome-more" title="Permalink to this headline">¶</a></h2>
+    </embed>
+
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`. To get started with Splunk Observability Cloud, see :ref:`get-started-o11y`.
+
+For information about Splunk Observability Cloud packaging and pricing, see :new-page:`Pricing - Observability <https://www.splunk.com/en_us/products/pricing/observability.html>`.
