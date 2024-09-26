@@ -64,7 +64,7 @@ Admin experience
    * - New feature or enhancement
      - Description
    * - Token management improvements
-     - Admin and power users access a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform.
+     - Admin and power users access a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform. For more information, see :ref:`admin-org-tokens`.
 
 .. _data-mngt-2024-10-01:
 
