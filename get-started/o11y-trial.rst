@@ -1,8 +1,7 @@
 .. _o11y-trial:
 
-******************************************************
-Free trial of Splunk Observability Cloud
-******************************************************
+Splunk Observability Cloud free trial and guided onboarding
+************************************************************
 
 .. meta::
     :description: About the free trial available for Splunk Observability Cloud.
@@ -19,8 +18,11 @@ For an introduction to Splunk Observability Cloud products, see :ref:`welcome`.
 
 For information about how to use these products together to address real-life scenarios, see :ref:`get-started-scenario`.
 
-Sign up for the trial
-============================
+.. raw:: html
+  
+    <embed>
+      <h2>Sign up for the trial<a name="trial-signup" class="headerlink" href="#trial-signup" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 If this is your first experience with Splunk Observability Cloud, here's how you can sign up for your free trial.
 
@@ -37,9 +39,11 @@ If this is your first experience with Splunk Observability Cloud, here's how you
     #. In the email, select :guilabel:`Verify` or paste the link into your browser. 
     #. Create your password and select :guilabel:`Sign in Now`.
 
-What you'll see when you sign in
-====================================
-
+.. raw:: html
+  
+    <embed>
+      <h2>What you'll see when you sign in<a name="trial-signin" class="headerlink" href="#trial-signin" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 .. image:: /_images/get-started/trial-exp.png
    :width: 80%
@@ -53,10 +57,11 @@ You can also expand the left-hand navigation menu to show the full names of the 
    :width: 80%
    :alt: The right-angle brackets in the bottom, left corner of the UI expands the navigation menu.
 
-
-
-Guided onboarding
-=========================
+.. raw:: html
+  
+    <embed>
+      <h2>Guided onboarding<a name="trial-guided" class="headerlink" href="#trial-guided" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 There are five steps to the guided onboarding. The UI guides you through each of the steps, providing the commands and links you require.
 
@@ -66,11 +71,13 @@ There are five steps to the guided onboarding. The UI guides you through each of
 #. Create traffic by exploring the Hipster Shop. Clicking around the Hipster Shop site will generate traces and metrics for you to view in Splunk Observability Cloud.
 #. Explore the results in Application Performance Monitoring (APM).
 
+.. raw:: html
+  
+    <embed>
+      <h3>Prerequisites<a name="trial-guided-prereqs" class="headerlink" href="#trial-guided-prereqs" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
-Pre-Requisites
----------------------
-
-The first step is to set up some pre-requistes for the demo enviornmnet. The trial UI will guide you through this and link to the resources you need. 
+The first step is to set up some prerequisites for the demo environment. The trial UI will guide you through this and link to the resources you need. 
 
 To run the demo environment, install and have functioning versions of:
 
@@ -80,15 +87,22 @@ To run the demo environment, install and have functioning versions of:
 - GSED: GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. - See :new-page:`https://formulae.brew.sh/formula/gnu-sed`.
 - The Hipster Shop cluster requires a minimum 4 GB of memory. 
 
-Install the OpenTelemetry collector
-------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Install the OpenTelemetry collector<a name="trial-guided-collector" class="headerlink" href="#trial-guided-collector" title="Permalink to this headline">¶</a></h3>
+    </embed>
+
 To install the OpenTelemetry collector, you'll need to know:
 
 - Your Splunk Observability Cloud realm. To locate your realm, see :new-page:`View your realm and org info <https://docs.splunk.com/Observability/admin/references/organizations.html>`.
 - Your Splunk Observability Cloud access token. For details, see :ref:`admin-org-tokens`.
 
-Install the Hipster Shop
--------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Install the Hipster Shop<a name="trial-guided-hipster" class="headerlink" href="#trial-guided-hipster" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 The Hipster Shop allows you to generate sample data. To install the Hipster shop demo locally, you'll need your Real User Management (RUM) token. For instructions, see :ref:`rum-access-token`.
 
