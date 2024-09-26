@@ -98,6 +98,9 @@ The following table specifies the permissions required for GCP integrations:
    *  - ``serviceusage.services.use``
       - Yes, if you want to activate the use of a quota from the project where metrics are stored
 
+   *  - ``serviceusage.serviceUsageConsumer``
+      - Yes, for SQL services
+
    *  - ``spanner.instances.list``
       - Yes, if the Spanner service is activated
 
