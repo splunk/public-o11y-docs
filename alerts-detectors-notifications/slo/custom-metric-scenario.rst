@@ -25,11 +25,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
           G = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check') and filter('success', 'true'))
           T = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check'))
 
-   Kai defines variables ``G`` and ``T`` as two streams of ``synthetics.run.count`` metric time series (MTS) measuring the health of requests sent to the Emby service.
-   
-   To distinguish between the two data streams, Kai applies an additional filter on the ``success`` dimension in the definition for ``G``. This filter queries for a specific collection of MTS that track successful requests for the Emby service.
-
-   In Kai's SignalFlow program, ``G`` is a data stream of good events and ``T`` is a data stream of total events.
+   Kai defines variables ``G`` and ``T`` as two streams of ``synthetics.run.count`` metric time series (MTS) measuring the health of requests sent to the Emby service. To distinguish between the two data streams, Kai applies an additional filter on the ``success`` dimension in the definition for ``G``. This filter queries for a specific collection of MTS that track successful requests for the Emby service. In Kai's SignalFlow program, ``G`` is a data stream of good events and ``T`` is a data stream of total events.
 
       .. image:: /_images/images-slo/custom-metric-slo-scenario.png
           :width: 100%
