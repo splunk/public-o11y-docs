@@ -133,12 +133,14 @@ The following example shows how to connect to a nonstandard API server that uses
 Activate control plane metrics histograms
 -------------------------------------------
 
-To activate control plane metrics histograms, use the feature flag ``useControlPlaneMetricsHistogramData``, for example:
+To activate control plane metrics histograms, use the feature flag ``useControlPlaneMetricsHistogramData``:
 
 .. code-block:: yaml
 
   featureGates:
     useControlPlaneMetricsHistogramData: true
+
+To learn more about histogram metrics see :ref:`histograms`.
 
 Known issues
 -----------------------------------------------------------------------------
