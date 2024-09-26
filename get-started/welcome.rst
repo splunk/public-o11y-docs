@@ -7,7 +7,7 @@ Splunk Observability Cloud overview
 .. meta::
    :description: This page provides an overview of the products and features provided by Splunk Observability Cloud
 
-Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real-time and at any scale, to help you:
+Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, to help you:
 
 - Keep your services reliable
 
@@ -15,11 +15,11 @@ Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting
 
 - Innovate faster
 
-Choose from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premise and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud.
+Select from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud.
 
-When you send data from each layer of your full-stack environment to Splunk Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.
+When you send data from each layer of your full-stack environment to Splunk Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about the data model for Splunk Observability Cloud, refer to :ref:`data-model`.
 
-Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content you are interested in. For details, see :ref:`gsearch`.
+The Splunk Observability Cloud suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content you are interested in. For details, see :ref:`gsearch`.
 
 The following diagram provides a high-level view of how each Splunk Observability Cloud product plays its part to provide you with full-stack observability:
 
@@ -41,7 +41,7 @@ Start learning about how the following Splunk Observability Cloud products work 
       <h2>Get data in using supported integrations to hundreds of common data sources<a name="welcome-gdi" class="headerlink" href="#welcome-gdi" title="Permalink to this headline">¶</a></h2>
     </embed>
 
-The first step toward full-stack observability is getting data from your environment into Splunk Observability Cloud. Get data in using any of our over 100 supported integrations to common data sources.
+The first step toward full-stack observability is getting data from your environment into Splunk Observability Cloud. Get data in using over 100 supported integrations to common data sources.
 
 For more information about getting data into Splunk Observability Cloud, see :ref:`get-started-get-data-in`.
 
@@ -51,7 +51,7 @@ For more information about getting data into Splunk Observability Cloud, see :re
       <h2>Splunk Infrastructure Monitoring<a name="welcome-imm" class="headerlink" href="#welcome-imm" title="Permalink to this headline">¶</a></h2>
     </embed>
 
-Gain insights into and perform powerful, capable analytics on your infrastructure and resources across hybrid and multi-cloud environments with Splunk Infrastructure Monitoring. Infrastructure Monitoring offers support for a broad range of integrations for collecting all kinds of data, from system metrics for infrastructure components to custom data from your applications.
+Gain insights into and perform powerful, capable analytics on your infrastructure and resources across hybrid and multicloud environments with Splunk Infrastructure Monitoring. Infrastructure Monitoring offers support for a broad range of integrations for collecting all kinds of data, from system metrics for infrastructure components to custom data from your applications.
 
 For more information, see :ref:`wcidw-imm`
 

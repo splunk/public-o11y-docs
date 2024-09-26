@@ -25,7 +25,7 @@ You can update the Splunk Observability Cloud documentation to fix typos or othe
 
 To update the Splunk Observability Cloud documentation you need a GitHub account. 
 
-You can use an existing GitHub account or create one for free in the GitHub website.
+You can use an existing GitHub account or create a new account for free in the GitHub website.
 
 .. raw:: html
   
@@ -41,7 +41,7 @@ On every page of the Splunk Observability Cloud documentation you can find an :g
 
 After you've completed your edit, GitHub prompts you to open a pull request and fill out the description of the changes using a template. 
 
-Within three days, the Splunk Observability Cloud documentation team reviews your pull request and might ask you to make some edits. If the changes are approved, the pull requests is approved and merged.
+Within 3 days, the Splunk Observability Cloud documentation team reviews your pull request and might ask you to make some edits. If the changes are approved, the pull requests is approved and merged.
 
 .. raw:: html
   
