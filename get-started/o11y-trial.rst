@@ -7,7 +7,7 @@ Splunk Observability Cloud free trial and guided onboarding
     :description: About the free trial available for Splunk Observability Cloud.
 
 
-The trial guides you through the steps to create your Splunk Observability Cloud trial environment. As part of the trial, Hipster shop - the Splunk Observability Cloud trial shop - is deployed to a local minikube cluster as a set of Docker containers that provide metrics and traces. To set up your minikube cluster and OpenTelemetry collector you also need Helm and gsed installed for the automation to configure the cluster.
+The trial guides you through the steps to create your Splunk Observability Cloud trial environment. As part of the trial, Hipster shop - the Splunk Observability Cloud trial shop - is deployed to a local minikube cluster as a set of Docker containers that provide metrics and traces. To set up your minikube cluster and OpenTelemetry collector you also need Helm and the gnu-sed editor installed for the automation to configure the cluster.
 
 You can try out Splunk Observability Cloud for 14 days, absolutely free. You can explore the trial in 2 ways:
 
