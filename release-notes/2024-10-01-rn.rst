@@ -19,7 +19,7 @@ Service level objective (SLO)
    * - New feature or enhancement
      - Description
    * - SignalFlow editor for custom metrics SLO
-     - Customers can use SignalFlow to define metrics and filters when creating a custom metric SLO.
+     - Customers can use SignalFlow to define metrics and filters when creating a custom metric SLO. For more information, see :ref:`create-slo`.
 
 .. _loc-2024-10-01:
 
