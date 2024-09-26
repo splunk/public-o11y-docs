@@ -69,7 +69,7 @@ Admin experience
 .. _data-mngt-2024-10-01:
 
 Data management
-==============
+===============
 
 .. list-table::
    :header-rows: 1
