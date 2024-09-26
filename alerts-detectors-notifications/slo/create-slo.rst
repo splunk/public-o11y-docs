@@ -56,7 +56,7 @@ Follow these steps to create an SLO.
                   G = data('good.metric', filter=filter('sf_error', 'false'))
                   T = data('total.metric')
               
-              * Line 1 defines ``G`` as a data stream of ``good.metric`` metric time series (MTS). The SignalFlow ``filter()`` function queries for a collection of MTS with value ``false`` for the ``sf_error`` dimension. The filter distinguishes successful requests from total requests, making ``G`` good events variable.
+              * Line 1 defines ``G`` as a data stream of ``good.metric`` metric time series (MTS). The SignalFlow ``filter()`` function queries for a collection of MTS with value ``false`` for the ``sf_error`` dimension. The filter distinguishes successful requests from total requests, making ``G`` the good events variable.
               * Line 2 defines ``T`` as a data stream ``total.metric`` MTS. ``T`` is the total events variable.
 
            Replace the code sample with your own SignalFlow program. You can define good events and total events variables using any metric and supported SignalFlow function. For more information, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` in the Splunk Observability Cloud Developer Guide.
