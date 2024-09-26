@@ -210,32 +210,6 @@ Set ``agent.hostNetwork`` to ``false`` to turn off host network access. This mig
 
 This value is disregarded for Windows.
 
-.. _otel-kubernetes-config-control-plane-metrics:
-
-Collect control plane metrics from specific OTel components 
-======================================================================================
-
-Control plane metrics are available for the following components: ``coredns``, ``etcd``, ``kube-controller-manager``, ``kubernetes-apiserver``, ``kubernetes-proxy``, and ``kubernetes-scheduler``
-
-You can use the :ref:`Collector agent <helm-chart-components-agent>` to obtain control plane metrics from a specific component by setting ``agent.controlPlaneMetrics.{otel_component}`` to ``true``. 
-
-Supported distributions
--------------------------------------------
-
-Control plane metrics are supported for Kubernetes version 1.22 and Openshift version 4.9.
-
-Unsupported distributions include AKS, EKS, EKS/Fargate, GKE, and GKE/Autopilot.
-
-Activate control plane metrics histograms
--------------------------------------------
-
-To activate control plane metrics histograms, use the feature flag ``useControlPlaneMetricsHistogramData``, for example:
-
-.. code-block:: yaml
-
-  featureGates:
-    useControlPlaneMetricsHistogramData: true
-
 Activate AlwaysOn Profiling
 =================================
 
