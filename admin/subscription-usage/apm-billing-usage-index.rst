@@ -249,7 +249,7 @@ The following metrics power the charts in your APM Subscription Usage page with 
 
    * - ``sf.org.apm.numMonitoringMetricSets``
      - Monitoring MetricSets
-     - The cardinality of Monitoring MetricSets. MMS data is available only for histogram MMS and is available only in the usage report. MMS data is available at 10-minute intervals and has a look-back period of 1 hour. 
+     - The cardinality of Monitoring MetricSets. MMS data is available only for histogram MMS. MMS data is available at 10-minute intervals and has a look-back period of 1 hour. 
 
 .. _host_subscription_plans:
 
@@ -280,7 +280,7 @@ The following metrics power the charts in your APM Subscription Usage page with 
 
    * - ``sf.org.apm.numTroubleshootingMetricSets``
      - Troubleshooting MetricSets
-     - The cardinality of Troubleshooting MetricSets for each 1-minute window.
+     - The cardinality of Troubleshooting MetricSets. TMS data is available per minute and has a look-back period of 1 minute.
 
    * - ``sf.org.apm.numMonitoringMetricSets``
      - Monitoring MetricSets
