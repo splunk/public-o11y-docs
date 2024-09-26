@@ -36,7 +36,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
           :alt: This image shows Kai's SLO configuration using the ``synthetics.run.count`` metric and appropriate filters.
 
 
-#. Kai assigns ``G`` to the :guilabel:`Good events (numerator)` dropdown menu, and ``T`` to the :guilabel:`Total events (denominator)` dropdown menu.
+#. Kai assigns ``G`` to the :guilabel:`Good events (numerator)` dropdown menu and ``T`` to the :guilabel:`Total events (denominator)` dropdown menu.
 
 #. Kai enters the following fields to define a target for their SLO:
 
