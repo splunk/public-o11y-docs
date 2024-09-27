@@ -1,11 +1,24 @@
 .. _alert-message-variables-ref:
 
+*********************************
 Alert message variables reference
-************************************
+*********************************
 
 The following tables describe the variables and helper functions you can use when creating a custom message. Use triple braces where indicated so that the variable value is not escaped.
 
-.. Note:: :ref:`Different additional variables may be available<condition-variables>` depending on the alert condition you specify. If you change the alert condition after customizing the message, an icon on the Message preview tab appears.
+Only the variables present in the detect condition are available in the alert body. For example, variable A in the following is not available in the alert body because it is only used in the ``TRIGGER_CONDITION`` and not in the detect condition.
+
+.. code-block::
+
+   A = data('metric').publish('A')
+   B = data('test').publish('B')
+   TRIGGER_CONDITION = when(A > 100)
+
+   detect(TRIGGER_CONDITION and when(B < 500)).publish('Alert notification')
+
+.. note:: 
+
+   If you change the alert condition after customizing the message, an icon on the Message preview tab appears.
 
    .. image:: /_images/images-detectors-alerts/message-tab-icon.png
       :width: 20%
@@ -13,10 +26,11 @@ The following tables describe the variables and helper functions you can use whe
 
    This is to remind you to review the message, since some variables you used might no longer apply to the new condition you selected. The icon is removed when you navigate away from the Message preview tab.
 
-|br|
+Alert message variables
+=======================
 
-
-:strong:`Detector and rule details`
+Detector and rule details
+-------------------------
 
 .. list-table::
    :header-rows: 1
@@ -49,11 +63,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{detectorUrl}}
      - The URL of this detector
 
-
-|br|
-
-
-:strong:`Alert details`
+Alert details
+-------------
 
 .. list-table::
    :header-rows: 1
@@ -88,13 +99,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{incidentId}}
      - The ID of this incident. The incidentID is the same for both the trigger and the clear alerts.
 
-
-|br|
-
-
-
-
-:strong:`Signal details`
+Signal details
+--------------
 
 .. list-table::
    :header-rows: 1
@@ -104,10 +110,12 @@ The following tables describe the variables and helper functions you can use whe
      - :strong:`Description`
 
    * - {{inputs.A.value}}
-     - The value of the signal on plot line A
+     - The value of the signal on plot line A. For the variable to be available
+       in the alert body, it must be used in the detect condition.
 
    * - {{inputs.B.value...}}
-     - (The value of other signals in the detector)
+     - The value of other signals in the detector. For the variable to be
+       available in the alert body, it must be used in the detect condition.
 
    * - {{{dimensions}}}
      - List of all dimensions for the signal being monitored, in the following format:
@@ -122,11 +130,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{dimensions.[dimension.name.3...]}}
      - The value of other dimensions for the signal being monitored. When dimension names contain dots (.), you must enclose them in square brackets ([]) for the variable to work.
 
-
-|br|
-
-
-:strong:`ORGANIZATION DETAILS`
+Organization details
+--------------------
 
 .. list-table::
    :header-rows: 1
@@ -138,12 +143,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{organizationId}}
      - The organization ID. You can use this to programmatically reference this organization.
 
-
-|br|
-
-
-
-:strong:`Helper functions`
+Helper functions
+================
 
 .. list-table::
    :header-rows: 1
@@ -160,46 +161,15 @@ The following tables describe the variables and helper functions you can use whe
      - If there are dimensions associated with the signal, e.g.
          {{#notEmpty dimensions}} Signal details: {{{dimensions}}} {{/notEmpty}}
 
-
-
-Here is an example of a default message that you can customize:
-
-.. code-block:: none
-
-   {{#if anomalous}}
-      Rule "{{ruleName}}" in detector "{{detectorName}}" triggered at {{timestamp}}.
-   {{else}}
-      Rule "{{ruleName}}" in detector "{{detectorName}}" cleared at {{timestamp}}.
-   {{/if}}
-
-   {{#if anomalous}}
-   Triggering condition: {{{readableRule}}}
-   {{/if}}
-
-   {{#if anomalous}}Signal value: {{inputs.A.value}}
-   {{else}}Current signal value: {{inputs.A.value}}
-   {{/if}}
-
-   {{#notEmpty dimensions}}
-   Signal details:
-   {{{dimensions}}}
-   {{/notEmpty}}
-
-   {{#if anomalous}}
-   {{#if runbookUrl}}Runbook: {{{runbookUrl}}}{{/if}}
-   {{#if tip}}Tip: {{{tip}}}{{/if}}
-   {{/if}}
-
-
-
 .. _condition-variables:
 
+Built-in alert rule variables
+=============================
 
-The following tables describe the additional variables you can use when creating a custom message for specific alert conditions. 
+The following tables list the variables that are available to use when creating a custom message for the given built-in alert rule. You can't use variables other than the ones that are listed.
 
-
-
-:strong:`Resource running out`
+Resource running out
+---------------------
 
 .. list-table::
    :header-rows: 1
@@ -218,11 +188,8 @@ The following tables describe the additional variables you can use when creating
    *  - {{event_annotations.clear_forecast_ahead}}
       - Threshold for clearing alert, in hours
 
-
-
-
-
-:strong:`Outlier detection`
+Outlier detection
+-----------------
 
 .. list-table::
    :header-rows: 1
@@ -246,10 +213,8 @@ The following tables describe the additional variables you can use when creating
    *  - {{inputs.clear_top.value}}
       - Threshold for clearing alert
 
-
-
-
-:strong:`Sudden change`
+Sudden change
+-------------
 
 .. list-table::
    :header-rows: 1
@@ -279,10 +244,8 @@ The following tables describe the additional variables you can use when creating
    *  - {{inputs.c_top.value}}
       - Threshold for clearing alert
 
-
-
-
-:strong:`Historical anomaly`
+Historical anomaly
+------------------
 
 .. list-table::
    :header-rows: 1
@@ -308,3 +271,34 @@ The following tables describe the additional variables you can use when creating
 
    *  - {{inputs.clear_top.value}}
       - Threshold for clearing alert
+
+Example message
+===============
+
+The following is an example of a default message that you can customize:
+
+.. code-block:: none
+
+   {{#if anomalous}}
+      Rule "{{ruleName}}" in detector "{{detectorName}}" triggered at {{timestamp}}.
+   {{else}}
+      Rule "{{ruleName}}" in detector "{{detectorName}}" cleared at {{timestamp}}.
+   {{/if}}
+
+   {{#if anomalous}}
+   Triggering condition: {{{readableRule}}}
+   {{/if}}
+
+   {{#if anomalous}}Signal value: {{inputs.A.value}}
+   {{else}}Current signal value: {{inputs.A.value}}
+   {{/if}}
+
+   {{#notEmpty dimensions}}
+   Signal details:
+   {{{dimensions}}}
+   {{/notEmpty}}
+
+   {{#if anomalous}}
+   {{#if runbookUrl}}Runbook: {{{runbookUrl}}}{{/if}}
+   {{#if tip}}Tip: {{{tip}}}{{/if}}
+   {{/if}}

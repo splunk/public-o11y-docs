@@ -57,9 +57,9 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
    * - :strong:`Category`
      - :strong:`Metrics`
    * - Web vitals
-     -  * LCP (Largest Contentful Paint) 
-        * FID (First Input Delay)
-        * CLS (Cumulative Layout Shift) 
+     -  * LCP (Largest conctentful paint) 
+        * INP (Interaction to next paint)
+        * CLS (Cumulative layout shift) 
    * - Custom events  
      -  * :ref:`Create custom events<rum-custom-event>`
    * - Page metrics 

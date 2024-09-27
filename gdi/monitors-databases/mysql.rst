@@ -12,7 +12,7 @@ MySQL (deprecated)
 
    To monitor your MySQL databases you can use the native OpenTelemetry MySQL receiver instead. See more at :ref:`MySQL receiver <mysql-receiver>`. 
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the MySQL monitor type to retrieve metrics and logs from MySQL.
+The :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the MySQL monitor type to retrieve metrics and logs from MySQL.
 
 This monitor connects to a MySQL instance and reports on the values
 returned by a ``SHOW STATUS`` command, which include the following:

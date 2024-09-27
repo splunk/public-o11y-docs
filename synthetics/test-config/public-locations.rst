@@ -36,6 +36,20 @@ EU0
    :widths: 10, 10, 10, 10, 20
    :header-rows: 1
 
+EU1
+----
+.. csv-table::
+   :file: eu1-public-locations.csv
+   :widths: 10, 10, 10, 10, 20
+   :header-rows: 1
+
+EU2
+----
+.. csv-table::
+   :file: eu2-public-locations.csv
+   :widths: 10, 10, 10, 10, 20
+   :header-rows: 1
+
 JP0
 ----
 .. csv-table::

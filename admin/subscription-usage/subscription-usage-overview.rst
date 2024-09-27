@@ -10,16 +10,14 @@ Monitor and manage subscription usage and billing
 .. toctree::
    :hidden:
 
-   APM subscription usage <apm-billing-usage-index>
-   APM billing reports <view-apm-billing-reports>
-   Analyze APM usage <analyze-apm-billing-usage>
+   APM billing and subscription usage <apm-billing-usage-index>
    Infrastructure subscription usage (Host and metrics plans) <monitor-imm-billing-usage>
    Manage Infrastructure billing (Host and metrics plans) <imm-billing>
    Infrastructure subscription usage (DPM plans) <dpm-usage>
    Logs subscription usage <lo-billing-usage>
    RUM subscription usage <rum-subscription-usage>
-   View parent-child subscription usage <parent-child-orgs>
    Synthetic Monitoring subscription usage <synthetics-usage>
+   View parent-child subscription usage <parent-child-orgs>
 
 View Splunk Observability Cloud subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
 
@@ -35,16 +33,14 @@ You must be a Splunk Observability Cloud administrator to view the Subscription 
 
 Splunk Observability Cloud admins can monitor billing usage for the following:
 
--  :ref:`Monitor Splunk APM subscription usage <apm-billing-usage-index>`
--  :ref:`Analyze Splunk APM subscription usage data for your subscription plan <analyze-apm-billing-usage>`
--  :ref:`View APM billing reports <view-apm-billing-reports>`
+-  :ref:`Monitor Splunk APM billing and subscription usage <apm-billing-usage-index>`
 -  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (Host plans) <monitor-imm-billing-usage>`
 -  :ref:`Manage Infrastructure costs and billing (Host plans) <imm-billing>`
 -  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (DPM plans only) <dpm-usage>`
 -  :ref:`Monitor Log Observer subscription usage <lo-billing-usage>`
 -  :ref:`Monitor RUM subscription usage <rum-subscription-usage>` 
--  :ref:`Monitor parent-child subscription usage <parent-child-orgs>`
 -  :ref:`Monitor Splunk Synthetic Monitoring subscription usage <synthetics-usage>`
+-  :ref:`Monitor parent-child subscription usage <parent-child-orgs>`
 
 .. _system-limits:
 

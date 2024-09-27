@@ -14,16 +14,17 @@ Get started with the Collector for Kubernetes
    Install with Helm <install-k8s.rst>
    Helm components <kubernetes-helm-architecture.rst>
    Helm releases and images <kubernetes-helm-releases.rst>
+   Helm commands reference <otel-commands.rst>
    Install with YAML manifests <install-k8s-manifests.rst>
    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
    Configure with Helm <kubernetes-config.rst>
-   Advanced config <kubernetes-config-advanced.rst>
+   Add components and data sources <kubernetes-config-add.rst>
    Configure logs and events <kubernetes-config-logs.rst>
+   Advanced configuration <kubernetes-config-advanced.rst>
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
    Upgrade <kubernetes-upgrade.rst>
    Uninstall <kubernetes-uninstall.rst>
-   Troubleshoot <troubleshoot-k8s.rst>
-   Troubleshoot containers <troubleshoot-k8s-container.rst>
+   Troubleshoot <k8s-troubleshooting/troubleshoot-k8s-landing.rst>
    Support <kubernetes-support.rst>
    Tutorial: Monitor your Kubernetes environment <k8s-infrastructure-tutorial/about-k8s-tutorial.rst>
    Tutorial: Configure the Collector for Kubernetes <collector-configuration-tutorial-k8s/about-collector-config-tutorial.rst>
@@ -55,12 +56,15 @@ Optionally, you can also:
     <h2>Configure the Collector for Kubernetes<a name="k8s-configure" class="headerlink" href="#k8s-configure" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To configure the Collector, see:
+To configure the Collector, including adding additional components or activating automatic discovery, see:
 
 * :ref:`otel-kubernetes-config`
-* :ref:`otel-kubernetes-config-advanced`
-* :ref:`kubernetes-config-logs`
+* :ref:`kubernetes-config-add` 
 * :ref:`discovery-mode-k8s`
+* :ref:`kubernetes-config-logs`
+* :ref:`otel-kubernetes-config-advanced`
+
+.. include:: /_includes/gdi/collector-common-options.rst
 
 .. raw:: html
 
@@ -75,8 +79,7 @@ To upgrade or uninstall, see:
 
 If you have any installation or configuration issues, refer to: 
 
-* :ref:`otel-troubleshooting` 
-* :ref:`troubleshoot-k8s`
+* :ref:`troubleshoot-k8s-landing` 
 * :ref:`kubernetes-support`
 
 .. raw:: html

@@ -5,23 +5,29 @@ Install the Collector for Windows with the installer script
 ****************************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows.
+      :description: Describes how to install the Splunk Distribution of the OpenTelemetry Collector for Windows.
 
 .. toctree::
   :maxdepth: 4
   :titlesonly:
 
 The Splunk Distribution of the OpenTelemetry Collector for Windows is a package that provides integrated collection and
-forwarding for all data types. Install the package using one of these methods:
+forwarding for all data types. Read on to see how to install it using the installer script.
 
-* :ref:`Installer script <windows-script>`
-* :ref:`Deployment tools <windows-deployments>`
+.. note:: 
+  
+  The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. To modify this configuration, refer to :ref:`otel-windows-config`.
 
-Alternatively, you can manually install the Collector. To learn how, see :ref:`otel-install-windows-manual`.
+  To learn how to obtain logs, see :ref:`windows-config-logs`.
 
-.. note:: The Collector comes with a default configuration. To learn more, see :ref:`windows-config-ootb`.
+Alternatively, you can also install the Collector for Windows:
+
+* Using MSI. See :ref:`otel-install-windows-msi`. 
+* Using deployment tools. See :ref:`otel-install-windows-tools`. 
+* Manually. See :ref:`otel-install-windows-manual`.
 
 .. _windows-otel-requirements:
+.. _install-windows-prereqs:
 
 Prerequisites
 ==========================
@@ -40,11 +46,10 @@ The Windows installer script installs the following packages:
 * JMX metric gatherer.
 * For Docker environments only, Java JDK and JRE.
 
-
 .. _windows-script:
 
-Install the Collector using the script
-============================================
+Install the Collector for Windows using the installer script
+================================================================
 
 The installer script is available for Windows 64-bit environments, and deploys and configures: 
 
@@ -69,7 +74,7 @@ If you need to activate TLS in PowerShell, use the command:
 
   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. When configuring additional settings, use service, process, or terminal scopes.
+.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. To configure additional settings use service, process, or terminal scopes.
 
 .. _otel-installer-options-windows:
 .. _windows-script-options:
@@ -162,60 +167,59 @@ The Windows installer script supports the following options:
      - Specify public MSI properties to be used when installing the Splunk OpenTelemetry Collector MSI package.
      -
 
-.. _otel-install-windows-modify:
+.. _windows-config-logs:
 
-Modify the default configuration
-----------------------------------
+Collect logs for the Collector for Windows
+====================================================================
 
-The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. This configuration can be modified as needed. See :ref:`otel-windows-config` for more information.
+Use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
-For more information about the Collector's environment variables, see :ref:`collector-env-var`.
+.. _fluentd-manual-config-windows:
 
-.. _windows-deployments:
+Collect Windows logs with Fluentd
+---------------------------------------
 
-Deployment tools
-===============================
+If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to install and enable Fluentd when installing the Collector. For example:
 
-Splunk Observability Cloud offers the configuration management options described in this section.
+.. code-block:: PowerShell
 
-.. _windows-ansible:
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-Ansible
---------------------------
+When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
+For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
+To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:
 
-.. _windows-chef:
+* ``hec_url = "<SPLUNK_HEC_URL>"``
+* ``hec_token = "<SPLUNK_HEC_TOKEN>"``
 
-Chef 
-----------------
+For example (replace the ``<SPLUNK...>`` values in the command for your configuration):
 
-Splunk provides a cookbook to install the Collector using Chef. See :ref:`deployments-chef` for the installation instructions.
+.. code-block:: PowerShell
 
-.. _windows-nomad:
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; hec_url = "<SPLUNK_HEC_URL>"; hec_token = "<SPLUNK_HEC_TOKEN>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-Nomad 
------------------
+The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
 
-Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
+You can add custom fluentd source configuration files to the ``<drive>\opt\td-agent\etc\td-agent\conf.d``
+directory after installation.
 
-.. _windows-puppet:
+Note the following:
 
-Puppet
--------------------------------
+* In this directory, fluentd includes all files with the .conf extension.
+* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
 
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
+After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
+
+.. code-block:: PowerShell
+
+  Stop-Service fluentdwinsvc
+  Start-Service fluentdwinsvc
 
 Next steps
 ==================================
 
-After you have installed the package, see:
-
-* :ref:`windows-config-ootb`.
-* :ref:`otel-windows-config`.
-* :ref:`collector-how-to`.
-* :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
+.. include:: /_includes/gdi/collector-windows-next-steps.rst
 
 
 

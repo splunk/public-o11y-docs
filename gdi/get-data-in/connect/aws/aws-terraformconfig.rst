@@ -27,7 +27,7 @@ See the requirements for each cloud services provider:
 * :ref:`Azure prerequisites <azure-integration-prereqs>`
 * :ref:`GCP prerequisites <gcp-prerequisites>`
 
-.. note:: To use CloudWatch Metric Streams or retrieve logs from AWS services, you need to deploy additional resources on your AWS account using one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk. Also, review your :ref:`IAM policy <review-aws-iam-policy>` to ensure all the required actions are available to Splunk Observability Cloud.
+.. note:: To use CloudWatch Metric Streams you need to deploy additional resources on your AWS account using one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk. Also, review your :ref:`IAM policy <review-aws-iam-policy>` to ensure all the required actions are available to Splunk Observability Cloud.
 
 .. _terraform-aws-tokens:
 .. _terraform-tokens:
@@ -99,7 +99,14 @@ To configure a connection through Terraform, perform the following steps:
 
 5. Add your cloud service as a data source, as described in: :guilabel:`Data Source: signalfx_aws_services`, :guilabel:`Data Source: signalfx_azure_services`, or :guilabel:`Data Source: signalfx_gcp_services`. Data sources allow Terraform to use information defined outside of Terraform, defined by another separate Terraform configuration, or modified by functions.  
 
-.. note:: For more Terraform syntax examples, see the blog entry :new-page:`Manage Your Splunk Infrastructure as Code Using Terraform <https://www.splunk.com/en_us/blog/partners/manage-your-splunk-infrastructure-as-code-using-terraform.html>`. For examples of how to configure through the Splunk Observability Cloud API, see :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>`.
+Additional resources
+-------------------------------------------
+
+See also:
+
+* For more Terraform syntax examples, see the blog entry :new-page:`Manage Your Splunk Infrastructure as Code Using Terraform <https://www.splunk.com/en_us/blog/partners/manage-your-splunk-infrastructure-as-code-using-terraform.html>`. 
+* For examples of how to configure through the Splunk Observability Cloud API, see :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>`.
+* For AWS Terraform templates, see :ref:`aws-terraform-use`.
 
 Next steps
 ===============

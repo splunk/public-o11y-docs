@@ -8,9 +8,7 @@ Memory usage
 
 .. note:: To collect memory utilization metrics only, use the native OTel component :ref:`host-metrics-receiver`.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Memory monitor type to send memory usage stats for the underlying host.
 
 On Linux hosts, this monitor type relies on the ``/proc`` file system.

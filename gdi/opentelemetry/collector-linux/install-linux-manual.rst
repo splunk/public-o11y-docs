@@ -478,8 +478,4 @@ If you're running the Collector from a non-default location, the Smart Agent rec
 Next steps
 ==================================
 
-After you've installed the Collector, you can perform these actions:
-
-* Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
-* Use :ref:`APM <get-started-apm>` to monitor the performance of applications.
-* Use :ref:`Log Observer Connect <logs-intro-logconnect>` to analyze log events and troubleshoot issues with your services.
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

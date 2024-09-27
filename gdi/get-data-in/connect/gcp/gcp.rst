@@ -10,7 +10,8 @@ Connect to Google Cloud Platform
 .. toctree::
    :hidden:
 
-   GCP metrics <gcp-metrics>
+   Supported GCP services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-gcp.html>
+   gcp-metrics
    Send GCP logs to Splunk Platform <gcp-logs>   
 
 With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
@@ -54,54 +55,65 @@ For more information, refer to Google's official announcement :new-page:`Introdu
       <h3>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-If you use GCP's :strong:`Project Viewer` role, you won't require any changes to your GCP setup to use Splunk Observability Cloud, and any update will be applied automatically. 
+You can use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios. 
 
-If you want to use a more restrictive role than Project Viewer, make sure your selected role has sufficient permissions to connect to Splunk Observability Cloud, otherwise you'll get an error message when trying to connect. Review and activate any missing permissions, or change the role to Project Viewer.
-
-The following table specifies the permissions required for GCP integrations:
+Alternatively you can create a more restrictive role using the permissions in the table:
 
 .. list-table::
    :header-rows: 1
-   :widths: 40 60
+   :widths: 35 45 20
 
    *  - :strong:`Permission`
       - :strong:`Required?`
+      - :strong:`Included in GCP's Viewer role?`
 
    *  - ``compute.instances.list``
       - Yes, if the Compute Engine service is activated
+      - Yes
 
    *  - ``compute.machineTypes.list``
       - Yes, if the Compute Engine service is activated
+      - Yes
 
    *  - ``container.clusters.list``
       - Yes, if the Kubernetes (GKE) service is activated
+      - Yes
 
    *  - ``container.nodes.list``
       - Yes, if the Kubernetes (GKE) service is activated
+      - Yes
 
    *  - ``container.pods.list``
       - Yes, if the Kubernetes (GKE) service is activated
+      - Yes
 
    *  - ``monitoring.metricDescriptors.get``
+      - Yes
       - Yes
 
    *  - ``monitoring.metricDescriptors.list``
       - Yes
+      - Yes
 
    *  - ``monitoring.timeSeries.list``
       - Yes
+      - Yes
 
    *  - ``resourcemanager.projects.get``
-      - Yes, if you want to sync project metadata (such as labels), or if you need to obtain metrics from monitored projects of a scoping project  
+      - Yes, if you want to sync project metadata (such as labels)
+      - Yes
 
    *  - ``serviceusage.services.use``
       - Yes, if you want to activate the use of a quota from the project where metrics are stored
+      - No, but included in ``roles/serviceusage.serviceUsageConsumer``
 
    *  - ``spanner.instances.list``
       - Yes, if the Spanner service is activated
+      - Yes
 
    *  - ``storage.buckets.list``
       - Yes, if the Spanner service is activated
+      - Yes
 
 .. _gcp-two:
 

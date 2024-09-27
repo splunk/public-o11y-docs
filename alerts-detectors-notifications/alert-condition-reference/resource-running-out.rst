@@ -16,7 +16,7 @@ Example
 
 You might have a detector that triggers an alert when memory utilization goes above 80%, so you have time to look into the issue before the your app is seriously affected. In fact, reaching 80% might only represent a problem if the value has been trending upward and is on a path to reaching 100%. A better way to monitor this signal is to use the Resource Running Out alert condition, which alerts you when a signal is trending up or down.
 
-In this case, say you want to receive a notification when the signal is expected to hit 80% in 15 |nbsp| minutes (trigger threshold of |nbsp| .25 |nbsp| hours) and has been in this state for 3 |nbsp| minutes (trigger duration of |nbsp| 3m). This alerts you in advance of the error condition, giving you more time to respond, but won't send a false alert if the signal simply spikes to 80% and then quickly drops to a safer level.
+In this case, say you want to receive a notification when the signal is expected to hit 80% in 15 |nbsp| minutes (trigger threshold of |nbsp| .25 |nbsp| hours) and has been in this state for 3 |nbsp| minutes (trigger duration of |nbsp| 3m). This alerts you in advance of the error condition, giving you more time to respond, but won't send a false alert if the signal spikes to 80% and then quickly drops to a safer level.
 
 
 Basic settings

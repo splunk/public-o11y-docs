@@ -32,7 +32,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
   
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
@@ -72,10 +72,7 @@ The following settings are required:
   * gRPC supports DNS as the default name-system. To learn more about the valid name syntax, see :new-page:`gRCP Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>` in GitHub. 
   * If you're using a scheme of ``https``, then client transport security is enabled and overrides the ``insecure`` setting.
 
-* ``tls``. See :ref:`TLS Configuration Settings <otlp-exporter-settings>` in this document for the full set of available options. 
-
-  * By default, ``tls: insecure`` is set to ``true``. 
-  * Mutual TLS (mTLS) is also supported. See more at :new-page:`TLS/mTLS configuration <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md#tls--mtls-configuration>` in GitHub.
+* ``tls``. See the exporter's :ref:`otlp-exporter-settings` in this document for the full set of available options, and learn more at :ref:`collector-common-config-tls`.
 
 Configuration examples
 --------------------------------
@@ -101,7 +98,6 @@ Configure gzip compression
 By default, gzip compression is enabled. To turn it off, use the following configuration:
 
 .. code-block:: yaml
-
 
   exporters:
     otlp:

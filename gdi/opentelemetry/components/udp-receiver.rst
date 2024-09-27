@@ -7,7 +7,7 @@ UDP log receiver
 .. meta::
       :description: The UDP log receiver collects logs over UDP connections.
 
-The UDP log receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs over UDP connections. The supported pipeline is ``logs``. See :ref:`otel-data-processing` for more information.
+The UDP log receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect logs over UDP connections. The supported pipeline is ``logs``. See :ref:`otel-data-processing` for more information.
 
 .. _get-started-udp-receiver:
 
@@ -16,8 +16,14 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform. See :ref:`otel-install-platform`. 
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
+
+   - :ref:`otel-install-linux`
+   - :ref:`otel-install-windows`
+   - :ref:`otel-install-k8s`
+
 2. Configure the UDP log receiver as described in the next section. 
+
 3. Restart the Collector.
 
 .. _udp-receiver-sample-configs:

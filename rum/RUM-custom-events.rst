@@ -115,6 +115,8 @@ The following examples show how to create a custom event for browser, Android, a
          ]
          SplunkRum.reportEvent(name: "testEvent", attributes: dictionary)
 
+.. note:: If you want a custom event to appear in the UI, you must set the attribute ``workflow.name`` for it. Without the ``workflow.name`` attribute, the span is still recorded but will only appear in the request waterfall view.
+
 Next steps with custom events 
 =================================== 
 

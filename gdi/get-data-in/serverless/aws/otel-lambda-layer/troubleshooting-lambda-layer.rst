@@ -68,7 +68,7 @@ Some of the wrappers included in the Splunk OpenTelemetry Lambda layer load inst
 
    .. group-tab:: Python
 
-      Enter the instrumentations you want to deactivate as comma-separated values for the ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS`` environment variable. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
+      Enter the instrumentations you want to deactivate as comma-separated values for the ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS`` environment variable. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: :new-page:`https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/nodeps-requirements.txt`.
 
 .. _aws-lambda-debug-logging:
 

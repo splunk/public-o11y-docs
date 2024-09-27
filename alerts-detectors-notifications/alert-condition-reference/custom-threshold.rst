@@ -25,7 +25,7 @@ When specifying compound conditions, AND conditions are applied before OR condit
 
 .. note:: For a compound condition to trigger an alert, all the values involved in the condition must be non-null.
 
-If you need to build more complex conditions than this alert condition supports, such as "a AND (b OR c) AND d", or "a AND NOT b", you can do so by using the :new-page:`Splunk Observability Cloud API <https://dev.splunk.com/observability/docs/detectors/detectors_events_alerts#Detectors>` to create the detector. 
+If you need to build more complex conditions than this alert condition supports, such as "a AND (b OR c) AND d", or "a AND NOT b", you can do so by using the :new-page:`Splunk Observability Cloud API <https://dev.splunk.com/observability/docs/detectors/detector_examples>` to create the detector. 
 
 
 .. _compare-signals:

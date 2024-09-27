@@ -6,9 +6,7 @@ Jaeger gRPC
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Jaeger gRCP monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``jaeger-grpc`` monitor type to run a gRPC server that listens for
 Jaeger trace batches and forwards them to Splunk Observability Cloud (or
 the configured ingest host in the ``writer`` section of the agent

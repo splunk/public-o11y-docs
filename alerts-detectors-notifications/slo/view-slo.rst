@@ -48,3 +48,8 @@ To add an SLI chart to a dashboard, follow these steps:
 #. Select :strong:`OK` to add the SLI chart to the dashboard.
 
 .. note:: You must have write permission for a dashboard to add an SLI chart to it.
+
+Troubleshooting with an SLI chart
+--------------------------------------
+
+With an SLI chart, not only can you get an overview of your SLO at a glance, but you can also gain more specific insights into your SLI performance using different filter and customized time ranges. For more information, see :ref:`time-range-selector`.

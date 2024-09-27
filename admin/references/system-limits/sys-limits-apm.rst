@@ -12,14 +12,14 @@ Splunk APM system limits
 
 Splunk APM has system limits that help ensure performance, stability, and reliability. These limits also protect the Splunk APM multitenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
-There are several out-of-the-box charts in Splunk Observability Cloud for the metrics described below. Admins can view these charts by navigating to :guilabel:`Settings > Organization Overview`.
+There are several prepackaged charts in Splunk Observability Cloud for the following metrics described. Admins can view these charts by navigating to :guilabel:`Settings` then :guilabel:`Organization Overview`.
 
 .. _subscription-apm:
 
 Subscriptions 
 ==========================
 
-There are two types of subscriptions: Enterprise and Standard. For more information on each type of subscription, see :new-page:`Splunk APM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`.
+There are 2 types of subscriptions: Enterprise and Standard. For more information on each type of subscription, see :new-page:`Splunk APM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`.
 
 
 Span and trace limits 
@@ -75,9 +75,8 @@ MetricSet limits
     - Spans and traces aren't dropped. Alerting and charting on new MMS might be affected.
 
 
-UI limits 
+User interface limits 
 ==================================
-
 
 .. list-table::
   :header-rows: 1
@@ -86,7 +85,7 @@ UI limits
   * - :strong:`Limit name`
     - :strong:`Default limit value`
   * - Number of nodes in the service map
-    - 500
+    - 200
   * - Number of traces in trace search 
     - 1000
   * -  Number of spans per trace in trace view
@@ -95,11 +94,11 @@ UI limits
     - 1024 characters
   * - Length of operation name 
     - 1024 characters
-  * - “Yellow” threshold for error rate
+  * - "Yellow" threshold for error rate
     - 5%
-  * - “Red” threshold for error rate
+  * - "Red" threshold for error rate
     - 20%
-  * - “Red” threshold for p90 latency
+  * - "Red" threshold for p90 latency
     - 1s
 
 
@@ -108,7 +107,7 @@ APM dashboards for throttling and entitlements
 
 .. note:: These dashboards are for troubleshooting purposes only. For more information, refer to the Subscription Usage page and reports for your organization.
 
-To navigate to the APM usage dashboards, you can either go to :guilabel:`Settings > Organization overview`. 
+To navigate to the APM usage dashboards, you can either go to :guilabel:`Settings` then :guilabel:`Organization overview`. 
 
 .. list-table::
   :header-rows: 1

@@ -57,17 +57,32 @@ This report, available on the Usage tab, shows the total number of data points s
 Report contents
 -------------------------------------------------------------------
 
-The report has five columns:
+The report has the following columns:
 
--  Date: Follows the mm/dd/yy format
+.. list-table:: 
+      :header-rows: 1
 
--  Time: 24 hour hh:mm UTC
-
--  Streaming Datapoints: The number of data points received by Splunk Infrastructure Monitoring through our ingest APIs for the specified date and time. 
-
--  Backfill Datapoints: The number of data points received by Splunk Infrastructure Monitoring through the backfill API for the specified date and time.
-
--  Throttled Datapoints: The number of data points actively dropped by Splunk Infrastructure Monitoring for the specified date and time.
+      * - Column title
+        - Description
+        - Notes
+      * - Date
+        - Date of the report
+        - Follows the `mm/dd/yy` format.
+      * - Time
+        - Time of the report
+        - Follows the 24 hour `hh:mm` UTC format.
+      * - Streaming data points
+        - The number of data points, including archived and histogram data points, received by Splunk Infrastructure Monitoring through the ingest APIs for the specified date and time. 
+        - For billing purposes, 10 archived data points count as 1 real-time data point. 1 histogram data point counts as 8 real-time data points.
+      * - Backfill data points
+        - The number of data points received by Splunk Infrastructure Monitoring through the backfill API for the specified date and time.
+        - None
+      * - Throttled data points
+        - The number of data points actively dropped by Splunk Infrastructure Monitoring for the specified date and time.
+        - None
+      * - Archived metric data points
+        - The number of archived data points stored by Splunk Infrastructure Monitoring for the specified date and time.
+        - 10 archived data points count as 1 real-time data point.
 
 For past months, the report includes streaming, backfill and throttled data points for all of the minutes in that month. For the current month, the report includes the data points for the month-to-date, and updates once per day.
 

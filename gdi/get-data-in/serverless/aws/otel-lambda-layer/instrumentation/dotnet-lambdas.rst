@@ -85,7 +85,28 @@ To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
       }
    }
 
-2. Make sure that the new function handler ``TracingFunctionHandler`` is configured as the main entry point by editing the aws-lambda-tools-defaults.json file and changing the ``function-handler`` entry. You can also do this using the AWS web console, changing the handler in :guilabel:`Runtime settings`.
+2. Make sure that the main entry point is set to ``TracingFunctionHandler`` by updating the ``function-handler`` field in the ``aws-lambda-tools-defaults.json`` file to ``<project-name>::<class-namespace-with-class-name>::TracingFunctionHandler``. You can also do this using the AWS web console, by changing the handler in :guilabel:`Runtime settings`.
+
+   The following is an example of a ``aws-lambda-tools-defaults.json`` file with the function handler set to ``TracingFunctionHandler``. Don't paste the contents of the example into your file, as most of it won't match your environment. The part that must match is ``TracingFunctionHandler``.
+
+   .. code-block:: json
+
+      {
+          "Information": [
+              "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+              "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+              "dotnet lambda help",
+              "All the command line options for the Lambda command can be specified in this file."
+          ],
+          "profile": "default",
+          "region": "us-west-2",
+          "configuration": "Release",
+          "function-architecture": "x86_64",
+          "function-runtime": "dotnet8",
+          "function-memory-size": 512,
+          "function-timeout": 30,
+          "function-handler": "AWSLambdaSample::AWSLambdaSample.Function::TracingFunctionHandler"
+      }
 
 3. The template expects the following environment variables:
 

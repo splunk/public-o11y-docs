@@ -8,14 +8,14 @@ Oracle Database receiver
 .. meta::
       :description: The Oracle Database receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Oracle Database by connecting to it.
 
-The Oracle Database receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Oracle Database. The receiver connects to an Oracle Database instance and obtains metrics such as the number of physical reads, cumulative CPU time, and others. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Oracle Database receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics from Oracle Database. The receiver connects to an Oracle Database instance and obtains metrics such as the number of physical reads, cumulative CPU time, and others. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
    
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
@@ -43,6 +43,8 @@ following permissions to the database user:
 -  ``GRANT SELECT ON V_$RESOURCE_LIMIT TO <username>;``
 -  ``GRANT SELECT ON DBA_TABLESPACES TO <username>;``
 -  ``GRANT SELECT ON DBA_DATA_FILES TO <username>;``
+-  ``GRANT SELECT ON DBA_TABLESPACE_USAGE_METRICS TO <username>;``
+
 
 Sample configurations
 ----------------------
@@ -55,7 +57,7 @@ configuration file, as shown in the following example:
    receivers:
      oracledb:
        # Refer to Oracle Go Driver go_ora documentation for full connection string options
-       datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+       datasource: "oracle://<username>:<password>@<host>:<port>/<database>"
 
 To add more than one instance of Oracle Database, add as many entries of
 the ``oracledb`` receiver as needed. For example:
@@ -65,11 +67,11 @@ the ``oracledb`` receiver as needed. For example:
    receivers:
      oracledb/aninstance:
        # Refer to Oracle Go Driver go_ora documentation for full connection string options
-       datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+       datasource: "oracle://<username>:<password>@<host>:<port>/<database>"
      
      oracledb/anotherinstance:
        # Refer to Oracle Go Driver go_ora documentation for full connection string options
-       datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+       datasource: "oracle://<username>:<password>@<host>:<port>/<database>"
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
@@ -81,6 +83,15 @@ configuration file. For example:
        metrics:
          receivers:
            - oracledb
+
+To configure the Oracle Database receiver for high availability use:
+
+.. code:: yaml
+
+   receivers:
+     oracledb:
+       # Refer to Oracle Go Driver go_ora documentation for full connection string options
+       datasource: "oracle://<username>:<password>@<host>:<port>/<service_name>?<server>=<host>:<port>"
 
 Settings
 ======================

@@ -23,6 +23,8 @@ To manually instrument your application, the version of ``@opentelemetry/api`` y
 
 To verify this, run ``window[Symbol.for('opentelemetry.js.api.1')].version`` in the browser's console from any page that you've instrumented. The command returns the full version of the OpenTelemetry API.
 
+.. _create-a-span-rum: 
+
 Create a span
 ---------------------------------------
 

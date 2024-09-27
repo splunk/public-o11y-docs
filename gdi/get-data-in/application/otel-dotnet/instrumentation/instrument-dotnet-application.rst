@@ -9,10 +9,124 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
-To get started, use the guided setup, follow the instructions manually, or automatically instrument your application. See :ref:`discovery_mode` for more information.
+You can install the .NET instrumentation manually or using the NuGet packages. The manual instructions include the option to use a guided setup. The NuGet packages are the best method for avoiding dependency version conflicts, but are not well-suited for instrumenting multiple applications running on the same machine. Review the :ref:`pre-checks <dotnet-pre-checks>` and the various installation procedures on this page to identify the best installation method for your application environment.
+
+.. _otel-dotnet-nuget-pkg:
+
+Install the OpenTelemetry .NET instrumentation using the NuGet packages
+=======================================================================
+
+You can deploy the Splunk Distribution of the OpenTelemetry .NET instrumentation automatically using the official NuGet packages. Your instrumented application project must support NuGet packages.
+
+NuGet package installation considerations
+-----------------------------------------
+
+The following scenarios are ideal for using the NuGet packages:
+
+* You control the application build but not the machine or container where the application is running.
+* You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
+* You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
+* You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
+
+Don't use the NuGet packages if any of the following apply to your environment:
+
+* You're unable to add the NuGet packages to the application project. This can be the case when instrumenting a third-party application.
+* You can't accommodate the increased disk use required by installing the NuGet packages separately for each instrumented application running on the same machine. 
+* You need to instrument a legacy application that can't be migrated to the SDK-style project. To verify whether your project is SDK style, see `Identify the project format <https://learn.microsoft.com/en-us/nuget/resources/check-project-format>`__ in the NuGet documentation.
+
+If your scenario isn't compatible with NuGet package installation, install the distribution manually. See :ref:`otel-dotnet-manual-install`.
+
+.. note::
+
+   For advanced configuration of the .NET automatic instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+
+Instrument your application using the NuGet packages
+----------------------------------------------------
+
+To automatically instrument your application using the NuGet packages, add the ``Splunk.OpenTelemetry.AutoInstrumentation`` package to your project.
+
+#. In a terminal, navigate to the root directory of your .NET application.
+
+#. Add the NuGet packages using the following command, replacing ``<project>`` with the ``.csproj`` file name:
+
+   .. code-block:: powershell
+
+      dotnet add <project> package Splunk.OpenTelemetry.AutoInstrumentation --prerelease
+
+If the build fails and prompts you to add missing instrumentation packages, add the instrumentation package or skip the instrumentation of the listed package by adding it to the ``SkippedInstrumentation`` property. For example:
+
+.. code-block:: xml
+
+   <PropertyGroup>
+      <SkippedInstrumentations>MongoDB.Driver.Core;StackExchange.Redis</SkippedInstrumentations>
+   </PropertyGroup>
+
+Alternatively, you can set the ``SkippedInstrumentation`` property from the terminal. Rewrite the ``;`` separator as ``%3B``. For example:
+
+.. code-block:: powershell
+
+   dotnet build -p:SkippedInstrumentations=StackExchange.Redis%3BMongoDB.Driver.Core
+
+To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. For more information, see :new-page:`.NET RID Catalog <https://learn.microsoft.com/en-us/dotnet/core/rid-catalog>` in the .NET documentation.
+
+Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
+
+Run the instrumented application
+--------------------------------
+
+The instrumentation procedure in the previous section produces launch scripts in the output folder of the build. The Windows script is ``splunk-launch.cmd`` and the Linux script is ``splunk-launch.sh``. The script passes all the command-line parameters that you provide to the application. Use the following steps to run your instrumented application:
+
+#. Identify the launch script in your build output.
+
+#. (Optional) If you want to verify that the instrumentation is working by viewing the telemetry data output in your console, set the following environment variables to ``true``:
+
+   * ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
+   * ``OTEL_DOTNET_AUTO_METRICS_CONSOLE_EXPORTER_ENABLED``
+   * ``OTEL_DOTNET_AUTO_LOGS_CONSOLE_EXPORTER_ENABLED``
+
+#. Run the instrumented application using the launch script:
+
+   * Using the executable:
+
+     - Windows: ``splunk-launch.cmd <application_executable>``.
+     - Linux: ``splunk-launch.sh <application_executable>``.
+
+   * Using the ``dotnet`` CLI:
+
+     - Windows: ``splunk-launch.cmd dotnet <application>``.
+     - Linux: ``splunk-launch.sh dotnet <application>``.
+
+.. _otel-dotnet-manual-install:
+
+Install the Splunk Distribution of OpenTelemetry .NET manually
+==============================================================
+
+You can deploy the Splunk Distribution of OpenTelemetry .NET instrumentation manually, using either the guided setup or the step-by-step instructions below.
+
+Manual installation considerations
+----------------------------------
+
+The following scenarios are ideal for manually installing the .NET instrumentation:
+
+* You're unable to add the NuGet packages to the application project. This can be the case when instrumenting a third-party application.
+* You can't accommodate the increased disk use required by installing the NuGet packages separately for each instrumented application running on the same machine. 
+* You need to instrument a legacy application that can't be migrated to the SDK-style project. To verify whether your project is SDK style, see `Identify the project format <https://learn.microsoft.com/en-us/nuget/resources/check-project-format>`__ in the NuGet documentation.
+
+Consider using the NuGet packages if any of the following apply to your environment:
+
+* You control the application build but not the machine or container where the application is running.
+* You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
+* You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
+* You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
+
+To install the distribution using the official NuGet packages, see :ref:`otel-dotnet-nuget-pkg`.
+
+.. note::
+
+   For advanced configuration of the .NET automatic instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Generate customized instructions using the guided setup
-====================================================================
+-------------------------------------------------------
 
 To generate all the basic installation commands for your environment and application, use the .NET OpenTelemetry guided setup. To access the .NET OpenTelemetry guided setup, follow these steps:
 
@@ -25,26 +139,29 @@ To generate all the basic installation commands for your environment and applica
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
 
-Install the Splunk Distribution of OpenTelemetry .NET manually
-==================================================================
+.. _install-dotnet-otel-instrumentation:
+
+Instrument your .NET application
+--------------------------------
 
 If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry .NET:
 
 - :ref:`install-dotnet-otel-instrumentation`
 - :ref:`configure-otel-dotnet`
 
-To install the distribution using the official NuGet packages, see :ref:`otel-dotnet-nuget-pkg`.
+Use the following steps to automatically instrument your application.
 
-.. _install-dotnet-otel-instrumentation:
+.. warning::
 
-Instrument your .NET application
----------------------------------------------
-
-Follow these steps to automatically instrument your application:
-
+   In .NET version 8, setting the ``DOTNET_EnableDiagnostics`` runtime environment variable to ``0`` deactivates all diagnostics including the CLR Profiler, which is required for launching the .NET instrumentation if you are not using .NET startup hooks. Make sure that ``DOTNET_EnableDiagnostics`` is set to ``1``. To limit diagnostics to only the CLR Profiler, use the following environment variable settings:
+   
+   * ``DOTNET_EnableDiagnostics=1``
+   * ``DOTNET_EnableDiagnostics_Profiler=1``
+   * ``DOTNET_EnableDiagnostics_IPC=0``
+   * ``DOTNET_EnableDiagnostics_Debugger=0``
 
 Windows
-^^^^^^^^^^^^
+^^^^^^^
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
@@ -63,11 +180,11 @@ Windows
       # Install the Splunk distribution using the PowerShell module
       Install-OpenTelemetryCore
 
-#. Register the distribution:
+#. Register the distribution according to the type of application you're instrumenting:
 
    .. tabs::
 
-      .. code-tab:: shell .NET application
+      .. code-tab:: shell .NET and .NET Framework Applications
 
          # Set up environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
@@ -87,7 +204,7 @@ Windows
 
    .. tabs::
 
-      .. tab:: .NET application
+      .. tab:: .NET and .NET Framework
 
          .. code-block:: powershell
 
@@ -96,7 +213,9 @@ Windows
 
          Run your application after setting the attribute.
 
-      .. tab:: IIS application (ASP.NET)
+         .. note:: This command instruments any applications launched in the same PowerShell session. It won't instrument applications in a different PowerShell session.
+
+      .. tab:: IIS (ASP.NET)
 
          For ASP.NET applications, configure the service name and resource attributes in the ``appSettings`` block of the web.config file:
 
@@ -110,24 +229,20 @@ Windows
          .. note:: 
             If ``OTEL_SERVICE_NAME`` is not set for a web application hosted in IIS, the inferred name based on the site name and virtual directory path is used.
 
+         .. note:: 
+            If multiple applications are running in the same IIS Application Pool do not use the ``appSettings`` block of the web.config file to configure any environment variable. Let the instrumentation infer the name and use the Application Pool environment variables configuration, see below, to set the resource attributes (which will be shared by all applications in the Application Pool).
+
          After modifying the web.config file, restart IIS:
 
          .. code-block:: powershell
 
             Start-Process "iisreset.exe" -NoNewWindow -Wait
 
-         You can also set the resource attributes for specific application pools in the ``environmentVariables`` block of the :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`. For example:
-
-         .. code-block:: xml
-
-            <environmentVariables>
-               <add name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
-            </environmentVariables>
-
          .. note::
-            If the ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
 
-      .. tab:: IIS application (ASP.NET Core)
+            For advanced IIS application configuration options, see :ref:`advanced-config-iis-apps`.
+
+      .. tab:: IIS (ASP.NET Core)
 
          For ASP.NET Core applications hosted in IIS, the service name and resource attributes can be configured using the ``environmentVariables`` block of the :new-page:`web.config file <https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/web-config?view=aspnetcore-8.0#set-environment-variables>`. For example:
 
@@ -143,6 +258,10 @@ Windows
          .. code-block:: powershell
 
             Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+         .. note::
+
+            For advanced IIS application configuration options, see :ref:`advanced-config-iis-apps`.
 
       .. tab:: Windows service
 
@@ -167,7 +286,7 @@ If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 .. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
 Linux
-^^^^^^^^^^^^^^^^^
+^^^^^
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
@@ -203,7 +322,7 @@ If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 .. _activate-profiling-dotnet-otel:
 
 Activate AlwaysOn Profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
@@ -224,64 +343,6 @@ Database Query Performance settings
 Starting from version 1.4.0, the .NET OTel instrumentation collects database queries for Database Query Performance. See :ref:`db-query-performance`.
 
 SQL statements might contain sensitive information. To configure this behavior, see ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT`` and ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT`` in :ref:`dotnet-otel-instrumentation-settings`.
-
-
-.. _otel-dotnet-nuget-pkg:
-
-Install the OpenTelemetry .NET instrumentation using the NuGet packages
---------------------------------------------------------------------------
-
-You can deploy the Splunk Distribution of OpenTelemetry .NET instrumentation automatically through the official NuGet packages. The project of your instrumented application must support NuGet packages.
-
-Use the NuGet package in the following scenarios:
-
-1. You control the application build but not the machine or container where the application is running.
-2. You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
-3. You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
-4. You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
-
-Instrument your application using the NuGet packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To automatically instrument your application using the NuGet packages, add the ``Splunk.OpenTelemetry.AutoInstrumentation`` package to your project. For example:
-
-.. code-block:: powershell
-
-   dotnet add [<PROJECT>] package Splunk.OpenTelemetry.AutoInstrumentation --prerelease
-
-If the build fails and prompts you to add missing instrumentation packages, add the instrumentation package or skip the instrumentation of the listed package by adding it to the ``SkippedInstrumentation`` property. For example:
-
-.. code-block:: xml
-
-   <PropertyGroup>
-      <SkippedInstrumentations>MongoDB.Driver.Core;StackExchange.Redis</SkippedInstrumentations>
-   </PropertyGroup>
-
-You can also set the ``SkippedInstrumentation`` property from the terminal. Rewrite the ``;`` separator as ``%3B``. For example:
-
-.. code-block:: powershell
-
-   dotnet build -p:SkippedInstrumentations=StackExchange.Redis%3BMongoDB.Driver.Core
-
-To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``.
-
-Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
-
-Run the instrumented application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Use the script in the output folder of the build to run the application with automatic instrumentation activated.
-
-- On Windows, use ``splunk-launch.cmd <application_executable>``.
-- On Linux, use ``splunk-launch.sh <application_executable>``.
-
-If you run the application using the ``dotnet`` CLI, add ``dotnet`` after the script.
-
-- On Windows, use ``splunk-launch.cmd dotnet <application>``.
-- On Linux, use ``splunk-launch.sh dotnet <application>``.
-
-The script passes all the command-line parameters you provide to the application.
-
 
 .. _docker-install-otel-dotnet:
 

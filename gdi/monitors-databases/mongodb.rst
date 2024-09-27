@@ -1,13 +1,17 @@
 .. _mongodb:
 
-MongoDB
-==========
+MongoDB (deprecated)
+=================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the MongoDB monitor. See benefits, install, configuration, and metrics
 
+.. note:: The MongoDB monitor is deprecated and will reach end of support on January 15, 2025. During this period, only critical security and bug fixes are provided. When the monitor reaches end of support, you won't be able to use it to send data to Splunk Observability Cloud.
+
+   To monitor your MongoDB databases, you can instead use the native OpenTelemetry MongoDB receiver. To learn more, see :ref:`mongodb-receiver`.
+
 The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+:ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 MongoDB monitor type to capture the following metrics about MongoDB:
 
@@ -195,21 +199,6 @@ monitor:
          default value is ``false``.
 
 .. note:: When using TLS authentication, SCRAM-SHA-256 is not supported. Use SCRAM-SHA-1 authentication.
-
-Metrics
--------
-
-The following metrics are available for this integration:
-
-.. raw:: html
- 
-      <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/mongodb/metadata.yaml"></div>
-
-
-Notes
-~~~~~
-
-.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------

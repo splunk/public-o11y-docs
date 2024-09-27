@@ -44,7 +44,7 @@ To create a new AWS IAM policy, follow these steps:
 #. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <review-aws-iam-policy>`.
 #. Follow the instructions to complete the process and create the policy.
 
-.. :note:: The default AWS IAM policy supports metrics and log collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
+.. :note:: The default AWS IAM policy supports metric collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
 
 If you have any doubts, check AWS documentation.  
 
@@ -87,7 +87,6 @@ These are the required permissions to collect AWS data:
 * :ref:`Permissions for the CloudWatch API <aws-iam-policy-cw>` 
 * :ref:`Permissions for Metric Streams <aws-iam-policy-ms>`
 * :ref:`Permissions for tag and properties collection <aws-iam-policy-services>`
-* :ref:`Permissions for logs <aws-iam-policy-logs>`
 * :ref:`Permissions for usage collection and reports <aws-iam-policy-reports>`
 
 .. _aws-iam-policy-required:
@@ -98,8 +97,18 @@ Required permissions in Splunk Observability Cloud
 Regardless of the services you want to use, you need the following permissions:
 
 * ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are activated.
-* ``ec2:DescribeRegions``
+* ``ec2:DescribeRegions``. Used to check if regions configured in the integration are enabled on the AWS account.
+* ``iam:ListAccountAliases``. Used to sync account aliases for AWS MTS.
+
+Tag and property sync permissions:
+
 * ``tag:GetResources``
+* ``cloudformation:ListResources``
+* ``cloudformation:GetResource``
+
+Tag and property sync is always activated for the services configured in the integration. For some services, Splunk Observability Cloud uses either service-specific APIs or generic APIs such as the Resource Groups Tagging API or Cloud Control API. 
+
+.. note:: The ``tag:GetResources`` permission is sufficient to use the Resource Groups Tagging API. If you're using the Cloud Control API, you need to provide permissions for ``cloudformation:ListResources`` and ``cloudformation:GetResource`` as well as service-specific permissions, for example, ``kinesisanalytics:DescribeApplication``, ``kinesisanalytics:ListApplications`` and ``kinesisanalytics:ListTagsForResource``, for AWS/KinesisAnalytics.
 
 .. _aws-iam-policy-cw:
 
@@ -116,7 +125,7 @@ For example:
 .. code-block:: json
 
   {
-    "Version": "2012-10-17",
+    "Version": "2012-10-17", 
     "Statement": [
       {
         "Effect": "Allow",
@@ -125,13 +134,17 @@ For example:
           "cloudwatch:ListMetrics",
           "ec2:DescribeRegions",
           "organizations:DescribeOrganization",
-          "tag:GetResources"
+          "tag:GetResources",
+          "cloudformation:ListResources",
+          "cloudformation:GetResource"
         ],
         "Resource": "*"
       }
     ]
   }
 
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+  
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
 
@@ -185,6 +198,8 @@ For example:
   ]
   }
 
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+
 .. _aws-iam-policy-services:
 
 Permissions for tag and properties collection
@@ -232,7 +247,9 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"elasticmapreduce:ListClusters"``
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
+- ``"kafka:DescribeCluster"``
 - ``"kafka:DescribeClusterV2"``
+- ``"kafka:ListClusters"``
 - ``"kafka:ListClustersV2"``
 - ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
@@ -244,6 +261,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
+- ``"network-firewall:ListFirewalls"``
+- ``"network-firewall:DescribeFirewall"``
 - ``"rds:DescribeDBClusters"``
 - ``"rds:DescribeDBInstances"``
 - ``"rds:ListTagsForResource"``
@@ -315,7 +334,9 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "elasticmapreduce:ListClusters",
           "es:DescribeElasticsearchDomain",
           "es:ListDomainNames",
+          "kafka:DescribeCluster",
           "kafka:DescribeClusterV2",
+          "kafka:ListClusters",
           "kafka:ListClustersV2",
           "kinesis:DescribeStream",
           "kinesis:ListShards",
@@ -331,6 +352,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "logs:DescribeLogGroups",
           "logs:DescribeSubscriptionFilters",
           "logs:PutSubscriptionFilter",
+          "network-firewall:ListFirewalls",
+          "network-firewall:DescribeFirewall",
           "organizations:DescribeOrganization",
           "rds:DescribeDBInstances",
           "rds:DescribeDBClusters",
@@ -371,32 +394,7 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
     ]
   }
 
-.. _aws-iam-policy-logs:
-
-Permissions for log collection
-----------------------------------------
-
-These are the permissions to allow Splunk Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
-
-- ``"cloudfront:GetDistributionConfig"``
-- ``"cloudfront:ListDistributions"``
-- ``"cloudfront:ListTagsForResource"``
-- ``"ec2:DescribeRegions"``
-- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
-- ``"elasticloadbalancing:DescribeLoadBalancers"``
-- ``"elasticloadbalancing:DescribeTags"``
-- ``"elasticloadbalancing:DescribeTargetGroups"``
-- ``"logs:DeleteSubscriptionFilter"``
-- ``"logs:DescribeLogGroups"``
-- ``"logs:DescribeSubscriptionFilters"``
-- ``"redshift:DescribeClusters"``
-- ``"redshift:DescribeLoggingStatus"``
-- ``"s3:GetBucketLogging"``
-- ``"s3:GetBucketNotification"``
-- ``"s3:ListAllMyBuckets"``
-- ``"s3:ListBucket"``
-- ``"s3:PutBucketNotification"``
-- ``"tag:GetResources"``
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
 
 .. _aws-iam-policy-reports:
 
@@ -419,7 +417,7 @@ Read more at the official AWS documentation:
 
 * :new-page:`AWS Organization Service Control Policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>`
 * :new-page:`Permissions boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`
-* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://web.archive.org/web/20231129090004/https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
+* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
 
 .. _aws-regions:
 

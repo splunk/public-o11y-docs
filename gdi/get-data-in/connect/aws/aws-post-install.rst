@@ -9,7 +9,7 @@ Leverage data from your integration with AWS
 
 You can use Splunk tooling to monitor, collect, process, and send AWS data after you integrate your AWS with Splunk Observability Cloud. See :ref:`infrastructure-aws`.
 
-By default, Splunk Observability Cloud will bring in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
+By default, Splunk Observability Cloud will bring in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`aws-infra-import`.
 
 Verify your metrics collection method
 ============================================
@@ -35,13 +35,7 @@ Locate your metrics
 See your logs 
 ------------------------------------------------------
 
-If you have access to Splunk Log Observer and selected the CloudWatch Logs option during configuration, you can review detailed log information. 
-
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
-
-In the :guilabel:`Data Management` section, select :strong:`AWS` from the :guilabel:`Deployed Integrations` tab, then select your AWS integration to access the :guilabel:`Data Summary`. Select the :menuselection:`Log Events` tab and click :guilabel:`Explore Log Events` to view more details using Splunk Log Observer.
-
-For more information, see :ref:`Introduction to Splunk Log Observer <get-started-logs>`.
+Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. To collect logs, see :ref:`aws-logs`.
 
 Use Dashboards and Related Content
 ------------------------------------------------------

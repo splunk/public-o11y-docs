@@ -8,7 +8,7 @@ Connect to AWS with Splunk-managed Metric Streams
 .. meta::
   :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch using Metric Streams.
 
-If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
+If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS and configure metric collection.
 
 Before you start
 ============================================
@@ -53,11 +53,10 @@ In this step you need to choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * CloudWatch metrics. 
-  * Logs.
 
-In the CloudWatch metrics option, select :guilabel:`Streaming (Splunk-managed)` as the ingestion method. 
+In the CloudWatch metrics option, select :guilabel:`Streaming (Splunk-managed)` as the ingestion method. When you activate Metric Streams, make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
 
-When you activate Metric Streams, make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
+.. note:: To collect logs, see :ref:`aws-logs`.
 
 Kinesis Firehose connection options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -96,7 +95,7 @@ Finally, proceed with the last steps:
 Review the default settings
 ==================================================
 
-After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration.
+After creating an AWS IAM policy and assigning it to a particular role through the guided setup you can modify your configuration.
 
 Modify the scope of data collection
 --------------------------------------------------
@@ -107,7 +106,6 @@ Use the check box options in the guided setup to limit the scope of your data co
   
 * Collect Amazon Cost and Usage Metrics.
 * Ingest CloudWatch Metrics. You can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead.
-* Collect CloudWatch Logs.
 * Select which :ref:`AWS regions <aws-regions>` to fetch data from.
 * Select which AWS services to fetch data from.
 
@@ -124,7 +122,7 @@ To limit data collection, you can also:
 Select a CloudFormation template
 --------------------------------------------------
 
-Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
+Select a :ref:`CloudFormation template <aws-cloudformation>` to collect Metric Streams for each AWS region that you want to operate in.
 
 Next steps
 ================

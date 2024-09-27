@@ -12,13 +12,16 @@ Collector components: Receivers
     :titlesonly:
     :hidden:
 
+    apache-receiver
     azureeventhub-receiver
     carbon-receiver
     cloudfoundry-receiver
     collectd-receiver
     discovery-receiver
+    elasticsearch-receiver
     filelog-receiver   
     fluentd-receiver
+    haproxy-receiver
     host-metrics-receiver
     http-check-receiver
     jaeger-receiver    
@@ -34,16 +37,20 @@ Collector components: Receivers
     mongodb-atlas-receiver
     mssql-server-receiver
     mysql-receiver
+    nginx-receiver
     oracledb-receiver
     otlp-receiver                
     postgresql-receiver
     prometheus-receiver
+    rabbitmq-receiver
     receiver-creator-receiver
     redis-receiver
     sapm-receiver
     simple-prometheus-receiver
+    signalfx-gateway-prometheus-remote-write-receiver
     signalfx-receiver
     smartagent-receiver
+    splunk-enterprise-receiver
     splunk-hec-receiver
     sqlquery-receiver 
     sshcheck-receiver

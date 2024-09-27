@@ -9,7 +9,7 @@ About the Splunk Distribution of OpenTelemetry Java
 
 The Splunk Distribution of OpenTelemetry Java is a wrapper for the OpenTelemetry Instrumentation for Java, an open source Java agent that dynamically injects bytecode to capture telemetry data.
 
-With the agent you can automatically instrument any application written in a Java Virtual Machine (JVM) language, like Java and Groovy. See :ref:`java-otel-requirements`). 
+With the agent you can automatically instrument any application written in a Java Virtual Machine (JVM) language, like Java and Groovy. See :ref:`java-otel-requirements`).
 
 Features of the Splunk Distribution of OpenTelemetry Java
 =========================================================
@@ -46,17 +46,17 @@ Snapshot releases contain the latest fixes and features developed for Splunk Obs
 
 To access the latest snapshot releases, see the Splunk Observability Cloud :new-page:`snapshot repository <https://oss.sonatype.org/content/repositories/snapshots/com/splunk/splunk-otel-javaagent/>`.
 
-.. note:: Snapshot releases are not supported by Splunk. Use them only for testing new fixes and features before the stable release. 
+.. note:: Snapshot releases are not supported by Splunk. Use them only for testing new fixes and features before the stable release.
 
 Defaults of the Splunk Distribution of OpenTelemetry Java
 =========================================================
 
 The Splunk Distribution of OpenTelemetry Java has the following default settings for context propagation, exporters, and trace settings:
 
-- W3C tracecontext and W3C baggage context propagation is activated by default. See :ref:`trace-propagation-configuration-java`.
-- The OTLP gRPC exporter is configured by default to send spans to the local :ref:`Splunk OpenTelemetry
+- W3C tracecontext and W3C baggage context propagation is activated by default. See :ref:`advanced-java-otel-configuration`.
+- The OTLP exporter is configured by default to send spans to the local :ref:`Splunk OpenTelemetry
   Collector <otel-intro>`.
-- Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`trace-configuration-java`.
+- Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`advanced-java-otel-configuration`.
 
 Performance overhead of the Splunk OTel Java agent
 ======================================================

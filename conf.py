@@ -23,7 +23,8 @@ extensions = [
     'olly_on_git_hub',
     'sphinxcontrib.images',
     'imagetarget',
-    'sphinxcontrib.mermaid'
+    'sphinxcontrib.mermaid',
+    'sphinx_last_updated_by_git'
 ]
 
 html_context = {
@@ -79,6 +80,9 @@ htmlhelp_basename = 'Splunkdoc'
 # GitHub edit links settings
 olly_on_github_repo = 'splunk/public-o11y-docs'
 olly_on_github_branch = 'main'
+
+# Git timestamp settings
+html_last_updated_fmt: "%Y-%m-%d %H:%M:%S"
 
 # Tabs settings
 sphinx_tabs_disable_tab_closing = True
@@ -141,6 +145,10 @@ rst_prolog = """
    
 
 
+   |App Launcher| imagetarget:: /_images/spoc/outlook-launcher.png
+   :alt: App Launcher
+   :class: inline-image
+   
 .. |br| raw:: html
 
    <br />

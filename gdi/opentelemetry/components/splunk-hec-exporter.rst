@@ -95,8 +95,8 @@ The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HE
      - See :new-page:`Send data to HTTP Event Collector on Splunk Enterprise <https://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Send_data_to_HTTP_Event_Collector_on_Splunk_Enterprise>`
      - See :new-page:`Create an Event Collector token on Splunk Enterprise <https://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Enterprise>`
    * - Splunk Observability Cloud
-     - See :ref:`admin-org-tokens`.
      - ``https://ingest.<realm>.signalfx.com/v1/log``, where ``<realm>`` is the Splunk Observability Cloud realm, for example ``us0``.
+     - See :ref:`admin-org-tokens`.
 
 To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
@@ -127,8 +127,6 @@ If you're using the Collector for log collection and need to send data to Splunk
          sourcetype: "otel"
          # Splunk index, optional name of the Splunk index targeted.
          index: "metrics"
-         # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
-         max_connections: 20
          # Whether to deactivate gzip compression over HTTP. Defaults to false.
          disable_compression: false
          # HTTP timeout when sending data. Defaults to 10s.
@@ -169,7 +167,6 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
        source: "otel"
        sourcetype: "otel"
        index: "main"
-       max_connections: 20
        disable_compression: false
        timeout: 10s
        tls:
@@ -317,7 +314,7 @@ Note that to be able to ingest metrics through Splunk HEC you need to declare yo
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC exporter:
+The following table shows the configuration options for the Splunk HEC exporter. For information about HTTP settings, such as ``max_idle_conns`` or ``max_idle_conns_per_host``, refer to :new-page:`HTTP config options for the Collector <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>` in GitHub.
 
 .. raw:: html
 

@@ -5,9 +5,9 @@ SignalFx receiver
 *************************
 
 .. meta::
-      :description: The SignalFx receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics and logs in SignalFx proto format.
+      :description: The SignalFx receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics and logs in SignalFx proto format.
 
-The SignalFx receiver is a native OpenTelemetry component that allows the Splunk Distribution of OpenTelemetry Collector to collect data in SignalFx proto format. Supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
+The SignalFx receiver is a native OpenTelemetry component that allows the Splunk Distribution of the OpenTelemetry Collector to collect data in SignalFx proto format. Supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
 
 .. note:: While the SignalFx Smart Agent has reached End of Support, OTel native components such as the Smart Agent receiver, the SignalFx receiver, and the SignalFx exporter are available and supported. For information on the exporter, see :ref:`signalfx-exporter`.
 
@@ -27,7 +27,7 @@ Get started
 
 Follow these steps to configure and activate the receiver:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
   
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`

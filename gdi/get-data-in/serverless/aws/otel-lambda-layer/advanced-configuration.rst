@@ -151,6 +151,6 @@ Other settings
    * - ``SPLUNK_LAMBDA_LOCAL_COLLECTOR_ENABLED``
      - Set to ``false`` to deactivate the OpenTelemetry Collector instance running inside each Lambda runtime. If you deactivate the bundled Collector, configure the instrumentation to either communicate directly to the REST API ingest endpoints, or configure up a forwarding instance of the Collector and configure the instrumentation to send data to it. The default value is ``true``. See :ref:`ec2-otel-collector-serverless` for more information.
    * - ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS``
-     - Comma-separated list of Python instrumentations you want to deactivate. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
+     - Comma-separated list of Python instrumentations you want to deactivate. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: :new-page:`https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/nodeps-requirements.txt`
 
 .. caution:: Activating ``DEBUG`` logging might increase AWS CloudWatch costs.

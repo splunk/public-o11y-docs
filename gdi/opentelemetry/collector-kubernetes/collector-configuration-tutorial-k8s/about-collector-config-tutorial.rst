@@ -1,7 +1,7 @@
 .. _about-collector-configuration-tutorial-k8s:
 
 *****************************************************************************************
-Tutorial: Configure the Splunk Distribution of OpenTelemetry Collector on Kubernetes
+Tutorial: Configure the Splunk Distribution of the OpenTelemetry Collector on Kubernetes
 *****************************************************************************************
 
 .. meta::
@@ -14,7 +14,7 @@ Tutorial: Configure the Splunk Distribution of OpenTelemetry Collector on Kubern
    collector-config-tutorial-start
    collector-config-tutorial-edit
 
-The Splunk Distribution of OpenTelemetry Collector is a :new-page:`distribution <https://docs.splunk.com/Splexicon:Distribution>` of the OpenTelemetry Collector that includes components, installers, and default settings so that it's ready to work with Splunk Observability Cloud.
+The Splunk Distribution of the OpenTelemetry Collector is a :new-page:`distribution <https://docs.splunk.com/Splexicon:Distribution>` of the OpenTelemetry Collector that includes components, installers, and default settings so that it's ready to work with Splunk Observability Cloud.
 
 Follow this tutorial for a walkthrough of configuring the Splunk Distribution of OpenTelemetry Collector to collect telemetry in common situations.
 

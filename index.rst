@@ -68,7 +68,7 @@ Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`
 .. rst-class:: newcard
 
 :strong:`Cloud providers`
-Integrate to collect service metrics and logs :ref:`get-started-connect`
+Integrate to collect service metrics and metadata :ref:`get-started-connect`
 
 .. rst-class:: newcard
 
@@ -278,7 +278,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Get started new <get-started/get-started>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth: 3
 
    Get started old <get-started/o11y>
 
@@ -351,12 +351,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Administer Splunk Observability Cloud
    :maxdepth:   3
 
-   admin/admin
+   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3
 
-   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
+   admin/admin
 
 .. toctree::
    :maxdepth:   3
@@ -372,7 +372,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
+   Send alert notifications to other services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
    :maxdepth:   3
@@ -496,7 +496,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Override default time range <data-visualization/use-time-range-selector>   
+   Select the time range <data-visualization/use-time-range-selector>   
 
 .. toctree::
    :maxdepth:   3
@@ -649,6 +649,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
 
 .. toctree::
+   :maxdepth:   3
+
+   apm/filter-apm-data
+
+.. toctree::
    :caption: Infrastructure
    :maxdepth:   3
 
@@ -795,6 +800,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3
+   
+   rum/rum-custom-indexed-tags
+
+.. toctree::
+   :maxdepth:   3
 
    rum/sample-app
 
@@ -844,6 +854,54 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Configure your tests TOGGLE <synthetics/test-config/test-config>
 
+.. toctree::
+   :caption: Splunk On-Call
+   :maxdepth:   3
+
+   Introduction to Splunk On-Call TOGGLE </sp-oncall/admin/get-started/getting-started-spoc>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   User management TOGGLE <sp-oncall/user-roles/user-roles-permissions>
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage on-call schedules TOGGLE <sp-oncall/on-call-schedules/create-manage-on-call-schedules>
+
+.. toctree::
+   :maxdepth:   3
+
+   Alerts TOGGLE <sp-oncall/alerts/alerts-main>
+
+.. toctree::
+   :maxdepth:   3
+
+   Notifications TOGGLE <sp-oncall/notifications/notification-types>
+
+.. toctree::
+   :maxdepth:   3
+
+   Incidents TOGGLE <sp-oncall/incidents/incident-pane>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Mobile app TOGGLE <sp-oncall/mobile/mobile-getting-started>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Reports TOGGLE <sp-oncall/reports/reports-main>  
+
+.. toctree::
+   :maxdepth:   3
+
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
 
 .. toctree::
    :caption: Reference and Legal

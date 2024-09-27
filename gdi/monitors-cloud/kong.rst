@@ -1,10 +1,14 @@
 .. _kong:
 
-Kong Gateway 
+Kong Gateway (deprecated)
 ====================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for Kong analytics. See benefits, install, configuration, and metrics
+
+.. caution:: 
+   
+   The Kong monitor is deprecated and is no longer supported. Do not use it to send data to Splunk Observability Cloud. 
 
 To monitor your Kong traffic metrics with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>` use the native OTel :ref:`Prometheus receiver <prometheus-receiver>`. The receiver uses the Kong metrics Prometheus endpoint, which emits metrics for configurable request and response lifecycle groups, including:
 
@@ -30,10 +34,6 @@ To learn more:
 * About the Kong metrics Prometheus endpoint, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
 * About using the Prometheus receiver to monitor applications, see :ref:`prometheus-generic`.
 
-.. caution:: 
-   
-   The Kong monitor is deprecated and is no longer supported. Do not use it to send data to Splunk Observability Cloud. 
-
 Benefits
 --------
 
@@ -47,7 +47,7 @@ Installation
 Kong installation
 ~~~~~~~~~~~~~~~~~
 
-Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
+Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. Use Kong version 3.4 or higher.
 
 Configuration
 -------------

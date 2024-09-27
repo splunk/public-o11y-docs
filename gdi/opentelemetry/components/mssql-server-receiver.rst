@@ -7,11 +7,12 @@ Microsoft SQL server receiver
 .. meta::
       :description: The Microsft SQL server receiver grabs metrics from a Microsoft SQL Server instance. 
 
-The Microsoft SQL Server receiver queries and retrieves metrics from Microsoft SQL Server instances. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Microsoft SQL Server receiver queries and retrieves metrics from Microsoft SQL Server instances. The receiver works by either using the Windows Performance Counters, or by directly connecting to the instance and querying it. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-The receiver works by either using the Windows Performance Counters, or by directly connecting to the instance and querying it. Windows Performance Counters are only available when running on Windows.
+The following applies:
 
-.. note:: Make sure to run the Collector as an administrator in order to collect all performance counters for metrics.
+* Windows Performance Counters are only available when running on Windows. 
+* Make sure to run the Collector as an administrator in order to collect all performance counters for metrics.
 
 Get started
 ======================
@@ -90,6 +91,15 @@ These are the optional direct connection options:
 The following are Windows-specific optional options:
 
 * ``computer_name``. The computer name identifies the SQL Server name or IP address of the computer being monitored. If specified, ``instance_name`` is also required. This option is ignored in non-Windows environments.
+
+.. _mssql-server-receiver-ootb:
+
+Enable built-in content
+====================================
+
+Splunk Observability Cloud provides built-in dashboards with charts that give you immediate visibility into the technologies and services being used in your environment. Learn more at :ref:`collector-builtin-dashboard`.
+
+For the MS SQL Server receiver out-of-the-box content to work properly, you need to explicitly enable and disable specific metrics in your configuration file. See the configuration that enables built-in content at :new-page:`SQL Server discovery yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/confmapprovider/discovery/bundle/bundle.d/receivers/sqlserver.discovery.yaml>` in GitHub.
 
 .. _mssql-server-receiver-settings:
 

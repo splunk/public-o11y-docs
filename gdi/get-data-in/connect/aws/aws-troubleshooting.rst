@@ -1,14 +1,15 @@
 .. _aws-troubleshooting:
 
 ************************************
-Troubleshoot your AWS connection
+Troubleshoot your AWS integration
 ************************************
 
 .. meta::
-   :description: Resolve AWS policy and permissions conflicts in Splunk Observability Cloud.
+   :description: Resolve AWS policy, permission conflicts, and other issues in Splunk Observability Cloud.
 
+If you experience difficulties when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account or using the platform, read on to troubleshoot common issues. See :ref:`aws-ts-metric-streams` for issues specific to Metric Streams. 
 
-If you experience issues when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, they might be caused by conflicts between policies and permissions. See :ref:`aws-ts-metric-streams` for issues specific to Metric Streams.   
+If issues persist, you can also contact :ref:`support`.  
 
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
@@ -17,42 +18,22 @@ If you experience issues when connecting Splunk Observability Cloud to your Amaz
 Error validating your AWS connection
 =========================================
 
-The automatic attempt to validate a connection that you just configured fails, so there is no connection between Splunk Observability Cloud and your AWS account.
+The automatic attempt to validate a connection that you just configured fails, so there is no connection between Splunk Observability Cloud and your AWS account. This can include failed API calls with ``400`` error codes.
 
 Cause
 ^^^^^^
 
-The connection might fail due to mismatched Identity Access Management (IAM) policies. To diagnose connection failure, check the permissions or policies you set up and compare them to the permissions that AWS requires.
+The connection might fail due to your AWS integration using invalid Identity Access Management (IAM) policies, or missing some of the required permissions. 
 
-Verify whether your error message looks similar to this example:
-
-.. code-block:: none
-
-   Error validating AWS / Cloudwatch credentials
-   Validation failed for following region(s):
-   us-east-1
-   [ec2] software.amazon.awssdk.services.ec2.model.Ec2Exception: You are not authorized to perform this operation.
-
-If you receive a similar error message, then the IAM policy that you created to connect AWS to Splunk Observability Cloud does not match the policy already in your AWS account.
-
-Similarly, if your AWS account uses a service control policy (SCP) or administrative features such as ``PermissionsBoundary``, then there might be limits on which calls can be made in your organization, even if those calls are covered by your AWS IAM policy.
+If you use AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
+might impact the AWS IAM policy you're using to connect to Splunk Observability Cloud. 
 
 Solution
 ^^^^^^^^^
 
-Splunk Observability Cloud uses the following calls to validate whether it can accept data from the AWS Compute Optimizer tool to support CloudWatch metric streams:
+Make sure to include all the required policies to connect your AWS account to Splunk Observability Cloud, as described in :ref:`aws-required-permissions`. Note that required permissions depend on your connection method (polling or Metric Streams), and that tag collection requires specific permissions.
 
-.. code-block:: none
-
-   client.describeInstanceStatus(),
-   client.describeTags(),
-   client.describeReservedInstances(),
-   client.describeReservedInstancesModifications()
-   client.describeOrganization()
-
-To ensure that your AWS integration works as expected, revisit your configuration choices in Splunk Observability Cloud to verify that they match the permissions policy in your AWS management console. 
-
-A match ensures that conflicting permissions do not cause your AWS environment to block integrations. See the "Amazon CloudWatch permissions reference" in the Amazon documentation for details about the available permissions.
+You also need to review the AWS Organizations' policies and boundaries you're using.
 
 .. _aws-ts-cloud:
 
@@ -73,7 +54,7 @@ Solution
 
 Review your :ref:`IAM policy <review-aws-iam-policy>` to ensure it includes the permissions needed for the metrics or other data that you intend to collect.
 
-Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch logs, CloudWatch Metric Streams, service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
+Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch Metric Streams, or service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
 
 .. _aws-ts-namespace-metrics:
 
@@ -99,6 +80,35 @@ Also, to ensure that you can see the metrics you expect to monitor, perform the 
 
    #. Review the default IAM policy shown in :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>` to find the entry for the namespace you want.
    #. Add the missing entry to your AWS IAM file. For more information, search for "Editing IAM policies" in the AWS Identity and Access Management documentation.
+
+.. _aws-ts-metric-discrepancy:
+
+Discrepancies between AWS Cloudwatch and Splunk Observability Cloud metrics 
+==========================================================================================
+
+You observe discrepancies between AWS Cloudwatch and Splunk Observability Cloud metrics. 
+
+There can be two main causes for metric discrepancies:
+
+Cause 1: Metrics are not stable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Some CloudWatch metrics are not stable, which means that the initial metric value published by CloudWatch might get updated after some time. Since Splunk Observability Cloud never fetches the same datapoint twice, this might result in value discrepancies. 
+
+Solution 1
+^^^^^^^^^^^^^^^^^^
+
+You can configure selected namespaces to ignore a number of the most recent datapoints, typically 1 or 2, to mitigate this issue. To implement these configuration changes contact :ref:`support`.  
+
+Cause 2: Charts are plotted using different time series
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+AWS Cloudwatch and Splunk Observability Cloud might be using a different set of time series to plot charts. 
+
+Solution 2
+^^^^^^^^^^^^^^^^^^
+
+Some AWS Cloudwatch metrics are reported with various sets of dimensions, so ensure you're using the same set of data in both AWS Cloudwatch and Splunk Observability Cloud. 
 
 .. _aws-ts-legacy-check-status:
 
