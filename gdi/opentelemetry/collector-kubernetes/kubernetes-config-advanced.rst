@@ -130,17 +130,19 @@ The following example shows how to connect to a nonstandard API server that uses
                 useHTTPS: true
                 useServiceAccount: false
 
-Activate Kubernetes control plane metrics with Prometheus receiver
--------------------------------------------
+.. _kubernetes-control-plane-prometheus:
 
-To activate control plane metrics with the OpenTelemetry prometheus receiver instead, use the feature flag ``useControlPlaneMetricsHistogramData``:
+Activate Kubernetes control plane metrics with the Prometheus receiver
+-------------------------------------------------------------------------
+
+To activate control plane metrics with the OpenTelemetry Prometheus receiver instead, use the feature flag ``useControlPlaneMetricsHistogramData``:
 
 .. code-block:: yaml
 
   featureGates:
     useControlPlaneMetricsHistogramData: true
 
-To learn more about histogram metrics see :ref:`histograms`.
+To learn more see :ref:`prometheus-receiver`.
 
 Known issues
 -----------------------------------------------------------------------------
