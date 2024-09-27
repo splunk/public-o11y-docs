@@ -16,12 +16,13 @@ Get data into Splunk Observability Cloud
     gdi-guide/api-onboarding.rst
     gdi-guide/additional-resources.rst
 
-Use Splunk Observability Cloud to achieve full-stack observability of all your data sources, including your infrastructure, applications, and user interfaces. Splunk Observability Cloud includes the following products:
+Use Splunk Observability Cloud to achieve full-stack observability of all your data sources, including your infrastructure, applications, and user interfaces. Splunk Observability Cloud includes the following solutions:
 
 - :ref:`Splunk Infrastructure Monitoring <infrastructure-infrastructure>`
 - :ref:`Splunk Application Performance Monitoring (APM) <get-started-apm>`
 - :ref:`Splunk Real User Monitoring (RUM) <rum-gdi>`
-- :ref:`Splunk Log Observer <get-started-logs>` and :ref:`Log Observer Connect <logs-intro-logconnect>`
+- :ref:`Log Observer Connect <logs-intro-logconnect>`
+- :ref:`Splunk Synthetic Monitoring <intro-synthetics>` - Splunk Synthetic Monitoring does not have a data import component
 
 This guide provides four chapters that guide you through the process of setting up each component of Splunk Observability Cloud.
 
@@ -29,7 +30,7 @@ This guide provides four chapters that guide you through the process of setting 
     
     <h2>How to use this guide</h2>
 
-You can set up each of Splunk's products, or you can choose individual components to set up.
+You can set up each of Splunk's solutions, or you can choose individual components to set up.
 
 If you're setting up all components, follow each part of each chapter in order. Otherwise, select the chapter or part you'd like to follow.
 

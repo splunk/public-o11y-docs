@@ -31,7 +31,7 @@ Splunk Observability Cloud architecture :ref:`architecture`
 .. rst-class:: newcard
 
 :strong:`Free trial`
-Free trial and guided onboarding :ref:`architecture`
+Free trial and guided onboarding :ref:`o11y-trial`
 
 .. role:: icon-cogs
 .. rst-class:: newparawithicon
@@ -41,12 +41,12 @@ Free trial and guided onboarding :ref:`architecture`
 .. rst-class:: newcard
 
 :strong:`Admin onboarding guide`
-Onboarding guide for Splunk Observability Cloud admins:ref:`admin-onboarding-guide`
+Onboarding guide for Splunk Observability Cloud admins :ref:`admin-onboarding-guide`
 
 .. rst-class:: newcard
 
 :strong:`Get your data in`
-Onboarding guide for getting your data into Splunk Observability Cloud :ref:`admin-onboarding-guide`
+Guide for getting your data into Splunk Observability Cloud :ref:`get-started-get-data-in`
 
 .. role:: icon-info
 .. rst-class:: newparawithicon
