@@ -8,10 +8,19 @@ Onboarding guide for Splunk Observability Cloud admins
    :maxdepth: 3
 
    onboarding-readiness
+   initial-rollout
+   scaled-rollout
 
 
-The onboarding journey for Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud solutions that apply to your organization. Solutions include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics. In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards.  
+The onboarding journey for Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. 
 
+In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. 
+
+In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud solutions that apply to your organization. Solutions include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics. 
+
+In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards.  
+
+Use the following table to get a high-level overview of the core setup steps involved in each stage. You can also reference common, optional configurations to be made to your setup as part of your onboarding journey. Finally, use the links to education resources for each phase to ensure you have the foundational knowledge and skills to successfully setup Splunk Observability Cloud.
 
 .. image:: /_images/get-started/onboarding-guide-2point0-flowonly.svg
    :width: 100%
@@ -40,7 +49,7 @@ The onboarding journey for Splunk Observability Cloud has 3 phases: onboarding r
 
        See :ref:`onboarding-guide-onboarding-readiness` for detailed steps.
 
-     - #. Choose an initial rollout environment and identify pilot teams and projects
+     - #. Choose an initial rollout environment
        #. Set up Infrastructure Monitoring
        #. Set up Application Performance Monitoring
        #. Set up Real User Monitoring
@@ -58,20 +67,32 @@ The onboarding journey for Splunk Observability Cloud has 3 phases: onboarding r
        See initial rollout for detailed steps.
 
    * - :strong:`Optional configurations`
-     - * test
-       * test
-     - * test
-       * test
-     - * test
-       * test
+     - * Request a custom URL for your organization
+       * Separate your teams with a parent-child setup
+       * Set up Log Observer Connect for Splunk Platform
+       * Create an architecture prototype
+       * Analyze how to collect metrics from cloud providers
+       * Configure and implement host and Kubernetes metrics 
+       * Collect data from third-party metrics providers
+
+     - * Set up an application framework
+       * Complete advanced configurations for the collector
+       * Create custom dashboards using charts based on ingested metrics
+       * Configure detectors and alerts for specific metric conditions
+       * Review metric names and ingested data
+
+     - * Set up Network Explorer to monitor network environment
+       * Analyze and troubleshoot usage, limits, and throttles
+       * Automate key workflows to accelerate onboarding and standardize consistent practices
+       * Identify complex and customized use cases to enhance value and return on investment
+
 
    * - :strong:`Education resources`
-     - * test
-       * test
-     - * test
-       * test
-     - * test
-       * test
+     - * Get familiar with Open Telemetry concepts
+       * Review the default dashboards and detectors
+     - * Set up training plans for pilot users
+       * Understand OTel sizing requirements
+     - * Identify and review mean time to resolution (MTTR)
 
 
 

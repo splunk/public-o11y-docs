@@ -3,7 +3,13 @@
 Onboarding guide phase 1: Onboarding readiness 
 *********************************************************
 
-In the onboarding readiness phase of the onboarding journey you set up users, teams, and access controls using roles and token management. The following sections cover the core setup steps for onboarding readiness phase. To configure your users, teams, and tokens complete the following tasks:
+In the onboarding readiness phase of the onboarding journey you set up users, teams, and access controls using roles and token management. The following sections cover the core setup steps for onboarding readiness phase. 
+
+.. image:: /_images/get-started/onboarding-guide-2point0-readiness.svg
+   :width: 100%
+   :alt: The Open in Splunk platform icon is at the top, right-hand side of the Logs table.
+
+To configure your users, teams, and tokens complete the following tasks:
 
 #. :ref:`phase1-create-trial`
 #. :ref:`phase1-network`
