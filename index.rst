@@ -285,6 +285,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Onboarding guide for admins <get-started/onboarding-guide/onboarding-guide>
+
+.. toctree::
+   :maxdepth:   3
+
    Free trial and guided onboarding <get-started/o11y-trial>
 
 .. toctree::

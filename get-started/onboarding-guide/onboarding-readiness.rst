@@ -1,37 +1,36 @@
-.. _phase1-team-user-admin:
+.. _onboarding-guide-onboarding-readiness:
 
-Onboarding readiness part 1: Configure your user and team administration
-*************************************************************************
+Onboarding guide phase 1: Onboarding readiness 
+*********************************************************
 
-.. meta::
-    :description: 
-
-In the first part of the onboarding readiness phase, you make foundational decisions about your organization in Splunk Observability Cloud, including user access management, team structure, and token management. To configure your users and teams, complete the following tasks:
+In the onboarding readiness phase of the onboarding journey you set up users, teams, and access controls using roles and token management. The following sections cover the core setup steps for onboarding readiness phase. To configure your users, teams, and tokens complete the following tasks:
 
 #. :ref:`phase1-create-trial`
+#. :ref:`phase1-network`
 #. :ref:`phase1-user-access`
-#. :ref:`phase1-custom-URL`
 #. :ref:`phase1-teams-tokens`
-#. :ref:`phase1-parent-child`
 
 .. note::
     Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
-.. _aog-phase1-create-trial:
+.. _phase1-create-trial:
 
 Create a trial for your organization 
 ========================================
 
 If you have a Splunk technical contact, they can create a Splunk Observability Cloud trial for your organization and provide you with the link to log in to your trial organization. Alternatively, you can sign up for a trial. See :ref:`o11y-trial`.
 
-.. _aog-phase1-custom-URL:
+.. _phase1-network:
 
-(Optional) Request a custom URL for your organization
-=========================================================
+Analyze your required network communication
+=============================================
 
-Create a Splunk support request to request a custom URL for your organization, for example, acme.signalfx.com. See :ref:`support` for support contact options.
+Before you begin bringing data into Splunk Observability Cloud from your infrastructure and applications, validate that network connections between your environment and Splunk Observability Cloud are allowed.
 
-.. _aog-phase1-user-access:
+* See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
+* If your organization requires a proxy, see :ref:`allow-services`.
+
+.. _phase1-user-access:
 
 Decide how to manage user access
 ========================================
@@ -42,7 +41,7 @@ Select from these 3 options for managing user access:
 #. Use an external Lightweight Directory Access Protocol (LDAP) and control access through Single Sign-On (SSO). See :ref:`sso-label` for more information.
 #. Use Splunk Observability Cloud user management to allow access using a username and password. See :ref:`user-managment-intro`.
 
-.. _aog-phase1-teams-tokens:
+.. _phase1-teams-tokens:
 
 Plan your teams structure and token management to control access
 =====================================================================================
@@ -74,34 +73,3 @@ Manage your tokens
 Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
 
 See :ref:`automate-tokens` in phase 3 of this guide and :ref:`admin-tokens` for more information about tokens.
-
-.. _aog-phase1-parent-child:
-
-(Optional) Separate your teams with a parent-child setup
-=====================================================================================
-
-If you want to create separate environments, you can use parent-child organizations. Perhaps you want a development environment and a production environment, or you want to make sure Team A is fully separated from Team B. Parent-child organizations are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more organizations as child organizations within the parent organization. The organizations are fully separated, including users and data. 
-
-You can request a parent-child organization setup by creating a support case. See :ref:`support` for support contact options.
-
-Next step
-===============
-
-Next, design your architecture and being bringing data in to Splunk Observability Cloud. See :ref:`phase1-arch-gdi`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

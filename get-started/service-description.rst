@@ -180,8 +180,11 @@ For additional information, see:
 
 Splunk Observability Cloud is available in the following global regions. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
 
-Realm to region equivalence
-----------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Realm to region equivalence<a name="sd-r2r" class="headerlink" href="#sd-r2r" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 The following table shows which cloud regions correspond to each realm in Splunk Observability Cloud.
 
@@ -217,9 +220,11 @@ The following table shows which cloud regions correspond to each realm in Splunk
      - AWS AP Tokyo (ap-northeast-1)
      - 
 
-
-Available components per region or realm
-----------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Available components per region or realm<a name="sd-components" class="headerlink" href="#sd-components" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 The following components are available for each global region. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
 

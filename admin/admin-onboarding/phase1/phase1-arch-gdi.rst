@@ -61,7 +61,7 @@ Create a prototype architecture solution for Splunk Observability Cloud in your 
 
    See :ref:`monitor-data-sources`, :ref:`built-in-dashboards`, and :ref:`autodetect`.
 
-.. _phase1-network:
+.. _aog-phase1-network:
 
 Analyze your required network communication
 =============================================
@@ -71,7 +71,7 @@ Analyze your required network communication by determining which ports need to b
 * See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
 * If your organization requires a proxy, see :ref:`allow-services`.
 
-.. _phase1-metrics:
+.. _aog-phase1-metrics:
 
 Analyze how to collect metrics from cloud providers
 ==========================================================================
@@ -85,7 +85,7 @@ To monitor a cloud-based host, install the Splunk OTel collector on each host to
 See :ref:`get-started-connect` and :ref:`otel_deployments`.
 
 
-.. _phase1-host-k8s:
+.. _aog-phase1-host-k8s:
 
 Configure and implement host and Kubernetes metrics
 ==========================================================
@@ -96,7 +96,7 @@ The OpenTelemetry Collector adds dimensions, metric tags, and span attributes wh
 
 To retrieve and modify your metadata, use the resource detection processor in the pipeline section of the OpenTelemetry Agent Configuration. Before installing the OpenTelemetry Collector on a host, verify that the resource detection module in the configuration file of the OpenTelemetry Collector matches the preferred metadata source. The order determines which sources are used. See :ref:`resourcedetection-processor`.
 
-.. _phase1-3rd-party:
+.. _aog-phase1-3rd-party:
 
 Collect data from third-party metrics providers
 ==========================================================
@@ -105,7 +105,7 @@ When using the Splunk Distribution of OpenTelemetry Collector, you can use recei
 
 See :ref:`monitor-data-sources` to see a list of receivers.
 
-.. _phase1-apm:
+.. _aog-phase1-apm:
 
 Bring data in for use in Splunk APM
 ======================================
@@ -114,14 +114,14 @@ Splunk Application Performance (APM) provides end-to-end visibility to help iden
 
 To familiarize yourself with the key concepts of Splunk APM, see :ref:`apm-key-concepts`.
 
-.. _phase1-auto-instrument:
+.. _aog-phase1-auto-instrument:
 
 Add an auto instrumentation library to a service to send traces to Splunk APM
 ---------------------------------------------------------------------------------
 
 To send traces to Splunk APM, you need to deploy an auto instrumentation agent for each programming language or language runtime. To deploy an auto instrumentation agent, see :ref:`instrument-applications`.  
 
-.. _phase1-discovery-mode:
+.. _aog-phase1-discovery-mode:
 
 (Optional) Use the automatic discovery to instrument your applications
 ------------------------------------------------------------------------------------------
@@ -130,7 +130,7 @@ If you are deploying many similar services written in Java, .NET, or Node.js, de
 
 See :ref:`discovery_mode`.
 
-.. _phase1-profiling:
+.. _aog-phase1-profiling:
 
 (Optional) Turn on AlwaysOn Profiling to collect stack traces
 -----------------------------------------------------------------
@@ -141,7 +141,7 @@ Use this profiling data to gain insights into your code behavior to troubleshoot
 
 See :ref:`profiling-intro`.
 
-.. _phase1-logs:
+.. _aog-phase1-logs:
 
 Set up Log Observer Connect for the Splunk Platform
 ================================================================================================
@@ -150,7 +150,7 @@ If your organization has an entitlement for Splunk Log Observer Connect, Splunk 
 
 See :ref:`logs-set-up-logconnect` or :ref:`logs-scp`. 
 
-.. _phase1-dashboards-detectors:
+.. _aog-phase1-dashboards-detectors:
 
 Review the default dashboards and detectors
 ==========================================================
