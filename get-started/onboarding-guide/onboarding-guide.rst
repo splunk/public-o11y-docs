@@ -40,10 +40,22 @@ The onboarding journey for Splunk Observability Cloud has 3 phases: onboarding r
 
        See :ref:`onboarding-guide-onboarding-readiness` for detailed steps.
 
-     - #. test
-       #. test
-     - #. test
-       #. test
+     - #. Choose an initial rollout environment and identify pilot teams and projects
+       #. Set up Infrastructure Monitoring
+       #. Set up Application Performance Monitoring
+       #. Set up Real User Monitoring
+       #. Set up Synthetics
+
+       See initial rollout for detailed steps.
+
+     - #. Add Splunk Observability Cloud to your CI/CD pipeline
+       #. Automate the token rotation process
+       #. Use metrics pipeline management tools to reduce cardinality of metric time series (MTS)
+       #. Review metric names and ingested data
+       #. Build advanced dashboards and detectors
+       #. Onboard all users and teams
+ 
+       See initial rollout for detailed steps.
 
    * - :strong:`Optional configurations`
      - * test
