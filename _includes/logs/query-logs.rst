@@ -8,9 +8,7 @@
 
 2. In the content control bar, enter a time range in the time picker.
 
-3. Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select which index you want to query in Log Observer.
-
-You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions. 
+3. Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select which index you want to query in Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions. 
 
 4. In the content control bar next to the index picker, select :guilabel:`Add Filter`.
 
