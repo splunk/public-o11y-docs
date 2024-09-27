@@ -55,13 +55,13 @@ For more information, refer to Google's official announcement :new-page:`Introdu
       <h3>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-You can use GCP's :strong:`Viewer` role, it has all/most of the permissions you need. You can also create a more restrictive role with the permissions in the table.
+You can use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios. 
 
-The following table specifies the permissions required for GCP integrations:
+Alternatively you can create a more restrictive role using the permissions in the table:
 
 .. list-table::
    :header-rows: 1
-   :widths: 40 60 20
+   :widths: 35 45 20
 
    *  - :strong:`Permission`
       - :strong:`Required?`
