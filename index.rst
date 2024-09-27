@@ -273,34 +273,14 @@ View a list of all supported integrations :ref:`supported-data-sources`
    get-started/welcome
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth:   3
 
-   Service description <get-started/service-description>
+   Get started new <get-started/get-started>
 
 .. toctree::
    :maxdepth:   3
 
-   Get started <get-started/o11y>
-
-.. toctree::
-   :maxdepth:   3
-
-   About Mobile TOGGLE <get-started/intro-to-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   Splunk Observability Cloud architecture <get-started/o11y-architecture>
-
-.. toctree::
-   :maxdepth:   3
-
-   Contribute to our documentation <get-started/contribute>
-
-.. toctree::
-   :maxdepth:   3
-
-   Free and paid courses <get-started/education-resources>
+   Get started old <get-started/o11y>
 
 .. toctree::
    :maxdepth:   3
@@ -310,7 +290,32 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   About Mobile TOGGLE <get-started/intro-to-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
    Support <get-started/support>
+
+.. toctree::
+   :maxdepth:   3
+
+   Free and paid courses <get-started/education-resources>
+
+.. toctree::
+   :maxdepth:   3
+
+   Splunk Observability Cloud architecture <get-started/o11y-architecture>
+
+.. toctree::
+   :maxdepth: 3
+
+   Service description <get-started/service-description>
+
+.. toctree::
+   :maxdepth:   3
+
+   Contribute to our documentation <get-started/contribute>
 
 .. toctree::
    :caption: Scenarios and tutorials
