@@ -133,7 +133,7 @@ The following example shows how to connect to a nonstandard API server that uses
 Activate control plane metrics histograms
 -------------------------------------------
 
-To activate control plane metrics histograms, use the feature flag ``useControlPlaneMetricsHistogramData``:
+To activate control plane metrics with the OpenTelemetry prometheus receiver instead, use the feature flag ``useControlPlaneMetricsHistogramData``:
 
 .. code-block:: yaml
 
