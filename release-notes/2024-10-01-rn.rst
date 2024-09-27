@@ -33,8 +33,8 @@ Log Observer Connect
 
    * - New feature or enhancement
      - Description
-   * - SVC optimization
-     - You can use buttons in the UI to run log searches independently of setting log search filters. The default limit is 150,000 logs. 
+   * - Splunk virtual compute (SVC) optimization
+     - You can optimize SVC, positively impacting performance and cost, by using new :guilabel:`Play`, :guilabel:`Pause`, and :guilabel:`Run` search buttons in the UI. The default limit is 150,000 logs. For more information, see :ref:`logs-keyword`.
 
 .. _ingest-2024-20-01:
 
