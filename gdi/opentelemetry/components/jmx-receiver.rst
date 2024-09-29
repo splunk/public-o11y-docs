@@ -106,6 +106,8 @@ You can use the following advanced settings with the receiver:
 * ``target_system``. The built-in target system (or systems) metric gatherer script to run. 
 
   * Possible values: ``"activemq"``, ``"cassandra"``, ``"hbase"``, ``"hadoop"``, ``"jetty"``, ``"jvm"``, ``"kafka"``, ``"kafka-consumer"``, ``"kafka-producer"``, ``"solr"``, ``"tomcat"``, or ``"wildfly"``. 
+  
+  * You can specify multiple target systems at the same time: ``"target_system": "activemq, kafka,kafka-consumer"``. 
 
   * If you need to support additional target systems because of a custom JMX metrics gatherer jar configured using the ``MetricsGathererHash`` build time config, add them with another build time flag. It corresponds to the ``otel.jmx.target.system`` property.
 
