@@ -122,8 +122,8 @@ Usage reports for host subscription plans include the following information abou
 * The number of billed hosts. Host data is available per minute.
 * The number of billed containers. Container data is available per minute.
 * The billed trace volume. Trace volume data is available per minute.
-* The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
-* The number of billed Monitoring MetricSets (MMS). MMS data is available only for histogram MMS and is available only in the usage report. MMS data is available at 10-minute intervals.
+* The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute and has a look-back period of 1 minute. 
+* The number of billed Monitoring MetricSets (MMS). MMS data is available only for histogram MMS and is available only in the usage report. MMS data is available at 10-minute intervals and has a look-back period of 1 hour. 
 * The average number of hosts. Averages are available in usage reports for complete months only.
 * The average number of containers. Averages are available in usage reports for complete months only.
 * The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
@@ -141,8 +141,8 @@ Usage reports for TAPM subscription plans include the following information abou
 
 * The number of billed TAPM. TAPM data is available per minute.
 * The billed trace volume. Trace volume data is available per minute.
-* The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
-* The number of billed Monitoring MetricSets (MMS). MMS data is available only for histogram MMS and is available only in the usage report. MMS data is available at 10-minute intervals.
+* The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute and has a look-back period of 1 minute. 
+* The number of billed Monitoring MetricSets (MMS). MMS data is available only for histogram MMS and is available only in the usage report. MMS data is available at 10-minute intervals and has a look-back period of 1 hour. 
 * The average number of TAPM. Averages are available in usage reports for complete months only.
 * The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
 * The average number of Monitoring MetricSets. Averages are available in usage reports for complete months only.
@@ -245,11 +245,11 @@ The following metrics power the charts in your APM Subscription Usage page with 
 
    * - ``sf.org.apm.numTroubleshootingMetricSets``
      - Troubleshooting MetricSets
-     - The cardinality of Troubleshooting MetricSets for each 1-minute window.
+     - The cardinality of Troubleshooting MetricSets. TMS data is available per minute and has a look-back period of 1 minute.
 
    * - ``sf.org.apm.numMonitoringMetricSets``
      - Monitoring MetricSets
-     - The cardinality of Monitoring MetricSets for each 10-minute window.
+     - The cardinality of Monitoring MetricSets. MMS data is available only for histogram MMS. MMS data is available at 10-minute intervals and has a look-back period of 1 hour. 
 
 .. _host_subscription_plans:
 
@@ -280,10 +280,10 @@ The following metrics power the charts in your APM Subscription Usage page with 
 
    * - ``sf.org.apm.numTroubleshootingMetricSets``
      - Troubleshooting MetricSets
-     - The cardinality of Troubleshooting MetricSets for each 1-minute window.
+     - The cardinality of Troubleshooting MetricSets. TMS data is available per minute and has a look-back period of 1 minute.
 
    * - ``sf.org.apm.numMonitoringMetricSets``
      - Monitoring MetricSets
-     - The cardinality of Monitoring MetricSets for each 10-minute window.
+     - The cardinality of Monitoring MetricSets. MMS data is available only for histogram MMS. MMS data is available at 10-minute intervals and has a look-back period of 1 hour. 
 
 To see all of the organization metrics for APM, see :ref:`org-metrics`.
