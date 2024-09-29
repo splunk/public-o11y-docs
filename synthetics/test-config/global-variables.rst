@@ -12,7 +12,7 @@ Define a global variables once, then you can use the variable across all of your
 
 How can you use global variables?
 ===================================
-Global variables are stored securely in the Splunk Synthetic Monitoring platform, but the keys and values of all global variables in your account are visible to all users with Manager or Administrator access. 
+Global variables are stored securely in the Splunk Synthetic Monitoring platform, but the keys and values of all global variables in your account are visible to all users. 
 
 To preserve your account's security, don't use production credentials, real credit card information, or other sensitive data in global variables for your checks. Instead, try using placeholder credentials to test workflows that require information to be entered during a test.
 
@@ -26,9 +26,6 @@ When you :strong:`conceal` a global variable, its value is permanently concealed
 
 To preserve security, the value of a concealed global variable is never revealed to any user of the account after it has been created and saved. The value is scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages.  
 
-Prerequisites
-================
-You need administrator access in Splunk Synthetic Monitoring to create and reference global variables. 
 
 Create a global variable
 ===============================
