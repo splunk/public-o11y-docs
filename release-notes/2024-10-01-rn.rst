@@ -19,7 +19,7 @@ Service level objective (SLO)
    * - New feature or enhancement
      - Description
    * - SignalFlow editor for custom metrics SLO
-     - Customers can use SignalFlow to define metrics and filters when creating a custom metric SLO. For more information, see :ref:`create-slo`.
+     - You can use SignalFlow to define metrics and filters when creating a custom metric SLO. For more information, see :ref:`create-slo`.
 
 .. _loc-2024-10-01:
 
@@ -34,7 +34,7 @@ Log Observer Connect
    * - New feature or enhancement
      - Description
    * - Splunk virtual compute (SVC) optimization
-     - You can optimize SVC, positively impacting performance and cost, by using new :guilabel:`Play`, :guilabel:`Pause`, and :guilabel:`Run` search buttons in the UI. The default limit is 150,000 logs. For more information, see :ref:`logs-keyword`.
+     - You can optimize SVC, resulting in performance improvements and cost savings, by using new :guilabel:`Play`, :guilabel:`Pause`, and :guilabel:`Run` search buttons in the UI. The default limit is 150,000 logs. For more information, see :ref:`logs-keyword`.
 
 .. _ingest-2024-20-01:
 
@@ -64,7 +64,7 @@ Authentication
    * - New feature or enhancement
      - Description
    * - Token management improvements
-     - Admin and power users access a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform. For more information, see :ref:`admin-org-tokens`.
+     - Admin and power users have a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform. For more information, see :ref:`admin-org-tokens`.
 
 .. _data-mngt-2024-10-01:
 
