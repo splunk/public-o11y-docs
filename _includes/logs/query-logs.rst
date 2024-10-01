@@ -1,6 +1,6 @@
 1. Navigate to :guilabel:`Log Observer`. Upon opening, Log Observer runs an initial search of all indexes you have access to and returns the most recent 150,000 logs. The search then defaults to Pause in order to save Splunk Virtual Compute (SVC) resources. Control your SVC resources, which impact performance and cost, by leaving your search on Pause when you are not monitoring incoming logs, and select Play when you want to see more incoming logs. 
 
-   .. image:: /_images/logs/LogObserverEnhancements.png
+   .. image:: /_images/logs/LogObserverEnhancementsUI.png
             :width: 90%
             :alt: The Log Observer UI is displayed.
 
