@@ -6,7 +6,7 @@ Get started with Splunk Observability Cloud
 .. meta::
     :description: Learn how to get started with Splunk Observability Cloud.
 
-Get started with Splunk Observability Cloud
+Get started with Splunk Observability Cloud.
 
 .. role:: icon-info
 .. rst-class:: newparawithicon

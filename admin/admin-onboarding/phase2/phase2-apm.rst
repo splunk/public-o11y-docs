@@ -1,4 +1,4 @@
-.. _phase2-apm:
+.. _aog-phase2-apm:
 
 Pilot phase part 3: Initial pilot rollout for Splunk Application Performance Monitoring
 *****************************************************************************************

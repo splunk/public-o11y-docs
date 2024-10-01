@@ -7,18 +7,11 @@ Onboarding guide for Splunk Observability Cloud admins
    :hidden:
    :maxdepth: 3
 
-   onboarding-readiness
-   initial-rollout
-   scaled-rollout
+   Phase 1: Onboarding readiness <onboarding-readiness>
+   Phase 2: Initial rollout <initial-rollout>
+   Phase 3: Scaled rollout <scaled-rollout>
 
-
-The onboarding journey for Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. 
-
-In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. 
-
-In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud solutions that apply to your organization. Solutions include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics. 
-
-In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards.  
+The onboarding journey for Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud solutions that apply to your organization. Solutions include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics. In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards.  
 
 Use the following table to get a high-level overview of the core setup steps involved in each stage. You can also reference common, optional configurations to be made to your setup as part of your onboarding journey. Finally, use the links to education resources for each phase to ensure you have the foundational knowledge and skills to successfully setup Splunk Observability Cloud.
 
@@ -42,20 +35,20 @@ Use the following table to get a high-level overview of the core setup steps inv
      - Establish repeatable observability practices through automation, data management, detectors, and dashboards
 
    * - :strong:`Core setup steps`
-     - #. Create a trial
+     - #. Create a trial for your organization
        #. Analyze your required network communication
        #. Decide how to manage user access
-       #. Plan your teams structure and token management to control access
+       #. Plan your teams structure and token management strategy to control access
 
        See :ref:`onboarding-guide-onboarding-readiness` for detailed steps.
 
-     - #. Choose an initial rollout environment
+     - #. Select an initial rollout environment to get data in
        #. Set up Infrastructure Monitoring
        #. Set up Application Performance Monitoring
        #. Set up Real User Monitoring
        #. Set up Synthetics
 
-       See initial rollout for detailed steps.
+       See :ref:`onboarding-guide-initial-rollout` for detailed steps.
 
      - #. Add Splunk Observability Cloud to your CI/CD pipeline
        #. Automate the token rotation process
@@ -64,7 +57,7 @@ Use the following table to get a high-level overview of the core setup steps inv
        #. Build advanced dashboards and detectors
        #. Onboard all users and teams
  
-       See initial rollout for detailed steps.
+       See :ref:`onboarding-guide-scaled-rollout` for detailed steps.
 
    * - :strong:`Optional configurations`
      - * Request a custom URL for your organization

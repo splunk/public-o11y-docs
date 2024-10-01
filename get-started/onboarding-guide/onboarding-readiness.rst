@@ -7,7 +7,7 @@ In the onboarding readiness phase of the onboarding journey you set up users, te
 
 .. image:: /_images/get-started/onboarding-guide-2point0-readiness.svg
    :width: 100%
-   :alt: The Open in Splunk platform icon is at the top, right-hand side of the Logs table.
+   :alt: 
 
 To configure your users, teams, and tokens complete the following tasks:
 
@@ -49,7 +49,7 @@ Select from these 3 options for managing user access:
 
 .. _phase1-teams-tokens:
 
-Plan your teams structure and token management to control access
+Plan your teams structure and token management strategy to control access
 =====================================================================================
 
 If you plan to roll out Splunk Observability Cloud across your organization you likely have multiple internal customers with different access requirements for the various features in Splunk Observability Cloud. To manage these internal customers, you can use the teams feature to organize users together in a team and manage them as a unit.
@@ -62,20 +62,25 @@ Before creating teams and tokens, determine your naming convention. This helps y
 * Team name: FRONTEND_DEV_TEAM 
 * Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
 
-See :ref:`admin-manage-usage`.
+See :ref:`phase1-manage-users`.
 
 Plan your team structure
 ---------------------------
 
 A user with an admin role can manage teams, which includes adding and removing regular users and assigning a team admin. 
 
-By default, users can join or leave teams at will. For larger organizations, you might want enhanced team security. Enhanced team security is useful if the teams are assigned a certain amount of usage rights with their associated tokens. See :ref:`enhanced-team-security`. 
+By default, users can join or leave teams at will. For larger organizations, you might want enhanced team security. Use enhanced team security to assign usage rights to each team and their associated tokens. See :ref:`enhanced-team-security`. 
 
 You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications give your teams different escalation methods for their alerts. See :ref:`admin-team-notifications`.
 
 Manage your tokens
 --------------------
 
-Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
+Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and you can extend them for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
 
 See :ref:`automate-tokens` in phase 3 of this guide and :ref:`admin-tokens` for more information about tokens.
+
+Next step
+===============
+
+Next, prepare for an initial rollout of the Splunk Observability Cloud solutions that are relevant to your organization. See :ref:`onboarding-guide-initial-rollout`.
