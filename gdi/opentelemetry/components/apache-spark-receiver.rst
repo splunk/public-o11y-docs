@@ -76,11 +76,7 @@ The following settings are optional:
 Settings
 ======================
 
-The following table shows the configuration options for the Apache Spark receiver:
-
-.. raw:: html
-
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/apachespark.yaml"></div>
+The full list of settings exposed for this receiver are documented in the :new-page:`Apache Spark receiver config repo <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/apachesparkreceiver/config.go>` in GitHub.
 
 Metrics
 ======================
