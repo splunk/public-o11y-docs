@@ -31,7 +31,6 @@ Each release date listed below includes new features and enhancements for SaaS a
      - * :ref:`Service level objective <slo-2024-10-01>`
        * :ref:`Log Observer Connect <loc-2024-10-01>`
        * :ref:`Data ingest <ingest-2024-20-01>`
-       * :ref:`Authentication <auth-2024-10-01>`
        * :ref:`Data Management <data-mngt-2024-10-01>`
 
 .. _changelogs:

@@ -51,21 +51,6 @@ Data ingest
    * - Kubernetes control plane metrics
      - In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are available using OpenTelemetry Prometheus receivers that target Prometheus endpoints. For more information see :ref:`kubernetes-control-plane-prometheus`.
 
-.. _auth-2024-10-01:
-
-Authentication
-==============
-
-.. list-table::
-   :header-rows: 1
-   :widths: 1 2
-   :width: 100%
-
-   * - New feature or enhancement
-     - Description
-   * - Token management improvements
-     - Admin and power users have a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform. For more information, see :ref:`admin-org-tokens`.
-
 .. _data-mngt-2024-10-01:
 
 Data management
