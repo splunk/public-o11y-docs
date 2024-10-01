@@ -12,6 +12,7 @@ Splunk Technical Add-on for the Splunk Distribution of the OpenTelemetry Collect
    :hidden:
 
    Install the Technical Add-on <collector-addon-install.rst>
+   Configure the Technical Add-on <collector-addon-install.rst>
 
 Use the Splunk Add-on for the OpenTelemetry Collector to collect traces and metrics for Splunk Observability Cloud.
 
@@ -48,20 +49,20 @@ The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offer
     - Supported
 
   * - Default agent configuration
-    - Includes logging receiver and exporter configuration.
-    - No out-of-the-box configuration is provided for the logging exporter or receiver.
+    - Includes logging receiver and exporter configuration
+    - No out-of-the-box configuration is provided for the logging exporter or receiver
 
   * - Configuration method
     - Environment variables
     - Inputs.conf
 
   * - Auto Instrumentation of language-specific agents support
-    - Out-of-the-box configuration is available.
-    - Out-of-the-box configuration is not available.
+    - Out-of-the-box configuration is available
+    - Out-of-the-box configuration is not available
 
   * - Distribution and deployment
-    - Source code, binary, Operator, Helm Charts, Debian, Ansible, Puppet, Chef, Salt.
-    - Manual installation and Splunk deployment server distribution.
+    - Source code, binary, Operator, Helm Charts, Debian, Ansible, Puppet, Chef, Salt
+    - Manual installation and Splunk deployment server distribution
 
 .. raw:: html
 
