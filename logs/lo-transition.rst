@@ -2,14 +2,14 @@
 
 
 *********************************************************************************************
-Splunk Log Observer transition
+Accomplish logs pipeline rules in Splunk platform
 *********************************************************************************************
 
 .. meta::
   :description: Discover how you can transition from Splunk Log Observer to Splunk Log Observer Connect where you can ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and expand into security logging by the January 2024 deadline.
 
 
-All customers who send logs to Splunk Observability Cloud are using Log Observer Connect, a bridge between Splunk Observability Cloud and Splunk platform. Using the Splunk platform allows you to ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and use logging for security use cases. 
+All customers who ingest logs into Splunk Observability Cloud now use Log Observer Connect, a bridge between Splunk Observability Cloud and Splunk platform. Using the Splunk platform allows you to ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and use logging for security use cases. 
 
 The following sections explain how to achieve all logging pipeline features in Splunk platform.
 
@@ -17,7 +17,7 @@ The following sections explain how to achieve all logging pipeline features in S
 
 Log processing rules
 ---------------------------------------------------------------------------------------------
-You can continue using existing log processing rules. See :ref:`logs-processors` for more information. You can turn your existing log processing rules off and on. However, you cannot create new log processing rules or edit existing rules.
+You can continue using existing log processing rules. You can turn your existing log processing rules off and on. However, you cannot create new log processing rules or edit existing rules.
 
 Going forward, you can process data in the Splunk platform using the following methods:
 

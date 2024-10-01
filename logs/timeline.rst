@@ -22,9 +22,7 @@ These features help you use the Timeline to review the health of your systems:
 
    To adjust the duration of each histogram bucket, use the time picker.
 
-   * The Live Tail option doesn't display a histogram. Use filtering or keyword highlighting to
-     review incoming log records. To learn more, see :new-page-ref:`logs-live-tail`.
-   * Other options display histograms over a previous time period. Log Observer calculates the time intervals for each
+   * Histograms display over a previous time period. Log Observer calculates the time intervals for each
      histogram bucket. The duration of each interval appears in the control bar.
    * To display a histogram for a specific time period, use the :menuselection:`Custom Time` option.
    * By default, the time period for the histogram is :menuselection:`Last 5 minutes`, which displays buckets for

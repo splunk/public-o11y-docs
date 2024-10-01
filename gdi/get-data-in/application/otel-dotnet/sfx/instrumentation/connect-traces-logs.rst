@@ -159,7 +159,6 @@ The instrumentation uses the underscore character as separator for field names (
 - ``service_version`` to ``service.version``
 - ``deployment_environment`` to ``deployment.environment``
 
-See :ref:`logs-processors` for more information on how to define log transformation rules.
 
 ILogger
 -------------------------

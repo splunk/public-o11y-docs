@@ -95,8 +95,6 @@ Now that you've explored and familiarized yourself with the data you have coming
 
 - Customize your APM experience by setting up business workflows and creating span tags that add metadata to traces sent to APM. For more information, see :ref:`apm-workflows` and :ref:`apm-add-context-trace-span`.
 
-- Customize your :ref:`logs pipeline <logs-pipeline>` to add value to your raw logs.
-
 
 .. _get-started-datalinks:
 

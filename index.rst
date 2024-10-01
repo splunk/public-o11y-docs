@@ -144,11 +144,6 @@ Use span tags to add useful metadata to traces :ref:`apm-add-context-trace-span`
 
 .. rst-class:: newcard
 
-:strong:`Logs pipeline`
-Add value to your raw logs by customizing your pipeline :ref:`logs-pipeline`
-
-.. rst-class:: newcard
-
 :strong:`Related Content`
 Enable users to seamlessly move across product views :ref:`get-started-relatedcontent`
 

@@ -28,7 +28,9 @@ Splunk Log Observer Connect
     aggregations
     logviews
     timestamp
+    logs-save-share
     forward-logs
+    lo-transition
     lo-connect-limits
 
 
@@ -69,7 +71,11 @@ Splunk Log Observer Connect
 
 - :ref:`logs-timestamp`
 
+- :ref:`logs-save-share`
+
 - :ref:`forward-logs`
+
+- :ref:`lo-transition`
 
 - :ref:`lo-connect-limits`
 
