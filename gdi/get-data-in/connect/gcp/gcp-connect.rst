@@ -12,9 +12,13 @@ Connect to GCP using the guided setup
 
 Follow these steps to connect to GCP:
 
+#. :ref:`gcp-one`
+#. :ref:`gcp-two`
+#. :ref:`gcp-three`
+
 .. _gcp-one:
 
-Select a role for your GCP service account
+1. Select a role for your GCP service account
 --------------------------------------------------------------------------------------
 
 You can use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios. 
@@ -79,7 +83,7 @@ Alternatively you can create a more restrictive role using the permissions in th
 
 .. _gcp-two:
 
-Configure GCP
+2. Configure GCP
 --------------------------------------------------------------------------------------
 
 To configure your GCP service, follow these steps:
@@ -116,7 +120,7 @@ To configure your GCP service, follow these steps:
 
 .. _gcp-three:
 
-Start the integration
+3. Start the integration
 --------------------------------------------------------------------------------------
 
 By default, all supported services are monitored, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
@@ -168,18 +172,19 @@ Integrate GCP using the API
 
 You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` in our developer portal for details.
 
+.. _gcp-terraform:
+
 Connect to GCP using Terraform
 --------------------------------------------------------------------------------------
 
 To connect using Terraform, see :ref:`terraform-config`.
-
 
 Next steps
 ============================================
 
 To validate your setup, examine the details of your GCP integration as displayed in the list at the end of the setup page.
 
-* For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`.
-* To send logs from GCP to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`.
-* Learn about Splunk Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
-* To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.
+* For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`
+* To send logs from GCP to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`
+* Learn about Splunk Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`
+* To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`
