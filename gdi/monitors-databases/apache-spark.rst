@@ -4,11 +4,11 @@ Apache Spark
 ============
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the Apache Sparck clusters monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the Apache Spark clusters monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-Apache Spark monitor type to monitor Apache Spark clusters. It does not
-support fetching metrics from Spark Structured Streaming.
+.. note:: If you're using the Splunk Distribution of the OpenTelemetry Collector and want to collect Apache Spark cluster metrics, use the native OTel component :ref:`apache-spark-receiver`.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the Apache Spark monitor type to monitor Apache Spark clusters. It does not support fetching metrics from Spark Structured Streaming.
 
 For the following cluster modes, the integration only supports HTTP
 endpoints:
