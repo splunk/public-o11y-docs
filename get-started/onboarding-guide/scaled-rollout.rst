@@ -24,44 +24,43 @@ Add Splunk Observability Cloud to your CI/CD pipeline
 =========================================================
 Now, you are ready to add services into your pipeline. If your teams use tools such as Ansible, Chef, or Puppet, use the exporter and pipeline templates using OpenTelemetry agents. You can also use the upstream OpenTelemetry Collector Contrib project, send data using the REST APIs, and send metrics using client libraries.
 
-* For details about adding receivers for a database, see Configure application receivers for databases.
-* For information about using the upstream Collector, see Send telemetry using the OpenTelemetry Collector Contrib project.
-* For details on Splunk Observability Cloud REST APIs, see Send metrics, traces, and events using Splunk Observability Cloud REST APIs.
-* For details on sending metrics using client libraries, see SignalFlow client libraries .
+* For details about adding receivers for a database, see :ref:`databases`.
+* For information about using the upstream Collector, see :ref:`using-upstream-otel`.
+* For details on the Splunk Observability Cloud REST APIs, see :ref:`rest-api-ingest`.
+* For details on sending metrics using client libraries, see :new-page:`SignalFlow client libraries <https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/#SignalFlow-client-libraries>`.
 
 .. _phase3-rotate-token:
 
 Automate the token rotation process
 ======================================
 
-Because tokens expire after 1 year, you can automate token rotation by using an API call. For a given token, when the API runs to create a new token, the old token continues to work until the time you specified in the grace period. Wherever the old token is in use, use the API call to automate token rotation within the grace period.
+Because tokens expire after 1 year, you need to automate the rotation of tokens using an API call. For a given token, when the API creates a new token, the old token continues to work until the time you specified in the grace period. Wherever the old token is in use, use the API call to automatically rotate the token within the grace period.
 
-For example, you can use the API to rotate a token that a Kubernetes cluster uses to ingest metrics and trace data. The API generates a new token that you can store directly in the secret in the Kubernetes cluster as part of the automation so that the application retrieves the new token.
+For example, you can use the API to rotate the token that a Kubernetes cluster uses to ingest metrics and trace data. When you use the API to generate a new token you can store the new token directly in the secret in the Kubernetes cluster as part of the automation.
 
 To learn more, see the following topics:
 
-* Create and manage authentication tokens using Splunk Observability Cloud
-* Retrieve and manage user API access tokens using Splunk Observability Cloud
-* Create and manage authentication tokens using Splunk Observability Cloud
-* Create and manage organization access tokens using Splunk Observability Cloud
+- :ref:`admin-org-tokens`
+- :new-page:`Org tokens <https://dev.splunk.com/observability/reference/api/org_tokens/latest> API endpoint documentation`
 
 .. _phase3-mpm:
 
 Use metrics pipeline management tools to reduce cardinality of metric time series (MTS)
 =========================================================================================
 
-As metrics data usage, or cardinality, grows in Splunk Infrastructure Monitoring, the cost increases.
+As metrics data usage and cardinality grows in Splunk Infrastructure Monitoring, the cost increases. Use metrics pipeline management (MPM) tools within Splunk Infrastructure Monitoring to streamline storage and processing to reduce overall monitoring cost. With MPM, you can make the following optimizations:
 
-You can reduce overall monitoring cost and optimize your return on investment by storing less critical metrics data at a much lower cost. To do this, use metrics pipeline management (MPM) tools within Splunk Infrastructure Monitoring. With MPM, you can make the following optimizations:
+* Streamline storage and processing to evolve the metric analytics platform into a multi-tier platform.
 
-* Streamline storage and processing to evolve the metric analytics platform into a multi tier platform.
 * Analyze reports to identify where to optimize usage.
-* Reduce metric time series (MTS) volume with rule-based metrics aggregation and filtering on dimensions.
-* Drop dimensions that are not needed.
+
+* Use rule-based metrics aggregation and filtering on dimensions to reduce metric time series (MTS) volume.
+
+* Drop dimensions that are not needed. 
 
 You can configure dimensions through the user interface, the API, and Terraform.
 
-For comprehensive documentation on MPM, see Introduction to metrics pipeline management.
+For comprehensive documentation on MPM, see :ref:`metrics-pipeline-intro`.
 
 .. _phase3-names-data:
 
