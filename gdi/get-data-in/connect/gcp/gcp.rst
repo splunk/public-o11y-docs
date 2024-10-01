@@ -12,20 +12,20 @@ Connect to Google Cloud Platform
 
    GCP prerequisites <gcp-prereqs>
    Supported GCP services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-gcp.html>
-   Connect to GCP <azure-connect> 
-   gcp-metrics
+   Connect to GCP <gcp-connect> 
+   GCP metrics and metadata <gcp-metrics>
    Send GCP logs to Splunk Platform <gcp-logs>   
 
-With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
+With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. 
 
 #. Before you start, check :ref:`gcp-prereqs`.
 #. Next, see :ref:`gcp-connect`.
-#. For a list of supported Azure services, see :ref:`gcp-integrations`. 
+#. For a list of supported GCP services, see :ref:`gcp-integrations`. 
 
 .. raw:: html
 
    <embed>
-      <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
+      <h2>Install the Splunk Distribution of the OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
@@ -58,7 +58,8 @@ To track the degree of OpenTelemetry enablement in your GCP integrations:
 
 To validate your setup, examine the details of your GCP integration as displayed in the list at the end of the setup page.
 
-* For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`.
-* To send logs from GCP to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`.
-* Learn about Splunk Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
-* To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.
+* Check the :ref:`gcp-prereqs`
+* :ref:`gcp-connect`
+* For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`
+* To send logs from GCP to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`
+
