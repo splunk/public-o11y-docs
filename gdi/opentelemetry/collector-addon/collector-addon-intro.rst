@@ -12,7 +12,7 @@ Splunk Technical Add-on for the Splunk Distribution of the OpenTelemetry Collect
    :hidden:
 
    Install the Technical Add-on <collector-addon-install.rst>
-   Configure the Technical Add-on <collector-addon-install.rst>
+   Configure the Technical Add-on <collector-addon-configure.rst>
 
 Use the Splunk Add-on for the OpenTelemetry Collector to collect traces and metrics for Splunk Observability Cloud.
 
