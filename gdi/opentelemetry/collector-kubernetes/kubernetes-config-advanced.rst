@@ -142,6 +142,8 @@ To activate control plane metrics with the OpenTelemetry Prometheus receiver ins
   featureGates:
     useControlPlaneMetricsHistogramData: true
 
+.. Note:: Out-of-the-box dashboards and navigators for control plane metrics with the Prometheus receiver aren't supported yet, but are planned for a future release.
+
 To learn more see :ref:`prometheus-receiver`.
 
 Known issues
