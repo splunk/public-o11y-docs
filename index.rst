@@ -708,7 +708,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Log Observer Connect 
    :maxdepth:   3
 
-   <logs/lo-connect-landing>
+   logs/lo-connect-landing
 
 .. toctree::
    :caption: Real User Monitoring
