@@ -13,6 +13,8 @@ The Helm chart for the Collector has three components: agent, cluster receiver, 
 
 .. note:: For use cases about the different components, see the GitHub documentation :new-page:`Splunk OpenTelemetry Collector Helm Chart Components: Use Cases <https://github.com/jvoravong/splunk-otel-collector-chart/blob/Feature-components-doc/docs/components.md#use-cases>`.
 
+.. _helm-chart-components-agent:
+
 Agent component
 ==============================================
 
