@@ -226,7 +226,7 @@ Opt out of error.message collection
 To avoid collecting ``error.message`` responses, deactivate the errors instrumentation as in the following example:
 
 .. code-block:: html
-   :emphasize-lines: 7
+   :emphasize-lines: 8
 
    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
    <script>
