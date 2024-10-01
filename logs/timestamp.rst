@@ -7,7 +7,6 @@ Where does a log's logical time come from?
 .. meta::
   :description: Log Observer determines a log's time and assigns it to _time. Time comes from event time processor, HEC protocol timestamp, or entrance into Splunk Observability Cloud.
 
-.. include:: /_includes/log-observer-transition.rst
 
 A log's logical time can come from different places, depending on what data is available for the log. Your logs may have fields, such as ``timestamp`` or ``Time``, that sound like the log's logical time. However, Log Observer determines the log's logical time and assigns it to the field, ``_time``. If your logs already contain the field ``_time``, Log Observer overwrites it.
 

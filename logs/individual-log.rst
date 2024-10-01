@@ -7,8 +7,6 @@ View individual log details and create a field extraction processor
 .. meta::
   :description: View and search a log's fields and values in JSON. Link to related content. Extract a field to create a processing rule.
 
-.. include:: /_includes/log-observer-transition.rst
-
 After you find a set of log records that contain specific useful information, you can view the contents of an individual record to get a complete view of the data in the log, broken down by fields and values and displayed in JSON format in the :strong:`Fields` panel. You can also see the number of times each field appears in all of your logs. 
 
 Once you have identified an interesting field, you can perform a field extraction and use it to transform your data. See :ref:`logs-processors` for more information.

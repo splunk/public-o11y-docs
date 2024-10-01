@@ -28,6 +28,7 @@ Splunk Log Observer Connect
     aggregations
     logviews
     timestamp
+    forward-logs
     lo-connect-limits
 
 
@@ -68,7 +69,7 @@ Splunk Log Observer Connect
 
 - :ref:`logs-timestamp`
 
+- :ref:`forward-logs`
+
 - :ref:`lo-connect-limits`
 
-
-If you do not have Log Observer Connect and instead use Log Observer, see :ref:`log-observer-landing`. 

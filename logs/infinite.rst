@@ -7,7 +7,6 @@ Archive your logs with infinite logging rules
 .. meta::
   :description: Archive logs in Amazon S3 buckets using infinite logging rules. Reduce the amount of logs data you index. Increase logs' retention period.
 
-.. include:: /_includes/log-observer-transition.rst
 
 Create infinite logging rules to archive all or any subset of logs in Amazon S3 buckets for compliance or possible future use while not paying to index them unless and until you want to analyze them in Splunk Log Observer. 
 

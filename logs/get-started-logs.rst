@@ -7,8 +7,6 @@ Introduction to Splunk Log Observer
 .. meta::
    :description: Get started investigating issues with Splunk Log Observer. Resolve incidents faster through log filtering, aggregations, and analysis.
 
-.. include:: /_includes/log-observer-transition.rst
-
 If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
 
 =========================================
@@ -25,7 +23,7 @@ In Log Observer, you can perform codeless queries on logs to detect the source o
 
 In Log Observer Connect, you can perform codeless queries on your Splunk Enterprise or Splunk Cloud Platform logs. See :ref:`logs-intro-logconnect` to learn what you can do with the Splunk platform integration.
 
-.. _LogObserverFeatures:
+
 
 =========================================
 What can I do with Log Observer?

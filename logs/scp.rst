@@ -9,7 +9,7 @@ Set up Log Observer Connect for Splunk Cloud Platform
 
 Set up Log Observer Connect by integrating Log Observer with Splunk Cloud Platform. If you are in a Splunk Enterprise environment and want to set up Log Observer Connect, see :ref:`logs-set-up-logconnect`.
 
-When you set up Log Observer Connect, your logs data remains in your Splunk Cloud Platform instance and is accessible only to Log Observer Connect. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
+When you set up Log Observer Connect, your logs remain in your Splunk Cloud Platform instance and are accessible only to Log Observer Connect. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
 .. note:: You can collect data using both the Splunk Distribution of the OpenTelemetry Collector and the Universal Forwarder without submitting any duplicated telemetry data. See :ref:`collector-with-the-uf` to learn how.
 
