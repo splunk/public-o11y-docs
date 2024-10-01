@@ -264,6 +264,12 @@ Collect traces :ref:`get-started-cpp`
 :strong:`All supported integrations`
 View a list of all supported integrations :ref:`supported-data-sources`
 
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Release notes`
+To keep up to date with changes in the products, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
+
 .. ----- This comment separates the landing page from the TOC -----
 
 .. toctree::
@@ -896,7 +902,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>
+
+.. toctree::
+   :caption: Release notes
+   :maxdepth:   3
+
+   Release notes overview TOGGLE <release-notes/release-notes-overview.rst>   
 
 .. toctree::
    :caption: Reference and Legal

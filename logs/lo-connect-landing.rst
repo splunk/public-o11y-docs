@@ -70,5 +70,6 @@ Splunk Log Observer Connect
 
 - :ref:`lo-connect-limits`
 
+To keep up to date with changes in Log Observer Connect, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
 
 If you do not have Log Observer Connect and instead use Log Observer, see :ref:`log-observer-landing`. 
