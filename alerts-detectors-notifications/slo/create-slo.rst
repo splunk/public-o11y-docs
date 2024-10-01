@@ -19,7 +19,7 @@ Follow these steps to create an SLO.
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Detectors & SLOs`.
 #. Select the :strong:`SLOs` tab.
 #. Select :guilabel:`Create SLO`.
-#. Configure the service level indicator (SLI) for your SLO.
+#. Configure the service level indicator (SLI) for your SLO. You can use a service or any metric of your choice as the system health indicator.
 
     To use a service as the system health indicator for your SLI configuration, follow these steps:
 
