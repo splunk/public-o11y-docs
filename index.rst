@@ -705,8 +705,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :caption: Log Observer Connect <logs/lo-connect-landing>
+   :caption: Log Observer Connect 
    :maxdepth:   3
+
+   <logs/lo-connect-landing>
 
 .. toctree::
    :caption: Real User Monitoring
