@@ -18,7 +18,7 @@ Keep up to date with the latest new features and enhancements to Splunk Observab
 
     <h2> What's new </h2>
 
-Each release date listed below includes new features and enhancements for SaaS and versioned products and components.
+Each release date includes new features and enhancements for SaaS and versioned products and components.
 
 .. list-table::
    :widths: 1 2
@@ -30,7 +30,7 @@ Each release date listed below includes new features and enhancements for SaaS a
    * - :ref:`October 1, 2024 <2024-10-01-rn>`
      - * :ref:`Log Observer Connect <loc-2024-10-01>`
        * :ref:`Data ingest <ingest-2024-20-01>`
-       * :ref:`Data Management <data-mngt-2024-10-01>`
+       * :ref:`Data management <data-mngt-2024-10-01>`
        * :ref:`Service level objective <slo-2024-10-01>`
 
 .. _changelogs:
