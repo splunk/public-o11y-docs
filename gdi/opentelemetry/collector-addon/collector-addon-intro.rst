@@ -13,6 +13,7 @@ Splunk Technical Add-on for the Splunk Distribution of the OpenTelemetry Collect
 
    Install the Technical Add-on <collector-addon-install.rst>
    Configure the Technical Add-on <collector-addon-configure.rst>
+   Troubleshooting <collector-addon-troibleshooting.rst>
 
 Use the Splunk Add-on for the OpenTelemetry Collector to collect traces and metrics for Splunk Observability Cloud.
 
@@ -79,6 +80,16 @@ Before you install the Splunk Add-on for the OpenTelemetry Collector, you must h
 * (optional) Install Splunk Enterprise or Splunk Cloud if you plan to use a Splunk Web interface or deployment server as forwarders.
 
 * (optional) Install the deployment server if you plan to use the deployment server to push the Splunk Add-on for OpenTelemetry Collector to multiple hosts.
+
+.. raw:: html
+
+   <embed>
+      <h2>Data collection and usage<a name="collector-addon-prereqs" class="headerlink" href="#collector-addon-prereqs" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+When you deploy the Splunk Add-on for the Open Telemetry Collector, Splunk Cloud Platform sends aggregated telemetry usage data to Splunk Inc. ("Splunk") to help improve future releases. For information about how to opt in or out, and how the data is collected, stored, and governed, see :new-page:`Share performance and usage data in Splunk Enterprise <https://docs.splunk.com/Documentation/Splunk/9.3.1/Admin/Shareperformancedata>`.
+
+The Splunk Add-on for the Open Telemetry Collector uses saved searches to collect anonymous usage data. These searches run in the background regardless of whether you opt in or out to send usage data to Splunk, and do not have any significant impact on performance.
 
 .. raw:: html
 

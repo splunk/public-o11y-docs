@@ -26,7 +26,7 @@ To configure the Splunk Add-on for OpenTelemetry Collector to receive traces fro
 
 .. _collector-addon-configure-multiple:
 
-Manage multiple collectors
+Manage multiple Collectors
 ============================================================================================================================================
 
 If your configuration uses more than one Collector, consider the following best practices:
