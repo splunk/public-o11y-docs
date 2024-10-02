@@ -99,7 +99,7 @@ Enable built-in content
 
 Splunk Observability Cloud provides built-in dashboards with charts that give you immediate visibility into the technologies and services being used in your environment. Learn more at :ref:`collector-builtin-dashboard`.
 
-For the MS SQL Server receiver out-of-the-box content to work properly, you need to explicitly enable and disable specific metrics in your configuration file. See the configuration that enables built-in content at :new-page:`SQL Server discovery yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/confmapprovider/discovery/bundle/bundle.d/receivers/sqlserver.discovery.yaml>` in GitHub.
+For the MS SQL Server receiver out-of-the-box content to work properly, you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. See the configuration that enables built-in content at :new-page:`SQL Server discovery yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/confmapprovider/discovery/bundle/bundle.d/receivers/sqlserver.discovery.yaml>` in GitHub.
 
 .. _mssql-server-receiver-settings:
 
