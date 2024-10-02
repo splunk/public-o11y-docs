@@ -17,12 +17,12 @@ To configure the OpenTelemetry Collector within the Add-on, follow these steps:
 #. Edit the default version of your inputs.conf file to point to the new configuration file.
 #. Restart the Splunk Universal Forwarder.
 
+.. _collector-addon-configure-traces:
+
 Activate trace collection
 ============================================================================================================================================
 
-The Splunk Add-on for the OpenTelemetry Collector does not perform automatic tracing. 
-
-To configure the Splunk Add-on for OpenTelemetry Collector to receive traces from your applications, see :ref:`get-started-application`.
+The Splunk Add-on for the OpenTelemetry Collector does not perform automatic tracing. To configure your Collector instance to receive traces from your applications, see :ref:`get-started-application`.
 
 .. _collector-addon-configure-multiple:
 

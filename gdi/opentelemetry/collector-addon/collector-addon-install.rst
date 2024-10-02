@@ -23,7 +23,7 @@ The following applies:
 
 .. _collector-addon-install-uf:
 
-Install the Splunk Add-on for OpenTelemetry Collector to a universal forwarder instance
+Install the Splunk Add-on for the OpenTelemetry Collector to a universal forwarder instance
 ============================================================================================================================================
 
 Follow these steps to install the Splunk Add-on for OpenTelemetry Collector to a universal forwarder instance:

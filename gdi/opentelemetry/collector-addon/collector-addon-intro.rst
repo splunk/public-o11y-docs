@@ -17,17 +17,17 @@ Splunk Technical Add-on for the Splunk Distribution of the OpenTelemetry Collect
 
 Use the Splunk Add-on for the OpenTelemetry Collector to collect traces and metrics for Splunk Observability Cloud.
 
-You have two ways to install and configure the Splunk Add-on for OpenTelemetry Collector:
+You have two ways to install and configure the Splunk Add-on for the OpenTelemetry Collector:
 
-* Install on multiple hosts using a deployment server.
-* Install directly onto one or several hosts.
+* :ref:`collector-addon-install-uf`
+* :ref:`collector-addon-install-server`
 
-You can also choose to install and configure the add-on using a customized or third-party solution, such as Ansible or Terraform. 
+You can also choose to install and configure the Add-on using a customized or third-party solution, such as Ansible or Terraform. 
 
 .. raw:: html
 
    <embed>
-      <h2>Differences between the OpenTelemetry Collector and the Splunk Add-on for the OpenTelemetry Collector<a name="collector-addon-distro-diffs" class="headerlink" href="#collector-addon-distro-diffs" title="Permalink to this headline">¶</a></h2>
+      <h2>Differences between the Splunk Distribution of the OpenTelemetry Collector and the Splunk Add-on for the OpenTelemetry Collector<a name="collector-addon-distro-diffs" class="headerlink" href="#collector-addon-distro-diffs" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offered in Splunk Observability. However, the Splunk Add-on for OpenTelemetry provides the added benefit of out-of-the box Collector content and configuration.
