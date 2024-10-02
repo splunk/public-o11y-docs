@@ -1,7 +1,7 @@
 .. _logs-save-share:
 
 *****************************************************************
-Save and share Log Observer queries
+Save and share Log Observer Connect queries
 *****************************************************************
 
 .. meta::
