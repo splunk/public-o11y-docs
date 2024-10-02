@@ -87,7 +87,8 @@ The following table shows the retention time period for each data type in APM.
 Data retention in Log Observer 
 ============================================
 
-The retention period for indexed logs in Splunk Log Observer is 30 days. If you send logs to S3 through the Infinite Logging feature, then the data retention period depends on the policy you purchased for your Amazon S3 bucket. To learn how to set up Infinite Logging rules, see :ref:`logs-infinite`.
+The retention period for indexed logs in Splunk Log Observer is 30 days. 
+
 
 .. _oncall-data-retention:
 

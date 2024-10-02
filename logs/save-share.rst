@@ -11,7 +11,7 @@ Save and share Log Observer queries
 After you create useful queries in Log Observer, you can save them and share them with team members. You can only save or share queries on the :guilabel:`Splunk Observability Cloud data` index. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can save and share Log Observer queries.
 
 To learn how to create filters, see :ref:`logs-keyword`.
-Log Observer Connect has no default aggregation. Log Observer defaults to :guilabel:`All (*)`` logs grouped by :guilabel:`Severity`. To learn how to create a unique aggregation, see :ref:`logs-aggregations`. To learn how to create search-time rules, see :ref:`logs-search-time-rules`.
+Log Observer Connect has no default aggregation. Log Observer defaults to :guilabel:`All (*)`` logs grouped by :guilabel:`Severity`. To learn how to create a unique aggregation, see :ref:`logs-aggregations`. 
 
 .. note:: 
    All organizations have access to pre-defined queries for Kubernetes and Cassandra. These queries appear at the beginning of the list of saved queries and are a part of content packs. Content packs include pre-defined saved queries as well as log processing rules. Splunk Observability Cloud includes content packs for Kubernetes System Events and Cassandra.

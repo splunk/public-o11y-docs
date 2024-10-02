@@ -21,7 +21,7 @@ Region and version availability
 
 What can I do with Log Observer Connect?
 ==============================================================
-The following table lists features available to customers who have integrated Splunk Enterprise or Splunk Cloud Platform with Log Observer, allowing them to use Log Observer Connect. If you have a Log Observer entitlement in Splunk Observability Cloud, see :ref:`get-started-logs` for a complete list of Log Observer features.
+The following table lists features available to customers who have integrated Splunk Enterprise or Splunk Cloud Platform with Splunk Observability Cloud, allowing them to use Log Observer Connect.
 
 .. list-table::
    :header-rows: 1
