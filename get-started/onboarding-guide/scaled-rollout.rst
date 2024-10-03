@@ -1,9 +1,9 @@
-.. _onboarding-guide-scaled-rollout:
+.. _get-started-guide-scaled-rollout:
 
-Onboarding guide phase 3: Scaled rollout
+Get started guide phase 3: Scaled rollout
 *********************************************************
 
-In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards.   The following sections cover the core setup steps for scaled rollout phase* . 
+In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards. The following sections cover the core setup steps for scaled rollout phase* . 
 
 .. image:: /_images/get-started/onboarding-guide-2point0-scaled.svg
    :width: 100%

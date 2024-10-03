@@ -1,9 +1,9 @@
-.. _onboarding-guide-onboarding-readiness:
+.. _get-started-guide-onboarding-readiness:
 
-Onboarding guide phase 1: Onboarding readiness 
+Get started guide phase 1: Onboarding readiness 
 *********************************************************
 
-In the onboarding readiness phase of the onboarding journey you set up users, teams, and access controls using roles and token management. The following sections cover the core setup steps for onboarding readiness phase. 
+In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. The following sections cover the core setup steps for onboarding readiness phase. 
 
 .. image:: /_images/get-started/onboarding-guide-2point0-readiness.svg
    :width: 100%
@@ -17,7 +17,7 @@ To configure your users, teams, and tokens complete the following tasks:
 #. :ref:`phase1-teams-tokens`
 
 .. note::
-    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager as you get started. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
 .. _phase1-create-trial:
 
@@ -62,7 +62,7 @@ Before creating teams and tokens, determine your naming convention. This helps y
 * Team name: FRONTEND_DEV_TEAM 
 * Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
 
-See :ref:`phase1-manage-users`.
+See :ref:`admin-manage-usage`.
 
 Plan your team structure
 ---------------------------
@@ -83,4 +83,4 @@ See :ref:`automate-tokens` in phase 3 of this guide and :ref:`admin-tokens` for 
 Next step
 ===============
 
-Next, prepare for an initial rollout of the Splunk Observability Cloud solutions that are relevant to your organization. See :ref:`onboarding-guide-initial-rollout`.
+Next, prepare for an initial rollout of the Splunk Observability Cloud solutions that are relevant to your organization. See :ref:`get-started-guide-initial-rollout`.

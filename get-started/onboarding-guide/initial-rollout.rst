@@ -1,6 +1,6 @@
-.. _onboarding-guide-initial-rollout:
+.. _get-started-guide-initial-rollout:
 
-Onboarding guide phase 2: Initial rollout
+Get started guide phase 2: Initial rollout
 *********************************************************
 
 In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud solutions that apply to your organization. Solutions include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics.
@@ -18,7 +18,7 @@ To configure Splunk Observability Cloud solutions for initial rollout, complete 
 #. :ref:`phase2-synthetics`
 
 .. note::
-    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager as you get started. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
 .. _phase2-initial-environment:
 
@@ -79,4 +79,4 @@ To get started with Splunk Synthetic Monitoring, create 1 of the 3 available tes
 Next step
 ===============
 
-Next, prepare to scale your rollout of Splunk Observability Cloud. See :ref:`onboarding-guide-scaled-rollout`.
+Next, prepare to scale your rollout of Splunk Observability Cloud. See :ref:`get-started-guide-scaled-rollout`.

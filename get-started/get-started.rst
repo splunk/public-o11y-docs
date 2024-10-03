@@ -62,3 +62,23 @@ Goal-based scenarios for using Splunk Observability Cloud :ref:`scenario-landing
 
 :strong:`Tutorials`
 Task-based tutorials to accomplish a task in Splunk Observability Cloud :ref:`tutorial-landing`
+
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Education and community resources`
+
+.. rst-class:: newcard
+
+:strong:`Course offerings`
+Splunk Observability Cloud course offerings :new-page:`https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights`
+
+.. rst-class:: newcard
+
+:strong:`Community blog`
+Get the latest updates from the Splunk community :new-page:`https://community.splunk.com/t5/Community-Blog/bg-p/Community-Blog`
+
+.. rst-class:: newcard
+
+:strong:`Join the community`
+Get the latest updates from the Splunk community :new-page:`https://community.splunk.com/t5/Welcome/bd-p/gs-welcome`
