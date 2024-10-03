@@ -41,7 +41,7 @@ Free trial and guided onboarding :ref:`o11y-trial`
 .. rst-class:: newcard
 
 :strong:`Admin onboarding guide`
-Onboarding guide for Splunk Observability Cloud admins :ref:`admin-onboarding-guide`
+Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`
 
 .. rst-class:: newcard
 
