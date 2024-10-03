@@ -41,7 +41,7 @@ For example, you can use the API to rotate the token that a Kubernetes cluster u
 To learn more, see the following topics:
 
 - :ref:`admin-org-tokens`
-- :new-page:`Org tokens <https://dev.splunk.com/observability/reference/api/org_tokens/latest> API endpoint documentation`
+- :new-page:`Org tokens API endpoint documentation<https://dev.splunk.com/observability/reference/api/org_tokens/latest>`
 
 .. _phase3-mpm:
 
@@ -67,33 +67,48 @@ For comprehensive documentation on MPM, see :ref:`metrics-pipeline-intro`.
 Review metric names and ingested data
 =========================================================================================
 
-To prepare for a successful scaled deployment down the road, consider your naming conventions for tokens and custom metrics in Splunk Observability Cloud. To start creating charts and detectors in Splunk Observability Cloud, define a standard for the naming metrics. Here are our best practices in setting up a consistent hierarchical naming convention for metrics, this will make it easier to find metrics and identify its usage by utilizing the name of the metric.
+To prepare for a successful scaled deployment, consider your naming conventions for tokens and custom metrics in Splunk Observability Cloud. A consistent, hierarchical naming convention for metrics makes it easier to find metrics and identify usage.
 
-After your initial onboarding of metrics data, review the name and the amount of metrics each team is ingesting. Make sure the ingest data matches the naming convention for dimensions and properties. If needed, address the name and type of dimensions required to ingest into Splunk Infrastructure Monitoring.
+After your initial onboarding of metrics data, review the name and the metrics volume each team is ingesting. Make sure the ingest data matches the naming convention for dimensions and properties. 
 
-Ensure the teams follow the naming convention setup for metrics, so that you can easily create charts and alerts across a range of hosts and nodes.
+Ensure the teams follow the naming convention setup for metrics so that you can easily create charts and alerts across a range of hosts and nodes.
 
-* For details about dimensions, see Dimensions.
-* For details about properties, see Custom properties.
-* For details about naming conventions for metrics, see Naming conventions for metrics and dimensions.
+* For details about dimensions, see :ref:`metadata-dimension`.
+* For details about properties, see :ref:`custom-properties`.
+* For details about naming conventions for metrics, see :ref:`metric-dimension-names`.
 
 .. _phase3-dash-detect:
 
 Build advanced dashboards and detectors
 =========================================================================================
 
+Dashboards and detectors are the foundation of a Splunk Observability cloud user's experience. 
+
+Dashboards are groupings of charts and visualizations of metrics. Dashboards provide useful and actionable insight into your system at a glance.
+
+Detectors monitor your streaming data against a specific condition that you specify to keep users informed when certain criteria are met.
+
 Build advanced dashboards
 -----------------------------
 
-It is important to familiarize the teams with built-in dashboards groups developed by Splunk, and how to create and customize dashboards. To ensure teams truly have a “single pane of glass”, make sure common dashboards are established as the standard source of truth by sharing, cloning, and mirroring dashboards - otherwise you may quickly find yourself in an endless debate over the right dashboard, filters, and dashboard variables. 
+Start by getting familiar with the built-in dashboards groups developed by Splunk. Then learn how to create and customize dashboards. 
 
-Utilize the text notes and event feeds that can be added into the dashboards. Also familiarize the teams with data links to be able to dynamically link a dashboard to another dashboard or external system such as Splunk APM or a custom URL to Splunk Cloud Platform.
+Make sure your teams can complete these tasks:
+
+* Clone, share, and mirror dashboards. 
+* Use dashboard filters and dashboard variables. 
+* Add text notes and event feeds to your dashboards. 
+* Use data links to dynamically link a dashboard to another dashboard or external system such as Splunk APM, Splunk Platform, or a custom URL.
+* Link metadata to related resources.
 
 For comprehensive documentation on these tasks, see the following topics:
 
-* Dashboards in Splunk Observability Cloud
-* Charts in Splunk Observability Cloud
-* Link metadata to related resources using global data links
+
+- :ref:`dashboards`
+- :ref:`built-in-dashboards`
+- :ref:`data-visualization-charts`
+- :ref:`link-metadata-to-content`
+
 
 Build advanced detectors
 -----------------------------
@@ -115,10 +130,12 @@ To learn more, see the following topics:
 Onboard all users and teams
 ================================================================================================================
 
-As a final step of the scaled rollout, onboard all users and teams into Splunk Observability Cloud. Turn on enhanced team security to identify team managers and users. Use enhanced security within teams to control who can view and who can modify each dashboard and detector.
+Your final step of the scaled rollout phase is to onboard all users and teams into Splunk Observability Cloud. 
+
+Use enhanced security to identify team managers and control who can view and who can modify each dashboard and detector. 
 
 To learn more, see the following topics:
 
-- :ref:`user-managment-intro`
+- :ref:`user-management-intro`
 
 - :ref:`enhanced-team-security`

@@ -6,7 +6,7 @@ Get started with Splunk Observability Cloud
 .. meta::
     :description: Learn how to get started with Splunk Observability Cloud.
 
-Get started with Splunk Observability Cloud.
+Everything you need to know to get started with Splunk Observability Cloud.
 
 .. role:: icon-info
 .. rst-class:: newparawithicon
@@ -40,7 +40,7 @@ Free trial and guided onboarding :ref:`o11y-trial`
 
 .. rst-class:: newcard
 
-:strong:`Admin onboarding guide`
+:strong:`Get started guide for admins`
 Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`
 
 .. rst-class:: newcard

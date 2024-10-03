@@ -32,7 +32,7 @@ The following table shows you aspects of your Splunk Observability Cloud organiz
        
        See :ref:`sso-label` to control access through Single Sign-On (SSO). 
        
-       See :ref:`user-managment-intro` to use Splunk Observability Cloud user management. 
+       See :ref:`user-management-intro` to use Splunk Observability Cloud user management. 
      - admin
 
    * - Allow Splunk Observability Cloud services in your network

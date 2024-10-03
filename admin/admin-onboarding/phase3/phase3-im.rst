@@ -245,7 +245,7 @@ During this phase, you can onboard all users and teams into Splunk Observability
 
 To learn more, see the following topics:
 
-- :ref:`user-managment-intro`
+- :ref:`user-management-intro`
 
 - :ref:`enhanced-team-security`
 
