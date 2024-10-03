@@ -19,7 +19,7 @@ Follow these steps to create an SLO.
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Detectors & SLOs`.
 #. Select the :strong:`SLOs` tab.
 #. Select :guilabel:`Create SLO`.
-#. Configure the service level indicator (SLI) for your SLO.
+#. Configure the service level indicator (SLI) for your SLO. You can use a service or any metric of your choice as the system health indicator.
 
     To use a service as the system health indicator for your SLI configuration, follow these steps:
 
@@ -46,21 +46,22 @@ Follow these steps to create an SLO.
           * - :guilabel:`Filters`
             - Enter any additional dimension names and values you want to apply this SLO to. Alternatively, use the ``NOT`` filter, represented by an exclamation point ( ! ), to exclude any dimension values from this SLO configuration.
 
-    To use a custom metric as the system health indicator for your SLI configuration, follow these steps:
+    To use a metric of your choice as the system health indicator for your SLI configuration, follow these steps:
 
-        .. list-table::
-          :header-rows: 1
-          :widths: 40 60
-          :width: 100%
+        #. For the :guilabel:`Metric type` field, select :guilabel:`Custom metric` from the dropdown menu. The SignalFlow editor appears.
+        #. In the SignalFlow editor, you can see the following code sample:
 
-          * - :strong:`Field name`
-            - :strong:`Actions`
-          * - :guilabel:`Metric type`
-            - Select :guilabel:`Custom metric` from the dropdown menu
-          * - :guilabel:`Good events (numerator)`
-            - Search for the metric you want to use for the success request count
-          * - :guilabel:`Total events (denominator)`
-            - Search for the metric you want to use for the total request count
+              .. code-block:: python
+
+                  G = data('good.metric', filter=filter('sf_error', 'false'))
+                  T = data('total.metric')
+              
+              * Line 1 defines ``G`` as a data stream of ``good.metric`` metric time series (MTS). The SignalFlow ``filter()`` function queries for a collection of MTS with value ``false`` for the ``sf_error`` dimension. The filter distinguishes successful requests from total requests, making ``G`` the good events variable.
+              * Line 2 defines ``T`` as a data stream ``total.metric`` MTS. ``T`` is the total events variable.
+
+           Replace the code sample with your own SignalFlow program. You can define good events and total events variables using any metric and supported SignalFlow function. For more information, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` in the Splunk Observability Cloud Developer Guide.
+        
+        #. Select appropriate variable names for the :guilabel:`Good events (numerator)` and :guilabel:`Total events (denominator)` dropdown menus.
 
         .. note:: Custom metric SLO works by calculating the percentage of successful requests over a given compliance period. This calculation works better for counter and histogram metrics than for gauge metrics. Gauge metrics are not suitable for custom metric SLO, so you might get confusing data when selecting gauge metrics in your configuration.
 
