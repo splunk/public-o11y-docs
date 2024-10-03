@@ -65,8 +65,6 @@ Splunk Log Observer Connect
 
 - :ref:`logs-aggregations`
 
-- :ref:`logs-save-share`
-
 - :ref:`logs-logviews`
 
 - :ref:`logs-timestamp`
