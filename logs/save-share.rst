@@ -8,7 +8,7 @@ Save and share Log Observer Connect queries
   :description: Collaborate with team members by sharing Log Observer Connect queries. Saved queries include filters, aggregations, and search-time rules.
 
 
-After you create useful queries in Log Observer Connect, you can save them and share them with team members. You can only save or share queries on the :guilabel:`Splunk Observability Cloud data` index. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. 
+After you create useful queries in Log Observer Connect, you can save them and share them with team members. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. 
 
 To learn how to create filters, see :ref:`logs-keyword`. Log Observer Connect has no default aggregation. To learn how to create a unique aggregation, see :ref:`logs-aggregations`. 
 
@@ -25,11 +25,11 @@ To save and share Log Observer Connect queries, you must have an administrator o
 Save a Log Observer Connect query
 ================================================================================
 
-To create a query, follow these steps:
+To create and save a query, follow these steps:
 
-#. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select :guilabel:`Splunk Observability Cloud data`. Select :guilabel:`Add Filter`, then enter a keyword or field.
+#. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select the index you want to search. Select :guilabel:`Add Filter`, then enter a keyword or field.
 
-#. To override the default aggregation, follow these steps:
+#. To set an aggregation, follow these steps:
 
    #. Using the calculation control, set the calculation type you want from the list. The default is :guilabel:`Count`.
    #. Select the field that you want to aggregate by.
