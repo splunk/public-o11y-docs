@@ -53,7 +53,7 @@ The following table lists features available to customers who have integrated Sp
 
    * - View the JSON schema of an individual log.
      - Log details
-     - :ref:`logs-individual-log`
+     - :ref:`logs-individual-log-connect`
 
    * - See the metrics, traces, and infrastructure related to a specific log.
      - Related Content

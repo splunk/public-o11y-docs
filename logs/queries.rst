@@ -16,7 +16,7 @@ Click any of the following documents to learn more about each way you can explor
 
 * :ref:`logs-keyword`
 
-* :ref:`logs-individual-log`
+* :ref:`logs-individual-log-connect`
 
 * :ref:`logs-aggregations`
 
