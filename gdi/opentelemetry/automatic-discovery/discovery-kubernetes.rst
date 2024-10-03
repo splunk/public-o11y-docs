@@ -1,11 +1,11 @@
 .. _discovery-kubernetes:
 
 ************************************************************************
-Automatic discovery and configuration for Kubernetes
+Automatic discovery and instrumentation for Kubernetes
 ************************************************************************
 
 .. meta:: 
-    :description: Get started with automatic discovery and configuration for Kubernetes environments. Deploy automatic discovery to automatically find applications running in your environment and send data from them to Splunk Observability Cloud.
+    :description: Get started with automatic discovery and instrumentation for Kubernetes environments. Deploy automatic discovery and instrumentation to automatically find services and applications running in your environment and send data from them to Splunk Observability Cloud.
 
 .. toctree::
     :hidden:
@@ -15,18 +15,18 @@ Automatic discovery and configuration for Kubernetes
     Advanced customization <k8s/k8s-advanced-config>
     k8s/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial
 
-Automatic discovery and configuration for Kubernetes automatically finds applications running in your Kubernetes environments and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
+Automatic discovery for Kubernetes automatically finds services running in your Kubernetes environments and captures telemetry data from them. The Splunk Distribution of the OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
 
-Using automatic discovery, you don't have to manually instrument or configure your applications before deploying them. 
+Used alongside automatic instrumentation, you don't have to manually instrument or configure your applications before deploying them.
 
 .. raw:: html
 
     <h2>Get started</h2>
 
-Automatic discovery for Kubernetes supports both back-end applications (such as Java and Node.js) as well as third-party applications (such as databases and web servers).
+Automatic instrumentation for Kubernetes supports back-end applications such as Java and Node.js and automatic discovery supports third-party services such as databases and web servers.
 
-To use automatic discovery for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
+To use automatic instrumentation for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
 
-To use automatic discovery with third-party applications, see :ref:`k8s-third-party`.
+To use automatic discovery with third-party services, see :ref:`k8s-third-party`.
 
-For a walkthrough of how to use automatic discovery to instrument an application in a Kubernetees environment, see :ref:`k8s-advanced-auto-discovery-config`.
+For a walkthrough of how to use automatic instrumentation to instrument an application in a Kubernetees environment, see :ref:`k8s-advanced-auto-discovery-config`.

@@ -1,11 +1,11 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Discover telemetry sources automatically
+Detect telemetry sources automatically
 ***************************************************************************
 
 .. meta::
-      :description: Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically and easily get started with Splunk Application Performance Monitoring and Splunk Infrastructure Monitoring.
+      :description: Use automatic discovery and automatic instrumentation with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically and easily get started with Splunk Application Performance Monitoring and Splunk Infrastructure Monitoring.
 
 .. toctree::
    :hidden:
@@ -14,11 +14,11 @@ Discover telemetry sources automatically
    Linux <automatic-discovery/discovery-linux>
    Windows <automatic-discovery/discovery-windows>
 
-Use automatic discovery and configuration (formerly Zero Configuration Automatic Instrumentation) with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically. 
+Use automatic discovery and automatic instrumentation with the Splunk Distribution of the OpenTelemetry Collector to automatically collect metrics and traces. 
 
-Automatic discovery and configuration helps you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring.
+Automatic discovery detects and collects signal data from third-party services, such as databases and web servers, whereas automatic instrumentation collects signal data from application language runtimes. Automatic discovery and automatic instrumentation together help you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring. To learn about automatic instrumentation, see :ref:`get-started-application`.
 
-The following diagram shows the process of using automatic discovery and configuration to find data sources:
+The following diagram shows the process of using automatic discovery and automatic instrumentation to find data sources:
 
 .. mermaid::
    
@@ -35,45 +35,15 @@ The following diagram shows the process of using automatic discovery and configu
       
       X --> Y --> Z
 
-Automatic discovery and configuration can detect several types of data sources on the host or Kubernetes cluster, such as language runtimes, databases, and web servers. 
+Automatic discovery can detect several types of data sources on the host or Kubernetes cluster, such as databases and web servers. To do so, the Collector generates a configuration that you can modify and adopt, or incorporate automatically into your existing configuration.
 
-Using this capability, you can automatically instrument your back-end applications such as Java or .NET without any additional installation or configuration steps. With automatic discovery, you can quickly get started with Splunk APM. 
+Using automatic instrumentation, you can automatically instrument your back-end applications such as Java or .NET without any additional installation or configuration steps. With automatic instrumentation, you can quickly get started with Splunk APM.
 
-For third-party applications such as databases and web servers, the Collector generates configuration you can modify and adopt, or incorporate into your existing configuration automatically by default.
-
-The main advantage of using automatic discovery is that you don't need to manually instrument applications or manually configure the Splunk Distribution of OpenTelemetry Collector. 
-
-.. raw:: html
-
-  <h2>Supported language runtimes</h2>
-
-The following table shows the platforms that support each language runtime:
-
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 25 25 25 25
-
-   * - Application language
-     - Supported for Linux
-     - Supported for Windows
-     - Supported for Kubernetes
-   * - Java
-     - Yes. See :ref:`linux-backend-auto-discovery`
-     - No
-     - Yes. See :ref:`k8s-backend-auto-discovery`
-   * - .NET
-     - Yes. See :ref:`linux-backend-auto-discovery`
-     - Yes. See :ref:`windows-backend-auto-discovery`
-     - Yes. See :ref:`k8s-backend-auto-discovery`
-   * - Node.js
-     - Yes. See :ref:`linux-backend-auto-discovery`
-     - No
-     - Yes. See :ref:`k8s-backend-auto-discovery`
+The main advantage of using automatic discovery and automatic instrumentation is that you don't need to manually configure the Splunk Distribution of the OpenTelemetry Collector.
 
 .. raw:: html
   
-  <h2>Supported host services and applications</h2>
+  <h2>Supported host services and applications for automatic discovery</h2>
 
 Automatic discovery for third-party applications is supported for Linux and Kubernetes.
 
@@ -116,3 +86,30 @@ Automatic discovery supports the following host services and applications:
    * - Microsoft SQL Server
      - Microsoft SQL Server receiver. See :ref:`mssql-server-receiver`
 
+.. raw:: html
+
+  <h2>Supported language runtimes for automatic instrumentation</h2>
+
+The following table shows the platforms that support each language runtime:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 25 25 25 25
+
+   * - Application language
+     - Supported for Linux
+     - Supported for Windows
+     - Supported for Kubernetes
+   * - Java
+     - Yes. See :ref:`linux-backend-auto-discovery`
+     - No
+     - Yes. See :ref:`k8s-backend-auto-discovery`
+   * - .NET
+     - Yes. See :ref:`linux-backend-auto-discovery`
+     - Yes. See :ref:`windows-backend-auto-discovery`
+     - Yes. See :ref:`k8s-backend-auto-discovery`
+   * - Node.js
+     - Yes. See :ref:`linux-backend-auto-discovery`
+     - No
+     - Yes. See :ref:`k8s-backend-auto-discovery`
