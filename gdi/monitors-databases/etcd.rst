@@ -6,11 +6,7 @@ etcd server
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the etcd monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-etcd monitor type to report etcd server metrics under the ``/metrics``
-path on its client port. Optionally, you can ediy location using
-``--listen-metrics-urls``. This integration only collects metrics from
-the Prometheus endpoint.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the etcd monitor type to report etcd server metrics under the ``/metrics`` path on its client port. Optionally, you can edit the location using ``--listen-metrics-urls``. This integration only collects metrics from the Prometheus endpoint.
 
 Benefits
 --------

@@ -7,8 +7,7 @@ Logparser
    
    :description: Use this Splunk Observability Cloud integration for the telegraf/logparser plugin monitor. See benefits, install, configuration, and metrics.
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``telegraf/logparser`` monitor type to tail log files.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``telegraf/logparser`` monitor type to tail log files.
 
 This integration is based on the Telegraf logparser plugin, and all
 emitted metrics have the plugin dimension set to ``telegraf-logparser``.

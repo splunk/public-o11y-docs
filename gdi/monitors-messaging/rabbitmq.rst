@@ -6,8 +6,7 @@ RabbitMQ
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the RabbitMQ monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
-``rabbitmq`` monitor type to keep track of an instance of RabbitMQ.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``rabbitmq`` monitor type to keep track of an instance of RabbitMQ.
 
 .. note:: To monitor RabbitMQ instances with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`rabbitmq-receiver`.
 

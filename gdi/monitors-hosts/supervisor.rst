@@ -6,9 +6,7 @@ Supervisor
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Supervisor monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``supervisor`` monitor type to retrieve the state of processes running
-by the Supervisor.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``supervisor`` monitor type to retrieve the state of processes running by Supervisor.
 
 This integration is available for Kubernetes, Windows, and Linux.
 
