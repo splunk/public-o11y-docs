@@ -31,8 +31,8 @@ In addition, the integration provides system-wide connection statistics, includi
 
 To learn more: 
 
-* About the Kong metrics Prometheus endpoint, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
-* About using the Prometheus receiver to monitor applications, see :ref:`prometheus-generic`.
+* About the Kong metrics Prometheus endpoint, see the official :new-page:`Kong documentation <https://docs.konghq.com/hub/kong-inc/prometheus>` on Prometheus. 
+* About using the Prometheus receiver to monitor applications, see the :ref:`prometheus-generic` doc.
 
 Benefits
 --------
