@@ -6,9 +6,7 @@ Statsd
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Statsd monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``statsd`` monitor type to collect statsd metrics. It listens on a
-configured address and port to receive the statsd metrics.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``statsd`` monitor type to collect statsd metrics. It listens on a configured address and port to receive the statsd metrics.
 
 This integration supports the ``Counter``, ``Timer``, ``Gauge``, and
 ``Set`` types, which are dispatched as the Splunk Observability Cloud

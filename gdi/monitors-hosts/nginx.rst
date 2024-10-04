@@ -6,8 +6,7 @@ NGINX
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the NGINX monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
-``nginx`` monitor type to to retrieve metrics from NGINX instances.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``nginx`` monitor type to retrieve metrics from NGINX instances.
 
 This integration is available on Linux and Windows.
 

@@ -10,8 +10,7 @@ Redis (deprecated)
 
    To monitor your Redis databases, you can instead use the native OpenTelemetry Redis receiver. To learn more, see :ref:`redis-receiver`.
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``redis`` monitor type to capture the following metrics:
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``redis`` monitor type to capture the following metrics:
 
 -  Memory used
 -  Commands processed per second

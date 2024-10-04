@@ -6,10 +6,7 @@ Collectd uptime
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd Uptime monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``collectd/uptime`` monitor type to send a single metric of the total
-number of seconds the host has been up, using the collectd uptime
-plugin.
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the ``collectd/uptime`` monitor type to send a single metric of the total number of seconds the host has been up, using the collectd uptime plugin.
 
 This integration is only available on Kubernetes and Linux.
 

@@ -6,8 +6,7 @@ Varnish
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf Varnish monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``telegraf/varnish`` monitor type to collect Varnish metrics.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``telegraf/varnish`` monitor type to collect Varnish metrics.
 
 This integration is available on Kubernetes and Linux.
 
