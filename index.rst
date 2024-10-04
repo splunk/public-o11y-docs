@@ -144,11 +144,6 @@ Use span tags to add useful metadata to traces :ref:`apm-add-context-trace-span`
 
 .. rst-class:: newcard
 
-:strong:`Logs pipeline`
-Add value to your raw logs by customizing your pipeline :ref:`logs-pipeline`
-
-.. rst-class:: newcard
-
 :strong:`Related Content`
 Enable users to seamlessly move across product views :ref:`get-started-relatedcontent`
 
@@ -711,15 +706,10 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :caption: Log Observer
+   :caption: Log Observer Connect 
    :maxdepth:   3
 
-   Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
-
-.. toctree::
-   :maxdepth:   3   
-
-   Splunk Log Observer TOGGLE <logs/log-observer-landing>
+   logs/lo-connect-landing
 
 .. toctree::
    :caption: Real User Monitoring

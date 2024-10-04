@@ -81,4 +81,4 @@ Learn more
 
 * For details about Tag Spotlight, see :ref:`apm-tag-spotlight`.
 * For details about using Related Content, see :ref:`get-started-relatedcontent`.
-* For more information about using Splunk Log Observer to detect the source of problems, see :ref:`get-started-logs`. 
+* For more information about using Splunk Log Observer Connect to detect the source of problems, see :ref:`logs-intro-logconnect`. 
