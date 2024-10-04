@@ -39,7 +39,7 @@ Creating the task definition requires using release v0.34.1 or newer (which corr
 To create the task definition:
 
 1. Locate the task definition for the Collector from the :new-page:`repository <https://github.com/signalfx/splunk-otel-collector/blob/main/deployments/ecs/ec2/splunk-otel-collector.json>`.
-2. Replace ``MY_SPLUNK_ACCESS_TOKEN`` and ``MY_SPLUNK_REALM`` with valid values. You should pin the image version to a specific version instead of ``latest`` to avoid upgrade issues. 
+2. You should pin the image to a specific version instead of ``latest`` to avoid unintentional upgrade issues. 
 3. Create a task definition of EC2 launch type. See :new-page:`Creating a task definition using the new console <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-task-definition.html>` for the instructions. The supplied task definition is a minimal definition. See :new-page:`Task definition parameters <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html>` for additional configuration options.
 
 The Collector is configured to use the default configuration file ``/etc/otel/collector/ecs_ec2_config.yaml``. The Collector image Dockerfile is available at :new-page:`Dockerfile <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/Dockerfile>` and the contents of the default configuration file can be seen at :new-page:`ECS EC2 configuration <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/ecs_ec2_config.yaml>`. 
