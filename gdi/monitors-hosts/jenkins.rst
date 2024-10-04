@@ -15,7 +15,7 @@ hitting the following endpoints:
 
 This integration is only available on Kubernetes and Linux.
 
-.. note:: The Jenkins integration requires Jenkins version 1.580.3 or higher and the :new-page:`Jenkins Metrics plugin <https://plugins.jenkins.io/metrics/>`.
+.. note:: The Jenkins integration requires Jenkins version 1.580.3 or higher and the :new-page:`Jenkins Metrics <https://plugins.jenkins.io/metrics/>` plugin.
 
 Benefits
 --------

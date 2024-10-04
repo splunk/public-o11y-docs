@@ -12,7 +12,7 @@ and runs the Splunk OpenTelemetry Connector on a Dyno to receive, process and ex
 -  Splunk APM through the ``sapm`` exporter. The ``otlphttp`` exporter can be used with a custom configuration.
 -  Splunk Infrastructure Monitoring through the ``signalfx`` exporter.
 
-To learn more about the Splunk Distribution of the OpenTelemetry Collector, see :ref:`otel-intro`.
+See :ref:`otel-intro` to learn more.
 
 Prerequisites
 ----------------

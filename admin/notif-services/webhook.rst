@@ -42,7 +42,7 @@ the request to your webhook is secure and valid.
 
 To learn more about the shared secret string, the cryptographic algorithm, and the message code, see the
 :new-page:`Shared secret <https://dev.splunk.com/observability/docs/integrations/webhook_integration_overview/#Shared-secret>` section in
-the :emphasis:`Splunk Observability Cloud Developers Guide`.
+the :emphasis:`Splunk Observability Cloud Developers Guide` docs.
 
 Your webhook must return a HTTP ``200 OK`` response code immediately after you receive the request.
 If Splunk Observability Cloud does not receive a 200 response code within a certain time frame, it retries the request.
