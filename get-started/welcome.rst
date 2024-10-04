@@ -107,10 +107,10 @@ For more information, see the :ref:`intro-synthetics`.
 
 .. _welcome-logobs:
 
-Splunk Log Observer
-===================
+Splunk Log Observer Connect 
+======================================
 
-Troubleshoot your application and infrastructure behavior using high-context logs in Splunk Observability Cloud. With Splunk Log Observer, you can perform codeless queries on logs to detect the source of problems in your systems. You can also extract fields from logs in Log Observer to set up log processing rules and transform your data as it arrives.
+Troubleshoot your application and infrastructure behavior using high-context logs in Splunk Observability Cloud. With Splunk Log Observer Connect, you can perform codeless queries on logs to detect the source of problems in your systems. 
 
 For more information, see :ref:`LogObserverFeatures`.
 

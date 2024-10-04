@@ -6,9 +6,7 @@ Logstash
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Logstash monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``logstash`` monitor type to monitor the health and performance of
-Logstash deployments through Logstash Monitoring APIs.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``logstash`` monitor type to monitor the health and performance of Logstash deployments through Logstash Monitoring APIs.
 
 Installation
 ------------

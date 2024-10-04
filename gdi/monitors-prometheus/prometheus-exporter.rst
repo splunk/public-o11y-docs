@@ -6,9 +6,7 @@ Prometheus Exporter
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Prometheus Exporter monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``prometheus-exporter`` monitor type to read all metric types from a
-Prometheus Exporter endpoint.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``prometheus-exporter`` monitor type to read all metric types from a Prometheus Exporter endpoint.
 
 A Prometheus Exporter is a piece of software that fetches statistics
 from another, non-Prometheus system, and turns them into Prometheus

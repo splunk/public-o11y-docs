@@ -64,6 +64,6 @@ Learn more at :ref:`per-product-limits` and the following docs:
    
    * Data ingest can be limited at the source by Cloud providers. You can track this with the metric ``sf.org.num.<cloudprovidername>ServiceClientCallCountThrottles``.
 
-* :ref:`Log Observer Connect limits <lo-connect-limits>` and :ref:`Log Observer limits <logs-limits>`
+* :ref:`Log Observer Connect limits <lo-connect-limits>`
 
 * :ref:`System limits for Splunk RUM <rum-limits>`

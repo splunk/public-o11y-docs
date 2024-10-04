@@ -12,9 +12,7 @@ PostgreSQL (deprecated)
 
    To monitor your PostgreSQL databases you can use the native OpenTelemetry PostgreSQL receiver instead. See more at :ref:`postgresql-receiver`.
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``postgresql`` monitor type to pull metrics from all PostgreSQL
-databases from a specific Postgres server instance using SQL queries.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``postgresql`` monitor type to pull metrics from all PostgreSQL databases from a specific Postgres server instance using SQL queries.
 
 Configuration settings
 ----------------------

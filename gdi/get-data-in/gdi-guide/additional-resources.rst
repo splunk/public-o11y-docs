@@ -36,5 +36,5 @@ See the following resources for more information about each component in Splunk 
 
 - :ref:`get-started-apm`
 - :ref:`get-started-infrastructure`
-- :ref:`get-started-logs`
+- :ref:`logs-intro-logconnect`
 - :ref:`get-started-rum`
