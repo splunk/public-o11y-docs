@@ -8,7 +8,7 @@ Kafka consumer
 
 The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``collectd/kafka_consumer`` monitor type to monitor a Java-based Kafka consumer. 
 
-.. note:: To monitor Kafka with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`kafkametrics-receiver`.
+.. note:: To monitor Kafka with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`kafkametrics-receiver` component.
 
 This integration has a set of built-in MBeans to pull metrics from the Kafka consumer's JMX endpoint. For more information, see :new-page:`Kafka consumer MBeans <https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafkaconsumer/mbeans.go>` in GitHub.
 
