@@ -19,7 +19,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Windows <collector-windows/collector-windows-intro.rst> 
     Splunk Add-On for OpenTelemetry Collector <collector-addon/collector-addon-intro.rst>    
     Other deployment tools: ECS EC2, Fargate, Nomad, PCF <deployments/otel-deployments.rst>  
-    Automatic discovery <discovery-mode.rst>
+    Automatic discovery and instrumentation <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
