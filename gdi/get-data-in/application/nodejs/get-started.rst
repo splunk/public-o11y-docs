@@ -31,4 +31,4 @@ To instrument your Node.js application, follow these steps:
 
 For more information, see :ref:`splunk-nodejs-otel-dist`.
 
-.. note:: The SignalFx Tracing Library for Node.js is deprecated and will reach End of Support on June 8th, 2023. To migrate to the Splunk Distribution of OpenTelemetry JS, see :ref:`migrate-signalfx-nodejs-agent-to-otel`.
+.. note:: The SignalFx Tracing Library for Node.js is deprecated and will reach End of Support on June 8th, 2023. See :ref:`migrate-signalfx-nodejs-agent-to-otel` to migrate to the Splunk Distribution of OpenTelemetry JS.

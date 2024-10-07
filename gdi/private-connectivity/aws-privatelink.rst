@@ -62,51 +62,59 @@ AWS PrivateLink endpoint URLs
 .. list-table::
   :header-rows: 1
   :width: 100
-  :widths: 20, 20, 20, 20, 20
+  :widths: 10, 10, 20, 20, 20, 20
 
-  * - AWS region
+  * - Splunk Observability Cloud realm
+    - AWS region
     - Ingest endpoint URL
     - API endpoint URL
     - Backfill endpoint URL
     - Stream endpoint URL
 
-  * - ap-northeast-1
+  * - jp0
+    - AWS AP Tokyo (ap-northeast-1)
     - :new-page:`private-ingest.jp0.signalfx.com <http://private-ingest.jp0.signalfx.com/>`
     - :new-page:`private-api.jp0.signalfx.com <http://private-api.jp0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.jp0.signalfx.com <http://private-stream.jp0.signalfx.com/>`
 
-  * - ap-southeast-2
+  * - au0
+    - AWS AP Sydney (ap-southeast-2)
     - :new-page:`private-ingest.au0.signalfx.com <http://private-ingest.au0.signalfx.com/>`
     - :new-page:`private-api.au0.signalfx.com <http://private-api.au0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.au0.signalfx.com <http://private-stream.au0.signalfx.com/>`
 
-  * - eu-central-1
+  * - eu1
+    - AWS EU Frankfurt (eu-central-1)
     - :new-page:`private-ingest.eu1.signalfx.com <http://private-ingest.eu1.signalfx.com/>`
     - :new-page:`private-api.eu1.signalfx.com <http://private-api.eu1.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu1.signalfx.com <http://private-stream.eu1.signalfx.com/>`
 
-  * - eu-west-1
+  * - eu0
+    - AWS EU Dublin (eu-west-1)
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
     - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
 
-  * - eu-west-2
+  * - eu2
+    - AWS EU London (eu-west-2)
     - :new-page:`private-ingest.eu2.signalfx.com <http://private-ingest.eu2.signalfx.com/>`
     - :new-page:`private-api.eu2.signalfx.com <http://private-api.eu2.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu2.signalfx.com <http://private-stream.eu2.signalfx.com/>`
 
-  * - us-east-1
+  * - us0
+    - AWS US East Virginia (us-east-1)
     - :new-page:`private-ingest.us0.signalfx.com <http://private-ingest.us0.signalfx.com/>`
     - :new-page:`private-api.us0.signalfx.com <http://private-api.us0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.us0.signalfx.com <http://private-stream.us0.signalfx.com/>`
 
-  * - us-west-2
+  * - us1
+    - AWS US West Oregon (us-west-2)
     - :new-page:`private-ingest.us1.signalfx.com <http://private-ingest.us1.signalfx.com/>`
     - :new-page:`private-api.us1.signalfx.com <http://private-api.us1.signalfx.com/>`
     - Coming soon
@@ -120,51 +128,59 @@ AWS PrivateLink service names
 .. list-table::
   :header-rows: 1
   :width: 100
-  :widths: 20, 20, 20, 20, 20
+  :widths: 10, 10, 20, 20, 20, 20
 
-  * - AWS region
+  * - Splunk Observability Cloud realm
+    - AWS region
     - Ingest endpoint service name
     - API endpoint service name
     - Backfill endpoint service name
     - Stream endpoint service name
 
-  * - ap-northeast-1
+  * - jp0
+    - AWS AP Tokyo (ap-northeast-1)
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-086c8167a74323e5a
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-06e1951072fcabaaa
     - Coming soon
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-0aebd0dfe769cc20b
 
-  * - ap-southeast-2
+  * - au0
+    - AWS AP Sydney (ap-southeast-2)
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-01e4e31c294754b6e
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-0d1d69a0b1bf003cd
     - Coming soon
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-006a9808c3bf97fc1
 
-  * - eu-central-1
+  * - eu1
+    - AWS EU Frankfurt (eu-central-1)
     - com.amazonaws.vpce.eu-central-1.vpce-svc-0163ebbf011db95fa
     - com.amazonaws.vpce.eu-central-1.vpce-svc-063722bf4a2e858a3
     - Coming soon
     - com.amazonaws.vpce.eu-central-1.vpce-svc-022080c55adaeac78
 
-  * - eu-west-1
+  * - eu0
+    - AWS EU Dublin (eu-west-1)
     - com.amazonaws.vpce.eu-west-1.vpce-svc-01c194b2265ecb86e
     - com.amazonaws.vpce.eu-west-1.vpce-svc-07b08296ff84e17a0
     - Coming soon
     - com.amazonaws.vpce.eu-west-1.vpce-svc-0d036df6dbc6ddadb
 
-  * - eu-west-2
+  * - eu2
+    - AWS EU London (eu-west-2)
     - com.amazonaws.vpce.eu-west-2.vpce-svc-0f7427a7b9ef925b0
     - com.amazonaws.vpce.eu-west-2.vpce-svc-0719f35de75c08514
     - Coming soon
     - com.amazonaws.vpce.eu-west-2.vpce-svc-0bc5b13127f2916ce
 
-  * - us-east-1
+  * - us0
+    - AWS US East Virginia (us-east-1)
     - com.amazonaws.vpce.us-east-1.vpce-svc-0336437d577075951
     - com.amazonaws.vpce.us-east-1.vpce-svc-089b68950f5be1c22
     - Coming soon
     - com.amazonaws.vpce.us-east-1.vpce-svc-0c7d803ea7ebe3157
 
-  * - us-west-2
+  * - us1
+    - AWS US West Oregon (us-west-2)
     - com.amazonaws.vpce.us-west-2.vpce-svc-06376c4a9be288ee9
     - com.amazonaws.vpce.us-west-2.vpce-svc-0da2bbb45fa4c3a6b
     - Coming soon
@@ -240,8 +256,8 @@ To create a VPC endpoint, follow these steps:
 
 7. Set the IP address type to ``IPv4``.
 
-8. Specify the security group or groups controlling inbound and outbound traffic for the endpoint, and set the outbound rule for the selected security groups open for port ``443``.
-
+8. Specify the security group controlling traffic for the endpoint. Set the inbound rule to HTTPS protocol and the ``443`` port.
+  
   The following image shows the security options for AWS PrivateLink: 
 
   .. image:: /_images/gdi/aws-privatelink-secgroups2.png
@@ -281,8 +297,42 @@ To delete an endpoint, follow these steps:
 #. Select the VPC endpoint you want to delete.
 #. Confirm the deletion when prompted.
 
-Advanced configuration: AWS PrivateLink with VPC peering 
+Advanced configuration 
 ==========================================================================
+
+Use AWS PrivateLink with the Collector 
+--------------------------------------------------
+
+To use AWS PrivateLink URLs in your Collector instance, update the necessary variables in your Collector configuration to point to the given endpoint type: 
+
+.. list-table::
+  :header-rows: 1
+  :width: 100
+  :widths: 20, 40, 40
+
+  * - Endpoint type
+    - Endpoint URL
+    - Example
+
+  * - Metric ingest endpoint
+    - ``private-ingest.<REGION>.signalfx.com``
+    - ``private-ingest.us0.signalfx.com``
+
+  * - Traces ingest endpoint
+    - ``private-ingest.<REGION>.signalfx.com/v2/trace``
+    - ``private-ingest.us0.signalfx.com/v2/trace``
+
+  * - API endpoint URL
+    - ``http://<REGION>.signalfx.com``
+    - ``http://private-api.us0.signalfx.com``
+
+
+See all PrivateLink URLs at :ref:`aws-privatelink-endpoint-urls`.
+
+For information about the Collector's environment variables see :ref:`collector-env-var`.
+
+Use AWS PrivateLink with VPC peering 
+--------------------------------------------------
 
 Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
 

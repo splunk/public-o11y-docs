@@ -7,7 +7,6 @@ Add logs data to Splunk Observability Cloud dashboards
 .. meta::
   :description: Add logs data to Splunk Observability Cloud dashboards without turning your logs into metrics first. Align log views, log timeline charts, and metrics charts on one dashboard.
 
-.. include:: /_includes/log-observer-transition.rst
 
 On a dashboard, metrics charts show what changed in your systems and when the problem started. Logs data on the same dashboard shows you in detail what is happening and why. All the data you add to a dashboard respond to the same time selection and other dashboard filters, allowing you to drill down to the source of the problem faster.
 

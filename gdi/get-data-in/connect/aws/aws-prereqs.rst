@@ -98,6 +98,7 @@ Regardless of the services you want to use, you need the following permissions:
 
 * ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are activated.
 * ``ec2:DescribeRegions``. Used to check if regions configured in the integration are enabled on the AWS account.
+* ``iam:ListAccountAliases``. Used to sync account aliases for AWS MTS.
 
 Tag and property sync permissions:
 
@@ -472,6 +473,12 @@ GovCloud
 
 * ``us-gov-east-1``: AWS GovCloud (US-East)
 * ``us-gov-west-1``: AWS GovCloud (US-West)  
+
+The following applies to GovCloud regions:
+
+* Metric sync in GovCloud regions is limited to namespaces supported by AWS. Verify the specific namespaces available in your GovCloud region in the official AWS documentation :new-page:`Services in AWS GovCloud (US) Regions <https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/using-services.html>`.
+
+* AWS doesn't currently provide FIPS-complaint endpoints to retrieve tags. If you set up tags in your AWS GovCloud infrastructure do not include any sensitive information. In Splunk Observability Cloud AWS tags are identified by the prefix ``aws_tag``.
 
 China
 -------------------------------------------

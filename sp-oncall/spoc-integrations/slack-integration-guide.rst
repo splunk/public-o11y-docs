@@ -22,6 +22,7 @@ You must be a Slack administrator to configure this integration. If you prefer n
 
 .. caution:: Deactivate the old Slack (webhook) integration prior to activating the Slack integration.
 
+In Splunk On-Call, you must have either Global or Alert Admin permissions to set up and adjust this integration.
 
 Slack configuration
 ==========================

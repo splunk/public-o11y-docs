@@ -47,7 +47,7 @@ For example:
 .. code-block:: yaml
 
   processors:
-    metrics_transform:
+    metricstransform:
 
 To complete the configuration, include the processor in the ``metrics`` pipeline of the ``service`` section of your configuration file. For example:
 
