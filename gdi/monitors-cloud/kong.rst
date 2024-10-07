@@ -74,7 +74,7 @@ Next, activate the ``metrics`` pipeline:
 Metrics
 -------
 
-For the complete list of metrics provided by the integration, refer to :new-page:`Kong Docs on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`.
+For the complete list of metrics provided by the integration, refer to :new-page:`Kong Docs <https://docs.konghq.com/hub/kong-inc/prometheus>` on Prometheus.
 
 Notes
 ~~~~~
