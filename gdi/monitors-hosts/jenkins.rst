@@ -6,9 +6,7 @@ Jenkins
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Jenkins monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
-``jenkins`` monitor type to collect metrics from Jenkins instances by
-hitting the following endpoints:
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``jenkins`` monitor type to collect metrics from Jenkins instances by hitting the following endpoints:
 
 - Job metrics with the ``../api/json`` endpoint.
 - Codahale or Dropwizard JVM metrics with the ``metrics/<MetricsKey>/..`` endpoint.
