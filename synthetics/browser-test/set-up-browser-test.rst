@@ -525,7 +525,8 @@ Note: Global variables are incompatible with chrome flags.
 
 These are the flags available: 
 
-<insert table>
+
+.. include:: /_includes/synthetics/chrome-flags.rst
 
 
 
