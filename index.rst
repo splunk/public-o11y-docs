@@ -816,6 +816,11 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    synthetics/key-concepts
 
 .. toctree::
+   :maxdepth:   3
+
+   synthetics/syn-ottb-dashboards
+
+.. toctree::
    :maxdepth:   3 
   
    Synthetics scenario library TOGGLE <synthetics/synth-scenarios/synth-landing>
