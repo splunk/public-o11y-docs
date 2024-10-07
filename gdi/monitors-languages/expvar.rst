@@ -8,7 +8,7 @@ Expvar (Go)
 
 The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the ``expvar`` monitor type to scrape metrics exposed Expvar. See :new-page:`expvar <https://golang.org/pkg/expvar/>` to learn more.
 
-The integration uses configured paths to get metric and dimension values from fetched JSON objects at an HTTP endpoint. The Metrics section in this document shows metrics derived from expvar variable :new-page:`memstats <https://golang.org/pkg/runtime/>`, which is exposed by default. These ``memstat`` metrics are referred to as standard or default metrics.
+The integration uses configured paths to get metric and dimension values from fetched JSON objects at an HTTP endpoint. The Metrics section in this document shows metrics derived from the :new-page:`memstats <https://golang.org/pkg/runtime/>` expvar variable. These ``memstat`` metrics are referred to as standard or default metrics and are exposed by default.
 
 Benefits
 --------
