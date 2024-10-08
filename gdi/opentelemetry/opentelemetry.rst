@@ -17,7 +17,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
     Collector for Linux <collector-linux/collector-linux-intro.rst>
     Collector for Windows <collector-windows/collector-windows-intro.rst> 
-    Splunk Technical Add-on for the OTel Collector <collector-addon/collector-addon-intro.rst>    
+    Splunk Add-On for OpenTelemetry Collector <collector-addon/collector-addon-intro.rst>    
     Other deployment tools: ECS EC2, Fargate, Nomad, PCF <deployments/otel-deployments.rst>  
     Automatic discovery and configuration <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
