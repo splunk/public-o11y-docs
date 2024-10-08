@@ -30,7 +30,7 @@ Go to Synthetics built-in dashboards
 
 To go to the built-in dashboards: 
 
-#. Select :guilabel:`Dashboards` then, :guilabel:`Synthetics `.
+#. Select :guilabel:`Dashboards` then, :guilabel:`Synthetics`
 
 
 #. To open Synthetics and explore data from a built-in dashboard, select the settings symbol in any tile, then :guilabel:`Troubleshoot from this time window`.
