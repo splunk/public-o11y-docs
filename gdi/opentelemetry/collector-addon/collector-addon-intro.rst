@@ -1,11 +1,11 @@
 .. _collector-addon-intro:
 
 *********************************************************************************************
-Splunk Add-On for OpenTelemetry Collector
+Splunk Add-On for the OpenTelemetry Collector
 *********************************************************************************************
 
 .. meta::
-   :description: Introduction to the Technical Add-on for the Splunk Distribution of the OpenTelemetry Collector.
+   :description: Introduction to the Splunk Add-on for the Splunk Distribution of the OpenTelemetry Collector.
 
 .. toctree::
    :maxdepth: 5
@@ -30,7 +30,7 @@ You can also choose to install and configure the Add-on using a customized or th
       <h2>Differences between the Splunk Distribution of the OpenTelemetry Collector and the Splunk Add-on for the OpenTelemetry Collector<a name="collector-addon-distro-diffs" class="headerlink" href="#collector-addon-distro-diffs" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offered in Splunk Observability. However, the Splunk Add-on for OpenTelemetry provides the added benefit of out-of-the box Collector content and configuration.
+The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offered in Splunk Observability. However, the Splunk Add-on provides the added benefit of out-of-the box Collector content and configuration.
 
 .. list-table::
   :widths: 30 40 40
@@ -57,9 +57,9 @@ The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offer
     - Environment variables
     - Inputs.conf
 
-  * - Auto Instrumentation of language-specific agents support
+  * - Auto Instrumentation of language-specific agents 
     - Out-of-the-box configuration is available
-    - Out-of-the-box configuration is not available
+    - Out-of-the-box configuration for backend applications and third party services is not supported 
 
   * - Distribution and deployment
     - Source code, binary, Operator, Helm Charts, Debian, Ansible, Puppet, Chef, Salt
@@ -73,13 +73,13 @@ The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offer
 
 Before you install the Splunk Add-on for the OpenTelemetry Collector, you must have the following Splunk products installed and configured:
 
-* Splunk Universal Forwarder version 8.x or 9.x on Windows or Linux: The Splunk Add-on for OpenTelemetry Collector is installed alongside your universal forwarder to push collected data to Splunk Observability Cloud.
+* Splunk Universal Forwarder version 8.x or 9.x on Windows or Linux: The Splunk Add-on for the OpenTelemetry Collector is installed alongside your universal forwarder to push collected data to Splunk Observability Cloud.
 
-* Splunk Observability Cloud: The Splunk Add-on for OpenTelemetry Collector is configured to send data to Splunk Observability Cloud. See :ref:`otel-intro` and :ref:`otel-requirements` for more information on how to prepare your Splunk Observability Cloud instance.
+* Splunk Observability Cloud: The Splunk Add-on for the OpenTelemetry Collector is configured to send data to Splunk Observability Cloud. See :ref:`otel-intro` and :ref:`otel-requirements` for more information on how to prepare your Splunk Observability Cloud instance.
 
 * (optional) Install Splunk Enterprise or Splunk Cloud if you plan to use a Splunk Web interface or deployment server as forwarders.
 
-* (optional) Install the deployment server if you plan to use the deployment server to push the Splunk Add-on for OpenTelemetry Collector to multiple hosts.
+* (optional) Install the deployment server if you plan to use the deployment server to push the Splunk Add-on for the OpenTelemetry Collector to multiple hosts.
 
 .. raw:: html
 
