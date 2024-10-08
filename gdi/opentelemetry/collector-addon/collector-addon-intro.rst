@@ -1,7 +1,7 @@
 .. _collector-addon-intro:
 
 *********************************************************************************************
-Splunk Technical Add-on for the Splunk Distribution of the OpenTelemetry Collector
+Splunk Add-On for OpenTelemetry Collector
 *********************************************************************************************
 
 .. meta::
