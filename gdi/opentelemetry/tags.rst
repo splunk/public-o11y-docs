@@ -101,14 +101,14 @@ Containers
 
 There are numerous attributes for services running in containers, such as ``container.id``, ``container.name``, or ``container.image.name``. 
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Container semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/container.yaml>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Container semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/container/resources.yaml>`.
 
 Hosts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are numerous attributes for services running in hosts, such as ``host.id``, ``host.name``, or ``host.arch``. 
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Host semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/host.yaml>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Host semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/host/resources.yaml>`.
 
 Deployment environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
