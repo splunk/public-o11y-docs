@@ -52,7 +52,13 @@ Select from these 3 options for managing user access:
 Plan your teams structure and token management strategy to control access
 =====================================================================================
 
-If you plan to roll out Splunk Observability Cloud across your organization you likely have multiple internal customers with different access requirements for the various features in Splunk Observability Cloud. To manage these internal customers, you can use the teams feature to organize users together in a team and manage them as a unit.
+If you plan to roll out Splunk Observability Cloud across your organization you likely have multiple internal customers with different access requirements for the various features in Splunk Observability Cloud. Complete the following steps to create a consistent team structure and corresponding token management strategy.
+
+#. :ref:`team-token-names`
+#. :ref:`team-structure`
+#. :ref:`token-mgmt`
+
+.. _team-token-names:
 
 Define team and token naming conventions
 ------------------------------------------
@@ -62,7 +68,7 @@ Before creating teams and tokens, determine your naming convention. This helps y
 * Team name: FRONTEND_DEV_TEAM 
 * Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
 
-See :ref:`admin-manage-usage`.
+.. _team-structure:
 
 Plan your team structure
 ---------------------------
@@ -73,12 +79,17 @@ By default, users can join or leave teams at will. For larger organizations, you
 
 You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications give your teams different escalation methods for their alerts. See :ref:`admin-team-notifications`.
 
+.. _token-mgmt:
+
 Manage your tokens
 --------------------
 
 Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and you can extend them for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
 
-See :ref:`automate-tokens` in phase 3 of this guide and :ref:`admin-tokens` for more information about tokens.
+To learn more, see the following topics:
+
+* See :ref:`admin-tokens`.
+* See :ref:`admin-manage-usage`.
 
 Next step
 ===============
