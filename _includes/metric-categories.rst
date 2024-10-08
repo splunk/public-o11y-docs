@@ -1,4 +1,33 @@
 .. list-table:: 
+  :header-rows: 1
+  :widths: 20 80
+  :width: 100%
+
+  * - :strong:`Billing class`
+    - :strong:`Description`
+  * - Custom metrics
+    - Metrics reported to Splunk Observability Cloud outside of those reported by default, such as host, container, or bundled metrics. Custom metrics might result in increased data ingest costs.
+  * - APM Monitoring MetricSets
+    - Includes metrics from APM Monitoring MetricSets. See :ref:`apm-metricsets` for more information.
+  * - RUM Monitoring MetricSets
+    - Includes metrics from RUM Monitoring MetricSets
+  * - Default/bundled metrics (Infrastructure)
+    - d
+  * - Default/bundled metrics (APM)
+    - Includes the following types of metrics:
+      * Host
+      * Container
+      * Identity
+      * Bundled
+      * Tracing 
+      * Runtime
+      * Synthetics
+  * - Other metrics
+    - d
+
+
+
+.. list-table:: 
    :header-rows: 1
    :widths: 20 80
    :width: 100%
