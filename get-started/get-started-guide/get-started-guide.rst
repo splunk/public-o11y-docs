@@ -16,6 +16,8 @@ The journey for getting started with Splunk Observability Cloud has 3 phases: on
 
 Use the following table to get a high-level overview of the primary setup steps involved in each stage. Use the links to each step to go directly to the detailed instructions or go to the phase topic to view all phase steps in detail. In the table, you can also reference optional and advanced configurations that you can make to your setup as part of each phase of your journey. Finally, use the links to education resources for each phase to ensure you have the foundational knowledge and skills to successfully setup Splunk Observability Cloud.
 
+.. note:: This guide is for Splunk Observability Cloud users with the admin role. The guide focuses on the steps to get started monitoring Kubernetes applications though customers using Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) can also follow this guide to get a sense for the steps to get started.
+
 .. image:: /_images/get-started/onboarding-guide-2point0-flowonly.svg
    :width: 100%
    :alt: .

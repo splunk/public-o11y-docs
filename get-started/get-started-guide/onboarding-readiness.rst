@@ -3,7 +3,10 @@
 Get started guide phase 1: Onboarding readiness 
 *********************************************************
 
-In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. The following sections cover the core setup steps for onboarding readiness phase. 
+In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. The following sections cover the primary setup steps for onboarding readiness phase. 
+
+.. note:: This guide is for Splunk Observability Cloud users with the admin role. The guide focuses on the steps to get started monitoring Kubernetes applications though customers using Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) can also follow this guide to get a sense for the steps to get started.
+
 
 .. image:: /_images/get-started/onboarding-guide-2point0-readiness.svg
    :width: 100%
@@ -28,10 +31,12 @@ If you have a Splunk technical contact, they can create a Splunk Observability C
 
 .. _phase1-network:
 
-Analyze your required network communication
-=============================================
+Analyze your network communication and access requirements
+============================================================
 
 Before you begin bringing data into Splunk Observability Cloud from your infrastructure and applications, validate that network connections between your environment and Splunk Observability Cloud are allowed.
+
+For Kubernetes applications, you need administrator access to monitored hosts of Kubernetes clusters to install. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user not a root or admin user. For the majority of use cases, the collector does not require privileged access to function. Some components might require privileged access; be careful when activating these components. Collector components might also require external permissions including network access or RBAC.  See the latest Security Guidelines for more details.
 
 * See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
 * If your organization requires a proxy, see :ref:`allow-services`.
