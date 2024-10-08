@@ -122,7 +122,7 @@ Cloud
 
 There are attributes that capture information for services running in public cloud environments, such ``cloud.provider``, ``cloud.account.id``, or ``cloud.region``.
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Cloud semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/cloud.yaml>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Cloud semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/cloud/resources.yaml>`.
 
 .. caution:: Some cloud providers, such as GCP, define semantic conventions specific to their offering. Check Google official documentation for more information.
 
