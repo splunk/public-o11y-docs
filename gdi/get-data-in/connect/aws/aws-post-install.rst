@@ -35,7 +35,7 @@ Locate your metrics
 See your logs 
 ------------------------------------------------------
 
-Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. To collect logs, see :ref:`aws-logs`.
+To collect and visualize your logs, see :ref:`aws-logs`.
 
 Use Dashboards and Related Content
 ------------------------------------------------------

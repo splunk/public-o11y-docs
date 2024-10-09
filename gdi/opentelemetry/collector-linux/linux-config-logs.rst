@@ -18,7 +18,7 @@ Fluentd is turned off by default. If you already installed Fluentd on a host, re
 Collect Linux logs with Fluentd
 ===========================================================================
 
-If you have a Log Observer entitlement or want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector. For example:
+If you want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector. For example:
 
 .. code-block:: bash
 

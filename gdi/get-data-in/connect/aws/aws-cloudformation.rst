@@ -9,6 +9,8 @@ Available CloudFormation and Terraform templates
 
 To create Splunk-managed Metric Streams resources you can either use :ref:`CloudFormation <aws-cloudformation-use>` or a :ref:`Terraform template <aws-terraform-use>`.
 
+.. note:: To collect logs, see :ref:`aws-logs`.
+
 .. _aws-cloudformation-use:
 
 Use CloudFormation to connect to Splunk Observability Cloud
@@ -23,8 +25,6 @@ To use CloudFormation to connect to Splunk Observability Cloud follow these step
   * Even if you don't intend to use all options you can safely deploy any CloudFormation template since unused infrastructure doesn't generate costs.
 
 3. Select the QuickLink for your chosen template. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
-
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. To collect logs, see :ref:`aws-logs`.
 
 .. _aws-cloudformation-templates:
 

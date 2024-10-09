@@ -167,7 +167,7 @@ Check for the following errors:
 
   * 429 (TOO MANY REQUESTS): Org is not provisioned for the amount of traffic being sent; reduce traffic or request increase in capacity
 
-  * 503 (SERVICE UNAVAILABLE): If using the Log Observer, this is the same as 429 (because that is how HECv1 responds). Otherwise, check the status page.
+  * 503 (SERVICE UNAVAILABLE): Check the status page.
 
 To confirm that a specific receiver is fetching metrics exposed by an application, update the configuration file, as shown in the following example.
 
@@ -198,7 +198,7 @@ If you are unable to determine the issue from logs, see :ref:`support`. Gather a
 
 .. _locate-sa-config-file:
 
-3. Locate your existing Smart Agent configuration file
+1. Locate your existing Smart Agent configuration file
 ================================================================
 
 The Smart Agent can be configured by editing the agent.yaml file. By default, the configuration is installed at ``/etc/signalfx/agent.yaml`` on Linux and ``\ProgramData\SignalFxAgent\agent.yaml`` on Windows. If you override the location while installing the Smart Agent using the ``-config`` command line flag, the configuration file is stored at the location that you specify.

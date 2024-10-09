@@ -5,7 +5,7 @@ Monitor and manage subscription usage and billing
 *********************************************************************
 
 .. meta::
-   :description: Monitor your Infrastructure Monitoring, APM, and Log Observer subscription usage. 
+   :description: Monitor your Splunk Observability Cloud subscription usage. 
 
 .. toctree::
    :hidden:
