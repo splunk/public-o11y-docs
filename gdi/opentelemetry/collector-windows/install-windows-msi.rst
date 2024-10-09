@@ -163,7 +163,7 @@ Learn more about advanced configuration options (including Service Logging) usin
 Install Fluentd MSI for log collection
 ==================================================
 
-If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
+If you have a wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
 
 .. note:: You need to be an Admin to configure log collection with Fluentd.
 

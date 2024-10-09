@@ -109,7 +109,7 @@ From the :strong:`Chart actions` menu, you can perform the following tasks:
 
 * Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM. (This option only exists if RUM contains data related to data in the logs chart.)
 
-* Select :strong:`Delete` to remove your logs chart from the dashboard. Deleting it from the dashboard does not impact the query you used to create your logs chart in Log Observer.
+* Select :strong:`Delete` to remove your logs chart from the dashboard. Deleting it from the dashboard does not impact the query you used to create it.
 
 Not all actions are available for all chart types.
 

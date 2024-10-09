@@ -35,7 +35,7 @@ After you've instrumented your application, you can access your data in the foll
 * The APM landing page
 * APM explorer view
 * Metric finder
-* Splunk Log Observer
+* Splunk Log Observer Connect
 
 Use one of these methods to make sure that your application data is reaching Splunk Observability Cloud.
 
