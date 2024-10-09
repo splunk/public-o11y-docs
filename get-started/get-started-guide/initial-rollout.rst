@@ -28,9 +28,9 @@ To configure Splunk Observability Cloud solutions for initial rollout, complete 
 Select an initial rollout environment to get data in
 ========================================================
 
-To get started with Splunk Observability Cloud, select an environment with a technology stack that allows you to use automatic discovery or the prepackaged integrations with cloud providers including AWS, Azure, and GCP. See :ref:`discovery_mode` and :ref:`get-started-connect`. 
+To get started with Splunk Observability Cloud, select an environment with a technology stack that supports the use of automatic discovery or the prepackaged integrations with cloud providers including AWS, Azure, and GCP. See :ref:`discovery_mode` and :ref:`get-started-connect` for detailed setup steps.
 
-If you do not have an environment that allows you to use automatic discovery or the cloud service provider integrations see :ref:`get-started-get-data-in` to learn about additional options for getting data in.
+If you do not have an environment that supports the use of automatic discovery or the cloud service provider integrations see :ref:`get-started-get-data-in` to learn about additional options for getting data in.
 
 .. _phase2-infra-mon:
 
@@ -65,7 +65,7 @@ Splunk Observability Cloud helps optimize web, mobile, and application performan
 
 Use Splunk Real User Monitoring (RUM) to gain visibility into the experience of your end-users across device types, web browsers, and geographies. RUM can help you identify slowness (latency) across transactions to eliminate and prevent slowness that impacts end users. Splunk Real User Monitoring connects transactions from the web browser through back-end services, so your on-call engineers can spot slowness or errors, regardless of where a problem originates across a distributed system.
  
-To enable RUM data capture, you need to create an access token. The access token can be used for either browser RUM or mobile RUM, which is available for both Android and iOS devices. See Set up Splunk RUM for mobile and browser applications.
+To turn on RUM data capture, you need to create an access token. The access token can be used for either browser RUM or mobile RUM, which is available for both Android and iOS devices. See Set up Splunk RUM for mobile and browser applications.
 Use the guided setup to create the required code snippets to use to instrument your webpages. See Install the Browser RUM agent for Splunk RUM. 
 Use the guided setup for iOS and Android mobile device monitoring. 
 You can link APM and RUM data as part of the instrumentation parameters. You can then use RUM and APM in conjunction to create a complete end to end view of every transaction from the end user interaction, through micro services, and ultimately to database calls or other transaction termination points.  

@@ -36,7 +36,7 @@ Analyze your network communication and access requirements
 
 Before you begin bringing data into Splunk Observability Cloud from your infrastructure and applications, validate that network connections between your environment and Splunk Observability Cloud are allowed.
 
-For Kubernetes applications, you need administrator access to monitored hosts of Kubernetes clusters to install. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user not a root or admin user. For the majority of use cases, the collector does not require privileged access to function. Some components might require privileged access; be careful when activating these components. Collector components might also require external permissions including network access or RBAC.  See the latest Security Guidelines for more details.
+For Kubernetes applications, you need administrator access to monitored hosts of Kubernetes clusters to install. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user not a root or admin user. For the majority of use cases, the collector does not require privileged access to function. Some components might require privileged access; be careful when activating these components. Collector components might also require external permissions including network access or RBAC. See the latest Security Guidelines for more details.
 
 * See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
 * If your organization requires a proxy, see :ref:`allow-services`.
