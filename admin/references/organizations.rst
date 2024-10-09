@@ -15,7 +15,7 @@ To view your realm, organization, or admin status in an organization, follow the
 
 3. On the :strong:`Organizations` tab, you can view or copy your realm, API endpoints, organizations, organization IDs, and API access token for your current organization. You can also see if you are an administrator of an organization and switch to another organization if you are a member. To view or copy your API access token, select :strong:`Show API Access Token`.
 
-Update your realm in your configuration settings and files
+About Splunk Observability Cloud realms
 ====================================================================================
 
 A realm is a self-contained deployment that hosts your organization. 
