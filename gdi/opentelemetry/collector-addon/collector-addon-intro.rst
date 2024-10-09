@@ -57,7 +57,7 @@ The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offer
     - Environment variables
     - Inputs.conf
 
-  * - [Automatic discovery and configuration](https://docs.splunk.com/observability/en/gdi/opentelemetry/discovery-mode.html)
+  * - :ref:`Automatic discovery and configuration <discovery_mode>`
     - Supported
     - Not supported
 
