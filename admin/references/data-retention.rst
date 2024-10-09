@@ -88,14 +88,6 @@ The following table shows the retention time period for each data type in APM.
      - 
        * 8 days
 
-.. _log-observer-data-retention:
-
-Data retention in Log Observer 
-============================================
-
-The retention period for indexed logs in Splunk Log Observer is 30 days. 
-
-
 .. _oncall-data-retention:
 
 Data retention in Splunk On-Call
