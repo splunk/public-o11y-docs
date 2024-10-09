@@ -132,7 +132,7 @@ To properly ingest trace telemetry data, the attribute ``deployment.environment`
   * - Through the values.yaml file ``environment`` configuration
     - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
     - The chart will set an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
-  * - Through the values.yaml file and ``operator.instrumentation.env`` or ``operator.instrumentation.{instrumentation_library}.env`` configuration
+  * - Through the values.yaml file and ``instrumentation.env`` or ``instrumentation.{instrumentation_library}.env`` configuration
     - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
     - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
   * - Through your Kubernetes application deployment, daemonset, or pod specification
