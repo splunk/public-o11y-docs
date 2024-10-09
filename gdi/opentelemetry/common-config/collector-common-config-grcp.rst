@@ -21,7 +21,7 @@ To configure gRCP clients in :ref:`exporters <otel-components-exporters>` use th
 
   * Defaults: ``pick_first`` before version 0.103.0, ``round_robin`` for v0.103.0 or higher 
 
-  * Learn more at gRCP's :new-page:`Load Balancing README https://github.com/grpc/grpc-go/blob/master/examples/features/load_balancing/README.md`. 
+  * Learn more at gRCP's :new-page:`Load Balancing README <https://github.com/grpc/grpc-go/blob/master/examples/features/load_balancing/README.md>`. 
 
 * ``compression`` 
 
