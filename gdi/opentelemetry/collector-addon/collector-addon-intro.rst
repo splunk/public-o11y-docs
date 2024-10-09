@@ -59,7 +59,7 @@ The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offer
 
   * - Auto Instrumentation of language-specific agents 
     - Out-of-the-box configuration is available
-    - Out-of-the-box configuration for backend applications and third party services is not supported 
+    - Not supported
 
   * - Distribution and deployment
     - Source code, binary, Operator, Helm Charts, Debian, Ansible, Puppet, Chef, Salt
