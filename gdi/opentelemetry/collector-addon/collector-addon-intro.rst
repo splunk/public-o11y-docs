@@ -58,7 +58,7 @@ The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offer
     - Inputs.conf
 
   * - Auto Instrumentation of language-specific agents 
-    - Out-of-the-box configuration is available
+    - Supported
     - Not supported
 
   * - Distribution and deployment
