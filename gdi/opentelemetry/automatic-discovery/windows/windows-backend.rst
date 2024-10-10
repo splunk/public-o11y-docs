@@ -9,7 +9,7 @@ Automatic discovery for back-end applications in Windows
 
 Automatic discovery can detect the following types of applications in your Windows environment:
 
-Automatic discovery and configuration for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. By default, automatic instrumentation is only enabled for IIS applications. To enable other application and service types, see :ref:`otel-dotnet-manual-install`. After installing the package, you must start or restart any .NET applications that you want to instrument. 
+Automatic discovery and configuration for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. By default, automatic instrumentation is only turned on for IIS applications. To activate other application and service types, see :ref:`otel-dotnet-manual-install`. After installing the package, you must start or restart any .NET applications that you want to instrument. 
 
 .. note:: The SignalFx instrumentation for .NET is deprecated and will reach end of support on February 21, 2025. To learn how to migrate from SignalFx .NET to OpenTelemetry .NET, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
 
