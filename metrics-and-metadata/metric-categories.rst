@@ -2,15 +2,15 @@
 .. _metrics-category:
 
 *****************************************************************
-Metric categories
+Metric billing classes
 *****************************************************************
 
 .. meta::
-  :description: Learn about metric categories in Splunk Observability Cloud.
+  :description: Learn about metric billing classes in Splunk Observability Cloud.
 
-These are the available categories for metrics in Splunk Observability Cloud:
+These are the available billing classes for metrics in Splunk Observability Cloud:
 
-.. include:: /_includes/metric-categories.rst
+.. include:: /_includes/metric-classes.rst
 
 Identify and track the category of a metric
 ====================================================
