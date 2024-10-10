@@ -134,6 +134,8 @@ The following sample configurations show how to perform different actions on att
 
 .. note:: For a complete list of examples, see the configuration snippets in :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/processor/attributesprocessor/testdata/config.yaml`.
 
+.. _attributes-processor-obfuscate-logs:
+
 Remove or obfuscate sensitive information from logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
