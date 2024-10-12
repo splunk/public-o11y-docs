@@ -98,33 +98,55 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
    .. note:: The API token must have ``admin`` privileges.
 
-3. To pair orgs, open Terminal and enter the following Admin Config Services (ACS) command:
+3. There are 2 ways you can pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: Command Line Interface or API endpoints. 
+   a. To use Command Line Interface, open Terminal and enter the following Admin Config Services (ACS) command:
 
-   .. code-block:: bash
+      .. code-block:: bash
     
-           acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"
+              acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"
 
-   Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
+      Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
-   .. note:: If you haven't installed the ACS command-line tool, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`.
+      .. note:: If you haven't installed the ACS command-line tool, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`. 
 
-   The pairing command returns a pairing id:
+    b. To use API endpoints, collect the following information before using the curl command:
+
+       i. Splunk Cloud Platform admin API access token (Create a new authentication token with an admin user. See :new-page:`Use Splunk Web to create authentication tokens <https://docs.splunk.com/Documentation/Splunk/9.3.1/Security/CreateAuthTokens>`.
+       
+       ii. O11y API access token (You obtained it in step 2 above)
+       
+       iii. Splunk Cloud Platform instance name (the custom subdomain for your Splunk Cloud stack)
+
+
+   Whether you used Command Line Interface or API endpoints, the pairing command returns a pairing id:
 
    .. image:: /_images/splunkplatform/pairingID.png
      :width: 90%
      :alt: This screenshot shows the response in Terminal showing the pairing id for the new pairing.
 
-4. You can use the pairing id to get the current status of the pairing. To get the status, run the following ACS command:
+4. You can use the pairing id to get the current status of the pairing. 
 
-  .. code-block:: bash
+   a. To get the status using Command Line Interface, run the following ACS command:
 
-          acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"
+      .. code-block:: bash
 
-  Replace the pairing id and the access token with your own values. The system returns a status message showing whether or not the pairing was a success. 
+              acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"
 
-   .. image:: /_images/splunkplatform/unifiedID-pairingSuccess.png
-     :width: 90%
-     :alt: This screenshot shows a success status for the new pairing.
+      Replace the pairing id and the access token with your own values. 
+    
+    b. To get the status using API endpoints, run the following curl command with the data you have obtained in step 3b:
+      
+      curl --location --request GET 
+      'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
+      --header 'Content-Type: application/json' \
+      --header 'Authorization: Bearer <enter-splunk-admin-api-token>'
+      --header 'o11y-access-token': '<enter-o11y-api-token>'
+
+5. The system returns a status message showing whether or not the pairing was a success. Statuses are SUCCESS, FAILED, or IN_PROGRESS. 
+
+       .. image:: /_images/splunkplatform/unifiedID-pairingSuccess.png
+         :width: 90%
+         :alt: This screenshot shows a success status for the new pairing.
 
 
 Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Managemen > Available integrations` in Splunk Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
