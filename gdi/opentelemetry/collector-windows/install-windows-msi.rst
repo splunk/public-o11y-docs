@@ -70,7 +70,7 @@ Follow these steps:
 
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
 
-3. Update all variables in the configuration file as appropriate.   
+3. Configure the Collector using the environment variables listed in the table below.   
 
 .. code-block:: PowerShell
 
@@ -140,7 +140,7 @@ You can use the following Splunk-specific environment variables with the MSI:
         - ``us0``
 
     *   - ``SPLUNK_SETUP_COLLECTOR_MODE`` 
-        - Install property that sets the Collector's deployment mode. Learn more at :ref:`otel-deployment-mode`. 
+        - Install property that sets the Collector's deployment mode to either ``agent`` or ``gateway``. Learn more at :ref:`otel-deployment-mode`. 
         - ``agent``
 
     *   - ``SPLUNK_TRACE_URL`` 
