@@ -28,11 +28,6 @@ Benefits and service terms :ref:`o11y-service-description`
 :strong:`Architecture`
 Splunk Observability Cloud architecture :ref:`architecture`
 
-.. rst-class:: newcard
-
-:strong:`Free trial`
-Free trial and guided onboarding :ref:`o11y-trial`
-
 .. role:: icon-cogs
 .. rst-class:: newparawithicon
 
@@ -47,6 +42,11 @@ Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`
 
 :strong:`Get your data in`
 Guide for getting your data into Splunk Observability Cloud :ref:`get-started-get-data-in`
+
+.. rst-class:: newcard
+
+:strong:`Get started with the collector`
+Get started: Understand and use the collector :ref:`otel-understand-use`
 
 .. role:: icon-info
 .. rst-class:: newparawithicon

@@ -3,7 +3,7 @@
 Get started guide phase 3: Scaled rollout
 *********************************************************
 
-In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards. The following sections cover the primary setup steps for scaled rollout phase.
+After completing the :ref:`get-started-guide-initial-rollout`, you are ready for phase 3, scaled rollout. In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards. The following sections cover the primary setup steps for scaled rollout phase.
 
 .. note:: This guide is for Splunk Observability Cloud users with the admin role. The guide focuses on the steps to get started monitoring Kubernetes applications though customers using Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) can also follow this guide to get a sense for the steps to get started.
 
