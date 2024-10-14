@@ -70,13 +70,13 @@ Follow these steps:
 
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
 
-3. Configure the Collector using the environment variables listed in the table below.   
+3. Configure the Collector using the variables listed in the table below.   
 
 .. code-block:: PowerShell
 
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
 
-You can use the following Splunk-specific environment variables with the MSI:
+Use the following installation configurations with the MSI deployment method:
 
 .. list-table::
     :widths: 15 75 10
