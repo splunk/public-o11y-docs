@@ -59,8 +59,6 @@ Use the following table to get a high-level overview of the primary setup steps 
        #. :ref:`phase3-names-data`
        #. :ref:`phase3-dash-detect`
        #. :ref:`phase3-onboard-all`
- 
-       See :ref:`get-started-guide-scaled-rollout` for detailed steps.
 
    * - :strong:`Optional and advanced configurations`
      - * :ref:`advanced-config-custom-URL`
@@ -70,20 +68,18 @@ Use the following table to get a high-level overview of the primary setup steps 
 
        See :ref:`phase1-advanced-config` for detailed steps.
 
-     - * Set up an application framework
-       * Complete advanced configurations for the collector
-       * Create custom dashboards using charts based on ingested metrics
-       * Configure detectors and alerts for specific metric conditions
-       * Review metric names and ingested data
+     - * Complete advanced configurations for the collector??
+       * :ref:`phase3-network-exp`
+       * :ref:`phase2-profiling`
 
-     - * Set up Network Explorer to monitor network environment
+     - * :ref:`phase3-otel-reqs`
        * Analyze and troubleshoot usage, limits, and throttles
        * Automate key workflows to accelerate onboarding and standardize consistent practices
        * Identify complex and customized use cases to enhance value and return on investment
 
    * - :strong:`Education resources`
-     - * Get familiar with Open Telemetry concepts
-       * Review the default dashboards and detectors
-     - * Set up training plans for pilot users
-       * Understand OTel sizing requirements
-     - * Identify and review mean time to resolution (MTTR)
+     - * :new-page:`Free Splunk Observability Cloud courses<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
+       * :new-page:`Full course catalog for Splunk Observability Cloud <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup4SplunkObservabilityCloud>`
+       * :new-page:`Splunk Observability Cloud metrics user certification <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
+     - * :new-page:`Get familiar with Open Telemetry concepts <https://opentelemetry.io/docs/concepts/>`
+     - * :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`

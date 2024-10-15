@@ -70,9 +70,13 @@ Use Splunk Real User Monitoring (RUM) to get visibility into the experience of y
 To set up Splunk Real User Monitoring, complete the following steps:
 
 #. To turn on RUM data capture, you need to create an access token. You can use an access token for either browser RUM or mobile RUM. Mobile RUM is available for both Android and iOS devices. See :ref:`rum-setup` for steps to set up an access token. 
-#. Use the guided setup to create the required code snippets to use to instrument your webpages. The JavaScript resources can be self hosted, CDN hosted, or deployed as an NPM package for single-page web applications. Use the guided setup process to help with your configurations. Go to the :new-page:`guided setup <https://login.signalfx.com/#/gdi/scripted/browser/step-1?category=use-case-user-experience&gdiState=%7B%22integrationId%22:%22browser%22%7D>`. See :ref:`browser-rum-install` for detailed manual installation instructions. 
-#. Use the guided setup for iOS and Android mobile device monitoring. See :ref:`rum-mobile-android` or the :ref:`rum-mobile-ios` for guided setup steps. 
-#. You can link APM and RUM data as part of the instrumentation parameters. You can then use RUM and APM in conjunction to create a complete end-to-end view of every transaction from the end user interaction, through micro services, and ultimately to database calls or other transaction termination points. See :ref:`rum-apm-connection`.
+#. Use the guided setup to create the required code snippets to use to instrument your webpages. The JavaScript resources can be self hosted, CDN hosted, or deployed as an NPM package for single-page web applications. 
+    * Go to the :new-page:`guided setup for browser instrumentation <https://login.signalfx.com/#/gdi/scripted/browser/step-1?category=use-case-user-experience&gdiState=%7B%22integrationId%22:%22browser%22%7D>`. 
+    * See :ref:`browser-rum-install` for detailed manual installation instructions. 
+#. Use the guided setup for iOS and Android mobile device monitoring. 
+    * See :ref:`rum-mobile-android` for guided setup steps for Android.
+    * See :ref:`rum-mobile-ios` for guided setup steps for iOS. 
+#. To create a complete end-to-end view of every transaction from the end user interaction, through micro services, and ultimately database calls or other transaction termination points, link your RUM and APM data. You can link RUM and APM data as part of the instrumentation parameters. See :ref:`rum-apm-connection`.
 
 .. _phase2-synthetics:
 
@@ -82,6 +86,43 @@ Set up Splunk Synthetic Monitoring
 Use Splunk Synthetic Monitoring to monitor and alert across critical endpoints, APIs, and business transactions and proactively find to fix functionality or performance issues. Your engineering teams can embed automatic pass/fail tests of new code based on performance budgets and standards into CI/CD processes. You can use Splunk Synthetic Monitoring to improve W3C metrics and the Lighthouse Performance Score on which Google bases its search rankings. 
 
 To get started with Splunk Synthetic Monitoring, create 1 of the 3 available tests: browser, uptime, or API. See :ref:`set-up-synthetics`.
+
+.. _phase2-advanced-config:
+
+Optional and advanced configurations
+======================================================================
+
+Consider these optional and advanced configurations to customize your setup as they apply to your organization. 
+
+.. _phase3-network-exp:
+
+Set up Network Explorer to monitor network environment
+----------------------------------------------------------
+Use the Splunk Distribution of OpenTelemetry Collector Helm chart to configure Network Explorer. Network Explorer inspects packets to capture network performance data with extended Berkeley Packet Filter (eBPF), technology which is run by Linux Kernel. eBPF allows programs to run in the operating system when the following kernel events occur:
+
+- When TCP handshake is complete
+
+- When TCP receives an acknowledgement for a packet
+
+Network Explorer captures network data that is passed on to the reducer and then to the Splunk OTel Collector. 
+
+For Splunk OTel Collector to work with Network Explorer, you must install it in gateway mode. After installation, the Network Explorer navigator displays on the :guilabel:`Infrastructure` tab in Splunk Infrastructure Monitoring.
+
+For comprehensive documentation on Network Explorer, see :ref:`network-explorer`.
+
+.. _phase2-profiling:
+
+Turn on AlwaysOn Profiling to collect stack traces
+-----------------------------------------------------------------
+
+Use AlwaysOn Profiling for deeper analysis of the behavior of select applications. Code profiling collects snapshots of the CPU call stacks and memory usage. After you get profiling data into Splunk Observability Cloud, you can explore stack traces directly from APM and visualize the performance and memory allocation of each component using the flame graph. 
+
+Use this profiling data to gain insights into your code behavior to troubleshoot performance issues. For example, you can identify bottlenecks and memory leaks for potential optimization.
+
+Education resource
+=====================
+
+Get familiar with OpenTelemetry concepts including the configuration of the pipeline components: receivers, processors, exporters, and connectors. See :new-page:`https://opentelemetry.io/docs/concepts/`.
 
 Next step
 ===============

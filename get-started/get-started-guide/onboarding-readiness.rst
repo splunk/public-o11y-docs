@@ -3,7 +3,7 @@
 Get started guide phase 1: Onboarding readiness 
 *********************************************************
 
-In the onboarding readiness phase of the getting started journey for Splunk Observability Cloud you set up users, teams, and access controls using roles and token management. The following sections cover the primary setup steps for onboarding readiness phase. 
+In the onboarding readiness phase of the getting started journey for Splunk Observability Cloud, you set up users, teams, and access controls using roles and token management. The following sections cover the primary setup steps for onboarding readiness phase. 
 
 To get a high-level overview of the entire getting started journey, see :ref:`get-started-guide`.
 
@@ -14,7 +14,7 @@ To get a high-level overview of the entire getting started journey, see :ref:`ge
    :width: 100%
    :alt: 
 
-To configure your users, teams, and tokens complete the following tasks:
+To configure your users, teams, and tokens complete the following primary tasks:
 
 #. :ref:`phase1-create-trial`
 #. :ref:`phase1-network`
@@ -84,11 +84,9 @@ Before creating teams and tokens, determine your naming convention. A naming con
 Plan your team structure
 ---------------------------
 
-A user with an admin role can manage teams, which includes adding and removing regular users and assigning a team admin. 
+Create a plan for your team structure and user roles within teams. A user with an admin role can manage teams, which includes adding and removing users and assigning a team manager. For an overview of the various team roles and permissions, see :ref:`about-team-roles`.
 
-By default, users can join or leave teams at will. For larger organizations, you might want enhanced team security. Use enhanced team security to assign usage rights to each team and their associated tokens. See :ref:`enhanced-team-security`. 
-
-You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications give your teams different escalation methods for their alerts. See :ref:`admin-team-notifications`.
+By default, every user can join any team in your organization. If you want to restrict users from being able to join any team, you can turn on the enhanced team security setting. Use enhanced team security to assign usage rights to each team and their associated tokens. See :ref:`enhanced-team-security`. 
 
 .. _token-mgmt:
 
@@ -101,6 +99,55 @@ To learn more about token management, see the following topics:
 
 * See :ref:`admin-tokens`.
 * See :ref:`admin-manage-usage`.
+
+.. _phase1-advanced-config:
+
+Optional and advanced configurations
+======================================================================
+
+Consider these optional and advanced configurations to customize your setup as they apply to your organization. 
+
+.. _advanced-config-custom-url:
+
+Request a custom URL for your organization
+--------------------------------------------------------------
+
+Create a Splunk support request to request a custom URL for your organization, for example, acme.signalfx.com. See :ref:`support` for support contact options.
+
+.. _advanced-config-parent-child:
+
+Separate your teams with a parent-child setup
+--------------------------------------------------------------
+
+If you want to create separate environments, you can use parent-child organizations. Perhaps you want a development environment and a production environment, or you want to make sure Team A is fully separated from Team B. Parent-child organizations are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more organizations as child organizations within the parent organization. The organizations are fully separated, including users and data. 
+
+You can request a parent-child organization setup by creating a support case. See :ref:`support` for support contact options.
+
+.. _advanced-config-logs:
+
+Set up Log Observer Connect for the Splunk Platform
+--------------------------------------------------------------
+
+If your organization has an entitlement for Splunk Log Observer Connect, Splunk Observability Cloud can automatically relate logs to infrastructure and trace data. 
+
+See :ref:`logs-set-up-logconnect` or :ref:`logs-scp`. 
+
+.. _advanced-config-3rd-party:
+
+Collect data from third-party metrics providers
+--------------------------------------------------------------
+
+When using the Splunk Distribution of OpenTelemetry Collector, you can use receivers to collect metrics data from third-party providers. For example, you can use the Prometheus receiver to scrape metrics data from any application that exposes a Prometheus endpoint. See :ref:`prometheus-receiver`.
+
+See :ref:`monitor-data-sources` to see a list of receivers.
+
+Education resources
+=====================
+
+* For a list of free Splunk Observability Cloud courses, see :new-page:`Free training<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
+* For the full course catalog for Splunk Observability Cloud, see :new-page:`Full course catalog for Splunk Observability Cloud <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup4SplunkObservabilityCloud>`. 
+   * See the :new-page:`Curated started track for Splunk Observability Cloud <https://drive.google.com/file/d/1LHZL1jaP8irQvfI3HG71XcgGavgEn5cD/view>` to determine what courses to prioritize.
+* Follow the Splunk Observability Cloud metrics user certification if you want to build a center of excellence for observability in your organization. See :new-page:`Splunk Observability Cloud metrics user certification <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
 
 Next step
 ===============

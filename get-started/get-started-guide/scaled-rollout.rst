@@ -53,9 +53,9 @@ To learn more, see the following topics:
 Use metrics pipeline management tools to reduce cardinality of metric time series (MTS)
 =========================================================================================
 
-As metrics data usage and cardinality grows in Splunk Infrastructure Monitoring, the cost increases. Use metrics pipeline management (MPM) tools within Splunk Infrastructure Monitoring to streamline storage and processing to reduce overall monitoring cost. With MPM, you can make the following optimizations:
+As metrics data usage and cardinality grows in Splunk Infrastructure Monitoring, your cost increases. Use metrics pipeline management (MPM) tools within Splunk Infrastructure Monitoring to streamline storage and processing to reduce overall monitoring cost. With MPM, you can make the following optimizations:
 
-* Streamline storage and processing to evolve the metric analytics platform into a multi-tier platform.
+* Streamline storage and processing to create a multi-tier metric analytics platform.
 
 * Analyze reports to identify where to optimize usage.
 
@@ -72,61 +72,40 @@ For comprehensive documentation on MPM, see :ref:`metrics-pipeline-intro`.
 Review metric names and ingested data
 =========================================================================================
 
-To prepare for a successful scaled deployment, consider your naming conventions for tokens and custom metrics in Splunk Observability Cloud. A consistent, hierarchical naming convention for metrics makes it easier to find metrics and identify usage.
+To prepare for a successful scaled deployment, consider your naming conventions for tokens and custom metrics in Splunk Observability Cloud. A consistent, hierarchical naming convention for metrics makes it easier to find metrics, identify usage, and create charts and alerts across a range of hosts and nodes.
 
-After your initial onboarding of metrics data, review the name and the metrics volume each team is ingesting. Make sure the ingest data matches the naming convention for dimensions and properties. 
-
-Ensure the teams follow the naming convention setup for metrics so that you can easily create charts and alerts across a range of hosts and nodes.
-
-* For details about dimensions, see :ref:`metadata-dimension`.
-* For details about properties, see :ref:`custom-properties`.
-* For details about naming conventions for metrics, see :ref:`metric-dimension-names`.
-
-
-When deploying OpenTelemetry in a large organization, it's critical to define a standardized naming convention for tagging and a governance process to ensure the convention is adhered to. Standardized naming also makes it easier to find metrics and identify usage. See :ref:`metric-dimension-names` and :new-page:`Naming conventions for tagging with OpenTelemetry and Splunk<https://splunk.github.io/observability-workshop/latest/en/resources/otel_tagging/index.html>`.
-
-   There are a few cases where incorrect naming affects in-product usage data:  
-
-   * If your organization uses host-based Splunk Observability Cloud licensing, your OpenTelemetry naming convention must use the OpenTelemetry host semantic convention to track usage and telemetry correctly. See :new-page:`the OpenTelemetry semantic conventions for hosts<https://github.com/open-telemetry/semantic-conventions/blob/main/docs/resource/host.md>`.
-   * You must use the Kubernetes attributes processor for Kubernetes pods to ensure standard naming and accurate usage counting for host-based organizations. See :ref:`kubernetes-attributes-processor`. 
-
-   See :ref:`metric-dimension-names`.
+#. See :ref:`metric-dimension-names` for guidance on creating a naming convention for your organization.
+#. After bringing in metrics data, review the name and the metrics volume each team is ingesting. Make sure the ingest data matches the naming convention for dimensions and properties. 
 
 .. _phase3-dash-detect:
 
 Build advanced dashboards and detectors
 =========================================================================================
 
-Dashboards and detectors are the foundation of a Splunk Observability cloud user's experience. 
-
-Dashboards are groupings of charts and visualizations of metrics. Dashboards provide useful and actionable insight into your system at a glance.
-
-Detectors monitor your streaming data against a specific condition that you specify to keep users informed when certain criteria are met.
+Dashboards and detectors are the foundation of a Splunk Observability Cloud user's experience. Dashboards are groupings of charts that visualize metrics. Use dashboards provide your team with actionable insight into your system at a glance. Use detectors to monitor your streaming data against a specific condition that you specify to keep users informed when certain criteria are met.
 
 Build advanced dashboards
 -----------------------------
 
-Start by getting familiar with the built-in dashboards groups developed by Splunk. Then learn how to create and customize dashboards. 
+#. Splunk Observability Cloud automatically adds built-in-dashboards for each integration you use after it ingests 50,000 data points. Review these built-in dashboards when they are available. See :ref:`view-dashboards` and :ref:`dashboards-list-imm`.
+#. Learn how to create and customize dashboards. Make sure your teams can complete these tasks:
+    #. Clone, share, and mirror dashboards. 
+    #. Use dashboard filters and dashboard variables. 
+    #. Add text notes and event feeds to your dashboards. 
+    #. Use data links to dynamically link a dashboard to another dashboard or external system such as Splunk APM, Splunk Platform, or a custom URL.
 
-Make sure your teams can complete these tasks:
+   For comprehensive documentation on these tasks, see the following topics:
 
-* Clone, share, and mirror dashboards. 
-* Use dashboard filters and dashboard variables. 
-* Add text notes and event feeds to your dashboards. 
-* Use data links to dynamically link a dashboard to another dashboard or external system such as Splunk APM, Splunk Platform, or a custom URL.
-* Link metadata to related resources.
-
-For comprehensive documentation on these tasks, see the following topics:
-
-
-- :ref:`dashboards`
-- :ref:`built-in-dashboards`
-- :ref:`data-visualization-charts`
-- :ref:`link-metadata-to-content`
-
+   * :ref:`built-in-dashboards`
+   * :ref:`dashboard-create-customize`
+   * :ref:`link-metadata-to-content`
+   * :ref:`dashboards-best-practices`
 
 Build advanced detectors
 -----------------------------
+
+Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them. See :ref:`autodetect`. 
+
 It is important to familiarize the teams with advanced detectors, this will bring great advantage to utilize the Splunk IM product. These sets of advanced detectors are basically taking the basic list of Alert conditions and enhancing it to take into account the different types of functions, such as additional firing or clearing conditions for the alerts, or comparing two main functions using population_comparison, etc. Here is an example of SLX detectors utilizing the advanced SignalFlow library.
 
 Advanced detectors enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 main functions using population_comparison.
@@ -145,12 +124,27 @@ To learn more, see the following topics:
 Onboard all users and teams
 ================================================================================================================
 
-Your final step of the scaled rollout phase is to onboard all users and teams into Splunk Observability Cloud. 
+Your final step of the scaled rollout phase is to onboard all users and teams and configure who can view and modify various aspects of Splunk Observability Cloud.
 
-Use enhanced security to identify team managers and control who can view and who can modify each dashboard and detector. 
+#. See :ref:`user-management-intro` to get started managing users, teams, and roles.
+#. If you haven't already done so, turn on enhanced security to identify team managers and control who can view and modify dashboards and detectors. See :ref:`enhanced-team-security`.
+#. Assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications give your teams different escalation methods for their alerts. See :ref:`admin-team-notifications`.
 
-To learn more, see the following topics:
+.. _phase3-advanced-config:
 
-- :ref:`user-management-intro`
+Optional and advanced configurations
+======================================================================
 
-- :ref:`enhanced-team-security`
+Consider these optional and advanced configurations to customize your setup as they apply to your organization. 
+
+.. _phase3-otel-reqs:
+
+Understand OpenTelemetry sizing requirements
+==============================================
+
+Before you start scaling up the use of the OpenTelemetry agents, consider the OpenTelemetry sizing guidelines. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services. Ensure that the OTel agents can allocate sufficient memory and CPU needed to aid with a smooth rollout. For details about the sizing guidelines, see :ref:`otel-sizing`. 
+
+Education resource
+====================
+
+Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. See :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
