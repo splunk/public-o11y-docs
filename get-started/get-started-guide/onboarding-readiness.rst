@@ -34,12 +34,16 @@ If you have a Splunk technical contact, they can create a Splunk Observability C
 Analyze your network communication and access requirements
 ============================================================
 
-Before you begin bringing data into Splunk Observability Cloud from your infrastructure and applications, validate that network connections between your environment and Splunk Observability Cloud are allowed.
+Before you begin bringing data into Splunk Observability Cloud from your infrastructure and applications, analyze your required network communications and access requirements.
 
-For Kubernetes, you need administrator access to monitored hosts of Kubernetes clusters to install. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user not a root or admin user. For the majority of use cases, the collector does not require privileged access to function. Some components might require privileged access; be careful when activating these components. Collector components might also require external permissions including network access or RBAC. See the latest Security Guidelines for more details.
-
-* See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
-* If your organization requires a proxy, see :ref:`allow-services`.
+#. Validate that network connections between your environment and Splunk Observability Cloud are allowed. See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector.
+#. If your organization requires a proxy, see :ref:`allow-services`. 
+#. For Kubernetes, you need administrator access to monitored hosts of Kubernetes clusters to install the Splunk Distribution of the OpenTelemetry Collector. 
+#. Whether you use a guided setup for data management or an advanced install, you use the Splunk Distribution of the OpenTelemetry Collector to ingest, process, and export metric, trace, logs, and metadata into Splunk Observability Cloud. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user not a root or admin user. For the majority of use cases, the collector doesn't require privileged access to function. 
+    #. Collector components might require privileged access. Use care when allowing privilege access for components. For example, a receiver might require the collector to run in a privileged mode, which could be a security concern. Receivers and exporters might expose buffer, queue, payload, and worker settings in configuration parameters. Setting these parameters might expose the collector to additional attack vectors including resource exhaustion. 
+    #. Collector components might also require external permissions including network access or role-based access. 
+   
+   See :ref:`otel-security` for more details.
 
 .. _phase1-user-access:
 
@@ -68,7 +72,7 @@ If you plan to roll out Splunk Observability Cloud across your organization you 
 Define team and token naming conventions
 ------------------------------------------
 
-Before creating teams and tokens, determine your naming convention. This helps you to track token assignments and control data ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
+Before creating teams and tokens, determine your naming convention. A naming convention helps you to track token assignments and control data ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
 
 * Team name: FRONTEND_DEV_TEAM 
 * Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
@@ -89,9 +93,9 @@ You can also assign team-specific notifications for alerts triggered by the dete
 Manage your tokens
 --------------------
 
-Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and you can extend them for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
+Use tokens to secure data ingest and API calls in Splunk Observability Cloud. Tokens are valid for 1 year and you can extend them for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
 
-To learn more, see the following topics:
+To learn more about token management, see the following topics:
 
 * See :ref:`admin-tokens`.
 * See :ref:`admin-manage-usage`.
