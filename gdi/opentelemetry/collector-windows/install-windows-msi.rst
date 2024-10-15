@@ -66,15 +66,15 @@ Follow these steps:
 
 2. Run the following command, where ``PATH_TO_MSI`` is the full path to the downloaded package. For example, ``C:\your\download\folder\splunk-otel-collector-0.4.0-amd64.msi``. 
 
-.. code-block:: PowerShell
+   .. code-block:: PowerShell
 
-    Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
+      Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
 
-3. Configure the Collector using the variables listed in the table below.   
+3. Configure the Collector using the variables listed in the table that follows:   
 
-.. code-block:: PowerShell
+   .. code-block:: PowerShell
 
-    Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
+      Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
 
 Use the following installation configurations with the MSI deployment method:
 
