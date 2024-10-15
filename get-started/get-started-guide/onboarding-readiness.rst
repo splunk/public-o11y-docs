@@ -3,7 +3,9 @@
 Get started guide phase 1: Onboarding readiness 
 *********************************************************
 
-In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. The following sections cover the primary setup steps for onboarding readiness phase. 
+In the onboarding readiness phase of the getting started journey for Splunk Observability Cloud you set up users, teams, and access controls using roles and token management. The following sections cover the primary setup steps for onboarding readiness phase. 
+
+To get a high-level overview of the entire getting started journey, see :ref:`get-started-guide`.
 
 .. note:: This guide is for Splunk Observability Cloud users with the admin role. 
 

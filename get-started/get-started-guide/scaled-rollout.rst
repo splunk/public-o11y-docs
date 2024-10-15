@@ -5,6 +5,8 @@ Get started guide phase 3: Scaled rollout
 
 After completing the :ref:`get-started-guide-initial-rollout`, you are ready for phase 3, scaled rollout. In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards. The following sections cover the primary setup steps for scaled rollout phase.
 
+To get a high-level overview of the entire getting started journey for Splunk Observability Cloud, see :ref:`get-started-guide`.
+
 .. note:: This guide is for Splunk Observability Cloud users with the admin role. 
 
 
