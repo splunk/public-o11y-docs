@@ -112,7 +112,7 @@ Tag and property sync is always activated for the services configured in the int
 
 .. _aws-iam-policy-cw:
 
-Permissions for the CloudWatch API
+Permissions for data polling using the CloudWatch API 
 -----------------------------------------------------------
 
 Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Splunk Observability Cloud to collect AWS metrics using the CloudWatch API:
@@ -199,6 +199,13 @@ For example:
   }
 
 Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+
+.. _aws-permissions-ms-aws-managed:
+
+Permissions for AWS-managed Metric Streams
+-----------------------------------------------------------
+
+If you're using AWS-managed Metric Streams, you don't need any additional permissions other than :ref:`those required to use Splunk Observability Cloud <aws-iam-policy-required>`.
 
 .. _aws-iam-policy-services:
 
