@@ -128,7 +128,7 @@ When you select an event in the Event Feed sidebar, you can see details about th
 .. note:: You can also :ref:`overlay event markers <dashboard-event-overlay>` onto charts on a dashboard.
 
 
-.. _events-rentention:
+.. _events-retention:
 
 Events retention in Splunk Observability Cloud
 =============================================================================
