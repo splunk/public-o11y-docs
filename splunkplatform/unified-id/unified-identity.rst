@@ -90,6 +90,8 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 Set up Unified Identity for existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
 
+There are 2 ways you can pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: Command Line Interface or API endpoints. These instructions cover both ways. If you haven't installed the ACS command-line tool and want to use it, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`. 
+
 If you already have a Splunk Cloud Platform account and a Splunk Observability Cloud account, take the following actions to set up Unified Identity:
 
 1. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
@@ -98,19 +100,17 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
    .. note:: The API token must have ``admin`` privileges.
 
-3. There are 2 ways you can pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: Command Line Interface or API endpoints. 
+3. Pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: 
 
-    a. To use Command Line Interface, open Terminal and enter the following Admin Config Services (ACS) command:
+    a. To pair with Command Line Interface, open Terminal and enter the following Admin Config Services (ACS) command:
 
       .. code-block:: bash
     
               acs observability pair --o11y-access-token "<enter-o11y-access-token>"
 
-        Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
+      Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
-      .. note:: If you haven't installed the ACS command-line tool, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`. 
-
-    b. To use API endpoints, collect the following information before using the curl command:
+    b. To pair with API endpoints, collect the following information before using the curl command:
 
        i. Splunk Cloud Platform admin API access token (Create a new authentication token with an admin user. See :new-page:`Use Splunk Web to create authentication tokens <https://docs.splunk.com/Documentation/Splunk/9.3.1/Security/CreateAuthTokens>`.)
        
