@@ -133,4 +133,4 @@ When you select an event in the Event Feed sidebar, you can see details about th
 Events retention in Splunk Observability Cloud
 =============================================================================
 
-* Custom and alert events have a retention period of 12 months.
+All types of events have a retention period of 12 months.
