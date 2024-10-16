@@ -77,7 +77,7 @@ Prerequisites
 You must be an admin of the Splunk Cloud Platform and Splunk Observability Cloud instances that you want to pair.
 
 
-New Splunk Observability Cloud customers
+Set up Unified Identity for new Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
 
 Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must take the following actions to set up Unified Identity:
@@ -87,7 +87,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 2. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
 
-Existing Splunk Observability Cloud customers
+Set up Unified Identity for existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
 
 If you already have a Splunk Cloud Platform account and a Splunk Observability Cloud account, take the following actions to set up Unified Identity:
@@ -99,30 +99,31 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
    .. note:: The API token must have ``admin`` privileges.
 
 3. There are 2 ways you can pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: Command Line Interface or API endpoints. 
-   a. To use Command Line Interface, open Terminal and enter the following Admin Config Services (ACS) command:
+
+    a. To use Command Line Interface, open Terminal and enter the following Admin Config Services (ACS) command:
 
       .. code-block:: bash
     
-              acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"
+              acs observability pair --o11y-access-token "<enter-o11y-access-token>"
 
-      Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
+        Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
       .. note:: If you haven't installed the ACS command-line tool, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`. 
 
     b. To use API endpoints, collect the following information before using the curl command:
 
-       i. Splunk Cloud Platform admin API access token (Create a new authentication token with an admin user. See :new-page:`Use Splunk Web to create authentication tokens <https://docs.splunk.com/Documentation/Splunk/9.3.1/Security/CreateAuthTokens>`.
+       i. Splunk Cloud Platform admin API access token (Create a new authentication token with an admin user. See :new-page:`Use Splunk Web to create authentication tokens <https://docs.splunk.com/Documentation/Splunk/9.3.1/Security/CreateAuthTokens>`.)
        
-       ii. O11y API access token (You obtained it in step 2 above)
+       ii. O11y API access token (obtained it in step 2 above)
        
        iii. Splunk Cloud Platform instance name (the custom subdomain for your Splunk Cloud stack)
 
 
    Whether you used Command Line Interface or API endpoints, the pairing command returns a pairing id:
 
-   .. image:: /_images/splunkplatform/pairingID.png
-     :width: 90%
-     :alt: This screenshot shows the response in Terminal showing the pairing id for the new pairing.
+   .. code-block:: bash
+
+          "id": "<pairing-id>"
 
 4. You can use the pairing id to get the current status of the pairing. 
 
@@ -130,23 +131,26 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
       .. code-block:: bash
 
-              acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"
+              acs observability pairing-status-by-id --pairing-id "<enter-pairing-id>" --o11y-access-token "<enter-o11y-access-token>"
 
       Replace the pairing id and the access token with your own values. 
     
     b. To get the status using API endpoints, run the following curl command with the data you have obtained in step 3b:
-      
-      curl --location --request GET 
-      'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <enter-splunk-admin-api-token>'
-      --header 'o11y-access-token': '<enter-o11y-api-token>'
+
+      .. code-block:: bash
+    
+              curl --location --request GET 
+              'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
+              --header 'Content-Type: application/json' \
+              --header 'Authorization: Bearer <enter-splunk-admin-api-token>'
+              --header 'o11y-access-token': '<enter-o11y-api-token>'
 
 5. The system returns a status message showing whether or not the pairing was a success. Statuses are SUCCESS, FAILED, or IN_PROGRESS. 
 
-       .. image:: /_images/splunkplatform/unifiedID-pairingSuccess.png
-         :width: 90%
-         :alt: This screenshot shows a success status for the new pairing.
+       .. code-block:: bash
+    
+              "pairingId": "<pairing-id>"
+              "status": "SUCCESS"
 
 
 Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Managemen > Available integrations` in Splunk Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
