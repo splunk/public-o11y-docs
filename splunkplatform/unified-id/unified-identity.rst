@@ -90,7 +90,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 Set up Unified Identity for existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
 
-There are 2 ways you can pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: Command Line Interface or API endpoints. These instructions cover both ways. If you haven't installed the ACS command-line tool and want to use it, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`. 
+There are 2 ways you can pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: using command-line interface with Admin Config Services (ACS) commands or using API endpoints. These instructions cover both ways. If you haven't installed the ACS command-line tool and want to use it, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`. 
 
 If you already have a Splunk Cloud Platform account and a Splunk Observability Cloud account, take the following actions to set up Unified Identity:
 
@@ -102,7 +102,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
 3. Pair your Splunk Observability Cloud and Splunk Cloud Platform organizations: 
 
-    a. To pair with Command Line Interface, open Terminal and enter the following Admin Config Services (ACS) command:
+    a. To pair with command-line interface, enter the following Admin Config Services (ACS) command:
 
       .. code-block:: bash
     
@@ -110,7 +110,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
       Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
-    b. To pair with API endpoints, collect the following information before using the curl command:
+    b. To pair with API endpoints, collect the following information then run the curl command:
 
        i. Splunk Cloud Platform admin API access token (Create a new authentication token with an admin user. See :new-page:`Use Splunk Web to create authentication tokens <https://docs.splunk.com/Documentation/Splunk/9.3.1/Security/CreateAuthTokens>`.)
        
@@ -118,8 +118,18 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
        
        iii. Splunk Cloud Platform instance name (the custom subdomain for your Splunk Cloud stack)
 
+       Run the curl command:
 
-   Whether you used Command Line Interface or API endpoints, the pairing command returns a pairing id:
+       .. code-block:: bash
+
+               curl --location 
+               'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing' \
+               --header 'Content-Type: application/json' \
+               --header 'Authorization: Bearer <enter-splunk-admin-api-token>' \
+               --header 'o11y-access-token': '<enter-o11y-api-token>'
+
+
+   Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
 
    .. code-block:: bash
 
@@ -127,7 +137,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
 4. You can use the pairing id to get the current status of the pairing. 
 
-   a. To get the status using Command Line Interface, run the following ACS command:
+   a. To get the status using command-line interface, run the following ACS command:
 
       .. code-block:: bash
 
@@ -135,7 +145,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
       Replace the pairing id and the access token with your own values. 
     
-    b. To get the status using API endpoints, run the following curl command with the data you have obtained in step 3b:
+    b. To get the status using API endpoints, run the following curl command with the data you obtained in step 3b:
 
       .. code-block:: bash
     
