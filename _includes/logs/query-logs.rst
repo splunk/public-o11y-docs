@@ -4,6 +4,7 @@
             :width: 90%
             :alt: The Log Observer UI is displayed.
 
+.. note:: To increase performance and help control cost, search jobs originating from Related Content stop running after 2 minutes of inactivity. All other search jobs stop running after fifteen minutes.
 
 2. In the content control bar, enter a time range in the time picker if you want to see logs from a specific historical period. To select a time range, you must select :guilabel:`Infinite` from the :guilabel:`Search Records` field in step 5 below. When you select :guilabel:`150,000`, Log Observer returns only the most recent 150,000 logs regardless of the time range you select.
 
