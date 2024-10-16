@@ -82,3 +82,19 @@ Get the latest updates from the Splunk community :new-page:`https://community.sp
 
 :strong:`Join the community`
 Get the latest updates from the Splunk community :new-page:`https://community.splunk.com/t5/Welcome/bd-p/gs-welcome`
+
+.. role:: icon-cie-communications
+.. rst-class:: newparawithicon
+
+:icon-cie-communications:`.` :strong:`cie communications`
+
+.. role:: icon-cie-healthcare
+.. rst-class:: newparawithicon
+
+:icon-cie-healthcare:`.` :strong:`cie healthcare`
+
+.. role:: icon-cie-online-services
+.. rst-class:: newparawithicon mynewSection
+
+:icon-cie-online-services:`.` :strong:`cie online services`
+

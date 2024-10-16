@@ -43,7 +43,7 @@ The following links access important terms and policies documents that pertain t
 .. raw:: html
   
     <embed>
-      <h2>Data ingestion and retention<a name="sd-data" class="headerlink" href="#sd-data" title="Permalink to this headline">¶</a></h2>
+      <h2 id="sd-data">Data ingestion and retention</h2>
     </embed>
 
 Splunk Observability Cloud provides software and APIs that allow you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
