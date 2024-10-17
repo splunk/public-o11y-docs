@@ -20,13 +20,13 @@ Splunk Observability Cloud overview :ref:`overview`
 
 .. rst-class:: newcard
 
-:strong:`Service description`
-Benefits and service terms :ref:`o11y-service-description`
+:strong:`Architecture`
+Splunk Observability Cloud architecture :ref:`architecture`
 
 .. rst-class:: newcard
 
-:strong:`Architecture`
-Splunk Observability Cloud architecture :ref:`architecture`
+:strong:`Service description`
+Benefits and service terms :ref:`o11y-service-description`
 
 .. role:: icon-cogs
 .. rst-class:: newparawithicon

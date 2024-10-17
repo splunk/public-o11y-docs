@@ -139,6 +139,24 @@ Understand OpenTelemetry sizing requirements
 
 Before you start scaling up the use of the OpenTelemetry agents, consider the OpenTelemetry sizing guidelines. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services. Ensure that the OTel agents can allocate sufficient memory and CPU needed to aid with a smooth rollout. For details about the sizing guidelines, see :ref:`otel-sizing`. 
 
+.. _phase3-usage-limits:
+
+Analyze and troubleshoot usage, limits, and throttles
+================================================================================================================
+To view Splunk Observability Cloud Subscription Usage data within your organization, you must have the admin role.
+
+To analyze and troubleshoot usage, make sure you know how to complete the following tasks:
+
+* Understand the difference between host-based and MTS-based subscriptions in Infrastructure Monitoring.
+* Understand the difference between host-based and trace-analyzed-per-minute (TAPM) subscriptions in APM.
+* Read available reports, such as monthly usage reports, hourly usage reports, dimension reports, and custom metric reports
+
+To learn more, see the following topics:
+
+- :ref:`per-product-limits`
+
+- :ref:`data-o11y`
+
 Education resource
 ====================
 

@@ -10,7 +10,6 @@ Get started guide for Splunk Observability Cloud admins
    Phase 1: Onboarding readiness <onboarding-readiness>
    Phase 2: Initial rollout <initial-rollout>
    Phase 3: Scaled rollout <scaled-rollout>
-   Optional and advanced configurations <get-started-guide-advanced-config>
 
 The journey for getting started with Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. In the onboarding readiness phase you set up users, teams, and access controls using roles and token management. In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud solutions that apply to your organization. Solutions include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics. In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards.  
 
@@ -70,15 +69,12 @@ Use the following table to get a high-level overview of the primary setup steps 
 
        See :ref:`phase1-advanced-config` for detailed steps.
 
-     - * Complete advanced configurations for the collector??
-       * :ref:`phase3-network-exp`
+     - * :ref:`phase3-network-exp`
        * :ref:`phase2-profiling`
        * :ref:`phase2-related-content`
 
      - * :ref:`phase3-otel-reqs`
        * Analyze and troubleshoot usage, limits, and throttles
-       * Automate key workflows to accelerate onboarding and standardize consistent practices
-       * Identify complex and customized use cases to enhance value and return on investment
 
    * - :strong:`Education resources`
      - * :new-page:`Free Splunk Observability Cloud courses<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
