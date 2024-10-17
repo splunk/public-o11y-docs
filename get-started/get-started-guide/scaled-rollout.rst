@@ -79,12 +79,12 @@ To prepare for a successful scaled deployment, consider your naming conventions 
 
 .. _phase3-dash-detect:
 
-Build advanced dashboards and detectors
+Build custom dashboards and detectors
 =========================================================================================
 
-Dashboards and detectors are the foundation of a Splunk Observability Cloud user's experience. Dashboards are groupings of charts that visualize metrics. Use dashboards provide your team with actionable insight into your system at a glance. Use detectors to monitor your streaming data against a specific condition that you specify to keep users informed when certain criteria are met.
+Dashboards are groupings of charts that visualize metrics. Use dashboards provide your team with actionable insight into your system at a glance. Use detectors to monitor your streaming data against a specific condition that you specify to keep users informed when certain criteria are met.
 
-Build advanced dashboards
+Build custom dashboards
 -----------------------------
 
 #. Splunk Observability Cloud automatically adds built-in-dashboards for each integration you use after it ingests 50,000 data points. Review these built-in dashboards when they are available. See :ref:`view-dashboards` and :ref:`dashboards-list-imm`.
@@ -101,23 +101,18 @@ Build advanced dashboards
    * :ref:`link-metadata-to-content`
    * :ref:`dashboards-best-practices`
 
-Build advanced detectors
+Build custom detectors
 -----------------------------
 
-Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them. See :ref:`autodetect`. 
+#. Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them. See :ref:`autodetect`. 
 
-It is important to familiarize the teams with advanced detectors, this will bring great advantage to utilize the Splunk IM product. These sets of advanced detectors are basically taking the basic list of Alert conditions and enhancing it to take into account the different types of functions, such as additional firing or clearing conditions for the alerts, or comparing two main functions using population_comparison, etc. Here is an example of SLX detectors utilizing the advanced SignalFlow library.
-
-Advanced detectors enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 main functions using population_comparison.
+Advanced detectors enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2  functions using population_comparison.
 
 To learn more, see the following topics:
 
-* Introduction to alerts and detectors in Splunk Observability Cloud
-* Scenarios for finding and resolving infrastructure problems using alerts and detectors
-* Use and customize AutoDetect alerts and detectors
-* Create detectors to trigger alerts
-* Link detectors to charts
-* Auto-clear alerts
+* :ref:`get-started-detectoralert`
+* :ref:`create-detectors`
+* :ref:`linking-detectors`
 
 .. _phase3-onboard-all:
 

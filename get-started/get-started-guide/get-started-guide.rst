@@ -60,6 +60,8 @@ Use the following table to get a high-level overview of the primary setup steps 
        #. :ref:`phase3-dash-detect`
        #. :ref:`phase3-onboard-all`
 
+       See :ref:`get-started-guide-scaled-rollout` for detailed steps.
+
    * - :strong:`Optional and advanced configurations`
      - * :ref:`advanced-config-custom-URL`
        * :ref:`advanced-config-parent-child`
@@ -71,6 +73,7 @@ Use the following table to get a high-level overview of the primary setup steps 
      - * Complete advanced configurations for the collector??
        * :ref:`phase3-network-exp`
        * :ref:`phase2-profiling`
+       * :ref:`phase2-related-content`
 
      - * :ref:`phase3-otel-reqs`
        * Analyze and troubleshoot usage, limits, and throttles
@@ -82,4 +85,5 @@ Use the following table to get a high-level overview of the primary setup steps 
        * :new-page:`Full course catalog for Splunk Observability Cloud <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup4SplunkObservabilityCloud>`
        * :new-page:`Splunk Observability Cloud metrics user certification <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
      - * :new-page:`Get familiar with Open Telemetry concepts <https://opentelemetry.io/docs/concepts/>`
+       * To learn more about the data model for Splunk Observability Cloud, see :ref:`data-model`.
      - * :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`

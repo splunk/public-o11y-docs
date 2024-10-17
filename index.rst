@@ -285,7 +285,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Get started guide for admins <get-started/get-started-guide/get-started-guide>
+   Get started guide for admins TOGGLE <get-started/get-started-guide/get-started-guide>
 
 .. toctree::
    :maxdepth:   3
@@ -316,11 +316,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth: 3
 
    Service description <get-started/service-description>
-
-.. toctree::
-   :maxdepth:   3
-
-   Contribute to our documentation <get-started/contribute>
 
 .. toctree::
    :caption: Scenarios and tutorials
@@ -919,3 +914,8 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
+
+.. toctree::
+   :maxdepth:   3
+
+   Contribute to our documentation <get-started/contribute>

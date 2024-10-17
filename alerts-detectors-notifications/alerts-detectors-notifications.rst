@@ -4,26 +4,27 @@
 Introduction to alerts and detectors in Splunk Observability Cloud
 **************************************************************************
 
-
-
 .. meta::
    :description: Splunk Observability Cloud uses detectors, events, alerts, and notifications to keep you informed when certain criteria are met. When a detector condition is met, the detector generates an event, triggers an alert, and can send one or more notifications.
 
-Splunk Observability Cloud uses :strong:`detectors`, :strong:`events`, :strong:`alerts`, and :strong:`notifications` to keep you informed when certain criteria are met.
+Splunk Observability Cloud uses detectors, events, alerts, and notifications to keep you informed when certain criteria are met. Active alerts and existing detectors can be found in tabs on the :strong:`Alerts` page, and events can be found in the :strong:`Events` sidebar, available from within any dashboard.
 
-Sample scenarios of alerts and detectors
-==========================================
+.. raw:: html
+  
+    <embed>
+      <h2>Example scenarios of alerts and detectors<a name="alert-detect-scenarios" class="headerlink" href="#alert-detect-scenarios" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 - You want a message sent to a Slack channel or to an email address for the Ops team when CPU Utilization has reached the 95th percentile.
 - You want to be notified when the number of concurrent users is approaching a limit that might require you to spin up an additional AWS instance.
 
-Active alerts and existing detectors can be found in tabs on the :strong:`Alerts` page, and events can be found in the :strong:`Events` sidebar, available from within any dashboard.
+For more example scenarios, see :ref:`scenarios-alerts-detectors`.
 
-
-.. _detectors-definition:
-
-Detectors
-==================
+.. raw:: html
+  
+    <embed>
+      <h2>Detectors<a name="detectors-definition" class="headerlink" href="#detectors-definition" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 A :term:`detector` monitors signals on a plot line, as on a chart, and triggers alert events and clear events based on conditions you define in rules. Conceptually, you can think of a detector as a chart that can trigger alerts when a signal value crosses specified thresholds defined in alert rules.
 
@@ -31,8 +32,11 @@ Rules trigger an alert when the conditions in those rules are met. Individual ru
 
 Detectors also evaluate streams against a specific condition over a period of time. When you apply analytics to a metric time series (MTS), it produces a stream, an object of SignalFlow query language. The MTS can contain raw data or the output of an analytics function.
 
-Metadata in detectors
---------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Metadata in detectors<a name="detector-metadata" class="headerlink" href="#detector-metadata" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 The metadata associated with MTS can be used to make detector definition simpler, more compact, and more resilient.
 
@@ -42,26 +46,33 @@ If you want to track whether the CPU utilization remains below 80 for each of th
 
 If the population changes because the cluster has grown to 40 virtual machines, you can make a cluster- or service-level detector. If you include the :code:`service:kafka` dimension for the newly-added virtual machines, the existing detector's query includes all new virtual machines in the cluster in the threshold evaluation.
 
-Dynamic threshold conditions
------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Dynamic threshold conditions<a name="threshold-conditions" class="headerlink" href="#threshold-conditions" title="Permalink to this headline">¶</a></h3>
+    </embed>
+
 Setting static values for detector conditions can lead to noisy alerting because the appropriate value for one service or for a particular time of day might not be suitable for another service or a different time of day. For example, if your applications or services contain an elastic infrastructure, like Docker containers or EC2 autoscaling, the values for your alerts might vary by time of day.
 
 You can define dynamic thresholds to account for changes in streaming data. For example, if your metric exhibits cyclical behavior, you can define a threshold that is a one-week timeshifted version of the same metric. Suppose the relevant basis of comparison for your data is the behavior of a population, such as a clustered service. In that case, you can define your threshold as a value that reflects that behavior. For example, the 90th percentile for the metric across the entire cluster over a moving 15-minute window.
 
 To learn more, see :ref:`condition-reference`.
 
+.. raw:: html
+  
+    <embed>
+      <h2>Alerts<a name="alerts" class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
-Alerts
-===========
 When data in an input MTS matches a condition, the detector generates a trigger event and an alert that has a specific severity level. You can configure an alert to send a notification using Splunk On-Call. For more information, see the :new-page:`Splunk On-Call <https://help.victorops.com/>` documentation.
 
 Alert rules use settings you specify for built-in alert conditions to define thresholds that trigger alerts. When a detector determines that the conditions for a rule are met, it triggers an alert, creates an event, and sends notifications (if specified). Detectors can send notifications via email, as well as via other systems, such as Slack, or via a webhook.
 
-
-.. _detector-dashboard:
-
-Interaction between detectors, events, alerts, and notifications
-===================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Interaction between detectors, events, alerts, and notifications<a name="detector-dashboard" class="headerlink" href="#detector-dashboard" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 The interaction between detectors, events, alerts, and notifications is as follows:
 
@@ -100,11 +111,13 @@ The boxes represent objects relating to the detector, and the diamonds represent
       D -.-> F["Notifications (optional)"]
     
 
-What you can do with alerts and detectors
-==================================================
+.. raw:: html
+  
+    <embed>
+      <h2>What you can do with alerts and detectors<a name="detector-do" class="headerlink" href="#detector-do" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 The following table shows you what you can do with detectors, events, alerts, and notifications:
-
 
 .. list-table::
    :header-rows: 1

@@ -119,10 +119,18 @@ Use AlwaysOn Profiling for deeper analysis of the behavior of select application
 
 Use this profiling data to gain insights into your code behavior to troubleshoot performance issues. For example, you can identify bottlenecks and memory leaks for potential optimization.
 
-Education resource
+.. _phase2-related-content:
+
+Turn on Related Content
+-----------------------------
+
+Turn on Related Content as part of your data integration setup so you can navigate between APM, Log Observer Connect, and Infrastructure Monitoring in Splunk Observability Cloud with your selected filters and context automatically applied to each view. :ref:`get-started-relatedcontent`.
+
+Education resources
 =====================
 
-Get familiar with OpenTelemetry concepts including the configuration of the pipeline components: receivers, processors, exporters, and connectors. See :new-page:`https://opentelemetry.io/docs/concepts/`.
+* Get familiar with OpenTelemetry concepts including the configuration of the pipeline components: receivers, processors, exporters, and connectors. See :new-page:`https://opentelemetry.io/docs/concepts/`.
+* To learn more about the data model for Splunk Observability Cloud, see :ref:`data-model`.
 
 Next step
 ===============
