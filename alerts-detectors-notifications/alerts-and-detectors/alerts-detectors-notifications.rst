@@ -4,6 +4,26 @@
 Introduction to alerts and detectors in Splunk Observability Cloud
 **************************************************************************
 
+.. toctree::
+    :maxdepth: 3
+    :hidden:
+
+    Alerts and detectors scenario library TOGGLE <scenarios-detectors-alerts/scenarios-intro>
+    Use and customize AutoDetect alerts and detectors TOGGLE <autodetect/autodetect>
+    create-detectors-for-alerts
+    detector-manage-permissions
+    link-detectors-to-charts
+    manage-notifications
+    preview-detector-alerts
+    View alerts <view-alerts>
+    View detectors <view-detectors>
+    detector-options
+    mute-notifications
+    auto-clearing-alerts
+    Troubleshoot detectors <troubleshoot-detectors>
+    Built-in alert conditions TOGGLE <alert-condition-reference/index>
+    alert-message-variables-reference
+
 .. meta::
    :description: Splunk Observability Cloud uses detectors, events, alerts, and notifications to keep you informed when certain criteria are met. When a detector condition is met, the detector generates an event, triggers an alert, and can send one or more notifications.
 
