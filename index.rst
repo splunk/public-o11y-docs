@@ -270,12 +270,22 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Get started
    :maxdepth:   2
 
-   Get started <get-started/get-started>
+   get-started/get-started
 
 .. toctree::
    :maxdepth:   3
 
    get-started/overview
+
+.. toctree::
+   :maxdepth:   3
+
+   Splunk Observability Cloud architecture <get-started/o11y-architecture>
+
+.. toctree::
+   :maxdepth: 3
+
+   Service description <get-started/service-description>
 
 .. toctree::
    :maxdepth: 3
@@ -301,16 +311,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Free and paid courses <get-started/education-resources>
-
-.. toctree::
-   :maxdepth:   3
-
-   Splunk Observability Cloud architecture <get-started/o11y-architecture>
-
-.. toctree::
-   :maxdepth: 3
-
-   Service description <get-started/service-description>
 
 .. toctree::
    :caption: Scenarios and tutorials
