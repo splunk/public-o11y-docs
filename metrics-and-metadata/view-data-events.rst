@@ -126,3 +126,11 @@ When you hover over an event in the Event Feed sidebar, a vertical line is shown
 When you select an event in the Event Feed sidebar, you can see details about the event and, for events associated with alerts, an option to open the detector that generated the event. If the event is associated with a currently active alert, you'll also see an option to resolve the alert.
 
 .. note:: You can also :ref:`overlay event markers <dashboard-event-overlay>` onto charts on a dashboard.
+
+
+.. _events-retention:
+
+Events retention in Splunk Observability Cloud
+=============================================================================
+
+All types of events have a retention period of 12 months.
