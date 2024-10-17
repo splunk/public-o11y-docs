@@ -21,7 +21,7 @@ Learn about the basic elements of Splunk Observability Cloud and all it can do f
 .. rst-class:: newcard
 
 :strong:`Overview`
-Splunk Observability Cloud overview :ref:`welcome`
+Splunk Observability Cloud overview :ref:`overview`
 
 .. rst-class:: newcard
 
@@ -119,7 +119,7 @@ Proactively monitor the performance of web resources :ref:`intro-synthetics`
 .. rst-class:: newcard
 
 :strong:`All products`
-Learn more about all Splunk Observability Cloud products :ref:`welcome`
+Learn more about all Splunk Observability Cloud products :ref:`overview`
 
 .. role:: icon-wrench
 .. rst-class:: newparawithicon
@@ -270,20 +270,15 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Get started
    :maxdepth:   2
 
-   get-started/welcome
+   Get started <get-started/get-started>
 
 .. toctree::
    :maxdepth:   3
 
-   Get started new <get-started/get-started>
+   get-started/overview
 
 .. toctree::
    :maxdepth: 3
-
-   Get started old <get-started/o11y>
-
-.. toctree::
-   :maxdepth:   3
 
    Get started guide for admins TOGGLE <get-started/get-started-guide/get-started-guide>
 

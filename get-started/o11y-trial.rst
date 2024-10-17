@@ -14,7 +14,7 @@ You can try out Splunk Observability Cloud for 14 days, absolutely free. You can
 * Use the sample data in a pre-instrumented environment (Hipster shop).
 * Use your own data by instrumenting your applications with OpenTelemetry.
 
-For an introduction to Splunk Observability Cloud products, see :ref:`welcome`.
+For an introduction to Splunk Observability Cloud products, see :ref:`overview`.
 
 For information about how to use these products together to address real-life scenarios, see :ref:`get-started-scenario`.
 

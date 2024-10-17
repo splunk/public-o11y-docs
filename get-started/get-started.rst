@@ -16,7 +16,7 @@ Everything you need to know to get started with Splunk Observability Cloud.
 .. rst-class:: newcard
 
 :strong:`Overview`
-Splunk Observability Cloud overview :ref:`welcome`
+Splunk Observability Cloud overview :ref:`overview`
 
 .. rst-class:: newcard
 

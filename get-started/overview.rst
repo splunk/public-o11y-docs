@@ -1,4 +1,4 @@
-.. _welcome:
+.. _overview:
 
 *************************************
 Splunk Observability Cloud overview
@@ -27,7 +27,7 @@ The following diagram provides a high-level view of how each Splunk Observabilit
   :width: 70%
   :alt: This screenshot shows how Splunk Observability Cloud products serve the different layers and processes in an organization's environment.
 
-For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`. To get started with Splunk Observability Cloud, see :ref:`get-started-o11y`.
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`. 
 
 For information about Splunk Observability Cloud packaging and pricing, see :new-page:`Pricing - Observability <https://www.splunk.com/en_us/products/pricing/observability.html>`.
 
@@ -145,6 +145,6 @@ For more information, see the :new-page:`Overview of the Splunk App for Content 
       <h2>Learn more <a name="welcome-more" class="headerlink" href="#welcome-more" title="Permalink to this headline">¶</a></h2>
     </embed>
 
-For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`. To get started with Splunk Observability Cloud, see :ref:`get-started-o11y`.
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`. 
 
 For information about Splunk Observability Cloud packaging and pricing, see :new-page:`Pricing - Observability <https://www.splunk.com/en_us/products/pricing/observability.html>`.
