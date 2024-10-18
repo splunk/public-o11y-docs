@@ -413,7 +413,7 @@ Size and time metrics; such as kb, Gb, ms, and w; are available from the :strong
 Add a prefix and/or suffix
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Unlike specifying the actual unit associated with the metric, the prefix and suffix are simply text fields that you add to clarify the chart display. They don't have any intrinsic relationship to the metric on the plot line and are not automatically scaled.
+Unlike specifying the actual unit associated with the metric, the prefix and suffix are text fields that you add to clarify the chart display. They don't have any intrinsic relationship to the metric on the plot line and are not automatically scaled.
 
 Using display units can also provide information that would not otherwise be apparent.
 

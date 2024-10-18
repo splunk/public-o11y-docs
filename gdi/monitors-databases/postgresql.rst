@@ -10,12 +10,9 @@ PostgreSQL (deprecated)
    
    The PostgreSQL monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
-   To monitor your PostgreSQL databases you can use the native OpenTelemetry PostgreSQL receiver instead. See more at :ref:`postgresql-receiver`.
+   To monitor your PostgreSQL databases you can use the native OpenTelemetry PostgreSQL receiver instead. See :ref:`postgresql-receiver` to learn more.
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-``postgresql`` monitor type to pull metrics from all PostgreSQL
-databases from a specific Postgres server instance using SQL queries.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``postgresql`` monitor type to pull metrics from all PostgreSQL databases from a specific Postgres server instance using SQL queries.
 
 Configuration settings
 ----------------------

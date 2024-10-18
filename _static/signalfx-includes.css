@@ -389,15 +389,21 @@ a.headerlink {
 }
 
 .footer {
-   text-align: left !important;
-width: 100% !important;
-margin: 0 0 0 !important;
-padding: 10px 0;
-background: #fff;
-border-top:1px solid #ddd;
-position: fixed;
-bottom:0;
-clear: both;
+    text-align: left !important;
+    width: 100% !important;
+    margin: 0 0 0 !important;
+    padding: 10px 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    clear: both;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        display: none !important;
+    }
 }
 
 .footerinner {

@@ -144,11 +144,6 @@ Use span tags to add useful metadata to traces :ref:`apm-add-context-trace-span`
 
 .. rst-class:: newcard
 
-:strong:`Logs pipeline`
-Add value to your raw logs by customizing your pipeline :ref:`logs-pipeline`
-
-.. rst-class:: newcard
-
 :strong:`Related Content`
 Enable users to seamlessly move across product views :ref:`get-started-relatedcontent`
 
@@ -264,6 +259,12 @@ Collect traces :ref:`get-started-cpp`
 :strong:`All supported integrations`
 View a list of all supported integrations :ref:`supported-data-sources`
 
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Release notes`
+To keep up to date with changes in the products, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
+
 .. ----- This comment separates the landing page from the TOC -----
 
 .. toctree::
@@ -278,7 +279,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Service description <get-started/service-description>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth: 3
 
    Get started <get-started/o11y>
 
@@ -367,7 +368,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
+   Send alert notifications to other services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
    :maxdepth:   3
@@ -705,15 +706,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :caption: Log Observer
+   :caption: Log Observer Connect 
    :maxdepth:   3
 
-   Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
-
-.. toctree::
-   :maxdepth:   3   
-
-   Splunk Log Observer TOGGLE <logs/log-observer-landing>
+   logs/lo-connect-landing
 
 .. toctree::
    :caption: Real User Monitoring
@@ -795,6 +791,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3
+   
+   rum/rum-custom-indexed-tags
+
+.. toctree::
+   :maxdepth:   3
 
    rum/sample-app
 
@@ -855,6 +856,60 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Troubleshoot tests  <synthetics/syn-troubleshoot/syn-missing-alerts>
 
+.. toctree::
+   :caption: Splunk On-Call
+   :maxdepth:   3
+
+   Introduction to Splunk On-Call TOGGLE </sp-oncall/admin/get-started/getting-started-spoc>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   User management TOGGLE <sp-oncall/user-roles/user-roles-permissions>
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage on-call schedules TOGGLE <sp-oncall/on-call-schedules/create-manage-on-call-schedules>
+
+.. toctree::
+   :maxdepth:   3
+
+   Alerts TOGGLE <sp-oncall/alerts/alerts-main>
+
+.. toctree::
+   :maxdepth:   3
+
+   Notifications TOGGLE <sp-oncall/notifications/notification-types>
+
+.. toctree::
+   :maxdepth:   3
+
+   Incidents TOGGLE <sp-oncall/incidents/incident-pane>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Mobile app TOGGLE <sp-oncall/mobile/mobile-getting-started>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Reports TOGGLE <sp-oncall/reports/reports-main>  
+
+.. toctree::
+   :maxdepth:   3
+
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>
+
+.. toctree::
+   :caption: Release notes
+   :maxdepth:   3
+
+   Release notes overview TOGGLE <release-notes/release-notes-overview.rst>   
 
 .. toctree::
    :caption: Reference and Legal

@@ -33,6 +33,11 @@ In addition, include the following information:
   * Kubernetes version.
   * Managed or on premises: if managed, which cloud provider and distribution?
 
+* ConfigMaps from problematic pods:
+
+  * ``kubectl get cm my-splunk-otel-collector-agent -o yaml > my-splunk-otel-collector-agent-cm.yaml``
+  * ``kubectl get cm my-splunk-otel-collector-k8s-cluster-receiver -o yaml > my-splunk-otel-collector-k8s-cluster-receiver-cm.yaml``
+
 * Logs from problematic pods:
 
   * ``kubectl logs my-splunk-otel-collector-agent-fzn4q otel-collector > my-splunk-otel-collector-agent.log``

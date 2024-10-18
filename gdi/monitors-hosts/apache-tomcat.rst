@@ -4,14 +4,9 @@ Apache Tomcat
 =============
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the Collectd Tomcat monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the Collectd Tomcat monitor. See benefits, install, configuration, and metrics.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-Collectd Tomcat monitor type to monitor Tomcat. You must activate JMX
-Remote to monitor Tomcat remotely. See
-:ref:`GenericJMX <genericjmx>` for more information.
+The :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the Collectd Tomcat monitor type to monitor Tomcat. You must activate JMX Remote to monitor Tomcat remotely. See :ref:`GenericJMX <genericjmx>` for more information.
 
 This integration is only available on Kubernetes and Linux.
 
@@ -162,7 +157,7 @@ integration:
       - Specifies how to map JMX MBean values to metrics. If using a
          specific service monitor such as Cassandra, Kafka, or ActiveMQ,
          they come pre-loaded with a set of mappings, and any that you
-         add in this option are merged with those. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
+         add in this option are merged with those. See the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>` to learn more.
 
 The **nested** ``mBeanDefinitions`` configuration object has the
 following fields:

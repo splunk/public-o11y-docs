@@ -7,7 +7,7 @@ Fluent Forward receiver
 .. meta::
       :description: The Fluent Forward receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs and events using the Fluent Forward protocol.
 
-The Fluent Forward receiver allows the Splunk Distribution of OpenTelemetry Collector to collect events using the bundled Fluentd application. The supported pipeline type is ``logs``. See :ref:`otel-data-processing` for more information.
+The Fluent Forward receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect events using the bundled Fluentd application. The supported pipeline type is ``logs``. See :ref:`otel-data-processing` for more information.
 
 The receiver accepts data formatted as Fluent Forward events through a TCP connection. All three Fluent event types, message, forward, and packed forward, are supported, including compressed packed forward.
 
@@ -24,7 +24,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
 
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
@@ -33,7 +33,7 @@ Follow these steps to configure and activate the component:
 2. Configure the receiver as described in the next document.
 3. Restart the Collector.
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Fluent Forward receiver in the ``logs`` pipeline:
+By default, the Splunk Distribution of the OpenTelemetry Collector includes the Fluent Forward receiver in the ``logs`` pipeline:
 
 .. code-block:: yaml
 
@@ -66,7 +66,7 @@ Troubleshooting
 
 For troubleshooting Fluentd, see:
 
-* :ref:`fluentd-collector-troubleshooting`.
+* :ref:`fluentd-collector-troubleshooting`
 * :ref:`otel-linux-uninstall-both-otel-and-tdagent`
 
-.. caution:: If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, make sure Fluentd is installed and turned on in your Collector instance.
+.. caution:: If you wish to collect logs for the target host with Fluentd, make sure Fluentd is installed and turned on in your Collector instance.

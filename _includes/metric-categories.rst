@@ -50,8 +50,7 @@
        | This category is not part of the report.
 
    * - 13
-     - | APM Monitoring MetricSets
-       | This category is not part of the report.
+     - APM Monitoring MetricSets
 
    * - 14
      - Infrastructure Monitoring function

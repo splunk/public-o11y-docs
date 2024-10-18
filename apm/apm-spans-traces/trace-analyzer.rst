@@ -65,8 +65,7 @@ To explore your trace data, use the following controls, which are numbered as ca
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface, described in the list after this image.
 
-#. Use the filter bar to refine traces by time range, environment, workflow, services, and tags.
-#. Use the trace view selection to select trace and error counts or duration in the chart.
+#. Use the filter bar to refine the traces by time range, environment, workflow, services, and tags. For tag filters, both equal to (``=``) and not equal to (``!=``) operators are available. 
 #. Use the minimum and maximum trace duration to refine the traces that are included by their duration.
 #. Use the sample ratio to select all traces or 10% of traces. By default the sample ratio is set to 1:10. Once you make a selection, your selection is preserved.
 #. Use the :guilabel:`Errors Only` switch to show only traces with errors.
@@ -123,17 +122,28 @@ You can order both tables by the number of matching traces.
 Trace Analyzer trace limits
 ==================================
 
-Trace Analyzer can search a maximum of 6 hours of data. 
-
 Within the Trace Analyzer interface, there are 3 different display limits, numbered as callouts in the following image. 
 
-#. The Trace Analyzer chart displays at least 1,000 traces and at least 6 hours of traces. After there are 1,000 traces and 6 hours of trace data, the trace search stops.
-#. The Group Metrics tab displays at least 1,000 traces and at least 6 hours of traces. After there are 1,000 traces and 6 hours of trace data, the trace search stops.
+#. The limits of the Trace Analyzer chart depend on the filters used and the chart selected:
+    #. When using a combination of the time range, environment, workflow, and services filters, the :guilabel:`Trace & error count` chart displays 8 days of traces.
+    #. When using either the operation or tag filters the :guilabel:`Trace & error count` chart displays at least 1,000 traces and at least 6 hours of traces. After there are 1,000 traces and 6 hours of trace data, the trace search stops.
+    #. The :guilabel:`Trace duration` chart displays at least 1,000 traces and at least 6 hours of traces. After there are 1,000 traces and 6 hours of trace data, the trace search stops.
+#. The :guilabel:`Group Metrics` tab displays at least 1,000 traces and at least 6 hours of traces. After there are 1,000 traces and 6 hours of trace data, the trace search stops.
 #. The list of traces displayed on the :guilabel:`Traces` tab has a limit of 1,000 traces. Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched, the list stops populating.
 
 ..  image:: /_images/apm/trace-analyzer/TraceAnalyzerLimit.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface that have trace limits, described in the list after this image.
+
+What to expect in Trace Analyzer when using the visibility filter API
+======================================================================
+
+If you are using the visibility filter API to block specific span tags in Splunk APM, here is what you can expect to see in Trace Analyzer: 
+
+* If you hide tags using the ``hiddenTags`` field in the visibility filter API, then you can't use these tags in the filter bar or trace grouping.  
+* If you specify the visible tags using the ``visibleTags`` field in the visibility filter API, then you can use only the visible tags in the filter bar or trace grouping.  
+
+See :ref:`apm-visibility-filters` and :new-page:`Visibility filters in APM <https://dev.splunk.com/observability/docs/apm/visibility-filter/>` in the Splunk Developer Guide to learn more about visibility filters. 
 
 Learn more
 =====================

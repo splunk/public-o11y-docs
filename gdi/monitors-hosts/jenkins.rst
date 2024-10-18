@@ -6,19 +6,14 @@ Jenkins
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Jenkins monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-``jenkins`` monitor type to collect metrics from Jenkins instances by
-hitting the following endpoints:
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``jenkins`` monitor type to collect metrics from Jenkins instances by hitting the following endpoints:
 
--  Job metrics with the ``../api/json`` endpoint.
--  Codahale or Dropwizard JVM metrics with the
-   ``metrics/<MetricsKey>/..`` endpoint.
+- Job metrics with the ``../api/json`` endpoint.
+- Codahale or Dropwizard JVM metrics with the ``metrics/<MetricsKey>/..`` endpoint.
 
 This integration is only available on Kubernetes and Linux.
 
-.. note:: The Jenkins integration requires Jenkins version 1.580.3 or higher and the :new-page:`Jenkins Metrics plugin <https://plugins.jenkins.io/metrics/>`.
+.. note:: The Jenkins integration requires Jenkins version 1.580.3 or higher and the :new-page:`Jenkins Metrics <https://plugins.jenkins.io/metrics/>` plugin.
 
 Benefits
 --------

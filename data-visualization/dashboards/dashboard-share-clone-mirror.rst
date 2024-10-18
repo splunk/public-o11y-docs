@@ -132,7 +132,7 @@ Now there are two mirrors of the same dashboard, seen in two different places wi
 Create a mirror
 ------------------------------------------------------------
 
-Any Splunk Observability Cloud user can create a mirror of any custom or user dashboard. Users simply need write permission for the dashboard group where they want to place the mirror.
+Any Splunk Observability Cloud user can create a mirror of any custom or user dashboard. Users need write permission for the dashboard group where they want to place the mirror.
 
 
 .. note:: If you are working with a dashboard you control, make sure to set appropriate write permissions on the dashboard, to prevent inadvertent edits by other users who might be viewing a mirror of the dashboard.

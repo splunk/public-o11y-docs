@@ -6,11 +6,7 @@ VMware vSphere
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the vSphere monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-``vsphere`` monitor type to collect metrics from vSphere through the
-vSphere API.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``vsphere`` monitor type to collect metrics from vSphere through the vSphere API.
 
 This integration is available on Kubernetes, Linux, and Windows. You can
 install it on the same server used by vSphere if it's running on Linux

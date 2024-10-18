@@ -106,7 +106,7 @@ The agent collects the following ClassLoader metrics:
     - Type
     - Description
   * - ``jvm.class.count``
-    - Gauge
+    - UpDown counter
     - Number of loaded classes.
   * - ``jvm.class.unloaded``
     - Counter
@@ -133,9 +133,6 @@ The agent collects the following garbage collection (GC) metrics:
   * - ``jvm.memory.allocated``
     - Counter
     - Increase in the size of the young heap memory pool after 1 garbage collection and before the next.
-  * - ``jvm.gc.duration{jvm.gc.name!=<concurrent gcs>}``
-    - Timer
-    - Time spent in garbage collection pause, in seconds.
 
 .. _jvm-memory-metrics:
 
@@ -154,47 +151,25 @@ The agent collects the following memory metrics:
     - Description
   * - ``jvm.memory.allocated``
     - Counter
-    - Total number of bytes allocated by JVM threads since the previous data point was emitted.
-        - Use the rate per second rollup.
-        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
-  * - ``process.runtime.jvm.memory.reclaimed``
-    - Counter
-    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes:
-        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC.
-        - Use the rate per second rollup.
-        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
+    - Total number of bytes allocated by JVM threads since the previous data point was emitted. Use the rate per second rollup.
   * - ``jvm.buffer.count``
-    - Gauge
+    - UpDown counter
     - An estimate of the number of buffers in the pool.
   * - ``jvm.buffer.memory.usage``
-    - Gauge
+    - UpDown counter
     - An estimate of the memory that the JVM is using for this buffer pool, in bytes.
   * - ``jvm.buffer.memory.limit``
-    - Gauge
+    - UpDown counter
     - An estimate of the total capacity of the buffers in this pool, in bytes.
   * - ``jvm.memory.committed``
-    - Gauge
+    - UpDown counter
     - Amount of memory available to the JVM, in bytes.
   * - ``jvm.memory.limit``
-    - Gauge
+    - UpDown counter
     - Maximum amount of memory available for memory management, in bytes.
   * - ``jvm.memory.used``
-    - Gauge
+    - UpDown counter
     - Amount of used memory, in bytes.
-
-All memory pool metrics share the following tags:
-
-.. list-table::
-  :header-rows: 1
-  :width: 100%
-  :widths: 30 70
-
-  * - Tag
-    - Value
-  * - ``area``
-    - Either ``heap`` or ``nonheap``
-  * - ``id``
-    - Name of the memory pool. For example, ``Perm Gen``
 
 .. _jvm-thread-metrics:
 
@@ -211,8 +186,8 @@ The agent collects the following thread metrics:
   * - Metric
     - Type
     - Description
-  * - ``jvm.threads.count``
-    - Gauge
+  * - ``jvm.thread.count``
+    - UpDown counter
     - Number of live threads, including daemon and nondaemon threads.
 
 
@@ -229,8 +204,6 @@ The Splunk Distribution of OpenTelemetry Java instruments several Java Database 
 - Oracle Universal Connection Pool (UCP)
 - Tomcat JDBC
 - Vibur DBCP
-- WebSphere Liberty
-- WebLogic thread pools
 
 Each of the connection pools reports a subset of the following metrics:
 
@@ -248,45 +221,30 @@ Each of the connection pools reports a subset of the following metrics:
   * - ``db.client.connections.usage[state=idle]``
     - Gauge
     - Number of open connections that are idle.
-  * - ``db.pool.connections.idle.max``
+  * - ``db.client.connections.idle.max``
     - Gauge
     - Maximum number of idle open connections allowed.
-  * - ``db.pool.connections.idle.min``
+  * - ``db.client.connections.idle.min``
     - Gauge
     - Minimum number of idle open connections allowed.
-  * - ``db.pool.connections.max``
+  * - ``db.client.connections.max``
     - Gauge
     - Maximum number of open connections allowed.
-  * - ``db.pool.connections.pending_threads``
+  * - ``db.client.connections.pending_requests``
     - Gauge
     - Number of threads that are waiting for an open connection.
-  * - ``db.pool.connections.timeouts``
+  * - ``db.client.connections.timeouts``
     - Counter
     - Number of connection timeouts that have happened since the application started.
-  * - ``db.pool.connections.create_time``
+  * - ``db.client.connections.create_time``
     - Histogram
     - Time it took to create a new connection, in milliseconds.
-  * - ``db.pool.connections.wait_time``
+  * - ``db.client.connections.wait_time``
     - Histogram
     - Time it took to get an open connection from the pool, in milliseconds.
-  * - ``db.pool.connections.use_time``
+  * - ``db.client.connections.use_time``
     - Histogram
     - Time between borrowing a connection and returning it to the pool, in milliseconds.
-
-All connection pool metrics share the following tags:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 40 60
-  :width: 100%
-
-  * - Tag
-    - Value
-  * - ``pool.name``
-    - Name of the connection pool. Spring bean name if Spring is used, JMX object name otherwise.
-  * - ``pool.type``
-    - Type or implementation of the connection pool. For example, ``c3p0``, ``dbcp2``, or ``hikari``.
-
 
 .. _webengine-attributes-java-otel:
 

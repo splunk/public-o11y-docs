@@ -11,17 +11,11 @@ You can configure Splunk Observability Cloud to automatically send alert notific
 
 To send Splunk Observability Cloud alert notifications to Splunk On-Call, complete the following configuration tasks:
 
-* :ref:`oncall1`
+* :ref:`oncall1`. You must be a Splunk On-Call global admin or alert admin to complete this task.
 
-   You must be a Splunk On-Call global admin or alert admin to complete this task.
+* :ref:`oncall2`. You must be a Splunk On-Call global admin or alert admin to complete this task.
 
-* :ref:`oncall2`
-
-   You must be a Splunk On-Call global admin or alert admin to complete this task.
-
-* :ref:`oncall3`
-
-   You must be a Splunk Observability Cloud administrator to complete this task.
+* :ref:`oncall3`. You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`oncall4`
 
@@ -55,7 +49,7 @@ Step 2: Get your Splunk On-Call alert routing key
 
 You must be a Splunk On-Call global admin or alert admin to complete this task.
 
-For information about how to get your Splunk On-Call alert routing key, see :new-page:`Create & Manage Alert Routing Keys <https://help.victorops.com/knowledge-base/routing-keys/>`.
+For information about how to get your Splunk On-Call alert routing key, see :ref:`spoc-routing-keys`.
 
 You'll need your alert routing key in :ref:`oncall3`.
 

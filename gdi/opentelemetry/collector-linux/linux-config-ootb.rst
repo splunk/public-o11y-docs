@@ -15,7 +15,6 @@ The Collector configuration is stored in a :new-page:`YAML file <https://yaml.or
 
 See :ref:`about-collector-configuration-tutorial` to learn how to configure the Collector.
 
-
 Default configuration 
 ========================================================
 

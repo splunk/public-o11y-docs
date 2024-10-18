@@ -55,7 +55,7 @@ SignalFlow computations often involve both data and corresponding metadata - dim
 
 To ensure that calculations throughout a SignalFlow program are able to make use of this metadata, time series data is ingested into a SignalFlow computation with its corresponding metadata. Subsequent computations on data include corresponding computations on metadata so that the result includes both data and metadata components, enabling further downstream processing and re-aggregations, as necessary.
 
-Computations that output a single summary result from a collection of time series, such as a sum or mean, use only the metadata that shares the same name and values across the collection. In contrast, computations that select values from a collection, such as maximum, minimum, etc. simply use the corresponding metadata of the selected values as is.
+Computations that output a single summary result from a collection of time series, such as a sum or mean, use only the metadata that shares the same name and values across the collection. In contrast, computations that select values from a collection, such as maximum, minimum and so on, use the corresponding metadata of the selected values as is.
 
 To learn more about SignalFlow computations, see :new-page-ref:`get-started-signalflow`.
 

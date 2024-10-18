@@ -31,4 +31,4 @@ To instrument your Go application, follow these steps:
 
 For more information, see :ref:`splunk-go-otel-dist`.
 
-.. note:: The SignalFx Tracing Library for Go is deprecated and will reach End of Support on June 8th, 2023. To migrate to the Splunk Distribution of OpenTelemetry Go, see :ref:`migrate-signalfx-go-to-otel`.
+.. note:: The SignalFx Tracing Library for Go is deprecated and will reach End of Support on June 8th, 2023. See :ref:`migrate-signalfx-go-to-otel` to migrate to the Splunk Distribution of OpenTelemetry Go.

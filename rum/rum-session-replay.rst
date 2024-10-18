@@ -42,7 +42,7 @@ This example shows the order in which to initialize the scripts:
     <script>
     SplunkRum.init({
         realm: '<realm>',
-        rumAccessToken: '<your_rum_token>'
+        rumAccessToken: '<your_rum_token>',
         applicationName: '<your_app_name>',
         version: '<your_app_version>',
         deploymentEnvironment: '<your_environment_name>'
@@ -53,7 +53,7 @@ This example shows the order in which to initialize the scripts:
     });
     </script>
 
-Use session replay through Splunk CDN
+CDN
 --------------------------------------------
 
 Initialize this code snippet to set up session replay through Splunk CDN. 
@@ -70,9 +70,11 @@ Initialize this code snippet to set up session replay through Splunk CDN.
 
 
 
-Use session replay through NPM
+NPM
 --------------------------------------------
+
 Use the following command to set up session replay with NPM through a package named ``@splunk/otel-web-session-recorder``.
+
 
 .. code-block:: html
 

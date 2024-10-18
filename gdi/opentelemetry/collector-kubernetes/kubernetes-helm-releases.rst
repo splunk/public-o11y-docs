@@ -19,14 +19,14 @@ Here's a list of the main chart releases available for the Splunk Distribution o
 Primary chart release
 ------------------------------------------------
 
-* :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/releases/download/splunk-otel-collector-X.X.X/splunk-otel-collector-X.X.X.tgz`
+* :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/releases`
 
 Optional releases for subcharts
 ------------------------------------------------
 
-* :new-page:`https://github.com/open-telemetry/opentelemetry-helm-charts/releases/download/opentelemetry-operator-X.X.X/opentelemetry-operator-X.X.X.tgz`
+* :new-page:`https://github.com/open-telemetry/opentelemetry-helm-charts/releases`
 
-* :new-page:`https://github.com/cert-manager/cert-manager/archive/refs/tags/vX.X.X.tar.gz` 
+* :new-page:`https://github.com/cert-manager/cert-manager/releases` 
 
 .. _helm-chart-images:
 
@@ -40,7 +40,7 @@ Here's a list of the main chart images available for the Splunk Distribution of 
 Images used by default
 ------------------------------------------------
 
-* :new-page:`quay.io/signalfx/splunk-otel-collector`
+* :new-page:`https://quay.io/repository/signalfx/splunk-otel-collector`
 
 .. _helm-chart-images-optional:
 
@@ -48,7 +48,7 @@ Optional add-on feature images
 ------------------------------------------------
 
 * :new-page:`https://quay.io/signalfx/splunk-otel-collector-windows`
-* :new-page:`https://registry.access.redhat.com/ubi9/ubi`
+* :new-page:`https://registry.access.redhat.com`
 * :new-page:`https://ghcr.io/open-telemetry/opentelemetry-operator/opentelemetry-operator`
 * :new-page:`https://quay.io/jetstack/cert-manager-controller`
 * :new-page:`https://quay.io/jetstack/cert-manager-acmesolver`
@@ -58,7 +58,6 @@ Optional add-on feature images
 * :new-page:`https://ghcr.io/signalfx/splunk-otel-java/splunk-otel-java`
 * :new-page:`https://ghcr.io/signalfx/splunk-otel-js/splunk-otel-js`
 * :new-page:`https://ghcr.io/signalfx/splunk-otel-dotnet/splunk-otel-dotnet`
-* :new-page:`https://ghcr.io/open-telemetry/opentelemetry-operator/autoinstrumentation-go`
+* :new-page:`https://ghcr.io/open-telemetry/opentelemetry-go-instrumentation/autoinstrumentation-go`
 * :new-page:`https://ghcr.io/open-telemetry/opentelemetry-operator/autoinstrumentation-apache-httpd`
 * :new-page:`https://ghcr.io/open-telemetry/opentelemetry-operator/autoinstrumentation-python`
-

@@ -82,11 +82,12 @@ Create a detector using the API
 
 Using the API to create a detector provides a number of capabilities that are not available in the UI, letting you build detectors with more advanced rules and conditions. You can view these detectors in the UI. The program text appears in place of the signals displayed in standard detectors.
 
--  For general information on creating detectors using the API, see the :new-page:`Detect Anomalies with Detectors <https://dev.splunk.com/observability/docs/detectors/detectors_events_alerts/>` topic in the Splunk Observability Cloud Developer Guide.
+-  For general information on creating detectors using the API, see the :new-page:`Detect Anomalies with Detectors <https://dev.splunk.com/observability/docs/detectors>` topic in the Splunk Observability Cloud Developer Guide.
 
 -  For information on using the UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
 
-.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
+.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to 
+   view and edit the detector code and make changes to the detector rules.
 
 
 .. _build-rules:
@@ -214,9 +215,11 @@ After you have created an alert message, continue to the next tab to specify whe
 Display custom properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you are creating a detector using the Splunk Observability Cloud API, you can convert custom properties of the detector to dimensions using the ``promote()`` method.
+If you are creating a detector using the Splunk Observability Cloud API, you can convert custom properties to dimensions using the ``promote()`` method.
 
 By converting a custom property to a dimension, you can display it in an alert message. To learn more, see the :new-page:`Developer documentation for the promote method <https://dev.splunk.com/observability/docs/signalflow/methods/promote_stream_method/>`.
+
+For more information about the detector API endpoints, see :new-page:`Detectors <https://dev.splunk.com/observability/reference/api/detectors/latest>` Splunk Observability Cloud API reference.
 
 .. _alert-recipients:
 

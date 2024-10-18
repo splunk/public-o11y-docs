@@ -98,7 +98,7 @@ As you enter values for ranges, the color changes based on the thresholds you en
 
 On a dashboard, the border lets you determine at a glance if you have used Color by value to specify thresholds. This feature is especially useful when you use a |sv| of Sparkline or None with a single value chart, because you are not seeing the threshold ranges as you are with Radial or Linear visualizations. 
 
-In the following illustration, the border on the left indicates that value is orange because it meets a threshold condition. The color of the value on the right simply reflects the color that is set (or is the default) for the plot in the chart.
+In the following illustration, the border on the left indicates that value is orange because it meets a threshold condition. The color of the value on the right reflects the color that is set (or is the default) for the plot in the chart.
 
 .. image:: /_images/images-charts/config-threshold-borders.png
       :width: 70%

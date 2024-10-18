@@ -55,7 +55,7 @@ If you are seeing database latency, but the query itself is not causing the issu
 * :ref:`microsoft-sql-server`
 * :ref:`postgresql`
 
-You can also use the Related Content tiles to pivot to Infrastructure Monitoring or Log Observer and further analyze database issues. See :ref:`get-started-relatedcontent` to learn more about Related Content.
+You can also use the Related Content tiles to pivot to Infrastructure Monitoring to further analyze database issues. See :ref:`get-started-relatedcontent` to learn more about Related Content.
 
 .. _disable-db-normalization:
 

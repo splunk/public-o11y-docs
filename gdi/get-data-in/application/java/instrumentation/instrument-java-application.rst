@@ -128,7 +128,7 @@ The following example shows how to activate the profiler using the system proper
    java -javaagent:./splunk-otel-javaagent.jar \
    -Dsplunk.profiler.enabled=true \
    -Dsplunk.profiler.memory.enabled=true \
-   -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
+   -Dotel.exporter.otlp.endpoint=http(s)://collector:4318 \
    -Dsplunk.metrics.endpoint=http(s)://collector:4318
    -jar <your_application>.jar
 
@@ -227,7 +227,7 @@ To deploy the Java agent in Kubernetes, follow these steps:
                      fieldRef:
                         fieldPath: status.hostIP
                   - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                  value: "http://$(SPLUNK_OTEL_AGENT):4317"
+                  value: "http://$(SPLUNK_OTEL_AGENT):4318"
                   - name: OTEL_SERVICE_NAME
                   value: "<serviceName>"
                   - name: OTEL_RESOURCE_ATTRIBUTES

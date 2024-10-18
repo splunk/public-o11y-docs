@@ -9,19 +9,26 @@ JMX receiver
 
 The JMX receiver works in conjunction with the :new-page:`OpenTelemetry JMX Metric Gatherer <https://github.com/open-telemetry/opentelemetry-java-contrib/blob/main/jmx-metrics/README.md>` to report metrics from an MBean server. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-This receiver launches a child JRE process which runs the JMX Metric Gatherer configured with your specified JMX connection information and target built-in OTel-helper Groovy script. It then reports metrics to an implicitly created OTLP receiver. 
+You can use the JMX receiver to monitor services such as Cassandra using the ``target_system`` setting. See more at :ref:`jmx-receiver-advanced` and :ref:`jmx-receiver-settings`. 
+
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the JMX receiver yet, but are planned for a future release.
+
+Prerequisites
+======================
+
+The receiver launches a child JRE process which runs the JMX Metric Gatherer configured with your specified JMX connection information and target built-in OTel-helper Groovy script. It then reports metrics to an implicitly created OTLP receiver. 
 
 In order to use the JMX receiver:
 
-* Download the most recent release of the JMX Metric Gatherer JAR and configure the receiver with its path. 
-* JRE must be available on your system.
+* Download the most recent release of the JMX Metric Gatherer JAR and configure the receiver with its path 
+* JRE must be available on your system
 
 Get started
 ======================
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
 
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
@@ -75,7 +82,9 @@ This examples provides configuration details for the receiver:
       log_level: info
       additional_jars:
         - /path/to/other.jar
-  
+
+.. _jmx-receiver-advanced:
+
 Advanced settings
 -----------------------------------------------
 
@@ -96,7 +105,9 @@ You can use the following advanced settings with the receiver:
 
 * ``target_system``. The built-in target system (or systems) metric gatherer script to run. 
 
-  * Must be a subset of: ``"activemq"``, ``"cassandra"``, ``"hbase"``, ``"hadoop"``, ``"jetty"``, ``"jvm"``, ``"kafka"``, ``"kafka-consumer"``, ``"kafka-producer"``, ``"solr"``, ``"tomcat"``, or ``"wildfly"``. 
+  * Possible values: ``"activemq"``, ``"cassandra"``, ``"hbase"``, ``"hadoop"``, ``"jetty"``, ``"jvm"``, ``"kafka"``, ``"kafka-consumer"``, ``"kafka-producer"``, ``"solr"``, ``"tomcat"``, or ``"wildfly"``. 
+  
+  * You can specify multiple target systems at the same time: ``"target_system": "activemq, kafka,kafka-consumer"``. 
 
   * If you need to support additional target systems because of a custom JMX metrics gatherer jar configured using the ``MetricsGathererHash`` build time config, add them with another build time flag. It corresponds to the ``otel.jmx.target.system`` property.
 

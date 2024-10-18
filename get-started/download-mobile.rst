@@ -74,7 +74,7 @@ Download Splunk Observability for Mobile from the Google Play store
 #. Tap the Splunk Observability Cloud Mobile app.
 #. Download Splunk Observability Cloud for Mobile.
 
-.. note:: Due to Chinese network restrictions, you can't access the Splunk Observability Cloud for Mobile app from the iOS App Store or the Google PlayStore if you are in mainland China and have a device that is on a Chinese network carrier.
+.. note:: Due to Chinese network restrictions, you can't access the Splunk Observability Cloud for Mobile app from the iOS App Store or the Google Play store if you are in mainland China and have a device that is on a Chinese network carrier.
 
 ==========================================================
 User Authentication in Splunk Observability for Mobile

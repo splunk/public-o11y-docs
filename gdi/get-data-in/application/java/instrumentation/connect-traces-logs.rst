@@ -5,15 +5,15 @@ Connect Java trace data with logs for Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
-   :description: The agent from the Splunk Distribution of OpenTelemetry Java automatically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the Collector.
+   :description: The Splunk Distribution of OpenTelemetry Java agent automatically captures application logs and sends them to the OpenTelemetry Collector using the OTLP exporter, annotating the log events with trace ID, span ID, and trace flags.
 
-The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
+The Splunk Distribution of OpenTelemetry Java agent automatically captures application logs and sends them to the OpenTelemetry Collector using the OTLP exporter, annotating the log events with trace ID, span ID, and trace flags.
 
 If needed, you can configure your Java logging library to produce logs that include additional attributes provided automatically by the Splunk OTel Java agent, like the version of your service or the deployment environment.
 
 .. note::
 
-   Logs export to Splunk Observability Cloud requires the Splunk Distribution of OpenTelemetry Collector.
+   Logs export requires the Splunk Distribution of OpenTelemetry Collector.
 
 .. _java-traces-logs-requirements:
 
@@ -34,18 +34,19 @@ The ``java.util.logging`` library is fully supported in all JDK versions that ar
 Trace metadata in log statements
 ===================================================
 
-The Splunk OTel Java agent automatically add the following attributes for logging libraries by default:
+The Splunk OTel Java agent automatically adds the following mapped diagnostic context (MDC) fields for logging libraries by default:
 
 - Trace information: ``trace_id`` and ``span_id``
 - Trace flags
 
-The Collector sends the annotated logs through the OTLP exporter.
+The default behavior is to send the MDC fields to the Collector but not write them to the application log files. To include this information in the log files, you must set your logging framework output format to include MDC fields. To configure your logging framework, see :ref:`configure-logging-library`.
 
+The Collector sends the annotated logs using the OTLP exporter.
 
 Deactivate logs export
 ==================================
 
-To turn off logs export to Splunk Observability Cloud, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``otel.logs.exporter`` system property to ``none``.
+To turn off logs export, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``otel.logs.exporter`` system property to ``none``.
 
 
 .. _inject-resource-attribs:
@@ -60,11 +61,13 @@ For example, you can inject resource attributes in your log statements, such as 
 Define the resource attributes
 ---------------------------------------------------
 
-Before injecting attributes, you must make them available through the Mapped Diagnostic Context (MDC) by setting the ``mdc.resource-attributes`` property at runtime. For example:
+Before injecting attributes, you must make them available through the MDC by setting the ``mdc.resource-attributes`` property at runtime. For example:
 
 .. code-block:: shell
 
-   -Dotel.instrumentation.common.mdc.resource-attributes=service.name,environment
+   -Dotel.instrumentation.common.mdc.resource-attributes=service.name,deployment.environment
+
+.. _configure-logging-library:
 
 Configure your logging library
 --------------------------------------------------
@@ -90,7 +93,7 @@ The following examples show how to include additional metadata in log statements
                      <KeyValuePair key="trace_id" value="${ctx:trace_id}"/>
                      <KeyValuePair key="span_id" value="${ctx:span_id}"/>
                      <KeyValuePair key="service.name" value="${ctx:service.name}"/>
-                     <KeyValuePair key="environment" value="${ctx:environment}"/>
+                     <KeyValuePair key="environment" value="${ctx:deployment.environment}"/>
                      <KeyValuePair key="trace_sampled" value="${ctx:trace_flags}"/>
                   </JsonLayout>
                </Console>
@@ -102,7 +105,7 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n
 
    .. tab:: Logback
 
@@ -115,7 +118,7 @@ The following examples show how to include additional metadata in log statements
          <configuration>
             <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
                <encoder>
-                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n</pattern>
+                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n</pattern>
                </encoder>
             </appender>
             <root level="info">
@@ -127,7 +130,7 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n %n
 
    .. tab:: JBoss LogManager
 
@@ -138,7 +141,7 @@ The following examples show how to include additional metadata in log statements
          formatter.PATTERN=org.jboss.logmanager.formatters.PatternFormatter
          formatter.PATTERN.properties=pattern
          formatter.PATTERN.constructorProperties=pattern
-         formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags}: %m%n
+         formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags}: %m%n
 
 If you're instrumenting a serverless service or application, use environment variables instead. The deployment environment requires that you set an arbitrary environment variable, for example ``OTEL_ENV_NAME``.
 

@@ -97,12 +97,22 @@ Required permissions in Splunk Observability Cloud
 Regardless of the services you want to use, you need the following permissions:
 
 * ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are activated.
-* ``ec2:DescribeRegions``
+* ``ec2:DescribeRegions``. Used to check if regions configured in the integration are enabled on the AWS account.
+* ``iam:ListAccountAliases``. Used to sync account aliases for AWS MTS.
+
+Tag and property sync permissions:
+
 * ``tag:GetResources``
+* ``cloudformation:ListResources``
+* ``cloudformation:GetResource``
+
+Tag and property sync is always activated for the services configured in the integration. For some services, Splunk Observability Cloud uses either service-specific APIs or generic APIs such as the Resource Groups Tagging API or Cloud Control API. 
+
+.. note:: The ``tag:GetResources`` permission is sufficient to use the Resource Groups Tagging API. If you're using the Cloud Control API, you need to provide permissions for ``cloudformation:ListResources`` and ``cloudformation:GetResource`` as well as service-specific permissions, for example, ``kinesisanalytics:DescribeApplication``, ``kinesisanalytics:ListApplications`` and ``kinesisanalytics:ListTagsForResource``, for AWS/KinesisAnalytics.
 
 .. _aws-iam-policy-cw:
 
-Permissions for the CloudWatch API
+Permissions for data polling using the CloudWatch API 
 -----------------------------------------------------------
 
 Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Splunk Observability Cloud to collect AWS metrics using the CloudWatch API:
@@ -115,7 +125,7 @@ For example:
 .. code-block:: json
 
   {
-    "Version": "2012-10-17",
+    "Version": "2012-10-17", 
     "Statement": [
       {
         "Effect": "Allow",
@@ -124,13 +134,17 @@ For example:
           "cloudwatch:ListMetrics",
           "ec2:DescribeRegions",
           "organizations:DescribeOrganization",
-          "tag:GetResources"
+          "tag:GetResources",
+          "cloudformation:ListResources",
+          "cloudformation:GetResource"
         ],
         "Resource": "*"
       }
     ]
   }
 
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+  
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
 
@@ -184,6 +198,15 @@ For example:
   ]
   }
 
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+
+.. _aws-permissions-ms-aws-managed:
+
+Permissions for AWS-managed Metric Streams
+-----------------------------------------------------------
+
+If you're using AWS-managed Metric Streams, you don't need any additional permissions other than :ref:`those required to use Splunk Observability Cloud <aws-iam-policy-required>`.
+
 .. _aws-iam-policy-services:
 
 Permissions for tag and properties collection
@@ -231,7 +254,9 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"elasticmapreduce:ListClusters"``
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
+- ``"kafka:DescribeCluster"``
 - ``"kafka:DescribeClusterV2"``
+- ``"kafka:ListClusters"``
 - ``"kafka:ListClustersV2"``
 - ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
@@ -243,6 +268,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
+- ``"network-firewall:ListFirewalls"``
+- ``"network-firewall:DescribeFirewall"``
 - ``"rds:DescribeDBClusters"``
 - ``"rds:DescribeDBInstances"``
 - ``"rds:ListTagsForResource"``
@@ -314,7 +341,9 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "elasticmapreduce:ListClusters",
           "es:DescribeElasticsearchDomain",
           "es:ListDomainNames",
+          "kafka:DescribeCluster",
           "kafka:DescribeClusterV2",
+          "kafka:ListClusters",
           "kafka:ListClustersV2",
           "kinesis:DescribeStream",
           "kinesis:ListShards",
@@ -330,6 +359,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "logs:DescribeLogGroups",
           "logs:DescribeSubscriptionFilters",
           "logs:PutSubscriptionFilter",
+          "network-firewall:ListFirewalls",
+          "network-firewall:DescribeFirewall",
           "organizations:DescribeOrganization",
           "rds:DescribeDBInstances",
           "rds:DescribeDBClusters",
@@ -370,6 +401,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
     ]
   }
 
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+
 .. _aws-iam-policy-reports:
 
 Permissions for usage collection and reports
@@ -391,7 +424,7 @@ Read more at the official AWS documentation:
 
 * :new-page:`AWS Organization Service Control Policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>`
 * :new-page:`Permissions boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`
-* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://web.archive.org/web/20231129090004/https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
+* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
 
 .. _aws-regions:
 
@@ -447,6 +480,12 @@ GovCloud
 
 * ``us-gov-east-1``: AWS GovCloud (US-East)
 * ``us-gov-west-1``: AWS GovCloud (US-West)  
+
+The following applies to GovCloud regions:
+
+* Metric sync in GovCloud regions is limited to namespaces supported by AWS. Verify the specific namespaces available in your GovCloud region in the official AWS documentation :new-page:`Services in AWS GovCloud (US) Regions <https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/using-services.html>`.
+
+* AWS doesn't currently provide FIPS-complaint endpoints to retrieve tags. If you set up tags in your AWS GovCloud infrastructure do not include any sensitive information. In Splunk Observability Cloud AWS tags are identified by the prefix ``aws_tag``.
 
 China
 -------------------------------------------

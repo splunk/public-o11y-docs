@@ -182,7 +182,7 @@ Web vitals capture key metrics that affect user experience.
 
    * - Total blocking time (TBT)
      - ``synthetics.webvitals_tbt.time.ms``
-     -  Captures issues that affect interactivity. TBT is a synthetic alternative for First Input Delay (FID), which measures page responsiveness to user input. Optimizations that improve TBT in the lab can also help improve FID for your users.
+     -  Captures issues that affect interactivity. TBT is a synthetic alternative for First Input Delay (INP), which measures page responsiveness to user input. Optimizations that improve TBT in the lab can also help improve INP for your users.
 
 
 To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation.

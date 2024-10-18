@@ -7,7 +7,7 @@ Splunk Observability Cloud architecture
 .. meta::
    :description: Overview of the architecture of Splunk Observability Cloud
 
-Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the default way of getting data in, which gives you a open standards-based set of instrumentation across all your data types. With Log Observer Connect, you can also query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities in Splunk Observability Cloud, giving you an overview of all your data in one place.
+Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the default way of getting data in, which gives you an open standards-based set of instrumentation across all your data types. With Log Observer Connect, you can also query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities in Splunk Observability Cloud, giving you an overview of all your data in one place.
 
 .. mermaid::
 
@@ -28,7 +28,7 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
   flowchart LR
 
       accTitle: Splunk Observability Cloud architecture diagram
-      accDescr: Splunk Observability Cloud architecture can be broken down into 4 main components, data collection, data ingestion, data procesisng and rentention, and analytics. Splunk Observability Cloud uses OpenTelemetry as the default method of data collection, which gives you a single set of instrumentation across different data types, such as distributed traces and metrics. You can also send Splunk Enterprise or Splunk Cloud Platform logs to Splunk Observability Cloud with the use of Log Observer Connect. Once you get your data in, OpenTelemetry Collector can aggregate, parse, extract, enrich, or delete your data as needed. The underlying mechanism for data ingestion is the Quantizer, which offers rollups and dynamic lag adjustment. Trace assembly and metadata extraction are also parts of data ingestion. Data processing and retention includes trace indexing and storage, trace metricization, as well as metrics routing and storage. Lastly, Splunk Observability Cloud offers various analytics tools for your data, including but not limited to, tracing analysis, predictive analysis, incident analysis, anomaly detection, SignalFlow, and historical baselines.
+      accDescr: Splunk Observability Cloud architecture can be broken down into 4 main components, data collection, data ingestion, data procesisng and retention, and analytics. Splunk Observability Cloud uses OpenTelemetry as the default method of data collection, which gives you a single set of instrumentation across different data types, such as distributed traces and metrics. You can also send Splunk Enterprise or Splunk Cloud Platform logs to Splunk Observability Cloud with the use of Log Observer Connect. Once you get your data in, OpenTelemetry Collector can aggregate, parse, extract, enrich, or delete your data as needed. The underlying mechanism for data ingestion is the Quantizer, which offers rollups and dynamic lag adjustment. Trace assembly and metadata extraction are also parts of data ingestion. Data processing and retention includes trace indexing and storage, trace metricization, as well as metrics routing and storage. Lastly, Splunk Observability Cloud offers various analytics tools for your data, including but not limited to, tracing analysis, predictive analysis, incident analysis, anomaly detection, SignalFlow, and historical baselines.
       
       %% LR indicates the direction (left-to-right)
 

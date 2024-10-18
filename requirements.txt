@@ -1,6 +1,6 @@
 alabaster==0.7.13
 Babel==2.12.1
-certifi==2023.7.22
+certifi==2024.7.4
 charset-normalizer==3.2.0
 cssmin==0.2.0
 Cython==3.0.0
@@ -17,7 +17,7 @@ pyparsing==3.1.0
 pytz==2023.3
 PyYAML==6.0.1
 requests==2.32.2
-setuptools==68.1.2
+setuptools==70.0.0
 snowballstemmer==2.2.0
 Sphinx==5.3.0
 sphinx-copybutton==0.5.2
@@ -35,5 +35,5 @@ sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 typing_extensions==4.7.1
 urllib3==2.2.2
-zipp==3.16.2
+zipp==3.19.1
 

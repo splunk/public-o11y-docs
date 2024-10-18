@@ -5,7 +5,7 @@ Use tags or attributes in OpenTelemetry
 *******************************************************
 
 .. meta::
-      :description: Add tags to your Splunk Distribution of OpenTelemetry Collector configuration. You can include span tags in settings for the batch processor in your configuration YAML file.
+      :description: Add tags to your Splunk Distribution of the OpenTelemetry Collector configuration. You can include span tags in settings for the batch processor in your configuration YAML file.
 
 Tags are key-value pairs of data associated with recorded measurements to provide contextual information, distinguish, and group metrics during analysis and inspection. 
 
@@ -101,14 +101,14 @@ Containers
 
 There are numerous attributes for services running in containers, such as ``container.id``, ``container.name``, or ``container.image.name``. 
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Container semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/container.yaml>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Container semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/container/resources.yaml>`.
 
 Hosts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are numerous attributes for services running in hosts, such as ``host.id``, ``host.name``, or ``host.arch``. 
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Host semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/host.yaml>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Host semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/host/resources.yaml>`.
 
 Deployment environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -122,7 +122,7 @@ Cloud
 
 There are attributes that capture information for services running in public cloud environments, such ``cloud.provider``, ``cloud.account.id``, or ``cloud.region``.
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Cloud semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/cloud.yaml>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Cloud semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/cloud/resources.yaml>`.
 
 .. caution:: Some cloud providers, such as GCP, define semantic conventions specific to their offering. Check Google official documentation for more information.
 
@@ -162,3 +162,11 @@ For example, suppose your application sends in data for a metric named ``custom.
 
 Splunk Observability Cloud provides a report that allows for management of metrics usage, and you can create rules to drop undesirable dimensions. See more at :ref:`subscription-overview`.
 
+Learn more
+------------------------------------------------------------
+
+For additional details see the following resources in GitHub:
+
+* :new-page:`Resource SDK <https://github.com/open-telemetry/opentelemetry-specification/blob/49c2f56f3c0468ceb2b69518bcadadd96e0a5a8b/specification/resource/sdk.md>` 
+* :new-page:`Metrics API <https://github.com/open-telemetry/opentelemetry-specification/blob/49c2f56f3c0468ceb2b69518bcadadd96e0a5a8b/specification/metrics/api.md>`
+* :new-page:`Trace Semantic Conventions <https://github.com/open-telemetry/opentelemetry-specification/blob/52cc12879e8c2d372c5200c00d4574fa73996369/specification/trace/semantic_conventions/README.md>` 

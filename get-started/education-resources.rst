@@ -5,11 +5,11 @@ Education classes for Splunk Observability Cloud
 *****************************************************
 
 .. meta::
-   :description: Where to learn more about Splunk Observability Cloud with frer and paid education classes.
+   :description: Where to learn more about Splunk Observability Cloud with free and paid education classes.
 
 
 
-There are many resources available to help you learn more about Splunk Observability Cloud or connect with other observabilty practitioners. 
+There are many resources available to help you learn more about Splunk Observability Cloud or connect with other observability practitioners. 
 
 Splunk Education offers free and paid course offerings for all aspects of Splunk Observability Cloud. For a complete list of current courses, see :new-page:`Splunk Observability Cloud course offerings <https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights>`. 
 

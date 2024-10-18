@@ -145,6 +145,10 @@ rst_prolog = """
    
 
 
+   |App Launcher| imagetarget:: /_images/spoc/outlook-launcher.png
+   :alt: App Launcher
+   :class: inline-image
+   
 .. |br| raw:: html
 
    <br />

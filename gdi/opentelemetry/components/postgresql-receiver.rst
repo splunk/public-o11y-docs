@@ -7,7 +7,7 @@ PostgreSQL receiver
 .. meta::
       :description: The PostgreSQL receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from PostgreSQL through its statistics collector.
 
-The PostgreSQL receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from PostgreSQL through its statistics collector. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The PostgreSQL receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics from PostgreSQL using the PostgreSQL statistics collector. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 .. note:: Use the PostgreSQL receiver in place of the SignalFx Smart Agent ``postgresql`` monitor type.
 
@@ -16,14 +16,14 @@ Requirements
 
 This receiver supports PostgreSQL version 9.6 and higher.
 
-To let the receiver collect data, grant the monitoring user ``SELECT`` permissions for ``pg_stat_database``.
+To let the receiver collect data, grant the monitoring user ``SELECT`` permissions for ``pg_stat_database``. Learn more at the official :new-page:`PostgreSQL statistics collector <https://www.postgresql.org/docs/9.6/monitoring-stats.html>` documentation.
 
 Get started
 ======================
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
    
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
@@ -47,7 +47,7 @@ configuration file, as shown in the following example:
        username: otel
        password: ${env:PGSQL_PASSWORD}
        databases:
-         - <database_name>
+         - otel
        collection_interval: 10s
        tls:
          insecure: false

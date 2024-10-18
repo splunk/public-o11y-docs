@@ -49,6 +49,12 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - Name
      - Description
      - Pipeline types
+   * - :ref:`apache-receiver` (``apache``) 
+     - Fetches stats from a Apache Web Server.
+     - Metrics
+   * - :ref:`apache-spark-receiver` (``apachespark``) 
+     - Fetches metrics for an Apache Spark cluster through the Apache Spark REST API. 
+     - Metrics
    * - :ref:`azureeventhub-receiver` (``azureeventhub``) 
      - Pulls logs from an Azure event hub.
      - Logs
@@ -61,15 +67,21 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`collectd-receiver` (``collectd``)
      - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
      - Metrics
-   * - :ref:`discovery-receiver` (``discovery``)
+   * - :ref:`discovery-receiver` (``discovery``) elasticsearch-receiver
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
+   * - :ref:`elasticsearch-receiver` (``elasticsearch``) 
+     - Queries the Elasticsearch node stats, cluster health and index stats endpoints to scrape metrics from a running Elasticsearch cluster.
+     - Metrics      
    * - :ref:`filelog-receiver` (``filelog``)
      - Tails and parses logs from files.
      - Logs
    * - :ref:`fluentd-receiver` (``fluentforward``)
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
+   * - :ref:`haproxy-receiver` (``haproxy``)
+     - Generates metrics by polling periodically the HAProxy process through a dedicated socket or HTTP URL. 
+     - Metrics
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics
@@ -115,6 +127,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`mysql-receiver` (``mysql``)
      - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
      - Metrics      
+   * - :ref:`nginx-receiver` (``nginx``)
+     - Fetches stats from a NGINX instance using the ``ngx_http_stub_status_module`` module's status endpoint.
+     - Metrics    
    * - :ref:`oracledb` (``oracledb``) |br|
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics
@@ -130,6 +145,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`simple-prometheus-receiver` (``prometheus_simple``)
      - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
      - Metrics
+   * - :ref:`rabbitmq-receiver` (``rabbitmq``)
+     - Fetches stats from a RabbitMQ node using the RabbitMQ Management Plugin.
+     - Metrics
    * - :ref:`receiver-creator-receiver` (``receiver_creator``)
      - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
      - N/A
@@ -139,11 +157,17 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`sapm-receiver` (``sapm``)
      - Receives traces from other collectors or from the SignalFx Smart Agent.
      - Traces
+   * - :ref:`signalfx-gateway-prometheus-remote-write-receiver` (``signalfxgatewayprometheusremotewritereceiver``)
+     - OTel native version of the SignalFx Prometheus remote write gateway.
+     - Metrics
    * - :ref:`signalfx-receiver` (``signalfx``)
      - Accepts metrics and logs in the proto format.
      - Metrics, logs
    * - :ref:`smartagent-receiver` (``smartagent``)
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
+     - Metrics
+   * - :ref:`splunk-enterprise-receiver` (``splunkenterprise``)
+     - Enables the ingestion of performance metrics describing the operational status of a user's Splunk Enterprise deployment.
      - Metrics
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.

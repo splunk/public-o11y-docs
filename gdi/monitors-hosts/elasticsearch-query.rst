@@ -4,13 +4,11 @@ Elasticsearch query
 ===================
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the ElasticSearch Query monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the Elasticsearch Query monitor. See benefits, install, configuration, and metrics
 
 :strong:`This integration is in beta.`
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``elasticsearch-query`` monitor type to metricize aggregated responses
 from Elasticsearch. The integration constructs Splunk Observability
 Cloud data points based on Elasticsearch aggregation types and

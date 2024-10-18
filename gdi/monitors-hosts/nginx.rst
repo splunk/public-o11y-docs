@@ -6,13 +6,11 @@ NGINX
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the NGINX monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-``nginx`` monitor type to to retrieve metrics and logs from an NGINX
-instance.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``nginx`` monitor type to retrieve metrics from NGINX instances.
 
 This integration is available on Linux and Windows.
+
+.. note:: To monitor NGINX instances with the OpenTelemetry Collector using native OpenTelemetry refer to the :ref:`nginx-receiver` component.
 
 Benefits
 --------
@@ -52,8 +50,6 @@ section of your configuration file:
    service:
      pipelines:
        metrics:
-         receivers: [smartagent/nginx]
-       logs:
          receivers: [smartagent/nginx]
 
 Configuration settings
