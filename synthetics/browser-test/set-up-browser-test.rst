@@ -392,7 +392,6 @@ Auto-retry
 
 Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like network issues, timeouts, or intermittent issues on your site. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your subscription usage. Auto-retry requires at least runner version 0.9.29.
 
-.. Security
 
 .. _browser-validation:
 
@@ -420,7 +419,6 @@ When executing the browser test, the Chrome browser is configured with the crede
 
 More details on Chrome authentication are available :new-page:`here list <https://www.chromium.org/developers/design-documents/http-authentication/>`.
 
-.. Custom content
 
 .. _browser-headers:
 
@@ -512,11 +510,7 @@ Here are the limits for each type of wait time. The maximum limit for a run is 3
 
 Chrome flags 
 ----------------
-Google Chrome flags are a helpful tool for troubleshooting. You can activate browser features that are not available by default so that you can test:
-
-* new features
-* custom configurations like dark mode 
-* performance and privacy settings 
+Google Chrome flags are a helpful tool for troubleshooting. Activate browser features that are not available by default to can test custom browser configurations and specialized use cases, like a proxy server.
 
 For more, see 
 :new-page:`What are Chrome flags? <https://developer.chrome.com/docs/web-platform/chrome-flags>` in the Google Chrome Developer guide. 
@@ -527,8 +521,6 @@ These are the flags available:
 
 
 .. include:: /_includes/synthetics/chrome-flags.rst
-
-
 
 
 
