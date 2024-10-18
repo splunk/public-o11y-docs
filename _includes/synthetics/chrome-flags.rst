@@ -12,7 +12,7 @@
   * - ``--disable-web-security``
     - Deactivate enforcement of same origin policy.
   * - ``--unsafely-treat-insecure-origin-as-secure=http://a.test,http://b.test``
-    - Treat given insecure origin as secure. Option to supply multiple origins in a comma-separated list. For the definition of secure contexts, see :new-page:`Secure Contexts <https://w3c.github.io/webappsec-secure-contexts/> ` and :new-page:`Is origin potentially trustworthy? <https://www.w3.org/TR/powerful-features/#is-origin-trustworthy>` from the W3C documentation. 
+    - Treat given insecure origin as secure. Multiple origins can be supplied in a comma-separated list.
   * - ``--proxy-bypass-list="*.google.com;*foo.com;127.0.0.1:8080"``
     - Proxy bypass list for any specified proxy for the given semi-colon-separated list of hosts. This flag must be used with ``--proxy-server``.
   * - ``--proxy-server="foopy:8080"``
