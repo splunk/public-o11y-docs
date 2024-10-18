@@ -11,7 +11,7 @@ You can configure the Python agent from the Splunk Distribution of OpenTelemetry
 
 The following sections describe all available settings for configuring the Python agent, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Python.
 
-.. _main-python-agent-settings:
+.. _main-python-agent-settings-1x:
 
 General settings
 =========================================================================
@@ -30,7 +30,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``OTEL_METRICS_ENABLED``
      - Activates application metrics collection. The default value is ``true``. See :ref:`python-otel-metrics` for more information.
 
-.. _trace-configuration-python:
+.. _trace-configuration-python-1x:
 
 Trace configuration
 =======================================================
@@ -61,7 +61,7 @@ The following settings control tracing limits and attributes:
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. The default value is ``1200``.
 
-.. _trace-exporters-settings-python:
+.. _trace-exporters-settings-python-1x:
 
 Exporters configuration
 ===============================================================
@@ -88,7 +88,7 @@ The following settings control trace exporters and their endpoints:
 
 To send data directly to Splunk Observability Cloud bypassing the Collector, see :ref:`export-directly-to-olly-cloud-python`.
 
-.. _trace-propagation-configuration-python:
+.. _trace-propagation-configuration-python-1x:
 
 Propagators configuration
 =======================================================
@@ -115,7 +115,7 @@ For backward compatibility with the SignalFx Python Tracing Library, use the b3m
 
       $env:OTEL_PROPAGATORS=b3multi
 
-.. _profiling-configuration-python:
+.. _profiling-configuration-python-1x:
 
 Python settings for AlwaysOn Profiling
 ====================================================
@@ -139,7 +139,7 @@ The following settings control the AlwaysOn Profiling feature for the Python age
    * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``
      - Determines whether to include stack traces from internal profiler threads. The default value is ``false``.
 
-.. _server-trace-information-python:
+.. _server-trace-information-python-1x:
 
 Server trace information
 ==============================================
@@ -155,7 +155,7 @@ The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters 
 
 .. note:: If you need to deactivate trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
-.. _code-configuration-python:
+.. _code-configuration-python-1x:
 
 Configure the Python agent in your code
 ====================================================

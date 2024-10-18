@@ -15,14 +15,14 @@ For examples of custom metrics instrumentation and instrument types, see :ref:`c
 
 .. caution:: This feature is experimental, and exported metric data and configuration properties might change. To learn more, see :new-page:`https://github.com/signalfx/splunk-otel-python/blob/main/docs/advanced-config.md`.
 
-.. _python-app-metrics:
+.. _python-app-metrics-1x:
 
 Application metrics
 ================================
 
 The agent of the Splunk Distribution of OpenTelemetry Python collects the following application metrics.
 
-.. _python-default-metrics:
+.. _python-default-metrics-1x:
 
 Default metrics dimensions
 -----------------------------------
@@ -47,7 +47,7 @@ The following dimensions are automatically added to all metrics exported by the 
   * - ``telemetry.sdk.version``
     - Version of the OpenTelemetry SDK. 
 
-.. _python-supported-libraries:
+.. _python-supported-libraries-1x:
 
 Supported libraries
 -------------------------------------
@@ -69,7 +69,7 @@ The Python agent collects metrics through the following supported libraries:
     - ``opentelemetry-instrumentation-pyramid``
     - Pyramid version 1.7 or higher
 
-.. _python-otel-runtime-metrics:
+.. _python-otel-runtime-metrics-1x:
 
 Runtime metrics
 ------------------------------------
@@ -94,7 +94,7 @@ The Python agent automatically collects and exports the following application ru
      - Cumulative counter
      - Garbage collections executed by the Python runtime.
 
-.. _python-system-metrics:
+.. _python-system-metrics-1x:
 
 System metrics
 ================================

@@ -35,10 +35,10 @@ Install the Splunk Distribution of OpenTelemetry Python manually
 
 If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Python:
 
-- :ref:`install-enable-python-agent`
-- :ref:`configure-python-instrumentation`
+- :ref:`install-enable-python-agent-1x`
+- :ref:`configure-python-instrumentation-1x`
 
-.. _install-enable-python-agent:
+.. _install-enable-python-agent-1x:
 
 Install and activate the Python agent
 ----------------------------------------------------
@@ -123,7 +123,7 @@ Application metrics are collected by default. See :ref:`python-otel-metrics` for
 
 If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
-.. _enable-profiling-python:
+.. _enable-profiling-python-1x:
 
 Activate AlwaysOn Profiling
 ------------------------------------------------
@@ -152,7 +152,7 @@ The following example shows how to activate the profiler from your application c
 
 See :ref:`get-data-in-profiling` for more information. For additional settings, see :ref:`profiling-configuration-python`.
 
-.. _configure-python-instrumentation:
+.. _configure-python-instrumentation-1x:
 
 Configure the Python agent
 ----------------------------------------------------
@@ -161,7 +161,7 @@ In most cases, the only configuration setting you need to enter is the service n
 
 For advanced configuration of the Python agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-python-otel-configuration`.
 
-.. _kubernetes_python_agent:
+.. _kubernetes_python_agent-1x:
 
 Deploy the Python agent in Kubernetes
 ===================================================
@@ -194,7 +194,7 @@ The following example shows how to update a deployment to expose environment var
                - name: OTEL_RESOURCE_ATTRIBUTES
                  value: "deployment.environment=<environmentName>"
 
-.. _export-directly-to-olly-cloud-python:
+.. _export-directly-to-olly-cloud-python-1x:
 
 Send data directly to Splunk Observability Cloud
 ==========================================================
@@ -228,7 +228,7 @@ Specify the source host
 
 .. include:: /_includes/gdi/apm-api-define-host.rst
 
-.. _instrument_aws_python_functions:
+.. _instrument_aws_python_functions-1x:
 
 Instrument Lambda functions
 =============================================
