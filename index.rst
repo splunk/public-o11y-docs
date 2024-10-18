@@ -35,8 +35,8 @@ A collection of task-based tutorials to achieve a goal in Splunk Observability C
 
 .. rst-class:: newcard
 
-:strong:`Admin onboarding guide`
-Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
+:strong:`Get started guide for admins`
+Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`
 
 .. rst-class:: newcard
 
