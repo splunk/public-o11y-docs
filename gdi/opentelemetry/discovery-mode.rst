@@ -14,9 +14,9 @@ Detect telemetry sources automatically
    Linux <automatic-discovery/discovery-linux>
    Windows <automatic-discovery/discovery-windows>
 
-Use automatic discovery and automatic instrumentation with the Splunk Distribution of the OpenTelemetry Collector to automatically collect metrics and traces. 
+Use automatic discovery and configuration alongside automatic instrumentation with the Splunk Distribution of the OpenTelemetry Collector to automatically collect metrics and traces. 
 
-Automatic discovery detects and collects signal data from third-party services, such as databases and web servers, whereas automatic instrumentation collects signal data from application language runtimes. Automatic discovery and automatic instrumentation together help you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring. To learn about automatic instrumentation, see :ref:`get-started-application`.
+Automatic discovery and configuration detects and collects signal data from third-party services, such as databases and web servers, whereas automatic instrumentation collects signal data from application language runtimes without having to modify the source application code. Together, automatic discovery and automatic instrumentation help you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring. To learn about automatic instrumentation, see :ref:`get-started-application`.
 
 The following diagram shows the process of using automatic discovery and automatic instrumentation to find data sources:
 

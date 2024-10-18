@@ -14,7 +14,7 @@ Automatic discovery and instrumentation for Linux
     Third-party applications <linux/linux-third-party>
     Advanced customization <linux/linux-advanced-config>
 
-Automatic discovery for Linux automatically finds services running in your Linux environment and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
+Automatic discovery and configuration for Linux automatically finds services running in your Linux environment and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
 
 Used alongside automatic instrumentation, you don't have to manually instrument or configure your applications before deploying them. 
 
@@ -26,4 +26,4 @@ Automatic instrumentation for Linux supports back-end applications such as Java 
 
 To use automatic instrumentation for back-end applications, see :ref:`linux-backend-auto-discovery`. 
 
-To use automatic discovery with third-party applications, see :ref:`linux-third-party`.
+To use automatic discovery and configuration with third-party applications, see :ref:`linux-third-party`.

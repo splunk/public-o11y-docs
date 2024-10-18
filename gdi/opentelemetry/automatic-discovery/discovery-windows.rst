@@ -12,7 +12,9 @@ Automatic discovery and instrumentation for Windows
 
     Language runtimes <windows/windows-backend>
 
-Automatic instrumentation for Windows automatically finds applications running in your Windows environment and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
+Automatic discovery and configuration for Windows automatically finds services running in your Linux environment and captures telemetry data from them. The Splunk Distribution of the OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
+
+Used alongside automatic instrumentation, you don't have to manually instrument or configure your applications before deploying them.
 
 .. raw:: html
 
