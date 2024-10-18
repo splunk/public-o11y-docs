@@ -10,7 +10,7 @@
   * - ``--disable-quic``
     - Deactivates QUIC, which also deactivates HTTP3.
   * - ``--disable-web-security``
-    - Deactivate enforcement of same origin policy. Intended for website testing only. This flag has no effect unless ``--user-data-dir`` as defined by the content embedded is also present.
+    - Deactivate enforcement of same origin policy.
   * - ``--unsafely-treat-insecure-origin-as-secure=http://a.test,http://b.test``
     - Treat given insecure origin as secure. Option to supply multiple origins in a comma-separated list. For the definition of secure contexts, see :new-page:`Secure Contexts <https://w3c.github.io/webappsec-secure-contexts/> ` and :new-page:`Is origin potentially trustworthy? <https://www.w3.org/TR/powerful-features/#is-origin-trustworthy>` from the W3C documentation. 
   * - ``--proxy-bypass-list="*.google.com;*foo.com;127.0.0.1:8080"``
