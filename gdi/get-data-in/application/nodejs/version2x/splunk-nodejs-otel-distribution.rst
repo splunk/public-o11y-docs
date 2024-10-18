@@ -1,4 +1,4 @@
-.. _splunk-nodejs-otel-dist:
+.. _splunk-nodejs-otel-dist-3x:
 
 ******************************************************
 About the Splunk Distribution of OpenTelemetry JS

@@ -1,3 +1,9 @@
+.. _get-started-nodejs-3x:
+
+***************************************************************
+Instrument Node.js applications for Splunk Observability Cloud
+***************************************************************
+
 .. meta::
    :description: Instrument your Node.js application to export metrics and spans to Splunk Observability Cloud.
 
