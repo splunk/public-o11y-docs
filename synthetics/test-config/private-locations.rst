@@ -116,7 +116,7 @@ Follow these steps to limit logging:
 
 Add certificates in Synthetics
 ------------------------------------------------------
-Splunk Synthetic Monitoring supports injecting custom root CA certificates for API and Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
+Splunk Synthetic Monitoring supports injecting custom root CA certificates for Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
 
 #. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
 
