@@ -275,12 +275,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   get-started/overview
+   Overview <get-started/overview>
 
 .. toctree::
    :maxdepth:   3
 
-   Splunk Observability Cloud architecture <get-started/o11y-architecture>
+   Architecture <get-started/o11y-architecture>
 
 .. toctree::
    :maxdepth: 3
@@ -291,6 +291,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth: 3
 
    Get started guide for admins TOGGLE <get-started/get-started-guide/get-started-guide>
+
+.. toctree::
+   :maxdepth:   3
+
+   Free and paid courses <get-started/education-resources>
 
 .. toctree::
    :maxdepth:   3
@@ -306,11 +311,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Support <get-started/support>
-
-.. toctree::
-   :maxdepth:   3
-
-   Free and paid courses <get-started/education-resources>
 
 .. toctree::
    :caption: Scenarios and tutorials

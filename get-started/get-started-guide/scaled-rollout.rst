@@ -94,25 +94,17 @@ Build custom dashboards
     #. Add text notes and event feeds to your dashboards. 
     #. Use data links to dynamically link a dashboard to another dashboard or external system such as Splunk APM, Splunk Platform, or a custom URL.
 
-   For comprehensive documentation on these tasks, see the following topics:
-
-   * :ref:`built-in-dashboards`
-   * :ref:`dashboard-create-customize`
-   * :ref:`link-metadata-to-content`
-   * :ref:`dashboards-best-practices`
+   For comprehensive documentation on these tasks, see :ref:`dashboards`.
 
 Build custom detectors
 -----------------------------
 
 #. Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them. See :ref:`autodetect`. 
-
-Advanced detectors enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2  functions using population_comparison.
+#. You can create advanced detectors to enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 functions using population_comparison.
 
 To learn more, see the following topics:
 
 * :ref:`get-started-detectoralert`
-* :ref:`create-detectors`
-* :ref:`linking-detectors`
 
 .. _phase3-onboard-all:
 
@@ -132,12 +124,12 @@ Optional and advanced configurations
 
 Consider these optional and advanced configurations to customize your setup as they apply to your organization. 
 
-.. _phase3-otel-reqs:
+.. _phase3-data-links:
 
-Understand OpenTelemetry sizing requirements
-==============================================
+Use Data Links to link properties to relevant resources
+================================================================================================================
 
-Before you start scaling up the use of the OpenTelemetry agents, consider the OpenTelemetry sizing guidelines. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services. Ensure that the OTel agents can allocate sufficient memory and CPU needed to aid with a smooth rollout. For details about the sizing guidelines, see :ref:`otel-sizing`. 
+Create global data links to link Splunk Observability Cloud dashboards to other dashboards, external systems, custom URLs, or Splunk Cloud Platform logs. To learn more, see :ref:`link-metadata-to-content`. 
 
 .. _phase3-usage-limits:
 
@@ -149,15 +141,16 @@ To analyze and troubleshoot usage, make sure you know how to complete the follow
 
 * Understand the difference between host-based and MTS-based subscriptions in Infrastructure Monitoring.
 * Understand the difference between host-based and trace-analyzed-per-minute (TAPM) subscriptions in APM.
-* Read available reports, such as monthly usage reports, hourly usage reports, dimension reports, and custom metric reports
+* Understand per-product system limits.
+* Read available reports, such as monthly and hourly usage reports, dimension reports, and custom metric reports.
 
 To learn more, see the following topics:
 
-- :ref:`per-product-limits`
+* :ref:`per-product-limits`
+* :ref:`subscription-overview`
 
-- :ref:`data-o11y`
-
-Education resource
+Education resources
 ====================
 
-Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. See :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
+* Before you start scaling up the use of the OpenTelemetry agents, consider the OpenTelemetry sizing guidelines. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services. For details about the sizing guidelines, see :ref:`otel-sizing`. 
+* Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. See :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`

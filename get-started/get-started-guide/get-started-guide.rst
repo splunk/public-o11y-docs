@@ -32,9 +32,9 @@ Use the following table to get a high-level overview of the primary setup steps 
      - :strong:`Phase 3: Scaled rollout`
 
    * - :strong:`Phase description`
-     - Set up users, teams, and access controls through roles and token management
-     - Bring data in and set up your desired Splunk Observability Cloud solutions
-     - Establish repeatable observability practices through automation, data management, detectors, and dashboards
+     - Set up users, teams, and access controls through roles and token management and lay the groundwork for connectivity
+     - Bring data in and set up the Splunk Observability Cloud solutions for your initial project team use cases 
+     - Increase usage across all user teams and establish repeatable observability practices through automation, data management, detectors, and dashboards
 
    * - :strong:`Primary setup steps`
      - #. :ref:`phase1-create-trial`
@@ -67,14 +67,18 @@ Use the following table to get a high-level overview of the primary setup steps 
        * :ref:`advanced-config-logs`
        * :ref:`advanced-config-3rd-party`
 
-       See :ref:`phase1-advanced-config` for detailed steps.
+       See :ref:`Phase 1 optional and advanced configurations <phase1-advanced-config>`.
 
      - * :ref:`phase3-network-exp`
        * :ref:`phase2-profiling`
        * :ref:`phase2-related-content`
 
-     - * :ref:`phase3-otel-reqs`
-       * Analyze and troubleshoot usage, limits, and throttles
+       See :ref:`Phase 2 optional and advanced configurations <phase2-advanced-config>`.
+
+     - * :ref:`phase3-data-links`
+       * :ref:`phase3-usage-limits`
+
+       See :ref:`Phase 3 optional and advanced configurations <phase3-advanced-config>`.
 
    * - :strong:`Education resources`
      - * :new-page:`Free Splunk Observability Cloud courses<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
@@ -82,4 +86,5 @@ Use the following table to get a high-level overview of the primary setup steps 
        * :new-page:`Splunk Observability Cloud metrics user certification <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
      - * :new-page:`Get familiar with Open Telemetry concepts <https://opentelemetry.io/docs/concepts/>`
        * To learn more about the data model for Splunk Observability Cloud, see :ref:`data-model`.
-     - * :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
+     - * :ref:`Understand OpenTelemetry sizing requirements <otel-sizing>`
+       * :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
