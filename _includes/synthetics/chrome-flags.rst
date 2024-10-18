@@ -18,5 +18,5 @@
   * - ``--proxy-server="foopy:8080"``
     - Uses a specified proxy server to override default settings.
   * - ``--no-proxy-server``
-    - Don't use a proxy server, always make direct connections. Overrides any other proxy server flags that are passed to the server.
+    - Don't use a proxy server, always make direct connections. This flag can be used to override any other proxy server flags that you may have set up in a private location. 
 
