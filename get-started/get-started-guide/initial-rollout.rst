@@ -3,7 +3,7 @@
 Get started guide phase 2: Initial rollout
 *********************************************************
 
-After completing the :ref:`get-started-guide-onboarding-readiness`, you are ready for phase 2, initial rollout. In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud solutions that apply to your organization. Solutions include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics.
+After completing the :ref:`get-started-guide-onboarding-readiness`, you are ready for phase 2, initial rollout. In the initial rollout phase you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud products that apply to your organization. Products include: Infrastructure Monitoring, Application Performance Monitoring (APM), Real User Monitoring (RUM), and Synthetics.
 
 To get a high-level overview of the entire getting started journey for Splunk Observability Cloud, see :ref:`get-started-guide`.
 

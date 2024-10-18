@@ -948,7 +948,7 @@ a.image-reference:hover
     margin-top: -35px;
 }
 
-#welcome .newparawithicon [class^="icon-"], #welcome .newparawithicon [class*=" icon-"], #get-started-with-splunk-observability-cloud .newparawithicon [class^=" icon-"], #get-started-with-splunk-observability-cloud .newparawithicon [class*=" icon-"]{
+#welcome .newparawithicon [class^="icon-"], #welcome .newparawithicon [class*="icon-"], #get-started-with-splunk-observability-cloud .newparawithicon [class^="icon-"], #get-started-with-splunk-observability-cloud .newparawithicon [class*="icon-"]{
     font-size: 28px;
     position: absolute;
     overflow: hidden;

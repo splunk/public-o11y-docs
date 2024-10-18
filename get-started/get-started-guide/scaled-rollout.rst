@@ -100,11 +100,14 @@ Build custom detectors
 -----------------------------
 
 #. Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them. See :ref:`autodetect`. 
-#. You can create advanced detectors to enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 functions using population_comparison.
+#. Create custom detectors to trigger alerts that address your use cases. See :ref:`get-started-detectoralert`.
+#. You can create advanced detectors to enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 functions using population_comparison. 
+   * See the library of SignalFlow for detectors on GitHub :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors`.
+   * To get started with SignalFlow, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` in the developer guide.
 
 To learn more, see the following topics:
 
-* :ref:`get-started-detectoralert`
+* 
 
 .. _phase3-onboard-all:
 
