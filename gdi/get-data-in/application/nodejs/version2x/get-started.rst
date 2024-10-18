@@ -1,9 +1,3 @@
-.. _get-started-nodejs:
-
-***************************************************************
-Instrument Node.js applications for Splunk Observability Cloud
-***************************************************************
-
 .. meta::
    :description: Instrument your Node.js application to export metrics and spans to Splunk Observability Cloud.
 
@@ -19,8 +13,8 @@ Instrument Node.js applications for Splunk Observability Cloud
    Performance overhead <performance>
    Troubleshoot the Node.js agent <troubleshooting/common-nodejs-troubleshooting>
    About Splunk OTel JS <splunk-nodejs-otel-distribution>
+   Migrate to Node.js 3.0 <migrate-3x>
    Migrate from the SFx Tracing Library <troubleshooting/migrate-signalfx-nodejs-agent-to-otel>
-   Version 2.x <version2x/get-started>
 
 The Splunk Distribution of OpenTelemetry JS provides a Node.js SDK that automatically adds APM instrumentation to your Node.js application. The instrumentation captures traces, runtime metrics, and CPU and memory profiles and sends them to Splunk Observability Cloud.
 
