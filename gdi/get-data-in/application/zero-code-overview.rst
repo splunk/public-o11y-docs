@@ -1,7 +1,7 @@
 .. _zero-code-overview:
 
 **********************************************************************
-Zero-code instrumentation for Splunk Observability Cloud
+Instrumentation methods for Splunk Observability Cloud
 **********************************************************************
 
 .. meta:: 
@@ -13,7 +13,9 @@ See the upstream OpenTelemetry Collector documentation for more information: :ne
 
 This change is only a terminology update and doesn't require you to install or update the OpenTelemetry Collector or any Splunk instrumentation agents.
 
-What is zero-code instrumentation?
+.. _zero-code-info:
+
+Zero-code instrumentation
 =========================================
 
 Zero-code instrumentation allows you to instrument your applications and export telemetry data without having to modify the application source files. 
@@ -42,18 +44,24 @@ See the following table for key differences between the automatic discovery and 
       - Instruments only back-end applications, for example, Python, Java, and Node.js applications.
       - Instruments back-end applications and third-party services. You can activate or deactivate instrumentation for each application language.
     * - Languages instrumented
-<<<<<<< HEAD
       - Agents are language-specific. For example, the NodeJS agent only instruments NodeJS applications. Zero-code instrumentation supports applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP.
       - Automatic discovery itself does not instrument language runtimes, but can be used to deploy zero-code instrumentation for applications written in Java, Node.JS, and .NET.
-=======
-      - Agents are language-specific. For example, the Node.js agent only instruments Node.js applications. Zero-code instrumentation supports applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP.
-      - Can instrument multiple applications written in separate languages. Automatic discovery supports applications written in Java, Node.js, and .NET.
->>>>>>> eadc60dd0 (parent page)
+
+.. _code-based-info:
+
+Code-based instrumentation
+=======================================
+
+Code-based instrumentation allows you to instrument your applications and export telemetry data to Splunk Observability Cloud by editing your application's source code. 
+
+Unlike zero-code instrumentation, code-based instrumentation requires editing your application's source code. Modifying the application's source code allows it to send telemetry data to a local running instance of the OpenTelemetry Collector, which then processes and forwards the data to Splunk Observability Cloud.
+
+Code-based instrumentation supports applications written in Java, Node.js, .NET, Python, PHP, Go, Ruby, and C++. C++ only supports code-based instrumentation.
 
 Learn more
 ===========================
 
-* To learn more about automatic discovery, see :ref:`discovery_mode`.
+* To learn more about automatic discovery and configuration, see :ref:`discovery_mode`.
 * For more information about important terms in Splunk Observability Cloud, see :ref:`get-started-glossary`.
 
 
