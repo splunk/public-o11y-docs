@@ -421,3 +421,4 @@ The following integrations are deprecated:
 * :ref:`consul`
 * :ref:`java-monitor`
 * :ref:`statsd` 
+* :ref:`telegraf-win-perf-counters`
