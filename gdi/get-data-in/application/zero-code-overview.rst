@@ -7,7 +7,9 @@ Zero-code instrumentation for Splunk Observability Cloud
 .. meta:: 
     :description: Learn about zero-code instrumentation (formerly automatic instrumentation) for back-end applications.
 
-To stay consistent with the terminology from the OpenTelemetry Collector docs, automatic instrumentation has been changed to zero-code instrumentation. 
+To stay consistent with the terminology from the OpenTelemetry Collector docs, automatic instrumentation has been changed to zero-code instrumentation, and manual instrumentation has been changed to code-based instrumentation.
+
+See the upstream OpenTelemetry Collector documentation for more information: :new-page:`https://opentelemetry.io/docs/concepts/instrumentation/zero-code/`.
 
 This change is only a terminology update and doesn't require you to install or update the OpenTelemetry Collector or any Splunk instrumentation agents.
 
@@ -35,23 +37,22 @@ See the following table for key differences between the automatic discovery and 
       - Automatic discovery
     * - Deployment
       - Deployed as a language-specific instrumentation agent, for example, the Splunk OpenTelemetry Java agent.
-      - Deployed with the OpenTelemetry Collector as an optional add-on.
+      - Deployed with the Splunk Distribution of OpenTelemetry Collector as an optional add-on.
     * - Applications instrumented
       - Instruments only back-end applications, for example, Python, Java, and Node.js applications.
-      - Instruments back-end applications and third-party services.
+      - Instruments back-end applications and third-party services. You can activate or deactivate instrumentation for each application language.
     * - Languages instrumented
+<<<<<<< HEAD
       - Agents are language-specific. For example, the NodeJS agent only instruments NodeJS applications. Zero-code instrumentation supports applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP.
       - Automatic discovery itself does not instrument language runtimes, but can be used to deploy zero-code instrumentation for applications written in Java, Node.JS, and .NET.
-
-When should I use zero-code instrumentation?
-================================================
-
-.. Not sure whether to include this section, but I think at least one section that has some guidance for users would help.
+=======
+      - Agents are language-specific. For example, the Node.js agent only instruments Node.js applications. Zero-code instrumentation supports applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP.
+      - Can instrument multiple applications written in separate languages. Automatic discovery supports applications written in Java, Node.js, and .NET.
+>>>>>>> eadc60dd0 (parent page)
 
 Learn more
 ===========================
 
-* For OpenTelemetry docs on zero-code instrumentation, see :new-page:`https://opentelemetry.io/docs/concepts/instrumentation/zero-code/`.
 * To learn more about automatic discovery, see :ref:`discovery_mode`.
 * For more information about important terms in Splunk Observability Cloud, see :ref:`get-started-glossary`.
 
