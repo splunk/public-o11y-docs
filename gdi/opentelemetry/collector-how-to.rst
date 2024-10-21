@@ -62,7 +62,7 @@ Browse the table below to learn how to carry out common tasks with the Splunk Di
   * - Collect custom metrics	
     - To send custom infrastructure and application metrics to Splunk Observability Cloud for deeper custom visibility.
     - Use this when instrumenting a service that isn't natively supported or when specific custom metrics are required.
-    - :new-page:`send-custom-metrics` 
+    - :ref:`send-custom-metrics` 
   * - Collect Prometheus metrics	
     - To collect widely used Prometheus metrics and send them to Splunk Observability Cloud.
     - Use this when instrumenting a Prometheus source for monitoring.
