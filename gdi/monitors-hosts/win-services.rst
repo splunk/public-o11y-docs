@@ -1,6 +1,6 @@
 .. _telegraf-win-services:
 
-Windows Services (deprecated)
+Windows Services 
 ================================
 
 .. meta::

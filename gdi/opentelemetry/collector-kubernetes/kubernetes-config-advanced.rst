@@ -60,7 +60,7 @@ This custom configuration is merged into the default agent configuration.
 Configure control plane metrics
 ==============================================================
 
-Control plane metrics are available for the following components: ``coredns``, ``etcd``, ``kube-controller-manager``, ``kubernetes-apiserver``, ``kubernetes-proxy``, and ``kubernetes-scheduler``. You can use the :ref:`Collector Helm agent <helm-chart-components-agent>` to obtain control plane metrics from a specific component by setting ``agent.controlPlaneMetrics.{otel_component}`` to ``true``. 
+Control plane metrics are available for the following components: ``coredns``, ``kube-controller-manager``, ``kubernetes-apiserver``, ``kubernetes-proxy``, and ``kubernetes-scheduler``. You can use the :ref:`Collector Helm agent <helm-chart-components-agent>` to obtain control plane metrics from a specific component by setting ``agent.controlPlaneMetrics.{otel_component}`` to ``true``. 
 
 The Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See :ref:`receiver-creator-receiver` for more information.
 
@@ -96,7 +96,6 @@ Availability
 The following components provide control plane metrics:
 
 * :ref:`CoreDNS <coredns>`.
-* :ref:`etcd`. To retrieve etcd metrics, see :new-page:`Setting up etcd metrics <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#setting-up-etcd-metrics>`.
 * :ref:`Kubernetes controller manager <kube-controller-manager>`.
 * :ref:`Kubernetes API server <kubernetes-apiserver>`.
 * :ref:`Kubernetes proxy <kubernetes-proxy>`.
