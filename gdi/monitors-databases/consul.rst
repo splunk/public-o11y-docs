@@ -1,7 +1,7 @@
 .. _consul:
 
-Consul datastore
-================
+Consul datastore (deprecated)
+================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Consul datastore monitor. See benefits, install, configuration, and metrics

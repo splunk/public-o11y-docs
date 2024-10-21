@@ -1,7 +1,7 @@
 .. _telegraf-win-services:
 
-Windows Services
-================
+Windows Services (deprecated)
+================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf Win_services monitor. See benefits, install, configuration, and metrics

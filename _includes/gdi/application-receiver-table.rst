@@ -80,10 +80,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`consul`
-     - :strong:`X`
-     -
-
    * - :ref:`conviva`
      - :strong:`X`
      -
@@ -124,10 +120,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`etcd`
-     - :strong:`X`
-     -
-
    * - :ref:`exec-input`
      - :strong:`X`
      -
@@ -157,10 +149,6 @@
      -
 
    * - :ref:`haproxy`
-     - :strong:`X`
-     -
-
-   * - :ref:`health-checker`
      - :strong:`X`
      -
 
@@ -197,10 +185,6 @@
      - :strong:`X`
 
    * - :ref:`jaeger-grpc`
-     - :strong:`X`
-     -
-
-   * - :ref:`java-monitor`
      - :strong:`X`
      -
 
@@ -404,10 +388,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`statsd`
-     - :strong:`X`
-     -
-
    * - :ref:`supervisor`
      - :strong:`X`
      -
@@ -435,3 +415,9 @@
    * - :ref:`telegraf-win-services`
      - :strong:`X`
      -
+
+The following integrations are deprecated:
+
+* :ref:`consul`
+* :ref:`java-monitor`
+* :ref:`statsd` 
