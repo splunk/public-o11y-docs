@@ -6,7 +6,7 @@ Java metrics (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Java monitor. See benefits, install, configuration, and metrics
 
-.. note:: 
+.. caution:: 
    
    This integration is deprecated and will reach End of Support on February 15th, 2025. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
