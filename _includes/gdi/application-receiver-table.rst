@@ -40,10 +40,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`asp-dot-net`
-     - :strong:`X`
-     -
-
    * - :ref:`appmesh`
      - :strong:`X`
      -
@@ -72,10 +68,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`collectd-df`
-     - :strong:`X`
-     -
-
    * - :ref:`collectd-uptime`
      - :strong:`X`
      -
@@ -100,10 +92,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`disk`
-     - :strong:`X`
-     -
-
    * - :ref:`dns`
      - :strong:`X`
      -
@@ -117,10 +105,6 @@
      -
 
    * - :ref:`elasticsearch-query`
-     - :strong:`X`
-     -
-
-   * - :ref:`exec-input`
      - :strong:`X`
      -
 
@@ -168,17 +152,9 @@
      - 
      -
 
-   * - :ref:`load`
-     - :strong:`X`
-     -
-
    * - :ref:`http`
      - :strong:`X`
      -
-
-   * - :ref:`interface`
-     - :strong:`X`
-     - :strong:`X`
 
    * - :ref:`get-started-istio`
      - :strong:`X`
@@ -204,27 +180,11 @@
      - :strong:`X`
      -
 
-   * - :ref:`kong`
-     - :strong:`X`
-     -
-
    * - :ref:`kubernetes-apiserver`
      - :strong:`X`
      -
 
-   * - :ref:`kubernetes-cluster`
-     - :strong:`X`
-     -
-
-   * - :ref:`kube-controller-manager`
-     - :strong:`X`
-     -
-
    * - :ref:`kubernetes-events`
-     - :strong:`X`
-     -
-
-   * - :ref:`kubelet-stats`
      - :strong:`X`
      -
 
@@ -256,10 +216,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`microsoft-dotnet`
-     - :strong:`X`
-     -
-
    * - :ref:`get-started-dotnet-otel`
      - :strong:`X`
      -
@@ -269,22 +225,6 @@
      -
 
    * - :ref:`windows-iis`
-     - :strong:`X`
-     -
-
-   * - :ref:`mongodb`
-     - :strong:`X`
-     -
-
-   * - :ref:`mongodb-atlas`
-     - :strong:`X`
-     -
-
-   * - :ref:`mysql`
-     - :strong:`X`
-     -
-
-   * - :ref:`nagios`
      - :strong:`X`
      -
 
@@ -324,10 +264,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`postgresql`
-     - :strong:`X`
-     -
-
    * - :ref:`procstat`
      - :strong:`X`
      -
@@ -364,17 +300,9 @@
      - :strong:`X`
      -
 
-   * - :ref:`redis`
-     - :strong:`X`
-     -
-  
    * - :ref:`hana`
      - :strong:`X`
      -
-
-   * - :ref:`signalfx-forwarder`
-     - :strong:`X`
-     - :strong:`X`
 
    * - :ref:`snmp`
      - :strong:`X`
@@ -408,17 +336,32 @@
      - :strong:`X`
      -
 
-   * - :ref:`telegraf-win-perf-counters`
-     - :strong:`X`
-     -
-
    * - :ref:`telegraf-win-services`
      - :strong:`X`
      -
 
 The following integrations are deprecated:
 
+* :ref:`asp-dot-net`
+* :ref:`collectd-df`
 * :ref:`consul`
+* :ref:`disk`
+* :ref:`exec-input`
+* :ref:`load`
+* :ref:`interface`
 * :ref:`java-monitor`
+* :ref:`kong`
+* :ref:`kubernetes-cluster`
+* :ref:`kube-controller-manager`
+* :ref:`kubelet-stats`
+* :ref:`microsoft-dotnet`
+* :ref:`mongodb`
+* :ref:`mongodb-atlas`
+* :ref:`mysql`
+* :ref:`nagios`
+* :ref:`postgresql`
+* :ref:`redis`
+* :ref:`signalfx-forwarder`
 * :ref:`statsd` 
 * :ref:`telegraf-win-perf-counters`
+

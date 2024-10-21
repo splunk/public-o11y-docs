@@ -6,7 +6,13 @@ Consul datastore (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Consul datastore monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+.. caution:: 
+   
+   This integration is deprecated and will be removed in a future release. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+
+   To forward Consul datastore metrics to Splunk Observability Cloud use the :ref:`statsd-receiver` or :ref:`prometheus-receiver` instead. 
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 Consul datastore monitor type to monitor Consul datastores and collect
 metrics from the following endpoints:
 

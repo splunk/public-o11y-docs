@@ -107,10 +107,16 @@ For more information, see :ref:`get-started-rum`.
 .. raw:: html
 
    <embed>
-      <h2>OpenTelemetry receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h2>
+      <h2>Applications and services<a name="monitor-applications" class="headerlink" href="#monitor-applications" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-Learn more at :ref:`OpenTelemetry receivers <otel-components-receivers>`.
+.. raw:: html
+
+   <embed>
+      <h3>OpenTelemetry receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h3>
+   </embed>
+
+You can monitor your applications and services with native OpenTelementry receivers. Learn more at :ref:`OpenTelemetry receivers <otel-components-receivers>`.
 
 These are the available OTel receivers:
 
@@ -119,12 +125,10 @@ These are the available OTel receivers:
 .. raw:: html
 
    <embed>
-      <h2>Application and host integrations<a name="app-monitors" class="headerlink" href="#app-monitors" title="Permalink to this headline">¶</a></h2>
+      <h3>Smart Agent integrations<a name="app-monitors" class="headerlink" href="#app-monitors" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
-
-Smart Agent integrations and application receivers are available and supported through the Splunk Distribution of the OpenTelemetry Collector. For more information, see :ref:`migration-monitors`.    
+Smart Agent integrations and monitors are available and supported through the Splunk Distribution of the OpenTelemetry Collector. For more information, see :ref:`migration-monitors`.    
 
 Browse available monitors by category:
 
@@ -142,7 +146,7 @@ Browse available monitors by category:
 * :ref:`Applications: Orchestration <orchestration>`
 * :ref:`Applications: Prometheus <prometheus>`
 
-These are the available Smart Agent monitors:
+These are the available Smart Agent integrations:
 
 .. include:: /_includes/gdi/application-receiver-table.rst
 
