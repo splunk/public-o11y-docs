@@ -1,17 +1,20 @@
 .. _java-monitor:
 
-Java metrics
-============
+Java metrics (deprecated)
+====================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Java monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``java-monitor`` to retrieve metrics from a Java application.
+.. note:: 
+   
+   This integration is deprecated and will reach End of Support on February 15th, 2025. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+
+   To forward metrics from a Java application to Splunk Observability Cloud use the :ref:`Splunk Distribution of OpenTelemetry Java <get-started-java>` instead. To activate metrics collection in the OpenTelemetry Java agent, see :ref:`Activate metrics collection <enable_automatic_metric_collection>`.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``java-monitor`` to retrieve metrics from a Java application.
 
 This integration is available on Linux and Windows.
-
-.. note:: To activate metrics collection in the OpenTelemetry Java agent, see :ref:`Activate metrics collection <enable_automatic_metric_collection>`.
 
 Benefits
 --------
