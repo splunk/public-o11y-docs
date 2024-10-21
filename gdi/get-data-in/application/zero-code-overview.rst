@@ -27,7 +27,7 @@ Zero-code instrumentation is available for applications written in Java, Node.js
 How does zero-code instrumentation differ from automatic discovery and configuration?
 -----------------------------------------------------------------------------------------
 
-Automatic discovery and zero-code instrumentation have similar capabilities but are separate features. Both automatic discovery and zero-code instrumentation can instrument applications without requiring you to modify application code, but they differ in several key details.
+Automatic discovery and zero-code instrumentation have similar capabilities but are separate features. Both automatic discovery and zero-code instrumentation detect telemetry data and send it to Splunk Observability Cloud, but they differ in several key details.
 
 See the following table for key differences between the automatic discovery and zero-code instrumentation:
 
@@ -42,7 +42,7 @@ See the following table for key differences between the automatic discovery and 
       - Deployed with the Splunk Distribution of OpenTelemetry Collector as an optional add-on.
     * - Applications instrumented
       - Instruments only back-end applications, for example, Python, Java, and Node.js applications.
-      - Instruments back-end applications and third-party services. You can activate or deactivate instrumentation for each application language.
+      - Collects telemetry data from third-party services such as databases and web servers.
     * - Languages instrumented
       - Agents are language-specific. For example, the NodeJS agent only instruments NodeJS applications. Zero-code instrumentation supports applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP.
       - Automatic discovery itself does not instrument language runtimes, but can be used to deploy zero-code instrumentation for applications written in Java, Node.JS, and .NET.
