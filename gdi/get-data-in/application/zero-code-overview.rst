@@ -41,7 +41,7 @@ See the following table for key differences between the automatic discovery and 
       - Instruments back-end applications and third-party services.
     * - Languages instrumented
       - Agents are language-specific. For example, the NodeJS agent only instruments NodeJS applications. Zero-code instrumentation supports applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP.
-      - Can instrument multiple applications written in separate languages. Automatic discovery supports applications written in Java, Node.js, and .NET.
+      - Automatic discovery itself does not instrument language runtimes, but can be used to deploy zero-code instrumentation for applications written in Java, Node.JS, and .NET.
 
 When should I use zero-code instrumentation?
 ================================================
