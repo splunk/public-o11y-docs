@@ -340,28 +340,4 @@
      - :strong:`X`
      -
 
-The following integrations are deprecated:
-
-* :ref:`asp-dot-net`
-* :ref:`collectd-df`
-* :ref:`consul`
-* :ref:`disk`
-* :ref:`exec-input`
-* :ref:`load`
-* :ref:`interface`
-* :ref:`java-monitor`
-* :ref:`kong`
-* :ref:`kubernetes-cluster`
-* :ref:`kube-controller-manager`
-* :ref:`kubelet-stats`
-* :ref:`microsoft-dotnet`
-* :ref:`mongodb`
-* :ref:`mongodb-atlas`
-* :ref:`mysql`
-* :ref:`nagios`
-* :ref:`postgresql`
-* :ref:`redis`
-* :ref:`signalfx-forwarder`
-* :ref:`statsd` 
-* :ref:`telegraf-win-perf-counters`
 

@@ -128,7 +128,7 @@ These are the available OTel receivers:
       <h3>Smart Agent integrations<a name="app-monitors" class="headerlink" href="#app-monitors" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-Smart Agent integrations and monitors are available and supported through the Splunk Distribution of the OpenTelemetry Collector. For more information, see :ref:`migration-monitors`.    
+Smart Agent integrations are available and supported through the Splunk Distribution of the OpenTelemetry Collector. For more information, see :ref:`migration-monitors`.    
 
 Browse available monitors by category:
 
@@ -149,6 +149,16 @@ Browse available monitors by category:
 These are the available Smart Agent integrations:
 
 .. include:: /_includes/gdi/application-receiver-table.rst
+
+.. raw:: html
+
+   <embed>
+      <h4>Deprecated integrations<a name="app-monitors-deprecated" class="headerlink" href="#app-monitors-deprecated" title="Permalink to this headline">¶</a></h4>
+   </embed>
+
+These Smart Agent integrations are deprecated:
+
+.. include:: /_includes/gdi/application-receiver-table-deprecated.rst
 
 .. raw:: html
 
