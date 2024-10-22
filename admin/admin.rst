@@ -9,9 +9,9 @@ Set up your Splunk Observability Cloud organization
 
 The first step in getting started with Splunk Observability Cloud is setting up your organization. In Splunk Observability Cloud, an organization, or account, is the highest-level security grouping. Other organizations and their users can't access the data in your organization.
 
-To set up your organization, create and carry out a plan for addressing the tasks described in this topic. See the :ref:`admin-onboarding-guide` for prescriptive guidance for setting up your organization and other onboarding tasks.
+To set up your organization, create and carry out a plan for addressing the tasks described in this topic. See the :ref:`get-started-guide` for prescriptive guidance for setting up your organization and other tasks for getting started.
 
-Many of these tasks require the admin role in Splunk Observability Cloud. If you choose to use Splunk Cloud Platform as your identity provider, you also need the sc_admin role in Splunk Cloud Platform.
+Many of these tasks require the admin role in Splunk Observability Cloud. If you opt to use Splunk Cloud Platform as your identity provider, you also need the sc_admin role in Splunk Cloud Platform.
 
 The following table shows you aspects of your Splunk Observability Cloud organization that you can plan for and set up:
 
@@ -23,7 +23,7 @@ The following table shows you aspects of your Splunk Observability Cloud organiz
      - :strong:`Link to documentation`
      - :strong:`Role required`
 
-   * - Choose from these 3 options for managing user access:
+   * - Select from these 3 options for managing user access:
 
        #. Use Splunk Cloud Platform as the unified identity provider. 
        #. Use an external Lightweight Directory Access Protocol (LDAP) and control access through Single Sign-On (SSO). 
