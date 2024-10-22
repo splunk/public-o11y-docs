@@ -25,14 +25,19 @@ To configure your users, teams, and tokens complete the following tasks:
 
 .. _phase3-pipeline:
 
-Add Splunk Observability Cloud to your CI/CD pipeline
-=========================================================
-Now, you are ready to add services into your pipeline. If your teams use tools such as Ansible, Chef, or Puppet, use the exporter and pipeline templates using OpenTelemetry agents. You can also use the upstream OpenTelemetry Collector Contrib project, send data using the REST APIs, and send metrics using client libraries.
+Add Splunk Observability Cloud to your deployment pipeline
+============================================================
 
-* For details about adding receivers for a database, see :ref:`databases`.
+After completing the initial rollout phase, you have deployed some collector components. For the scaled rollout, continue adding services to your pipeline. 
+
+* See the :ref:`otel-components` documentation for examples and templates to reference as you build your pipeline. 
+* See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
+
+You can also use other ingestion methods like the following:
+
+* To send data using the Splunk Observability Cloud REST APIs, see :ref:`rest-api-ingest`.
+* To send metrics using client libraries, see :new-page:`SignalFlow client libraries <https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/#SignalFlow-client-libraries>`.
 * For information about using the upstream Collector, see :ref:`using-upstream-otel`.
-* For details on the Splunk Observability Cloud REST APIs, see :ref:`rest-api-ingest`.
-* For details on sending metrics using client libraries, see :new-page:`SignalFlow client libraries <https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/#SignalFlow-client-libraries>`.
 
 .. _phase3-rotate-token:
 

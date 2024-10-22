@@ -83,8 +83,10 @@ Use the following table to get a high-level overview of the primary setup steps 
    * - :strong:`Education resources`
      - * :new-page:`Free Splunk Observability Cloud courses<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
        * :new-page:`Full course catalog for Splunk Observability Cloud <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup4SplunkObservabilityCloud>`
+       * :new-page:`Splunk `
        * :new-page:`Splunk Observability Cloud metrics user certification <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
      - * :new-page:`Get familiar with Open Telemetry concepts <https://opentelemetry.io/docs/concepts/>`
        * To learn more about the data model for Splunk Observability Cloud, see :ref:`data-model`.
      - * :ref:`Understand OpenTelemetry sizing requirements <otel-sizing>`
        * :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
+       * :new-page:`Curated training curriculum for Splunk Observability Cloud end users<https://drive.google.com/file/d/1LHZL1jaP8irQvfI3HG71XcgGavgEn5cD/view>`

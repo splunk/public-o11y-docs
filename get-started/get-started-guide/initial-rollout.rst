@@ -57,7 +57,9 @@ Use Splunk Application Performance Monitoring (APM) to monitor and troubleshoot 
 
 To set up Splunk Application Performance Monitoring, complete the following steps:
 	
-#. If you used automatic discovery and configuration to instrument your infrastructure, you're already capturing APM data for supported technologies. See :ref:`discovery_mode`. To send APM trace data for other technologies, deploy the Splunk distribution of the OpenTelemetry Collector. Follow the guided setup steps for the collector for Kubernetes, Linux, and Windows. See :ref:`get-started-k8s`, :ref:`get-started-linux`, or :ref:`get-started-windows`.
+#. If you used automatic discovery and configuration to instrument your infrastructure, you're already capturing APM data for supported technologies. See :ref:`discovery_mode`. 
+   
+   To send APM trace data for technologies not supported by automatic discovery, deploy the Splunk distribution of the OpenTelemetry Collector. Follow the guided setup steps for the collector for Kubernetes, Linux, and Windows. See :ref:`get-started-k8s`, :ref:`get-started-linux`, or :ref:`get-started-windows`.
 #. To instrument your applications, you can export spans to a collector running on the host or in the Kubernetes cluster that you deployed in the previous step. The collector endpoint varies depending on the language you are instrumenting. Use the specific guided setups for each language. See :ref:`get-started-application`.
 
 .. _phase2-rum:
