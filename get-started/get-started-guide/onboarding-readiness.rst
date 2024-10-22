@@ -42,7 +42,7 @@ Before you begin bringing data into Splunk Observability Cloud from your infrast
 #. If your organization requires a proxy, see :ref:`allow-services`. 
 #. For Kubernetes, you need administrator access to monitored hosts of Kubernetes clusters to install the Splunk Distribution of the OpenTelemetry Collector. 
 #. Whether you use a guided setup for data management or an advanced install, you use the Splunk Distribution of the OpenTelemetry Collector to ingest, process, and export metric, trace, logs, and metadata into Splunk Observability Cloud. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user not a root or admin user. For the majority of use cases, the collector doesn't require privileged access to function. 
-    #. Collector components might require privileged access. Use care when allowing privilege access for components. For example, a receiver might require the collector to run in a privileged mode, which could be a security concern. Receivers and exporters might expose buffer, queue, payload, and worker settings in configuration parameters. Setting these parameters might expose the collector to additional attack vectors including resource exhaustion. 
+    #. Collector components might require privileged access. Use care when allowing privilege access for components. For example, a receiver might require the collector to run in a privileged mode, which might be a security concern. Receivers and exporters might expose buffer, queue, payload, and worker settings in configuration parameters. Setting these parameters might expose the collector to additional attack vectors including resource exhaustion. 
     #. Collector components might also require external permissions including network access or role-based access. 
    
    See :ref:`otel-security` for more details.
@@ -74,7 +74,7 @@ If you plan to roll out Splunk Observability Cloud across your organization you 
 Define team and token naming conventions
 ------------------------------------------
 
-Before creating teams and tokens, determine your naming convention. A naming convention helps you to track token assignments and control data ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
+Before creating teams and tokens, determine your naming convention. A naming convention helps you to track token assignments and control data-ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
 
 * Team name: FRONTEND_DEV_TEAM 
 * Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
@@ -152,4 +152,4 @@ Education resources
 Next step
 ===============
 
-Next, prepare for an initial rollout of the Splunk Observability Cloud solutions that are relevant to your organization. See :ref:`get-started-guide-initial-rollout`.
+Next, prepare for an initial rollout of the Splunk Observability Cloud products that are relevant to your organization. See :ref:`get-started-guide-initial-rollout`.

@@ -55,7 +55,7 @@ Use metrics pipeline management tools to reduce cardinality of metric time serie
 
 As metrics data usage and cardinality grows in Splunk Infrastructure Monitoring, your cost increases. Use metrics pipeline management (MPM) tools within Splunk Infrastructure Monitoring to streamline storage and processing to reduce overall monitoring cost. With MPM, you can make the following optimizations:
 
-* Streamline storage and processing to create a multi-tier metric analytics platform.
+* Streamline storage and processing to create a multitier metric analytics platform.
 
 * Analyze reports to identify where to optimize usage.
 
