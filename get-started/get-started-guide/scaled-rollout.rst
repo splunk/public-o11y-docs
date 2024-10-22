@@ -28,7 +28,7 @@ To configure your users, teams, and tokens complete the following tasks:
 Add Splunk Observability Cloud to your deployment pipeline
 ============================================================
 
-After completing the initial rollout phase, you have deployed some collector components. For the scaled rollout, continue adding services to your pipeline. 
+After completing the initial rollout phase, you have deployed some collector components. For the scaled rollout, continue to add services to your pipeline. 
 
 * See the :ref:`otel-components` documentation for examples and templates to reference as you build your pipeline. 
 * See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
@@ -107,12 +107,8 @@ Build custom detectors
 #. Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them. See :ref:`autodetect`. 
 #. Create custom detectors to trigger alerts that address your use cases. See :ref:`get-started-detectoralert`.
 #. You can create advanced detectors to enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 functions using population_comparison. 
-   * See the library of SignalFlow for detectors on GitHub :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors`.
-   * To get started with SignalFlow, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` in the developer guide.
-
-To learn more, see the following topics:
-
-* 
+    * See the library of SignalFlow for detectors on GitHub :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors`.
+    * To get started with SignalFlow, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` in the developer guide.
 
 .. _phase3-onboard-all:
 
@@ -161,4 +157,5 @@ Education resources
 ====================
 
 * Before you start scaling up the use of the OpenTelemetry agents, consider the OpenTelemetry sizing guidelines. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services. For details about the sizing guidelines, see :ref:`otel-sizing`. 
-* Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. See :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
+* Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. See :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`.
+* To begin creating a training curriculum for your Splunk Observability Cloud end users see the :new-page:`Curated training for end users<https://drive.google.com/file/d/1LHZL1jaP8irQvfI3HG71XcgGavgEn5cD/view>`.
