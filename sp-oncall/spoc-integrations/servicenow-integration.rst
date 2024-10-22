@@ -26,7 +26,7 @@ You can do the following with the integration:
 Requirements
 =====================
 
-* ServiceNow versions supported: Madrid, New York, Orlando, Paris, Quebec, Rome, San Diego, Tokyo, Utah
+* ServiceNow versions supported: Madrid, New York, Orlando, Paris, Quebec, Rome, San Diego, Tokyo, Utah, Vancouver, Washington DC, Xanadu
 *  ServiceNow account: Requires ServiceNow Administrative Privileges to create the application registry and an Active, Web Service Access only user with the ITIL role.
 * Splunk On-Call version required: Enterprise level of service
 
@@ -125,7 +125,7 @@ Preconfigured fields that are immediately available are:
 * assigned_to
 * resolved_by
 
-You can set all the preconfigured fields using the rules engine using the followig syntax: ``ServiceNowField_victorops\_<field_name>``. 
+You can set all the preconfigured fields using the rules engine using the following syntax: ``ServiceNowField_victorops\_<field_name>`` or ``ServiceNowField_u_victorops\_<field_name>``.  The particular syntax will depend on the specific ServiceNow environment version and may require testing.
 
 The following fields are automatically handled by the integration mapping:
 
@@ -161,7 +161,7 @@ Only some fields are preconfigured with the VictorOps app, so mapping additional
    #. Last, make sure the 2 fields are mapped,in the :guilabel:`Field Map` field. 
    #. Select :guilabel:`Save`.
 
-Now you can use the Splunk On-Call alert rules engine to supply the field values with the same syntax as before: set ``ServiceNowField_<field_name>`` to new value ``<value>``.
+Now you can use the Splunk On-Call alert rules engine to supply the field values with the same syntax as before: set ``ServiceNowField_<field_name>`` OR ``ServiceNowField_u_victorops\_<field_name>`` (depending on ServiceNow version) to new value ``<value>``.
 
 In the following example image, the field value on the Splunk On-Call import table in ServiceNow is ``victorops_custom_field``.
 
