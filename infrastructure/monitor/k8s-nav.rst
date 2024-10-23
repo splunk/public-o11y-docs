@@ -46,7 +46,7 @@ The following table describes the Kubernetes navigators:
         * Pods
         * Containers
       - * Provides a :ref:`table, heat map <navigator-views>`, and :ref:`hierarchy map <k8s-nav-hierarchy-map>` view of your Kubernetes infrastructure
-        * Provides a :ref:`Kubernetes Analyzer<k8s-nav-analyzer>` that helps you troubleshoot Kubernetes problems at scale
+        * Provides a :ref:`Kubernetes Analyzer<k8s-nav-analyzer-overview>` that helps you troubleshoot Kubernetes problems at scale
       - * Get an overview of your Kubernetes infrastructure
         * Monitor the health of part of your Kubernetes infrastructure
         * Identify and diagnose an issue with part of your Kubernetes infrastructure
