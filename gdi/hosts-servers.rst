@@ -57,6 +57,7 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`apache-httpserver`
 * :ref:`apache-tomcat`
 * :ref:`zookeeper`
+* :ref:`chrony`
 * :ref:`collectd-plugin`
 * :ref:`collectd-df`
 * :ref:`collectd-uptime`  
