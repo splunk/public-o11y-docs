@@ -1,4 +1,5 @@
 * :ref:`asp-dot-net`
+* :ref:`chrony`
 * :ref:`collectd-df`
 * :ref:`consul`
 * :ref:`disk`

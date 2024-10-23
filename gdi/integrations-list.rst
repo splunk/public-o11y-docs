@@ -118,7 +118,7 @@ For more information, see :ref:`get-started-rum`.
 
 You can monitor your applications and services with native OpenTelementry receivers. Learn more at :ref:`OpenTelemetry receivers <otel-components-receivers>`.
 
-These are the available OTel receivers:
+These are the available OpenTelemetry receivers:
 
 .. include:: /_includes/gdi/otel-receivers-table.rst
 

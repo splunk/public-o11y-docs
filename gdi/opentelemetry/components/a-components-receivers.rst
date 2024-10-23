@@ -16,6 +16,7 @@ Collector components: Receivers
     apache-spark-receiver
     azureeventhub-receiver
     carbon-receiver
+    chrony-receiver
     cloudfoundry-receiver
     collectd-receiver
     discovery-receiver

@@ -2,6 +2,7 @@
 * :ref:`apache-spark-receiver`
 * :ref:`azureeventhub-receiver`
 * :ref:`carbon-receiver`
+* :ref:`chrony-receiver`
 * :ref:`cloudfoundry-receiver`
 * :ref:`collectd-receiver`
 * :ref:`discovery-receiver`

@@ -61,6 +61,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`carbon-receiver` (``carbon``)
      - Receives metrics in Carbon plaintext protocol.
      - Metrics
+   * - :ref:`chrony-receiver` (``chrony``)
+     - Go implementation of the ``chronyc`` command to track portability across systems and platforms.
+     - Metrics
    * - :ref:`cloudfoundry-receiver` (``cloudfoundry``)
      - Connects to the Reverse Log Proxy (RLP) gateway of Cloud Foundry to extract metrics.
      - Metrics

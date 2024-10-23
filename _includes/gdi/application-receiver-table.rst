@@ -56,10 +56,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`chrony`
-     - :strong:`X`
-     -
-
    * - :ref:`cloudfoundry-firehose-nozzle`
      - :strong:`X`
      -
