@@ -59,9 +59,9 @@ Follow these steps to automatically instrument your application using the Python
 
    .. code-block:: bash
 
-      splunk-py-trace-bootstrap
+      opentelemetry-bootstrap
 
-   To print the instrumentation packages to the console instead of installing them, run ``splunk-py-trace-bootstrap --action=requirements``. You can then add the output to your requirements or Pipfile.
+   To print the instrumentation packages to the console instead of installing them, run ``opentelemetry-bootstrap --action=requirements``. You can then add the output to your requirements or Pipfile.
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
 
@@ -107,11 +107,11 @@ Follow these steps to automatically instrument your application using the Python
 
          python3 main.py --port=8000
 
-   prefix the command with ``splunk-py-trace``:
+   prefix the command with ``opentelemetry-instrument``:
 
       .. code-block:: bash
 
-         splunk-py-trace python3 main.py --port=8000
+         opentelemetry-instrument python3 main.py --port=8000
 
    .. note:: To instrument uWSGI applications, see :ref:`python-manual-instrumentation`.
 

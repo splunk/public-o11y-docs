@@ -23,12 +23,12 @@ For example, if your manage.py file sets the environment variable to mydjangopro
    .. code-tab:: bash Linux
 
          export DJANGO_SETTINGS_MODULE=mydjangoproject.settings
-         splunk-py-trace python3 ./manage.py runserver --noreload
+         opentelemetry-instrument python3 ./manage.py runserver --noreload
 
    .. code-tab:: shell Windows PowerShell
 
          $env:DJANGO_SETTINGS_MODULE=mydjangoproject.settings
-         splunk-py-trace python3 ./manage.py runserver --noreload
+         opentelemetry-instrument python3 ./manage.py runserver --noreload
 
 .. _uwsgi-instrumentation:
 
@@ -40,11 +40,11 @@ When using uWSGI, you must configure tracing as a response to the ``post_fork`` 
 .. code-block:: python
 
    import uwsgidecorators
-   from splunk_otel.tracing import start_tracing
+   from splunk_otel.tracing import start_otel
 
    @uwsgidecorators.postfork
-   def setup_tracing():
-      start_tracing()
+   def start_otel():
+      start_otel()
 
 Customize and use the following snippet to run the application:
 
@@ -65,15 +65,15 @@ When using both uSWGI and Flask, calling ``start_tracing()`` only autoinstrument
 
    # app.py
    import uwsgidecorators
-   from splunk_otel.tracing import start_tracing
+   from splunk_otel.tracing import start_otel
    from opentelemetry.instrumentation.flask import FlaskInstrumentor
    from flask import Flask
 
    app = Flask(__name__)
 
    @uwsgidecorators.postfork
-   def setup_tracing():
-      start_tracing()
+   def setup_otel():
+      start_otel()
       # Instrument the Flask app instance explicitly
       FlaskInstrumentor().instrument_app(app)
 
