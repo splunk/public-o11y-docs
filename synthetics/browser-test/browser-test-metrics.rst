@@ -162,7 +162,7 @@ Performance timing metrics capture information about how long it takes resources
 
 Web vitals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Web vitals capture key metrics that affect user experience.
+Web vitals are metrics that represent user experience in terms of loading, interactivity, and visual stability.
 
 .. list-table::
    :header-rows: 1
@@ -172,17 +172,17 @@ Web vitals capture key metrics that affect user experience.
      - :strong:`Source metric name`
      - :strong:`Description`
 
-   * - Cumulative layout shift (CLS)
-     - ``synthetics.webvitals_cls.score``
-     - Measures page stability. CLS is based on a formula that tallies up how many times the components on the page move or “shift” around while the page is loading. Fewer shifts are better.
-
    * - Largest contentful paint (LCP)
      - ``synthetics.webvitals_lcp.time.ms``
      - Measures page loading times as perceived by users. The LCP metric reports the render time of the largest content element visible within the viewport.
 
    * - Total blocking time (TBT)
      - ``synthetics.webvitals_tbt.time.ms``
-     -  Captures issues that affect interactivity. TBT is a synthetic alternative for First Input Delay (INP), which measures page responsiveness to user input. Optimizations that improve TBT in the lab can also help improve INP for your users.
+     -  Captures issues that affect interactivity. TBT is a synthetic alternative for Interaction to Next Paint (INP), which measures page responsiveness to user input. Optimizations that improve TBT in the lab can also help improve INP for your users.
+
+   * - Cumulative layout shift (CLS)
+     - ``synthetics.webvitals_cls.score``
+     - Measures page stability. CLS is based on a formula that tallies up how many times the components on the page move or “shift” around while the page is loading. Fewer shifts are better.
 
 
 To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation.
