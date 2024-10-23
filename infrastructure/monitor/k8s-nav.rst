@@ -119,7 +119,7 @@ Investigate instances in the hierarchy map
       :width: 100%
       :alt: Filtering ``kubernetes.io/cluster-service`` to ``true`` hides nodes that don't match and highlights matching pods and containers.
 
-.. _k8s-nav-analyzer:
+.. _k8s-nav-analyzer-overview:
 
 Analyzer
 ==============
