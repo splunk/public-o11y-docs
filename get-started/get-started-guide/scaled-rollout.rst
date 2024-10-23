@@ -28,10 +28,11 @@ To configure your users, teams, and tokens complete the following tasks:
 Add Splunk Observability Cloud to your deployment pipeline
 ============================================================
 
-After completing the initial rollout phase, you have deployed some collector components. For the scaled rollout, continue to add services to your pipeline. 
+After completing the initial rollout phase, you have deployed a Collector instance with limited configuration. For the scaled rollout, you can expand your Collector pipelines with more components and services.
 
-* See the :ref:`otel-components` documentation for examples and templates to reference as you build your pipeline. 
-* See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
+* See :ref:`otel-configuration` for an overview of the available options to install, configure, and use the Splunk Distribution of the Open Telemetry Collector.
+* See :ref:`otel-data-processing` to learn how data is processed in Collector pipelines.
+* See the :ref:`otel-components` documentation to see the available components you can add to the Collector configuration. 
 
 You can also use other ingestion methods like the following:
 
