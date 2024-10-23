@@ -8,10 +8,6 @@
      - :strong:`Provides metrics`
      - :strong:`Provides traces`
 
-   * - :ref:`amazon-ecs-metadata`
-     - :strong:`X`
-     -
-
    * - :ref:`activemq`
      - :strong:`X`
      -

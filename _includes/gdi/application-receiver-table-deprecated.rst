@@ -1,4 +1,5 @@
 * :ref:`asp-dot-net`
+* :ref:`amazon-ecs-metadata`
 * :ref:`chrony`
 * :ref:`collectd-df`
 * :ref:`consul`
