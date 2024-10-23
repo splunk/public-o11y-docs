@@ -1,5 +1,6 @@
 * :ref:`apache-receiver`
 * :ref:`apache-spark-receiver`
+* :ref:`awsecscontainermetrics-receiver`
 * :ref:`azureeventhub-receiver`
 * :ref:`carbon-receiver`
 * :ref:`chrony-receiver`
