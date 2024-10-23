@@ -22,10 +22,8 @@ Migrate to OTel Node.js 3.x
 
 .. _nodejs-3x-metric-names:
 
-New metric names for version 2.x
+New metric names for version 3.x
 ======================================
-
-.. include:: /_includes/gdi/java-20-metrics-equivalences.rst
 
 .. _metrics-not-reported-nodejs:
 
