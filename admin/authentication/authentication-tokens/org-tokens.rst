@@ -22,9 +22,9 @@ Power users who have access to tokens in an organization see a banner, but only 
 Token expiry 
 ================
 
-Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires using the Splunk Observability Cloud API. For details, see :ref:`access-token-rotate`.
+You can view the expiration dates of your tokens through the access token page. To view this page, select :guilabel:`Settings` and select :guilabel:`Access tokens`. By default, access tokens expire 18 years after the creation date. You can rotate a token before it expires. For details, see :ref:`access-token-rotate`.
 
-Every organization admin will receive an email 30 days before a token in their org expires. The email includes a link to Splunk Observability Cloud that displays a list of expiring tokens. You cannot customize the token expiration email. 
+By default, every organization admin receives an email 30 days before a token in their org expires. The email includes a link to Splunk Observability Cloud that displays a list of expiring tokens. To change the expiration reminder date, see :ref:`create-access-token-date`.
 
 The default access token
 ===========================
@@ -36,48 +36,60 @@ By default, every organization has one organization-level access token. If you d
 Manage access tokens
 =======================
 
-To manage your access (org) tokens:
+To manage your access (org) tokens, follow these steps:
 
 #. Open the :guilabel:`Settings` menu.
-#. Select :menuselection:`Access Tokens`.
-#. To find the access token in a large list, start entering its name in the search box. Splunk Observability Cloud returns matching results.
-#. To look at the details for an access token, select the expand icon next to the token name.
+#. Select :guilabel:`Access Tokens`.
+#. Find your token by using the :guilabel:`Status` and :guilabel:`Scope` filters or enter the token name in the search bar.
+#. Select the expand icon next to the token name. This displays details about the token.
 
    For information about the access token permissions allowed by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
-#. If you're an organization administrator, the actions menu (|more| icon) appears to the right side of the token listing. You can select token actions from this menu.
+#. (Optional) If you're an organization administrator, the actions menu (|verticaldots|) appears to the right side of the token listing. You can select token actions from this menu.
 
-#. To change the token visibility, follow these steps:
+#. See :ref:`change-token-permissions` and :ref:`change-token-expiration` to modify token permissions and token expiration settings, respectively.
 
-   #. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
-      permission options appear:
+.. _change-token-permissions:
+
+Change token permissions
+-------------------------------------
+
+If you're an organization administrator, you can change token permissions for other users and teams.
+
+To change the token permissions, follow these steps:
+
+#. Select the :guilabel:`Access Token Permissions` box. Choose from the following permission options:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
       * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
-   #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
-   #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
-      #. Select :guilabel:`Add Team or User`. Splunk Observability Cloud displays a list of teams and users in your organization.
-      #. To find the team or username in a large list, start entering the name in the search box. Splunk Observability Cloud returns matching results.
-         Select the user or team.
-      #. If you need to add more teams or users, select :guilabel:`Add Team or User` again.
+#. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
+#. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access.
+#. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
+#. To update the token, select :guilabel:`Update`.
 
-         .. note::
+.. _change-token-expiration:
 
-            You might see the following message in the middle of the dialog:
+Change token expiration date and expiration alerts
+-------------------------------------------------------
 
-            You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and is  able to access this Access Token.
+To change the token expiration date and expiration alerts, follow these steps:
 
-            This message means that all users are able to join the team and then view or read the access token.
+#. In the token actions menu (|verticaldots|), select :guilabel:`Expiration date`.
+#. In the :guilabel:`Expiration date` box, select a new expiration date for the token.
+#. To change the visibility of the expiration alert, select from the following options:
 
-      #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
-   #. To update the token, select :guilabel:`Update`.
+   * :menuselection:`Admins and users or teams with token permissions can receive alert`: Admins and anyone with token permissions receive an alert when the token is close to expiring.
+   * :menuselection:`Only admins can receive alert`: Only admins receive an alert when the token is close to expiring.
 
+#. Configure the type of alert that your recipients receive.
+#. Change the time at which recipients receive an alert. For example, a value of ``7d`` means recipients receive an alert 7 days before the token expires.
+#. Select :guilabel:`Update`.
 
-View and copy access tokens
-==============================
+View and copy access token secrets
+====================================
 
-To view the value of an access token, select the token name and then select :guilabel:`Show Token`.
+To view the token secret, select the token name and then select :guilabel:`Show Token`.
 
 To copy the token value, select :guilabel:`Copy`. You don't need to be an administrator to view or copy an access token.
 
@@ -87,53 +99,77 @@ To copy the token value, select :guilabel:`Copy`. You don't need to be an admini
 Create an access token
 ==========================
 
-.. note::
-
-   To do the following tasks, you must be an organization administrator.
-
-To create an access token:
+To get started with creating an access token, follow these steps: 
 
 #. Open the Splunk Observability Cloud main menu.
 #. Select :menuselection:`Settings` and select :menuselection:`Access Tokens`.
-#. Select :guilabel:`New Token`. If your organization has a long list of access tokens, you might need to scroll down to the bottom of the list to access this button.
+#. Select :guilabel:`New Token`.
+
+Next, complete each step in the access token creation guided setup:
+
+* :ref:`create-access-token-name`.
+* :ref:`create-access-token-permissions`.
+* :ref:`create-access-token-date`.
+
+.. note::
+
+   You must be an organization administrator to create access tokens.
+
+.. _create-access-token-name:
+
+Name the token and select the authorization scope
+-------------------------------------------------------------------------
+
+To get started with creating the token, enter a name and scope for the token. Complete the following steps:
+
 #. Enter a unique token name. If you enter a token name that is already in use, even if the token is inactive, Splunk Observability Cloud doesn't accept the name.
-#. Select an authorization scope for the token from 1 of the following values:    
-   
-   .. note:: Assign only 1 authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
+#. Select an authorization scope. See the following table for information about the authorization scopes:
 
-   - :strong:`RUM Token`: Select this authorization scope to use the token to authenticate with RUM ingest endpoints. These endpoints use the following base URL: :code:`https://rum-ingest.<REALM>.signalfx.com/v1/rum`.
-      
-      .. caution::
-         RUM displays the RUM token in URIs that are visible in a browser. To preserve security, you can't assign the :strong:`Ingest` or :strong:`API` authorization scope to a RUM token.
+   .. list-table::
+      :header-rows: 1
 
-   - :strong:`Ingest Token`: Select this authorization scope to use the token to authenticate with data ingestion endpoints. These endpoints use the following base URLs:
+      * - Authorization scope
+        - Description
+      * - RUM token
+        - Use this scope to authenticate with RUM ingest endpoints. These endpoints use the following base URL: ``https://rum-ingest.<REALM>.signalfx.com/v1/rum``.
+      * - Ingest token
+        - Use this scope to authenticate with data ingestion endpoints and when using the Splunk Distribution of OpenTelemetry Collector. These endpoints use the following base URLs:
 
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint`
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint/otlp`
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
-        - POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint/otlp`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
+          * POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
 
-      For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+           For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+      * - API token
+        - Use this scope to authenticate with Splunk Observability Cloud API endpoints. These endpoints use the following base URLs:
 
-      .. note:: Use the ingest autorization scope for the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-intro`.
-   - :strong:`API Token`: Select this authorization scope to use the token to authenticate with Splunk Observability Cloud endpoints. Example use cases are Terraform, programmatic usage of the API for business objects, and so on. These endpoints use the following base URLs: 
-        
-        - :code:`https://api.<REALM>.signalfx.com`
-        - :code:`wss://stream.<REALM>.signalfx.com`
+          * :code:`https://api.<REALM>.signalfx.com`
+          * :code:`wss://stream.<REALM>.signalfx.com`
 
-      When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`roles-and-capabilities`.
+           When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`roles-and-capabilities`.
 
-      For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
+           For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
 
-#. Edit the visibility permissions:
+#. (Optional) Add a description for the token.
+#. Select :guilabel:`Next` to continue to the next step.
 
-   #. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
-      permission options appear:
+.. _create-access-token-permissions:
+
+Determine who can view and use the token
+--------------------------------------------------------
+
+Next, configure token permissions so your organization's users and teams can use the token. Complete the following steps:
+
+#. Edit the visibility permissions. To display the available permissions, select the :guilabel:`Access Token Permissions` box. The following
+   permission options appear:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
       * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
-   #. To add permissions, select the arrow below :guilabel:`Access Token Permissions`.
+   
+   To add permissions, select the arrow below :guilabel:`Access Token Permissions`.
+
 #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
    #. Select :guilabel:`Add Team or User`. Splunk Observability Cloud displays a list of teams and users in your organization.
@@ -150,21 +186,54 @@ To create an access token:
          This message means that all users are able to join the team and then view or read the access token.
 
    #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
-#. To create the new token, select :guilabel:`Create`.
 
+#. Select :guilabel:`Next` to continue to the final step.
+
+.. _create-access-token-date:
+
+Configure an expiration date
+-----------------------------------------------
+
+To finish creating the token, select an expiration date for the token. 
+
+#. In the :guilabel:`Expiration date` box, select a date at which the token will expire. The date can't be over 5 years from the token creation date.
+#. In the :guilabel:`Expiration alert` box, select from one of the following options:
+
+   * :menuselection:`Only admins can receive alert`: Only admins receive an alert when the token is close to its expiration date.
+   * :menuselection:`Admins and users or teams with token permissions can receive alert`: Admins and any users with token permissions receive an alert when the token is close to its expiration date.
+
+#. (Optional) Set a time for when Splunk Observability Cloud sends an expiration alert. For example, a value of 7 days means Splunk Observability Cloud will send an alert 7 days before the token expires.
+#. Select :guilabel:`Create` to finish creating the new token.
 
 .. _access-token-rotate:
 
 Rotate an access token
 ==============================
 
-You can rotate an access token using the Splunk Observability Cloud API. This creates a new secret for the token and deactivates the token's previous secret. Optionally, you can provide a grace period before the previous token secret expires.
+You can rotate an access token using the access token menu or the Splunk Observability Cloud API. This creates a new secret for the token and deactivates the token's previous secret. Optionally, you can provide a grace period before the previous token secret expires.
 
 You can't rotate tokens after they expire. If you don't rotate a token before it expires, you must create a new token to replace it.
 
 .. note:: You must be a Splunk Observability Cloud admin to rotate a token. 
 
-To rotate an access token, use the ``POST /token/{name}/rotate`` endpoint in the Splunk Observability Cloud API. An API call to rotate a token looks like this:
+Rotate access tokens using the token menu
+-------------------------------------------------------------------
+
+To rotate a token using the access token menu, follow these steps:
+
+#. In Splunk Observability Cloud, select :guilabel:`Settings`.
+#. Select :guilabel:`Access tokens`. 
+#. In the access tokens menu, select the token you want to rotate.
+#. Select :guilabel:`Rotate token`.
+#. Enter an expiration date for the new token secret, and optionally, a grace period for the current token secret. 
+#. Select :guilabel:`Rotate`.
+
+After you're finished rotating the token, update any of your OpenTelemetry Collector configurations with the new token secret before the grace period ends. 
+
+Rotate access tokens using the Splunk Observability Cloud API
+-------------------------------------------------------------------
+
+To rotate an access token with the API, use the ``POST /token/{name}/rotate`` endpoint in the Splunk Observability Cloud API. An API call to rotate a token looks like this:
 
 .. code-block:: bash
 
@@ -197,11 +266,11 @@ Rename an access token
 
 To rename a token:
 
-#. Select :menuselection:`Edit Token` from the token's actions menu (|more|).
+#. Select :menuselection:`Edit Token` from the token's actions menu (|verticaldots|).
 #. Enter a new name for the token.
 #. Select :guilabel:`OK`.
 
-Renaming a token does not affect the value of the token.
+Renaming a token does not affect the token's secret.
 
 .. note::
 
@@ -214,11 +283,19 @@ Deactivate or activate an access token
 
    You can't delete tokens. You can only deactivate them.
 
-To deactivate a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
-The line that displays the token has a shaded background, which indicates that the
-token is inactive. The UI displays deactivated tokens at the end of the tokens list,
-after the activated tokens.
+To deactivate a token, select :menuselection:`Deactivate` from the token's actions menu (|verticaldots|).
 
-To activate a deactivated token, select :menuselection:`Enable` from the deactivated
-token's actions menu (|more| icon). The line that displays the token has a light background,
-which indicates that the token is inactive.
+To activate a deactivated token, select :menuselection:`Activate` from the deactivated token's actions menu (|verticaldots|). 
+
+You can search for activated or deactivated tokens using the :guilabel:`Status` filter in the access tokens page.
+
+Manage token limits
+=========================================
+
+To change limits for your access tokens, including host and container limits, follow these steps:
+
+#. Select the token that you want to edit. This opens the token detail page.
+#. Select the token actions menu (|verticaldots|), and select :guilabel:`Manage limits`. 
+#. In the :guilabel:`Manage limits` menu, add the new token limits. 
+
+To learn more about token limits, see :ref:`admin-manage-usage`.
