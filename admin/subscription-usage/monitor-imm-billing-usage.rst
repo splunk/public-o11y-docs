@@ -32,7 +32,8 @@ Infrastructure Monitoring collects metric time series (MTS) which are classified
     - :strong:`Description`
 
   * - Host and container metrics
-    - * Default metrics sent by the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
+    - * Default metrics sent by the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them. 
+      * Default metrics from the Collector receivers also fall in this category.
 
   * - Bundled metrics
     - * Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
