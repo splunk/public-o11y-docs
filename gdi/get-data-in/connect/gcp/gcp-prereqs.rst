@@ -2,7 +2,7 @@
 .. _gcp-prereqs:
 
 ********************************************************
-GCP authentication, permissions, and supported regions 
+GCP authentication, permissions and supported regions 
 ********************************************************
 
 .. meta::
@@ -13,10 +13,82 @@ The following pre-requisites apply:
 * You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
 * Splunk Observability Cloud supports all GCP regions. 
 
-Account permissions
+Authenticate your Google account 
 ============================================
 
-Starting in March 2024, GCP disables service account key creation by setting ``iam.disableServiceAccountKeyCreation`` to ``false`` by default. When this constraint is set, you cannot create user-managed credentials for service accounts in projects affected by the constraint. Check the restrictions on your organization's account keys before connecting to Splunk Observability Cloud.
+You need your service account keys to be able to integrate your GCP services with Splunk Observability Cloud. Check the restrictions on your organization's account keys before connecting to Splunk Observability Cloud. 
 
-For more information, refer to Google's official announcement :new-page:`Introducing stronger default Org Policies for our customers <https://cloud.google.com/blog/products/identity-security/introducing-stronger-default-org-policies-for-our-customers/>`.
+For more information, refer to: 
 
+* GCP's docs on :new-page:`Service account keys <https://cloud.google.com/iam/docs/service-account-creds#key-types>` 
+* Google's official announcement on the new permission policies at :new-page:`Introducing stronger default Org Policies for our customers <https://cloud.google.com/blog/products/identity-security/introducing-stronger-default-org-policies-for-our-customers/>`
+
+Authenticate using Workload Identity Federation
+--------------------------------------------------------------------------------------
+
+Alternatively, you can use :new-page:`GCP's Workload Identity Federation <https://cloud.google.com/iam/docs/workload-identity-federation>` to access your Google Cloud resources and authenticate them in Splunk Observability Cloud.
+
+.. _gcp-prereqs-role-permissions:
+
+GCP role permissions
+============================================
+
+You can use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios. 
+
+Alternatively you can create a more restrictive role using the permissions in the table:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 45 20
+
+   *  - :strong:`Permission`
+      - :strong:`Required?`
+      - :strong:`Included in GCP's Viewer role?`
+
+   *  - ``compute.instances.list``
+      - Yes, if the Compute Engine service is activated
+      - Yes
+
+   *  - ``compute.machineTypes.list``
+      - Yes, if the Compute Engine service is activated
+      - Yes
+
+   *  - ``container.clusters.list``
+      - Yes, if the Kubernetes (GKE) service is activated
+      - Yes
+
+   *  - ``container.nodes.list``
+      - Yes, if the Kubernetes (GKE) service is activated
+      - Yes
+
+   *  - ``container.pods.list``
+      - Yes, if the Kubernetes (GKE) service is activated
+      - Yes
+
+   *  - ``monitoring.metricDescriptors.get``
+      - Yes
+      - Yes
+
+   *  - ``monitoring.metricDescriptors.list``
+      - Yes
+      - Yes
+
+   *  - ``monitoring.timeSeries.list``
+      - Yes
+      - Yes
+
+   *  - ``resourcemanager.projects.get``
+      - Yes, if you want to sync project metadata (such as labels)
+      - Yes
+
+   *  - ``serviceusage.services.use``
+      - Yes, if you want to activate the use of a quota from the project where metrics are stored
+      - No, but included in ``roles/serviceusage.serviceUsageConsumer``
+
+   *  - ``spanner.instances.list``
+      - Yes, if the Spanner service is activated
+      - Yes
+
+   *  - ``storage.buckets.list``
+      - Yes, if the Spanner service is activated
+      - Yes
