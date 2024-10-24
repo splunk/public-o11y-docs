@@ -44,7 +44,7 @@ Before you set up the integration, choose a ServiceNow issue type from the follo
         - ``user_admin``, ``itil``
         - ``/api/now/v2/table/incident``
       * - Event
-        - None
+        - ``evt_mgmt_integration``, only if :guilabel:`Requires ACL authorization` is turned on for :strong:`Default Bulk Endpoint` in :strong:`Scripted Rest APIs`.
         - ``/api/global/em/jsonv2``
 
 Make note of the role and receiving endpoint that corresponds to your issue type before proceeding with :ref:`servicenow2`.
@@ -112,9 +112,9 @@ To create a ServiceNow integration in Splunk Observability Cloud:
 
    To troubleshoot potential blind server-side request forgeries (SSRF), Splunk Observability Cloud has included ``\*.service-now.com`` on an allow list. As a result, if you enter a domain name that is rejected by Splunk Observability Cloud, contact :ref:`support` to update the allow list of domain names.
 
-#. Select :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using the other issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule. The following table shows the roles required to create each issue type:
+#. Select :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using the other issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule.
 
-#. :strong:`Save`.
+#. Select :strong:`Save`.
 
 #. If Splunk Observability Cloud can validate the ServiceNow username, password, and instance name combination, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the values you entered match the values in ServiceNow.
 
