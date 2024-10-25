@@ -112,7 +112,7 @@ To create a ServiceNow integration in Splunk Observability Cloud:
 
    To troubleshoot potential blind server-side request forgeries (SSRF), Splunk Observability Cloud has included ``\*.service-now.com`` on an allow list. As a result, if you enter a domain name that is rejected by Splunk Observability Cloud, contact :ref:`support` to update the allow list of domain names.
 
-#. Select :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using the other issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule.
+#. Select :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using another issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule.
 
 #. Select :strong:`Save`.
 
