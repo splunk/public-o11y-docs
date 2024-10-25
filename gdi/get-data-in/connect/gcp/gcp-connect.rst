@@ -28,7 +28,7 @@ Follow these steps to connect to GCP:
 
 .. _gcp-one:
 
-1. Select a role for your GCP service account
+1. Define a role for your GCP service account
 --------------------------------------------------------------------------------------
 
 You can use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios. 
@@ -56,7 +56,7 @@ To configure your GCP service:
 
 #. (Optional) Select a role to grant this Service account access to the selected project, then select :guilabel:`CONTINUE`.
 
-#. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer.
+#. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer. You will need this key to authenticate in Splunk Observability Cloud.
 
 #. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and activate the Cloud Resource Manager API. You need to activate this API so Splunk Observability Cloud can use it to validate permissions on the service account keys.
 
@@ -66,10 +66,10 @@ To configure your GCP service:
 
 .. _gcp-three:
 
-3. Start the integration
+3. Connect to Splunk Observability Cloud and start the integration
 --------------------------------------------------------------------------------------
 
-By default, all supported services are monitored, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
+By default, Splunk Observability Cloud monitors all supported services, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
 
 #. Log in to Splunk Observability Cloud and open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
 
@@ -121,7 +121,9 @@ Alternatives to connect to GCP
 Integrate GCP using the API 
 --------------------------------------------------------------------------------------
 
-You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` in our developer portal for details.
+You can also integrate GCP with Splunk Observability Cloud using the GCP API. 
+
+See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` in our developer portal for details.
 
 .. _gcp-terraform:
 

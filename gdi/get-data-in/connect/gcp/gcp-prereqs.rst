@@ -1,4 +1,3 @@
-.. _gcp-prerequisites:
 .. _gcp-prereqs:
 
 ********************************************************
@@ -8,10 +7,12 @@ GCP authentication, permissions and supported regions
 .. meta::
    :description: Connect your Google Cloud Platform / GCP account to Splunk Observability Cloud.
 
-The following pre-requisites apply:
+.. _gcp-prerequisites:
 
-* You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
-* Splunk Observability Cloud supports all GCP regions. 
+Prerequisites
+============================================
+
+You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
 
 Authenticate your Google account 
 ============================================
@@ -26,7 +27,7 @@ For more information, refer to:
 Authenticate using Workload Identity Federation
 --------------------------------------------------------------------------------------
 
-Alternatively, you can use :new-page:`GCP's Workload Identity Federation <https://cloud.google.com/iam/docs/workload-identity-federation>` to access your Google Cloud resources and authenticate them in Splunk Observability Cloud.
+Alternatively, if you're connecting to Splunk Observability Cloud using the API you can use :new-page:`GCP's Workload Identity Federation <https://cloud.google.com/iam/docs/workload-identity-federation>` to access your Google Cloud resources and authenticate them. See how in the Splunk Observability Cloud developer documentation at :new-page:`Integrate GCP <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview>`.
 
 .. _gcp-prereqs-role-permissions:
 
@@ -92,3 +93,10 @@ Alternatively you can create a more restrictive role using the permissions in th
    *  - ``storage.buckets.list``
       - Yes, if the Spanner service is activated
       - Yes
+
+.. _gcp-prereqs-regions:
+
+Supported regions 
+============================================
+
+Splunk Observability Cloud supports all GCP regions. 
