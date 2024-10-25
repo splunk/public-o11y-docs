@@ -23,7 +23,7 @@ Used alongside automatic instrumentation, you don't have to manually instrument 
 
     <h2>Get started</h2>
 
-Automatic instrumentation for Kubernetes supports back-end applications such as Java and Node.js and automatic discovery supports third-party services such as databases and web servers.
+Automatic instrumentation for Kubernetes supports back-end applications written in Java, Node.js, and .NET and automatic discovery supports third-party services such as databases and web servers.
 
 To use automatic instrumentation for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
 
