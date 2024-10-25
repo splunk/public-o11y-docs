@@ -44,7 +44,7 @@ Before you set up the integration, choose a ServiceNow issue type from the follo
         - ``user_admin``, ``itil``
         - ``/api/now/v2/table/incident``
       * - Event
-        - ``evt_mgmt_integration``, only if :guilabel:`Requires ACL authorization` is turned on for :strong:`Default Bulk Endpoint` in :strong:`Scripted Rest APIs`.
+        - ``evt_mgmt_integration``, only if :guilabel:`Requires ACL authorization` is selected for :strong:`Inbound Event Default Bulk Endpoint` in :strong:`Scripted Rest APIs`. To learn more, see the :new-page:`ServiceNow support article on events <https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0993277>`.
         - ``/api/global/em/jsonv2``
 
 Make note of the role and receiving endpoint that corresponds to your issue type before proceeding with :ref:`servicenow2`.
