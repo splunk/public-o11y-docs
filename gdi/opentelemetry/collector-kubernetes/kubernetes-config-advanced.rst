@@ -95,12 +95,12 @@ Availability
 
 The following components provide control plane metrics:
 
-* :ref:`CoreDNS <coredns>`.
-* :ref:`etcd`. To retrieve etcd metrics, see :new-page:`Setting up etcd metrics <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#setting-up-etcd-metrics>`.
-* :ref:`Kubernetes controller manager <kube-controller-manager>`.
-* :ref:`Kubernetes API server <kubernetes-apiserver>`.
-* :ref:`Kubernetes proxy <kubernetes-proxy>`.
-* :ref:`Kubernetes scheduler <kubernetes-scheduler>`.
+* :ref:`CoreDNS <coredns>`
+* :ref:`awsecscontainermetrics-receiver`
+* :ref:`Kubernetes controller manager <kube-controller-manager>`
+* :ref:`Kubernetes API server <kubernetes-apiserver>`
+* :ref:`Kubernetes proxy <kubernetes-proxy>`
+* :ref:`Kubernetes scheduler <kubernetes-scheduler>`
 
 Use custom configurations for non-standard control plane components
 -----------------------------------------------------------------------------
