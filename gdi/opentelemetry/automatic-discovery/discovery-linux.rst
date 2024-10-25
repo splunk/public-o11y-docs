@@ -10,8 +10,8 @@ Automatic discovery and instrumentation for Linux
 .. toctree::
     :hidden:
 
-    Language runtimes <linux/linux-backend>
-    Third-party applications <linux/linux-third-party>
+    Automatic instrumentation <linux/linux-backend>
+    Automatic discovery <linux/linux-third-party>
     Advanced customization <linux/linux-advanced-config>
 
 Automatic discovery and configuration for Linux automatically finds services running in your Linux environment and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.

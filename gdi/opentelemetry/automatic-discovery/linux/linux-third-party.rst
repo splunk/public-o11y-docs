@@ -1,7 +1,7 @@
 .. _linux-third-party:
 
 **********************************************************************************
-Automatic discovery for third-party applications in Linux
+Automatic discovery for third-party services in Linux
 **********************************************************************************
 
 .. meta:: 

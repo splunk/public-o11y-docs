@@ -1,7 +1,7 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Detect telemetry sources automatically
+Automatic discovery and instrumentation
 ***************************************************************************
 
 .. meta::

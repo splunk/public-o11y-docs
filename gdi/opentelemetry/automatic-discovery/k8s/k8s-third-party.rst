@@ -1,7 +1,7 @@
 .. _k8s-third-party:
 
 ***************************************************************************************
-Automatic discovery for third-party applications in Kubernetes
+Automatic discovery for third-party services in Kubernetes
 ***************************************************************************************
 
 .. meta:: 

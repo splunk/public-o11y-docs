@@ -10,8 +10,8 @@ Automatic discovery and instrumentation for Kubernetes
 .. toctree::
     :hidden:
 
-    Language runtimes <k8s/k8s-backend>
-    Third-party applications <k8s/k8s-third-party>
+    Automatic instrumentation <k8s/k8s-backend>
+    Automatic discovery <k8s/k8s-third-party>
     Advanced customization <k8s/k8s-advanced-config>
     k8s/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial
 
