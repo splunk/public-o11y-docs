@@ -39,11 +39,11 @@ By default, the Splunk Distribution of OpenTelemetry Collector uses the latest v
           enabled: true
         operator:
           enabled: true
-          instrumentation:
-            spec: 
-              java:
-                repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
-                tag: v1.27.0
+        instrumentation:
+          spec: 
+            java:
+              repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
+              tag: v1.27.0
 
 #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
@@ -74,25 +74,25 @@ You can configure AlwaysOn Profiling in Kubernetes by editing the values.yaml fi
 Follow these steps to activate Profiling for a language:
 
 #. Open the values.yaml file.
-#. In the ``operator.instrumentation.spec.<language>.env`` section, add the ``SPLUNK_PROFILER_ENABLED="true"``, ``SPLUNK_PROFILER_MEMORY_ENABLED="true"``, and ``SPLUNK_PROFILER_CALL_STACK_INTERVAL`` environment variables. For example, the following values.yaml file configures AlwaysOn Profiling to sample call stacks from a 5000 millisecond interval:
+#. In the ``instrumentation.spec.<language>.env`` section, add the ``SPLUNK_PROFILER_ENABLED="true"``, ``SPLUNK_PROFILER_MEMORY_ENABLED="true"``, and ``SPLUNK_PROFILER_CALL_STACK_INTERVAL`` environment variables. For example, the following values.yaml file configures AlwaysOn Profiling to sample call stacks from a 5000 millisecond interval:
 
     .. code-block:: yaml
 
         operator:
           enabled: true
-          instrumentation:  
-            spec:
-              nodejs:
-                env:
-                # Activates AlwaysOn Profiling for Node.js
-                - name: SPLUNK_PROFILER_ENABLED
-                  value: "true"
-                - name: SPLUNK_PROFILER_MEMORY_ENABLED
-                  value: "true"
-                # Samples call stacks from a 5000 millisecond interval. 
-                # If excluded, samples from a 10000 millisecond interval by default.
-                - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
-                  value: 5000
+        instrumentation:  
+          spec:
+            nodejs:
+              env:
+              # Activates AlwaysOn Profiling for Node.js
+              - name: SPLUNK_PROFILER_ENABLED
+                value: "true"
+              - name: SPLUNK_PROFILER_MEMORY_ENABLED
+                value: "true"
+              # Samples call stacks from a 5000 millisecond interval. 
+              # If excluded, samples from a 10000 millisecond interval by default.
+              - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
+                value: 5000
       
 #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
@@ -108,36 +108,36 @@ You can activate runtime metrics collection for Java and Node.js applications ru
 Follow these steps to activate runtime metrics collection:
 
 #. Open the values.yaml file.
-#. In the ``operator.instrumentation.spec.<language>.env`` section, add the ``SPLUNK_METRICS_ENABLED=true`` environment variable. For example, the following values.yaml file activates runtime metrics collection for Java applications:
+#. In the ``instrumentation.spec.<language>.env`` section, add the ``SPLUNK_METRICS_ENABLED=true`` environment variable. For example, the following values.yaml file activates runtime metrics collection for Java applications:
 
     .. code-block:: yaml
 
       operator:
         enabled: true
-        instrumentation:  
-          spec:
-            java:
-              env:
-              # Activates runtime metrics collection for Java
-              - name: SPLUNK_METRICS_ENABLED
-                value: "true"
-
-#. In the ``operator.instrumentation.spec.env`` section, add the following environment variables and values to configure the endpoint to which the Collector sends runtime metrics:
-
-    .. code-block:: yaml
-
-      operator:
-        enabled: true
-        instrumentation:
-          spec:
+      instrumentation:  
+        spec:
+          java:
             env:
-            - name: SPLUNK_OTEL_AGENT
-              valueFrom:
-                fieldRef:
-                  apiVersion: v1
-                  fieldPath: status.hostIP
-            - name: SPLUNK_METRICS_ENDPOINT
-              value: http://$(SPLUNK_OTEL_AGENT):9943/v2/datapoint
+            # Activates runtime metrics collection for Java
+            - name: SPLUNK_METRICS_ENABLED
+              value: "true"
+
+#. In the ``instrumentation.spec.env`` section, add the following environment variables and values to configure the endpoint to which the Collector sends runtime metrics:
+
+    .. code-block:: yaml
+
+      operator:
+        enabled: true
+      instrumentation:
+        spec:
+          env:
+          - name: SPLUNK_OTEL_AGENT
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: SPLUNK_METRICS_ENDPOINT
+            value: http://$(SPLUNK_OTEL_AGENT):9943/v2/datapoint
 
 #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
@@ -157,7 +157,7 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 Follow these steps to send data to a gateway endpoint:
 
 #. Open the values.yaml file.
-#. Set the ``operator.instrumentation.spec.exporter.endpoint`` value to the gateway endpoint. For example:
+#. Set the ``instrumentation.spec.exporter.endpoint`` value to the gateway endpoint. For example:
 
     .. code-block:: yaml
         :emphasize-lines: 13
@@ -170,11 +170,11 @@ Follow these steps to send data to a gateway endpoint:
         certmanager:
           enabled: true
         operator:
-            enabled: true
-            instrumentation:
-              spec:
-                exporter:
-                  endpoint: <gateway-endpoint>
+          enabled: true
+        instrumentation:
+          spec:
+            exporter:
+              endpoint: <gateway-endpoint>
 
 #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 

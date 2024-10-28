@@ -24,7 +24,7 @@ Instrument Java applications for Splunk Observability Cloud
    Version 1.x (Deprecated) <version1x/get-started-1x>
    About Splunk OTel Java <splunk-java-otel-distribution>
 
-The Splunk Distribution of OpenTelemetry Java provides a Java Virtual Machine (JVM) agent that automatically adds APM instrumentation to your Java application or service. The instrumentation captures distributed traces and sends them to Splunk Observability Cloud. For more information, see :ref:`splunk-java-otel-dist`.
+The Splunk Distribution of OpenTelemetry Java provides a Java Virtual Machine (JVM) agent that automatically adds APM instrumentation to your Java application or service. The instrumentation captures distributed traces and sends them to Splunk Observability Cloud. See :ref:`splunk-java-otel-dist` for more information.
 
 To instrument your Java application, follow these steps:
 

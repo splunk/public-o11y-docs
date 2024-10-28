@@ -179,7 +179,7 @@ Use the Universal Forwarder to send logs to the Splunk platform. See more at :re
 Collect Windows logs with Fluentd
 ---------------------------------------
 
-If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to install and enable Fluentd when installing the Collector. For example:
+If you wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to install and enable Fluentd when installing the Collector. For example:
 
 .. code-block:: PowerShell
 

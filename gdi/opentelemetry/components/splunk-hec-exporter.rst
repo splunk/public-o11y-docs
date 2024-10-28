@@ -15,8 +15,6 @@ The exporter also sends AlwaysOn Profiling data to Splunk Observability Cloud. F
 
 For information about the HEC receiver, see :ref:`splunk-hec-receiver`.
 
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
-
 Get started
 ======================
 
@@ -239,7 +237,7 @@ To turn off log collection for Splunk Observability Cloud while preserving Alway
      sourcetype: "otel"
      log_data_enabled: false
 
-If you need to turn off log data export to Splunk Observability Cloud, for example because you're using Log Observer Connect or because you don't have Log Observer in your organization, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
+If you need to turn off log data export to Splunk Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
    :emphasize-lines: 6

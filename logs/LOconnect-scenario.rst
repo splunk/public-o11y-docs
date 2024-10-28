@@ -8,7 +8,6 @@ Scenario: Aisha troubleshoots workflow failures with Log Observer Connect
 .. meta::
   :description: Aisha troubleshoots problems in a workflow using Log Observer where Log Observer accesses Splunk platform logs through Log Observer Connect.
 
-.. include:: /_includes/log-observer-transition.rst
 
 Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They analyze logs in Splunk Cloud Platform. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure. They purchased Splunk Observability Cloud as their observability solution. Buttercup Games analyzes their Splunk Cloud Platform logs in Log Observer, a point-and-click Splunk Observability Cloud tool, which they set up through Log Observer Connect.
 

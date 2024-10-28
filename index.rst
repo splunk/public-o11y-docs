@@ -144,11 +144,6 @@ Use span tags to add useful metadata to traces :ref:`apm-add-context-trace-span`
 
 .. rst-class:: newcard
 
-:strong:`Logs pipeline`
-Add value to your raw logs by customizing your pipeline :ref:`logs-pipeline`
-
-.. rst-class:: newcard
-
 :strong:`Related Content`
 Enable users to seamlessly move across product views :ref:`get-started-relatedcontent`
 
@@ -263,6 +258,12 @@ Collect traces :ref:`get-started-cpp`
 
 :strong:`All supported integrations`
 View a list of all supported integrations :ref:`supported-data-sources`
+
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Release notes`
+To keep up to date with changes in the products, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
 
 .. ----- This comment separates the landing page from the TOC -----
 
@@ -710,15 +711,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :caption: Log Observer
+   :caption: Log Observer Connect 
    :maxdepth:   3
 
-   Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
-
-.. toctree::
-   :maxdepth:   3   
-
-   Splunk Log Observer TOGGLE <logs/log-observer-landing>
+   logs/lo-connect-landing
 
 .. toctree::
    :caption: Real User Monitoring
@@ -852,7 +848,18 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Configure your tests TOGGLE <synthetics/test-config/test-config>
+   Advanced test configurations TOGGLE <synthetics/test-config/test-config>
+
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests TOGGLE <synthetics/syn-troubleshoot/syn-troubleshoot>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests  <synthetics/syn-troubleshoot/syn-missing-alerts>
 
 .. toctree::
    :caption: Splunk On-Call
@@ -901,7 +908,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>
+
+.. toctree::
+   :caption: Release notes
+   :maxdepth:   3
+
+   Release notes overview TOGGLE <release-notes/release-notes-overview.rst>   
 
 .. toctree::
    :caption: Reference and Legal

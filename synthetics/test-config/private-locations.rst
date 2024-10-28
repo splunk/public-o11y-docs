@@ -116,7 +116,7 @@ Follow these steps to limit logging:
 
 Add certificates in Synthetics
 ------------------------------------------------------
-Splunk Synthetic Monitoring supports injecting custom root CA certificates for API and Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
+Splunk Synthetic Monitoring supports injecting custom root CA certificates for Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
 
 #. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
 
@@ -189,10 +189,6 @@ When using runner, it's important to correctly configure the proxy settings to a
 3. :strong:`Dockerfile defaults`:
    
    - By default, the runner will set the ``NO_PROXY`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``NO_PROXY``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
-
-4. :strong:`Startup Check`:
-   
-   - The runner includes a startup check to validate that ``NO_PROXY`` contains ``127.0.0.1`` and ``localhost``. If these are missing, you might encounter unexpected behavior in test execution.
 
 
 

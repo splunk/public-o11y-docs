@@ -21,7 +21,7 @@ Use Splunk Observability Cloud to achieve full-stack observability of all your d
 - :ref:`Splunk Infrastructure Monitoring <infrastructure-infrastructure>`
 - :ref:`Splunk Application Performance Monitoring (APM) <get-started-apm>`
 - :ref:`Splunk Real User Monitoring (RUM) <rum-gdi>`
-- :ref:`Splunk Log Observer <get-started-logs>` and :ref:`Log Observer Connect <logs-intro-logconnect>`
+- :ref:`Splunk Log Observer Connect <logs-intro-logconnect>`
 
 This guide provides four chapters that guide you through the process of setting up each component of Splunk Observability Cloud.
 

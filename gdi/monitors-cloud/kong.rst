@@ -31,8 +31,8 @@ In addition, the integration provides system-wide connection statistics, includi
 
 To learn more: 
 
-* About the Kong metrics Prometheus endpoint, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
-* About using the Prometheus receiver to monitor applications, see :ref:`prometheus-generic`.
+* About the Kong metrics Prometheus endpoint, see the official :new-page:`Kong documentation <https://docs.konghq.com/hub/kong-inc/prometheus>` on Prometheus. 
+* About using the Prometheus receiver to monitor applications, see the :ref:`prometheus-generic` doc.
 
 Benefits
 --------
@@ -47,7 +47,7 @@ Installation
 Kong installation
 ~~~~~~~~~~~~~~~~~
 
-Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. Use Kong version 3.4 or higher.
+Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see the official :new-page:`Kong documentation <https://docs.konghq.com/hub/kong-inc/prometheus>` on Prometheus. Use Kong version 3.4 or higher.
 
 Configuration
 -------------
@@ -74,7 +74,7 @@ Next, activate the ``metrics`` pipeline:
 Metrics
 -------
 
-For the complete list of metrics provided by the integration, refer to :new-page:`Kong Docs on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`.
+For the complete list of metrics provided by the integration, refer to :new-page:`Kong Docs <https://docs.konghq.com/hub/kong-inc/prometheus>` on Prometheus.
 
 Notes
 ~~~~~

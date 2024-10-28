@@ -1,4 +1,5 @@
 * :ref:`apache-receiver`
+* :ref:`apache-spark-receiver`
 * :ref:`azureeventhub-receiver`
 * :ref:`carbon-receiver`
 * :ref:`cloudfoundry-receiver`

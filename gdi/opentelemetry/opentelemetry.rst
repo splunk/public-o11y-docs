@@ -16,7 +16,8 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     install-the-collector.rst
     Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
     Collector for Linux <collector-linux/collector-linux-intro.rst>
-    Collector for Windows <collector-windows/collector-windows-intro.rst>     
+    Collector for Windows <collector-windows/collector-windows-intro.rst> 
+    Splunk Add-On for OpenTelemetry Collector <collector-addon/collector-addon-intro.rst>    
     Other deployment tools: ECS EC2, Fargate, Nomad, PCF <deployments/otel-deployments.rst>  
     Automatic discovery and configuration <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
@@ -152,7 +153,7 @@ To collect logs with the Splunk Distribution of the OpenTelemetry Collector:
 * In Kubernetes environments, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
 * For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
-.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, install and enable Fluentd in your Collector instance. 
+.. note:: If you wish to collect logs for the target host, install and enable Fluentd in your Collector instance. 
 
 .. _otel-intro-enterprise:
 

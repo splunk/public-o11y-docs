@@ -9,6 +9,8 @@ Introduction to Splunk Synthetic Monitoring
 
 Create detailed tests to proactively monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.
 
+To keep up to date with changes in Synthetic Monitoring, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
+
 How does Splunk Synthetic Monitoring work?
 =============================================
 Synthetic tests are the primary mechanism of application monitoring in Splunk Synthetic Monitoring. You can set up Browser tests and Uptime tests to monitor various aspects of your site or application. You can set up these tests to run at your preferred frequency from the devices and locations of your choosing. 

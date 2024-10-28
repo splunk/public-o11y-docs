@@ -57,6 +57,8 @@ You can control your data ingestion and storage with MPM's routing capabilities:
 
 To learn more, see :ref:`mpm-rule-routing`.
 
+.. _archived-metrics-intro:
+
 Archived metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
