@@ -7,7 +7,7 @@ Chrony receiver
 .. meta::
       :description: Go implementation of the command chronyc tracking to allow for portability across systems and platforms.
 
-The Chrony receiver is a pure Go implementation of the command ``chronyc tracking`` to allow for portability across systems and platforms. The receiver produces all of the metrics that would typically be captured by the tracking command.
+The Chrony receiver is a pure Go implementation of the command ``chronyc tracking`` which allows portability across systems and platforms. The receiver produces all of the metrics that would typically be captured by the tracking command.
 
 For more information about Chrony, see :new-page:`Red Hat's Chrony suite documentation <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-configuring_ntp_using_the_chrony_suite>`.
 
@@ -62,7 +62,7 @@ You can use the following settings:
 
 * ``timeout``. Optional. The total amount of time allowed to read and process the data from chronyd. Use at least 1 second.
 
-* ``collection_interval``. Determines how often to query Chrony.
+* ``collection_interval``. Optional. Determines how often to query Chrony.
 
 * ``initial_delay``. Optional. ``1s`` by default. Defines how long this receiver waits before starting. See more in :new-page:`Red Hat's Chrony suite documentation <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-configuring_ntp_using_the_chrony_suite>`.
 
