@@ -27,8 +27,8 @@ The following scenarios are ideal for using the NuGet packages:
 
 * You control the application build but not the machine or container where the application is running.
 * You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
-* You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
-* You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
+* You want to facilitate developer experimentation with zero-code instrumentation through NuGet packages.
+* You need to solve version conflicts between the dependencies used by the application and the zero-code instrumentation.
 
 Don't use the NuGet packages if any of the following apply to your environment:
 
@@ -40,7 +40,7 @@ If your scenario isn't compatible with NuGet package installation, install the d
 
 .. note::
 
-   For advanced configuration of the .NET automatic instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+   For advanced configuration of the .NET zero-code instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Instrument your application using the NuGet packages
 ----------------------------------------------------
@@ -71,7 +71,7 @@ Alternatively, you can set the ``SkippedInstrumentation`` property from the term
 
 To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. For more information, see :new-page:`.NET RID Catalog <https://learn.microsoft.com/en-us/dotnet/core/rid-catalog>` in the .NET documentation.
 
-Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
+Both self-contained and framework-dependent applications are compatible with zero-code instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
 
 Run the instrumented application
 --------------------------------
@@ -118,14 +118,14 @@ Consider using the NuGet packages if any of the following apply to your environm
 
 * You control the application build but not the machine or container where the application is running.
 * You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
-* You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
-* You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
+* You want to facilitate developer experimentation with zero-code instrumentation through NuGet packages.
+* You need to solve version conflicts between the dependencies used by the application and the zero-code instrumentation.
 
 To install the distribution using the official NuGet packages, see :ref:`otel-dotnet-nuget-pkg`.
 
 .. note::
 
-   For advanced configuration of the .NET automatic instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+   For advanced configuration of the .NET zero-code instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Generate customized instructions using the guided setup
 -------------------------------------------------------
@@ -302,11 +302,11 @@ Linux
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
 
-#. Activate the automatic instrumentation:
+#. Activate the zero-code instrumentation:
 
    .. code-block:: shell
 
-      # Activate the automatic instrumentation
+      # Activate the zero-code instrumentation
       . $HOME/.splunk-otel-dotnet/instrument.sh
 
 #. Set the environment and service version resource attributes:
@@ -337,7 +337,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 Configure the instrumentation
 ---------------------------------------------
 
-For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+For advanced configuration of the .NET zero-code instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Database Query Performance settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -364,7 +364,7 @@ To instrument applications or services running on Azure Web Apps, see :ref:`inst
 Offline installation for Windows
 ----------------------------------------------
 
-To install the .NET automatic instrumentation on Windows hosts that are offline, follow these steps:
+To install the .NET zero-code instrumentation on Windows hosts that are offline, follow these steps:
 
 #. Download the following files from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>` and copy them to the offline server:
 

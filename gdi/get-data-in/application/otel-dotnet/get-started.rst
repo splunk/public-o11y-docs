@@ -25,7 +25,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    SignalFx Instrumentation for .NET (Deprecated) TOGGLE <sfx/sfx-instrumentation>
    Migrate from SignalFx Instrumentation for .NET <troubleshooting/migrate-signalfx-dotnet-to-dotnet-otel>
 
-The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry to Splunk Observability Cloud.
+The Splunk Distribution of OpenTelemetry .NET provides zero-code instrumentation for popular .NET libraries and frameworks to collect and send telemetry to Splunk Observability Cloud.
 
 .. raw:: html
 
