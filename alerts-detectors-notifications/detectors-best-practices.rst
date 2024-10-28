@@ -12,7 +12,7 @@ Splunk Observability Cloud uses detectors to set conditions that determine when 
 
 Using static thresholds
 ==========================================================================
-The most basic kind of alert triggers immediately when a simple metric crosses a static threshold. An example is anytime CPU utilization goes above 70%. Fixed thresholds are easy to implement and interpret when there are absolute goals to measure against. For example, if you know the typical memory per CPU profile of a certain application, you can define bounds that define normal state. Or, if you have a business requirement to serve requests within a certain time period, you know what is an unacceptable latency for that function.
+The most basic kind of alert triggers immediately when a simple metric crosses a static threshold. An example is anytime CPU utilization goes above 70%. Fixed thresholds are easy to implement and interpret when there are absolute goals to measure against. For example, if you know the typical memory per CPU profile of a certain application, you can define bounds that define normal state. Or, if you have a business requirement to serve requests within a certain time period, you know what is an unacceptable latency for that function. See :ref:`static-threshold`for more information.
 
 Consistent signal types
 ==========================================================================
@@ -22,7 +22,7 @@ Do not use wildcards. If you use wildcards in your metric name, make sure that t
 
 Viewing at native data resolution
 ==========================================================================
-A common and easy way to create a detector is to first create a chart, which lets you visualize the behavior of the signal you want to alert on, then convert it to a detector. In the chart builder actions menu, select :strong:`Chart` then :strong:`New Detector`. If you choose to use this method to create a detector, make sure you are visualizing the data at its native resolution, as this gives you the most accurate picture of the data that your detector evaluates. For example, if you create a detector using a metric that reports once every 10 seconds, make sure the time range for your chart is small enough (say, 15 minutes) to see individual measurements every 10 seconds. 
+A common and easy way to create a detector is to first create a chart, which lets you visualize the behavior of the signal you want to alert on, then convert it to a detector. See :new-page:`Create a detector from a chart <https://docs.splunk.com/observability/en/alerts-detectors-notifications/create-detectors-for-alerts.html#create-a-detector-from-a-chart>` to learn how. If you choose to use this method to create a detector, make sure you are visualizing the data at its native resolution, as this gives you the most accurate picture of the data that your detector evaluates. For example, if you create a detector using a metric that reports once every 10 seconds, make sure the time range for your chart is small enough (say, 15 minutes) to see individual measurements every 10 seconds. 
 
 By default, Splunk Observability Cloud chooses a chart display resolution that fits within the time range you choose, and summarizes the data to match that resolution. For example, if you use a metric that reports every 10 seconds, but you look at a 1-day window, then by default the data you see on the chart represents 30-minute intervals. Depending on the rollup or summarization method, this could mean that any peaks or dips average out, which gives you an inaccurate understanding of your signal and what constitutes an appropriate detector threshold. Also, analytics pipelines are applied to the rolled-up data, so the meaning of a calculation might change if the resolution changes. For example, duration parameters, which you can use for timeshifting and smoothing data, have no effect when they are smaller than the resolution.
 
@@ -44,7 +44,7 @@ You can also use detectors to monitor sub-groups within the population. For exam
 
 This aggregation detector triggers alerts for each service, just as if you had 10 separate detectors - but you only need to create one detector, not 10. If you add additional services, the detector automatically monitors them as long as you have included a ``service`` dimension or property for the new services' metrics.
 
-Note you can also monitor individual members of a population for deviation from the population norm, optionally grouping by dimensions or properties, with the Outlier Detection built-in alert condition. (population_comparison in the SignalFlow library. See the population_comparison detector in the signalflow-library at :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/population_comparison`.
+Note you can also monitor individual members of a population for deviation from the population norm, optionally grouping by dimensions or properties, with the Outlier Detection built-in alert condition. (population_comparison in the SignalFlow library. See the population_comparison detector in the signalflow-library in GitHub at :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/population_comparison`.
 
 
 
