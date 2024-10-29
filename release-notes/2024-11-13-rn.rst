@@ -1,0 +1,154 @@
+.. _2024-11-13-rn:
+
+***************
+October 1, 2024
+***************
+
+Splunk Observability Cloud released the following new features and enhancements on November 13, 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+Application Performance Monitoring
+==================================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Metrics usage analytics
+     - <TBD>
+   * - Tag spotlight enhancements
+     - <TBD>
+
+Log Observer Connect
+====================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Observability teams
+     - <TBD>
+
+Synthetics
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Synthetic monitoring performance KPI enhancements
+     - <TBD>
+
+Real User Monitoring
+====================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Tag spotlight enhancements
+     - <TBD>
+
+AppDynamics
+===========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - AppDynamics 24.10 release
+     - <TBD>
+
+Splunk Cloud Platform
+=====================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Real-time metrics in Splunk Cloud Platform
+     - <TBD>
+
+Data ingest
+===========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Kubernetes proactive troubleshooting journey
+     - <TBD>
+
+Data management
+===============
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Service inventory and onboarding improvements
+     - <TBD>
+
+Instrumentation agents
+======================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Node.js 3.0
+     - <TBD>
+   * - Python 2.0
+     - <TBD>
+
+User interface
+==============
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - User interface alignment
+     - <TBD>
+
+Search and navigation
+=====================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Global search updates
+     - <TBD>
