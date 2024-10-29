@@ -12,7 +12,7 @@ Splunk Observability Cloud uses detectors to set conditions that determine when 
 
 Using static thresholds
 ==========================================================================
-The most basic kind of alert triggers immediately when a simple metric crosses a static threshold. An example is anytime CPU utilization goes above 70%. Fixed thresholds are easy to implement and interpret when there are absolute goals to measure against. For example, if you know the typical memory per CPU profile of a certain application, you can define bounds that define normal state. Or, if you have a business requirement to serve requests within a certain time period, you know what is an unacceptable latency for that function. See :ref:`static-threshold`for more information.
+The most basic kind of alert triggers immediately when a simple metric crosses a static threshold. An example is anytime CPU utilization goes above 70%. Fixed thresholds are easy to implement and interpret when there are absolute goals to measure against. For example, if you know the typical memory per CPU profile of a certain application, you can define bounds that define normal state. Or, if you have a business requirement to serve requests within a certain time period, you know what is an unacceptable latency for that function. See :ref:`static-threshold` for more information.
 
 Consistent signal types
 ==========================================================================
