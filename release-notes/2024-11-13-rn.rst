@@ -1,8 +1,8 @@
 .. _2024-11-13-rn:
 
-***************
-October 1, 2024
-***************
+*****************
+November 13, 2024
+*****************
 
 Splunk Observability Cloud released the following new features and enhancements on November 13, 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
 
