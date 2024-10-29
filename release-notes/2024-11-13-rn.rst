@@ -21,6 +21,19 @@ Application Performance Monitoring
    * - Tag spotlight enhancements
      - <TBD>
 
+Infrastructure Monitoring
+=========================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Kubernetes proactive troubleshooting journey
+     - <TBD>
+
 Log Observer Connect
 ====================
 
@@ -84,19 +97,6 @@ Splunk Cloud Platform
    * - New feature or enhancement
      - Description
    * - Real-time metrics in Splunk Cloud Platform
-     - <TBD>
-
-Data ingest
-===========
-
-.. list-table::
-   :header-rows: 1
-   :widths: 1 2
-   :width: 100%
-
-   * - New feature or enhancement
-     - Description
-   * - Kubernetes proactive troubleshooting journey
      - <TBD>
 
 Data management
