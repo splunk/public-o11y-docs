@@ -22,7 +22,7 @@ Power users who have access to tokens in an organization see a banner, but only 
 Token expiry 
 ================
 
-You can view the expiration dates of your tokens through the access token page. To view this page, select :guilabel:`Settings` and select :guilabel:`Access tokens`. By default, access tokens expire 18 years after the creation date. You can rotate a token before it expires. For details, see :ref:`access-token-rotate`.
+You can view the expiration dates of your tokens through the access token page. To view this page, select :guilabel:`Settings` and select :guilabel:`Access tokens`. By default, access tokens expire 18 years after the creation date. You can rotate a token before it expires, or you can change the default expiration date during token creation. For details, see :ref:`access-token-rotate` and :ref:`create-access-token-date`.
 
 By default, every organization admin receives an email 30 days before a token in their org expires. The email includes a link to Splunk Observability Cloud that displays a list of expiring tokens. To change the expiration reminder date, see :ref:`create-access-token-date`.
 
@@ -196,7 +196,7 @@ Configure an expiration date
 
 To finish creating the token, select an expiration date for the token. 
 
-#. In the :guilabel:`Expiration date` box, select a date at which the token will expire. The date can't be over 5 years from the token creation date.
+#. In the :guilabel:`Expiration date` box, select a date at which the token will expire. The date can't be over 18 years from the token creation date.
 #. In the :guilabel:`Expiration alert` box, select from one of the following options:
 
    * :menuselection:`Only admins can receive alert`: Only admins receive an alert when the token is close to its expiration date.
