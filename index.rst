@@ -843,7 +843,18 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-   Configure your tests TOGGLE <synthetics/test-config/test-config>
+   Advanced test configurations TOGGLE <synthetics/test-config/test-config>
+
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests TOGGLE <synthetics/syn-troubleshoot/syn-troubleshoot>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests  <synthetics/syn-troubleshoot/syn-missing-alerts>
 
 .. toctree::
    :caption: Splunk On-Call
