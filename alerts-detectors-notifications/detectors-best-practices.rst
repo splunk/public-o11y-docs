@@ -44,7 +44,7 @@ You can also use detectors to monitor sub-groups within the population. For exam
 
 This aggregation detector triggers alerts for each service, just as if you had 10 separate detectors - but you only need to create one detector, not 10. If you add additional services, the detector automatically monitors them as long as you have included a ``service`` dimension or property for the new services' metrics.
 
-Note you can also monitor individual members of a population for deviation from the population norm, optionally grouping by dimensions or properties, with the Outlier Detection built-in alert condition. (population_comparison in the SignalFlow library. See the population_comparison detector in the signalflow-library in GitHub at :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/population_comparison`.
+You can also monitor individual members of a population for deviation from the population norm, optionally grouping by dimensions or properties, with the Outlier Detection built-in alert condition. See the population_comparison detector in the signalflow-library in GitHub at :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/population_comparison`.
 
 
 
