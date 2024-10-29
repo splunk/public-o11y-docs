@@ -55,11 +55,17 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`apache-spark-receiver` (``apachespark``) 
      - Fetches metrics for an Apache Spark cluster through the Apache Spark REST API. 
      - Metrics
+   * - :ref:`awsecscontainermetrics-receiver` (``awsecscontainermetrics``) 
+     - Reads task metadata and docker stats from Amazon ECS and generates resource usage metrics.
+     - Metrics
    * - :ref:`azureeventhub-receiver` (``azureeventhub``) 
      - Pulls logs from an Azure event hub.
      - Logs
    * - :ref:`carbon-receiver` (``carbon``)
      - Receives metrics in Carbon plaintext protocol.
+     - Metrics
+   * - :ref:`chrony-receiver` (``chrony``)
+     - Go implementation of the ``chronyc`` command to track portability across systems and platforms.
      - Metrics
    * - :ref:`cloudfoundry-receiver` (``cloudfoundry``)
      - Connects to the Reverse Log Proxy (RLP) gateway of Cloud Foundry to extract metrics.
