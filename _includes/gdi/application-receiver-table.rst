@@ -8,10 +8,6 @@
      - :strong:`Provides metrics`
      - :strong:`Provides traces`
 
-   * - :ref:`amazon-ecs-metadata`
-     - :strong:`X`
-     -
-
    * - :ref:`activemq`
      - :strong:`X`
      -
@@ -40,10 +36,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`asp-dot-net`
-     - :strong:`X`
-     -
-
    * - :ref:`appmesh`
      - :strong:`X`
      -
@@ -60,10 +52,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`chrony`
-     - :strong:`X`
-     -
-
    * - :ref:`cloudfoundry-firehose-nozzle`
      - :strong:`X`
      -
@@ -72,15 +60,7 @@
      - :strong:`X`
      -
 
-   * - :ref:`collectd-df`
-     - :strong:`X`
-     -
-
    * - :ref:`collectd-uptime`
-     - :strong:`X`
-     -
-
-   * - :ref:`consul`
      - :strong:`X`
      -
 
@@ -104,10 +84,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`disk`
-     - :strong:`X`
-     -
-
    * - :ref:`dns`
      - :strong:`X`
      -
@@ -121,14 +97,6 @@
      -
 
    * - :ref:`elasticsearch-query`
-     - :strong:`X`
-     -
-
-   * - :ref:`etcd`
-     - :strong:`X`
-     -
-
-   * - :ref:`exec-input`
      - :strong:`X`
      -
 
@@ -160,10 +128,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`health-checker`
-     - :strong:`X`
-     -
-
    * - :ref:`heroku`
      - :strong:`X`
      -
@@ -180,27 +144,15 @@
      - 
      -
 
-   * - :ref:`load`
-     - :strong:`X`
-     -
-
    * - :ref:`http`
      - :strong:`X`
      -
-
-   * - :ref:`interface`
-     - :strong:`X`
-     - :strong:`X`
 
    * - :ref:`get-started-istio`
      - :strong:`X`
      - :strong:`X`
 
    * - :ref:`jaeger-grpc`
-     - :strong:`X`
-     -
-
-   * - :ref:`java-monitor`
      - :strong:`X`
      -
 
@@ -220,27 +172,11 @@
      - :strong:`X`
      -
 
-   * - :ref:`kong`
-     - :strong:`X`
-     -
-
    * - :ref:`kubernetes-apiserver`
      - :strong:`X`
      -
 
-   * - :ref:`kubernetes-cluster`
-     - :strong:`X`
-     -
-
-   * - :ref:`kube-controller-manager`
-     - :strong:`X`
-     -
-
    * - :ref:`kubernetes-events`
-     - :strong:`X`
-     -
-
-   * - :ref:`kubelet-stats`
      - :strong:`X`
      -
 
@@ -272,10 +208,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`microsoft-dotnet`
-     - :strong:`X`
-     -
-
    * - :ref:`get-started-dotnet-otel`
      - :strong:`X`
      -
@@ -285,22 +217,6 @@
      -
 
    * - :ref:`windows-iis`
-     - :strong:`X`
-     -
-
-   * - :ref:`mongodb`
-     - :strong:`X`
-     -
-
-   * - :ref:`mongodb-atlas`
-     - :strong:`X`
-     -
-
-   * - :ref:`mysql`
-     - :strong:`X`
-     -
-
-   * - :ref:`nagios`
      - :strong:`X`
      -
 
@@ -340,10 +256,6 @@
      - :strong:`X`
      -
 
-   * - :ref:`postgresql`
-     - :strong:`X`
-     -
-
    * - :ref:`procstat`
      - :strong:`X`
      -
@@ -380,17 +292,9 @@
      - :strong:`X`
      -
 
-   * - :ref:`redis`
-     - :strong:`X`
-     -
-  
    * - :ref:`hana`
      - :strong:`X`
      -
-
-   * - :ref:`signalfx-forwarder`
-     - :strong:`X`
-     - :strong:`X`
 
    * - :ref:`snmp`
      - :strong:`X`
@@ -401,10 +305,6 @@
      -
 
    * - :ref:`sql`
-     - :strong:`X`
-     -
-
-   * - :ref:`statsd`
      - :strong:`X`
      -
 
@@ -428,10 +328,8 @@
      - :strong:`X`
      -
 
-   * - :ref:`telegraf-win-perf-counters`
-     - :strong:`X`
-     -
-
    * - :ref:`telegraf-win-services`
      - :strong:`X`
      -
+
+

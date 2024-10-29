@@ -1,12 +1,16 @@
 .. _telegraf-win-perf-counters:
 
-Windows Performance Counters
-============================
+Windows Performance Counters (deprecated)
+========================================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf win_perf_counters monitor for Windows. See benefits, install, configuration, and metrics
 
-.. note:: For information on the OpenTelemetry receiver based on the Windows Performance Counters input plugin, see :ref:`Windows Performance Counters receiver <windowsperfcounters-receiver>`.
+.. caution:: 
+   
+   This integration is deprecated and will reach End of Support in a future release. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+
+   To forward metrics from Windows Performance Counters to Splunk Observability Cloud use the :ref:`windowsperfcounters-receiver` instead. 
 
 The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``telegraf/win_perf_counters`` monitor type to receive metrics from Windows performance counters.
 
