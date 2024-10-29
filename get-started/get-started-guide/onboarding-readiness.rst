@@ -3,7 +3,7 @@
 Get started guide phase 1: Onboarding readiness 
 *********************************************************
 
-In the onboarding readiness phase of the getting started journey for Splunk Observability Cloud, you set up users, teams, and access controls using roles and token management. The following sections cover the primary setup steps for onboarding readiness phase. 
+In the onboarding readiness phase of the getting started journey for Splunk Observability Cloud, you set up users, teams, and access controls using roles and token management. The following sections cover the primary setup steps for the onboarding readiness phase. 
 
 To get a high-level overview of the entire getting started journey, see :ref:`get-started-guide`.
 
@@ -14,7 +14,7 @@ To get a high-level overview of the entire getting started journey, see :ref:`ge
    :width: 100%
    :alt: 
 
-To configure your users, teams, and tokens complete the following primary tasks:
+To configure your users, teams, and tokens, complete the following primary tasks:
 
 #. :ref:`phase1-create-trial`
 #. :ref:`phase1-network`
@@ -41,11 +41,11 @@ Before you begin bringing data into Splunk Observability Cloud from your infrast
 #. Validate that network connections between your environment and Splunk Observability Cloud are allowed. See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector.
 #. If your organization requires a proxy, see :ref:`allow-services`. 
 #. For Kubernetes, you need administrator access to monitored hosts of Kubernetes clusters to install the Splunk Distribution of the OpenTelemetry Collector. 
-#. Whether you use a guided setup for data management or an advanced install, you use the Splunk Distribution of the OpenTelemetry Collector to ingest, process, and export metric, trace, logs, and metadata into Splunk Observability Cloud. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user not a root or admin user. For the majority of use cases, the collector doesn't require privileged access to function. 
-    #. Collector components might require privileged access. Use care when allowing privilege access for components. For example, a receiver might require the collector to run in a privileged mode, which might be a security concern. Receivers and exporters might expose buffer, queue, payload, and worker settings in configuration parameters. Setting these parameters might expose the collector to additional attack vectors including resource exhaustion. 
+#. Whether you use a guided setup for data management or an advanced installation method, you use the Splunk Distribution of the OpenTelemetry Collector to ingest, process, and export metric, trace, logs, and metadata into Splunk Observability Cloud. You can run the Splunk Distribution of the OpenTelemetry Collector as a custom user, not a root or admin user. For the majority of use cases, the collector doesn't require privileged access to function. 
+    #. Collector components might require privileged access. Use care when allowing privilege access for components. For example, a receiver might require the Collector to run in a privileged mode, which might be a security concern. Receivers and exporters might expose buffer, queue, payload, and worker settings in configuration parameters. Setting these parameters might expose the Collector to additional attack vectors including resource exhaustion. 
     #. Collector components might also require external permissions including network access or role-based access. 
    
-   See :ref:`otel-security` for more details.
+   See :ref:`otel-security` for more details about managing your architecture security.
 
 .. _phase1-user-access:
 
@@ -60,10 +60,10 @@ Select from these 3 options for managing user access:
 
 .. _phase1-teams-tokens:
 
-Plan your teams structure and token management strategy to control access
+Plan your team structure and token management strategy to control access
 =====================================================================================
 
-If you plan to roll out Splunk Observability Cloud across your organization you likely have multiple internal customers with different access requirements for the various features in Splunk Observability Cloud. Complete the following steps to create a consistent team structure and corresponding token management strategy.
+If you plan to roll out Splunk Observability Cloud across your organization, you likely have multiple internal customers with different access requirements for the various features in Splunk Observability Cloud. Complete the following steps to create a consistent team structure and corresponding token management strategy.
 
 #. :ref:`team-token-names`
 #. :ref:`team-structure`
@@ -74,7 +74,7 @@ If you plan to roll out Splunk Observability Cloud across your organization you 
 Define team and token naming conventions
 ------------------------------------------
 
-Before creating teams and tokens, determine your naming convention. A naming convention helps you to track token assignments and control data-ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
+Before creating teams and tokens, determine your naming convention. A naming convention helps you to track token assignments and control data-ingestion limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
 
 * Team name: FRONTEND_DEV_TEAM 
 * Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
@@ -93,7 +93,7 @@ By default, every user can join any team in your organization. If you want to re
 Manage your tokens
 --------------------
 
-Use tokens to secure data ingest and API calls in Splunk Observability Cloud. Tokens are valid for 1 year and you can extend them for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
+Use tokens to secure data ingestion and API calls in Splunk Observability Cloud. Tokens are valid for 1 year and you can extend them for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
 
 To learn more about token management, see the following topics:
 
@@ -139,14 +139,14 @@ Collect data from third-party metrics providers
 
 When using the Splunk Distribution of OpenTelemetry Collector, you can use receivers to collect metrics data from third-party providers. For example, you can use the Prometheus receiver to scrape metrics data from any application that exposes a Prometheus endpoint. See :ref:`prometheus-receiver`.
 
-See :ref:`monitor-data-sources` to see a list of receivers.
+See :ref:`monitor-data-sources` for a list of receivers.
 
 Education resources
 =====================
 
 * For a list of free Splunk Observability Cloud courses, see :new-page:`Free training<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
 * For the full course catalog for Splunk Observability Cloud, see :new-page:`Full course catalog for Splunk Observability Cloud <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup4SplunkObservabilityCloud>`. 
-   * See the :new-page:`Curated started track for Splunk Observability Cloud <https://drive.google.com/file/d/1LHZL1jaP8irQvfI3HG71XcgGavgEn5cD/view>` to determine what courses to prioritize.
+   * See the :new-page:`Curated track for Splunk Observability Cloud <https://drive.google.com/file/d/1LHZL1jaP8irQvfI3HG71XcgGavgEn5cD/view>` to determine what courses to prioritize.
 * Follow the Splunk Observability Cloud metrics user certification if you want to build a center of excellence for observability in your organization. See :new-page:`Splunk Observability Cloud metrics user certification <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
 
 Next step

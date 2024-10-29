@@ -3,7 +3,7 @@
 Get started guide phase 3: Scaled rollout
 *********************************************************
 
-After completing the :ref:`get-started-guide-initial-rollout`, you are ready for phase 3, scaled rollout. In the final, scaled rollout phase you establish repeatable observability practices using automation, data management, detectors, and dashboards. The following sections cover the primary setup steps for scaled rollout phase.
+After completing the :ref:`get-started-guide-initial-rollout`, you are ready for phase 3, scaled rollout. In the final scaled rollout phase, you establish repeatable observability practices using automation, data management, detectors, and dashboards. The following sections cover the primary setup steps for the scaled rollout phase.
 
 To get a high-level overview of the entire getting started journey for Splunk Observability Cloud, see :ref:`get-started-guide`.
 
@@ -14,7 +14,7 @@ To get a high-level overview of the entire getting started journey for Splunk Ob
    :width: 100%
    :alt: 
 
-To configure your users, teams, and tokens complete the following tasks:
+To configure your users, teams, and tokens, complete the following tasks:
 
 #. :ref:`phase3-pipeline`
 #. :ref:`phase3-rotate-token`
@@ -34,7 +34,7 @@ After completing the initial rollout phase, you have deployed a Collector instan
 * See :ref:`otel-data-processing` to learn how data is processed in Collector pipelines.
 * See the :ref:`otel-components` documentation to see the available components you can add to the Collector configuration. 
 
-You can also use other ingestion methods like the following:
+You can also use other ingestion methods, like the following:
 
 * To send data using the Splunk Observability Cloud REST APIs, see :ref:`rest-api-ingest`.
 * To send metrics using client libraries, see :new-page:`SignalFlow client libraries <https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/#SignalFlow-client-libraries>`.
@@ -47,7 +47,7 @@ Automate the token rotation process
 
 Because tokens expire after 1 year, you need to automate the rotation of tokens using an API call. For a given token, when the API creates a new token, the old token continues to work until the time you specified in the grace period. Wherever the old token is in use, use the API call to automatically rotate the token within the grace period.
 
-For example, you can use the API to rotate the token that a Kubernetes cluster uses to ingest metrics and trace data. When you use the API to generate a new token you can store the new token directly in the secret in the Kubernetes cluster as part of the automation.
+For example, you can use the API to rotate the token that a Kubernetes cluster uses to ingest metrics and trace data. When you use the API to generate a new token, you can store the new token directly in the secret in the Kubernetes cluster as part of the automation.
 
 To learn more, see the following topics:
 
@@ -65,7 +65,7 @@ As metrics data usage and cardinality grows in Splunk Infrastructure Monitoring,
 
 * Analyze reports to identify where to optimize usage.
 
-* Use rule-based metrics aggregation and filtering on dimensions to reduce metric time series (MTS) volume.
+* Use rule-based metrics aggregation and filtering on dimensions to reduce MTS volume.
 
 * Drop dimensions that are not needed. 
 
@@ -88,7 +88,7 @@ To prepare for a successful scaled deployment, consider your naming conventions 
 Build custom dashboards and detectors
 =========================================================================================
 
-Dashboards are groupings of charts that visualize metrics. Use dashboards provide your team with actionable insight into your system at a glance. Use detectors to monitor your streaming data against a specific condition that you specify to keep users informed when certain criteria are met.
+Dashboards are groupings of charts that visualize metrics. Use dashboards to provide your team with actionable insight into your system at a glance. Use detectors to monitor your streaming data against a specific condition that you specify to keep users informed when certain criteria are met.
 
 Build custom dashboards
 -----------------------------
@@ -98,7 +98,7 @@ Build custom dashboards
     #. Clone, share, and mirror dashboards. 
     #. Use dashboard filters and dashboard variables. 
     #. Add text notes and event feeds to your dashboards. 
-    #. Use data links to dynamically link a dashboard to another dashboard or external system such as Splunk APM, Splunk Platform, or a custom URL.
+    #. Use data links to dynamically link a dashboard to another dashboard or external system such as Splunk APM, the Splunk platform, or a custom URL.
 
    For comprehensive documentation on these tasks, see :ref:`dashboards`.
 
@@ -107,8 +107,8 @@ Build custom detectors
 
 #. Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them. See :ref:`autodetect`. 
 #. Create custom detectors to trigger alerts that address your use cases. See :ref:`get-started-detectoralert`.
-#. You can create advanced detectors to enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 functions using population_comparison. 
-    * See the library of SignalFlow for detectors on GitHub :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors`.
+#. You can create advanced detectors to enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing 2 functions using the population_comparison function. 
+    * See the :new-page:`library of SignalFlow for detectors <https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors>` on GitHub.
     * To get started with SignalFlow, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` in the developer guide.
 
 .. _phase3-onboard-all:
@@ -131,16 +131,15 @@ Consider these optional and advanced configurations to customize your setup as t
 
 .. _phase3-data-links:
 
-Use Data Links to link properties to relevant resources
-================================================================================================================
+Use global data links to link properties to relevant resources
+---------------------------------------------------------------
 
 Create global data links to link Splunk Observability Cloud dashboards to other dashboards, external systems, custom URLs, or Splunk Cloud Platform logs. To learn more, see :ref:`link-metadata-to-content`. 
 
 .. _phase3-usage-limits:
 
 Analyze and troubleshoot usage, limits, and throttles
-================================================================================================================
-To view Splunk Observability Cloud Subscription Usage data within your organization, you must have the admin role.
+---------------------------------------------------------------
 
 To analyze and troubleshoot usage, make sure you know how to complete the following tasks:
 
