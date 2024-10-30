@@ -8,7 +8,8 @@ Introduction to alerts and detectors in Splunk Observability Cloud
     :maxdepth: 3
     :hidden:
 
-    Alerts and detectors scenario library TOGGLE <scenarios-detectors-alerts/scenarios-intro>
+    Best practices for creating detectors <detectors-best-practices>
+    Alerts and detectors scenario library TOGGLE <scenarios-detectors-alerts/scenarios-intro.rst>
     Use and customize AutoDetect alerts and detectors TOGGLE <autodetect/autodetect>
     create-detectors-for-alerts
     detector-manage-permissions
