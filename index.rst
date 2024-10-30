@@ -508,6 +508,11 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
+   Best practices for detectors <alerts-detectors-notifications/detectors-best-practices>
+
+.. toctree::
+   :maxdepth:   3
+
    Alerts and detectors scenario library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
 
 .. toctree::
