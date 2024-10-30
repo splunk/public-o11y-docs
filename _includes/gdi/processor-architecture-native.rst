@@ -220,11 +220,6 @@
      - Yes
      - Yes
      - Yes
-   * - ``etcd``
-     - Yes
-     - Yes
-     - Yes
-     - Yes
    * - ``gitlab``
      - Yes
      - Yes

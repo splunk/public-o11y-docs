@@ -1,10 +1,16 @@
 .. _statsd:
 
-Statsd
-======
+Statsd (deprecated)
+======================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Statsd monitor. See benefits, install, configuration, and metrics
+
+.. caution:: 
+   
+   This integration is deprecated and will be removed in a future release. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+
+   To forward statsd metrics to Splunk Observability Cloud use the :ref:`statsd-receiver` instead. 
 
 The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``statsd`` monitor type to collect statsd metrics. It listens on a configured address and port to receive the statsd metrics.
 
