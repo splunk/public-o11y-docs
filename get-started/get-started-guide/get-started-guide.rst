@@ -13,8 +13,12 @@ Get started guide for Splunk Observability Cloud admins
 
 The journey for getting started with Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. In the onboarding readiness phase, you set up users, teams, and access controls using roles and token management and lay the groundwork for connectivity. Next, in the initial rollout phase, you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud products for your initial project team use cases. In the final scaled rollout phase, you establish repeatable observability practices using automation, data management, detectors, and dashboards.  
 
-How to use this guide
-========================
+.. raw:: html
+  
+    <embed>
+      <h2>How to use this guide<a name="use-guide" class="headerlink" href="#use-guide" title="Permalink to this headline">¶</a></h2>
+    </embed>
+
 
 * Use the following table to get a high-level overview of the primary setup steps involved in each phase. 
 * Use the links for each step to go directly to the detailed instructions or go to the phase topic to view all phase steps in detail. 
