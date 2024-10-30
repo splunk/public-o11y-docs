@@ -117,7 +117,6 @@ See and manage logs
 
 To see and manage your logs, use :ref:`lo-connect-landing`.
 
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. Learn more in :ref:`logs-logs`.
 
 See and manage metrics
 ---------------------------------------

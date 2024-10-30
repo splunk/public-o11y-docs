@@ -7,7 +7,6 @@ View individual log details
 .. meta::
   :description: View the contents of an individual log, then create a field extraction to drill down further. See message, error, span ID, trace ID, and other fields.
 
-.. include:: /_includes/log-observer-transition.rst
 
 After you find log records that contain a specific area, view the
 contents of an individual record to get a precise view of the data related to

@@ -8,6 +8,8 @@ Introduction to Splunk APM
 
 Collect :ref:`traces and spans<apm-traces-spans>` to monitor your distributed applications with Splunk Application Performance Monitoring (APM). A trace is a collection of actions, or spans, that occur to complete a transaction. Splunk APM collects and analyzes every span and trace from each of the services that you have connected to Splunk Observability Cloud to give you full-fidelity access to all of your application data.
 
+To keep up to date with changes in APM, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
+
 For scenarios using Splunk APM, see :ref:`apm-scenarios-intro`.
 
 .. raw:: html

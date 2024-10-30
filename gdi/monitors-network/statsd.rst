@@ -1,19 +1,50 @@
 .. _statsd:
 
-Statsd
-======
+Statsd (deprecated)
+======================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Statsd monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``statsd`` monitor type to collect statsd metrics. It listens on a
-configured address and port to receive the statsd metrics.
+.. caution:: 
+   
+   This integration is deprecated and will be removed in a future release. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
-This integration supports the ``Counter``, ``Timer``, ``Gauge``, and
-``Set`` types, which are dispatched as the Splunk Observability Cloud
-types ``counter``, ``gauge``, ``gauge``, and ``gauge`` respectively.
-Statsd extensions such as tags are not supported.
+   To forward statsd metrics to Splunk Observability Cloud use the :ref:`statsd-receiver` instead. 
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``statsd`` monitor type to collect statsd metrics. It listens on a configured address and port to receive the statsd metrics.
+
+This integration supports certain Stats types, which are dispatched as ``counter`` or ``gauges`` types in Splunk Observability Cloud, as displayed in the table. Statsd extensions such as tags are not supported.
+
+.. list-table::
+   :widths: 50 50
+   :width: 100%
+   :header-rows: 1
+
+   - 
+
+      - Statsd type
+      - Splunk Observability Cloud type
+
+   - 
+
+      - ``Counter``
+      - ``counter``
+
+   - 
+
+      -  ``Timer``
+      - ``counter``
+
+   - 
+
+      - ``Gauge``
+      - ``gauge``
+
+   - 
+
+      - ``Set``
+      - ``gauge``
 
 This integration is available for Kubernetes and Linux.
 

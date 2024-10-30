@@ -10,6 +10,7 @@ Introduction to Splunk Infrastructure Monitoring
 
 Gain insights into and perform powerful, capable analytics on your infrastructure and resources across hybrid and multi-cloud environments with Splunk Infrastructure Monitoring. Infrastructure Monitoring offers support for a broad range of integrations for collecting all kinds of data, from system metrics for infrastructure components to custom data from your applications.
 
+To keep up to date with changes in Infrastructure Monitoring, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
 
 ==========================================================
 Splunk Infrastructure Monitoring hierarchy

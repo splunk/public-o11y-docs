@@ -553,7 +553,7 @@ Control plane metrics
 To see the control plane metrics the Collector provides, see:
 
 * :ref:`CoreDNS <coredns>`
-* :ref:`etcd`
+* :ref:`awsecscontainermetrics-receiver` 
 * :ref:`Kubernetes controller manager <kube-controller-manager>`
 * :ref:`Kubernetes API server <kubernetes-apiserver>`
 * :ref:`Kubernetes proxy <kubernetes-proxy>`

@@ -20,14 +20,12 @@ To get data into Splunk APM AlwaysOn Profiling, you need the following:
 
 AlwaysOn Profiling is activated for all host-based subscriptions. For subscriptions based on traces analyzed per minute (TAPM), check with your Splunk support representative.
 
-.. note:: You don't need Log Observer to get data into Splunk APM AlwaysOn Profiling. See :ref:`exclude-log-data` for more information.
-
 .. _profiling-setup-helm:
 
 Helm chart deployments
 ---------------------------------------------------------------
 
-If you're deploying the Splunk Distribution of OpenTelemetry Collector using Helm, pass the following value when installing the chart:
+If you're deploying the Splunk Distribution of the OpenTelemetry Collector using Helm, pass the following value when installing the chart:
 
 .. code-block:: bash
 
@@ -43,7 +41,7 @@ You can also edit the parameter in the values.yaml file itself. For example:
    # If you don't use AlwaysOn Profiling for Splunk APM, you can disable it.
    profilingEnabled: false
 
-If you don't have a Log Observer entitlement and are using a version of the OTel Collector lower than 0.78.0, make sure to turn off logs collection:
+If you are using a version of the OTel Collector lower than 0.78.0, make sure to turn off logs collection:
 
 .. code-block:: yaml
 

@@ -112,7 +112,7 @@ Tag and property sync is always activated for the services configured in the int
 
 .. _aws-iam-policy-cw:
 
-Permissions for the CloudWatch API
+Permissions for data polling using the CloudWatch API 
 -----------------------------------------------------------
 
 Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Splunk Observability Cloud to collect AWS metrics using the CloudWatch API:
@@ -199,6 +199,13 @@ For example:
   }
 
 Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+
+.. _aws-permissions-ms-aws-managed:
+
+Permissions for AWS-managed Metric Streams
+-----------------------------------------------------------
+
+If you're using AWS-managed Metric Streams, you don't need any additional permissions other than :ref:`those required to use Splunk Observability Cloud <aws-iam-policy-required>`.
 
 .. _aws-iam-policy-services:
 
@@ -473,6 +480,12 @@ GovCloud
 
 * ``us-gov-east-1``: AWS GovCloud (US-East)
 * ``us-gov-west-1``: AWS GovCloud (US-West)  
+
+The following applies to GovCloud regions:
+
+* Metric sync in GovCloud regions is limited to namespaces supported by AWS. Verify the specific namespaces available in your GovCloud region in the official AWS documentation :new-page:`Services in AWS GovCloud (US) Regions <https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/using-services.html>`.
+
+* AWS doesn't currently provide FIPS-complaint endpoints to retrieve tags. If you set up tags in your AWS GovCloud infrastructure do not include any sensitive information. In Splunk Observability Cloud AWS tags are identified by the prefix ``aws_tag``.
 
 China
 -------------------------------------------

@@ -24,8 +24,7 @@ This integration allows you to monitor the following:
 -  GitLab Sidekiq: It scrapes the Gitlab Sidekiq Prometheus Exporter.
 -  GitLab Unicorn server: It comes with a Prometheus exporter. The IP
    address of the container or host needs to be allowed for the
-   collector to access the endpoint. See the ``IP allowlist``
-   documentation on GitLab Docs for more information.
+   collector to access the endpoint. See the ``IP allowlist`` documentation on GitLab Docs for more information.
 -  GitLab Webservice: It provides the GitLab Rails webserver with two Webservice workers per pod.     
 -  GitLab Workhorse: The GitLab service that handles slow HTTP requests.
    Workhorse includes a built-in Prometheus exporter that this monitor
@@ -138,9 +137,9 @@ The following Prometheus endpoint targets are available:
 Important notes
 ~~~~~~~~~~~~~~~~~~~~~~
 
-* If you configue GitLab by editing ``/etc/gitlab/gitlab.rb``, run the command ``gitlab-ctl reconfigure`` for the changes to take effect.
+* If you configure GitLab by editing ``/etc/gitlab/gitlab.rb``, run the command ``gitlab-ctl reconfigure`` for the changes to take effect.
 
-* If you configue nginx by editing the file ``/var/opt/gitlab/nginx/conf/nginx-status.conf``, run the command ``gitlab-ctl restart``. 
+* If you configure nginx by editing the file ``/var/opt/gitlab/nginx/conf/nginx-status.conf``, run the command ``gitlab-ctl restart``. 
 
   * Note that changes to the configuration file ``/var/opt/gitlab/nginx/conf/nginx-status.conf`` in particular are erased by subsequent runs of ``gitlab-ctl reconfigure`` because ``gitlab-ctl reconfigure`` restores the original configuration file.
 
