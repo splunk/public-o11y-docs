@@ -14,7 +14,7 @@ To get a high-level overview of the entire getting started journey for Splunk Ob
    :width: 100%
    :alt: 
 
-To configure your users, teams, and tokens, complete the following tasks:
+To increase usage across all user teams and establish repeatable observability practices through automation, data management, detectors, and dashboards, complete the following tasks:
 
 #. :ref:`phase3-pipeline`
 #. :ref:`phase3-rotate-token`
