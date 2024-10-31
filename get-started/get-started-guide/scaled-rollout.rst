@@ -33,7 +33,7 @@ Add Splunk Observability Cloud to your deployment pipeline
 
 After completing the initial rollout phase, you have deployed a Collector instance with limited configuration. For the scaled rollout, you can expand your Collector pipelines with more components and services.
 
-* See :ref:`otel-configuration` for an overview of the available options to install, configure, and use the Splunk Distribution of the Open Telemetry Collector.
+* See :ref:`otel-configuration` for an overview of the available options to install, configure, and use the Splunk Distribution of the OpenTelemetry Collector.
 * See :ref:`otel-data-processing` to learn how data is processed in Collector pipelines.
 * See the :ref:`otel-components` documentation to see the available components you can add to the Collector configuration. 
 
