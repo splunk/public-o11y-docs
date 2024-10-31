@@ -38,4 +38,4 @@ Learn more
 ----------
 
 * For more details about alerts and detectors, see :ref:`Introduction to alerts and detectors in Splunk Observability Cloud <get-started-detectoralert>`.
-* To learn more about the concepts in this tutorial, such as managing dashboards and teams, see :ref:`welcome`.
+* To learn more about the concepts in this tutorial, such as managing dashboards and teams, see :ref:`overview`.

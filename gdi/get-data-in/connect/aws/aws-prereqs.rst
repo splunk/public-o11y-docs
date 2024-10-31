@@ -262,8 +262,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
 - ``"kinesis:ListTagsForStream"``
-- ``“kinesisanalytics:DescribeApplication”``
-- ``“kinesisanalytics:ListApplications”``
+- ``"kinesisanalytics:DescribeApplication"``
+- ``"kinesisanalytics:ListApplications"``
 - ``"kinesisanalytics:ListTagsForResource"``
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
