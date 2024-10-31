@@ -11,7 +11,11 @@ Impact and benefits of archiving or dropping data
 
 |hr|
 
-:strong:`Available in Enterprise Edition`. For more information, see :ref:`sd-subscriptions`.
+.. raw:: html
+  
+    <embed>
+      <p><b>Available in Enterprise Edition</b>. For more information, see <a href="#sd-subscriptions">Subscription types, expansions, renewals, and terminations</a>.</p>
+    </embed>
 
 |hr|
 

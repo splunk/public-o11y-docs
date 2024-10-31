@@ -9,8 +9,12 @@ Use data routing to keep, archive, or discard your metrics
 
 |hr|
 
-:strong:`Available in Enterprise Edition`. For more information, see :ref:`sd-subscriptions`.
-
+.. raw:: html
+  
+    <embed>
+      <p><b>Available in Enterprise Edition</b>. For more information, see <a href="#sd-subscriptions">Subscription types, expansions, renewals, and terminations</a>.</p>
+    </embed>
+    
 |hr|
 
 Use data routing to choose how to ingest and store all the metric time series (MTS) that have the same metric. Routing options include to keep metrics in real-time, archive them, or drop them altogether. 
