@@ -23,6 +23,9 @@ To configure your users, teams, and tokens, complete the following tasks:
 #. :ref:`phase3-dash-detect`
 #. :ref:`phase3-onboard-all`
 
+.. note::
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager as you get started. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
+
 .. _phase3-pipeline:
 
 Add Splunk Observability Cloud to your deployment pipeline
