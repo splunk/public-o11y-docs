@@ -132,7 +132,7 @@ To determine if a gRPC span counts towards the error rate for a service, Splunk 
      - unset
      - ERROR
 
-See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/rpc.yaml`.
+See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/rpc/spans.yaml`.
 
 .. _metricset-errors:
 
