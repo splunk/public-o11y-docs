@@ -10,8 +10,8 @@ Release notes overview
 .. toctree::
    :hidden:
 
-   2024-11-13-rn
-   2024-10-01-rn
+   2024-11-rn
+   2024-10-rn
 
 Keep up to date with the latest new features and enhancements to Splunk Observability Cloud products and components. Splunk Observability Cloud comprises both SaaS products which release on a rolling basis and downloadable versioned components. Presented here are new feature and enhancement announcements for both SaaS and versioned offerings as well as links to detailed changelogs for versioned components.
 
@@ -26,16 +26,14 @@ Each release date includes new features and enhancements for SaaS and versioned 
    :width: 100%
    :header-rows: 1
 
-   * - Release
-     - Changes by product or component
-   * - :ref:`November 13, 2024 <2024-11-13-rn>`
-     - * <TBD>
-   * - :ref:`October 1, 2024 <2024-10-01-rn>`
-     - * :ref:`Log Observer Connect <loc-2024-10-01>`
-       * :ref:`Data ingest <ingest-2024-20-01>`
-       * :ref:`Data management <data-mngt-2024-10-01>`
-       * :ref:`Service level objective <slo-2024-10-01>`
-       * :ref:`Token management improvements <auth-2024-10-01>`
+   * - Release month
+     - Release date
+   * - :ref:`2024-11-rn`
+     - * :ref:`2024-11-13-rn`
+   * - :ref:`2024-10-rn`
+     - * :ref:`2024-10-23-rn`
+       * :ref:`2024-10-02-rn`
+       * :ref:`2024-10-01-rn`
 
 .. _changelogs:
 

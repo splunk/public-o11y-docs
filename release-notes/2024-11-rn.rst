@@ -1,0 +1,59 @@
+.. _2024-11-rn:
+
+*************
+November 2024
+*************
+
+Splunk Observability Cloud released the following new features and enhancements in November 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+.. _2024-11-13-rn:
+
+November 13, 2024
+=================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Real-time metrics in Splunk Cloud Platform
+     - Splunk Cloud Platform users can now import real-time monitoring (RTM) metrics series into Splunk Dashboard Studio for additional event context. Either import charts and navigators from Splunk Observability Cloud or create charts in Splunk Dashboard Studio using metrics from Splunk Observability Cloud.
+   * - Metrics usage analytics
+     - Metrics pipeline management now include the metrics usage analytics (MUA) self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system.
+   * - Log Observer Connect teams
+     - Splunk Cloud Platform admins can now restrict user access at a service-account level to ensure that sensitive logs are only available to a specific user group.
+   * - Getting data in onboarding improvements
+     - The user interface now includes the following enhancements:
+
+       - Tabbed layout for the Data Management page
+       - Guided onboarding banner that replaces the OTel Collector banner
+       - Updated integrations list
+       - Call to action added to the infrastructure inventory for the hosts and clusters that don't have the OTel Collector installed
+   * - User interface alignment
+     - The Splunk Observability Cloud user interface now more closely aligns with the AppDynamics user experience.
+   * - Global search enhancements
+     - The in-app search now includes the following enhancements:
+     
+       - Improved search coverage for RUM, Synthetics, and Log Observer Connect
+       - Quick navigation links to Settings, Help & Support, and Documentation
+       - Enhanced usability with more consistent and easy-to-understand search results
+   * - Kubernetes proactive troubleshooting journey
+     - The Infrastructure Monitoring Kubernetes navigator now includes the following enhancements:
+
+       - Tabular and heatmap troubleshooting views
+       - Additional coverage for Kubernetes entities
+       - Hierarchical browser in instance views
+       - Data links in tables, metadata, and the sidebar
+   * - Synthetic monitoring performance KPI enhancements
+     - <TBD>
+   * - Tag spotlight enhancements in APM and RUM
+     - <TBD>
+   * - Archived metrics visibility in charts and detectors
+     - When building charts and detectors, it's now possible to know whether metric data have been archived.
+
+
+
+
+
