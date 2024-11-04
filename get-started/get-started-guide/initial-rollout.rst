@@ -96,6 +96,15 @@ Optional and advanced configurations
 
 Consider these optional and advanced configurations to customize your setup as they apply to your organization. 
 
+.. _advanced-config-3rd-party:
+
+Collect data from third-party metrics providers
+--------------------------------------------------------------
+
+When using the Splunk Distribution of OpenTelemetry Collector, you can use receivers to collect metrics data from third-party providers. For example, you can use the Prometheus receiver to scrape metrics data from any application that exposes a Prometheus endpoint. See :ref:`prometheus-receiver`.
+
+See :ref:`monitor-data-sources` for a list of receivers.
+
 .. _phase3-network-exp:
 
 Set up Network Explorer to monitor network environment

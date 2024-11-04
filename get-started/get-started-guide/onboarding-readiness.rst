@@ -132,15 +132,6 @@ If your organization has an entitlement for Splunk Log Observer Connect, Splunk 
 
 See :ref:`logs-set-up-logconnect` or :ref:`logs-scp`. 
 
-.. _advanced-config-3rd-party:
-
-Collect data from third-party metrics providers
---------------------------------------------------------------
-
-When using the Splunk Distribution of OpenTelemetry Collector, you can use receivers to collect metrics data from third-party providers. For example, you can use the Prometheus receiver to scrape metrics data from any application that exposes a Prometheus endpoint. See :ref:`prometheus-receiver`.
-
-See :ref:`monitor-data-sources` for a list of receivers.
-
 Education resources
 =====================
 
