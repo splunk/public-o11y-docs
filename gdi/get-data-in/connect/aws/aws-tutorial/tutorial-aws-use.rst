@@ -113,4 +113,4 @@ Learn more
   * To learn how to jump between components of Splunk Observability Cloud by selecting related data, see :ref:`get-started-relatedcontent`.
   * To learn about additional data sources that you can monitor using Splunk Observability Cloud, see :ref:`supported-data-sources`.
   * To learn how to coordinate team efforts in Splunk Observability Cloud using team alerts and dashboards, see :ref:`admin-manage-teams`
-* To learn more about the concepts used in this tutorial and Splunk Observability Cloud in general, see :ref:`welcome`.
+  * To learn more about the concepts used in this tutorial and Splunk Observability Cloud in general, see :ref:`overview`.
