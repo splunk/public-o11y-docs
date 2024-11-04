@@ -31,6 +31,6 @@ Billing
 ---------------------------------------------
 
 * If you're in a MTS-based subscription, all metrics count towards metrics usage.
-* If you're in a host-based plan, metrics listed on this document are considered default and are included free of charge.
+* If you're in a host-based plan, metrics listed as active (Active: Yes) on this document are considered default and are included free of charge.
 
 Learn more at :ref:`monitor-imm-billing-usage`.
