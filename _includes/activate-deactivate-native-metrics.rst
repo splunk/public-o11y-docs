@@ -26,3 +26,11 @@ The following is an example of host metrics receiver configuration with activate
                enabled: true
 
 .. note:: Deactivated metrics aren't sent to Splunk Observability Cloud.
+
+Billing
+---------------------------------------------
+
+* If you're in a MTS-based subscription, all metrics count towards metrics usage.
+* If you're in a host-based plan, metrics listed as active (Active: Yes) on this document are considered default and are included free of charge.
+
+Learn more at :ref:`monitor-imm-billing-usage`.
