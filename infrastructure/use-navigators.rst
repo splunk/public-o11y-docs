@@ -261,8 +261,8 @@ The following table describes the content displayed in the :guilabel:`dependenci
      - The services and hosts that are running on the Kubernetes containers.
 
    * - Hosts navigators
-     - The services that are running on the hosts.
-     - The Kubernetes containers that the hosts are running on.
+     - * The services that are running on the hosts.
+       * The Kubernetes containers that the hosts are running on.
 
    * - Other navigators
      - The Kubernetes containers or hosts that the services are running on.
