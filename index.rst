@@ -770,12 +770,6 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 
    Troubleshoot tests TOGGLE <synthetics/syn-troubleshoot/syn-troubleshoot>
 
-
-.. toctree::
-   :maxdepth:   3
-
-   Troubleshoot tests  <synthetics/syn-troubleshoot/syn-missing-alerts>
-
 .. toctree::
    :caption: Splunk On-Call
    :maxdepth:   3
