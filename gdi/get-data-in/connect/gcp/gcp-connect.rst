@@ -70,7 +70,7 @@ Alternatively you can create a more restrictive role using the permissions in th
       - Yes
 
    *  - ``serviceusage.services.use``
-      - Yes, if you want to activate the use of a quota from the project where metrics are stored
+      - Yes, if you either want to activate the use of a quota from the project where metrics are stored or sync cloud sql metadata
       - No, but included in ``roles/serviceusage.serviceUsageConsumer``
 
    *  - ``spanner.instances.list``
@@ -80,6 +80,39 @@ Alternatively you can create a more restrictive role using the permissions in th
    *  - ``storage.buckets.list``
       - Yes, if the Spanner service is activated
       - Yes
+
+   *  - ``cloudsql.databases.list``
+      - Yes, if the cloud sql service is activated
+      - Yes
+
+   *  - ``cloudsql.instances.list``
+      - Yes, if the cloud sql service is activated
+      - Yes
+
+   *  - ``pubsub.topics.list``
+      - Yes, if the pub/sub service is activated
+      - Yes
+
+   *  - ``pubsub.subscriptions.list``
+      - Yes, if the pub/sub service is activated
+      - Yes
+
+   *  - ``run.jobs.list``
+      - Yes, if the cloud run service is activated
+      - Yes
+
+   *  - ``run.revisions.list``
+      - Yes, if the cloud run service is activated
+      - Yes
+
+   *  - ``cloudasset.assets.searchAllResources``
+      - Yes, if the cloud run service is activated
+      - Yes
+
+   *  - ``cloudfunctions.functions.list``
+      - Yes, if the cloud functions service is activated
+      - Yes
+
 
 .. _gcp-two:
 

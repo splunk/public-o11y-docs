@@ -28,7 +28,7 @@ You can collect data from the following GCP services out-of-the-box:
   * - cloudfunctions
     - Cloud Functions
     - :strong:`X`
-    - 
+    - :strong:`X`
    
   * - cloudiot
     - Cloud Internet of Things Core
@@ -38,7 +38,7 @@ You can collect data from the following GCP services out-of-the-box:
   * - cloudsql
     - Cloud SQL
     - :strong:`X`
-    - 
+    - :strong:`X`
    
   * - cloudtasks
     - Cloud Tasks
@@ -128,7 +128,7 @@ You can collect data from the following GCP services out-of-the-box:
   * - pubsub
     - Cloud Pub/Sub
     - :strong:`X`
-    - 
+    - :strong:`X`
    
   * - redis
     - Memorystore for Redis
@@ -143,7 +143,7 @@ You can collect data from the following GCP services out-of-the-box:
   * - run
     - Cloud Run
     - :strong:`X`
-    - 
+    - :strong:`X`
    
   * - serviceruntime
     - Google Cloud Endpoints APIs
