@@ -14,4 +14,4 @@ You can search for keywords, field names, or field values. To search your logs, 
 
 .. include:: /_includes/logs/query-logs.rst
 
-When you add keywords, field names, or field values to the filters, Log Observer narrows the results in the Timeline and the Logs table so that only records containing the selected fields and values appear. To learn how you can reuse a productive search in the future, see :ref:`logs-save-share`.
+When you add keywords, field names, or field values to the filters, Log Observer Connect narrows the results in the Timeline and the Logs table so that only records containing the selected fields and values appear. To learn how you can reuse a productive search in the future, see :ref:`logs-save-share`.

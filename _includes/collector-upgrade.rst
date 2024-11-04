@@ -1,4 +1,4 @@
-The installer script uses one of the supported package managers to install the Collector, for example apt or yum.
+The installer script uses one of the supported package managers to install the Collector.
 
 When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped. 
 

@@ -11,7 +11,7 @@ Connect AWS to Splunk Observability Cloud
   :hidden:
   :maxdepth: 5
 
-  AWS authentication and supported regions <aws-prereqs>
+  AWS authentication, permissions and regions <aws-prereqs>
   Supported Amazon services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-aws.html#cloud-aws>
   Compare connection options <aws-compare-connect>
   Connect via polling <aws-connect-polling>

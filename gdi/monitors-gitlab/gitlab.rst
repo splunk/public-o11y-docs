@@ -137,9 +137,9 @@ The following Prometheus endpoint targets are available:
 Important notes
 ~~~~~~~~~~~~~~~~~~~~~~
 
-* If you configue GitLab by editing ``/etc/gitlab/gitlab.rb``, run the command ``gitlab-ctl reconfigure`` for the changes to take effect.
+* If you configure GitLab by editing ``/etc/gitlab/gitlab.rb``, run the command ``gitlab-ctl reconfigure`` for the changes to take effect.
 
-* If you configue nginx by editing the file ``/var/opt/gitlab/nginx/conf/nginx-status.conf``, run the command ``gitlab-ctl restart``. 
+* If you configure nginx by editing the file ``/var/opt/gitlab/nginx/conf/nginx-status.conf``, run the command ``gitlab-ctl restart``. 
 
   * Note that changes to the configuration file ``/var/opt/gitlab/nginx/conf/nginx-status.conf`` in particular are erased by subsequent runs of ``gitlab-ctl reconfigure`` because ``gitlab-ctl reconfigure`` restores the original configuration file.
 

@@ -5,7 +5,7 @@ Get started with the Collector for Linux
 ***********************************************************
 
 .. meta::
-   :description: Introduction to the Splunk Distribution of OpenTelemetry Collector for Linux.
+   :description: Introduction to the Splunk Distribution of the OpenTelemetry Collector for Linux.
 
 .. toctree::
    :maxdepth: 5
@@ -27,6 +27,8 @@ To install and configure the Splunk Distribution of the OpenTelemetry Collector 
 * :ref:`otel-install-linux`
 * :ref:`otel-install-linux-manual`
 * :ref:`otel-install-linux-tools` 
+
+.. note:: You can also deploy the Collector using the Technical Add-on, which provides out-of-the box Collector content and configuration. Learn more at :ref:`collector-addon-intro`.
 
 See the default settings and configuration options at:
 

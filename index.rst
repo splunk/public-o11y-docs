@@ -21,7 +21,7 @@ Learn about the basic elements of Splunk Observability Cloud and all it can do f
 .. rst-class:: newcard
 
 :strong:`Overview`
-Splunk Observability Cloud overview :ref:`welcome`
+Splunk Observability Cloud overview :ref:`overview`
 
 .. rst-class:: newcard
 
@@ -35,8 +35,8 @@ A collection of task-based tutorials to achieve a goal in Splunk Observability C
 
 .. rst-class:: newcard
 
-:strong:`Admin onboarding guide`
-Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
+:strong:`Get started guide for admins`
+Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`
 
 .. rst-class:: newcard
 
@@ -114,12 +114,12 @@ Query logs to identify root causes :ref:`logs-intro-logconnect`
 .. rst-class:: newcard
 
 :strong:`Synthetic Monitoring`
-Proactively monitor the performance of web resources :ref:`welcome-synthmon`
+Proactively monitor the performance of web resources :ref:`intro-synthetics`
 
 .. rst-class:: newcard
 
 :strong:`All products`
-Learn more about all Splunk Observability Cloud products :ref:`welcome`
+Learn more about all Splunk Observability Cloud products :ref:`overview`
 
 .. role:: icon-wrench
 .. rst-class:: newparawithicon
@@ -271,7 +271,17 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    :caption: Get started
    :maxdepth:   2
 
-   get-started/welcome
+   get-started/get-started
+
+.. toctree::
+   :maxdepth:   3
+
+   Overview <get-started/overview>
+
+.. toctree::
+   :maxdepth:   3
+
+   Architecture <get-started/o11y-architecture>
 
 .. toctree::
    :maxdepth: 3
@@ -281,22 +291,7 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth: 3
 
-   Get started <get-started/o11y>
-
-.. toctree::
-   :maxdepth:   3
-
-   About Mobile TOGGLE <get-started/intro-to-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   Splunk Observability Cloud architecture <get-started/o11y-architecture>
-
-.. toctree::
-   :maxdepth:   3
-
-   Contribute to our documentation <get-started/contribute>
+   Get started guide for admins TOGGLE <get-started/get-started-guide/get-started-guide>
 
 .. toctree::
    :maxdepth:   3
@@ -306,7 +301,12 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-   Free trial experience <get-started/o11y-trial>
+   Free trial and guided onboarding <get-started/o11y-trial>
+
+.. toctree::
+   :maxdepth:   3
+
+   About Mobile TOGGLE <get-started/intro-to-mobile>
 
 .. toctree::
    :maxdepth:   3
@@ -345,11 +345,6 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 
 .. toctree::
    :caption: Administer Splunk Observability Cloud
-   :maxdepth:   3
-
-   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
-
-.. toctree::
    :maxdepth:   3
 
    admin/admin
@@ -503,82 +498,7 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    :caption: Alerts, detectors, and SLOs
    :maxdepth:   3
 
-   Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
-
-.. toctree::
-   :maxdepth:   3
-
-   Alerts and detectors scenario library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
-
-.. toctree::
-   :maxdepth:   3
-
-   Use and customize AutoDetect alerts and detectors TOGGLE <alerts-detectors-notifications/autodetect/autodetect>
-
-.. toctree::
-   :maxdepth:   3
-
-   Create detectors to trigger alerts <alerts-detectors-notifications/create-detectors-for-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   alerts-detectors-notifications/detector-manage-permissions
-
-.. toctree::
-   :maxdepth:   3
-
-   Link detectors to charts <alerts-detectors-notifications/link-detectors-to-charts>
-
-.. toctree::
-   :maxdepth:   3
-
-   Manage notification subscribers <alerts-detectors-notifications/manage-notifications>
-
-.. toctree::
-   :maxdepth:   3
-
-   Preview detector alerts <alerts-detectors-notifications/preview-detector-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   View alerts <alerts-detectors-notifications/view-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   View detectors <alerts-detectors-notifications/view-detectors>
-
-.. toctree::
-   :maxdepth:  3
-
-   Mute alert notifications <alerts-detectors-notifications/mute-notifications>
-
-.. toctree::
-   :maxdepth:   3
-
-   Auto-clear alerts <alerts-detectors-notifications/auto-clearing-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   Troubleshoot detectors <alerts-detectors-notifications/troubleshoot-detectors>
-
-.. toctree::
-   :maxdepth:   3
-
-   Detector options <alerts-detectors-notifications/detector-options>
-
-.. toctree::
-   :maxdepth:   3
-
-   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
-
-.. toctree::
-   :maxdepth:   3
-
-   alerts-detectors-notifications/alert-message-variables-reference
+   Alerts and detectors TOGGLE <alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst>
 
 .. toctree::
    :maxdepth:   3
@@ -848,7 +768,18 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-   Configure your tests TOGGLE <synthetics/test-config/test-config>
+   Advanced test configurations TOGGLE <synthetics/test-config/test-config>
+
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests TOGGLE <synthetics/syn-troubleshoot/syn-troubleshoot>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests  <synthetics/syn-troubleshoot/syn-missing-alerts>
 
 .. toctree::
    :caption: Splunk On-Call
@@ -916,3 +847,8 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    :maxdepth:   3
 
    Glossary <references/glossary>
+
+.. toctree::
+   :maxdepth:   3
+
+   Contribute to our documentation <get-started/contribute>

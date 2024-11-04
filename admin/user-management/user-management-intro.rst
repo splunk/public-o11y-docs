@@ -1,4 +1,4 @@
-.. _user-managment-intro:
+.. _user-management-intro:
 
 ********************************************************************************
 Manage users and teams

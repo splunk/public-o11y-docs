@@ -9,7 +9,7 @@ Automatic discovery for back-end applications in Windows
 
 Automatic discovery can detect the following types of applications in your Windows environment:
 
-Automatic discovery and configuration for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. After installing the package, you must start or restart any .NET applications that you want to instrument.
+Automatic discovery and configuration for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. By default, automatic instrumentation is only turned on for IIS applications. To activate other application and service types, see :ref:`otel-dotnet-manual-install`. After installing the package, you must start or restart any .NET applications that you want to instrument. 
 
 .. note:: The SignalFx instrumentation for .NET is deprecated and will reach end of support on February 21, 2025. To learn how to migrate from SignalFx .NET to OpenTelemetry .NET, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
 
@@ -44,6 +44,8 @@ Do the following to customize the command:
 - Replace ``<environment_name>`` with the label for the target environment.
 - Replace ``<access_token>`` with a valid Splunk Observability Cloud access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
 - Replace ``<realm>`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+
+
 
 .. _configure-the-package-dotnet:
 

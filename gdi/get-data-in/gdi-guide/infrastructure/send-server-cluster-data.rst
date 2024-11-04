@@ -10,7 +10,7 @@ Part 2: Install the OpenTelemetry Collector to send server and cluster data
 Install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` on any hosts or clusters you're using as a part of your infrastructure, such as servers running in your data center or on a virtual machine running in the cloud to: 
 
 - Send metrics to Infrastructure Monitoring
-- Send logs to Log Observer
+- Query logs in Log Observer Connect
 - Set up your environment to receive logs and traces from applications instrumented in :ref:`instrument-back-end-services-apm`.
 
 .. image:: /_images/infrastructure/k8s-nav-pivot.gif
@@ -87,10 +87,10 @@ You can find your infrastructure metrics by using the Splunk metric finder. For 
 
 .. _query-logs-inframon:
 
-Query logs in Log Observer
+Query logs in Log Observer Connect 
 ----------------------------------------------------------------------------------------------
 
-If you chose to ingest logs, you can query them in the Splunk Log Observer. For more information, see :ref:`logs-timeline`.
+If you chose to ingest logs, you can query them in the Splunk Log Observer Connect. See more at :ref:`logs-intro-logconnect`.
 
 Next steps
 =========================================

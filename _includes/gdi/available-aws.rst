@@ -88,7 +88,7 @@ You can collect data from the following AWS services:
     - :strong:`X`
     - 
     - 
-    - 
+    - :strong:`X`
 
   * - AWS/CloudFront
     - AWS CloudFront

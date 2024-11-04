@@ -181,18 +181,9 @@ Use the Kubernetes Operator in OpenTelemetry
 
 Using the Splunk Helm chart, you can install the Splunk Collector along with an upstream OpenTelemetry Kubernetes Operator for Auto Instrumentation. For more information, see :ref:`discovery-kubernetes`.
 
-This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Operator project. See the :new-page:`OpenTelemetry GitHub repo <OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>` for more information.
+This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Operator project. See the :new-page:`OpenTelemetry Operator documentation <https://github.com/open-telemetry/opentelemetry-operator>` in GitHub for more information.
 
 .. note:: The upstream Kubernetes Operator is not related to the Splunk Operator for Kubernetes, which is used to deploy and operate Splunk Enterprise deployments in a Kubernetes infrastructure.
-
-Splunk Distribution of the OpenTelemetry Collector for Kubernetes Operator (Alpha)
---------------------------------------------------------------------------------------------------------
-
-.. caution::
-
-   This project is Alpha. Do not use in production.
-
-The Splunk Distribution of the OpenTelemetry Collector for Kubernetes Operator is Splunk Observability Cloud's implementation of a Kubernetes Operator, and it helps deploy and manage the Splunk Distribution of the OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
 
 Next steps
 ==================================

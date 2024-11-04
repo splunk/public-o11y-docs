@@ -20,7 +20,7 @@ You can configure two types of authentication for the Collector:
   * :ref:`oauth2client-extension`
   * Sigv4 extension
 
-.. note:: For more details see :new-page:`Auth Configuration Settings https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth` in OTel's GitHub repo.
+.. note:: For more details see :new-page:`Auth Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth>` in OTel's GitHub repo.
 
 Example
 =============================================================================================

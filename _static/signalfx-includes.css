@@ -742,7 +742,7 @@ border-left: 1px solid #eee;
   margin: 0 0 10px 0px;
   }
 
-  #welcome .section .section{
+   .section .section{
     width:100%;
   }
 
@@ -853,7 +853,7 @@ div.sphinxsidebar p {
   margin:17px 0 5px;
 }
 
-#welcome {
+#welcome, #get-started-with-splunk-observability-cloud {
   width:100%;
 }
 

@@ -1,12 +1,14 @@
 .. _chrony:
 
-Chrony NTP
-==========
+Chrony NTP (deprecated)
+==============================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Chrony NTP monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+.. caution:: This integration is deprecated. If you're using the Splunk Distribution of the OpenTelemetry Collector and want to monitor Chrony use the native OpenTelemetry component :ref:`chrony-receiver` instead.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 Chrony NTP monitor type to monitor NTP data from a chrony server, such
 as clock skew and per-peer stratum. To talk to chronyd, this integration
 mimics what the chronyc control program does on the wire.
