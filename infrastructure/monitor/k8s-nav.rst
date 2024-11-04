@@ -61,7 +61,7 @@ The following table describes the Kubernetes navigators:
         * CronJobs
         * Services
         * Resources
-      - Provides a :ref:`table view <navigator-views>` of Kubernetes instances across your infrastructure
+      - Provides a :ref:`table and heat map view <navigator-views>` of Kubernetes instances across your infrastructure
       - * Monitor Kubernetes instances across your infrastructure
         * Monitor a specific subset of instances, such as workloads running in a particular namespace
         * View services and hosts on which Kubernetes is running
@@ -128,7 +128,7 @@ Analyzer
 
 The Analyzer, accessed through the :guilabel:`K8s analyzer` tab, helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes objects that are in a bad state, such as nodes that are not ready. The Analyzer produces theories about what those objects might have in common, such as that all of the objects are running the same workload or all objects are located in the same AWS region. Select a finding in the Analyzer panel to filter the map.
 
-The Analyzer panel displays suggested filters for the elements selected in the :ref:`cluster map <k8s-nav-map>`. Select links in the Analyzer panel to add filters to the cluster map and explore conditions across your entire Kubernetes environment.
+The Analyzer panel displays suggested filters for the elements selected in the table or heat map view. Select links in the Analyzer panel to add filters to the table or heat map view and explore conditions across your entire Kubernetes environment.
 
 The Analyzer uses AI-driven insights to examine patterns that nodes, pods, or containers could have in common. The trouble indicators are:
 
