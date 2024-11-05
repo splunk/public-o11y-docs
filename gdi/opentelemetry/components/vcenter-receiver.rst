@@ -76,7 +76,7 @@ The following settings are required:
 
 * ``endpoint``. Endpoint to the vCenter Server or ESXi host that has the SDK path enabled. 
 
-  * Use the <protocol>://<hostname> format, for example ``https://vcsa.hostname.localnet`.
+  * Use the <protocol>://<hostname> format, for example ``https://vcsa.hostname.localnet``.
 
 The following settings are optional:
 
