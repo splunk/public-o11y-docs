@@ -49,7 +49,6 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
       metrics:
         receivers: [vcenter]
 
-
 Configuration example
 ----------------------------------------------------------------------
 
