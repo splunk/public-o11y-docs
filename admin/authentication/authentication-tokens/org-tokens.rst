@@ -247,7 +247,7 @@ Follow these steps:
 #. Enter your API session token in the ``your-user-session-api-token-value`` field. To find or create an API session token, see :ref:`admin-api-access-tokens`.
 #. Provide the name of the token you want to rotate in the ``name`` field.
 #. Optionally, provide a grace period, in seconds, in the ``gracePeriod`` field.
-#. Optionally, provide the seconds until your token expires in the secondsUntilExpiry field. This can be any value between 0 seconds and 5,676,000,000 seconds (18 years). If left unspecified, the token remains valid for 18 years. 
+#. Optionally, provide the seconds until your token expires in the ``secondsUntilExpiry`` field. This can be any value between 0 seconds and 5,676,000,000 seconds (18 years). If left unspecified, the token remains valid for 30 days. 
 #. Call the API endpoint to rotate the token.
 
 For example, the following API call rotates ``myToken`` and sets a grace period of 604800 seconds (7 days) before the previous token secret expires.
