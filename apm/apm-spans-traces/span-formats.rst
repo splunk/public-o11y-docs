@@ -98,19 +98,4 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 
 .. note:: You can also send trace data in OTLP format directly to Splunk Observability Cloud using the gRPC endpoint, either directly or from an OpenTelemetry Collector. See :ref:`grpc-data-ingest`.
 
-.. _apm-formats-smart-agent:
 
-Span formats compatible with the Smart Agent (deprecated)
-============================================================
-
-The Smart Agent can receive the following span formats with the ``signalfx-forwarder`` monitor:
-
-- Jaeger: gRPC and Thrift
-- Zipkin v1, v2 JSON
-
-The Smart Agent can export the following span formats using the ``writer`` exporter:
-
-- Zipkin v1, v2 JSON
-- SAPM
-
-To configure the Smart Agent for Splunk APM, see :ref:`smart-agent`.
