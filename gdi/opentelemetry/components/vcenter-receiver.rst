@@ -68,9 +68,25 @@ See the following config example:
 Configuration settings
 -------------------------------------------------
 
-The following setting are required:
+The following settings are required:
 
+* ``password``
 
+* ``username``
+
+* ``endpoint``. Endpoint to the vCenter Server or ESXi host that has the SDK path enabled. 
+
+  * Use the <protocol>://<hostname> format, for example ``https://vcsa.hostname.localnet`.
+
+The following settings are optional:
+
+* ``collection_interval``. ``2m`` by default.  This receiver collects metrics on an interval. If the vCenter is large, increase this value. 
+
+  * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
+
+* ``initial_delay``. ``1s`` by default. Defines how long the receiver waits before starting.
+
+* ``tls``. TLS control. By default insecure settings are rejected and certificate verification is on. Will use defaults for configtls.ClientConfig. Learn more at :new-page:`TLS Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>` in GitHub.
 
 Settings
 ======================
@@ -81,7 +97,7 @@ The following table shows the configuration options for the vCenter receiver:
 
   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/vcenter.yaml"></div>
 
-.. _redis-receiver-metrics:
+.. _vcenter-receiver-metrics:
 
 Metrics
 =====================
