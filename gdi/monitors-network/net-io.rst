@@ -68,8 +68,7 @@ integration:
       - ``interfaces``
       - no
       - ``list of strings``
-      - The network interfaces to send metrics about. This is an
-         :ref:`overridable set <filtering-smart-agent>`
+      - The network interfaces to send metrics about. 
          (**default:**
          ``[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]``)
 
