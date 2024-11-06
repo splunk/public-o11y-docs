@@ -1,7 +1,7 @@
 .. _admin-notifs-index:
 
 ************************************************************************************
-Send alert notifications to third-party services using Splunk Observability Cloud
+Send alert notifications to services using Splunk Observability Cloud
 ************************************************************************************
 
 .. meta::
@@ -19,18 +19,20 @@ Send alert notifications to third-party services using Splunk Observability Clou
    Send alerts to ServiceNow<servicenow>
    Send alerts to Slack<slack>
    Send alerts to Splunk On-Call<splunkoncall>
+   Send alerts to Splunk platform<splunkplatform>
    Send alerts to Webhook<webhook>
    Send alerts to xMatters<xmatters>
    
 
-In addition to sending alert notifications by email (see :ref:`manage-notifications`), you can configure Splunk Observability Cloud to send alert notifications to the following third-party services:
+In addition to sending alert notifications by email (see :ref:`manage-notifications`), you can configure Splunk Observability Cloud to send alert notifications to the following services:
 
+The following table shows third-party service integrations
 
 .. list-table::
    :header-rows: 1
    :widths: 30, 40
 
-   * - :strong:`Third-party`
+   * - :strong:`Third-party service`
      - :strong:`Link to documentation`
 
    * - Amazon EventBridge
@@ -57,16 +59,26 @@ In addition to sending alert notifications by email (see :ref:`manage-notificati
    * - Slack
      - See :ref:`slack`.
 
-   * - Splunk On-Call (VictorOps)
-     - See :ref:`splunkoncall`.
-
    * - Webhook
      - See :ref:`webhook`.
 
    * - xMatters
      - See :ref:`xmatters`.
 
-You can also configure Splunk Observability Cloud to send alert notifications to a webhook. See :ref:`webhook`.
+The following table shows Splunk service integrations:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Splunk service`
+     - :strong:`Link to documentation`
+
+   * - Splunk On-Call (VictorOps)
+     - See :ref:`splunkoncall`.
+
+   * - Splunk platform
+     - See :ref:`splunkplatform`.
 
 These notification service integrations allow you to configure Splunk Observability Cloud to automatically send alert notifications to these third-party services and webhooks when a condition for a detector alert is met and when the condition clears.
 
@@ -107,6 +119,14 @@ The following table contains a list of the IP addresses that you can use to allo
     - * 108.128.26.145/32
       * 34.250.243.212/32
       * 54.171.237.247/32
+  * - eu1
+    - * 3.73.240.7
+      * 18.196.129.64
+      * 3.126.181.171
+  * - eu2
+    - * 13.41.86.83
+      * 52.56.124.93
+      * 35.177.204.133
   * - jp0
     - * 35.78.47.79/32
       * 35.77.252.198/32

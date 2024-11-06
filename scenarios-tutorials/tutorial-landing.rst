@@ -14,7 +14,8 @@ This is the collection of tutorials available for Splunk Observability Cloud. Us
 * :ref:`about-k8s-tutorial`
 * :ref:`about-aws-tutorial`
 * :ref:`about-k8s-java-traces-tutorial`
+* :ref:`about-logs-collector-splunk-tutorial`
 
 For specific scenarios and use cases, see :ref:`scenario-landing`.
 
-For an overview of Splunk Observability Cloud and how to send your data in, go to :ref:`welcome` and :ref:`get-started-get-data-in`.
+For an overview of Splunk Observability Cloud and how to send your data in, go to :ref:`overview` and :ref:`get-started-get-data-in`.

@@ -26,7 +26,7 @@ Assess the health of your applications with the APM landing page
 
 When you log into Splunk Observability Cloud and select :guilabel:`APM` from the navigation menu, you arrive on the APM landing page. You can use this dashboard of consolidated and unsampled span metrics to get a real-time snapshot of your services and :ref:`Business Workflows<apm-workflows>` at a glance. 
 
-..  image:: /_images/apm/set-up-apm/set-up-apm-01.png
+..  image:: /_images/apm/set-up-apm/set-up-apm-01-1.png
     :width: 95%
     :alt: This screenshot shows an example of the Splunk APM landing page
 

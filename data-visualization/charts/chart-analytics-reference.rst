@@ -9,7 +9,7 @@ Functions reference for Splunk Observability Cloud
 
 You can run calculations on observability data and visualize the output in :ref:`charts <data-visualization-charts>` using :ref:`SignalFlow <get-started-signalflow>` analytics functions. To use analytics functions in your charts select :strong:`Add Analytics` in the :strong:`Plot Editor` tab.
 
-Use the following list to learn more about each SignalFlow analytics function, including sample calculations. To use analytics functions in SignalFlow programs, see the :new-page:`SignalFlow Functions and Methods <https://dev.splunk.com/observability/docs/signalflow/function_method_list>` topic in the Splunk Observability Cloud Developer Guide.
+Use the following list to learn more about each SignalFlow analytics function, including sample calculations. To use analytics functions in SignalFlow programs, see the :new-page:`SignalFlow Functions and Methods <https://dev.splunk.com/observability/docs/signalflow>` topic in the Splunk Observability Cloud Developer Guide.
 
 .. hlist::
    :columns: 3

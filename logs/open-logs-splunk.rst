@@ -7,7 +7,6 @@ Open logs in Splunk platform
 .. meta::
   :description: Open your logs in Splunk Cloud or Splunk Enterprise for additional SPL queries.
 
-.. include:: /_includes/log-observer-transition.rst
 
 You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. If your organization has integrated its Splunk platform (Splunk Cloud Platform or Splunk Enterprise) instance with its Splunk Observability Cloud instance, you can search Splunk platform logs that your Splunk platform role has permissions to see in Splunk platform. You can also open the logs in Splunk platform for additional SPL querying.
 

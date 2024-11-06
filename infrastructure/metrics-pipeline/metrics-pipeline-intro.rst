@@ -10,7 +10,11 @@ Introduction to metrics pipeline management
 
 |hr|
 
-:strong:`Available in Enterprise Edition`. For more information, see :ref:`sd-subscriptions`.
+.. raw:: html
+  
+    <embed>
+      <p><b>Available in Enterprise Edition</b>. For more information, see <a href="#sd-subscriptions">Subscription types, expansions, renewals, and terminations</a>.</p>
+    </embed>
 
 |hr|
 
@@ -94,7 +98,7 @@ You send a metric called ``http.server.duration`` for a containerized workload u
 Your workload has 10 endpoints, 20 regions, 5 services, and 10,000 containers. Each of the 5 services has 10,000
 containers and 10 endpoints.
 
-Your data is coming in at the container ID level, generating 10 (endpoints) * 5 (services) * 20 (regions) * 10,000 (containers) = 1,000,000 MTS.
+Your data is coming in at the container ID level, generating 10 (endpoints) * 5 (services) * 20 (regions) * 10,000 (containers) = 10,000,000 MTS.
 
 You can reduce your metric cardinality by aggregating one or multiple dimensions.
 

@@ -2,16 +2,15 @@
 .. _kubernetes-config-logs:
 
 *********************************************************************************
-Configure logs and events for Kubernetes
+Collect logs and events for the Collector for Kubernetes
 *********************************************************************************
 
 .. meta::
       :description: Configure logs and events for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
-
 .. note:: See how to configure the Collector for Kubernetes at :ref:`otel-kubernetes-config` and :ref:`otel-kubernetes-config-advanced`.
 
-Starting on version 0.86.0, the Splunk Distribution of Collector for Kubernetes collects native OpenTelemetry logs by default.
+Starting on version 0.86.0, the Splunk Distribution of the Collector for Kubernetes collects native OpenTelemetry logs by default.
 
 The following applies:
 
@@ -24,17 +23,6 @@ The following applies:
 * Log collection is not supported in GKE Autopilot.
 
 * See also :ref:`other rules and limitations for metrics and dimensions <metric-dimension-names>`. For instance, you can have up to 36 dimensions per MTS, otherwise the data point is dropped.
-
-Use Fluentd to collect logs
-===========================================================================
-
-You can also use Fluentd to collect Kubernetes logs and send them through the Collector, which does all of the necessary metadata enrichment. 
-
-Add the following line to your configuration to use Fluentd to collect logs.
-
-.. code-block:: yaml
-
-  logsEngine: fluentd
 
 Add log files from Kubernetes host machines or volumes
 ===========================================================================
@@ -68,7 +56,7 @@ The following example shows how to add logs from Kubernetes host machines:
 Process multi-line logs
 ===========================================================================
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes supports parsing of multi-line logs to help read, understand, and troubleshoot the multi-line logs in a better way. 
+The Splunk Distribution of the OpenTelemetry Collector for Kubernetes supports parsing of multi-line logs to help read, understand, and troubleshoot the multi-line logs in a better way. 
 
 To process multi-line logs, add the following section to your values.yaml configuration:
 
@@ -88,16 +76,25 @@ To process multi-line logs, add the following section to your values.yaml config
 
 Use :new-page:`regex101 <https://regex101.com/ >` to find a Golang regex that works for your format and specify it in the config file for the config option ``firstEntryRegex``.
 
+.. _kubernetes-config-logs-annotations:
+
 Manage log ingestion using annotations
 ===========================================================================
 
-Use the ``splunk.com/index`` annotation on pods or namespaces to indicate which Splunk platform indexes you want to send logs to. Pod annotation will take precedence over namespace annotation when both are annotated. 
+.. _kubernetes-config-logs-annotations-indexes:
+
+Send logs to different indexes
+-----------------------------------------------------
+
+The Collector for Kubernetes uses ``main`` as the default Splunk platform index. Use the ``splunk.com/index`` annotation on pods or namespaces to indicate which Splunk platform indexes you want to send logs to. 
 
 For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
   
 .. code-block:: bash
 
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
+
+.. note:: A pod annotation takes precedence over a namespace annotation when both are annotated.     
 
 Filter logs using pod or namespace annotations
 -----------------------------------------------------
@@ -182,6 +179,19 @@ The following table provides a summary of performance benchmarks run internally:
 
 The data pipelines for these test runs involved reading container logs as they are being written, then parsing filename for metadata, enriching it with Kubernetes metadata, reformatting the data structure, and sending logs (without compression) to the Splunk HEC endpoint.
 
+.. _kubernetes-config-logs-fluentd:
+
+Use Fluentd to collect Kubernetes logs 
+===========================================================================
+
+Alternatively, you can use Fluentd to collect Kubernetes logs and send them through the Collector, which does all of the necessary metadata enrichment. 
+
+Add the following line to your configuration to use Fluentd to collect logs.
+
+.. code-block:: yaml
+
+  logsEngine: fluentd
+
 .. _otel-k8s-events:
 
 Collect events
@@ -192,7 +202,7 @@ Collect Kubernetes events
 
 To see Kubernetes events as part of the :strong:`Events Feed` section in charts, set ``splunkObservability.infrastructureMonitoringEventsEnabled`` to ``true``. The cluster receiver will be configured with a Smart Agent receiver using the ``kubernetes-events`` monitor to send custom events.
 
-To collect Kubernetes events as logs for Log Observer or Log Observer Connect using the Collector, you need to add ``clusterReceiver.k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true`` in either ``splunkObservability`` or ``splunkPlatform``. Events are processed in the ``logs`` pipeline.
+To collect Kubernetes events as logs for Log Observer Connect using the Collector, you need to add ``clusterReceiver.k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true`` in either ``splunkObservability`` or ``splunkPlatform``. Events are processed in the ``logs`` pipeline.
 
 ``clusterReceiver.k8sObjects`` has the following fields:
 

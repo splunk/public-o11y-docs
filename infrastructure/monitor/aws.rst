@@ -13,7 +13,7 @@ Monitor Amazon Web Services
    Manage AWS data import <aws-infra-import.rst>
    Monitor AWS <aws-infra-monitor>
    aws-infra-costs.rst
-   Supported Amazon services <https://docs.splunk.com/Observability/gdi/get-data-in/integrations.html#amazon-web-services>
+   Supported Amazon services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-aws.html#cloud-aws>
    Available AWS metadata <aws-infra-metadata>
    
 Splunk Observability Cloud's Infrastructure Monitoring imports data, logs, and metadata, including tags and other properties, for the following :ref:`AWS services <aws-integrations>`.
@@ -36,7 +36,7 @@ To monitor AWS resources:
 
 See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Splunk Observability Cloud provides <aws-infra-metadata>` for AWS.
 
-By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
+By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`aws-infra-import`.
 
 .. _aws-unique-id:
 

@@ -132,7 +132,7 @@ To properly ingest trace telemetry data, the attribute ``deployment.environment`
   * - Through the values.yaml file ``environment`` configuration
     - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
     - The chart will set an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
-  * - Through the values.yaml file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
+  * - Through the values.yaml file and ``instrumentation.env`` or ``instrumentation.{instrumentation_library}.env`` configuration
     - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
     - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
   * - Through your Kubernetes application deployment, daemonset, or pod specification
@@ -172,15 +172,14 @@ The following examples show how to set the attribute using each method:
 
           operator:
             enabled: true
-            instrumentation:
-              spec:
-                env: 
-                  - name: OTEL_RESOURCE_ATTRIBUTES
-                    value: "deployment.environment=prd"
-                java:
-                  env: 
-                    - name: OTEL_RESOURCE_ATTRIBUTES
-                      value: "deployment.environment=prd-canary-java"
+          instrumentation:
+            env:
+              - name: OTEL_RESOURCE_ATTRIBUTES
+                value: "deployment.environment=prd"
+            java:
+              env:
+                - name: OTEL_RESOURCE_ATTRIBUTES
+                  value: "deployment.environment=prd-canary-java"
 
     .. tab:: Deployment YAML
 
@@ -191,13 +190,13 @@ The following examples show how to set the attribute using each method:
             apiVersion: apps/v1
             kind: Deployment
             metadata:
-            name: my-java-app
+              name: my-java-app
             spec:
-            template:
-               spec:
+              template:
+                spec:
                   containers:
                   - name: my-java-app
-                  image: my-java-app:latest
+                    image: my-java-app:latest
                   env:
                   - name: OTEL_RESOURCE_ATTRIBUTES
                     value: "deployment.environment=prd"
@@ -289,10 +288,10 @@ The annotation you set depends on the language runtime you're using. You can set
             apiVersion: apps/v1
             kind: Deployment
             metadata:
-            name: my-java-app
-            namespace: monitoring
+              name: my-java-app
+              namespace: monitoring
             spec:
-            template:
+              template:
                 spec:
                 containers:
                 - name: my-java-app
@@ -306,23 +305,25 @@ The annotation you set depends on the language runtime you're using. You can set
             apiVersion: apps/v1
             kind: Deployment
             metadata:
-            name: my-java-app
-            namespace: monitoring
+              name: my-java-app
+              namespace: monitoring
             spec:
-            template:
+              template:
                 metadata:
-                annotations:
+                  annotations:
                     instrumentation.opentelemetry.io/inject-java: "true"
                 spec:
-                containers:
-                - name: my-java-app
+                  containers:
+                  - name: my-java-app
                     image: my-java-app:latest
     
     .. tab:: .NET
 
         Add the ``instrumentation.opentelemetry.io/inject-dotnet`` annotation to the application object YAML.
 
-        Depending on your environment, you'll need to add another annotation. See the following table for details:
+        Depending on your environment and your runtime identifier (RID), you'll need to add another annotation. To learn how to find your RID, see :ref:`dotnet-find-rid`.
+        
+        See the following table for details:
 
         .. list-table::
             :header-rows: 1
@@ -349,13 +350,13 @@ The annotation you set depends on the language runtime you're using. You can set
                     apiVersion: apps/v1
                     kind: Deployment
                     metadata:
-                    name: my-dotnet-app
-                    namespace: monitoring
+                      name: my-dotnet-app
+                      namespace: monitoring
                     spec:
-                    template:
+                      template:
                         spec:
-                        containers:
-                        - name: my-dotnet-app
+                          containers:
+                          - name: my-dotnet-app
                             image: my-dotnet-app:latest
 
                 Activate automatic discovery by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
@@ -366,18 +367,18 @@ The annotation you set depends on the language runtime you're using. You can set
                     apiVersion: apps/v1
                     kind: Deployment
                     metadata:
-                    name: my-dotnet-app
-                    namespace: monitoring
+                      name: my-dotnet-app
+                      namespace: monitoring
                     spec:
-                    template:
+                      template:
                         metadata:
-                        annotations:
+                          annotations:
                             instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"
                             instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"
-                        spec:
+                          spec:
                             containers:
                             - name: my-dotnet-app
-                            image: my-dotnet-app:latest
+                              image: my-dotnet-app:latest
             
             .. tab:: ``linux-musl-x64``
 
@@ -429,13 +430,13 @@ The annotation you set depends on the language runtime you're using. You can set
             apiVersion: apps/v1
             kind: Deployment
             metadata:
-            name: my-nodejs-app
-            namespace: monitoring
+              name: my-nodejs-app
+              namespace: monitoring
             spec:
-            template:
+              template:
                 spec:
-                containers:
-                - name: my-nodejs-app
+                  containers:
+                  - name: my-nodejs-app
                     image: my-nodejs-app:latest
 
         Activate automatic discovery by adding ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` to the ``spec``:
@@ -446,16 +447,16 @@ The annotation you set depends on the language runtime you're using. You can set
             apiVersion: apps/v1
             kind: Deployment
             metadata:
-            name: my-nodejs-app
-            namespace: monitoring
+              name: my-nodejs-app
+              namespace: monitoring
             spec:
-            template:
+              template:
                 metadata:
-                annotations:
+                  annotations:
                     instrumentation.opentelemetry.io/inject-nodejs: "true"
                 spec:
-                containers:
-                - name: my-nodejs-app
+                  containers:
+                  - name: my-nodejs-app
                     image: my-nodejs-app:latest
 
 Applying annotations in a different namespace
@@ -601,7 +602,7 @@ Allow the Operator to do the work. The Operator intercepts and alters the Kubern
 
 You can configure the Splunk Distribution of OpenTelemetry Collector to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and system properties. To do so, use the values.yaml file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
+You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and system properties. To do so, use the values.yaml file and  ``instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
 
 You can also use the methods shown in :ref:`k8s-auto-discovery-setup-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables. For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable:
 

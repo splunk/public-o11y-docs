@@ -25,7 +25,7 @@ To access the Collector built-in dashboard:
 
 #. Log in to Splunk Observability Cloud.
 #. Select :guilabel:`Dashboards` on the left navigation menu. 
-#. Use the search bar or browse down to locate the OpenTelementry Collector tile.
+#. Use the search bar or browse down to locate the OpenTelemetry Collector tile.
 #. Select the link in the tile to access the built-in dashboard.
 
 Use the built-in Collector dashboard

@@ -9,7 +9,7 @@ Access relevant resources linked to APM services, traces, and spans
 
 Use global data links to access relevant resources directly from Splunk APM properties, including services, traces, spans, and span tags.
 
-For example, you can use a global data link to easily navigate from an APM property to a resource, such as an Infrastructure Monitoring dashboard, Splunk instance, Kibana log, or custom URL. Global data links dynamically transfer the context of the property you're viewing to the resource, helping you get to relevant information faster.
+For example, you can use a global data link to easily navigate from an APM property to a resource, such as an Infrastructure Monitoring dashboard or navigator, Splunk instance, Kibana log, or custom URL. Global data links dynamically transfer the context of the property you're viewing to the resource, helping you get to relevant information faster.
 
 For information about creating global data links, see :ref:`apm-create-data-links`.
 

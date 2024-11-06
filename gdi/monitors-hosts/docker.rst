@@ -6,12 +6,7 @@ Docker Containers
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Docker monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-``docker-container-stats`` monitor type to read container stats from a
-Docker API server. Note it doesn't currently support CPU share/quota
-metrics.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``docker-container-stats`` monitor type to read container stats from a Docker API server. Note it doesn't currently support CPU share/quota metrics.
 
 This integration is available for Kubernetes, Linux, and Windows.
 
@@ -37,6 +32,8 @@ socket, you might need to add the ``splunk-otel-collector`` user to the
 .. code:: yaml
 
    usermod -aG docker splunk-otel-collector
+
+For a walkthrough of how to send Docker container logs to a Splunk Enterprise instance, see :ref:`about-logs-collector-splunk-tutorial`.
 
 Example
 ~~~~~~~

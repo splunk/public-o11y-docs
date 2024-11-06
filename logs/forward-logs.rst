@@ -6,11 +6,9 @@ Forward Log Observer logs data to the Splunk platform
 *****************************************************************
 
 .. meta::
-  :description: Learn how you can forward Log Observer logs to the Splunk platform as part of the Log Observer transition.
+  :description: Learn how you can forward Log Observer logs to the Splunk platform.
 
-.. include:: /_includes/log-observer-transition.rst
-
-The Log Observer transition allows customers to analyze their Log Observer logs in the Splunk platform while still maintaining the ability to analyze them in Log Observer. Current Log Observer customers can forward their Log Observer logs data to a single index in a single instance of the Splunk platform. Splunk Observability Cloud uses an HEC token to forward new incoming Log Observer logs data to the Splunk platform in addition to storing it in Log Observer. 
+If you ingest logs into Log Observer, you can forward them to the Splunk platform for analysis, as well. You can only forward logs to a single index in a single instance of the Splunk platform. Splunk Observability Cloud uses an HEC token to forward new incoming Log Observer logs to the Splunk platform in addition to storing them in Log Observer. 
 
 To forward logs data from Log Observer to the Splunk platform, you must do the following:
 
@@ -92,6 +90,16 @@ If you already set up Log Observer Connect, you do not need to add the necessary
      - | 108.128.26.145/32
        | 34.250.243.212/32
        | 54.171.237.247/32
+
+   * - eu1
+     - | 3.73.240.7
+       | 18.196.129.64
+       | 3.126.181.171
+
+   * - eu2
+     - | 13.41.86.83
+       | 52.56.124.93
+       | 35.177.204.133
 
 .. _authenticate-hec:
 

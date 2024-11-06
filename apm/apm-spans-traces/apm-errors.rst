@@ -11,14 +11,14 @@ With Splunk APM error detection, you can isolate specific causes of errors in yo
 
 .. _apm-error-detection:
 
-How error spans are detected
+How Splunk APM detects error spans
 =========================================
 
-Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span to be an error span if the operation that the span captures results in an error. A span is considered to be an error span when any of the following conditions are met: 
+Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span to be an error span if the operation that the span captures results in an error as defined by the following conditions: 
 
 * The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in the Splunk Distribution of the OpenTelemetry instrumentation using the native OTel field ``span.status``. ``span.status``, and subsequently ``otel.status_code``, are set based on either the HTTP status code or the gRPC status code.
   
-   * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
+   * See :ref:`apm-http-status` to learn which status code values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
    * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
 * The ``error`` tag for the span is set to a truthy value, which is any value other than ``False`` or ``0``. 
 
@@ -29,7 +29,7 @@ See the Span Status section of the OpenTelemetry Transformation to non-OTLP Form
 How OpenTelemetry handles HTTP status codes
 ----------------------------------------------
 
-The following table provides an overview of how HTTP status codes are used to set the ``span.status`` field, and subsequently ``otel.status_code``, in OpenTelemetry instrumentation in accordance with OpenTelemetry semantic conventions. To learn more, see the OpenTelemetry semantic conventions for HTTP spans on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/http.yaml`.
+The following table provides an overview of how HTTP status codes are used to set the ``span.status`` field, and subsequently ``otel.status_code``, in OpenTelemetry instrumentation in accordance with OpenTelemetry semantic conventions. To learn more, see the OpenTelemetry semantic conventions for HTTP spans on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/http/spans.yaml`.
 
 .. list-table::
    :header-rows: 1
@@ -132,7 +132,7 @@ To determine if a gRPC span counts towards the error rate for a service, Splunk 
      - unset
      - ERROR
 
-See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/rpc.yaml`.
+See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/rpc/spans.yaml`.
 
 .. _metricset-errors:
 
@@ -195,17 +195,17 @@ Count 4xx status codes as errors
 
 By default, Splunk APM does not count server-side spans with ``4xx`` status codes as errors, because a ``4xx`` status code is often associated with a problem with the request itself, rather than a problem with the service handling a request.
 
-For example, if a user makes a request to ``endpoint/that/does/not/exist``, the ``404`` status code the service returns does not mean there's a problem with the service. Instead, it means there was a problem with the request, which is trying to call an endpoint that doesn't exist. Similarly, if a user tries to access a resource they don’t have access to, the service might return a ``401`` status code, which is typically not the result of an error on the server side.
+For example, if a user makes a request to ``endpoint/that/does/not/exist``, the ``404`` status code the service returns does not mean there's a problem with the service. Instead, it means there was a problem with the request, which is trying to call an endpoint that doesn't exist. Similarly, if a user tries to access a resource they don't have access to, the service might return a ``401`` status code, which is typically not the result of an error on the server side.
 
-However, depending on your application’s logic, a ``4xx`` status code might represent a meaningful error, particularly for client-side requests. To monitor for ``4xx`` errors, try doing the following: 
+However, depending on your application's logic, a ``4xx`` status code might represent a meaningful error, particularly for client-side requests. To monitor for ``4xx`` errors, try doing the following: 
 
 * Break down performance by HTTP status code span tags, if available. 
 * Customize your instrumentation to set the ``span.status`` of spans with meaningful ``4xx`` status codes to ``Error``.
 
 For example, if Kai wants to alert on the rate of ``401`` errors returned by a given service, they do the following:
 
-1. Index ``http.status_code``. See :ref:`apm-index-span-tags`.
-2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service's endpoints to get a time series for each status code. See :ref:`cmms`.
+1. Index ``http.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower. Or index ``http.response.status_code`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher. See :ref:`apm-index-span-tags`.
+2. Create a custom Monitoring MetricSet on the status code tag for the service's endpoints to get a time series for each status code. See :ref:`cmms`.
 3. Set up an alert on the rate of ``401`` errors as compared to all requests. See :ref:`apm-alerts`.
 
 .. _5xx-error-logic:

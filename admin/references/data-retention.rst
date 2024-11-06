@@ -9,6 +9,12 @@ Data retention in Splunk Observability Cloud
 
 The following sections list the data retention for each product in Splunk Observability Cloud.
 
+.. note:: 
+
+  The data retention listed in each section applies to real-time metrics. Archived metrics have a retention period of 31 days, and this period doesn't depend on the Splunk Observability Cloud product.
+
+  To learn more about archived metrics, see :ref:`archived-metrics-intro`.
+
 .. _im-data-retention:
 
 Data retention in Infrastructure Monitoring
@@ -23,11 +29,11 @@ The following table shows the retention time period for each data type in Infras
 
    * - :strong:`Data resolution`
      - :strong:`Retention`
-   * - 1 to 60-second resolution
+   * - 1 second resolution
      - 
        * Standard license edition: 8 days
        * Enterprise license edition: 3 months 
-   * - 1 minute resolution and more (one-minute roll-ups)
+   * - 10 seconds or more
      - 
        * 13 months
 
@@ -48,7 +54,7 @@ The following table shows the retention time period for each data type in RUM.
    * - Spans 
      - 
        * 8 days
-   * - Metrics 
+   * - :ref:`Troubleshooting MetricSets <troubleshooting-metricsets>` 
      - 
        * 8 days
    * - :ref:`Monitoring MetricSets <monitoring-metricsets>`
@@ -59,7 +65,7 @@ The following table shows the retention time period for each data type in RUM.
 
 Data retention in Application Performance Monitoring (APM)
 =====================================================================
-The following table shows the retention time period for each data type in APM. See :ref:`apm-extended-trace-retention` to learn how to extend the retention of specific traces of interest. 
+The following table shows the retention time period for each data type in APM. 
 
 .. list-table:: 
    :widths: 20 25
@@ -71,7 +77,7 @@ The following table shows the retention time period for each data type in APM. S
    * - Traces
      - 
         * All raw traces: 8 days
-        * Specific traces of interest: up to 13 months
+        * Traces of interest viewed in the Splunk APM user interface: up to 13 months. See :ref:`apm-extended-trace-retention` to learn how to extend the retention of specific traces of interest. 
    * - :ref:`Troubleshooting MetricSets <troubleshooting-metricsets>`
      - 
        * 8 days   
@@ -81,13 +87,6 @@ The following table shows the retention time period for each data type in APM. S
    * - :ref:`Profiling data <profiling-intro>`
      - 
        * 8 days
-
-.. _log-observer-data-retention:
-
-Data retention in Log Observer 
-============================================
-
-The retention period for indexed logs in Splunk Log Observer is 30 days. If you send logs to S3 through the Infinite Logging feature, then the data retention period depends on the policy you purchased for your Amazon S3 bucket. To learn how to set up Infinite Logging rules, see :ref:`logs-infinite`.
 
 .. _oncall-data-retention:
 

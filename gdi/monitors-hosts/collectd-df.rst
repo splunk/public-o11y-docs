@@ -8,9 +8,7 @@ Collectd df (deprecated)
 
 .. note::  This integration is deprecated in favor of :ref:`filesystems`. 
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Collectd df monitor type to track free disk space on the host using the
 collectd df plugin.
 

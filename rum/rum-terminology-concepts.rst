@@ -38,7 +38,7 @@ This topic introduces important terminology and concepts in Splunk RUM for Brows
       - Web Vitals are made up of three metrics that measure user experience:
             * Largest contentful paint (LCP)
             * Cumulative layout shift (CLS)
-            * First input delay (FID)
+            * Interaction to next paint (INP)
     * - :ref:`rum-error-id`
       - In Splunk RUM, the error ID is created by hashing the associated stack trace, error message, and error type. 
     * - :ref:`rum-custom-event-term`
@@ -219,7 +219,7 @@ Web Vitals are made up of three metrics that measure user experience:
 
 * LCP (largest contentful paint)
 * CLS (cumulative layout shift)
-* FID (first input delay).
+* INP (Interaction to next paint)
 
  Google uses web vitals to determine page ranking. Splunk RUM automatically measures Web Vital metrics. To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation.
 

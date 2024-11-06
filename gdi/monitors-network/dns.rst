@@ -6,9 +6,7 @@ DNS Query Input
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf DNS monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 DNS Query Input monitor type (an embedded form of the Telegraf DNS Query
 plugin) to collect DNS data.
 
@@ -40,6 +38,8 @@ configuration:
        type: telegraf/dns
        ...  # Additional config
 
+.. note:: Make sure to include the required ``servers`` configuration setting. See the following section, :strong:`Configuration settings`, for more information.
+
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
@@ -49,6 +49,8 @@ section of your configuration file:
     pipelines:
       metrics:
         receivers: [smartagent/dns]
+
+.. _config-settings:
 
 Configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~

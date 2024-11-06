@@ -164,7 +164,7 @@ Check metric data from the command line
 To check whether host metrics are being collected and processed correctly, you can query the Collector for raw data using ``curl`` or similar tools from the command line.
 
 - On Linux, run ``curl http://localhost:8888/metrics`` in your terminal.
-- On Windows, run ``"Invoke-WebRequest -URI https://localhost:8888/metrics"`` in PowerShell.
+- On Windows, run ``"Invoke-WebRequest -URI http://localhost:8888/metrics"`` in PowerShell.
 
 You can then pipe the output to ``grep`` (Linux) or ``Select-String`` (Windows) to filter the data. For example, ``curl http://localhost:8888/metrics | grep service_instance_id`` retrieves the service instance ID.
 
@@ -234,7 +234,7 @@ If an HTTP request is not successfully completed, you might see the following HT
   * - ``429 (TOO MANY REQUESTS)``
     - Organization is not provisioned for the amount of traffic being sent. Reduce traffic or request increase in capacity.
   * - ``503 (SERVICE UNAVAILABLE)``
-    - If using the Log Observer, this is the same as the ``429 (TOO MANY REQUESTS)`` error code, due to how HECv1 responds. Otherwise, check the status page.
+    - Check the status page.
 
 Trace collection issues
 ================================

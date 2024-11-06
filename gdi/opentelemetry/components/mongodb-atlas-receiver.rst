@@ -7,19 +7,19 @@ MongoDB Atlas receiver
 .. meta::
       :description: The MongoDB Atlas receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from MongoDB Atlas through its monitoring API.
 
-The MongoDB Atlas receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics and logs from MongoDB Atlas through its monitoring API. The supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
+The MongoDB Atlas receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics and logs from MongoDB Atlas through its monitoring API. The supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Database metrics are dimensionalized by project and database attributes, for example, ``project_name`` and
 ``database_name``.
 
-.. note:: Use the MongoDB Atlas receiver in place of the SignalFx Smart Agent ``mongodb-atlas`` monitor type.
+.. note:: Use the MongoDB Atlas receiver in place of the deprecated SignalFx Smart Agent ``mongodb-atlas`` monitor type.
 
 Get started
 ======================
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
    
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
@@ -77,7 +77,7 @@ To complete the configuration, include the receiver in the ``metrics`` or ``logs
 Settings
 ======================
 
-The following table shows the configuration options for the MongoDB Atlas:
+The following table shows the configuration options for the MongoDB Atlas receiver:
 
 .. raw:: html
 

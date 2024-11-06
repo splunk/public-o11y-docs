@@ -87,6 +87,35 @@ You can enter multiple classes. For example, ``my.package.MyClass,my.package2.*`
 
 .. caution:: Deactivating instrumentation for specific classes can have unintended side effects. Use this feature with caution.
 
+.. _java_telemetry_export_issues:
+
+Telemetry export issues
+=======================
+
+Telemetry not working after migration to Java 2.x instrumentation
+-----------------------------------------------------------------
+
+In the Java 2.x instrumentation, the default protocol changed from gRPC to http/protobuf. If a custom configuration overrides the default endpoint setting, you must make sure of the following:
+
+#. Verify that the Java agent configuration is correct:
+
+   #. Verify that you are using the correct port for the selected protocol:
+
+      * gRPC: 4317
+      * http/protobuf: 4318
+   #. Verify that the custom endpoint configuration uses the correct port. For example: ``otel.exporter.otlp.endpoint=http://<host>:4318``.
+   #. Verify that the custom protocol configuration uses the correct protocol. For example: ``otel.exporter.otlp.protocol=http/protobuf``.
+#. In the OTel Collector configuration file, verify that the associated OTLP receiver protocols match those used by the Java agent. Here is an example OTLP receiver configuration in the OTel Collector file:
+
+   .. code-block:: yaml
+
+      otlp:
+        protocols:
+          grpc:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4317"
+          http:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4318"
+
 .. _java-trace-exporter-issues:
 
 Trace exporter issues
@@ -105,10 +134,19 @@ The following error in the logs means that the agent can't send trace data to th
 
 To troubleshoot the lack of connectivity between the OTLP exporter and the OTel Collector, try the following steps:
 
-#. Make sure that ``otel.exporter.otlp.endpoint`` points to the correct OpenTelemetry Collector instance host.
+#. Make sure that ``otel.exporter.otlp.endpoint`` points to the correct OpenTelemetry Collector instance host: ``http://<host>:4318``.
 #. Check that your OTel Collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
-#. Check that the OTLP gRPC receiver is activated in the OTel Collector and plugged into the traces pipeline.
-#. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
+#. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
+#. In the OTel Collector configuration file, verify that the associated OTLP receiver protocols match those used by the Java agent. Here is an example OTLP receiver configuration in the OTel Collector file:
+
+   .. code-block:: yaml
+
+      otlp:
+        protocols:
+          grpc:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4317"
+          http:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4318"
 
 401 error when sending spans
 --------------------------------------------------------
@@ -126,20 +164,18 @@ Make sure that you're using a valid Splunk access token when sending data direct
 Metrics exporter issues
 ===============================================================
 
-If you see the following warning in your logs, it means that the Java agent can't send metrics to your OTel Collector, Smart Agent (now deprecated), or to the Splunk platform endpoints:
-
-.. code-block:: bash
-
-   [signalfx-metrics-publisher] WARN com.splunk.javaagent.shaded.io.micrometer.signalfx.SignalFxMeterRegistry - failed to send metrics: Unable to send data points
+If you see warnings about metrics in your logs, it might mean that the Java agent can't send metrics to your OTel Collector, Smart Agent (now deprecated), or to the Splunk platform endpoints:
 
 To troubleshoot connectivity issues affecting application metrics, try the following steps:
 
 1. Make sure that ``splunk.metrics.endpoint`` points to the correct host.
+
 2. Check that the OpenTelemetry Collector or Smart Agent instance is configured and running.
-3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:9943/v2/datapoint``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
+
+3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:4318/v2/datapoint``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
+
 4. Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
-.. note:: Metric collection for Java using OpenTelemetry instrumentation is still experimental.
 
 .. _java-profiler-issues:
 
@@ -173,8 +209,7 @@ If AlwaysOn Profiling is not working as intended, check the configuration settin
    [otel.javaagent 2021-09-28 18:17:04:244 +0000] [main] INFO <snip> -      splunk.profiler.recording.duration : 20s
    [otel.javaagent 2021-09-28 18:17:04:244 +0000] [main] INFO <snip> -              splunk.profiler.keep-files : false
    [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -           splunk.profiler.logs-endpoint : null
-   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -             otel.exporter.otlp.endpoint : http://collector:4317
-   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -            splunk.profiler.tlab.enabled : false
+   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -             otel.exporter.otlp.endpoint : http://collector:4318
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> -   splunk.profiler.period.jdk.threaddump : null
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> - -----------------------
 

@@ -8,343 +8,255 @@
      - :strong:`Provides metrics`
      - :strong:`Provides traces`
 
-   * - :ref:`Amazon ECS Task Metadata <amazon-ecs-metadata>`
+   * - :ref:`activemq`
      - :strong:`X`
      -
 
-   * - :ref:`Apache ActiveMQ <activemq>`
+   * - :ref:`apache-couchdb`
      - :strong:`X`
      -
 
-   * - :ref:`Apache CouchDB <apache-couchdb>`
+   * - :ref:`apache-httpserver`
      - :strong:`X`
      -
 
-   * - :ref:`Apache HTTP Server <apache-httpserver>`
+   * - :ref:`kafka`
      - :strong:`X`
      -
 
-   * - :ref:`Apache Kafka <kafka>`
+   * - :ref:`spark`
      - :strong:`X`
      -
 
-   * - :ref:`Apache Spark <spark>`
+   * - :ref:`apache-tomcat`
      - :strong:`X`
      -
 
-   * - :ref:`Apache Tomcat <apache-tomcat>`
+   * - :ref:`zookeeper`
      - :strong:`X`
      -
 
-   * - :ref:`Apache Zookeeper <zookeeper>`
+   * - :ref:`appmesh`
      - :strong:`X`
      -
 
-   * - :ref:`ASP.NET <asp-dot-net>`
+   * - :ref:`cadvisor`
      - :strong:`X`
      -
 
-   * - :ref:`AWS AppMesh Envoy Proxy <appmesh>`
+   * - :ref:`cassandra`
      - :strong:`X`
      -
 
-   * - :ref:`cAdvisor <cadvisor>`
+   * - :ref:`cgroups`
      - :strong:`X`
      -
 
-   * - :ref:`Cassandra <cassandra>`
+   * - :ref:`cloudfoundry-firehose-nozzle`
      - :strong:`X`
      -
 
-   * - :ref:`cgroups <cgroups>`
+   * - :ref:`collectd-plugin`
      - :strong:`X`
      -
 
-   * - :ref:`Chrony NTP <chrony>`
+   * - :ref:`collectd-uptime`
      - :strong:`X`
      -
 
-   * - :ref:`Cloud Foundry Loggregator Firehose <cloudfoundry-firehose-nozzle>`
+   * - :ref:`conviva`
      - :strong:`X`
      -
 
-   * - :ref:`Collectd plugin <collectd-plugin>`
+   * - :ref:`coredns`
      - :strong:`X`
      -
 
-   * - :ref:`Collectd df plugin <collectd-df>`
+   * - :ref:`couchbase`
      - :strong:`X`
      -
 
-   * - :ref:`Collectd uptime <collectd-uptime>`
+   * - :ref:`cpu`
      - :strong:`X`
      -
 
-   * - :ref:`Consul datastore <consul>`
+   * - :ref:`cpufreq`
      - :strong:`X`
      -
 
-   * - :ref:`Conviva Real-Time/Live video play <conviva>`
+   * - :ref:`dns`
      - :strong:`X`
      -
 
-   * - :ref:`CoreDNS <coredns>`
+   * - :ref:`docker`
      - :strong:`X`
      -
 
-   * - :ref:`Couchbase server <couchbase>`
+   * - :ref:`elasticsearch`
      - :strong:`X`
      -
 
-   * - :ref:`CPU <cpu>`
+   * - :ref:`elasticsearch-query`
      - :strong:`X`
      -
 
-   * - :ref:`CPUFreq <cpufreq>`
+   * - :ref:`expvar`
      - :strong:`X`
      -
 
-   * - :ref:`Disk and partition <disk>`
+   * - :ref:`filesystems`
      - :strong:`X`
      -
 
-   * - :ref:`DNS Query Input <dns>`
+   * - :ref:`genericjmx`
      - :strong:`X`
      -
 
-   * - :ref:`Docker Containers <docker>`
+   * - :ref:`gitlab`
      - :strong:`X`
      -
 
-   * - :ref:`Elasticsearch <elasticsearch>`
+   * - :ref:`hadoop`
      - :strong:`X`
      -
 
-   * - :ref:`Elasticsearch query <elasticsearch-query>`
+   * - :ref:`hadoopjmx`
      - :strong:`X`
      -
 
-   * - :ref:`etcd server <etcd>`
+   * - :ref:`haproxy`
      - :strong:`X`
      -
 
-   * - :ref:`Exec Input <exec-input>`
+   * - :ref:`heroku`
      - :strong:`X`
      -
 
-   * - :ref:`Expvar (Go) <expvar>`
+   * - :ref:`host-metadata`
      - :strong:`X`
      -
 
-   * - :ref:`Free disk space (filesystems) <filesystems>`
+   * - :ref:`processes`
      - :strong:`X`
      -
 
-   * - :ref:`GenericJMX <genericjmx>`
-     - :strong:`X`
-     -
-
-   * - :ref:`GitLab <gitlab>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Hadoop <hadoop>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Hadoop JMX <hadoopjmx>`
-     - :strong:`X`
-     -
-
-   * - :ref:`HAProxy <haproxy>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Health Checker <health-checker>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Heroku <heroku>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Host metadata properties <host-metadata>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Host process <processes>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Host process list <processlist>`
+   * - :ref:`processlist`
      - 
      -
 
-   * - :ref:`Host process load <load>`
+   * - :ref:`http`
      - :strong:`X`
      -
 
-   * - :ref:`HTTP <http>`
+   * - :ref:`get-started-istio`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`jaeger-grpc`
      - :strong:`X`
      -
 
-   * - :ref:`Interface traffic <interface>`
-     - :strong:`X`
-     - :strong:`X`
-
-   * - :ref:`Istio <get-started-istio>`
-     - :strong:`X`
-     - :strong:`X`
-
-   * - :ref:`Jaeger gRPC <jaeger-grpc>`
+   * - :ref:`jenkins`
      - :strong:`X`
      -
 
-   * - :ref:`Java metrics <java-monitor>`
+   * - :ref:`jmx`
      - :strong:`X`
      -
 
-   * - :ref:`Jenkins <jenkins>`
+   * - :ref:`kafka-consumer`
      - :strong:`X`
      -
 
-   * - :ref:`JMX <jmx>`
+   * - :ref:`kafka-producer`
      - :strong:`X`
      -
 
-   * - :ref:`Kafka consumer <kafka-consumer>`
+   * - :ref:`kubernetes-apiserver`
      - :strong:`X`
      -
 
-   * - :ref:`Kafka producer <kafka-producer>`
+   * - :ref:`kubernetes-events`
      - :strong:`X`
      -
 
-   * - :ref:`Kong Gateway <kong>`
+   * - :ref:`kubernetes-proxy`
      - :strong:`X`
      -
 
-   * - :ref:`Kubernetes API server <kubernetes-apiserver>`
+   * - :ref:`kubernetes-scheduler`
      - :strong:`X`
      -
 
-   * - :ref:`Kubernetes cluster <kubernetes-cluster>`
+   * - :ref:`telegraf-logparser`
+     -
+     -
+
+   * - :ref:`logstash`
      - :strong:`X`
      -
 
-   * - :ref:`Kubernetes controller manager <kube-controller-manager>`
+   * - :ref:`logstash-tcp`
      - :strong:`X`
      -
 
-   * - :ref:`Kubernetes events <kubernetes-events>`
+   * - :ref:`memcached`
      - :strong:`X`
      -
 
-   * - :ref:`Kubernetes network stats <kubelet-stats>`
+   * - :ref:`memory`
      - :strong:`X`
      -
 
-   * - :ref:`Kubernetes proxy <kubernetes-proxy>`
+   * - :ref:`get-started-dotnet-otel`
      - :strong:`X`
      -
 
-   * - :ref:`Kubernetes scheduler <kubernetes-scheduler>`
+   * - :ref:`microsoft-sql-server`
      - :strong:`X`
      -
 
-   * - :ref:`Logparser<telegraf-logparser>`
-     -
-     -
-
-   * - :ref:`Logstash<logstash>`
+   * - :ref:`windows-iis`
      - :strong:`X`
      -
 
-   * - :ref:`Logstash TCP <logstash-tcp>`
+   * - :ref:`net-io`
      - :strong:`X`
      -
 
-   * - :ref:`Memcached <memcached>`
+   * - :ref:`protocols`
      - :strong:`X`
      -
 
-   * - :ref:`Memory usage <memory>`
+   * - :ref:`nginx`
      - :strong:`X`
      -
 
-   * - :ref:`Microsoft .NET <microsoft-dotnet>`
+   * - :ref:`telegraf-ntpq`
      - :strong:`X`
      -
 
-   * - :ref:`Microsoft .NET runtime <get-started-dotnet-otel>`
+   * - :ref:`ntp`
      - :strong:`X`
      -
 
-   * - :ref:`Microsoft SQL Server <microsoft-sql-server>`
+   * - :ref:`opcache`
      - :strong:`X`
      -
 
-   * - :ref:`Microsoft Windows IIS <windows-iis>`
+   * - :ref:`openshift-cluster`
      - :strong:`X`
      -
 
-   * - :ref:`MongoDB <mongodb>`
+   * - :ref:`openstack`
      - :strong:`X`
      -
 
-   * - :ref:`MongoDB Atlas cluster <mongodb-atlas>`
+   * - :ref:`collectd-php-fpm`
      - :strong:`X`
      -
 
-   * - :ref:`MySQL <mysql>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Nagios <nagios>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Network interface I/O <net-io>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Network protocols <protocols>`
-     - :strong:`X`
-     -
-
-   * - :ref:`NGINX <nginx>`
-     - :strong:`X`
-     -
-
-   * - :ref:`NTPQ <telegraf-ntpq>`
-     - :strong:`X`
-     -
-
-   * - :ref:`NTP server <ntp>`
-     - :strong:`X`
-     -
-
-   * - :ref:`OPcache <opcache>`
-     - :strong:`X`
-     -
-
-   * - :ref:`OpenShift Cluster <openshift-cluster>`
-     - :strong:`X`
-     -
-
-   * - :ref:`OpenStack <openstack>`
-     - :strong:`X`
-     -
-
-   * - :ref:`PHP FPM <collectd-php-fpm>`
-     - :strong:`X`
-     -
-
-   * - :ref:`PostgreSQL <postgresql>`
-     - :strong:`X`
-     -
-
-   * - :ref:`procstat <procstat>`
+   * - :ref:`procstat`
      - :strong:`X`
      -
 
@@ -352,86 +264,72 @@
      - :strong:`X`
      -
 
-   * - :ref:`Prometheus exporter <prometheus-exporter>`
+   * - :ref:`prometheus-exporter`
      - :strong:`X`
      -
 
-   * - :ref:`Prometheus Go <prometheus-go>`
+   * - :ref:`prometheus-go`
      - :strong:`X`
      -
 
-   * - :ref:`Prometheus NGINX Ingress <prometheus-nginx-ingress>`
+   * - :ref:`prometheus-nginx-ingress`
      - :strong:`X`
      - 
 
-   * - :ref:`Prometheus NGINX VTS <prometheus-nginx-vts>`
+   * - :ref:`prometheus-nginx-vts`
      - :strong:`X`
      -
 
-   * - :ref:`Prometheus Node exporter <prometheus-node>`
+   * - :ref:`prometheus-node`
      - :strong:`X`
      -
 
-   * - :ref:`Prometheus Velero <prometheus-velero>`
+   * - :ref:`prometheus-velero`
      - :strong:`X`
      -
 
-   * - :ref:`RabbitMQ <rabbitmq>`
+   * - :ref:`rabbitmq`
      - :strong:`X`
      -
 
-   * - :ref:`Redis <redis>`
-     - :strong:`X`
-     -
-  
-   * - :ref:`SAP HANA <hana>`
+   * - :ref:`hana`
      - :strong:`X`
      -
 
-   * - :ref:`signalfx-forwarder`
-     - :strong:`X`
-     - :strong:`X`
-
-   * - :ref:`SNMP agent <snmp>`
+   * - :ref:`snmp`
      - :strong:`X`
      -
 
-   * - :ref:`SolrCloud <solr>`
+   * - :ref:`solr`
      - :strong:`X`
      -
 
-   * - :ref:`SQL <sql>`
+   * - :ref:`sql`
      - :strong:`X`
      -
 
-   * - :ref:`Statsd <statsd>`
+   * - :ref:`supervisor`
      - :strong:`X`
      -
 
-   * - :ref:`Supervisor <supervisor>`
+   * - :ref:`collectd-systemd`
      - :strong:`X`
      -
 
-   * - :ref:`systemd <collectd-systemd>`
+   * - :ref:`traefik`
      - :strong:`X`
      -
 
-   * - :ref:`Traefik <traefik>`
+   * - :ref:`telegraf-varnish`
      - :strong:`X`
      -
 
-   * - :ref:`Varnish <telegraf-varnish>`
+   * - :ref:`vsphere`
      - :strong:`X`
      -
 
-   * - :ref:`VMware vSphere <vsphere>`
+   * - :ref:`telegraf-win-services`
      - :strong:`X`
      -
 
-   * - :ref:`Windows Performance Counters <telegraf-win-perf-counters>`
-     - :strong:`X`
-     -
 
-   * - :ref:`Windows services <telegraf-win-services>`
-     - :strong:`X`
-     -

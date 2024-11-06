@@ -11,13 +11,9 @@ You can configure Splunk Observability Cloud to automatically send alert notific
 
 To send Splunk Observability Cloud alert notifications to Opsgenie, complete the following configuration tasks:
 
-* :ref:`opsgenie1`
+* :ref:`opsgenie1`. You must be an Opsgenie account owner or administrator to complete this task. 
 
-   You must be an Opsgenie account owner or administrator to complete this task. 
-
-* :ref:`opsgenie2`
-
-   You must be a Splunk Observability Cloud administrator to complete this task.
+* :ref:`opsgenie2`. You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`opsgenie3`
 

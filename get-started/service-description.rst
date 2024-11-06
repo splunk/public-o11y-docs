@@ -25,11 +25,11 @@ The following sections describe the features, capabilities, limitations, and con
 
 .. note:: For the service description of Splunk Cloud Platform see :new-page:`Splunk Cloud Platform Service Details <https://docs.splunk.com/Documentation/SplunkCloud/latest/Service/SplunkCloudservice>`.
 
-
-.. _sd-terms-policies:
-
-Service term and policies
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Service term and policies<a name="sd-terms-policies" class="headerlink" href="#sd-terms-policies" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 The following links access important terms and policies documents that pertain to Splunk Observability Cloud. Be sure to read these documents to have a clear understanding of the service. If you have any questions, contact your Splunk sales representative.
 
@@ -40,92 +40,118 @@ The following links access important terms and policies documents that pertain t
 - :new-page:`Splunk Data Security and Privacy <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html>`
 - :new-page:`Splunk Observability Cloud - Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
 
-
-.. _sd-data:
-
-Data ingestion and retention
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2 id="sd-data">Data ingestion and retention</h2>
+    </embed>
 
 Splunk Observability Cloud provides software and APIs that allow you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
 
 .. note::
    All editions of Splunk Observability Cloud include Log Observer Connect, which let you analyze logs you've ingested to Splunk Cloud Platform and Splunk Enterprise at no additional cost. See :ref:`lo-connect-landing` for more information.
 
-Splunk OpenTelemetry Collector
------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Splunk OpenTelemetry Collector<a name="sd-collector" class="headerlink" href="#sd-collector" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 The Splunk Distribution of OpenTelemetry Collector is an open-source software agent capable of collecting traces, metrics, and logs from a wide variety of hosts, containers, and services. You are responsible for installing, configuring, transforming, sending data, and managing your Collector instances, including maintaining version compatibility and installing, configuring, and managing Collector components. See :ref:`otel-intro` for more information.
 
 Splunk provides support for the Splunk Distribution of OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
 
-
-Integration with cloud service providers
-------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Integration with cloud service providers<a name="sd-csp-integration" class="headerlink" href="#sd-csp-integration" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 You can configure Splunk Observability Cloud to connect to services in AWS, Azure, and Google Cloud Platform to retrieve metrics and logs. See :ref:`get-started-connect` for more information.
 
 Splunk instrumentation can help you instrument serverless applications to bring traces and application metrics to Splunk Observability Cloud. See :ref:`instrument-serverless-functions`.
 
-Splunk distributions of OpenTelemetry instrumentation
------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Splunk distributions of OpenTelemetry instrumentation<a name="sd-splunk-distro" class="headerlink" href="#sd-splunk-distro" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and libraries is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for more information.
 
 Splunk officially supports the Splunk distributions of OpenTelemetry instrumentation, including manual instrumentation.
 
-
-Ingest API endpoints
--------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Ingest API endpoints<a name="sd-ingest-endpoints" class="headerlink" href="#sd-ingest-endpoints" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 You can use the REST API to send telemetry directly to Splunk Observability Cloud. This might be useful when you can't use the Splunk Distribution of OpenTelemetry Collector or when you have specific networking or security requirements. See :ref:`rest-api-ingest` for more information. If your organization has stringent networking security policies that apply to sending data to third parties, see :ref:`allow-services`.
 
-
-Private connectivity
--------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Private connectivity<a name="sd-private-connectivity" class="headerlink" href="#sd-private-connectivity" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 If you prefer not to send data to Splunk public endpoints using HTTPS, you can use AWS Private Link to ingest data from sources deployed on AWS. See :ref:`aws-privatelink` for more information.
 
-
-Data retention
--------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Data retention<a name="sd-data-retention" class="headerlink" href="#sd-data-retention" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 When you send data to Splunk Observability Cloud, it is ingested and stored for a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
 
 You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information.
 
-.. _sd-subscriptions:
-
-Subscription types, expansions, renewals, and terminations
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Subscription types, expansions, renewals, and terminations<a name="sd-subscriptions" class="headerlink" href="#sd-subscriptions" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Your subscription to Splunk Observability Cloud depends on the Splunk product: host-based or usage-based for Splunk IM and Splunk APM, or web sessions for Splunk RUM or synthetics check for Splunk Synthetic Monitoring.
 
-Host-based subscriptions
-------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Host-based subscriptions<a name="sd-host-subscriptions" class="headerlink" href="#sd-host-subscriptions" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 Host-based subscriptions base billing on the total number of unique hosts reporting data to Splunk Observability Cloud on an hourly basis, then calculate the average of those hourly measurements across each billing month. The calculation is done for each host, container, custom metric, and high resolution metric. A host is a physical, non-virtualized environment, or a virtual instance in a virtualized or public cloud environment, that reports metric data to Splunk Observability Cloud. You can increase the amount of hosts or containers per host if needed.
 
-Usage-based subscription
----------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Usage-based subscriptions<a name="sd-usage-subscriptions" class="headerlink" href="#sd-usage-subscriptions" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 Usage-based pricing is suited for custom metrics, containerized environments, and monitoring serverless environments or cloud services that don't provide a view of underlying hosts. Usage is calculated depending on the product or feature. For example, Splunk Infrastructure Monitoring usage-based pricing relies on metric time series (MTS), whereas Splunk Real User Monitoring calculates usage from the number of web sessions. For more information on subscription usage and monitoring in Splunk Observability Cloud, see :ref:`subscription-overview`.
 
-Overages
-----------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Overages<a name="sd-overages" class="headerlink" href="#sd-overages" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 Splunk Observability Cloud overages are based on usage measured over a month. Overages are incurred if the monthly usage is higher than your paid subscription. Splunk Observability Cloud provides transparent usage data with granular daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts or setup tokens to manage your usage. See :ref:`subscription-overview` for more information.
 
-.. _sd-suites:
-
-Suite offerings
------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Suite offerings<a name="sd-suites" class="headerlink" href="#sd-suites" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 Splunk Observability Cloud is also available in different suites, including Splunk Observability Cloud Enterprise Edition and Splunk Observability Cloud Commercial Edition. See :new-page:`Suites <https://www.splunk.com/en_us/legal/suitification-licensing.html>` on Splunk.com for more information.
 
-.. _sd-subscription:
-
-Subscription updates, renewals, and terminations
----------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Subscription updates, renewals, and terminations<a name="sd-subscription" class="headerlink" href="#sd-subscription" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 You can update or expand your Splunk Observability Cloud subscription any time during the term of the subscription to meet your business needs. For example, you can:
 
@@ -146,110 +172,19 @@ For additional information, see:
 - :new-page:`Splunk Offerings Purchase Capacity and Limitations <https://www.splunk.com/en_us/legal/licensed-capacity.html>` on Splunk.com
 - :new-page:`Splunk Success Plans <https://www.splunk.com/en_us/customer-success/success-plans.html>` on Splunk.com
 
-
-.. _sd-regions:
-
-Available regions or realms
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Available regions or realms<a name="sd-regions" class="headerlink" href="#sd-regions" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk Observability Cloud is available in the following global regions. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
 
-.. list-table::
-   :header-rows: 1
-   :widths: 25 25 25 25
-   :width: 100%
-
-   * - 
-     - :strong:`AWS regions`
-     - :strong:`Google Cloud regions`
-     - :strong:`Splunk Observability Cloud realm`
-   * - Splunk Observability Cloud
-     - 
-        * US: Oregon (us-west-2), Virginia (us-east-1)
-        * Europe: Dublin (eu-west-1)
-        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - 
-       * US: Oregon (us-west-1)
-     - 
-        * us0, us1, us2
-        * eu0
-        * au0, jp0
-
-
-
-Available components per region or realm
-----------------------------------------------------------
-
-The following components are available for each global region. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25 25 25 25
-   :width: 100%
-
-   * - :strong:`Service component`
-     - :strong:`AWS regions`
-     - :strong:`Google Cloud regions`
-     - :strong:`Splunk Observability Cloud realm`
-   * - Application Performance Monitoring (APM)
-     - 
-        * US: Oregon (us-west-2), Virginia (us-east-1)
-        * Europe: Dublin (eu-west-1)
-        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - 
-       * US: Oregon (us-west-1)
-     - 
-       * us0, us1, us2
-       * eu0
-       * au0, jp0
-   * - Infrastructure Monitoring (IM)
-     - 
-       * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
-       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - 
-       * US: Oregon (us-west-1)
-     - 
-       * us0, us1, us2
-       * eu0
-       * au0, jp0
-   * - Log Observer Connect
-     - 
-       * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
-       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - 
-       * US: Oregon (us-west-1)
-     - 
-       * us0, us1, us2
-       * eu0
-       * au0, jp0
-   * - Real User Monitoring (RUM)
-     - 
-       * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
-       * Asia Pacific: Sydney (ap-southeast-2)
-     - 
-       * US: Oregon (us-west-1)
-     -
-       * us0, us1, us2
-       * eu0
-       * au0
-   * - Synthetic Monitoring
-     - 
-       * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
-       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - 
-       * US: Oregon (us-west-1)
-     -
-       * us0, us1, us2
-       * eu0
-       * au0, jp0
-
-
-Realm to region equivalence
-----------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Realm to region equivalence<a name="sd-r2r" class="headerlink" href="#sd-r2r" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 The following table shows which cloud regions correspond to each realm in Splunk Observability Cloud.
 
@@ -272,6 +207,12 @@ The following table shows which cloud regions correspond to each realm in Splunk
    * - eu0
      - AWS EU Dublin (eu-west-1)
      -
+   * - eu1
+     - AWS EU Frankfurt (eu-central-1)
+     -
+   * - eu2
+     - AWS EU London (eu-west-2)
+     -
    * - au0
      - AWS AP Sydney (ap-southeast-2)
      - 
@@ -279,15 +220,91 @@ The following table shows which cloud regions correspond to each realm in Splunk
      - AWS AP Tokyo (ap-northeast-1)
      - 
 
+.. raw:: html
+  
+    <embed>
+      <h3>Available components per region or realm<a name="sd-components" class="headerlink" href="#sd-components" title="Permalink to this headline">¶</a></h3>
+    </embed>
+
+The following components are available for each global region. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 25 25
+   :width: 100%
+
+   * - :strong:`Service component`
+     - :strong:`AWS regions`
+     - :strong:`Google Cloud regions`
+     - :strong:`Splunk Observability Cloud realm`
+   * - Application Performance Monitoring (APM)
+     - 
+        * US: Oregon (us-west-2), Virginia (us-east-1)
+        * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
+        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+       * US: Oregon (us-west-1)
+     - 
+       * us0, us1, us2
+       * eu0, eu1, eu2
+       * au0, jp0
+   * - Infrastructure Monitoring (IM)
+     - 
+       * US: Oregon (us-west-2), Virginia (us-east-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+       * US: Oregon (us-west-1)
+     - 
+       * us0, us1, us2
+       * eu0, eu1, eu2
+       * au0, jp0
+   * - Log Observer Connect
+     - 
+       * US: Oregon (us-west-2), Virginia (us-east-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+       * US: Oregon (us-west-1)
+     - 
+       * us0, us1, us2
+       * eu0, eu1, eu2
+       * au0, jp0
+   * - Real User Monitoring (RUM)
+     - 
+       * US: Oregon (us-west-2), Virginia (us-east-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
+       * Asia Pacific: Sydney (ap-southeast-2)
+     - 
+       * US: Oregon (us-west-1)
+     -
+       * us0, us1, us2
+       * eu0, eu1, eu2
+       * au0
+   * - Synthetic Monitoring
+     - 
+       * US: Oregon (us-west-2), Virginia (us-east-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+       * US: Oregon (us-west-1)
+     -
+       * us0, us1, us2
+       * eu0, eu1, eu2
+       * au0, jp0
+
+
+
 For additional information, see:
 
 - :ref:`Note about realms<about-realms>`
 - :new-page:`Observability for Google Cloud Environments <https://www.splunk.com/en_us/observability/observability-for-google-cloud-environments.html>`
 
-.. _sd-compliance:
-
-Compliance and certifications
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Compliance and certifications<a name="sd-compliance" class="headerlink" href="#sd-compliance" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk has attained a number of compliance attestations and certifications from industry-leading auditors as part of our commitment to adhere to industry standards worldwide and part of our efforts to safeguard customer data. The following compliance attestations/certifications are available:
 
@@ -297,46 +314,82 @@ Splunk has attained a number of compliance attestations and certifications from 
 
 - :strong:`Cloud Security Alliance (CSA) Security, Trust, & Assurance Registry (STAR)`: Splunk Observability Cloud participates in the voluntary CSA STAR Level 1 Self Assessment to document compliance with CSA- published best practices. We submit our security and privacy self-assessments using the :new-page:`Cloud Controls Matrix <https://cloudsecurityalliance.org/research/cloud-controls-matrix/>` and :new-page:`GDPR Code of Conduct <https://cloudsecurityalliance.org/privacy/gdpr/code-of-conduct/>` based on the CSA Consensus Assessment Initiative Questionnaire (CAIQ).
 
-For information regarding the availability of service components between the AWS and Google Cloud regions, see :ref:`sd-regions`.
+.. raw:: html
+  
+    <embed>
+      <p>For information regarding the availability of service components between the AWS and Google Cloud regions, see <a href="#sd-regions">Available regions or realms</a>.</p>
+    </embed>
 
 For additional information, see:
 
 - :new-page:`Compliance at Splunk <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy/compliance-at-splunk.html>`
 
-
-.. _sd-security:
-
-Security
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Security<a name="sd-security" class="headerlink" href="#sd-security" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 The security and privacy of your data is key to you and your organization, and Splunk makes this a top priority. Splunk Observability Cloud is designed and delivered using key security controls described in the following sections.
 
-Data encryption
------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Data encryption<a name="sd-encryption" class="headerlink" href="#sd-encryption" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 All data in transit to and from Splunk Observability Cloud is TLS 1.2+ encrypted. Splunk Observability Cloud uses AES 256-bit encryption by default. Encryption key management processes are in place to help ensure the secure generation, storage, distribution and destruction of encryption keys.
 
-Data handling
------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Data handling<a name="sd-handling" class="headerlink" href="#sd-handling" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
-Your data is stored securely in a Splunk Observability Cloud realm that corresponds to a cloud service provider's region. See :ref:`sd-regions` for more information on regions and realms.
+.. raw:: html
+  
+    <embed>
+      <p>Your data is stored securely in a Splunk Observability Cloud realm that corresponds to a cloud service provider's region. See <a href="#sd-regions">Available regions or realms</a> for more information on regions and realms.</p>
+    </embed>
 
-Splunk retains Customer Content stored in its cloud computing services for at least thirty days after the expiration or termination of the subscription. See :ref:`sd-subscription` for more information.
+.. raw:: html
+  
+    <embed>
+      <p>Splunk retains Customer Content stored in its cloud computing services for at least thirty days after the expiration or termination of the subscription. See <a href="#sd-subscription">Subscription types, expansions, renewals, and terminations</a> for more information.</p>
+    </embed>
 
-For information on data retention, see :ref:`sd-data`.
+.. raw:: html
+  
+    <embed>
+      <p>For information on data retention, see <a href="#sd-data">Data ingestion and retention</a>.</p>
+    </embed>
 
-Security controls and compliance
-------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Security controls and compliance<a name="sd-controls" class="headerlink" href="#sd-controls" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
-Splunk has attained a number of compliance attestations and certifications from industry-leading auditors. See :ref:`sd-compliance` for information on compliance certifications.
+.. raw:: html
+  
+    <embed>
+      <p>Splunk has attained a number of compliance attestations and certifications from industry-leading auditors. See <a href="#sd-compliance">Available regions or realms</a> for information on compliance certifications.</p>
+    </embed>
 
-Realm security
-------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Realm security<a name="sd-realm-security" class="headerlink" href="#sd-realm-security" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 Every realm in Splunk Observability Cloud runs in a secured environment on a stable operating system and in a network that is hardened to industry standards. Realms are scanned for threats on a regular basis.
 
-User authentication and access
-------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>User authentication and access<a name="sd-auth-access" class="headerlink" href="#sd-auth-access" title="Permalink to this headline">¶</a></h3>
+    </embed>
+
 
 You can configure authentication using Single-sign on (SSO) integrations implementing SAML 2.0, such as Ping, Okta, or AzureAD. See :ref:`sso-about` for more information.
 
@@ -348,24 +401,27 @@ For additional information, see:
 - :new-page:`Splunk Data Privacy & Security <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html>`
 - :new-page:`Splunk Observability Cloud Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
 
-.. _sd-slas:
-
-Service level agreements
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Service level agreements<a name="sd-slas" class="headerlink" href="#sd-slas" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 The :new-page:`Splunk Observability Cloud Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` document describes the uptime SLA and exclusions. You may claim service credits in the event of SLA failures, as set forth in the Splunk SLA schedule.
 
+.. raw:: html
+  
+    <embed>
+      <h3>Status page<a name="sd-status" class="headerlink" href="#sd-status" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
-Status page
--------------------------------------------
+You can check the current status of Splunk Observability Cloud realms through the :new-page:`https://status.signalfx.com <https://status.signalfx.com>` status page. You can subscribe to updates on the status pages.
 
-You can check the current status of Splunk Observability Cloud realms through the :new-page:`https://status.signalfx.com <https://status.signalfx.com>` status page. Each status page lets you subscribe to updates.
-
-
-.. _sd-compatibility:
-
-Supported browsers
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Supported browsers<a name="sd-compatibility" class="headerlink" href="#sd-compatibility" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk Observability Cloud works as expected when using the latest and next-to-latest official releases of the following browsers:
 
@@ -376,21 +432,21 @@ Splunk Observability Cloud works as expected when using the latest and next-to-l
 
 See :ref:`supported-browsers` for more information.
 
-
-.. _sd-limits:
-
-System limits per product
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>System limits per product<a name="sd-limits" class="headerlink" href="#sd-limits" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Splunk Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions.
 
 Contact Splunk if your requirements are different or exceed what is recommended in :ref:`per-product-limits`.
 
-
-.. _sd-support:
-
-Technical support
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Technical support<a name="sd-support" class="headerlink" href="#sd-support" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Splunk Observability Cloud subscriptions include technical support. For more information regarding support terms and program options, see :new-page:`Splunk Support Programs <https://www.splunk.com/en_us/support-and-services/support-programs.html>`. Also note the following:
 
@@ -399,11 +455,11 @@ Splunk Observability Cloud subscriptions include technical support. For more inf
 
 For additional information, see :ref:`support`.
 
-
-.. _sd-auth:
-
-Users and authentication
-===========================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Users and authentication<a name="sd-auth" class="headerlink" href="#sd-auth" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 You are responsible for creating and administering your users's accounts, the roles and capabilities assigned to them, the authentication method, and global password policies. To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities. You can assign roles using Splunk Observability Cloud in the browser or through the REST API. See :ref:`users-assign-roles-ph3`.
 
@@ -411,7 +467,10 @@ Roles give Splunk Observability Cloud users access to features and permission to
 
 You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
 
-Unified identity
-----------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Unified identity<a name="sd-unified" class="headerlink" href="#sd-unified" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
 When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user's role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Users can examine logs from the Splunk Cloud Platform instance in Log Observer Connect upon provisioning with no additional setup. See :ref:`unified-id-unified-identity` for more information.

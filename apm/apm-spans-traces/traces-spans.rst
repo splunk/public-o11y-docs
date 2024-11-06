@@ -131,7 +131,7 @@ You can add custom span tags through the OpenTelemetry Collector, or when you in
 
 Span tags are most useful when they follow a simple, dependable system of naming conventions. See :ref:`span-tag-naming` to learn about OpenTelemetry naming conventions for span tags. 
 
-.. note:: Note that span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-infra-tags`.
+.. note:: Span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-infra-tags`.
 
 .. raw:: html
 

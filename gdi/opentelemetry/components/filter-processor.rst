@@ -114,6 +114,8 @@ The following sample configurations show how to filter spans, metrics, and logs 
 
 .. note:: For a complete list of examples, see the configuration snippets in :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor/testdata`.
 
+.. _filter-processor-spans:
+
 Filter spans
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -145,6 +147,8 @@ You can exclude or include spans from traces using resource attributes or OTTL c
          - 'attributes["test"] == "value2"'
 
 .. note:: Include filters are always applied before exclude filters for any given filter processor instance.
+
+.. _filter-processor-metrics:
 
 Filter metrics
 ^^^^^^^^^^^^^^^^^^^^^
@@ -189,6 +193,8 @@ You can exclude or include metrics using metric names, expressions, or OTTL cond
          - 'name == "a_name"'
       datapoint:
          - 'attributes["attributename"] == "value"'
+
+.. _filter-processor-logs:
 
 Filter logs
 ^^^^^^^^^^^^^^^^^^^^^

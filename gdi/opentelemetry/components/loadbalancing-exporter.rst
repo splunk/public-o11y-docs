@@ -27,8 +27,6 @@ To use the load balancing exporter, provide a list of back ends that can receive
 
 You can provide a static list of IP addresses, or a DNS host name to resolve. See :ref:`loadbalancing-sample-configs` for example configurations of the load balancing exporter that use each type of list.
 
-.. _routing-keys:
-
 Routing keys
 ------------------------
 

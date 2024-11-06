@@ -9,9 +9,6 @@ Send traces from Istio to Splunk Observability Cloud
 
 Istio 1.8 and higher has native support for observability. You can configure your Istio service mesh to send traces, metrics, and logs to Splunk Observability Cloud by configuring the Splunk OpenTelemetry Collector and Istio.
 
-.. note::
-   The SignalFx Istio Mixer Adapter is deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-istio-adapter/blob/main/DEPRECATION-NOTICE.md>`.
-
 Requirements
 ==============================
 

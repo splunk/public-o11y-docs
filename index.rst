@@ -21,7 +21,7 @@ Learn about the basic elements of Splunk Observability Cloud and all it can do f
 .. rst-class:: newcard
 
 :strong:`Overview`
-Splunk Observability Cloud overview :ref:`welcome`
+Splunk Observability Cloud overview :ref:`overview`
 
 .. rst-class:: newcard
 
@@ -35,8 +35,8 @@ A collection of task-based tutorials to achieve a goal in Splunk Observability C
 
 .. rst-class:: newcard
 
-:strong:`Admin onboarding guide`
-Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
+:strong:`Get started guide for admins`
+Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`
 
 .. rst-class:: newcard
 
@@ -114,12 +114,12 @@ Query logs to identify root causes :ref:`logs-intro-logconnect`
 .. rst-class:: newcard
 
 :strong:`Synthetic Monitoring`
-Proactively monitor the performance of web resources :ref:`welcome-synthmon`
+Proactively monitor the performance of web resources :ref:`intro-synthetics`
 
 .. rst-class:: newcard
 
 :strong:`All products`
-Learn more about all Splunk Observability Cloud products :ref:`welcome`
+Learn more about all Splunk Observability Cloud products :ref:`overview`
 
 .. role:: icon-wrench
 .. rst-class:: newparawithicon
@@ -141,11 +141,6 @@ Get actionable insights about the systems you monitor :ref:`dashboards`
 
 :strong:`Span tags`
 Use span tags to add useful metadata to traces :ref:`apm-add-context-trace-span`
-
-.. rst-class:: newcard
-
-:strong:`Logs pipeline`
-Add value to your raw logs by customizing your pipeline :ref:`logs-pipeline`
 
 .. rst-class:: newcard
 
@@ -264,13 +259,29 @@ Collect traces :ref:`get-started-cpp`
 :strong:`All supported integrations`
 View a list of all supported integrations :ref:`supported-data-sources`
 
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Release notes`
+To keep up to date with changes in the products, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
+
 .. ----- This comment separates the landing page from the TOC -----
 
 .. toctree::
    :caption: Get started
    :maxdepth:   2
 
-   get-started/welcome
+   get-started/get-started
+
+.. toctree::
+   :maxdepth:   3
+
+   Overview <get-started/overview>
+
+.. toctree::
+   :maxdepth:   3
+
+   Architecture <get-started/o11y-architecture>
 
 .. toctree::
    :maxdepth: 3
@@ -278,24 +289,9 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Service description <get-started/service-description>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth: 3
 
-   Get started <get-started/o11y>
-
-.. toctree::
-   :maxdepth:   3
-
-   About Mobile TOGGLE <get-started/intro-to-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   Splunk Observability Cloud architecture <get-started/o11y-architecture>
-
-.. toctree::
-   :maxdepth:   3
-
-   Contribute to our documentation <get-started/contribute>
+   Get started guide for admins TOGGLE <get-started/get-started-guide/get-started-guide>
 
 .. toctree::
    :maxdepth:   3
@@ -305,7 +301,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Free trial experience <get-started/o11y-trial>
+   Free trial and guided onboarding <get-started/o11y-trial>
+
+.. toctree::
+   :maxdepth:   3
+
+   About Mobile TOGGLE <get-started/intro-to-mobile>
 
 .. toctree::
    :maxdepth:   3
@@ -346,11 +347,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Administer Splunk Observability Cloud
    :maxdepth:   3
 
-   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
-
-.. toctree::
-   :maxdepth:   3
-
    admin/admin
 
 .. toctree::
@@ -367,7 +363,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
+   Send alert notifications to other services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
    :maxdepth:   3
@@ -442,11 +438,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    gdi/other-ingestion-methods/other-data-ingestion-methods
 
 .. toctree::
-   :maxdepth: 3
-
-   SignalFx Smart Agent (Deprecated) TOGGLE <gdi/smart-agent/smart-agent-intro>
-
-.. toctree::
    :caption: Understand and analyze your data
    :maxdepth:   3
 
@@ -491,7 +482,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Override default time range <data-visualization/use-time-range-selector>   
+   Select the time range <data-visualization/use-time-range-selector>   
 
 .. toctree::
    :maxdepth:   3
@@ -502,82 +493,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Alerts, detectors, and SLOs
    :maxdepth:   3
 
-   Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
-
-.. toctree::
-   :maxdepth:   3
-
-   Alerts and detectors scenario library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
-
-.. toctree::
-   :maxdepth:   3
-
-   Use and customize AutoDetect alerts and detectors TOGGLE <alerts-detectors-notifications/autodetect/autodetect>
-
-.. toctree::
-   :maxdepth:   3
-
-   Create detectors to trigger alerts <alerts-detectors-notifications/create-detectors-for-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   alerts-detectors-notifications/detector-manage-permissions
-
-.. toctree::
-   :maxdepth:   3
-
-   Link detectors to charts <alerts-detectors-notifications/link-detectors-to-charts>
-
-.. toctree::
-   :maxdepth:   3
-
-   Manage notification subscribers <alerts-detectors-notifications/manage-notifications>
-
-.. toctree::
-   :maxdepth:   3
-
-   Preview detector alerts <alerts-detectors-notifications/preview-detector-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   View alerts <alerts-detectors-notifications/view-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   View detectors <alerts-detectors-notifications/view-detectors>
-
-.. toctree::
-   :maxdepth:  3
-
-   Mute alert notifications <alerts-detectors-notifications/mute-notifications>
-
-.. toctree::
-   :maxdepth:   3
-
-   Auto-clear alerts <alerts-detectors-notifications/auto-clearing-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   Troubleshoot detectors <alerts-detectors-notifications/troubleshoot-detectors>
-
-.. toctree::
-   :maxdepth:   3
-
-   Detector options <alerts-detectors-notifications/detector-options>
-
-.. toctree::
-   :maxdepth:   3
-
-   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
-
-.. toctree::
-   :maxdepth:   3
-
-   alerts-detectors-notifications/alert-message-variables-reference
+   Alerts and detectors TOGGLE <alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst>
 
 .. toctree::
    :maxdepth:   3
@@ -644,6 +560,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
 
 .. toctree::
+   :maxdepth:   3
+
+   apm/filter-apm-data
+
+.. toctree::
    :caption: Infrastructure
    :maxdepth:   3
 
@@ -700,15 +621,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :caption: Log Observer
+   :caption: Log Observer Connect 
    :maxdepth:   3
 
-   Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
-
-.. toctree::
-   :maxdepth:   3   
-
-   Splunk Log Observer TOGGLE <logs/log-observer-landing>
+   logs/lo-connect-landing
 
 .. toctree::
    :caption: Real User Monitoring
@@ -790,6 +706,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3
+   
+   rum/rum-custom-indexed-tags
+
+.. toctree::
+   :maxdepth:   3
 
    rum/sample-app
 
@@ -837,8 +758,67 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Configure your tests TOGGLE <synthetics/test-config/test-config>
+   Advanced test configurations TOGGLE <synthetics/test-config/test-config>
 
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests TOGGLE <synthetics/syn-troubleshoot/syn-troubleshoot>
+
+.. toctree::
+   :caption: Splunk On-Call
+   :maxdepth:   3
+
+   Introduction to Splunk On-Call TOGGLE </sp-oncall/admin/get-started/getting-started-spoc>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   User management TOGGLE <sp-oncall/user-roles/user-roles-permissions>
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage on-call schedules TOGGLE <sp-oncall/on-call-schedules/create-manage-on-call-schedules>
+
+.. toctree::
+   :maxdepth:   3
+
+   Alerts TOGGLE <sp-oncall/alerts/alerts-main>
+
+.. toctree::
+   :maxdepth:   3
+
+   Notifications TOGGLE <sp-oncall/notifications/notification-types>
+
+.. toctree::
+   :maxdepth:   3
+
+   Incidents TOGGLE <sp-oncall/incidents/incident-pane>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Mobile app TOGGLE <sp-oncall/mobile/mobile-getting-started>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Reports TOGGLE <sp-oncall/reports/reports-main>  
+
+.. toctree::
+   :maxdepth:   3
+
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>
+
+.. toctree::
+   :caption: Release notes
+   :maxdepth:   3
+
+   Release notes overview TOGGLE <release-notes/release-notes-overview.rst>   
 
 .. toctree::
    :caption: Reference and Legal
@@ -851,3 +831,8 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
+
+.. toctree::
+   :maxdepth:   3
+
+   Contribute to our documentation <get-started/contribute>

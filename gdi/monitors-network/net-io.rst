@@ -6,9 +6,7 @@ Network interface I/O
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the net-io monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``net-io`` monitor type to report I/O metrics about network interfaces.
 
 Benefits
@@ -70,8 +68,7 @@ integration:
       - ``interfaces``
       - no
       - ``list of strings``
-      - The network interfaces to send metrics about. This is an
-         :ref:`overridable set <filtering-smart-agent>`
+      - The network interfaces to send metrics about. 
          (**default:**
          ``[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]``)
 

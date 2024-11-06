@@ -15,13 +15,28 @@ This topic describes general aspects of your usage and consumption. For more det
 
 .. _about-custom:
 
-Metrics in Infrastructure
+Metric billing in Infrastructure
 ==================================================
 
 Infrastructure Monitoring collects metric time series (MTS) which are classified into different categories depending on the type of subscription you have.
 
-* In MTS-based subscriptions, all MTS count towards custom metrics usage.
-* In host-based plans, the following categories apply:
+.. note:: Each histogram data point is billed as 8 MTS. Learn more about metric categories in :ref:`metrics-category`.
+
+MTS-based subscriptions
+-------------------------------------------------------------------------------------
+
+In MTS-based subscriptions, all MTS are considered custom and charged.
+
+Host-based subscriptions
+-------------------------------------------------------------------------------------
+
+In host-based plans, the following applies:
+
+* MTS from host and container metrics and bundled metrics are covered as part of the subscription and not charged separately 
+* MTS from custom metrics are subject to the entitlements (200 MTS per host for Enterprise plan and 100 MTS per host for Standard plan)
+* Additional MTS from custom metrics are charged separately per MTS
+
+See the table for more details:
 
 .. list-table::
   :header-rows: 1
@@ -32,22 +47,17 @@ Infrastructure Monitoring collects metric time series (MTS) which are classified
     - :strong:`Description`
 
   * - Host and container metrics
-    - * Default metrics sent by the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
+    - * Default metrics sent by the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.       
+      * Metrics retrieved out-of-the-box by Collector receivers also fall in this category. These metrics are listed in the :ref:`otel-components-receivers` documentation.
 
   * - Bundled metrics
-    - * Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
-      * They are included as part of a host-based subscription, so you're not charged for them.
+    - * Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers. 
 
   * - Custom metrics 
     - * Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics.
       * Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests.
       * You can also configure the Splunk Distribution of OpenTelemetry Collector to send custom metrics (such as system or service metrics) outside of its default set of metrics.
       * Your Infrastructure Monitoring subscription lets you send a certain number of custom metrics. If you exceed this number your organization might be overcharged.
-
-In host-based subscriptions, MTS from host and container metrics and bundled metrics are covered as part of the subscription and not charged separately. MTS from custom metrics are subject to the entitlements (200 MTS per host for Enterprise plan and 100 MTS per host for Standard plan). Additional MTS from custom metrics will be charged separately per MTS. 
-
-.. note:: Each histogram data point is billed as 8 MTS. Learn more about metric categories in :ref:`metrics-category`.
-
 
 .. _about-metric-res:
 
@@ -113,7 +123,10 @@ The report has the following columns:
      - The number of containers that Infrastructure Monitoring monitored during the specified hour.
 
    * - # Custom Metrics
-     - The number of Metric Time Series (MTS) that are sent to Infrastructure Monitoring during the specified hour.
+     - The number of metric time series (MTS) that Splunk Infrastructure Monitoring monitored during the specified hour. This includes archived metrics and histogram metrics. For billing purposes, 10 archived custom metrics count as 1 real-time custom metric, and 1 histogram custom metric counts as 8 real-time custom metrics.
+
+   * - # Archived custom metrics
+     - The number of archived metric time series (MTS) that Splunk Infrastructure Monitoring monitored during the specified hour. 
 
 .. _summary-including-children:
 

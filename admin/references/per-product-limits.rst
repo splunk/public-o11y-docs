@@ -11,6 +11,7 @@ Per product system limits in Splunk Observability Cloud
    :hidden:
 
    Infrastructure system limits <system-limits/sys-limits-infra>
+   Infrastructure system limits (details) <system-limits/sys-limits-infra-details>
    APM system limits <system-limits/sys-limits-apm>
    RUM system limits <system-limits/sys-limits-rum>
 

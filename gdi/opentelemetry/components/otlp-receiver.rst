@@ -26,7 +26,7 @@ Get started
   
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform. See :ref:`otel-install-platform`. 
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform. See :ref:`otel-install-platform`. 
 2. Configure the OTLP receiver as described in the next section. 
 3. Restart the Collector.
 
@@ -68,12 +68,7 @@ Next, add the receiver to the service pipelines section of your configuration fi
 Advanced configuration
 -------------------------------------------------
 
-Use the following helper files to provide additional capabilities automatically:
-
-* :new-page:`gRPC settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configgrpc/README.md>` including CORS
-* :new-page:`HTTP settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/confighttp/README.md>`
-* :new-page:`TLS and mTLS settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>`
-* :new-page:`Auth settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configauth/README.md>`
+You can use helper files to provide additional capabilities automatically. For more information see :ref:`collector-common-config`.
 
 Protobuf payloads
 =================================================

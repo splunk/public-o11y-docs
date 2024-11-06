@@ -94,12 +94,12 @@ The following table shows how long data is retained at different resolutions.
 
    *  -  1 second
       -  8 days
-      -  ~3 months (96 days)
+      -  3 months (96 days)
 
-   *  -  10 seconds, 1 minute, 5 minutes, 1 hour
-      -  ~13 months (416 days)
-      -  ~13 months (416 days)
+   *  -  10 seconds or more
+      -  13 months (416 days)
+      -  13 months (416 days)
 
 For more information on rollups in general, and how they apply to charts and detectors, see :ref:`rollups`.
 
-.. note:: Custom events are retained in the platform for a year.
+.. note:: All events are retained in the platform for 12 months.

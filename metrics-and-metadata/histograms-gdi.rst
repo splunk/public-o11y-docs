@@ -13,6 +13,8 @@ The Splunk Distribution of OpenTelemetry Collector supports explicit-bucket hist
 
 .. include:: /_includes/gdi/histograms.rst
 
+You can collect histogram data using a variety of receivers, including the :ref:`Prometheus receiver <prometheus-receiver>`.
+
 .. _bucket-histograms-best-practices:
 
 Best practices when sending bucket histogram data

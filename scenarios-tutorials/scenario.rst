@@ -229,8 +229,6 @@ Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the 
 Learn more
 ####################
 
-* For details about creating metrics from logs and displaying them in a chart, see :ref:`logs-metricization`.
-
 * For details about creating detectors to issue alerts based on charts or metrics, see :ref:`create-detectors`.
 
 * For details about setting up detectors and alerts, see :ref:`get-started-detectoralert`.
@@ -246,5 +244,3 @@ Learn more
 * For details about using the Kubernetes navigator and other navigators, see :ref:`use-navigators-imm`.
 
 * For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
-
-* For details about using Splunk Log Observer Live Tail view, see :ref:`logs-live-tail`.
