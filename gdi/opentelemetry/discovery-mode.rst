@@ -108,7 +108,7 @@ Automatic discovery supports the following host services and applications:
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`
 
    * - RabbitMQ
-     - RabbitMQ receiver. See :ref:`rabbitmq-receiever`.
+     - RabbitMQ receiver. See :ref:`rabbitmq-receiver`.
 
    * - Redis
      - Redis receiver. See :ref:`redis-receiver`
