@@ -27,7 +27,7 @@ Automatic instrumentation for Kubernetes supports back-end applications written 
 
 .. note::
 
-   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for eight back-end language runtimes. For more information, see :ref:`get-started-application`.
+   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for 8 back-end language runtimes. For more information, see :ref:`get-started-application`.
 
 To use automatic instrumentation for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
 
