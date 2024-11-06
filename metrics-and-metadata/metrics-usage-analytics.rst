@@ -5,22 +5,22 @@ Analyze your metric usage in Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-    :description: Use metric usage analytics (MUA) to determine usage of your metrics in Splunk Observability Cloud.
+    :description: Use usage analytics to determine the usage of your metrics in Splunk Observability Cloud.
 
-Metric usage analytics (MUA) gives you in-depth visualizations of your metric usage in Splunk Observability Cloud. MUA can help you make informed decisions about your metrics, for example, if you're deciding whether to aggregate, archive, or drop certain metrics.
+Usage analytics gives you in-depth visualizations of your metric usage in Splunk Observability Cloud. Usage analytics can help you make informed decisions about your metrics, for example, if you're deciding whether to aggregate, archive, or drop certain metrics.
 
-To learn how to use MUA, see :ref:`mua-understand-metrics`.
+To learn how to use usage analytics, see :ref:`mua-understand-metrics`.
 
-For guidance in using MUA to manage and reduce your overall metric usage, see :ref:`mua-reduce-usage`.
+For guidance in using usage analytics to manage and reduce your overall metric usage, see :ref:`mua-reduce-usage`.
 
 To learn more about metric usage and billing, see :ref:`subscription-overview`.
 
-Benefits of metric usage analytics
+Benefits of usage analytics
 ================================================
 
-Using MUA, you can quickly find and visualize which metrics your organization is using and how these metrics contribute to your metric usage plan. With this information, you can accurately decide how to manage individual metrics for the purpose of reducing your overall usage.
+With usage analytics, you can quickly find and visualize which metrics your organization is using and how these metrics contribute to your overall monthly usage. With this information, you can accurately decide how to manage individual metrics for the purpose of reducing your overall usage.
 
-MUA can help you complete the following example scenarios: 
+Usage analytics can help you complete the following example scenarios: 
 
 * You want to view high-cardinality custom metrics that are taking up large chunks of your metric usage plan. 
 * You want to identify what metrics your team is producing so you can access their usefulness.
@@ -28,27 +28,30 @@ MUA can help you complete the following example scenarios:
 
 .. _mua-understand-metrics:
 
-Use MUA to view and understand your metric usage
+View and understand your metric usage
 ====================================================
 
-MUA displays several charts and visualizations that help you determine your metric usage relative to your usage plan. 
+Usage analytics displays several charts and visualizations that help you determine your metric usage relative to your usage plan. 
 
-With MUA, you can also find more details about individual metrics in MUA, such as which dimensions the metric uses, which tokens the metric is associated with, and which charts the metric appears in.
+With usage analytics, you can also find more details about individual metrics, such as which dimensions the metric uses, which tokens the metric is associated with, and which charts the metric appears in.
 
-Access metric usage analytics
+Access usage analytics
 ------------------------------------------------
 
-To access metric usage analytics in Splunk Observability Cloud, follow these steps:
+To access usage analytics in Splunk Observability Cloud, follow these steps:
 
 #. In Splunk Observability Cloud, select :guilabel:`Settings`.
 #. Under :guilabel:`Data Configuration`, select :guilabel:`Metrics Management`.
 #. Select the :guilabel:`Usage analytics` tab.
 
-The MUA home page contains the following visualizations:
+The usage analytics home page contains the following visualizations:
 
 * A card displaying the average number of metric time series (MTS) per hour for your selected time frame.
 * A chart displaying the average number of MTS per half hour over the selected time frame.
 * The metrics table, displaying each of your metrics and their usage. See :ref:`mua-metrics-table` to interpret these values.
+
+.. image:: /_images/images-metrics/usage-analytics-home-page.png
+  :alt: The usage analytics home page, which displays the total MTS count, trends for hourly MTS count, and metrics with the highest utilization.
 
 .. _mua-metrics-table:
 
@@ -75,10 +78,22 @@ The metric usage table displays the following fields:
     * - Percentage of total
       - How much of your total usage plan this metric utilizes.
 
-Use metric profiles to examine metric properties
-------------------------------------------------------
+You can use the options at the top of the page to filter metrics by time, billing class, utilization, and token. 
 
-MUA includes metric profiles for each of your metrics. To access a metric profile, select one of the metrics in your metric usage table.
+For example, if you only want to see metrics that are unused, follow these steps:
+
+#. Select the box with :guilabel:`Utilization: Any`. 
+#. In the menu, select :guilabel:`Unused`.
+#. Select :guilabel:`Run search`.
+
+After running the search, the usage analytics page displays only metrics which are unused. To revert the search, select :guilabel:`Reset`.
+
+.. note:: Running searches with filters that yield more results, such as searching for metrics from the previous 30 days instead of the previous 24 hours, might cause the search to run slower. 
+
+View dimensions, tokens, and charts with metric profiles
+---------------------------------------------------------
+
+Usage analytics includes metric profiles for each of your metrics. To access a metric profile, select one of the metrics in your metric usage table.
 
 Metric profiles provide the following tables with additional information about the metric:
 
@@ -102,9 +117,14 @@ Metric profiles provide the following tables with additional information about t
       - Displays the detectors associated with each of your metrics, as well as the user who last updated the detector and the time they updated it.
       - None
 
+For example, the following metric profile displays information about the CPUUtilization metric, including the metric's dimensions:
+
+.. image:: /_images/images-metrics/usage-analytics-example-profile.png
+  :alt: Information about the CPUUtilization metric, including the total MTS, the percentage of total MTS, and related tokens, dimensions, charts, and detectors.
+
 .. _mua-reduce-usage:
 
-Manage and reduce your metric usage with MUA
+Manage and reduce your metric usage
 ================================================
 
 This section contains tips for identifying metrics that you can aggregate, archive, or drop for the purpose of reducing your metric usage. 
