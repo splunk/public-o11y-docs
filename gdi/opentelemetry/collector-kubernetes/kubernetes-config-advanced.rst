@@ -504,13 +504,8 @@ The Cluster receiver is a 1-replica deployment of the OpenTelemetry Collector. B
 
 Data persistence is currently not applicable to the Kubernetes cluster metrics and Kubernetes events.
 
-Configure special Kubernetes distributions
-================================================
-
-To collect telemetry data from specific Kubernetes distributions such as RedHat OpenShift, EKS, and GCP, you might have to create additional configurations. 
-
 Monitor OpenShift infrastructure nodes
-------------------------------------------------
+============================================
 
 By default, the Splunk Distribution of OpenTelemetry Collector for Kubernetes doesn't collect data from OpenShift infrastructure nodes. 
 
