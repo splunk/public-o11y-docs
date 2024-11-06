@@ -237,7 +237,7 @@ To rotate an access token with the API, use the ``POST /token/{name}/rotate`` en
 
 .. code-block:: bash
 
-   curl -X  POST "https://api.{realm}.signalfx.com/v2/token/{name}/rotate?graceful={gracePeriod}?expiry={secondsUntilExpiry}" \
+   curl -X  POST "https://api.{realm}.signalfx.com/v2/token/{name}/rotate?graceful={gracePeriod}&expiry={secondsUntilExpiry}" \
       -H "Content-type: application/json" \
       -H "X-SF-TOKEN: <your-user-session-api-token-value>"
 
