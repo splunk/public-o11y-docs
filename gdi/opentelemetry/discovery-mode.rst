@@ -41,7 +41,7 @@ Using automatic instrumentation, you can automatically instrument your back-end 
 
 .. note::
 
-   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for eight back-end language runtimes. For more information, see :ref:`get-started-application`.
+   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for 8 back-end language runtimes. For more information, see :ref:`get-started-application`.
 
 The main advantage of using automatic discovery and automatic instrumentation is that you don't need to manually configure the Splunk Distribution of the OpenTelemetry Collector.
 
