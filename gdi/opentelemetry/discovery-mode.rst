@@ -37,7 +37,11 @@ The following diagram shows the process of using automatic discovery and automat
 
 Automatic discovery can detect several types of data sources on the host or Kubernetes cluster, such as databases and web servers. To do so, the Collector generates a configuration that you can modify and adopt, or incorporate automatically into your existing configuration.
 
-Using automatic instrumentation, you can automatically instrument your back-end applications such as Java or .NET without any additional installation or configuration steps. With automatic instrumentation, you can quickly get started with Splunk APM.
+Using automatic instrumentation, you can automatically instrument your back-end applications written in Java, Node.js, and .NET without any additional installation or configuration steps. With automatic instrumentation, you can quickly get started with Splunk APM.
+
+.. note::
+
+   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for eight back-end language runtimes. For more information, see :ref:`get-started-application`.
 
 The main advantage of using automatic discovery and automatic instrumentation is that you don't need to manually configure the Splunk Distribution of the OpenTelemetry Collector.
 

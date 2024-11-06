@@ -25,6 +25,10 @@ Used alongside automatic instrumentation, you don't have to manually instrument 
 
 Automatic instrumentation for Kubernetes supports back-end applications written in Java, Node.js, and .NET and automatic discovery supports third-party services such as databases and web servers.
 
+.. note::
+
+   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for eight back-end language runtimes. For more information, see :ref:`get-started-application`.
+
 To use automatic instrumentation for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
 
 To use automatic discovery and configuration with third-party services, see :ref:`k8s-third-party`.
