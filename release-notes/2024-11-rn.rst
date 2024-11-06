@@ -21,7 +21,7 @@ November 13, 2024
    * - Real-time metrics in Splunk Cloud Platform
      - Splunk Cloud Platform users can now import real-time monitoring (RTM) metrics series into Splunk Dashboard Studio for additional event context. Either import charts and navigators from Splunk Observability Cloud or create charts in Splunk Dashboard Studio using metrics from Splunk Observability Cloud.
    * - Metrics usage analytics
-     - Metrics pipeline management now include the metrics usage analytics (MUA) self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system.
+     - Metrics pipeline management now include the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. See :ref:`metric-usage-analytics-intro`.
    * - Log Observer Connect teams
      - Splunk Cloud Platform admins can now restrict user access at a service-account level to ensure that sensitive logs are only available to a specific user group.
    * - Getting data in onboarding improvements
@@ -42,16 +42,16 @@ November 13, 2024
    * - Kubernetes proactive troubleshooting journey
      - The Infrastructure Monitoring Kubernetes navigators now includes the following enhancements:
 
-       - Additional coverage for Kubernetes entities. For more information, see :ref:`use-k8s-nav`.
-       - Table and heat map views. For more information, see :ref:`navigator-views`.
-       - Hierarchy map moved to the single instance view. For more information, see :ref:`k8s-nav-hierarchy-map`.
-       - Data links for metadata in the sidebar. For more information, see :ref:`navigator-sidebar-metadata`.
+       - Additional coverage for Kubernetes entities. See :ref:`use-k8s-nav`.
+       - Table and heat map views. See :ref:`navigator-views`.
+       - Hierarchy map moved to the single instance view. See :ref:`k8s-nav-hierarchy-map`.
+       - Data links for metadata in the sidebar. See :ref:`navigator-sidebar-metadata`.
    * - Synthetic monitoring performance KPI enhancements
      - <TBD>
    * - Tag spotlight enhancements in APM and RUM
      - <TBD>
    * - Archived metrics visibility in charts and detectors
-     - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. To learn more, see :ref:`archived-metrics-charts` and :ref:`alert-signal`.
+     - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. See :ref:`archived-metrics-charts` and :ref:`alert-signal`.
 
 
 
