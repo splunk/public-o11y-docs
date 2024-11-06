@@ -758,7 +758,7 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-  synthetics/test-kpis/test-kpis
+   synthetics/test-kpis/test-kpis
 
 .. toctree::
    :maxdepth:   3

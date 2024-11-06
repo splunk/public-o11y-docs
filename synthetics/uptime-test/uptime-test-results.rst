@@ -33,7 +33,7 @@ On the :guilabel:`Test History` page, view a customizable summary of recent run 
 
 Customize the Performance KPIs chart 
 --------------------------------------------------
-See :ref:`test-kpi`.
+See :ref:`test-kpis`.
 
 View results for a specific run
 ---------------------------------
