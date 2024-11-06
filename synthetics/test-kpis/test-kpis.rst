@@ -4,9 +4,13 @@
 Test performance KPIs 
 ***************************************************
 
+.. meta::
+    :description: words
+
+    
 words 
 
-Customize the Performance KPIs chart 
+Performance KPI chart settings 
 --------------------------------------------------
 The :guilabel:`Performance KPIs` chart offers a customizable visualization of your recent test results. Use these steps to customize the visualization:
 
