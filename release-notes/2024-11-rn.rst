@@ -21,7 +21,7 @@ November 13, 2024
    * - Real-time metrics in Splunk Cloud Platform
      - Splunk Cloud Platform users can now import real-time monitoring (RTM) metrics series into Splunk Dashboard Studio for additional event context. Either import charts and navigators from Splunk Observability Cloud or create charts in Splunk Dashboard Studio using metrics from Splunk Observability Cloud.
    * - Metrics usage analytics
-     - Metrics pipeline management now include the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. See :ref:`metric-usage-analytics-intro`.
+     - Metrics pipeline management now include the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. For more information, see :ref:`metric-usage-analytics-intro`.
    * - Log Observer Connect teams
      - Splunk Cloud Platform admins can now restrict user access at a service-account level to ensure that sensitive logs are only available to a specific user group.
    * - Getting data in onboarding improvements
@@ -34,11 +34,13 @@ November 13, 2024
    * - User interface alignment
      - The Splunk Observability Cloud user interface now more closely aligns with the AppDynamics user experience.
    * - Global search enhancements
-     - The in-app search now includes the following enhancements:
-     
+     - The top navigation search now includes the following enhancements:
+
        - Improved search coverage for RUM, Synthetics, and Log Observer Connect
-       - Quick navigation links to Settings, Help & Support, and Documentation
-       - Enhanced usability with more consistent and easy-to-understand search results
+       - Ability to search for applications, RUM session IDs, and synthetic tests
+       - More consistent, streamlined search results for enhanced usability
+
+       For more information, see :ref:`gsearch`.
    * - Kubernetes proactive troubleshooting journey
      - The Infrastructure Monitoring Kubernetes navigators now includes the following enhancements:
 
@@ -51,7 +53,7 @@ November 13, 2024
    * - Tag spotlight enhancements in APM and RUM
      - <TBD>
    * - Archived metrics visibility in charts and detectors
-     - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. See :ref:`archived-metrics-charts` and :ref:`alert-signal`.
+     - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. For more information, see :ref:`archived-metrics-charts` and :ref:`alert-signal`.
 
 
 
