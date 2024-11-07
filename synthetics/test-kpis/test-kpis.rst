@@ -8,7 +8,12 @@ Test performance KPIs
     :description: words
 
     
-words 
+KPIs measure how well your tests are performing in a variety of circumstances. There are two tabs in this view on the test details page: availability and performance KPIs. The availability tab shows when the test was up and running versus failing, and if an auto-retry run occurred. 
+
+Here are some ways you can troubleshoot issues in the performance KPI chart: 
+
+* Zoom in on a range of time to isolate an issue 
+* Select... 
 
 Performance KPI chart settings 
 --------------------------------------------------
@@ -27,18 +32,6 @@ In the :guilabel:`Performance KPIs` chart, use the selectors to adjust the follo
     * - Time
       - Last 8 hours
       - Choose the amount of time shown in the chart.
-
-    * - Interval
-      - Run level
-      - | Interval between each pair of data points. 
-        | 
-        | When you choose :strong:`Run level`, each data point on the chart corresponds to an actual run of the test; choosing larger intervals shows an aggregation of results over that time interval. 
-        |
-        | If you choose a level higher than :strong:`Run level`, the data points you see are aggregations of multiple runs. You can select an aggregate data point in the chart to zoom in and view the data at a per-run level.
-
-    * - Scale
-      - Linear
-      - Choose whether the y-axis has a linear or logarithmic scale.
 
     * - Segment by
       - Location
