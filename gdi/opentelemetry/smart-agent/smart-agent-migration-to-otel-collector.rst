@@ -17,14 +17,15 @@ Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Co
 
    Migration process <smart-agent-migration-process.rst>
    smart-agent-migration-monitors.rst
-   legacy-otel-mappings.rst
    monitors-common-config
 
-.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
+.. caution:: 
+   
+   The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs. 
+   
+   Smart Agent monitors are also being deprecated and will no longer be available to send data to Splunk Observability Cloud when they reach End of Support. Instead, you can use native OpenTelemetry receivers to gather data with the OTel Collector. See :ref:`migration-monitors-native`.
 
-  Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Distribution of OpenTelemetry Collector are available and supported.
-
-The Splunk Distribution of the :new-page:`OpenTelemetry Collector <https://opentelemetry.io/docs/concepts/data-collection/>` provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud. Current SignalFx Smart Agent (deprecated) users can easily transition to the Collector without losing any functionality. 
+The Splunk Distribution of the :new-page:`OpenTelemetry Collector <https://opentelemetry.io/docs/concepts/data-collection/>` provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud. If you're using the SignalFx Smart Agent (deprecated) you can easily transition to the Collector without losing any functionality. 
 
 .. raw:: html
 
@@ -50,7 +51,7 @@ To migrate from the Smart Agent to the Collector, follow :ref:`these steps <migr
 .. raw:: html
 
    <embed>
-      <h3>Smart Agent monitors and the Smart Agent Receiver<a name="sa-receiver-monitor" class="headerlink" href="#sa-receiver-monitor" title="Permalink to this headline">¶</a></h2>
+      <h2>Smart Agent monitors and the Smart Agent Receiver<a name="sa-receiver-monitor" class="headerlink" href="#sa-receiver-monitor" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 While the Smart Agent is deprecated, Smart Agent :ref:`monitors <monitor-data-sources>` are not.
@@ -59,15 +60,7 @@ The Smart Agent metric monitors allow real-time insights into how your target se
 
 The :ref:`smartagent-receiver` is a :ref:`component of the Collector <otel-components>` that allows the embedding of existing Smart Agent monitors in your Collector metric pipelines. 
 
-Learn :ref:`how to use Smart Agent monitors in the Collector <migration-monitors>`. 
-
-.. raw:: html
-
-   <embed>
-      <h2>Data mapping service<a name="migration-data" class="headerlink" href="#migration-data" title="Permalink to this headline">¶</a></h2>
-   </embed>
-
-Splunk Observability Cloud has a mapping service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. See :ref:`Metric mapping service <legacy-otel-mappings>` for more information. 
+Learn :ref:`how to use Smart Agent monitors with the Collector <migration-monitors>`. 
 
 .. raw:: html
 

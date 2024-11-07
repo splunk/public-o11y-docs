@@ -438,11 +438,6 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    gdi/other-ingestion-methods/other-data-ingestion-methods
 
 .. toctree::
-   :maxdepth: 3
-
-   SignalFx Smart Agent (Deprecated) TOGGLE <gdi/smart-agent/smart-agent-intro>
-
-.. toctree::
    :caption: Understand and analyze your data
    :maxdepth:   3
 
@@ -774,12 +769,6 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    :maxdepth:   3
 
    Troubleshoot tests TOGGLE <synthetics/syn-troubleshoot/syn-troubleshoot>
-
-
-.. toctree::
-   :maxdepth:   3
-
-   Troubleshoot tests  <synthetics/syn-troubleshoot/syn-missing-alerts>
 
 .. toctree::
    :caption: Splunk On-Call

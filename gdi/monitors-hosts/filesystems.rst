@@ -105,8 +105,7 @@ The following table shows the configuration options for this monitor.
       - ``fsTypes``
       - no
       - ``list of strings``
-      - The filesystem types to include. This is an
-         :ref:`overridable set <filtering-smart-agent>` If this is
+      - The filesystem types to include. If this is
          not set, the default value is the set of all
          **non-logical/virtual filesystems** on the system. On Linux
          this list is determined by reading the ``/proc/filesystems``
@@ -117,8 +116,7 @@ The following table shows the configuration options for this monitor.
       - ``mountPoints``
       - no
       - ``list of strings``
-      - The mount paths to include/exclude. This is an
-         :ref:`overridable set <filtering-smart-agent>` **Note**:
+      - The mount paths to include/exclude. **Note**:
          If you are using the hostFSPath option, do not include the
          ``/hostfs/`` mount in the filter. If both this and ``fsTypes``
          are specified, the two filters combine in an AND relationship.
