@@ -16,6 +16,7 @@ Splunk Add-On for the OpenTelemetry Collector
    Configure the Technical Add-on <collector-addon-configure.rst>
    Upgrade the Technical Add-on <collector-addon-upgrade.rst>
    Troubleshooting <collector-addon-troubleshooting.rst>
+   Release Notes <collector-addon-release-notes.rst>
 
 Use the Splunk Add-on for the OpenTelemetry Collector to collect traces and metrics with Splunk Observability Cloud.
 
@@ -101,27 +102,6 @@ The Splunk Add-on for the Open Telemetry Collector uses saved searches to collec
 
 You can download the Splunk Add-on for the OpenTelemetry Collector from Splunkbase. See :new-page:`Splunkbase's Splunk Add-on for the OpenTelemetry Collector <https://splunkbase.splunk.com/app/7125?_gl=1*nsvlab*_gcl_au*MTI1MDc1MzQ3OS4xNzIzNDQ2NTk2*FPAU*MTI1MDc1MzQ3OS4xNzIzNDQ2NTk2*_ga*MTY3OTA0Njk3Mi4xNjUyNzEwMTA4*_ga_5EPM2P39FV*MTcyNzcwMTk1MC4xMDQ5LjEuMTcyNzcwMjM4OC4wLjAuMzU0OTAyMDQ1*_fplc*MEE0WVo5cGVvVWpGWXhndCUyRlE1U0RIdU81dUElMkZoUFQ2RyUyQmZXcTRQMGZCdzl5R2N2NVE0JTJGdEVHTXFkZGhPdGZoJTJCQ21JdHp6cFJIOWl0TEdYJTJCd0NIc1BjelRDeG9Oc1lISDlXOU9BcHJ5cm5PTFBRJTNE>`.
 
-.. raw:: html
 
-   <embed>
-      <h2>Release notes<a name="collector-addon-intro-releasenotes" class="headerlink" href="#collector-addon-intro-releasenotes" title="Permalink to this headline">¶</a></h2>
-   </embed>
-
-.. list-table::
-   :widths: 30 35 35
-   :header-rows: 1
-   :width: 100%
-
-   *  - Splunk Add-on version
-      - Release date
-      - Collector version
-
-   *  - 1.3.2 
-      - September 20, 2024
-      - :new-page:`version 0.104 <https://github.com/signalfx/splunk-otel-collector/releases/tag/v0.104.0>`
-
-   *  - 1.3.1 
-      - August 6, 2024
-      - :new-page:`version 0.104 <https://github.com/signalfx/splunk-otel-collector/releases/tag/v0.104.0>`
 
 
