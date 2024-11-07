@@ -39,8 +39,12 @@ Supported search prefixes include:
 - trace (APM trace)
 - service (APM service)
 - business workflow (APM workflow)
-- application 
+- application, app (RUM application)
 - session (RUM session ID)
+- test (Synthetic test)
+- private location (Synthetics private location)
+- saved query (Log Observer saved query)
+- connection (Log Observer connection)
   
 .. - index (Log index) PI2
 .. - saved query (Log saved query)
@@ -49,7 +53,6 @@ Supported search prefixes include:
 Use the prefix in a 'key value pair' format to narrow your search. For example, enter ``service: checkoutservice`` to search for a service named ``checkoutservice``. 
 
 You can also search using only the prefix to search for all objects of that type.
-
 
 How to use Observability search
 =====================================
