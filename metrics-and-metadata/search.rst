@@ -14,8 +14,6 @@ Prerequisites
 
 Search only shows results for Splunk APM if your organization has access to Splunk APM. 
 
-Search is currently limited to Splunk APM, dashboards, charts, Infrastructure Monitoring navigators, and docs results.
-
 .. _prefix:
 
 Supported search prefixes
@@ -26,7 +24,7 @@ Narrow your search results to specific types of objects by using one of the supp
 Supported search prefixes include:
 
 - metric search
-- dashboard
+- dashboards
 - chart
 - team
 - metric
@@ -41,6 +39,8 @@ Supported search prefixes include:
 - trace (APM trace)
 - service (APM service)
 - business workflow (APM workflow)
+- application 
+- session (RUM session ID)
   
 .. - index (Log index) PI2
 .. - saved query (Log saved query)
@@ -51,7 +51,7 @@ Use the prefix in a 'key value pair' format to narrow your search. For example, 
 You can also search using only the prefix to search for all objects of that type.
 
 
-How to use observability search
+How to use Observability search
 =====================================
 
 You can either search a specific term, or define what type of object you're looking for by using one of the supported prefixes to narrow the search to specific result types. This allows you to search for a specific object, if you know the type and name. Or, you can search by prefix type if you're unsure of the name. 
