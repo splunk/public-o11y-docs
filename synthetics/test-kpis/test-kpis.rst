@@ -14,15 +14,13 @@ Here are some ways you can troubleshoot issues in the performance KPI chart:
 
 * Zoom in on a range of time to isolate an issue. 
 * Play or pause windows of time during troubleshooting to and open run results, screen captures, and charts in context with the selected data. 
-* Data density  automatically adjusts for zoomed in views or summaries of larger time ranges. 
-* Up to 90 days of historical data for related run results. 
+* Automatically adjust data density adjusts for zoomed in views or summaries of larger time ranges. 
+* VIew up to 90 days of historical data for related run results. 
 
 
 Performance KPI chart settings 
 --------------------------------------------------
-The :guilabel:`Performance KPIs` chart offers a customizable visualization of your recent test results. Use these steps to customize the visualization:
-
-In the :guilabel:`Performance KPIs` chart, use the selectors to adjust the following settings:
+The :guilabel:`Performance KPIs` chart offers a customizable visualization of your recent test results.
 
   .. list-table::
     :header-rows: 1
