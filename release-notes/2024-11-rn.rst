@@ -20,6 +20,8 @@ November 13, 2024
      - Description
    * - Real-time metrics in Splunk Cloud Platform
      - Splunk Cloud Platform users can now import real-time monitoring (RTM) metrics series into Splunk Dashboard Studio for additional event context. Either import charts and navigators from Splunk Observability Cloud or create charts in Splunk Dashboard Studio using metrics from Splunk Observability Cloud.
+   * - Consolidated role and user management
+     - Splunk admins can now manage users and roles across Splunk Cloud Platform and Splunk Observability Cloud using a single UI.
    * - Metrics usage analytics
      - Metrics pipeline management now include the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. For more information, see :ref:`metric-usage-analytics-intro`.
    * - Log Observer Connect teams
@@ -31,8 +33,8 @@ November 13, 2024
        - Guided onboarding banner that replaces the OTel Collector banner
        - Updated integrations list
        - Call to action added to the infrastructure inventory for the hosts and clusters that don't have the OTel Collector installed
-   * - User interface alignment
-     - The Splunk Observability Cloud user interface now more closely aligns with the AppDynamics user experience.
+   * - Enhanced navigation with modern UI
+     - The user interface is updated to bring together AppDynamics and Splunk Observability, with enhancements to the top navigation bar, a new user profile menu, and a more accessible left navigation panel. For more information, see the Splunk Community post :new-page:`Splunk Observability Cloud - Enhanced navigation with a modern look and feel <https://community.splunk.com/t5/Product-News-Announcements/Coming-Soon-Splunk-Observability-Cloud-Enhanced-navigation-with/ba-p/701021>`.
    * - Global search enhancements
      - The top navigation search now includes the following enhancements:
 
@@ -48,10 +50,14 @@ November 13, 2024
        - Table and heat map views. See :ref:`navigator-views`.
        - Hierarchy map moved to the single instance view. See :ref:`k8s-nav-hierarchy-map`.
        - Data links for metadata in the sidebar. See :ref:`navigator-sidebar-metadata`.
-   * - Synthetic monitoring performance KPI enhancements
-     - <TBD>
-   * - Tag spotlight enhancements in APM and RUM
-     - <TBD>
+   * - Synthetic Monitoring performance KPI enhancements
+     - Synthetic Monitoring now includes the following enhancements:
+
+       - Dynamic dashboard resolution now automatically adjusts data views based on zoom levels and data density, providing granular detail when zoomed in and summarized data when zoomed out. To adjust the view, you don't need to manually set frequencies based on the time period.
+       - The run history page offers up to 90 days of historical data across all 3 test types, capturing artifacts such as waterfalls and API responses for comprehensive analysis.
+       - You can now pause run data at a specific time, allowing you to analyze and troubleshoot issues without the chart continuously updating.
+   * - Tag Spotlight enhancements in APM and RUM
+     - For faster troubleshooting, you can now customize the APM and RUM Tag Spotlight card layout for each user based on span attributes.
    * - Archived metrics visibility in charts and detectors
      - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. For more information, see :ref:`archived-metrics-charts` and :ref:`alert-signal`.
 
