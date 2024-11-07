@@ -31,6 +31,14 @@ To view service performance broken down by your indexed span tags, follow these 
 #. View the distribution of all indexed span tags. The tag bar charts display either request and error distributions or latency distribution. Use the :guilabel:`Cards display` menu to select the data you want to display in the bars. 
 #. Select the menu on the top left of the bar chart section to select which metrics to display in each tag panel. You can also use this menu to select whether to display tags with no values.
 
+Customize tags display on Tag Spotlight    
+----------------------------------------------------------------------
+To configure the layout of the cards on the Tag Spotlight page, follow these steps: 
+
+#. From the menu on the top left of the bar chart, select :guilabel:`Customize card display order`. 
+#. Drag each of the span tags to arrange the order that cards are displayed on the page. Arrange the tags by priority, order of importance, or other criteria.
+#. Select :guilabel:`Save`. 
+
 Explore the distribution of span tags and values to find trends
 ----------------------------------------------------------------------
 
