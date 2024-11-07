@@ -57,7 +57,7 @@ November 13, 2024
        - The run history page offers up to 90 days of historical data across all 3 test types, capturing artifacts such as waterfalls and API responses for comprehensive analysis.
        - You can now pause run data at a specific time, allowing you to analyze and troubleshoot issues without the chart continuously updating.
    * - Tag Spotlight enhancements in APM and RUM
-     - For faster troubleshooting, you can now customize the APM and RUM Tag Spotlight card layout for each user based on span attributes.
+     - You can now rearrange the cards on the Tag Spotlight page by priority order to view your most important tags. For more information, see :ref:`apm-tag-spotlight`.
    * - Archived metrics visibility in charts and detectors
      - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. For more information, see :ref:`archived-metrics-charts` and :ref:`alert-signal`.
 
