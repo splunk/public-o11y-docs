@@ -12,8 +12,11 @@ KPIs measure how well your tests are performing in a variety of circumstances. T
 
 Here are some ways you can troubleshoot issues in the performance KPI chart: 
 
-* Zoom in on a range of time to isolate an issue 
-* Select... 
+* Zoom in on a range of time to isolate an issue. 
+* Play or pause windows of time during troubleshooting to and open run results, screen captures, and charts in context with the selected data. 
+* Data density  automatically adjusts for zoomed in views or summaries of larger time ranges. 
+* Up to 90 days of historical data for related run results. 
+
 
 Performance KPI chart settings 
 --------------------------------------------------
