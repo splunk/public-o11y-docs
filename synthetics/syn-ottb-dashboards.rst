@@ -35,7 +35,7 @@ Troubleshoot an issue from a built-in dashboard
 If you want to do additional troubleshooting and explore data from a built-in dashboard, select the settings symbol in any tile, then :guilabel:`Troubleshoot from this time window` in Splunk APM and Splunk RUM. 
 
 ..  image:: /_images/synthetics/ootb-dashboard-modal.png
-    :width: 60%
+    :width: 40%
     :alt: Screenshot showing the troubleshooting tab for a tile in the dashboard with an option to open the data in RUM or APM. 
 
 
