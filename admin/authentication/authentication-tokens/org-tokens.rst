@@ -237,7 +237,7 @@ To rotate an access token with the API, use the ``POST /token/{name}/rotate`` en
 
 .. code-block:: bash
 
-   curl -X  POST "https://api.{realm}.signalfx.com/v2/token/{name}/rotate?graceful={gracePeriod}" \
+   curl -X  POST "https://api.{realm}.signalfx.com/v2/token/{name}/rotate?graceful={gracePeriod}&secondsUntilExpiry={secondsUntilExpiry}" \
       -H "Content-type: application/json" \
       -H "X-SF-TOKEN: <your-user-session-api-token-value>"
 
@@ -247,6 +247,7 @@ Follow these steps:
 #. Enter your API session token in the ``your-user-session-api-token-value`` field. To find or create an API session token, see :ref:`admin-api-access-tokens`.
 #. Provide the name of the token you want to rotate in the ``name`` field.
 #. Optionally, provide a grace period, in seconds, in the ``gracePeriod`` field.
+#. Optionally, provide the seconds until your token expires in the ``secondsUntilExpiry`` field. This can be any value between 0 second and 5,676,000,000 seconds (18 years), inclusive. If left unspecified, the token remains valid for 30 days. 
 #. Call the API endpoint to rotate the token.
 
 For example, the following API call rotates ``myToken`` and sets a grace period of 604800 seconds (7 days) before the previous token secret expires.
