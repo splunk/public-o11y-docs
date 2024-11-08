@@ -23,7 +23,7 @@ This is the collection of scenarios available for Splunk Observability Cloud. Us
 
   * - :strong:`Category`
     - :strong:`Scenario`
-  * - :ref:`Splunk Observability Cloud <get-started-o11y>`
+  * - :ref:`Splunk Observability Cloud <overview>`
     - :ref:`scenario-security`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`otel-collector-scenario`

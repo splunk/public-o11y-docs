@@ -1,7 +1,7 @@
 .. _browser-test-results:
 
 ***********************************************
-Interpret Browser Test results
+Interpret Browser test results
 ***********************************************
 
 .. meta::

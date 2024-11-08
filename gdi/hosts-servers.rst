@@ -29,7 +29,6 @@ Configure application receivers for hosts and servers
    monitors-hosts/elasticsearch-query
    monitors-hosts/filesystems
    monitors-hosts/haproxy
-   monitors-hosts/health-checker
    monitors-hosts/host-metadata
    opentelemetry/components/host-metrics-receiver
    monitors-hosts/host-processes
@@ -72,7 +71,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`elasticsearch-query`
 * :ref:`filesystems`
 * :ref:`haproxy`
-* :ref:`health-checker`
 * :ref:`host-metadata`
 * :ref:`host-metrics-receiver`
 * :ref:`processes`
