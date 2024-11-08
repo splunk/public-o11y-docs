@@ -150,8 +150,6 @@ View services and hosts running on Kubernetes
 
 Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts running on Kubernetes in the navigator sidebar. When you select a service or host from the sidebar, you are switching to the navigator for that service or host instance.
 
-  .. note:: From a host navigator, you can also jump to a Kubernetes navigator, but only to the Kubernetes nodes navigator.
-
   ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-dependencies.gif
     :width: 100%
     :alt: Starting on the Kubernetes pod navigator, switching to the MySQL host navigator, and then switching back to the Kubernetes pod navigator.

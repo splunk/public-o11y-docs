@@ -231,7 +231,7 @@ The Find Outliers feature also provides a population selector that lets you rest
 View metadata in the navigator sidebar
 ---------------------------------------------------
 
-In table or heat map view, click on a single instance to display the navigator sidebar. The :guilabel:`About this \<Entity_Type\>` panel displays the tags and metadata associated with the instance.
+In table or heat map view, select a single instance to display the navigator sidebar. The :guilabel:`About this \<Entity_Type\>` panel displays the tags and metadata associated with the instance.
 
 View data links
 =================
@@ -259,14 +259,14 @@ The following table describes the content displayed in the :guilabel:`Dependenci
      - :strong:`What you see in the Dependencies section`
 
    * - Kubernetes navigators
-     - The services and hosts that are running on the Kubernetes containers.
+     - The services and hosts that are running on the Kubernetes entity.
 
    * - Host navigators
      - * The services that are running on the hosts.
-       * The Kubernetes containers that the hosts are running on.
+       * The Kubernetes entities that the hosts are running on.
 
    * - Other navigators
-     - The Kubernetes containers or hosts that the services are running on.
+     - The Kubernetes entities or hosts that the services are running on.
 
 Best practice
 ============================
