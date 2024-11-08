@@ -338,7 +338,7 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-   Centralized user and role management <splunkplatform/unified-id/centralized-rbac>
+   Centralized user and role management <splunkplatform/centralized-rbac>
 
 .. toctree::
    :maxdepth:   3   
