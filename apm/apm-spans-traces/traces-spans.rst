@@ -39,19 +39,19 @@ Spans and traces form the backbone of application monitoring in Splunk APM. Use 
 
 
 .. raw:: html
+  
+    <embed>
+      <h2>What are services?<a name="what-are-services" class="headerlink" href="#what-are-services" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
-  <embed>
-    <h2>What are services?</h2>
-  </embed>
 
 Services are the key components of the systems you can monitor with Splunk APM. 
 
-
 .. raw:: html
-
-  <embed>
-    <h2>What are traces and spans?</h2>
-  </embed>
+  
+    <embed>
+      <h2>What are traces and spans?<a name="what-are-traces-spans" class="headerlink" href="#what-are-traces-spans" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 
 A trace is a collection of operations that represents a unique transaction handled by an application and its constituent services. A span represents a single operation within a trace. 
@@ -66,13 +66,11 @@ The following image illustrates the relationship between traces and spans:
 
 A span might refer to another span as its parent, indicating a relationship between operations involved in the trace. In the preceding image, span A is a parent span, and span B is a child span. This relationship might indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on. 
 
-
 .. raw:: html
-
-  <embed>
-    <h2>Span metadata</h2>
-  </embed>
-
+  
+    <embed>
+      <h2>Span metadata<a name="span-metadata" class="headerlink" href="#span-metadata" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Each span contains metadata about the operation captured by the span and the service in which the operation took place. 
 
@@ -117,12 +115,11 @@ Each span contains the following basic metadata:
      -  Delay between the start of the parent trace and the start of this particular span
 
 
-
 .. raw:: html
-
-  <embed>
-    <h2>Span tags</h2>
-  </embed>
+  
+    <embed>
+      <h2>Span tags<a name="span-tags" class="headerlink" href="#span-tags" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 
 Span tags are key-value pairs that provide additional information and context about the operations a span represents. Both the keys and values are strings, and span tag keys for a single span must be unique. You can use span tags to query and filter traces, or to get information about the spans of a trace during troubleshooting.
@@ -133,11 +130,12 @@ Span tags are most useful when they follow a simple, dependable system of naming
 
 .. note:: Span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-infra-tags`.
 
-.. raw:: html
 
-  <embed>
-    <h2>Identities</h2>
-  </embed>
+.. raw:: html
+  
+    <embed>
+      <h2>Identities<a name="identities" class="headerlink" href="#identities" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 An identity represents a unique set of indexed span tags for a Splunk APM object, and always includes at least one service. 
 
