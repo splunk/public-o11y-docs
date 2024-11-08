@@ -154,7 +154,6 @@ Because histogram data must be summarized by combining the buckets in the histog
 
 To add a histogram function, select :guilabel:`Select function` and choose a function from the :strong:`Histogram function` dropdown menu. For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram_function>` in the SignalFlow reference documentation.
 
-
 .. image:: /_images/data-visualization/charts/change-histogram-function.png
    :width: 50%
 
