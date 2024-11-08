@@ -9,9 +9,7 @@ Centralized user and role management
 .. meta::
    :description: This page describes how Splunk Cloud Platform admins can control Splunk Observability Cloud roles from Splunk Cloud Platform.
 
-Centralized user and role management brings Splunk Observability Cloud (O11y) roles in to Splunk Cloud enabling administrators to assign roles across both products to a single user in Splunk Cloud when Unified Identity is active.
-
-Administrators can now centrally control users and roles for both Splunk Cloud Platform Splunk Observability Cloud in Splunk Cloud Platform.
+Administrators can now centrally control users and roles for both Splunk Cloud Platform and Splunk Observability Cloud in Splunk Cloud Platform. Splunk Cloud Platform is the role based access control (RBAC) store for Splunk Observability Cloud. 
 
 
 Who can access centralized user and role management?
