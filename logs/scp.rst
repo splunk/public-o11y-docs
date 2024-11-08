@@ -50,7 +50,7 @@ Splunk Observability Cloud
 
 In Splunk Observability Cloud, do the following:
 
-1. Go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
+1. Go to :guilabel:`Settings` then  :guilabel:`Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
 
 2. Select :guilabel:`Splunk Cloud Platform`. Next, log in to Splunk Cloud Platform as an administrator and follow the instructions in the next section.
 
@@ -95,7 +95,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
 
-6. Next, in Splunk Cloud Platform, go to :guilabel:`Settings > Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created in the preceeding steps for the Log Observer Connect service account.
+6. Next, in Splunk Cloud Platform, go to :guilabel:`Settings` then :guilabel:` Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created in the preceeding steps for the Log Observer Connect service account.
    
       .. image:: /_images/logs/CreateUser.png
          :width: 100%
@@ -136,7 +136,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 10.  Remove your IPv4 address from the IP allowlist that you added in step 9. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8. Select :guilabel:`Next`.
 
-11. On the :guilabel:`Configure permissions` page of the guided setup, select the users who you want to give access to this Log Observer Connect connection and teh associated Splunk Cloud Platform indexes.
+11. On the :guilabel:`Configure permissions` page of the guided setup, select the Splunk Observability Cloud users who you want to give access to this connection and the associated Splunk Cloud Platform indexes.
 
 12. Select :guilabel:`Save and activate`.
 

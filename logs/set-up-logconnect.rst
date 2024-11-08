@@ -54,7 +54,7 @@ Splunk Observability Cloud
 ----------------------------------------------------------------
 In Splunk Observability Cloud, do the following:
 
-1. Go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
+1. Go to :guilabel:`Settings` then :guilabel:` Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
 
 2. Select :guilabel:`Splunk Enterprise`. Next, log in to Splunk Enterprise as an administrator and follow the instructions in the next section.
 
@@ -66,7 +66,7 @@ In your Splunk Enterprise search head, follow the instructions in the guided set
 
 Set up Service account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
+1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings` then :guilabel:`Roles`. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
       
 2. On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
 
@@ -135,7 +135,7 @@ Set up Observability Cloud
 
 Configure permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-11. On the Configure permissions page of the guided setup, select the users who you want to give access to this Log Observer Connect connection and teh associated Splunk Enterprise indexes.
+11. On the Configure permissions page of the guided setup, select the Splunk Observability Cloud users who you want to give access to this connection and the associated Splunk Enterprise indexes.
 
 12. Select :guilabel:`Save and activate`.
 
