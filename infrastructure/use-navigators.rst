@@ -245,11 +245,9 @@ View dependencies in the navigator sidebar
 
 In the navigator sidebar, you can track the dependencies for:
 
-- Kubernetes containers.
-
-- Hosts (:guilabel:`My Data Center` hosts, virtual hosts, Amazon EC2 hosts, Azure Virtual Machines, and Google Cloud Platform hosts).
-
-- Services running on Kubernetes containers or hosts.
+-  Kubernetes containers.
+-  Hosts (:guilabel:`My Data Center` hosts, virtual hosts, Amazon EC2 hosts, Azure Virtual Machines, and Google Cloud Platform hosts).
+-  Services running on Kubernetes containers or hosts.
 
 The following table describes the content displayed in the :guilabel:`Dependencies` section of the sidebar for different navigators:
 
@@ -263,7 +261,7 @@ The following table describes the content displayed in the :guilabel:`Dependenci
    * - Kubernetes navigators
      - The services and hosts that are running on the Kubernetes containers.
 
-   * - Hosts navigators
+   * - Host navigators
      - * The services that are running on the hosts.
        * The Kubernetes containers that the hosts are running on.
 
