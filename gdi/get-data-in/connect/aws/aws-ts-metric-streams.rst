@@ -47,7 +47,7 @@ To access these dashboards, go to :guilabel:`Dashboards > Organization metrics >
 To learn more about built-in content, see :ref:`built-in-dashboards`.
 
 How does Splunk-managed Metric Streams clean-up work? How can I try to clean up Metric Streams again?
-====================================================================================================
+=====================================================================================================
 
 When you deactivate Splunk-managed Metric Streams (or an entire AWS integration), Splunk Observability Cloud attempts to remove all CloudWatch Metric Streams that had been created. This process might take up to 15 minutes.
 
