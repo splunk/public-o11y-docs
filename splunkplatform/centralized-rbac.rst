@@ -1,6 +1,6 @@
 
 
-.. _unified-id-unified-identity:
+.. _centralized-rbac:
 
 *************************************************************************************************
 Centralized user and role management 
