@@ -133,6 +133,8 @@ Create a ConfigMap with the config for ``otelcontribcol``, replacing ``OTLP_ENDP
 Chart deployment
 --------------------------------------
 
+Alternatively, use the following Helm chart deployment instead of the manual deployment:
+
 .. code-block:: yaml
 
    clusterReceiver:
