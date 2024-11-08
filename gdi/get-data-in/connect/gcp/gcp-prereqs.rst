@@ -27,7 +27,9 @@ For more information, refer to:
 Authenticate using Workload Identity Federation
 --------------------------------------------------------------------------------------
 
-Alternatively, if you're connecting to Splunk Observability Cloud using the API you can use :new-page:`GCP's Workload Identity Federation <https://cloud.google.com/iam/docs/workload-identity-federation>` to access your Google Cloud resources and authenticate them. See how in the Splunk Observability Cloud developer documentation at :new-page:`Integrate GCP <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview>`.
+Alternatively, if you're connecting to Splunk Observability Cloud using the API you can use :new-page:`GCP's Workload Identity Federation (WIF) <https://cloud.google.com/iam/docs/workload-identity-federation>` to access your Google Cloud resources and authenticate them. It's safer, and with WIF you won't have to export and rotate service account keys.
+
+See how to authenticate with WIF in the Splunk Observability Cloud developer documentation at :new-page:`Integrate GCP <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview>`.
 
 .. _gcp-prereqs-role-permissions:
 
