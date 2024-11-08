@@ -84,7 +84,7 @@ To set up centralized user and role management, follow these steps:
     
               acs observability enable-capabilities
 
-3. Assign Splunk Observability Cloud roles to users in the Splunk Cloud Platform admin UI. The following Splunk Observability Cloud roles (with o11y_* prefix) are now visible in Splunk Cloud role management page:
+3. In the Splunk Cloud Platform admin UI, assign Splunk Observability Cloud roles to users. The following Splunk Observability Cloud roles (with o11y_* prefix) are now visible in Splunk Cloud role management page:
 
     * o11y_admin
 
@@ -102,7 +102,9 @@ To set up centralized user and role management, follow these steps:
     
               acs observability enable-centralized-rbac --o11y-access-token <access-token>
 
-5. 
+5. Give all users who should have access to Splunk Observability Cloud the ``o11y_access`` role.
+
+6. For users who should be able to access real-time Splunk Observability Cloud metrics in Splunk Cloud Platform, give them the ``read_o11y_content`` and ``write_o11y_content`` capabilities.
               
 
 How centralized user and role management works
