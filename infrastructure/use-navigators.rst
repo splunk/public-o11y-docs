@@ -231,7 +231,7 @@ The Find Outliers feature also provides a population selector that lets you rest
 View metadata in the navigator sidebar
 ---------------------------------------------------
 
-In table or heat map view, click on a single instance to display the navigator sidebar. The :guilabel:`About this \<Instance_Type\>` panel displays the tags and metadata associated with the instance.
+In table or heat map view, click on a single instance to display the navigator sidebar. The :guilabel:`About this \<Entity_Type\>` panel displays the tags and metadata associated with the instance.
 
 View data links
 =================
@@ -244,8 +244,11 @@ View dependencies in the navigator sidebar
 ----------------------------------------------------
 
 In the navigator sidebar, you can track the dependencies for:
+
 - Kubernetes containers.
+
 - Hosts (:guilabel:`My Data Center` hosts, virtual hosts, Amazon EC2 hosts, Azure Virtual Machines, and Google Cloud Platform hosts).
+
 - Services running on Kubernetes containers or hosts.
 
 The following table describes the content displayed in the :guilabel:`Dependencies` section of the sidebar for different navigators:
