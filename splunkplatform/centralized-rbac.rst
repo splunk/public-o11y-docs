@@ -7,24 +7,24 @@ Centralized user and role management
 *************************************************************************************************
 
 .. meta::
-   :description: This page describes how Splunk Cloud Platform admins can control Splunk Observability Cloud roles from Splunk Cloud Platform.
+   :description: This page describes how Splunk Cloud Platform admins can manage Splunk Observability Cloud roles from Splunk Cloud Platform.
 
-Administrators can now centrally control users and roles for both Splunk Cloud Platform and Splunk Observability Cloud in Splunk Cloud Platform. Splunk Cloud Platform is the role based access control (RBAC) store for Splunk Observability Cloud. 
+Administrators can now centrally manage users and roles for both Splunk Cloud Platform and Splunk Observability Cloud in Splunk Cloud Platform. Splunk Cloud Platform is the role based access control (RBAC) store for Splunk Observability Cloud. 
 
 
 Who can access centralized user and role management?
 =================================================================================================
 
-All Unified Identity customers are able to access the Centralized User and Role Management in Splunk feature. Unified Identity is available to Splunk Cloud and O11y customers co-located in the same AWS region.
+All customers who have Unified Identity can access centralized user and role management in Splunk Cloud Platform. Unified Identity is available to Splunk Cloud Platform and Splunk Observability Cloud customers co-located in the same AWS region.
 
-All customers who have Unified Identity can access centralized user and role management in Splunk Cloud Platform. 
+ 
 
 Prerequisites
 =================================================================================================
 
 Customers who meet the following criteria can access centralized user and role management:
 
-* Be on Splunk Cloud Platform version 9.x or higher
+* Be on Splunk Cloud Platform version 9.3.2408 or higher
 
 * Have Unified Identity configured. See :ref:`unified-id-unified-identity`` for more information.
 
@@ -55,13 +55,16 @@ Customers who meet the following criteria can access centralized user and role m
 How to set up centralized user and role management
 =================================================================================================
 
-You can set up centralized user and role management whether you already have Splunk Observability Cloud or not.
+You can set up centralized user and role management whether you already have Splunk Observability Cloud or not. If want to set up centralized user and role management but you do not have Splunk Observability Cloud yet, see the next section, :ref:`rbac-new-o11y-customers`. If you already have Splunk Observability Cloud, follow the instructions in :ref:`rbac-existing-o11y-customers` to set up centralized user and role management.
 
+.. _rbac-new-o11y-customers:
 
 New Splunk Observability Cloud customers
 -------------------------------------------------------------------------------------------------
 
 If you do not yet have Splunk Observability Cloud, inform your Splunk sales representative that you want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with your Splunk Cloud Platform instance and has centralized user and role management already configured. 
+
+.._rbac-existing-o11y-customers:
 
 Existing Splunk Observability Cloud customers
 -------------------------------------------------------------------------------------------------
@@ -84,7 +87,15 @@ To set up centralized user and role management, follow these steps:
     
               acs observability enable-capabilities
 
-3. In the Splunk Cloud Platform admin UI, assign Splunk Observability Cloud roles to users. The following Splunk Observability Cloud roles (with o11y_* prefix) are now visible in Splunk Cloud role management page:
+3. Allow your Splunk Observability Cloud organization to start using Splunk Cloud Platform as the source of role based access controls (RBAC) by running the following ACS command:
+
+    .. code-block:: bash
+    
+              acs observability enable-centralized-rbac --o11y-access-token <access-token>
+
+4. Give all users who should have access to Splunk Observability Cloud the ``o11y_access`` role.
+
+5. Log in to Splunk Cloud Platform as an administrator and go to :guilabel:`Settings` then :guilabel:`Users and Authentication` then :guilabel:`Roles`. Assign Splunk Observability Cloud roles to users. The following Splunk Observability Cloud roles (with o11y_* prefix) are now visible in Splunk Cloud role management page:
 
     * o11y_admin
 
@@ -95,14 +106,6 @@ To set up centralized user and role management, follow these steps:
     * o11y_usage
 
    See :ref:`roles-table-phase` to learn precisely what each role can do.
-
-4. Allow your Splunk Observability Cloud organization to start using Splunk Cloud Platform as the source of role based access controls (RBAC) by running the following ACS command:
-
-    .. code-block:: bash
-    
-              acs observability enable-centralized-rbac --o11y-access-token <access-token>
-
-5. Give all users who should have access to Splunk Observability Cloud the ``o11y_access`` role.
 
 6. For users who should be able to access real-time Splunk Observability Cloud metrics in Splunk Cloud Platform, give them the ``read_o11y_content`` and ``write_o11y_content`` capabilities.
               
@@ -160,4 +163,3 @@ First, confirm that the paired Splunk SH/SHC is available and not undergoing mai
 
 Next, check that token authentication is active on the Splunk Cloud Platform instance.
 
-Lastly, check the signalboost-rest skynet logs, searching for errors containing the keyword ``SplunkCapabilitiesService``.
