@@ -39,19 +39,19 @@ Spans and traces form the backbone of application monitoring in Splunk APM. Use 
 
 
 .. raw:: html
+  
+    <embed>
+      <h2>What are services?<a name="what-are-services" class="headerlink" href="#what-are-services" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
-  <embed>
-    <h2>What are services?</h2>
-  </embed>
 
 Services are the key components of the systems you can monitor with Splunk APM. 
 
-
 .. raw:: html
-
-  <embed>
-    <h2>What are traces and spans?</h2>
-  </embed>
+  
+    <embed>
+      <h2>What are traces and spans?<a name="what-are-traces-spans" class="headerlink" href="#what-are-traces-spans" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 
 A trace is a collection of operations that represents a unique transaction handled by an application and its constituent services. A span represents a single operation within a trace. 
@@ -66,13 +66,11 @@ The following image illustrates the relationship between traces and spans:
 
 A span might refer to another span as its parent, indicating a relationship between operations involved in the trace. In the preceding image, span A is a parent span, and span B is a child span. This relationship might indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on. 
 
-
 .. raw:: html
-
-  <embed>
-    <h2>Span metadata</h2>
-  </embed>
-
+  
+    <embed>
+      <h2>Span metadata<a name="span-metadata" class="headerlink" href="#span-metadata" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Each span contains metadata about the operation captured by the span and the service in which the operation took place. 
 
@@ -117,12 +115,11 @@ Each span contains the following basic metadata:
      -  Delay between the start of the parent trace and the start of this particular span
 
 
-
 .. raw:: html
-
-  <embed>
-    <h2>Span tags</h2>
-  </embed>
+  
+    <embed>
+      <h2>Span tags<a name="span-tags" class="headerlink" href="#span-tags" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 
 Span tags are key-value pairs that provide additional information and context about the operations a span represents. Both the keys and values are strings, and span tag keys for a single span must be unique. You can use span tags to query and filter traces, or to get information about the spans of a trace during troubleshooting.
@@ -132,46 +129,3 @@ You can add custom span tags through the OpenTelemetry Collector, or when you in
 Span tags are most useful when they follow a simple, dependable system of naming conventions. See :ref:`span-tag-naming` to learn about OpenTelemetry naming conventions for span tags. 
 
 .. note:: Span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-infra-tags`.
-
-.. raw:: html
-
-  <embed>
-    <h2>Identities</h2>
-  </embed>
-
-An identity represents a unique set of indexed span tags for a Splunk APM object, and always includes at least one service. 
-
-APM objects can generate multiple identities that correspond to the same APM object. If a set of indexed span tags for a span that corresponds to a certain APM object is unique, the APM object generates a new identity for the unique set of indexed span tags. 
-
-For example, a service ``myService`` reports a tenant span tag ``something`` for its endpoint ``/foo/bar``, and doesn't report a tenant span tag for its endpoint ``/another/endpoint``. Because ``myService`` reports a tenant span tag for one endpoint and not another, it forces the endpoint without a specified tenant span tag to have a tenant span tag value of ``unknown``. As a result, the service has two unique sets of span tags, and two identities. 
-
-An identity can represent any one of these APM objects:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20, 40, 40
-
-   * - :strong:`APM object`
-     - :strong:`Example`
-     - :strong:`Description`
-   
-   * - Service
-     - ``Service-1``
-     - The name of a service you instrumented and are collecting traces from.
-
-   * - Endpoint
-     - ``Service-1.Endpoint-1``
-     - The first span for a service.
-
-   * - Operation
-     - ``Service-1.Operation-1``
-     - A span within a single service.
-
-   * - Edge
-     - ``Service-1.Endpoint-1->Service-2.Endpoint-2``
-     - The span between two services.
-
-   * - Workflow
-     - ``Service-1.InitEndpoint-1``
-     - The endpoint where traces initiate.
-

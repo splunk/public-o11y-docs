@@ -9,7 +9,7 @@ Kubernetes objects receiver
 
 The Kubernetes Objects receiver collects objects from the Kubernetes API server. The supported pipeline is ``logs``. See :ref:`otel-data-processing` and :ref:`kubernetes-config-logs` for more information.
 
-.. note:: This receiver supports authentication via service accounts only at the moment. 
+.. note:: This receiver supports authentication through service accounts only at the moment. 
 
 Get started
 ======================
@@ -95,10 +95,11 @@ Configure the resources for the Kubernetes deployment
 
 Follow these sections to set up the various Kubernetes resources required to deploy the Collector with the receiver.
 
-Configuration
+Manual deployment
 --------------------------------------
 
 Create a ConfigMap with the config for ``otelcontribcol``, replacing ``OTLP_ENDPOINT`` with a valid value.
+
 
 .. code-block:: yaml
 
@@ -128,6 +129,25 @@ Create a ConfigMap with the config for ``otelcontribcol``, replacing ``OTLP_ENDP
            logs:
              receivers: [k8sobjects]
              exporters: [otlp]
+
+Chart deployment
+--------------------------------------
+
+Alternatively, use the following Helm chart deployment instead of the manual deployment:
+
+.. code-block:: yaml
+
+   clusterReceiver:
+    k8sObjects:
+      - name: pods
+        mode: pull
+        label_selector: environment in (production),tier in (frontend)
+        field_selector: status.phase=Running
+        interval: 15m
+      - name: events
+        mode: watch
+        group: events.k8s.io
+        namespaces: [default] 
 
 Service account
 --------------------------------------
