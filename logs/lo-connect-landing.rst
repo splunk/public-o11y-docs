@@ -28,6 +28,9 @@ Splunk Log Observer Connect
     aggregations
     logviews
     timestamp
+    logs-save-share
+    forward-logs
+    lo-transition
     lo-connect-limits
 
 
@@ -62,13 +65,16 @@ Splunk Log Observer Connect
 
 - :ref:`logs-aggregations`
 
-- :ref:`logs-save-share`
-
 - :ref:`logs-logviews`
 
 - :ref:`logs-timestamp`
 
+- :ref:`logs-save-share`
+
+- :ref:`forward-logs`
+
+- :ref:`lo-transition`
+
 - :ref:`lo-connect-limits`
 
-
-If you do not have Log Observer Connect and instead use Log Observer, see :ref:`log-observer-landing`. 
+To keep up to date with changes in Log Observer Connect, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.

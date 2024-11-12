@@ -6,10 +6,7 @@ NTPQ
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf NTPQ monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``net-io`` monitor type to retrieve metrics from NTPQ. This is an
-embedded form of the Telegraf NTPQ plugin and requires the ``ntpq``
-executable available on the path of the agent.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``net-io`` monitor type to retrieve metrics from NTPQ. This is an embedded form of the Telegraf NTPQ plugin and requires the ``ntpq`` executable available on the path of the agent.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 

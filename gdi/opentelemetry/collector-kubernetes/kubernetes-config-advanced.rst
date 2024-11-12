@@ -57,16 +57,16 @@ This custom configuration is merged into the default agent configuration.
 
 .. _otel-kubernetes-config-advanced-control-plane:
 
-Override a control plane configuration
+Configure control plane metrics
 ==============================================================
 
-If any of the control plane metric receivers are activated under the ``agent.controlPlaneMetrics`` configuration section, then the Helm chart will configure the Collector to use the activated receivers to collect metrics from the control plane.
+Control plane metrics are available for the following components: ``coredns``, ``etcd``, ``kube-controller-manager``, ``kubernetes-apiserver``, ``kubernetes-proxy``, and ``kubernetes-scheduler``. You can use the :ref:`Collector Helm agent <helm-chart-components-agent>` to obtain control plane metrics from a specific component by setting ``agent.controlPlaneMetrics.{otel_component}`` to ``true``. 
 
-To collect control plane metrics, the Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See :ref:`receiver-creator-receiver` for more information.
+The Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See :ref:`receiver-creator-receiver` for more information.
 
 If your control plane is using non-standard specifications, then you can provide a custom configuration to allow the Collector to successfully connect to it.
 
-Availability and configuration instructions
+Supported versions
 -----------------------------------------------------------------------------
 
 The Collector relies on pod-level network access to collect metrics from the control plane pods. Since most cloud Kubernetes as a service distributions don't expose the control plane pods to the end user, collecting metrics from these distributions is not supported.
@@ -90,22 +90,17 @@ The following table shows which Kubernetes distributions support control plane m
 
 See the :new-page:`agent template <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/templates/config/_otel-agent.tpl>` for the default configurations for the control plane receivers.
 
-See the following documentation for information on the configuration options and supported metrics for each control plane receiver:
-
-* :ref:`CoreDNS <coredns>`.
-* :ref:`etcd`. To retrieve etcd metrics, see :new-page:`Setting up etcd metrics <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#setting-up-etcd-metrics>`.
-* :ref:`Kubernetes controller manager <kube-controller-manager>`.
-* :ref:`Kubernetes API server <kubernetes-apiserver>`.
-* :ref:`Kubernetes proxy <kubernetes-proxy>`.
-* :ref:`Kubernetes scheduler <kubernetes-scheduler>`.
-
-Known issue
+Availability 
 -----------------------------------------------------------------------------
 
-There is a known limitation for the Kubernetes proxy control plane receiver. When using a Kubernetes cluster created using kops, a network connectivity issue prevents proxy metrics from being collected. The limitation can be addressed by updating the kubeProxy metric bind address in the kops cluster specification:
+The following components provide control plane metrics:
 
-#. Set ``kubeProxy.metricsBindAddress: 0.0.0.0`` in the kops cluster specification.
-#. Run ``kops update cluster {cluster_name}`` and ``kops rolling-update cluster {cluster_name}`` to deploy the change.
+* :ref:`CoreDNS <coredns>`
+* :ref:`awsecscontainermetrics-receiver`
+* :ref:`Kubernetes controller manager <kube-controller-manager>`
+* :ref:`Kubernetes API server <kubernetes-apiserver>`
+* :ref:`Kubernetes proxy <kubernetes-proxy>`
+* :ref:`Kubernetes scheduler <kubernetes-scheduler>`
 
 Use custom configurations for non-standard control plane components
 -----------------------------------------------------------------------------
@@ -134,6 +129,30 @@ The following example shows how to connect to a nonstandard API server that uses
                 skipVerify: true
                 useHTTPS: true
                 useServiceAccount: false
+
+.. _kubernetes-control-plane-prometheus:
+
+Activate Kubernetes control plane metrics with the Prometheus receiver
+-------------------------------------------------------------------------
+
+To activate control plane metrics with the OpenTelemetry Prometheus receiver instead, use the feature flag ``useControlPlaneMetricsHistogramData``:
+
+.. code-block:: yaml
+
+  featureGates:
+    useControlPlaneMetricsHistogramData: true
+
+.. Note:: Out-of-the-box dashboards and navigators for control plane metrics with the Prometheus receiver aren't supported yet, but are planned for a future release.
+
+To learn more see :ref:`prometheus-receiver`.
+
+Known issues
+-----------------------------------------------------------------------------
+
+There is a known limitation for the Kubernetes proxy control plane receiver. When using a Kubernetes cluster created using kops, a network connectivity issue prevents proxy metrics from being collected. The limitation can be addressed by updating the kubeProxy metric bind address in the kops cluster specification:
+
+#. Set ``kubeProxy.metricsBindAddress: 0.0.0.0`` in the kops cluster specification.
+#. Run ``kops update cluster {cluster_name}`` and ``kops rolling-update cluster {cluster_name}`` to deploy the change.
 
 .. _kubernetes-config-advanced-non-root:
 
@@ -484,3 +503,32 @@ Cluster Receiver support
 The Cluster receiver is a 1-replica deployment of the OpenTelemetry Collector. Because the Kubernetes control plane can select any available node to run the cluster receiver pod (unless ``clusterReceiver.nodeSelector`` is explicitly set to pin the pod to a specific node), ``hostPath`` or ``local`` volume mounts don't work for such environments.
 
 Data persistence is currently not applicable to the Kubernetes cluster metrics and Kubernetes events.
+
+Monitor OpenShift infrastructure nodes
+============================================
+
+By default, the Splunk Distribution of OpenTelemetry Collector for Kubernetes doesn't collect data from OpenShift infrastructure nodes. 
+
+You can customize the Collector Helm Chart file to activate data collection from OpenShift infrastructure nodes. To do so, complete the following steps:
+
+#. Open your values.yaml file for the Helm Chart.
+#. Copy and paste the following YAML snippet into the values.yaml file:
+
+    .. code-block:: yaml
+
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          effect: NoSchedule
+        - key: node-role.kubernetes.io/control-plane
+          effect: NoSchedule
+        - key: node-role.kubernetes.io/infra
+          effect: NoSchedule
+          operator: Exists
+
+#. Install the Collector using the Helm Chart:
+
+    .. code-block:: bash
+
+      helm install my-splunk-otel-collector --values values.yaml splunk-otel-collector-chart/splunk-otel-collector
+
+.. note:: Monitoring OpenShift infrastructure nodes might pose a security risk depending on which method you used to create the Kubernetes environment.

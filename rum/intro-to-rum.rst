@@ -20,6 +20,7 @@ With Splunk Real User Monitoring (RUM), you can gain insight about the performan
    * - Splunk RUM for Mobile
      - Splunk Real User Monitoring (RUM) for Mobile provides visibility into every user session of your native iOS and Android mobile applications by equipping you with comprehensive performance monitoring, directed troubleshooting, and full-stack observability.
 
+To keep up to date with changes in RUM, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`.
 
 .. _wcidw-rum:
 

@@ -134,11 +134,6 @@
      - Yes
      - Experimental
      - No
-   * - ``collectd/etcd``
-     - Yes
-     - Yes
-     - Experimental
-     - No
    * - ``collectd/hadoop``
      - Yes
      - Yes

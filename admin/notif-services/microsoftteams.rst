@@ -11,13 +11,9 @@ You can configure Splunk Observability Cloud to automatically send alert notific
 
 To send Splunk Observability Cloud alert notifications to Microsoft Teams, complete the following configuration tasks:
 
-* :ref:`microsoftteams1`
+* :ref:`microsoftteams1`. You must be an owner or administrator of the Microsoft Team to complete this task.
 
-   You must be an owner or administrator of the Microsoft Team to complete this task.
-
-* :ref:`microsoftteams2`
-
-   You must be a Splunk Observability Cloud administrator to complete this task.
+* :ref:`microsoftteams2`. You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`microsoftteams3`
 

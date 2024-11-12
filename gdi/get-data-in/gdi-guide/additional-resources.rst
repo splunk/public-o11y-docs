@@ -12,7 +12,7 @@ Now that you've set up your Splunk Observability Cloud components, learn more ab
 Coordinate team work around your data
 -------------------------------------------------------------------
 
-You can create and manage users and teams to collaborate in Splunk Observability Cloud. See :ref:`admin-onboarding-guide` to begin integrating Splunk Observability Cloud with your organization.
+You can create and manage users and teams to collaborate in Splunk Observability Cloud. See :ref:`get-started-guide` to begin integrating Splunk Observability Cloud with your organization.
 
 Create dashboards and charts to monitor your data
 -------------------------------------------------------------------
@@ -36,5 +36,5 @@ See the following resources for more information about each component in Splunk 
 
 - :ref:`get-started-apm`
 - :ref:`get-started-infrastructure`
-- :ref:`get-started-logs`
+- :ref:`logs-intro-logconnect`
 - :ref:`get-started-rum`

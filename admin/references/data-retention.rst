@@ -9,6 +9,12 @@ Data retention in Splunk Observability Cloud
 
 The following sections list the data retention for each product in Splunk Observability Cloud.
 
+.. note:: 
+
+  The data retention listed in each section applies to real-time metrics. Archived metrics have a retention period of 31 days, and this period doesn't depend on the Splunk Observability Cloud product.
+
+  To learn more about archived metrics, see :ref:`archived-metrics-intro`.
+
 .. _im-data-retention:
 
 Data retention in Infrastructure Monitoring
@@ -81,13 +87,6 @@ The following table shows the retention time period for each data type in APM.
    * - :ref:`Profiling data <profiling-intro>`
      - 
        * 8 days
-
-.. _log-observer-data-retention:
-
-Data retention in Log Observer 
-============================================
-
-The retention period for indexed logs in Splunk Log Observer is 30 days. If you send logs to S3 through the Infinite Logging feature, then the data retention period depends on the policy you purchased for your Amazon S3 bucket. To learn how to set up Infinite Logging rules, see :ref:`logs-infinite`.
 
 .. _oncall-data-retention:
 

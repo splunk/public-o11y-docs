@@ -13,8 +13,11 @@ Collector components: Receivers
     :hidden:
 
     apache-receiver
+    apache-spark-receiver
+    awsecscontainermetrics-receiver
     azureeventhub-receiver
     carbon-receiver
+    chrony-receiver
     cloudfoundry-receiver
     collectd-receiver
     discovery-receiver

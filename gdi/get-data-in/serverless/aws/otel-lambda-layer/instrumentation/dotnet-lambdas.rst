@@ -14,7 +14,7 @@ You can instrument a .NET AWS Lambda function to send traces to Splunk Observabi
 * :new-page:`OpenTelemetry.Instrumentation.AWS <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AWS>`
 * :new-page:`OpenTelemetry.Instrumentation.AWSLambda <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AWSLambda>`
 * :new-page:`OpenTelemetry.Instrumentation.Http <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Http>`
-* :new-page:`OpenTelemetry.ResourceDetectors.AWS <https://www.nuget.org/packages/OpenTelemetry.ResourceDetectors.AWS>`
+* :new-page:`OpenTelemetry.Resources.AWS <https://www.nuget.org/packages/OpenTelemetry.Resources.AWS/>`
 
 To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
 
@@ -26,7 +26,6 @@ To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
    using OpenTelemetry;
    using OpenTelemetry.Exporter;
    using OpenTelemetry.Instrumentation.AWSLambda;
-   using OpenTelemetry.ResourceDetectors.AWS;
    using OpenTelemetry.Resources;
    using OpenTelemetry.Trace;
    using System.Diagnostics;
@@ -72,8 +71,8 @@ To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
                .ConfigureResource(configure => configure
                      .AddService(serviceName, serviceVersion: "1.0.0")
                      // Different resource detectors can be found at
-                     // https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.AWS#usage
-                     .AddDetector(new AWSEBSResourceDetector()))
+                     // https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.Resources.AWS#usage
+                     .AddAWSEBSDetector())
                .AddOtlpExporter(opts =>
                {
                   opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");

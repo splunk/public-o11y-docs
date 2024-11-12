@@ -11,7 +11,7 @@ Connect AWS to Splunk Observability Cloud
   :hidden:
   :maxdepth: 5
 
-  AWS authentication and supported regions <aws-prereqs>
+  AWS authentication, permissions and regions <aws-prereqs>
   Supported Amazon services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-aws.html#cloud-aws>
   Compare connection options <aws-compare-connect>
   Connect via polling <aws-connect-polling>
@@ -137,7 +137,9 @@ To manage the amount of data to import, see :ref:`aws-infra-import`.
     <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
+If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
+
+If you're using Metric Streams, by default Splunk Observability Cloud streams all stats.
 
 .. _aws-data-availability:
 

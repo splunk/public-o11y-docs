@@ -88,7 +88,7 @@ You can collect data from the following AWS services:
     - :strong:`X`
     - 
     - 
-    - 
+    - :strong:`X`
 
   * - AWS/CloudFront
     - AWS CloudFront
@@ -685,3 +685,8 @@ The following applies to the collected logs and metadata listed in the table:
 #. Logs collected by the CloudWatch agent stored in CloudWatch Logs
 #. Metadata in this context refers to AWS tags and properties
 #. Collected by the :ref:`Splunk Distribution of the Collector for Kubernetes <collector-kubernetes-intro>`
+
+The following applies to GovCloud regions:
+
+* Metric sync in GovCloud regions is limited to namespaces supported by AWS. Verify the specific namespaces available in your GovCloud region in the official AWS documentation :new-page:`Services in AWS GovCloud (US) Regions <https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/using-services.html>`.
+* AWS doesn't currently provide FIPS-complaint endpoints to retrieve tags. If you set up tags in your AWS GovCloud infrastructure do not include any sensitive information. In Splunk Observability Cloud AWS tags are identified by the prefix ``aws_tag``.

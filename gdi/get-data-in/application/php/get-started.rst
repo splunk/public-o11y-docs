@@ -24,4 +24,4 @@ To instrument your PHP application, follow these steps:
 #. Instrument your PHP application. See :ref:`instrument-php-otel-applications`.
 #. Add custom instrumentation. See :ref:`manual-php-otel-instrumentation`.
 
-.. note:: The SignalFx Tracing Library for PHP is deprecated. To migrate to the OpenTelemetry automatic instrumentation for PHP, see :ref:`php-migration-guide`.
+.. note:: The SignalFx Tracing Library for PHP is deprecated. See :ref:`php-migration-guide` to migrate to the OpenTelemetry automatic instrumentation for PHP.

@@ -6,9 +6,13 @@ ASP.NET (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the ASP.NET app monitor. See benefits, install, configuration, and metrics
 
-.. note:: This integration is deprecated and will be removed in February 2025. To forward data to Splunk Observability Cloud, use the Splunk Distribution of OpenTelemetry .NET. For a full list of collected metrics, refer to :ref:`dotnet-otel-metrics-attributes`. 
+.. caution:: 
+   
+   This integration is deprecated and will reach End of Support in February 2025. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+   To forward data from a .NET application to Splunk Observability Cloud use the :ref:`Splunk Distribution of OpenTelemetry .NET <get-started-dotnet-otel>` instead. 
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 ``aspdotnet`` monitor type to retrieve metrics for requests, errors,
 sessions, and worker processes from ASP.NET applications.
 

@@ -6,9 +6,7 @@ systemd
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd Systemd monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
-``collectd/systemd`` monitor type to collect metrics about the state of
-configured systemd services.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``collectd/systemd`` monitor type to collect metrics about the state of configured systemd services.
 
 This integration is available on Kubernetes and Linux.
 

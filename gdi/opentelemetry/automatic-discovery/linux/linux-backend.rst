@@ -91,7 +91,7 @@ Using the installer script, you can install and activate automatic discovery for
                             curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                             sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
-                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
+                        .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
                         The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
 
@@ -127,7 +127,7 @@ Using the installer script, you can install and activate automatic discovery for
                         
                         The ``systemd`` instrumentation automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
 
-                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+                        .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
                         To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
@@ -232,7 +232,7 @@ Using the installer script, you can install and activate automatic discovery for
                                 curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                                 sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
-                            .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+                            .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
                         The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
 
@@ -259,7 +259,7 @@ Using the installer script, you can install and activate automatic discovery for
                             
                             The ``systemd`` automatic discovery method automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
 
-                            .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
+                            .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
                         You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
 
@@ -311,7 +311,7 @@ Using the installer script, you can install and activate automatic discovery for
                             curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                             sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
-                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
+                        .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
                         The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/dotnet.conf``.
 
@@ -347,7 +347,7 @@ Using the installer script, you can install and activate automatic discovery for
                                 
                         The ``systemd`` instrumentation automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
 
-                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+                        .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
                         To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
@@ -563,9 +563,9 @@ Update automatic discovery and configuration
 
                 To manually upgrade the package:
 
-                1. Download the ``splunk-auto-auto-instrumentation`` Debian or RPM package for the target system from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>`.
+                3. Download the ``splunk-auto-auto-instrumentation`` Debian or RPM package for the target system from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>`.
 
-                2. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package:
+                4. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package:
 
                 .. tabs::
 

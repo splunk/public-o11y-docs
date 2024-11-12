@@ -10,7 +10,11 @@ Introduction to metrics pipeline management
 
 |hr|
 
-:strong:`Available in Enterprise Edition`. For more information, see :ref:`sd-subscriptions`.
+.. raw:: html
+  
+    <embed>
+      <p><b>Available in Enterprise Edition</b>. For more information, see <a href="#sd-subscriptions">Subscription types, expansions, renewals, and terminations</a>.</p>
+    </embed>
 
 |hr|
 
@@ -56,6 +60,8 @@ You can control your data ingestion and storage with MPM's routing capabilities:
 * Drop your metrics. If you select this option, metrics will be dropped and won't be available for monitoring. You can still keep aggregated MTS derived from those metrics.
 
 To learn more, see :ref:`mpm-rule-routing`.
+
+.. _archived-metrics-intro:
 
 Archived metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

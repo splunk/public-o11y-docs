@@ -7,8 +7,6 @@ Create field aliases
 .. meta::
   :description: Aliases are alternate names for a field that allows you to search for it by multiple names. Aliasing does not rename or remove the original field.
 
-.. include:: /_includes/log-observer-transition.rst
-
 An alias is an alternate name that you assign to a field, allowing you to use that name to search for events that contain that field. An alias is added to the event alongside the original field name to make it easier to find the data you want and to connect your data sources through :ref:`Related Content <get-started-relatedcontent>` suggestions.
 
 :strong:`Field Aliasing` occurs at search time, not index time, so it does not transform your data. Field Aliasing does not rename or remove the original field name. When you alias a field, you can search for it by its original name or by any of its aliases.

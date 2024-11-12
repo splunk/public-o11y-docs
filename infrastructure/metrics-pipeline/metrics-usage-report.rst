@@ -38,7 +38,7 @@ Metric identifiers
    
    * - Category type 
      - The category of the metric, in the format of a number. It only applies to host-based subscription plans. In data points per
-       minute (DPM) subscription plans, the system counts all metrics ase considered custom metrics.
+       minute (DPM) subscription plans, all metrics are considered custom metrics.
 
 The following table has an overview of metric category types. To learn more about metric categories, see :ref:`metrics-category`.
 
