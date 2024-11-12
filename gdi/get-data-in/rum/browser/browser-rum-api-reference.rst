@@ -12,6 +12,8 @@ Use the following API methods when creating manual instrumentation for Splunk RU
 
 .. note:: ``try ... catch`` blocks can prevent your app from crashing when using the CDN version of Browser RUM.
 
+.. _browser-rum-methods:
+
 Methods
 =========================
 
@@ -130,3 +132,9 @@ The following example shows how to add an event listener to track changes of ses
    SplunkRum.addEventListener('session-changed', (event) => {
      LiveChat.setMetadata('splunk.sessionId', event.payload.sessionId);
    });
+
+Migrate to OpenTelemetry
+==============================
+
+If you have some existing manual instrumentation of your app you can translate the code to use OpenTelemetry conventions. See how in GitHub's :new-page:`Migrating Manual Instrumentation <https://github.com/signalfx/splunk-otel-js-web/blob/13cb35597773c251d7ec0df08cecabf5fbc4bcb2/docs/MigratingInstrumentation.md#custom-properties--tags--attributes>`. 
+
