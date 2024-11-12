@@ -69,7 +69,9 @@ November 13, 2024
      
        For more information, see :ref:`unified-id-unified-identity`.
    * - Log Observer Connect teams
-     - Splunk Cloud Platform admins can now restrict user access at a service-account level to ensure that sensitive logs are only available to a specific user group.
+     - You can now restrict access to Splunk Platform indexes by Splunk Observability Cloud user.
+
+       For more information, see :ref:`logs-set-up-logconnect` and :ref:`logs-scp`.
    * - Archived metrics visibility in charts and detectors
      - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. 
      
