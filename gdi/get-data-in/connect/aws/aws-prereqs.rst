@@ -148,6 +148,8 @@ Note that the ``Version`` policy element defines the version of the policy langu
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
 
+.. note:: To ensure that API Gateway charts are fully populated, detailed CloudWatch metrics needs to be explicitly enabled.  Refer to :new-page:`Amazon API Gateway dimensions and metrics <https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metricdimensions>` for further guidance. 
+
 Permissions for Splunk-managed Metric Streams
 -----------------------------------------------------------
 
