@@ -255,7 +255,7 @@ The following table identifies the team management capabilities of each Splunk O
      - Yes
      - 
 
-   * - Create, edit, or delete escation policies
+   * - Create, edit, or delete escaltion policies
      - Yes
      - 
      - For teams where they are a Team admin
