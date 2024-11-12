@@ -121,7 +121,7 @@ Use archived metrics in charts
 
 When you select an archived metric as a signal in your chart, the archived metric can't be plotted.
 
-To include an archived metric in charts, route them to real-time or create exception rules to make them available. For more information, see the :ref:`mpm-rule-routing-exception` section.
+To include an archived metric in a chart, route the archived metric to real-time or create exception rules to make it available. For more information, see the :ref:`mpm-rule-routing-exception` section.
 
 To learn more about MPM, see :ref:`metrics-pipeline-intro`.
 
