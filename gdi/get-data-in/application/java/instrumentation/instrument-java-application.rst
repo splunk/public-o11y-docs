@@ -259,11 +259,13 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
       export SPLUNK_ACCESS_TOKEN=<access_token>
       export SPLUNK_REALM=<realm>
+      export OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=grpc
 
    .. code-tab:: shell Windows PowerShell
 
       $env:SPLUNK_ACCESS_TOKEN=<access_token>
       $env:SPLUNK_REALM=<realm>
+      $env:OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=grpc
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
