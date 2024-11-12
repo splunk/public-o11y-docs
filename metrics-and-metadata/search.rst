@@ -41,7 +41,7 @@ Supported search prefixes include:
 - business workflow (APM workflow)
 - application, app (RUM application)
 - session (RUM session ID)
-- test (Synthetic test)
+- test (Synthetics test)
 - private location (Synthetics private location)
 - saved query (Log Observer saved query)
 - connection (Log Observer connection)
