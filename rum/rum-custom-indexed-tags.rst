@@ -38,7 +38,7 @@ Add custom tags to Tag Spotlight
 
 You need to be an admin to do this task. Follow these steps to add custom tags to Tag Spotlight: 
 
-1. Add a span tag following as explained in :ref:`create-a-span-rum`. To add attributes to the span, see RUM's API :ref:`browser-rum-methods`.
+1. Add a span tag as explained in :ref:`create-a-span-rum`. To add attributes to the span, see RUM's API :ref:`browser-rum-methods`.
 
 2. There are two ways to navigate to the MetricSets configuration page. Choose either one: 
 

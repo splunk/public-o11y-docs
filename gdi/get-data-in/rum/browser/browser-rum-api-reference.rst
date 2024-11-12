@@ -136,5 +136,5 @@ The following example shows how to add an event listener to track changes of ses
 Migrate to OpenTelemetry
 ==============================
 
-If you have some existing manual instrumentation of your app you can translate the code to use OpenTelemetry conventions. See how in GitHub's :new-page:`Migrating Manual Instrumentation https://github.com/signalfx/splunk-otel-js-web/blob/13cb35597773c251d7ec0df08cecabf5fbc4bcb2/docs/MigratingInstrumentation.md#custom-properties--tags--attributes>`. 
+If you have some existing manual instrumentation of your app you can translate the code to use OpenTelemetry conventions. See how in GitHub's :new-page:`Migrating Manual Instrumentation <https://github.com/signalfx/splunk-otel-js-web/blob/13cb35597773c251d7ec0df08cecabf5fbc4bcb2/docs/MigratingInstrumentation.md#custom-properties--tags--attributes>`. 
 
