@@ -19,6 +19,9 @@ Check compatibility and requirements
 .. include:: /_includes/requirements/browser.rst
 
 
+.. include:: /_includes/requirements/realm.rst
+
+
 .. _rum-browser-install:
 
 Instrument your web application for Splunk RUM
@@ -194,7 +197,7 @@ Follow these steps to instrument and configure Splunk RUM using npm:
 
 .. _loading-initializing_browser-rum:
 
-Loading and initializing the Browser RUM agent
+Load and initialize the Browser RUM agent
 ========================================================
 
 To avoid gaps in your data, load and initialize the Browser RUM agent synchronously and as early as possible. Delayed loading might result in missing data, as the instrumentation cannot collect data before it's initialized.
