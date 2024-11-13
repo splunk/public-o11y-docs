@@ -18,10 +18,10 @@ November 13, 2024
 
    * - New feature or enhancement
      - Description
-   * - Real-time metrics in Splunk Cloud Platform
-     - You can now view real-time metrics from Splunk Observability Cloud in Splunk Cloud Platform. Create a real-time metrics-based chart in Splunk Dashboard Studio or import a chart from Splunk Observability Cloud into Splunk Dashboard Studio.
+   * - Splunk Observability Cloud metrics in Splunk Cloud Platform
+     - Administrators can now view Splunk Observability Cloud metrics in Splunk Cloud Platform. Create a Splunk Observability Cloud metrics-based chart in Splunk Dashboard Studio or import a chart from Splunk Observability Cloud into Splunk Dashboard Studio.
      
-       For more information, see :new-page:`Observability metrics in Dashboard Studio <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/DashStudio/o11yMetrics>` in the Splunk Cloud Platform documentation.
+       For more information, see :new-page:`Splunk Observability Cloud metrics in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/DashStudio/o11yMetrics>` in the Splunk Cloud Platform documentation. 
    * - Metrics usage analytics
      - Metrics pipeline management now includes the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. 
      
