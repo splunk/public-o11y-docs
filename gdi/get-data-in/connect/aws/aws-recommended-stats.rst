@@ -7,7 +7,7 @@ AWS recommended stats (polling only)
 .. meta::
   :description: List of recommended stats used in the AWS integration.
 
-If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with service. You can look for your services' AWS recommended stats in the official AWS docs, for example :new-page:`CloudWatch metrics for your Classic Load Balancer <https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html>` or :new-page:`S3 monitoring with Amazon CloudWatch <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html>`.
+If you're polling data, by default Splunk Observability Cloud ??????? imports certain stats, which are based on AWS' own recommended stats and vary with service. You can look for your services' AWS recommended stats in the official AWS docs, for example :new-page:`CloudWatch metrics for your Classic Load Balancer <https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html>` or :new-page:`S3 monitoring with Amazon CloudWatch <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html>`.
 
 Splunk Observability Cloud uses the following recommended stats:
 
