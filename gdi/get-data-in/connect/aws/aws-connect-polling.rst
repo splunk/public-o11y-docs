@@ -106,14 +106,14 @@ By default, Splunk Observability Cloud brings in:
 * Data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
 * 5 default stats per service: ``sum``, ``min``, ``max``, ``count``, and ``avg``. 
 
-.. note:: You can also chose to import recommended stats. Learn more at :ref:`aws-recommended-stats`.
-
 Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
 * Collect Amazon Cost and Usage Metrics.
 * Ingest CloudWatch Metrics. You can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead.
 * Select which :ref:`AWS regions <aws-regions>` to fetch data from.
 * Select which AWS services to fetch data from.
+
+.. note:: You can also chose to import recommended stats. Learn more at :ref:`aws-recommended-stats`.
 
 To limit data collection, you can also:
 
