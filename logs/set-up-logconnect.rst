@@ -64,9 +64,7 @@ You must create a user and role in your Splunk Enterprise search head to serve a
 
 In your Splunk Enterprise search head, follow the instructions in the guided setup for the integration to do the following:
 
-Set up Service account
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings` then :guilabel:`Roles`. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
+1. To set up a service account for Log Observer Connect, go to :guilabel:`Settings` then :guilabel:`Roles`. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
       
 2. On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
 
@@ -116,10 +114,7 @@ Set up Service account
 
 8. Complete the steps on the :guilabel:`Secure a connection to the Splunk platform` section to get certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance. When finished, select :guilabel:`Next` in the guided setup. When finished, select :guilabel:`Next`.
 
-Set up Observability Cloud
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-9. Enter the following on the Set up Observability Cloud page of the guided setup:
+9. On the Set up Observability Cloud page of the guided setup, enter the following:
 
    * Service account username 
 
@@ -133,8 +128,6 @@ Set up Observability Cloud
 
 10. Select :guilabel:`Save and continue`.
 
-Configure permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11. On the Configure permissions page of the guided setup, select the Splunk Observability Cloud users who you want to give access to this connection and the associated Splunk Enterprise indexes.
 
 12. Select :guilabel:`Save and activate`.
