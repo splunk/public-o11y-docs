@@ -424,7 +424,8 @@ Read more at the official AWS documentation:
 
 * :new-page:`AWS Organization Service Control Policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>`
 * :new-page:`Permissions boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`
-* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
+
+.. tip:: Search for specific troubleshooting at AWS' knowledge center. 
 
 .. _aws-regions:
 
