@@ -144,11 +144,11 @@ For example:
   }
 
 Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
-  
+
+.. note:: To ensure that API Gateway charts are fully populated, you need to explicity enable detailed CloudWatch metrics. Refer to :new-page:`Amazon API Gateway dimensions and metrics <https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metricdimensions>` for further guidance. 
+
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
-
-.. note:: To ensure that API Gateway charts are fully populated, detailed CloudWatch metrics needs to be explicitly enabled.  Refer to :new-page:`Amazon API Gateway dimensions and metrics <https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metricdimensions>` for further guidance. 
 
 Permissions for Splunk-managed Metric Streams
 -----------------------------------------------------------
