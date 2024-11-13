@@ -19,7 +19,7 @@ If you are editing an existing chart, you might want to start by configuring plo
 Specify a signal for a plot line
 =============================================================================
 
-A signal is the :term:`metric` or :ref:`histogram metric <histograms>` you want to plot on the chart, to which you might add filters and apply analytics. Plot lines, or plots, are the building blocks of charts. A chart has one or more plots, and each plot is composed of the :term:`metric time series<Metric time series>` or histogram metric represented by the signal and its properties and dimensions, any filters, and any analytics applied.
+A signal is the :term:`metric` or :ref:`histogram metric <histograms>` you want to plot on the chart, to which you might add filters and apply analytics. Plot lines, or plots, are the building blocks of charts. A chart has one or more plots, and each plot is composed of the :term:`metric time series<metric time series>` or histogram metric represented by the signal and its properties and dimensions, any filters, and any analytics applied.
 
 .. note:: Instead of a metric, you can also enter a :ref:`time series expression<expression>` to create a composite or derived metric, specify an :ref:`event<chart-events>` to be displayed on the chart, or :ref:`link a detector to a chart<link-detector-to-chart>` to display its alert status on the chart.
 
@@ -113,6 +113,17 @@ In this case, if you want to plot a metric as histogram, do the following steps 
    #. Add a supported method to the SignalFlow program. For example, ``histogram('service_latency').sum()``.
 
 For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram_function>` in the SignalFlow reference documentation.
+
+.. _archived-metrics-charts:
+   
+Use archived metrics in charts
+--------------------------------------
+
+When you select an archived metric as a signal in your chart, the archived metric can't be plotted.
+
+To include an archived metric in a chart, route the archived metric to real-time or create exception rules to make it available. For more information, see the :ref:`mpm-rule-routing-exception` section.
+
+To learn more about MPM, see :ref:`metrics-pipeline-intro`.
 
 .. _filter-signal:
 
