@@ -23,7 +23,7 @@ November 13, 2024
      
        For more information, see :new-page:`Observability metrics in Dashboard Studio <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/DashStudio/o11yMetrics>` in the Splunk Cloud Platform documentation.
    * - Metrics usage analytics
-     - Metrics pipeline management now include the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. 
+     - Metrics pipeline management now includes the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. 
      
        For more information, see :ref:`metric-usage-analytics-intro`.
    * - Getting data in onboarding improvements
@@ -65,19 +65,14 @@ November 13, 2024
      
        For more information, see :ref:`apm-tag-spotlight`.
    * - Centralized user and role management
-     - Administrators can now centrally control users and roles for both Splunk Cloud Platform and Splunk Observability Cloud in Splunk Cloud Platform. 
-     
-       For more information, see :ref:`unified-id-unified-identity`.
+     - Administrators can now centrally manage users and roles for both Splunk Cloud Platform and Splunk Observability Cloud in Splunk Cloud Platform.
+       
+       For more information, see :ref:`centralized-rbac`.
    * - Log Observer Connect teams
-     - You can now restrict access to Splunk Platform indexes by Splunk Observability Cloud user.
+     - Administrators can now restrict access to Splunk Platform indexes by Splunk Observability Cloud user.
 
        For more information, see :ref:`logs-set-up-logconnect` and :ref:`logs-scp`.
    * - Archived metrics visibility in charts and detectors
      - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. 
      
        For more information, see :ref:`archived-metrics-charts` and :ref:`alert-signal`.
-
-
-
-
-
