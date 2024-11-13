@@ -78,7 +78,7 @@ The instrumentation procedure in the previous section produces launch scripts in
 
 #. Identify the launch script in your build output.
 
-#. (Optional) If you want to verify that the instrumentation is working by viewing the telemetry data output in your console, add ``console`` to the value of the following environment variables:
+#. (Optional) If you want to view telemetry data output in your console to verify that instrumentation is working, add ``console`` to the value (for example ``OTEL_TRACES_EXPORTER=otlp,console``) of the following environment variables:
 
    * ``OTEL_TRACES_EXPORTER``
    * ``OTEL_METRICS_EXPORTER``
