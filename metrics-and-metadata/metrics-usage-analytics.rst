@@ -67,8 +67,8 @@ The metric usage table displays the following fields:
       - Description
     * - Metric name
       - The name of the metric
-    * - Billing category
-      - Category of metric for billing purposes (host, billing, or custom). To learn more about billing categories, see :ref:`imm-billing`.
+    * - Billing class
+      - Class of metric for billing purposes (host, billing, or custom). To learn more about billing classes, see :ref:`metric-categories`.
     * - Utilization
       - Whether the metric is in use. "Unused" indicates that the metric is producing MTS, but these values aren't utilized in Splunk Observability Cloud.
     * - Utility score
