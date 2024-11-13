@@ -736,6 +736,11 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    synthetics/key-concepts
 
 .. toctree::
+   :maxdepth:   3
+
+   synthetics/syn-ottb-dashboards
+
+.. toctree::
    :maxdepth:   3 
   
    Synthetics scenario library TOGGLE <synthetics/synth-scenarios/synth-landing>
@@ -748,17 +753,22 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-   Use a Browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
+   Browser tests for webpages TOGGLE <synthetics/browser-test/browser-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an Uptime test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
+   Uptime Tests for port and HTTP TOGGLE <synthetics/uptime-test/uptime-test>
 
 .. toctree::
    :maxdepth:   3
 
    Use an API test to test an endpoint TOGGLE <synthetics/api-test/api-test>
+
+.. toctree::
+   :maxdepth:   3
+
+   synthetics/test-kpis/test-kpis
 
 .. toctree::
    :maxdepth:   3

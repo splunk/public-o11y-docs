@@ -144,7 +144,9 @@ For example:
   }
 
 Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
-  
+
+.. note:: To ensure that API Gateway charts are fully populated, you need to explicity enable detailed CloudWatch metrics. Refer to :new-page:`Amazon API Gateway dimensions and metrics <https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metricdimensions>` for further guidance. 
+
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
 
@@ -424,7 +426,8 @@ Read more at the official AWS documentation:
 
 * :new-page:`AWS Organization Service Control Policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>`
 * :new-page:`Permissions boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`
-* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
+
+.. tip:: Search for specific troubleshooting at AWS' knowledge center. 
 
 .. _aws-regions:
 
