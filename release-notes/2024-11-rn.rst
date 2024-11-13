@@ -6,9 +6,9 @@ November 2024
 
 Splunk Observability Cloud released the following new features and enhancements in November 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
 
-.. _2024-11-13-rn:
+.. _2024-11-14-rn:
 
-November 13, 2024
+November 14, 2024
 =================
 
 .. list-table::
@@ -25,7 +25,7 @@ November 13, 2024
    * - Metrics usage analytics
      - Metrics pipeline management now includes the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. 
      
-       For more information, see :ref:`metric-usage-analytics-intro`.
+       For more information, see :ref:`metrics-usage-analytics-intro`.
    * - Getting data in onboarding improvements
      - The user interface now includes the following enhancements:
 

@@ -29,7 +29,7 @@ Each release date includes new features and enhancements for SaaS and versioned 
    * - Release month
      - Release date
    * - :ref:`2024-11-rn`
-     - * :ref:`2024-11-13-rn`
+     - * :ref:`2024-11-14-rn`
    * - :ref:`2024-10-rn`
      - * :ref:`2024-10-23-rn`
        * :ref:`2024-10-02-rn`
