@@ -78,11 +78,11 @@ The instrumentation procedure in the previous section produces launch scripts in
 
 #. Identify the launch script in your build output.
 
-#. (Optional) If you want to verify that the instrumentation is working by viewing the telemetry data output in your console, set the following environment variables to ``true``:
+#. (Optional) If you want to verify that the instrumentation is working by viewing the telemetry data output in your console, add ``console`` to the following environment variables:
 
-   * ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
-   * ``OTEL_DOTNET_AUTO_METRICS_CONSOLE_EXPORTER_ENABLED``
-   * ``OTEL_DOTNET_AUTO_LOGS_CONSOLE_EXPORTER_ENABLED``
+   * ``OTEL_TRACES_EXPORTER``
+   * ``OTEL_METRICS_EXPORTER``
+   * ``OTEL_LOGS_EXPORTER``
 
 #. Run the instrumented application using the launch script:
 
