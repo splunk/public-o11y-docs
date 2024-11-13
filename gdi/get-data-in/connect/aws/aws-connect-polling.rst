@@ -104,7 +104,9 @@ Modify the scope of data collection
 By default, Splunk Observability Cloud brings in: 
 
 * Data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
-* ???? but only imports certain :ref:`recommended stats <aws-recommended-stats>` from each service
+* 5 default stats per service: ``sum``, ``min``, ``max``, ``count``, and ``avg``. 
+
+.. note:: You can also chose to import recommended stats. Learn more at :ref:`aws-recommended-stats`.
 
 Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
