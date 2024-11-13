@@ -86,6 +86,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 2. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
+.. _existing-setup-unified-identity:
 
 Set up Unified Identity for existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
