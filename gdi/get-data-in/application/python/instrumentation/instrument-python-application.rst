@@ -7,6 +7,8 @@ Instrument your Python application for Splunk Observability Cloud
 .. meta::
    :description: The Splunk OpenTelemetry Python agent can automatically instrument your Python application or service. Follow these steps to get started.
 
+.. include:: /_includes/zero-code-info.rst
+
 The Python agent from the Splunk Distribution of OpenTelemetry Python can automatically instrument your Python application by dynamically patching supported libraries.
 
 To get started, use the guided setup or follow the instructions manually.
