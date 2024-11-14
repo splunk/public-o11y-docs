@@ -112,7 +112,7 @@ Sorting list charts
 -------------------
 
 The API lets you sort values in list charts by specifying the ``options.sortBy`` property in the request to create or update a chart.
-You can sort on one of the dimensions in the MTS for the chart, a data point, the metric name, or the ``publish()`` method ``label`` argument of the SignalFlow statement that generates the data. To choose one of these options, you specify one of the keyword values shown in the following table:
+You can sort on one of the dimensions in the MTS for the chart, a data point, the metric name, or the ``publish()`` method ``label`` argument of the SignalFlow statement that generates the data. To choose one of these options, specify one of the keyword values shown in the following table:
 
 .. list-table::
    :header-rows: 1
@@ -142,10 +142,12 @@ In addition, you can sort by any dimension of an MTS displayed in the chart.
 
 To see a list of entities on which you can sort:
 
-#. In the user interface, open the chart.
-#. Select the :strong:`Chart options` tab.
-#. Open the :strong:`Sort` dropdown list. In the list, :strong:`Value` is the alias for ``value``, :strong:`Plot name` is the
-alias for ``sf_metric``, and :strong:`Metric` is the alias for ``sf_originatingMetric``. All other list items are dimension names.
+  #. In the user interface, open the chart.
+  #. Select the :strong:`Chart options` tab.
+  #. Open the :strong:`Sort` dropdown list. In the list, :strong:`Value` is the alias for ``value``, :strong:`Plot name` is the
+  alias for ``sf_metric``, and :strong:`Metric` is the alias for ``sf_originatingMetric``. All other list items are dimension names.
+
+
 
 Examples
 ++++++++++
