@@ -172,8 +172,9 @@ Users will receive an email telling them to authenticate to Splunk Observability
 User provisioning
 ==========================================================================================
 
-To benefit from Unified Identity, all users must have a Splunk Cloud Platform user with the ``o11y_access`` role.
+To benefit from Unified Identity, all users must have a Splunk Cloud Platform user with the ``o11y_access`` role. 
 
+If your organization uses Okta for SSO (Single Sign On), the ``o11y_access`` role is mapped to the Okta group. The Okta admin must add the ``o11y_access`` role to the Okta group to complete the authorization process. If the Okta admin is not available, contact Splunk Support to enable local authentication.
 
 .. _existing-scp-users:
 
