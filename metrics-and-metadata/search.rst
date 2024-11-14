@@ -23,7 +23,6 @@ Narrow your search results to specific types of objects by using one of the supp
 
 Supported search prefixes include:
 
-- metric search
 - dashboards
 - chart
 - team
@@ -35,7 +34,7 @@ Supported search prefixes include:
 - tag
 - property
 - navigation (takes you to the corresponding page)
-- action
+- navigator 
 - trace (APM trace)
 - service (APM service)
 - business workflow (APM workflow)
