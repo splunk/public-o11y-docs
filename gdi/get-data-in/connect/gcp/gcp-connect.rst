@@ -31,7 +31,7 @@ Follow these steps to connect to GCP:
 1. Define a role for your GCP service account
 --------------------------------------------------------------------------------------
 
-You can use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios. 
+Use GCP’s :strong:`Viewer` role as it comes with the permissions you need for most scenarios.
 
 To customize the permissions for your role refer to :ref:`gcp-prereqs-role-permissions`.
 

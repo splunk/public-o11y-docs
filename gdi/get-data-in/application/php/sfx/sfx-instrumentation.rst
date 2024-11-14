@@ -21,7 +21,7 @@ SignalFx Tracing Library for PHP (deprecated)
    Configure the PHP instrumentation <configuration/advanced-php-configuration>
    Manual instrumentation <instrumentation/php-manual-instrumentation>
 
-The SignalFx Tracing Library for PHP provides automatic instrumentations for many popular PHP libraries and frameworks. The library is a native extension that supports PHP versions 7.0 or higher running on the Zend Engine.
+The SignalFx Tracing Library for PHP provides zero-code instrumentation for many popular PHP libraries and frameworks. The library is a native extension that supports PHP versions 7.0 or higher running on the Zend Engine.
 
 To instrument your PHP application, follow these steps:
 

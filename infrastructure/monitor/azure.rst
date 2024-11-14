@@ -129,9 +129,6 @@ Azure Virtual Machines instances are powered by their respective public cloud se
 
 - If you have only the public cloud service and the Smart Agent configured, some charts in the built-in dashboards for Azure Virtual Machines instances display no data.
 - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Azure Virtual Machines instances display no data.
-- If you have only Smart Agent configured, Azure Virtual Machines instance navigator isn't available.
-
-.. note:: The SignalFx Smart Agent has reached End of Support. To use the Collector, see :ref:`migrate-from-sa-to-otel`.
 
 .. _azure-id-metadata: 
 

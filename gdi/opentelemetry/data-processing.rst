@@ -7,7 +7,7 @@ Process your data with pipelines
 .. meta::
       :description: Learn how to process data collected with the Splunk Distribution of the OpenTelemetry Collector.
 
-Use pipelines in your Collector's config file to define the path you want your ingested data to follow. Specify which components you want to use, starting from data reception using :ref:`receivers <otel-components-receivers>`, then data processing or modification with :ref:`processors <otel-components-processors>`, until data finally exits the Collector through :ref:`exporters <otel-components-exporters>`. For an overview of all available components and theire behavior refer to :ref:`otel-components`.
+Use pipelines in your Collector's config file to define the path you want your ingested data to follow. Specify which components you want to use, starting from data reception using :ref:`receivers <otel-components-receivers>`, then data processing or modification with :ref:`processors <otel-components-processors>`, until data finally exits the Collector through :ref:`exporters <otel-components-exporters>`. For an overview of all available components and their behavior refer to :ref:`otel-components`.
 
 Pipelines operate on three data types: logs, traces, and metrics. To learn more about data in Splunk Observability Cloud, see :ref:`data-model`.
 

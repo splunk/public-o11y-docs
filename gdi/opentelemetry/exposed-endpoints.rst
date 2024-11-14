@@ -35,7 +35,7 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://0.0.0.0:7276``
     - SAPM trace receiver
   * - ``http://localhost:8888/metrics``
-    - :new-page:`Internal Prometheus metrics <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/monitoring.md>` 
+    - :new-page:`Internal Prometheus metrics <https://opentelemetry.io/docs/collector/internal-telemetry>` 
   * - ``http(s)://localhost:8006``
     - Fluent forward receiver
   * - ``http(s)://0.0.0.0:9080``

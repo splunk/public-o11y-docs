@@ -1,20 +1,20 @@
 .. _aws-ts-metric-streams:
 
 ******************************************************
-Troubleshoot Metric Streams in AWS
+Troubleshoot AWS Metric Streams
 ******************************************************
 
 .. meta::
-  :description: Troubleshoot Metric Streams from your AWS services in Splunk Observability Cloud.
+  :description: Troubleshoot AWS Metric Streams related issues.
 
-See the following topics when experiencing Metric Streams issues from AWS.
+See the following topics when experiencing AWS Metric Streams related issues.
 
 .. note::
 
   See also :ref:`aws-troubleshooting`.
 
-I've enabled Metric Streams in my AWS integration but I do not see any metrics streaming in
-==================================================================================================
+I've enabled Splunk-managed Metric Streams in my AWS integration but I do not see any metrics streaming in
+==========================================================================================================
 
 After all the required IAM permissions are in place, your AWS integration is configured, and one of the :ref:`CloudFormation templates <aws-cloudformation>` has been deployed, Splunk Observability Cloud starts to create CloudWatch Metric Streams objects in your AWS account. It might take up to 15 minutes for metrics to start streaming.
 
@@ -26,7 +26,7 @@ If you're experiencing issues streaming metrics, check the following:
   
   * Set ``SplunkIngestUrl`` to the value shown in the :guilabel:`Real-time Data Ingest Endpoint` section under :strong:`Organizations` in your profile. For example, https://ingest.signalfx.com.
   
-    Note: Don't include the :strong:`/v1/cloudwatch_metric_stream` endpoint path in ``SplunkIngestUrl``.
+    Note: Don't include the :strong:`/v1/cloudwatch_metric_stream` endpoint path in ``SplunkIngestUrl``. However, when checking metric stream destination details you should see full URL with the endpoint included, e.g. `https://ingest.signalfx.com/v1/cloudwatch_metric_stream`.
 
   * ``SplunkAccessToken`` needs to be a valid organization access token with ``INGEST`` authorization scope. You can find access tokens in the :strong:`Access Tokens` page in the Splunk Observability Cloud settings.
 
@@ -37,7 +37,7 @@ If you're experiencing issues streaming metrics, check the following:
 How can I track invalid Metric Streams?
 ====================================================================================================
 
-Splunk Observability Cloud provides out-of-the-box navigators and dashboards to help you track invalid or faulty Metric Streams, including:
+Splunk Observability Cloud provides out-of-the-box dashboard to help you track invalid or faulty Metric Streams, including:
 
 * Streams without a matching AWS integration on the Observability side.
 * Streams from a disabled integration or Metric Stream feature.
@@ -46,10 +46,10 @@ To access these dashboards, go to :guilabel:`Dashboards > Organization metrics >
 
 To learn more about built-in content, see :ref:`built-in-dashboards`.
 
-How does Metric Streams clean-up work? How can I try to clean up Metric Streams again?
-====================================================================================================
+How does Splunk-managed Metric Streams clean-up work? How can I try to clean up Metric Streams again?
+=====================================================================================================
 
-When you deactivate Metric Streams (or an entire AWS integration), Splunk Observability Cloud attempts to remove all CloudWatch Metric Streams that had been created. This process might take up to 15 minutes.
+When you deactivate Splunk-managed Metric Streams (or an entire AWS integration), Splunk Observability Cloud attempts to remove all CloudWatch Metric Streams that had been created. This process might take up to 15 minutes.
 
 The clean-up procedure might fail if you remove IAM permissions or due to throttling, for example if there are too many API calls to delete Metric Streams objects.
 
@@ -58,7 +58,7 @@ To retry the clean-up process, you have two options:
 * Splunk Observability Cloud UI (beta feature - limited availability): Go to the context menu in the integration list and select Cleanup. 
 * API: Set ``metricStreamsSyncState`` to the ``CANCELLING`` state.
 
-Assisted Metric Streams clean-up failed. How do I clean up Metric Streams manually?
+Assisted Splunk-managed Metric Streams clean-up failed. How do I clean up Metric Streams manually?
 ====================================================================================================
 
 To manually remove Metric Streams:
