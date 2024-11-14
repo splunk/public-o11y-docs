@@ -145,9 +145,10 @@ To see a list of entities on which you can sort:
 #. In the user interface, open the chart.
 #. Select the :strong:`Chart options` tab.
 #. Open the :strong:`Sort` dropdown list. In the list, :strong:`Value` is the alias for ``value``, :strong:`Plot name` is the
-alias for ``sf_metric``, and :strong:`Metric`` is the alias for ``sf_originatingMetric``. All other list items are dimension names.
+alias for ``sf_metric``, and :strong:`Metric` is the alias for ``sf_originatingMetric``. All other list items are dimension names.
 
-:strong:`Examples`
+Examples
+++++++++++
 
 To sort a list chart by value, specify the following in the request body:
 
