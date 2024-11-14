@@ -5,7 +5,7 @@ Troubleshoot log collection
 ****************************************************************
 
 .. meta::
-      :description: Describes known issues when collecting logs with the Splunk Distribution of OpenTelemetry Collector.
+      :description: Describes known issues when collecting logs with the Splunk Distribution of the OpenTelemetry Collector.
 
 This document describes common issues related to log collection with the Collector.
 
