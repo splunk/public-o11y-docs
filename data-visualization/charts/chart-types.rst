@@ -142,10 +142,9 @@ In addition, you can sort by any dimension of an MTS displayed in the chart.
 
 To see a list of entities on which you can sort:
 
-  #. In the user interface, open the chart.
-  #. Select the :strong:`Chart options` tab.
-  #. Open the :strong:`Sort` dropdown list. In the list, :strong:`Value` is the alias for ``value``, :strong:`Plot name` is the
-  alias for ``sf_metric``, and :strong:`Metric` is the alias for ``sf_originatingMetric``. All other list items are dimension names.
+#. In the user interface, open the chart.
+#. Select the :strong:`Chart options` tab.
+#. Open the :strong:`Sort` dropdown list. In the list, :strong:`Value` is the alias for ``value``, :strong:`Plot name` is the alias for ``sf_metric``, and :strong:`Metric` is the alias for ``sf_originatingMetric``. All other list items are dimension names.
 
 
 
