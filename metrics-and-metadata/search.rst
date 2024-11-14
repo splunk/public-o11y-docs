@@ -12,7 +12,7 @@ Use the search from the Splunk Observability Cloud top navigation bar to search 
 Prerequisites
 =====================
 
-Search only shows results for Splunk APM if your organization has access to Splunk APM. 
+Search currently includes results for Splunk APM if your organization has access to Splunk APM. 
 
 .. _prefix:
 
@@ -23,8 +23,7 @@ Narrow your search results to specific types of objects by using one of the supp
 
 Supported search prefixes include:
 
-- metric search
-- dashboards
+- dashboard
 - chart
 - team
 - metric
@@ -35,7 +34,7 @@ Supported search prefixes include:
 - tag
 - property
 - navigation (takes you to the corresponding page)
-- action
+- navigator 
 - trace (APM trace)
 - service (APM service)
 - business workflow (APM workflow)
