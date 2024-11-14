@@ -8,7 +8,14 @@ Troubleshoot Collector logs
       :description: Describes known issues when collecting logs with the Splunk Distribution of OpenTelemetry Collector.
 
 
-.. note:: See also the :new-page:`OpenTelemetry Project troublehooting docs <https://opentelemetry.io/docs/collector/troubleshooting>` for more information about debugging.
+.. note:: 
+  
+  To collect logs see:
+
+  * :ref:`kubernetes-config-logs`
+  * :ref:`linux-config-logs`
+  
+  See also the :new-page:`OpenTelemetry Project troublehooting docs <https://opentelemetry.io/docs/collector/troubleshooting>` for more information about debugging.
 
 Here are some common issues related to log collection on the Collector.
 
