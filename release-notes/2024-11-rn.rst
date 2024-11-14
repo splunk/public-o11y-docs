@@ -46,7 +46,7 @@ November 14, 2024
 
        For more information, see :ref:`gsearch`.
    * - Kubernetes proactive troubleshooting improvements
-     - The Infrastructure Monitoring Kubernetes navigators now includes the following enhancements:
+     - The Infrastructure Monitoring Kubernetes navigators now include the following enhancements:
 
        - Additional coverage for Kubernetes entities. See :ref:`use-k8s-nav`.
        - Table and heat map views. See :ref:`navigator-views`.
