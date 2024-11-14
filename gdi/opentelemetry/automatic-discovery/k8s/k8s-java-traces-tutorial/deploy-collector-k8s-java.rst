@@ -74,7 +74,7 @@ Deploy the Spring Petclinic Java application in your Kubernetes cluster:
             - Image for the Spring Petclinic application
           * - ``spec.template.metadata.annotations``
             - ``instrumentation.opentelemetry.io/inject-java: "true"``
-            - Activates Splunk OpenTelemetry automatic instrumentation for the Java application
+            - Activates Splunk OpenTelemetry zero-code instrumentation for the Java application
 
       After adding these keys and values, your petclinic-spec.yaml file looks like the following example:
 
@@ -94,7 +94,7 @@ Deploy the Spring Petclinic Java application in your Kubernetes cluster:
                 labels:
                   app: spring-petclinic
                 annotations:
-                  # Activates automatic instrumentation for the Java application
+                  # Activates zero-code instrumentation for the Java application
                   instrumentation.opentelemetry.io/inject-java: "true"
               spec:
                 containers:

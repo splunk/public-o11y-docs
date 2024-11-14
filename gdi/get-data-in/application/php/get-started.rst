@@ -16,7 +16,7 @@ Instrument PHP applications for Splunk Observability Cloud
    SignalFx Tracing Library (Deprecated) <sfx/sfx-instrumentation>
    Migrate from the SignalFx PHP library <php-migration-guide>
 
-You can send application traces and metrics from your PHP applications to Splunk Observability Cloud using the OpenTelemetry automatic instrumentation for PHP.
+You can send application traces and metrics from your PHP applications to Splunk Observability Cloud using the OpenTelemetry zero-code instrumentation for PHP.
 
 To instrument your PHP application, follow these steps:
 
@@ -24,4 +24,4 @@ To instrument your PHP application, follow these steps:
 #. Instrument your PHP application. See :ref:`instrument-php-otel-applications`.
 #. Add custom instrumentation. See :ref:`manual-php-otel-instrumentation`.
 
-.. note:: The SignalFx Tracing Library for PHP is deprecated. See :ref:`php-migration-guide` to migrate to the OpenTelemetry automatic instrumentation for PHP.
+.. note:: The SignalFx Tracing Library for PHP is deprecated. See :ref:`php-migration-guide` to migrate to the OpenTelemetry zero-code instrumentation for PHP.

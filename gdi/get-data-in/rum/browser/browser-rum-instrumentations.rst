@@ -8,7 +8,7 @@ Instrumentation-specific data for Browser RUM
 .. meta::
    :description: Splunk Observability Cloud real user monitoring / RUM for Browser collects the following data through automatic instrumentations.
 
-Splunk RUM for Browser collects the following data through automatic instrumentations. To activate or deactivate instrumentations, see :ref:`browser-rum-instrumentation-settings`.
+Splunk RUM for Browser collects the following data through instrumentation. To activate or deactivate instrumentations, see :ref:`browser-rum-instrumentation-settings`.
 
 .. _browser-rum-data-doc-load:
 

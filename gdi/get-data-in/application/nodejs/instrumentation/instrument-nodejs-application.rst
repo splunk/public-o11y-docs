@@ -7,6 +7,8 @@ Instrument your Node.js application for Splunk Observability Cloud
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
 
+.. include:: /_includes/zero-code-info.rst
+   
 The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
 
 To get started, use the guided setup or follow the instructions manually.

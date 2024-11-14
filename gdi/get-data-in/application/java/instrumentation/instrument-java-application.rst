@@ -9,6 +9,8 @@ Instrument your Java application for Splunk Observability Cloud
 
 The Java agent from the Splunk Distribution of OpenTelemetry Java can automatically instrument your Java application by injecting instrumentation to Java classes. To get started, use the guided setup or follow the instructions manually.
 
+.. include:: /_includes/zero-code-info.rst
+
 Generate customized instructions using the guided setup
 ====================================================================
 

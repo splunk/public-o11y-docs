@@ -24,7 +24,7 @@ SignalFx Instrumentation for .NET (Deprecated)
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
 
-The SignalFx Instrumentation for .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud.
+The SignalFx Instrumentation for .NET provides zero-code instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud.
 
 .. raw:: html
 
@@ -54,4 +54,4 @@ To instrument your .NET application, follow these steps:
 #. Instrument your .NET application. See :ref:`instrument-dotnet-applications`.
 #. Configure your instrumentation. See :ref:`advanced-dotnet-configuration`.
 
-You can also automatically instrument your .NET applications along with the Splunk Distribution of OpenTelemetry Collector installation. Automatic instrumentation removes the need to install and configure the .NET library separately. See :ref:`windows-backend-auto-discovery` for the installation instructions.
+You can also automatically instrument your .NET applications along with the Splunk Distribution of OpenTelemetry Collector installation. Zero-code instrumentation removes the need to install and configure the .NET library separately. See :ref:`windows-backend-auto-discovery` for the installation instructions.
