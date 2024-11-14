@@ -12,7 +12,7 @@ Use the search from the Splunk Observability Cloud top navigation bar to search 
 Prerequisites
 =====================
 
-Search only shows results for Splunk APM if your organization has access to Splunk APM. 
+Search currently includes results for Splunk APM if your organization has access to Splunk APM. 
 
 .. _prefix:
 
@@ -23,7 +23,7 @@ Narrow your search results to specific types of objects by using one of the supp
 
 Supported search prefixes include:
 
-- dashboards
+- dashboard
 - chart
 - team
 - metric
