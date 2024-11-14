@@ -1,0 +1,78 @@
+.. _2024-11-rn:
+
+*************
+November 2024
+*************
+
+Splunk Observability Cloud released the following new features and enhancements in November 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+.. _2024-11-14-rn:
+
+November 14, 2024
+=================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Splunk Observability Cloud metrics in Splunk Cloud Platform
+     - Administrators can now view Splunk Observability Cloud metrics in Splunk Cloud Platform. Create a Splunk Observability Cloud metrics-based chart in Splunk Dashboard Studio or import a chart from Splunk Observability Cloud into Splunk Dashboard Studio.
+     
+       For more information, see :new-page:`Splunk Observability Cloud metrics in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/DashStudio/o11yMetrics>` in the Splunk Cloud Platform documentation. 
+   * - Metrics usage analytics
+     - Metrics pipeline management now includes the usage analytics self-service reporting interface, allowing users to see the number of metric time series (MTS) generated, used, and stored across their system. 
+     
+       For more information, see :ref:`metrics-usage-analytics-intro`.
+   * - Getting data in onboarding improvements
+     - The user interface now includes the following enhancements:
+
+       - Tabbed layout for the Data Management page.
+       - Guided onboarding banner that replaces the OTel Collector banner.
+       - Updated integrations list.
+       - Call to action added to the infrastructure inventory for the hosts and clusters that don't have the OTel Collector installed.
+   * - Enhanced navigation with modern UI
+     - The user interface is updated to bring together AppDynamics and Splunk Observability, with enhancements to the top navigation bar, a new user profile menu, and a more accessible left navigation panel. 
+     
+       For more information, see :new-page:`Splunk Observability Cloud - Enhanced navigation with a modern look and feel <https://community.splunk.com/t5/Product-News-Announcements/Coming-Soon-Splunk-Observability-Cloud-Enhanced-navigation-with/ba-p/701021>` in the Splunk Community.
+   * - Global search enhancements
+     - The top navigation search now includes the following enhancements:
+
+       - Improved search coverage for RUM, Synthetics, and Log Observer Connect.
+       - Ability to search for applications, RUM session IDs, and synthetic tests.
+       - More consistent, streamlined search results for enhanced usability.
+
+       For more information, see :ref:`gsearch`.
+   * - Kubernetes proactive troubleshooting improvements
+     - The Infrastructure Monitoring Kubernetes navigators now includes the following enhancements:
+
+       - Additional coverage for Kubernetes entities. See :ref:`use-k8s-nav`.
+       - Table and heat map views. See :ref:`navigator-views`.
+       - Hierarchy map moved to the single instance view. See :ref:`k8s-nav-hierarchy-map`.
+       - Data links for metadata in the sidebar. See :ref:`navigator-sidebar-metadata`.
+   * - Synthetic Monitoring performance KPI enhancements
+     - Synthetic Monitoring now includes the following enhancements:
+
+       - Dynamic dashboard resolution now automatically adjusts data views based on zoom levels and data density, providing granular detail when zoomed in and summarized data when zoomed out. To adjust the view, you don't need to manually set frequencies based on the time period. See :ref:`test-kpis`.
+       - The run history page offers up to 90 days of historical data across all 3 test types, capturing artifacts such as waterfalls and API responses for comprehensive analysis.
+       - Ability to pause run data at a specific time, allowing you to analyze and troubleshoot issues without the chart continuously updating.
+       - Built-in dashboards. See :ref:`syn-ottb-dashboards`.
+       - Google Chrome flags for troubleshooting browser tests.
+   * - Tag Spotlight enhancements in APM
+     - You can now rearrange the cards on the Tag Spotlight page by priority order to view your most important tags. 
+     
+       For more information, see :ref:`apm-tag-spotlight`.
+   * - Centralized user and role management
+     - Administrators can now centrally manage users and roles for both Splunk Cloud Platform and Splunk Observability Cloud in Splunk Cloud Platform.
+       
+       For more information, see :ref:`centralized-rbac`.
+   * - Log Observer Connect teams
+     - Administrators can now restrict access to Splunk Platform indexes by Splunk Observability Cloud user.
+
+       For more information, see :ref:`logs-set-up-logconnect` and :ref:`logs-scp`.
+   * - Archived metrics visibility in charts and detectors
+     - Users can see if a metric used in charts and detectors is an archived metric and create rerouting or exception rules accordingly to avoid broken charts and detectors. 
+     
+       For more information, see :ref:`archived-metrics-charts` and :ref:`alert-signal`.
