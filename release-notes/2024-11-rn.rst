@@ -60,7 +60,7 @@ November 14, 2024
        - Ability to pause run data at a specific time, allowing you to analyze and troubleshoot issues without the chart continuously updating.
        - Built-in dashboards. See :ref:`syn-ottb-dashboards`.
        - Google Chrome flags for troubleshooting browser tests.
-   * - Tag Spotlight enhancements in APM and RUM
+   * - Tag Spotlight enhancements in APM
      - You can now rearrange the cards on the Tag Spotlight page by priority order to view your most important tags. 
      
        For more information, see :ref:`apm-tag-spotlight`.
