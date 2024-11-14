@@ -17,7 +17,7 @@ You can monitor Kubernetes metrics with Splunk Observability Cloud. Splunk Obser
 Prerequisites
 ================
 
-Before you start monitoring any Kubernetes resources, do the following:
+To start monitoring Kubernetes resources, you must:
 
 * :ref:`get-started-k8s`.
 * Log in with your administrator credentials.
@@ -28,133 +28,131 @@ Before you start monitoring any Kubernetes resources, do the following:
 Kubernetes navigators
 ===============================
 
-.. note:: The following sections show you components specific to the Kubernetes navigators. For information on components shared by all navigators, see :ref:`use-navigators-imm`.
+.. note:: The following sections describe components specific to the Kubernetes navigators. For information on components shared by all navigators, see :ref:`use-navigators-imm`.
 
-There are two Kubernetes navigators, Kubernetes nodes and Kubernetes workloads. On the :strong:`Infrastructure` landing page, you can see the summary cards for both navigators under the :strong:`Kubernetes` section.
+On the :guilabel:`Infrastructure` landing page, you can view the summary cards for Kubernetes navigators under the :guilabel:`Kubernetes` section.
 
-   .. image:: /_images/infrastructure/k8s-nav-summary.png
-      :alt: Summary cards for Kubernetes navigators on the landing page.
-      :width: 60%
-
-The following table compares the two Kubernetes navigators.
+The following table describes the Kubernetes navigators:
 
  .. list-table::
     :header-rows: 1
     :widths: 20 40 40
 
-    * - :strong:`Navigator`
+    * - :strong:`Kubernetes navigator`
       - :strong:`Description`
       - :strong:`Use this to`
    
-    * - Kubernetes nodes
-      - Provides a hierarchical view of your Kubernetes infrastructure
-      - * Get an overview of your entire Kubernetes infrastructure
-        * Monitor the health of all or part of the Kubernetes infrastructure
-        * Identify and diagnose an issue with some part of the Kubernetes infrastructure
+    * - * Nodes
+        * Pods
+        * Containers
+      - * Provides a :ref:`table, heat map <navigator-views>`, and :ref:`hierarchy map <k8s-nav-hierarchy-map>` view of your Kubernetes infrastructure
+        * Provides a :ref:`Kubernetes Analyzer<k8s-nav-analyzer-overview>` that helps you troubleshoot Kubernetes problems at scale
+      - * Get an overview of your Kubernetes infrastructure
+        * Monitor the health of part of your Kubernetes infrastructure
+        * Identify and diagnose an issue with part of your Kubernetes infrastructure
+        * View services and hosts running on Kubernetes
 
-    * - Kubernetes workloads
-      - Provides a view of Kubernetes workloads across all your infrastructure
-      - Monitor Kubernetes workloads across your infrastructure, or a specific subset of workloads, such as those running in a particular namespace.
+    * - * Workloads
+        * Deployments
+        * ReplicaSets
+        * StatefulSets
+        * DaemonSets
+        * Jobs
+        * CronJobs
+        * Services
+        * Resources
+      - Provides a :ref:`table and heat map view <navigator-views>` of Kubernetes objects across your infrastructure
+      - * Monitor Kubernetes instances across your infrastructure
+        * Monitor a specific subset of instances, such as workloads running in a particular namespace
+        * View services and hosts running on Kubernetes
 
-.. _k8s-nodes-nav:
+.. _k8s-nav-hierarchy-map:
 
-Kubernetes nodes navigator
-------------------------------
+Hierarchy map
+======================
 
-Each Kubernetes service consists of the following elements:
+.. note:: The hierarchy map is only available on the Kubernetes nodes, pods, and containers navigators.
 
-    * Container: A lightweight package containing everything needed to run applications.
-    * Pod: A group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
-    * Node: A physical or a virtual machine that hosts pods and the necessary resources to run pods.
-    * Cluster: A group of nodes for running containerized applications. 
+Monitor your Kubernetes infrastructure with an interactive hierarchical map that displays the child resources associated with a selected Kubernetes instance. You can select elements in the map to drill down into them, or use the filter to explore your data. The level of detail shown on the map is dynamic and depends on the number of elements shown.
 
-   .. image:: /_images/infrastructure/k8s-hierarchy-diagram.png
-      :alt: Diagram of Kubernetes component hierarchical relationship.
-      :width: 40%
+To navigate to the hierarchy map:
 
-Monitor your entire Kubernetes infrastructure with an interactive hierarchical map. You can select elements in the map to drill down into them, or use the filter to explore your data. The level of detail shown on the map is dynamic and depends on the number of elements shown. 
+1. On the :guilabel:`Infrastructure` landing page, select the Kubernetes nodes, pods, or containers navigator.
+2. The table view displays by default. Select an instance from the table.
+3. Expand the hierarchy map.
 
-   .. image:: /_images/infrastructure/k8s-nodes-map.png
-      :alt: Hierarchical map view in the Kubernetes nodes navigator at the service level.
+   .. image:: /_images/infrastructure/k8s-nav/k8s-nav-hierarchy-map.png
+      :alt: Hierarchy map view in the Kubernetes nodes navigator.
       :width: 90%
 
-Containers, pods, and nodes are colored by health and status, as reported by Kubernetes:
+Nodes, pods, and containers are colored by health and status, as reported by Kubernetes:
 
-    * Containers are colored by status: ``Ready``, ``Not Ready``, and ``Unknown``
-    * Pods are colored by phase: ``Running``, ``Pending``, ``Succeeded``, ``Failed``, and ``Unknown``
     * Nodes are colored by condition: ``Node Ready``, ``Memory Pressure``, ``PID Pressure``, ``Disk Pressure``, ``Network Unavailable``, and ``Out of Disk``
+    * Pods are colored by phase: ``Running``, ``Pending``, ``Succeeded``, ``Failed``, and ``Unknown``
+    * Containers are colored by status: ``Ready``, ``Not Ready``, and ``Unknown``
 
-Investigate instances in the hierarchical map
-++++++++++++++++++++++++++++++++++++++++++++++++
+Investigate instances in the hierarchy map
+---------------------------------------------
 
-* Breadcrumb navigation: Jump across levels and switch to different entities at any level using the breadcrumb navigation bar.
+* Breadcrumb navigation: Switch to different instances and jump across entity levels using the breadcrumb navigation bar.
 
-    ..  image:: /_images/infrastructure/k8s-nav-breadcrumb.gif
+    ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-breadcrumb.gif
         :width: 100%
-        :alt: How to jump back to the node level from the container level, select a different node to investigate, and jump to the cluster level.
+        :alt: How to select a different node to investigate and jump to the cluster level.
 
 
-* Hover: Get more information about an element, including status or phase, by hovering over that element.
+* Hover: Get more information about an instance, including its status or phase, by hovering over that instance.
 
-    .. image:: /_images/infrastructure/k8s-nav-hover.png
-        :alt: Hovering over a pod shows its information and ``Pending`` phase.
+    .. image:: /_images/infrastructure/k8s-nav/k8s-nav-hover.png
+        :alt: Hovering over a pod shows its information and phase.
         :width: 50%
 
-* Select and zoom: Drill down into an element and change the zoom level of the map, if applicable, by selecting the element. Details about the element display in the sidebar, in the :strong:`About this pod` panel.
+* Select and zoom: Drill down into an instance and change the zoom level of the map, if applicable, by selecting the instance. Details about the instance display in the sidebar, in the :guilabel:`About this <Entity_Type>` panel.
     
-    ..  image:: /_images/infrastructure/k8s-nav-zoom.gif
+    ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-zoom.gif
       :width: 100%
-      :alt: Selecting a pod zooms the hierarchical map view from cluster level to pod level. Details about the selected pod displays in the sidebar, in the :strong:`About this pod` panel.
+      :alt: From the node-level hierarchy map, selecting a pod zooms the view to the pod level. Details about the selected pod display in the sidebar in the :guilabel:`About this pod` panel. From the pod level, selecting a container zooms the view to the container level.
 
-* Filter: Filter the map by any available metadata in your Kubernetes data, such as a namespace, a workload, or any other key-value pair. When you apply a filter, the map shows only nodes that match the filter and highlights matching pods and containers. You can still select the dimmed pods and containers to view details about them in the sidebar.
+* Filter: Filter the map by any available metadata in your Kubernetes data, such as a namespace, a workload, or any other key-value pair. When you apply a filter, the map highlights instances that match the filter. You can still hover over the dimmed instances to view details about them.
 
-    ..  image:: /_images/infrastructure/k8s-nav-filter.gif
+    ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-filter.gif
       :width: 100%
-      :alt: Filtering ``kubernetes.io/cluster-service`` to ``true`` hides nodes that don't match and highlights matching pods and containers.
+      :alt: Filtering ``k8s.container.name`` to ``config-reloader`` and ``core-metrics-exporter`` highlights matching pods and dims pods that don't match.
 
-.. _k8s-workloads-nav:
-
-Kubernetes workloads navigator
----------------------------------
-
-A workload is an application running on Kubernetes. Your workload might be a single component or several that work together, but it always runs inside a set of pods on Kubernetes.
-
-Instead of a hierarchical approach to your Kubernetes infrastructure, you can investigate workloads for a given Kubernetes namespace, and the pods where each workload is running on.
-
-For more information, see :ref:`use-navigators-imm`.
-
-.. _k8s-nav-pivot:
-
-View services and hosts on which Kubernetes is running
------------------------------------------------------------
-
-Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts where Kubernetes is running in the navigator sidebar for both the Kubernetes nodes and workloads navigators. When you select a host or service from the sidebar, you are switching to the navigator for that host or service instance. 
-
-  .. note:: From a host navigator, you can also jump to a Kubernetes navigator, but only to the Kubernetes nodes navigator.
-
-  ..  image:: /_images/infrastructure/k8s-nav-pivot.gif
-    :width: 100%
-    :alt: Navigating to the EC2 navigator from the Kubernetes nodes navigator, and then navigating back to the Kubernetes nodes navigator.
+.. _k8s-nav-analyzer-overview:
 
 Analyzer
-+++++++++++++++++++++++++++
+==============
 
-The Analyzer accessed through the K8s analyzer tab helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes objects that are in a bad state, such as nodes that are not ready. Then, the Analyzer produces theories about what those objects might have in common, such as that all of the objects are running the same workload or all objects are located in the same AWS region. Click on a finding in the Analyzer panel to filter the map.
+.. note:: The Analyzer is only available on the Kubernetes nodes, pods, and containers navigators.
 
-The Analyzer panel displays suggested filters for the elements selected in the :ref:`cluster map <k8s-nav-map>`. Click links in the Analyzer panel to add filters to the cluster map and explore conditions across your entire Kubernetes environment.
+The Analyzer, accessed through the :guilabel:`K8s analyzer` tab, helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes instances that are in a bad state, such as nodes that are not ready. The Analyzer produces theories about what those instances might have in common, such as that all of the instances are running the same workload or all instances are located in the same AWS region. Select a finding in the Analyzer panel to filter the map.
 
-The Analyzer uses AI-driven insights to examine patterns that nodes, pods, or containers could have in common. Trouble indicators are:
+The Analyzer panel displays suggested filters for the elements selected in the table or heat map view. Select links in the Analyzer panel to add filters to the table or heat map view and explore conditions across your entire Kubernetes environment.
 
--  pods that are in pending status
--  pods that are in failed status
--  pods with unknown condition
--  containers with high restart counts
--  nodes not ready
--  nodes with unknown condition
--  nodes experiencing high CPU
--  nodes experiencing high memory
+The Analyzer uses AI-driven insights to examine patterns that nodes, pods, or containers could have in common. The trouble indicators are:
 
-The Analyzer displays overrepresented metrics properties for known conditions, such as pods in pending status, pods in failed status, and so on. You can use properties that are highly correlated with these conditions to filter the cluster map. You can explore data about each of those elements in the navigator using context-sensitive dashboards. This enables you to identify the underlying patterns noticeable on the filtered map that might be correlated with Kubernetes issues. For example, if all failed pods are in certain types of clusters, Analyzer provides suggested paths to follow for troubleshooting such issues.
+-  Pods that are in pending status
+-  Pods that are in failed status
+-  Pods with unknown condition
+-  Containers with high restart counts
+-  Nodes not ready
+-  Nodes with unknown condition
+-  Nodes experiencing high CPU
+-  Nodes experiencing high memory
+
+The Analyzer displays overrepresented metrics properties for known conditions, such as pods in pending status, pods in failed status, and so on. You can use properties that are highly correlated with these conditions to filter the table or heat map. You can explore data about each of those elements in the navigator using context-sensitive dashboards. This enables you to identify the underlying patterns noticeable on the filtered map that might be correlated with Kubernetes issues. For example, if all failed pods are in certain types of clusters, the Analyzer provides suggested paths to follow to troubleshoot such issues.
+
+.. _k8s-nav-view-services:
+
+View services and hosts running on Kubernetes
+=======================================================
+
+Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts running on Kubernetes in the navigator sidebar. When you select a service or host from the sidebar, you are switching to the navigator for that service or host instance.
+
+  ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-dependencies.gif
+    :width: 100%
+    :alt: Starting on the Kubernetes pod navigator, switching to the MySQL host navigator, and then switching back to the Kubernetes pod navigator.
 
 Next steps
 =====================

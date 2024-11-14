@@ -13,7 +13,7 @@ Install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` o
 - Query logs in Log Observer Connect
 - Set up your environment to receive logs and traces from applications instrumented in :ref:`instrument-back-end-services-apm`.
 
-.. image:: /_images/infrastructure/k8s-nav-pivot.gif
+.. image:: /_images/infrastructure/k8s-nav/k8s-nav-dependencies.gif
     :alt: Using the Kubernetes infrastructure navigator in Splunk Observability Cloud.
 
 Install the OpenTelemetry Collector for your servers or clusters
