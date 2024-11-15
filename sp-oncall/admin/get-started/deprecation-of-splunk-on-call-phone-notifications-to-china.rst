@@ -3,7 +3,7 @@
 .. _deprecated-china:
 
 ************************************************************************
-Deprecation of Splunk On-Call phonw notifications to China
+Deprecation of Splunk On-Call phone notifications to China
 ************************************************************************
 
 .. meta::
