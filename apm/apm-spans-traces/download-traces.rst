@@ -26,3 +26,5 @@ Follow these steps to download a trace:
 4. Select the trace you want to download. Or, if you know the trace ID, enter it in the trace search bar.
 
 5. Select :guilabel:`Trace Properties` then :guilabel:`Download Trace` to get a JSON file of the trace content. If the trace contains more than one trace segment, the button is a dropdown menu that provides a link to each segment.
+
+.. note:: About how to view Downloaded JSON in UI, or how to import Download UI, should be mentioned here!
