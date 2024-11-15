@@ -20,6 +20,8 @@ On the Infrastructure Monitoring landing page, each card represents a navigator,
         :width: 70%
         :alt: This image shows the Splunk Infrastructure Monitoring landing page with all available navigator cards.
 
+.. _navigator-views:
+
 Monitor all instances in a navigator
 ---------------------------------------
 
@@ -224,14 +226,47 @@ While both outlier strategies highlight instances that are behaving differently 
 
 The Find Outliers feature also provides a population selector that lets you restrict the comparison population to only those instances that have similar characteristics (as defined by the Group By dimension). For example, you might not want to compare a server against others that are running different software. It is more relevant to determine outliers among servers providing the same service. Grouping instances by the service that they run and using that as your population basis ensures that instances are compared only with their peers to determine if they behave abnormally.
 
+.. _navigator-sidebar-metadata:
+
+View metadata in the navigator sidebar
+---------------------------------------------------
+
+In table or heat map view, select a single instance to display the navigator sidebar. The :guilabel:`About this \<Entity_Type\>` panel displays the tags and metadata associated with the instance.
+
+View data links
+=================
+
+You can configure data links to appear in the navigator sidebar. For more information on data links and how to configure them, see :ref:`data-link-def` and :ref:`navigate-with-data-links`.
+
 .. _navigator-sidebar:
 
 View dependencies in the navigator sidebar
 ----------------------------------------------------
 
-.. note:: Available only for Kubernetes, hosts, and virtual hosts.
+In the navigator sidebar, you can track the dependencies for:
 
-In navigators for Kubernetes, hosts in :strong:`My Data Center`, and virtual hosts, Amazon EC2, Azure Virtual Machines, and Google Cloud Platform, you can track dependent services and containers in the navigator sidebar.
+-  Kubernetes containers.
+-  Hosts (:guilabel:`My Data Center` hosts, virtual hosts, Amazon EC2 hosts, Azure Virtual Machines, and Google Cloud Platform hosts).
+-  Services running on Kubernetes containers or hosts.
+
+The following table describes the content displayed in the :guilabel:`Dependencies` section of the sidebar for different navigators:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - :strong:`Navigator`
+     - :strong:`What you see in the Dependencies section`
+
+   * - Kubernetes navigators
+     - The services and hosts that are running on the Kubernetes entity.
+
+   * - Host navigators
+     - * The services that are running on the hosts.
+       * The Kubernetes entities that the hosts are running on.
+
+   * - Other navigators
+     - The Kubernetes entities or hosts that the services are running on.
 
 Best practice
 ============================
