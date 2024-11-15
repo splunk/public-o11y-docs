@@ -17,7 +17,15 @@ The Splunk Distribution of OpenTelemetry Collector supports the following operat
 Linux
 ------------------------------------------------------------
 
+.. raw:: html
+
+   <div class="include-start" id="requirements/collector-linux.rst"></div>
+
 .. include:: /_includes/requirements/collector-linux.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/collector-linux.rst"></div>
 
 See :ref:`get-started-linux` for more information.
 
