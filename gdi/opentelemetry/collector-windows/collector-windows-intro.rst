@@ -17,6 +17,7 @@ Get started with the Collector for Windows
    Install the Collector for Windows (manually) <install-windows-manual.rst>       
    windows-config-ootb.rst
    windows-config.rst
+   windows-config-logs.rst
    metrics-ootb-windows.rst   
    windows-upgrade.rst   
    windows-uninstall.rst
@@ -31,8 +32,9 @@ To install the Splunk Distribution of the OpenTelemetry Collector for Windows, f
 See the default settings and configuration options at:
 
 * :ref:`windows-config-ootb`
-* :ref:`otel-windows-config`
 * By default, you'll obtain these :ref:`metrics <ootb-metrics-windows>` 
+* :ref:`otel-windows-config`
+* :ref:`windows-config-logs`
 
 .. include:: /_includes/gdi/collector-common-options.rst
 
