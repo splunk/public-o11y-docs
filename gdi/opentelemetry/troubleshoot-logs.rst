@@ -15,8 +15,8 @@ This document describes common issues related to log collection with the Collect
 
   * :ref:`kubernetes-config-logs`
   * :ref:`linux-config-logs`
+  * :ref:`windows-config-logs`
   
-
 To troubleshoot the health and performance of the Collector see the :new-page:`OpenTelemetry Project troublehooting docs <https://opentelemetry.io/docs/collector/troubleshooting>`. It includes information about troubleshooting tools and debugging.
 
 My source isn't generating logs
@@ -77,9 +77,7 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
   echo "2021-03-17 02:14:44 +0000 [debug]: test" >>/var/log/syslog.log
   echo "2021-03-17 02:14:44 +0000 [debug]: test" | systemd-cat
 
-.. note::
-
-  Properly structured syslog is required for Fluentd to properly pick up the log line.
+.. caution:: Fluentd requires properly structured syslog to pick up the log line.
 
 .. _unwanted_profiling_logs:
 
