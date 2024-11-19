@@ -197,10 +197,10 @@ List chart secondary visualization
 
 Secondary visualizations help you see trends in a list chart:
 
-- :strong:`Sparkline`: Shows recent trends for each value
-- :strong:`Radial`: Shows a dial that marks where the current values are among
+- Sparkline: Shows recent trends for each value
+- Radial: Shows a dial that marks where the current values are among
   the expected range of values
-- :strong:`Linear`: Shows a bar that marks where the current values are among the expected range of values
+- Linear: Shows a bar that marks where the current values are among the expected range of values
 
 .. _single-value-charts:
 
@@ -233,10 +233,10 @@ Single value chart secondary visualization
 
 Secondary visualizations help you see trends in a single value chart:
 
-- :strong:`Sparkline`: Shows recent trends of the value
-- :strong:`Radial`: Shows a dial that marks where the current value is among
+- Sparkline: Shows recent trends of the value
+- Radial: Shows a dial that marks where the current value is among
   the expected range of values
-- :strong:`Linear`: Shows a bar that marks where the current value is among the expected range of values
+- Linear: Shows a bar that marks where the current value is among the expected range of values
 
 By default, a single value chart doesn't show any additional visualizations.
 
