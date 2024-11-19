@@ -7,7 +7,12 @@ Troubleshoot your AWS integration
 .. meta::
    :description: Resolve AWS policy, permission conflicts, and other issues in Splunk Observability Cloud.
 
-If you experience difficulties when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account or using the platform, read on to troubleshoot common issues. See :ref:`aws-ts-metric-streams` for issues specific to Metric Streams. 
+If you experience difficulties when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account or using the platform, read on to troubleshoot common issues. 
+
+See also:
+
+* :ref:`aws-ts-metric-streams` for issues specific Splunk-managed Metric Streams. 
+* :ref:`aws-ts-ms-aws` for issues specific to AWS-managed Metric Streams.
 
 If issues persist, you can also contact :ref:`support`.  
 

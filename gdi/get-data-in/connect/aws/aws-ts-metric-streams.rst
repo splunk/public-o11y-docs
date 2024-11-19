@@ -1,7 +1,7 @@
 .. _aws-ts-metric-streams:
 
 ******************************************************
-Troubleshoot AWS Metric Streams
+Troubleshoot Splunk-managed Metric Streams
 ******************************************************
 
 .. meta::
@@ -9,9 +9,7 @@ Troubleshoot AWS Metric Streams
 
 See the following topics when experiencing AWS Metric Streams related issues.
 
-.. note::
-
-  See also :ref:`aws-troubleshooting`.
+.. note:: See also :ref:`aws-troubleshooting` and :ref:`aws-ts-ms-aws`.
 
 I've enabled Splunk-managed Metric Streams in my AWS integration but I do not see any metrics streaming in
 ==========================================================================================================
