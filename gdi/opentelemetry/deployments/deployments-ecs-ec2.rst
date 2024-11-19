@@ -138,11 +138,19 @@ Launch the Collector as a Daemon from the ECS console
 To launch the Collector from the Amazon ECS console:
 
 #. Go to your cluster in the console and select :guilabel:`Services`. 
+
 #. Select :guilabel:`Create` and define the following options:
+
   #. Launch Type: EC2
+
   #. Task Definition (Family): splunk-otel-collector
+
   #. Task Definition (Revision): 1 (or whatever the latest is in your case)
+
   #. Service Name: splunk-otel-collector
+
   #. Service type: DAEMON
-#. Leave everything else at default and proceed to :guilabel:`Next step` until you're required to create the service.
+
+#. Leave everything else as default and proceed to :guilabel:`Next step` until you're required to create the service.
+
 #. Select :guilabel:`Create Service` to deploy the Collector onto each node in the ECS cluster. You should see infrastructure and docker metrics flowing soon.
