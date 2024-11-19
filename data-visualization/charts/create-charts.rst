@@ -127,8 +127,6 @@ To learn more about different chart types, see :ref:`chart-types`.
 
 The chart type you select is applied as a default to all the plots on the chart, but you can use different visualizations for individual plots. To learn more, see :ref:`plot-config-panel`.
 
-
-
 Edit a chart
 ============
 
