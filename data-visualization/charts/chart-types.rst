@@ -16,10 +16,10 @@ Overview
 Charts in Splunk Observability Cloud are components of a dashboard. Each chart type provides a different way to represent your data:
   
 - :ref:`graph-charts`: Display data points over a period of time. Graph charts come in four different forms.
-  - :ref:`line-charts`: Display data in a plot with data points connected by a series of straight lines.
-  - :ref:`area-charts`: Display in a plot similar to a line chart, except that the area below the line is filled.
-  - :ref:`column-charts`: Also known as bar charts. Display each data point as a vertical bar going from the x-axis origin to the measured value of the data point. The bars aren't connected.
-  - :ref:`histogram-charts`: Display as horizontal rectangles on a two-dimensional plot. The starting and ending x-position of a rectangle represents the time duration over which data points for that rectangle were collected. The y-position of a rectangle represents the number of data points collected in that time duration.
+    - :ref:`line-charts`: Display data in a plot with data points connected by a series of straight lines.
+    - :ref:`area-charts`: Display in a plot similar to a line chart, except that the area below the line is filled.
+    - :ref:`column-charts`: Also known as bar charts. Display each data point as a vertical bar going from the x-axis origin to the measured value of the data point. The bars aren't connected.
+    - :ref:`histogram-charts`: Display as horizontal rectangles on a two-dimensional plot. The starting and ending x-position of a rectangle represents the time duration over which data points for that rectangle were collected. The y-position of a rectangle represents the number of data points collected in that time duration.
 - :ref:`list-charts`: Display multiple data points at each point in time. They show recent trends in the data, including up to 100 data points.
 - :ref:`single-value-charts`: Display a single value for a data point as it changes over time. In most cases, you use this type of chart to display important metrics as a single number.
 - :ref:`heatmap-charts`: Display a series of squares each representing a single data point of the selected metric. The color of each square represents the value range of the metric allowing quick identification of values that are higher or lower than desired.
