@@ -16,15 +16,15 @@ Overview
 Charts in Splunk Observability Cloud are components of a dashboard. Each chart type provides a different way to represent your data:
   
 - :ref:`graph-charts`: Display data points over a period of time. Graph charts come in four different forms.
-    - :ref:`line-charts`: Display data in a plot with data points connected by a series of straight lines.
-    - :ref:`area-charts`: Display in a plot similar to a line chart, except that the area below the line is filled.
-    - :ref:`column-charts`: Also known as bar charts. Display each data point as a vertical bar going from the x-axis origin to the measured value of the data point. The bars aren't connected.
-    - :ref:`histogram-charts`: Display as horizontal rectangles on a two-dimensional plot. The starting and ending x-position of a rectangle represents the time duration over which data points for that rectangle were collected. The y-position of a rectangle represents the number of data points collected in that time duration.
+  - :ref:`line-charts`: Display data in a plot with data points connected by a series of straight lines.
+  - :ref:`area-charts`: Display in a plot similar to a line chart, except that the area below the line is filled.
+  - :ref:`column-charts`: Also known as bar charts. Display each data point as a vertical bar going from the x-axis origin to the measured value of the data point. The bars aren't connected.
+  - :ref:`histogram-charts`: Display as horizontal rectangles on a two-dimensional plot. The starting and ending x-position of a rectangle represents the time duration over which data points for that rectangle were collected. The y-position of a rectangle represents the number of data points collected in that time duration.
 - :ref:`list-charts`: Display multiple data points at each point in time. They show recent trends in the data, including up to 100 data points.
 - :ref:`single-value-charts`: Display a single value for a data point as it changes over time. In most cases, you use this type of chart to display important metrics as a single number.
 - :ref:`heatmap-charts`: Display a series of squares each representing a single data point of the selected metric. The color of each square represents the value range of the metric allowing quick identification of values that are higher or lower than desired.
 - :ref:`event-feed-charts`: Display a list of events instead of metric data.
-- :ref:`text-charts`: Text charts let you create a "chart" containing descriptive information. Add this chart to a dashboard to provide an introduction or instructions for other charts in the dashboard.
+- :ref:`text-charts`: Display descriptive textual information. Add this chart to a dashboard to provide an introduction or instructions for other charts in the dashboard.
 - :ref:`table-charts`: Display metrics and dimensions in the table format.
 
 To learn more about selecting the appropriate charts in Splunk Observability Cloud, see the following sections for more description and example on each chart type.
@@ -38,10 +38,6 @@ Use graph charts when you want to display data points over a period of time.
 
 Each metric time series (MTS) in the chart appears as a single plot, and each plot has its own color. For example, a series of line plots for AWS MTS might be colored by their AWS availability zone dimension, with red indicating ``us-east-1``, green indicating ``us-east-2``, and purple indicating ``eu-west-1``.
 
-
-Graph chart visualizations
-----------------------------
-
 Graph charts can have one of four forms:
 
 - :ref:`line-charts`
@@ -54,8 +50,7 @@ Graph charts can have one of four forms:
 Line charts
 ===========
 
-The line chart plot type appears as a series of straight lines that
-connect the data points in the MTS.
+Use line chart when you want to see a series of straight lines that connect the data points in the MTS.
 
   .. image:: /_images/data-visualization/charts/line-chart.png
      :alt: This screenshot shows a line chart illustrating the CPU percentages used for a set of AWS EC2 instances.
@@ -66,7 +61,7 @@ connect the data points in the MTS.
 Area charts
 ===========
 
-The area chart plot type appears as line chart with the area between the line and the x-axis filled in with the color of the line.
+Use area charts when you want to display your data using both lines and shaded areas between the lines and the x-axis. Each line indicates how an MTS changes over time, while each shaded area indicate how each MTS contributes to the overall trend.
 
   .. image:: /_images/data-visualization/charts/area-chart.png
      :alt: This screenshot shows an area chart illustrating the CPU percentages used for a set of AWS EC2 instances.
@@ -76,7 +71,7 @@ The area chart plot type appears as line chart with the area between the line an
 Column charts
 =============
 
-The column chart plot type appears as shaded vertical bars starting at the x-axis and ending at the data point value. By default, each plot point is shown as an independent bar.
+Use column charts to display your data as shaded vertical bars starting at the x-axis and ending at the data point value. By default, each plot point is shown as an independent bar.
 
 You can also stack column charts. The bars representing each value appear as vertical stacks at the corresponding time value along the x-axis.
 
@@ -88,9 +83,9 @@ You can also stack column charts. The bars representing each value appear as ver
 Histogram charts
 ================
 
-Histograms appear as colored rectangular bins indicating how many plot points are at that value. For example, a green bar might indicate a higher density of plot points with the relevant value than a red bar. Alternatively, darker shades of a single color might indicate a higher density of plot points for a value than a lighter shade of that same color.
+Use histogram charts to display your data as rectangular bars indicating how many plot points are at that value. For example, a green bar might indicate a higher density of plot points with the relevant value than a red bar. Alternatively, darker shades of a single color might indicate a higher density of plot points for a value than a lighter shade of that same color.
 
-The values of a histogram plot display in a random order by default. You can organize them into two grouping levels to clarify the data. For example, you can group data by AWS region or availability zone to make it easier to track performance within each region or availability zone.
+By default, the values of a histogram plot display in a random order. You can organize them into two grouping levels to clarify the data. For example, you can group data by AWS region or availability zone to make it easier to track performance within each region or availability zone.
 
   .. image:: /_images/data-visualization/charts/histogram-chart.png
      :alt: This screenshot shows a histogram chart illustrating CPU percentages used for a set of AWS EC2 instances.
@@ -101,7 +96,7 @@ The values of a histogram plot display in a random order by default. You can org
 List charts
 ===========
 
-Use this chart type to display current data values in a list format. By default, the name of each value in the chart reflects the name of the plot and any associated analytics. To avoid having the raw metric name displayed on the chart, give the plot a meaningful name.
+Use list charts to display current data values in a list format. By default, the name of each value in the chart reflects the name of the plot and any associated analytics. To avoid having the raw metric name displayed on the chart, give the plot a meaningful name.
 
 A list chart can display up to 100 items at a time.
 
@@ -212,7 +207,7 @@ Secondary visualizations help you see trends in a list chart:
 Single value charts
 ===================
 
-Use this chart type when you want to see a single number in a large font that represents the value of a single data point on a plot line. In most cases, you use this type of chart to display important metrics as a single number.
+Use single value charts when you want to see a single number in a large font that represents the value of a single data point on a plot line. In most cases, you use this type of chart to display important metrics as a single number.
 
 For example, use single value charts in a summary dashboard shown on a wall TV. The dashboard can display the number of active hosts, active processes, or number of requests served in the past 24 hours.
 
@@ -286,7 +281,7 @@ To help describe the values in the heatmap, add prefix and suffix strings:
 Event feed charts
 =================
 
-Use this chart type when you want to see a list of events on your dashboard. An event feed chart can display one or more event types depending how you specify the criteria.
+Use event feed charts when you want to see a list of events on your dashboard. An event feed chart can display one or more event types depending how you specify the criteria.
 
   .. image:: /_images/data-visualization/charts/event-feed-chart.png
      :alt: This screenshot shows an event feed chart illustrating a series of cleared, critical, and custom events.
