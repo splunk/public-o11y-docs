@@ -118,7 +118,7 @@ You can sort on one of the dimensions in the MTS for the chart, a data point, th
      - :strong:`Description`
 
    * - ``<dimension-name>``
-     - ``<dimension-name>``
+     - Dimension name
      - One of the dimensions of the displayed MTS. To see the available dimensions, follow the instructions following this table.
 
    * - ``sf_metric``
