@@ -52,7 +52,7 @@ Customers who meet the following criteria can access centralized user and role m
 How to set up centralized user and role management
 =================================================================================================
 
-You can set up centralized user and role management whether you already have Splunk Observability Cloud or not. If want to set up centralized user and role management but you do not have Splunk Observability Cloud yet, see the next section, :ref:`rbac-new-o11y-customers`. If you already have Splunk Observability Cloud, follow the instructions in :ref:`rbac-existing-o11y-customers` to set up centralized user and role management.
+You can set up centralized user and role management whether you already have Splunk Observability Cloud or not. If you want to set up centralized user and role management but you do not have Splunk Observability Cloud yet, see the next section, :ref:`rbac-new-o11y-customers`. If you already have Splunk Observability Cloud, follow the instructions in :ref:`rbac-existing-o11y-customers` to set up centralized user and role management.
 
 .. _rbac-new-o11y-customers:
 
