@@ -29,7 +29,7 @@ Connect AWS to Splunk Observability Cloud
   GetMetricStatistics API deprecation notice <aws-api-notice>
   aws-tutorial/about-aws-tutorial.rst
 
-You have several data ingestion and connection methods when it comes to monitoring your Amazon Web Services (AWS) data in Splunk Observability Cloud. 
+Splunk Observability Cloud offers you several data ingestion and connection methods to monitor your Amazon Web Services (AWS) data. 
 
 .. note:: If you want to send AWS data to the Splunk platform, use the Splunk add-on. Learn more at :new-page:`Splunk Add-on for AWS <https://docs.splunk.com/Documentation/AddOns/released/AWS/Description>`.
 
