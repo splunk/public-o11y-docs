@@ -11,7 +11,7 @@ If you experience difficulties when connecting Splunk Observability Cloud to you
 
 See also the following docs:
 
-* :ref:`aws-ts-metric-streams` for issues specific Splunk-managed Metric Streams. 
+* :ref:`aws-ts-metric-streams` for issues specific to Splunk-managed Metric Streams. 
 * :ref:`aws-ts-ms-aws` for issues specific to AWS-managed Metric Streams.
 
 If issues persist, you can also contact :ref:`support`.  
