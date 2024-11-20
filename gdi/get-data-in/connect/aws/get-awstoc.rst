@@ -23,12 +23,13 @@ Connect AWS to Splunk Observability Cloud
   Send AWS logs to Splunk Platform <aws-logs>
   Next steps <aws-post-install>
   Troubleshoot your AWS integration <aws-troubleshooting>
-  Troubleshoot Metric Streams <aws-ts-metric-streams>
+  Troubleshoot Splunk-managed Metric Streams <aws-ts-metric-streams>
+  Troubleshoot AWS-managed Metric Streams <aws-ts-ms-aws>
   aws-recommended-stats.rst
   GetMetricStatistics API deprecation notice <aws-api-notice>
   aws-tutorial/about-aws-tutorial.rst
 
-You have several data ingestion and connection methods when it comes to monitoring your Amazon Web Services (AWS) data in Splunk Observability Cloud. 
+Splunk Observability Cloud offers you several data ingestion and connection methods to monitor your Amazon Web Services (AWS) data. 
 
 .. note:: If you want to send AWS data to the Splunk platform, use the Splunk add-on. Learn more at :new-page:`Splunk Add-on for AWS <https://docs.splunk.com/Documentation/AddOns/released/AWS/Description>`.
 
@@ -137,7 +138,9 @@ To manage the amount of data to import, see :ref:`aws-infra-import`.
     <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
+If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
+
+If you're using Metric Streams, by default Splunk Observability Cloud streams all stats.
 
 .. _aws-data-availability:
 

@@ -10,7 +10,7 @@ Metric categories
 
 These are the available categories for metrics in Splunk Observability Cloud:
 
-.. include:: /_includes/metric-categories.rst
+.. include:: /_includes/metric-classes.rst
 
 Identify and track the category of a metric
 ====================================================

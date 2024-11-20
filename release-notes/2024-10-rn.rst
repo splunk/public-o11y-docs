@@ -1,0 +1,58 @@
+.. _2024-10-rn:
+
+************
+October 2024
+************
+
+Splunk Observability Cloud released the following new features and enhancements in October 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+.. _2024-10-23-rn:
+
+October 23, 2024
+================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Token management improvements
+     - Admin and power users have a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform. For more information, see :ref:`admin-org-tokens`.
+
+.. _2024-10-02-rn:
+
+October 2, 2024
+===============
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - SignalFlow editor for custom metrics SLO
+     - You can use SignalFlow to define metrics and filters when creating a custom metric SLO. For more information, see :ref:`create-slo`.
+
+.. _2024-10-01-rn:
+
+October 1, 2024
+===============
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Splunk virtual compute (SVC) optimization
+     - You can optimize SVC, resulting in performance improvements and cost savings, by using new :guilabel:`Play`, :guilabel:`Pause`, and :guilabel:`Run` search buttons in the UI. The default limit is 150,000 logs. For more information, see :ref:`logs-keyword`.
+   * - Kubernetes control plane metrics
+     - In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are available using OpenTelemetry Prometheus receivers that target Prometheus endpoints. For more information see :ref:`kubernetes-control-plane-prometheus`.
+   * - Data retention for archived metrics extended from 8 to 31 days
+     - To facilitate long-term data and historical trend analysis, you can store archived metrics for up to 31 days. You can also customize your restoration time window when creating exception rules.
+   * - Terraform implementation
+     - You can use Terraform to archive metrics and create exception rules, such as routing a subset of metrics to the real-time tier rather than the archival tier.

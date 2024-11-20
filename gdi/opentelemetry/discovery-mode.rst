@@ -66,6 +66,9 @@ Automatic discovery supports the following host services and applications:
    * - Service
      - Receiver
 
+   * - Apache Web Server
+     - Apache Web Server receiver. See :ref:`apache-receiver`.
+
    * - MySQL
      - MySQL receiver. See :ref:`mysql-receiver`
 
@@ -77,6 +80,9 @@ Automatic discovery supports the following host services and applications:
 
    * - NGINX
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`
+
+   * - RabbitMQ
+     - RabbitMQ receiver. See :ref:`rabbitmq-receiver`.
 
    * - Redis
      - Redis receiver. See :ref:`redis-receiver`

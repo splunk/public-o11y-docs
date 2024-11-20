@@ -7,6 +7,8 @@ Instrument your Ruby application for Splunk Observability Cloud
 .. meta:: 
     :description: Instrument your Ruby application using the OpenTelemetry instrumentation for Ruby and get your data into Splunk Observability Cloud.
 
+.. include:: /_includes/zero-code-info.rst
+    
 You can use the OpenTelemetry Collector to send traces from Ruby applications to Splunk APM. 
 
 .. _ruby-prereqs:

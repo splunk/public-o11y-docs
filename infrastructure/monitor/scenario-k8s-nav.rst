@@ -33,7 +33,7 @@ Isolate the problem area
 
 Using the hierarchical map, Kai drills down into the appropriate cluster and identifies the node with a failing pod. Kai can see that the pod is in a ``failed`` state.
 
-    .. image:: /_images/infrastructure/k8s-failed-pods.png
+    .. image:: /_images/images-navigators/k8s-failed-pods.png
        :width: 99%
        :alt: Kubernetes navigator showing issues with Kubernetes pods
 

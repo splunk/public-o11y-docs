@@ -7,6 +7,8 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS. Follow these steps to get started.
 
+.. include:: /_includes/zero-code-info.rst
+   
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
 You can install the .NET instrumentation manually or using the NuGet packages. The manual instructions include the option to use a guided setup. The NuGet packages are the best method for avoiding dependency version conflicts, but are not well-suited for instrumenting multiple applications running on the same machine. Review the :ref:`pre-checks <dotnet-pre-checks>` and the various installation procedures on this page to identify the best installation method for your application environment.
@@ -25,8 +27,8 @@ The following scenarios are ideal for using the NuGet packages:
 
 * You control the application build but not the machine or container where the application is running.
 * You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
-* You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
-* You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
+* You want to facilitate developer experimentation with zero-code instrumentation through NuGet packages.
+* You need to solve version conflicts between the dependencies used by the application and the zero-code instrumentation.
 
 Don't use the NuGet packages if any of the following apply to your environment:
 
@@ -38,7 +40,7 @@ If your scenario isn't compatible with NuGet package installation, install the d
 
 .. note::
 
-   For advanced configuration of the .NET automatic instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+   For advanced configuration of the .NET zero-code instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Instrument your application using the NuGet packages
 ----------------------------------------------------
@@ -69,7 +71,7 @@ Alternatively, you can set the ``SkippedInstrumentation`` property from the term
 
 To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. For more information, see :new-page:`.NET RID Catalog <https://learn.microsoft.com/en-us/dotnet/core/rid-catalog>` in the .NET documentation.
 
-Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
+Both self-contained and framework-dependent applications are compatible with zero-code instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
 
 Run the instrumented application
 --------------------------------
@@ -78,11 +80,11 @@ The instrumentation procedure in the previous section produces launch scripts in
 
 #. Identify the launch script in your build output.
 
-#. (Optional) If you want to verify that the instrumentation is working by viewing the telemetry data output in your console, set the following environment variables to ``true``:
+#. (Optional) If you want to view telemetry data output in your console to verify that instrumentation is working, add ``console`` to the value (for example ``OTEL_TRACES_EXPORTER=otlp,console``) of the following environment variables:
 
-   * ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
-   * ``OTEL_DOTNET_AUTO_METRICS_CONSOLE_EXPORTER_ENABLED``
-   * ``OTEL_DOTNET_AUTO_LOGS_CONSOLE_EXPORTER_ENABLED``
+   * ``OTEL_TRACES_EXPORTER``
+   * ``OTEL_METRICS_EXPORTER``
+   * ``OTEL_LOGS_EXPORTER``
 
 #. Run the instrumented application using the launch script:
 
@@ -116,14 +118,14 @@ Consider using the NuGet packages if any of the following apply to your environm
 
 * You control the application build but not the machine or container where the application is running.
 * You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
-* You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
-* You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
+* You want to facilitate developer experimentation with zero-code instrumentation through NuGet packages.
+* You need to solve version conflicts between the dependencies used by the application and the zero-code instrumentation.
 
 To install the distribution using the official NuGet packages, see :ref:`otel-dotnet-nuget-pkg`.
 
 .. note::
 
-   For advanced configuration of the .NET automatic instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+   For advanced configuration of the .NET zero-code instrumentation, such as changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Generate customized instructions using the guided setup
 -------------------------------------------------------
@@ -300,11 +302,11 @@ Linux
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
 
-#. Activate the automatic instrumentation:
+#. Activate the zero-code instrumentation:
 
    .. code-block:: shell
 
-      # Activate the automatic instrumentation
+      # Activate the zero-code instrumentation
       . $HOME/.splunk-otel-dotnet/instrument.sh
 
 #. Set the environment and service version resource attributes:
@@ -335,7 +337,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 Configure the instrumentation
 ---------------------------------------------
 
-For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+For advanced configuration of the .NET zero-code instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 Database Query Performance settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -362,7 +364,7 @@ To instrument applications or services running on Azure Web Apps, see :ref:`inst
 Offline installation for Windows
 ----------------------------------------------
 
-To install the .NET automatic instrumentation on Windows hosts that are offline, follow these steps:
+To install the .NET zero-code instrumentation on Windows hosts that are offline, follow these steps:
 
 #. Download the following files from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>` and copy them to the offline server:
 

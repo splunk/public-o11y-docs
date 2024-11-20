@@ -86,6 +86,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 2. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
+.. _existing-setup-unified-identity:
 
 Set up Unified Identity for existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
@@ -163,7 +164,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
               "status": "SUCCESS"
 
 
-Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Managemen > Available integrations` in Splunk Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
+Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Management > Available integrations` in Splunk Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
 
 
 .. _unified-id-user-provisioning:
@@ -171,8 +172,9 @@ Users will receive an email telling them to authenticate to Splunk Observability
 User provisioning
 ==========================================================================================
 
-To benefit from Unified Identity, all users must have a Splunk Cloud Platform user with the ``o11y_access`` role.
+To benefit from Unified Identity, all users must have a Splunk Cloud Platform user with the ``o11y_access`` role. 
 
+If your organization uses Okta for SSO (Single Sign On), the ``o11y_access`` role is mapped to the Okta group. The Okta admin must add the ``o11y_access`` role to the Okta group to complete the authorization process. If the Okta admin is not available, contact Splunk Support to enable local authentication.
 
 .. _existing-scp-users:
 
