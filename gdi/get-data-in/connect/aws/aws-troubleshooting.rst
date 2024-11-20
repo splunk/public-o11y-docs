@@ -9,7 +9,7 @@ Troubleshoot your AWS integration
 
 If you experience difficulties when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account or using the platform, read on to troubleshoot common issues. 
 
-See also:
+See also the following docs:
 
 * :ref:`aws-ts-metric-streams` for issues specific Splunk-managed Metric Streams. 
 * :ref:`aws-ts-ms-aws` for issues specific to AWS-managed Metric Streams.
