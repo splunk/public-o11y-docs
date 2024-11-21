@@ -95,7 +95,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
 
-6. Next, in Splunk Cloud Platform, go to :guilabel:`Settings` then :guilabel:` Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created in the preceeding steps for the Log Observer Connect service account.
+6. Next, in Splunk Cloud Platform, go to :guilabel:`Settings` then :guilabel:`Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created in the preceeding steps for the Log Observer Connect service account.
    
       .. image:: /_images/logs/CreateUser.png
          :width: 100%
