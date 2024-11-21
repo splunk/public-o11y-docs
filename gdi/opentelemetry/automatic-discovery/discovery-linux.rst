@@ -1,7 +1,7 @@
 .. _discovery-linux:
 
 ************************************************************************
-Automatic discovery and instrumentation for Linux
+Automatic discovery and zero-code instrumentation for Linux
 ************************************************************************
 
 .. meta:: 
@@ -10,24 +10,16 @@ Automatic discovery and instrumentation for Linux
 .. toctree::
     :hidden:
 
-    Automatic instrumentation <linux/linux-backend>
+    Zero-code instrumentation <linux/linux-backend>
     Automatic discovery <linux/linux-third-party>
     Advanced customization <linux/linux-advanced-config>
 
-Automatic discovery and configuration for Linux automatically finds services running in your Linux environment and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
-
-Used alongside automatic instrumentation, you don't have to manually instrument or configure your applications before deploying them. 
+.. include:: /_includes/gdi/auto-discovery-intro.rst
 
 .. raw:: html
 
     <h2>Get started</h2>
 
-Automatic instrumentation for Linux supports back-end applications written in Java, Node.js, and .NET and automatic discovery supports third-party services such as databases, web servers, and message queues.
+To enable the Collector's zero-code instrumentation of back-end applications written in Java, Node.js, and .NET see :ref:`linux-backend-auto-discovery`. 
 
-.. note::
-
-   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for 8 back-end language runtimes. For more information, see :ref:`get-started-application`.
-
-To use automatic instrumentation for back-end applications, see :ref:`linux-backend-auto-discovery`. 
-
-To use automatic discovery and configuration with third-party applications, see :ref:`linux-third-party`.
+To use the Collector's automatic discovery of third-party applications in Linux environments see :ref:`linux-third-party`.

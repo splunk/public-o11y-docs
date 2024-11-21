@@ -1,7 +1,7 @@
 .. _discovery-kubernetes:
 
 ************************************************************************
-Automatic discovery and instrumentation for Kubernetes
+Automatic discovery and zero-code instrumentation for Kubernetes
 ************************************************************************
 
 .. meta:: 
@@ -10,27 +10,19 @@ Automatic discovery and instrumentation for Kubernetes
 .. toctree::
     :hidden:
 
-    Automatic instrumentation <k8s/k8s-backend>
+    Zero-code instrumentation <k8s/k8s-backend>
     Automatic discovery <k8s/k8s-third-party>
     Advanced customization <k8s/k8s-advanced-config>
     k8s/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial
 
-Automatic discovery and configuration for Kubernetes automatically finds services running in your Kubernetes environments and captures telemetry data from them. The Splunk Distribution of the OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
-
-Used alongside automatic instrumentation, you don't have to manually instrument or configure your applications before deploying them.
+.. include:: /_includes/gdi/auto-discovery-intro.rst
 
 .. raw:: html
 
     <h2>Get started</h2>
 
-Automatic instrumentation for Kubernetes supports back-end applications written in Java, Node.js, and .NET and automatic discovery supports third-party services such as databases and web servers.
+To enable the Collector's zero-code instrumentation of back-end applications written in Java, Node.js, and .NET see :ref:`k8s-backend-auto-discovery`. 
 
-.. note::
+To use the Collector's automatic discovery of third-party applications in Kubernetes environments see :ref:`k8s-third-party`.
 
-   When deploying automatic instrumentation using automatic discovery, only Java, Node.js, and .NET are supported. If you deploy automatic instrumentation independently of the Collector, Splunk Observability Cloud supports automatic instrumentation for 8 back-end language runtimes. For more information, see :ref:`get-started-application`.
-
-To use automatic instrumentation for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
-
-To use automatic discovery and configuration with third-party services, see :ref:`k8s-third-party`.
-
-For a walkthrough of how to use automatic instrumentation to instrument an application in a Kubernetees environment, see :ref:`k8s-advanced-auto-discovery-config`.
+For a walkthrough of how to use automatic instrumentation to instrument an application in a Kubernetes environment, see :ref:`k8s-advanced-auto-discovery-config`.
