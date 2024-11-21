@@ -113,14 +113,17 @@ For more information, see :ref:`get-started-rum`.
 .. raw:: html
 
    <embed>
-      <h3>OpenTelemetry receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h3>
+      <h3>Ingest data with OpenTelemetry<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-You can monitor your applications and services with native OpenTelementry receivers. Learn more at :ref:`OpenTelemetry receivers <otel-components-receivers>`.
-
-These are the available OpenTelemetry receivers:
+You can monitor your applications and services with the Collector and the following native :ref:`OpenTelemetry receivers <otel-components-receivers>`:
 
 .. include:: /_includes/gdi/otel-receivers-table.rst
+
+You can also use OpenTelemetry in these cases:
+
+* :ref:`get-started-dotnet-otel`
+* :ref:`get-started-istio`
 
 .. raw:: html
 
@@ -146,7 +149,7 @@ Browse available monitors by category:
 * :ref:`Applications: Orchestration <orchestration>`
 * :ref:`Applications: Prometheus <prometheus>`
 
-These are the available Smart Agent integrations:
+You can send metrics from these Smart Agent integrations to Splunk Observability Cloud:
 
 .. include:: /_includes/gdi/application-receiver-table.rst
 
