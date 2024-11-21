@@ -109,7 +109,7 @@ Splunk Observability Cloud sends an alert notification to the Microsoft Teams ch
 Update existing Microsoft Teams integration configurations for Office 365 connectors retirement
 =================================================================================================
 
-.. caution:: After December 31, 2024, Office 365 connectors in Microsoft Teams will be retired. 
+.. caution:: Office 365 connectors in Microsoft Teams will be retired. To see the latest update on the retirement date, search for "Retirement of Office 365 connectors within Microsoft Teams" in Microsoft Dev Blogs.
 
 To continue using the Microsoft Teams integration in Splunk Observability Cloud without any interruption, follow these steps:
 
