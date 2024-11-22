@@ -1,7 +1,7 @@
 .. _discovery-windows:
 
 ************************************************************************
-Automatic discovery and zero-code instrumentation for Windows
+Automatic discovery for Windows
 ************************************************************************
 
 .. meta:: 
@@ -10,10 +10,14 @@ Automatic discovery and zero-code instrumentation for Windows
 .. toctree::
     :hidden:
 
-    Zero-code instrumentation <windows/windows-backend>
+    Language runtimes <windows/windows-backend>
 
 .. include:: /_includes/gdi/auto-discovery-intro.rst
 
+.. raw:: html
+
+    <h2>Get started</h2>
+
 The Collector for Windows does not support automatic discovery of services.
 
-To enable the Collector's zero-code instrumentation of back-end applications written in .NET see :ref:`windows-backend-auto-discovery`.
+To enable the Collector's zero-code instrumentation of back-end applications written in .NET see :ref:`windows-backend-auto-discovery`. With this option you won't have to install and configure your instrumentation agents separately. 

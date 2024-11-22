@@ -16,7 +16,7 @@ Automatic discovery of apps and services
 
 .. include:: /_includes/gdi/auto-discovery-intro.rst
 
-The following diagram shows how automatic discovery and zero-code instrumentation find data sources:
+The following diagram shows how automatic discovery finds data sources:
 
 .. mermaid::
    
