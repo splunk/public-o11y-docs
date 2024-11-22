@@ -167,7 +167,7 @@ The following example shows how to scrape performance counters using different c
               attributes:
                 state: active
         - object: "Processor"
-          instances: [1, 2]
+          instances: ["0", "1"]
           counters:
             - name: "% Idle Time"
               metric: processor.time
