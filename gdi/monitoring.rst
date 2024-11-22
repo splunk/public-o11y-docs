@@ -28,8 +28,8 @@ These application receivers gather metrics from their associated monitoring appl
 * :ref:`jaeger-grpc`
 * :ref:`nagios`
 * :ref:`signalfx-forwarder`
-* :ref:`telegraf-win-perf-counters`
 * :ref:`telegraf`
+* :ref:`telegraf-win-perf-counters`
 
 These exporters determine where to send the received data.
 
