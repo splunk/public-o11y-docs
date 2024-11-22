@@ -53,6 +53,8 @@ The usage analytics home page contains the following visualizations:
 .. image:: /_images/images-metrics/usage-analytics-home-page.png
   :alt: The usage analytics home page, which displays the total MTS count, trends for hourly MTS count, and metrics with the highest utilization.
 
+.. note:: Usage analytics doesn't show APM Monitoring MetricSets or RUM Monitoring MetricSets.
+  
 .. _mua-metrics-table:
 
 Understand metric usage with the metrics table 
@@ -68,7 +70,7 @@ The metric usage table displays the following fields:
     * - Metric name
       - The name of the metric.
     * - Billing class
-      - Class of metric for billing purposes (host, billing, or custom). To learn more about billing classes, see :ref:`metric-categories`.
+      - Class of metric for billing purposes (host, billing, or custom). Usage analytics doesn't show APM Monitoring MetricSets or RUM Monitoring MetricSets. To learn more about billing classes, see :ref:`metric-categories`.
     * - Utilization
       - Whether the metric is used. "Unused" indicates that the metric is producing MTS, but these values aren't utilized in Splunk Observability Cloud.
     * - Utility score
