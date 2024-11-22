@@ -22,4 +22,4 @@ Automatic discovery and zero-code instrumentation for Linux
 
 To enable the Collector's zero-code instrumentation of back-end applications written in Java, Node.js, and .NET see :ref:`linux-backend-auto-discovery`. 
 
-To use the Collector's automatic discovery of third-party applications in Linux environments see :ref:`linux-third-party`.
+To use the Collector's automatic discovery and configuration of third-party applications in Linux environments see :ref:`linux-third-party`.
