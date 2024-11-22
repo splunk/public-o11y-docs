@@ -21,7 +21,7 @@ Automatic discovery and zero-code instrumentation for Kubernetes
 
     <h2>Get started</h2>
 
-To enable the Collector's zero-code instrumentation of back-end applications written in Java, Node.js, and .NET see :ref:`k8s-backend-auto-discovery`. 
+To enable the zero-code instrumentation of back-end applications written in Java, Node.js, and .NET with the Collector without installing and configuring instrumentation agents separately see :ref:`k8s-backend-auto-discovery`. 
 
 To use the Collector's automatic discovery of third-party applications in Kubernetes environments see :ref:`k8s-third-party`.
 
