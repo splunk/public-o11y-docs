@@ -73,6 +73,28 @@ If you're using a named instance on Windows, you need to specify a computer and 
           sqlserver.instance.name:
             enabled: true
 
+Enable resource attributes
+--------------------------------------------
+
+Some resource attributes, such as ``sqlserver.instance.name``, are disabled by default. 
+
+To enable them, specify the option in your config file: 
+
+.. code:: yaml
+
+  receivers:
+      sqlserver:
+        collection_interval: 10s
+      sqlserver/1:
+        collection_interval: 5s
+        username: sa
+        password: securepassword
+        server: 0.0.0.0
+        port: 1433
+        resource_attributes:
+          sqlserver.instance.name:
+            enabled: true
+
 Advanced configuration
 --------------------------------------------
 
