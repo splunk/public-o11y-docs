@@ -53,7 +53,7 @@ The usage analytics home page contains the following visualizations:
 .. image:: /_images/images-metrics/usage-analytics-home-page.png
   :alt: The usage analytics home page, which displays the total MTS count, trends for hourly MTS count, and metrics with the highest utilization.
 
-.. note:: Usage analytics doesn't show APM Monitoring MetricSets or RUM Monitoring MetricSets.
+.. note:: Usage analytics doesn't show APM Monitoring MetricSets or RUM Monitoring MetricSets. To learn more about usage analytics, see :ref:`metrics-usage-analytics-intro`.
   
 .. _mua-metrics-table:
 
