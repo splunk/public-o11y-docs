@@ -55,6 +55,8 @@ Next, include the receiver in the ``metrics`` pipeline of the ``service`` sectio
         receivers:
           - sqlserver
 
+.. caution:: To retrieve out-of-the-box content properly, you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. Read more at :ref:`mssql-server-receiver-ootb`.
+
 Configure a named instance on Windows
 --------------------------------------------
 
@@ -70,28 +72,6 @@ If you're using a named instance on Windows, you need to specify a computer and 
         resource_attributes:
           sqlserver.computer.name:
             enabled: true
-          sqlserver.instance.name:
-            enabled: true
-
-Enable resource attributes
---------------------------------------------
-
-Some resource attributes, such as ``sqlserver.instance.name``, are disabled by default. 
-
-To enable them, specify the option in your config file: 
-
-.. code:: yaml
-
-  receivers:
-      sqlserver:
-        collection_interval: 10s
-      sqlserver/1:
-        collection_interval: 5s
-        username: sa
-        password: securepassword
-        server: 0.0.0.0
-        port: 1433
-        resource_attributes:
           sqlserver.instance.name:
             enabled: true
 
@@ -121,7 +101,35 @@ Enable built-in content
 
 Splunk Observability Cloud provides built-in dashboards with charts that give you immediate visibility into the technologies and services being used in your environment. Learn more at :ref:`collector-builtin-dashboard`.
 
-For the MS SQL Server receiver out-of-the-box content to work properly, you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. See the configuration that enables built-in content at :new-page:`SQL Server discovery yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/confmapprovider/discovery/bundle/bundle.d/receivers/sqlserver.discovery.yaml>` in GitHub.
+.. caution:: For the MS SQL Server receiver out-of-the-box content to work properly, you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. 
+
+For more information:
+
+* See the configuration that enables built-in content at :new-page:`SQL Server discovery yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/confmapprovider/discovery/bundle/bundle.d/receivers/sqlserver.discovery.yaml>` in GitHub.
+
+* See the list of default and optional metrics at :new-page:`SQL server default and optional metrics <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/sqlserverreceiver/documentation.md#optional-metrics>` in GitHub. 
+
+Enable metrics and resource attributes
+--------------------------------------------
+
+Some resource attributes, such as ``sqlserver.instance.name``, are disabled by default. 
+
+To enable them, specify the option in your config file: 
+
+.. code:: yaml
+
+  receivers:
+      sqlserver:
+        collection_interval: 10s
+      sqlserver/1:
+        collection_interval: 5s
+        username: sa
+        password: securepassword
+        server: 0.0.0.0
+        port: 1433
+        resource_attributes:
+          sqlserver.instance.name:
+            enabled: true
 
 .. _mssql-server-receiver-settings:
 
