@@ -22,7 +22,7 @@ To use information such as login credentials, API keys, or other test data, you 
 
 What happens when you conceal a global variable?
 ==================================================
-When you :strong:`conceal` a global variable, its value is permanently concealed from all users of the account. This lets you create and save variables such as test login credentials, API keys, and other sensitive information to use in browser and API tests. 
+When you conceal a global variable, its value is permanently concealed from all users of the account. This lets you create and save variables such as test login credentials, API keys, and other sensitive information to use in browser and API tests. 
 
 To preserve security, the value of a concealed global variable is never revealed to any user of the account after it has been created and saved. The value is scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages.  
 
