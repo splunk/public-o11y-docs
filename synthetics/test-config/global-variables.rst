@@ -16,7 +16,7 @@ Global variables are stored securely in Splunk Synthetic Monitoring, but the key
 
 To preserve your account's security, don't use production credentials, real credit card information, or other sensitive data in global variables for your tests. Instead, use placeholder credentials to test workflows that require you to enter information.
 
-To use information such as test login credentials, API keys, or other test data, you can permanently conceal the value of a global variable from all users of your account. 
+To use information such as login credentials, API keys, or other test data, you can permanently conceal the value of a global variable from all users of your account. 
 
 .. _concealed-gv:
 
