@@ -13,7 +13,7 @@ Troubleshoot the Collector
     :hidden:
 
     General troubleshooting <splunk-collector-troubleshooting.rst>
-    Logs troubleshooting <troubleshoot-logs.rst>
+    Troubleshoot log collection <troubleshoot-logs.rst>
     Support checklist <support-checklist.rst>
 
 .. note:: To learn about the Collector's internal logs and other telemetry refer to the OpenTelemetry project :new-page:`Internal telemetry <https://opentelemetry.io/docs/collector/internal-telemetry/>` documentation.

@@ -22,7 +22,7 @@ For more information on log collection see:
       - Docs
 
     * - Kubernetes
-      - * :ref:`kubernetes-config-logs`
+      - :ref:`kubernetes-config-logs`
 
     * - Linux
       - :ref:`linux-config-logs`
