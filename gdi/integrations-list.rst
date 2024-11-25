@@ -114,13 +114,7 @@ For more information, see :ref:`get-started-rum`.
 .. raw:: html
 
    <embed>
-      <h3>Ingest applications and services data with OpenTelemetry<a name="native-otel" class="headerlink" href="#native-otel" title="Permalink to this headline">¶</a></h3>
-   </embed>
-
-.. raw:: html
-
-   <embed>
-      <h4>Native OTel receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h4>
+      <h3>Native OTel receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h3>
    </embed>
 
 You can monitor your applications and services with the Collector and the following native :ref:`OpenTelemetry receivers <otel-components-receivers>`:
@@ -130,10 +124,10 @@ You can monitor your applications and services with the Collector and the follow
 .. raw:: html
 
    <embed>
-      <h4>Other ingestion methods<a name="native-otel-other" class="headerlink" href="#native-otel-other" title="Permalink to this headline">¶</a></h4>
+      <h3>Other ingestion methods<a name="native-otel-other" class="headerlink" href="#native-otel-other" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-You can also send data to Splunk Observability Cloud with the following methods:
+You can also send data to Splunk Observability Cloud with OpenTelemetry with the following options:
 
 * :ref:`prometheus-generic`
 
