@@ -1,7 +1,7 @@
 .. _prometheus-generic:
 
 *************************************************************
-Configure applications with Prometheus metrics
+Monitor applications with Prometheus metrics
 *************************************************************
 
 .. meta::
