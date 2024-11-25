@@ -55,7 +55,7 @@ Next, include the receiver in the ``metrics`` pipeline of the ``service`` sectio
         receivers:
           - sqlserver
 
-.. caution:: To retrieve out-of-the-box content properly, you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. Read more at :ref:`mssql-server-receiver-ootb`.
+.. caution:: To retrieve out-of-the-box content properly you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. Read more at :ref:`mssql-server-receiver-ootb`.
 
 Configure a named instance on Windows
 --------------------------------------------
@@ -101,7 +101,7 @@ Enable built-in content
 
 Splunk Observability Cloud provides built-in dashboards with charts that give you immediate visibility into the technologies and services being used in your environment. Learn more at :ref:`collector-builtin-dashboard`.
 
-.. caution:: For the MS SQL Server receiver out-of-the-box content to work properly, you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. 
+.. caution:: For the MS SQL Server receiver out-of-the-box content to work properly you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. 
 
 For more information:
 
