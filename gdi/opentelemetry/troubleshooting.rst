@@ -13,10 +13,10 @@ Troubleshoot the Collector
     :hidden:
 
     General troubleshooting <splunk-collector-troubleshooting.rst>
-    Logs troubleshooting <troubleshoot-logs.rst>
+    Troubleshoot log collection <troubleshoot-logs.rst>
     Support checklist <support-checklist.rst>
 
-.. note:: To activate the Collector's debug logging, see the :new-page:`OpenTelemetry project documentation in GitHub <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#logs>`.
+.. note:: To learn about the Collector's internal logs and other telemetry refer to the OpenTelemetry project :new-page:`Internal telemetry <https://opentelemetry.io/docs/collector/internal-telemetry/>` documentation.
 
 Here are some common issues that you might encounter when using the OpenTelemetry Collector and the Splunk Distribution of the OpenTelemetry Collector, and tips on how to address them. 
 
@@ -25,9 +25,11 @@ Here are some common issues that you might encounter when using the OpenTelemetr
 * :ref:`otel-support-checklist`
 * :ref:`support`
 
-To :ref:`troubleshoot-k8s-landing`, see:
+For :ref:`troubleshooting specific to the Collector for Kubernetes <troubleshoot-k8s-landing>` see:
 
 * :ref:`troubleshoot-k8s`
 * :ref:`troubleshoot-k8s-sizing`
 * :ref:`troubleshoot-k8s-missing-metrics`
 * :ref:`troubleshoot-k8s-container`
+
+

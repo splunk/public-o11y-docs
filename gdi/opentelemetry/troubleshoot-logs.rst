@@ -9,16 +9,27 @@ Troubleshoot log collection
 
 This document describes common issues related to log collection with the Collector.
 
-.. note:: 
-  
-  To collect logs see:
-
-  * :ref:`kubernetes-config-logs`
-  * :ref:`linux-config-logs`
-  * :ref:`windows-config-logs`
-  
 To troubleshoot the health and performance of the Collector see the :new-page:`OpenTelemetry Project troublehooting docs <https://opentelemetry.io/docs/collector/troubleshooting>`. It includes information about troubleshooting tools and debugging.
 
+For more information on log collection see:
+
+.. list-table::
+    :width: 100%
+    :widths: 25 75
+    :header-rows: 1
+
+    * - Platform
+      - Docs
+
+    * - Kubernetes
+      - :ref:`kubernetes-config-logs`
+
+    * - Linux
+      - :ref:`linux-config-logs`
+
+    * - Windows
+      - :ref:`windows-config-logs`
+  
 My source isn't generating logs
 =========================================
 
