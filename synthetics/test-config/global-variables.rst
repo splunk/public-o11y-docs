@@ -1,28 +1,28 @@
 .. _global-variables:
 
 *****************************************
-Create and use Global Variables 
+Create and use global variables 
 *****************************************
 
 .. meta::
     :description: Define a variable that you can use in multiple browser and API tests in Splunk Synthetic Monitoring.
 
-Define a global variables once, then you can use the variable across all of your Browser and API tests.
+Define a global variable once, and then you can use the variable across all of your browser and API tests.
 
 
-How can you use global variables?
+How can you use a global variable?
 ===================================
-Global variables are stored securely in the Splunk Synthetic Monitoring platform, but the keys and values of all global variables in your account are visible to all users. 
+Global variables are stored securely in Splunk Synthetic Monitoring, but the keys and values of all global variables in your account are visible to all users. 
 
-To preserve your account's security, don't use production credentials, real credit card information, or other sensitive data in global variables for your checks. Instead, try using placeholder credentials to test workflows that require information to be entered during a test.
+To preserve your account's security, don't use production credentials, real credit card information, or other sensitive data in global variables for your tests. Instead, use placeholder credentials to test workflows that require you to enter information.
 
-To use data such as test login credentials, API keys, or other test information, you can permanently conceal the value of a global variable from all users of your account. 
+To use information such as test login credentials, API keys, or other test data, you can permanently conceal the value of a global variable from all users of your account. 
 
 .. _concealed-gv:
 
 What happens when you conceal a global variable?
 ==================================================
-When you :strong:`conceal` a global variable, its value is permanently concealed from all users of the account. This lets you create and save variables such as test login credentials, API keys, and other sensitive information to use in Browser and API tests. 
+When you :strong:`conceal` a global variable, its value is permanently concealed from all users of the account. This lets you create and save variables such as test login credentials, API keys, and other sensitive information to use in browser and API tests. 
 
 To preserve security, the value of a concealed global variable is never revealed to any user of the account after it has been created and saved. The value is scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages.  
 
@@ -49,9 +49,9 @@ Once you're in the :guilabel:`Add global variable` dialog box, enter the followi
 #. Once you're satisfied with your global variable, select :guilabel:`Add`. 
 
 
-Edit a Global Variable
+Edit a global variable
 ====================================
-To edit the key or description of a global variable, visit the global variables page and edit within the field. Select :guilabel:`Save` when you're finished editing.
+To edit the key or description of a global variable, visit the :guilabel:`Global variables` page and edit within the field. Select :guilabel:`Save` when you're finished editing.
 
 Editing the value of a saved concealed global variable clears the previous value. You must provide a new value and select :guilabel:`Save` to apply it.
   
@@ -59,19 +59,19 @@ Editing the value of a saved concealed global variable clears the previous value
 
 Use a global variable in a synthetic test
 =================================================
-You can use a global variable to fill in fields in the :guilabel:`Steps` and :guilabel:`synthetic transactions` of a Browser test, or in the requests of an API test. Global variables cannot be used in cookies. 
+You can use a global variable to fill in fields in the :guilabel:`Steps` and :guilabel:`synthetic transactions` of a browser test, or in the requests of an API test. Global variables cannot be used in cookies. 
 
 While creating or editing a test, the right-hand :guilabel:`Variables` tab provides list of built-in variables and global variables you can use. Select the name of a variable to copy it to your keyboard. 
 
 .. _ gv-browser-test:
 
-Use a global variable in a Browser test
+Use a global variable in a browser test
 --------------------------------------------
-Follow these steps to add a variable to your Browser test:
+Follow these steps to add a variable to your browser test:
 
-#. While creating or editing a transactional Browser test, go to your :guilabel:`Steps`.
+#. While creating or editing a transactional browser test, go to your :guilabel:`Steps`.
 #. Under :guilabel:`Action`, select :guilabel:`Fill in field` from the dropdown menu. 
-#. Under :guilabel:`Value`, enter the key for the global variable you want to use, use the ``env.`` prefix and enclosed in double curly braces. For example, to reference a global variable with the key dev-username, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
+#. Under :guilabel:`Value`, enter the key for the global variable you want to use, use the ``env.`` prefix and enclosed in double curly braces. For example, to reference a global variable with the key ``dev-username``, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
 #. Finish editing or creating the test.
 #. :guilabel:`Save` your test. 
 
@@ -85,7 +85,7 @@ You can also use a global variable to fill in any field in an API test. For inst
 Follow these steps to add a variable to your API test:
 
 #. While creating or editing an API test, go to your :guilabel:`Requests`.
-#. In a variable field for any setup, request, or validation step, enter the key for the global variable you want to use, use the ``env.`` prefix and enclosed in double curly braces.  For example, to reference a global variable with the key ``staging-url``, enter ``{{env.staging-url}}`` in the field. 
+#. In a variable field for any setup, request, or validation step, enter the key for the global variable you want to use, prefixed with ``env.`` prefix and enclosed in double curly braces.  For example, to use a global variable with the key ``staging-url``, enter ``{{env.staging-url}}`` in the field. 
 #. Finish editing or creating the test.
 #. :guilabel:`Save` your test. 
 
