@@ -7,11 +7,13 @@ Troubleshoot the Splunk OpenTelemetry Collector
 .. meta::
       :description: Describes known issues when using the Splunk Distribution of OpenTelemetry Collector.
 
+.. caution:: Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
+
 See the following issues and workarounds for the Splunk Distribution of the OpenTelemetry Collector.
 
-.. note:: See also the :new-page:`OpenTelemetry Project troublehooting docs <https://opentelemetry.io/docs/collector/troubleshooting>`.
+To understand how the Collector implements security see :ref:`otel-security`.
 
-.. caution:: Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
+To learn about the Collector's internal logs and other telemetry refer to the OpenTelemetry project :new-page:`Internal telemetry <https://opentelemetry.io/docs/collector/internal-telemetry/>` documentation.
 
 The Collector isn't behaving as expected
 =================================================

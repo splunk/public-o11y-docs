@@ -11,11 +11,11 @@ This document describes common issues related to log collection with the Collect
 
 To troubleshoot the health and performance of the Collector see the :new-page:`OpenTelemetry Project troublehooting docs <https://opentelemetry.io/docs/collector/troubleshooting>`. It includes information about troubleshooting tools and debugging.
 
-For more information on log collection and log collection troubleshooting see also:
+For more information on log collection see:
 
 .. list-table::
     :width: 100%
-    :widths: 40 60
+    :widths: 25 75
     :header-rows: 1
 
     * - Platform
@@ -23,11 +23,6 @@ For more information on log collection and log collection troubleshooting see al
 
     * - Kubernetes
       - * :ref:`kubernetes-config-logs`
-        * :ref:`troubleshoot-k8s-landing`
-        * :ref:`troubleshoot-k8s`
-        * :ref:`troubleshoot-k8s-sizing`
-        * :ref:`troubleshoot-k8s-missing-metrics`
-        * :ref:`troubleshoot-k8s-container`
 
     * - Linux
       - :ref:`linux-config-logs`
