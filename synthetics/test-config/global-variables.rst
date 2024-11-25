@@ -71,7 +71,7 @@ Follow these steps to add a variable to your browser test:
 
 #. While creating or editing a transactional browser test, go to your :guilabel:`Steps`.
 #. Under :guilabel:`Action`, select :guilabel:`Fill in field` from the dropdown menu. 
-#. Under :guilabel:`Value`, enter the key for the global variable you want to use, prefixed with ``env.`` and enclosed in double curly braces. For example, to reference a global variable with the key ``dev-username``, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
+#. Under :guilabel:`Value`, enter the key for the global variable you want to use, prefixed with ``env.`` and enclosed in double curly braces. For example, to use a global variable with the key ``dev-username``, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
 #. Finish editing or creating the test.
 #. :guilabel:`Save` your test. 
 
