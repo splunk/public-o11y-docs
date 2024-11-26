@@ -19,7 +19,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Windows <collector-windows/collector-windows-intro.rst> 
     Splunk Add-On for OpenTelemetry Collector <collector-addon/collector-addon-intro.rst>    
     Other deployment tools: ECS EC2, Fargate, Nomad, PCF <deployments/otel-deployments.rst>  
-    Automatic discovery and configuration <discovery-mode.rst>
+    Automatic discovery of apps and services <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
@@ -272,7 +272,7 @@ The Collector also offers a :ref:`zPages extension <zpages-extension>`, which pr
 After installing the Collector, read :ref:`otel-understand-use`.  
 
 * See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. For example, learn how to :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-* Learn about automatic discovery and configuration (formerly zero configuration auto instrumentation) to detect telemetry data. Automatic discovery allows the Collector to automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`discovery_mode`.
+* Learn about automatic discovery and zero-code instrumentation (formerly zero configuration auto instrumentation) to detect telemetry data. Automatic discovery allows the Collector to automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`discovery_mode`.
 
 For more information see also:
 

@@ -1,33 +1,33 @@
 .. _k8s-backend-auto-discovery:
 
 ********************************************************************************
-Automatic discovery and configuration for back-end applications in Kubernetes
+Automatic instrumentation for back-end applications in Kubernetes
 ********************************************************************************
 
 .. meta:: 
-    :description: Get started with automatic discovery and configuration for back-end applications and language runtimes in a Kubernetes environment.
+    :description: Get started with automatic instrumentation for back-end applications and language runtimes in a Kubernetes environment.
 
-When using automatic discovery and configuration, the Splunk Distribution of OpenTelemetry Collector automatically detects back-end applications running in your Kubernetes environment. 
+When using automatic instrumentation, the Splunk Distribution of OpenTelemetry Collector automatically detects back-end applications running in your Kubernetes environment. 
 
-By deploying the Collector with automatic discovery, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
+By deploying the Collector with automatic instrumentation, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
 
-Automatic discovery for Kubernetes can detect and configure the following applications and language runtimes:
+Automatic instrumentation for Kubernetes can detect and configure the following applications and language runtimes:
 
 * Java
 * .NET
 * Node.js
 
-How automatic discovery for Kubernetes works
-================================================
+How automatic instrumentation for Kubernetes works
+==================================================
 
-Automatic discovery for Kubernetes operates as a Kubernetes DaemonSet that you install with Helm. Using Helm, you can specify which language runtimes you want automatic discovery to find. After installation, Helm deploys a set of Kubernetes pods in your cluster, which includes the Splunk Distribution of OpenTelemetry Collector, the Kubernetes operator, and other supporting resources. 
+Automatic instrumentation for Kubernetes operates as a Kubernetes DaemonSet that you install with Helm. Using Helm, you can specify which language runtimes you want automatic instrumentation to find. After installation, Helm deploys a set of Kubernetes pods in your cluster, which includes the Splunk Distribution of OpenTelemetry Collector, the Kubernetes operator, and other supporting resources. 
 
 The Collector and Kubernetes operator listen for requests to your application and gather telemetry data upon detecting activity in your application. The Collector then sends this data to Splunk Application Performance Monitoring (APM).
 
 Get started
 ==============================
 
-To install automatic discovery for Kubernetes, complete the following steps:
+To install automatic instrumentation for Kubernetes, complete the following steps:
 
 #. :ref:`k8s-auto-discovery-deploy-helm-chart`
 #. :ref:`k8s-auto-discovery-verify-resources`
@@ -39,7 +39,7 @@ To install automatic discovery for Kubernetes, complete the following steps:
 Requirements
 ===============================================
 
-You need the following components to use automatic discovery for back-end Kubernetes applications:
+You need the following components to use automatic instrumentation for back-end Kubernetes applications:
 
 * Helm version 3 or higher.
 * Administrator access to your Kubernetes cluster and familiarity with your Kubernetes configuration.
@@ -297,7 +297,7 @@ The annotation you set depends on the language runtime you're using. You can set
                 - name: my-java-app
                     image: my-java-app:latest
 
-        Activate automatic discovery by adding ``instrumentation.opentelemetry.io/inject-java: "true"`` to the ``spec``:
+        Activate automatic instrumentation by adding ``instrumentation.opentelemetry.io/inject-java: "true"`` to the ``spec``:
 
         .. code-block:: yaml
             :emphasize-lines: 10
@@ -359,7 +359,7 @@ The annotation you set depends on the language runtime you're using. You can set
                           - name: my-dotnet-app
                             image: my-dotnet-app:latest
 
-                Activate automatic discovery by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
+                Activate automatic instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
 
                 .. code-block:: yaml
                     :emphasize-lines: 10,11
@@ -398,7 +398,7 @@ The annotation you set depends on the language runtime you're using. You can set
                            - name: my-dotnet-app
                              image: my-dotnet-app:latest
 
-                Activate automatic discovery by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
+                Activate automatic instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
 
                 .. code-block:: yaml
                   :emphasize-lines: 10,11
@@ -439,7 +439,7 @@ The annotation you set depends on the language runtime you're using. You can set
                   - name: my-nodejs-app
                     image: my-nodejs-app:latest
 
-        Activate automatic discovery by adding ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` to the ``spec``:
+        Activate automatic instrumentation by adding ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` to the ``spec``:
 
         .. code-block:: yaml
             :emphasize-lines: 10
@@ -475,7 +475,7 @@ Replace ``<application_language>`` with the language of the application you want
 Instrument applications in multi-container pods
 -------------------------------------------------
 
-By default, automatic discovery instruments the first container in the Kubernetes pod spec. You can specify multiple containers to instrument by adding an annotation.
+By default, automatic instrumentation instruments the first container in the Kubernetes pod spec. You can specify multiple containers to instrument by adding an annotation.
 
 The following example instruments Java applications running in the ``myapp`` and ``myapp2`` containers:
 
@@ -521,16 +521,16 @@ You can also instrument multiple containers with specific languages. To do so, s
             instrumentation.opentelemetry.io/inject-nodejs: "true"
             instrumentation.opentelemetry.io/python-container-names: "myapp3"
 
-Deactivate automatic discovery
+Deactivate automatic instrumentation
 -----------------------------------------------
 
-To deactivate automatic discovery, remove the annotation. The following command removes the annotation for automatic discovery, deactivating it:
+To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
 .. code-block:: bash
 
    kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-<application_language>"}]'
 
-Replace ``<application_language>`` with the language of the application for which you want to deactivate discovery.
+Replace ``<application_language>`` with the language of the application for which you want to deactivate instrumentation.
 
 Verify instrumentation
 ----------------------------------------
@@ -625,5 +625,5 @@ To troubleshoot common errors that occur when instrumenting applications, see th
 Learn more
 ===========================================================================
 
-* To learn more about how automatic discovery and configuration works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
+* To learn more about how automatic instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
 * See :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.

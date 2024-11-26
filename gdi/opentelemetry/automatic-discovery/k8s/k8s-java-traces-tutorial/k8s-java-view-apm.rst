@@ -35,4 +35,4 @@ Learn more
 
 See :ref:`get-started-apm` to learn how to use Splunk APM to gather insights about your data.
 
-See :ref:`discovery_mode` for more information about automatic discovery.
+See :ref:`discovery_mode` for more information about automatic discovery and automatic instrumentation.
