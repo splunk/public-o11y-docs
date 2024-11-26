@@ -70,44 +70,44 @@ The following example uses a static list of host names to configure the load bal
     receivers:
       otlp:
         protocols:
-        grpc:
+          grpc:
             endpoint: localhost:4317
-
+    
     processors:
-
+    
     exporters:
       loadbalancing:
         routing_key: "service"
         protocol:
-        otlp:
+          otlp:
             # all options from the OTLP exporter are supported
             # except the endpoint
-          timeout: 1s
+            timeout: 1s
         resolver:
           static:
             hostnames:
-            - backend-1:4317
-            - backend-2:4317
-            - backend-3:4317
-            - backend-4:4317
-            # Notice to config a headless service DNS in Kubernetes  
-            # dns:
-            #  hostname: otelcol-headless.observability.svc.cluster.local        
-
+              - backend-1:4317
+              - backend-2:4317
+              - backend-3:4317
+              - backend-4:4317
+          # Notice to config a headless service DNS in Kubernetes  
+          # dns:
+          #  hostname: otelcol-headless.observability.svc.cluster.local        
+    
     service:
       pipelines:
         traces:
-        receivers:
-          - otlp
-        processors: []
-        exporters:
-          - loadbalancing
+          receivers:
+            - otlp
+          processors: []
+          exporters:
+            - loadbalancing
         logs:
-        receivers:
-          - otlp
-        processors: []
-        exporters:
-          - loadbalancing
+          receivers:
+            - otlp
+          processors: []
+          exporters:
+            - loadbalancing
 
 Kubernetes resolver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
