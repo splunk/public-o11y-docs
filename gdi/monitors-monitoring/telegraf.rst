@@ -46,7 +46,7 @@ Run the following commands to install Telegraf from the InfluxData repository:
 
 Next, install the Telegraf Input plugin for the service you want to monitor. Available plugins include Chrony, Consul, Docker, Elasticsearch, Fluentd, GitHub, Jenkins, RabbitMQ or SQL. Find a complete list of Input plugins at :new-page:`Telegraf Input plugins <https://github.com/influxdata/telegraf/tree/master/plugins/inputs/exec>` in GitHub.
 
-For example, if you want to monitor Exec, use a setup like: 
+For example, if you want to monitor execute commands on every interval and parse metrics from their output with the exec input plugin, use a setup like: 
 
 .. code:: 
 
