@@ -11,8 +11,6 @@ Configure application receivers with Prometheus metrics
    :maxdepth: 4
    :hidden:
 
-   monitors-prometheus/prometheus-generic
-   opentelemetry/components/prometheus-receiver
    monitors-prometheus/prometheus-exporter
    monitors-prometheus/prometheus-go
    monitors-prometheus/prometheus-nginx-ingress
@@ -20,15 +18,14 @@ Configure application receivers with Prometheus metrics
    monitors-prometheus/prometheus-node
    monitors-prometheus/prometheus-velero
 
-You can use the OpenTelementry native Prometheus receiver to gather metrics from any software, tool or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. See more at :ref:`prometheus-receiver`.
+Splunk Observability Cloud offers the following OTel solutions to monitor applications and services that expose metrics in the Prometheus format:
 
-Splunk Observability Cloud offers the following solutions:
+* :ref:`prometheus-receiver`. You can use the OpenTelementry native Prometheus receiver to gather metrics from any software, tool or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. 
+* :ref:`prometheus-generic`.
 
-* :ref:`prometheus-generic`
-* :ref:`prometheus-receiver`
-* See a complete list of third-party applications compatible with Prometheus in :new-page:`Prometheus' official documentation <https://prometheus.io/docs/instrumenting/exporters/>`. 
+You can find the complete list of third-party applications compatible with Prometheus in :new-page:`Prometheus' official documentation <https://prometheus.io/docs/instrumenting/exporters/>`. 
 
-See also:
+The following Smart Agent monitors are also available:
 
 * :ref:`prometheus-exporter`
 * :ref:`prometheus-go`

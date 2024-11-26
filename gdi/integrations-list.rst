@@ -20,7 +20,7 @@ Supported integrations in Splunk Observability Cloud
   APM instrumentation <get-data-in/application/application>
   RUM instrumentation <get-data-in/rum/rum-instrumentation>  
   OpenTelemetry: Receivers <opentelemetry/components/a-components-receivers>
-  OpenTelemetry: Other ingestion methods
+  OpenTelemetry: Other ingestion methods <opentelemetry/otel-other/otel-other-landing>
   Applications: Caches and memory TOGGLE <caches-memory>
   Applications: Cloud platforms TOGGLE <cloud>
   Applications: Cloudfoundry <monitors-cloudfoundry/cloudfoundry-firehose-nozzle>

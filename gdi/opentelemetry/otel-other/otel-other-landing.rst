@@ -1,7 +1,7 @@
 .. _otel-other-landing:
 
 ******************************************
-Collector components: Receivers
+Other OpenTelemetry ingestion methods
 ******************************************
 
 .. meta::
@@ -13,7 +13,7 @@ Collector components: Receivers
     :hidden:
 
     prometheus-generic
-    telegraf-generic
+    telegraf
 
 On top of the available native :ref:`OpenTelemetry receivers <otel-components-receivers>`, you can also send data to Splunk Observability Cloud with OpenTelemetry with the following options:
 
