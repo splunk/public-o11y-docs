@@ -1,4 +1,5 @@
 .. _telegraf:
+.. _telegraf-generic:
 
 Monitor services with Telegraf and OpenTelemetry
 ========================================================
