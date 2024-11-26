@@ -19,7 +19,8 @@ Supported integrations in Splunk Observability Cloud
   Infrastructure monitoring <get-data-in/compute/compute>
   APM instrumentation <get-data-in/application/application>
   RUM instrumentation <get-data-in/rum/rum-instrumentation>  
-  OpenTelemetry receivers <opentelemetry/components/a-components-receivers>
+  OpenTelemetry: Receivers <opentelemetry/components/a-components-receivers>
+  OpenTelemetry: Other ingestion methods <opentelemetry/otel-other/otel-other-landing>
   Applications: Caches and memory TOGGLE <caches-memory>
   Applications: Cloud platforms TOGGLE <cloud>
   Applications: Cloudfoundry <monitors-cloudfoundry/cloudfoundry-firehose-nozzle>
@@ -130,6 +131,7 @@ You can monitor your applications and services with the Collector and the follow
 You can also send data to Splunk Observability Cloud with OpenTelemetry with the following options:
 
 * :ref:`prometheus-generic`
+* :ref:`telegraf-generic`
 
 .. raw:: html
 
