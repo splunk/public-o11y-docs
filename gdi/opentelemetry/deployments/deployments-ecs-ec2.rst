@@ -7,13 +7,7 @@ Deploy the Collector with Amazon ECS EC2
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Sidecar in an Amazon ECS EC2 cluster.
 
-Use the guided setup to deploy the Collector as a Sidecar in an Amazon ECS EC2 cluster. The guided setup provides a JSON task definition for the Collector.
-
-Choose one of the following Collector configuration options:
-
-- **Default:** The file /etc/otel/collector/ecs_ec2_config.yaml in the Collector image is used for the Collector configuration.
-- **File:** Specify the file to use for the Collector configuration. See :ref:`ecs-ec2-custom-config`.
-- **AWS Parameter Store:** Specify the AWS Parameter Store key or ARN to use for the Collector configuration. See :ref:`ecs-ec2-custom-config`.
+Use the guided setup to deploy the Collector as a sidecar in an Amazon ECS EC2 cluster. 
 
 To access the guided setup for AWS integration, perform the following steps:
 
@@ -21,18 +15,20 @@ To access the guided setup for AWS integration, perform the following steps:
 #. On the navigation menu, select :guilabel:`Data Management`.
 #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 #. Select the tile for :guilabel:`Amazon ECS EC2`.
-#. Follow the steps provided in the guided setup.
+#. Follow the steps provided in the guided setup, which provides a JSON task definition for the Collector.
 
-Getting started
-=================================
+Choose one of the following Collector configuration options:
 
-The following sections describe how to create a task definition and launch the Collector. A task definition is required to run Docker containers in Amazon ECS. After creating the task definition, you need to launch the Collector.
+- **Default:** The file /etc/otel/collector/ecs_ec2_config.yaml in the Collector image is used for the Collector configuration.
+- **File:** Specify the file to use for the Collector configuration. See :ref:`ecs-ec2-custom-config`.
+- **AWS Parameter Store:** Specify the AWS Parameter Store key or ARN to use for the Collector configuration. See :ref:`ecs-ec2-aws-store`.
 
-Add the Collector as a Sidecar
----------------------------------
-.. note:: To use this option you need to be familiar with Amazon ECS EC2 launch type. See :new-page:`Getting started with the classic console using Amazon EC2 <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-ecs-ec2.html>` for further reading. 
+Add the Collector as a sidecar
+==================================================================
 
-Open the ECS task definition to which the Collector Sidecar is going to be added:
+.. note:: To use this option you need to be familiar with Amazon ECS EC2 launch. See :new-page:`Getting started with the classic console using Amazon EC2 <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-ecs-ec2.html>` for further reading. 
+
+Open the ECS task definition in which you'll add the Collector sidecar:
 
 1. Locate the task definition for the Collector from the :new-page:`repository <https://github.com/signalfx/splunk-otel-collector/blob/main/deployments/ecs/ec2/splunk-otel-collector.json>`.
 2. Merge the definitions of the Collector with the existing ECS task definition.
@@ -50,8 +46,8 @@ Notes:
 
 .. _ecs-ec2-custom-config:
 
-Use a custom configuration
-==============================
+Deploy the Collector using a custom configuration
+============================================================
 
 To use a custom configuration file, replace the value of the ``SPLUNK_CONFIG`` environment variable  with the file path of the custom configuration file in the Collector task definition.
 
@@ -59,19 +55,56 @@ Alternatively, you can specify the custom configuration YAML directly using the 
 
 .. _ecs-observer-config:
 
-Configure ``ecs_observer`` 
---------------------------------
+Configure the Amazon Elastic Container Service Observer extension
+=======================================================================
 
-Use extension Amazon Elastic Container Service Observer (``ecs_observer``) in your custom configuration to discover metrics targets in running tasks, filtered by service names, task definitions, and container labels. ``ecs_observer`` is currently limited to Prometheus targets and requires the read-only permissions below. The Collector should be configured to run as an ECS Daemon. You can add the permissions to the task role by adding them to a customer-managed policy that is attached to the task role.
+Use the Amazon Elastic Container Service Observer (``ecs_observer``) extension in your custom configuration to discover metric targets in running tasks, filtered by service names, task definitions, and container labels. 
+
+Prerequisites
+----------------------------------------------------------------
+
+The following applies:
+
+* The Collector must run as an ECS daemon. See :ref:`ecs-observer-launch`.
+* The ECS Observer is currently limited to Prometheus targets. 
+* The ECS Observer requires the read-only permissions below. Add them to the customer-managed policy that is attached to the task role.
 
 .. code-block:: yaml
 
-   ecs:List*
-   ecs:Describe*
+  ecs:List*
+  ecs:Describe*
 
-The following custom configuration examples show the ``ecs_observer`` configured to find Prometheus targets in the ``lorem-ipsum-cluster`` cluster and ``us-west-2`` region, where the task ARN pattern is ``^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$``. 
+.. _ecs-observer-launch:
 
-The results are written to ``/etc/ecs_sd_targets.yaml``. The ``prometheus`` receiver is configured to read targets from the results file. The values for ``access_token`` and ``realm`` are read from the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables , which must be specified in your container definition.
+Launch the Collector as a daemon from the ECS console
+----------------------------------------------------------------
+
+To launch the Collector from the Amazon ECS console:
+
+1. Go to your cluster in the console and select :guilabel:`Services`. 
+
+2. Select :guilabel:`Create` and define the following options:
+
+  * Launch Type: EC2
+
+  * Task Definition (Family): splunk-otel-collector
+
+  * Task Definition (Revision): 1 (or whatever the latest is in your case)
+
+  * Service Name: splunk-otel-collector
+
+  * Service type: DAEMON
+
+3. Leave everything else as default and proceed to :guilabel:`Next step` until you're required to create the service.
+
+4. Select :guilabel:`Create Service` to deploy the Collector onto each node in the ECS cluster. You should see infrastructure and docker metrics flowing soon.
+
+Configuration example
+----------------------------------------------------------------
+
+The following example configures the ``ecs_observer`` to find Prometheus targets in the ``lorem-ipsum-cluster`` cluster and ``us-west-2`` region, where the task ARN pattern is ``^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$``. The results are written to ``/etc/ecs_sd_targets.yaml``. 
+
+The ``prometheus`` receiver is configured to read targets from the results file. The values for ``access_token`` and ``realm`` are read from the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables, which you must specify in your container definition.
 
 .. code-block:: yaml
 
@@ -111,42 +144,26 @@ The results are written to ``/etc/ecs_sd_targets.yaml``. The ``prometheus`` rece
          processors: [batch, resourcedetection]
          exporters: [signalfx]
 
-.. _aws-parameter-store:
+.. _ecs-ec2-aws-store:
 
-Launch the Collector as a Daemon
---------------------------------------------
+Deploy the Collector using the AWS Parameter Store
+=========================================================================================
 
-To launch the Collector from the Amazon ECS console:
+To use the AWS Parameter Store, specify the config YAML directly in the ``SPLUNK_CONFIG_YAML`` environment variable instead of using ``SPLUNK_CONFIG``. 
 
-#. Go to your cluster in the console.
-#. Select :guilabel:`Services`. 
-#. Select :guilabel:`Create`. 
-#. Select the following options:
-   #. Launch Type: EC2
-   #. Task Definition (Family): splunk-otel-collector
-   #. Task Definition (Revision): 1 (or whatever the latest is in your case)
-   #. Service Name: splunk-otel-collector
-   #. Service type: DAEMON
-   #. Leave everything else at default.
-#. Select :guilabel:`Next step`.
-#. Leave everything on this next page at their defaults and select :guilabel:`Next step`.
-#. Leave everything on this next page at their defaults and select :guilabel:`Next step`.
-#. Select :guilabel:`Create Service` to deploy the Collector onto each node in the ECS cluster. You should see infrastructure and docker metrics flowing soon.
+.. note:: To have read access to the Parameter Store add the policy ``AmazonSSMReadOnlyAccess`` to the task role. See :new-page:`Systems manager parameter store <https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html>` for more information.
 
-Use the AWS Parameter Store
-----------------------------
+Follow these steps: 
 
-Use the ``SPLUNK_CONFIG_YAML`` environment variable to specify the configuration YAML directly. Use ``SPLUNK_CONFIG_YAML`` in place of ``SPLUNK_CONFIG``.
-
-For example, first, store the custom configuration for the :ref:`ecs-observer-config` in a parameter called ``splunk-otel-collector-config`` in the AWS Systems Manager Parameter Store.Next, assign the parameter to ``SPLUNK_CONFIG_YAML`` using the ``valueFrom`` option, as shown in the following example:
+#. Store the custom configuration for the :ref:`ecs-observer-config` in the parameter ``splunk-otel-collector-config`` in the AWS Systems Manager Parameter Store. 
+#. Next, assign the ``splunk-otel-collector-config`` parameter to ``SPLUNK_CONFIG_YAML`` using the ``valueFrom`` option, as shown in the following example:
 
 .. code-block:: none
 
-   {
-            "name": "lorem-ipsum-cluster",
-            "valueFrom": "^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$""
-        }
+  {
+  "name": "lorem-ipsum-cluster",
+  "valueFrom": "^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$""
+  }
 
-.. note:: 
-    
-    You should add policy ``AmazonSSMReadOnlyAccess`` to the task role for the task to have read access to the Parameter Store. See :new-page:`Systems manager parameter store <https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html>` for more information.
+.. caution:: The AWS Parameter Store limits the size of the config file to 4096 bytes.
+
