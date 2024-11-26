@@ -44,8 +44,6 @@ Notes:
 
 * You can set the memory limit for the ``memory_limiter`` processor using environment variable ``SPLUNK_MEMORY_LIMIT_MIB``. The default memory limit is 512 MiB. 
 
-* To run Docker containers in Amazon ECS you need a task definition and to launch the Collector.
-
 .. _ecs-ec2-custom-config:
 
 Deploy the Collector using a custom configuration
@@ -57,19 +55,56 @@ Alternatively, you can specify the custom configuration YAML directly using the 
 
 .. _ecs-observer-config:
 
-Configure ``ecs_observer`` 
---------------------------------
+Configure the Amazon Elastic Container Service Observer extension
+=======================================================================
 
-Use extension Amazon Elastic Container Service Observer (``ecs_observer``) in your custom configuration to discover metric targets in running tasks, filtered by service names, task definitions, and container labels. ``ecs_observer`` is currently limited to Prometheus targets and requires the read-only permissions below. The Collector should be configured to run as an ECS Daemon. You can add the permissions to the task role by adding them to a customer-managed policy that is attached to the task role.
+Use the Amazon Elastic Container Service Observer (``ecs_observer``) extension in your custom configuration to discover metric targets in running tasks, filtered by service names, task definitions, and container labels. 
+
+Prerequisites
+----------------------------------------------------------------
+
+The following applies:
+
+* The Collector must run as an ECS Daemon. See :ref:`ecs-observer-launch`.
+* The ECS Observer is currently limited to Prometheus targets. 
+* The ECS Observer requires the read-only permissions below. Add them to the customer-managed policy that is attached to the task role.
 
 .. code-block:: yaml
 
-   ecs:List*
-   ecs:Describe*
+  ecs:List*
+  ecs:Describe*
 
-The following custom configuration examples show the ``ecs_observer`` configured to find Prometheus targets in the ``lorem-ipsum-cluster`` cluster and ``us-west-2`` region, where the task ARN pattern is ``^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$``. 
+.. _ecs-observer-launch:
 
-The results are written to ``/etc/ecs_sd_targets.yaml``. The ``prometheus`` receiver is configured to read targets from the results file. The values for ``access_token`` and ``realm`` are read from the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables, which must be specified in your container definition.
+Launch the Collector as a Daemon from the ECS console
+----------------------------------------------------------------
+
+To launch the Collector from the Amazon ECS console:
+
+1. Go to your cluster in the console and select :guilabel:`Services`. 
+
+2. Select :guilabel:`Create` and define the following options:
+
+  * Launch Type: EC2
+
+  * Task Definition (Family): splunk-otel-collector
+
+  * Task Definition (Revision): 1 (or whatever the latest is in your case)
+
+  * Service Name: splunk-otel-collector
+
+  * Service type: DAEMON
+
+3. Leave everything else as default and proceed to :guilabel:`Next step` until you're required to create the service.
+
+4. Select :guilabel:`Create Service` to deploy the Collector onto each node in the ECS cluster. You should see infrastructure and docker metrics flowing soon.
+
+Configuration example
+----------------------------------------------------------------
+
+The following example configures the ``ecs_observer`` to find Prometheus targets in the ``lorem-ipsum-cluster`` cluster and ``us-west-2`` region, where the task ARN pattern is ``^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$``. The results are written to ``/etc/ecs_sd_targets.yaml``. 
+
+The ``prometheus`` receiver is configured to read targets from the results file. The values for ``access_token`` and ``realm`` are read from the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables, which you must specify in your container definition.
 
 .. code-block:: yaml
 
@@ -132,25 +167,3 @@ Follow these steps:
 
 .. caution:: The AWS Parameter Store limits the size of the config file to 4096 bytes.
 
-Launch the Collector as a Daemon from the ECS console
-============================================================
-
-To launch the Collector from the Amazon ECS console:
-
-1. Go to your cluster in the console and select :guilabel:`Services`. 
-
-2. Select :guilabel:`Create` and define the following options:
-
-  * Launch Type: EC2
-
-  * Task Definition (Family): splunk-otel-collector
-
-  * Task Definition (Revision): 1 (or whatever the latest is in your case)
-
-  * Service Name: splunk-otel-collector
-
-  * Service type: DAEMON
-
-3. Leave everything else as default and proceed to :guilabel:`Next step` until you're required to create the service.
-
-4. Select :guilabel:`Create Service` to deploy the Collector onto each node in the ECS cluster. You should see infrastructure and docker metrics flowing soon.
