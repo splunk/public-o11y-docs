@@ -31,20 +31,21 @@ This scenario describes how Kai, an SRE, and Deepu, a service owner, perform the
 
 For a video version of this scenario, watch :new-page:`the Splunk Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
 
-.. _receive-alerts-xpuc:
-
-Receive alerts about outlier behavior
-========================================
+.. raw:: html
+  
+    <embed>
+      <h2>Receive alerts about outlier behavior<a name="receive-alerts-xpuc" class="headerlink" href="#receive-alerts-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 #. Kai, the SRE on call, receives an alert showing that the number of purchases on the Buttercup Games site has dropped significantly in the past hour and the checkout completion rate is too low. Kai trusts that these are true outlier behaviors because the alert rule their team set up in Splunk Observability Cloud takes into account the time and day of week as a dynamic baseline, rather than using a static threshold.
 
 #. Kai logs in to Splunk Observability Cloud on their laptop to investigate.
 
-
-.. _assess-user-impact-xpuc:
-
-Assess user impact
-===========================
+.. raw:: html
+  
+    <embed>
+      <h2>Assess user impact<a name="assess-user-impact-xpuc" class="headerlink" href="#assess-user-impact-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 The first thing Kai wants to know about the alert they received is: What's the user impact?
 
@@ -80,11 +81,11 @@ The first thing Kai wants to know about the alert they received is: What's the u
 
 Kai decides to take a look at the end-to-end transaction workflow.
 
-
-.. _investigate-root-cause-xpuc:
-
-Investigate the root cause of a business workflow error
-===============================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Investigate the root cause of a business workflow error<a name="investigate-root-cause-xpuc" class="headerlink" href="#investigate-root-cause-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 #. In Splunk RUM, Kai selects the :strong:`frontend:/cart/checkout` business workflow link to display its service map in Splunk Application Performance Monitoring (APM). A business workflow is a group of logically related traces, such as a group of traces that reflect an end-to-end transaction in your system.
 
@@ -106,12 +107,11 @@ Investigate the root cause of a business workflow error
 
 Kai decides to take a look at the Kubernetes cluster to see if the errors are based on an infrastructure issue.
 
-
-
-.. _check-infra-health-xpuc:
-
-Check on infrastructure health
-===============================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Check on infrastructure health<a name="check-infra-health-xpuc" class="headerlink" href="#check-infra-health-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 #. Kai selects the :strong:`K8s cluster(s) for paymentservice` Related Content tile in Splunk APM to display the Kubernetes navigator in Splunk Infrastructure Monitoring, where their view is automatically narrowed down to the :strong:`paymentservice` to preserve the context they were just looking at in Splunk APM.
 
@@ -129,12 +129,11 @@ Check on infrastructure health
 
 3. Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai selects the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring.
 
-
-
-.. _look-for-patterns-xpuc:
-
-Look for patterns in application errors
-===============================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Look for patterns in application errors<a name="look-for-patterns-xpuc" class="headerlink" href="#look-for-patterns-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 1. In Splunk APM, Kai selects :strong:`Tag Spotlight`` to look for correlations in tag values for the errors they're seeing.
 
@@ -142,7 +141,7 @@ Look for patterns in application errors
 
     .. image:: /_images/get-started/tenant-level.png
       :width: 60%
-      :alt: This screenshot shows the tenant.level module in Splunk APM displaying errors evenly spread across gold, silver, and bronze tenant levels.
+      :alt: This screenshot shows the tenant.level module in Splunk APM displaying errors evenly distributed across gold, silver, and bronze tenant levels.
 
     However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the lower :strong:`v350.9` version.
 
@@ -153,16 +152,15 @@ Look for patterns in application errors
 
 2. This seems like a strong lead, so Kai decides to dig into the log details. They select the :strong:`Logs for paymentservice` Related Content tile.
 
-
-
-.. _review-logs-xpuc:
-
-Examine error logs for meaningful messages and patterns
-===============================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Examine error logs for meaningful messages and patterns<a name="review-logs-xpuc" class="headerlink" href="#review-logs-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
 
-1. Kai sees some error logs, so they select one to see more details in a structured view. As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
+1. Kai sees some error logs, so they select 1 to see more details in a structured view. As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
 
     .. image:: /_images/get-started/error-log.png
       :width: 100%
@@ -180,16 +178,15 @@ Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log
       :width: 100%
       :alt: This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs.
 
-4. To be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message.
+4. To be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that appear for version v350.9 too, but they don't include the error message.
 
 This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings.
 
-
-
-.. _monitor-a-fix-xpuc:
-
-Monitor a fix
-=====================================================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Monitor a fix<a name="monitor-a-fix-xpuc" class="headerlink" href="#monitor-a-fix-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the error logs in Splunk Log Observer. They agree with Kai's assessment that the test API token is the likely cause of the problem.
 
@@ -203,12 +200,11 @@ Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the
 
 3. Deepu watches the Live Tail view and sure enough, the failed payment messages have stopped appearing in :strong:`paymentservice` logs. Reassured that the Buttercup Games site is back in a stable state, Deepu moves on to helping their team fix v350.10.
 
-
-
-.. _take-preventative-action-xpuc:
-
-Take preventative action and create metrics from logs to power dashboards and alerts
-==============================================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Take preventative action and create metrics from logs to power dashboards and alerts<a name="take-preventative-action-xpuc" class="headerlink" href="#take-preventative-action-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Now that Kai knows that this particular issue can cause a problem on the Buttercup Games site, they decide to do some preventative work for their SRE team. Kai takes the query they created in Splunk Log Observer and saves it as a metric.
 
@@ -218,9 +214,11 @@ Now that Kai knows that this particular issue can cause a problem on the Butterc
 
 Doing this defines log metricization rules that create a log-derived metric that shows aggregate counts. Kai's team can embed this log-derived metric in charts, dashboards, and alerts that can help them identify this issue faster if it comes up again in the future.
 
-
-Summary
-==========
+.. raw:: html
+  
+    <embed>
+      <h2>Summary<a name="summary-xpuc" class="headerlink" href="#summary-xpuc" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
 Kai was able to respond to and resolve front-end issues with the Buttercup Games website that were preventing users from completing their purchases. Kai used RUM to begin troubleshooting the errors, isolating spikes in front-end errors and back-end latency as possible causes. Digging into the :strong:`/cart/checkout` endpoint, Kai used the Tag Spotlight view in RUM to investigate the full trace. Based on this, Kai realized the latency wasn't a front-end issue. Next, Kai viewed a performance summary and the end-to-end transaction workflow in APM. Looking at the service map, Kai noted that Splunk APM identified the :strong:`paymentservice` as the root cause of the errors. After ruling out Kubernetes issues, Kai used Tag Spotlight to look for correlations in tag values for the errors. Kai noticed that the errors were only happening on a specific version and decided to look into the log details. Using Log Observer, Kai looked at the log details and noticed that the error messages for the API token started with "test". 
 
