@@ -54,7 +54,7 @@ For example, if you want to monitor Exec, use a setup like:
   [[inputs.exec]]
   
   ## Commands array
-  commands = ["sh /etc/otelcustom/mqmscripts/fileagemonitor.sh"]
+  commands = ["sh /testfolder/testscript.sh"]
   timeout = "30s"
   data_format = "influx"
 
