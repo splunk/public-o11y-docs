@@ -65,7 +65,7 @@ Prerequisites
 
 The following applies:
 
-* The Collector must run as an ECS Daemon. See :ref:`ecs-observer-launch`.
+* The Collector must run as an ECS daemon. See :ref:`ecs-observer-launch`.
 * The ECS Observer is currently limited to Prometheus targets. 
 * The ECS Observer requires the read-only permissions below. Add them to the customer-managed policy that is attached to the task role.
 
@@ -76,7 +76,7 @@ The following applies:
 
 .. _ecs-observer-launch:
 
-Launch the Collector as a Daemon from the ECS console
+Launch the Collector as a daemon from the ECS console
 ----------------------------------------------------------------
 
 To launch the Collector from the Amazon ECS console:
