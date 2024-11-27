@@ -85,7 +85,7 @@ To skip these steps and use configured repos on the target system that provide t
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- $SPLUNK_ACCESS_TOKEN
 
-.. _configure-auto-instrumentation:
+.. _configure-auto-instrumentation-linux:
 
 Configure automatic discovery for back-end applications
 ==================================================================
@@ -215,8 +215,8 @@ Collector
      - Removes the Splunk OpenTelemetry Collector for Linux.
      -
 
-Automatic Discovery for back-end services
---------------------------------------------------------------------
+Automatic discovery with zero-code instrumentation for back-end services
+---------------------------------------------------------------------------------------
 
 .. list-table::
    :header-rows: 1
@@ -227,16 +227,16 @@ Automatic Discovery for back-end services
      - Description
      - Default value
    * - ``--with[out]-instrumentation``
-     - Whether to install the ``splunk-otel-auto-instrumentation`` package and add the ``libsplunk.so`` shared object library to ``/etc/ld.so.preload`` to activate auto instrumentation for all supported processes on the host. Cannot be combined with the ``--with-systemd-instrumentation`` option. See :ref:`linux-backend-auto-discovery` for more information.
+     - Whether to install the ``splunk-otel-auto-instrumentation`` package and add the ``libsplunk.so`` shared object library to ``/etc/ld.so.preload`` to activate zero-code instrumentation for all supported processes on the host. Cannot be combined with the ``--with-systemd-instrumentation`` option. See :ref:`linux-backend-auto-discovery` for more information.
      - ``--without-instrumentation``
    * - ``--with[out]-systemd-instrumentation``
-     - Whether to install the ``splunk-otel-auto-instrumentation`` package and configure a systemd drop-in file to activate auto instrumentation for all supported applications running as systemd services. Cannot be combined with the ``--with-instrumentation`` option. See :ref:`linux-backend-auto-discovery` for more information.
+     - Whether to install the ``splunk-otel-auto-instrumentation`` package and configure a systemd drop-in file to activate zero-code instrumentation for all supported applications running as systemd services. Cannot be combined with the ``--with-instrumentation`` option. See :ref:`linux-backend-auto-discovery` for more information.
      - ``--without-systemd-instrumentation``
    * - ``--with[out]-instrumentation-sdk <sdk>``
-     - Whether to enable auto instrumentation for a specific language. This option takes a comma separated set of values representing supported auto-instrumentation SDKs. Currently supported values: ``java``, ``node``, and ``dotnet``. Use ``--with-instrumentation-sdk`` to enable only the specified language(s), for example ``--with-instrumentation-sdk java``. Note: .NET (``dotnet``) auto instrumentation is only supported on x86_64/amd64.
+     - Whether to enable zero-code instrumentation for a specific language. This option takes a comma separated set of values representing supported auto-instrumentation SDKs. Currently supported values: ``java``, ``node``, and ``dotnet``. Use ``--with-instrumentation-sdk`` to enable only the specified language(s), for example ``--with-instrumentation-sdk java``. Note: .NET (``dotnet``) zero-code instrumentation is only supported on x86_64/amd64.
      - ``--with-instrumentation-sdk java,nodejs,dotnet``
    * - ``--npm-path <path>``
-     - If Auto Instrumentation for Node.js is enabled, ``npm`` is required to install the included Splunk OpenTelemetry Auto Instrumentation for Node.js package. If ``npm`` is not found via the ``command -v npm`` shell command or if installation fails, Auto Instrumentation for Node.js will not be activated. Use this option to specify a custom path to ``npm``, for example ``--npm-path /my/path/to/npm``.
+     - If zero-code instrumentation for Node.js is enabled, ``npm`` is required to install the included Splunk OpenTelemetry zero-code instrumentation for Node.js package. If ``npm`` is not found via the ``command -v npm`` shell command or if installation fails, zero-code instrumentation for Node.js will not be activated. Use this option to specify a custom path to ``npm``, for example ``--npm-path /my/path/to/npm``.
      - ``npm``
    * - ``--deployment-environment <value>``
      - Set the ``deployment.environment`` resource attribute to the specified value. If not specified, the ``Environment`` in the Splunk APM UI will appear as ``unknown`` for all instrumented applications. The resource attribute will be appended to the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
@@ -266,7 +266,7 @@ Automatic Discovery for back-end services
      - Activate or deactivate collection and exporting metrics for all activated SDKs that support the ``SPLUNK_METRICS_ENABLED`` environment variable.
      - ``--disable-metrics``
    * - ``--instrumentation-version``
-     - The ``splunk-otel-auto-instrumentation`` package version to install. Note: The minimum supported version for Java and Node.js auto instrumentation is 0.87.0, and the minimum supported version for .NET auto instrumentation is 0.99.0.
+     - The ``splunk-otel-auto-instrumentation`` package version to install. Note: The minimum supported version for Java and Node.js zero-code instrumentation is 0.87.0, and the minimum supported version for .NET zero-code instrumentation is 0.99.0.
      - ``latest``
 
 Fluentd
