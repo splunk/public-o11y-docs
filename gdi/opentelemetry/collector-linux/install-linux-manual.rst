@@ -117,7 +117,7 @@ To install the Collector for Linux using a RPM package, set up the package repos
 
          yum install -y splunk-otel-collector
 
-         # Optional: install Splunk OpenTelemetry Auto Instrumentation
+         # Optional: install Splunk OpenTelemetry zero-code instrumentation
          yum install -y splunk-otel-auto-instrumentation
 
    .. tab:: dnf 
@@ -137,7 +137,7 @@ To install the Collector for Linux using a RPM package, set up the package repos
 
          dnf install -y splunk-otel-collector
 
-         # Optional: install Splunk OpenTelemetry Auto Instrumentation
+         # Optional: install Splunk OpenTelemetry zero-code instrumentation
          dnf install -y splunk-otel-auto-instrumentation
 
    .. tab:: zypper 
@@ -157,7 +157,7 @@ To install the Collector for Linux using a RPM package, set up the package repos
 
          zypper install -y splunk-otel-collector
 
-         # Optional: install Splunk OpenTelemetry Auto Instrumentation
+         # Optional: install Splunk OpenTelemetry zero-code instrumentation
          zypper install -y splunk-otel-auto-instrumentation
 
 See also:
@@ -251,7 +251,7 @@ The following applies:
 
 .. _linux-packages-auto:
 
-Auto Instrumentation with Debian and RPM packages
+Zero-code instrumentation with Debian and RPM packages
 --------------------------------------------------------------
 
 If you prefer to install the Collector without the installer script or the Debian/RPM repositories, download the individual Debian or RPM package from the GitHub releases page and install it as shown below. 
@@ -260,9 +260,9 @@ Note that:
 
 * You need to have root privileges.
 * Download the appropriate ``splunk-otel-auto-instrumentation`` Debian or RPM package for the target system in GitHub at :new-page:`Splunk OTel Collector releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
-* Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded Auto Instrumentation package.
+* Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded zero-code instrumentation package.
 
-Run the following commands to install the Auto Instrumentation package:
+Run the following commands to install the zero-code instrumentation package:
 
 .. tabs:: 
 
@@ -278,7 +278,7 @@ Run the following commands to install the Auto Instrumentation package:
 
          rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
 
-To upgrade the Auto Instrumentation package, run:
+To upgrade the zero-code instrumentation package, run:
 
 .. tabs:: 
 
@@ -294,13 +294,14 @@ To upgrade the Auto Instrumentation package, run:
 
          sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
 
-Auto Instrumentation agents
+Zero-code instrumentation agents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``splunk-otel-auto-instrumentation`` deb/rpm package installs and supports configuration for the following Auto Instrumentation agents:
+The ``splunk-otel-auto-instrumentation`` deb/rpm package installs and supports configuration for the following zero-code instrumentation agents:
 
 * Java
 * Node.js
+* .Net
 
 To learn more, see :ref:`linux-backend-auto-discovery`.
 
