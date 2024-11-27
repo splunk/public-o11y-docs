@@ -1,14 +1,13 @@
 .. _telegraf:
 .. _telegraf-generic:
 
-Monitor services with Telegraf and OpenTelemetry
-========================================================
+Monitor services with Telegraf Input plugins and OpenTelemetry
+=====================================================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf monitor. See benefits, install, configuration, and metrics.
 
-To monitor your service with Telegraf using native OpenTelemetry in Splunk Observability Cloud, install the service's Telegraf plugin then push metrics to the Splunk Opentelemetry Collector
-via OTLP. 
+To monitor your service with Telegraf using native OpenTelemetry in Splunk Observability Cloud, install the service's Telegraf Input plugin then push metrics to the Splunk Opentelemetry Collector via OTLP. 
 
 .. note:: This setup is designed for a Linux Ubuntu OS but should be replicable on any machines running Linux OS with Debian flavor. These instructions might not work on other OS (MacOS/Windows). 
 
@@ -45,9 +44,9 @@ Run the following commands to install Telegraf from the InfluxData repository:
 2. Set up your service's Telegraf Input plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Next, install the Telegraf Input plugin for the service you want to monitor. Available plugins include Chrony, Consul, Docker, Elasticsearch, Fluentd, GitHub, Jenkins, RabbitMQ or SQL. Find a complete list of Input plugins at :new-page:`Telegraf Input plugins <https://github.com/influxdata/telegraf/tree/master/plugins/inputs/exec>` in GitHub.
+Next, install the Telegraf Input plugin for the service you want to monitor. Available plugins include Chrony, Consul, Docker, Elasticsearch, Fluentd, GitHub, Jenkins, RabbitMQ or SQL. Find a complete list of available plugins at :new-page:`Telegraf Input plugins <https://github.com/influxdata/telegraf/tree/master/plugins/inputs>` in GitHub.
 
-For example, if you want to monitor execute commands on every interval and parse metrics from their output with the exec input plugin, use a setup like: 
+For example, if you want to monitor execute commands on every interval and parse metrics from their output with the Exec Input plugin, use a setup like: 
 
 .. code:: 
 
