@@ -47,6 +47,7 @@ Optionally, you can also:
 
 * :ref:`otel-install-k8s-manifests`
 * :ref:`Deploy the Collector as an AWS EKS Add-on <install-k8s-addon-eks>`
+* Deploy the Collector using the Technical Add-on, which provides out-of-the box Collector content and configuration. Learn more at :ref:`collector-addon-intro`.
 
 .. note:: By default, you'll obtain these :ref:`Kubernetes metrics <ootb-metrics-k8s>`. 
 
@@ -65,6 +66,8 @@ To configure the Collector, including adding additional components or activating
 * :ref:`otel-kubernetes-config-advanced`
 
 .. include:: /_includes/gdi/collector-common-options.rst
+
+To automatically find services and applications running in your Kubernetes environment and send data from them to Splunk Observability Cloud refer to :ref:`discovery-kubernetes`.     
 
 .. raw:: html
 

@@ -39,6 +39,8 @@ See the default settings and configuration options at:
 
 .. include:: /_includes/gdi/collector-common-options.rst
 
+To automatically find services and applications running in your Linux environment and send data from them to Splunk Observability Cloud refer to :ref:`discovery-linux`.   
+
 To upgrade or uninstall, see:
 
 * :ref:`otel-linux-upgrade` 
