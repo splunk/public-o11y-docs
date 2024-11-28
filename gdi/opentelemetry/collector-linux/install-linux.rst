@@ -92,7 +92,7 @@ Configure automatic discovery for back-end applications
 
 You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to configure receivers for each back-end application. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
 
-For more information on instrumentation, see: 
+For more information on APM instrumentation, see: 
 
 * :ref:`get-started-java` 
 * :ref:`get-started-nodejs`
@@ -143,7 +143,7 @@ To use host bindings, run this command:
 Options of the installer script of the Collector for Linux
 ==================================================================
 
-The Linux installer script supports the following options for the Collector, Automatic Discovery for back-end services and Fluentd.
+The Linux installer script supports the following options for the Collector, automatic discovery for back-end services and Fluentd.
 
 To display all the configuration options supported by the script, use the ``-h`` flag.
 
