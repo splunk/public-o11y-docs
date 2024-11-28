@@ -37,6 +37,8 @@ The following diagram shows how automatic discovery finds data sources:
   
   <h2>Supported host services and applications for automatic discovery</h2>
 
+.. _discovery-mode-services:
+
 Automatic discovery of third-party applications is supported in Linux and Kubernetes environments for the following services:
 
 .. list-table::
@@ -85,6 +87,8 @@ Read more:
 .. raw:: html
 
   <h2>Supported language runtimes for zero-code instrumentation</h2>
+
+.. _discovery-mode-languages:
 
 Zero-code instrumentation via the Collector's automatic discovery is available for the following languages:
 

@@ -6,6 +6,6 @@ The Splunk Distribution of the OpenTelemetry Collector can automatically identif
 
 .. caution:: 
 
-   Auto discovery of services is only available for the Collector in Linux and Kubernetes environments.
+   Auto discovery of services is only available for the Collector in Linux and Kubernetes environments. See more at :ref:`discovery-mode-services`.
 
-   Zero-code instrumentation using the Collector's automatic discovery feature is only available for Java, Node.js, and .NET applications. If deployed independently from the Collector, zero-code instrumentation is supported for 8 back-end language runtimes. For more information, see :ref:`get-started-application`.
+   Zero-code instrumentation using the Collector's automatic discovery feature is only available for Java, Node.js, and .NET applications. See more at :ref:`discovery-mode-languages`. Alternatively you can deploy zero-code instrumentation independently from the Collector for 8 back-end language runtimes. For more information, see :ref:`get-started-application`.

@@ -98,12 +98,52 @@ For more information on APM instrumentation, see:
 * :ref:`get-started-nodejs`
 * :ref:`get-started-dotnet-otel`    
 
+.. _collector-linux-with-docker:
+
+Collector for Linux with Docker
+====================================================================
+
+Install the Collector in a host with Docker
+--------------------------------------------------------------------
+
+If you're installing your Collector instance in a host with Docker, you need to configure a client to establish a connection with the daemon. Depending on your Docker installation and Collector deployment method, try one of these options:
+
+1. If your daemon is listening to a domain socket (for example ``/var/run/docker.sock``), your Collector service or executable needs appropriate permissions and access. Add the ``splunk-otel-collector`` user to the Docker group as configured on your system:
+
+  .. code-block:: bash
+
+    $ usermod -aG docker splunk-otel-collector
+
+2. When using the :new-page:`quay.io/signalfx/splunk-otel-collector <https://quay.io/repository/signalfx/splunk-otel-collector>` image, add the default container user to the required group as configured on your system, and the bind and mount the domain socket:
+
+  .. code-block:: bash
+
+    $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --group-add $(stat -c '%g' /var/run/docker.sock) quay.io/signalfx/splunk-otel-collector:latest <...>
+    
+    # or if specifying the user:group directly
+    $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --user "splunk-otel-collector:$(stat -c '%g' /var/run/docker.sock)" quay.io/signalfx/splunk-otel-collector:latest <...>
+
+Use auto discovery with containers 
+--------------------------------------------------------------------
+
+If your Collector instance is running in a Docker container and the discovery targets are also containers, you need to share the Docker socket when launching the Collector container:
+
+.. code-block:: bash
+
+  $ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --group-add <socket_gid>
+
+To use host bindings, run this command:
+
+.. code-block:: bash
+
+  --set=splunk.discovery.extensions.docker_observer.config.use_host_bindings=true
+
 .. _otel-installer-options-linux:
 
 Options of the installer script of the Collector for Linux
 ==================================================================
 
-The Linux installer script supports the following options for the Collector, Automatic Discovery for back-end services and Fluentd.
+The Linux installer script supports the following options for the Collector, automatic discovery for back-end services and Fluentd.
 
 To display all the configuration options supported by the script, use the ``-h`` flag.
 
