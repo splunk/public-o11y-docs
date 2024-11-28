@@ -52,7 +52,7 @@ For more information about creating dashboard groups and dashboards, see :ref:`c
 User dashboards and dashboard groups
 =======================================
 
-Every Splunk Observability Cloud user who has set a password and logged in at least once, gets a user dashboard group and user dashboard. Your user dashboard group is your individual workspace within Splunk Observability Cloud. Depending on when you create your account, your user dashboard group might contain a large number of demo data dashboards.
+Every Splunk Observability Cloud user who has set a password and logged in at least once gets a user dashboard group and user dashboard. Your user dashboard group is your individual workspace within Splunk Observability Cloud. Depending on when you create your account, your user dashboard group might contain a large number of demo data dashboards.
 
 The names of your user dashboard group and user dashboard are the email address associated with your Splunk Observability Cloud account.
 
