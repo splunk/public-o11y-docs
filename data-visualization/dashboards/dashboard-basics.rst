@@ -30,9 +30,9 @@ Built-in dashboards and dashboard groups
 ..
   how to handle "collectd" reference here? okay as-is?
 
-Built-in dashboard groups are provided to give you immediate visibility into the technologies and services being used in your environment. The dashboards in these groups are automatically created for you when you use integrations that send metrics that Splunk Observability Cloud recognizes. Most of the collectd plugins that we support come with built-in dashboard groups, as do many Amazon Web Services and Google Cloud Platform services.
+Built-in dashboard groups are provided to give you immediate visibility into the technologies and services being used in your environment. The dashboards in these groups are automatically created for you when you use integrations that send metrics that Splunk Observability Cloud recognizes. Most of the supported collectd plugins come with built-in dashboard groups, as do many Amazon Web Services and Google Cloud Platform services.
 
-Built-in dashboards are meant to behave like templates. To make use of them in any way beyond simple viewing, for example to add or modify charts, you must first save a copy of the dashboard by opening the :strong:`Dashboard actions` menu and clicking :strong:`Save as`. For more information about built-in dashboards, see :ref:`built-in-dashboards`.
+Built-in dashboards behave like templates. To make use of them in any way beyond simple viewing, for example to add or modify charts, you must first save a copy of the dashboard by opening the :strong:`Dashboard actions` menu and clicking :strong:`Save as`. For more information about built-in dashboards, see :ref:`built-in-dashboards`.
 
 ..
   still need to migrate this content?
@@ -54,8 +54,8 @@ Custom dashboards are meant to be used by multiple people and usually represent 
 User dashboards and dashboard groups
 =======================================
 
-Every Splunk Observability Cloud user who has set a password and logged in at least once, gets a user dashboard group and user dashboard. Your user dashboard group is your individual workspace within Splunk Observability Cloud. Depending on when your user was created, your user dashboard group may contain a large number of demo data dashboards.
+Every Splunk Observability Cloud user who has set a password and logged in at least once, gets a user dashboard group and user dashboard. Your user dashboard group is your individual workspace within Splunk Observability Cloud. Depending on when your user was created, your user dashboard group might contain a large number of demo data dashboards.
 
-The names of your user dashboard group and user dashboard are the the email address associated with your Splunk Observability Cloud account.
+The names of your user dashboard group and user dashboard are the email address associated with your Splunk Observability Cloud account.
 
-To access your user dashboard group, in the navigation menu, click :strong:`Dashboards`. At the top of the Dashboards page, you'll see your favorite dashboards, recently accessed dashboards, and your user dashboard in your user dashboard group.
+To access your user dashboard group, in the navigation menu, select :strong:`Dashboards`. At the top of the :strong:`Dashboards` page, you can see your favorite dashboards, recently accessed dashboards, and your user dashboard in your user dashboard group.
