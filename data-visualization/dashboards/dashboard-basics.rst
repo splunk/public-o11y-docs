@@ -30,7 +30,7 @@ Built-in dashboards and dashboard groups
 ..
   how to handle "collectd" reference here? okay as-is?
 
-Built-in dashboard groups are provided to give you immediate visibility into the technologies and services being used in your environment. The dashboards in these groups are automatically created for you when you use integrations that send metrics that Splunk Observability Cloud recognizes. Most of the supported collectd plugins come with built-in dashboard groups, as do many Amazon Web Services and Google Cloud Platform services.
+Built-in dashboard groups are provided to give you immediate visibility into the technologies and services used in your environment. The dashboards in these groups are automatically created for you when you use integrations that send metrics that Splunk Observability Cloud recognizes. Most of the supported collectd plugins come with built-in dashboard groups, as do many Amazon Web Services and Google Cloud Platform services.
 
 Built-in dashboards behave like templates. To make use of them in any way beyond simple viewing, for example to add or modify charts, you must first save a copy of the dashboard by opening the :strong:`Dashboard actions` menu and clicking :strong:`Save as`. For more information about built-in dashboards, see :ref:`built-in-dashboards`.
 
