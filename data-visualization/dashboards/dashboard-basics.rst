@@ -1,13 +1,13 @@
 .. _dashboard-basics:
 
-************************************************
-Dashboard types in Splunk Observability Cloud
-************************************************
+*************************************************************************
+Dashboard and dashboard group types in Splunk Observability Cloud
+*************************************************************************
 
 .. meta::
-      :description: Use built-in, custom, or user dashboard types to understand your data in Splunk Observability Cloud. Custom and user dashboards and dashboard groups are accessible by all users. 
+      :description: Use built-in, custom, or user dashboard and dashboard group types to understand your data in Splunk Observability Cloud. Custom and user dashboards and dashboard groups are accessible by all users. 
 
-Dashboards are groupings of charts and visualizations of metrics. All dashboards, irrespective of type, belong to a dashboard group. Dashboard groups are displayed on the Dashboards page.
+Dashboards are groupings of charts and visualizations of metrics. All dashboards, irrespective of type, belong to a dashboard group. Dashboard groups are displayed on the :strong:`Dashboards` page.
 
 For more information about accessing dashboards and dashboard groups, see :ref:`viewing-dashboards`.
 
