@@ -30,11 +30,12 @@ To install and configure the Splunk Distribution of the OpenTelemetry Collector 
     <h2>Install the Collector for Linux<a name="linux-install" class="headerlink" href="#linux-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+To install the Splunk Distribution of the OpenTelemetry Collector for Linux you have the following options:
+
 * :ref:`otel-install-linux`
 * :ref:`otel-install-linux-manual`
 * :ref:`otel-install-linux-tools` 
-
-.. note:: You can also deploy the Collector using the Technical Add-on, which provides out-of-the box Collector content and configuration. Learn more at :ref:`collector-addon-intro`.
+* You can also deploy the Collector using the Technical Add-on, which provides out-of-the box Collector content and configuration. Learn more at :ref:`collector-addon-intro`.
 
 .. raw:: html
 
@@ -59,13 +60,12 @@ See the default settings and configuration options at:
     <h2>Upgrade, uninstall and troubleshoot<a name="linux-ts" class="headerlink" href="#linux-ts" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-
-To upgrade or uninstall, see:
+To upgrade or uninstall the Collector see:
 
 * :ref:`otel-linux-upgrade` 
 * :ref:`otel-linux-uninstall`
 
-If you have any installation or configuration issues, refer to :ref:`otel-troubleshooting`.
+If you have any installation or configuration issues refer to :ref:`otel-troubleshooting`.
 
 .. raw:: html
 

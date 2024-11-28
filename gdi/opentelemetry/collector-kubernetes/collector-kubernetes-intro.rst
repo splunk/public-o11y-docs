@@ -37,13 +37,13 @@ To install, configure and use the Splunk Distribution of the Collector for Kuber
     <h2>Install the Collector for Kubernetes<a name="k8s-install" class="headerlink" href="#k8s-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To install the Splunk Distribution of the OpenTelemetry Collector for Kubernetes using the Helm chart, read and follow these docs:
+To install the Splunk Distribution of the OpenTelemetry Collector for Kubernetes using the Helm chart read and follow these docs:
 
 * :ref:`otel-install-k8s`
 * :ref:`kubernetes-helm-architecture`
 * :ref:`kubernetes-helm-releases`
 
-.. note:: By default, you'll obtain these :ref:`Kubernetes metrics <ootb-metrics-k8s>`. 
+.. note:: By default you'll obtain these :ref:`Kubernetes metrics <ootb-metrics-k8s>`. 
 
 Optionally, you can also:
 
@@ -74,7 +74,7 @@ To configure the Collector see:
     <h2>Upgrade, uninstall and troubleshoot<a name="k8s-ts" class="headerlink" href="#k8s-ts" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To upgrade or uninstall, see:
+To upgrade or uninstall the Collector see:
 
 * :ref:`otel-kubernetes-upgrade`
 * :ref:`otel-kubernetes-uninstall`
