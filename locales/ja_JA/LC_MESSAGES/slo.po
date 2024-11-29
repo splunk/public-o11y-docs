@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-07 09:20+0000\n"
-"PO-Revision-Date: 2024-05-21 13:47+0100\n"
+"PO-Revision-Date: 2024-10-29 15:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #: ../../slo/burn-rate-alerts.rst:-1
 msgid "How burn rate alerting works in Splunk Observability Cloud SLO."
@@ -32,11 +32,11 @@ msgstr "プレビュー：サービスレベル目標（SLO）管理"
 
 #: ../../_includes/slo/slo-preview-header.rst:3 ../../slo/slo-preview-sitemap.rst:5
 msgid ""
-"Preview features are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it "
-"at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+"Preview features are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue "
+"itat any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
 msgstr ""
-"プレビュー機能は、いかなる保証、メンテナンス、サポート、サービスレベルの約束もなく、Splunk からお客様に「現状のまま」提供されます。Splunk は独自の判断でこのプレビュー機能を提供し、いつでも中止することができます。プレビュー機能の"
-"使用は、:new-page:`Splunk 一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
+"プレビュー機能は、いかなる保証、メンテナンス、サポート、サービスレベルの約束もなく、Splunk からお客様に「現状のまま」提供されます。Splunk は独自の判断でこのプレビュー機能を提供し、いつでも中止することができます。プレビュー機能"
+"の使用は、:new-page:`Splunk 一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
 
 #: ../../_includes/slo/slo-preview-header.rst:5
 msgid "See :ref:`slo-preview-sitemap` for the complete list of topics, or use these links to navigate to the high-level topics for SLO management:"
@@ -72,8 +72,8 @@ msgstr "例えば、コンプライアンスウィンドウが30日の場合、�
 
 #: ../../slo/burn-rate-alerts.rst:18
 msgid ""
-"Splunk Observability Cloud implements multiwindow, multi-burn-rate alerting to let you know when the rate of consumption of your service level objective (SLO) error budget exceeds a healthy burn rate threshold for the length of "
-"your specified compliance window."
+"Splunk Observability Cloud implements multiwindow, multi-burn-rate alerting to let you know when the rate of consumption of your service level objective (SLO) error budget exceeds a healthy burn rate threshold for the length "
+"ofyour specified compliance window."
 msgstr "Splunk Observability Cloud は、マルチウィンドウ、マルチ燃焼率アラートを実装し、サービスレベル目標 (SLO) エラー予算の消費率が、指定したコンプライアンスウィンドウの長さに対して健全な燃焼率しきい値を超えた場合に通知します。"
 
 #: ../../slo/burn-rate-alerts.rst:21
@@ -334,11 +334,11 @@ msgstr "サービスレベル目標（SLO）管理は、ビジネスニーズと
 
 #: ../../slo/slo-intro.rst:18
 msgid ""
-"While you have always been able to use the data in Splunk Observability Cloud to monitor, troubleshoot, and optimize your services, SLO management provides a quantitative way to track the reliability and performance of your "
-"services. This allows teams to make the right investment trade-offs between product development and operational work."
+"While you have always been able to use the data in Splunk Observability Cloud to monitor, troubleshoot, and optimize your services, SLO management provides a quantitative way to track the reliability and performance of "
+"yourservices. This allows teams to make the right investment trade-offs between product development and operational work."
 msgstr ""
-"これまでも Splunk Observability Cloud のデータを使用して、サービスの監視、トラブルシューティング、最適化を行うことができましたが、SLO 管理はサービスの信頼性とパフォーマンスを定量的に追跡する方法を提供します。これにより、チームは"
-"製品開発と運用業務の間で適切な投資のトレードオフを行うことができます。"
+"これまでも Splunk Observability Cloud のデータを使用して、サービスの監視、トラブルシューティング、最適化を行うことができましたが、SLO 管理はサービスの信頼性とパフォーマンスを定量的に追跡する方法を提供します。これにより、チーム"
+"は製品開発と運用業務の間で適切な投資のトレードオフを行うことができます。"
 
 #: ../../slo/slo-intro.rst:21
 msgid "What is service level monitoring?"
@@ -346,8 +346,8 @@ msgstr "サービスレベルモニタリングとは何ですか？"
 
 #: ../../slo/slo-intro.rst:23
 msgid ""
-"Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service. This process calculates the health of a deployed software or service "
-"and compares it against the service level agreement (SLA)."
+"Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service. This process calculates the health of a deployed software or "
+"serviceand compares it against the service level agreement (SLA)."
 msgstr ""
 "サービスレベルモニタリングは、特定のサービスに関連するさまざまなサービスレベル指標（SLI）を測定、追跡、分析するプロセスです。このプロセスでは、デプロイされたソフトウェアまたはサービスの健全性を計算し、サービスレベルアグリーメン"
 "ト (SLA) と比較します。"
@@ -390,8 +390,8 @@ msgstr "サービスレベル目標（SLO）"
 
 #: ../../slo/slo-intro.rst:41
 msgid ""
-"An SLO defines a target for an SLI and a compliance period over which that target must be met. An SLO contains 3 elements: an SLI, a target, and a compliance period. Compliance periods can be calendar, such as monthly, or "
-"rolling, such as past 30 days."
+"An SLO defines a target for an SLI and a compliance period over which that target must be met. An SLO contains 3 elements: an SLI, a target, and a compliance period. Compliance periods can be calendar, such as monthly, "
+"orrolling, such as past 30 days."
 msgstr ""
 "SLOは、SLIの目標と、その目標を達成するためのコンプライアンス期間を定義します。SLOには、SLI、目標、コンプライアンス期間の3つの要素が含まれます。コンプライアンス期間は、月単位などのカレンダー、または過去30日などのローリングが可能"
 "です。"
@@ -418,11 +418,11 @@ msgstr "カスタマーサービスSLAでは、通常のサポート日に受け
 
 #: ../../slo/slo-intro.rst:50
 msgid ""
-"A measurement of how your SLI performs relative to your SLO over a period of time. Error budget measures the difference between actual and desired performance. It determines how unreliable your service might be during this "
-"period and serves as a signal when you need to take corrective action."
+"A measurement of how your SLI performs relative to your SLO over a period of time. Error budget measures the difference between actual and desired performance. It determines how unreliable your service might be during "
+"thisperiod and serves as a signal when you need to take corrective action."
 msgstr ""
-"一定期間におけるSLOに対するSLIの相対的なパフォーマンスを測定するもの。エラー予算は、実際のパフォーマンスと望ましいパフォーマンスの差を測定します。この期間中にサービスがどの程度信頼できないかを判断し、是正措置を講じる必要がある場"
-"合のシグナルとなります。"
+"一定期間におけるSLOに対するSLIの相対的なパフォーマンスを測定するもの。エラー予算は、実際のパフォーマンスと望ましいパフォーマンスの差を測定します。この期間中にサービスがどの程度信頼できないかを判断し、是正措置を講じる必要がある"
+"場合のシグナルとなります。"
 
 #: ../../slo/slo-intro.rst:51
 msgid "Our service can respond to 1% of requests in >100 ms over a 7 day period."
@@ -430,8 +430,8 @@ msgstr "当社のサービスは、7 日間で 100 ミリ秒を超えるリク�
 
 #: ../../slo/slo-intro.rst:54
 msgid ""
-"A unitless measurement of how quickly a service consumes the error budget during the compliance window of the SLO. Burn rate makes the SLO and error budget actionable, showing service owners when a current incident is serious "
-"enough to page an on-call responder."
+"A unitless measurement of how quickly a service consumes the error budget during the compliance window of the SLO. Burn rate makes the SLO and error budget actionable, showing service owners when a current incident is "
+"seriousenough to page an on-call responder."
 msgstr ""
 "SLO のコンプライアンスウィンドウの間に、サービスがエラー予算をどれだけ早く消費するかを示す単位なしの測定値。燃焼率は、SLOとエラー予算を実行可能なものにし、現在のインシデントがオンコールレスポンダーを呼び出すのに十分な深刻さであ"
 "ることをサービス所有者に示します。"
@@ -483,7 +483,7 @@ msgstr "SLO を編集する"
 
 #: ../../slo/view-slo.rst:26 ../../slo/view-slo.rst:34
 msgid "On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to edit."
-msgstr ":strong:`サービスレベル目標（SLO）` ページで、編集する SLO の横にある詳細アイコン（|more|）を選択します。"
+msgstr ":strong:`サービスレベル目標（SLO）` ページで、編集する SLO の横にある詳細アイコン（|more| ）を選択します。"
 
 #: ../../slo/view-slo.rst:27
 msgid "In the actions menu, select :menuselection:`Edit`."
