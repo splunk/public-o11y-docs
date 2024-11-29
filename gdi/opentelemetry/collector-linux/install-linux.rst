@@ -143,7 +143,7 @@ To use host bindings, run this command:
 Options of the installer script of the Collector for Linux
 ==================================================================
 
-The Linux installer script supports the following options for the Collector, automatic discovery for back-end services and Fluentd.
+The Linux installer script supports the following options for the Collector, automatic discovery with zero-code instrumentation for back-end services, and Fluentd.
 
 To display all the configuration options supported by the script, use the ``-h`` flag.
 
