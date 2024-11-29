@@ -14,7 +14,7 @@ Automatic discovery of apps and services
    Linux <automatic-discovery/discovery-linux>
    Windows <automatic-discovery/discovery-windows>
 
-.. include:: /_includes/gdi/auto-discovery-intro.rst
+The Splunk Distribution of the OpenTelemetry Collector can automatically identify data sources and collect metrics and traces to send them to Splunk Observability Cloud. With automatic discovery and zero-code instrumentation you don't need to manually configure the Splunk Distribution of the OpenTelemetry Collector or your applications before deploying them. 
 
 The following diagram shows how automatic discovery finds data sources:
 
@@ -32,6 +32,8 @@ The following diagram shows how automatic discovery finds data sources:
       Z["Run your application"]
       
       X --> Y --> Z
+
+.. include:: /_includes/gdi/auto-discovery-intro.rst
 
 .. raw:: html
   

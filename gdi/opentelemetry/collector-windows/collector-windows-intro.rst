@@ -28,6 +28,7 @@ To install the Splunk Distribution of the OpenTelemetry Collector for Windows, f
 * :ref:`otel-install-windows-msi` 
 * :ref:`otel-install-windows-tools`
 * :ref:`otel-install-windows-manual`
+* You can also deploy the Collector using the Technical Add-on, which provides out-of-the box Collector content and configuration. Learn more at :ref:`collector-addon-intro`.
 
 See the default settings and configuration options at:
 
@@ -37,6 +38,8 @@ See the default settings and configuration options at:
 * :ref:`windows-config-logs`
 
 .. include:: /_includes/gdi/collector-common-options.rst
+
+To automatically find services and applications running in your Windows environment and send data from them to Splunk Observability Cloud refer to :ref:`discovery-windows`.        
 
 To upgrade or uninstall, see:
 
