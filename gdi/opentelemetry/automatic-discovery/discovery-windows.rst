@@ -18,6 +18,6 @@ Automatic discovery for Windows
 
     <h2>Get started</h2>
 
-The Collector for Windows does not support automatic discovery of services.
+The Collector for Windows does not support automatic discovery of third-party services.
 
 To enable the Collector's zero-code instrumentation of back-end applications written in .NET see :ref:`windows-backend-auto-discovery`. With this option you won't have to install and configure your instrumentation agents separately. 

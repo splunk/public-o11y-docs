@@ -1,33 +1,33 @@
 .. _linux-backend-auto-discovery:
 
 *****************************************************************************
-Automatic instrumentation for back-end applications in Linux
+Zero-code instrumentation for back-end applications in Linux
 *****************************************************************************
 
 .. meta:: 
-    :description: Get started with automatic instrumentation for back-end applications in Linux environments.
+    :description: Get started with zero-code instrumentation for back-end applications in Linux environments.
 
-When using automatic instrumentation, the Splunk Distribution of OpenTelemetry Collector automatically detects back-end applications running in your Linux environment. 
+When using automatic discovery with zero-code instrumentation, the Splunk Distribution of OpenTelemetry Collector automatically detects back-end applications running in your Linux environment. 
 
-By deploying the Collector with automatic instrumentation, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
+By deploying the Collector with zero-code instrumentation, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
 
-Automatic instrumentation for Linux can detect and configure the following applications and language runtimes:
+Zero-code instrumentation for Linux can detect and configure the following applications and language runtimes:
 
 * Java
 * Node.js
 * .NET
 
-How automatic instrumentation for Linux works
+How zero-code instrumentation for Linux works
 ===================================================
 
-Automatic instrumentation for Linux operates as a mode of the Splunk Distribution of OpenTelemetry Collector. You install and activate automatic instrumentation for the Collector by using the Linux installer script or package manager. During installation, you can specify the types of language runtimes you want the Collector to detect. 
+Zero-code instrumentation for Linux operates as a mode of the Splunk Distribution of OpenTelemetry Collector. You install and activate zero-code instrumentation for the Collector by using the Linux installer script or package manager. During installation, you can specify the types of language runtimes you want the Collector to detect. 
 
 After installation, the Collector runs in your Linux environment and listens for requests to your applications. When the Collector detects activity, it gathers telemetry data from your application runtime and sends this data to Splunk Application Performance Monitoring (APM).
 
 Requirements
 ==================================================
 
-You need the following components to use automatic instrumentation for back-end Linux applications:
+You need the following components to use zero-code instrumentation for back-end Linux applications:
 
 * ``systemd``
 * ``curl``
@@ -54,7 +54,7 @@ Make sure you've also installed the components specific to your language runtime
 Get started
 ===============================
 
-To install and use automatic instrumentation for Linux, follow these steps:
+To install and use zero-code instrumentation for Linux, follow these steps:
 
 #. :ref:`auto-discovery-linux-install`
 #. :ref:`auto-discovery-linux-verify`
@@ -65,7 +65,7 @@ To install and use automatic instrumentation for Linux, follow these steps:
 Install the package
 =======================================
 
-Using the installer script, you can install and activate automatic instrumentation for either all supported applications on the host via the system-wide method or only for applications running as ``systemd`` services. 
+Using the installer script, you can install and activate zero-code instrumentation for either all supported applications on the host via the system-wide method or only for applications running as ``systemd`` services. 
 
 
 .. tabs:: 
@@ -415,7 +415,7 @@ If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCE
 Start your applications
 ------------------------------------------------
 
-For automatic instrumentation to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the automatic instrumentation package for the first time and whenever you make any changes to the configuration file. 
+For zero-code instrumentation to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the automatic instrumentation package for the first time and whenever you make any changes to the configuration file. 
 
 After your applications are running, you can verify your data. See :ref:`auto-discovery-view-results-linux`. You can also configure instrumentation settings. See :ref:`auto-discovery-configure-linux`. 
 
@@ -433,9 +433,8 @@ To learn more, see the following resources:
 
 .. _auto-discovery-upgrade-package:
 
-Update automatic instrumentation
+Update zero-code instrumentation
 ==================================================
-
 
 .. tabs:: 
 
@@ -683,5 +682,5 @@ To troubleshoot common errors that occur when instrumenting applications, see th
 View results in Splunk APM
 ====================================================
 
-After activating automatic instrumentation, ensure your data is flowing into Splunk Observability Cloud. See :ref:`verify-apm-data`. 
+After activating zero-code instrumentation, ensure your data is flowing into Splunk Observability Cloud. See :ref:`verify-apm-data`. 
     
