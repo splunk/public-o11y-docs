@@ -5,7 +5,7 @@ Automatic discovery for Linux
 ************************************************************************
 
 .. meta:: 
-    :description: Get started with automatic discovery and instrumentation for Linux environments. Deploy automatic discovery and instrumentation to automatically find services and applications running in your Linux environment and send data from them to Splunk Observability Cloud.
+    :description: Get started with automatic discovery and zero-code instrumentation for Linux environments. Deploy automatic discovery and zero-code instrumentation to automatically find services and applications running in your Linux environment and send data from them to Splunk Observability Cloud.
 
 .. toctree::
     :hidden:

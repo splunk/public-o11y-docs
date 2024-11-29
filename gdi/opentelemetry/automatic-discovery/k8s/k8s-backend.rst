@@ -7,9 +7,7 @@ Zero-code instrumentation for back-end applications in Kubernetes
 .. meta:: 
     :description: Get started with zero-code instrumentation for back-end applications and language runtimes in a Kubernetes environment.
 
-When using zero-code instrumentation, the Splunk Distribution of OpenTelemetry Collector automatically detects back-end applications running in your Kubernetes environment. 
-
-By deploying the Collector with zero-code instrumentation, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
+The Splunk Distribution of the OpenTelemetry Collector uses automatic discovery with zero-code instrumentation to automatically detect back-end applications running in your Kubernetes environment. By deploying the Collector with zero-code instrumentation, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
 
 Zero-code instrumentation for Kubernetes can detect and configure the following applications and language runtimes:
 
@@ -524,7 +522,7 @@ You can also instrument multiple containers with specific languages. To do so, s
 Deactivate zero-code instrumentation
 -----------------------------------------------
 
-To deactivate zero-code instrumentation, remove the annotation. The following command removes the annotation for zero-code instrumentation, deactivating it:
+To deactivate zero-code instrumentation remove the annotation using the following command:
 
 .. code-block:: bash
 
@@ -616,7 +614,7 @@ See :ref:`k8s-advanced-auto-discovery-config` for more information.
 
 .. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
 
-To troubleshoot common errors that occur when instrumenting applications, see the following troubleshooting guides:
+To troubleshoot common errors that occur when instrumenting applications, see the following guides:
 
 * Java: :ref:`common-java-troubleshooting`
 * Node.js: :ref:`common-nodejs-troubleshooting`

@@ -7,9 +7,7 @@ Zero-code instrumentation for back-end applications in Linux
 .. meta:: 
     :description: Get started with zero-code instrumentation for back-end applications in Linux environments.
 
-When using automatic discovery with zero-code instrumentation, the Splunk Distribution of OpenTelemetry Collector automatically detects back-end applications running in your Linux environment. 
-
-By deploying the Collector with zero-code instrumentation, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
+The Splunk Distribution of the OpenTelemetry Collector uses automatic discovery with zero-code instrumentation to automatically detect back-end applications running in your Linux environment. By deploying the Collector with zero-code instrumentation, you can monitor applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
 
 Zero-code instrumentation for Linux can detect and configure the following applications and language runtimes:
 
@@ -20,7 +18,7 @@ Zero-code instrumentation for Linux can detect and configure the following appli
 How zero-code instrumentation for Linux works
 ===================================================
 
-Zero-code instrumentation for Linux operates as a mode of the Splunk Distribution of OpenTelemetry Collector. You install and activate zero-code instrumentation for the Collector by using the Linux installer script or package manager. During installation, you can specify the types of language runtimes you want the Collector to detect. 
+Zero-code instrumentation for Linux operates as a mode of the Splunk Distribution of the OpenTelemetry Collector. You install and activate zero-code instrumentation for the Collector by using the Linux installer script or package manager. During installation, you can specify the types of language runtimes you want the Collector to detect. 
 
 After installation, the Collector runs in your Linux environment and listens for requests to your applications. When the Collector detects activity, it gathers telemetry data from your application runtime and sends this data to Splunk Application Performance Monitoring (APM).
 
@@ -49,7 +47,7 @@ Make sure you've also installed the components specific to your language runtime
 
         .NET version 6.0 or higher and supported libraries. See :ref:`dotnet-otel-requirements` for more information.
 
-        Automatic instrumentation for .NET is only supported for x86_64/AMD64 architectures.
+        Zero-code instrumentation for .NET is only supported for x86_64/AMD64 architectures.
 
 Get started
 ===============================
@@ -76,9 +74,9 @@ Using the installer script, you can install and activate zero-code instrumentati
 
             .. tab:: Installer script
 
-                Using the installer script, you can install the automatic instrumentation package for Java and activate automatic instrumentation for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
+                Using the installer script, you can install the zero-code instrumentation package for Java and activate zero-code instrumentation for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
 
-                .. note:: By default, automatic instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+                .. note:: By default, zero-code instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate zero-code instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
                 
                 .. tabs:: 
 
@@ -93,7 +91,7 @@ Using the installer script, you can install and activate zero-code instrumentati
 
                         .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
-                        The system-wide automatic instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
+                        The system-wide zero-code instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
 
                         To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
@@ -209,7 +207,7 @@ Using the installer script, you can install and activate zero-code instrumentati
 
             .. tab:: Installer script
 
-                Using the installer script, you can install and activate automatic instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
+                Using the installer script, you can install and activate zero-code instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
 
                 The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
 
@@ -217,7 +215,7 @@ Using the installer script, you can install and activate zero-code instrumentati
 
                     --npm-path /custom/path/to/npm
 
-                .. note:: By default, automatic instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+                .. note:: By default, zero-code instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate zero-code instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
 
                 .. tabs::
 
@@ -234,7 +232,7 @@ Using the installer script, you can install and activate zero-code instrumentati
 
                             .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
-                        The system-wide automatic instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
+                        The system-wide zero-code instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
 
                         You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
 
@@ -257,7 +255,7 @@ Using the installer script, you can install and activate zero-code instrumentati
                                 curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                                 sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
                             
-                            The ``systemd`` automatic instrumentation method automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+                            The ``systemd`` zero-code instrumentation method automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
 
                             .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
@@ -296,9 +294,9 @@ Using the installer script, you can install and activate zero-code instrumentati
 
             .. tab:: Installer script 
 
-                Using the installer script, you can install and activate automatic instrumentation for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
+                Using the installer script, you can install and activate zero-code instrumentation for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
 
-                .. note:: By default, automatic instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+                .. note:: By default, zero-code instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate zero-code instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
 
                 .. tabs::
 
@@ -313,7 +311,7 @@ Using the installer script, you can install and activate zero-code instrumentati
 
                         .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
-                        The system-wide automatic instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/dotnet.conf``.
+                        The system-wide zero-code instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/dotnet.conf``.
 
                         To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
@@ -415,7 +413,7 @@ If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCE
 Start your applications
 ------------------------------------------------
 
-For zero-code instrumentation to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the automatic instrumentation package for the first time and whenever you make any changes to the configuration file. 
+For zero-code instrumentation to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the zero-code instrumentation package for the first time and whenever you make any changes to the configuration file. 
 
 After your applications are running, you can verify your data. See :ref:`auto-discovery-view-results-linux`. You can also configure instrumentation settings. See :ref:`auto-discovery-configure-linux`. 
 
@@ -588,7 +586,7 @@ Update zero-code instrumentation
             sudo npm install /usr/lib/splunk-instrumentation/splunk-otel-js.tgz
 
 
-        The default automatic instrumentation configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
+        The default zero-code instrumentation configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
 
         If the Node.js agent is installed under a different path, manually update the path for the ``NODE_OPTIONS`` environment variable in either ``/etc/splunk/zeroconfig/node.conf`` for system-wide services or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` for ``systemd`` services. For example:
 

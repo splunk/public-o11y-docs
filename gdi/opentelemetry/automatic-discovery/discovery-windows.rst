@@ -5,7 +5,7 @@ Automatic discovery for Windows
 ************************************************************************
 
 .. meta:: 
-    :description: Get started with automatic instrumentation for Windows environments. Deploy automatic instrumentation to automatically find applications running in your Windows environment and send data from them to Splunk Observability Cloud.
+    :description: Get started with automatic discovery for Windows environments. Deploy zero-code instrumentation to automatically find applications running in your Windows environment and send data from them to Splunk Observability Cloud.
 
 .. toctree::
     :hidden:
