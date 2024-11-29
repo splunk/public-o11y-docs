@@ -310,7 +310,7 @@ Visibility of plot lines
 
 Click the eye icon on the far left of the plot line to show or hide the plot line on the chart. This option is not available for text charts and event feeds. In all chart types except heatmap, multiple plot lines can be displayed.
 
-.. note:: In the :ref:`single-value-chart-type`, if multiple plots are visible, the value on the chart reflects the first visible plot in the plot list.
+.. note:: In a single value chart, if multiple plots are visible, the value on the chart reflects the first visible plot in the plot list.
 
 To hide all plot lines except one, alt-click (or option-click) the eye icon for the plot line you want to display. This can be useful when a chart contains multiple plots and you need to focus on just one. To return to the previous view, alt-click the eye icon again for the visible plot line.
 
@@ -402,7 +402,7 @@ A number displayed on a chart could be anything from a raw number (such as bits 
 
 All display units are shown when you take any of the following actions:
 
--  View a :ref:`single-value<single-value-chart-type>` or :ref:`list chart<list-chart-type>`
+-  View a :ref:`single value<single-value-charts>` or :ref:`list chart<list-charts>`
 
 -  Look at values in the :ref:`data table<data-table>` for a chart
 
@@ -436,7 +436,7 @@ It can sometimes be useful to apply the :ref:`Scale<scale>` analytics function w
 Visualization type
 -------------------------------------------------------------------
 
-For :ref:`graphs<graph-chart-type>`, plots default to a visualization style selected for the chart as a whole, such as line, area, column, or histogram. For example, new plots created on a column chart appear initially as additional columns. However, you can change this setting so a plot uses a different chart display type than the chart default.
+For :ref:`graph charts<graph-charts>`, plots default to a visualization style selected for the chart as a whole, such as line, area, column, or histogram. For example, new plots created on a column chart appear initially as additional columns. However, you can change this setting so a plot uses a different chart display type than the chart default.
 
 For example, if the chart is an area chart, you can choose to display one of its plots as a line.
 
