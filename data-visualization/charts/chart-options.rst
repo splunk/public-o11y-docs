@@ -1,7 +1,7 @@
 .. _chart-options-tab:
 
 *****************************************************************
-Chart Options in the Chart Builder
+Chart options in the Chart Builder
 *****************************************************************
 
 
