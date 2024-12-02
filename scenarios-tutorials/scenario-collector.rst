@@ -13,10 +13,16 @@ PonyBank uses Splunk Observability Cloud, which brings data in through the open-
 
 To instrument their infrastructure using the Splunk OTel Collector, Kai takes the following steps:
 
-#. :ref:`set-up-eks-monitoring`
-#. :ref:`instrument-ec2-instances`
-#. :ref:`instrument-java-svc`
-#. :ref:`related-content-use-case`
+.. raw:: html
+  
+    <embed>
+      <ol>
+          <li><a href="#set-up-eks-monitoring">Enable EKS monitoring using custom Helm charts</a></li>
+          <li><a href="#instrument-ec2-instances">Use the Collector to instrument all EC2 instances</a></li>
+          <li><a href="#instrument-java-svc">Instrument the Java service for Splunk APM</a></li>
+          <li><a href="#related-content-use-case">Explore links between telemetry using Related Content</a></li>
+      </ol>
+    </embed>
 
 .. raw:: html
   
