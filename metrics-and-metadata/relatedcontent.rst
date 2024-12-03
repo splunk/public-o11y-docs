@@ -73,7 +73,7 @@ The following table describes when and where in Splunk Observability Cloud you c
 Use the Splunk Distribution of the OpenTelemetry Collector to enable Related Content
 ==========================================================================================================
 
-Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
+Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To do this, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
 
 Related Content works out-of-the-box when you deploy the Splunk Distribution of the OpenTelemetry Collector with its default configuration to send your telemetry data to Splunk Observability Cloud. With the default configuration the Collector automatically maps your metadata key names correctly. To learn more about the Collector, see :ref:`otel-intro`.
 
@@ -108,7 +108,7 @@ When the field names in APM and Log Observer match, the trace and the log with t
 Required Collector components
 =================================================================
 
-If you're using the Splunk Distribution of the OpenTelemetry Collector, another distribution of the Collector, or the :ref:`upstream Collector <using-upstream-otel>` and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
+If you're using the Splunk Distribution of the OpenTelemetry Collector, any other distribution of the Collector, or the :ref:`upstream Collector <using-upstream-otel>` and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
 
 The Collector uses the correlation flag of the SignalFx exporter to make relevant API calls to correlate your spans with the infrastructure metrics. This flag is enabled by default. To adjust the correlation option further, see the SignalFx exporter's options at :ref:`signalfx-exporter-settings`.
 
@@ -185,6 +185,8 @@ To enable Related Content for logs use one of these span tags:
 To ensure full functionality of both Log Observer and Related Content, verify that your log events fields are correctly mapped. Correct log field mappings enable built-in log filtering, embed logs in APM and Infrastructure Monitoring functionality, and enable fast searches as well as the Related Content bar.
 
 If the key names in the preceding list use different names in your log fields, remap them to the key names listed here. For example, if you don't see values for :strong:`host.name` in the Log Observer UI, check to see whether your logs use a different field name, such as :strong:`host_name`. If your logs do not contain the default field names exactly as they appear in the preceding list, remap your logs using one of the methods in the following section. 
+
+.. include:: /_includes/log-observer-transition.rst
 
 Kubernetes log fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
