@@ -716,7 +716,7 @@ For example, for a regular wildcard query, :code:`jvm.*` returns anything that s
 
 For Graphite wildcards, :code:`jvm.*` returns only something that has no subsequent dots in the name. For example, for :code:`jvm.*`, :code:`jvm.foo` would be returned, but :code:`jvm.foo.bar` and :code:`jvm.foo.bar.foo` would not.
 
-To use the Graphite wildcard, enter the appropriate Graphite syntax into the signal field, then select the Graphite wildcard option. If you are using the Metrics Sidebar, enter any search term with an asterisk between two dot (.) characters, then select :strong:`Graphite wildcard` from the search results list.
+To use the Graphite wildcard, enter the appropriate Graphite syntax into the signal field, then select the Graphite wildcard option. If you are using the metrics sidebar, enter any search term with an asterisk between two dot (.) characters, then select :strong:`Graphite wildcard` from the search results list.
 
 When the Graphite wildcard option is selected, the ability to filter plots by dimensions is removed. Graphite naming conventions encapsulate dimension values into dot-separated strings and are in effect selected through the use of wildcards.
 
