@@ -35,13 +35,13 @@ This is the collection of scenarios available for Splunk Observability Cloud. Us
     - :ref:`monitor-autodetect`
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`find-detectors`
-  * - :ref:`Alerts, detectors, and SLOs <scenarios-alerts-detectors>`
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`troubleshoot-noisy-detectors`
-  * - :ref:`Alerts, detectors, and SLOs <scenarios-alerts-detectors>`
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`min-delay-detectors-scenario`
-  * - :ref:`Alerts, detectors, and SLOs <scenarios-alerts-detectors>`
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`max-delay-detectors-scenario`
-  * - :ref:`Alerts, detectors, and SLOs <scenarios-alerts-detectors>`
+  * - :ref:`SLOs <slo-intro>`
     - :ref:`custom-metric-slo-scenario`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`service-map`
