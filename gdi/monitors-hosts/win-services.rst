@@ -6,7 +6,9 @@ Windows Services
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf Win_services monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+.. caution:: Smart Agent monitors are being deprecated. To collect Windows service data use the OpenTelemetry Collector and the :new-page:`Telegraf Windows Services Input plugin <https://github.com/influxdata/telegraf/tree/master/plugins/inputs/win_services>`. See how in :ref:`telegraf-generic`.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 ``telegraf/win_services`` monitor type to ingest metrics about Windows
 services.
 

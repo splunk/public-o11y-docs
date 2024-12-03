@@ -8,7 +8,7 @@ DNS Query Input
 
 .. caution:: Smart Agent monitors are being deprecated. To collect DNS data use the OpenTelemetry Collector and the :new-page:`Telegraf DNS Query Input plugin <https://github.com/influxdata/telegraf/tree/master/plugins/inputs/dns_query>`. See how in :ref:`telegraf-generic`.
 
-You can use the Splunk Distribution of OpenTelemetry Collector's Smart Agent receiver with the DNS Query Input monitor type (an embedded form of the Telegraf DNS Query plugin) to collect DNS data.
+You can use the Splunk Distribution of the OpenTelemetry Collector's Smart Agent receiver with the DNS Query Input monitor type (an embedded form of the Telegraf DNS Query plugin) to collect DNS data.
 
 Benefits
 --------
