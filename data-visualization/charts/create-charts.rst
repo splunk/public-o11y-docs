@@ -40,8 +40,6 @@ See the following table for different chart creation methods:
   * - Create a chart using the API
     - Use this method to programmatically create a chart instead of creating one through the user interface. To learn more, see :ref:`create-chart-via-api`.
 
-- To create a chart based on a metric you have found in the Metadata Catalog, see :ref:`create-chart-from-catalog`.
-
 
 .. _create-chart-metric-sidebar:
 
@@ -141,28 +139,12 @@ Once you copy charts to the clipboard, several options from the :strong:`Create`
 Create a new chart using the Chart Builder
 ------------------------------------------
 
-#. In the :strong:`Create` menu, select :strong:`Chart`. Alternatively, select :guilabel:`New chart` on custom dashboards.
+#. In the :strong:`Create` menu on the top navigation bar, select :strong:`Chart`. Alternatively, select :guilabel:`New chart` on custom dashboards.
 #. Search for metrics or events you want to plot on your chart. For more information, see :ref:`chart-builder`.
     
     .. note:: You can add functions to your chart with the :strong:`F(x)` column. See :ref:`plot-analytics` and :ref:`analytics-ref` for more details.
 
 #. Customize your chart. See :ref:`chart-options-tab`.
-
-
-.. _create-chart-from-finder:
-
-Create a chart from the Metric Finder
--------------------------------------
-Use the Metric Finder to find the metric you want to track. From the results page, select the metric name to open the Chart Builder, pre-populated with your metric.
-
-
-.. _create-chart-from-catalog:
-
-Create a chart from the Metadata Catalog
-----------------------------------------
-
-You can also create a chart from the Metadata Catalog. Select a metric from the list in the sidebar, then select :guilabel:`View in Chart` in the preview pane to open the Chart Builder, pre-populated with your metric.
-
 
 .. _create-chart-via-api:
 
@@ -192,7 +174,7 @@ Edit a chart
 
 To edit a chart, open it from any dashboard or the Dashboard panel of a navigator. Editing a chart is essentially identical to building a chart. See :ref:`chart-builder`.
 
-If you don't have write permissions for the dashboard containing the chart, or you are in a built-in dashboard, you have to use :guilabel:`Save as` to save the edited chart.
+If you don't have write permissions for the dashboard containing the chart or if you are in a built-in dashboard, you have to use :guilabel:`Save as` to save the edited chart as a new chart.
 
 .. _save-chart:
 

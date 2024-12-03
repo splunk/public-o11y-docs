@@ -9,7 +9,7 @@ Plot metrics and events using chart builder in Splunk Observability Cloud
 
 Charts are highly customizable. This topic describes how to use chart builder's tools and options to customize your charts to display signals (metrics and events) in an intuitive and compelling way.
 
-.. note:: Use the chart builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`simple-charts-dashboards`.
+.. note:: Use the chart builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`create-chart-metric-sidebar`.
 
 If you are editing an existing chart, you might want to start by configuring plot lines already on the chart (see :ref:`plot-options` and :ref:`plot-config-panel`).
 
