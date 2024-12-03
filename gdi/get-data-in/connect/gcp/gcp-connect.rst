@@ -101,9 +101,9 @@ Your GCP integration is now complete.
 Using a single principal for your resources
 ++++++++++++++++++++++++++++++++++++++++++++++++
 
-In IAM you can grant access to your resources to one or more entities called principals. The principal provided for the project needs either the ``serviceusage.services.use`` permission or the Service Usage Consumer role.
+In IAM you can grant access to your resources to one or more entities called principals, regardless of the authentication method (single Service Account or Workload Identity Federation). 
 
-Regardless of the authentication method (single Service Account or Workload Identity Federation), if you're using a single principal for multiple projects, GCP tracks all API usage quota in the project where the principal originates from. This can result in throttling in your integration. To mitigate this, select :strong:`Use quota from the project where metrics are stored`. 
+If you're using a single principal for multiple projects, GCP tracks all API usage quota in the project where the principal originates from, which can result in throttling in your integration. To mitigate this, select :strong:`Use quota from the project where metrics are stored`. To use this option the principal provided for the project needs either the ``serviceusage.services.use`` permission or the Service Usage Consumer role.
 
 For a more detailed description see :new-page:`Principals <https://cloud.google.com/iam/docs/overview#concepts_related_identity>` in GCP's docs.
 
