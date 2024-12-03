@@ -111,7 +111,7 @@ Optionally you can:
 
 * If you select Compute Engine as one of the services to monitor, you can enter a comma-separated list of Compute Engine Instance metadata keys to send as properties. These metadata keys are sent as properties named ``gcp_metadata_<metadata-key>``.
 
-* Select :strong:`Use quota from the project where metrics are stored` to use a quota from the project where metrics are stored. The service account provided for the project needs either the ``serviceusage.services.use`` permission, or the `Service Usage Consumer` role.
+* If you are using a single principal for multiple projects (a single Service Account or a single Workload Identity Federation provider), GCP tracks all API usage quota in the project where the principal originates from. This can result in throttling in your integration. To mitigate this, select  :strong:`Use quota from the project where metrics are stored`. The principal provided for the project needs either the ``serviceusage.services.use`` permission, or the `Service Usage Consumer` role.
 
 Alternatives to connect to GCP
 ============================================
