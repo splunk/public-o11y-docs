@@ -34,7 +34,7 @@ See the following table for different chart creation methods:
   * - Create a chart using the metrics sidebar
     - Use this method to create a simple chart or add a new chart to an existing dashboard. To learn more, see :ref:`create-chart-metric-sidebar`.
   * - Copy a chart
-    - Use this method to add a clone or move a chart to another dashboard. To learn more, see :ref:`copy-charts`.
+    - Use this method to add a copy or move a chart to another dashboard. To learn more, see :ref:`copy-charts`.
   * - Create a chart using the Chart Builder
     - Use this method to create a more complex chart with customizations during the creation process. To learn more, see :ref:`create-chart-with-chart-builder`.
   * - Create a chart using the API
@@ -59,7 +59,7 @@ To start creating a simple chart, use the metrics sidebar to find and select the
 #. Enter keywords into the search field. If a search keyword also matches metric metadata, such as a dimension name or property value, the metadata displays under the metric name. To add the metadata to your query as a filter, select the matching metadata or the :strong:`Filter` (+) icon. To exclude the metadata from your search results, select the :strong:`Exclude` (-) icon.
     .. note:: Hover over a metric or event name to display information about it.
 
-Create one or multiple charts with metrics
+Create charts with metrics
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * Create a chart with a single metric:
@@ -75,12 +75,12 @@ Create one or multiple charts with metrics
 * Create multiple charts, one for each metric:
 
     #. Select the check box next to each item you want to add.
-    #. Select the :strong:`Separate charts` option.
+    #. Select :strong:`Separate charts`.
     #. Select :strong:`Add charts`.
 
 .. note:: Select :strong:`Add with filters` to add matching metadata from each metric result as filters to your chart.
 
-Create one or multiple charts with events
+Create charts with events
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * Create a chart with a single event:
