@@ -73,7 +73,7 @@ The following table describes when and where in Splunk Observability Cloud you c
 Use the Splunk Distribution of the OpenTelemetry Collector to enable Related Content
 ==========================================================================================================
 
-Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
+Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
 
 Related Content works out-of-the-box when you deploy the Splunk Distribution of the OpenTelemetry Collector with its default configuration to send your telemetry data to Splunk Observability Cloud. With the default configuration the Collector automatically maps your metadata key names correctly. To learn more about the Collector, see :ref:`otel-intro`.
 
