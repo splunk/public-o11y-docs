@@ -27,7 +27,7 @@ The journey for getting started with Splunk Observability Cloud has 3 phases: on
 
 .. note:: This guide is for Splunk Observability Cloud users with the admin role. 
   
-.. image:: /_images/get-started/onboarding-guide-2point0-flowonly.svg
+.. image:: /_images/get-started/full-flow.svg
    :width: 100%
    :alt: .
 
