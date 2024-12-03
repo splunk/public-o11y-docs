@@ -40,32 +40,32 @@ You can use detectors to alert on metrics at the test level, or at the page leve
 
 .. _synth-detector-setup:
 
-Set up a detector for a Splunk Synthetic Monitoring test
+Set up a detector for Splunk Synthetic Monitoring tests
 ==========================================================
 
-You can set up a detector while initially creating or editing a test, or from the results view for a particular test. 
+You can set up a detector while initially creating or editing a test, or from the results view for a particular test. A detector can track one or multiple Synthetic Monitoring tests of the same type.
 
 To set up a detector, do one of the following:
 
 * While creating or editing a test, select :guilabel:`+ Create detector`. The detector dialog box opens.
 * From the :guilabel:`Test results` page for a particular test, select :guilabel:`+ Create detector`. The detector dialog box opens.
 
-Then, in the detector dialog box, do the following:
+In the detector dialog box, enter the following fields:
 
-#. Check that you see the name of the test you want to monitor 
-#. Type a name for your detector. 
-#. Use the metric selector to select the metric you'd like to alert on. 
-#. Use the condition selector to choose the default :guilabel:`Static threshold` alert condition. 
-#. Use the :guilabel:`Scope alerts to` selector to scope the alerts by dimension. For Browser tests, you can use this selector to scope the detector to the entire test, a particular page within the test, or a particular synthetic transaction within the test. See the following sections for details:
+#. In the test name list, select the tests you want to include in your detector. If you want to include all tests of the same type, select :strong:`All tests`.
+#. In the metric list, select the metric you want to receive alerts for. By default, a detector tracks :strong:`Uptime` metric.
+#. The default :guilabel:`Static threshold` alert condition can't be changed.
+#. Select :strong:`+ Add filters` to scope the alerts by dimension. For Browser tests, you can use this selector to scope the detector to the entire test, a particular page within the test, or a particular synthetic transaction within the test. See the following sections for details:
 
     * :ref:`page-level-detector`
     * :ref:`transaction-level-detector`
 
 #. In the :guilabel:`Alert details` section, enter the following:
 
-    * :guilabel:`Trigger threshold`: The threshold the metric must exceed to trigger the alert
-    * :guilabel:`Violates threshold`: How many times the threshold must be violated to trigger the alert
-    * :guilabel:`Split by location`: Choose whether to split the detector by test location. If you don't filter by location, the detector monitors the average value across locations. 
+    * :guilabel:`Trigger threshold`: The threshold to trigger the alert.
+    * :guilabel:`Orientation`: Specify whether the metric must fall below or exceed the threshold to trigger the alert.
+    * :guilabel:`Violates threshold`: How many times the metric must violate the threshold to trigger the alert.
+    * :guilabel:`Split by location`: Select whether to split the detector by test location. If you don't filter by location, the detector monitors the average value across all locations. 
 
 #. Use the severity selector to select the severity of the alert.
 #. Add recipients. 
