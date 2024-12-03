@@ -174,11 +174,11 @@ The chart type you select is applied as a default to all the plots on the chart,
 Save a chart
 ============
 
-When you finish creating or editing a chart, select :guilabel:`Save`, :guilabel:`Save as`, or :guilabel:`Save and close` from the :guilabel:`Chart actions` menu of the chart. The options vary depending on how you created or opened the chart.
+#. When you finish creating or editing a chart, select :guilabel:`Save`, :guilabel:`Save as`, or :guilabel:`Save and close` from the :guilabel:`Chart actions` menu of the chart. The options vary depending on how you created or opened the chart.
 
-If you don't have write permissions for the dashboard you are viewing or if you are in a built-in dashboard, you can't see an option to save the chart. Instead, you have to use :guilabel:`Save as` to save the chart to another dashboard.
+    If you don't have write permissions for the dashboard you are viewing or if you are in a built-in dashboard, you have to use :guilabel:`Save as` to save the chart to another dashboard.
 
-To save your changes, select :guilabel:`Close`.
+#. Select :guilabel:`Close`.
 
 .. note::
 
