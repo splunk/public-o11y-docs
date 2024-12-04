@@ -23,7 +23,7 @@ With usage analytics, you can quickly find and visualize which metrics your orga
 Usage analytics can help you complete the following example scenarios: 
 
 * You want to view high-cardinality custom metrics that are taking up large chunks of your metric usage plan. 
-* You want to identify what metrics your team is producing so you can access their usefulness.
+* You want to identify what metrics your team is producing so you can assess their usefulness.
 * You want to find the source and ownership of a certain metric so that you can modify or adjust it.
 
 .. _mua-understand-metrics:
