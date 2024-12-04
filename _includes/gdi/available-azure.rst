@@ -1,4 +1,4 @@
-You can collect data from the following Azure services out-of-the-box:
+Splunk Observability Cloud can collect metrics from the Azure services listed below. To do so, add the service to your Azure integration as explained in :ref:`connect-to-azure`.
 
 .. list-table::
   :header-rows: 1
