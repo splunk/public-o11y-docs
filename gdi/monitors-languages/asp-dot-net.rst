@@ -12,6 +12,8 @@ ASP.NET (deprecated)
 
    To forward data from a .NET application to Splunk Observability Cloud use the :ref:`Splunk Distribution of OpenTelemetry .NET <get-started-dotnet-otel>` instead. 
 
+   To monitor Windows Performance Counters with native OpenTelemetry refer to :ref:`windowsperfcounters-receiver`.
+
 The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 ``aspdotnet`` monitor type to retrieve metrics for requests, errors,
 sessions, and worker processes from ASP.NET applications.

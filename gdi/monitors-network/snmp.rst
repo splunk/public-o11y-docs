@@ -6,7 +6,9 @@ SNMP agent
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the SNMP agent monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+.. caution:: Smart Agent monitors are being deprecated. To collect data from SNMP agents use the OpenTelemetry Collector and the :new-page:`Telegraf SNMP Input plugin <https://github.com/influxdata/telegraf/tree/master/plugins/inputs/snmp>`. See how in :ref:`telegraf-generic`.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 ``snmp`` monitor type to collect metrics from SNMP agents.
 
 This integration is available for Kubernetes, Windows, and Linux.

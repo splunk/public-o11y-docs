@@ -25,7 +25,7 @@ Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Co
    
    Smart Agent monitors are also being deprecated and will no longer be available to send data to Splunk Observability Cloud when they reach End of Support. Instead, you can use native OpenTelemetry receivers to gather data with the OTel Collector. See :ref:`migration-monitors-native`.
 
-The Splunk Distribution of the :new-page:`OpenTelemetry Collector <https://opentelemetry.io/docs/concepts/data-collection/>` provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud. If you're using the SignalFx Smart Agent (deprecated) you can easily transition to the Collector without losing any functionality. 
+The Splunk Distribution of the OpenTelemetry Collector provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud. If you're using the SignalFx Smart Agent (End Of Support) you must transition to the Collector. 
 
 .. raw:: html
 

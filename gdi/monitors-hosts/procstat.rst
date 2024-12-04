@@ -6,7 +6,9 @@ procstat
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the procstat monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+.. caution:: Smart Agent monitors are being deprecated. To collect metrics about processes use the OpenTelemetry Collector and the :new-page:`Telegraf Procstat Input plugin <https://github.com/influxdata/telegraf/tree/master/plugins/inputs/procstat>`. See how in :ref:`telegraf-generic`.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 ``procstat`` monitor type to collect metrics about processes.
 
 This integration is available for Kubernetes, Linux, and Windows.
