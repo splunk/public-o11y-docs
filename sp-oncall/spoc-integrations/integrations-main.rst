@@ -14,6 +14,7 @@ Splunk On-Call integrations
    alertsite-integration
    appdynamics-integration
    appoptics-integration
+   arista-cloudvision-integration
    atatus-integration
    aws-cloudwatch-integration-guide
    azure-monitoring-integration-guide
