@@ -34,8 +34,8 @@ Basic settings
 
    * - :strong:`Cycle length`
      - Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be significantly larger than the native resolution.
-     - | The time range that reflects the cyclicity of your signal. A value of ``1w`` indicates your signal follows a weekly cycle. A value of ``1d`` indicates your signal follows a daily cycle.
-       | Cycle length works in conjunction with the duration of the time window used for data comparison, represented by the :strong:`Current window` parameter. Data from the current window might be compared against data from multiple previous cycles to detect historical anomaly.
+     - | The time range that reflects the cyclicity of your signal. For example, a value of 1w indicates your signal follows a weekly cycle, and a value of 1d indicates your signal follows a daily cycle.
+       | Cycle length works in conjunction with the duration of the time window used for data comparison, represented by the :strong:`Current window` parameter. Data from the current window will be compared against data from one or more previous cycles to detect historical anomaly, depending on the value of the :strong:`Number of previous cycles` parameter.
        | For example, if the current window is ``1h`` and the cycle length is ``1w``, data in the past hour ([-1h, now]) is compared against data from the [-1w1h, -1w] hour, [-2w1h, -2w] hour, and so on.
 
    * - :strong:`Alert when`
