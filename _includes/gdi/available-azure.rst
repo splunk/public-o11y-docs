@@ -1,4 +1,14 @@
-You can sync Splunk Observability Cloud with the Azure services listed below as exlained in :ref:`connect-to-azure`. For any other service not listed, Splunk Observability Cloud won't retrieve any tags or props by default. If you wish to connect with them, add them as a custom service. 
+Splunk Observability Cloud collects data from the Azure services listed below as explained in :ref:`connect-to-azure`. If you want to collect data from other Azure services add them as a custom service (related API field is `additionalServices`). 
+
+A resource type you specify as a custom service must meet the following criteria:
+
+1. The type is a Azure GenericResource. For resource types that have hierarchical structure, only the root resource type is a GenericResource.
+
+For example, a Storage Account type can have a File Service type, and a File Service type can have a File Storage type. In this case, only Storage Account is a GenericResource.
+
+2. The resource type stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation.
+
+Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication.
 
 .. list-table::
   :header-rows: 1
