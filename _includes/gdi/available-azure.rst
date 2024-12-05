@@ -1,4 +1,4 @@
-Splunk Observability Cloud collects data from the Azure services listed on the table below as explained in :ref:`connect-to-azure`. 
+By default Splunk Observability Cloud collects metrics from the Azure services listed on the table below as explained in :ref:`connect-to-azure`. 
 
 .. list-table::
   :header-rows: 1
