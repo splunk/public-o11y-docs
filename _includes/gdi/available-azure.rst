@@ -1,4 +1,4 @@
-Splunk Observability Cloud can collect metrics from the Azure services listed below. To do so, add the service to your Azure integration as explained in :ref:`connect-to-azure`.
+You can sync Splunk Observability Cloud with the Azure services listed below as exlained in :ref:`connect-to-azure`. For any other service not listed, Splunk Observability Cloud won't retrieve any tags or props by default. If you wish to connect with them, add them as a custom service. 
 
 .. list-table::
   :header-rows: 1
