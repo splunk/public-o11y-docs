@@ -254,7 +254,7 @@ Splunk Observability Cloud collects data from the Azure services listed on the t
 Add additional services
 ============================================
 
-If you want to collect data from other Azure services you need to add them as a custom service with via the API using the field `additionalServices`. Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication.
+If you want to collect data from other Azure services you need to add them as a custom service in the UI, or with the field `additionalServices` if you're using the API. Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication.
 
 Any resource type you specify as a custom service must meet the following criteria:
 
