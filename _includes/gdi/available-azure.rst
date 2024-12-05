@@ -1,14 +1,4 @@
-Splunk Observability Cloud collects data from the Azure services listed below as explained in :ref:`connect-to-azure`. If you want to collect data from other Azure services add them as a custom service (related API field is `additionalServices`). 
-
-A resource type you specify as a custom service must meet the following criteria:
-
-1. The type is a Azure GenericResource. For resource types that have hierarchical structure, only the root resource type is a GenericResource.
-
-For example, a Storage Account type can have a File Service type, and a File Service type can have a File Storage type. In this case, only Storage Account is a GenericResource.
-
-2. The resource type stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation.
-
-Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication.
+Splunk Observability Cloud collects data from the Azure services listed on the table below as explained in :ref:`connect-to-azure`. 
 
 .. list-table::
   :header-rows: 1
@@ -261,3 +251,15 @@ Splunk Observability Cloud syncs resource types that you specify in services and
   * - VPN Gateway	
     - microsoft.network/virtualnetworkgateways
 
+Add additional services
+============================================
+
+If you want to collect data from other Azure services you need to add them as a custom service with via the API using the field `additionalServices`. Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication.
+
+Any resource type you specify as a custom service must meet the following criteria:
+
+* The resource must be an Azure GenericResource type. 
+  
+  * If the resource types has a hierarchical structure, only the root resource type is a GenericResource. For example, a Storage Account type can have a File Service type, which in turn can have a File Storage type. In this case, only Storage Account is a GenericResource.
+
+* The resource type stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation.
