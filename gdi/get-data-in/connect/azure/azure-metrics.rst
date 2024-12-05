@@ -14,9 +14,6 @@ Azure services metric information
 
 Metric names and descriptions are generated dynamically from data provided by Microsoft. See all details in Microsoft's :new-page:`Supported metrics with Azure Monitor <https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported>`.
 
-Types of available metrics
--------------------------------------------
-
 Every metric can either be a counter or a gauge, depending on what dimension is being looked at. If the MTS contains the dimension ``aggregation_type: total`` or ``aggregation_type: count``, then it is sent as a counter. Otherwise, it is sent as a gauge. To learn more, see :ref:`metric-types` and :ref:`metric-time-series`. 
 
 Azure functions metrics
