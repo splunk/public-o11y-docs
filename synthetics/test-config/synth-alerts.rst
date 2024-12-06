@@ -47,12 +47,15 @@ You can set up a detector while initially creating or editing a test, or from th
 
 To set up a detector, do one of the following:
 
-* While creating or editing a test, select :guilabel:`+ Create detector`. The detector dialog box opens.
-* From the :guilabel:`Test results` page for a particular test, select :guilabel:`+ Create detector`. The detector dialog box opens.
+* While creating or editing a test, select :guilabel:`Create detector`. The detector dialog box opens.
+* From the :guilabel:`Test results` page for a particular test, select :guilabel:`Create detector`. The detector dialog box opens.
 
 In the detector dialog box, enter the following fields:
 
-#. In the test name list, select the tests you want to include in your detector. If you want to include all tests of the same type, select :strong:`All tests`.
+#. In the test name list, select the tests you want to include in your detector. If you want to include all tests you see in the list, select the :strong:`All tests` check box.
+
+    .. note:: The :strong:`All tests` option uses wildcard ( * ) in the program text and always covers all tests of the same type.
+
 #. In the metric list, select the metric you want to receive alerts for. By default, a detector tracks :strong:`Uptime` metric.
 #. The default :guilabel:`Static threshold` alert condition can't be changed.
 #. Select :strong:`+ Add filters` to scope the alerts by dimension. For Browser tests, you can use this selector to scope the detector to the entire test, a particular page within the test, or a particular synthetic transaction within the test. See the following sections for details:
@@ -63,13 +66,12 @@ In the detector dialog box, enter the following fields:
 #. In the :guilabel:`Alert details` section, enter the following:
 
     * :guilabel:`Trigger threshold`: The threshold to trigger the alert.
-    * :guilabel:`Orientation`: Specify whether the metric must fall below or exceed the threshold to trigger the alert.
+    * :guilabel:`Orientation`: Only available for uptime metric. Specify whether the metric must fall below or exceed the threshold to trigger the alert.
     * :guilabel:`Violates threshold`: How many times the metric must violate the threshold to trigger the alert.
     * :guilabel:`Split by location`: Select whether to split the detector by test location. If you don't filter by location, the detector monitors the average value across all locations. 
 
 #. Use the severity selector to select the severity of the alert.
-#. Add recipients. 
-#. (Optional) Add a URL to a runbook. 
+#. Add recipients.
 #. Select :guilabel:`Activate`. 
 
 .. _page-level-detector:
