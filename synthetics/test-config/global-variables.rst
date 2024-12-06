@@ -7,24 +7,20 @@ Create and use global variables
 .. meta::
     :description: Define a variable that you can use in multiple browser and API tests in Splunk Synthetic Monitoring.
 
-Define a global variable once, and then you can use the variable across all of your browser and API tests.
+Define a global variable once, and then use it across all of your browser and API tests.
 
 
 How can you use a global variable?
 ===================================
-Global variables are stored securely in Splunk Synthetic Monitoring, but the keys and values of all global variables in your account are visible to all users. 
+Use global variables to store non-sensitive information for your browser and API tests. Splunk Synthetic Monitoring saves your global variables, but note that their values are visible to all users in your account. 
 
-To preserve your account's security, don't use production credentials, real credit card information, or other sensitive data in global variables for your tests. Instead, use placeholder credentials to test workflows that require you to enter information.
-
-To use information such as login credentials, API keys, or other test data, you can permanently conceal the value of a global variable from all users of your account. 
+To preserve your account's security, don't use global variables to store sensitive information like login credentials, API keys, or credit card information. Instead, either use placeholder values or permanently conceal the global variables that contain sensitive information. 
 
 .. _concealed-gv:
 
 What happens when you conceal a global variable?
 ==================================================
-When you conceal a global variable, its value is permanently concealed from all users of the account. This lets you create and save variables such as test login credentials, API keys, and other sensitive information to use in browser and API tests. 
-
-To preserve security, the value of a concealed global variable is never revealed to any user of the account after it has been created and saved. The value is scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages.  
+When you conceal a global variable, Splunk Synthetic Monitoring permanently hides its value from all users of your account. Concealed values are never revealed; they are scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages. However, if you send a concealed value to a test endpoint, that endpoint receives its unconcealed value.
 
 
 Create a global variable
