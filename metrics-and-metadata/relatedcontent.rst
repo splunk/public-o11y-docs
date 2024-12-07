@@ -73,7 +73,7 @@ The following table describes when and where in Splunk Observability Cloud you c
 Use the Splunk Distribution of the OpenTelemetry Collector to enable Related Content
 ==========================================================================================================
 
-Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
+Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To do this, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
 
 Related Content works out-of-the-box when you deploy the Splunk Distribution of the OpenTelemetry Collector with its default configuration to send your telemetry data to Splunk Observability Cloud. With the default configuration the Collector automatically maps your metadata key names correctly. To learn more about the Collector, see :ref:`otel-intro`.
 
@@ -108,7 +108,7 @@ When the field names in APM and Log Observer match, the trace and the log with t
 Required Collector components
 =================================================================
 
-If you're using the Splunk Distribution of the OpenTelemetry Collector, another distribution of the Collector, or the :ref:`upstream Collector <using-upstream-otel>` and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
+If you're using the Splunk Distribution of the OpenTelemetry Collector, any other distribution of the Collector, or the :ref:`upstream Collector <using-upstream-otel>` and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
 
 The Collector uses the correlation flag of the SignalFx exporter to make relevant API calls to correlate your spans with the infrastructure metrics. This flag is enabled by default. To adjust the correlation option further, see the SignalFx exporter's options at :ref:`signalfx-exporter-settings`.
 
@@ -124,10 +124,12 @@ The following sections list the metadata key names required to enable Related Co
 Splunk APM
 -----------------------------------------------------------------
 
-The following APM span tags are required to enable Related Content:
+To enable Related Content for APM use one of these span tags:
 
 - ``service.name``
-- ``deployment.environment`` 
+- ``trace_id``
+
+Optionally, you can also use ``deployment.environment`` with ``service.name``.
 
 The default configuration of the Splunk Distribution of the OpenTelemetry Collector already provides these span tags. To ensure full functionality of Related Content, do not change any of the metadata key names or span tags provided by the Splunk OTel Collector. 
 
@@ -154,15 +156,15 @@ For example, consider a scenario in which Related Content needs to return data f
 Splunk Infrastructure Monitoring
 -----------------------------------------------------------------
 
-The following Infrastructure Monitoring metadata keys are required to enable Related Content:
+To enable Related Content for IM use one of these metadata combinations:
 
-- ``host.name``
+-  ``host.name``. It falls back on ``host``, ``aws_private_dns_name`` (AWS), ``instance_name`` (GCP), ``azure_computer_name`` (Azure)
 - ``k8s.cluster.name``
-- ``k8s.node.name``
-- ``k8s.pod.name``
-- ``container.id``
-- ``k8s.namespace.name``
-- ``kubernetes.workload.name``
+- ``k8s.cluster.name`` + ``k8s.node.name``
+- ``k8s.cluster.name`` + ``k8s.node.name`` (optional) + ``k8s.pod.name``
+- ``k8s.cluster.name`` + ``k8s.node.name`` (optional) + ``k8s.pod.name`` (optional) + ``container.id``
+- ``service.name``
+- ``service.name`` + ``deployment.environment`` (optional) + ``k8s.cluster.name`` (optional)
 
 If you're using the default configuration of the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, the required Infrastructure Monitoring metadata is provided. See more at :ref:`otel-install-k8s`.
 
@@ -170,22 +172,41 @@ If you're using other distributions of the OpenTelemetry Collector or non-defaul
 
 .. _relatedcontent-log-observer:
 
-Splunk Log Observer
+Splunk logs
 -----------------------------------------------------------------
 
-.. include:: /_includes/log-observer-transition.rst
+To enable Related Content for logs use one of these fields:
 
-The following key names are required to enable Related Content for Log Observer:
-
-- ``service.name``
-- ``deployment.environment``
 - ``host.name``
-- ``trace_id``
+- ``service.name``
 - ``span_id``
+- ``trace_id``
 
 To ensure full functionality of both Log Observer and Related Content, verify that your log events fields are correctly mapped. Correct log field mappings enable built-in log filtering, embed logs in APM and Infrastructure Monitoring functionality, and enable fast searches as well as the Related Content bar.
 
 If the key names in the preceding list use different names in your log fields, remap them to the key names listed here. For example, if you don't see values for :strong:`host.name` in the Log Observer UI, check to see whether your logs use a different field name, such as :strong:`host_name`. If your logs do not contain the default field names exactly as they appear in the preceding list, remap your logs using one of the methods in the following section. 
+
+.. include:: /_includes/log-observer-transition.rst
+
+Kubernetes log fields
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Splunk Distribution of the OpenTelemetry Collector injects the following fields into your Kubernetes logs. Do not modify them if you want to use Related Content. 
+
+- ``k8s.cluster.name``
+- ``k8s.node.name``
+- ``k8s.pod.name``
+- ``container.id``
+- ``k8s.namespace.name``
+- ``kubernetes.workload.name``
+
+Use one of these tag combinations to enable Related Content:
+
+- ``k8s.cluster.name`` + ``k8s.node.name``
+- ``k8s.cluster.name`` + ``k8s.node.name`` (optional) + ``k8s.pod.name``
+- ``k8s.cluster.name`` + ``k8s.node.name`` (optional) + ``k8s.pod.name`` (optional) + ``container.id``
+
+Learn more about the Collector for Kubernetes at :ref:`collector-kubernetes-intro`.
 
 .. _remap-log-fields:
 
@@ -207,7 +228,6 @@ The following table describes the four methods for remapping log fields:
    * - Client-side
      - Configure your app to remap the necessary fields.
 
-
 When to use Log Field Aliasing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -217,20 +237,6 @@ Use Log Field Aliasing to remap fields in Splunk Observability Cloud when you ca
 - You do not want to use indexing capacity by creating additional log processing rules.
 - You do not want to transform your data at index time.
 - You want the new alias to affect every log message, even those that came in from a time before you created the alias.
-
-Kubernetes log fields
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Splunk Distribution of the OpenTelemetry Collector injects the following fields into your Kubernetes logs. Do not modify them if you want to use Related Content. 
-
-- ``k8s.cluster.name``
-- ``k8s.node.name``
-- ``k8s.pod.name``
-- ``container.id``
-- ``k8s.namespace.name``
-- ``kubernetes.workload.name``
-
-Learn more about the Collector for Kubernetes at :ref:`collector-kubernetes-intro`.
 
 How to change your metadata key names
 =================================================================
