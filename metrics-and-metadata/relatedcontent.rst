@@ -156,7 +156,7 @@ For example, consider a scenario in which Related Content needs to return data f
 Splunk Infrastructure Monitoring
 -----------------------------------------------------------------
 
-To enable Related Content for IM use one of these span tag combinations:
+To enable Related Content for IM use one of these metadata combinations:
 
 -  ``host.name``. It falls back on ``host``, ``aws_private_dns_name`` (AWS), ``instance_name`` (GCP), ``azure_computer_name`` (Azure)
 - ``k8s.cluster.name``
@@ -175,7 +175,7 @@ If you're using other distributions of the OpenTelemetry Collector or non-defaul
 Splunk logs
 -----------------------------------------------------------------
 
-To enable Related Content for logs use one of these span tags:
+To enable Related Content for logs use one of these fields:
 
 - ``host.name``
 - ``service.name``
