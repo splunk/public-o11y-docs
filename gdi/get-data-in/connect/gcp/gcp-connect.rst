@@ -98,8 +98,17 @@ Your GCP integration is now complete.
 
 .. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
-Options
-++++++++
+Using a single principal for your resources
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+In IAM you can grant access to your resources to one or more entities called principals, regardless of the authentication method (single Service Account or Workload Identity Federation). 
+
+If you're using a single principal for multiple projects, GCP tracks all API usage quota in the project where the principal originates from, which can result in throttling in your integration. To mitigate this, select :strong:`Use quota from the project where metrics are stored`. To use this option the principal provided for the project needs either the ``serviceusage.services.use`` permission or the Service Usage Consumer role.
+
+For a more detailed description see :new-page:`Principals <https://cloud.google.com/iam/docs/overview#concepts_related_identity>` in GCP's docs.
+
+Other options
+++++++++++++++++
 
 Optionally you can: 
 
@@ -110,8 +119,6 @@ Optionally you can:
    - To learn about custom metric type domain syntax, see :new-page:`Custom metric type domain examples <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Custom-metric-type-domain-examples>` in the Splunk developer documentation.
 
 * If you select Compute Engine as one of the services to monitor, you can enter a comma-separated list of Compute Engine Instance metadata keys to send as properties. These metadata keys are sent as properties named ``gcp_metadata_<metadata-key>``.
-
-* Select :strong:`Use quota from the project where metrics are stored` to use a quota from the project where metrics are stored. The service account provided for the project needs either the ``serviceusage.services.use`` permission, or the `Service Usage Consumer` role.
 
 Alternatives to connect to GCP
 ============================================
