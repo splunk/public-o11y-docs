@@ -34,7 +34,9 @@ Basic settings
 
    * - :strong:`Cycle length`
      - Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be significantly larger than the native resolution.
-     - The time range that reflects the cyclicity of your signal. For example, a value of 1w indicates your signal follows a weekly cycle (you want to compare data for a Monday morning with previous Monday mornings). A value of 1d indicates your signal follows a daily cycle (you want to compare today's data with data from the same time yesterday, the day before, and so on.)
+     - | The time range that reflects the cycle of your signal. For example, a value of ``1w`` indicates your signal follows a weekly cycle, and a value of ``1d`` indicates your signal follows a daily cycle.
+       | Cycle length works in conjunction with the duration of the time window used for data comparison, represented by the :strong:`Current window` parameter. Data from the current window will be compared against data from one or more previous cycles to detect historical anomaly, depending on the value of the :strong:`Number of previous cycles` parameter.
+       | For example, if the current window is ``1h`` and the cycle length is ``1w``, data in the past hour ([-1h, now]) is compared against data from the [-1w1h, -1w] hour, [-2w1h, -2w] hour, and so on.
 
    * - :strong:`Alert when`
      - ``Too high``, ``Too low``, ``Too high or Too low``
@@ -62,7 +64,7 @@ Advanced settings
      -  If the short-term variation in a signal is small relative to the scale of the signal, and the scale is somehow natural, using ``Mean plus percentage change`` is recommended; using ``Mean plus standard deviation`` might trigger alerts even for a large number of standard deviations. In addition, ``Mean plus percentage change`` is recommended for metrics which admit a direct business interpretation. For instance, if ``user_sessions`` drops by 20%, revenue drops by 5%.
 
    * - :strong:`Current window`
-     - Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be smaller than Cycle length, and significantly larger than the native resolution.
+     - Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be shorter than cycle length, and significantly larger than the native resolution.
      - The time range against which to compare the data; you can think of this as the moving average window. Higher values compute the mean over more data points, which generally smoothes the value, resulting in lower sensitivity and potentially fewer alerts.
 
    * - :strong:`Number of previous cycles`

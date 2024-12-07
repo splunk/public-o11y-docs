@@ -1,4 +1,4 @@
-You can collect data from the following Azure services out-of-the-box:
+By default Splunk Observability Cloud collects metrics from the Azure services listed on the table below as explained in :ref:`connect-to-azure`. 
 
 .. list-table::
   :header-rows: 1
@@ -251,3 +251,15 @@ You can collect data from the following Azure services out-of-the-box:
   * - VPN Gateway	
     - microsoft.network/virtualnetworkgateways
 
+Add additional services
+============================================
+
+If you want to collect data from other Azure services you need to add them as a custom service in the UI, or with the field ``additionalServices`` if you're using the API. Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication.
+
+Any resource type you specify as a custom service must meet the following criteria:
+
+* The resource must be an Azure GenericResource type. 
+  
+  * If the resource type has a hierarchical structure, only the root resource type is a GenericResource. For example, a Storage Account type can have a File Service type, which in turn can have a File Storage type. In this case, only Storage Account is a GenericResource.
+
+* The resource type stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation.
