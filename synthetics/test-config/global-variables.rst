@@ -14,7 +14,7 @@ How can you use a global variable?
 ===================================
 Use global variables to store non-sensitive information for your browser and API tests. Splunk Synthetic Monitoring saves your global variables, but note that their values are visible to all users in your account. 
 
-To preserve your account's security, don't use global variables to store sensitive information like login credentials, API keys, or credit card information. Instead, either use placeholder values or permanently conceal the global variables that contain sensitive information. 
+To preserve your account's security, don't use global variables to store sensitive information such as login credentials, API keys, or credit card information. Instead, either use placeholder values or permanently conceal the global variables that contain sensitive information. 
 
 .. _concealed-gv:
 
