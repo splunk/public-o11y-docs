@@ -45,7 +45,20 @@ Follow these steps to set up a Browser test:
 #. Save your test.
 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="synthetics/configure-test.rst"></div>
+
 .. include:: /_includes/synthetics/configure-test.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="synthetics/configure-test.rst"></div>
+
+
+
 
 Import a JSON file generated from Google Chrome Recorder
 ============================================================
@@ -520,7 +533,20 @@ Note: Global variables are incompatible with Chrome flags.
 These are the flags available: 
 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="synthetics/chrome-flags.rst"></div>
+
 .. include:: /_includes/synthetics/chrome-flags.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="synthetics/chrome-flags.rst"></div>
+
+
+
 
 
 

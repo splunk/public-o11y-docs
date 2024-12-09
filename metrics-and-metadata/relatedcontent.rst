@@ -186,7 +186,20 @@ To ensure full functionality of both Log Observer and Related Content, verify th
 
 If the key names in the preceding list use different names in your log fields, remap them to the key names listed here. For example, if you don't see values for :strong:`host.name` in the Log Observer UI, check to see whether your logs use a different field name, such as :strong:`host_name`. If your logs do not contain the default field names exactly as they appear in the preceding list, remap your logs using one of the methods in the following section. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="log-observer-transition.rst"></div>
+
 .. include:: /_includes/log-observer-transition.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="log-observer-transition.rst"></div>
+
+
+
 
 Kubernetes log fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

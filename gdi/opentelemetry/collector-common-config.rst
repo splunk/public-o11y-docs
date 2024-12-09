@@ -20,4 +20,16 @@ Common configuration options
 
 .. note:: The following list might not contain all the latest additions and updates. For a complete list of Collector common settings see the ``opentelemetry`` repository in GitHub.  
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-common-options.rst"></div>
+
 .. include:: /_includes/gdi/collector-common-options.rst
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-common-options.rst"></div>
+
+
+

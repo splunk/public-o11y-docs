@@ -158,12 +158,38 @@ The following metrics, resource attributes, and attributes are available.
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/kafkametricsreceiver.yaml"></div>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="activate-deactivate-native-metrics.rst"></div>
+
 .. include:: /_includes/activate-deactivate-native-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="activate-deactivate-native-metrics.rst"></div>
+
+
+
 
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+
 
 
 

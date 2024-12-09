@@ -21,7 +21,20 @@ The Splunk Distribution of OpenTelemetry Python instruments numerous libraries a
 Ensure you have supported Python and library versions
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/python.rst"></div>
+
 .. include:: /_includes/requirements/python.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/python.rst"></div>
+
+
+
    
 .. _python-otel-connector-requirement:
 

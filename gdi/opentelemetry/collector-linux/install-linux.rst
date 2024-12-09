@@ -20,7 +20,20 @@ Install the package using one of these methods:
 Supported versions
 =================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/collector-linux.rst"></div>
+
 .. include:: /_includes/requirements/collector-linux.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/collector-linux.rst"></div>
+
+
+
 
 Included packages
 ==========================
@@ -290,4 +303,17 @@ Fluentd
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-linux-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-linux-next-steps.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-linux-next-steps.rst"></div>
+
+
+

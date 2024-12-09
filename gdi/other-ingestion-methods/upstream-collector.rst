@@ -81,8 +81,21 @@ Sample configuration for Splunk Observability Cloud
 
 The following example shows how to configure the upstream Collector to send metrics and traces to Splunk Observability Cloud:
 
+
+
+.. raw:: html
+
+   <div class="github" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/upstream_agent_config.yaml"></div>
+
 .. github:: yaml
    :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/upstream_agent_config.yaml
+
+.. raw:: html
+
+   <div class="github-end"></div>
+
+
+
 
 .. _migrate-otel-upstream:
 
@@ -106,4 +119,17 @@ To migrate from the Collector Contrib to the Splunk OTel Collector, follow these
 Troubleshooting
 ==================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+
