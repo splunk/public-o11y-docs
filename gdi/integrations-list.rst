@@ -120,7 +120,20 @@ For more information, see :ref:`get-started-rum`.
 
 You can monitor your applications and services with the Collector and the following native :ref:`OpenTelemetry receivers <otel-components-receivers>`:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/otel-receivers-table.rst"></div>
+
 .. include:: /_includes/gdi/otel-receivers-table.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/otel-receivers-table.rst"></div>
+
+
+
 
 .. raw:: html
 
@@ -141,7 +154,20 @@ You can also send data to Splunk Observability Cloud with OpenTelemetry with the
 
 Smart Agent integrations are available and supported through the Splunk Distribution of the OpenTelemetry Collector. For more information, see :ref:`migration-monitors`. You can use these integrations to send your apps and services' metrics to Splunk Observability Cloud:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/application-receiver-table.rst"></div>
+
 .. include:: /_includes/gdi/application-receiver-table.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/application-receiver-table.rst"></div>
+
+
+
 
 Browse the available monitors by category:
 
@@ -167,7 +193,20 @@ Browse the available monitors by category:
 
 These Smart Agent integrations are deprecated:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/application-receiver-table-deprecated.rst"></div>
+
 .. include:: /_includes/gdi/application-receiver-table-deprecated.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/application-receiver-table-deprecated.rst"></div>
+
+
+
 
 .. raw:: html
 

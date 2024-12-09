@@ -63,7 +63,20 @@ Send histogram metrics in OTLP format
 
 The Splunk Distribution of OpenTelemetry Collector supports OTLP histogram metrics starting from version 0.98 and higher. See :ref:`explicit-bucket-histograms` for more information.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/histograms.rst"></div>
+
 .. include:: /_includes/gdi/histograms.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/histograms.rst"></div>
+
+
+
 
 .. _sfx-exporter-default-metric-filter:
 
@@ -291,7 +304,20 @@ Translation rules currently allow the following actions:
 
 .. _default-translation-rules-sfx-exporter:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/default-translation-metrics.rst"></div>
+
 .. include:: /_includes/gdi/default-translation-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/default-translation-metrics.rst"></div>
+
+
+
 
 .. _drop-histogram-metrics:
 
@@ -318,4 +344,17 @@ The following table shows the configuration options for the SignalFx exporter:
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

@@ -14,7 +14,20 @@ Automatic discovery for Linux
     Third-party applications <linux/linux-third-party>
     Advanced customization <linux/linux-advanced-config>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/auto-discovery-intro.rst"></div>
+
 .. include:: /_includes/gdi/auto-discovery-intro.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/auto-discovery-intro.rst"></div>
+
+
+
 
 .. raw:: html
 

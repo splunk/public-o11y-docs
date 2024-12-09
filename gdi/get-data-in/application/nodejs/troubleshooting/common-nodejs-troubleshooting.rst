@@ -190,4 +190,16 @@ The following snippet contains a sample ``profiling`` pipeline:
          processors: [memory_limiter, batch]
          exporters: [splunk_hec, splunk_hec/profiling]
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

@@ -12,7 +12,20 @@ Automatic discovery for Windows
 
     Language runtimes <windows/windows-backend>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/auto-discovery-intro.rst"></div>
+
 .. include:: /_includes/gdi/auto-discovery-intro.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/auto-discovery-intro.rst"></div>
+
+
+
 
 .. raw:: html
 

@@ -53,7 +53,20 @@ If you don't use the guided setup, follow these instructions to manually install
     <h3>Check compatibility and requirements <a name="otel-lambda-layer-requirements" class="headerlink" href="#otel-lambda-layer-requirements" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/lambda.rst"></div>
+
 .. include:: /_includes/requirements/lambda.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/lambda.rst"></div>
+
+
+
 
 .. raw:: html
 
@@ -84,13 +97,39 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
       .. tab:: Standard x86_64
 
+
+
+         .. raw:: html
+
+            <div class="github" url="https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm.md"></div>
+
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm.md
 
+         .. raw:: html
+
+            <div class="github-end"></div>
+
+
+
+
       .. tab:: Graviton2 ARM64
+
+
+
+         .. raw:: html
+
+            <div class="github" url="https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-arm.md"></div>
 
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-arm.md
+
+         .. raw:: html
+
+            <div class="github-end"></div>
+
+
+
 
 #. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 
@@ -103,12 +142,38 @@ If you don't want to use a local Collector, you must specify the address of a Co
 
 .. _set-env-vars-otel-lambda:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/lambda-configuration.rst"></div>
+
 .. include:: /_includes/gdi/lambda-configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/lambda-configuration.rst"></div>
+
+
+
 
 
 .. _send_directly_olly_cloud:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/send-spans-directly-lambda.rst"></div>
+
 .. include:: /_includes/gdi/send-spans-directly-lambda.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/send-spans-directly-lambda.rst"></div>
+
+
+
 
 .. raw:: html
 

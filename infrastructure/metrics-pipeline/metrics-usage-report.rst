@@ -42,7 +42,20 @@ Metric identifiers
 
 The following table has an overview of metric category types. To learn more about metric categories, see :ref:`metrics-category`.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="metric-classes.rst"></div>
+
 .. include:: /_includes/metric-classes.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="metric-classes.rst"></div>
+
+
+
 
 Usage statistics
 --------------------------------

@@ -279,6 +279,19 @@ If the receiver returns an error similar to the one below, make sure that ``reso
 General troubleshooting
 -----------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+
 
 

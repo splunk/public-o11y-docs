@@ -18,7 +18,20 @@ When you set up Log Observer Connect, your Splunk Enterprise logs data remains i
 Region and version compatibility
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="logs/loc-availability.rst"></div>
+
 .. include:: /_includes/logs/loc-availability.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="logs/loc-availability.rst"></div>
+
+
+
 
 Prerequisites
 ==============================================================

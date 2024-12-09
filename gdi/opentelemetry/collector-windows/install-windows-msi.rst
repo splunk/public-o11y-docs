@@ -31,7 +31,20 @@ Alternatively, you can also install the Collector for Windows:
 Prerequisites
 ==========================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/collector-windows.rst"></div>
+
 .. include:: /_includes/requirements/collector-windows.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/collector-windows.rst"></div>
+
+
+
 
 .. _windows-installer:
 
@@ -216,4 +229,16 @@ A :new-page:`Chocolatey package <https://community.chocolatey.org/packages/splun
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-windows-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-windows-next-steps.rst
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-windows-next-steps.rst"></div>
+
+
+

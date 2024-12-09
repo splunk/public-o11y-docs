@@ -69,6 +69,19 @@ Collector components: Receivers
 
 The following receivers are available:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/otel-receivers-table.rst"></div>
+
 .. include:: /_includes/gdi/otel-receivers-table.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/otel-receivers-table.rst"></div>
+
+
+
 
 To see other components, refer to :ref:`otel-components`.

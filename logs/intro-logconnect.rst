@@ -15,7 +15,20 @@ Splunk Log Observer Connect is an integration that allows you to query your Splu
 Region and version availability
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="logs/loc-availability.rst"></div>
+
 .. include:: /_includes/logs/loc-availability.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="logs/loc-availability.rst"></div>
+
+
+
 
 .. _LogObserverFeatures:
 
