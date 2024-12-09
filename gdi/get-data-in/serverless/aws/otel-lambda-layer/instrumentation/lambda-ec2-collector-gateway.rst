@@ -203,7 +203,8 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 .. note:: You can automate the update of the Lambda layers using the AWS CLI or other automation tools.
 
-
+Configure the Splunk OpenTelemetry Lambda layer
+----------------------------------------------------
 
 .. raw:: html
 
