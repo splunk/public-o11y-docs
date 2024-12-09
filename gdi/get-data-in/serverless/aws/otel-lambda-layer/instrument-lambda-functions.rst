@@ -142,8 +142,6 @@ If you don't want to use a local Collector, you must specify the address of a Co
 
 .. _set-env-vars-otel-lambda:
 
-
-
 .. raw:: html
 
    <div class="include-start" id="gdi/lambda-configuration.rst"></div>
