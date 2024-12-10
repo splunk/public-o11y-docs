@@ -52,7 +52,20 @@ See the default settings and configuration options at:
 * :ref:`otel-linux-config`
 * :ref:`linux-config-logs`
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-common-options.rst"></div>
+
 .. include:: /_includes/gdi/collector-common-options.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-common-options.rst"></div>
+
+
+
 
 .. raw:: html
 

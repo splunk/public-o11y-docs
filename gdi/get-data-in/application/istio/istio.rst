@@ -12,7 +12,20 @@ Istio 1.8 and higher has native support for observability. You can configure you
 Requirements
 ==============================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/istio.rst"></div>
+
 .. include:: /_includes/requirements/istio.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/istio.rst"></div>
+
+
+
 
 Install and configure the Splunk OpenTelemetry Collector
 =============================================================
@@ -139,4 +152,17 @@ For example:
 
 For more information on how to configure Istio see the Istio distributed tracing installation documentation.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

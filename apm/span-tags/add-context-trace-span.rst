@@ -38,7 +38,20 @@ The following sections describe two ways to add tags to your spans:
 
 Begin by considering where to add your span tags. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="tag-decision-support.rst"></div>
+
 .. include:: /_includes/tag-decision-support.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="tag-decision-support.rst"></div>
+
+
+
 
 The ``deployment.environment`` span tag is particularly useful, as it lets you filter your entire APM experience by deployment environment. To learn more about environments in Splunk APM, see :ref:`apm-environments`. 
 

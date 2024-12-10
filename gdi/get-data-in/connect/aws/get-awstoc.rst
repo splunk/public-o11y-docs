@@ -112,7 +112,20 @@ You can deactivate this check by setting the ``enableCheckLargeVolume`` field in
 
 If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease. Read more at :ref:`specify-data-metadata`.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/aws-unsupported-chars.rst"></div>
+
 .. include:: /_includes/gdi/aws-unsupported-chars.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/aws-unsupported-chars.rst"></div>
+
+
+
 
 .. raw:: html
 

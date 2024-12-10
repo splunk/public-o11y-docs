@@ -7,7 +7,20 @@ Instrument your Node.js application for Splunk Observability Cloud
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="zero-code-info.rst"></div>
+
 .. include:: /_includes/zero-code-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="zero-code-info.rst"></div>
+
+
+
    
 The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
 
@@ -296,7 +309,20 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 Specify the source host 
 -----------------------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+
 
 Instrument Lambda functions
 =============================================================

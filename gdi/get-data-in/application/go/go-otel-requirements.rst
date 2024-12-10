@@ -65,7 +65,20 @@ The following table lists all the instrumentations supported by Splunk. Check th
 Ensure you are using supported Go versions
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/go.rst"></div>
+
 .. include:: /_includes/requirements/go.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/go.rst"></div>
+
+
+
 
 
 .. _go-otel-connector-requirement:

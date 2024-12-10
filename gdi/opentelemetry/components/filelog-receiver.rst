@@ -232,32 +232,84 @@ Send truncated logs to Splunk Enterprise
 
 Use the following configuration to truncate logs and send them to Splunk Enterprise:
 
+
+
+.. raw:: html
+
+   <div class="github" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-truncate-splunk/otel-collector-config.yml"></div>
+
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-truncate-splunk/otel-collector-config.yml
+
+.. raw:: html
+
+   <div class="github-end"></div>
+
+
+
 
 Send sanitized logs to Splunk Enterprise
 --------------------------------------------
 
 Use the following configuration to sanitize logs and send them to Splunk Enterprise.
 
+
+
+.. raw:: html
+
+   <div class="github" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-sanitization-splunk/otel-collector-config.yml"></div>
+
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-sanitization-splunk/otel-collector-config.yml
+
+.. raw:: html
+
+   <div class="github-end"></div>
+
+
+
 
 Route logs to different indexes
 --------------------------------------------
 
 Use the following configuration to route logs to different Splunk indexes.
 
+
+
+.. raw:: html
+
+   <div class="github" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-processor-splunk/otel-collector-config.yml"></div>
+
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-processor-splunk/otel-collector-config.yml
+
+.. raw:: html
+
+   <div class="github-end"></div>
+
+
+
 
 Associate log sources with source types 
 --------------------------------------------
 
 This example showcases how the Collector collects data from files and sends it to Splunk Enterprise, associating each source with a different source type. The source type is a default field that identifies the structure of an event, and determines how Splunk Enterprise formats the data during the indexing process.
 
+
+
+.. raw:: html
+
+   <div class="github" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-with-sourcetypes-splunk/otel-collector-config.yml"></div>
+
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-with-sourcetypes-splunk/otel-collector-config.yml
+
+.. raw:: html
+
+   <div class="github-end"></div>
+
+
+
 
 Settings
 ======================
@@ -273,4 +325,17 @@ The following table shows the configuration options for the Filelog receiver:
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

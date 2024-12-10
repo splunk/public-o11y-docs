@@ -66,7 +66,20 @@ To configure the Collector see:
 * :ref:`kubernetes-config-logs`
 * :ref:`otel-kubernetes-config-advanced`
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-common-options.rst"></div>
+
 .. include:: /_includes/gdi/collector-common-options.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-common-options.rst"></div>
+
+
+
 
 .. raw:: html
 

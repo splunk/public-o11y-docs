@@ -612,7 +612,20 @@ See :ref:`k8s-advanced-auto-discovery-config` for more information.
 
 .. _troubleshooting-k8s-auto-discovery:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/troubleshoot-zeroconfig-k8s.rst"></div>
+
 .. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/troubleshoot-zeroconfig-k8s.rst"></div>
+
+
+
 
 To troubleshoot common errors that occur when instrumenting applications, see the following guides:
 

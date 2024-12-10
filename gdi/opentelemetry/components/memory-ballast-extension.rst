@@ -10,7 +10,20 @@ Memory Ballast extension (deprecated)
 
 .. caution:: The ``memory_ballast`` extension is deprecated and has been removed starting in Collector version 0.97.0. If you're using this extension, read on to learn how to update your configuration. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-upgrade-memory-ballast.rst"></div>
+
 .. include:: /_includes/collector-upgrade-memory-ballast.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-upgrade-memory-ballast.rst"></div>
+
+
+
 
 Get started
 ======================
@@ -108,4 +121,17 @@ The following table shows the configuration options for the Memory Ballast exten
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

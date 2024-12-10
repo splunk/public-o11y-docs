@@ -117,7 +117,20 @@ Use these configurations to change the default settings in each Collector packag
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-common-options.rst"></div>
+
 .. include:: /_includes/gdi/collector-common-options.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-common-options.rst"></div>
+
+
+
 
 .. raw:: html
 
@@ -194,7 +207,20 @@ Common sources such as filelog, journald, and Windows Event Viewer are included 
     <h2>Use the Collector<a name="collector-use-index" class="headerlink" href="#collector-use-index" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-works.rst"></div>
+
 .. include:: /_includes/collector-works.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-works.rst"></div>
+
+
+
 
 See also the following documents to understand how the Collector works, and how to use it:
 
@@ -208,7 +234,20 @@ See also the following documents to understand how the Collector works, and how 
     <h3>Components and services of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h3>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-components.rst"></div>
+
 .. include:: /_includes/collector-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-components.rst"></div>
+
+
+
 
 .. raw:: html
 

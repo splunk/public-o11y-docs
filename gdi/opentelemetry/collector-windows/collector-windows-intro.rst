@@ -37,7 +37,20 @@ See the default settings and configuration options at:
 * :ref:`otel-windows-config`
 * :ref:`windows-config-logs`
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-common-options.rst"></div>
+
 .. include:: /_includes/gdi/collector-common-options.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-common-options.rst"></div>
+
+
+
 
 To automatically find services and applications running in your Windows environment and send data from them to Splunk Observability Cloud refer to :ref:`discovery-windows`.        
 

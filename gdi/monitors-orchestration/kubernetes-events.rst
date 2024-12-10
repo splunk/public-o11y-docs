@@ -24,12 +24,38 @@ This monitor type is available on Kubernetes, Linux, and Windows.
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits-events.rst"></div>
+
 .. include:: /_includes/benefits-events.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits-events.rst"></div>
+
+
+
 
 Installation
 ------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-installation.rst"></div>
+
 .. include:: /_includes/collector-installation.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-installation.rst"></div>
+
+
+
 
 Deploy with Helm
 ~~~~~~~~~~~~~~~~
@@ -76,7 +102,20 @@ To deploy without Helm, include the following in the OTel configuration:
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -245,4 +284,17 @@ Example YAML configuration:
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

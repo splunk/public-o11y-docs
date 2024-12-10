@@ -110,4 +110,16 @@ On Windows, the variables/values will be added to the Environment value under th
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-windows-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-windows-next-steps.rst
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-windows-next-steps.rst"></div>
+
+
+

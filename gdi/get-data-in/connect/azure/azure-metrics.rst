@@ -7,7 +7,20 @@ Azure metrics in Splunk Observability Cloud
 .. meta::
    :description: These are the metrics available for the Azure integration with Splunk Observability Cloud, grouped according to Azure resource.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/available-azure.rst"></div>
+
 .. include:: /_includes/gdi/available-azure.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/available-azure.rst"></div>
+
+
+
 
 Azure services metric information
 ================================================

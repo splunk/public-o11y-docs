@@ -360,4 +360,17 @@ After uninstalling the Smart Agent, :ref:`deploy the Collector to a production h
 
 After verifying with one host, deploy the Collector with the same configuration to the rest of the hosts.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

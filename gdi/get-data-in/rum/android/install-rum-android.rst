@@ -26,7 +26,20 @@ Latest updates automatically whenever Splunk RUM releases a new version. In pre-
 Check compatibility and requirements
 ===============================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/android.rst"></div>
+
 .. include:: /_includes/requirements/android.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/android.rst"></div>
+
+
+
 
 .. _enable-desugaring:
 

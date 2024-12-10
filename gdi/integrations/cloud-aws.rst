@@ -10,4 +10,17 @@ Available Amazon Web Services integrations
 
 To learn about AWS and Splunk Observability Cloud, read :ref:`get-started-aws`.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/available-aws.rst"></div>
+
 .. include:: /_includes/gdi/available-aws.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/available-aws.rst"></div>
+
+
+

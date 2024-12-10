@@ -1,6 +1,3 @@
-Configure the Splunk OpenTelemetry Lambda layer
-----------------------------------------------------
-
 Follow these steps to add the required configuration for the Splunk OpenTelemetry Lambda layer:
 
 1. In the AWS Lambda console, open the function that you are instrumenting.

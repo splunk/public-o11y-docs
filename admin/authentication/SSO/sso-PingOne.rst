@@ -88,4 +88,17 @@ set up the data mapping from PingOne to Splunk Observability Cloud, follow these
 
 To learn more about mapping Splunk Observability Cloud data fields to PingOne data fields, see the :ref:`saml-user-information` section in the :ref:`sso-generic` topic.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

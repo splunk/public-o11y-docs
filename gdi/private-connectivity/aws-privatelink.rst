@@ -356,4 +356,17 @@ Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs pee
 
 .. _aws-privatelink-support:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="report-issue.rst"></div>
+
 .. include:: /_includes/report-issue.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="report-issue.rst"></div>
+
+
+

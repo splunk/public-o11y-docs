@@ -117,7 +117,20 @@ JSON payload:
         "hiddenTags": ["user.email", "credit.card.number"]
     }
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="realm-note.rst"></div>
+
 .. include:: /_includes/realm-note.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="realm-note.rst"></div>
+
+
+
 
 Block tags from a particular operation within a service
 ------------------------------------------------------------------------

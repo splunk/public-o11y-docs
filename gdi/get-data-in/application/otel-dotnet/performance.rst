@@ -21,7 +21,20 @@ The following sections describe the minimum requirements of the Splunk Distribut
 Minimum requirements for production deployments
 =================================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/dotnet.rst"></div>
+
 .. include:: /_includes/requirements/dotnet.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/dotnet.rst"></div>
+
+
+
 
 
 .. _dotnet-overhead-guidelines:
@@ -151,4 +164,16 @@ Consider that different stacks, applications, and environments might result in d
 How to get support
 =================================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

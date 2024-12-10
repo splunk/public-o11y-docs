@@ -60,4 +60,16 @@ You can upgrade the package by installing a new version of the Splunk Distributi
 Troubleshooting
 ===========================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+
