@@ -216,4 +216,17 @@ If you want to turn off the email authentication feature, contact :ref:`support`
 
 .. note:: The ADFS portal is the only way that your users can log in to Splunk Observability Cloud.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

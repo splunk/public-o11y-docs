@@ -16,7 +16,20 @@ Change the default configuration file for the Collector for Windows
 
 All installation methods offer default configurations using environment variables. Before starting the ``splunk-otel-collector`` service, replace the variables in the default configuration file with the appropriate values for your environment.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-env-vars.rst"></div>
+
 .. include:: /_includes/collector-env-vars.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-env-vars.rst"></div>
+
+
+
 
 .. note:: When configuring additional settings, use service, process, or terminal scopes.    
 

@@ -63,4 +63,17 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Splunk Observability Cloud generates a password for users you create in Okta SSO. If the Okta login portal is unavailable, Splunk Observability Cloud users can use the reset password link on the Splunk Observability Cloud login page to get native Splunk Observability Cloud credentials.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

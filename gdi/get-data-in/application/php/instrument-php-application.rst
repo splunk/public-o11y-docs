@@ -7,7 +7,20 @@ Instrument your PHP application for Splunk Observability Cloud
 .. meta::
    :description: The OpenTelemetry PHP extensions automatically instruments PHP applications using a PHP extension and available instrumentation libraries. Follow these steps to get started.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="zero-code-info.rst"></div>
+
 .. include:: /_includes/zero-code-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="zero-code-info.rst"></div>
+
+
+
    
 The OpenTelemetry PHP extension automatically instruments PHP applications using a PHP extension and available instrumentation libraries. You can send telemetry to the Splunk Distribution of OpenTelemetry Collector or directly to the Splunk Observability Cloud ingest endpoint.
 

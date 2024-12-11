@@ -7,7 +7,20 @@ OpenTelemetry PHP instrumentation compatibility and requirements
 .. meta::
     :description: This is what you need to instrument PHP applications for Splunk Observability Cloud.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/php.rst"></div>
+
 .. include:: /_includes/requirements/php.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/php.rst"></div>
+
+
+
 
 Dependencies
 ---------------

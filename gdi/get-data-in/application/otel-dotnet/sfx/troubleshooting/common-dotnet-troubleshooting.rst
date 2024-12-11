@@ -228,4 +228,17 @@ Follow these steps to remove the SignalFx Instrumentation for .NET:
 #. Remove all environment variables you might have set for the instrumentation.
 #. Remove ``signalfx-dotnet-tracing`` using your package manager or delete the files from ``/opt/signalfx`` if you installed the instrumentation using the tar file.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

@@ -14,7 +14,20 @@ To monitor your service with Telegraf using native OpenTelemetry in Splunk Obser
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits.rst"></div>
+
 .. include:: /_includes/benefits.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits.rst"></div>
+
+
+
 
 Configuration
 ----------------------------------
@@ -119,4 +132,17 @@ Add the following configuration to the OTel Collector to retrieve metrics from t
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

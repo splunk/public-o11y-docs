@@ -19,4 +19,16 @@ For a detailed list of the upstream environment variables, refer to OpenTelemetr
 Splunk-specific environment variables
 ==========================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-env-vars.rst"></div>
+
 .. include:: /_includes/collector-env-vars.rst
+.. raw:: html
+
+   <div class="include-stop" id="collector-env-vars.rst"></div>
+
+
+

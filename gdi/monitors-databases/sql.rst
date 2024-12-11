@@ -13,7 +13,20 @@ The SQL monitor gathers database usage metrics from SQL queries on your database
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -379,4 +392,17 @@ This integration doesn't produce any metrics.
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

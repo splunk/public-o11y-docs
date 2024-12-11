@@ -15,7 +15,20 @@ Automatic discovery for Kubernetes
     Advanced customization <k8s/k8s-advanced-config>
     k8s/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/auto-discovery-intro.rst"></div>
+
 .. include:: /_includes/gdi/auto-discovery-intro.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/auto-discovery-intro.rst"></div>
+
+
+
 
 .. raw:: html
 

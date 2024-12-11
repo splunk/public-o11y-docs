@@ -39,7 +39,20 @@ Alternatively, you can also install the Collector for Windows:
     <h2>Prerequisites<a name="install-windows-tools-prereqs" class="headerlink" href="#install-windows-tools-prereqs" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/collector-windows.rst"></div>
+
 .. include:: /_includes/requirements/collector-windows.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/collector-windows.rst"></div>
+
+
+
 
 .. raw:: html
 
@@ -61,7 +74,20 @@ The following deployment tools to install the Splunk Distribution of the OpenTel
     <h2>Next steps<a name="install-windows-next" class="headerlink" href="#install-windows-next" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-windows-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-windows-next-steps.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-windows-next-steps.rst"></div>
+
+
+
 
 
 

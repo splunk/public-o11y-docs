@@ -7,7 +7,20 @@ Instrument your Python application for Splunk Observability Cloud
 .. meta::
    :description: The Splunk OpenTelemetry Python agent can automatically instrument your Python application or service. Follow these steps to get started.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="zero-code-info.rst"></div>
+
 .. include:: /_includes/zero-code-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="zero-code-info.rst"></div>
+
+
+
 
 The Python agent from the Splunk Distribution of OpenTelemetry Python can automatically instrument your Python application by dynamically patching supported libraries.
 
@@ -228,7 +241,20 @@ To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 Specify the source host
 ----------------------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+
 
 .. _instrument_aws_python_functions:
 

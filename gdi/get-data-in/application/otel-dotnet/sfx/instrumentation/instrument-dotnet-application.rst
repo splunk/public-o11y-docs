@@ -388,4 +388,17 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 Specify the source host
 --------------------------------------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+

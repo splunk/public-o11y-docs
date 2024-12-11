@@ -23,7 +23,20 @@ Latest updates automatically whenever Splunk RUM releases a new version. In pre-
 Check compatibility and requirements
 ===============================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/ios.rst"></div>
+
 .. include:: /_includes/requirements/ios.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/ios.rst"></div>
+
+
+
 
 
 .. _rum-ios-install:

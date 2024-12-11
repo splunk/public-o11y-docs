@@ -28,7 +28,20 @@ Splunk Observability Cloud supports the following SSO integrations:
 
 .. _about-realms:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="realm-note.rst"></div>
+
 .. include:: /_includes/realm-note.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="realm-note.rst"></div>
+
+
+
 
 .. _custom-url:
 

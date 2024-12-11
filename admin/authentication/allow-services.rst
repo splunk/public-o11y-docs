@@ -153,7 +153,20 @@ Restart the Collector after adding these environment variables to your configura
 URLs to allow in your network
 ================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="realm-note.rst"></div>
+
 .. include:: /_includes/realm-note.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="realm-note.rst"></div>
+
+
+
 
 If your organization's networking security policies require you to individually allow services delivered over the internet, ensure that you allow the following service URLs on your network:
 

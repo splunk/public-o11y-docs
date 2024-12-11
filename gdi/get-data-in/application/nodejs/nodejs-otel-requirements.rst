@@ -16,7 +16,20 @@ Meet these requirements to instrument Node.js applications for Splunk Observabil
 Ensure you have supported Node.js and library versions
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/nodejs.rst"></div>
+
 .. include:: /_includes/requirements/nodejs.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/nodejs.rst"></div>
+
+
+
 
 Dependencies
 ---------------

@@ -18,17 +18,56 @@ This monitor is available on Kubernetes, Linux, and Windows.
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits.rst"></div>
+
 .. include:: /_includes/benefits.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits.rst"></div>
+
+
+
 
 Installation
 ------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-installation.rst"></div>
+
 .. include:: /_includes/collector-installation.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-installation.rst"></div>
+
+
+
 
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -261,4 +300,17 @@ running with has the necessary permissions.
 Get help
 ~~~~~~~~
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

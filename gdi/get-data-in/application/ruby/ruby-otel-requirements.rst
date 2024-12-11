@@ -21,7 +21,20 @@ The OpenTelemetry instrumentation for Ruby instruments numerous libraries and pa
 Ensure you have supported Ruby and library versions
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/ruby.rst"></div>
+
 .. include:: /_includes/requirements/ruby.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/ruby.rst"></div>
+
+
+
 
 
 .. _ruby-otel-connector-requirement:

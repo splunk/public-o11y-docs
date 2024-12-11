@@ -187,7 +187,20 @@ To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 Specify the source host
 ---------------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+
 
 .. _instrument_aws_ruby_functions:
 

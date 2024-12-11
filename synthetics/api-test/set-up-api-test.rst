@@ -67,7 +67,20 @@ Follow these steps to add requests to your API test:
 #. Repeat until you have added as many requests as you'd like to include in your API test.
 #. Select :guilabel:`Save steps & return to test` to finish creating your test.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="synthetics/configure-test.rst"></div>
+
 .. include:: /_includes/synthetics/configure-test.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="synthetics/configure-test.rst"></div>
+
+
+
 
 Example
 ==================

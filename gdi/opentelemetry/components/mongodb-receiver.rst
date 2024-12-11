@@ -115,9 +115,35 @@ The following metrics, resource attributes, and attributes are available.
 
 * ``mongodb.extent.count`` is available for versions under 4.4 with mmapv1 storage engine.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="activate-deactivate-native-metrics.rst"></div>
+
 .. include:: /_includes/activate-deactivate-native-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="activate-deactivate-native-metrics.rst"></div>
+
+
+
 
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

@@ -8,7 +8,20 @@ Upgrade the Collector for Windows
 .. meta::
   :description: Upgrade the Splunk Distribution of OpenTelemetry Collector.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-upgrade.rst"></div>
+
 .. include:: /_includes/collector-upgrade.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-upgrade.rst"></div>
+
+
+
 
 Upgrade the Collector for Windows
 =======================================

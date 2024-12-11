@@ -28,7 +28,20 @@ On spans where the ``deployment.environment`` tag is not set, Splunk APM assumes
 
 For more information about adding span tags to spans, see :ref:`apm-add-context-trace-span`. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="tag-decision-support.rst"></div>
+
 .. include:: /_includes/tag-decision-support.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="tag-decision-support.rst"></div>
+
+
+
 
 Set ``deployment.environment`` via auto-instrumentation
 -----------------------------------------------------------

@@ -191,4 +191,17 @@ The following table shows the variables that can be configured with this Chef co
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-linux-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-linux-next-steps.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-linux-next-steps.rst"></div>
+
+
+

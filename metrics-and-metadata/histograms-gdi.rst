@@ -11,7 +11,20 @@ You can collect histogram data using a variety of receivers, including the Prome
 
 The Splunk Distribution of OpenTelemetry Collector supports explicit-bucket histogram metrics. You can send histogram metric using the OTLP exporter or, starting from version 0.98, through the :ref:`signalfx-exporter`.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/histograms.rst"></div>
+
 .. include:: /_includes/gdi/histograms.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/histograms.rst"></div>
+
+
+
 
 You can collect histogram data using a variety of receivers, including the :ref:`Prometheus receiver <prometheus-receiver>`.
 
@@ -69,4 +82,17 @@ To migrate your existing dashboards, functions, charts, and detectors to histogr
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+
