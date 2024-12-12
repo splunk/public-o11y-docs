@@ -188,7 +188,20 @@ See how to filter data at :ref:`aws-control-example`.
 Unsupported characters for tags 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/aws-unsupported-chars.rst"></div>
+
 .. include:: /_includes/gdi/aws-unsupported-chars.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/aws-unsupported-chars.rst"></div>
+
+
+
 
 .. _api-filters:
 

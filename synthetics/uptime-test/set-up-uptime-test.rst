@@ -43,7 +43,20 @@ Follow these steps to set up a Port Uptime test:
 #. In the :guilabel:`Name` field, enter a name for your test. You will use this name to identify data from the test in your alerts and reports. 
 #. In the :guilabel:`Address` field, use the drop-down list to indicate whether the port you are monitoring follows TCP or UDP protocol. Enter the host and port addresses. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="synthetics/configure-test.rst"></div>
+
 .. include:: /_includes/synthetics/configure-test.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="synthetics/configure-test.rst"></div>
+
+
+
 
 View your Uptime test
 ======================

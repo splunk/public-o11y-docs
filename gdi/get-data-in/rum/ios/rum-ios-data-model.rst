@@ -12,7 +12,20 @@ The iOS RUM library includes a package that collects the following types of data
 Common data types
 ==============================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="rum-data-model.rst"></div>
+
 .. include:: /_includes/rum-data-model.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="rum-data-model.rst"></div>
+
+
+
 
 .. _rum-ios-metrics:
 

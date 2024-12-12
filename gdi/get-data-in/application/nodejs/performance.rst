@@ -20,7 +20,20 @@ The following sections describe the minimum requirements of the Splunk OTel Node
 Minimum requirements for production deployments
 =================================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/nodejs.rst"></div>
+
 .. include:: /_includes/requirements/nodejs.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/nodejs.rst"></div>
+
+
+
 
 
 .. _nodejs-overhead-guidelines:
@@ -188,4 +201,17 @@ You can also compare your results with the official OpenTelemetry JS benchmarks 
 How to get support
 =================================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

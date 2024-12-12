@@ -16,7 +16,20 @@ Key concepts
 ==================
 How span tags, indexed span tags, and MetricSets relate to each other. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="synthetics/metricset-def.rst"></div>
+
 .. include:: /_includes/synthetics/metricset-def.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="synthetics/metricset-def.rst"></div>
+
+
+
 
 Example: track custom processes 
 =================================

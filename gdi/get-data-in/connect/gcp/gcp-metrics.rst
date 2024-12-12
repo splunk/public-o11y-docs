@@ -19,7 +19,20 @@ Although you can configure :new-page:`Cloud Monitoring <https://cloud.google.com
 Available GCP metrics and metadata
 ========================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/available-gcp.rst"></div>
+
 .. include:: /_includes/gdi/available-gcp.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/available-gcp.rst"></div>
+
+
+
 
 * For a detailed list of the available Google Cloud Monitoring metrics, including services not supported out-of-the-box, see the official Google documentation at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
 * To track and understand your consumption, see :ref:`monitor-imm-billing-usage`.

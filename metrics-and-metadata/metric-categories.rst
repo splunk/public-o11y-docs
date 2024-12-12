@@ -10,7 +10,20 @@ Metric categories
 
 These are the available categories for metrics in Splunk Observability Cloud:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="metric-classes.rst"></div>
+
 .. include:: /_includes/metric-classes.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="metric-classes.rst"></div>
+
+
+
 
 .. note:: Usage analytics doesn't support APM Monitoring MetricSets, RUM Monitoring MetricSets, or default/bundles APM metrics, so you can't view these metrics in usage analytics. To learn more about usage analytics, see :ref:`metrics-usage-analytics-intro`.
 

@@ -220,7 +220,20 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
       export SIGNALFX_ACCESS_TOKEN=<access_token>
       export SIGNALFX_ENDPOINT_URL=https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 

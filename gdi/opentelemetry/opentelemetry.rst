@@ -35,7 +35,20 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
     <h2>How does the OpenTelemetry Collector work?<a name="collector-intro-how" class="headerlink" href="#collector-intro-how" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-works.rst"></div>
+
 .. include:: /_includes/collector-works.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-works.rst"></div>
+
+
+
 
 .. raw:: html
 
