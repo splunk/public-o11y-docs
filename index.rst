@@ -281,6 +281,11 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
+   AI Assistant in Observability Cloud <get-started/o11y-ai>
+
+.. toctree::
+   :maxdepth:   3   
+
    Architecture <get-started/o11y-architecture>
 
 .. toctree::
