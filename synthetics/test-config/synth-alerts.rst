@@ -44,7 +44,7 @@ In Synthetics, there are detectors to alert on metrics at the test level, at the
 Sample use case: Send an alert when a synthetic test fails
 ===============================================================
 
-You can set up a detector while initially creating or editing a test, or from the results view for a particular test. A detector can track one or multiple Synthetic Monitoring tests of the same type.
+You can set up a detector while initially creating or editing a test, or from the results view for a particular test. A detector can track one or more synthetic tests.
 
 To set up a detector, do one of the following:
 
@@ -60,15 +60,15 @@ In the detector dialog box, enter the following fields:
 #. In the :guilabel:`Alert details` section, enter the following:
 
     * :guilabel:`Trigger threshold`: The threshold to trigger the alert.
-    * :guilabel:`Orientation`: Only available for uptime metric. Specify whether the metric must fall below or exceed the threshold to trigger the alert.
+    * :guilabel:`Orientation`: Whether the metric must fall below or exceed the threshold to trigger the alert.
     * :guilabel:`Violates threshold`: How many times the metric must violate the threshold to trigger the alert.
-    * :guilabel:`Split by location`: Select whether to split the detector by test location. If you don't filter by location, the detector monitors the average value across all locations. 
+    * :guilabel:`Split by location`: Whether to split the detector by test location. If you don't split by location, the detector monitors the average value across all locations. 
 
-#. Use the severity selector to select the severity of the alert.
+#. Use the severity selector to set the severity of the alert.
 #. Add recipients.
 #. Select :guilabel:`Activate`. 
 
-Your detector is now set up to check for failed test runs every minute and to send an alert based on your settings in :guilabel:`Alert details`.
+Your detector is now set up to check for failed tests every minute and to send an alert based on your settings in :guilabel:`Alert details`.
 
 .. _synth-detector-setup:
 
