@@ -68,7 +68,7 @@ In the detector dialog box, enter the following fields:
 #. Add recipients.
 #. Select :guilabel:`Activate`. 
 
-Your detector is now set up to check for failed tests every minute and to send an alert based on your settings in :guilabel:`Alert details`.
+Your detector is now set up to check for failed test runs every minute and to send an alert based on your settings in :guilabel:`Alert details`.
 
 .. _synth-detector-setup:
 
