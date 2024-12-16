@@ -68,6 +68,12 @@ In the detector dialog box, enter the following fields:
 #. Add recipients.
 #. Select :guilabel:`Activate`. 
 
+..  image:: /_images/synthetics/detector-one.png
+    :width: 40%
+    :alt: Screenshot showing the troubleshooting tab for a tile in the dashboard with an option to open the data in RUM or APM. 
+
+
+
 Your detector is now set up to check for failed test runs every minute and to send an alert based on your settings in :guilabel:`Alert details`.
 
 .. _synth-detector-setup:
