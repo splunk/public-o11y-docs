@@ -43,7 +43,7 @@ See the following table for different chart creation methods:
     - Use this method to programmatically create a chart instead of creating one through the user interface. To learn more, see :ref:`create-chart-via-api`.
 
 
-.. _create-chart-metrics-finder:
+.. _create-chart-metric-finder:
 
 Create a chart using the Metric Finder
 ------------------------------------------------
