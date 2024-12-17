@@ -32,7 +32,7 @@ See the following table for different chart creation methods:
   * - :strong:`Method`
     - :strong:`Description`
   * - Create a chart using the Metric Finder
-    - Use this method to browse metrics and decide the metric you are interested in before creating a chart. To learn more, see :ref:`create-chart-metric-finder`.
+    - Use this method to browse metrics and decide which metric to track before creating a chart. To learn more, see :ref:`create-chart-metric-finder`.
   * - Create a chart using the metrics sidebar
     - Use this method to create a simple chart or add a new chart to an existing dashboard. To learn more, see :ref:`create-chart-metric-sidebar`.
   * - Copy a chart
