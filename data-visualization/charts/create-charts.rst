@@ -31,6 +31,8 @@ See the following table for different chart creation methods:
 
   * - :strong:`Method`
     - :strong:`Description`
+  * - Create a chart using the Metric Finder
+    - Use this method to browse metrics and decide the metric you are interested in before creating a chart. To learn more, see :ref:`create-chart-metric-finder`.
   * - Create a chart using the metrics sidebar
     - Use this method to create a simple chart or add a new chart to an existing dashboard. To learn more, see :ref:`create-chart-metric-sidebar`.
   * - Copy a chart
@@ -40,6 +42,19 @@ See the following table for different chart creation methods:
   * - Create a chart using the API
     - Use this method to programmatically create a chart instead of creating one through the user interface. To learn more, see :ref:`create-chart-via-api`.
 
+
+.. _create-chart-metrics-finder:
+
+Create a chart using the Metric Finder
+------------------------------------------------
+
+If you're not sure which metric you want to track, use the Metric Finder to browse different options before creating a new chart.
+
+#. From the navigation menu, select :strong:`Metric Finder`. 
+#. Search for metrics by entering key words into the search bar, or selecting an integration name.
+#. Once you find the metric you're interested in, select the metric name to open the Chart Builder, pre-populated with your metric.
+
+To learn more about using the Metric Finder, see :ref:`metric-finder`.
 
 .. _create-chart-metric-sidebar:
 
