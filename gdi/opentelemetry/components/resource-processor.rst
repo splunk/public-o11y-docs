@@ -51,6 +51,8 @@ Follow these steps to configure and activate the component:
 2. Configure the resource processor as described in the next section.
 3. Restart the Collector.
 
+.. _sample_configurations:
+
 Sample configurations
 ----------------------
 
