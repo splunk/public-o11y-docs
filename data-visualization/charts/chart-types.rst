@@ -8,11 +8,6 @@ Chart types in Splunk Observability Cloud
 .. meta::
     :description: Learn about different chart types and when to use each chart type in Splunk Observability Cloud
     
-.. _charts-overview:
-
-Overview
-====================
-
 Charts in Splunk Observability Cloud are components of a dashboard. Each chart type provides a different way to represent your data:
   
 - :ref:`graph-charts`: Display data points over a period of time. Graph charts come in four different forms.

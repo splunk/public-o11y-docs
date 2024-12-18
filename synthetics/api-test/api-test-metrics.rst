@@ -108,9 +108,9 @@ Each occurrence of a test from a particular device and location at a specific ti
 
    * - Uptime
      - ``synthetics.run.uptime.percent``
-     - The percentage of non-failed test runs. Uptime is calculated by taking the average score of all runs in the selected time frame, where a successful run receives a score of 100 and a failure receives a score of 0.
+     - The uptime of a test run: the value will be 0 if the test run failed and 100 if it succeeded. 
 
    * - Downtime
      - ``synthetics.run.downtime.percent``
-     - The percentage of failed runs within the selected time frame. Downtime is calculated by taking the average score of all runs in the selected time frame, where a failed run receives a score of 100 and a successful run receives a score of 0.
+     - The downtime of a test run: The value will be 100 if the test run failed and 0 if it succeeded.
 

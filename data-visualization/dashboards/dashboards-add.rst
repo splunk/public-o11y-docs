@@ -43,9 +43,9 @@ An event feed chart shows a list of events that meet criteria you specify, inclu
 - custom events that you have manually created in Splunk Infrastructure Monitoring
 - custom events that have been sent in from an external source
 
-You can use the Metrics Sidebar to quickly add simple event feed charts to your dashboard (see :ref:`create-charts`). Click :menuselection:`Find Events` in the Metrics Sidebar to include only events in your search results.
+You can use the metrics sidebar to quickly add simple event feed charts to your dashboard (see :ref:`create-charts`). Select :menuselection:`Find events` in the metrics sidebar to include only events in your search results.
 
-To add charts with more robust event feeds to a dashboard, open the dashboard and then select :menuselection:`Chart` from the dashboard's Actions menu (|more|). (Alternately, you can click :guilabel:`New chart` in the placeholder image at the bottom of every dashboard.) From the chart type selector, select :menuselection:`Event Feed`. See :ref:`chart-types` for more information on Event Feed charts.
+To add charts with more robust event feeds to a dashboard, open the dashboard and then select :menuselection:`Chart` from the dashboard's Actions menu (|more|). (Alternately, you can select :guilabel:`New chart` in the placeholder image at the bottom of every dashboard.) From the chart type selector, select :menuselection:`Event Feed`. See :ref:`chart-types` for more information on Event Feed charts.
 
 If you don't have :ref:`write permissions<about-write-permissions>` for the dashboard you are viewing, or you are in a built-in dashboard, you need to select :guilabel:`Save as` to save the chart.
 
@@ -53,7 +53,7 @@ You can add multiple event types to the feed by adding a new plot line for each 
 
 If you add events generated when a detector triggers an alert, the severity of the alert is shown in the feed.
 
-Click :guilabel:`Save As` to save the event feed to the dashboard; the event feed is placed at the bottom of the dashboard. Once in the dashboard, the event feed can be moved and resized like any other chart. You can also click on custom events listed in the feed to edit or delete them.
+Select :guilabel:`Save As` to save the event feed to the dashboard; the event feed is placed at the bottom of the dashboard. Once in the dashboard, the event feed can be moved and resized like any other chart. You can also select custom events listed in the feed to edit or delete them.
 
 When you hover over an event in a dashboard's event feed chart, a vertical line is displayed in all the charts at the time the event occurred. This feature makes it easy for you to visualize correlations between metric values and the event. (Of course, a line is displayed only when the event occurred during the time frame displayed in the dashboard.)
 

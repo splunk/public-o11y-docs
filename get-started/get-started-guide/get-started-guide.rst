@@ -79,7 +79,7 @@ The journey for getting started with Splunk Observability Cloud has 3 phases: on
        See :ref:`Phase 1 optional and advanced configurations <phase1-advanced-config>`.
 
      - * :ref:`advanced-config-3rd-party`
-       * :ref:`phase3-network-exp`
+       * :ref:`phase2-network-exp`
        * :ref:`phase2-profiling`
        * :ref:`phase2-related-content`
 
