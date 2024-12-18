@@ -41,7 +41,7 @@ In Synthetics, there are detectors to alert on metrics at the test level, at the
        | Examples: Send an alert on the three transaction-level metrics that Splunk Synthetic Monitoring captures (duration, requests, and size). See :ref:`transaction-level-detector` to learn more.
 
 
-Sample use case: Send an alert when a synthetic test fails
+Best practices for sending an alert when a synthetic test fails
 ===============================================================
 
 You can set up a detector while initially creating or editing a test, or from the results view for a particular test. A detector can track one or more synthetic tests.
@@ -69,10 +69,8 @@ In the detector dialog box, enter the following fields:
 #. Select :guilabel:`Activate`. 
 
 ..  image:: /_images/synthetics/detector-one.png
-    :width: 40%
-    :alt: Screenshot showing the troubleshooting tab for a tile in the dashboard with an option to open the data in RUM or APM. 
-
-
+    :width: 100%
+    :alt: Setting up a detector for failed tests. 
 
 Your detector is now set up to check for failed test runs every minute and to send an alert based on your settings in :guilabel:`Alert details`.
 
