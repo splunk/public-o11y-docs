@@ -31,30 +31,31 @@ See the following table for different chart creation methods:
 
   * - :strong:`Method`
     - :strong:`Description`
+  * - Create a chart using the Chart Builder
+    - Use this method to create a complex chart with customizations during the creation process. To learn more, see :ref:`create-chart-with-chart-builder`.
+  * - Create a chart using the metrics sidebar
+    - Use this method to create a simple chart or add a new chart to an existing dashboard. This method is useful for users who are new to Splunk Observability Cloud and are not familiar with more complex chart customizations. To learn more, see :ref:`create-chart-metric-sidebar`.
   * - Create a chart using the Metric Finder
     - Use this method to browse metrics and decide which metric to track before creating a chart. To learn more, see :ref:`create-chart-metric-finder`.
-  * - Create a chart using the metrics sidebar
-    - Use this method to create a simple chart or add a new chart to an existing dashboard. To learn more, see :ref:`create-chart-metric-sidebar`.
   * - Copy a chart
     - Use this method to add a copy or move a chart to another dashboard. To learn more, see :ref:`copy-charts`.
-  * - Create a chart using the Chart Builder
-    - Use this method to create a more complex chart with customizations during the creation process. To learn more, see :ref:`create-chart-with-chart-builder`.
   * - Create a chart using the API
     - Use this method to programmatically create a chart instead of creating one through the user interface. To learn more, see :ref:`create-chart-via-api`.
 
 
-.. _create-chart-metric-finder:
+.. _create-chart-with-chart-builder:
 
-Create a chart using the Metric Finder
-------------------------------------------------
+Create a new chart using the Chart Builder
+------------------------------------------
 
-If you're not sure which metric you want to track, use the Metric Finder to browse different options before creating a new chart.
+Follow these steps to create a chart in the Chart Builder:
 
-#. From the navigation menu, select :strong:`Metric Finder`. 
-#. Search for metrics by entering key words into the search bar, or selecting an integration name.
-#. Once you find the metric you're interested in, select the metric name to open the Chart Builder, pre-populated with your metric.
+#. In the :strong:`Create` menu on the top navigation bar, select :strong:`Chart`. Alternatively, select :guilabel:`New chart` on custom dashboards.
+#. Search for metrics or events you want to plot on your chart. For more information, see :ref:`chart-builder`.
+    
+    .. note:: You can add functions to your chart with the :strong:`F(x)` column. See :ref:`plot-analytics` and :ref:`analytics-ref` for more details.
 
-To learn more about using the Metric Finder, see :ref:`metric-finder`.
+#. Customize your chart. See :ref:`chart-options-tab`.
 
 .. _create-chart-metric-sidebar:
 
@@ -111,6 +112,19 @@ Create charts with events
     #. Select the check box next to each item you want to add.
     #. Select :strong:`Multiple charts`.
 
+.. _create-chart-metric-finder:
+
+Create a chart using the Metric Finder
+------------------------------------------------
+
+If you're not sure which metric you want to track, use the Metric Finder to browse different options before creating a new chart.
+
+#. From the navigation menu, select :strong:`Metric Finder`. 
+#. Search for metrics by entering key words into the search bar, or selecting an integration name.
+#. Once you find the metric you're interested in, select the metric name to open the Chart Builder, pre-populated with your metric.
+
+To learn more about using the Metric Finder, see :ref:`metric-finder`.
+
 .. _copy-charts:
 
 Copy a chart
@@ -148,18 +162,6 @@ Once you copy charts to the clipboard, several options from the :strong:`Create`
     - If you see this option, you have already added charts to a new dashboard but haven't saved it. Select this option to open the unsaved dashboard. Select :strong:`Past charts` to add the copied charts to this dashboard.
   * - Clear clipboard
     - Select this option to clear the clipboard content without pasting charts to a dashboard.
-
-.. _create-chart-with-chart-builder:
-
-Create a new chart using the Chart Builder
-------------------------------------------
-
-#. In the :strong:`Create` menu on the top navigation bar, select :strong:`Chart`. Alternatively, select :guilabel:`New chart` on custom dashboards.
-#. Search for metrics or events you want to plot on your chart. For more information, see :ref:`chart-builder`.
-    
-    .. note:: You can add functions to your chart with the :strong:`F(x)` column. See :ref:`plot-analytics` and :ref:`analytics-ref` for more details.
-
-#. Customize your chart. See :ref:`chart-options-tab`.
 
 .. _create-chart-via-api:
 
