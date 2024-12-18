@@ -11,7 +11,6 @@ Charts in Splunk Observability Cloud
    :hidden:
 
    Chart types<chart-types>
-   Create simple charts <simple-charts-dashboards>
    Create charts<create-charts>
    data-resolution-and-rollups
    Plot metrics and events using Chart Builder<chart-builder>
@@ -29,7 +28,6 @@ Charts can range from extremely simple (monitor a single metric for a single hos
 The following sections lead you through developing the expertise you need to build charts that meet your requirements, based on the metrics you want to monitor.
 
 - :ref:`chart-types`
-- :ref:`Create simple charts <simple-charts-dashboards>`
 - :ref:`create-charts`
 - :ref:`data-resolution-rollups-charts`
 - :ref:`Plot metrics and events using Chart Builder <chart-builder>`
