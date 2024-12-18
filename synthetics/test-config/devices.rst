@@ -14,7 +14,7 @@ Because browser tests capture the visual experience of a page, while uptime and 
 
 Viewport
 ===================================
-Browser tests in Splunk Synthetic Monitoring capture the visual experience of a user interacting with your application. The viewport is the framed area on a device's screen for viewing information, such as the browser window on a desktop. By default, browser tests run from a desktop-sized viewport, but you can select a different viewport size from a list of common devices to test the user experience from a variety of window sizes and device types. 
+Browser tests capture the visual experience of a user interacting with your application. The viewport is the framed area on a device's screen for viewing information, such as the browser window on a desktop. By default, browser tests run from a desktop-sized viewport, but in the test creation view you can select a different device type to test the user experience from a different viewport size. 
  
 
 Network connection
