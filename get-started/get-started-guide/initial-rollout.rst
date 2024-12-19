@@ -105,7 +105,7 @@ When using the Splunk Distribution of OpenTelemetry Collector, you can use recei
 
 See :ref:`monitor-data-sources` for a list of receivers.
 
-.. _phase3-network-exp:
+.. _phase2-network-exp:
 
 Set up Network Explorer to monitor network environment
 ----------------------------------------------------------

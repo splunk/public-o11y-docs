@@ -274,13 +274,13 @@ The following components are available for each global region. Each Cloud provid
      - 
        * US: Oregon (us-west-2), Virginia (us-east-1)
        * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
-       * Asia Pacific: Sydney (ap-southeast-2)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
        * US: Oregon (us-west-1)
      -
        * us0, us1, us2
        * eu0, eu1, eu2
-       * au0
+       * au0, jp0
    * - Synthetic Monitoring
      - 
        * US: Oregon (us-west-2), Virginia (us-east-1)

@@ -277,6 +277,8 @@ Point-and-click log analysis
 
 One important advantage of the integration is that users can now query their Splunk Cloud Platform logs in Log Observer's no-code UI. Users can create advanced queries without knowing SPL with Log Observer's filters and aggregations. See :ref:`logs-queries` for more information.
 
+When you use Log Observer Connect, your logs remain in  your Splunk Cloud Platform instance and are accessible only to Log Observer Connect. Log Observer Connect does not store or index your logs data.
+
 
 Related Content
 ------------------------------------------------------------------------------------------

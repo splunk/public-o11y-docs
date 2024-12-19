@@ -9,7 +9,7 @@ Plot metrics and events using chart builder in Splunk Observability Cloud
 
 Charts are highly customizable. This topic describes how to use chart builder's tools and options to customize your charts to display signals (metrics and events) in an intuitive and compelling way.
 
-.. note:: Use the chart builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`simple-charts-dashboards`.
+.. note:: Use the chart builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`create-chart-metric-sidebar`.
 
 If you are editing an existing chart, you might want to start by configuring plot lines already on the chart (see :ref:`plot-options` and :ref:`plot-config-panel`).
 
@@ -47,14 +47,14 @@ If your metrics follow the naming conventions for Graphite metrics, see :ref:`gr
 
 .. _find-metric:
 
-Use the Metrics Sidebar to find a metric
+Use the metrics sidebar to find a metric
 -------------------------------------------------------------------
 
-You can also choose the signal by using the Metrics Sidebar to search for metric and histogram metric names, instead of typing one in directly. Select :strong:`Browse` next to the :strong:`Signal` field to display the Metrics Sidebar.
+You can also select the signal by using the metrics sidebar to search for metric and histogram metric names, instead of typing one in directly. Select :strong:`Browse` next to the :strong:`Signal` field to display the metrics sidebar.
 
-In the Metrics Sidebar, select the :strong:`Find Metrics` option to search for metrics and histogram metrics. Using the Metrics Sidebar is the same as described in :ref:`use-metrics-sidebar`, except that each selected metric is added as a plot in the chart, instead of as one or more new charts.
+In the metrics sidebar, select :strong:`Find metrics` to search for metrics and histogram metrics. Using the metrics sidebar is the same as described in :ref:`create-chart-metric-sidebar`, except that each selected metric is added as a plot in the chart, instead of as one or more new charts.
 
-For information about how to use the :strong:`Find Events` option, see :ref:`chart-events-as-occur`.
+For information about how to use the :strong:`Find events` option, see :ref:`chart-events-as-occur`.
 
 
 .. _expression:
@@ -234,9 +234,9 @@ For background information on events, see :ref:`events-intro`.
 Display events as they occur
 -------------------------------------------------------------------
 
-The process for adding an event triggered by a :term:`detector`, or occurrences of a custom event, is essentially identical to :ref:`specifying a metric as a signal<specify-signal>`. The only real difference is that if you :ref:`use the Metrics Sidebar <use-metrics-sidebar>`, you must select the :strong:`Find Events` option to search for detector or custom event names.
+The process for adding an event triggered by a :term:`detector`, or occurrences of a custom event, is essentially identical to :ref:`specifying a metric as a signal<specify-signal>`. The only real difference is that if you use the metrics sidebar, you must select the :strong:`Find events` option to search for detector or custom event names.
 
-.. note:: If you clear the :strong:`Find Metrics` option to search only for events, none of the other search options in the Metrics Sidebar are available. You must enter text manually to find matching detector or custom event names. Similarly, if you add a filter, you can search only for metrics, not for events.
+.. note:: If you clear the :strong:`Find metrics` option to search only for events, none of the other search options in the metrics sidebar are available. You must enter text manually to find matching detector or custom event names. Similarly, if you add a filter, you can search only for metrics, not for events.
 
 
 .. _event-markers:
@@ -716,7 +716,7 @@ For example, for a regular wildcard query, :code:`jvm.*` returns anything that s
 
 For Graphite wildcards, :code:`jvm.*` returns only something that has no subsequent dots in the name. For example, for :code:`jvm.*`, :code:`jvm.foo` would be returned, but :code:`jvm.foo.bar` and :code:`jvm.foo.bar.foo` would not.
 
-To use the Graphite wildcard, enter the appropriate Graphite syntax into the signal field, then select the Graphite wildcard option. If you are using the Metrics Sidebar, enter any search term with an asterisk between two dot (.) characters, then select :strong:`Graphite wildcard` from the search results list.
+To use the Graphite wildcard, enter the appropriate Graphite syntax into the signal field, then select the Graphite wildcard option. If you are using the metrics sidebar, enter any search term with an asterisk between two dot (.) characters, then select :strong:`Graphite wildcard` from the search results list.
 
 When the Graphite wildcard option is selected, the ability to filter plots by dimensions is removed. Graphite naming conventions encapsulate dimension values into dot-separated strings and are in effect selected through the use of wildcards.
 
