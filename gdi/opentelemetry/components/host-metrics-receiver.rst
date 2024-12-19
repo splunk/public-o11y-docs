@@ -11,6 +11,7 @@ The host metrics receiver generates metrics scraped from host systems when the C
 
 By default, the host metrics receiver is activated in the Splunk Distribution of OpenTelemetry Collector and collects the following metrics:
 
+- System metrics
 - CPU usage metrics
 - Disk I/O metrics
 - CPU load metrics
@@ -89,6 +90,10 @@ Scrapers extract data from endpoints and then send that data to a specified targ
 
       - Scraper
       - Description
+   - 
+
+      - ``system``
+      - System metrics
    - 
 
       - ``cpu``
