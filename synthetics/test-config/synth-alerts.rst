@@ -1,7 +1,7 @@
 .. _synth-alerts:
 
 ************************************************************
-Set up detectors and alerts in Splunk Synthetic Monitoring
+Detectors and alerts
 ************************************************************
 
 .. meta::
