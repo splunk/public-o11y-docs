@@ -20,7 +20,7 @@ To preserve your account's security, don't use global variables to store sensiti
 
 What happens when you conceal a global variable?
 ==================================================
-When you conceal a global variable, Splunk Synthetic Monitoring encrypts the variable's value in its database and scrubs its value from the Splunk Synthetic Monitoring UI, from test results, and from alert messages. However, concealed global variables are not designed to safeguard sensitive information or critical data. In addition, if you send a concealed value to a test endpoint, that endpoint receives its unconcealed value.
+When you conceal a global variable, Splunk Synthetic Monitoring encrypts the variable's value in its database and scrubs its value from the Splunk Synthetic Monitoring UI, from test results, and from alert messages. However, concealed global variables were not designed to safeguard sensitive information or critical data; do not misuse them for such purposes.
 
 
 Create a global variable
