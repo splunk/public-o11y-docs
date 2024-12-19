@@ -27,22 +27,22 @@ Create a global variable
 ===============================
 There are two ways to create a global variable:
 
-#. Add a new global variable in the vault:
+* Add a new global variable in the vault:
 
-    a. From the Splunk Synthetic Monitoring landing page, select :guilabel:`Synthetics configuration`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab.
-    b. Select :guilabel:`+ Add` to open the creation dialog box. 
+    #. From the Splunk Synthetic Monitoring landing page, select :guilabel:`Synthetics configuration`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab.
+    #. Select :guilabel:`+ Add` to open the creation dialog box. 
 
-#. Add a new global variable while editing a test: 
+* Add a new global variable while editing a test: 
 
-   a. In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global variables` and select :guilabel:`Add`. 
+   In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global variables` and select :guilabel:`Add`. 
 
-Once you're in the :guilabel:`Add global variable` dialog box, enter the following:
+When you're in the :guilabel:`Add global variable` dialog box, enter the following:
  
 #. In the :guilabel:`env` field, enter the name of the variable. You will use this key to access your variable within a test.
 #. In the :guilabel:`value` field, enter the value that will replace the variable when the test is run.
 #. (Optional) In the :guilabel:`Description` field, enter a description to explain the purpose of the variable for future reference. A description is particularly helpful when you conceal the variable and cannot reveal its value. 
-#. (Optional) Select :guilabel:`Conceal value` to permanently conceal the value to all users. 
-#. Once you're satisfied with your global variable, select :guilabel:`Add`. 
+#. (Optional) Select :guilabel:`Conceal value`. 
+#. Select :guilabel:`Add`. 
 
 
 Edit a global variable
