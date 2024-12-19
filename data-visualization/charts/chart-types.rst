@@ -101,7 +101,7 @@ A list chart can display up to 100 items at a time.
 Sort list charts
 -------------------
 
-You can sort a list chart using the API. For more information, see the :new-ref:`Sort a list chart <https://dev.splunk.com/observability/docs/chartsdashboards/charts_overview#Sort-a-list-chart>` section in the `Splunk Observability Cloud Developer Guide`.
+You can sort a list chart using the API. For more information, see the :new-page:`Sort a list chart <https://dev.splunk.com/observability/docs/chartsdashboards/charts_overview#Sort-a-list-chart>` section in the `Splunk Observability Cloud Developer Guide`.
 
 List chart prefix and suffix
 ----------------------------
