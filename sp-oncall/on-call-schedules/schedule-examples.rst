@@ -32,11 +32,11 @@ Configure the Business Hours rotation
 
 #. Navigate to the team you'd like to implement this schedule for and add all of the appropriate users using the :guilabel:`Invite User` button.
 #. Navigate to the :menuselection:`Rotations` tab and select :guilabel:`Add Rotation`.
-#. Name the rotation "Business Hours" and select "Partial Day" for the shift type
+#. Name the rotation "Business Hours" and select "Partial Day" for the shift type.
     #. Name the first shift either after the user who will be occupying it or just call it "Shift 1" and set the hours.
     #. Select :guilabel:`Save Shift`.
     
-    .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
+        .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
 
     #. Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`.
     #. After adding the appropriate user, select :guilabel:`Add Another Shift`.
@@ -49,12 +49,14 @@ Configure the Nights and Weekends rotation
 #. Create the "Nights and Weekends' rotation by selecting :guilabel:`Add a Rotation`.
 #. Name the rotation "Nights and Weekends" and select :guilabel:`Partial Day` for the first shift type.
 #. Name the first shift "Weeknights".
-    #. In the section with Monday through Friday in blue lettering, deselect Friday. Also, change the hours to cover all week-hours that are not covered by the Business Hours rotation. For example, if your  business hours are 8 AM to 5 PM, your Weeknights shift should be 5 PM to 8 AM. If your Business Hours are 9 AM to 4 PM, your Weeknights
-    shift should be 4 PM to 9 AM.
+
+    #. In the section with Monday through Friday in blue lettering, deselect Friday. Also, change the hours to cover all week-hours that are not covered by the Business Hours rotation. For example, if your  business hours are 8 AM to 5 PM, your Weeknights shift should be 5 PM to 8 AM. If your Business Hours are 9 AM to 4 PM, your Weeknights shift should be 4 PM to 9 AM.
     #. Change the :guilabel:`The next handoff happens` date to the next upcoming Monday.
     #. Select :guilabel:`Save Shift`.
     #. To add users to this shift, select :guilabel:`Manage Members` then :guilabel:`Select a User to add`. The order that you add the users in will dictate the week they end up on-duty. The first user you add will do the current week, the next user the week after, the third user the third week. You can re-order them after adding by dragging them on the :menuselection:`Members` page.
+
 #. After adding the appropriate users, select :guilabel:`Add another Shift` and select :guilabel:`Multi-day` for the type.
+
     #. Name this shift “Weekends” and adjust the hours to those desired.
     #. Select :guilabel:`Save Shift`.
     #. To add users to this shift, select :guilabel:`Manage Members` then :guilabel:`Select a User to add`. The order that you add the users in will dictate the week they end up on-duty. You can re-order these users after adding by dragging them around within this menu.
@@ -123,18 +125,17 @@ Navigate to the team you'd like to implement this schedule for and add all of th
 #. Navigate to the :menuselection:`Rotations` tab and select :guilabel:`Add Rotation`.
 #. Name the rotation "Business Hours" and select "Partial Day" for the shift type.
 
-   #. Name the first shift either after the user who will be occupying it or just call it "Shift 1" and set the hours.
-   #. Set the shift hours.
-   #. Select :guilabel:`Save Shift`.
+  #. Name the first shift either after the user who will be occupying it or just call it "Shift 1" and set the hours.
+  #. Set the shift hours.
+  #. Select :guilabel:`Save Shift`.
 
-   .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
+    .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
 
-   #. Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`.
-   #. After adding the appropriate user, select :guilabel:`Add Another Shift`.
+  #. Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`.
+  #. After adding the appropriate user, select :guilabel:`Add Another Shift`.
 
 #. Select :guilabel:`Partial Day` and repeat the process from the previous steps. You will end up creating one shift for each user you would like on-call simultaneously during the business day.
 #. When finished, select :guilabel:`I'm Done, Save this Rotation`.
-
 
 
 Configure the Escalation Policies
