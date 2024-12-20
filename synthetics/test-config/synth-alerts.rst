@@ -48,7 +48,7 @@ You can set up a detector while initially creating or editing a test, or from th
 
 To set up a detector, do one of the following:
 
-* While creating or editing a test, select :guilabel:`Create detector`. The detector dialog box opens.
+* When creating or editing a test, select :guilabel:`Create detector` to open the detector dialog box.
 * From the :guilabel:`Test results` page for a particular test, select :guilabel:`Create detector`. The detector dialog box opens.
 
 In the detector dialog box, enter the following fields:
