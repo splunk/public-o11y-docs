@@ -5,7 +5,7 @@ Public locations
 *****************
 
 .. meta::
-    :description: Run synthetic tests from locations set by infrastructure and connectivity providers to simulate performance for users in that location.
+    :description: Run synthetic tests from locations set by infrastructure and connectivity providers to simulate performance from a range of checkpoints around the world.
 
 Public locations are global checkpoints from which you can run synthetic tests to simulate performance for users in that location.
 

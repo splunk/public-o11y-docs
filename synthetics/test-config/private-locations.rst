@@ -5,7 +5,7 @@ Private locations
 *****************
 
 .. meta::
-    :description: Run synthetic tests from an internal site or private web application to quickly find defects using Splunk Synthetic Monitoring. 
+    :description: Run synthetic tests from private locations such as internal sites, private web applications, or private networks.
 
 A private location is a software package that offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
 

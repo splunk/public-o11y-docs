@@ -1,7 +1,7 @@
 .. _metrics-finder-and-metadata-catalog:
 
 *****************************************************************
-Search the Metric Finder and Metadata catalog 
+Search the Metric Finder and Metadata Catalog 
 *****************************************************************
 
 .. meta::
