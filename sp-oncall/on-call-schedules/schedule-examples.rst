@@ -35,11 +35,10 @@ Configure the Business Hours rotation
 #. Name the rotation "Business Hours" and select "Partial Day" for the shift type.
     #. Name the first shift either after the user who will be occupying it or just call it "Shift 1" and set the hours.
     #. Select :guilabel:`Save Shift`.
-    
         .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
-
     #. Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`.
     #. After adding the appropriate user, select :guilabel:`Add Another Shift`.
+
 #. Select :guilabel:`Partial Day` and repeat the process from the previous steps. You will end up creating one shift for each user you would like on-call simultaneously during the business day.
 #. When finished, select :guilabel:`I'm Done, Save this Rotation`.
 
@@ -71,7 +70,7 @@ The next part of the configuration process will involve creating a Secondary rot
 #. Name the rotation “Secondary” and select :guilabel:`24/7` for the shift type.
 #. Name the shift “Secondary Shift” and change the handoff time to the appropriate one. This is typically when business hours begin for your organization.
 #. Change the :guilabel:`The next handoff happens` date to the next upcoming Monday.
-#. Select :guilabel:`Save Shift`/
+#. Select :guilabel:`Save Shift`.
 #. To add users to the shift :guilabel:`Manage Members` then :guilabel:`Select a User to add`.The order that you add the users in will dictate the week they end up on-duty. The first user you add will do the current week, the next user the week after, the third user the third week. You can re-order these users after adding by dragging them around within this menu.
 #. When finished, select :guilabel:`I'm Done, Save this Rotation`.
 
@@ -121,18 +120,18 @@ Main points:
 Configure the Business Hours rotation
 --------------------------------------------
 
-Navigate to the team you'd like to implement this schedule for and add all of the appropriate users using the :guilabel:`Invite User` button.
+#. Navigate to the team you'd like to implement this schedule for and add all of the appropriate users using the :guilabel:`Invite User` button.
 #. Navigate to the :menuselection:`Rotations` tab and select :guilabel:`Add Rotation`.
 #. Name the rotation "Business Hours" and select "Partial Day" for the shift type.
 
-  #. Name the first shift either after the user who will be occupying it or just call it "Shift 1" and set the hours.
-  #. Set the shift hours.
-  #. Select :guilabel:`Save Shift`.
+    #. Name the first shift either after the user who will be occupying it or just call it "Shift 1" and set the hours.
+    #. Set the shift hours.
+    #. Select :guilabel:`Save Shift`.
 
-    .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
+        .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
 
-  #. Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`.
-  #. After adding the appropriate user, select :guilabel:`Add Another Shift`.
+    #. Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`.
+    #. After adding the appropriate user, select :guilabel:`Add Another Shift`.
 
 #. Select :guilabel:`Partial Day` and repeat the process from the previous steps. You will end up creating one shift for each user you would like on-call simultaneously during the business day.
 #. When finished, select :guilabel:`I'm Done, Save this Rotation`.
