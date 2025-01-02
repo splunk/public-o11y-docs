@@ -166,7 +166,7 @@ To instrument your application programmatically, add the following lines at the 
 
    start({
       serviceName: 'my-node-service',
-      endpoint: 'http://localhost:4317'
+      endpoint: 'http://localhost:4318'
    });
 
    // Rest of your main module
@@ -252,7 +252,7 @@ To deploy the Collector for Node.js in a Kubernetes environment, follow these st
                    fieldRef:
                      fieldPath: status.hostIP
                - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
+                 value: "http://$(SPLUNK_OTEL_AGENT):4318"
                - name: OTEL_SERVICE_NAME
                  value: "<serviceName>"
                - name: OTEL_RESOURCE_ATTRIBUTES
