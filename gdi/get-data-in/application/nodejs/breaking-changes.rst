@@ -36,16 +36,6 @@ If a custom configuration overrides the default endpoint setting, you must make 
           http:
             endpoint: "${SPLUNK_LISTEN_INTERFACE}:4318"
 
-.. _nodejs-3x-metric-names:
-
-New metric names for version 3.x
-======================================
-
-.. _metrics-not-reported-nodejs:
-
-Metrics no longer reported
----------------------------------------
-
 Troubleshooting
 ======================
 
