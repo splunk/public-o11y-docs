@@ -98,86 +98,10 @@ A list chart can display up to 100 items at a time.
   .. image:: /_images/data-visualization/charts/list-chart.png
      :alt: This screenshot shows a list chart illustrating the number of active hosts per AWS EC2 instance type.
 
-Sorting list charts
+Sort list charts
 -------------------
 
-The API lets you sort values in list charts by specifying the ``options.sortBy`` property in the request to create or update a chart.
-You can sort on one of the dimensions in the MTS for the chart, a data point, the metric name, or the ``publish()`` method ``label`` argument of the SignalFlow statement that generates the data. To choose one of these options, specify one of the keyword values shown in the following table:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10 40 50
-
-   * - :strong:`Keyword`
-     - :strong:`Alias in the user interface`
-     - :strong:`Description`
-
-   * - ``<dimension-name>``
-     - Dimension name
-     - One of the dimensions of the displayed MTS. To see the available dimensions, follow the instructions following this table.
-
-   * - ``sf_metric``
-     - Plot name
-     - The ``label`` argument of the SignalFlow ``publish()`` that provides the displayed data. This is also the plot name of the corresponding signal in the user interface.
-
-   * - ``sf_originatingMetric``
-     - Metric
-     - Name of the metric for the displayed MTS.
-
-   * - ``value``
-     - Value
-     - Value of the data point when Splunk Observability Cloud receives it.
-
-In addition, you can sort by any dimension of an MTS displayed in the chart.
-
-To see a list of entities on which you can sort:
-
-#. In the user interface, open the chart.
-#. Select the :strong:`Chart options` tab.
-#. Open the :strong:`Sort` dropdown list. In the list, :strong:`Value` is the alias for ``value``, :strong:`Plot name` is the alias for ``sf_metric``, and :strong:`Metric` is the alias for ``sf_originatingMetric``. All other list items are dimension names.
-
-
-
-Examples
-++++++++++
-
-To sort a list chart by value, specify the following in the request body:
-
-.. code-block::
-
-    {
-        options: {
-            "sortBy": "value",
-        ...
-        }
-    }
-
-
-To sort by plot name, specify the following:
-
-.. code-block::
-
-    {
-        options: {
-            "sortBy": "sf_metric",
-            ...
-        }
-    }
-
-To sort by the dimension ``demo_datacenter``, specify the following:
-
-.. code-block::
-
-    {
-        options: {
-            "sortBy": "demo_datacenter",
-            ...
-        }
-    }
-
-
-.. note::
-    Splunk Observability Cloud doesn't guarantee the sort order of identical values in the input stream.
+You can sort a list chart using the API. For more information, see the :new-page:`Sort a list chart <https://dev.splunk.com/observability/docs/chartsdashboards/charts_overview#Sort-a-list-chart>` section in the `Splunk Observability Cloud Developer Guide`.
 
 List chart prefix and suffix
 ----------------------------
