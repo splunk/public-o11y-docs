@@ -120,7 +120,7 @@ The following settings control tracing limits and attributes:
      - Maximum number of links per span. Default value is ``1000``.
    * - OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT
      - Not applicable
-     - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
+     - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``12000``. Empty values are treated as infinity.
 
 
 .. _trace-sampling-settings-nodejs-3x:
@@ -137,11 +137,13 @@ The following settings control trace sampling:
 
    * - Environment variable
      - Description
+     - Default value
    * - OTEL_TRACES_SAMPLER
      - Sampler to use. The default value is ``parentbased_always_on``. Possible values are: ``always_on``, ``always_off``, ``parentbased_always_on``, ``parentbased_always_off``, ``traceidratio``, ``parentbased_traceidratio``. See :new-page:`Built-in samplers <https://github.com/open-telemetry/opentelemetry-js/blob/main/packages/opentelemetry-sdk-trace-base/README.md#built-in-samplers>` in the official OpenTelemetry documentation for more information.
-
+     - ``always_on``
    * - OTEL_TRACES_SAMPLER_ARG
      - Semicolon-separated list of rules for the ``rules`` sampler. For example, when setting the sampler to ``parentbased_traceidratio`` you can set the ratio using a number in the 0 to 1 range: |br| |br| ``OTEL_TRACES_SAMPLER_ARG=0.25``.
+     - `` ``
 
 
 .. _trace-exporters-settings-nodejs-3x:

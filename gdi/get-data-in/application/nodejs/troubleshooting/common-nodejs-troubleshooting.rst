@@ -46,15 +46,6 @@ You can also activate debug logging programmatically by setting the ``logLevel``
       },
    });
 
-To deactivate debug logging in your code, call ``setLogger()`` as in the following example:
-
-.. code-block:: js
-
-   const { diag } = require('@opentelemetry/api');
-   diag.setLogger();
-
-.. note:: Activate debug logging only when needed. Debug mode requires more resources.
-
 .. _enable-debug-metrics-3x:
 
 Activate debug metrics
