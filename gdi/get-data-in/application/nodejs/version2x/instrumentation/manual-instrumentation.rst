@@ -1,4 +1,4 @@
-.. _nodejs-manual-instrumentation-3x:
+.. _nodejs-manual-instrumentation:
 
 ************************************************************************
 Manually instrument Node.js applications for Splunk Observability Cloud
@@ -11,7 +11,7 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 
 .. note:: Manual OTel instrumentation is fully compatible with Splunk automatic Node.js instrumentation and is fully supported by Splunk.
 
-.. _nodejs-otel-custom-traces-3x:
+.. _nodejs-otel-custom-traces:
 
 Custom traces
 =====================================
@@ -46,7 +46,7 @@ To send custom traces to Splunk Observability Cloud, add the required dependenci
 .. note:: For more examples of manual instrumentation, see :new-page:`Manual instrumentation <https://opentelemetry.io/docs/instrumentation/js/manual/>` in the OpenTelemetry official documentation.
 
 
-.. _nodejs-otel-custom-metrics-3x:
+.. _nodejs-otel-custom-metrics:
 
 Custom metrics
 =====================================

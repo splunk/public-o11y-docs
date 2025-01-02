@@ -1,4 +1,4 @@
-.. _instrument-nodejs-applications:
+.. _instrument-nodejs-applications-3x:
 
 ********************************************************************
 Instrument your Node.js application for Splunk Observability Cloud
@@ -41,7 +41,7 @@ If you don't use the guided setup, follow these instructions to manually install
 - :ref:`configure-nodejs-instrumentation`
 - :ref:`nodejs-programmatically-instrument`
 
-.. _install-enable-nodejs-agent:
+.. _install-enable-nodejs-agent-3x:
 
 Install and activate the Node.js instrumentation
 ------------------------------------------------------
@@ -104,7 +104,7 @@ If no data appears in APM, see :ref:`common-nodejs-troubleshooting`.
 
 .. note:: To instrument applications that use Webpack, see :ref:`nodejs-webpack-issues`.
 
-.. _enable_profiling_nodejs:
+.. _enable_profiling_nodejs-3x:
 
 Activate AlwaysOn Profiling
 --------------------------------------------
@@ -127,7 +127,7 @@ The following example shows how to activate the profiler from your application c
 
 See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-nodejs`.
 
-.. _enable_automatic_metric_collection_nodejs:
+.. _enable_automatic_metric_collection_nodejs-3x:
 
 Activate metrics collection
 ------------------------------------------------
@@ -144,14 +144,14 @@ To activate automatic runtime metric collection, activate the metrics feature us
 
       $env:SPLUNK_METRICS_ENABLED='true'
 
-.. _configure-nodejs-instrumentation:
+.. _configure-nodejs-instrumentation-3x:
 
 Configure the Node.js distribution
 -----------------------------------------------------
 
 In most cases, the only configuration setting you need to enter is the service name. For advanced configuration, like changing trace propagation formats or configuring server trace data, see :ref:`advanced-nodejs-otel-configuration`.
 
-.. _nodejs-programmatically-instrument:
+.. _nodejs-programmatically-instrument-3x:
 
 Instrument your application programmatically
 -----------------------------------------------------
@@ -187,7 +187,7 @@ After you add the ``start()`` function to your entry point script, run your appl
 
    node -r <entry-point.js> <your-app.js>
 
-.. _add-custom-instrumentation:
+.. _add-custom-instrumentation-3x:
 
 Add custom instrumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -213,7 +213,7 @@ For a list of supported instrumentations, see :new-page:`https://github.com/open
 
 .. note:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
 
-.. _kubernetes_nodejs_agent:
+.. _kubernetes_nodejs_agent-3x:
 
 Deploy the Node.js distribution in Kubernetes
 =======================================================
@@ -262,7 +262,7 @@ To deploy the Collector for Node.js in a Kubernetes environment, follow these st
                - -r @splunk/otel/instrument
                - <your-app>.js
 
-.. _export-directly-to-olly-cloud-nodejs:
+.. _export-directly-to-olly-cloud-nodejs-3x:
 
 Send data directly to Splunk Observability Cloud
 =============================================================

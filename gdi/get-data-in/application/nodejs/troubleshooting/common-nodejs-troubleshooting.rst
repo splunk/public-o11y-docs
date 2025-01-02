@@ -1,4 +1,4 @@
-.. _common-nodejs-troubleshooting:
+.. _common-nodejs-troubleshooting-3x:
 
 *******************************************************************
 Troubleshoot Node.js instrumentation for Splunk Observability Cloud
@@ -9,7 +9,7 @@ Troubleshoot Node.js instrumentation for Splunk Observability Cloud
 
 When you instrument a Node.js application using the Splunk Distribution of OpenTelemetry JS and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
-.. _basic-nodejs-troubleshooting:
+.. _basic-nodejs-troubleshooting-3x:
 
 Steps for troubleshooting Node.js OpenTelemetry issues
 =======================================================
@@ -19,7 +19,7 @@ The following steps can help you troubleshoot Node.js instrumentation issues:
 #. :ref:`enable-nodejs-debug-logging`
 #. :ref:`enable-debug-metrics`
 
-.. _enable-nodejs-debug-logging:
+.. _enable-nodejs-debug-logging-3x:
 
 Activate diagnostic logging
 -------------------------------------------------------
@@ -55,7 +55,7 @@ To deactivate debug logging in your code, call ``setLogger()`` as in the followi
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
-.. _enable-debug-metrics:
+.. _enable-debug-metrics-3x:
 
 Activate debug metrics
 ---------------------------------
@@ -64,7 +64,7 @@ You can activate internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_EN
 
 For more information, see :ref:`nodejs-otel-debug-metrics`.
 
-.. _nodejs-trace-exporter-issues:
+.. _nodejs-trace-exporter-issues-3x:
 
 Trace exporter issues
 =====================================================
@@ -99,7 +99,7 @@ If you send traces directly to Splunk Observability Cloud and receive a 401 erro
 
 Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
-.. _nodejs-webpack-issues:
+.. _nodejs-webpack-issues-3x:
 
 Webpack compatibility issues
 =====================================================
@@ -132,7 +132,7 @@ When added to ``externals``, the ``express`` framework loads through the ``requi
 
 .. note:: You don't need to add Node.js core modules such as ``http``, ``net``, and ``dns`` to the ``externals`` list.
 
-.. _nodejs-profiler-issues:
+.. _nodejs-profiler-issues-3x:
 
 Troubleshoot AlwaysOn Profiling for Node.js
 ===============================================================

@@ -1,4 +1,4 @@
-.. _nodejs-otel-metrics:
+.. _nodejs-otel-metrics-3x:
 
 **********************************************************************
 Metrics and attributes collected by the Splunk Distribution of OTel JS
@@ -11,14 +11,14 @@ The Splunk Distribution of OpenTelemetry JS collects runtime and custom metrics.
 
 To learn about the different metric types, see :ref:`metric-types`.
 
-.. _enable-nodejs-metrics:
+.. _enable-nodejs-metrics-3x:
 
 Activate metrics collection
 ====================================================
 
 To collect Node.js metrics, see :ref:`metrics-configuration-nodejs`.
 
-.. _nodejs-otel-runtime-metrics:
+.. _nodejs-otel-runtime-metrics-3x:
 
 Runtime metrics
 ================================================
@@ -71,7 +71,7 @@ The following runtime metrics are automatically collected and exported:
      - Gauge
      - Minimum event loop lag within the collection interval, in nanoseconds.
 
-.. _nodejs-otel-metrics-migration:
+.. _nodejs-otel-metrics-migration-3x:
 
 Migrate from SignalFx metrics for Node.js
 ===========================================
@@ -150,7 +150,7 @@ With the release of version 2.0 of the Splunk Distribution of OpenTelemetry JS, 
    * - ``process.runtime.nodejs.event_loop.lag.min``
      - ``nodejs.event_loop.lag.min``
 
-.. _nodejs-otel-debug-metrics:
+.. _nodejs-otel-debug-metrics-3x:
 
 Debug metrics
 =====================================

@@ -1,4 +1,4 @@
-.. _nodejs-otel-performance-3x:
+.. _nodejs-otel-performance:
 
 ***************************************************
 Performance reference for Splunk OTel Node.js agent
@@ -15,7 +15,7 @@ Due to the complexity of modern software and the broad diversity in deployment s
 
 The following sections describe the minimum requirements of the Splunk OTel Node.js agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
-.. _nodejs-overhead-requirements-3x:
+.. _nodejs-overhead-requirements:
 
 Minimum requirements for production deployments
 =================================================================
@@ -23,7 +23,7 @@ Minimum requirements for production deployments
 .. include:: /_includes/requirements/nodejs.rst
 
 
-.. _nodejs-overhead-guidelines-3x:
+.. _nodejs-overhead-guidelines:
 
 Guidelines to reduce agent overhead
 =================================================================
@@ -60,7 +60,7 @@ The following example shows how to configure trace sampling in the code to drop 
    });
 
 
-.. _turn-on-nodejs-instrumentations-3x:
+.. _turn-on-nodejs-instrumentations:
 
 Turn on only the instrumentation you need
 -----------------------------------------------------------------
@@ -89,7 +89,7 @@ Provision adequate resources
 Make sure to provision enough resources for your instrumentation and for the Collector. The amount of resources such as memory or disk depend on your application architecture and needs. For example, a common setup is to run the instrumented application on the same host as the Splunk Distribution of OpenTelemetry Collector. In that case, consider rightsizing the resources for the Collector and optimize its settings. See :ref:`otel-sizing`.
 
 
-.. _nodejs-overhead-constraints-3x:
+.. _nodejs-overhead-constraints:
 
 Constraints impacting the performance of the Node.js agent
 =================================================================
@@ -101,7 +101,7 @@ Some instrumentations, for example JDBC or Redis, produce high span volumes that
 .. note:: Experimental features of the Node.js agent might increase agent overhead due to the experimental focus on functionality over performance. Stable features are safer in terms of agent overhead.
 
 
-.. _nodejs-overhead-troubleshooting-3x:
+.. _nodejs-overhead-troubleshooting:
 
 Troubleshooting agent overhead issues
 ====================================================================
@@ -124,7 +124,7 @@ Consider taking the following actions to decrease agent overhead:
 - Turn on runtime metrics to check event loop lag. See :ref:`enable_automatic_metric_collection_nodejs`.
 
 
-.. _nodejs-overhead-measure-diy-3x:
+.. _nodejs-overhead-measure-diy:
 
 Guidelines for measuring agent overhead
 =================================================================

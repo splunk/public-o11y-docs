@@ -1,4 +1,4 @@
-.. _advanced-nodejs-otel-configuration-3x:
+.. _advanced-nodejs-otel-configuration:
 
 ***************************************************************************
 Configure the Splunk Distribution of OTel JS for Splunk Observability Cloud
@@ -11,7 +11,7 @@ You can configure the Splunk Distribution of OpenTelemetry JS to suit your instr
 
 The following sections describe all available settings for configuring OpenTelemetry for Node.js, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry JS.
 
-.. _configuration-methods-nodejs-3x:
+.. _configuration-methods-nodejs:
 
 Configuration methods
 ===========================================================
@@ -55,7 +55,7 @@ You can also activate the collection of a specific data type by passing a boolea
 
 .. note:: Function arguments take precedence over the corresponding environment variables.
 
-.. _main-nodejs-agent-settings-3x:
+.. _main-nodejs-agent-settings:
 
 General settings
 =========================================================================
@@ -66,7 +66,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
 
     <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
-.. _instrumentation-configuration-nodejs-3x:
+.. _instrumentation-configuration-nodejs:
 
 Instrumentations configuration
 =======================================================
@@ -87,7 +87,7 @@ For example, to turn off all default instrumentations and only turn on the ``bun
 The previous settings only apply to instrumentations loaded by the Splunk Distribution of OpenTelemetry JS by default. When using the programmatic API to supply a list of user-specified instrumentations, they have no effect.
 
 
-.. _trace-configuration-nodejs-3x:
+.. _trace-configuration-nodejs:
 
 Trace configuration
 =======================================================
@@ -123,7 +123,7 @@ The following settings control tracing limits and attributes:
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
 
 
-.. _trace-sampling-settings-nodejs-3x:
+.. _trace-sampling-settings-nodejs:
 
 Samplers configuration
 ===============================================================
@@ -144,7 +144,7 @@ The following settings control trace sampling:
      - Semicolon-separated list of rules for the ``rules`` sampler. For example, when setting the sampler to ``parentbased_traceidratio`` you can set the ratio using a number in the 0 to 1 range: |br| |br| ``OTEL_TRACES_SAMPLER_ARG=0.25``.
 
 
-.. _trace-exporters-settings-nodejs-3x:
+.. _trace-exporters-settings-nodejs:
 
 Exporters configuration
 ===============================================================
@@ -155,7 +155,7 @@ The following settings control trace exporters and their endpoints:
 
     <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
-.. _jaeger-exporter-nodejs-3x:
+.. _jaeger-exporter-nodejs:
 
 Jaeger exporter
 -------------------
@@ -180,7 +180,7 @@ To use the Jaeger exporter, add the ``@opentelemetry/exporter-jaeger`` package a
 
 .. note:: To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
-.. _trace-propagation-configuration-nodejs-3x:
+.. _trace-propagation-configuration-nodejs:
 
 Propagators configuration
 =======================================================
@@ -203,7 +203,7 @@ For backward compatibility with the SignalFx Tracing Library for Node.js, use th
 
       $env:OTEL_PROPAGATORS=b3multi
 
-.. _profiling-configuration-nodejs-3x:
+.. _profiling-configuration-nodejs:
 
 Node.js settings for AlwaysOn Profiling
 ===============================================
@@ -228,7 +228,7 @@ To configure AlwaysOn Profiling programmatically, pass the arguments to the ``st
 
 .. note:: For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
-.. _metrics-configuration-nodejs-3x:
+.. _metrics-configuration-nodejs:
 
 Metrics configuration
 ===============================================================
@@ -256,7 +256,7 @@ The following is a list of dimensions added by default:
 - ``metric_source``: ``splunk-otel-js``
 - ``node_version``: ``process.versions.node``, for example ``16.10.0``
 
-.. _server-trace-information-nodejs-3x:
+.. _server-trace-information-nodejs:
 
 Server trace information
 ==============================================
