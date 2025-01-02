@@ -7,7 +7,7 @@ Instrument your Node.js application for Splunk Observability Cloud
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
 
-The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
+The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular Node.js libraries your application uses.
 
 To get started, use the guided setup or follow the instructions manually.
 
@@ -209,7 +209,7 @@ To add custom or third-party instrumentations that implement the OpenTelemetry J
       },
    });
    
-For a list of supported instrumentations, see :new-page:`https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations>` on GitHub.
+For a list of bundled instrumentations, see :new-page:`https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations>` on GitHub.
 
 .. note:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
 

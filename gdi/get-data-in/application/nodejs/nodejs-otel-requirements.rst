@@ -16,14 +16,7 @@ Meet these requirements to instrument Node.js applications for Splunk Observabil
 Ensure you have supported Node.js and library versions
 ==============================================================
 
-.. include:: /_includes/requirements/nodejs.rst
-
-Dependencies
----------------
-
-.. raw:: html
-
-    <div class="instrumentation" section="dependencies" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"name": "Dependency", "source_href": "Link to source", "version": "Version", "stability": "Stability"}'></div>
+The Splunk Distribution of OpenTelemetry JS requires Node.js version 18 and higher.
 
 .. _supported-nodejs-otel-libraries-3x:
 

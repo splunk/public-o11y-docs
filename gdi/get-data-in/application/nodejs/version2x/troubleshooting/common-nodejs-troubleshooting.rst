@@ -86,7 +86,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
 #. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
-#. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
+#. Check that the OTel Collector points to the following address: ``http://<host>:4318``. Verify that your URL is correct.
 
 401 error when sending spans
 --------------------------------------------------------
@@ -169,6 +169,7 @@ The following snippet contains a sample ``profiling`` pipeline:
      otlp:
        protocols:
          grpc:
+         http:
 
    exporters:
      # Profiling

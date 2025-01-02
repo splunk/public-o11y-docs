@@ -72,8 +72,8 @@ To send custom application metrics to Splunk Observability Cloud, add ``@opentel
          }));
        },
        exportIntervalMillis: 1000, // default: 5000
-       // The default exporter used is OTLP over gRPC
-       endpoint: 'http://collector:4317',
+       // The default exporter used is OTLP over HTTP (port 4318)
+       endpoint: 'http://collector:4318',
      },
    });
 
