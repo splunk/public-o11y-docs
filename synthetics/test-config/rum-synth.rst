@@ -21,11 +21,11 @@ Splunk Synthetic Monitoring automatically collects Web Vitals for Browser tests.
      - Measures loading performance by capturing the render time of the largest image or text block visible within the viewport.
    * - Cumulative layout shift (CLS)
      -  Measures visual stability by capturing the sum of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page. A layout shift occurs any time a visible element changes its position from one rendered frame to the next. Fewer shifts are better for page stability.
-   * - INP (interaction to next paint)
-     - Measures the time from when a user first interacts with a web page to the time when the browser responds to that interaction.
+   * - Interaction to next paint (INP)
+     - Measures responsiveness by observing all user interactions on a page and capturing the longest time it takes the browser to respond to an interaction.
    * - Total blocking time (TBT)
      - Measures the time it takes a page to become interactive and responsive for a user. 
-       TBT is collected from a synthetic test, while INP is collected from real user data. They are considered equivalent to each other because they measure the same metric.
+       TBT is considered a lab proxy for INP, when INP might not be captured. Both TBT and INP can be improved by [optimizing interactions](https://web.dev/articles/optimize-inp#optimize_interactions).
 
 Prerequisites 
 ===================
