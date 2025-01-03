@@ -138,5 +138,5 @@ Splunk On-Call Handler
    end
    end
 
-For more information, see :new-page:`Sensu documentation on Handlers <https://sensuapp.org/docs/0.29/reference/handlers.html#handler-definition-specification>`.
+For more information, see search "handlers" on the Sensu documentation website. 
 
