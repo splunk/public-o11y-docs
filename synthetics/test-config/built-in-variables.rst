@@ -1,7 +1,7 @@
 .. _built-in-variables:
 
 ***********************************
-Built-in variables to use in tests
+Built-in variables
 ***********************************
 
 .. meta::
