@@ -130,7 +130,7 @@ It is often useful to visualize multiple metrics on the same chart so as to more
 
 |br|
 
-1. In plot B, click :guilabel:`Y-Axis` and select :strong:`right`. To learn more, see :ref:`2nd-y-axis`.
+3. In plot B, click :guilabel:`Y-Axis` and select :strong:`right`. To learn more, see :ref:`2nd-y-axis`.
 
 ..  image:: /_images/data-visualization/charts/gain-insights-through-chart-analytics/correlate-metrics-02.png
     :width: 99%
@@ -138,7 +138,7 @@ It is often useful to visualize multiple metrics on the same chart so as to more
 
 |br|
 
-1. Using the visualization type option for each plot line, select different types for A and B, such as Line for A and Column for B. To learn more, see :ref:`plot-display-type`. In this example, we also used plot configuration options to change the color of plot line B to enhance visibility. To learn more, see :ref:`plot-color`.
+4. Using the visualization type option for each plot line, select different types for A and B, such as Line for A and Column for B. To learn more, see :ref:`plot-display-type`. In this example, we also used plot configuration options to change the color of plot line B to enhance visibility. To learn more, see :ref:`plot-color`.
 
 ..  image:: /_images/data-visualization/charts/gain-insights-through-chart-analytics/correlate-metrics-03.png
     :width: 99%
