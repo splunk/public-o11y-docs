@@ -103,7 +103,7 @@ The following metrics, resource attributes, and attributes are available.
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/nginxreceiver.yaml"></div>
 
-
+.. caution:: The NGINX receiver does not provide the following metrics: ``nginx_connections.reading``, ``nginx_connections.waiting``, and ``nginx_connections.writing``.
 
 .. raw:: html
 
