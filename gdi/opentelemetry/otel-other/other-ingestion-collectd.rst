@@ -1,12 +1,12 @@
 .. _other-ingestion-collectd:
 
-Monitor services with collectd and OpenTelemetry
+Monitor hosts with collectd and OpenTelemetry
 =====================================================================
 
 .. meta::
    :description: Use collectd and native OpenTelemetry to monitor services in Splunk Observability Cloud. See benefits, install, configuration, and metrics.
 
-To monitor your services with collectd using native OpenTelemetry in Splunk Observability Cloud, connect a collectd daemon to your Collector instance as described in this document.
+To monitor your infrastructure with collectd using native OpenTelemetry in Splunk Observability Cloud, install a collectd daemon in your host and connect it to your Collector instance as described in this document.
 
 Benefits
 --------
@@ -25,18 +25,23 @@ Benefits
 Configuration
 ----------------------------------
 
-This example shows how to connect a collectd daemon running on a host to an OpenTelemetry Collector.
+Install a collectd daemon in your a host and connect it to an OpenTelemetry Collector with the following steps:
 
-.. note:: In this example, the host is represented by an Ubuntu 24.04 docker image.
+1. Install and configure collectd
+2. Configure the OpenTelemetry Collector
+3. Build and run
+
 
 1. Install and configure collectd
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Follow these steps to install and configure the collectd daemon:
 
-#. Install collectd as a Debian package in your host using stock instructions
+#. Install collectd as a Debian package in your host 
 #. Configure the daemon to ingest free disk related metrics through `collectd/metrics.conf`
 #. Configure the daemon to send data over HTTP using `collectd/http.conf`
+
+In this example, the host is represented by an Ubuntu 24.04 docker image.
 
 .. code::
 
@@ -82,7 +87,7 @@ Set up your Collector instance to listen for traffic from the collectd daemon ov
 
 .. caution:: Make sure to use ``0.0.0.0`` to expose port 8081 over the Docker network interface so that both Docker containers can interact.
 
-3. Run the example
+3. Build and run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Run the example with the instruction to start the docker-compose setup and build the collectd container:
