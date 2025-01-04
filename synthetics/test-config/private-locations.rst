@@ -9,16 +9,7 @@ Private locations
 
 A private location is a software package that offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
 
-Customers can, through the Splunk Synthetics Monitoring web interface, create new private locations and open a runner to run any checks assigned to them.
-
-What is a runner?
-===================
-
-A runner is a Docker container set up to run tests from a particular private location. A single private location can have one or more runners. 
-
-A location consists of a queue of tests assigned to a particular private location. Runners pick up runs from the queue, so the more active runners you have, the faster the queue of tests is processed. 
-
-Splunk Synthetic Monitoring doesn't track how many runners there are for a given location. It is up to you to manage your own fleet of runners. 
+Customers can, through the Splunk Synthetics Monitoring web interface, create new private locations connected to private runners that run any tests assigned to them.
 
 
 Use cases for private locations
@@ -30,8 +21,18 @@ Use cases for private locations
 * Test from locations not currently supported by Splunk Synthetic Monitoring's public locations.
 
 
-Requirements 
-=============
+What is a private runner?
+===================
+
+A private runner is a Docker container set up to run tests from a particular private location. A single private location can have one or more private runners. 
+
+A private location contains of a queue of tests assigned to that particular private location. Private rrunners pick up runs from the queue, so the more active private runners you have, the faster the queue of tests is processed. 
+
+Splunk Synthetic Monitoring doesn't track how many private runners there are for a given private location. It is up to you to manage your own fleet of private runners. 
+
+
+Requirements for private runners 
+===========================
 
 
 .. list-table::
@@ -55,7 +56,7 @@ Requirements
     -  Linux, Windows, or macOS
 
 
-For optimal performance when running Browser tests:
+For optimal performance when running browser tests:
 
 * Linux
 * 2.3 GHz Dual-Core Intel Xeon (or equivalent) processor
@@ -69,7 +70,7 @@ Follow these steps to set up a new private location:
 
 1. In Splunk Synthetic Monitoring, select the settings gear icon, then :guilabel:`Private locations`.  
 2. Select :guilabel:`+ Add` and add a name. 
-3. Follow the steps in the guided setup to set up your runner. 
+3. Follow the steps in the guided setup to set up one or more private runners for that private location. 
 4. Save your private location. 
 
 
@@ -139,7 +140,7 @@ For example, here is what a command might look like after you modify it to fit y
 
 
 
-Configuring Proxy Settings for Private Locations
+Configuring proxy settings for a private location
 ===================================================
 
 In environments where direct internet access is restricted, you can route synthetic test traffic through a proxy server by configuring the following environment variables:
@@ -194,7 +195,7 @@ When using runner, it's important to correctly configure the proxy settings to a
 
 
 
-Assess the health of your private location
+Assess the health of a private location
 ==============================================
 
 A private location's health depends on three factors:
