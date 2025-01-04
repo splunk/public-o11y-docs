@@ -13,7 +13,7 @@ Customers can, through the Splunk Synthetics Monitoring web interface, create ne
 
 
 Use cases for private locations
-=================================
+====================================
 
 * Test private applications that aren't exposed to the public.
 * Test pre-production applications which don't have public staging sites.
@@ -22,7 +22,7 @@ Use cases for private locations
 
 
 What is a private runner?
-===================
+================================
 
 A private runner is a Docker container set up to run tests from a particular private location. A single private location can have one or more private runners. 
 
@@ -32,7 +32,7 @@ Splunk Synthetic Monitoring doesn't track how many private runners there are for
 
 
 Requirements for private runners 
-===========================
+==========================================
 
 
 .. list-table::
@@ -64,7 +64,7 @@ For optimal performance when running browser tests:
 
 
 Set up a new private location
-===============================
+=====================================
 
 Follow these steps to set up a new private location:
 
