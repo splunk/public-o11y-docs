@@ -7,32 +7,29 @@ Private locations
 .. meta::
     :description: Run synthetic tests from private locations such as internal sites, private web applications, or private networks.
 
-A private location is a name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests.  The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. You must also set up one or more private runners within every private location to do the actual communication with your targets and with Splunk Synthetic Monitoring. You can use a private location to test an internal endpoint or to test a public endpoint from a location that isn't included in :ref:`the list of Splunk Synthetic Monitoring public locations <public-locations>`.  
+A private location is a name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests.  The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. In order to run synthetic tests from private locations, you must also set up one or more private runners within the private location to do the actual communication with your test targets and with Splunk Synthetic Monitoring.  
 
 
 Use cases for private locations
 ====================================
 
-A private location offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow you to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
+Private locations provide a way for you to find, fix, and prevent web performance problems in internal web applications in any environment - inside or outside of your firewalls. You can use private locations to run tests earlier in your development cycle - against internal sites or applications that aren't available to the public. You can also use private locations to test public endpoints from locations that aren't included in :ref:`the list of Splunk Synthetic Monitoring public locations <public-locations>`. 
 
-Through the Splunk Synthetics Monitoring web interface, you can create new private locations connected to private runners that run any tests assigned to them.
-
+To summarize, here are sample use cases for private locations:
 
 * Test private applications that aren't exposed to the public.
 * Test pre-production applications which don't have public staging sites.
-* Gain a higher level of flexibility in giving Splunk Synthetic Monitoring access to applications.
+* Gain a higher level of flexibility by giving Splunk Synthetic Monitoring access to applications.
 * Test from locations not currently supported by Splunk Synthetic Monitoring's public locations.
 
 
 What is a private runner?
 ================================
 
-A private runner queries Splunk Synthetic Monitoring for tests configured to run in its inherent private location, performs the test's steps on your private target, and reports the results back to Splunk Synthetic Monitoring. Because a private runner must have access to your private target, it is a Docker image which you deploy on your own infrastructure, within your own internal network. See :ref:`private-locations`. 
+A private runner is a Docker image which you deploy on your own infrastructure, within your own internal network. It picks up test runs from the queue of tests assigned to its associated private location, performs the actions in the test run on the test target, and reports the results back to Splunk Synthetic Monitoring. 
 
 
-A private location contains of a queue of tests assigned to that particular private location. Private runners pick up runs from the queue, so the more active private runners you have, the faster the queue of tests is processed. 
-
-Splunk Synthetic Monitoring doesn't track how many private runners there are for a given private location. It is up to you to manage your own fleet of private runners. 
+If you create multiple private runners for a private location, they can process that location's test queue faster. Splunk Synthetic Monitoring doesn't track how many private runners there are for a given private location. It's up to you to manage your own fleet of private runners. 
 
 
 Requirements for private runners 
