@@ -7,13 +7,16 @@ Private locations
 .. meta::
     :description: Run synthetic tests from private locations such as internal sites, private web applications, or private networks.
 
-A private location is a software package that offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
-
-Customers can, through the Splunk Synthetics Monitoring web interface, create new private locations connected to private runners that run any tests assigned to them.
+A private location is a name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests.  The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. You must also set up one or more private runners within every private location to do the actual communication with your targets and with Splunk Synthetic Monitoring. You can use a private location to test an internal endpoint or to test a public endpoint from a location that isn't included in :ref:`the list of Splunk Synthetic Monitoring public locations <public-locations>`.  
 
 
 Use cases for private locations
 ====================================
+
+A private location offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow you to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
+
+Through the Splunk Synthetics Monitoring web interface, you can create new private locations connected to private runners that run any tests assigned to them.
+
 
 * Test private applications that aren't exposed to the public.
 * Test pre-production applications which don't have public staging sites.
@@ -24,7 +27,8 @@ Use cases for private locations
 What is a private runner?
 ================================
 
-A private runner is a Docker container set up to run tests from a particular private location. A single private location can have one or more private runners. 
+A private runner queries Splunk Synthetic Monitoring for tests configured to run in its inherent private location, performs the test's steps on your private target, and reports the results back to Splunk Synthetic Monitoring. Because a private runner must have access to your private target, it is a Docker image which you deploy on your own infrastructure, within your own internal network. See :ref:`private-locations`. 
+
 
 A private location contains of a queue of tests assigned to that particular private location. Private runners pick up runs from the queue, so the more active private runners you have, the faster the queue of tests is processed. 
 
