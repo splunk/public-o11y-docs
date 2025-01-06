@@ -23,7 +23,7 @@ These key concepts help you get the most out of your experience with Splunk Synt
      - A common abbreviation for Synthetic Monitoring.
 
    * - Test
-     - An ordered sequence of steps (actions or operations) to perform on a target URL or endpoint, similar to a script. A test is the primary mechanism for monitoring applications in Splunk Synthetic Monitoring. You can set up browser, uptime, and API tests to run at your preferred frequency from the devices and locations of your choosing. 
+     - An ordered sequence of actions or operations to perform on a target URL or endpoint, similar to a script. A test is the primary mechanism for monitoring applications in Splunk Synthetic Monitoring. You can set up browser, uptime, and API tests to run at your preferred frequency from the devices and locations of your choosing. 
 
    * - Run
      - An instance of a test invocation from a specific device and location and at a specific time. 
@@ -55,10 +55,10 @@ These key concepts help you get the most out of your experience with Splunk Synt
      - A public IP address from which you can run synthetic tests to simulate performance for users in that location. See :ref:`public-locations`.
 
    * - Private location
-     - A name you create in Splunk Synthetic Monitoring to represent a private, internal location from which you can run synthetic tests on internal applications or private URLs. The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. You must also set up one or more private runners within every private location to do the actual communication to and from your private target.  See :ref:`private-locations`.
+     - A name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests.  The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. You must also set up one or more private runners within every private location to do the actual communication with your targets and with Splunk Synthetic Monitoring. You can use a private location to test an internal endpoint or to test a public endpoint from a location that isn't included in :ref:`the list of Splunk Synthetic Monitoring public locations <public-locations>`.  See :ref:`private-locations`.
 
    * - Private runner
-     - A private runner queries Splunk Synthetic Monitoring for each step to perform for the test that it is connected to, performs that step on your private target, and reports the results back to Splunk Synthetic Monitoring. Because a private runner must have access to your private target, it is a Docker image which you deploy on your own infrastructure, within your own internal network. See :ref:`private-locations`. 
+     - A private runner queries Splunk Synthetic Monitoring for tests configured to run in its inherent private location, performs the test's steps on your private target, and reports the results back to Splunk Synthetic Monitoring. Because a private runner must have access to your private target, it is a Docker image which you deploy on your own infrastructure, within your own internal network. See :ref:`private-locations`. 
 
 
 
