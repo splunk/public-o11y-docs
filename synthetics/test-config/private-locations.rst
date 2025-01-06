@@ -26,7 +26,7 @@ What is a private runner?
 
 A private runner is a Docker container set up to run tests from a particular private location. A single private location can have one or more private runners. 
 
-A private location contains of a queue of tests assigned to that particular private location. Private rrunners pick up runs from the queue, so the more active private runners you have, the faster the queue of tests is processed. 
+A private location contains of a queue of tests assigned to that particular private location. Private runners pick up runs from the queue, so the more active private runners you have, the faster the queue of tests is processed. 
 
 Splunk Synthetic Monitoring doesn't track how many private runners there are for a given private location. It is up to you to manage your own fleet of private runners. 
 
