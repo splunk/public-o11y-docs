@@ -7,7 +7,7 @@ Private locations
 .. meta::
     :description: Run synthetic tests from private locations such as internal sites, private web applications, or private networks.
 
-A private location is a name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests.  The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. In order to run synthetic tests from private locations, you must also set up one or more private runners within the private location to do the actual communication with your test targets and with Splunk Synthetic Monitoring.  
+A private location is a name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests. The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. To run synthetic tests from private locations, you must also set up one or more private runners within the private location to do the actual communication with your test targets and with Splunk Synthetic Monitoring.  
 
 
 Use cases for private locations
