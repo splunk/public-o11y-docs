@@ -37,7 +37,7 @@ Install a collectd daemon in your host and connect it to an OpenTelemetry Collec
 
 Follow these steps to install and configure the collectd daemon:
 
-#. Install collectd as a Debian package in your host 
+#. Install collectd as a Debian or Yum package in your host 
 #. Configure the daemon to ingest free disk related metrics through `collectd/metrics.conf`
 #. Configure the daemon to send data over HTTP using `collectd/http.conf`
 
