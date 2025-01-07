@@ -69,6 +69,7 @@ The http and metrics configuration files look like this:
    # http.conf 
    # The minimal configuration required to have collectd send data to an OpenTelemetry Collector
    # with a collectdreceiver deployed on port 8081.
+   
    LoadPlugin write_http
    <Plugin "write_http">
       <Node "collector">
@@ -79,8 +80,11 @@ The http and metrics configuration files look like this:
       </Node>
    </Plugin>
 
+.. code:: yaml
+
    # metrics.conf
    # An example of collectd plugin configuration reporting free disk space on the host.
+   
    <LoadPlugin df>
       Interval 3600
    </LoadPlugin>
