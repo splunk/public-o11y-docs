@@ -13,7 +13,7 @@ A private location is a name you create in Splunk Synthetic Monitoring to repres
 Use cases for private locations
 ====================================
 
-Private locations provide a way for you to find, fix, and prevent web performance problems in internal web applications in any environment - inside or outside of your firewalls. You can use private locations to run tests earlier in your development cycle - against internal sites or applications that aren't available to the public. You can also use private locations to test public endpoints from locations that aren't included in :ref:`the list of Splunk Synthetic Monitoring public locations <public-locations>`. 
+Private locations provide a way for you to find, fix, and prevent performance problems in internal applications in any environment, inside or outside of your firewalls. You can use private locations to run tests earlier in your development cycle against internal sites or applications that aren't available to the public. You can also use private locations to test public endpoints from locations that aren't included in the :ref:`list of Splunk Synthetic Monitoring public locations <public-locations>`. 
 
 To summarize, here are sample use cases for private locations:
 
