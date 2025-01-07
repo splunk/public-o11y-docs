@@ -35,7 +35,7 @@ There are two types of data links for a property, local and global. See the foll
        | - Example: While viewing a dashboard, you can create a link from any value of ``InstanceId`` to the built-in dashboard "EC2 Instance". Following the link opens the EC2 Instance dashboard filtered to the value of ``InstanceId`` you select. This link is available for any appearance of ``InstanceId`` in that dashboard; it doesn't appear as a link on any other dashboard or in alert messages.
    
    * - Global
-     - | - Available on all dashboards and alert messages, as well as in the Infrastructure Monitoring navigators.
+     - | - Available on dashboards, list charts, alert messages, Infrastructure Monitoring navigators, and Application Performance Monitoring services, traces, and spans.
        | - Only Splunk Observability Cloud administrators can create global links.
        | - Example: If you create the link described in the previous example as a global instead of local link, the link is available for every appearance of ``InstanceId`` in Splunk Infrastructure Monitoring, including dashboards created after the link is created.
    
