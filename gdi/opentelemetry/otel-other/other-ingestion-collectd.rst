@@ -31,7 +31,6 @@ Install a collectd daemon in your host and connect it to an OpenTelemetry Collec
 2. Configure the OpenTelemetry Collector
 3. Build and run
 
-
 1. Install and configure collectd
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,8 +51,8 @@ In this example, the host is represented by an Ubuntu 24.04 docker image.
          depends_on:
             - otelcollector
          volumes:
-      - ./collectd/http.conf:/etc/collectd/collectd.conf.d/http.conf
-      - ./collectd/metrics.conf:/etc/collectd/collectd.conf.d/metrics.conf
+            - ./collectd/http.conf:/etc/collectd/collectd.conf.d/http.conf
+            - ./collectd/metrics.conf:/etc/collectd/collectd.conf.d/metrics.conf
    
    # OpenTelemetry Collector
    otelcollector:
@@ -63,7 +62,33 @@ In this example, the host is represented by an Ubuntu 24.04 docker image.
       volumes:
          - ./otel-collector-config.yml:/etc/otel-collector-config.yml
 
-2. Configure the OpenTelemetry Collector
+The http and metrics configuration files look like this:
+
+.. code:: yaml
+
+   # http.conf 
+   # The minimal configuration required to have collectd send data to an OpenTelemetry Collector
+   # with a collectdreceiver deployed on port 8081.
+   LoadPlugin write_http
+   <Plugin "write_http">
+      <Node "collector">
+         URL "http://otelcollector:8081"
+         Format JSON
+         VerifyPeer false
+         VerifyHost false
+      </Node>
+   </Plugin>
+
+   # metrics.conf
+   # An example of collectd plugin configuration reporting free disk space on the host.
+   <LoadPlugin df>
+      Interval 3600
+   </LoadPlugin>
+   <Plugin df>
+      ValuesPercentage true
+   </Plugin>
+
+1. Configure the OpenTelemetry Collector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Set up your Collector instance to listen for traffic from the collectd daemon over HTTP with the :ref:`collectd-receiver`:
