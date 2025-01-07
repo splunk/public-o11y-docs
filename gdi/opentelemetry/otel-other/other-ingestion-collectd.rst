@@ -25,7 +25,7 @@ Benefits
 Configuration
 ----------------------------------
 
-Install a collectd daemon in your a host and connect it to an OpenTelemetry Collector with the following steps:
+Install a collectd daemon in your host and connect it to an OpenTelemetry Collector with the following steps:
 
 1. Install and configure collectd
 2. Configure the OpenTelemetry Collector
