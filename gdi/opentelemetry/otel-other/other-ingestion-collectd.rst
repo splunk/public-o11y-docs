@@ -45,7 +45,6 @@ In this example, the host is represented by an Ubuntu 24.04 docker image.
 
 .. code::
 
-   version: "3"
    services:
       collectd:
          build: collectd
