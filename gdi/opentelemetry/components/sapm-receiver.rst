@@ -1,13 +1,11 @@
 .. _sapm-receiver:
 
-****************************
-SAPM receiver
-****************************
+********************************************
+Splunk APM (SAPM) receiver (deprecated)
+********************************************
 
 .. meta::
       :description: Receives traces from other collectors or from the SignalFx Smart Agent.
 
-The Splunk Distribution of the OpenTelemetry Collector supports the SAPM receiver. Documentation is planned for a future release. 
-
-To find information about this component in the meantime, see :new-page:`SAPM receiver <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/sapmreceiver>` on GitHub.
+.. caution:: The SAPM receiver is deprecated and will be removed in April 2025. To receive traces from other Collector instances use the :ref:`otlp-receiver` instead.
 

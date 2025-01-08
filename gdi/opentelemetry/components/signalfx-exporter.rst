@@ -1,7 +1,7 @@
 .. _signalfx-exporter:
 
 *************************
-SignalFx exporter
+SignalFx exporter 
 *************************
 
 .. meta::
