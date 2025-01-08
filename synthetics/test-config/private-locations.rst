@@ -141,59 +141,57 @@ For example, here is what a command might look like after you modify it to fit y
 
 
 
-Configuring proxy settings for a private location
+Configure proxy settings for a private location
 ===================================================
 
 In environments where direct internet access is restricted, you can route synthetic test traffic through a proxy server by configuring the following environment variables:
 
-* ``HTTP_PROXY``: Specifies the proxy server for HTTP traffic.
+* ``http_proxy``: Specifies the proxy server for HTTP traffic.
 
-    * Example: ``export HTTP_PROXY="\http://proxy.example.com:8080"``
+    * Example: ``export http_proxy="http://proxy.example.com:8443"``
 
-* ``HTTPS_PROXY``: Specifies the proxy server for HTTPS traffic.
+* ``https_proxy``: Specifies the proxy server for HTTPS traffic.
 
-    * Example: ``export HTTPS_PROXY="\https://proxy.example.com:8443"``
+    * Example: ``export https_proxy="http://proxy.example.com:8443"``
 
-* ``NO_PROXY``: Specifies a comma-separated list of domains or IP addresses that should bypass the proxy.
+* ``no_proxy``: Specifies a comma-separated list of domains or IP addresses that should bypass the proxy.
 
-    * Example: ``export NO_PROXY="localhost,127.0.0.1,.internal-domain.com"``
+    * Example: ``export no_proxy="localhost,127.0.0.1,.internal-domain.com"``
 
 For example, here is what a command might look like after you modify it to fit your environment:
 
 
 .. code:: yaml
 
-    docker run --cap-add NET_ADMIN -e "RUNNER_TOKEN=*****" quay.io/signalfx/splunk-synthetics-runner:latest -e NO_PROXY=".signalfx.com,.amazonaws.com"  -e HTTPS_PROXY="https://172.17.0.1:1234" -e HTTP_PROXY="http://172.17.0.1:1234"
+    docker run --cap-add NET_ADMIN -e "RUNNER_TOKEN=*****" -e "no_proxy=.signalfx.com,.amazonaws.com,127.0.0.1,localhost" -e "https_proxy=http://172.17.0.1:1234" -e "http_proxy=http://172.17.0.1:1234" quay.io/signalfx/splunk-synthetics-runner:latest
+
     
 In this example:
 
-``HTTP_PROXY`` and ``HTTPS_PROXY`` are set to route traffic through a proxy at ``http://172.17.0.1:1234``.
+``http_proxy`` and ``https_proxy`` are set to route traffic through a proxy at ``http://172.17.0.1:1234``.
 
-``NO_PROXY`` is configured to bypass the proxy for local addresses and specific domains like .signalfx.com and .amazonaws.com.
+``no_proxy`` is configured to bypass the proxy for local addresses and specific domains like .signalfx.com and .amazonaws.com.
 
 Ensure that these variables are correctly configured to comply with your network policies. This setup allows the synthetic tests to communicate securely and efficiently in a controlled network environment.
 
-When using runner, it's important to correctly configure the proxy settings to avoid issues with browser-based tests. The following steps should be followed when setting up their environment:
+When using a private runner, it's important to correctly configure the proxy settings to avoid issues with browser-based tests. The following steps should be followed when setting up their environment:
 
-1. :strong:`Ensure proper NO_PROXY setup`:
+1. :strong:`Ensure proper no_proxy setup`:
    
-   - When configuring ``NO_PROXY`` always include the following addresses:
+   - When configuring ``no_proxy`` always include the following addresses:
    
      - ``127.0.0.1`` (for localhost communication)
      - ``localhost`` (for resolving local tests)
    
    These addresses ensure that internal services and tests run correctly without routing through a proxy, preventing potential failures.
 
-2. :strong:`Merging HTTP_PROXY and http_proxy`:
-   
-   - The system automatically handles both ``HTTP_PROXY`` and ``http_proxy`` environment variables. If you define one of these, ensure the other is also set, or they will be automatically merged at start-up.
-
 3. :strong:`Dockerfile defaults`:
    
-   - By default, the runner will set the ``NO_PROXY`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``NO_PROXY``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
+   - By default, the private runner sets the ``no_proxy`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``no_proxy``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
 
 
-
+.. note:: 
+  Lower case variable names take precedence and are best practice.
 
 
 Assess the health of a private location
