@@ -7,6 +7,11 @@ Node.js 3.0 breaking changes
 .. meta::
   :description:
 
+Update to Splunk OpenTelemetry JS version 3.0
+==========================================================
+
+To update your Splunk Distribution for OpenTelemetry JS agent to version 3.0, see :ref:`instrument-nodejs-application` and install the latest version of the Splunk OpenTelemetry JS agent.
+
 Default port and protocol changes
 =================================
 
@@ -21,11 +26,11 @@ If a custom configuration overrides the default endpoint setting, you must make 
       * gRPC: 4317
       * http/protobuf: 4318
 
-   #. Verify that the custom endpoint configuration uses the correct port. For example: ``otel.exporter.otlp.endpoint=http://<host>:4318``.
+   #. Verify that the custom endpoint configuration uses the correct port. For example: ``OTEL_EXPORTER_OTLP_ENDPOINT=http://<host>:4318``.
 
-   #. Verify that the custom protocol configuration uses the correct protocol. For example: ``otel.exporter.otlp.protocol=http/protobuf``.
+   #. Verify that the custom protocol configuration uses the correct protocol. For example: ``OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf``.
 
-#. In the OTel Collector configuration file, verify that the associated OTLP receiver protocols match those used by the Java agent. Here is an example OTLP receiver configuration in the OTel Collector file:
+#. In the OTel Collector configuration file, verify that the associated OTLP receiver protocols match those used by the Node.js agent. Here is an example OTLP receiver configuration in the OTel Collector file:
 
    .. code-block:: yaml
 

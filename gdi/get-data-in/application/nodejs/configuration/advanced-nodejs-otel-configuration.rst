@@ -107,7 +107,19 @@ The following settings control tracing limits and attributes:
      - ``serviceName``
      - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
    * - OTEL_RESOURCE_ATTRIBUTES
-     - Not applicable
+     - Use the ``resource`` method in the ``start()`` function to pass resource attributes. For example, 
+
+         .. code-block:: js
+
+            import { start } from '@splunk/otel';
+            import { Resource } from '@opentelemetry/resources';
+
+            start({
+               serviceName: 'example',
+               resource: (detectedResource) => {
+                  return detectedResource.merge(new Resource({ 'service.version': '0.2.0' }));
+               },
+            });
      - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``.
    * - OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT
      - Not applicable
@@ -247,10 +259,6 @@ Configuring an existing metrics client to send custom metrics
 ---------------------------------------------------------------------
 
 You can use an existing SignalFx client for sending custom metrics instead of creating and configuring a new one.
-
-To configure an existing client, pass the following data to the ``start()`` function:
-
-- ``signalfx``: A JavaScript object with optional ``client`` and ``dimensions`` fields. The ``dimensions`` object adds a predefined dimension for each data point. The format for ``dimensions`` is ``{key: value, ...}``.
 
 The following is a list of dimensions added by default:
 
