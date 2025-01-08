@@ -22,43 +22,45 @@ These key concepts help you get the most out of your experience with Splunk Synt
    * - Synthetics
      - A common abbreviation for Synthetic Monitoring.
 
-   * - Tests
-     - Tests are the primary mechanism of application monitoring in Splunk Synthetic Monitoring. You can set up Browser, Uptime, and API tests to run at your preferred frequency from the devices and public locations of your choosing. 
+   * - Test
+     - An ordered sequence of actions or operations to perform on a target URL or endpoint, similar to a script. A test is the primary mechanism for monitoring applications in Splunk Synthetic Monitoring. You can set up browser, uptime, and API tests to run at your preferred frequency from the devices and locations of your choosing. 
 
-   * - Runs
-     - Each occurrence of a test from a particular device and location at a specific time is called a run. Each run of a test captures a set of metrics and diagnostics that provide insight into your application's performance. 
+   * - Run
+     - An instance of a test invocation from a specific device and location and at a specific time. 
 
-   * - Metrics
-     - | Numeric indicators of site performance that synthetic tests capture in each run of a test. See the following links for the lists of metrics available for each test type:
+   * - Metric
+     - A numeric indicator of a performance factor. Each run of a test captures metrics and diagnostics that provide insight into your application's performance. See the following links for details on the metrics available captured by each test type:
        | 
        | - :ref:`browser-metrics` 
        | - :ref:`uptime-metrics`
        | - :ref:`api-test-metrics`
        | 
      
-   * - Browser tests
-     - Synthetic tests that simulate and analyze the user experience of loading a page or performing a workflow on a site or application. 
+   * - Browser test
+     - A synthetic test that simulates and analyzes the user experience of loading a page or performing a workflow on a site or application. 
 
-   * - Uptime tests
-     - Synthetic tests that monitor the response time and response code of HTTP requests and server ports. 
+   * - Uptime test
+     - A synthetic test that monitors the response times and response codes of HTTP requests and server ports. 
        
-   * - API tests
-     - Synthetic tests that monitor the functionality and performance of API endpoints. 
+   * - API test
+     - A synthetic test that monitors the functionality and performance of API endpoints. 
 
-   * - Waterfall charts
-     - A visualization that represents the performance of resources on a webpage in a Browser test.
+   * - Waterfall chart
+     - A visualization that represents the performance of resources on a webpage in a browser test.
      
-   * - Devices
-     - Options to configure the viewport and network connection type of your tests. For example, you can test a webpage from a laptop screen or a smartphone. 
+   * - Device
+     - A predefined combination of a specific viewport size and network connection. For more information about devices, viewports, and network connections, see :ref:`devices`.
 
-   * - Viewport
-     -  Browser tests in Splunk Synthetic Monitoring capture the visual experience of a user interacting with your application. The viewport is the framed area on a device's screen for viewing information, such as the browser window on a desktop. When you set up a test, you can choose the viewport size from a list of common devices, or set a custom viewport by height and width. 
+   * - Public location
+     - A public IP address from which you can run synthetic tests to simulate performance for users in that location. See :ref:`public-locations`.
 
-   * - Network connection
-     - You can run Browser, Uptime or API tests to simulate network connections of various latencies, including Mobile LTE, Mobile 3G, DSL, and cable internet. Testing your site from a variety of connection types lets you monitor the experience of users in a variety of settings. 
+   * - Private location
+     - A name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests.  The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. You must also set up one or more private runners within every private location to do the actual communication with your targets and with Splunk Synthetic Monitoring. You can use a private location to test an internal endpoint or to test a public endpoint from a location that isn't included in :ref:`the list of Splunk Synthetic Monitoring public locations <public-locations>`.  See :ref:`private-locations`.
 
-   * - Public Locations
-     - Global checkpoints from which you can synthetically run tests to simulate performance for users in that location. 
+   * - Private runner
+     - A private runner queries Splunk Synthetic Monitoring for tests configured to run in its inherent private location, performs the test's steps on your private target, and reports the results back to Splunk Synthetic Monitoring. Because a private runner must have access to your private target, it is a Docker image which you deploy on your own infrastructure, within your own internal network. See :ref:`private-locations`. 
+
+
 
 Learn more
 ===========
