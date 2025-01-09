@@ -67,9 +67,9 @@ Collector components: Receivers
     windowsperfcounters-receiver
     zipkin-receiver 
 
+.. note:: To see other components, refer to :ref:`otel-components`.
+
 The following receivers are available:
-
-
 
 .. raw:: html
 
@@ -84,4 +84,3 @@ The following receivers are available:
 
 
 
-To see other components, refer to :ref:`otel-components`.

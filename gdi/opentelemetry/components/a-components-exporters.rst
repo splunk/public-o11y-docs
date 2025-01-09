@@ -24,18 +24,16 @@ Collector components: Exporters
     splunk-apm-exporter
     splunk-hec-exporter
 
+.. note:: To see other components, refer to :ref:`otel-components`.
+
 The following exporters are available in the Splunk Distribution of OpenTelemetry Collector:
 
-* :ref:`awss3-exporter`
-* :ref:`file-exporter`
-* :ref:`kafka-exporter`
-* :ref:`loadbalancing-exporter`
-* :ref:`logging-exporter`
-* :ref:`otlp-exporter`
-* :ref:`otlphttp-exporter`
-* :ref:`pulsar-exporter`            
-* :ref:`signalfx-exporter`
-* :ref:`splunk-apm-exporter`
-* :ref:`splunk-hec-exporter`
+.. raw:: html
 
-To see other components, refer to :ref:`otel-components`.
+   <div class="include-start" id="collector-available-exporters.rst"></div>
+
+.. include:: /_includes/gdi/collector-available-exporters.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-available-exporters.rst"></div>
