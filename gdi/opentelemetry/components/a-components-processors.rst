@@ -28,64 +28,19 @@ Collector components: Processors
     tail-sampling-processor
     transform-processor
 
+.. note:: To see other components, refer to :ref:`otel-components`.
+
 The following processors are available:
 
-.. list-table::
-    
-  :width: 100%
-  :widths: 25 75
-  :header-rows: 1
+.. raw:: html
 
-  * - Processor
-    - Use it for...
+   <div class="include-start" id="troubleshooting-components.rst"></div>
 
-  * - :ref:`attributes-processor`
-    - TBC
+.. include:: /_includes/gdi/collector-available-processors.rst
 
-  * :ref:`batch-processor`
-    - TBC
+.. raw:: html
 
-  * :ref:`cumulative-to-delta-processor`
-    - TBC
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
 
-  * :ref:`filter-processor`
-    - TBC
 
-  * :ref:`groupbyattrs-processor`
-    - TBC
-
-  * :ref:`kubernetes-attributes-processor`
-    - TBC
-
-  * :ref:`memory-limiter-processor`
-    - TBC
-
-  * :ref:`metrics-transform-processor`
-    - TBC
-
-  * :ref:`probabilistic-sampler-processor`
-    - TBC
-
-  * :ref:`redaction-processor`
-    - TBC
-
-  * :ref:`resource-processor`
-    - TBC
-
-  * :ref:`resourcedetection-processor`
-    - TBC
-
-  * :ref:`routing-processor`
-    - TBC
-
-  * :ref:`span-processor`
-    - TBC
-
-  * :ref:`tail-sampling-processor`
-    - TBC
-
-  * :ref:`transform-processor`
-    - TBC
-
-To see other components, refer to :ref:`otel-components`.
 
