@@ -30,21 +30,62 @@ Collector components: Processors
 
 The following processors are available:
 
-* :ref:`attributes-processor`
-* :ref:`batch-processor`
-* :ref:`cumulative-to-delta-processor`
-* :ref:`filter-processor`
-* :ref:`groupbyattrs-processor`
-* :ref:`kubernetes-attributes-processor`
-* :ref:`memory-limiter-processor`
-* :ref:`metrics-transform-processor`
-* :ref:`probabilistic-sampler-processor`
-* :ref:`redaction-processor`
-* :ref:`resource-processor`
-* :ref:`resourcedetection-processor`
-* :ref:`routing-processor`
-* :ref:`span-processor`
-* :ref:`tail-sampling-processor`
-* :ref:`transform-processor`
+.. list-table::
+    
+  :width: 100%
+  :widths: 25 75
+  :header-rows: 1
+
+  * - Processor
+    - Use it for...
+
+  * - :ref:`attributes-processor`
+    - TBC
+
+  * :ref:`batch-processor`
+    - TBC
+
+  * :ref:`cumulative-to-delta-processor`
+    - TBC
+
+  * :ref:`filter-processor`
+    - TBC
+
+  * :ref:`groupbyattrs-processor`
+    - TBC
+
+  * :ref:`kubernetes-attributes-processor`
+    - TBC
+
+  * :ref:`memory-limiter-processor`
+    - TBC
+
+  * :ref:`metrics-transform-processor`
+    - TBC
+
+  * :ref:`probabilistic-sampler-processor`
+    - TBC
+
+  * :ref:`redaction-processor`
+    - TBC
+
+  * :ref:`resource-processor`
+    - TBC
+
+  * :ref:`resourcedetection-processor`
+    - TBC
+
+  * :ref:`routing-processor`
+    - TBC
+
+  * :ref:`span-processor`
+    - TBC
+
+  * :ref:`tail-sampling-processor`
+    - TBC
+
+  * :ref:`transform-processor`
+    - TBC
 
 To see other components, refer to :ref:`otel-components`.
+
