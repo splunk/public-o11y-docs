@@ -1,7 +1,7 @@
 .. _discovery-linux:
 
 ************************************************************************
-Automatic discovery for Linux
+Automatic discovery and zero-code instrumentation for Linux
 ************************************************************************
 
 .. meta:: 

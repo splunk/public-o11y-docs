@@ -1,7 +1,7 @@
 .. _discovery-kubernetes:
 
 ************************************************************************
-Automatic discovery for Kubernetes
+Automatic discovery and zero-code instrumentation for Kubernetes
 ************************************************************************
 
 .. meta:: 

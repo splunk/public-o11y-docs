@@ -1,7 +1,7 @@
 .. _discovery-windows:
 
 ************************************************************************
-Automatic discovery for Windows
+Automatic discovery and zero-code instrumentation for Windows
 ************************************************************************
 
 .. meta:: 
