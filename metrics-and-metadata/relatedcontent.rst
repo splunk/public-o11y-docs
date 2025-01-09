@@ -39,7 +39,7 @@ Related logs in APM
 -----------------------------------------------------------------
 To conserve resources, the Related Content bar in Splunk APM does not show related logs by default. An administrator must activate it. To activate Related Content for logs in APM, go to :strong:`Settings` then select :strong:`General Settings`. Switch the toggle :strong:`Activate Related Content for logs` to active.
 
-If you want to activate Related Content for logs in APM, go to :strong:`Settings`, select :strong:`General Settings`,and switch the toggle:strong:`Activate Related Content for logs` to inactive.
+If you want to activate Related Content for logs in APM, go to :strong:`Settings`, select :strong:`General Settings`,and switch the toggle:strong:`Activate Related Content for logs` to inactive. 
 
 
 Where can I see Related Content?
