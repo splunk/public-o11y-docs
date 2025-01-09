@@ -28,23 +28,21 @@ Collector components: Processors
     tail-sampling-processor
     transform-processor
 
+The Splunk Distribution of the OpenTelemetry Collector includes and supports the processors listed on this doc. To see other components, refer to :ref:`otel-components`.
+
+.. note:: The following list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
+
 The following processors are available:
 
-* :ref:`attributes-processor`
-* :ref:`batch-processor`
-* :ref:`cumulative-to-delta-processor`
-* :ref:`filter-processor`
-* :ref:`groupbyattrs-processor`
-* :ref:`kubernetes-attributes-processor`
-* :ref:`memory-limiter-processor`
-* :ref:`metrics-transform-processor`
-* :ref:`probabilistic-sampler-processor`
-* :ref:`redaction-processor`
-* :ref:`resource-processor`
-* :ref:`resourcedetection-processor`
-* :ref:`routing-processor`
-* :ref:`span-processor`
-* :ref:`tail-sampling-processor`
-* :ref:`transform-processor`
+.. raw:: html
 
-To see other components, refer to :ref:`otel-components`.
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
+.. include:: /_includes/gdi/collector-available-processors.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+
