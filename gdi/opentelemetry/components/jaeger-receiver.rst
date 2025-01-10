@@ -94,7 +94,7 @@ The Jaeger receiver uses helper files for additional capabilities:
 Remote sampling
 -----------------------------------------------
 
-Since version 0.61.0, remote sampling is no longer supported. Instead, since version 0.59.0, use the ``jaegerremotesapmpling`` extension for remote sampling.
+Since version 0.61.0, remote sampling is no longer supported. Instead, since version 0.59.0, use the ``jaegerremotesampling`` extension for remote sampling.
 
 .. _jaeger-receiver-settings:
 
