@@ -1,11 +1,11 @@
 .. _nodejs-3x-breaking-changes:
 
-****************************
-Node.js 3.0 breaking changes
-****************************
+*****************************************************
+Splunk OpenTelemetry JS version 3.0 breaking changes
+*****************************************************
 
 .. meta::
-  :description:
+  :description: Learn about the latest changes for Splunk OpenTelemetry JS version 3.0.
 
 Update to Splunk OpenTelemetry JS version 3.0
 ==========================================================

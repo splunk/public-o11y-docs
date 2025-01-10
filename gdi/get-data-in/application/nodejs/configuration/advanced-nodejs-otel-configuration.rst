@@ -255,17 +255,6 @@ The following settings activate runtime metrics collection:
 
 .. note:: To pass settings as arguments, use the ``start()`` function.
 
-Configuring an existing metrics client to send custom metrics
----------------------------------------------------------------------
-
-You can use an existing SignalFx client for sending custom metrics instead of creating and configuring a new one.
-
-The following is a list of dimensions added by default:
-
-- ``service``: See ``serviceName`` in :ref:`trace-configuration-nodejs`.
-- ``metric_source``: ``splunk-otel-js``
-- ``node_version``: ``process.versions.node``, for example ``16.10.0``
-
 .. _server-trace-information-nodejs-3x:
 
 Server trace information
