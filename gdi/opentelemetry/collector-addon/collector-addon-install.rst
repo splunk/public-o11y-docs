@@ -45,7 +45,7 @@ Follow these steps to install the Splunk Add-on for OpenTelemetry Collector to a
 
 #. In Splunk_TA_otel/local, create or open the access_token file, and replace the existing contents with the token value you copied from Splunk Observability Cloud. Save the updated file.
 
-#. In :strong:`Splunk Observability Cloud`, select your name, then select the Organization tab to verify that the realm value in the realm and sapm-endpoint files in your local folder reflect the value shown in Splunk Observability Cloud. Save any changes you make in the local files.
+#. In :strong:`Splunk Observability Cloud`, select your name, then select the Organization tab to verify that the realm value in the realm and ingest endpoints files in your local folder reflect the value shown in Splunk Observability Cloud. Save any changes you make in the local files.
 
 #. Restart Splunkd. Your Add-on solution is now deployed. 
 
@@ -75,7 +75,7 @@ Follow these steps to install the Splunk Add-on for the OpenTelemetry Collector 
 
 #. In Splunk_TA_otel/local, create or open the access_token file, and replace the existing contents with the token value you copied from Splunk Observability Cloud. Save the updated file.
 
-#. In :strong:`Splunk Observability Cloud`, select your name, then select the Organization tab to verify that the realm value in the realm and sapm-endpoint files in your local folder match the value shown in Splunk Observability Cloud. Save any changes you make in the local files.
+#. In :strong:`Splunk Observability Cloud`, select your name, then select the Organization tab to verify that the realm value in the realm and ingest endpoints files in your local folder match the value shown in Splunk Observability Cloud. Save any changes you make in the local files.
 
 #. In :strong:`Splunk Web`, select :guilabel:`Settings > Forwarder Management` to access your deployment server.
 
