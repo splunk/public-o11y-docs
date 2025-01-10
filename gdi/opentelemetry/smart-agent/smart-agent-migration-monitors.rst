@@ -36,7 +36,7 @@ For each Smart Agent monitor you want to add to the Collector, add a ``smartagen
 
 Instead of using ``discoveryRule``, use the Collector receiver creator and observer extensions. See :ref:`receiver-creator-receiver` for more information.
 
-If you're using a SignalFx Forwarder monitor (deprecated), add it to both a ``traces`` and a ``metrics`` pipeline, and use a SAPM exporter and a SignalFx exporter, as each pipeline's exporter, respectively. See more on :ref:`exporters <collector-components-processors>`.
+If you're using a SignalFx Forwarder monitor (deprecated), add it to both a ``traces`` and a ``metrics`` pipeline, and use an OTLP exporter and a SignalFx exporter as each pipeline's exporter, respectively. See more on :ref:`exporters <collector-components-processors>`.
 
 Configure the Smart Agent receiver 
 ------------------------------------------------------------
@@ -106,9 +106,9 @@ Configuration example
       signalfx:
          access_token: "${SIGNALFX_ACCESS_TOKEN}"
          realm: us1
-      sapm:
+      otlphttp:
          access_token: "${SIGNALFX_ACCESS_TOKEN}"
-         endpoint: https://ingest.us1.signalfx.com/v2/trace
+         traces_endpoint: https://ingest.us1.signalfx.com/v2/trace/otlp
 
    service:
       pipelines:
@@ -134,6 +134,6 @@ Configuration example
             processors:
                - resourcedetection
             exporters:
-               - sapm
+               - otlphttp
 
 
