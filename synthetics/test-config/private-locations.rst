@@ -1,8 +1,8 @@
 .. _private-locations:
 
-*****************
+***************************
 Private locations
-*****************
+***************************
 
 .. meta::
     :description: Run synthetic tests from private locations such as internal sites, private web applications, or private networks.
@@ -21,6 +21,36 @@ To summarize, here are sample use cases for private locations:
 * Test pre-production applications which don't have public staging sites.
 * Gain a higher level of flexibility by giving Splunk Synthetic Monitoring access to applications.
 * Test from locations not currently supported by Splunk Synthetic Monitoring's public locations.
+
+
+Set up a new private location
+=====================================
+
+Follow these steps to set up a new private location:
+
+1. In Splunk Synthetic Monitoring, select the settings gear icon, then :guilabel:`Private locations`.  
+2. Select :guilabel:`+ Add` and add a name. 
+3. Follow the steps in the guided setup to set up one or more private runners for that private location. 
+4. Save your private location. 
+
+
+What you can do with your private location ID 
+------------------------------------------------------------
+
+Each private location has a corresponding private location ID. With this ID, you can:
+
+* Build charts or dashboards
+* Search for metrics by private location
+* Refer to your private location ID if you're interacting with the Splunk Synthetics Monitoring APIs. 
+
+Manage your tokens
+--------------------------------
+It is your responsibility to update and manage your tokens. Tokens are valid for one year. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires. You are not notified of expiring tokens.
+
+
+***************************
+Private locations
+***************************
 
 
 What is a private runner?
@@ -62,31 +92,6 @@ For optimal performance when running browser tests:
 * Linux
 * 2.3 GHz Dual-Core Intel Xeon (or equivalent) processor
 * 8 GB RAM, 2 cores
-
-
-Set up a new private location
-=====================================
-
-Follow these steps to set up a new private location:
-
-1. In Splunk Synthetic Monitoring, select the settings gear icon, then :guilabel:`Private locations`.  
-2. Select :guilabel:`+ Add` and add a name. 
-3. Follow the steps in the guided setup to set up one or more private runners for that private location. 
-4. Save your private location. 
-
-
-What you can do with your private location ID 
-------------------------------------------------------------
-
-Each private location has a corresponding private location ID. With this ID, you can:
-
-* Build charts or dashboards
-* Search for metrics by private location
-* Refer to your private location ID if you're interacting with the Splunk Synthetics Monitoring APIs. 
-
-Manage your tokens
---------------------
-It is your responsibility to update and manage your tokens. Tokens are valid for one year. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires. You are not notified of expiring tokens.
 
 
 Working with Docker 
@@ -135,10 +140,6 @@ For example, here is what a command might look like after you modify it to fit y
 
 
 .. Note:: Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
-
-
-
-
 
 
 Configure proxy settings for a private location
