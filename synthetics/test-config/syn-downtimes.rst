@@ -41,19 +41,19 @@ To mute any alerts associated with a test included in a downtime configuration w
 When a downtime configuration is active, you can't edit, or delete it. You can extend the duration, or cancel while it is active. 
 
 Downtime recurrence
-======================
+----------------------------------------
 
 PLACEHOLDER
 
 
 Custom downtime events
-======================
+========================================
 
 PLACEHOLDER
 
 
 KPI chart visualizations
-======================
+========================================
 
 PLACEHOLDER
 
