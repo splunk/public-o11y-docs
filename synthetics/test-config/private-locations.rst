@@ -47,14 +47,49 @@ Manage your tokens
 --------------------------------
 It is your responsibility to update and manage your tokens. Tokens are valid for one year. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires. You are not notified of expiring tokens.
 
+Assess the health of a private location
+---------------------------------------------------------
 
-***************************
-Private locations
-***************************
+A private location's health depends on three factors:
 
+.. list-table::
+  :header-rows: 1
+  :widths: 20 40 40 
+
+  * - :strong:`Factor`
+    - :strong:`Description`
+    - :strong:`Solution`
+  * - Active runner
+    - At least one runner is actively checking in.
+    - If no runners are checking in, set up new runners for the private location. 
+  * - Used in tests
+    - The private location is currently being used in one or more tests.
+    - If you need to delete a private location, you need to first delete it from all tests.
+  * - Clear queue
+    - The queue for a given location is being cleared periodically and is not backed up.
+    - If the queue is backed up, add new runners to the private location.
+
+
+Troubleshoot queue length and latency
+---------------------------------------------------
+
+If both the queue latency and length increase over time, then add more runners to improve performance. 
+
+If your queue latency increases but your queue length doesn't, then try these troubleshooting methods:
+
+* Check to see if a step is delaying the rest of the test
+* Investigate whether you have the sufficient resources to run private location runners on your machines.
+
+The maximum number of runs in a queue is 100,000. 
+
+Any runs older than one hour are removed from the queue. 
+
+
+Private runners
+=====================================
 
 What is a private runner?
-================================
+-------------------------------------
 
 A private runner is a Docker image which you deploy on your own infrastructure, within your own internal network. It picks up test runs from the queue of tests assigned to its associated private location, performs the actions in the test run on the test target, and reports the results back to Splunk Synthetic Monitoring. 
 
@@ -63,8 +98,7 @@ If you create multiple private runners for a private location, they can process 
 
 
 Requirements for private runners 
-==========================================
-
+-------------------------------------
 
 .. list-table::
   :header-rows: 1
@@ -95,13 +129,9 @@ For optimal performance when running browser tests:
 
 
 Working with Docker 
-======================================
-Here is some guidance for working with Docker. 
+-------------------------------------
 
-Limit logging in Docker 
-------------------------------------
-
-Follow these steps to limit logging:
+Follow these steps to limit logging in Docker:
 
 #. Create a file in a directory like this: ``/etc/docker/daemon.json``.
 
@@ -120,9 +150,9 @@ Follow these steps to limit logging:
 #. Restart your docker service: ``sudo systemctl docker.service restart``.
 
 
+Add certificates
+-------------------------------------
 
-Add certificates in Synthetics
-------------------------------------------------------
 Splunk Synthetic Monitoring supports injecting custom root CA certificates for Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
 
 #. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
@@ -142,8 +172,8 @@ For example, here is what a command might look like after you modify it to fit y
 .. Note:: Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
 
 
-Configure proxy settings for a private location
-===================================================
+Configure proxy settings for a private runner
+---------------------------------------------------------
 
 In environments where direct internet access is restricted, you can route synthetic test traffic through a proxy server by configuring the following environment variables:
 
@@ -193,42 +223,4 @@ When using a private runner, it's important to correctly configure the proxy set
 
 .. note:: 
   Lower case variable names take precedence and are best practice.
-
-
-Assess the health of a private location
-==============================================
-
-A private location's health depends on three factors:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 20 40 40 
-
-  * - :strong:`Factor`
-    - :strong:`Description`
-    - :strong:`Solution`
-  * - Active runner
-    - At least one runner is actively checking in.
-    - If no runners are checking in, set up new runners for the private location. 
-  * - Used in tests
-    - The private location is currently being used in one or more tests.
-    - If you need to delete a private location, you need to first delete it from all tests.
-  * - Clear queue
-    - The queue for a given location is being cleared periodically and is not backed up.
-    - If the queue is backed up, add new runners to the private location.
-
-Troubleshoot queue length and latency
----------------------------------------------------
-
-If both the queue latency and length increase over time, then add more runners to improve performance. 
-
-If your queue latency increases but your queue length doesn't, then try these troubleshooting methods:
-
-* Check to see if a step is delaying the rest of the test
-* Investigate whether you have the sufficient resources to run private location runners on your machines.
-
-The maximum number of runs in a queue is 100,000. 
-
-Any runs older than one hour are removed from the queue. 
-
 
