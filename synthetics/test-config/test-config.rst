@@ -9,6 +9,7 @@ Advanced test configurations
 
 .. toctree::
 
+   auth
    built-in-variables
    synth-alerts
    devices
