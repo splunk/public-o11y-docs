@@ -75,7 +75,7 @@ Automatic discovery of third-party applications is supported in Linux and Kubern
      - Oracle DB receiver. See :ref:`oracledb`
 
    * - NGINX
-     - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`
+     - NGINX receiver. See :ref:`nginx-receiver`
 
    * - RabbitMQ
      - RabbitMQ receiver. See :ref:`rabbitmq-receiver`.

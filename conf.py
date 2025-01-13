@@ -162,7 +162,7 @@ rst_prolog = """
 # An RST epilog to add variable names for feature text replacement, and non-breaking space.
 
 rst_epilog = """
-.. |ms| replace:: Metrics Sidebar
+.. |ms| replace:: metrics sidebar
 .. |mtab| replace:: Muting Rules tab
 .. |sn| replace:: ServiceNow
 .. |sv| replace:: secondary visualization

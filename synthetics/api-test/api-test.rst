@@ -1,7 +1,7 @@
 .. _api-test:
 
 ************************************
-API Tests for endpoint
+API tests for endpoints
 ************************************
 
 .. meta::

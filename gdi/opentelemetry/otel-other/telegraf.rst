@@ -5,7 +5,7 @@ Monitor services with Telegraf Input plugins and OpenTelemetry
 =====================================================================
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the Telegraf monitor. See benefits, install, configuration, and metrics.
+   :description: Use Telegraf and OpenTelemetry to monitor your services in Splunk Observability Cloud. See benefits, install, configuration, and metrics.
 
 To monitor your service with Telegraf using native OpenTelemetry in Splunk Observability Cloud, install the service's Telegraf Input plugin then push metrics to the Splunk Opentelemetry Collector via OTLP. 
 
@@ -39,7 +39,7 @@ Follow these steps to scrape Telegraf metrics with the OTel Collector:
 3. Set up the Telegraf OpenTelemetry Output plugin
 4. Configure the OpenTelemetry Collector
 
-1. Install Telegraf 
+5. Install Telegraf 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Run the following commands to install Telegraf from the InfluxData repository:

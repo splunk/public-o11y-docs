@@ -32,8 +32,6 @@ See the table for a complete list of exposed ports and endpoints:
     - OTLP receiver using gRPC and http
   * - ``http(s)://0.0.0.0:6060``
     - HTTP forwarder used to receive Smart Agent ``apiUrl`` data
-  * - ``http(s)://0.0.0.0:7276``
-    - SAPM trace receiver
   * - ``http://localhost:8888/metrics``
     - :new-page:`Internal Prometheus metrics <https://opentelemetry.io/docs/collector/internal-telemetry>` 
   * - ``http(s)://localhost:8006``

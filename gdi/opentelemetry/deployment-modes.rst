@@ -263,9 +263,9 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
 
    exporters:
       # Traces (Agent)
-      sapm:
+      otlphttp:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
-         endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace"
+         endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
       # Metrics + Events (Agent)
       signalfx:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -285,7 +285,7 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
             processors:
             - memory_limiter
             - batch
-            exporters: [sapm]
+            exporters: [otlphttp]
          metrics:
             receivers: [otlp]
             processors: [memory_limiter, batch]
@@ -317,9 +317,9 @@ If you want to use the :ref:`signalfx-exporter` for metrics on both agent and ga
 
    exporters:
       # Traces
-      sapm:
+      otlphttp:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
-         endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace"
+         traces_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
       # Metrics + Events (Agent)
       signalfx:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -340,7 +340,7 @@ If you want to use the :ref:`signalfx-exporter` for metrics on both agent and ga
             processors:
             - memory_limiter
             - batch
-            exporters: [sapm]
+            exporters: [otlphttp]
          metrics:
             receivers: [signalfx]
             processors: [memory_limiter, batch]

@@ -763,17 +763,17 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-   Uptime Tests for port and HTTP TOGGLE <synthetics/uptime-test/uptime-test>
+   Uptime tests for port and HTTP TOGGLE <synthetics/uptime-test/uptime-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an API test to test an endpoint TOGGLE <synthetics/api-test/api-test>
+   API tests for endpoints TOGGLE <synthetics/api-test/api-test>
 
 .. toctree::
    :maxdepth:   3
 
-   synthetics/test-kpis/test-kpis
+   Test status TOGGLE <synthetics/test-status/test-status>
 
 .. toctree::
    :maxdepth:   3

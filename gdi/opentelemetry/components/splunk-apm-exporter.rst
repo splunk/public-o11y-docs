@@ -1,21 +1,18 @@
 .. _splunk-apm-exporter:
 
-Splunk APM exporter
-**************************
+****************************************************
+Splunk APM (SAPM) exporter (deprecated)
+****************************************************
 
 .. meta::
       :description: Use the Splunk APM (SAPM) exporter to send traces from multiple nodes or services in a single batch. Read on to learn how to configure the component.
+
+.. caution:: The SAPM exporter is deprecated and will be removed in April 2025. To send traces to Splunk Observability Cloud use the :ref:`otlphttp-exporter` instead.
 
 The Splunk APM (SAPM) exporter allows the OpenTelemetry Collector to send traces to Splunk Observability Cloud. The supported pipeline types are ``traces``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
-
-.. note:: 
-  
-  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``traces`` pipeline. See :ref:`otel-deployment-mode` for more information. 
-  
-  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
 Follow these steps to configure and activate the component:
 

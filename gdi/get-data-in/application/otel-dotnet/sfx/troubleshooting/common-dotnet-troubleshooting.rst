@@ -69,9 +69,9 @@ Traces don't appear in Splunk Observability Cloud
 If traces from your instrumented application or service are not available in Splunk Observability Cloud, verify the OpenTelemetry Collector configuration:
 
 * Make sure that the Splunk Distribution of OpenTelemetry Collector is running.
-* Make sure that a ``zipkin`` receiver and a ``sapm`` exporter are configured.
+* Make sure that a ``zipkin`` receiver and an ``otlp`` exporter are configured.
 * Make sure that the ``access_token`` and ``endpoint`` fields are configured.
-* Check that the traces pipeline is configured to use the ``zipkin`` receiver and ``sapm`` exporter.
+* Check that the traces pipeline is configured to use the ``zipkin`` receiver and ``otlp`` exporter.
 
 Metrics don't appear in Splunk Observability Cloud
 ==================================================================
