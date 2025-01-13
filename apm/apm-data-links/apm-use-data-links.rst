@@ -13,6 +13,7 @@ For example, you can use a global data link to easily navigate from an APM prope
 
 For information about creating global data links, see :ref:`apm-create-data-links`.
 
+.. _apm-access-gdl-service:
 
 Access global data links for a service
 =========================================

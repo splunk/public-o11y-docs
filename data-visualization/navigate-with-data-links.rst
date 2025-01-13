@@ -26,8 +26,8 @@ There are two types of data links for a property, local and global. See the foll
    :header-rows: 1
    :widths: 20 80
 
-   * - :strong:`Type`
-     - :strong:`Description`
+   * - :guilabel:`Type`
+     - :guilabel:`Description`
   
    * - Local
      - | - Available on only on dashboard.
@@ -48,15 +48,15 @@ There are two types of data links for a property, local and global. See the foll
 Configure local data links
 =============================================================================
 
-When you view properties in a chart on a dashboard, either in the data table or on a list chart, you can configure local data links by using the :strong:`Actions` menu. The following steps show you how to create a new local data link:
+When you view properties in a chart on a dashboard, either in the data table or on a list chart, you can configure local data links by using the :guilabel:`Actions` menu. The following steps show you how to create a new local data link:
 
 #. Hover over the property and select the (|more|) icon.
 
-#. Select :strong:`Configure data links` to display the :strong:`Data Links` tab.
+#. Select :guilabel:`Configure data links` to display the :guilabel:`Data Links` tab.
 
 #. Select :guilabel:`New Link` to display the link configuration options. If the :guilabel:`New Link` button is not available, you don't have write permission for the dashboard and can't create local data links.
 
-#. Add a label for the link. This label is what the user sees in a property's :strong:`Actions` menu, so use a concise and clear label.
+#. Add a label for the link. This label is what the user sees in a property's :guilabel:`Actions` menu, so use a concise and clear label.
 
 #. Select the type of destination to link to:
 
@@ -66,13 +66,13 @@ When you view properties in a chart on a dashboard, either in the data table or 
     - Kibana: You have to create the URL template for the link in a following step.
     - Custom URL: Any URL-addressable destination.
 
-#.  In the :strong:`Show On` drop-down menu, select a value that indicates where you want the data link to display.
+#.  In the :guilabel:`Show On` drop-down menu, select a value that indicates where you want the data link to display.
 
     - Any Metadata Value: Link from all values of all properties. (Not available for Dashboard destinations.)
     - Any Value of: Link from any value of a property. The property you start from is pre-filled as the trigger, but you can delete it and select a different trigger.
     - Property:Value Pair: Link from a specific value of a property. The property:value you start from is pre-filled, but you can delete it and select a different trigger.
 
-#. If you want the data link to display based on the :strong:`Show On` value and one or more additional conditions, select :strong:`Add Conditions`. If you define multiple conditions, all conditions must be met for the link to display.
+#. If you want the data link to display based on the :guilabel:`Show On` value and one or more additional conditions, select :guilabel:`Add Conditions`. If you define multiple conditions, you must meet all conditions for the link to display.
 
 #. Choose the scope of visibility of this link. You can choose:
 
@@ -106,7 +106,7 @@ When you view properties in a chart on a dashboard, either in the data table or 
 
 #. Select :guilabel:`Save` to create the new link.
 
-The link now appears on the :strong:`Actions` menu for the property.
+The link now appears on the :guilabel:`Actions` menu for the property.
 
 .. note:: If you selected Entire Organization as the scope, the link is also added to the :guilabel:`Global Data Links` page.
 
@@ -118,28 +118,28 @@ Select a property value to follow a link
 
 If a link target is an Infrastructure Monitoring dashboard, you can follow a link by selecting on the property value. When multiple links to dashboards are available for a property, the application selects which link to follow based on the following order of operations.
 
-.. note:: In any dashboard, all local and global data links are available by using a property's :guilabel:`Actions` (|more|) menu. You don't have to click on a property value to navigate to a link.
+.. note:: In any dashboard, all local and global data links are available by using a property's :guilabel:`Actions` (|more|) menu. You don't have to select a property value to navigate to a link.
 
 More specific data links override less specific data links
 ----------------------------------------------------------------------------------
 
-If multiple links that go to Infrastructure Monitoring dashboards are triggered by the same property, clicking the linked value goes to the destination for the trigger that is most specific to that value. In other words, a trigger on a property:value pair is more specific than a trigger on any value of a property.
+If multiple links that go to Infrastructure Monitoring dashboards are triggered by the same property, selecting the linked value goes to the destination for the trigger that is most specific to that value. In other words, a trigger on a property:value pair is more specific than a trigger on any value of a property.
 
 For example, suppose Link A is a local data link triggered by any value of ``service``, and Link B is a global data link triggered by ``service:analytics``.
 
-- Clicking on ``service:analytics`` in that dashboard follows Link B because the global data link is more specific than the local data link.
-- Clicking on any other value of service in that dashboard, such as ``service:testing``, follows Link A.
+- Selecting ``service:analytics`` in that dashboard follows Link B because the global data link is more specific than the local data link.
+- Selecting any other value of service in that dashboard, such as ``service:testing``, follows Link A.
 
 
 Local data links override equally specific global data links
 ----------------------------------------------------------------------------------
 
-If a property has equally specific local and global data links that go to Infrastructure Monitoring dashboards, clicking on the property value navigates to the local link.
+If a property has equally specific local and global data links that go to Infrastructure Monitoring dashboards, selecting the property value navigates to the local link.
 
 For example, suppose Link C is a local data link triggered by ``service:analytics`` with a destination of Dashboard |nbsp| X; link D is a global data link also triggered by ``service:analytics``, with a destination of Dashboard |nbsp| Y.
 
-- Clicking on ``service:analytics`` in that dashboard follows the local data link to Dashboard |nbsp| X because the local data link overrides the global data link.
-- Clicking on ``service:analytics`` in a different dashboard or in an alert message follows the global data link to Dashboard |nbsp| Y.
+- Selecting ``service:analytics`` in that dashboard follows the local data link to Dashboard |nbsp| X because the local data link overrides the global data link.
+- Selecting ``service:analytics`` in a different dashboard or in an alert message follows the global data link to Dashboard |nbsp| Y.
 
 
 .. _default-links:
@@ -147,28 +147,28 @@ For example, suppose Link C is a local data link triggered by ``service:analytic
 Default links override non-default links
 ----------------------------------------------------------------------------------
 
-If there are multiple, equally-specific triggers that go to Infrastructure Monitoring navigators or dashboards for a property, clicking the property value follows the link that has been specified as the default.
+If there are multiple, equally-specific triggers that go to Infrastructure Monitoring navigators or dashboards for a property, selecting the property value follows the link that has been specified as the default.
 
-For example, suppose two links are triggered by any value of ``host``, but they have different destination navigators or dashboards. One link is designated as the default; clicking on any value of ``host`` follows the link to the default destination.
+For example, suppose two links are triggered by any value of ``host``, but they have different destination navigators or dashboards. One link is designated as the default; selecting any value of ``host`` follows the link to the default destination.
 
-To change the default link for a trigger, expand the link for the desired default destination so you can see its settings, then open the :strong:`Actions` menu and select :guilabel:`Make default`.
+To change the default link for a trigger, expand the link for the desired default destination so you can see its settings, then open the :guilabel:`Actions` menu and select :guilabel:`Make default`.
 
 Use and view data links
 =============================================================================
 
 If data links are available in your organization, you have access to them from a number of locations in Splunk Infrastructure Monitoring.
 
-- When a property has a data link with an Infrastructure Monitoring dashboard as the target, hovering over the property displays the cursor pointer. A tooltip indicates the dashboard you can navigate to if you click on the property; the dashboard group is shown in parentheses.
+- When a property has a data link with an Infrastructure Monitoring dashboard as the target, hovering over the property displays the cursor pointer. A tooltip indicates the dashboard you can navigate to if you select the property; the dashboard group is shown in parentheses.
 
     .. image:: /_images/images-data-links/link-tooltip.png
         :width: 40%
         :alt: This image shows the tooltip that appears when you hover over over a property that has a data link.
 
-- Alternately, you can view available data links in the :guilabel:`Actions` menu for any property. To access the :strong:`Actions` menu, hover over a property and select the (|more|) icon that appears. If there are data links defined for the property, the list of links is displayed when you select the (|more|) icon, and you can navigate to any of them from this menu.
+- Alternately, you can view available data links in the :guilabel:`Actions` menu for any property. To access the :guilabel:`Actions` menu, hover over a property and select the (|more|) icon that appears. If there are data links defined for the property, the list of links is displayed when you select the (|more|) icon, and you can navigate to any of them from this menu.
 
-    .. note:: To navigate to targets other than dashboards, you must use the :strong:`Actions` menu.
+    .. note:: To navigate to targets other than dashboards, you must use the :guilabel:`Actions` menu.
 
-- To view all the local data links for a dashboard, select :guilabel:`Data Links` from the :strong:`Dashboard actions` menu.
+- To view all the local data links for a dashboard, select :guilabel:`Data Links` from the :guilabel:`Dashboard actions` menu.
 - To view all the global data links for an organization, go to :guilabel:`Navigation menu > Data Configuration`, then select :guilabel:`Global Data Links`. Alternately, you can select :guilabel:`Global Data links` when viewing the list of local data links.
 
 .. _about-links:
@@ -178,9 +178,9 @@ About defining data links
 
 - You can define multiple data links for a property.
 
-- If a link target is a Splunk Infrastructure Monitoring dashboard, you can follow the link by clicking on the property value.
+- If a link target is a Splunk Infrastructure Monitoring dashboard, you can follow the link by selecting the property value.
 
-- If a property is linked to multiple target navigators or dashboards, a few factors determine which navigators or dashboards are opened when you click on the property value; see :ref:`click-on-link`.
+- If a property is linked to multiple target navigators or dashboards, a few factors determine which navigators or dashboards are opened when you select the property value; see :ref:`click-on-link`.
 
 - If your organization has the permissions feature available, you can define or remove local data links only if you have write permissions for the source dashboard. However, you don't need write permissions for the target dashboard. To learn more, see :ref:`about-permissions`.
 
