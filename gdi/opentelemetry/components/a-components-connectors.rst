@@ -11,6 +11,7 @@ Collector components: Connectors
     :titlesonly:
     :hidden:
 
+    routing-connector.rst
     span-metrics-connector
 
 The Splunk Distribution of the OpenTelemetry Collector includes and supports the connectors listed on this doc. To see other components, refer to :ref:`otel-components`.
