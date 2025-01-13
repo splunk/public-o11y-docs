@@ -12,3 +12,6 @@
    * - :ref:`span-metrics-connector` (``spanmetrics``)
      - Aggregates Request, Error and Duration (R.E.D) OpenTelemetry metrics from span data.
      - Traces, metrics
+   * - :ref:`sum-connector` (``sum``)
+     - Sums attribute values from spans, span events, metrics, data points, and log records.
+     - Traces, metrics, logs 
