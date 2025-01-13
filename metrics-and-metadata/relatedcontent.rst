@@ -7,7 +7,9 @@ Related Content in Splunk Observability Cloud
 .. meta::
    :description: Related Content functionality: introduction, requirements, how to use.
 
-The Related Content panel automatically correlates and presents data between different views within Splunk Observability Cloud. Splunk Cloud Platform also has the Related Content panel where users can see previews of observability data that correlates to search results in the Search app. For more information, see :new-page:`Preview Splunk Observability Cloud data <https://quickdraw.splunk.com/redirect/?product=Observability&location=related.content.observability&version=current>`.
+The Related Content panel automatically correlates and presents data between different views within Splunk Observability Cloud. In one view of Splunk Observability Cloud, such as APM, the Related Content bar shows and links to related content in other views. 
+
+Splunk Cloud Platform also has the Related Content panel where users can see previews of observability data that correlates to search results in the Search app. For more information, see :new-page:`Preview Splunk Observability Cloud data <https://quickdraw.splunk.com/redirect/?product=Observability&location=related.content.observability&version=current>`.
 
 Use Related Content 
 ==========================================================================================================
@@ -31,6 +33,14 @@ In the preceding example, the user navigates through the following sequence:
 3. Splunk Observability Cloud takes the user to Log Observer where they can drill down into the related logs to find the root cause of the problem.
 
 .. note:: Related Content is different from data links, a separate capability, which lets you dynamically transfer contextual information about the property you're viewing to the resource, helping you get to relevant information faster. To learn more about data links, see :ref:`apm-create-data-links`.
+
+
+Related logs in APM 
+-----------------------------------------------------------------
+For Unified Identity and Log Observer Connect customers, Splunk APM does not show related logs in the Related Content bar by default in order to save resources. To activate Related Content for logs in APM, an administrator must go to :strong:`Settings` then select :strong:`General Settings`. Switch the toggle, :strong:`Activate Related Content for logs` to active.
+
+If you want to save resources by deactivating Related Content for logs in APM, go to :strong:`Settings`, select :strong:`General Settings`,and switch the toggle, :strong:`Activate Related Content for logs` to inactive. 
+
 
 Where can I see Related Content?
 -----------------------------------------------------------------
