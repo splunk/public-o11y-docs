@@ -77,7 +77,7 @@ You can then add the transform processor to any compatible pipeline. For example
          - memory_limiter
          - batch
          - resourcedetection
-         exporters: [sapm, signalfx]
+         exporters: [otlphttp, signalfx]
        metrics:
          receivers: [hostmetrics, otlp, signalfx]
          processors:
@@ -192,4 +192,17 @@ You can apply the following functions to metric contexts:
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

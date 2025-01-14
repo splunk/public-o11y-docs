@@ -73,8 +73,7 @@ The following table shows the configuration options for the
       - no
       - ``list of strings``
       - List of databases to send database-specific metrics about. If
-         omitted, metrics about all databases will be sent. This is an
-         :ref:`overridable set <filtering-smart-agent>`
+         omitted, metrics about all databases will be sent. 
          (**default:** ``[*]``)
    - 
 
@@ -102,4 +101,17 @@ The following table shows the configuration options for the
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

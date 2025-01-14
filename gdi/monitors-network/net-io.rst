@@ -12,17 +12,56 @@ The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits.rst"></div>
+
 .. include:: /_includes/benefits.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits.rst"></div>
+
+
+
 
 Installation
 ------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-installation.rst"></div>
+
 .. include:: /_includes/collector-installation.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-installation.rst"></div>
+
+
+
 
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -68,8 +107,7 @@ integration:
       - ``interfaces``
       - no
       - ``list of strings``
-      - The network interfaces to send metrics about. This is an
-         :ref:`overridable set <filtering-smart-agent>`
+      - The network interfaces to send metrics about. 
          (**default:**
          ``[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]``)
 
@@ -90,9 +128,35 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="metric-defs.rst"></div>
+
 .. include:: /_includes/metric-defs.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="metric-defs.rst"></div>
+
+
+
 
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

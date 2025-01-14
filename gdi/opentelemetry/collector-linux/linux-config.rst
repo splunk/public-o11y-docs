@@ -29,3 +29,4 @@ You can view the ``splunk-otel-collector`` service logs and errors in the system
   sudo journalctl -u splunk-otel-collector   
 
 .. note:: See :ref:`about-collector-configuration-tutorial` to learn how to configure the Collector.
+

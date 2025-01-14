@@ -6,9 +6,15 @@ ASP.NET (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the ASP.NET app monitor. See benefits, install, configuration, and metrics
 
-.. note:: This integration is deprecated and will be removed in February 2025. To forward data to Splunk Observability Cloud, use the Splunk Distribution of OpenTelemetry .NET. For a full list of collected metrics, refer to :ref:`dotnet-otel-metrics-attributes`. 
+.. caution:: 
+   
+   This integration is deprecated and will reach End of Support in February 2025. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+   To forward data from a .NET application to Splunk Observability Cloud use the :ref:`Splunk Distribution of OpenTelemetry .NET <get-started-dotnet-otel>` instead. 
+
+   To monitor Windows Performance Counters with native OpenTelemetry refer to :ref:`windowsperfcounters-receiver`.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 ``aspdotnet`` monitor type to retrieve metrics for requests, errors,
 sessions, and worker processes from ASP.NET applications.
 
@@ -25,17 +31,56 @@ This integration is only available on Windows.
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits.rst"></div>
+
 .. include:: /_includes/benefits.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits.rst"></div>
+
+
+
 
 Installation
 ------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-installation-windows.rst"></div>
+
 .. include:: /_includes/collector-installation-windows.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-installation-windows.rst"></div>
+
+
+
 
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -105,9 +150,35 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="metric-defs.rst"></div>
+
 .. include:: /_includes/metric-defs.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="metric-defs.rst"></div>
+
+
+
 
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

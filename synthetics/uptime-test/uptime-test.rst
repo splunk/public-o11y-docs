@@ -2,7 +2,7 @@
 .. _uptime-test:
 
 **************************************************
-Use an Uptime Test to test port or HTTP uptime
+Uptime tests for port and HTTP
 **************************************************
 
 .. meta::

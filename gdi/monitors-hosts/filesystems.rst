@@ -16,17 +16,56 @@ This integration is available on Linux and Windows. On Linux, this monitor relie
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits.rst"></div>
+
 .. include:: /_includes/benefits.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits.rst"></div>
+
+
+
 
 Installation
 ------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-installation.rst"></div>
+
 .. include:: /_includes/collector-installation.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-installation.rst"></div>
+
+
+
 
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -105,8 +144,7 @@ The following table shows the configuration options for this monitor.
       - ``fsTypes``
       - no
       - ``list of strings``
-      - The filesystem types to include. This is an
-         :ref:`overridable set <filtering-smart-agent>` If this is
+      - The filesystem types to include. If this is
          not set, the default value is the set of all
          **non-logical/virtual filesystems** on the system. On Linux
          this list is determined by reading the ``/proc/filesystems``
@@ -117,8 +155,7 @@ The following table shows the configuration options for this monitor.
       - ``mountPoints``
       - no
       - ``list of strings``
-      - The mount paths to include/exclude. This is an
-         :ref:`overridable set <filtering-smart-agent>` **Note**:
+      - The mount paths to include/exclude. **Note**:
          If you are using the hostFSPath option, do not include the
          ``/hostfs/`` mount in the filter. If both this and ``fsTypes``
          are specified, the two filters combine in an AND relationship.
@@ -142,9 +179,35 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="metric-defs.rst"></div>
+
 .. include:: /_includes/metric-defs.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="metric-defs.rst"></div>
+
+
+
 
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

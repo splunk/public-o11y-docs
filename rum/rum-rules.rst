@@ -122,7 +122,7 @@ This example shows how to use a ``<?>`` symbol to apply a single token wildcard 
 <??> Wildcard for one or more trailing tokens
 --------------------------------------------------------
 
-This example shows how to use a ``<??>`` wildcard to group together URLs by one or more tokens. The ``<??>`` wildcard is supported only as the last wild card in a pattern at this time.
+This example shows how to use a ``<??>`` wildcard to group together URLs by one or more tokens. The ``<??>`` wildcard is supported only as the last wildcard in a pattern at this time.
  
 
 .. list-table:: 

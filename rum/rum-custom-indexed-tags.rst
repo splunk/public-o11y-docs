@@ -16,7 +16,20 @@ Key concepts
 ==================
 How span tags, indexed span tags, and MetricSets relate to each other. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="synthetics/metricset-def.rst"></div>
+
 .. include:: /_includes/synthetics/metricset-def.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="synthetics/metricset-def.rst"></div>
+
+
+
 
 Example: track custom processes 
 =================================
@@ -33,14 +46,12 @@ Here are some examples of what you could use as span tags:
  ..
    "How can I add my own tags to Tag Spotlight?", "How can I filter on custom tags?" "How can I troubleshoot with custom tags?
 
-
-
 Add custom tags to Tag Spotlight
 ========================================================
 
 You need to be an admin to do this task. Follow these steps to add custom tags to Tag Spotlight: 
 
-1. Add a span tag following these steps: :ref:`create-a-span-rum`.
+1. Add a span tag as explained in :ref:`create-a-span-rum`. To add attributes to the span, see RUM's API :ref:`browser-rum-methods`.
 
 2. There are two ways to navigate to the MetricSets configuration page. Choose either one: 
 

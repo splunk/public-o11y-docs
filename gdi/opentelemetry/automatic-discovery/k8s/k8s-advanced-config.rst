@@ -1,13 +1,13 @@
 .. _k8s-advanced-auto-discovery-config:
 
-***********************************************************************
-Advanced customization for automatic discovery in Kubernetes
-***********************************************************************
+********************************************************************************
+Advanced customization for automatic discovery and instrumtenation in Kubernetes
+********************************************************************************
 
 .. meta:: 
-    :description: Learn how to customize your deployment of automatic discovery in a Kubernetes environment.
+    :description: Learn how to customize your deployment of automatic discovery and instrumentation in a Kubernetes environment.
 
-Learn how to customize Splunk automatic discovery and configuration for advanced scenarios. 
+Learn how to customize Splunk automatic discovery and instrumentation for advanced scenarios. 
 
 Through advanced customization, you can achieve the following tasks:
 
@@ -45,7 +45,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector uses the latest v
               repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
               tag: v1.27.0
 
-#. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
+#. Reinstall the Splunk OTel Collector chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
     .. code-block:: bash
 
@@ -94,7 +94,7 @@ Follow these steps to activate Profiling for a language:
               - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
                 value: 5000
       
-#. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
+#. Reinstall the Splunk OTel Collector chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
     .. code-block:: bash
 
@@ -103,7 +103,7 @@ Follow these steps to activate Profiling for a language:
 Activate runtime metrics collection (Java and Node.js only)
 -------------------------------------------------------------
 
-You can activate runtime metrics collection for Java and Node.js applications running in your Kubernetes environment. To learn more about runtime metrics collection, see :
+You can activate runtime metrics collection for Java and Node.js applications running in your Kubernetes environment.
 
 Follow these steps to activate runtime metrics collection:
 
@@ -139,7 +139,7 @@ Follow these steps to activate runtime metrics collection:
           - name: SPLUNK_METRICS_ENDPOINT
             value: http://$(SPLUNK_OTEL_AGENT):9943/v2/datapoint
 
-#. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
+#. Reinstall the Splunk OTel Collector chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
     .. code-block:: bash
 
@@ -150,7 +150,7 @@ Follow these steps to activate runtime metrics collection:
 Use automatic discovery with gateway mode
 =======================================================
 
-The Splunk OTel Collector Chart uses the agent mode by default. Activating gateway mode deploys an instance of the OpenTelemetry Collector in a separate container, and this instance collects data from the entire cluster.
+The Splunk OTel Collector chart uses the agent mode by default. Activating gateway mode deploys an instance of the OpenTelemetry Collector in a separate container, and this instance collects data from the entire cluster.
 
 To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 
@@ -176,7 +176,7 @@ Follow these steps to send data to a gateway endpoint:
             exporter:
               endpoint: <gateway-endpoint>
 
-#. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
+#. Reinstall the Splunk OTel Collector chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
     .. code-block:: bash
 
@@ -207,7 +207,7 @@ Using this configuration, automatic discovery automatically sends data to a runn
 Additional settings
 ===================================
 
-There are many other settings you can customize in automatic discovery and configuration.
+There are many other settings you can customize in automatic instrumentation.
 
 For a list of settings that you can change for each language, see the following resources:
 

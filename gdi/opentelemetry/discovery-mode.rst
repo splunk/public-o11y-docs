@@ -1,11 +1,11 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Discover telemetry sources automatically
+Automatic discovery of apps and services
 ***************************************************************************
 
 .. meta::
-      :description: Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically and easily get started with Splunk Application Performance Monitoring and Splunk Infrastructure Monitoring.
+      :description: Use automatic discovery and zero-code instrumentation with the Splunk Distribution of the OpenTelemetry Collector to collect metrics and traces automatically and send them to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -14,11 +14,9 @@ Discover telemetry sources automatically
    Linux <automatic-discovery/discovery-linux>
    Windows <automatic-discovery/discovery-windows>
 
-Use automatic discovery and configuration (formerly Zero Configuration Automatic Instrumentation) with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically. 
+The Splunk Distribution of the OpenTelemetry Collector can automatically identify data sources and collect metrics and traces to send them to Splunk Observability Cloud. With automatic discovery and zero-code instrumentation you don't need to manually configure the Splunk Distribution of the OpenTelemetry Collector or your applications before deploying them. 
 
-Automatic discovery and configuration helps you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring.
-
-The following diagram shows the process of using automatic discovery and configuration to find data sources:
+The following diagram shows how automatic discovery finds data sources:
 
 .. mermaid::
    
@@ -29,25 +27,81 @@ The following diagram shows the process of using automatic discovery and configu
 
       X["Connect to your \n cloud environment"]
 
-      Y["Deploy the Splunk Distribution \n of OpenTelemetry Collector \n in your environment"]
+      Y["Deploy the Splunk Distribution \n of the OpenTelemetry Collector \n in your environment"]
 
       Z["Run your application"]
       
       X --> Y --> Z
 
-Automatic discovery and configuration can detect several types of data sources on the host or Kubernetes cluster, such as language runtimes, databases, and web servers. 
 
-Using this capability, you can automatically instrument your back-end applications such as Java or .NET without any additional installation or configuration steps. With automatic discovery, you can quickly get started with Splunk APM. 
-
-For third-party applications such as databases and web servers, the Collector generates configuration you can modify and adopt, or incorporate into your existing configuration automatically by default.
-
-The main advantage of using automatic discovery is that you don't need to manually instrument applications or manually configure the Splunk Distribution of OpenTelemetry Collector. 
 
 .. raw:: html
 
-  <h2>Supported language runtimes</h2>
+   <div class="include-start" id="gdi/auto-discovery-intro.rst"></div>
 
-The following table shows the platforms that support each language runtime:
+.. include:: /_includes/gdi/auto-discovery-intro.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/auto-discovery-intro.rst"></div>
+
+
+
+
+.. raw:: html
+  
+  <h2>Supported host services and applications for automatic discovery</h2>
+
+Automatic discovery of third-party applications is supported in Linux and Kubernetes environments for the following services:
+
+.. list-table::
+   :width: 100%
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Service
+     - Receiver
+
+   * - Apache Web Server
+     - Apache Web Server receiver. See :ref:`apache-receiver`.
+
+   * - MySQL
+     - MySQL receiver. See :ref:`mysql-receiver`
+
+   * - PostgreSQL
+     - PostgreSQL receiver. See :ref:`postgresql-receiver`
+
+   * - OracleDB
+     - Oracle DB receiver. See :ref:`oracledb`
+
+   * - NGINX
+     - NGINX receiver. See :ref:`nginx-receiver`
+
+   * - RabbitMQ
+     - RabbitMQ receiver. See :ref:`rabbitmq-receiver`.
+
+   * - Redis
+     - Redis receiver. See :ref:`redis-receiver`
+
+   * - MongoDB
+     - MongoDB receiver. See :ref:`mongodb-receiver`
+
+   * - Kafka
+     - Kafka metrics receiver. See :ref:`kafkametrics-receiver`
+
+   * - Microsoft SQL Server
+     - Microsoft SQL Server receiver. See :ref:`mssql-server-receiver`
+
+Read more:
+
+* Linux: :ref:`linux-third-party`
+* Kubernetes: :ref:`k8s-third-party`
+
+.. raw:: html
+
+  <h2>Supported language runtimes for zero-code instrumentation</h2>
+
+Zero-code instrumentation via the Collector's automatic discovery is available for the following languages:
 
 .. list-table::
    :header-rows: 1
@@ -70,49 +124,3 @@ The following table shows the platforms that support each language runtime:
      - Yes. See :ref:`linux-backend-auto-discovery`
      - No
      - Yes. See :ref:`k8s-backend-auto-discovery`
-
-.. raw:: html
-  
-  <h2>Supported host services and applications</h2>
-
-Automatic discovery for third-party applications is supported for Linux and Kubernetes.
-
-To get started with automatic discovery for third-party applications, see the instructions corresponding to your environment:
-
-* Linux: :ref:`linux-third-party`
-* Kubernetes: :ref:`k8s-third-party`
-
-Automatic discovery supports the following host services and applications:
-
-.. list-table::
-   :width: 100%
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Service
-     - Receiver
-
-   * - MySQL
-     - MySQL receiver. See :ref:`mysql-receiver`
-
-   * - PostgreSQL
-     - PostgreSQL receiver. See :ref:`postgresql-receiver`
-
-   * - OracleDB
-     - Oracle DB receiver. See :ref:`oracledb`
-
-   * - NGINX
-     - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`
-
-   * - Redis
-     - Redis receiver. See :ref:`redis-receiver`
-
-   * - MongoDB
-     - MongoDB receiver. See :ref:`mongodb-receiver`
-
-   * - Kafka
-     - Kafka metrics receiver. See :ref:`kafkametrics-receiver`
-
-   * - Microsoft SQL Server
-     - Microsoft SQL Server receiver. See :ref:`mssql-server-receiver`
-

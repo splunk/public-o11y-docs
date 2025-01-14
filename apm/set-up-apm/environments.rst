@@ -28,7 +28,20 @@ On spans where the ``deployment.environment`` tag is not set, Splunk APM assumes
 
 For more information about adding span tags to spans, see :ref:`apm-add-context-trace-span`. 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="tag-decision-support.rst"></div>
+
 .. include:: /_includes/tag-decision-support.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="tag-decision-support.rst"></div>
+
+
+
 
 Set ``deployment.environment`` via auto-instrumentation
 -----------------------------------------------------------
@@ -47,6 +60,20 @@ The :new-page:`Splunk Distribution of OpenTelemetry Collector agent config file 
         key: deployment.environment
 
 Note that unlike standard attributes, the ``deployment.environment`` tag is set with the ``resource`` processor in OpenTelemetry, because this tag is typically associated with the host or container in which the application is running.
+
+The ``resource/add_environment`` resorce can be then added to any pipeline of the ``service`` section of your configuration file. See 
+:ref:`Sample configurations <sample_configurations>` for more examples. 
+
+.. code-block:: yaml
+
+    service:
+        pipelines:
+            metrics:
+                processors: [resource/add_environment]
+            logs:
+                processors: [resource/add_environment]
+            traces:
+                processors: [resource/add_environment]
 
 To learn more about how to add span tags via the Splunk Distribution of OpenTelemetry Collector, see :ref:`otel-span-tags`.
 

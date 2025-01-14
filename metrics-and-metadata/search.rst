@@ -12,9 +12,7 @@ Use the search from the Splunk Observability Cloud top navigation bar to search 
 Prerequisites
 =====================
 
-Search only shows results for Splunk APM if your organization has access to Splunk APM. 
-
-Search is currently limited to Splunk APM, dashboards, charts, Infrastructure Monitoring navigators, and docs results.
+Search currently includes results for Splunk APM if your organization has access to Splunk APM. 
 
 .. _prefix:
 
@@ -25,7 +23,6 @@ Narrow your search results to specific types of objects by using one of the supp
 
 Supported search prefixes include:
 
-- metric search
 - dashboard
 - chart
 - team
@@ -37,10 +34,16 @@ Supported search prefixes include:
 - tag
 - property
 - navigation (takes you to the corresponding page)
-- action
+- navigator 
 - trace (APM trace)
 - service (APM service)
 - business workflow (APM workflow)
+- application, app (RUM application)
+- session (RUM session ID)
+- test (Synthetics test)
+- private location (Synthetics private location)
+- saved query (Log Observer saved query)
+- connection (Log Observer connection)
   
 .. - index (Log index) PI2
 .. - saved query (Log saved query)
@@ -50,8 +53,7 @@ Use the prefix in a 'key value pair' format to narrow your search. For example, 
 
 You can also search using only the prefix to search for all objects of that type.
 
-
-How to use observability search
+How to use Observability search
 =====================================
 
 You can either search a specific term, or define what type of object you're looking for by using one of the supported prefixes to narrow the search to specific result types. This allows you to search for a specific object, if you know the type and name. Or, you can search by prefix type if you're unsure of the name. 

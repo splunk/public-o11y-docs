@@ -7,6 +7,8 @@ Logparser
    
    :description: Use this Splunk Observability Cloud integration for the telegraf/logparser plugin monitor. See benefits, install, configuration, and metrics.
 
+.. caution:: Smart Agent monitors are being deprecated. To tail log files use the OpenTelemetry Collector and the :new-page:`Telegraf Tail Input plugin <https://github.com/influxdata/telegraf/blob/master/plugins/inputs/tail/README.md>`. See how in :ref:`telegraf-generic`.
+
 The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``telegraf/logparser`` monitor type to tail log files.
 
 This integration is based on the Telegraf logparser plugin, and all
@@ -15,17 +17,56 @@ emitted metrics have the plugin dimension set to ``telegraf-logparser``.
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits.rst"></div>
+
 .. include:: /_includes/benefits.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits.rst"></div>
+
+
+
 
 Installation
 ------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-installation.rst"></div>
+
 .. include:: /_includes/collector-installation.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-installation.rst"></div>
+
+
+
 
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -162,4 +203,17 @@ built-in filtering of metrics coming out of this monitor type.
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

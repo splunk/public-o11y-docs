@@ -270,7 +270,20 @@ For a list of supported application servers, see the :ref:`supported-java-librar
 New metric names
 ======================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/java-20-metrics-equivalences.rst"></div>
+
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/java-20-metrics-equivalences.rst"></div>
+
+
+
 
 
 Deactivate metrics export

@@ -23,10 +23,12 @@ This is the collection of scenarios available for Splunk Observability Cloud. Us
 
   * - :strong:`Category`
     - :strong:`Scenario`
-  * - :ref:`Splunk Observability Cloud <get-started-o11y>`
+  * - :ref:`Splunk Observability Cloud <overview>`
     - :ref:`scenario-security`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`otel-collector-scenario`
+  * - :ref:`OpenTelemetry <otel-intro>`
+    - :ref:`deployments-fargate-java`
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`monitor-server-latency`
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
@@ -35,8 +37,16 @@ This is the collection of scenarios available for Splunk Observability Cloud. Us
     - :ref:`find-detectors`
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`troubleshoot-noisy-detectors`
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
+    - :ref:`min-delay-detectors-scenario`
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
+    - :ref:`max-delay-detectors-scenario`
+  * - :ref:`SLOs <slo-intro>`
+    - :ref:`custom-metric-slo-scenario`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`service-map`
+  * - :ref:`APM <apm-scenarios-intro>`
+    - :ref:`specific-trace`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`services-impact-business-workflows`
   * - :ref:`APM <apm-scenarios-intro>`
@@ -45,6 +55,8 @@ This is the collection of scenarios available for Splunk Observability Cloud. Us
     - :ref:`troubleshoot-business-workflows`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`apm-scenario-trace-analyzer`
+  * - :ref:`APM <apm-scenarios-intro>`
+    - :ref:`apm-scenario-trace-analyzer-trace-duration`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`monitor-services`
   * - :ref:`APM <apm-scenarios-intro>`
@@ -65,10 +77,12 @@ This is the collection of scenarios available for Splunk Observability Cloud. Us
     - :ref:`profiling-scenario`
   * - :ref:`APM Profiling <profiling-scenario-landingpage>`
     - :ref:`memory-profiling-scenario`
-  * - :ref:`Infrastructure Monitoring <apm-scenarios-intro>`
+  * - :ref:`Infrastructure Monitoring <get-started-infrastructure>`
     - :ref:`troubleshoot-k8s-nav-scenario`
-  * - :ref:`Infrastructure Monitoring <apm-scenarios-intro>`
+  * - :ref:`Infrastructure: Metrics pipeline management <metrics-pipeline-intro>`
     - :ref:`aggregate-drop-use-case`
+  * - :ref:`Infrastructure: Metrics pipeline management <metrics-pipeline-intro>`
+    - :ref:`use-case-archive`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
     - :ref:`find-network-error`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
@@ -83,8 +97,6 @@ This is the collection of scenarios available for Splunk Observability Cloud. Us
     - :ref:`scenario-monitoring`
   * - :ref:`RUM <scenario-landingpage>`
     - :ref:`spa-custom-event`
-  * - :ref:`RUM <scenario-landingpage>`
-    - :ref:`rum-identify-span-problems`
   * - :ref:`RUM <scenario-landingpage>`
     - :ref:`rum-mobile-scenario`
   * - :ref:`Synthetic Monitoring <synth-landing>`

@@ -1,22 +1,20 @@
 .. _windows-backend-auto-discovery:
 
 ****************************************************************
-Automatic discovery for back-end applications in Windows
+Zero-code instrumentation for back-end applications in Windows
 ****************************************************************
 
 .. meta:: 
     :description: draft
 
-Automatic discovery can detect the following types of applications in your Windows environment:
-
-Automatic discovery and configuration for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. By default, automatic instrumentation is only turned on for IIS applications. To activate other application and service types, see :ref:`otel-dotnet-manual-install`. After installing the package, you must start or restart any .NET applications that you want to instrument. 
+Automatic discovery for OpenTelemetry .NET activates zero-code instrumentation for .NET applications running on Windows. By default, zero-code instrumentation is only turned on for IIS applications. To activate other application and service types, see :ref:`otel-dotnet-manual-install`. After installing the package, you must start or restart any .NET applications that you want to instrument. 
 
 .. note:: The SignalFx instrumentation for .NET is deprecated and will reach end of support on February 21, 2025. To learn how to migrate from SignalFx .NET to OpenTelemetry .NET, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
 
 Get started
 ==================================================
 
-To get started with automatic discovery for Windows, follow these steps:
+To get started with zero-code instrumentation for Windows, follow these steps:
 
 #. :ref:`windows-install-package`
 #. :ref:`configure-the-package-dotnet`
@@ -45,14 +43,12 @@ Do the following to customize the command:
 - Replace ``<access_token>`` with a valid Splunk Observability Cloud access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
 - Replace ``<realm>`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
 
-
-
 .. _configure-the-package-dotnet:
 
 Configure the .NET instrumentation
 ==========================================================
 
-To configure the instrumentation, see :ref:`advanced-dotnet-otel-configuration`.
+To configure .NET instrumentation, see :ref:`advanced-dotnet-otel-configuration`.
 
 .. _upgrade-the-package-dotnet:
 
@@ -64,4 +60,16 @@ You can upgrade the package by installing a new version of the Splunk Distributi
 Troubleshooting
 ===========================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

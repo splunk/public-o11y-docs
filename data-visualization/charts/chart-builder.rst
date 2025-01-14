@@ -9,7 +9,7 @@ Plot metrics and events using chart builder in Splunk Observability Cloud
 
 Charts are highly customizable. This topic describes how to use chart builder's tools and options to customize your charts to display signals (metrics and events) in an intuitive and compelling way.
 
-.. note:: Use the chart builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`simple-charts-dashboards`.
+.. note:: Use the chart builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`create-chart-metric-sidebar`.
 
 If you are editing an existing chart, you might want to start by configuring plot lines already on the chart (see :ref:`plot-options` and :ref:`plot-config-panel`).
 
@@ -19,7 +19,7 @@ If you are editing an existing chart, you might want to start by configuring plo
 Specify a signal for a plot line
 =============================================================================
 
-A signal is the :term:`metric` or :ref:`histogram metric <histograms>` you want to plot on the chart, to which you might add filters and apply analytics. Plot lines, or plots, are the building blocks of charts. A chart has one or more plots, and each plot is composed of the :term:`metric time series<Metric time series>` or histogram metric represented by the signal and its properties and dimensions, any filters, and any analytics applied.
+A signal is the :term:`metric` or :ref:`histogram metric <histograms>` you want to plot on the chart, to which you might add filters and apply analytics. Plot lines, or plots, are the building blocks of charts. A chart has one or more plots, and each plot is composed of the :term:`metric time series<metric time series>` or histogram metric represented by the signal and its properties and dimensions, any filters, and any analytics applied.
 
 .. note:: Instead of a metric, you can also enter a :ref:`time series expression<expression>` to create a composite or derived metric, specify an :ref:`event<chart-events>` to be displayed on the chart, or :ref:`link a detector to a chart<link-detector-to-chart>` to display its alert status on the chart.
 
@@ -47,14 +47,14 @@ If your metrics follow the naming conventions for Graphite metrics, see :ref:`gr
 
 .. _find-metric:
 
-Use the Metrics Sidebar to find a metric
+Use the metrics sidebar to find a metric
 -------------------------------------------------------------------
 
-You can also choose the signal by using the Metrics Sidebar to search for metric and histogram metric names, instead of typing one in directly. Select :strong:`Browse` next to the :strong:`Signal` field to display the Metrics Sidebar.
+You can also select the signal by using the metrics sidebar to search for metric and histogram metric names, instead of typing one in directly. Select :strong:`Browse` next to the :strong:`Signal` field to display the metrics sidebar.
 
-In the Metrics Sidebar, select the :strong:`Find Metrics` option to search for metrics and histogram metrics. Using the Metrics Sidebar is the same as described in :ref:`use-metrics-sidebar`, except that each selected metric is added as a plot in the chart, instead of as one or more new charts.
+In the metrics sidebar, select :strong:`Find metrics` to search for metrics and histogram metrics. Using the metrics sidebar is the same as described in :ref:`create-chart-metric-sidebar`, except that each selected metric is added as a plot in the chart, instead of as one or more new charts.
 
-For information about how to use the :strong:`Find Events` option, see :ref:`chart-events-as-occur`.
+For information about how to use the :strong:`Find events` option, see :ref:`chart-events-as-occur`.
 
 
 .. _expression:
@@ -113,6 +113,17 @@ In this case, if you want to plot a metric as histogram, do the following steps 
    #. Add a supported method to the SignalFlow program. For example, ``histogram('service_latency').sum()``.
 
 For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram_function>` in the SignalFlow reference documentation.
+
+.. _archived-metrics-charts:
+   
+Use archived metrics in charts
+--------------------------------------
+
+When you select an archived metric as a signal in your chart, the archived metric can't be plotted.
+
+To include an archived metric in a chart, route the archived metric to real-time or create exception rules to make it available. For more information, see the :ref:`mpm-rule-routing-exception` section.
+
+To learn more about MPM, see :ref:`metrics-pipeline-intro`.
 
 .. _filter-signal:
 
@@ -223,9 +234,9 @@ For background information on events, see :ref:`events-intro`.
 Display events as they occur
 -------------------------------------------------------------------
 
-The process for adding an event triggered by a :term:`detector`, or occurrences of a custom event, is essentially identical to :ref:`specifying a metric as a signal<specify-signal>`. The only real difference is that if you :ref:`use the Metrics Sidebar <use-metrics-sidebar>`, you must select the :strong:`Find Events` option to search for detector or custom event names.
+The process for adding an event triggered by a :term:`detector`, or occurrences of a custom event, is essentially identical to :ref:`specifying a metric as a signal<specify-signal>`. The only real difference is that if you use the metrics sidebar, you must select the :strong:`Find events` option to search for detector or custom event names.
 
-.. note:: If you clear the :strong:`Find Metrics` option to search only for events, none of the other search options in the Metrics Sidebar are available. You must enter text manually to find matching detector or custom event names. Similarly, if you add a filter, you can search only for metrics, not for events.
+.. note:: If you clear the :strong:`Find metrics` option to search only for events, none of the other search options in the metrics sidebar are available. You must enter text manually to find matching detector or custom event names. Similarly, if you add a filter, you can search only for metrics, not for events.
 
 
 .. _event-markers:
@@ -299,7 +310,7 @@ Visibility of plot lines
 
 Click the eye icon on the far left of the plot line to show or hide the plot line on the chart. This option is not available for text charts and event feeds. In all chart types except heatmap, multiple plot lines can be displayed.
 
-.. note:: In the :ref:`single-value-chart-type`, if multiple plots are visible, the value on the chart reflects the first visible plot in the plot list.
+.. note:: In a single value chart, if multiple plots are visible, the value on the chart reflects the first visible plot in the plot list.
 
 To hide all plot lines except one, alt-click (or option-click) the eye icon for the plot line you want to display. This can be useful when a chart contains multiple plots and you need to focus on just one. To return to the previous view, alt-click the eye icon again for the visible plot line.
 
@@ -391,7 +402,7 @@ A number displayed on a chart could be anything from a raw number (such as bits 
 
 All display units are shown when you take any of the following actions:
 
--  View a :ref:`single-value<single-value-chart-type>` or :ref:`list chart<list-chart-type>`
+-  View a :ref:`single value<single-value-charts>` or :ref:`list chart<list-charts>`
 
 -  Look at values in the :ref:`data table<data-table>` for a chart
 
@@ -425,7 +436,7 @@ It can sometimes be useful to apply the :ref:`Scale<scale>` analytics function w
 Visualization type
 -------------------------------------------------------------------
 
-For :ref:`graphs<graph-chart-type>`, plots default to a visualization style selected for the chart as a whole, such as line, area, column, or histogram. For example, new plots created on a column chart appear initially as additional columns. However, you can change this setting so a plot uses a different chart display type than the chart default.
+For :ref:`graph charts<graph-charts>`, plots default to a visualization style selected for the chart as a whole, such as line, area, column, or histogram. For example, new plots created on a column chart appear initially as additional columns. However, you can change this setting so a plot uses a different chart display type than the chart default.
 
 For example, if the chart is an area chart, you can choose to display one of its plots as a line.
 
@@ -705,7 +716,7 @@ For example, for a regular wildcard query, :code:`jvm.*` returns anything that s
 
 For Graphite wildcards, :code:`jvm.*` returns only something that has no subsequent dots in the name. For example, for :code:`jvm.*`, :code:`jvm.foo` would be returned, but :code:`jvm.foo.bar` and :code:`jvm.foo.bar.foo` would not.
 
-To use the Graphite wildcard, enter the appropriate Graphite syntax into the signal field, then select the Graphite wildcard option. If you are using the Metrics Sidebar, enter any search term with an asterisk between two dot (.) characters, then select :strong:`Graphite wildcard` from the search results list.
+To use the Graphite wildcard, enter the appropriate Graphite syntax into the signal field, then select the Graphite wildcard option. If you are using the metrics sidebar, enter any search term with an asterisk between two dot (.) characters, then select :strong:`Graphite wildcard` from the search results list.
 
 When the Graphite wildcard option is selected, the ability to filter plots by dimensions is removed. Graphite naming conventions encapsulate dimension values into dot-separated strings and are in effect selected through the use of wildcards.
 

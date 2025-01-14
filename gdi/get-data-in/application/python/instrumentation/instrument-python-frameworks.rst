@@ -5,7 +5,7 @@ Instrument Python frameworks for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
-   :description: If you're instrumenting a Python app that uses Django or uWSGI, perform these additional steps after you've followed the common procedure for automatic instrumentation.
+   :description: If you're instrumenting a Python app that uses Django or uWSGI, perform these additional steps after you've followed the common procedure for zero-code instrumentation.
 
 If you're instrumenting a Python application or service that uses Django or uWSGI, follow these additional steps after you've followed all the steps in :ref:`instrument-python-applications`.
 

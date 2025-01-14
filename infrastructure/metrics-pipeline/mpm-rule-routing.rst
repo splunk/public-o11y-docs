@@ -9,8 +9,12 @@ Use data routing to keep, archive, or discard your metrics
 
 |hr|
 
-:strong:`Available in Enterprise Edition`. For more information, see :ref:`sd-subscriptions`.
-
+.. raw:: html
+  
+    <embed>
+      <p><b>Available in Enterprise Edition</b>. For more information, see <a href="#sd-subscriptions">Subscription types, expansions, renewals, and terminations</a>.</p>
+    </embed>
+    
 |hr|
 
 Use data routing to choose how to ingest and store all the metric time series (MTS) that have the same metric. Routing options include to keep metrics in real-time, archive them, or drop them altogether. 
@@ -30,7 +34,7 @@ Routing rule options
 You have the following options to route your MTS:
 
 * Ingest and keep metrics real-time (default). Metrics stored in the real-time tier are available in charts and detectors.
-* Send your data to archived metrics. Archived metrics are not available in charts and detectors. You can change routing to real time or filter a subset of data to real time to make those metrics available in charts and detectors again. You can restore archived data from up to 8 days ago in case you need it.
+* Send your data to archived metrics. Archived metrics are not available in charts and detectors. You can change routing to real time or filter a subset of data to real time to make those metrics available in charts and detectors again. You can restore archived data from up to 31 days ago in case you need it.
 * Drop your metrics. If you select this option, metrics are dropped and aren't available for monitoring. You can still keep aggregated MTS derived from those metrics.
 
 .. note:: You cannot archive histogram metrics.

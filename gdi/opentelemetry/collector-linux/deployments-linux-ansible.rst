@@ -105,10 +105,10 @@ The following table describes the variables that can be configured for this role
 
 .. _ansible-zero-config:
 
-Configure automatic discovery for back-end applications (Linux only)
-====================================================================
+Configure automatic discovery with zero-code instrumentation for back-end applications (Linux only) 
+=================================================================================================================
 
-You can automatically discover and instrument your back-end applications along with the Collector installation. Automatic discovery (formerly zero configuration auto instrumentation) removes the need to install and configure the SDKs separately. See :ref:`configure-auto-instrumentation` for more information.
+You can automatically discover and instrument your back-end applications along with the Collector installation. Automatic discovery (formerly zero configuration auto instrumentation) removes the need to install and configure the SDKs separately. See :ref:`configure-auto-instrumentation-linux` for more information.
 
 The following table shows the variables that you can configure for this Ansible role:
 
@@ -171,4 +171,17 @@ The following table shows the variables that you can configure for this Ansible 
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-linux-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-linux-next-steps.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-linux-next-steps.rst"></div>
+
+
+

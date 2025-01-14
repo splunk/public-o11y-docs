@@ -58,7 +58,7 @@ The following best practices can help you when initiating the migration process:
 Use the Data Migration tool
 =======================================================
 
-Due to the changes in metric names, upgrading to Java OTel 2.x might break existing dashboards, detectors, and other features. To prevent sudden loss of access to custom reporting elements, use the Data Migration tool, which transforms and duplicates metric data in 1.x to the 2.x formats for a limited period of time at no additional cost.
+Due to the changes in metric names, upgrading to Java OTel 2.x might break existing dashboards, detectors, and other features. To prevent sudden loss of access to custom reporting elements, use the Data Migration tool, which transforms and duplicates metric data from the new 2.x semantic conventions into the legacy 1.x format for a limited period of time at no additional cost.
 
 .. image:: /_images/gdi/datamigrationtool2.png
       :width: 90%
@@ -100,7 +100,20 @@ To migrate your instrumentation to the version 2.5.0 or higher of the Java agent
 
 2. Turn on OTLP histograms in the Splunk Distribution of OpenTelemetry Collector.
 
+
+
+   .. raw:: html
+
+      <div class="include-start" id="gdi/histograms.rst"></div>
+
    .. include:: /_includes/gdi/histograms.rst
+
+   .. raw:: html
+
+      <div class="include-stop" id="gdi/histograms.rst"></div>
+
+
+
 
 3. Make sure version 2.5.0 or higher of the Splunk Distribution of the Java agent is installed. See :ref:`upgrade-java-instrumentation`.
 
@@ -133,7 +146,20 @@ To migrate your instrumentation to the version 2.5.0 or higher of the Java agent
 New metric names for version 2.x
 ======================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/java-20-metrics-equivalences.rst"></div>
+
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/java-20-metrics-equivalences.rst"></div>
+
+
+
 
 .. _metrics-not-reported-java:
 
@@ -177,4 +203,17 @@ Optionally, you can navigate to the dashboards on your own:
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

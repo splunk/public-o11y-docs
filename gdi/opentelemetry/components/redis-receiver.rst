@@ -21,7 +21,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
    
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
@@ -56,9 +56,9 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
         receivers: [redis]
 
 Configuration settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
 
-The following setting is required:
+The following settings are required:
 
 * ``endpoint``: The hostname and port of the Redis instance, separated by a colon. No default value.
 
@@ -124,4 +124,17 @@ The following metrics, resource attributes, and attributes are available.
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

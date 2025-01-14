@@ -191,12 +191,6 @@ These are the Collector's internal metrics.
   * - ``otelcol_receiver_refused_spans``
     - Number of spans that could not be pushed into the pipeline
 
-  * - ``otelcol_sapm_requests_failed``
-    - Number of failed HTTP requests
-
-  * - ``otelcol_sapm_spans_exported``
-    - Number of spans successfully exported
-
   * - ``otelcol_scraper_errored_metric_points``
     - Number of metric points that couldn't be scraped
 

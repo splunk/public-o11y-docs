@@ -7,6 +7,21 @@ Instrument your Go application for Splunk Observability Cloud
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Go can instrument your Go application or service. Follow these steps to get started.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="zero-code-info.rst"></div>
+
+.. include:: /_includes/zero-code-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="zero-code-info.rst"></div>
+
+
+
+   
 The Splunk Distribution of OpenTelemetry Go can instrument your Go application or service. To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
@@ -180,4 +195,17 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 Specify the source host 
 --------------------------------------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+

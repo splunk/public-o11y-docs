@@ -18,4 +18,4 @@ This is the collection of tutorials available for Splunk Observability Cloud. Us
 
 For specific scenarios and use cases, see :ref:`scenario-landing`.
 
-For an overview of Splunk Observability Cloud and how to send your data in, go to :ref:`welcome` and :ref:`get-started-get-data-in`.
+For an overview of Splunk Observability Cloud and how to send your data in, go to :ref:`overview` and :ref:`get-started-get-data-in`.

@@ -20,7 +20,20 @@ To instrument your React Native or Expo application and get data into Splunk RUM
 Check compatibility and requirements 
 ===============================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/react.rst"></div>
+
 .. include:: /_includes/requirements/react.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/react.rst"></div>
+
+
+
 
 .. _rum-react-install:
 

@@ -28,9 +28,6 @@ Splunk APM is an Application Performance Monitoring solution that collects every
    * - :ref:`environment<environment-concept>`
      - A distinct deployment of your application that doesn't interact directly with other deployments of the same application.  
 
-   * - :ref:`identity<identity-concept>`
-     - A unique set of indexed span tags that corresponds to a Splunk APM object. 
-
    * - :ref:`indexed span tag<indexed-tag-concept>`
      - A span tag for which Splunk generates Troubleshooting MetricSets.
   
@@ -101,16 +98,6 @@ A special type of operation where the root span's ``span.kind = SERVER``. A give
 
 
 The term “environment” refers to the deployment environment, which is a distinct deployment in Splunk APM that doesn't interact directly with other deployments of the same application. Separate deployment environments are often used for different stages of the development process, such as development, staging, and production. For more information, see :ref:`apm-environments`. 
-
-.. _identity-concept:
-
-.. raw:: html
-
-  <embed>
-    <h3>identity<a name="identity-concept" class="headerlink" href="#identity-concept" title="Permalink to this headline">¶</a></h3>
-  </embed>
-
-A unique set of indexed span tags that corresponds to a Splunk APM object. An identity can represent a service, endpoint, operation, edge, or workflow, and is always related to at least one service. For more information, see :ref:`apm-traces-spans`.
 
 .. _inf-service-concept:
 

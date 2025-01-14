@@ -5,9 +5,9 @@ Pre-checks
 **********
 
 .. meta::
-    :description: A list of pre-checks for the user to complete before installing the .NET automatic instrumentation.
+    :description: A list of pre-checks for the user to complete before installing the .NET zero-code instrumentation agent.
 
-Before installing the .NET automatic instrumentation, complete the following pre-checks.
+Before installing the .NET zero-code instrumentation agent, complete the following pre-checks.
 
 Verify platform compatibility
 =============================
@@ -57,7 +57,7 @@ Review core dependencies
 
 Make sure that your application's dependencies are compatible with the .NET instrumentation.
 
-#. Verify whether your target applications have the same dependencies as the automatic instrumentation. See :new-page:`OpenTelemetry.AutoInstrumentation <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation/OpenTelemetry.AutoInstrumentation.csproj>` and :new-page:`OpenTelemetry.AutoInstrumentation.AdditionalDeps <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation.AdditionalDeps/Directory.Build.props>`. If there are conflicts, consider installing using the NuGet packages. Otherwise, you must resolve all the dependencies before manually installing the instrumentation.
+#. Verify whether your target applications have the same dependencies as the zero-code instrumentation. See :new-page:`OpenTelemetry.AutoInstrumentation <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation/OpenTelemetry.AutoInstrumentation.csproj>` and :new-page:`OpenTelemetry.AutoInstrumentation.AdditionalDeps <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation.AdditionalDeps/Directory.Build.props>`. If there are conflicts, consider installing using the NuGet packages. Otherwise, you must resolve all the dependencies before manually installing the instrumentation.
 
 #. Verify whether your target applications have the same dependencies as the NuGet packages. See the :new-page:`NuGet dependencies <https://www.nuget.org/packages/OpenTelemetry.AutoInstrumentation/#dependencies-body-tab>` in the NuGet documentation. If there are conflicts, you must resolve them before installing the instrumentation using the NuGet packages.
 

@@ -96,7 +96,7 @@ Here are the relevant config snippets from each section:
 
   exporters:
     # Traces
-    sapm:
+    otlphttp:
       access_token: "${SPLUNK_ACCESS_TOKEN}"
       endpoint: "${SPLUNK_TRACE_URL}"
     # Metrics + Events + APM correlation calls
@@ -113,7 +113,7 @@ Here are the relevant config snippets from each section:
       traces:
         receivers: [jaeger, zipkin]
         processors: [memory_limiter, batch, resourcedetection, resource/add_environment]
-        exporters: [sapm, signalfx]
+        exporters: [otlphttp, signalfx]
       metrics:
         receivers: [hostmetrics]
         processors: [memory_limiter, batch, resourcedetection]
@@ -257,9 +257,9 @@ Here are the relevant config snippets from each section:
 
   exporters:
     # Traces
-    sapm:
+    otlphttp:
       access_token: "${SPLUNK_ACCESS_TOKEN}"
-      endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace"
+      traces_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
     # Metrics + Events
     signalfx:
       access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -273,7 +273,7 @@ Here are the relevant config snippets from each section:
         processors:
         - memory_limiter
         - batch
-        exporters: [sapm]
+        exporters: [otlphttp]
       metrics:
         receivers: [otlp]
         processors: [memory_limiter, batch]
@@ -293,9 +293,9 @@ Configure the agent in gateway mode as follows:
 
   exporters:
     # Traces
-    sapm:
+    otlphttp:
       access_token: "${SPLUNK_ACCESS_TOKEN}"
-      endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace"
+      endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
     # Metrics + Events
     signalfx:
       access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -311,7 +311,7 @@ Configure the agent in gateway mode as follows:
         processors:
         - memory_limiter
         - batch
-        exporters: [sapm]
+        exporters: [otlphttp]
       metrics:
         receivers: [signalfx]
         processors: [memory_limiter, batch]

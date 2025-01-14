@@ -19,6 +19,7 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a PHP application TOGGLE <php/get-started>
    Instrument a C++ application TOGGLE <cpp/get-started-cpp>
    Send spans from the Istio service mesh <istio/istio>
+   Instrumentation methods <zero-code-overview>
 
 You can instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
 

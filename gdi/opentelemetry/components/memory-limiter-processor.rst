@@ -36,12 +36,9 @@ To activate the resource processor, add ``memory_limiter`` to the ``processors``
 
 Define the ``memory_limiter`` as the first processor in the pipeline, immediately after the receivers, to ensure that backpressure can be sent to applicable receivers, and to minimize the likelihood of dropped data when ``memory_limiter`` gets triggered.
 
-Along with the ``memory_limiter`` processor, it's highly recommended to configure the Ballast extension as well on every Collector. The ballast should be configured to be 1/3 to 1/2 of the memory allocated to the Collector. 
-
 See the following example:
 
 .. code-block:: yaml
-
 
   processors:
     memory_limiter:
@@ -52,7 +49,6 @@ See the following example:
 To complete the configuration, include the processor in any pipeline of the ``service`` section of your configuration file. For example:
 
 .. code-block:: yaml
-
 
   service:
     pipelines:
@@ -131,4 +127,17 @@ The following table shows the configuration options for the ``memory_limiter`` p
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

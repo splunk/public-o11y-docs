@@ -42,7 +42,7 @@ Adding an empty entry like in the previous example is sometimes enough to get st
          listen_address: "0.0.0.0:54526"
        protocol: rfc5424
 
-After you've added the Syslog receiver, make sure to add it to the receivers's list under ``service.pipelines``. In this case, the pipeline type is ``logs``, since the Syslog receiver collect logs:
+After you've added the Syslog receiver, make sure to add it to the receivers's list under ``service.pipelines``. In this case, the pipeline type is ``logs``, since the Syslog receiver collects logs:
 
 .. code-block:: yaml
    :emphasize-lines: 8

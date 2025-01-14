@@ -12,7 +12,20 @@ The Splunk Distribution of the OpenTelemetry Collector is a package that provide
 Supported versions
 =====================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/collector-linux.rst"></div>
+
 .. include:: /_includes/requirements/collector-linux.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/collector-linux.rst"></div>
+
+
+
 
 Install the Collector for Linux
 ======================================

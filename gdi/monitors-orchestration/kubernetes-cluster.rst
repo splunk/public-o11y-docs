@@ -119,8 +119,7 @@ Metrics
 -------
 
 The following table shows the legacy metrics that are available for this
-integration. See :ref:`legacy-otel-mappings` for the Splunk
-Distribution of OpenTelemetry Collector equivalents.
+integration. 
 
 .. raw:: html
  
@@ -130,9 +129,35 @@ Distribution of OpenTelemetry Collector equivalents.
 Notes
 ~~~~~
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="metric-defs.rst"></div>
+
 .. include:: /_includes/metric-defs.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="metric-defs.rst"></div>
+
+
+
 
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

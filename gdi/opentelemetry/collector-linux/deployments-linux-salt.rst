@@ -129,7 +129,7 @@ For Linux, the formula accepts the attributes described in the following table:
 Configure automatic discovery for back-end application(s) 
 ======================================================================
 
-You can automatically instrument your back-end applications along with the Collector installation. Automatic discovery removes the need to install and configure the OpenTelemetry SDKs separately. See :ref:`configure-auto-instrumentation` for more information.
+You can automatically instrument your back-end applications along with the Collector installation. Automatic discovery removes the need to install and configure the OpenTelemetry SDKs separately. See :ref:`configure-auto-instrumentation-linux` for more information.
 
 The following table shows the variables that can be configured for this Salt module:
 
@@ -189,4 +189,17 @@ The following table shows the variables that can be configured for this Salt mod
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-linux-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-linux-next-steps.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-linux-next-steps.rst"></div>
+
+
+

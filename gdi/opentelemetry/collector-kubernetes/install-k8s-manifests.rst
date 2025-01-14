@@ -74,8 +74,21 @@ Manifest examples
 ==================================
 See the following manifest to set security constraints:
 
+
+
+.. raw:: html
+
+   <div class="github" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector-chart/main/examples/distribution-openshift/rendered_manifests/securityContextConstraints.yaml"></div>
+
 .. github:: yaml
    :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector-chart/main/examples/distribution-openshift/rendered_manifests/securityContextConstraints.yaml
+
+.. raw:: html
+
+   <div class="github-end"></div>
+
+
+
 
 Next steps
 ==================================

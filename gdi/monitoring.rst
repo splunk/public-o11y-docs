@@ -13,11 +13,9 @@ Configure application exporters and receivers for monitoring
 
    monitors-monitoring/cadvisor
    monitors-monitoring/cgroups
-   Istio <get-data-in/application/istio/istio>
    monitors-monitoring/jaeger-grpc
    monitors-monitoring/nagios
    monitors-monitoring/signalfx-forwarder
-   opentelemetry/components/splunk-apm-exporter
    monitors-monitoring/win_perf_counters
 
 These application receivers gather metrics from their associated monitoring applications and the hosts the applications are running on.
