@@ -71,17 +71,17 @@ To configure your GCP service:
 
 By default, Splunk Observability Cloud monitors all supported services, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
 
-#. Log in to Splunk Observability Cloud and open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
+1. Log in to Splunk Observability Cloud and open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
-   
+
    #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
 
    #. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
 
-#. Complete the following fields:
+2. Complete the following fields:
 
   * Name. Type in the name of the GCP integration.
 
@@ -95,7 +95,7 @@ By default, Splunk Observability Cloud monitors all supported services, and any 
 
   * Specify if you want to use quota from the project where metrics are stored. See :ref:`gcp-quota` for more information.
 
-#. Optional fields:
+3. Optional fields:
 
   * Custom Metric Type Domains. To list any additional GCP service domain names that you want to monitor, use commas to separate domain names in the :strong:`Custom Metric Type Domains` field. For example, to obtain Apigee metrics, add ``apigee.googleapis.com``.
 
