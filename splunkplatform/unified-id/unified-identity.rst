@@ -105,11 +105,11 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
     a. To pair with command-line interface, enter the following Admin Config Services (ACS) command:
 
-      .. code-block:: bash
+       .. code-block:: bash
     
               acs observability pair --o11y-access-token "<enter-o11y-access-token>"
 
-       Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
+      Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
     b. To pair with API endpoints, collect the following information then run the curl command:
 
@@ -130,9 +130,9 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
        Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
 
-   .. code-block:: bash
+       .. code-block:: bash
 
-          "id": "<pairing-id>"
+              "id": "<pairing-id>"
 
 4. You can use the pairing id to get the current status of the pairing. 
 
@@ -150,7 +150,6 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
               -H "Content-Type: application/json" \
               -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
               -H "o11y-access-token: <enter-o11y-api-token>"
-
 
 5. The system returns a status message showing whether or not the pairing was a success. Statuses are SUCCESS, FAILED, or IN_PROGRESS. 
 
