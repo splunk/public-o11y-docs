@@ -88,14 +88,9 @@ Any runs older than one hour are removed from the queue.
 Private runners
 =====================================
 
+A private runner queries Splunk Synthetic Monitoring for tests configured to run in its inherent private location, performs the test's steps on your private target, and reports the results back to Splunk Synthetic Monitoring. Because a private runner must have access to your private target, it is a Docker image which you deploy on your own infrastructure, within your own internal network. See :ref:`private-locations`. 
 
-What is a private runner?
--------------------------------------
-
-A private runner is a Docker image which you deploy on your own infrastructure, within your own internal network. It picks up test runs from the queue of tests assigned to its associated private location, performs the actions in the test run on the test target, and reports the results back to Splunk Synthetic Monitoring. 
-
-
-If you create multiple private runners for a private location, they can process that location's test queue faster. Splunk Synthetic Monitoring doesn't track how many private runners there are for a given private location. It's up to you to manage your own fleet of private runners. 
+If you deploy multiple private runners on behalf of a single private location, they can process that location's test queue faster. Splunk Synthetic Monitoring doesn't track how many private runners you've deployed for a given private location. It's up to you to manage your own fleet of private runners. 
 
 
 Requirements for private runners 
