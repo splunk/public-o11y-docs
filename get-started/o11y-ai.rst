@@ -44,6 +44,13 @@ Alternatively, you can select from the two suggested prompts:
     :width: 40%
     :alt: This image shows the location of the AI Assistant for Observability.
 
+.. note:: When you ask questions or submit instructions that require the Assistant to query logs, there will be an impact on your SVC quota.
+
+feedback
+----------------------------------------------------------------------------------
+You can give feedback to the AI Assistant in development team by selecting the thumbs up or thumbs down icon that appears after each AI Assistant response.
+
+
 Context limitations
 ==================================================================================
 Context length is the amount of text that the AI assistant can process in a single conversation due to LLM limitations. Think of it as the short-term memory of the AI assistant. Each interaction with the assistant is limited to the context set from the beginning of that conversation. The AI Assistant tells you when you exceed the chat limit and prompts you to copy the information that you want to save and start a new chat to continue. Select the New chat button in the upper right corner of the assistant to create a new chat with a new context.
