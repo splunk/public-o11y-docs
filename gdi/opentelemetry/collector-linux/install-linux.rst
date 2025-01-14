@@ -108,7 +108,7 @@ You can also automatically instrument your Java, Node.js, and .NET applications 
 For more information on APM instrumentation, see: 
 
 * :ref:`get-started-java` 
-* :ref:`get-started-nodejs`
+* :ref:`get-started-nodejs-3x`
 * :ref:`get-started-dotnet-otel`    
 
 .. _collector-linux-with-docker:
