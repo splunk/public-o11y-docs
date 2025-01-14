@@ -20,7 +20,7 @@ Ensure you have supported Node.js and library versions
 .. include:: /_includes/requirements/nodejs.rst
 
 
-.. _supported-nodejs-otel-libraries:
+.. _supported-nodejs-otel-libraries-3x:
 
 Supported libraries
 =================================================
