@@ -74,21 +74,21 @@ In your code, the instrumentation entry point for SignalFx tracing is similar to
 
 You have two options to update your instrumentation entry point:
 
-1. Update the entry point to use ``@splunk/otel`` and ``start()``, as shown in the following code:
+#. Update the entry point to use ``@splunk/otel`` and ``start()``, as shown in the following code:
 
-.. code-block:: javascript
+    .. code-block:: javascript
 
-  const { start } = require('@splunk/otel');
+      const { start } = require('@splunk/otel');
 
-  start({
-   // your new options here
-  });
+      start({
+      // your new options here
+      });
 
-2. Automatically update your application to use Splunk Distribution of OpenTelemetry JS instead of SignalFx Tracing Library. To do so, run Node.js using the following command:
+#. Automatically update your application to use Splunk Distribution of OpenTelemetry JS instead of SignalFx Tracing Library. To do so, run Node.js using the following command:
 
-.. code-block:: bash
+    .. code-block:: bash
 
-  node -r @splunk/otel/instrument <your-app.js>
+      node -r @splunk/otel/instrument <your-app.js>
 
 .. note:: To export traces directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
