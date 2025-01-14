@@ -109,7 +109,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
     
               acs observability pair --o11y-access-token "<enter-o11y-access-token>"
 
-      Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
+       Replace ``<enter-o11y-access-token>`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
     b. To pair with API endpoints, collect the following information then run the curl command:
 
@@ -128,7 +128,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
               -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
               -H "o11y-access-token: <enter-o11y-api-token>" 
 
-   Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
+       Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
 
    .. code-block:: bash
 
@@ -136,13 +136,11 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
 4. You can use the pairing id to get the current status of the pairing. 
 
-   a. To get the status using command-line interface, run the following ACS command:
+   a. To get the status using command-line interface, run the following ACS command then replace the pairing id and the access token with your own values:
 
       .. code-block:: bash
 
               acs observability pairing-status-by-id --pairing-id "<enter-pairing-id>" --o11y-access-token "<enter-o11y-access-token>"
-
-      Replace the pairing id and the access token with your own values. 
     
     b. To get the status using API endpoints, run the following curl command with the data you obtained in step 3b:
 
