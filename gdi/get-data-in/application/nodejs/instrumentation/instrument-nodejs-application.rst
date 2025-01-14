@@ -1,4 +1,4 @@
-.. _instrument-nodejs-applications-3x:
+.. _instrument-nodejs-applications:
 
 ********************************************************************
 Instrument your Node.js application for Splunk Observability Cloud
@@ -8,8 +8,21 @@ Instrument your Node.js application for Splunk Observability Cloud
    :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
 
 
-The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
 
+.. raw:: html
+
+   <div class="include-start" id="zero-code-info.rst"></div>
+
+.. include:: /_includes/zero-code-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="zero-code-info.rst"></div>
+
+
+
+   
+The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
 
 To get started, use the guided setup or follow the instructions manually.
 
@@ -38,10 +51,12 @@ Install the Splunk Distribution of OpenTelemetry JS manually
 If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry JS:
 
 - :ref:`install-enable-nodejs-agent`
+   - :ref:`enable_profiling_nodejs`
+   - :ref:`enable_automatic_metric_collection_nodejs`
 - :ref:`configure-nodejs-instrumentation`
 - :ref:`nodejs-programmatically-instrument`
 
-.. _install-enable-nodejs-agent-3x:
+.. _install-enable-nodejs-agent:
 
 Install and activate the Node.js instrumentation
 ------------------------------------------------------
@@ -104,7 +119,7 @@ If no data appears in APM, see :ref:`common-nodejs-troubleshooting`.
 
 .. note:: To instrument applications that use Webpack, see :ref:`nodejs-webpack-issues`.
 
-.. _enable_profiling_nodejs-3x:
+.. _enable_profiling_nodejs:
 
 Activate AlwaysOn Profiling
 --------------------------------------------
@@ -127,7 +142,7 @@ The following example shows how to activate the profiler from your application c
 
 See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-nodejs`.
 
-.. _enable_automatic_metric_collection_nodejs-3x:
+.. _enable_automatic_metric_collection_nodejs:
 
 Activate metrics collection
 ------------------------------------------------
@@ -144,14 +159,14 @@ To activate automatic runtime metric collection, activate the metrics feature us
 
       $env:SPLUNK_METRICS_ENABLED='true'
 
-.. _configure-nodejs-instrumentation-3x:
+.. _configure-nodejs-instrumentation:
 
 Configure the Node.js distribution
 -----------------------------------------------------
 
-In most cases, the only configuration setting you need to enter is the service name. For advanced configuration, such as changing trace propagation formats or configuring server trace data, see :ref:`advanced-nodejs-otel-configuration`.
+In most cases, the only configuration setting you need to enter is the service name. For advanced configuration, like changing trace propagation formats or configuring server trace data, see :ref:`advanced-nodejs-otel-configuration`.
 
-.. _nodejs-programmatically-instrument-3x:
+.. _nodejs-programmatically-instrument:
 
 Instrument your application programmatically
 -----------------------------------------------------
@@ -166,7 +181,7 @@ To instrument your application programmatically, add the following lines at the 
 
    start({
       serviceName: 'my-node-service',
-      endpoint: 'http://localhost:4318'
+      endpoint: 'http://localhost:4317'
    });
 
    // Rest of your main module
@@ -187,7 +202,7 @@ After you add the ``start()`` function to your entry point script, run your appl
 
    node -r <entry-point.js> <your-app.js>
 
-.. _add-custom-instrumentation-3x:
+.. _add-custom-instrumentation:
 
 Add custom instrumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -209,11 +224,11 @@ To add custom or third-party instrumentations that implement the OpenTelemetry J
       },
    });
    
-For a list of bundled instrumentations, see :new-page:`https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations>` on GitHub.
+For a list of supported instrumentations, see :new-page:`https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations>` on GitHub.
 
 .. note:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
 
-.. _kubernetes_nodejs_agent-3x:
+.. _kubernetes_nodejs_agent:
 
 Deploy the Node.js distribution in Kubernetes
 =======================================================
@@ -252,7 +267,7 @@ To deploy the Collector for Node.js in a Kubernetes environment, follow these st
                    fieldRef:
                      fieldPath: status.hostIP
                - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4318"
+                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
                - name: OTEL_SERVICE_NAME
                  value: "<serviceName>"
                - name: OTEL_RESOURCE_ATTRIBUTES
@@ -262,7 +277,7 @@ To deploy the Collector for Node.js in a Kubernetes environment, follow these st
                - -r @splunk/otel/instrument
                - <your-app>.js
 
-.. _export-directly-to-olly-cloud-nodejs-3x:
+.. _export-directly-to-olly-cloud-nodejs:
 
 Send data directly to Splunk Observability Cloud
 =============================================================
