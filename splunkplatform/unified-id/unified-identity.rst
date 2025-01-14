@@ -123,12 +123,10 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
        .. code-block:: bash
 
-               curl --location 
-               'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing' \
-               --header 'Content-Type: application/json' \
-               --header 'Authorization: Bearer <enter-splunk-admin-api-token>' \
-               --header 'o11y-access-token': '<enter-o11y-api-token>'
-
+              curl -X POST 'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing' \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
+              -H "o11y-access-token: <enter-o11y-api-token>" 
 
    Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
 
@@ -150,11 +148,11 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
       .. code-block:: bash
     
-              curl --location --request GET 
-              'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
-              --header 'Content-Type: application/json' \
-              --header 'Authorization: Bearer <enter-splunk-admin-api-token>'
-              --header 'o11y-access-token': '<enter-o11y-api-token>'
+              curl -X GET 'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
+              -H "o11y-access-token: <enter-o11y-api-token>"
+
 
 5. The system returns a status message showing whether or not the pairing was a success. Statuses are SUCCESS, FAILED, or IN_PROGRESS. 
 
