@@ -38,8 +38,6 @@ Install the Splunk Distribution of OpenTelemetry JS manually
 If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry JS:
 
 - :ref:`install-enable-nodejs-agent`
-   - :ref:`enable_profiling_nodejs`
-   - :ref:`enable_automatic_metric_collection_nodejs`
 - :ref:`configure-nodejs-instrumentation`
 - :ref:`nodejs-programmatically-instrument`
 
@@ -151,7 +149,7 @@ To activate automatic runtime metric collection, activate the metrics feature us
 Configure the Node.js distribution
 -----------------------------------------------------
 
-In most cases, the only configuration setting you need to enter is the service name. For advanced configuration, like changing trace propagation formats or configuring server trace data, see :ref:`advanced-nodejs-otel-configuration`.
+In most cases, the only configuration setting you need to enter is the service name. For advanced configuration, such as changing trace propagation formats or configuring server trace data, see :ref:`advanced-nodejs-otel-configuration`.
 
 .. _nodejs-programmatically-instrument-3x:
 

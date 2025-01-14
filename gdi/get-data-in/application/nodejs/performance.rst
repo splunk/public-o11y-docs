@@ -1,13 +1,13 @@
 .. _nodejs-otel-performance-3x:
 
 ***************************************************
-Performance reference for Splunk OTel Node.js agent
+Performance reference for Splunk OTel JS agent
 ***************************************************
 
 .. meta::
    :description: Minimum requirements of the Splunk OTel Node.js agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
-The Splunk OTel Node.js agent instruments your application at runtime. Like any other software agent, the Node.js agent requires system resources like CPU, memory, and network bandwidth. The use of resources by the agent is called agent overhead or performance overhead. The Splunk OTel Node.js agent has minimal impact on system performance when instrumenting Node.js applications, although the final agent overhead depends on multiple factors.
+The Splunk OTel JS agent instruments your application at runtime. Like any other software agent, the JS agent requires system resources like CPU, memory, and network bandwidth. The use of resources by the agent is called agent overhead or performance overhead. The Splunk OTel Node.js agent has minimal impact on system performance when instrumenting Node.js applications, although the final agent overhead depends on multiple factors.
 
 Some factors that might increase agent overhead are environmental, such as the physical machine architecture, CPU frequency, amount and speed of memory, system temperature, and resource contention. Other factors include virtualization and containerization, the operating system and its libraries, the Node.js version, Node.js configuration, the algorithmic design of the software being monitored, and software dependencies.
 

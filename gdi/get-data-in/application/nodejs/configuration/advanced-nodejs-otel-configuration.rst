@@ -144,7 +144,7 @@ The following settings control trace sampling:
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 70
+   :widths: 20 40 40
    :width: 100%
 
    * - Environment variable
@@ -155,7 +155,7 @@ The following settings control trace sampling:
      - ``always_on``
    * - OTEL_TRACES_SAMPLER_ARG
      - Semicolon-separated list of rules for the ``rules`` sampler. For example, when setting the sampler to ``parentbased_traceidratio`` you can set the ratio using a number in the 0 to 1 range: |br| |br| ``OTEL_TRACES_SAMPLER_ARG=0.25``.
-     - `` ``
+     - None
 
 
 .. _trace-exporters-settings-nodejs-3x:

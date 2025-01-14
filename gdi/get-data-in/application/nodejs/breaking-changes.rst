@@ -10,7 +10,7 @@ Splunk OpenTelemetry JS version 3.0 breaking changes
 Update to Splunk OpenTelemetry JS version 3.0
 ==========================================================
 
-To update your Splunk Distribution for OpenTelemetry JS agent to version 3.0, see :ref:`instrument-nodejs-application` and install the latest version of the Splunk OpenTelemetry JS agent.
+To update your Splunk Distribution for OpenTelemetry JS agent to version 3.0, see :ref:`instrument-nodejs-applications-3x` and install the latest version of the Splunk OpenTelemetry JS agent.
 
 Default port and protocol changes
 =================================
