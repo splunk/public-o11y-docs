@@ -262,7 +262,7 @@ Filter metrics using service or environment
 
 The SignalFx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Splunk Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment.
 
-.. note:: You need to send traces using :ref:`splunk-apm-exporter` to see them in Splunk Observability Cloud.
+.. note:: You need to send traces using :ref:`otlphttp-exporter` to see them in Splunk Observability Cloud.
 
 Use the ``correlation`` setting to control the syncing of service and environment properties onto dimensions. It has the following options:
 
