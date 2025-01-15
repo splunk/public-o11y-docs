@@ -108,6 +108,9 @@
    * - :ref:`simple-prometheus-receiver` (``prometheus_simple``)
      - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
      - Metrics
+   * - :ref:`purefa-receiver` (``purefa``)
+     - Receives metrics from the Pure Storage FlashArray.
+     - Metrics
    * - :ref:`rabbitmq-receiver` (``rabbitmq``)
      - Fetches stats from a RabbitMQ node using the RabbitMQ Management Plugin.
      - Metrics
@@ -128,6 +131,9 @@
      - Metrics, logs
    * - :ref:`smartagent-receiver` (``smartagent``)
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
+     - Metrics
+   * - :ref:`snowflake-receiver` (``snowflake``)
+     - Collects metrics from a Snowflake account by connecting to and querying a Snowflake deployment.
      - Metrics
    * - :ref:`splunk-enterprise-receiver` (``splunkenterprise``)
      - Enables the ingestion of performance metrics describing the operational status of a user's Splunk Enterprise deployment.
