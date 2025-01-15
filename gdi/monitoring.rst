@@ -30,4 +30,4 @@ These application receivers gather metrics from their associated monitoring appl
 
 These exporters determine where to send the received data.
 
-* :ref:`splunk-apm-exporter`
+* :ref:`otlphttp-exporter`

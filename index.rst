@@ -242,7 +242,7 @@ Collect traces :ref:`get-started-ruby`
 .. rst-class:: newcard
 
 :strong:`Node.js`
-Collect traces :ref:`get-started-nodejs`
+Collect traces :ref:`get-started-nodejs-3x`
 
 .. rst-class:: newcard
 

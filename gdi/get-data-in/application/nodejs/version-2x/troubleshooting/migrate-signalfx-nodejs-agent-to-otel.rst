@@ -1,4 +1,4 @@
-.. _migrate-signalfx-nodejs-agent-to-otel-3x: 
+.. _migrate-signalfx-nodejs-agent-to-otel: 
 
 **************************************************************
 Migrate from the SignalFx Tracing Library for Node.js
@@ -11,7 +11,7 @@ The SignalFx Tracing Library for Node.js is deprecated and will reach End of Sup
 
 The Splunk Distribution of OpenTelemetry JS is based on the OpenTelemetry Instrumentation for Node.js, an open-source project that uses the OpenTelemetry API.
 
-.. _requirements-splunk-nodejs-otel-migration-3x:
+.. _requirements-splunk-nodejs-otel-migration:
 
 Compatibility and requirements
 ==========================================================
@@ -20,7 +20,7 @@ The Splunk Distribution of OpenTelemetry JS requires Node.js 14 and higher. See 
 
 See :ref:`considerations-nodejs-migration` for considerations about migrating from the SignalFx Tracing Library for Node.js to the Splunk Distribution of OpenTelemetry JS.
 
-.. _migrate-to-splunk-nodejs-otel-agent-3x:
+.. _migrate-to-splunk-nodejs-otel-agent:
 
 Migrate to the Splunk Distribution of OpenTelemetry JS
 ==========================================================
@@ -35,7 +35,7 @@ To migrate from the SignalFx Tracing Library for Node.js to the Splunk Distribut
 
 .. note:: Semantic conventions for span names and attributes change when you migrate. For more information, see :ref:`migrate-sa-to-otel-collector`.
 
-.. _remove-nodejs-tracing-library-3x:
+.. _remove-nodejs-tracing-library:
 
 Remove the SignalFx Tracing Library for Node.js
 -----------------------------------------------------------------
@@ -52,14 +52,14 @@ Follow these steps to remove the tracing library and its dependencies:
 
 #. Remove any additional instrumentation packages related to the SignalFx Tracing Library for Node.js.
 
-.. _install-splunk-otel-nodejs-distribution-3x:
+.. _install-splunk-otel-nodejs-distribution:
 
 Deploy the Splunk Distribution of OpenTelemetry JS
 ---------------------------------------------------
 
 To install the Splunk Distribution of OpenTelemetry JS, see :ref:`instrument-nodejs-applications`.
 
-.. _update-instrumentation-entry-point-nodejs-3x:
+.. _update-instrumentation-entry-point-nodejs:
 
 Update the instrumentation entry point
 -----------------------------------------------
@@ -92,7 +92,7 @@ You have two options to update your instrumentation entry point:
 
 .. note:: To export traces directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
-.. _migrate-settings-nodejs-agent-3x:
+.. _migrate-settings-nodejs-agent:
 
 Migrate settings
 -----------------------------------------------------------------
@@ -159,14 +159,14 @@ If you're using the passing configuration options as arguments to ``start()``, u
    * - ``enableServerTiming``
      - ``serverTimingEnabled`` 
 
-.. _migrate-logging-nodejs-3x:
+.. _migrate-logging-nodejs:
 
 Migrate debug log settings
 -----------------------------------------------
 
 To configure the debug logs produced by the instrumentation, the closest equivalent to ``SIGNALFX_TRACING_DEBUG`` is ``OTEL_LOG_LEVEL``. See :ref:`enable-nodejs-debug-logging`.
 
-.. _migrate-endpoint-url-nodejs-3x:
+.. _migrate-endpoint-url-nodejs:
 
 Update the endpoint URL
 -----------------------------------------------
@@ -187,7 +187,7 @@ All libraries supported by the SignalFx Tracing Library for Node.js are support 
 
 To find equivalent instrumentation, search for each instrumentation in the OpenTelemetry registry. If an instrumentation is not bundled, you can use custom instrumentation packages. See :ref:`add-custom-instrumentation`.
 
-.. _considerations-nodejs-migration-3x:
+.. _considerations-nodejs-migration:
 
 Considerations for migrating to Splunk Distribution of OpenTelemetry JS
 =======================================================================

@@ -45,6 +45,7 @@ Collector components: Receivers
     otlp-receiver                
     postgresql-receiver
     prometheus-receiver
+    purefa-receiver
     rabbitmq-receiver
     receiver-creator-receiver
     redis-receiver
@@ -53,6 +54,7 @@ Collector components: Receivers
     signalfx-gateway-prometheus-remote-write-receiver
     signalfx-receiver
     smartagent-receiver
+    snowflake-receiver
     splunk-enterprise-receiver
     splunk-hec-receiver
     sqlquery-receiver 

@@ -1,4 +1,4 @@
-.. _get-started-nodejs-3x:
+.. _get-started-nodejs:
 
 ***************************************************************
 Instrument Node.js applications for Splunk Observability Cloud
@@ -10,18 +10,16 @@ Instrument Node.js applications for Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   Requirements <nodejs-otel-requirements>
-   Instrument your Node.js application <instrumentation/instrument-nodejs-application>
-   Connect trace data with logs <instrumentation/connect-traces-logs>
-   Runtime and custom metrics <configuration/nodejs-otel-metrics>
-   Manual instrumentation <instrumentation/manual-instrumentation>
-   Configure the Node.js agent <configuration/advanced-nodejs-otel-configuration>
-   Performance overhead <performance>
-   Version 2.X <version-2x/get-started>
-   Splunk OTel JS 3.0 breaking changes <breaking-changes>
-   Troubleshoot the Node.js agent <troubleshooting/common-nodejs-troubleshooting>
-   About Splunk OTel JS <splunk-nodejs-otel-distribution>
-   Migrate from the SFx Tracing Library <troubleshooting/migrate-signalfx-nodejs-agent-to-otel>
+   Requirements <nodejs-otel-requirements.rst>
+   Instrument your Node.js application <instrumentation/instrument-nodejs-applications.rst>
+   Connect trace data with logs <instrumentation/connect-traces-logs.rst>
+   Runtime and custom metrics <configuration/nodejs-otel-metrics.rst>
+   Manual instrumentation <instrumentation/manual-instrumentation.rst>
+   Configure the Node.js agent <configuration/advanced-nodejs-otel-configuration.rst>
+   Performance overhead <performance.rst>
+   Troubleshoot the Node.js agent <troubleshooting/common-nodejs-troubleshooting.rst>
+   About Splunk OTel JS <splunk-nodejs-otel-dist.rst>
+   Migrate from the SFx Tracing Library <troubleshooting/migrate-signalfx-nodejs-agent-to-otel.rst>
 
 .. note:: The Splunk OpenTelemetry JS version 3.0 contains a set of breaking changes. To view these changes and learn how to update to version 3.0, see :ref:`nodejs-3x-breaking-changes`.
 
