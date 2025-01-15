@@ -75,9 +75,9 @@ Troubleshoot queue length and latency
 
 If both the queue latency and length increase over time, then add more runners to improve performance. 
 
-If your queue latency increases but your queue length doesn't, then try these troubleshooting methods:
+If your queue latency increases but your queue length doesn't, try these troubleshooting methods:
 
-* Check to see if a step is delaying the rest of the test
+* Check to see if a step is delaying the rest of the test.
 * Investigate whether you have the sufficient resources to run private location runners on your machines.
 
 The maximum number of runs in a queue is 100,000. 
