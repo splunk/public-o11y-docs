@@ -74,7 +74,7 @@ See :ref:`get-started-compute` for information on how to collect data for:
 See the :ref:`available APM instrumentation <get-started-application>` to send spans to Splunk Observability Cloud:
 
 - :ref:`Java <get-started-java>`
-- :ref:`Node.js <get-started-nodejs>`
+- :ref:`Node.js <get-started-nodejs-3x>`
 - :ref:`.NET <get-started-dotnet-otel>`
 - :ref:`Go <get-started-go>`
 - :ref:`Python <get-started-python>`

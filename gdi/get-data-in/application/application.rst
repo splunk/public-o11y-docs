@@ -84,7 +84,7 @@ If you send your APM data directly to Splunk Observability Cloud without using t
 You can instrument applications in each of these languages using official Splunk instrumentation:
 
 - :ref:`Java <get-started-java>`
-- :ref:`Node.js <get-started-nodejs>`
+- :ref:`Node.js <get-started-nodejs-3x>`
 - :ref:`.NET <get-started-dotnet-otel>`
 - :ref:`Go <get-started-go>`
 - :ref:`Python <get-started-python>`
