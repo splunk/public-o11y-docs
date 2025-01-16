@@ -183,52 +183,52 @@ Pod level metrics and dimensions
     - Exported?
 
   * - ``k8s.cronjob.active_jobs``
-    -    
+    - Active cronjob jobs    
     -   
     - ??  
 
   * - ``k8s.hpa.current_replicas``
-    -    
+    -  Number of current HPA replicas  
     -   
     - ??  
 
   * - ``k8s.hpa.desired_replicas``
-    -    
+    - Number of desired HPA replicas      
     -   
     - ??  
 
   * - ``k8s.hpa.max_replicas``
-    -    
+    - Maximum HPA replicas      
     -   
     - ??   
 
   * - ``k8s.hpa.min_replicas``
-    -    
+    - Minimum HPA replicas   
     -   
     - ??  
 
   * - ``k8s.job.active_pods``
-    -    
+    - Active pod jobs    
     -   
     - ??  
 
   * - ``k8s.job.desired_successful_pods``
-    -    
+    - Desired number of successful pods   
     -   
     - ??  
 
   * - ``k8s.job.failed_pods``
-    -    
+    - Number of failed pods    
     -   
     - ??  
 
   * - ``k8s.job.max_parallel_pods``
-    -    
+    - Maximum number of parallel pods   
     -   
     - ??  
 
   * - ``k8s.job.successful_pods``
-    -    
+    - Succesful pod jobs   
     -   
     - ??  
 
@@ -307,22 +307,22 @@ Pod level metrics and dimensions
     - Yes
 
   * - ``k8s.statefulset.desired_pods``
-    -    
+    - Desired number of StatefulSets in the pod    
     -   
     - ??  
 
   * - ``k8s.statefulset.current_pods``
-    -    
+    - Current number of StatefulSets in the pod        
     -   
     - ??   
 
   * - ``k8s.statefulset.ready_pods``
-    -    
+    - Number of ready StatefulSets in the pod        
     -   
     - ??  
 
   * - ``k8s.statefulset.updated_pods``
-    -    
+    - Number of updated StatefulSets in the pod      
     -   
     - ??   
 
