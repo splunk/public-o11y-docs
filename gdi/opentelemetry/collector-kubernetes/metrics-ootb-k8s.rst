@@ -182,6 +182,56 @@ Pod level metrics and dimensions
     - Attributes
     - Exported?
 
+  * - ``k8s.cronjob.active_jobs``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.hpa.current_replicas``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.hpa.desired_replicas``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.hpa.max_replicas``
+    -    
+    -   
+    - ??   
+
+  * - ``k8s.hpa.min_replicas``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.job.active_pods``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.job.desired_successful_pods``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.job.failed_pods``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.job.max_parallel_pods``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.job.successful_pods``
+    -    
+    -   
+    - ??  
+
   * - ``k8s.pod.cpu.time``
     - Pod CPU time
     - 
@@ -255,6 +305,26 @@ Pod level metrics and dimensions
     - Information on the pod status
     - 
     - Yes
+
+  * - ``k8s.statefulset.desired_pods``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.statefulset.current_pods``
+    -    
+    -   
+    - ??   
+
+  * - ``k8s.statefulset.ready_pods``
+    -    
+    -   
+    - ??  
+
+  * - ``k8s.statefulset.updated_pods``
+    -    
+    -   
+    - ??   
 
 Node level metrics and dimensions
 ============================================================================
