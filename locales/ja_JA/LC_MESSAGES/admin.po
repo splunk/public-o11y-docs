@@ -2632,8 +2632,8 @@ msgid "If you chose a team as a notification recipient and you want to have aler
 msgstr "通知の受信者としてチームを選択していて、チームの「ダッシュボード」ページにアラートを表示したい場合は、前のステップで作成したディテクターをチームにリンクする必要があります。これを行うには、以下の手順にしたがってください："
 
 #: ../../admin/authentication/authentication-tokens/manage-usage.rst:169
-msgid "Access the left navigation panel and select :menuselection:`Alerts & Detectors`."
-msgstr "左のナビゲーションパネルにアクセスし、:menuselection:`Alerts & Detectors` を選択します。"
+msgid "Access the left navigation panel and select :menuselection:`Detectors & SLOs`."
+msgstr "左のナビゲーションパネルにアクセスし、:menuselection:`Detectors & SLOs` を選択します。"
 
 #: ../../admin/authentication/authentication-tokens/manage-usage.rst:170
 msgid "Select the :guilabel:`Detectors` tab."

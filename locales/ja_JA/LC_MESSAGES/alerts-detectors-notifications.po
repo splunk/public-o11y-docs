@@ -2363,8 +2363,8 @@ msgid "To customize a copy of an AutoDetect detector, do the following:"
 msgstr "AutoDetectディテクターのコピーをカスタマイズするには、以下の手順に従います："
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-customize.rst:14 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-subscribe-mute-turn-off.rst:27
-msgid "In the navigation menu, select :menuselection:`Alerts & Detectors`."
-msgstr "ナビゲーションメニューで、:menuselection:`Alerts & Detectors` を選択します。"
+msgid "In the navigation menu, select :menuselection:`Detectors & SLOs`."
+msgstr "ナビゲーションメニューで、:menuselection:`Detectors & SLOs` を選択します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-customize.rst:15 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-subscribe-mute-turn-off.rst:28
 msgid "Select the :strong:`Detectors` tab."
@@ -2451,8 +2451,8 @@ msgid ":ref:`get-started-k8s`"
 msgstr ":ref:`get-started-k8s`"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-intro.rst:25
-msgid "After you've set up the supported integrations, AutoDetect alerts and detectors automatically appear on the :strong:`Alerts & Detectors` page and the corresponding dashboards and navigators for your integrations."
-msgstr "サポート対象のインテグレーションを設定すると、AutoDetectアラートおよびディテクターは、:strong:`アラートとディテクター` のページ、およびインテグレーションに対応したダッシュボードとナビゲーターに自動的に表示されます。"
+msgid "After you've set up the supported integrations, AutoDetect alerts and detectors automatically appear on the :strong:`Detectors & SLOs` page and the corresponding dashboards and navigators for your integrations."
+msgstr "サポート対象のインテグレーションを設定すると、AutoDetectアラートおよびディテクターは、:strong:`Detectors & SLOs` のページ、およびインテグレーションに対応したダッシュボードとナビゲーターに自動的に表示されます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-intro.rst:27
 msgid "By default, you aren't subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe-mute-turn-off`."
@@ -3621,16 +3621,16 @@ msgid "View AutoDetect alerts and detectors"
 msgstr "AutoDetectのアラートおよびディテクターを表示する"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-view.rst:9
-msgid "You can view AutoDetect detectors on the :guilabel:`Alerts & Detectors` page, in a navigator or dashboard for a service, or in a chart."
-msgstr "AutoDetectディテクターは、:guilabel:`Alerts & Detectors` ページ上、サービスのナビゲーターまたはダッシュボード内、またはチャート内で表示できます。"
+msgid "You can view AutoDetect detectors on the :guilabel:`Detectors & SLOs` page, in a navigator or dashboard for a service, or in a chart."
+msgstr "AutoDetectディテクターは、:guilabel:`Detectors & SLOs` ページ上、サービスのナビゲーターまたはダッシュボード内、またはチャート内で表示できます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-view.rst:11
 msgid "To view a complete list of all available AutoDetect alerts and detectors in your organization, do the following:"
 msgstr "組織で利用可能なすべてのAutoDetectのアラートおよびディテクターの完全なリストを表示するには、次の手順を実行します："
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-view.rst:13
-msgid "From the Splunk Observability Cloud home page, go to the :guilabel:`Alerts & Detectors` page."
-msgstr "Splunk Observability Cloudホームページから、:guilabel:`Alerts & Detectors` ページに移動します。"
+msgid "From the Splunk Observability Cloud home page, go to the :guilabel:`Detectors & SLOs` page."
+msgstr "Splunk Observability Cloudホームページから、:guilabel:`Detectors & SLOs` ページに移動します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-view.rst:14
 msgid "Select the :guilabel:`Active Alerts` or :guilabel:`Detectors` tab. Alerts genereated by AutoDetect detectors have an :guilabel:`Auto` badge."
@@ -3773,8 +3773,8 @@ msgid "When a detector determines that the conditions for a rule are met, it tri
 msgstr "ディテクターは、ルールの条件が満たされたと判断すると、アラートをトリガーし、イベントを作成し、通知を送信します（指定してある場合）。ディテクターは、電子メール、Slackなどの他システムを介して、またはウェブフックを使用して通知を送信できます。詳細については、:ref:`admin-notifs-index` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:16
-msgid "You can find active alerts, existing detectors, and muting rules under :guilabel:`Alerts & Detectors`. You can also find alerts in the Events Feed, available within any dashboard."
-msgstr "アクティブなアラート、既存のディテクター、ミュートルールは、:guilabel:`Alerts & Detectors` で確認できます。また、どのダッシュボードでも利用できる「イベント」フィードでもアラートを確認することができます。"
+msgid "You can find active alerts, existing detectors, and muting rules under :guilabel:`Detectors & SLOs`. You can also find alerts in the Events Feed, available within any dashboard."
+msgstr "アクティブなアラート、既存のディテクター、ミュートルールは、:guilabel:`Detectors & SLOs` で確認できます。また、どのダッシュボードでも利用できる「イベント」フィードでもアラートを確認することができます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:18
 msgid "This topic covers Infrastructure and Custom Metrics detectors. You can create a Splunk APM detector to monitor request rates, error rates, and latency for your service. To learn more about Splunk APM detectors, visit :ref:`apm-alerts`."
@@ -3814,7 +3814,7 @@ msgstr "AutoDetectディテクターをカスタマイズできます。:ref:`au
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:38
 msgid "Start from the Detector tab to create detectors based on what you are currently viewing, such as a chart or the Infrastructure Navigator. See :ref:`create-detector-from-chart`."
-msgstr "チャートや Infrastructure Navigatorなど、現在表示している項目に基づいて、「ディテクター」タブから開始してディテクターを作成できます。:ref:`create-detector-from-chart` を参照してください。"
+msgstr "チャートや Infrastructure Navigatorなど、現在表示している項目に基づいて、「Detector」タブから開始してディテクターを作成できます。:ref:`create-detector-from-chart` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:39
 msgid "Create a detector from a dashboard chart to preselect one of the chart signals as the signal to be monitored. See :ref:`create-detector-from-chart`."
@@ -3833,8 +3833,8 @@ msgid "Clone an existing detector"
 msgstr "既存のディテクターを複製する"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:48
-msgid "You can see a list of existing detectors on the :guilabel:`Detectors` tab under Alerts & Detectors."
-msgstr "「アラートとディテクター」の :guilabel:`Detectors` タブで、既存のディテクターのリストを確認できます。"
+msgid "You can see a list of existing detectors on the :guilabel:`Detectors` tab under Detectors & SLOs."
+msgstr "「Detectors & SLOs」の :guilabel:`Detectors` タブで、既存のディテクターのリストを確認できます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:50
 msgid "Look for a detector that is similar to the detector you want to create."
@@ -3885,8 +3885,8 @@ msgid "Create a detector from scratch"
 msgstr "ディテクターをゼロから作成する"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:76
-msgid "To create a new detector for Infrastructure or Custom Metrics from scratch, you can either select :guilabel:`New Detector` under Alerts & Detectors, or select :menuselection:`Custom Detector` from the create menu on the navigation bar. Enter a detector name and then select :guilabel:`Create Alert Rule` to proceed to the alert rule builder. For instructions on building the rule, see :ref:`build-rules`."
-msgstr "Infrastructure Monitoringまたはカスタムメトリクスの新規ディテクターをゼロから作成する場合は、「アラートとディテクター」で :guilabel:`New Detector` を選択するか、ナビゲーションバーの作成メニューから :menuselection:`Custom Detector` を選択します。ディテクター名を入力し、:guilabel:`Create Alert Rule` を選択してアラートルールビルダーに進みます。ルールの構築方法については、:ref:`build-rules` を参照してください。"
+msgid "To create a new detector for Infrastructure or Custom Metrics from scratch, you can either select :guilabel:`New Detector` under Detectors & SLOs, or select :menuselection:`Custom Detector` from the create menu on the navigation bar. Enter a detector name and then select :guilabel:`Create Alert Rule` to proceed to the alert rule builder. For instructions on building the rule, see :ref:`build-rules`."
+msgstr "Infrastructure Monitoringまたはカスタムメトリクスの新規ディテクターをゼロから作成する場合は、「Detectors & SLOs」で :guilabel:`New Detector` を選択するか、ナビゲーションバーの作成メニューから :menuselection:`Custom Detector` を選択します。ディテクター名を入力し、:guilabel:`Create Alert Rule` を選択してアラートルールビルダーに進みます。ルールの構築方法については、:ref:`build-rules` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:81
 msgid "Create a detector using the API"
@@ -4193,8 +4193,8 @@ msgid "Tips"
 msgstr "ヒント"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:256
-msgid "If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option on the Detectors tab under Alerts & Detectors after you save the detector."
-msgstr "複数のルールのそれぞれに同じ受信登録者を追加する場合は、ディテクターを保存した後に、「アラートとディテクター」の「ディテクター」タブにある「 :ref:`受信登録の管理<manage-subs>` 」オプションを使用して、すべてのルールに受信登録者を一度に追加できます。"
+msgid "If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option on the Detectors tab under Detectors & SLOs after you save the detector."
+msgstr "複数のルールのそれぞれに同じ受信登録者を追加する場合は、ディテクターを保存した後に、「Detectors & SLOs」の「Detector」タブにある「 :ref:`受信登録の管理<manage-subs>` 」オプションを使用して、すべてのルールに受信登録者を一度に追加できます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:258
 msgid "You can temporarily stop a detector from sending notifications by :ref:`muting notifications<mute-notifications>`."
@@ -4210,10 +4210,10 @@ msgstr ":strong:`有効化` タブに、指定したディテクター設定の�
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:268
 msgid ""
-"Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the Detectors tab under Alerts & Detectors. You can also provide additional descriptive text "
+"Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the Detectors tab under Detectors & SLOs. You can also provide additional descriptive text "
 "belowthe name, for example, to clarify the purpose of the detector for others."
 msgstr ""
-" :guilabel:`Activate Alert Rule` を選択して、ディテクターを保存し指定したシグナルの監視を開始します。ディテクターを有効にすると、ディテクターの :strong:`アラート ルール` タブが表示され、選択したシグナルと構築したルールの概要が表示されます。ディテクター名の編集ができます。ここで入力したテキストは、「アラートとディテクター」の「ディテクター」タブにディテクター名として表示されます。また、ディテクターの目的を明確にするために、ディテクター名の下に追加の説明テ"
+" :guilabel:`Activate Alert Rule` を選択して、ディテクターを保存し指定したシグナルの監視を開始します。ディテクターを有効にすると、ディテクターの :strong:`アラート ルール` タブが表示され、選択したシグナルと構築したルールの概要が表示されます。ディテクター名の編集ができます。ここで入力したテキストは、「Detectors & SLOs」の「Detector」タブにディテクター名として表示されます。また、ディテクターの目的を明確にするために、ディテクター名の下に追加の説明テ"
 "キストを入力することもできます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:271
@@ -4893,7 +4893,7 @@ msgstr "通知が期待通りに届かない場合は、ディテクタールー
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/manage-notifications.rst:29
 msgid "Manage subscribers from the Detectors tab"
-msgstr "「ディテクター」タブから受信登録者を管理する"
+msgstr "「Detector」タブから受信登録者を管理する"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/manage-notifications.rst:31
 msgid "To manage the subscribers to a specific detector:"
@@ -5447,16 +5447,16 @@ msgid "Kai, a site reliability engineer at Buttercup Games, has created a detect
 msgstr "Buttercup Gamesのサイト信頼性エンジニアであるKaiは、Buttercup GamesのホストマシンのCPU使用率の急激な変化を監視する「CPUディテクター」というディテクターを作成しました。Kaiはこのディテクターから多くのアラートを受け取っており、これらのアラートのより詳細なビューを取得したいと考えています。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/find-detectors.rst:14
-msgid "Using the :guilabel:`Alerts & Detectors` page in Splunk Observability Cloud, Kai can find and view these active alerts so they can easily troubleshoot the CPU changes."
-msgstr "Splunk Observability Cloudの :guilabel:`Alerts & Detectors` ページを使用して、Kaiはこれらのアクティブなアラートを見つけて表示することができ、CPUの変化に対するトラブルシューティングを簡単に行うことができます。"
+msgid "Using the :guilabel:`Detectors & SLOs` page in Splunk Observability Cloud, Kai can find and view these active alerts so they can easily troubleshoot the CPU changes."
+msgstr "Splunk Observability Cloudの :guilabel:`Detectors & SLOs` ページを使用して、Kaiはこれらのアクティブなアラートを見つけて表示することができ、CPUの変化に対するトラブルシューティングを簡単に行うことができます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/find-detectors.rst:17
 msgid "Find active alerts using the search list"
 msgstr "検索リストを使用してアクティブなアラートを見つける"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/find-detectors.rst:19
-msgid "From the :guilabel:`Alerts & Detectors` page, Kai can find active alerts using the search list. Kai follows these steps:"
-msgstr ":guilabel:`Alerts & Detectors` ページから、Kaiは検索リストを使ってアクティブなアラートを見つけることができます。その手順は以下の通りです："
+msgid "From the :guilabel:`Detectors & SLOs` page, Kai can find active alerts using the search list. Kai follows these steps:"
+msgstr ":guilabel:`Detectors & SLOs` ページから、Kaiは検索リストを使ってアクティブなアラートを見つけることができます。その手順は以下の通りです："
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/find-detectors.rst:21
 msgid "Kai wants to find an active alert, so they select the :guilabel:`Active Alerts` tab."
@@ -5587,7 +5587,7 @@ msgstr "シナリオ：KaiがAutoDetectを使ってシステム制限を監視�
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/monitor-autodetect.rst:12
 msgid "Kai, a site reliability engineer at Buttercup Games, wants to know when they are reaching their limit for the number of detectors they can create for Buttercup Games. This limit is automatically monitored through an AutoDetect detector, which Kai can view from the Alerts and Detectors page."
-msgstr "Buttercup Gamesのサイト信頼性エンジニアであるKaiは、Buttercup Gamesで作成できるディテクターの数がいつ上限に達するかを知りたいと考えています。この制限は、AutoDetectディテクターによって自動的に監視されており、「アラートとディテクター」ページから確認することができます。"
+msgstr "Buttercup Gamesのサイト信頼性エンジニアであるKaiは、Buttercup Gamesで作成できるディテクターの数がいつ上限に達するかを知りたいと考えています。この制限は、AutoDetectディテクターによって自動的に監視されており、「Detectors & SLOs」ページから確認することができます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/monitor-autodetect.rst:17
 #, fuzzy
@@ -5729,8 +5729,8 @@ msgid "Define the data to use for alerting"
 msgstr "アラートに使用するデータを定義する"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/monitor-server-latency.rst:19
-msgid "Kai opens the :guilabel:`Alerts & Detectors` page in Splunk Observability Cloud and selects :guilabel:`New Detector` to create a detector from scratch."
-msgstr "Kaiは、Splunk Observability Cloud の :guilabel:`Alerts & Detectors` ページを開き、:guilabel:`New Detector` を選択してゼロからディテクターを作成します。"
+msgid "Kai opens the :guilabel:`Detectors & SLOs` page in Splunk Observability Cloud and selects :guilabel:`New Detector` to create a detector from scratch."
+msgstr "Kaiは、Splunk Observability Cloud の :guilabel:`Detectors & SLOs` ページを開き、:guilabel:`New Detector` を選択してゼロからディテクターを作成します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/monitor-server-latency.rst:21
 msgid "After naming the detector, Kai chooses :guilabel:`Infrastructure or Custom Metrics Alert Rule`."
@@ -5893,8 +5893,8 @@ msgid "Kai creates a detector to report on latency by following these steps:"
 msgstr "Kaiは、以下の手順で、レイテンシをレポートするディテクターを作成します："
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/troubleshoot-noisy-detectors.rst:19
-msgid "In the :guilabel:`Alerts & Detectors` page, Kai selects :guilabel:`New Detector`."
-msgstr ":guilabel:`Alerts & Detectors` ページで、:guilabel:`New Detector` を選択します。"
+msgid "In the :guilabel:`Detectors & SLOs` page, Kai selects :guilabel:`New Detector`."
+msgstr ":guilabel:`Detectors & SLOs` ページで、:guilabel:`New Detector` を選択します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/troubleshoot-noisy-detectors.rst:20
 #, fuzzy
@@ -6425,7 +6425,7 @@ msgstr "ディテクターのアクティブなアラートを表示するには
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-alerts.rst:67
 msgid "Detectors tab in Alerts"
-msgstr "「アラート」の「ディテクター」タブ"
+msgstr "「アラート」の「Detector」タブ"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-alerts.rst:75
 msgid "To open a detector, select its name. When you open a detector, a counter for each alert rule shows the number of active alerts that apply to the detector."
@@ -6489,7 +6489,7 @@ msgstr "全ディテクターのリストを見る"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-detectors.rst:17
 msgid "You can see a list of existing detectors in the Detectors tab on the Alerts page. If a detector is currently :ref:`muted<mute-notifications>` or scheduled to be muted, a red or grey indicator (respectively) appears next to the detector. For more information, see :ref:`view-muting-rules`."
-msgstr "既存のディテクターのリストは、「アラート」ページの「ディテクター」タブで表示できます。ディテクターが現在 :ref:`ミュート<mute-notifications>` になっている場合、またはミュートの予定がある場合は、ディテクターの横に、それぞれ赤とグレーのインジケーターが表示されます。詳細については、:ref:`view-muting-rules` を参照してください。"
+msgstr "既存のディテクターのリストは、「アラート」ページの「Detector」タブで表示できます。ディテクターが現在 :ref:`ミュート<mute-notifications>` になっている場合、またはミュートの予定がある場合は、ディテクターの横に、それぞれ赤とグレーのインジケーターが表示されます。詳細については、:ref:`view-muting-rules` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-detectors.rst:23
 msgid "View detectors related to a chart or the Infrastructure Navigator"
