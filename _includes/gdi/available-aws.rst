@@ -492,7 +492,7 @@ The following applies:
 
 - (*) Metadata in this context refers to AWS tags and properties
 - (**) EC2 tags & properties only
-- (***) Collected by the Splunk Distribution of the Collector for Kubernetes. See :ref:`collector-linux-intro`
+- (***) Collected by the Splunk Distribution of the Collector for Kubernetes
 
 The following applies to GovCloud regions:
 
