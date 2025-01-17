@@ -11,7 +11,7 @@ You can collect metrics and metadata from the following AWS services:
   * - :strong:`Namespace`
     - :strong:`Service`
     - :strong:`Provides metrics`
-    - :strong:`Provides metadata (tags/properties) (*)`
+    - :strong:`Provides metadata (tags/properties) (1)`
 
   * - AWS/ACMPrivateCA
     - ACM Private CA
@@ -150,7 +150,7 @@ You can collect metrics and metadata from the following AWS services:
 
   * - AWS/EKS
     - Amazon Elastic Kubernetes Service (EKS)
-    - :strong:`X` (***)
+    - :strong:`X` (3)
     - :strong:`X`
 
   * - AWS/ElastiCache
@@ -466,7 +466,7 @@ You can collect metrics and metadata from the following AWS services:
   * - CWAgent
     - Amazon CloudWatch Agent
     - :strong:`X`
-    - :strong:`X` (**)
+    - :strong:`X` (2)
 
   * - Glue
     - AWS Glue
@@ -490,9 +490,9 @@ You can collect metrics and metadata from the following AWS services:
 
 The following applies:
 
-- (*) Metadata in this context refers to AWS tags and properties
-- (**) EC2 tags & properties only
-- (***) Collected by the Splunk Distribution of the Collector for Kubernetes
+#. Metadata in this context refers to AWS tags and properties
+#. EC2 tags & properties only
+#. Collected by the Splunk Distribution of the Collector for Kubernetes
 
 The following applies to GovCloud regions:
 
