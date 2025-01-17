@@ -36,9 +36,9 @@ In the preceding example, the user navigates through the following sequence:
 
 Related logs in APM 
 -----------------------------------------------------------------
-For Unified Identity and Log Observer Connect customers, Splunk APM does not show related logs in the Related Content bar by default in order to save resources. To activate Related Content for logs in APM, an administrator must go to :strong:`Settings` then select :strong:`General Settings`. Switch the toggle, :strong:`Activate Related Content for logs` to active.
+Splunk APM displays related logs in the Related Content bar by default. To to save resources, Unified Identity and Log Observer Connect customers can deactivate the display of related logs in Splunk APM. To deactivate Related Content for logs in APM, an administrator must go to :strong:`Settings` then select :strong:`General Settings` and the toggle the switch to :strong:`Deactivate Related Content for logs`.
 
-If you want to save resources by deactivating Related Content for logs in APM, go to :strong:`Settings`, select :strong:`General Settings`,and switch the toggle, :strong:`Activate Related Content for logs` to inactive. 
+If you want to display Related Content for logs in APM again, go to :strong:`Settings`, select :strong:`General Settings`,and toggle the switch to :strong:`Activate Related Content for logs`. 
 
 Where can I see Related Content?
 -----------------------------------------------------------------
