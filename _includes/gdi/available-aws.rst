@@ -4,7 +4,7 @@ You can collect metrics and metadata from the following AWS services:
 
 .. list-table::
   :header-rows: 1
-  :widths: 30 30 10 10 10 10
+  :widths: 40 40 10 10  
   :width: 100%
   :class: monitor-table
 
