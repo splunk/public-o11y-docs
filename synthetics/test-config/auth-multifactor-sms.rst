@@ -43,15 +43,13 @@ Some services may not be accessible during Synthetics tests due to violations of
     :width: 70%
     :alt: Screenshot showing the "Go to URL" step. 
 
-
-4. Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript.
-   This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a global variable named ``otp``.
+4. Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a global variable named ``otp``.
 
    .. :note::  In the script, set the variable url to the URL of your  own virtual phone number's SMS service.
 
-..  image:: /_images/synthetics/auth-multifactor-sms-three.png
-    :width: 70%
-    :alt: Screenshot showing the JavaScript that retrieves data from a specified URL. 
+   ..  image:: /_images/synthetics/auth-multifactor-sms-three.png
+       :width: 70%
+       :alt: Screenshot showing the JavaScript that retrieves data from a specified URL. 
 
    .. code-block:: javascript
 
@@ -87,7 +85,7 @@ Some services may not be accessible during Synthetics tests due to violations of
 
    2. In :guilabel:`Value`, enter the name of the custom varialble your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
 
-..  image:: /_images/synthetics/auth-multifactor-sms-four.png
+..  image:: /_images/synthetics/auth-multifactor-sms-fillinfield.png
     :width: 70%
     :alt: Screenshot showing the "Fill in field" step. 
 
