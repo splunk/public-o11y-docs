@@ -10,6 +10,13 @@ Basic authentication through API request headers
 
 .. :note:: This authentication method applies to API tests only. The steps below are for targets that support “Basic auth”, in other words, API methods like: ``curl -G https://api.twilio.com/2010-04-01/Accounts.json -u <YOUR_ACCOUNT_SID>:<YOUR_AUTH_TOKEN>``.  You can modify these steps for targets that support a Bearer token.
 
+If your test target expects login credentials to be included in an an API request header, configure your browser test as follows.
+
+..  image:: /_images/synthetics/auth-basic-api-one.png
+    :width: 40%
+    :alt: Screenshot showing how to set up a synthetic test with basic authentication through API request headers. 
+
+
 1. Get the *base64-encoded string* of the username and password
      combination for your test target. There are several ways to get a base64-encoded string. For example:
 
@@ -31,11 +38,11 @@ Basic authentication through API request headers
 
    3. Select the Authorization header, and for its value, enter the word ``Basic`` followed by a space and then the name of the global variable containing your base64-encoded combined username and password. The variable must be prefixed with ``env.`` and enclosed in double curly braces. For example, ``{{env.est1_base64_auth}}``. To see the list of available global variables, expand the pane on the right.
 
-..   |image6|
-
 5. Select :guilabel:`Submit`.
 
 To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
 
-.. |image7|
+..  image:: /_images/synthetics/auth-basic-api-two.png
+    :width: 40%
+    :alt: Screenshot showing how to verify that your synthetic test settings are working. 
 
