@@ -8,7 +8,7 @@ Basic authentication through HTML login forms
     :description: Basic authentication allows your tests to send a username and password to a login form on a target test page.
 
 
-This authentication method applies to browser tests only.
+.. :note:: This authentication method applies to browser tests only.
 
 If your test target provides an HTML form for entering username and password, configure your browser test as follows.
 

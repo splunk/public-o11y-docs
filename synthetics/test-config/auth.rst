@@ -5,7 +5,7 @@ Authentication
 ******************************************************************
 
 .. meta::
-    :description: PLACEHOLDER.
+    :description: Your synthetic test can incorporate any authentication method that Splunk Synthetic Monitoring supports for that test type.
 
 .. toctree::
 
@@ -19,24 +19,24 @@ Authentication
 The following authentication methods are available for you to configure
 in your Synthetics tests:
 
-+-----------+----------------------------------------------------------+
-| Test      | Authentication method                                    |
-| type      |                                                          |
-+========+=============================================================+
-| Browser   | -  :ref:`auth-basic-html-login`                          |
-|           |                                                          |
-|           | -  :ref:`auth-basic-http-headers`                        |
-|           |                                                          |
-|           | -  :ref:`auth-multifactor-sms`                           |
-|           |                                                          |
-|           | -  :ref:`auth-multifactor-email`                         |
-|           |                                                          |
-|           | -  :ref:`auth-multifactor-sso`                           |
-|           |                                                          |
-+--------+-------------------------------------------------------------+
-| Uptime    | None                                                     |
-+--------+-------------------------------------------------------------+
-| API       | :ref:`auth-basic-http-headers`                          |
-+--------+-------------------------------------------------------------+
+.. list-table::
+   :header-rows: 1
+   :widths: 25, 75
+
+   * - :strong:`Test type`
+     - :strong:`Authentication method`
+   
+   * - Browser
+     - :ref:`auth-basic-html-login`
+     - :ref:`auth-basic-http-headers` 
+     - :ref:`auth-multifactor-sms` 
+     - :ref:`auth-multifactor-email` 
+     - :ref:`auth-multifactor-sso` 
+
+   * - Uptime
+     - None 
+
+   * - API
+     - :ref:`auth-basic-http-headers` 
 
 
