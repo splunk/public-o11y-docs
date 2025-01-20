@@ -103,7 +103,7 @@ To deactivate session replay you can either:
 Additional instrumentation settings
 ------------------------------------
 
-For more information on configuration options, see :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#guide>` on GitHub. 
+For more information on configuration options, see :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#guide>` on GitHub. 
 
 Redact information
 ==============================
@@ -113,6 +113,32 @@ Text is redacted by default, you can optionally configure image redaction as wel
    :alt: Example home screen of a website with the text replaced by the star symbol to show redacted text. 
    :width: 70%
 
+
+To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting the ``maskTextClass`` option to a custom value, which can also accept a regular expression, or you can set custom selector to ``maskTextSelector`` option.
+
+Examples:
+
+.. code-block:: html
+
+    // Will disable text redaction on all elements except elements with default 'rr-mask' class
+    SplunkSessionRecorder.init({
+        // ... other configuration options
+        maskTextSelector: false
+    });
+    
+    // Will redact only elements with 'my-custom-mask-class' class
+    SplunkSessionRecorder.init({
+        // ...
+        maskTextClass: 'my-custom-mask-class',
+        maskTextSelector: false
+    });
+    
+    // Redacts elements with class names starting with "sensitive-" or with specified IDs
+    SplunkSessionRecorder.init({
+        // ...
+        maskTextClass: /^sensitive-.*$/,
+        maskTextSelector: '#private-info, #hidden-section'
+    });
 
 
 Image redaction 
