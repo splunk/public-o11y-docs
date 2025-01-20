@@ -13,21 +13,21 @@ Basic authentication through HTTP headers
 If your test target expects login credentials to be included in an HTTP header, configure your browser test as follows.
 
 ..  image:: /_images/synthetics/auth-basic-http-one.png
-    :width: 40%
+    :width: 70%
     :alt: Screenshot showing how to set up a synthetic test with basic authentication through HTTP headers. 
 
 1. Create global variables for this test target's username and password.
-   Best practice is to conceal the global variable you create for the password. For more information, see :new-page:`https://docs.splunk.com/observability/en/synthetics/test-config/global-variables.html`.
+   Best practice is to conceal the global variable you create for the password. For more information, see :ref:`global-variables`.
 
 2. On the browser test's configuration page, select the :guilabel:`Advanced` toggle.
 
-3. Scroll down to the :guilabel:`Security`` section.
+3. Scroll down to the :guilabel:`Security` section.
 
 4. On the row for :guilabel:`Authentication`, set values as follows:
 
-   1. In the left field (with hint text :guilabel:`Username``), enter the username for the target page.
+   1. In the left field (with hint text :guilabel:`Username`), enter the username for the target page.
 
-   2. In the right field, enter the name of the global varialble in which you stored the password for this target page, prefixed with ``env.``. and enclosed in double curly braces. For example, ``{{env.test1_password}}``. To see the list of available global variables, expand the pane on the right.
+   2. In the right field, enter the name of the global varialble in which you stored the password for this target page, prefixed with ``env.`` and enclosed in double curly braces. For example, ``{{env.test1_password}}``. To see the list of available global variables, expand the pane on the right.
 
 5. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
 
@@ -47,7 +47,7 @@ To verify that the login is working, select :guilabel:`Try now`. Results may tak
 your test navigated to on the target page, plus the message :guilabel:`Success`.
 
 ..  image:: /_images/synthetics/auth-basic-http-three.png
-    :width: 40%
+    :width: 70%
     :alt: Screenshot showing how to verify that your synthetic test settings are working. 
 
 

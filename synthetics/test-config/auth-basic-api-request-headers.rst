@@ -5,15 +5,16 @@ Basic authentication through API request headers
 ******************************************************************
 
 .. meta::
-    :description: placeholder.
+    :description: Basic authentication allows your tests to send a username and password through API request headers.
 
 
-.. :note:: This authentication method applies to API tests only. The steps below are for targets that support “Basic auth”, in other words, API methods like: ``curl -G https://api.twilio.com/2010-04-01/Accounts.json -u <YOUR_ACCOUNT_SID>:<YOUR_AUTH_TOKEN>``.  You can modify these steps for targets that support a Bearer token.
+.. :note:: This authentication method applies to API tests only. The steps below are for targets that support “Basic auth”, in other words, API methods like ``curl -G https://api.twilio.com/2010-04-01/Accounts.json -u <YOUR_ACCOUNT_SID>:<YOUR_AUTH_TOKEN>``.  
+    You can modify these steps for targets that support a Bearer token.
 
 If your test target expects login credentials to be included in an an API request header, configure your browser test as follows.
 
 ..  image:: /_images/synthetics/auth-basic-api-one.png
-    :width: 40%
+    :width: 70%
     :alt: Screenshot showing how to set up a synthetic test with basic authentication through API request headers. 
 
 
@@ -22,10 +23,10 @@ If your test target expects login credentials to be included in an an API reques
 
    -  Run the JavaScript function btoa from your browser's console: ``btoa("myusername:mypassword")``
 
-   -  Run this command in a Linux terminal: ``\`echo -n 'myusername:mypassword' \| base64\```
+   -  Run this command in a Linux terminal: ``echo -n 'myusername:mypassword' | base64``
 
 2. Store the base64 value in a concealed global variable. For more information, see
-   :new-page:`https://docs.splunk.com/observability/en/synthetics/test-config/global-variables.html`.
+   :ref:`global-variables`.
 
 3. On the API test's configuration page, select an existing request in
    the test or select :guilabel:`Add requests`.
@@ -43,6 +44,6 @@ If your test target expects login credentials to be included in an an API reques
 To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
 
 ..  image:: /_images/synthetics/auth-basic-api-two.png
-    :width: 40%
+    :width: 70%
     :alt: Screenshot showing how to verify that your synthetic test settings are working. 
 

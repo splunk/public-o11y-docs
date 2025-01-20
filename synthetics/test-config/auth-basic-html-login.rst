@@ -13,10 +13,10 @@ Basic authentication through HTML login forms
 If your test target provides an HTML form for entering username and password, configure your browser test as follows.
 
 ..  image:: /_images/synthetics/auth-basic-html-one.png
-    :width: 40%
-    :alt: Screenshot showing how to set up a synthetic test with basic authentication through an HTML login form. 
+    :width: 70%
+    :alt: Screenshot showing how to set up a synthetic test with basic authentication through an API request header. 
 
-1. Create global variables for this test target's username and password. Best practice is to conceal the global variable you create for the password. For more information, see :new-page:`https://docs.splunk.com/observability/en/synthetics/test-config/global-variables.html`.
+1. Create global variables for this test target's username and password. Best practice is to conceal the global variable you create for the password. For more information, see :ref:`global-variables`.
 
 2. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
 
@@ -24,7 +24,7 @@ If your test target provides an HTML form for entering username and password, co
 
 4. Add a step of type :guilabel:`Fill in field`, and set it up as follows:
 
-   1. In :guilabel:`Selector`, enter the ID, name, XPath, CSS, link, or JS path of the target page's username field.  For more information on element selectors, see :new-page:`https://developer.chrome.com/docs/devtools/#selector`.
+   1. In :guilabel:`Selector`, enter the ID, name, XPath, CSS, link, or JS path of the target page's username field.  For more information on element selectors on Chrome, see :new-page:`Chrome DevTools <https://developer.chrome.com/docs/devtools/#selector>`.
 
    2. In :guilabel:`Value`, enter the name of the global varialble you stored the username in, prefixed with env. and enclosed in double curly braces. For example, ``{{env.test1_username}}``.
 
@@ -46,12 +46,12 @@ If your test target provides an HTML form for entering username and password, co
 
    2. (Optional) Set :guilabel:`Wait for up to` to a large enough value, in milliseconds, to ensure that the page loads.
 
-8. Click :guilabel:`Submit`.
+8. Select :guilabel:`Submit`.
 
-To verify that the login is working, click :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
+To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
 
 ..  image:: /_images/synthetics/auth-basic-html-two.png
-    :width: 40%
+    :width: 70%
     :alt: Screenshot showing how to verify that your synthetic test settings are working. 
 
 
