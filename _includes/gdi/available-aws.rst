@@ -1,4 +1,4 @@
-.. note:: For trace monitoring see :ref:`get-started-apm`.
+.. note:: For trace monitoring see :ref:`apm-gdi`.
 
 You can collect metrics and metadata from the following AWS services:
 
