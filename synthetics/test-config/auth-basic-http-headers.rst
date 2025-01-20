@@ -27,7 +27,7 @@ If your test target expects login credentials to be included in an HTTP header, 
 
    1. In the left field (with hint text :guilabel:`Username``), enter the username for the target page.
 
-   2. In the right field, enter the name of the global varialble in which you stored the password for this target page, prefixed with ``env``. and enclosed in double curly braces. For example, ``{{env.test1_password}}``. To see the list of available global variables, expand the pane on the right.
+   2. In the right field, enter the name of the global varialble in which you stored the password for this target page, prefixed with ``env.``. and enclosed in double curly braces. For example, ``{{env.test1_password}}``. To see the list of available global variables, expand the pane on the right.
 
 5. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
 

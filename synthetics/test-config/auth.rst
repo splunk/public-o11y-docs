@@ -11,6 +11,7 @@ Authentication
 
    auth-basic-html-login
    auth-basic-http-headers
+   auth-basic-api-request-headers
    auth-multifactor-sms
    auth-multifactor-email
    auth-multifactor-sso
@@ -33,6 +34,6 @@ in your Synthetics tests:
      - None 
 
    * - API
-     - :ref:`auth-basic-http-headers` 
+     - :ref:`auth-basic-api-request-headers` 
 
 
