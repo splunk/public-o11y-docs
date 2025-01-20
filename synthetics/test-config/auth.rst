@@ -27,11 +27,7 @@ in your Synthetics tests:
      - :strong:`Authentication method`
    
    * - Browser
-     - :ref:`auth-basic-html-login`
-     - :ref:`auth-basic-http-headers` 
-     - :ref:`auth-multifactor-sms` 
-     - :ref:`auth-multifactor-email` 
-     - :ref:`auth-multifactor-sso` 
+     - :ref:`auth-basic-html-login`, :ref:`auth-basic-http-headers`, :ref:`auth-multifactor-sms`, :ref:`auth-multifactor-email`, :ref:`auth-multifactor-sso` 
 
    * - Uptime
      - None 
