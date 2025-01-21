@@ -137,15 +137,15 @@ Link APM properties to Splunk AppDynamics tiers
 =================================================
 
 .. note::
-    Global data links are only supported for tiers that are monitored by a Splunk AppDynamics SaaS environment.
+    You can only create a global data link to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
 
 #. In the Splunk Observability Cloud main menu, select :guilabel:`Settings` then :guilabel:`Global Data Links`.
-#. Select :guilabel:`New Link`.
-#. Enter a :guilabel:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific Splunk AppDynamics tier. For example, you might enter :guilabel:`Splunk AppDynamics tier`.
+#. Select :guilabel:`New link`.
+#. Enter a :guilabel:`Link label`. This is what you select when you want to use the global data link to drill down into a specific Splunk AppDynamics tier. For example, you might enter :guilabel:`Splunk AppDynamics tier`.
 #. For :guilabel:`Link to`, select :guilabel:`AppDynamics tier`.
 #. For :guilabel:`Show on`, select an inferred service from the list. For more information on inferred services, see :ref:`apm-inferred-services`.
 #. For :guilabel:`URL`, enter the Splunk AppDynamics tier URL. To obtain the tier URL, navigate to the tier in the Splunk AppDynamics UI and copy the URL from the browser. Ensure that you capture the entire URL and that it contains the controller URL, application ID, and application component.
-#. Select :guilabel:`Save`. When you view an inferred service, you can select the data link to navigate to the service in Splunk AppDynamics.
+#. Select :guilabel:`Save`. When you view an inferred service in the :guilabel:`APM Service Map`, you can select the data link to navigate to the service in Splunk AppDynamics.
 
 Transfer APM context in a custom URL
 =======================================
