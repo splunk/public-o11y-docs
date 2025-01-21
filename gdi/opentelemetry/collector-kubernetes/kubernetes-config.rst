@@ -250,6 +250,8 @@ For the Operator:
 
 .. code-block:: yaml
 
+  operatorcrds:
+    install: true
   operator:
     enabled: true
 
