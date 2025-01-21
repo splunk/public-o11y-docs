@@ -16,9 +16,9 @@ If your test target sends a one time passcode (OTP) through email for multifacto
 Prerequisites
 ============================
 
-You must have an email service that supports connecting to your email account and managing your emails through an API. The steps below feature an example using the :new-page:`Nylas service <http://nylas.com>`. For detailed information on how to retrieve messages from this service, refer to its :new-page:`API documentation https://developer.nylas.com/docs/api/v3/ecc/?redirect=api#get-/v3/grants/-grant_id-/messages`.
+You must have an email service that supports connecting to your email account and managing your emails through an API. The steps below feature an example using the :new-page:`Nylas service <http://nylas.com>`. For detailed information on how to retrieve messages from this service, refer to its :new-page:`API documentation <https://developer.nylas.com/docs/api/v3/ecc/?redirect=api#get-/v3/grants/-grant_id-/messages>`.
 
-Additionally, the steps below demonstrate the use of http://Github.com to send an authorization email, which is essential for extracting the OTP from it.
+Additionally, the steps below demonstrate the use of :new-page:`GitHub <http://github.com>`` to send an authorization email, which is essential for extracting the OTP from it.
 
 Limitations
 ============================
@@ -31,40 +31,41 @@ Your email service must be accessible through an API. Some services may not be a
 
 3. Add a step of type :guilabel:`Go to url`, and in :guilabel:`URL`, enter the URL of the target's authentication page.
 
-4. Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript.
-   This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a custom variable named ``otp``. 
+4. Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a custom variable named ``otp``. 
+
    .. :note:: In the script, set the variable url to the URL of your own email inbox API endpoint.
+
    .. :note::  If you are utilizing the Nylas service, you can locate unread emails by searching for specific text in the subject line or other parameters. For more information, please refer to the :new-page:`Nylas API documentation for messages <https://developer.nylas.com/docs/api/v3/ecc/?redirect=api#get-/v3/grants/-grant_id-/messages>`.
 
    .. code-block:: javascript
 
       function getOtp() {
-      const grantId = "<NYLAS_GRANT_ID>";
-      const jwToken = "<NYLAS_API_KEY>";
-      const from = "noreply@github.com";
-      const subject = "Your GitHub launch code";
-      const unread = "true";
-      const url = "https://api.us.nylas.com/v3/grants/" + grantId + "/messages?limit=1&unread=" + unread + "from=" + from + "&subject=" + subject;
-      var request = new XMLHttpRequest();
-      request.open("GET", url, false);
-      request.setRequestHeader('Authorization', 'Bearer ' + jwToken)
-      request.send();
-      if (request.status == 200) {
-      return parseOtp(JSON.parse(request.responseText));
-      }
-      return "ERR";
+        const grantId = "<NYLAS_GRANT_ID>";
+        const jwToken = "<NYLAS_API_KEY>";
+        const from = "noreply@github.com";
+        const subject = "Your GitHub launch code";
+        const unread = "true";
+        const url = "https://api.us.nylas.com/v3/grants/" + grantId + "/messages?limit=1&unread=" + unread + "from=" + from + "&subject=" + subject;
+        var request = new XMLHttpRequest();
+        request.open("GET", url, false);
+        request.setRequestHeader('Authorization', 'Bearer ' + jwToken)
+        request.send();
+        if (request.status == 200) {
+          return parseOtp(JSON.parse(request.responseText));
+        }
+        return "ERR";
       }
 
       function parseOtp(jsonResponse) {
-      const firstInbound = jsonResponse. data[0];
-      if (firstInbound && firstInbound.snippet) {
-      // Extract the number using a regular expression
-      const match = firstInbound.snippet.match(/\\b\\d{8}\\b/);
-      if (match) {
-      return match[0]; // Return the first matched number
-      }
-      }
-      return "NO-OTP";
+        const firstInbound = jsonResponse. data[0];
+        if (firstInbound && firstInbound.snippet) {
+          // Extract the number using a regular expression
+          const match = firstInbound.snippet.match(/\\b\\d{8}\\b/);
+          if (match) {
+            return match[0]; // Return the first matched number
+          }
+        }
+        return "NO-OTP";
       }
       return getOtp();
 
@@ -76,9 +77,9 @@ Your email service must be accessible through an API. Some services may not be a
 
    2. In :guilabel:`Value`, enter the name of the custom varialble your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
 
-  ..  image:: /_images/synthetics/auth-multifactor-email-fillinfield.png
-      :width: 70%
-      :alt: Screenshot showing the "Fill in field" step. 
+   ..  image:: /_images/synthetics/auth-multifactor-email-fillinfield.png
+       :width: 70%
+       :alt: Screenshot showing the "Fill in field" step. 
 
 7. To verify that the login succeeded, add a step of type :guilabel:`Assert text present`, and set it up as follows:
 

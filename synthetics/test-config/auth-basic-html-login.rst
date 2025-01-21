@@ -12,8 +12,8 @@ Basic authentication through HTML login forms
 
 If your test target provides an HTML form for entering username and password, configure your browser test as follows.
 
-..  image:: /_images/synthetics/auth-basic-html-one.png
-    :width: 70%
+..  image:: /_images/synthetics/auth-basic-html-steps.png
+    :width: 90%
     :alt: Screenshot showing how to set up a synthetic test with basic authentication through an API request header. 
 
 1. Create global variables for this test target's username and password. Best practice is to conceal the global variable you create for the password. For more information, see :ref:`global-variables`.
@@ -49,9 +49,4 @@ If your test target provides an HTML form for entering username and password, co
 8. Select :guilabel:`Submit`.
 
 To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
-
-..  image:: /_images/synthetics/auth-basic-html-two.png
-    :width: 70%
-    :alt: Screenshot showing how to verify that your synthetic test settings are working. 
-
 

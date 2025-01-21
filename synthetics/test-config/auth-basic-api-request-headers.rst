@@ -13,8 +13,8 @@ Basic authentication through API request headers
 
 If your test target expects login credentials to be included in an an API request header, configure your browser test as follows.
 
-..  image:: /_images/synthetics/auth-basic-api-one.png
-    :width: 70%
+..  image:: /_images/synthetics/auth-basic-api-steps.png
+    :width: 90%
     :alt: Screenshot showing how to set up a synthetic test with basic authentication through API request headers. 
 
 
@@ -43,7 +43,4 @@ If your test target expects login credentials to be included in an an API reques
 
 To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
 
-..  image:: /_images/synthetics/auth-basic-api-two.png
-    :width: 70%
-    :alt: Screenshot showing how to verify that your synthetic test settings are working. 
 

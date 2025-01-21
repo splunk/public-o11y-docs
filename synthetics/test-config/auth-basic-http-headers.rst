@@ -12,9 +12,6 @@ Basic authentication through HTTP headers
 
 If your test target expects login credentials to be included in an HTTP header, configure your browser test as follows.
 
-..  image:: /_images/synthetics/auth-basic-http-one.png
-    :width: 70%
-    :alt: Screenshot showing how to set up a synthetic test with basic authentication through HTTP headers. 
 
 1. Create global variables for this test target's username and password.
    Best practice is to conceal the global variable you create for the password. For more information, see :ref:`global-variables`.
@@ -45,9 +42,5 @@ If your test target expects login credentials to be included in an HTTP header, 
 
 To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that
 your test navigated to on the target page, plus the message :guilabel:`Success`.
-
-..  image:: /_images/synthetics/auth-basic-http-three.png
-    :width: 70%
-    :alt: Screenshot showing how to verify that your synthetic test settings are working. 
 
 

@@ -10,10 +10,10 @@ Multifactor authentication through SSO and Active Directory
 
 Authorization through Single Sign-On (SSO) is similar to :ref:`basic authentication <auth-basic-html-login>`. To create a test of that uses SSO or AD login, you must configure a series of steps that include opening the webpage, selecting the SSO authentication link, and entering the required information for SSO authentication. Additional webpages may load during this process, so it's crucial that you include steps to confirm that all the components of each webpage have fully loaded before proceeding.
 
-SSO authentication frequently involves additional authentication factors. If the identity provider (such as Google, Microsoft, Okta, Duo, and so on) does not mandate an extra login factor, your test might only need the authentication steps that are illustrated in the example below:
+SSO authentication frequently involves additional authentication factors. If the identity provider (such as Google, Microsoft, Okta, Duo, and so on) does not mandate an extra login factor, your test might only need the authentication steps that are illustrated in the example below,
 
 ..  image:: /_images/synthetics/auth-multifactor-sso-sample.png
-    :width: 70%
+    :width: 90%
     :alt: Screenshot showing steps to create in a synthetic test that authenicates with SSO or Active Directory. 
 
 
