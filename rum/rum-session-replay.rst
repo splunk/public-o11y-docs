@@ -118,7 +118,7 @@ To disable all text redaction, set ``maskTextSelector: false``. To customize whi
 
 Examples:
 
-.. code-block:: html
+.. code-block:: javascript
 
     // Will disable text redaction on all elements except elements with default 'rr-mask' class
     SplunkSessionRecorder.init({
