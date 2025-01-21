@@ -86,29 +86,33 @@ For each metric, there is 1 metric time series (MTS) with responses ``sf_error: 
     :header-rows: 1
 
     *   - Description
-        - MMS
         - Histogram MMS
+        - MMS (deprecated)
     *   - Request count
-        - ``<component>.count``
-        - ``<component>`` with a ``count`` function
+         - ``<component>`` with a ``count`` function
+         - ``<component>.count``
     *   - Minimum request duration
+        - ``<component>`` with a ``min`` function
         - ``<component>.duration.ns.min`` 
-        - ``<component>`` with a ``min`` function 
     *   - Maximum request duration
+         - ``<component>`` with a ``max`` function
         - ``<component>.duration.ns.max`` 
-        - ``<component>`` with a ``max`` function
     *   - Median request duration
-        - ``<component>.duration.ns.median`` 
         - ``<component>`` with a ``median`` function
+        - ``<component>.duration.ns.median``
     *   - Percentile request duration
+        - ``<component>`` with a ``percentile`` function and a percentile ``value``
         - ``<component>.duration.ns.p90`` 
-        - ``<component>`` with a ``percentile`` function and a percentile ``value``
     *   - Percentile request duration
-        - ``<component>.duration.ns.p99`` 
         - ``<component>`` with a ``percentile`` function and a percentile ``value``
+        - ``<component>.duration.ns.p99`` 
 
 
 Each MMS has a set of dimensions you can use to monitor and alert on service performance. 
+
+Deprecated non-histogram metrics
+---------------------------------
+Histograms provide more flexibility and accuracy for your application performance data. If you are using any non-histogram metrics, use the equivalent histogram MMS. In the future, only histogram MMS will be used for monitoring in Splunk APM, including in charts and dashboards. For more information about histograms, see :ref:`histograms`.
 
 .. _service-mms: 
 
