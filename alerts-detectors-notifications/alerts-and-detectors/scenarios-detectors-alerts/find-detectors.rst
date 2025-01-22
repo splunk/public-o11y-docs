@@ -11,12 +11,12 @@ Scenario: Kai finds active alerts to investigate a CPU issue
 
 Kai, a site reliability engineer at Buttercup Games, has created a detector called "CPU Detector" that monitors Buttercup Games host machine's CPU usage for sudden changes. Kai has received many alerts from this detector, and wants to get a more detailed view of these alerts. 
 
-Using the :guilabel:`Alerts & Detectors` page in Splunk Observability Cloud, Kai can find and view these active alerts so they can easily troubleshoot the CPU changes.
+Using the :guilabel:`Detectors & SLOs` page in Splunk Observability Cloud, Kai can find and view these active alerts so they can easily troubleshoot the CPU changes.
 
 Find active alerts using the search list
 ====================================================
 
-From the :guilabel:`Alerts & Detectors` page, Kai can find active alerts using the search list. Kai follows these steps: 
+From the :guilabel:`Detectors & SLOs` page, Kai can find active alerts using the search list. Kai follows these steps: 
 
 #. Kai wants to find an active alert, so they select the :guilabel:`Active Alerts` tab.
 #. Kai enters filters so they can find their active alerts more easily. They enter desired values for the following fields:

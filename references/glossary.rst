@@ -18,7 +18,7 @@ A
    alert
       An alert is triggered when the conditions for a detector rule are met. For example, a detector monitoring the number of application requests has a rule that produces an alert if the number is below a static threshold, for example, 20 requests per minute, and/or above a calculated one, for example, the mean + 3 standard deviations above the number of requests per minute over the past hour.
 
-      When an alert is triggered, the detector also creates an :term:`event` and might optionally send a :term:`notification`. All currently active alerts can be viewed under Alerts & Detectors 
+      When an alert is triggered, the detector also creates an :term:`event` and might optionally send a :term:`notification`. All currently active alerts can be viewed under Detectors & SLOs 
 
    analytics
       Analytics are the mathematical functions that can be applied to a collection of data points. For a full list of analytics that can be applied in Splunk Infrastructure Monitoring, see the :ref:`analytics-ref`.

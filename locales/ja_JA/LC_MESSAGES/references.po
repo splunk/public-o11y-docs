@@ -47,8 +47,8 @@ msgid "An alert is triggered when the conditions for a detector rule are met. Fo
 msgstr "アラートは、ディテクタールールの条件が満たされたときにトリガーされます。例えば、アプリケーションのリクエスト数を監視するあるディテクターは、リクエスト数が静的閾値（例えば1分あたり20リクエスト）を下回る場合、および／または計算された閾値（例えば過去1時間の1分あたりのリクエスト数の平均＋3標準偏差）を上回る場合にアラートを生成するルールを持っています。"
 
 #: ../../references/glossary.rst:21
-msgid "When an alert is triggered, the detector also creates an :term:`event` and might optionally send a :term:`notification`. All currently active alerts can be viewed under Alerts & Detectors"
-msgstr "アラートがトリガーされると、ディテクターは :term:`event` も作成し、オプションで :term:`notification` を送信する場合もあります。現在アクティブになっているアラートはすべて「アラートとディテクター」で確認できます。"
+msgid "When an alert is triggered, the detector also creates an :term:`event` and might optionally send a :term:`notification`. All currently active alerts can be viewed under Detectors & SLOs"
+msgstr "アラートがトリガーされると、ディテクターは :term:`event` も作成し、オプションで :term:`notification` を送信する場合もあります。現在アクティブになっているアラートはすべて「Detectors & SLOs」で確認できます。"
 
 #: ../../references/glossary.rst:22
 msgid "analytics"

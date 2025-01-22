@@ -166,7 +166,7 @@ To set token limits:
 
 #. If you chose a team as a notification recipient and you want to have alerts display on the team's Dashboards page, you must link the detector you created in the previous step to the team. To do this:
 
-    #. Access the left navigation panel and select :menuselection:`Alerts & Detectors`.
+    #. Access the left navigation panel and select :menuselection:`Detectors & SLOs`.
     #. Select the :guilabel:`Detectors` tab.
     #. Search for the detector you created. By default, the detector's name includes the name of the access token it was created for. So, an easy way to find the detector is to search for the name of the access token.
     #. Open the detector's action menu (|more|) and select :guilabel:`Links to Teams`. Select a team.

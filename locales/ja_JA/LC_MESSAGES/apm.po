@@ -10190,8 +10190,8 @@ msgid "To update your detectors, follow these steps."
 msgstr "ディテクターをアップデートするには、以下の手順に従ってください。"
 
 #: ../../apm/span-tags/migrate-apm-custom-reporting.rst:129
-msgid "Go to :guilabel:`Alerts & Detectors`, then :guilabel:`Detectors`."
-msgstr ":guilabel:`Alerts & Detectors` にアクセスし、次に :guilabel:`Detectors` にアクセスします。"
+msgid "Go to :guilabel:`Detectors & SLOs`, then :guilabel:`Detectors`."
+msgstr ":guilabel:`Detectors & SLOs` にアクセスし、次に :guilabel:`Detectors` にアクセスします。"
 
 #: ../../apm/span-tags/migrate-apm-custom-reporting.rst:130
 msgid "For each affected detector, select the detector, then select :guilabel:`Signals`."

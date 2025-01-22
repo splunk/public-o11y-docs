@@ -11,7 +11,7 @@ To customize an AutoDetect detector you must copy it first, because AutoDetect d
 
 To customize a copy of an AutoDetect detector, do the following:
 
-#. In the navigation menu, select :menuselection:`Alerts & Detectors`. 
+#. In the navigation menu, select :menuselection:`Detectors & SLOs`. 
 #. Select the :strong:`Detectors` tab.
 #. In the search field, enter the name of the detector you want to customize.
     

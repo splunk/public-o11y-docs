@@ -1119,7 +1119,7 @@ msgid "To create charts and dashboards for your RUM alerts and detectors, see:"
 msgstr "RUMアラートとディテクターのチャートとダッシュボードを作成するには、以下を参照してください："
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:85
-msgid ":ref:`Link detectors to charts <linking-detectors>` in Alerts & Detectors."
+msgid ":ref:`Link detectors to charts <linking-detectors>` in Detectors & SLOs."
 msgstr "アラートとディテクターで :ref:`ディテクターをチャートにリンク<linking-detectors>` します。"
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:93 ../../rum/rum-identify-span-problems.rst:132 ../../rum/rum-scenario-library/rum-mobile-scenario.rst:98 ../../rum/rum-scenario-library/scenario-monitoring.rst:122 ../../rum/rum-scenario-library/spa-custom-event.rst:109

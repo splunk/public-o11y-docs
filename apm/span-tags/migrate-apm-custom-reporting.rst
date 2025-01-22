@@ -126,7 +126,7 @@ Update your detectors to use the new indexed tags
 
 To update your detectors, follow these steps.
 
-#. Go to :guilabel:`Alerts & Detectors`, then :guilabel:`Detectors`.
+#. Go to :guilabel:`Detectors & SLOs`, then :guilabel:`Detectors`.
 #. For each affected detector, select the detector, then select :guilabel:`Signals`.
 #. Change the filter to reference the new tag names. Or, if you need to use data from the old tags in your detectors, change the reference in the SignalFlow to both the old and the new tags. 
 
