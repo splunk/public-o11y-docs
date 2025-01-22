@@ -13,7 +13,7 @@ You can use automatic discovery to find third-party applications (such as databa
   
   Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
 
-  If you're using the Collector version 0.109.0 or higher, log in to Splunk Observability Cloud and go to the :guilabel:`Discovered entities`` tab in the :guilabel:`Data Management` menu to see which of your services and third-party applications the Collector has detected and can monitor automatically.   
+  If you're using the Collector version 0.109.0 or higher, log in to Splunk Observability Cloud and go to the :guilabel:`Discovered entities` tab in the :guilabel:`Data Management` menu to see which of your services and third-party applications the Collector has detected and can monitor automatically.   
 
 How automatic discovery works
 ================================================
