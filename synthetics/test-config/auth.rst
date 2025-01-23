@@ -138,7 +138,7 @@ Basic authentication through API request headers
     :description: Basic authentication allows your tests to send a username and password through API request headers.
 
 .. note::
-   This authentication method applies to API tests only. The steps below are for targets that support “Basic auth”, in other words, API methods like ``curl -G https://api.twilio.com/2010-04-01/Accounts.json -u <YOUR_ACCOUNT_SID>:<YOUR_AUTH_TOKEN>``.  You can modify these steps for targets that support a Bearer token.
+   This authentication method applies to API tests only. The steps below are for targets that support “Basic auth”, in other words, API methods like ``curl -G https://api.twilio.com/2010-04-01/Accounts.json -u <YOUR_ACCOUNT_SID>:<YOUR_AUTH_TOKEN>``.  You can modify these steps for targets that support a bearer token.
 
 If your test target expects login credentials to be included in an an API request header, configure your browser test as follows.
 
