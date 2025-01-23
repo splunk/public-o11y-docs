@@ -119,7 +119,7 @@ To disable all text redaction, set ``maskTextSelector: false``. To customize whi
 Input redaction is handled separately. To disable all input redaction, set ``maskAllInputs: false``. To customize which inputs are redacted use the ``maskInputOptions`` option.
 
 .. note::
-    In the rrweb documentation, the default value of ``maskTextSelector`` is specified as ``null`` and ``maskAllInputs`` as ``false``. However, we have changeded these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or ``maskTextSelector`` to ``false`` when no redaction is desired.
+    In the rrweb documentation, the default value of ``maskTextSelector`` is specified as ``null`` and ``maskAllInputs`` as ``false``. However, we have changeded these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or ``maskAllInputs`` to ``false`` when no redaction is desired.
 
 Examples:
 
