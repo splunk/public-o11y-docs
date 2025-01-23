@@ -124,6 +124,12 @@ For optimal performance when running browser tests:
 * 8 GB RAM, 2 cores
 
 
+.. new content here
+
+
+
+
+
 Working with Docker 
 -------------------------------------
 
