@@ -292,29 +292,27 @@ To upgrade the Docker image manually, follow these steps:
 
 #. Pull the latest image
 
-.. code:: shell
-
-  docker pull http://quay.io/signalfx/splunk-synthetics-runner:latest
+   .. code:: shell
+    
+    docker pull http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 #. Stop the running container
 
-.. code:: shell
-   
-   docker stop <container_id_or_name>
+   .. code:: shell
+    
+    docker stop <container_id_or_name>
 
 #. Remove the old container
 
-.. code:: shell
-
-   docker rm <container_id_or_name>
+   .. code:: shell
+    
+    docker rm <container_id_or_name>
 
 #. Start a new container with the updated image
 
-.. code:: shell
-
-   docker run --cap-add NET_ADMIN \
-   -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \
-   http://quay.io/signalfx/splunk-synthetics-runner:latest
+   .. code:: shell
+    
+    docker run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 
 Automatic upgrades
@@ -345,21 +343,21 @@ Uninstall a private runner
 
 #. List all containers
 
-.. code:: shell
-
-   docker ps -a
+   .. code:: shell
+    
+    docker ps -a
 
 #. Remove a stopped container by ID or name
 
-.. code:: shell
-
-   docker rm -f <container_id_or_name>
+   .. code:: shell
+    
+    docker rm -f <container_id_or_name>
 
 #. Force-remove a running container
 
-.. code:: shell
-
-   docker rm -f my_running_container
+   .. code:: shell
+    
+    docker rm -f my_running_container
 
 
 Private runners on Docker Compose
@@ -374,23 +372,23 @@ Install a private runner
 
 #. Create a ``docker-compose.yml`` file with the following definition:
 
-.. code:: yaml
-
-  version: '3'
-  services:
-    runner:
-      image: quay.io/signalfx/splunk-synthetics-runner:latest
-      environment:
-        RUNNER_TOKEN: YOUR_TOKEN_HERE
-      cap_add:
-        - NET_ADMIN
-      restart: always
+   .. code:: yaml
+    
+    version: '3'
+    services:
+      runner:
+        image: quay.io/signalfx/splunk-synthetics-runner:latest
+        environment:
+          RUNNER_TOKEN: YOUR_TOKEN_HERE
+        cap_add:
+          - NET_ADMIN
+        restart: always
 
 #. Run the following command to start the container:
 
-.. code:: shell
-
-   docker-compose up
+   .. code:: shell
+    
+    docker-compose up
 
 .. _upgrade-a-private-runner-1:
 
@@ -406,21 +404,21 @@ To upgrade the Docker image manually, follow these steps:
 
 #. Navigate to the directory containing your docker-compose.yml
 
-.. code:: shell
-
-   cd /path/to/your/docker-compose-file
+  .. code:: shell
+    
+    cd /path/to/your/docker-compose-file
 
 #. Pull the latest images
 
-.. code:: shell
-
-   docker-compose pull
+   .. code:: shell
+    
+    docker-compose pull
 
 #. Recreate containers with the updated images
 
-.. code:: shell
-
-   docker-compose up -d
+   .. code:: shell
+    
+    docker-compose up -d
 
 .. _automatic-upgrades-1:
 
@@ -436,15 +434,15 @@ Uninstall a private runner
 
 #. Navigate to your project directory
 
-.. code:: shell
-
-   cd /path/to/your/docker-compose-directory
+   .. code:: shell
+    
+    cd /path/to/your/docker-compose-directory
 
 #. Run the docker-compose down command
 
-.. code:: shell
-
-   docker-compose down
+   .. code:: shell
+    
+    docker-compose down
 
 Private runners on Docker for Mac or Windows
 --------------------------------------------------------------
@@ -458,8 +456,8 @@ Install a private runner
 
 #. Start your Docker container with the following flags:
 
-.. code:: shell
-
+   .. code:: shell
+    
     docker run -e "DISABLE_NETWORK_SHAPING=true" \
     -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \
     quay.io/signalfx/splunk-synthetics-runner:latest
@@ -479,28 +477,27 @@ To upgrade the Docker image manually, follow these steps:
 
 #. Pull the latest image
 
-.. code:: shell
-
-   docker pull http://quay.io/signalfx/splunk-synthetics-runner:latest
+   .. code:: shell
+    
+    docker pull http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 #. Stop the running container
 
-.. code:: shell
-
-   docker stop <container_id_or_name>
+   .. code:: shell
+    
+    docker stop <container_id_or_name>
 
 #. Remove the old container
 
-.. code:: shell
-
-   docker rm <container_id_or_name>
+   .. code:: shell
+    
+    docker rm <container_id_or_name>
 
 #. Start a new container with the updated image
 
-.. code:: shell
-
-    docker run --cap-add NET_ADMIN \
-    -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \
+   .. code:: shell
+    
+    docker run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \
     http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 .. _automatic-upgrades-2:
@@ -538,21 +535,21 @@ To upgrade the Docker image manually, follow these steps:
 
 #. List all containers
 
-.. code:: shell
-
-   docker ps -a
+   .. code:: shell
+    
+    docker ps -a
 
 #. Remove a stopped container by ID or name
 
-.. code:: shell
-
-   docker rm -f <container_id_or_name>
+   .. code:: shell
+    
+    docker rm -f <container_id_or_name>
 
 #. Force-remove a running container
 
-.. code:: shell
-
-   docker rm -f my_running_container
+   .. code:: shell
+    
+    docker rm -f my_running_container
 
 Private runners on AWS ECS
 --------------------------------------------------------------
@@ -568,41 +565,39 @@ Install a private runner
 
 #.  Copy the following JSON and paste it into the console:
 
-.. code:: json
+    .. code:: json
 
-{
-  "requiresCompatibilities": [
-    "EC2"
-  ],
-  "containerDefinitions": [
-    {
-      "name": "splunk-synthetics-runner",
-      "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
-      "memory": 7680,
-      "cpu": 2048,
-      "essential": true,
-      "environment": [
+      {
+    "requiresCompatibilities": [
+      "EC2"
+    ],
+    "containerDefinitions": [
         {
-          "name": "RUNNER_TOKEN",
-          "value": "YOUR_TOKEN_HERE"
+            "name": "splunk-synthetics-runner",
+            "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
+            "memory": 7680,
+            "cpu": 2048,
+            "essential": true,
+            "environment": [
+              {
+                  "name": "RUNNER_TOKEN",
+                  "value": "YOUR_TOKEN_HERE"
+              }
+            ],
+            "linuxParameters": {
+                  "capabilities": {
+                    "add": ["NET_ADMIN"]
+                  }
+            }
         }
-      ],
-      "linuxParameters": {
-        "capabilities": {
-          "add": [
-            "NET_ADMIN"
-          ]
-        }
-      }
-    }
-  ],
-  "volumes": [],
-  "networkMode": "none",
-  "memory": "7680",
-  "cpu": "2048",
-  "placementConstraints": [],
-  "family": "splunk-synthetics"
-}
+    ],
+    "volumes": [],
+    "networkMode": "none",
+    "memory": "7680",
+    "cpu": "2048",
+    "placementConstraints": [],
+    "family": "splunk-synthetics"
+  }
 
 #. Select :guilabel:`Save` to close the JSON input panel.
 
@@ -748,14 +743,14 @@ Install a private runner
 
 #. Create a Kubernetes Secret with the runner token:
 
-.. code:: shell
-
-   kubectl create secret generic runner-token-secret \\
+   .. code:: shell
+    
+    kubectl create secret generic runner-token-secret \\
    --from-literal=RUNNER_TOKEN=YOUR_TOKEN_HERE
 
-#.  Create the deployment YAML:
+#. Create the deployment YAML:
 
-.. code:: yaml
+   .. code:: yaml
 
    apiVersion: apps/v1
    kind: Deployment
@@ -797,9 +792,9 @@ Install a private runner
 
 #. Apply the Deployment YAML:
 
-.. code:: shell
-   
-   kubectl apply -f deployment.yaml
+   .. code:: shell
+    
+    kubectl apply -f deployment.yaml
 
 .. _upgrade-a-private-runner-5:
 
@@ -835,13 +830,13 @@ Install a private runner
 
 #. Create a OpenShift Secret with the runner token:
 
-.. code:: shell
-   
-   oc create secret generic runner-token-secret --from-literal=RUNNER_TOKEN=YOUR_TOKEN_HERE
+   .. code:: shell
+    
+    oc create secret generic runner-token-secret --from-literal=RUNNER_TOKEN=YOUR_TOKEN_HERE
 
 #.  Create the deployment YAML:
 
-.. code:: yaml
+   .. code:: yaml
 
    apiVersion: apps/v1
    kind: Deployment
@@ -885,9 +880,9 @@ Install a private runner
 
 #.  Apply the deployment YAML:
 
-.. code:: shell
-
-   oc apply -f deployment.yaml
+   .. code:: shell
+    
+    oc apply -f deployment.yaml
 
 .. _upgrade-a-private-runner-6:
 
@@ -935,27 +930,27 @@ Upgrade a private runner
 
 #. Pull the latest image
 
-.. code:: shell
-
-   podman pull http://quay.io/signalfx/splunk-synthetics-runner:latest
+   .. code:: shell
+    
+    podman pull http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 #. Stop the running container
 
-.. code:: shell
-
-   podman stop <container_id_or_name>
+   .. code:: shell
+    
+    podman stop <container_id_or_name>
 
 #. Remove the old container
 
-.. code:: shell
-
-   podman rm <container_id_or_name>
+   .. code:: shell
+    
+    podman rm <container_id_or_name>
 
 #. Start a new container with the updated image
 
-.. code:: shell
-   
-   podman run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \\
+   .. code:: shell
+    
+    podman run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \\
    http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 .. _uninstall-a-private-runner-7:
@@ -965,21 +960,22 @@ Uninstall a private runner
 
 #. List all containers
 
-.. code:: shell
-
-   podman ps -a
+   .. code:: shell
+    
+    podman ps -a
 
 #. Remove a stopped container by ID or name
 
-.. code:: shell
-
-   podman rm -f <container_id_or_name>
+   .. code:: shell
+    
+    podman rm -f <container_id_or_name>
 
 3. Force remove a running container
 
-.. code:: shell
+   .. code:: shell
+    
+    podman rm -f my_running_container
 
-   podman rm -f my_running_container
 
 Private runners on Podman for MacOS or Windows
 --------------------------------------------------------------
@@ -1001,28 +997,27 @@ Upgrade a private runner
 
 #. Pull the latest image
 
-.. code:: shell
-
-   podman pull http://quay.io/signalfx/splunk-synthetics-runner:latest
+   .. code:: shell
+    
+    podman pull http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 #. Stop the running container
 
-.. code:: shell
-
-   podman stop <container_id_or_name>
+   .. code:: shell
+    
+    podman stop <container_id_or_name>
 
 #. Remove the old container
 
-.. code:: shell
-
-   podman rm <container_id_or_name>
+   .. code:: shell
+    
+    podman rm <container_id_or_name>
 
 #. Start a new container with the updated image
 
-.. code:: shell
-   
-   podman run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \\
-   http://quay.io/signalfx/splunk-synthetics-runner:latest
+   .. code:: shell
+    
+    podman run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 .. _uninstall-a-private-runner-8:
 
@@ -1031,21 +1026,22 @@ Uninstall a private runner
 
 #. List all containers
 
-.. code:: shell
-
-   podman ps -a
+   .. code:: shell
+    
+    podman ps -a
 
 #. Remove a stopped container by ID or name
 
-.. code:: shell
-
-   podman rm -f <container_id_or_name>
+   .. code:: shell
+    
+    podman rm -f <container_id_or_name>
 
 #. Force remove a running container
 
-.. code:: shell
+   .. code:: shell
+    
+    podman rm -f my_running_container
 
-   podman rm -f my_running_container
 
 Private runners on ARM64 machines on AWS and GCP
 --------------------------------------------------------------
