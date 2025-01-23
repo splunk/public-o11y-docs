@@ -13,6 +13,7 @@ Collector components: Extensions
     :hidden:
 
     basic-auth-extension
+    bearertokenauth-extension
     docker-observer-extension
     ecs-observer-extension
     ecstask-observer-extension

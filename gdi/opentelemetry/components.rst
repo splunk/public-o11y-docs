@@ -120,17 +120,15 @@ A connector connects different pipelines and helps you send telemetry data betwe
 
 Each pipeline in the OpenTelemetry Collector acts on one type of telemetry data. If you need to process one form of telemetry data into another one, route the data accordingly to its proper collector pipeline.
 
-.. list-table::
-   :widths: 25 55 20
-   :header-rows: 1
-   :width: 100%
+.. raw:: html
 
-   * - Name
-     - Description
-     - Pipeline types
-   * - :ref:`span-metrics-connector` (``spanmetrics``)
-     - Aggregates Request, Error and Duration (R.E.D) OpenTelemetry metrics from span data.
-     - Traces, metrics
+   <div class="include-start" id="collector-available-connectors.rst"></div>
+
+.. include:: /_includes/gdi/collector-available-connectors.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-available-connectors.rst"></div>
 
 .. raw:: html
 

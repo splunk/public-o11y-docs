@@ -190,5 +190,5 @@ Learn more about these processors:
 
 Learn more about these exporters:
 
-* :ref:`splunk-apm-exporter`
+* :ref:`otlphttp-exporter`
 * :ref:`signalfx-exporter`

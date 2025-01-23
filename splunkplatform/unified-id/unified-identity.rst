@@ -105,7 +105,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
     a. To pair with command-line interface, enter the following Admin Config Services (ACS) command:
 
-      .. code-block:: bash
+       .. code-block:: bash
     
               acs observability pair --o11y-access-token "<enter-o11y-access-token>"
 
@@ -123,38 +123,33 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
        .. code-block:: bash
 
-               curl --location 
-               'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing' \
-               --header 'Content-Type: application/json' \
-               --header 'Authorization: Bearer <enter-splunk-admin-api-token>' \
-               --header 'o11y-access-token': '<enter-o11y-api-token>'
+              curl -X POST 'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing' \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
+              -H "o11y-access-token: <enter-o11y-api-token>" 
 
+       Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
 
-   Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
+       .. code-block:: bash
 
-   .. code-block:: bash
-
-          "id": "<pairing-id>"
+              "id": "<pairing-id>"
 
 4. You can use the pairing id to get the current status of the pairing. 
 
-   a. To get the status using command-line interface, run the following ACS command:
+   a. To get the status using command-line interface, run the following ACS command then replace the pairing id and the access token with your own values:
 
       .. code-block:: bash
 
               acs observability pairing-status-by-id --pairing-id "<enter-pairing-id>" --o11y-access-token "<enter-o11y-access-token>"
-
-      Replace the pairing id and the access token with your own values. 
     
     b. To get the status using API endpoints, run the following curl command with the data you obtained in step 3b:
 
       .. code-block:: bash
     
-              curl --location --request GET 
-              'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
-              --header 'Content-Type: application/json' \
-              --header 'Authorization: Bearer <enter-splunk-admin-api-token>'
-              --header 'o11y-access-token': '<enter-o11y-api-token>'
+              curl -X GET 'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
+              -H "o11y-access-token: <enter-o11y-api-token>"
 
 5. The system returns a status message showing whether or not the pairing was a success. Statuses are SUCCESS, FAILED, or IN_PROGRESS. 
 
