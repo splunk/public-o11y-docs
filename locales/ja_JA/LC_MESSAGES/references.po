@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-09 16:18+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -63,360 +63,371 @@ msgid "automatic discovery"
 msgstr "自動ディスカバリー"
 
 #: ../../references/glossary.rst:27
+#, fuzzy
 msgid ""
-"Automatic discovery is a feature of the Splunk Distribution of the OpenTelemetry Collector that identifies the services, such as third-party databases and web servers, running in your environment and sends telemetry data from them to Splunk Application Performance Monitoring (APM) and Infrastructure Monitoring. The Collector configures service-specific receivers that collect data from an "
-"endpointexposed on each service. For more information, see :ref:`discovery_mode`."
+"Automatic discovery is a feature of the Splunk Distribution of the OpenTelemetry Collector that identifies the services, such as third-party databases and web servers, running in your environment and sends telemetry data from them to Splunk Application Performance Monitoring (APM) and Infrastructure Monitoring. The Collector configures service-specific receivers that collect data from an endpoint exposed "
+"oneach service. For more information, see :ref:`discovery_mode`."
 msgstr ""
-"自動ディスカバリーは、Splunk Distribution of the OpenTelemetry Collectorの機能であり、お使いの環境で実行されているサードパーティのデータベースや Web サーバーなどのサービスを識別し、それらからの遠隔測定データを Splunk Application Performance Monitoring (APM) と Infrastructure Monitoring に送信します。Collectorは、各サービスで公開されているエンドポイントからデータを収集するサービス固有のレシーバーを構成"
-"します。詳細については、:ref:`discovery_mode` を参照してください。"
-
-#: ../../references/glossary.rst:28
-msgid "automatic instrumentation"
-msgstr "自動インストルメンテーション"
+"自動ディスカバリーは、Splunk Distribution of the OpenTelemetry Collectorの機能であり、お使いの環境で実行されているサードパーティのデータベースや Web サーバーなどのサービスを識別し、それらからの遠隔測定データを Splunk Application Performance Monitoring (APM) と Infrastructure Monitoring に送信します。Collectorは、各サービスで公開されているエンドポイントからデータを収集するサービス固有のレシーバーを構成します。"
+"詳細については、:ref:`discovery_mode` を参照してください。"
 
 #: ../../references/glossary.rst:30
-msgid ""
-"Automatic instrumentation allows you to instrument your applications and export telemetry data without having to modify the application source files. The language-specific instrumentation agent configures the source application to export data in a supported format to an OTLP endpoint, on either an OTLP receiver or the Splunk Observability Cloud back end. Automatic instrumentation is available "
-"forapplications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP and automatically collects telemetry data for code written using supported libraries in each language. For more information, see :ref:`get-started-application`."
-msgstr ""
-"自動インストルメンテーションにより、アプリケーションのソースファイルを変更することなく、アプリケーションをインストルメンテーションし、遠隔測定データをエクスポートすることができます。言語固有のインストルメンテーションエージェントは、OTLP 受信機または Splunk Observability Cloud バックエンドのいずれかにある OTLP エンドポイントに、サポートされている形式でデータをエクスポートするようにソースアプリケーション"
-"を設定します。自動インストルメンテーションは、Java、Node.js、.NET、Go、Python、Ruby、PHP で書かれたアプリケーションで利用でき、各言語でサポートされているライブラリを使用して書かれたコードの遠隔測定データを自動的に収集します。詳細については、:ref:`get-started-application` を参照してください。"
-
-#: ../../references/glossary.rst:33
 msgid "C"
 msgstr "C"
 
-#: ../../references/glossary.rst:36
+#: ../../references/glossary.rst:33
 msgid "call stack"
 msgstr "コールスタック"
 
-#: ../../references/glossary.rst:38
+#: ../../references/glossary.rst:35
 msgid "A call stack is the data structure used by a machine to keep track of which methods are currently being called. When the active call stack is sampled, the result is a stack trace."
 msgstr "コールスタックとは、現在呼び出されているメソッドを追跡するためにマシンが使用するデー タ構造のことです。アクティブなコールスタックがサンプリングされると、その結果はスタックトレースになります。"
 
-#: ../../references/glossary.rst:39
+#: ../../references/glossary.rst:36
 msgid "counter metric"
 msgstr "カウンターメトリクス"
 
-#: ../../references/glossary.rst:41
+#: ../../references/glossary.rst:38
+#, fuzzy
 msgid ""
-"The counter metric type represents data that is a count of occurrences in a time interval. It measures occurrences of an activity or event, for example, the number of web pages served by a website or the number of exceptions in a process. Summing counters over a period of time produces the net activity in that interval. Counters can only take integer values of zero or greater and are reset to zero "
-"atthe conclusion of each reporting interval."
+"The counter metric type represents data that is a count of occurrences in a time interval. It measures occurrences of an activity or event, for example, the number of web pages served by a website or the number of exceptions in a process. Summing counters over a period of time produces the net activity in that interval. Counters can only take integer values of zero or greater and are reset to zero at "
+"theconclusion of each reporting interval."
 msgstr ""
-"カウンターメトリックスタイプは、ある時間間隔内の発生回数のカウントであるデータを表します。これは、アクティビティやイベントの発生を測定するもので、例えば、ウェブサイトが提供するウェブページの数や、プロセス内の例外の数などがあります。ある期間のカウンターを合計すると、その間隔内の正味のアクティビティが計算されます。カウンターはゼロ以上の整数値しか取ることができず、各レポート間隔の終了時にゼロにリセットさ"
-"れます。"
+"カウンターメトリックスタイプは、ある時間間隔内の発生回数のカウントであるデータを表します。これは、アクティビティやイベントの発生を測定するもので、例えば、ウェブサイトが提供するウェブページの数や、プロセス内の例外の数などがあります。ある期間のカウンターを合計すると、その間隔内の正味のアクティビティが計算されます。カウンターはゼロ以上の整数値しか取ることができず、各レポート間隔の終了時にゼロにリセットされます。"
 
-#: ../../references/glossary.rst:42
+#: ../../references/glossary.rst:39
 msgid "cumulative counter metric"
 msgstr "累積カウンターメトリクス"
 
-#: ../../references/glossary.rst:44
+#: ../../references/glossary.rst:41
+#, fuzzy
 msgid ""
-"The cumulative counter metric type represents a running count of occurrences. It typically represents the total activity in the lifetime of an application or process. Cumulative counters are NOT reset with each reporting interval. Examples of cumulative counters include the total number of Splunk Infrastructure Monitoring API calls served since a web server started up, or the total number of "
-"bytestransmitted by an interface since it started up. Cumulative counters can also be used to derive incremental values, just as counters can."
+"The cumulative counter metric type represents a running count of occurrences. It typically represents the total activity in the lifetime of an application or process. Cumulative counters are NOT reset with each reporting interval. Examples of cumulative counters include the total number of Splunk Infrastructure Monitoring API calls served since a web server started up, or the total number of bytestransmitted "
+"by an interface since it started up. Cumulative counters can also be used to derive incremental values, just as counters can."
 msgstr ""
-"累積カウンターメトリクスタイプは、発生回数の累積カウントを表します。これは通常、アプリケーションまたはプロセスの生涯におけるアクティビティの合計を表します。累積カウンターはレポート間隔ごとにリセットされません。累積カウンターの例としては、Webサーバーが起動してからの Splunk Infrastructure Monitoring API呼び出しの総数や、インターフェイスが起動してからの送信バイトの総計などがあります。累積カウンターも、カ"
-"ウンターと同様に、増分値を導くために使用できます。"
+"累積カウンターメトリクスタイプは、発生回数の累積カウントを表します。これは通常、アプリケーションまたはプロセスの生涯におけるアクティビティの合計を表します。累積カウンターはレポート間隔ごとにリセットされません。累積カウンターの例としては、Webサーバーが起動してからの Splunk Infrastructure Monitoring API呼び出しの総数や、インターフェイスが起動してからの送信バイトの総計などがあります。累積カウンターも、カウンター"
+"と同様に、増分値を導くために使用できます。"
 
-#: ../../references/glossary.rst:47
+#: ../../references/glossary.rst:44
 msgid "D"
 msgstr "D"
 
-#: ../../references/glossary.rst:50
+#: ../../references/glossary.rst:47
 msgid "detector"
 msgstr "ディテクター"
 
-#: ../../references/glossary.rst:52
+#: ../../references/glossary.rst:49
 msgid "A detector monitors a signal for conditions that you care about."
 msgstr "ディテクターは、ユーザーの関心対象の条件について信号をモニターします。"
 
-#: ../../references/glossary.rst:54
+#: ../../references/glossary.rst:51
 msgid "Those conditions are expressed as one or more rules that trigger an alert when the conditions in the rules are met. Individual rules in a detector are labeled according to criticality: Info, Warning, Minor, Major, and Critical."
 msgstr "これらの条件は、条件が満たされたときにアラートをトリガーする1つまたは複数のルールとして表されます。ディテクター内の個々のルールは、重大度に応じて「情報」、「警告」、「マイナー」、「メジャー」、「クリティカル」のラベルを付されます。"
 
-#: ../../references/glossary.rst:56
+#: ../../references/glossary.rst:53
 msgid "For example, a detector that monitors the latency of an API call triggers a critical alert when the latency is significantly higher than normal, as defined in the detector rules."
 msgstr "例えば、APIコールのレイテンシを監視するあるディテクターは、ディテクタールールで定義されている「通常」よりもレイテンシが著しく高い場合に「クリティカル」のアラートをトリガーします。"
 
-#: ../../references/glossary.rst:58
+#: ../../references/glossary.rst:55
 msgid "For more information, see :ref:`get-started-detectoralert`."
 msgstr "詳細は、:ref:`get-started-detectoralert` を参照してください。"
 
-#: ../../references/glossary.rst:59
+#: ../../references/glossary.rst:56
 msgid "dimension"
 msgstr "ディメンション"
 
-#: ../../references/glossary.rst:61
+#: ../../references/glossary.rst:58
 msgid "A dimension is a key/value pair that, along with the metric name, is part of the identity of a time series. You can filter and aggregate time series by those dimensions across Infrastructure Monitoring."
 msgstr "ディメンションとは、メトリクス名とともに時系列のIDの一部となるキーと値のペアです。Infrastructure Monitoring全体で、これらのディメンションによって時系列をフィルタリングおよび集計できます。"
 
-#: ../../references/glossary.rst:64
+#: ../../references/glossary.rst:61
 msgid "E"
 msgstr "E"
 
-#: ../../references/glossary.rst:67
+#: ../../references/glossary.rst:64
 msgid "event"
 msgstr "イベント"
 
-#: ../../references/glossary.rst:69
+#: ../../references/glossary.rst:66
+#, fuzzy
 msgid ""
-"An event is a periodic occurrence that can be represented as a structured log line to Splunk Infrastructure Monitoring. For example, the values could be represented as any combination of key/value pairs. Events are secondary to :term:`metrics<Metric>` in Infrastructure Monitoring and are meant to provide context for the metric data. Events can be displayed on charts and viewed in the Events sidebar."
-"See :ref:`events-intro`."
+"An event is a periodic occurrence that can be represented as a structured log line to Splunk Infrastructure Monitoring. For example, the values could be represented as any combination of key/value pairs. Events are secondary to :term:`metrics<Metric>` in Infrastructure Monitoring and are meant to provide context for the metric data. Events can be displayed on charts and viewed in the Events sidebar. See :ref:"
+"`events-intro`."
 msgstr ""
-"イベントとは、Splunk Infrastructure Monitoringに構造化されたログラインとして表される定期的な発生事象です。例えば、イベントの値はキーと値のペアの任意の組み合わせとして表すことができます。イベントはInfrastructure Monitoringにおいて :term:`メトリクス<Metric>` に次ぐものであり、メトリクスデータにコンテキストを提供することを意図しています。イベントは、チャートに表示したり、「イベント」サイドバーに表示したり"
-"できます。詳細は :ref:`events-intro` を参照してください。"
+"イベントとは、Splunk Infrastructure Monitoringに構造化されたログラインとして表される定期的な発生事象です。例えば、イベントの値はキーと値のペアの任意の組み合わせとして表すことができます。イベントはInfrastructure Monitoringにおいて :term:`メトリクス<Metric>` に次ぐものであり、メトリクスデータにコンテキストを提供することを意図しています。イベントは、チャートに表示したり、「イベント」サイドバーに表示したりできま"
+"す。詳細は :ref:`events-intro` を参照してください。"
 
-#: ../../references/glossary.rst:70
+#: ../../references/glossary.rst:67
 msgid "event time series"
 msgstr "イベント時系列"
 
-#: ../../references/glossary.rst:72
+#: ../../references/glossary.rst:69
 msgid "An event time series (ETS) is a sequence of events uniquely identified by the event name and optional, additional dimensions. For example, an event time series with the name ``code push`` and the dimension ``repository`` can be created to record code push events for a given repository. An example of such an ETS could be ``sf_eventType:code push`` and ``repository:ui-code-base``."
-msgstr "イベント時系列（ETS）は、イベント名およびオプションの追加ディメンションによって一意に識別されるイベントのシーケンスです。例えば、``code push`` という名前で ``repository`` というディメンションを持つイベント時系列を作成して、あるリポジトリのコードプッシュイベントを記録することができます。このようなETSの例としては、``sf_eventType:code push `` や `` repository:ui-code-base`` があります。"
+msgstr "イベント時系列（ETS）は、イベント名およびオプションの追加ディメンションによって一意に識別されるイベントのシーケンスです。例えば、``code push`` という名前で ``repository`` というディメンションを持つイベント時系列を作成して、あるリポジトリのコードプッシュイベントを記録することができます。このようなETSの例としては、``sf_eventType:code push`` や ``repository:ui-code-base`` があります。"
 
-#: ../../references/glossary.rst:75
+#: ../../references/glossary.rst:72
 msgid "F"
 msgstr "F"
 
-#: ../../references/glossary.rst:78
+#: ../../references/glossary.rst:75
 msgid "flame graph"
 msgstr "フレームグラフ"
 
-#: ../../references/glossary.rst:80
+#: ../../references/glossary.rst:77
+#, fuzzy, python-format
 msgid ""
-"The flame graph is a visual representation of a collection of stack traces. For every line of code in the stack trace, there is a corresponding line in the flame graph. The width of each bar in the flame graph represents the number of times the respective line of code appears in the stack traces that have been collected in the time range of the flame graph. For example, if a line of code occupies "
-"100%of the width of the flame graph, then that line of code appears in all of the stack traces in the collection. The  y-axis of the flame graph shows the depth of the stack trace.  The colors of the flame graph are random. The x-axis is not ordered by time. The ordering of stack traces from left to right is random and it does not correlate to a time-based sequence."
+"The flame graph is a visual representation of a collection of stack traces. For every line of code in the stack trace, there is a corresponding line in the flame graph. The width of each bar in the flame graph represents the number of times the respective line of code appears in the stack traces that have been collected in the time range of the flame graph. For example, if a line of code occupies 100% of "
+"thewidth of the flame graph, then that line of code appears in all of the stack traces in the collection. The  y-axis of the flame graph shows the depth of the stack trace.  The colors of the flame graph are random. The x-axis is not ordered by time. The ordering of stack traces from left to right is random and it does not correlate to a time-based sequence."
 msgstr ""
-"フレームグラフは、スタックトレースの集合を視覚的に表現したものです。スタックトレース内のすべてのコード行に対して、対応する行がフレームグラフ内にあります。フレームグラフの各バーの幅は、フレームグラフの時間範囲内で収集されたスタックトレースにおいてそれぞれのコード行が現れる回数を表しています。例えば、あるコード行がフレームグラフの幅の100％を占める場合、そのコード行は、その集合内のすべてのスタックトレース"
-"に現れているということです。フレームグラフのY軸は、スタックトレースの深さを示します。フレ―ムグラフの色はランダムです。X軸は時間順ではありません。スタックトレースの左から右への順序はランダムであり、時間ベースのシーケンスとの相関はありません。"
+"フレームグラフは、スタックトレースの集合を視覚的に表現したものです。スタックトレース内のすべてのコード行に対して、対応する行がフレームグラフ内にあります。フレームグラフの各バーの幅は、フレームグラフの時間範囲内で収集されたスタックトレースにおいてそれぞれのコード行が現れる回数を表しています。例えば、あるコード行がフレームグラフの幅の100％を占める場合、そのコード行は、その集合内のすべてのスタックトレースに現れ"
+"ているということです。フレームグラフのY軸は、スタックトレースの深さを示します。フレ―ムグラフの色はランダムです。X軸は時間順ではありません。スタックトレースの左から右への順序はランダムであり、時間ベースのシーケンスとの相関はありません。"
 
-#: ../../references/glossary.rst:81
+#: ../../references/glossary.rst:78
 msgid "flappy"
 msgstr "フラッピー"
 
-#: ../../references/glossary.rst:83
-#, python-format
+#: ../../references/glossary.rst:80
+#, fuzzy, python-format
 msgid ""
-"A :term:`detector` is said to be \"flappy\" when it triggers and clears alerts too frequently. For example, if you have a detector set to trigger an alert when a value reaches 90%, and the signal you are monitoring regularly spikes and dips around this value, alerts will be triggered and cleared too often to be of value. To reduce this flappiness, you might want to specify that the value must remain "
-"at90% for a specified amount of time before triggering an alert."
+"A :term:`detector` is said to be \"flappy\" when it triggers and clears alerts too frequently. For example, if you have a detector set to trigger an alert when a value reaches 90%, and the signal you are monitoring regularly spikes and dips around this value, alerts will be triggered and cleared too often to be of value. To reduce this flappiness, you might want to specify that the value must remain at "
+"90%for a specified amount of time before triggering an alert."
 msgstr ""
-"ある :term:`detector` が頻繁にアラートをトリガーしクリアする場合、その状態を「フラッピー」といいます。たとえば、値が90%に達したときにアラートをトリガーするようにディテクターを設定していて、監視している信号がこの値の周辺で定期的に急上昇したり急降下したりする場合、アラートのトリガーとクリアの頻度が高くなりすぎてアラートの意味がありません。このフラッピーな状態を抑えるために、アラートがトリガーされる前に値"
-"が90%の状態を一定時間維持する必要があることを条件で指定するとよいでしょう。"
+"ある :term:`detector` が頻繁にアラートをトリガーしクリアする場合、その状態を「フラッピー」といいます。たとえば、値が90%に達したときにアラートをトリガーするようにディテクターを設定していて、監視している信号がこの値の周辺で定期的に急上昇したり急降下したりする場合、アラートのトリガーとクリアの頻度が高くなりすぎてアラートの意味がありません。このフラッピーな状態を抑えるために、アラートがトリガーされる前に値が90%の"
+"状態を一定時間維持する必要があることを条件で指定するとよいでしょう。"
 
-#: ../../references/glossary.rst:86
+#: ../../references/glossary.rst:83
 msgid "G"
 msgstr "G"
 
-#: ../../references/glossary.rst:89
+#: ../../references/glossary.rst:86
 msgid "gateway (deployment method)"
 msgstr "ゲートウェイ（デプロイの方法）"
 
-#: ../../references/glossary.rst:91
+#: ../../references/glossary.rst:88
 msgid "Gateway is a deployment method where the :term:`Splunk Distribution of OpenTelemetry Collector` is running by itself. When you configure the Splunk Distribution of OpenTelemetry Collector as a standalone package, you are using the gateway deployment method."
 msgstr "ゲートウェイとは、:term:`Splunk Distribution of OpenTelemetry Collector` が単独で実行されるデプロイメントの方法です。Splunk Distribution of OpenTelemetry Collectorをスタンドアロンパッケージとして構成する場合は、ゲートウェイのデプロイ方法を使用しています。"
 
-#: ../../references/glossary.rst:92
+#: ../../references/glossary.rst:89
 msgid "gauge metric"
 msgstr "ゲージメトリクス"
 
-#: ../../references/glossary.rst:94
+#: ../../references/glossary.rst:91
+#, fuzzy, python-format
 msgid ""
 "The gauge metric type represents data that has a specific value at each point in time. It measures the value of something over time. Examples of gauges used in monitoring include CPU utilization percentage, % free JVM heap, or the size of an internal queue in an application. Reporting frequency (in other words, how often you take a reading) is most important for gauges, as higher frequency is "
 "typicallyassociated with higher accuracy."
 msgstr "ゲージメトリクスタイプは、各時点で特定の値を持つデータを表します。これは、一定時間にわたる何らかの値を測定するものです。監視において使用されるゲージの例には、CPU使用率、JVMのヒープ空き率、アプリケーションの内部キューのサイズなどがあります。レポート頻度（つまり、どれくらいの頻度で読み取りを行うか）は、ゲージにとって最も重要です。一般的に、頻度が高いほど精度の高さと結びつくからです。"
 
-#: ../../references/glossary.rst:96
+#: ../../references/glossary.rst:93
 msgid "For example, measuring CPU utilization every 5 minutes means that any peaks and valleys that may have occurred between readings are missed, and it's entirely possible that those peaks or valleys may be significant."
 msgstr "たとえば、CPU使用率を5分ごとに測定するということは、読み取りと読み取りの間に発生した可能性のあるピークやバレーを見逃すということですが、それらのピークやバレーが重要である可能性は十分にあります。"
 
-#: ../../references/glossary.rst:99
+#: ../../references/glossary.rst:96
 msgid "I"
 msgstr "I"
 
-#: ../../references/glossary.rst:102
+#: ../../references/glossary.rst:99
 msgid "integration"
 msgstr "インテグレーション"
 
-#: ../../references/glossary.rst:104
+#: ../../references/glossary.rst:101
 #, fuzzy
 msgid "An integration is a configurable component of Splunk Observability Cloud that connects Splunk Observability Cloud to a third-party service. Most integrations connect third-party data services, but Splunk Observability Cloud also offers SSO and notification integrations."
 msgstr "インテグレーションとは、Splunk Observability Cloudをサードパーティのサービスに接続するSplunk Observability Cloudの設定可能なコンポーネントです。ほとんどのインテグレーションはサードパーティのデータサービスを接続しますが、Splunk Observability CloudはSSOと通知のインテグレーションも提供します。"
 
-#: ../../references/glossary.rst:108
+#: ../../references/glossary.rst:105
 msgid "M"
 msgstr "M"
 
-#: ../../references/glossary.rst:111
+#: ../../references/glossary.rst:108
 msgid "metric"
 msgstr "メトリクス"
 
-#: ../../references/glossary.rst:113
+#: ../../references/glossary.rst:110
 msgid "Metrics are the primary form of data you send into Splunk Infrastructure Monitoring. A metric is a periodic measurement that is represented as a numerical value. The same metric can be reported from multiple sources or emitters. Typically, each unique combination of a source and a metric results in a :term:`metric time series<metric time series>`."
-msgstr "メトリクスは、Splunk Infrastructure Monitoringに送信するデータの主な形式です。メトリクスは数値として表される定期的な測定結果です。同じメトリクスを複数のソースまたは送信元からレポートすることができます。通常、ソースとメトリックの一意の組み合わせはそれぞれ :term:`メトリック時系列` になります。"
+msgstr "メトリクスは、Splunk Infrastructure Monitoringに送信するデータの主な形式です。メトリクスは数値として表される定期的な測定結果です。同じメトリクスを複数のソースまたは送信元からレポートすることができます。通常、ソースとメトリックの一意の組み合わせはそれぞれ :term:`metric time series<metric time series>` になります。"
 
-#: ../../references/glossary.rst:114
+#: ../../references/glossary.rst:111
 msgid "metric cardinality"
 msgstr "メトリクスカーディナリティ"
 
-#: ../../references/glossary.rst:116
+#: ../../references/glossary.rst:113
 msgid "Metric cardinality is the number of unique metric time series (MTS) produced by a combination of metric name and its associated dimensions. Therefore, a metric has high cardinality when it has a high number of dimension keys, and a high number of possible unique values for those dimension keys."
 msgstr "メトリクスカーディナリティは、メトリクス名と関連するディメンションの組み合わせによって生成される一意のメトリック時系列（MTS）の数です。したがって、メトリクスのカーディナリティが高いのは、ディメンションキーの数が多く、それらのディメンションキーに対して取り得る一意の値の数が多い場合です。"
 
-#: ../../references/glossary.rst:117
+#: ../../references/glossary.rst:114
 msgid "metric time series"
 msgstr "メトリック時系列"
 
-#: ../../references/glossary.rst:119
+#: ../../references/glossary.rst:116
 msgid "A metric time series (MTS) is defined by the unique combination of a metric and a set of dimensions (which may be empty). The most common dimension is a source, like a host or instance for infrastructure metrics, or an application component or service tier for application metrics. The output of analytics pipelines are also metric time series."
 msgstr "メトリック時系列（MTS）は、メトリクスとディメンションセット（空の場合もある）の一意の組み合わせによって定義されます。最も一般的なディメンションはソースで、インフラストラクチャメトリクスの場合はホストやインスタンス、アプリケーションメトリクスの場合はアプリケーションコンポーネントやサービス層などです。分析パイプラインの出力もメトリック時系列です。"
 
-#: ../../references/glossary.rst:120
+#: ../../references/glossary.rst:117
 msgid "MTS"
 msgstr "MTS"
 
-#: ../../references/glossary.rst:122
+#: ../../references/glossary.rst:119
 msgid "See :term:`metric time series`."
 msgstr ":term:`metric time series` を参照してください。"
 
-#: ../../references/glossary.rst:123
+#: ../../references/glossary.rst:120
 msgid "muting rule"
 msgstr "ミュートルール"
 
-#: ../../references/glossary.rst:125
+#: ../../references/glossary.rst:122
 msgid "A muting rule defines a period of time during which :term:`notifications<notification>` for specified :term:`alerts<alert>` will not be sent.  See :ref:`mute-notifications`."
-msgstr "ミュートルールは、指定した :term:`アラート<alert>` の :term:`通知<notification>` を送信しない期間を定義するものです。:ref:`mute-notifications` を参照してください。"
+msgstr "ミュートルールは、指定した :term:`アラート<alert>` の :term:`通知 <notification>` を送信しない期間を定義するものです。:ref:`mute-notifications` を参照してください。"
 
-#: ../../references/glossary.rst:128
+#: ../../references/glossary.rst:125
 msgid "N"
 msgstr "N"
 
-#: ../../references/glossary.rst:131
+#: ../../references/glossary.rst:128
 msgid "notification"
 msgstr "通知"
 
-#: ../../references/glossary.rst:133
+#: ../../references/glossary.rst:130
 msgid "A notification is an action taken when a :term:`detector` triggers an :term:`alert` and when the alert condition clears. Notifications can be sent to an email address; to one of several other systems, such as Slack; or to a webhook URL."
 msgstr "通知とは、:term:`detector` が :term:`alert` をトリガーしたときとアラート条件がクリアされたときに実行されるアクションです。通知は、電子メールアドレス、Slackのような他のシステムの1つ、またはWebhook URLに送信することができます。"
 
-#: ../../references/glossary.rst:136
+#: ../../references/glossary.rst:133
 msgid "P"
 msgstr "P"
 
-#: ../../references/glossary.rst:139
+#: ../../references/glossary.rst:136
 msgid "property"
 msgstr "プロパティ"
 
-#: ../../references/glossary.rst:141
+#: ../../references/glossary.rst:138
+#, fuzzy
 msgid ""
-"Properties are key-value pairs that can be bound to metrics, dimensions, or time series. They define arbitrary text data that can be used to provide additional operational information on the objects they are associated with. Properties are different from dimensions in the sense that they do not take part in the identity of a time series; changing the value of a property does not affect the identity "
-"ofthat time series."
+"Properties are key-value pairs that can be bound to metrics, dimensions, or time series. They define arbitrary text data that can be used to provide additional operational information on the objects they are associated with. Properties are different from dimensions in the sense that they do not take part in the identity of a time series; changing the value of a property does not affect the identity of "
+"thattime series."
 msgstr "プロパティとは、メトリクス、ディメンション、または時系列に結び付けることのできるキーと値のペアです。プロパティは、関連付けられているオブジェクトに関する追加の操作情報を提供するために使用できる任意のテキストデータを定義します。プロパティは、時系列IDの一部ではないという意味において、ディメンションとは異なります。プロパティの値を変更しても、その時系列のIDには影響しません。"
 
-#: ../../references/glossary.rst:143
+#: ../../references/glossary.rst:140
 msgid "Property values are most frequently used as dynamic filters for charts (for example, show 90th percentile of CPU utilization for servers with a location property value of \"Seattle\"), or for groupings (for example, show 90th percentile of CPU utilization for servers, grouped by location value)."
 msgstr "プロパティ値は、チャートの動的フィルタ―として（例：場所のプロパティ値が「シアトル」のサーバーのCPU使用率の90パーセンタイルの表示）、または、グループ化のために（例：サーバーのCPU使用率の90パーセンタイルを場所の値でグループ化して表示）、最も頻繁に使用されます。"
 
-#: ../../references/glossary.rst:146
+#: ../../references/glossary.rst:143
 msgid "R"
 msgstr "R"
 
-#: ../../references/glossary.rst:149
+#: ../../references/glossary.rst:146
 msgid "realm"
 msgstr "レルム"
 
-#: ../../references/glossary.rst:151
+#: ../../references/glossary.rst:148
 msgid "The self-contained deployment of Splunk Observability Cloud where your organization is hosted. Different realms have different Splunk Observability Cloud API endpoints. For example, the endpoint for sending data in the us1 realm is https://ingest.us1.signalfx.com, while the endpoint for sending data in the eu0 realm is https://ingest.eu0.signalfx.com."
 msgstr "あなたの組織がホストされている Splunk Observability Cloud の自己完結型デプロイメント。異なるレルムには異なる Splunk Observability Cloud API エンドポイントがあります。たとえば、us1 レルムでデータを送信するエンドポイントは https://ingest.us1.signalfx.com であり、eu0 レルムでデータを送信するエンドポイントは https://ingest.eu0.signalfx.com です。"
 
-#: ../../references/glossary.rst:152
+#: ../../references/glossary.rst:149
 msgid "rollup"
 msgstr "ロールアップ"
 
-#: ../../references/glossary.rst:154
+#: ../../references/glossary.rst:151
 msgid "An accumulation of data points, with some mathematical or statistical expression applied to it. For example, a 95th percentile calculation over a 1-week window. In an Infrastructure Monitoring plot, rollups determine how Infrastructure Monitoring prepares data points for use in charts or analytic computations."
 msgstr "データポイントの蓄積で、何らかの数式または統計的式が適用されたものです。例えば、1週間の期間における95パーセンタイルの計算です。Infrastructure Monitoringのプロットでは、ロールアップは、Infrastructure Monitoringがチャートや分析計算で使用するデータポイントをどのように準備するかを決定します。"
 
-#: ../../references/glossary.rst:156
+#: ../../references/glossary.rst:153
 msgid "For example, if you change the time range from -1m (past minute) to -1w (past week), multiple data points may be rolled up into one using a rollup function, such as Average, so the data points for the wider timeframe can be effectively displayed."
 msgstr "例えば、時間範囲を-1m（過去1分）から-1w（過去1週間）に変更した場合、Averageなどのロールアップ関数を使って複数のデータポイントを1つにまとめ、より広い時間枠のデータポイントを効果的に表示することができます。"
 
-#: ../../references/glossary.rst:158
+#: ../../references/glossary.rst:155
 msgid "For more information, see :ref:`rollups`."
 msgstr "詳細は、:ref:`rollups` を参照してください。"
 
-#: ../../references/glossary.rst:159
+#: ../../references/glossary.rst:156
 msgid "rule"
 msgstr "ルール"
 
-#: ../../references/glossary.rst:161
+#: ../../references/glossary.rst:158
 msgid "A :term:`detector` contains one or more rules that specify conditions under which the detector triggers an :term:`alert`, the severity of the alert, and the recipients of :term:`notifications<notification>` that are sent when the condition occurs and when it clears."
 msgstr ":term:`detector` には、ディテクターが :term:`alert` をトリガーする条件と、アラートの重大度、そして、条件の発生時と条件のクリア時に送信される :term:`通知<notification>` の受信者を指定する1つまたは複数のルールが含まれます。"
 
-#: ../../references/glossary.rst:163
+#: ../../references/glossary.rst:160
 msgid "For more information, see :ref:`build-rules`."
 msgstr "詳細は、:ref:`build-rules` を参照してください。"
 
-#: ../../references/glossary.rst:166
+#: ../../references/glossary.rst:163
 msgid "S"
 msgstr "S"
 
-#: ../../references/glossary.rst:169
+#: ../../references/glossary.rst:166
 msgid "signal"
 msgstr "シグナル"
 
-#: ../../references/glossary.rst:171
+#: ../../references/glossary.rst:168
 msgid "In the context of a chart in Infrastructure Monitoring, a signal is the metric time series that you want to plot on a chart or use as an input to a detector or to additional analytics."
 msgstr "Infrastructure Monitoringのチャートの文脈においてシグナルとは、チャートにプロットするメトリック時系列、または、ディテクターまたは追加の分析の入力として使用するメトリック時系列です。"
 
-#: ../../references/glossary.rst:172
+#: ../../references/glossary.rst:169
 msgid "stack trace"
 msgstr "スタックトレース"
 
-#: ../../references/glossary.rst:174
+#: ../../references/glossary.rst:171
 msgid "A stack trace is a sampled snapshot of the call stack. The stack trace contains the class name, method name, and line number in the call stack for a given thread. For example, AlwaysOn Profiling captures a stack trace for every running thread in the Java Virtual Machine. When stack traces are sampled across all VM threads, the result is a thread dump."
 msgstr ""
-"スタックトレースとは、コールスタックのスナップショットをサンプリングしたものです。スタックトレースには、指定したスレッドのコールスタック内のクラス名、メソッド名、行番号が含まれます。たとえば、AlwaysOn Profilingでは、Java仮想マシンで実行されているすべてのスレッドのスタックトレースがキャプチャされます。スタックトレースがすべてのVMスレッドにわたってサンプリングされると、その結果はスレッドダンプとなりま"
-"す。"
+"スタックトレースとは、コールスタックのスナップショットをサンプリングしたものです。スタックトレースには、指定したスレッドのコールスタック内のクラス名、メソッド名、行番号が含まれます。たとえば、AlwaysOn Profilingでは、Java仮想マシンで実行されているすべてのスレッドのスタックトレースがキャプチャされます。スタックトレースがすべてのVMスレッドにわたってサンプリングされると、その結果はスレッドダンプとなります。"
 
-#: ../../references/glossary.rst:175
+#: ../../references/glossary.rst:172
 msgid "span"
 msgstr "スパン"
 
-#: ../../references/glossary.rst:177
+#: ../../references/glossary.rst:174
 msgid "A span is a single operation within a trace. A session is made up of a collection of spans and traces."
 msgstr "スパンとは、トレース内の単一の操作です。セッションは、スパンとトレースの集合で構成されます。"
 
-#: ../../references/glossary.rst:178
+#: ../../references/glossary.rst:175
 msgid "Splunk Distribution of OpenTelemetry Collector"
 msgstr "Splunk Distribution of OpenTelemetry Collector"
 
-#: ../../references/glossary.rst:180
+#: ../../references/glossary.rst:177
 msgid "The Splunk Distribution of OpenTelemetry Collector is a package that bundles the Splunk Distribution of OpenTelemetry Collector with additional components to provide integrated collection and forwarding of traces, metrics, and logs for a specific platform. Configuring the Splunk Distribution of OpenTelemetry Collector uses the :term:`agent deployment method <Agent (deployment method)>`."
 msgstr "Splunk Distribution of OpenTelemetry Collectorは、Splunk Distribution of OpenTelemetry Collectorと追加コンポーネントをバンドリングし、特定のプラットフォーム向けにトレース、メトリクス、ログの統合的収集と転送を提供するパッケージです。Splunk Distribution of OpenTelemetry Collectorの設定には、:term:`エージェントのデプロイ方法 <Agent (deployment method)>` を使用します。"
 
-#: ../../references/glossary.rst:183
+#: ../../references/glossary.rst:180
 msgid "T"
 msgstr "T"
 
-#: ../../references/glossary.rst:186
+#: ../../references/glossary.rst:183
 msgid "tag"
 msgstr "タグ"
 
-#: ../../references/glossary.rst:188
+#: ../../references/glossary.rst:185
 msgid "Tags can be thought of as labels or keywords assigned to dimensions, metrics, and other objects. They are not key/value pairs."
 msgstr "タグは、ディメンション、メトリクス、およびその他のオブジェクトに割り当てられたラベルまたはキーワードと考えることができます。キーと値のペアではありません。"
 
-#: ../../references/glossary.rst:190
+#: ../../references/glossary.rst:187
 msgid "The primary use case for tags is when there is a one-to-many relationship between the tag and the object you are assigning it to. For example, suppose you have hosts that are running multiple apps. You can create a tag for each app, then apply multiple tags to each host to specify the apps that are running on that host."
 msgstr "タグの主な用途は、タグとタグの割り当て先のオブジェクトとの間に1対多の関係がある場合です。例えば、複数のアプリを実行しているホストがあるとします。各アプリのタグを作成すると、各ホストに複数のタグを適用して、そのホストで実行中のアプリを指定することができます。"
 
-#: ../../references/glossary.rst:191
+#: ../../references/glossary.rst:188
 msgid "trace"
 msgstr "トレース"
 
-#: ../../references/glossary.rst:193
+#: ../../references/glossary.rst:190
 msgid "A trace is a collection of operations that represents a unique transaction handled by an application and its constituent services. Traces are made of spans, which are calls that microservices make to each other."
 msgstr "トレースとは、アプリケーションとそれを構成するサービスによって処理される一意のトランザクションを表す操作の集合です。トレースは、スパン（マイクロサービスが互いに実行し合うコール）で構成されます。"
+
+#: ../../references/glossary.rst:193
+msgid "Z"
+msgstr "Z"
+
+#: ../../references/glossary.rst:196
+#, fuzzy
+msgid "zero-code instrumentation"
+msgstr "ゼロコードインストルメンテーション"
+
+#: ../../references/glossary.rst:198
+#, fuzzy
+msgid ""
+"Zero-code instrumentation allows you to instrument your applications and export telemetry data without having to modify the application source files. The language-specific instrumentation agent configures the source application to export data in a supported format to an OTLP endpoint, on either an OTLP receiver or the Splunk Observability Cloud back end. Zero-code instrumentation is available forapplications "
+"written in Java, Node.js, .NET, Go, Python, Ruby, and PHP and automatically collects telemetry data for code written using supported libraries in each language. For more information, see :ref:`get-started-application`."
+msgstr ""
+"ゼロコードインストルメンテーションにより、アプリケーションのソースファイルを変更することなく、アプリケーションをインストルメンテーションし、遠隔測定データをエクスポートすることができます。言語固有のインストルメンテーションエージェントは、OTLP 受信機または Splunk Observability Cloud バックエンドのいずれかにある OTLP エンドポイントに、サポートされている形式でデータをエクスポートするようにソースアプリケーション"
+"を設定します。ゼロコードインストルメンテーションは、Java、Node.js、.NET、Go、Python、Ruby、PHP で書かれたアプリケーションで利用でき、各言語でサポートされているライブラリを使用して書かれたコードの遠隔測定データを自動的に収集します。詳細については、:ref:`get-started-application` を参照してください。"
 
 #: ../../references/third-party-credits.rst:-1
 msgid "Download credits to third-party software included in the Splunk Observability Cloud."
