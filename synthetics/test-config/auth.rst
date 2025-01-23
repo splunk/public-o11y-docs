@@ -197,6 +197,7 @@ Prerequisites
    Certain services, such as Twilio, may block incoming SMS messages containing OTPs. For more information regarding this issue, see Twilio's documentation on :new-page:`OTP Message Body Filtered <https://www.twilio.com/docs/api/errors/30038>`.
 
 -  SMS notifications
+
    To enhance the authorization process, you must have a service that sends SMS notifications, such as :new-page:`GitHub <https://github.com>`.
 
 
