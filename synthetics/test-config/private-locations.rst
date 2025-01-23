@@ -153,7 +153,7 @@ Supported platforms
 Browser compatibility
 --------------------------------------------------------------
 
-A headless browser is used to run the browser tests. The Docker image for AMD64 architecture contains the Chrome browser, and the Docker image for ARM64 architecture contains the Chromium browser, because Chrome is unavailable for ARM64. Chrome and Chromium versions might not be the same.
+The private runner uses a headless browser to run the browser tests. The private runner Docker image for AMD64 architecture contains the Chrome browser, and the private runner Docker image for ARM64 architecture contains the Chromium browser, because Chrome is unavailable for ARM64. Chrome and Chromium versions might not be the same.
 
 To find the browser type and version, look at the labels ``browser-type`` and ``browser-version`` in the Docker image. You can find these labels either at http://quay.io/ or in the output of the following commands:
 
@@ -167,7 +167,7 @@ To find the browser type and version, look at the labels ``browser-type`` and ``
 Security
 --------------------------------------------------------------
 
-The Docker image as based on a Debian image which some vulnerability scanners might incorrectly flag as having a CVE. To verify the presence and the severity of any CVE, look at the Debian Security Tracker to verify its status in Debian. For example, :new-page:`quay.io <http://quay.io/>` (the Docker repository that hosts the published private runner Docker
+The Docker image as based on a Debian image which some vulnerability scanners might incorrectly flag as having a common vulnerability and exposure (CVE). To verify the presence and the severity of any CVE, look at the Debian Security Tracker to verify its status in Debian. For example, :new-page:`quay.io <http://quay.io/>` (the Docker repository that hosts the published private runner Docker
 images) reports CVE-2023-45853 as a critical severity vulnerability but the Debian Security Tracker describes the status of https://security-tracker.debian.org/tracker/CVE-2023-45853 and explains why it's marked as ignored by the Debian security team.
 
 Required container permissions
@@ -338,7 +338,8 @@ Using the ``label-enable`` flag ensures that only containers with the correct la
 
 There are additional options available in the :new-page:`Watchtower documentation <https://github.com/v2tec/watchtower#options>` that you can explore, including auto-cleanup of old images to ensure that your Docker host does not hold onto outdated images.
 
-.. :note::  In order for Watchtower to issue commands to the Docker host, it requires the ``docker.sock`` volume or TCP connection, which provides Watchtower with full administrative access to your Docker host. If you are unable to provide Watchtower with this level of access, you can explore other options for automating updates.
+.. note::
+  In order for Watchtower to issue commands to the Docker host, it requires the ``docker.sock`` volume or TCP connection, which provides Watchtower with full administrative access to your Docker host. If you are unable to provide Watchtower with this level of access, you can explore other options for automating updates.
 
 Uninstall a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -616,12 +617,10 @@ Upgrade a private runner
 Manual upgrades
 ###################################
 
-
 You can upgrade the runner by using the forceNewDeployment option. This shuts down the existing container and brings up a new container by pulling the latest image from the repository.
 
 Automatic upgrades
 ###################################
-
 
 You can automate the upgrade of the private location Docker images by using an automated upgrade solution such as :new-page:`Watchtower <https://github.com/v2tec/watchtower>`, a third party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker images you can use your
 existing mechanism without making any configuration changes to the private runner. Best practice is to run your upgrade automation at least once every 24 hours. Failing to update our the private runner to the latest available image may result in inconsistent data and loss of functionality.
@@ -724,8 +723,7 @@ Run the helm upgrade command:
 
   helm upgrade my-splunk-synthetics-runner synthetics-helm-charts/splunk-synthetics-runner --reuse-values
 
-If you're upgrading to an image that has major version change, you must
-also upgrade your Helm chart.
+If you're upgrading to an image that has major version change, you must also upgrade your Helm chart.
 
 .. _uninstall-a-private-runner-4:
 
@@ -1092,7 +1090,7 @@ Follow these steps to limit logging in Docker:
 
 #. In the file, add: 
 
-.. code:: yaml
+.. code:: json
 
     {
       "log-driver": "local",
@@ -1119,12 +1117,13 @@ Splunk Synthetic Monitoring supports injecting custom root CA certificates for U
 
 For example, here is what a command might look like after you modify it to fit your environment:  
 
-.. code:: yaml
+.. code:: shell
 
     docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
 
 
-.. Note:: Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
+.. note::
+  Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
 
 
 Configure proxy settings for a private runner
@@ -1147,7 +1146,7 @@ In environments where direct internet access is restricted, you can route synthe
 For example, here is what a command might look like after you modify it to fit your environment:
 
 
-.. code:: yaml
+.. code:: shell
 
     docker run --cap-add NET_ADMIN -e "RUNNER_TOKEN=*****" -e "no_proxy=.signalfx.com,.amazonaws.com,127.0.0.1,localhost" -e "https_proxy=http://172.17.0.1:1234" -e "http_proxy=http://172.17.0.1:1234" quay.io/signalfx/splunk-synthetics-runner:latest
 
@@ -1162,7 +1161,7 @@ Ensure that these variables are correctly configured to comply with your network
 
 When using a private runner, it's important to correctly configure the proxy settings to avoid issues with browser-based tests. The following steps should be followed when setting up their environment:
 
-1. :strong:`Ensure proper no_proxy setup`:
+#. :strong:`Ensure proper no_proxy setup`:
    
    - When configuring ``no_proxy`` always include the following addresses:
    
@@ -1171,7 +1170,7 @@ When using a private runner, it's important to correctly configure the proxy set
    
    These addresses ensure that internal services and tests run correctly without routing through a proxy, preventing potential failures.
 
-3. :strong:`Dockerfile defaults`:
+#. :strong:`Dockerfile defaults`:
    
    - By default, the private runner sets the ``no_proxy`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``no_proxy``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
 
