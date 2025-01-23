@@ -154,7 +154,7 @@ If your test target expects login credentials to be included in an an API reques
     :alt: Screenshot showing how to set up a synthetic test with basic authentication through API request headers. 
 
 
-#. Get the *base64-encoded string* of the username and password combination for your test target. There are several ways to get a base64-encoded string. For example:
+#. Get the base64-encoded string of the username and password combination for your test target. There are several ways to get a base64-encoded string. For example:
 
    -  Run the JavaScript function btoa from your browser's console: ``btoa("myusername:mypassword")``
 
