@@ -753,8 +753,8 @@ Install a private runner
 
    .. code:: shell
     
-    kubectl create secret generic runner-token-secret \\
-   --from-literal=RUNNER_TOKEN=YOUR_TOKEN_HERE
+    kubectl create secret generic runner-token-secret \
+    --from-literal=RUNNER_TOKEN=YOUR_TOKEN_HERE
 
 #. Create the deployment YAML:
 
@@ -958,8 +958,8 @@ Upgrade a private runner
 
    .. code:: shell
     
-    podman run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \\
-   http://quay.io/signalfx/splunk-synthetics-runner:latest
+    podman run --cap-add NET_ADMIN -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \
+    http://quay.io/signalfx/splunk-synthetics-runner:latest
 
 .. _uninstall-a-private-runner-7:
 
@@ -995,7 +995,7 @@ Install a private runner
 
 .. code:: shell
    
-   podman run -e "DISABLE_NETWORK_SHAPING=true" -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \\
+   podman run -e "DISABLE_NETWORK_SHAPING=true" -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \
    quay.io/signalfx/splunk-synthetics-runner:latest
 
 .. _upgrade-a-private-runner-8:
@@ -1079,8 +1079,8 @@ To automatically restart the container you must add ``--restart unless-stopped``
 
 .. code:: shell
    
-   docker run --restart unless-stopped -e ALWAYS_HEALTHY=true --cap-add NET_ADMIN \\
-   -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \\
+   docker run --restart unless-stopped -e ALWAYS_HEALTHY=true --cap-add NET_ADMIN \
+   -e "RUNNER_TOKEN=YOUR_TOKEN_HERE" \
    quay.io/signalfx/splunk-synthetics-runner:latest
 
 
