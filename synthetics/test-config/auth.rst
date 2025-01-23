@@ -64,13 +64,13 @@ If your test target provides an HTML form for entering username and password, co
 
    #. In :guilabel:`Selector`, enter the ID, name, XPath, CSS, link, or JS path of the target page's username field.  For more information on element selectors on Chrome, see :new-page:`Chrome DevTools <https://developer.chrome.com/docs/devtools/#selector>`.
 
-   #. In :guilabel:`Value`, enter the name of the global varialble you stored the username in, prefixed with env. and enclosed in double curly braces. For example, ``{{env.test1_username}}``.
+   #. In :guilabel:`Value`, enter the name of the global variable you stored the username in, prefixed with env. and enclosed in double curly braces. For example, ``{{env.test1_username}}``.
 
 #. Add a step of type :guilabel:`Fill in field`, and set it up as follows:
 
    #. In :guilabel:`Selector`, enter the ID of the target page's password field.
 
-   #. In :guilabel:`Value`, enter the name of the global varialble you stored the password in, prefixed with env. and enclosed in double curly braces. For example, ``{{env.test1_password}}``.
+   #. In :guilabel:`Value`, enter the name of the global variable you stored the password in, prefixed with env. and enclosed in double curly braces. For example, ``{{env.test1_password}}``.
 
 #. Add a step of type :guilabel:`Click`, and set it up as follows:
 
@@ -115,7 +115,7 @@ If your test target expects login credentials to be included in an HTTP header, 
 
    #. In the left field (with hint text :guilabel:`Username`), enter the username for the target page.
 
-   #. In the right field, enter the name of the global varialble in which you stored the password for this target page, prefixed with ``env.`` and enclosed in double curly braces. For example, ``{{env.test1_password}}``. To see the list of available global variables, expand the pane on the right.
+   #. In the right field, enter the name of the global variable in which you stored the password for this target page, prefixed with ``env.`` and enclosed in double curly braces. For example, ``{{env.test1_password}}``. To see the list of available global variables, expand the pane on the right.
 
 #. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
 
@@ -255,7 +255,7 @@ Some services may not be accessible during Synthetics tests due to violations of
 
    #. In :guilabel:`Selector`, enter the ID of the element on the target page where the user must enter the OTP.
 
-   #. In :guilabel:`Value`, enter the name of the custom varialble your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
+   #. In :guilabel:`Value`, enter the name of the custom variable your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
 
    ..  image:: /_images/synthetics/auth-multifactor-sms-fillinfield.png
        :width: 70%
@@ -351,7 +351,7 @@ Your email service must be accessible through an API. Some services may not be a
 
    #. In :guilabel:Selec`tor, enter the ID of the element on the target page where the user must enter the OTP.
 
-   #. In :guilabel:`Value`, enter the name of the custom varialble your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
+   #. In :guilabel:`Value`, enter the name of the custom variable your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
 
      .. image:: /_images/synthetics/auth-multifactor-email-fillinfield.png
           :width: 70%
