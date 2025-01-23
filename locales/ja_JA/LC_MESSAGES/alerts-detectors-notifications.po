@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-09 16:18+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -61,7 +61,7 @@ msgstr "複合条件がアラートをトリガーするためには、条件に
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:28
 #, fuzzy
 msgid "If you need to build more complex conditions than this alert condition supports, such as \"a AND (b OR c) AND d\", or \"a AND NOT b\", you can do so by using the :new-page:`Splunk Observability Cloud API <https://dev.splunk.com/observability/docs/detectors/detector_examples>` to create the detector."
-msgstr "\"a AND (b OR c) AND d \"や \"a AND NOT b \"など、このアラート条件がサポートするよりも複雑な条件を作成する必要がある場合は、:new-page:`Splunk Observability Cloud API<https://dev.splunk.com/observability/docs/detectors/detector_examples>` を使用してディテクターを作成することができます。"
+msgstr "\"a AND (b OR c) AND d \"や \"a AND NOT b \"など、このアラート条件がサポートするものよりも複雑な条件を作成する必要がある場合は、:new-page:`Splunk Observability Cloud API<https://dev.splunk.com/observability/docs/detectors/detector_examples>` を使用してディテクターを作成することができます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:34
 msgid "Examples: Single condition, comparing signals"
@@ -69,7 +69,7 @@ msgstr "例：単一条件、シグナルの比較"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:36
 msgid "You want to receive an alert when the number of ``cache-misses`` is higher than the number of ``cache-hits`` for 1 |nbsp| minute. In this case,  use ``cache-misses`` as the signal to monitor, ``Above`` as the option for :guilabel:`Alert when`, ``cache-hits`` as the threshold, and a ``Duration`` of |nbsp| 1 |nbsp| minute as the option for :guilabel:`Trigger sensitivity`."
-msgstr "1分間の  ``cache-misses``  の数が  ``cache-hits``  の数より多いときにアラートを受信するとします。この場合、監視するシグナルとして  ``cache-misses``  を、:guilabel:`Alert when` のオプションとして ``Above`` を、閾値として  ``cache-hits``  を、そして、:guilabel:`Trigger sensitivity` のオプションとして1分間の ``Duration`` を使用します。"
+msgstr "1 |nbsp| 分間の ``cache-misses`` の数が ``cache-hits`` の数より多いときにアラートを受信するとします。この場合、監視するシグナルとして  ``cache-misses`` を、:guilabel:`Alert when` のオプションとして ``Above`` を、閾値として  ``cache-hits``  を、そして、:guilabel:`Trigger sensitivity` のオプションとして |nbsp| 1 |nbsp| 分間の ``Duration`` を使用します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:38
 msgid "You have 3 signals, each of which measures maximum latency for a single AWS availability zone. You have had problems with one of the zones in the past, and you want to receive an alert when that signal is outside the range of the other 2 |nbsp| signals. In this case, use the troublesome zone as the signal to monitor,  ``Out of range`` as the option for :guilabel:`Alert when`, and the other two signals for the lower and upper thresholds."
@@ -175,19 +175,19 @@ msgstr "Bが健全でない"
 msgid "Settings"
 msgstr "設定"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:98 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:56
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:98 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:58
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:29 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:56 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:30
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:49
 msgid ":strong:`Parameter`"
 msgstr ":strong:`パラメータ`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:99 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:32 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:32 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:57
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:99 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:32 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:32 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:59
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:30 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:50 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:30 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:57
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:32 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:50
 msgid ":strong:`Values`"
 msgstr ":strong:`値`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:100 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:33 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:33 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:58
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:100 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:33 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:33 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:60
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:51 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:31 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:58
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:33 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:32 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:51
 msgid ":strong:`Notes`"
@@ -267,18 +267,19 @@ msgstr "アラートをトリガーするための継続期間"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:138
 msgid "As you might expect, choosing ``Immediately`` for :guilabel:`Trigger Sensitivity` means that an alert is triggered as soon as the signal meets the threshold. This option is the most sensitive (might trigger the most alerts) of the three trigger sensitivity options."
-msgstr "ご想像の通り、:guilabel:`Trigger Sensitivity` に ``Immediately`` を選択すると、シグナルが閾値に達するとすぐにアラートがトリガーされます。このオプションは、トリガー感度の3つのオプションの中で最も感度が高いものです（最も多数のアラートをトリガーする可能性があります）。"
+msgstr "ご想像の通り、 :guilabel:`Trigger Sensitivity` に ``Immediately`` を選択すると、シグナルが閾値に達するとすぐにアラートがトリガーされます。このオプションは、トリガー感度の3つのオプションの中で最も感度が高いものです（最も多数のアラートをトリガーする可能性があります）。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:140 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:81
 msgid "Depending on the nature of your signal, triggering alerts immediately can lead to :term:`flappiness<flappy>`. In these cases, you can choose one of the other options, :ref:`Duration<duration-option>` or :ref:`Percent of duration<pct-duration-option>`."
 msgstr "シグナルの性質によっては、アラートをすぐにトリガーすると :term:`フラッピング<flappy>` につながることがあります。このような場合は、他のオプションである :ref:`継続期間<duration-option>` または :ref:`継続期間のパーセンテージ<pct-duration-option>` のいずれかを選択できます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:146
+#, fuzzy
 msgid ""
 "The ``Duration`` option triggers when the signal meets and remains at threshold condition for a specified period, such as 10 minutes. Therefore, using this option is less sensitive (might trigger fewer alerts) than the ``Immediately`` option. If you use this option, an alert isn't triggered if any data points are delayed or do not arrive at all during that time range, even if all the data points that are received :strong:`do` meet the threshold. For "
 "moreinformation about delayed or missing data points, see :ref:`delayed-missing`."
 msgstr ""
-" ``Duration`` オプションを使用すると、シグナルが閾値条件を満たし、指定した期間（例：10分）にわたってその状態を継続した場合にアラートがトリガーされます。したがって、このオプションを使用すると、``Immediately`` オプションよりも感度は低くなります（アラートのトリガー回数が少なくなる可能性があります）。このオプションを使用すると、たとえ受信したすべてのデータポイントが閾値条件を :strong:`満たしていても`、指定した期間中にデータポイントが遅延したり、まったく到着し"
+" ``Duration`` オプションを使用すると、シグナルが閾値条件を満たし、指定した期間（例：10分間）にわたってその状態を継続した場合にアラートがトリガーされます。したがって、このオプションを使用すると、``Immediately`` オプションよりも感度は低くなります（アラートのトリガー回数が少なくなる可能性があります）。このオプションを使用すると、たとえ受信したすべてのデータポイントが閾値条件を :strong:`満たしていても`、指定した期間中にデータポイントが遅延したり、まったく到着し"
 "なかったりすれば、アラートはトリガーされません。データポイントの遅延や欠落について、詳細は :ref:`delayed-missing` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:148
@@ -286,12 +287,13 @@ msgid "If you want an option that triggers even if some data points do not arriv
 msgstr "一部のデータポイントが時間通りに到着しなくてもアラートをトリガーするオプションが必要な場合は、``Percent of duration`` を（100未満の値のパーセンテージを指定して）使用します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:152
+#, fuzzy
 msgid ""
-"The ``Percent of duration`` option triggers alerts based on the number of data points that met the threshold during the window, compared to how many data points were expected to arrive. Because this option triggers an alert based on the percentage of data points that met the threshold, it can sometimes trigger an alert even if some data points didn't arrive on time. Therefore, using this option with a percentage less than |nbsp| 100 is more "
-"sensitive(might trigger more alerts) than the ``Duration`` option."
+"The ``Percent of duration`` option triggers alerts based on the number of data points that met the threshold during the window, compared to how many data points were expected to arrive. Because this option triggers an alert based on the percentage of data points that met the threshold, it can sometimes trigger an alert even if some data points didn't arrive on time. Therefore, using this option with a percentage less than |nbsp| 100 is more sensitive "
+"(mighttrigger more alerts) than the ``Duration`` option."
 msgstr ""
-" ``Percent of duration`` オプションを使用すると、指定した時間窓の間に閾値を満たしたデータポイントの数に基づいてアラートがトリガーされます。このオプションは、閾値を満たしたデータ ポイント数のパーセンテージに基づいてアラートをトリガーするため、一部のデータポイントが時間通りに到着しなかった場合でもアラートをトリガーすることがあります。したがって、100未満のパーセンテージでこのオプションを使用すると、``Duration`` オプションを使用した場合よりも感度は高くなりま"
-"す（より多くのアラートがトリガーされる可能性があります）。"
+" ``Percent of duration`` オプションを使用すると、指定した時間窓の間に閾値を満たしたデータポイントの数に基づいてアラートがトリガーされます。このオプションは、閾値を満たしたデータ ポイント数のパーセンテージに基づいてアラートをトリガーするため、一部のデータポイントが時間通りに到着しなかった場合でもアラートをトリガーすることがあります。したがって、100未満のパーセンテージでこのオプションを使用すると、``Duration`` オプションを使用した場合よりも感度は高くなります"
+"（より多くのアラートがトリガーされる可能性があります）。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:155 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:94
 msgid "The following examples illustrate how alerts are triggered in various situations."
@@ -411,7 +413,7 @@ msgstr "26以下"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/custom-threshold.rst:240 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:179
 msgid "Note that in the last example above, even if 26 anomalous data points arrive, and 26/30 is greater than the |nbsp| 75% you specified, the required number of anomalous data points (27) did not arrive. Therefore, the alert isn't triggered. The percent you specify represents percent of :strong:`expected` data points, not percent of :strong:`received` data points."
-msgstr "上記の後の方の例では、26個の異常データポイントが到着し、26/30が指定した「75%」より大きくても、必要な異常データポイント数（27個）が到着していないことに注意してください。したがって、アラートはトリガーされません。指定するパーセンテージは、:strong:`予想` データポイント数に対するパーセンテージを示すものであり、:strong:`受信` データポイント数に対するパーセンテージではありません。"
+msgstr "上記の後の方の例では、26個の異常データポイントが到着し、26/30が指定した「 |nbsp| 75%」より大きくても、必要な異常データポイント数（27個）が到着していないことに注意してください。したがって、アラートはトリガーされません。指定するパーセンテージは、:strong:`予想 ` データポイント数に対するパーセンテージを示すものであり、:strong:`受信` データポイント数に対するパーセンテージではありません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:-1
 msgid "The Heartbeat Check condition alerts when a signal has not reported for some time. This might happen because a host is down or stopped reporting a particular metric."
@@ -449,7 +451,7 @@ msgstr ">= 1の整数の後に時間を表す指標（s、m、h、d、w）を付
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:38
 #, fuzzy
 msgid "How long it's been since the signal last reported. Longer time periods result in lower sensitivity and potentially fewer alerts. If you specify a value for :guilabel:`Group by` (below), how long it's been since all members of the group stopped reporting."
-msgstr "シグナルの最後のレポートからの経過時間。この期間が長いほど感度は低くなり、アラートの数が潜在的に少なくなります。:guilabel:`Group by` （下記）の値を指定した場合は、グループのすべてのメンバーからのレポートが停止してからの経過時間。"
+msgstr "シグナルの最後のレポートからの経過時間。期間が長いほど感度は低くなり、アラートの数は潜在的に少なくなります。:guilabel:`Group by` （下記）の値を指定した場合は、グループのすべてのメンバーからのレポートが停止してからの経過時間。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:40
 msgid "(optional) :strong:`Group by`"
@@ -463,17 +465,17 @@ msgstr "ドロップダウンメニューから選択したディメンション
 msgid "Use a dimension or property when you want alerts to be based on a specified unit. For example, if you group by ``cluster``, the alert is triggered only if all hosts in a cluster stop reporting. Alternatively, if each time series is associated with only one host, and you want to be alerted when :strong:`any` host has stopped reporting, leave this parameter blank (or group by ``host``)."
 msgstr "指定したユニットに基づいてアラートを発する場合には、ディメンションまたはプロパティを使用します。例えば、``cluster`` でグループ化すると、クラスタ内のすべてのホストがレポートを停止した場合にのみアラートがトリガーされます。あるいは、各時系列が1つのホストのみに関連付けられており、:strong:`いずれかの` ホストがレポートを停止したときにアラートを発したい場合は、このパラメータを空白のままにします（または ``host`` でグループを指定）。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:45 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:101 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:285 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:93
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:45 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:103 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:285 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:93
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:115
 msgid "Further reading"
 msgstr "参考"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:52 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:107 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:291 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:100
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:52 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:109 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:291 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:100
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:122
 msgid ":strong:`Parameters`"
 msgstr ":strong:`パラメータ`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:53 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:108 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:292 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:101
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/heartbeat-check.rst:53 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:110 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:292 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:101
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:123
 msgid ":strong:`Remarks`"
 msgstr ":strong:`注釈`"
@@ -530,162 +532,173 @@ msgstr ":strong:`サイクル長`"
 msgid "Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be significantly larger than the native resolution."
 msgstr ">= 1の整数の後に時間を表す指標（s、m、h、d、w）を付す。例：30s、10m、2h、5d、1w。この値は、ネイティブ解像度より大幅に大きくなるように設定します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:37
-msgid "The time range that reflects the cyclicity of your signal. For example, a value of 1w indicates your signal follows a weekly cycle (you want to compare data for a Monday morning with previous Monday mornings). A value of 1d indicates your signal follows a daily cycle (you want to compare today's data with data from the same time yesterday, the day before, and so on.)"
-msgstr "シグナルの周期性を表す時間範囲。たとえば、値が1wの場合、シグナルが毎週のサイクルに従うということを示します（月曜日の朝のデータを過去の月曜日の朝のデータと比較する等）。値が1dの場合、シグナルが毎日のサイクルに従うということを示します（今日のデータを、昨日、一昨日などの同時刻のデータと比較する等）。"
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst
+#, fuzzy
+msgid "The time range that reflects the cycle of your signal. For example, a value of ``1w`` indicates your signal follows a weekly cycle, and a value of ``1d`` indicates your signal follows a daily cycle."
+msgstr "シグナルのサイクルを表す時間範囲。たとえば、値が ``1w`` の場合は、そのシグナルが毎週のサイクルに従っていることを示します。値が ``1d`` の場合は、そのシグナルが毎日のサイクルに従っていることを示します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:39 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:33
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst
+msgid "Cycle length works in conjunction with the duration of the time window used for data comparison, represented by the :strong:`Current window` parameter. Data from the current window will be compared against data from one or more previous cycles to detect historical anomaly, depending on the value of the :strong:`Number of previous cycles` parameter."
+msgstr "サイクル長は、:strong:`現在のウィンドウ` パラメータで表される、データ比較に使用される時間窓の期間と連動して動作します。現在のウィンドウからのデータは、:strong:`以前のサイクル数` パラメータの値に応じて、履歴的異常を検出するために、1つ以上前のサイクルからのデータと比較されます。"
+
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst
+msgid "For example, if the current window is ``1h`` and the cycle length is ``1w``, data in the past hour ([-1h, now]) is compared against data from the [-1w1h, -1w] hour, [-2w1h, -2w] hour, and so on."
+msgstr "例えば、現在のウィンドウが ``1h`` で、サイクル長が ``1w`` の場合、過去1時間のデータ（[-1h,now]）と、[-1w1h,-1w]時間、[-2w1h,-2w]時間などのデータが比較されます。"
+
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:41 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:33
 msgid ":strong:`Alert when`"
 msgstr ":strong:`アラートのタイミング`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:40 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:34 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:35
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:42 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:34 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:35
 msgid "``Too high``, ``Too low``, ``Too high or Too low``"
 msgstr "``Too high``、``Too low``、``Too high or Too low``"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:41
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:43
 #, fuzzy
 msgid "Alert is triggered when the signal is either above a threshold, below a threshold, or outside a specified range (for example, more than 3.5 deviations above or below normal, or more than 30% above or below normal). To specify whether anomalies are based on standard deviations from normal or percentage difference from normal, choose :strong:`Custom sensitivity` and then the :strong:`Normal based on` parameter."
-msgstr "アラートは、シグナルが閾値を超えたとき、閾値を下回ったとき、または指定された範囲外にあるときにトリガーされます（例：正常値より3.5偏差以上上または下の場合、または正常値より30%以上上または下の場合）。異常を、正常値からの標準偏差ベースとするか、正常値からのパーセンテージ差ベースとするかを指定するには、:strong:`カスタム感度` > :strong:`正常値の基準` パラメータを選択します。"
+msgstr "アラートは、シグナルが閾値を超えたとき、閾値を下回ったとき、または指定された範囲外にあるときにトリガーされます（例：正常値より3.5偏差以上上または下の場合、正常値より30%以上上または下の場合など）。異常の基準を正常値からの標準偏差とするか、正常値からのパーセンテージ差とするかを指定するには、:strong:`カスタム感度` > :strong:`正常値の基準` パラメータを選択します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:43 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:37 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:41
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:45 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:37 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:41
 msgid ":strong:`Trigger Sensitivity`"
 msgstr ":strong:`トリガー感度`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:44 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:38 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:42 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:39
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:46 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:38 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:42 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:39
 msgid "``Low``, ``Medium``, ``High``, ``Custom``"
 msgstr "``Low``、``Medium``、``High``、``Custom``"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:45 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:39 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:40
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:47 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:39 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:40
 msgid "Approximately how often alerts are triggered, where Low can result in fewer alerts being triggered and alerts taking longer to clear (least :term:`flappy`). Choose ``Custom`` to modify the settings that determine triggering and clearing sensitivity (listed below)."
 msgstr "アラートのトリガー頻度の目安。「Low」を選択するとアラートのトリガー頻度は低くなり、アラートが解除されるまでの時間が長くなります（最も :term:`flappy` でなくなる）。トリガーと解除の感度を決定する設定を変更するには、``Custom`` を選択します（以下にリスト）。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:48 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:42 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:49 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:43
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:50 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:42 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:49 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:43
 msgid "Advanced settings"
 msgstr "詳細な設定"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:60 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:53
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:62 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:53
 msgid ":strong:`Normal based on`"
 msgstr ":strong:`正常値の基準`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:61
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:63
 msgid "``Mean plus standard deviation``, ``Mean plus percentage change``"
 msgstr "``Mean plus standard deviation``、``Mean plus percentage change``"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:62
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:64
+#, fuzzy
 msgid ""
-"If the short-term variation in a signal is small relative to the scale of the signal, and the scale is somehow natural, using ``Mean plus percentage change`` is recommended; using ``Mean plus standard deviation`` might trigger alerts even for a large number of standard deviations. In addition, ``Mean plus percentage change`` is recommended for metrics which admit a direct business interpretation. For instance, if ``user_sessions`` drops by 20%, "
-"revenuedrops by 5%."
-msgstr "シグナルの短期的な変動がシグナルのスケールに対して小さく、スケールがある程度自然である場合は、 ``Mean plus percentage change``  を使用することを推奨します。``Mean plus standard deviation`` を使用すると、標準偏差の数が多い場合にもアラートが発生する可能性があります。さらに ``Mean plus percentage change``  は、ビジネス上の直接的な解釈が可能なメトリクスに推奨されます（例： ``user_sessions`` が20%低下すると、収益が5%低下する）。"
+"If the short-term variation in a signal is small relative to the scale of the signal, and the scale is somehow natural, using ``Mean plus percentage change`` is recommended; using ``Mean plus standard deviation`` might trigger alerts even for a large number of standard deviations. In addition, ``Mean plus percentage change`` is recommended for metrics which admit a direct business interpretation. For instance, if ``user_sessions`` drops by 20%, revenuedrops "
+"by 5%."
+msgstr "シグナルの短期的な変動がシグナルのスケールに対して小さく、そのスケールがある程度自然である場合は、 ``Mean plus percentage change``  を使用することを推奨します。``Mean plus standard deviation`` を使用すると、標準偏差の数が大きい場合にもアラートが発生する可能性があります。さらに、``Mean plus percentage change``  は、ビジネス上の直接的な解釈が可能なメトリクスの場合に推奨されます（例： ``user_sessions`` が20%低下すると収益が5%低下する、という場合）。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:64 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:59
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:66 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:59
 msgid ":strong:`Current window`"
 msgstr ":strong:`現在のウィンドウ`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:65
-msgid "Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be smaller than Cycle length, and significantly larger than the native resolution."
-msgstr ">= 1の整数の後に時間を表す指標（s、m、h、d、w）を付す。例：30s、10m、2h、5d、1w。この値は、サイクル長より小さく、ネイティブ解像度より大幅に大きくなるように設定します。"
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:67
+#, fuzzy
+msgid "Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be shorter than cycle length, and significantly larger than the native resolution."
+msgstr ">= 1の整数の後に、時間を表す指標（s、m、h、d、w）を付す。例：30s、10m、2h、5d、1w。この値は、サイクル長より短く、ネイティブ解像度より大幅に大きくなるように設定します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:66
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:68
 msgid "The time range against which to compare the data; you can think of this as the moving average window. Higher values compute the mean over more data points, which generally smoothes the value, resulting in lower sensitivity and potentially fewer alerts."
 msgstr "データを比較する対象となる時間範囲。移動平均のウィンドウと考えることができます。値が高いほど、より多くのデータポイントの平均が計算され、一般的に値が平滑化されるため、感度は低くなり、アラート数は潜在的に少なくなります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:68
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:70
 msgid ":strong:`Number of previous cycles`"
 msgstr ":strong:`過去のサイクル数`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:69
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:71
 msgid "Integer >=1 and <= 8"
 msgstr ">=1 かつ <= 8の整数"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:70
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:72
 msgid "Works in conjunction with cycle length. The number of cycles to use for setting a historical norm, or baseline. For example, if your cycle length is |nbsp|  1w, this value specifies how many prior weeks you want to use when computing a historical norm. To consider last week the norm, use the value  |nbsp| 1; to consider the mean of the last 4  |nbsp| weeks the norm, use the value |nbsp| 4. Higher values mean more data is used to define the baseline."
 msgstr "サイクル長と連動して動作します。履歴ベースの基準またはベースラインを設定するために使用するサイクル数です。例えば、サイクル長が1wの場合、このパラメータは、履歴上の基準を計算する際に使用する過去の週数を指定するものです。先週を基準とする場合は、この値に1を使用します。過去4週間の平均を基準とする場合は、この値に4を使用します。値が大きいほど、基準値を定義するために使用されるデータが多いことを意味します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:72
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:74
 msgid ":strong:`Trigger threshold` and :strong:`Clear threshold` (when :strong:`Normal based on` is ``Mean plus standard deviation``)"
 msgstr ":strong:`トリガーの閾値` および :strong:`解除の閾値` （ :strong:`正常値の基準` が ``Mean plus standard deviation`` の場合）"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:73
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:75
 msgid "Number >= 0; Clear threshold must be lower than Trigger threshold"
 msgstr ">= 0の数値。解除の閾値はトリガーの閾値より低くする必要があります"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:74
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:76
 msgid "The number of standard deviations away from the norm required to trigger or clear an alert."
 msgstr "アラートのトリガーおよび解除のために必要な、基準からの標準偏差の数。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:76
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:78
 msgid "For example, a trigger value of |nbsp| 3.5 triggers an alert when the values being compared differ by 3.5 standard deviations or more. Higher values result in lower sensitivity and potentially fewer alerts."
 msgstr "例えば、トリガーの値が3.5の場合、比較される値が3.5標準偏差以上異なる場合にアラートをトリガーします。値が高いほど感度は低くなり、アラート数は潜在的に少なくなります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:78 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:75
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:80 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:75
 msgid "A clear value of |nbsp| 2.5 clears the alert when the values being compared differ by 2.5 standard deviations or less. Higher values result in alerts taking longer to clear."
 msgstr "解除の値が2.5の場合、比較される値が2.5標準偏差以下の差である場合にアラートを解除します。値が大きいほど、アラートの解除にかかる時間が長くなります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:80
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:82
 msgid ":strong:`Trigger threshold` and :strong:`Clear threshold` (when :strong:`Normal based on` is ``Mean plus percentage change``)"
 msgstr ":strong:`トリガーの閾値` および :strong:`解除の閾値` （ :strong:`正常値の基準` が ``Mean plus percentage change`` の場合）"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:81 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:78 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:76
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:83 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:78 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:76
 msgid "Number between 0 and 100, inclusive; Clear threshold must be lower than Trigger threshold."
 msgstr "0～100の数値（0と100を含む）。解除の閾値はトリガーの閾値より低くする必要があります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:82 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:79 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:77
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:84 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:79 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:77
 msgid "The percentage change required to trigger or clear the alert."
 msgstr "アラートのトリガーまたは解除に必要な変化のパーセンテージ。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:84 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:81 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:79
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:86 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:81 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:79
 msgid "For example, a trigger value of |nbsp| 30 triggers an alert when the values being compared differ by 30% or more. Higher values result in lower sensitivity and potentially fewer alerts."
 msgstr "例えば、トリガーの値が30の場合、比較される値が30%以上異なる場合にアラートをトリガーします。値が高いほど感度は低くなり、アラート数は潜在的に少なくなります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:86 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:81
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:88 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:81
 msgid "A clear value of |nbsp| 20 clears the alert when the values being compared differ by 20% or less. Higher values result in alerts taking longer to clear."
 msgstr "解除の値が20の場合、比較される値が20%以下の差である場合にアラートを解除します。値が大きいほど、アラートの解除にかかる時間が長くなります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:89
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:91
 msgid ":strong:`Ignore historical extremes`"
 msgstr ":strong:`履歴的極値を無視`"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:90 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:80 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:84 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:90
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:92 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:80 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:84 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:90
 msgid "``Yes``, ``No``"
 msgstr "``Yes``、``No``"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:91
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:93
 msgid "Only relevant when :strong:`Number of previous cycles` is greater than or equal to |nbsp| 3."
 msgstr ":strong:`過去のサイクル数` が3以上の場合のみ該当します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:93
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:95
 msgid "When :strong:`Normal based on` is ``Mean plus percentage change``, ``Yes`` takes the median of the historical baselines; ``No`` takes their mean."
 msgstr ":strong:`正常値の基準` が ``Mean plus percentage change`` の場合は、``Yes`` に設定すると履歴ベースの基準値の中央値を取り、``No`` に設定するとその平均値を取ります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:95
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:97
 msgid "When :strong:`Normal based on` is ``Mean plus standard deviation``. ``Yes`` excludes the cycles with largest and smallest mean; ``No`` includes them."
 msgstr ":strong:`正常値の基準` が ``Mean plus standard deviation`` の場合は、``Yes`` に設定すると平均が最大のサイクルと平均が最小のサイクルを除外し、``No`` に設定するとそれらを含めます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:97
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:99
 msgid "In general, ``Yes`` is recommended; if there was an incident last week, for example, excluding the associated data from the threshold calculation provides a more accurate representation of \"normal\" behavior against which to measure the signal."
 msgstr "一般的には、``Yes`` が推奨されます。例えば、先週インシデント発生した場合、その関連データを閾値の計算から除外することで、シグナル測定の比較基準となる「正常」の挙動をより正確に表すことができます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:110
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:112
 msgid "Cycle length and Current window"
 msgstr "サイクル長と現在のウィンドウ"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:111
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:113
 msgid "Set both parameters to be significantly larger than native resolution."
 msgstr "この両パラメータは、ネイティブ解像度より大幅に大きく設定します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:113
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:115
 msgid "Current window and native resolution"
 msgstr "現在のウィンドウとネイティブ解像度"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:114
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:116
 msgid "If the ratio of current window to native resolution is small, the rolling standard deviation might be small. In that situation, using ``Mean plus percentage change`` might lead to better results."
 msgstr "現在のウィンドウとネイティブ解像度の比率が小さい場合、ローリング標準偏差が小さくなる可能性があります。そのような場合、``Mean plus percentage change`` を使用すると、より良い結果が得られる可能性があります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:116 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:109 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:112 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:117
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:118 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:109 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:112 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:117
 msgid "Signal"
 msgstr "シグナル"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:117
+#: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/hist-anomaly.rst:119
 msgid "The alert condition applies a rolling mean plus standard deviation to the signal, and this might interact poorly with other transformations applied to the signal (for example, can cause double counting or small standard deviations)."
 msgstr "このアラート条件は、ローリング平均に標準偏差を加えたものをシグナルに適用するため、シグナルに適用される他の変換との相互作用が悪くなる可能性があります（例えば、カウントが重複したり、標準偏差が小さくなったりする可能性があります）。"
 
@@ -777,7 +790,7 @@ msgstr "シグナルが通常の挙動と異なる場合にアラートを発し
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/index.rst:60
 msgid "All the values for ``cpu.utilization`` received in the last 15 |nbsp| minutes are at least |nbsp| 3 standard deviations higher than the mean of the preceding hour. All the values for ``latency`` received in the last 10 minutes are greater than 99% of the values of the preceding 1 hour."
-msgstr "過去15分間に受信した ``cpu.utilization`` のすべての値が、直前の1時間の平均値より少なくとも3標準偏差高い場合。過去10分間に受信した ``latency`` のすべの値が、直前の1時間の値の99%より大きい場合。"
+msgstr "過去15 |nbsp| 分間に受信した ``cpu.utilization`` のすべての値が、直前の1時間の平均値より少なくとも |nbsp| 3標準偏差高い場合。過去10分間に受信した ``latency`` のすべの値が、直前の1時間の値の99%より大きい場合。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/index.rst:62
 msgid ":ref:`hist-anomaly`"
@@ -936,8 +949,8 @@ msgid ""
 "Specifying |nbsp| 100% means that all expected data points arrived (there were no delayed or missing data points) and all met the threshold. In other words, if you specify 100% |nbsp| of a time range, an alert isn't triggered if any data points are delayed or do not arrive at all during that time range, even if all the data points that are received :strong:`do` meet the threshold.  (For more information about delayed or missing data points, see :ref:"
 "`delayed-missing`.)"
 msgstr ""
-"「100%」と指定すると、期待されたデータポイントがすべて到着し（遅延や欠落したデータポイントがない）、すべてが閾値を満たしたという意味になります。言い換えると、「時間範囲の100%」を指定した場合、受信されたすべてのデータポイントが閾値を :strong:`満たしていたとしても`、その時間範囲中にデータポイントが遅延したり、まったく到着しなかったりしたりすれば、アラートはトリガーされません。（データポイントの遅延や欠落の詳細については、:ref:`delayed-missing` を参照してく"
-"ださい。）"
+"「100%」と指定すると、期待されたデータポイントがすべて到着し（遅延や欠落したデータポイントがない）、すべてが閾値を満たしたという意味になります。言い換えると、「時間範囲の100%」を指定した場合、受信されたすべてのデータポイントが閾値を :strong:`満たして` いたとしても、その時間範囲中にデータポイントが遅延したり、まったく到着しなかったりしたりすれば、アラートはトリガーされません。（データポイントの遅延や欠落の詳細については、 :ref:`delayed-missing` を参照してくだ"
+"さい。）"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:104
 msgid "To specify that an alert triggers immediately, specify 100% |nbsp| of 1 |nbsp| second for infrastructure detectors, and 100% |nbsp| of 10 |nbsp| seconds for µAPM |nbsp| detectors. If the signal resolution is greater than the value you enter, a message indicates that you need to change it to at least the value of the signal resolution."
@@ -1032,7 +1045,7 @@ msgstr "47"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:197
 msgid "Note that in the last example above, even though 47/50 is greater than the |nbsp| 80% you specified, the required number of anomalous data points (48) did not arrive. Therefore, the alert isn't triggered. The percent you specify represents percent of :strong:`expected` data points, not percent of :strong:`received` data points."
-msgstr "上記の最後の例では、47/50が指定した「80%」より大きくても、異常データポイントの必要数（48）が到着していないことに注意してください。したがって、アラートはトリガーされません。指定するパーセンテージは、 :strong:`予想` データポイント数に対するパーセンテージを示すものであり、:strong:`受信` データポイント数に対するパーセンテージではありません。"
+msgstr "上記の最後の例では、47/50が指定した「 |nbsp| 80%」より大きくても、異常データポイントの必要数（48）が到着していないことに注意してください。したがって、アラートはトリガーされません。指定するパーセンテージは、:strong:`予想 ` データポイント数に対するパーセンテージを示すものであり、:strong:`受信` データポイント数に対するパーセンテージではありません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:202
 msgid "Clear example 1"
@@ -1112,7 +1125,7 @@ msgstr "14"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:281
 msgid "Note that in the last example above, even if 14 anomalous data points arrive, and 14/15 is greater than the |nbsp| 50% you specified, the required number of anomalous data points (15) did not arrive. Therefore, the alert isn't triggered. The percent you specify represents percent of :strong:`expected` data points, not percent of :strong:`received` data points."
-msgstr "上記の最後の例では、14個の異常データポイントが到着し、14/15が指定した「50%」より大きくても、必要な異常データポイント数（15個）が到着していないことに注意してください。したがって、アラートはトリガーされません。指定したパーセンテージは、:strong:`予想` データポイント数に対するパーセンテージを示すものであり、:strong:`受信` データポイント数に対するパーセンテージではありません。"
+msgstr "上記の最後の例では、14個の異常データポイントが到着し、14/15が指定した「 |nbsp| 50%」より大きくても、必要な異常データポイント数（15個）が到着していないことに注意してください。したがって、アラートはトリガーされません。指定したパーセンテージは、:strong:`予想` データポイント数に対するパーセンテージを示すものであり、:strong:`受信` データポイント数に対するパーセンテージではありません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/outlier-detection.rst:294 ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:125
 msgid "Alert when"
@@ -1155,13 +1168,13 @@ msgid "Resource Running Out"
 msgstr "リソースの枯渇"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:11
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Resource Running Out alerts when a signal has a certain amount of time before it is exhausted (reaches a specified minimum value) or full (reaches a specified capacity). While it is common to use a :ref:`static-threshold` for many types of signals that trend to empty or capacity, such as alerting when memory utilization is  |nbsp| 80% or when free disk space is below |nbsp| 10%, the Resource Running Out condition provides a more powerful way of "
 "receivingalerts for these types of signals, because it takes into account whether a signal is trending up or down (steadily rising or falling)."
 msgstr ""
-"「リソースの枯渇」は、シグナルが枯渇する（指定した最小値に達する）、または満杯になる（指定した容量に達する）までに一定の時間があるときにアラートを発します。メモリの使用率が80%になったときや、ディスクの空き容量が10%未満になったときにアラートを発するというような空きまたは容量を示す多くのタイプのシグナルには :ref:`static-threshold` を使用するのが一般的ですが、「リソースの枯渇」条件は、シグナルの上昇傾向または下降傾向（安定して上昇または下降している）を考慮に"
-"入れるため、これらのタイプのシグナルについてより強力なアラートを受け取る方法を提供します。"
+"「リソースの枯渇」は、シグナルが枯渇する（指定した最小値に達する）、または満杯になる（指定した容量に達する）までに一定の時間があるときにアラートを発します。メモリの使用率が80%になったときや、ディスクの空き容量が10%未満になったときにアラートを発するというような、空きまたは容量を示す多くのタイプのシグナルには :ref:`static-threshold` を使用するのが一般的ですが、「リソースの枯渇」条件は、シグナルの上昇傾向または下降傾向（安定して上昇または下降している）を考慮に"
+"入れるため、これらのタイプのシグナルについてアラートを受け取るためのより強力な方法を提供します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:17
 msgid "You might have a detector that triggers an alert when memory utilization goes above 80%, so you have time to look into the issue before the your app is seriously affected. In fact, reaching 80% might only represent a problem if the value has been trending upward and is on a path to reaching 100%. A better way to monitor this signal is to use the Resource Running Out alert condition, which alerts you when a signal is trending up or down."
@@ -1170,7 +1183,7 @@ msgstr "メモリ使用率が80%を超過したときにアラートを発する
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:19
 #, fuzzy, python-format
 msgid "In this case, say you want to receive a notification when the signal is expected to hit 80% in 15 |nbsp| minutes (trigger threshold of |nbsp| .25 |nbsp| hours) and has been in this state for 3 |nbsp| minutes (trigger duration of |nbsp| 3m). This alerts you in advance of the error condition, giving you more time to respond, but won't send a false alert if the signal spikes to 80% and then quickly drops to a safer level."
-msgstr "この場合に、シグナルが15分後に80%に達すると予想され（トリガーの閾値は0.25時間）、その状態が3分間続いたとき（トリガーの継続期間は3m）に通知を受け取りたいとします。これは、エラー状態を事前にアラートし、対応のために使える時間を増やしますが、シグナルが80%まで急上昇し、その後すぐに安全なレベルまで低下した場合に、誤アラートを送信することはありません。"
+msgstr "この場合に、シグナルが15分後に80%に達すると予想され（トリガーの閾値は0.25時間）、その状態が3分間続いたとき（トリガーの継続期間は3m）に通知を受け取りたいとします。これは、エラー条件を事前にアラートし、対応のために使える時間を増やしますが、シグナルが80%まで急上昇し、その後すぐに安全なレベルまで低下した場合に、誤アラートを送信することはありません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:33
 msgid ":strong:`Alert when nearing`"
@@ -1246,18 +1259,18 @@ msgstr ":strong:`Double EWMAの使用`"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:81
 msgid "``Yes`` uses a double exponentially weighted moving average to perform forecasts. ``No`` uses linear extrapolation. In general, it's good paractice to use ``Yes`` to handle trends present at a resolution somewhat coarser than native resolution."
-msgstr "``Yes``  に設定すると、二重指数加重移動平均を使用して予測を実行します。``No`` に設定すると、線形外挿法を使用します。一般的に、  ``Yes``  を使用して、ネイティブ解像度よりやや粗い解像度に存在する傾向を扱うのが良い方法です。"
+msgstr "``Yes``  に設定すると、二重指数加重移動平均を使用して予測を実行します。``No`` に設定すると、線形外挿法を使用します。一般的に、   ``Yes``  を使用して、ネイティブ解像度よりやや粗い解像度に存在する傾向を扱うのが良い方法です。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:87
 msgid "Using the Duration option"
 msgstr "継続期間のオプションの使用"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:89
+#, fuzzy
 msgid ""
-"The Trigger duration and Clear duration options are used to trigger or clear alerts based on how frequently the condition is satisfied during the specified time window. For this alert, the condition being evaluated concerns the forecasted number of hours left, and the forecast is extrapolated when data is missing. Therefore, in the alert when nearing empty case (for example), a short period of descent followed by a long period of missing data mightresult "
-"in an alert being triggered."
-msgstr ""
-"トリガーの継続期間および解除の継続期間のオプションは、指定された時間窓の間に条件が満たされる頻度に基づいてアラートをトリガーまたは解除するために使用されます。このアラートの場合、評価される条件は予測される残り時間数に関するものであり、データが欠落している場合には予測が外挿されます。したがって、（たとえば）「Emptyに接近したときにアラートを発する」のケースでは、短時間の下降に続いて長時間のデータ欠落が発生すると、アラートがトリガーされる可能性があります。"
+"The Trigger duration and Clear duration options are used to trigger or clear alerts based on how frequently the condition is satisfied during the specified time window. For this alert, the condition being evaluated concerns the forecasted number of hours left, and the forecast is extrapolated when data is missing. Therefore, in the alert when nearing empty case (for example), a short period of descent followed by a long period of missing data might resultin "
+"an alert being triggered."
+msgstr "トリガーの継続期間と解除の継続期間のオプションは、指定された時間窓の間に条件が満たされる頻度に基づいてアラートをトリガーまたは解除するために使用します。このアラートの場合、評価される条件において重要なのは予測される残り時間数であり、データが欠落している場合には予測が外挿されます。したがって、（たとえば）「Emptyに接近したときにアラートを発する」のケースでは、短時間の下降に続いて長時間のデータ欠落が発生すると、アラートがトリガーされる可能性があります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/resource-running-out.rst:103
 msgid "Trigger duration and Clear duration"
@@ -1292,11 +1305,11 @@ msgid "Static Threshold"
 msgstr "静的閾値"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:12
+#, fuzzy
 msgid ""
 "Static Threshold alerts when a signal goes above or below a static threshold, or is within or outside of a range. Use this condition when you need to be alerted based on fixed values, as opposed to trends (for which you can use the :ref:`sudden-change` and :ref:`resource-running-out` conditions) or comparisons with past behavior (for which you can use :ref:`hist-anomaly`). This condition works best with metrics that have a static range of \"good\" "
 "and\"bad\" values."
-msgstr ""
-"静的閾値は、シグナルが静的閾値を上回った場合か下回った場合、または、範囲内にあるか範囲外にあるかによってアラートを発します。この条件は、傾向（ :ref:`sudden-change` および :ref:`resource-running-out` の条件が使用可能な場合）や過去の挙動との比較（ :ref:`hist-anomaly` の条件が使用可能な場合）とは対照的に、固定値に基づいてアラートする必要がある場合に使用します。この条件は、「可」の値と「不可」の値に静的な範囲があるメトリクスで使用すると最適に動作します。"
+msgstr "静的閾値は、シグナルが静的閾値を上回った/下回った場合、または、ある範囲内にある/範囲外にある場合にアラートを発します。この条件は、傾向（ :ref:`sudden-change` および :ref:`resource-running-out` の条件が使用可能な場合）や過去の挙動との比較（ :ref:`hist-anomaly` の条件が使用可能な場合）とは対照的に、固定値に基づいてアラートする必要がある場合に使用します。この条件は、「可」の値と「不可」の値に静的な範囲があるメトリクスで使用すると最適に動作します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:14
 msgid "To compare one signal with another, use :ref:`custom-threshold`."
@@ -1324,7 +1337,7 @@ msgstr "数値"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:45
 msgid "Lower and upper thresholds are available if you choose ``Out of Range`` or ``Within Range`` for :guilabel:`Alert when`."
-msgstr ":guilabel:`Alert when` に ``Out of Range`` または ``Within Range`` を選択した場合、下限および上限の閾値が利用できます。"
+msgstr ":guilabel:`Alert when` に ``Out of Range`` または ``Within Range``  を選択した場合、下限および上限の閾値が利用できます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:47
 msgid "For ``Alert when``, if you select ``Out of Range`` or ``Within Range``, you can enter a number for :guilabel:`Lower threshold` and :guilabel:`Upper threshold`."
@@ -1359,11 +1372,12 @@ msgid "As you might expect, choosing ``Immediately`` for :guilabel:`Trigger Sens
 msgstr "ご想像の通り、:guilabel:`Trigger Sensitivity` に ``Immediately`` を選択すると、シグナルが閾値に達するとすぐにアラートがトリガーされます。このオプションは、トリガー感度の3つのオプションの中で最も感度が高いものです（最も多数のアラートをトリガーする可能性があります）。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:86
+#, fuzzy
 msgid ""
 "The ``Duration`` option triggers when the signal meets and remains at threshold condition for a specified period, such as 10 minutes. Therefore, using this option is less sensitive (might trigger fewer alerts) than the ``Immediately`` option. If you use this option, an alert isn't triggered if any data points are delayed or don't arrive at all during that time range, even if all the data points that are received :strong:`do` meet the threshold. For "
 "moreinformation about delayed or missing data points, see :ref:`delayed-missing`."
 msgstr ""
-" ``Duration`` オプションを使用すると、シグナルが閾値条件を満たし、指定した期間（例：10分）にわたってその状態を継続した場合にアラートがトリガーされます。したがって、このオプションを使用すると、``Immediately`` オプションよりも感度は低くなります（アラートのトリガー回数が少なくなる可能性があります）。このオプションを使用すると、たとえ受信したすべてのデータポイントが閾値条件を :strong:`満たしていても`、指定した期間中にデータポイントが遅延したり、まったく到着し"
+" ``Duration`` オプションを使用すると、シグナルが閾値条件を満たし、指定した期間（例：10分間）にわたってその状態を継続した場合にアラートがトリガーされます。したがって、このオプションを使用すると、``Immediately`` オプションよりも感度は低くなります（アラートのトリガー回数が少なくなる可能性があります）。このオプションを使用すると、たとえ受信したすべてのデータポイントが閾値条件を :strong:`満たしていても`、指定した期間中にデータポイントが遅延したり、まったく到着し"
 "なかったりすれば、アラートはトリガーされません。データポイントの遅延や欠落について、詳細は :ref:`delayed-missing` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:88
@@ -1371,12 +1385,13 @@ msgid "If you want an option that triggers even if some data points do not arriv
 msgstr "一部のデータポイントが時間通りに到着しなくてもアラートをトリガーするオプションが必要な場合は、``Percent of duration`` を（100未満の値のパーセンテージを指定して）使用します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:92
+#, fuzzy
 msgid ""
 "The ``Percent of duration`` option triggers alerts based on the number of data points that met the threshold during the window, compared to how many data points were expected to arrive. Because this option triggers an alert based on the percentage of data points that met the threshold, it can sometimes trigger an alert even if some data points didn't arrive on time. Therefore, using this option with a percentage below |nbsp| 100 is more sensitive "
 "(mighttrigger more alerts) than the ``Duration`` option."
 msgstr ""
-" ``Percent of duration`` オプションを使用すると、指定した時間窓の間に閾値を満たしたデータポイントの数に基づいてアラートがトリガーされます。このオプションは、閾値を満たしたデータ ポイント数のパーセンテージに基づいてアラートをトリガーするため、一部のデータポイントが時間通りに到着しなかった場合でもアラートをトリガーすることがあります。したがって、100未満のパーセンテージでこのオプションを使用すると、``Duration`` オプションを使用した場合よりも感度は高くなりま"
-"す（より多くのアラートがトリガーされる可能性があります）。"
+" ``Percent of duration`` オプションを使用すると、指定した時間窓の間に閾値を満たしたデータポイントの数に基づいてアラートがトリガーされます。このオプションは、閾値を満たしたデータ ポイント数のパーセンテージに基づいてアラートをトリガーするため、一部のデータポイントが時間通りに到着しなかった場合でもアラートをトリガーすることがあります。したがって、100未満のパーセンテージでこのオプションを使用すると、``Duration`` オプションを使用した場合よりも感度は高くなります"
+"（より多くのアラートがトリガーされる可能性があります）。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:142
 msgid "Option you specify for :strong:`Trigger Sensitivity`: Percent of Duration = 75% of 3 |nbsp| minutes"
@@ -1387,12 +1402,13 @@ msgid "API usage note"
 msgstr "APIの使用に関する注意事項"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/static-threshold.rst:185
+#, fuzzy
 msgid ""
-"If you use the Splunk Observability Cloud API to build detectors, you can use the ``const()`` function to specify different threshold values for different dimension values. For example, you might have different acceptable SLA values depending on whether a host is in dev, lab, or production. Using the ``const()`` function can be more efficient than manually building multiple detectors or detectors with multiple rules. For more information, see the "
-"sectionon creating multiple time series in the :new-page:`Splunk Observability Cloud API documentation <https://dev.splunk.com/observability/docs/signalflow/functions/const_function/>`."
+"If you use the Splunk Observability Cloud API to build detectors, you can use the ``const()`` function to specify different threshold values for different dimension values. For example, you might have different acceptable SLA values depending on whether a host is in dev, lab, or production. Using the ``const()`` function can be more efficient than manually building multiple detectors or detectors with multiple rules. For more information, see the section "
+"oncreating multiple time series in the :new-page:`Splunk Observability Cloud API documentation <https://dev.splunk.com/observability/docs/signalflow/functions/const_function/>`."
 msgstr ""
-"Splunk Observability Cloud APIを使用してディテクターを作成する場合、 ``const()``  関数を使用して、異なるディメンション値に対して異なる閾値を指定できます。たとえば、ホストが開発、実験、本番のいずれであるかによって、許容できるSLA値が異なるという場合があるでしょう。ここで ``const()``  関数を使用すると、複数のディテクターや複数のルールを持つディテクターを手動で構築するよりも効率的です。詳細は、:new-page:`Splunk Observability Cloud API ドキュメント <https://"
-"dev.splunk.com/observability/docs/signalflow/functions/const_function/>` の、複数の時系列の作成に関するセクションを参照してください。"
+"Splunk Observability Cloud APIを使用してディテクターを作成する場合、 ``const()``  関数を使用して、異なるディメンション値に対して異なる閾値を指定できます。たとえば、あるホストが開発、実験、本番のいずれに存在するかによって許容できるSLA値が異なるという場合があるでしょう。ここで ``const()``  関数を使用すると、複数のディテクターや、複数のルールを持つディテクターを手動で構築するよりも効率的です。詳細は、:new-page:`Splunk Observability Cloud API ドキュメント"
+"<https://dev.splunk.com/observability/docs/signalflow/functions/const_function/>`の、複数の時系列の作成に関するセクションを参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:-1
 msgid "The Sudden Change condition alerts when values received during a recent time window are anomalous compared to values received during the preceding time window."
@@ -1415,10 +1431,11 @@ msgid "If the number of logins for a server suddenly decreases significantly, th
 msgstr "あるサーバーのログイン数が突然大幅に減少した場合、そのサーバーに問題がある可能性があります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:36
+#, fuzzy
 msgid ""
-"Alert is triggered when the signal is either above a threshold, below a threshold, or outside a specified range (e.g. more than 3.5 standard deviations above or below the mean of the preceding window, or higher than the 95th percentile of the preceding window). Choose :strong:`Custom sensitivity` and then the :strong:`Normal based on` parameter on to specify whether anomalies are based on standard deviations from the mean, a percentile value, or meanplus "
-"percentage change."
-msgstr "アラートは、シグナルが閾値を超えたとき、閾値を下回ったとき、または指定した範囲外にあるときにトリガーされます（例：直前のウィンドウの平均値より3.5標準偏差以上上または下、または直前のウィンドウの95パーセンタイルより高い場合）。:strong:`カスタム感度` を選択し、:strong:`正常値の基準` のパラメータを選択して、異常の基準を平均値からの標準偏差とするか、パーセンタイル値とするか、または平均に変化率を加えたものとするかを指定します。"
+"Alert is triggered when the signal is either above a threshold, below a threshold, or outside a specified range (e.g. more than 3.5 standard deviations above or below the mean of the preceding window, or higher than the 95th percentile of the preceding window). Choose :strong:`Custom sensitivity` and then the :strong:`Normal based on` parameter on to specify whether anomalies are based on standard deviations from the mean, a percentile value, or mean "
+"pluspercentage change."
+msgstr "アラートは、シグナルが閾値を超えたとき、閾値を下回ったとき、または指定した範囲外にあるときにトリガーされます（例：直前のウィンドウの平均値より3.5標準偏差以上上または下、または直前のウィンドウの95パーセンタイルより高い場合など）。:strong:`カスタム感度` を選択し、:strong:`正常値の基準` のパラメータを選択して、異常の基準を平均値からの標準偏差とするか、パーセンタイル値とするか、または平均に変化率を加えたものとするかを指定します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:38
 msgid ":guilabel:`Trigger Sensitivity`"
@@ -1433,12 +1450,13 @@ msgid "How to define anomalies as compared to the historical window."
 msgstr "履歴ウィンドウとの比較における異常の定義方法。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:57
+#, fuzzy
 msgid ""
-"Use ``Percentile`` for signals such as application response time or latency, where the signal might be more likely to have small but consistent increases or decreases. In general, ``Percentile`` aims to be representative but can be rigid (a new maximum value is seen as anomalous regardless of scale). ``Mean plus standard deviation`` is more flexible but can be unduly influenced by extreme observations. ``Mean plus percentage change`` is moreinterpretable "
-"but might be harder to tune."
+"Use ``Percentile`` for signals such as application response time or latency, where the signal might be more likely to have small but consistent increases or decreases. In general, ``Percentile`` aims to be representative but can be rigid (a new maximum value is seen as anomalous regardless of scale). ``Mean plus standard deviation`` is more flexible but can be unduly influenced by extreme observations. ``Mean plus percentage change`` is more "
+"interpretablebut might be harder to tune."
 msgstr ""
-"アプリケーションの応答時間やレイテンシのように、小さくとも一貫した増減を示す可能性の高いシグナルには、``Percentile``  を使用します。一般的に、``Percentile``  は代表的であることを目指しているものの、柔軟性に欠ける可能性があります（新たな最大値は、スケールに関係なく異常とみなされる）。``Mean plus standard deviation`` はより柔軟ですが、極値が観測された場合に過度に影響される可能性があります。``Mean plus percentage change`` はより解釈しやすいですが、調整が難し"
-"い可能性があります。"
+"アプリケーションの応答時間やレイテンシのように、小さくとも一貫した増減を示す可能性の高いシグナルには、``Percentile``  を使用します。一般的に、``Percentile``  は代表的であることを目指しているものの、柔軟性に欠ける可能性があります（新たな最大値は、スケールに関係なく異常とみなされる）。``Mean plus standard deviation`` はより柔軟ですが、極値が観測された場合に過度に影響される可能性があります。``Mean plus percentage change`` はより解釈しやすいですが、調整が難しい"
+"可能性があります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:61
 msgid "The time range being monitored. For example, a value of 10m indicates that you are looking for anomalies that have occurred in the most recent 10 minutes."
@@ -1498,7 +1516,7 @@ msgstr ":strong:`EWMAを使用` （ :strong:`正常値の基準` が ``Mean plus
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:91
 msgid "``Yes`` calculates an exponentially weighted moving average (and adds standard deviations or a percentage as appropriate). ``No`` uses a usual moving average. In general, ``Yes`` is recommended as a way to prevent the threshold from lagging too far behind the current values."
-msgstr "``Yes``  に設定すると、二重指数加重移動平均を計算します（そして、必要に応じて標準偏差またはパーセンテージを追加します）。``No`` に設定すると、通常の移動平均を使用します。一般的に、閾値が現在の値から大きく遅れるのを防ぐためには、  ``Yes``  が推奨されます。"
+msgstr "``Yes``  に設定すると、二重指数加重移動平均を計算します（そして、必要に応じて標準偏差またはパーセンテージを追加します）。``No`` に設定すると、通常の移動平均を使用します。一般的に、閾値が現在の値から大きく遅れるのを防ぐためには、   ``Yes``  が推奨されます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:98
 msgid "Specifying trigger and clear thresholds"
@@ -1518,7 +1536,7 @@ msgstr "この条件が満たされない場合、ディテクターは期待通
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:110
 msgid "Note, however, that you don't need to adapt the thresholds to the type of comparison; that is, if you specify 99 |nbsp| as a Trigger threshold, it is automatically converted to |nbsp| 1 if :guilabel:`Alert when` is ``Too low``."
-msgstr "ただし、比較のタイプに合わせて閾値を変化させる必要はないことに注意してください。つまり、トリガーの閾値として「99」を指定した場合、:guilabel:`Alert when` が ``Too low`` であれば、自動的に1に変換されます。"
+msgstr "ただし、比較のタイプに合わせて閾値を変化させる必要はないことに注意してください。つまり、トリガーの閾値として「99 |nbsp| 」を指定した場合、 :guilabel:`Alert when` が ``Too low`` であれば、自動的に |nbsp| 1に変換されます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:126
 msgid "The setting ``Too high or Too low`` doesn't trigger an alert for a signal that oscillates between above and below the bands. The signal must spend at least the amount of time specified for :guilabel:`Current window` on one side of the band or the other."
@@ -1538,22 +1556,22 @@ msgid "Current window"
 msgstr "現在のウィンドウ"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:132
+#, fuzzy
 msgid ""
-"The alert condition applies rolling minimum and maximum transformations (over the current window), which can interact poorly with other analytics on the signal. The alert condition is not influenced by missing data points in the current window or historical window. That is, all of the received values must be above/below the threshold; missing data points do not prevent an alert from triggering. Similarly, the threshold calculations ignore missing "
-"datapoints."
+"The alert condition applies rolling minimum and maximum transformations (over the current window), which can interact poorly with other analytics on the signal. The alert condition is not influenced by missing data points in the current window or historical window. That is, all of the received values must be above/below the threshold; missing data points do not prevent an alert from triggering. Similarly, the threshold calculations ignore missing datapoints."
 msgstr ""
-"このアラート条件は、（現在のウィンドウに）ローリング最小値および最大値の変換を適用するため、シグナルに対する他の分析との相互作用が悪くなる可能性があります。このアラート条件は、現在のウィンドウまたは履歴ウィンドウにおけるデータポイントの欠落の影響を受けません。つまり、すべての受信値が閾値を超えるか閾値未満である必要があります。データポイントが欠落しても、アラートのトリガーを妨げることはありません。同様に、閾値の計算もデータポイントの欠落を無視します。"
+"このアラート条件は、（現在のウィンドウに）ローリング最小値および最大値の変換を適用するため、シグナルに対する他の分析との相互作用が悪くなる可能性があります。このアラート条件は、現在のウィンドウまたは履歴的ウィンドウにおけるデータポイントの欠落の影響を受けません。つまり、すべての受信値が閾値を超えるか閾値未満である必要があります。データポイントが欠落しても、アラートのトリガーを妨げることはありません。同様に、閾値の計算もデータポイントの欠落を無視します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:134
 msgid "Trigger threshold and Clear threshold"
 msgstr "トリガーの閾値と解除の閾値"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-condition-reference/sudden-change.rst:135
+#, fuzzy
 msgid ""
-"These produce dynamic thresholds, which can be somewhat disorienting. For example, an alert can be triggered when the signal value is 31.4 (units of the original metric, not deviations or a percentile) and clear when the value is 55.1 (because the dynamic threshold has been influenced by the elevated values that have occurred since the alert was triggered). The clear event does :strong:`not` mean the signal is below the threshold in effect when the "
-"alertwas triggered."
-msgstr ""
-"これらは動的な閾値を生成するため、多少混乱を生じさせる可能性があります。例えば、あるアラートは、シグナル値が31.4（偏差やパーセンタイルではなく、元のメトリクスの単位）のときにアラートがトリガーされ、55.1のときに解除されるという可能性があります（アラートがトリガーされてから発生した値の上昇によって動的閾値が影響を受けたため）。解除イベントは、アラートがトリガーされたときに有効であった閾値をシグナルが下回ったことを意味するもの :strong:`ではありません`。"
+"These produce dynamic thresholds, which can be somewhat disorienting. For example, an alert can be triggered when the signal value is 31.4 (units of the original metric, not deviations or a percentile) and clear when the value is 55.1 (because the dynamic threshold has been influenced by the elevated values that have occurred since the alert was triggered). The clear event does :strong:`not` mean the signal is below the threshold in effect when the alertwas "
+"triggered."
+msgstr "これらは動的な閾値を生成するため、多少混乱を生じさせる可能性があります。例えば、あるアラートは、シグナル値が31.4（偏差やパーセンタイルではなく、元のメトリクスの単位）のときにアラートがトリガーされ、55.1のときに解除されるという可能性があります（アラートがトリガーされてから発生した値の上昇によって動的閾値が影響を受けたため）。解除イベントは、アラートがトリガーされたときに有効であった閾値をシグナルが下回ったことを意味するもの :strong:`ではありません`。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alert-message-variables-reference.rst:5
 msgid "Alert message variables reference"
@@ -2028,7 +2046,7 @@ msgstr "Splunk Observability Cloudのアラートとディテクターの概要"
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst:31
 #, fuzzy
 msgid "Splunk Observability Cloud uses detectors, events, alerts, and notifications to keep you informed when certain criteria are met. Active alerts and existing detectors can be found in tabs on the :strong:`Alerts` page, and events can be found in the :strong:`Events` sidebar, available from within any dashboard."
-msgstr "Splunk Observability Cloudは、ディテクター、イベント、アラート、および通知を使用して、特定の基準が満たされたときに情報を提供します。アクティブなアラートと既存のディテクターは、:strong:`アラート` ページのタブで見つけることができ、イベントは、:strong:`イベント` サイドバーで見つけることができます。どのダッシュボードからも利用可能です。"
+msgstr "Splunk Observability Cloudは、ディテクター、イベント、アラート、および通知を使用して、特定の基準が満たされたときに情報を提供します。アクティブなアラートと既存のディテクターは、:strong:`アラート` ページのタブ内で見つけることができ、イベントは、:strong:`イベント` サイドバー内で見つけることができます。どのダッシュボードからも利用可能です。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst:39
 msgid "You want a message sent to a Slack channel or to an email address for the Ops team when CPU Utilization has reached the 95th percentile."
@@ -2064,12 +2082,13 @@ msgid "For example, if you have a group of 30 virtual machines that are used to 
 msgstr "たとえば、Kafkaのようなクラスタ化されたサービスを提供するために使用される30台の仮想マシンのグループがある場合、通常はこれらの仮想マシンから来るすべてのメトリクスを :code:`service:kafka` というディメンションとあわせて含めます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst:66
+#, fuzzy
 msgid ""
-"If you want to track whether the CPU utilization remains below 80 for each of those virtual machines, you can create a single detector that queries for the CPU utilization metrics that include the :code:`service:kafka` dimension and evaluates those metrics against the threshold of 80. This single detector triggers individual alerts for each virtual machine whose CPU utilization exceeds the threshold, as if you had 30 separate detectors. You do not needto "
-"create 30 individual detectors to monitor each of your 30 virtual machines."
+"If you want to track whether the CPU utilization remains below 80 for each of those virtual machines, you can create a single detector that queries for the CPU utilization metrics that include the :code:`service:kafka` dimension and evaluates those metrics against the threshold of 80. This single detector triggers individual alerts for each virtual machine whose CPU utilization exceeds the threshold, as if you had 30 separate detectors. You do not need "
+"tocreate 30 individual detectors to monitor each of your 30 virtual machines."
 msgstr ""
-"これらの各仮想マシンのCPU使用率が80未満にとどまっているかどうかを追跡する場合、:code:`service:kafka` ディメンションを含むCPU使用率メトリクスをクエリし、80という閾値に対してこれらのメトリクスを評価する単一のディテクターを作成できます。この単一のディテクターを使用して、まるで30台の別々のディテクターがあるかのように、CPU使用率が閾値を超える各仮想マシンに対して個別のアラートをトリガーできます。30台の各仮想マシンの監視に、30個の個別のディテクターを作成する必要"
-"はありません。"
+"これらの各仮想マシンのCPU使用率が80未満にとどまっているかどうかを追跡する場合、:code:`service:kafka` ディメンションを含むCPU使用率メトリクスをクエリし、80という閾値に対してこれらのメトリクスを評価する単一のディテクターを作成できます。この単一のディテクターを使用して、まるで30台の別々のディテクターがあるかのように、CPU使用率が閾値を超える各仮想マシンに対して個別のアラートをトリガーできます。30台の仮想マシンそれぞれの監視に、30個の個別のディテクターを作成する"
+"必要はありません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst:68
 msgid "If the population changes because the cluster has grown to 40 virtual machines, you can make a cluster- or service-level detector. If you include the :code:`service:kafka` dimension for the newly-added virtual machines, the existing detector's query includes all new virtual machines in the cluster in the threshold evaluation."
@@ -2080,10 +2099,11 @@ msgid "Setting static values for detector conditions can lead to noisy alerting 
 msgstr "ディテクターの条件に静的な値を設定すると、あるサービスや特定の時間帯にとって適切な値が、別のサービスや別の時間帯には適切でない可能性があるため、ノイズの多いアラートが発生する可能性があります。例えば、アプリケーションやサービスにDockerコンテナやEC2オートスケーリングのようなしなやかなインフラストラクチャが含まれている場合、アラートの値は、時間帯によって異なる可能性があります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst:78
+#, fuzzy
 msgid ""
-"You can define dynamic thresholds to account for changes in streaming data. For example, if your metric exhibits cyclical behavior, you can define a threshold that is a one-week timeshifted version of the same metric. Suppose the relevant basis of comparison for your data is the behavior of a population, such as a clustered service. In that case, you can define your threshold as a value that reflects that behavior. For example, the 90th percentile forthe "
-"metric across the entire cluster over a moving 15-minute window."
-msgstr "そこで、ストリーミングデータの変化を考慮した動的な閾値を定義することができます。例えば、メトリクスが周期的な挙動を示す場合、同じメトリクスを1週間タイムシフトしたバージョンの閾値を定義することができます。データの比較基準が、クラスタ化されたサービスのような集団の挙動であると考えてみてください。この場合は、その挙動を反映した値を閾値として定義することができます。例えば、15分の移動窓におけるクラスタ全体のメトリクスの90パーセンタイルなどです。"
+"You can define dynamic thresholds to account for changes in streaming data. For example, if your metric exhibits cyclical behavior, you can define a threshold that is a one-week timeshifted version of the same metric. Suppose the relevant basis of comparison for your data is the behavior of a population, such as a clustered service. In that case, you can define your threshold as a value that reflects that behavior. For example, the 90th percentile for "
+"themetric across the entire cluster over a moving 15-minute window."
+msgstr "そこで、ストリーミングデータにおける変化を考慮した動的な閾値を定義することができます。例えば、メトリクスが周期的な挙動を示す場合、同じメトリクスを1週間タイムシフトしたバージョンの閾値を定義することができます。関連データの比較基準が、クラスタ化されたサービスのような集団の挙動であると考えてみてください。この場合は、その挙動を反映した値を閾値として定義することができます。例えば、15分の移動窓におけるクラスタ全体のメトリクスの90パーセンタイルなどです。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/alerts-detectors-notifications.rst:80
 msgid "To learn more, see :ref:`condition-reference`."
@@ -2300,7 +2320,7 @@ msgstr "アラートの自動解除機能の設定は、それが適用される
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/auto-clearing-alerts.rst:46
 msgid "When an alert has been auto-cleared rather than resolved manually, it is listed as :guilabel:`Auto-Cleared` rather than :guilabel:`Cleared`."
-msgstr "アラートが手動で解決されたのではなく、自動解除された場合は、:guilabel:`Cleared` ではなく :guilabel:`Auto-Cleared` としてリストに入ります。"
+msgstr "アラートが手動で解決されたのではなく、自動解除された場合は、 :guilabel:`Cleared` ではなく :guilabel:`Auto-Cleared` としてリストに入ります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-intro.rst:-1 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-view.rst:-1 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect.rst:-1
 msgid "Splunk Observability Cloud automatically creates alerts and detectors when you have supported integrations configured. Learn how to use and customize with AutoDetect alerts and detectors."
@@ -2529,7 +2549,7 @@ msgstr "引数"
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:656 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:693 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:729 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:765
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:813 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:848 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:882 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:917
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:943 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:968 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:1004 ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:1032
-#: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:1076 ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:243 ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/find-detectors.rst:30 ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/monitor-server-latency.rst:55
+#: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:1076 ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:247 ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/find-detectors.rst:30 ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/monitor-server-latency.rst:55
 #: ../../alerts-detectors-notifications/slo/custom-metric-scenario.rst:45
 msgid "Description"
 msgstr "説明"
@@ -3314,7 +3334,7 @@ msgstr "説明：スロットリングにより除外されたプロファイリ
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:804
 msgid "SignalFlow function: See the APM ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L4>` repository on GitHub."
-msgstr "SignalFlow関数：GitHubの :new-page:`SignalFlowライブラリ<https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L4>` リポジトリにあるAPM ``operational.flow`` 関数を参照してください。"
+msgstr "SignalFlow関数：GitHubの :new-page:`SignalFlowライブラリ <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L4>` リポジトリにあるAPM ``operational.flow`` 関数を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:817
 msgid "Trigger threshold for APM profiling messages throttled"
@@ -3358,7 +3378,7 @@ msgstr "説明：ブロックされたスパン数が指定閾値を超えた場
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:873
 msgid "SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L53>` repository on GitHub."
-msgstr "SignalFlow関数：GitHubの :new-page:`SignalFlowライブラリ<https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L53>` リポジトリにある ``operational.flow`` 関数を参照してください。"
+msgstr "SignalFlow関数：GitHubの :new-page:`SignalFlowライブラリ <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L53>` リポジトリにある ``operational.flow`` 関数を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-list.rst:886
 msgid "Trigger threshold for APM spans blocked"
@@ -3638,7 +3658,7 @@ msgstr ":guilabel:`Active Alerts` または :guilabel:`Detectors` のタブを�
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-view.rst:15
 msgid "You can also select :guilabel:`AutoDetect` or :guilabel:`Customized AutoDetect` in the filter on the :guilabel:`Active Alerts` or :guilabel:`Detectors` tabs."
-msgstr "また、:guilabel:`Active Alerts` または :guilabel:`Detectors` のタブのフィルターで :guilabel:`AutoDetect` または :guilabel:`Customized AutoDetect` を選択することもできます。"
+msgstr "また、:guilabel:`Active Alerts` または :guilabel:`Detectors`  のタブのフィルターで :guilabel:`AutoDetect` または :guilabel:`Customized AutoDetect` を選択することもできます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/autodetect/autodetect-view.rst:17
 msgid "This screenshot shows what an AutoDetect component looks like on the Alerts page."
@@ -3958,393 +3978,404 @@ msgid "On the :strong:`Alert signal` tab, define the signal to monitor by enteri
 msgstr ":strong:`アラートシグナル` タブで、メトリクスと該当する分析を入力して、監視するシグナルを定義します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:118
-msgid "If you are creating a detector from scratch, you have to first select the signals you want to monitor. Selecting a signal for a detector is similar to selecting a signal in a chart in the Chart Builder. Enter a metric and select the metric you want to monitor from the list. Add filters or analytics. To learn more, see :ref:`specify-signal`."
-msgstr "ディテクターをゼロから作成する場合は、まず監視するシグナルを選択する必要があります。ディテクターのシグナルの選択方法は、「チャートビルダー」でのチャートのシグナルの選択と同様です。メトリクスを入力し、監視するメトリクスをリストから選択します。フィルターまたは分析を追加します。詳細は、:ref:`specify-signal` を参照してください。"
+#, fuzzy
+msgid ""
+"If you are creating a detector from scratch, you have to first select the signals you want to monitor. Selecting a signal for a detector is similar to selecting a signal in a chart in the Chart Builder. Enter a metric and select the metric you want to monitor from the list. Add filters or analytics. To add more signals, select :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. You can add events to be displayed on the chart, but you cannot selectan "
+"event as the signal to be monitored. To learn more, see :ref:`specify-signal`."
+msgstr ""
+"ディテクターをゼロから作成する場合は、まず監視するシグナルを選択する必要があります。ディテクターのシグナルの選択方法は、「チャートビルダー」でのチャートのシグナルの選択と同様です。メトリクスを入力し、監視するメトリクスをリストから選択します。フィルターまたは分析を追加します。さらにシグナルを追加する場合は、:guilabel:`Add Metric or Event` または :guilabel:`Add Formula` を選択します。チャートに表示するイベントを追加することはできますが、監視対象のシグナルとし"
+"てイベントを選択することはできません。詳細は、:ref:`specify-signal` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:120
-msgid "If you want to add more signals, select :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored."
-msgstr "さらにシグナルを追加したい場合は、:guilabel:`Add Metric or Event` または :guilabel:`Add Formula` を選択します。チャートに表示するイベントを追加することはできますが、監視するシグナルとしてイベントを選択することはできないことに注意してください。"
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:121
+msgid "When you select an archived metric as a signal in your detector, the archived metric can't be report data to your detector and will cause the detector to misfire alerts or stop working. To include an archived metric in detectors, route them to real-time or create exception rules to make them available. For more information, see the :ref:`mpm-rule-routing-exception` section."
+msgstr "アーカイブ済みのメトリクスをディテクターのシグナルとして選択すると、アーカイブ済みのメトリクスがディテクターにデータをレポートすることができず、ディテクターがアラートを誤発動したり動作を停止したりする原因になります。アーカイブ済みのメトリクスをディテクターに含めるには、リアルタイムにルーティングするか、例外ルールを作成してそれらを利用できるようにします。詳細については、:ref:`mpm-rule-routing-exception` セクションを参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:122
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:123
 msgid "If you are creating a detector :ref:`from a chart<create-detector-from-chart>` or by :ref:`cloning a detector<clone-detector>`, you might not need to add new signals. However, if you do add new signals to the detector, the signals you add are not added to the original chart or detector."
 msgstr ":ref:`チャートから<create-detector-from-chart>` ディテクターを作成する場合または :ref:`ディテクターを複製して<clone-detector>` 作成する場合は、新しいシグナルを追加する必要はありません。ただし、それでもディテクターに新しいシグナルを追加するという場合、追加したシグナルは元のチャートやディテクターには追加されません。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:126
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:125
+#, fuzzy
+msgid "You can add events to be displayed on the chart, but you can't select an event as the signal to be monitored."
+msgstr "チャートに表示するイベントを追加することはできますが、監視対象のシグナルとしてイベントを選択することはできません。"
+
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:130
 msgid "If the detector has multiple signals, select what signal you want to alert on."
 msgstr "ディテクターに複数のシグナルがある場合は、どのシグナルに対してアラートを発するかを選択します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:128
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:132
 msgid "To monitor one signal, select the bell icon in the :guilabel:`Alert on` column to select which signal you want to monitor. A blue bell indicates the signal that is being monitored."
 msgstr "単一のシグナルを監視するには、:guilabel:`Alert on` 列のベルアイコンを選択し、監視するシグナルを選択します。ベルが青くなっている場合、それは監視中のシグナルです。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:130
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:134
 msgid "To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the :guilabel:`Monitor multiple signals` double-bells icon. When you select to monitor multiple signals your alert condition is changed to :guilabel:`Custom Threshold`."
 msgstr "複数のシグナルの値に基づいて複合条件を作成する場合（例えば、「シグナルAが ``x`` より高い OR シグナルBが ``y`` より高い」など）、:guilabel:`Monitor multiple signals` のベル2個のアイコンを選択します。複数のシグナルを監視することを選択すると、アラート条件は :guilabel:`Custom Threshold` に変更されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:132
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:136
 msgid "If you don't see the Alert signal tab, you are viewing a detector created through the API. For more information, see :ref:`v2-detector-SignalFlow`."
 msgstr "「アラートシグナル」タブが表示されない場合は、APIを使って作成されたディテクターが表示されています。詳細は、:ref:`v2-detector-SignalFlow` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:137
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:141
 msgid "Select alert conditions"
 msgstr "アラート条件を選択する"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:139
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:143
 msgid "On the :strong:`Alert condition` tab, select the type of condition that triggers an alert. If you want to create compound conditions using AND or OR operators on the Alert settings tab, you must use the Custom Threshold condition. This applies whether you are monitoring a single signal or multiple signals."
 msgstr ":strong:`アラート条件` タブで、アラートをトリガーする条件のタイプを選択します。「アラート設定] タブでANDまたはOR演算子を使用して複合条件を作成する場合は、「カスタム閾値」条件を使用する必要があります。これは、単一のシグナルを監視する場合でも、複数のシグナルを監視する場合でも適用されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:141
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:145
 msgid "See :ref:`condition-reference` for the list of the available built-in alert conditions for Infrastructure Monitoring and Custom Metrics detectors."
 msgstr "Infrastructure Monitoringおよびカスタムメトリクスのディテクターで使用可能な内蔵アラート条件のリストについては、:ref:`condition-reference` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:143
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:147
 msgid "After you have selected the alert condition, continue to the next tab to specify the settings that trigger alerts."
 msgstr "アラート条件を選択したら、次のタブに進み、アラートのトリガーとする設定を指定します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:145
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:149
 msgid "If you don't see the Alert condition tab, you are viewing a detector created through the API. For more information, see :ref:`v2-detector-SignalFlow`."
 msgstr "「アラート条件」タブが表示されない場合は、APIを使って作成されたディテクターが表示されています。詳細は、:ref:`v2-detector-SignalFlow` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:150
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:154
 msgid "Specify alert settings"
 msgstr "アラート設定を指定する"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:152
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:156
 msgid "On the :strong:`Alert settings` tab, specify the settings that trigger an alert. The available settings vary depending on the alert condition you selected. See :ref:`condition-reference` for the settings available for each built-in condition."
 msgstr ":strong:`アラート設定` タブで、アラートをトリガーする設定を指定します。利用可能な設定は、選択したアラート条件によって異なります。各内蔵条件で使用可能な設定については、:ref:`condition-reference` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:154
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:158
 msgid "If you are using the Custom Threshold condition, you can select :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`."
 msgstr "「カスタム閾値」条件を使用している場合、:guilabel:`Add another condition` を選択してANDおよびOR演算子を使用した複合条件を作成できます。複合条件の詳細については、:ref:`custom-threshold` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:156
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:160
 msgid "In the chart, use a preview of the alerts that are triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`."
 msgstr "チャートでは、選択した設定に基づいてトリガーされるアラートのプレビューを使用します。プレビューの使い方については、:ref:`preview-detector-alerts` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:158
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:162
 msgid "After you have specified settings for triggering alerts, continue to the next tab to create a message that is sent when the alert is triggered."
 msgstr "アラートをトリガーするための設定を指定したら、次のタブに進み、アラートがトリガーされたときに送信されるメッセージを作成します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:160
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:164
 msgid "If you don't see the Alert settings tab, you are viewing a detector that was created using the API; alert settings are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`."
 msgstr "「アラート設定」タブが表示されない場合は、APIを使用して作成されたディテクターを表示しています。アラート設定は、「 :ref:`SignalFlow<v2-detector-signalflow>` 」タブで定義されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:165
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:169
 msgid "Alert messages"
 msgstr "アラートメッセージ"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:167
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:171
 msgid "On the :strong:`Alert message` tab, specify the severity of the alert and the information you want to include in the notification message."
 msgstr ":strong:`アラートメッセージ` タブで、アラートの重大度と通知メッセージに含める情報を指定します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:172
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:176
 msgid "Severity"
 msgstr "重大度"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:174
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:178
 msgid "Specify the importance of the alerts generated by this rule. Splunk Observability Cloud has five severity labels: ``Critical``, ``Major``, ``Minor``, ``Warning``, and ``Info``. Each severity label has a different color, and event markers appear on charts in the associated color."
 msgstr "このルールによって生成されるアラートの重要度を指定します。Splunk Observability Cloudには、``Critical``、``Major``、``Minor``、``Warning``、``Info`` の5つの重大度ラベルがあります。各重大度ラベルは異なる色が付いており、イベントマーカーは、これに関連付けられた色でチャートに表示されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:176
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:180
 msgid "You can create multiple rules to generate alerts with different severity levels for similar conditions, for example:"
 msgstr "複数のルールを作成し、類似した条件に対して異なる重大度レベルのアラートを生成することができます。例えば、以下のように設定できます："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:178
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:182
 msgid "Critical alert for the alert condition :ref:`resource-running-out` set to low trigger sensitivity"
 msgstr "トリガー感度を「低」に設定した :ref:`resource-running-out` のアラート条件には「Critical」のアラート"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:179
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:183
 msgid "Major alert for the same condition set to medium sensitivity"
 msgstr "トリガー感度を「中」に設定した同じアラート条件には「Major」のアラート"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:180
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:184
 msgid "Minor alert for same the condition set to high sensitivity"
 msgstr "トリガー感度を「高」に設定した同じアラート条件には「Minor」のアラート"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:182
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:186
 msgid "Another example might be:"
 msgstr "別の例としては："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:184
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:188
 msgid "Critical alert for the alert condition :ref:`heartbeat-check` where the value for :strong:`Hasn't reported for` is 60 minutes"
 msgstr ":strong:`「レポートがなかった期間」` の条件を60分間に設定した :ref:`heartbeat-check` のアラート条件には「Critical」のアラート"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:185
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:189
 msgid "Major alert for the same condition set at 30 minutes"
 msgstr "同期間を30分間に設定した同じアラート条件には「Major」のアラート"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:186
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:190
 msgid "Minor alert for same the condition set at 15 minutes"
 msgstr "同期間を15分間に設定した同じアラート条件には「Minor」のアラート"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:188
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:192
 msgid "The easiest way to do this is to create a rule at one severity, select :menuselection:`Clone` from the actions menu (|more|), and then edit the settings and severity."
 msgstr "これを行うための最も簡単な方法は、1つの重大度でルールを作成し、アクションメニュー（|more| ）から :menuselection:`Clone` を選択し、設定と重大度を編集することです。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:193
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:197
 msgid "Message preview"
 msgstr "メッセージのプレビュー"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:195
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:199
 msgid "Displays a default message that is sent when an alert is triggered or cleared. To edit the subject or the content of the message, select :guilabel:`Customize`; you can see the code and variables used to construct the message. Available variables are shown to the right of the message area while you are editing the message. Use triple braces where indicated so that the variable value is not escaped."
 msgstr "アラートがトリガーまたは解除されたときに送信されるデフォルトメッセージを表示します。メッセージの件名や内容を編集するには、:guilabel:`Customize` を選択します。メッセージの作成に使用されるコードと変数を見ることができます。メッセージの編集中には、使用可能な変数がメッセージ領域の右に表示されます。変数の値がエスケープ処理されないように、指定された場所では三重の波括弧を使用します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:197
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:201
 msgid "Note that the use of variables is supported only in the message subject and body, not in the Runbook or Tip fields."
 msgstr "変数の使用は、メッセージの件名と本文でのみサポートされており、RunbookやTipフィールドではサポートされていないことに注意してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:193
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:197
 msgid "This image shows the message editor."
 msgstr "この画像はメッセージエディターを示しています。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:203
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:207
 msgid "You can also use Markdown in the message."
 msgstr "メッセージ内では、Markdownも使用できます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:207
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:211
 msgid "When entering a variable in the message, enter the first few characters to narrow down the list of variables. Select Tab to add the first variable in the list to the message."
 msgstr "メッセージに変数を入力する際、最初の数文字を入力すると変数のリストを絞り込むことができます。「タブ」を選択すると、リストの最初の変数がメッセージに追加されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:209
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:213
 msgid "See :ref:`alert-message-variables-ref` to see all variables and helper functions you can use when creating a custom message."
 msgstr "カスタムメッセージの作成時に使用できるすべての変数とヘルパー関数については、:ref:`alert-message-variables-ref` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:211
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:215
 msgid "After you have created an alert message, continue to the next tab to specify where alert messages will be sent."
 msgstr "アラートメッセージを作成したら、次のタブに進み、アラートメッセージの送信先を指定します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:216
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:220
 msgid "Display custom properties"
 msgstr "カスタムプロパティを表示する"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:218
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:222
 #, fuzzy
 msgid "If you are creating a detector using the Splunk Observability Cloud API, you can convert custom properties to dimensions using the ``promote()`` method."
 msgstr "Splunk Observability Cloud APIを使用してディテクターを作成する場合、``promote()`` メソッドを使用してカスタムプロパティをディメンションに変換できます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:220
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:224
 msgid "By converting a custom property to a dimension, you can display it in an alert message. To learn more, see the :new-page:`Developer documentation for the promote method <https://dev.splunk.com/observability/docs/signalflow/methods/promote_stream_method/>`."
 msgstr "カスタムプロパティをディメンションに変換することで、そのプロパティをアラートメッセージに表示できます。詳細は、:new-page:`promoteメソッドの開発者用ドキュメント<https://dev.splunk.com/observability/docs/signalflow/methods/promote_stream_method/>` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:222
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:226
 #, fuzzy
 msgid "For more information about the detector API endpoints, see :new-page:`Detectors <https://dev.splunk.com/observability/reference/api/detectors/latest>` Splunk Observability Cloud API reference."
-msgstr "ディテクターAPIエンドポイントの詳細については、Splunk Observability Cloud APIリファレンスの「 :new-page:`ディテクター<https://dev.splunk.com/observability/reference/api/detectors/latest>` 」を参照してください。"
+msgstr "ディテクターのAPIエンドポイントの詳細については、Splunk Observability Cloud APIリファレンスの「 :new-page:`ディテクター<https://dev.splunk.com/observability/reference/api/detectors/latest>` 」を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:228
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:232
 msgid "Alert recipients"
 msgstr "アラート受信者"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:231
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:235
 #, fuzzy
 msgid "On the :strong:`Alert recipients` tab, specify who receive notification messages when alerts are triggered or cleared. Recipients are subscribers to a rule. Adding recipients is optional, but often useful."
 msgstr ":strong:`アラート受信者` タブで、アラートがトリガーまたは解除された際の通知メッセージの受信者を指定します。受信者は、ルールの受信登録者です。受信者の追加は任意ですが、この機能は多くの場合に役立ちます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:233
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:237
 msgid "If you have previously :ref:`integrated your alerts with another system <admin-notifs-index>`, those options appear in the :guilabel:`Add Recipient` dropdown menu. You can also send to email addresses, :ref:`webhook URLs<webhook>`, and :ref:`Create and manage teams<admin-manage-teams>`. Notifications are also sent when a condition clears."
-msgstr "以前に :ref:`アラートを他のシステムと統合している場合<admin-notifs-index>` は、それらのオプションは :guilabel:`Add Recipient` のドロップダウンメニューに表示されます。また、メールアドレス、:ref:`ウェブフックURL<webhook>`、:ref:`チームの作成と管理<admin-manage-teams>` に送信することもできます。条件が解除された際にも、通知が送信されます。"
+msgstr "以前に :ref:`アラートを他のシステムと統合している場合 <admin-notifs-index>` は、それらのオプションは :guilabel:`Add Recipient` のドロップダウンメニューに表示されます。また、メールアドレス、:ref:`ウェブフックURL<webhook>` および :ref:`Create and manage teams<admin-manage-teams>` に送信することもできます。条件が解除された際にも、通知が送信されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:235
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:239
 msgid "The following table explains different types of email notifications:"
 msgstr "次の表は、さまざまなタイプのメール通知について説明したものです："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:242
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:246
 #, fuzzy
 msgid "Email notification"
 msgstr "メール通知"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:244
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:248
 msgid "Stopped"
 msgstr "中止"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:245
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:249
 #, fuzzy
 msgid "The detector is muted or disabled when the alert is triggered"
 msgstr "アラートがトリガーされたときにディテクターがミュートまたは無効になっています"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:246
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:250
 msgid "Back to normal"
 msgstr "正常に復帰"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:247
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:251
 #, fuzzy
 msgid "The alert is cleared"
 msgstr "アラートは解除されています"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:248
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:252
 msgid "Manually resolved"
 msgstr "手動で解決"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:249
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:253
 msgid "The alert is manually set as ``resolved`` during an alert state"
 msgstr "アラート状態中に、アラートが手動で ``resolved`` に設定されました"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:250
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:254
 #, fuzzy
 msgid "Auto-cleared"
 msgstr "自動解除"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:251
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:255
 msgid "The Auto-clear setting is applied to the detector and the specified duration has elapsed. To learn more, see :ref:`auto-clearing-alerts`"
 msgstr "ディテクターに自動解除設定が適用されており、指定時間が経過しました。詳細は、:ref:`auto-clearing-alerts` を参照してください"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:254
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:258
 msgid "Tips"
 msgstr "ヒント"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:256
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:260
 msgid "If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option on the Detectors tab under Alerts & Detectors after you save the detector."
 msgstr "複数のルールのそれぞれに同じ受信登録者を追加する場合は、ディテクターを保存した後に、「アラートとディテクター」の「ディテクター」タブにある「 :ref:`受信登録の管理<manage-subs>` 」オプションを使用して、すべてのルールに受信登録者を一度に追加できます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:258
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:262
 msgid "You can temporarily stop a detector from sending notifications by :ref:`muting notifications<mute-notifications>`."
 msgstr "ディテクターによる通知の送信を一時的に停止するには、:ref:`通知のミュート<mute-notifications>` を実行します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:264
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:268
 msgid "Activate"
 msgstr "有効化"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:266
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:270
 msgid "On the :strong:`Activate` tab you see a summary of the detector settings you specified. Review the summary and make any necessary changes in the associated tabs, then name the rule; by default, the rule name is the same as the detector name. The rule name is displayed on the Alerts page and in notifications."
 msgstr ":strong:`有効化` タブに、指定したディテクター設定の概要が表示されます。概要を確認し、関連タブで必要な変更を行った後、ルールに名前を付けます。 デフォルトでは、ルール名はディテクター名と同じになっています。ルール名は、「アラート」ページおよび通知に表示されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:268
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:272
+#, fuzzy
 msgid ""
-"Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the Detectors tab under Alerts & Detectors. You can also provide additional descriptive text "
-"belowthe name, for example, to clarify the purpose of the detector for others."
+"Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the Detectors tab under Alerts & Detectors. You can also provide additional descriptive text below "
+"thename, for example, to clarify the purpose of the detector for others."
 msgstr ""
-" :guilabel:`Activate Alert Rule` を選択して、ディテクターを保存し指定したシグナルの監視を開始します。ディテクターを有効にすると、ディテクターの :strong:`アラート ルール` タブが表示され、選択したシグナルと構築したルールの概要が表示されます。ディテクター名の編集ができます。ここで入力したテキストは、「アラートとディテクター」の「ディテクター」タブにディテクター名として表示されます。また、ディテクターの目的を明確にするために、ディテクター名の下に追加の説明テ"
-"キストを入力することもできます。"
+" :guilabel:`Activate Alert Rule` を選択して、ディテクターを保存し指定したシグナルの監視を開始します。ディテクターを有効にすると、ディテクターの :strong:`アラート ルール` タブが表示され、選択したシグナルと構築したルールの概要が表示されます。ディテクター名の編集ができます。ここで入力したテキストは、「アラートとディテクター」の「ディテクター」タブにディテクター名として表示されます。また、他のメンバーに向けてディテクターの目的を明確にするために、ディテクター名の"
+"下に追加の説明テキストを入力することもできます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:271
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:275
 msgid "If you make any changes to the detector name or description, select the :guilabel:`Save` button. If you select the :strong:`Close` button without saving, your changes will be lost."
 msgstr "ディテクター名または説明を変更する場合は、:guilabel:`Save` ボタンを選択します。保存せずに「 :strong:`閉じる` 」ボタンを選択すると、変更内容が失われます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:280
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:284
 msgid "Edit detectors through the SignalFlow tab"
 msgstr "SignalFlowタブでディテクターを編集する"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:282
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:286
 msgid "This section assumes you are familiar with the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`."
 msgstr "このセクションは、:new-page:`Splunk Observability CloudディテクターAPI<https://dev.splunk.com/observability/reference/api/detectors/latest>` に精通していることを前提としています。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:284
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:288
 msgid "If you are modifying a detector that was created using the API, you can add and edit detector rules using the SignalFlow tab. The SignalFlow program text replaces the Alert signal, Alert condition, and Alert settings tabs that are used when creating and editing detectors using the UI."
 msgstr "APIを使用して作成されたディテクターを変更する場合、SignalFlowタブを使用してディテクタールールを追加および編集することができます。SignalFlowのプログラムテキストは、UIを使用してディテクターを作成および編集する際に使用する「アラートシグナル」、「アラート条件」、および「アラート設定」タブの代わりです。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:286
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:290
 msgid "Every ``publish`` statement in a SignalFlow ``detect`` statement corresponds to a rule on the Alert Rules tab. The label you enter inside the ``publish`` block is displayed next to the number of active alerts displayed on the Alert Rules tab."
-msgstr "SignalFlowの ``detect`` ステートメント内の ``publish``  ステートメントはすべて、「アラートルール」タブのルールに対応しています。 ``publish``  ブロック内に入力したラベルは、「アラートルール」タブに表示されるアクティブなアラートの数の横に表示されます。"
+msgstr "SignalFlowの ``detect`` ステートメント内の ``publish`` ステートメントはすべて、「アラートルール」タブのルールに対応しています。 ``publish``  ブロック内に入力したラベルは、「アラートルール」タブに表示されるアクティブなアラートの数の横に表示されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:288
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:292
 msgid "For example, this SignalFlow ``detect`` block:"
 msgstr "例えば、下記のSignalFlowの ``detect`` ブロックの場合："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:290
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:294
 msgid "``detect(when(A > 1000)).publish('Weekly Starting Monday')``"
 msgstr "``detect(when(A > 1000)).publish('Weekly Starting Monday')``"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:292
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:296
 msgid "looks like this on the Alert Rules tab:"
 msgstr "「アラートルール」タブでは、以下のように表示されます："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:280
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:284
 msgid "This image shows an example of the SignalFlow detect block on the Alert Rules tab."
 msgstr "この画像は、「アラートルール」タブのSignalFlowの「detect」ブロックの例です。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:298
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:302
 msgid "If the detector contains ``data`` blocks that correspond to plot lines in the detector's chart, such as:"
 msgstr "例えば以下のように、ディテクターに、ディテクターのチャートのプロットラインに対応する ``data`` ブロックが含まれている場合："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:300
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:304
 msgid "``A = data('cpu.idle'.publish(label='CPU idle')``"
 msgstr "``A = data('cpu.idle'.publish(label='CPU idle')``"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:302
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:306
 msgid "then the labels are displayed on the right side of the screen on the SignalFlow tab. For a label to be displayed, the ``data`` block must include a ``publish`` block."
 msgstr "ラベルは、SignalFlowタブの画面の右側に表示されます。ラベルが表示されるようにするには、``data`` ブロックに ``publish`` ブロックを含める必要があります。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:280
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:284
 msgid "This image shows plot label."
 msgstr "この画像はプロットラベルを示しています。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:310
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:314
 msgid "Select the gear icon to display options you can specify for the plot line shown in the detector's chart."
 msgstr "歯車のアイコンを選択すると、ディテクターのチャートに表示されるプロットラインに指定できるオプションが表示されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:280
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:284
 msgid "This image shows the plot options for the plot line."
 msgstr "この画像は、プロットラインのプロットオプションを示しています。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:318
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:322
 msgid "To add or edit the alert message, recipients, or rule name, use the :guilabel:`Edit` button on the Alert Rules tab. The rule name you add on the :strong:`Activate` tab is displayed on the :strong:`Alert Rules` tab. The rule name is also shown as the alert condition on the :strong:`Alerts` page and in alert notifications."
 msgstr "アラートメッセージ、受信者、またはルール名を追加または編集するには、「アラートルール」タブの :guilabel:`Edit` ボタンを使用します。:strong:`有効化` タブで追加したルール名は、:strong:`アラート ルール` タブに表示されます。このルール名は、:strong:`アラート` ページおよびアラート通知のアラート条件としても表示されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:320
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:324
 msgid "For example, this rule name on the :strong:`Activate` tab"
 msgstr "例えば、:strong:`有効化` タブで以下のように表示されたルール名は："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:280
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:284
 msgid "This image shows the rule name on the Activate tab."
 msgstr "この画像は、「有効化」タブのルール名を示しています。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:326
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:330
 msgid "looks like this on the :strong:`Alert Rules` tab:"
 msgstr ":strong:`アラートルール` タブでは、以下のように表示されます："
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:280
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:284
 msgid "This image shows another example of the rule name on the Alert Rules tab."
 msgstr "この画像は、「アラートルール」タブのルール名の別の例を示しています。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:332
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:336
 msgid "For more information about editing detector options on the :strong:`Alert Rules` tab, see :ref:`alert-message`, :ref:`alert-recipients`, and :ref:`activate-detector`."
 msgstr ":strong:`アラートルール` タブのディテクターの編集オプションの詳細については、:ref:`alert-message`、:ref:`alert-recipients`、:ref:`activate-detector` を参照してください。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:337
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:341
 msgid "Manage alert rules"
 msgstr "アラートルールの管理"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:339
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:343
 msgid "On the :guilabel:`Alert Rules` tab of a detector, you can use the actions menu (|more|) menu for a rule to deactivate, activate, clone, or delete an alert rule."
 msgstr "ディテクターの :guilabel:`Alert Rules` タブで、ルールのアクションメニュー（|more| ）を使用して、アラートルールの非アクティブ化、アクティブ化、複製、削除を行うことができます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:341
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:345
 msgid "The options to clone or delete rules are not available for detectors created using the API."
 msgstr "ルールの複製または削除のオプションは、APIを使用して作成されたディテクターでは使用できません。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:346
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:350
 msgid "Activate/deactivate alert rules"
 msgstr "アラートルールの有効化／無効化"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:348
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:352
 msgid "If a detector has multiple rules, such as different rules for different severity levels, you can specify which ones to activate or deactivate. Deactivating a rule prevents it from generating any events or sending any notifications. Use this option to decrease or increase the number of alerts the detector is triggering."
 msgstr "ディテクターに複数のルール（重大度レベルごとに異なるルールなど）がある場合、どのルールをアクティブまたは非アクティブにするかを指定できます。ルールを非アクティブにすると、そのルールはイベントを生成しなくなり、通知を送信しなくなります。このオプションを使用して、ディテクターがトリガーするアラートの数を増やしたり減らしたりします。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:350
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:354
 msgid "Deactivating an alert rule also clears any of its active alerts."
 msgstr "アラートルールを非アクティブにすると、そのルールのアクティブなアラートもすべて解除されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:355
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:359
 msgid "Clone alert rules"
 msgstr "アラートルールの複製"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:357
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:361
 msgid "As with plot lines on charts, you can clone rules. This option is commonly used to create rules with slightly different settings from each other, such as specifying a different value for the :strong:`Alert condition` property or changing the severity level of an alert."
 msgstr "チャートのプロットラインと同様に、ルールを複製することができます。このオプションは、:strong:`アラート条件` のプロパティに異なる値を指定したり、アラートの重大度レベルを変更するなど、互いにわずかに異なる設定を持つルールを作成するために、よく使用されます。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:362
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:366
 msgid "Delete alert rules"
 msgstr "アラートルールの削除"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:364
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:368
 msgid "Use this option to remove a rule from the detector."
 msgstr "ディテクターからルールを削除するには、このオプションを使用します。"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:369
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:373
 msgid "Set detector permissions"
 msgstr "ディテクターの権限の設定"
 
-#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:371
+#: ../../alerts-detectors-notifications/alerts-and-detectors/create-detectors-for-alerts.rst:375
 msgid "To protect detectors from being edited or deleted by other members of your organization, you can specify which users and teams have permissions for them. For more information, see :ref:`detector-manage-permissions`."
 msgstr "ディテクターが組織の他のメンバーによって編集または削除されないように保護するために、ディテクターに対する権限を持つユーザーおよびチームを指定できます。詳細については、:ref:`detector-manage-permissions` を参照してください。"
 
@@ -4534,10 +4565,11 @@ msgid "The :strong:`Min Delay` parameter specifies the minimum amount of time th
 msgstr ":strong:`最小遅延` パラメータは、分析エンジンが特定のディテクターのデータ到着を待機する最小時間を指定します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detector-options.rst:48
+#, fuzzy
 msgid ""
-"For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits for at least 2 minutes even if all the data points arrive on time with no delay. Because the detector will wait a minimum of 2 minutes whether the data arrives on time or not, you are prioritizing correctness over real-time alerting. :strong:`Min Delay` is most useful in cases of delayed new MTS or sparsely emitting MTS for the detector compared to the existing set of "
-"MTSbeing computed on."
-msgstr "たとえば、:strong:`最小遅延`  を2分に設定すると、すべてのデータポイントが遅延なく時間通りに到着しても、計算は最低2分間待機します。データが時間通りに到着してもしなくても、ディテクターは最低2分間待機するため、リアルタイムのアラートよりも正確性を優先することになります。:strong:`最小遅延`  は、新しいMTSが遅延している場合や、計算中の既存のMTSセットに比べてディテクターのMTSによる送信が疎である場合に最も有効です。"
+"For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits for at least 2 minutes even if all the data points arrive on time with no delay. Because the detector will wait a minimum of 2 minutes whether the data arrives on time or not, you are prioritizing correctness over real-time alerting. :strong:`Min Delay` is most useful in cases of delayed new MTS or sparsely emitting MTS for the detector compared to the existing set of MTS "
+"beingcomputed on."
+msgstr "たとえば、:strong:`最小遅延`  を2分に設定すると、すべてのデータポイントが遅延なく時間通りに到着しても、計算は最低2分間待機します。データが時間通りに到着してもしなくても、ディテクターは最低2分間待機するため、リアルタイムのアラートよりも正確性を優先することになります。:strong:`最小遅延`  は、新しいMTSが遅延している場合や、計算中の既存のMTSセットに比べてディテクターのMTSによる送信が疎である場合に、最も有効です。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detector-options.rst:50
 msgid "By default, :strong:`Min Delay` is set to ``0``, which means the analytics engine does not have to wait to run the computation."
@@ -4572,12 +4604,13 @@ msgid "Disable chart display sampling"
 msgstr "チャート表示のサンプリングを無効にする"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detector-options.rst:73
+#, fuzzy
 msgid ""
-"In cases where a large number of time series are displayed, for example, if you choose a metric being reported by 500 servers, Splunk Infrastructure Monitoring samples a subset of those time series so the chart will render more quickly. The sampled display provides you with an approximate sense of the values in those time series. If you disable sampling, any time series data that were previously omitted will be shown. Depending on the number of "
-"timeseries, disabling sampling might cause the chart to render more slowly."
+"In cases where a large number of time series are displayed, for example, if you choose a metric being reported by 500 servers, Splunk Infrastructure Monitoring samples a subset of those time series so the chart will render more quickly. The sampled display provides you with an approximate sense of the values in those time series. If you disable sampling, any time series data that were previously omitted will be shown. Depending on the number of time series,"
+"disabling sampling might cause the chart to render more slowly."
 msgstr ""
-"多数の時系列が表示される場合、たとえば500個のサーバーからレポートされているメトリクスを選択した場合、Splunk Infrastructure Monitoringはこれらの時系列のサブセットをサンプリングし、チャートがより迅速にレンダリングされるようにします。サンプリングされた表示は、これらの時系列の値に対するおおまかな感覚を提供します。サンプリングを無効にすると、それまでに省略されていた時系列データが表示されます。時系列の数によっては、サンプリングを無効にするとチャートのレンダリン"
-"グが遅くなることがあります。"
+"多数の時系列が表示される場合、たとえば500個のサーバーからレポートされているメトリクスを選択した場合に、Splunk Infrastructure Monitoringはこれらの時系列のサブセットをサンプリングし、チャートがより迅速にレンダリングされるようにします。サンプリングされた表示は、これらの時系列の値に対するおおまかな感覚を提供します。サンプリングを無効にすると、それまで省略されていた時系列データが表示されるようになります。時系列の数によっては、サンプリングを無効にするとチャートの"
+"レンダリングが遅くなる場合があります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detector-options.rst:75
 msgid "The detector is still triggered as configured, regardless of the number of time series displayed on the chart."
@@ -4588,11 +4621,12 @@ msgid "Calendar time zone"
 msgstr "カレンダーのタイムゾーン"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detector-options.rst:84
+#, fuzzy
 msgid ""
-"The :ref:`time zone<cal-window-time-zone>` used for aligning data timestamps and interpreting calendar cycles in analytics functions that perform  :ref:`calculations over calendar windows<calendar-window>`. All such functions in a chart use the same calendar time zone. The value set here can also be viewed and changed while editing any calendar window function in the chart builder. This option has no effect if there are no functions using calendarwindows."
+"The :ref:`time zone<cal-window-time-zone>` used for aligning data timestamps and interpreting calendar cycles in analytics functions that perform  :ref:`calculations over calendar windows<calendar-window>`. All such functions in a chart use the same calendar time zone. The value set here can also be viewed and changed while editing any calendar window function in the chart builder. This option has no effect if there are no functions using calendar windows."
 msgstr ""
-" :ref:`タイムゾーン<cal-window-time-zone>` は、:ref:`カレンダーウィンドウでの計算を<calendar-window>` 実行する分析関数においてデータのタイムスタンプを揃え、カレンダー・サイクルを解釈するために使用されます。チャート内のこのような関数はすべて同じカレンダー・タイムゾーンを使用します。ここで設定した値は、チャートビルダーでカレンダーウィンドウ関数を編集するときにも表示および変更できます。カレンダーウィンドウを使用する関数がない場合、このオプションには何の効果"
-"もありません。"
+" :ref:`カレンダーウィンドウでの計算<calendar-window>` を実行する分析関数において、データのタイムスタンプを揃えカレンダー周期を解釈するために使用される :ref:`タイムゾーン<cal-window-time-zone>` です。チャート内のこのような関数はすべて同じカレンダータイムゾーンを使用します。ここで設定した値は、チャートビルダーでカレンダーウィンドウ関数を編集する際にも表示および変更ができます。カレンダーウィンドウを使用する関数がない場合、このオプションには何の効果もありませ"
+"ん。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:-1
 #, fuzzy
@@ -4605,11 +4639,12 @@ msgid "Best practices for creating detectors in Splunk Observability Cloud"
 msgstr "Splunk Observability Cloudのディテクター作成のベストプラクティス"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:11
+#, fuzzy
 msgid ""
 "Splunk Observability Cloud uses detectors to set conditions that determine when to send an alert or notification to the appropriate team members. Detectors evaluate metric time series against a specified condition, and optionally for a duration. When a condition is met, detectors generate events with a level of severity. Severity levels are  Info, Warning, Minor, Major, and Critical. These events are alerts that can trigger notifications in "
 "incidentmanagement platforms, such as PagerDuty, or messaging systems, such as Slack or email."
 msgstr ""
-"Splunk Observability Cloudは、ディテクターを使用して、適切なチームメンバーにアラートまたは通知を送信するタイミングを決定する条件を設定します。ディテクターは、指定された条件および（オプション）期間に照らしてメトリック時系列を評価します。条件が満たされると、ディテクターは重大度レベル付きのイベントを生成します。重大度レベルは、「情報」（Info）、「警告」（Warning）、「マイナー」（Minor）、「メジャー」（Major）、および「クリティカル」（Critical）です。これらの"
+"Splunk Observability Cloudは、ディテクターを使用して、適切なチームメンバーにアラートまたは通知を送信するタイミングを決定する条件を設定します。ディテクターは、指定された条件および（オプションの）期間に照らしてメトリック時系列を評価します。条件が満たされると、ディテクターは重大度レベル付きのイベントを生成します。重大度レベルは、「情報」（Info）、「警告」（Warning）、「マイナー」（Minor）、「メジャー」（Major）、および「クリティカル」（Critical）です。これらの"
 "イベントは、PagerDutyなどのインシデント管理プラットフォーム、またはSlackや電子メールなどのメッセージングシステムで通知をトリガーできるアラートです。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:14
@@ -4618,12 +4653,13 @@ msgid "Using static thresholds"
 msgstr "静的閾値の使用"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:15
+#, fuzzy
 msgid ""
 "The most basic kind of alert triggers immediately when a simple metric crosses a static threshold. An example is anytime CPU utilization goes above 70%. Fixed thresholds are easy to implement and interpret when there are absolute goals to measure against. For example, if you know the typical memory per CPU profile of a certain application, you can define bounds that define normal state. Or, if you have a business requirement to serve requests within "
 "acertain time period, you know what is an unacceptable latency for that function. See :ref:`static-threshold` for more information."
 msgstr ""
-"最も基本的な種類のアラートは、シンプルなメトリクスが静的閾値を超えたときに即座にトリガーされるものです。例えば、CPU使用率が70%を超えた時などです。測定する絶対的な目標がある場合は、固定した閾値を実装し解釈すると簡単です。例えば、特定のアプリケーションのCPUあたりの典型的なメモリプロファイルがわかっている場合、正常なステータスを定義するための境界を定義することができます。あるいは、特定時間内にリクエストを処理するというビジネス要件がある場合に、その機能にとっ"
-"て許容できない待ち時間を把握します。詳細は、:ref:`static-threshold` を参照してください。"
+"最も基本的な種類のアラートは、シンプルなメトリクスが静的閾値を超えたときに即座にトリガーされるものです。例えば、CPU使用率が70%を超えた時などです。測定する絶対的な目標がある場合は、固定した閾値を実装し解釈すると簡単です。例えば、特定のアプリケーションのCPUあたりの典型的なメモリプロファイルがわかっている場合、正常なステータスを定義するための境界を定義することができます。あるいは、特定時間内にリクエストを処理するというビジネス要件がある場合に、その機能にとって"
+"許容できない待ち時間を把握します。詳細は、:ref:`static-threshold` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:18
 msgid "Consistent signal types"
@@ -4643,63 +4679,67 @@ msgid "Viewing at native data resolution"
 msgstr "ネイティブのデータ解像度での表示"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:25
+#, fuzzy
 msgid ""
-"A common and easy way to create a detector is to first create a chart, which lets you visualize the behavior of the signal you want to alert on, then convert it to a detector. See :new-page:`Create a detector from a chart <https://docs.splunk.com/observability/en/alerts-detectors-notifications/create-detectors-for-alerts.html#create-a-detector-from-a-chart>` to learn how. If you choose to use this method to create a detector, make sure you arevisualizing "
-"the data at its native resolution, as this gives you the most accurate picture of the data that your detector evaluates. For example, if you create a detector using a metric that reports once every 10 seconds, make sure the time range for your chart is small enough (say, 15 minutes) to see individual measurements every 10 seconds."
+"A common and easy way to create a detector is to first create a chart, which lets you visualize the behavior of the signal you want to alert on, then convert it to a detector. See :new-page:`Create a detector from a chart <https://docs.splunk.com/observability/en/alerts-detectors-notifications/create-detectors-for-alerts.html#create-a-detector-from-a-chart>` to learn how. If you choose to use this method to create a detector, make sure you are "
+"visualizingthe data at its native resolution, as this gives you the most accurate picture of the data that your detector evaluates. For example, if you create a detector using a metric that reports once every 10 seconds, make sure the time range for your chart is small enough (say, 15 minutes) to see individual measurements every 10 seconds."
 msgstr ""
-"ディテクターを作成するための一般的で簡単な方法は、最初にチャートを作成し、アラートを発したいシグナルの動作を視覚化してから、それをディテクターに変換することです。方法は、「 :new-page:`チャートからディテクターを作成する<https://docs.splunk.com/observability/en/alerts-detectors-notifications/create-detectors-for-alerts.html#create-a-detector-from-a-chart>` 」を参照してください。この方法を使用してディテクターを作成する場合、必ずデータをネイティブの解像度で視"
-"覚化してください。これを行うことで、ディテクターが評価するデータの最も正確な描画を取得できるからです。たとえば、10秒に1回レポートするメトリクスを使用してディテクターを作成する場合は、チャートの時間範囲が、10秒ごとの個々の測定値を表示するために十分に小さい（例：15分）ことを確認してください。"
+"ディテクターを作成するための一般的で簡単な方法は、最初にチャートを作成し、アラートを発したいシグナルの動作を視覚化してから、それをディテクターに変換することです。この方法は、「 :new-page:`チャートからディテクターを作成する<https://docs.splunk.com/observability/en/alerts-detectors-notifications/create-detectors-for-alerts.html#create-a-detector-from-a-chart>` 」を参照してください。この方法を使用してディテクターを作成する場合、必ずデータをネイティブの解像度で"
+"視覚化してください。これを行うことで、ディテクターが評価するデータの最も正確な描画を取得できるからです。たとえば、10秒に1回レポートするメトリクスを使用してディテクターを作成する場合は、チャートの時間範囲が、10秒ごとの個々の測定値を表示するために十分に小さい（例：15分間）ことを確認してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:27
+#, fuzzy
 msgid ""
-"By default, Splunk Observability Cloud chooses a chart display resolution that fits within the time range you choose, and summarizes the data to match that resolution. For example, if you use a metric that reports every 10 seconds, but you look at a 1-day window, then by default the data you see on the chart represents 30-minute intervals. Depending on the rollup or summarization method, this could mean that any peaks or dips average out, which gives "
-"youan inaccurate understanding of your signal and what constitutes an appropriate detector threshold. Also, analytics pipelines are applied to the rolled-up data, so the meaning of a calculation might change if the resolution changes. For example, duration parameters, which you can use for timeshifting and smoothing data, have no effect when they are smaller than the resolution."
+"By default, Splunk Observability Cloud chooses a chart display resolution that fits within the time range you choose, and summarizes the data to match that resolution. For example, if you use a metric that reports every 10 seconds, but you look at a 1-day window, then by default the data you see on the chart represents 30-minute intervals. Depending on the rollup or summarization method, this could mean that any peaks or dips average out, which gives you "
+"aninaccurate understanding of your signal and what constitutes an appropriate detector threshold. Also, analytics pipelines are applied to the rolled-up data, so the meaning of a calculation might change if the resolution changes. For example, duration parameters, which you can use for timeshifting and smoothing data, have no effect when they are smaller than the resolution."
 msgstr ""
-"デフォルトでは、Splunk Observability Cloudは選択した時間範囲に収まるチャート表示解像度を選択し、その解像度に合わせてデータを要約します。たとえば、10秒ごとにレポートするメトリクスを使用しているにもかかわらず、1日の時間窓で見るという場合、デフォルトでは、チャート上のデータは30分間隔で表示されます。ロールアップや要約の方法によっては、これではピークやディップが平均化されてしまう可能性があり、シグナルや適切なディテクター閾値に対する不正確な理解につながる可能性"
+"デフォルトでは、Splunk Observability Cloudは選択された時間範囲に収まるチャート表示解像度を選択し、その解像度に合わせてデータを要約します。たとえば、10秒ごとにレポートするメトリクスを使用しているにもかかわらず、1日の時間窓で見るという場合、デフォルトでは、チャート上のデータは30分間隔で表示されます。ロールアップや要約の方法によっては、これではピークやディップが平均化されてしまう可能性があり、シグナルや適切なディテクター閾値に対する不正確な理解につながる可能性"
 "があります。また、分析パイプラインはロールアップされたデータに適用されるため、解像度が変わると計算の意味が変わる可能性があります。例えば、タイムシフトやデータの平滑化に使用できる継続期間パラメータは、解像度より小さければ効果がありません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:32
 #, fuzzy
 msgid "Create detectors that monitor a single signal across a population"
-msgstr "母集団全体にわたる単一のシグナルを監視するディテクターの作成"
+msgstr "母集団全体にわたり単一のシグナルを監視するディテクターの作成"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:33
 msgid "Splunk Observability Cloud provides a simple and concise way of defining detectors that monitor a large number of similar items like the CPU utilization for all of the hosts in a given cluster. It accomplishes this through the metadata that is associated with metric time series, which is analogous to how that metadata - dimensions, properties or tags - creates charts."
-msgstr "Splunk Observability Cloudは、特定のクラスター内の全ホストのCPU使用率のように多数の類似した項目を監視するディテクターを定義するためのシンプルで簡潔な方法を提供します。これは、メトリック時系列に関連付けられたメタデータによって実現されるもので、これは、そのメタデータ（ディメンション、プロパティ、タグ）がチャートを作成する方法に似ています。"
+msgstr "Splunk Observability Cloudは、特定のクラスタ内の全ホストのCPU使用率のように多数の類似した項目を監視するディテクターを定義するためのシンプルで簡潔な方法を提供します。これは、メトリック時系列に関連付けられたメタデータによって実現されるもので、これは、そのメタデータ（ディメンション、プロパティ、タグ）がチャートを作成する方法に似ています。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:35
 #, fuzzy, python-format
 msgid ""
-"Let's look at an example. If you have a group of 30 hosts that provide a clustered service like Kafka, it normally includes a dimension like ``service:kafka`` with all of the metrics coming from those hosts. In this case, if you want to track whether CPU utilization remains below 70% for each of those hosts, you can create a single detector for the ``cpu.utilization`` metric that filters hosts using the ``service:kafka`` dimension and evaluates "
-"themagainst the static threshold of 70. This detector triggers individual alerts for each host whose CPU utilization exceeds the threshold - just as if you had 30 separate detectors - but you only need to create one detector, not 30."
+"Let's look at an example. If you have a group of 30 hosts that provide a clustered service like Kafka, it normally includes a dimension like ``service:kafka`` with all of the metrics coming from those hosts. In this case, if you want to track whether CPU utilization remains below 70% for each of those hosts, you can create a single detector for the ``cpu.utilization`` metric that filters hosts using the ``service:kafka`` dimension and evaluates them "
+"againstthe static threshold of 70. This detector triggers individual alerts for each host whose CPU utilization exceeds the threshold - just as if you had 30 separate detectors - but you only need to create one detector, not 30."
 msgstr ""
-"例を1つ見てみましょう。Kafkaのようなクラスター化されたサービスを提供する30個のホストのグループがある場合、通常は ``service:kafka``  のようなディメンションが含まれ、そのメトリクスはすべてこれらのホストから来ます。この場合に、これらの各ホストのCPU使用率が70%未満にとどまっているかどうかを追跡したければ、 ``service:kafka``  ディメンションを使用しているホストをフィルタリングして ``cpu.utilization`` メトリクスを監視する単一のディテクターを作成し、70という閾値に"
+"例を1つ見てみましょう。Kafkaのようなクラスタ化されたサービスを提供する30個のホストのグループがある場合、通常は ``service:kafka``  のようなディメンションが含まれ、そのメトリクスはすべてこれらのホストから来ます。この場合に、これらの各ホストのCPU使用率が70%未満にとどまっているかどうかを追跡したければ、 ``service:kafka``  ディメンションを使用しているホストをフィルタリングして ``cpu.utilization`` メトリクスを監視する単一のディテクターを作成し、70という静的閾値に"
 "対して評価を行います。このディテクターは、まるで別々の30個のディテクターを設定しているかのように、CPU使用率が閾値を超えた各ホストに対して個別のアラートをトリガーしますが、作成する必要があるのは30個ではなくたった1個のディテクターです。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:37
 #, fuzzy
 msgid "In addition, if the population changes - say, because the cluster grows to 40 hosts - you do not need to make any changes to your detector. As long as you include the ``service:kafka`` dimension for metrics coming from the new hosts, the existing detector finds them and automatically includes them in the threshold evaluation."
-msgstr "さらに、母集団が変わった場合（例えば、クラスターの規模が40ホストに拡大した場合）でも、ディテクターに変更を加える必要がありません。新たに増えたホストから来るメトリクスについて ``service:kafka`` ディメンションを含めている限りは、既存のディテクターがそれらを見つけて自動で閾値評価の対象に含めます。"
+msgstr "さらに、母集団が変わった場合（例えば、クラスタの規模が40ホストに拡大した場合）でも、ディテクターに変更を加える必要がありません。新たに増えたホストから来るメトリクスについて ``service:kafka`` ディメンションを含めている限りは、既存のディテクターがそれらを見つけて自動で閾値評価の対象に含めます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:39
+#, fuzzy
 msgid ""
-"Detectors that monitor a single signal work best when all of the members of the population have the same threshold, and the same notification policy. For example, they might publish alerts into the same Slack channel. If you have different thresholds or notification policies, you must create multiple detectors (one for each permutation of threshold and notification) or take advantage of the const function in SignalFlow. In any case, the likely number "
-"ofsuch detectors is still fewer than the count of individual members that it monitors. It is important to create a detector for a signal, not for a microservice, in order to avoid accumulating too many detectors that trigger a multitude of alerts."
+"Detectors that monitor a single signal work best when all of the members of the population have the same threshold, and the same notification policy. For example, they might publish alerts into the same Slack channel. If you have different thresholds or notification policies, you must create multiple detectors (one for each permutation of threshold and notification) or take advantage of the const function in SignalFlow. In any case, the likely number ofsuch "
+"detectors is still fewer than the count of individual members that it monitors. It is important to create a detector for a signal, not for a microservice, in order to avoid accumulating too many detectors that trigger a multitude of alerts."
 msgstr ""
-"単一のシグナルを監視するディテクターは、母集団の全てのメンバーが同じ閾値を持ち、同じ通知ポリシーを持っている場合に、最もうまく機能します。例えば、同じSlackチャンネルにアラートを発行するような場合です。閾値や通知ポリシーが異なる場合は、複数のディテクターを作成するか（閾値と通知の配列ごとに1つずつ）、SignalFlowのconst関数を利用する必要があります。いずれにせよ、このようなディテクターの数は、それが監視する個々のメンバーの数よりもまだ少ない可能性が高いです。多"
-"数のアラートをトリガーするディテクターを蓄積しすぎないようにするためには、マイクロサービスではなくシグナルに対してディテクターを作成することが重要です。"
+"単一のシグナルを監視するディテクターは、母集団の全てのメンバーが同じ閾値を持ち、同じ通知ポリシーを持っている場合に、最もうまく機能します。例えば、同じSlackチャンネルにアラートを発行するような場合です。閾値や通知ポリシーが異なる場合は、複数のディテクター（閾値と通知の配列ごとに1つずつ）を作成するか、SignalFlowのconst関数を活用する必要があります。いずれにせよ、このようなディテクターの数は、それが監視する個々のメンバーの数よりもまだ少ない可能性が高いです。多数"
+"のアラートをトリガーするディテクターを蓄積しすぎないようにするためには、マイクロサービスではなくシグナルに対してディテクターを作成することが重要です。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:42
 msgid "Use aggregation to monitor sub-groups within a population"
 msgstr "母集団内のサブグループを監視するために集計を使用する"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:43
+#, fuzzy
 msgid ""
-"You can also use detectors to monitor sub-groups within the population. For example, let’s say you have 100 hosts in total, divided among 10 services. You want to make sure the 95th percentile of CPU utilization across the cluster of hosts that provide each of those services remains below 70%. In this case, create a single detector for ``cpu.utilization``, then apply an analytics function of P95, and group by ``service``. The aggregation approach "
-"worksonly if ``service`` is a dimension or property. The aggregation approach does not work if ``service`` is a tag."
+"You can also use detectors to monitor sub-groups within the population. For example, let’s say you have 100 hosts in total, divided among 10 services. You want to make sure the 95th percentile of CPU utilization across the cluster of hosts that provide each of those services remains below 70%. In this case, create a single detector for ``cpu.utilization``, then apply an analytics function of P95, and group by ``service``. The aggregation approach works "
+"onlyif ``service`` is a dimension or property. The aggregation approach does not work if ``service`` is a tag."
 msgstr ""
-"ディテクターを使用して、母集団内のサブグループを監視することもできます。例えば、合計100個のホストがあり、それらが10個のサービスに分かれているとします。これらの各サービスを提供するホストクラスター全体のCPU使用率の95パーセンタイルが70%未満にとどまっていることを確認したいとします。この場合、``cpu.utilization`` のディテクターを1つ作成し、P95の分析関数を適用して、``service``   でグループ化します。この集計アプローチは、``service``   がディメンションまたはプロパ"
-"ティである場合にのみ機能します。``service``   がタグである場合、この集計アプローチは機能しません。"
+"ディテクターを使用して、母集団内のサブグループを監視することもできます。例えば、合計100個のホストがあり、それらが10個のサービスに分かれているとします。これらの各サービスを提供するホストクラスタ全体のCPU使用率の95パーセンタイルが70%未満にとどまっていることを確認したいとします。この場合、``cpu.utilization`` のディテクターを1つ作成し、P95の分析関数を適用して、``service``   でグループ化します。この集計アプローチは、``service``   がディメンションまたはプロパティ"
+"である場合にのみ機能します。``service``   がタグである場合、この集計アプローチは機能しません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/detectors-best-practices.rst:45
 msgid "This aggregation detector triggers alerts for each service, just as if you had 10 separate detectors - but you only need to create one detector, not 10. If you add additional services, the detector automatically monitors them as long as you have included a ``service`` dimension or property for the new services' metrics."
@@ -5169,7 +5209,7 @@ msgstr "アクティブなミュートルールおよびスケジュールされ
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/mute-notifications.rst:119
 msgid "To find active or scheduled muting rules, use the search field in the :guilabel:`Muting Rules` tab on the :guilabel:`Alerts` page."
-msgstr "アクティブなミュートルールまたはスケジュールされたミュートルールを検索するには、:guilabel:`Alerts` ページの :guilabel:`Muting Rules` タブにある検索フィールドを使用します。"
+msgstr "アクティブなミュートルールまたはスケジュールされたミュートルールを検索するには、 :guilabel:`Alerts` ページの :guilabel:`Muting Rules` タブにある検索フィールドを使用します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/mute-notifications.rst:121
 msgid "You can also view information about active and scheduled muting rules from different places on the Alerts page."
@@ -5256,36 +5296,39 @@ msgid "Preview detector alerts"
 msgstr "ディテクターのアラートのプレビュー"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:12
+#, fuzzy
 msgid ""
 "Setting up the right alerts is usually a process of trial and error. You set up an alert, get notified when it is triggered (or worse, don't get notified when it should have triggered), adjust the trigger condition if necessary, and wait for the next alert. Splunk Infrastructure Monitoring provides an alert preview functionality that accelerates this trial and error process. (If you are using the Splunk Observability Cloud API to manage detectors, "
 "thisfeature corresponds to the :new-page:`POST /v2/signalflow/preflight <https://dev.splunk.com/observability/reference/api/signalflow/latest#endpoint-preview-detector-alert-count>` API endpoint.)"
 msgstr ""
-"適切なアラートの設定は、通常、試行錯誤のプロセスです。アラートを設定し、それがトリガーされたときに通知を受け（悪ければ、トリガーされるべきときに通知が届かず）、必要に応じてトリガー条件を調整し、次のアラートを待ちます。Splunk Infrastructure Monitoringは、この試行錯誤のプロセスを迅速化するアラートプレビュー機能を提供します。（ディテクターの管理にSplunk Observability Cloud APIを使用している場合、この機能は :new-page:`POST /v2/signalflow/preflight<https://"
-"dev.splunk.com/observability/reference/api/signalflow/latest#endpoint-preview-detector-alert-count>` のAPIエンドポイントに対応します。）"
+"適切なアラートを設定することは、通常、試行錯誤のプロセスです。アラートを設定し、それがトリガーされたときに通知を受け（うまく行かなければ、トリガーされるべきときに通知が届かず）、必要に応じてトリガー条件を調整し、次のアラートを待ちます。Splunk Infrastructure Monitoringは、この試行錯誤のプロセスを迅速化するためのアラートプレビュー機能を提供します。（ディテクターの管理にSplunk Observability Cloud APIを使用している場合、この機能は、:new-page:`POST /v2/"
+"signalflow/preflight<https://dev.splunk.com/observability/reference/api/signalflow/latest#endpoint-preview-detector-alert-count>`のAPIエンドポイントに対応します。）"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:16
 msgid "How alert preview works"
 msgstr "アラートプレビューの仕組み"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:18
+#, fuzzy
 msgid ""
-"When you go to the Alert Settings tab while creating or editing a detector rule, Splunk Infrastructure Monitoring runs the settings against your data and generates a preview chart to help you decide whether your settings are appropriate for your requirements. The preview indicates when alerts would have triggered during the time range specified in the detector. You can use the preview to fine-tune the settings that will trigger the alert, to assure "
-"thatyou will receive the alerts you expect when you expect them."
+"When you go to the Alert Settings tab while creating or editing a detector rule, Splunk Infrastructure Monitoring runs the settings against your data and generates a preview chart to help you decide whether your settings are appropriate for your requirements. The preview indicates when alerts would have triggered during the time range specified in the detector. You can use the preview to fine-tune the settings that will trigger the alert, to assure that "
+"youwill receive the alerts you expect when you expect them."
 msgstr ""
-"ディテクタールールの作成中または編集中に「アラート設定」タブに移動すると、Splunk Infrastructure Monitoringがデータに対してその設定を実行し、設定が要件に対して適切かどうかを判断するのに役立つプレビューチャートを生成します。プレビューには、ディテクターで指定した時間範囲においてアラートがトリガーされるはずのタイミングが表示されます。このプレビューを使用して、アラートをトリガーする設定の微調整を行い、期待するアラートを期待するタイミングで確実に受信できるよう"
-"にすることができます。"
+"ディテクタールールの作成中または編集中に「アラート設定」タブに移動すると、Splunk Infrastructure Monitoringがデータに対してその設定を実行し、設定内容が要件に対して適切かどうかを判断するのに役立つプレビューチャートを生成します。このプレビューには、ディテクターで指定した時間範囲においてアラートがトリガーされるはずのタイミングが表示されます。このプレビューを使用して、アラートをトリガーするための設定内容の微調整を行い、期待するアラートを期待するタイミングで確実に"
+"受信できるようにすることができます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:23
 msgid "If you are editing a detector created using the API, alert preview is available while you are managing rules using the Alert Rules tab. The preview is triggered when you are editing the SignalFlow text or when you change the time range of the detector."
 msgstr "APIを使用して作成されたディテクターを編集している場合は、「アラートルール」タブを使用してルールを管理しているときにアラートプレビューを利用できます。プレビューは、SignalFlowテキストを編集しているとき、またはディテクターの時間範囲を変更したときにトリガーされます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:26
+#, fuzzy
 msgid ""
-"Data displayed in the chart may be rolled up based on the detector's time range. The detail view displays data at detector resolution for the selected time period on the chart; that is, data points are shown at the frequency with which the detector is monitoring the signal to determine whether an alert should be triggered or cleared. This view lets you see exactly what data the detector is viewing for the period selected in the chart. You can select "
-"anddrag the left edge of the detail view to enlarge it and gain more visibility into the data."
+"Data displayed in the chart may be rolled up based on the detector's time range. The detail view displays data at detector resolution for the selected time period on the chart; that is, data points are shown at the frequency with which the detector is monitoring the signal to determine whether an alert should be triggered or cleared. This view lets you see exactly what data the detector is viewing for the period selected in the chart. You can select anddrag "
+"the left edge of the detail view to enlarge it and gain more visibility into the data."
 msgstr ""
-"チャートに表示されるデータは、ディテクターの時間範囲に基づいてロールアップされることがあります。詳細ビューでは、チャート上で選択された期間のデータがディテクターの解像度で表示されます。つまり、ディテクターがアラートのトリガーまたは解除を判断するためにシグナルを監視する頻度で、データポイントが表示されます。このビューでは、チャートで選択された期間について、ディテクターが見ているデータを正確に確認できます。詳細ビューの左端を選択してドラッグすると、ビューが拡"
-"大され、データがより見やすくなります。"
+"チャートに表示されるデータは、ディテクターの時間範囲に基づいてロールアップされることがあります。詳細ビューでは、チャート上で選択された期間のデータがディテクターの解像度で表示されます。つまり、ディテクターがアラートのトリガーまたは解除を判断するためにシグナルを監視する頻度で、データポイントが表示されます。このビューでは、チャートで選択された期間について、ディテクターが見ているデータそのものを確認できます。詳細ビューの左端を選択してドラッグすると、ビューが拡大"
+"され、データがより見やすくなります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:28
 msgid "You can navigate between tabs while the preview is shown. For example, you might want to go to the Alert Signal tab and look at the Data Table to review the values of your signal before, during, and after the time an alert would be triggered."
@@ -5320,20 +5363,21 @@ msgid "If you already have detectors triggering alerts in your system, you may f
 msgstr "すでにシステムでアラートをトリガーしているディテクターがある場合、それらの一部の感度が高すぎる（アラートをトリガーする頻度が高すぎる）か、または十分な感度がない（問題について通知を受けたいときにアラートをトリガーしない）ことに気づくかもしれません。いずれの場合も、プレビューオプションを使用して、適切な数のアラートをトリガーするようにディテクターの設定を変更できます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:46
+#, fuzzy
 msgid ""
-"To use the preview option for the detector, open the detector and set a time range of, for example, -1w to display all alerts that were triggered in the last week. (Alternately, you can set a shorter time range that better represents the issue you are addressing). Display the Alert Rules tab, edit the alert condition, and open the Alert Settings tab. The chart display changes from showing actual past alerts (if any) to showing a preview of alerts "
-"thatwould have triggered based on the alert condition."
+"To use the preview option for the detector, open the detector and set a time range of, for example, -1w to display all alerts that were triggered in the last week. (Alternately, you can set a shorter time range that better represents the issue you are addressing). Display the Alert Rules tab, edit the alert condition, and open the Alert Settings tab. The chart display changes from showing actual past alerts (if any) to showing a preview of alerts that "
+"wouldhave triggered based on the alert condition."
 msgstr ""
-"ディテクターのプレビューオプションを使用するには、ディテクターを開き、時間範囲を例えば-1wに設定して、過去1週間にトリガーされたすべてのアラートを表示します。（または、対処中の問題をより適切に表すさらに短い時間範囲を設定することもできます。）「アラートルール」タブを表示し、アラート条件を編集し、「アラート設定」タブを開きます。チャートの表示は、実際の過去のアラート（該当するものがある場合）の表示から、アラート条件に基づいてトリガーされたであろうアラートのプ"
-"レビュー表示に変わります。"
+"ディテクターのプレビューオプションを使用するには、ディテクターを開き、時間範囲を例えば-1wに設定して、過去1週間にトリガーされたすべてのアラートを表示します（対処中の問題をより適切に表すさらに短い時間範囲を設定することもできます）。「アラートルール」タブを表示し、アラート条件を編集し、「アラート設定」タブを開きます。チャートの表示は、実際の過去のアラート（該当するものがある場合）の表示から、アラート条件に基づいてトリガーされたであろうアラートのプレビュー表示に"
+"変わります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:51
+#, fuzzy
 msgid ""
-"Depending on the type of alert condition, you have different options for making the detector more or less sensitive. For example, if you see more markers than you think you should (alert is too :term:`flappy`), you might be able to change Trigger Sensitivity from High to Medium or Low, or you might be able to change the sensitivity from triggering immediately to triggering after a period of time. For many alert conditions, you can choose Custom "
-"forTrigger Sensitivity, which gives you more control over when alerts will be triggered."
+"Depending on the type of alert condition, you have different options for making the detector more or less sensitive. For example, if you see more markers than you think you should (alert is too :term:`flappy`), you might be able to change Trigger Sensitivity from High to Medium or Low, or you might be able to change the sensitivity from triggering immediately to triggering after a period of time. For many alert conditions, you can choose Custom for "
+"TriggerSensitivity, which gives you more control over when alerts will be triggered."
 msgstr ""
-"アラート条件の種類に応じて、ディテクターの感度を上げるか下げるかのオプションがあります。たとえば、必要以上に多くのマーカーが表示される場合（アラートが :term:`flappy` すぎる場合）は、トリガー感度を「高」から「中」または「低」に変更したり、感度を「即時トリガー」から「一定時間後にトリガー」に変更したりできます。多くのアラート条件では、「トリガー感度」に「カスタム」を選択することができ、アラートがトリガーされるタイミングをより詳細にコントロールすることができ"
-"ます。"
+"アラート条件の種類に応じて、ディテクターの感度を上げるか下げるかのオプションがあります。たとえば、必要以上に多くのマーカーが表示される場合（アラートが :term:`flappy` すぎる場合）は、トリガー感度を「高」から「中」または「低」に変更したり、感度を「即時トリガー」から「一定時間経過後トリガー」に変更したりできます。多くのアラート条件では、「トリガー感度」に「カスタム」を選択することができ、アラートがトリガーされるタイミングをより詳細に制御することができます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:53
 msgid "As you make these changes, the preview is updated and the chart will display the number of alerts that would have triggered based on your new settings. When you have modified the detector to more accurately reflect the desired behavior, select :guilabel:`Activate`` and then update the alert rule."
@@ -5356,12 +5400,13 @@ msgid "If you already have a chart that includes the signal as a plot line, you 
 msgstr "このシグナルをプロットラインとして含むチャートがすでにある場合、ゼロから新しいディテクターを作成する代わりに、:ref:`チャートからディテクターを作成する<create-detector-from-chart>` ことができます。「アラート条件」タブでルールの作成を開始する際に、そのシグナルを選択します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:68
+#, fuzzy
 msgid ""
-"In this example, we set the time range of the detector to -2h, named the detector and the new rule, and chose the :ref:`sudden-change` condition, which compares recent values with earlier values. Based on the trigger sensitivity (the default is Low), the preview chart shows event markers for times when the alert would have been triggered during the past week; you should see an event marker for the time the spike occurred. You might also see markers "
-"forother times the signal spiked in the past week, as well as markers indicating the alert condition cleared."
+"In this example, we set the time range of the detector to -2h, named the detector and the new rule, and chose the :ref:`sudden-change` condition, which compares recent values with earlier values. Based on the trigger sensitivity (the default is Low), the preview chart shows event markers for times when the alert would have been triggered during the past week; you should see an event marker for the time the spike occurred. You might also see markers forother "
+"times the signal spiked in the past week, as well as markers indicating the alert condition cleared."
 msgstr ""
-"この例では、ディテクターの時間範囲を-2hに設定し、ディテクターと新しいルールに名前を付け、:ref:`sudden-change` 条件を選択しています。これは、最近の値と以前の値を比較する条件です。トリガー感度（デフォルトは「低」）に基づき、プレビューチャートには、過去1週間の間にアラートがトリガーされたであろう時間にイベントマーカーが表示されます。急上昇が発生した時間にイベントマーカーが見えているはずです。また、過去1週間でシグナルが急上昇した他の時間のマーカーや、アラート"
-"条件が解除されたことを示すマーカーも表示されます。"
+"この例では、ディテクターの時間範囲を-2hに設定し、ディテクターと新しいルールに名前を付け、:ref:`sudden-change` 条件を選択しています。これは、最近の値と以前の値を比較する条件です。トリガー感度（デフォルトは「低」）に基づいて、プレビューチャートでは、過去1週間の間にアラートがトリガーされたであろう時間にイベントマーカーが表示されます。急上昇が発生した時間にイベントマーカーが見えているはずです。また、過去1週間でシグナルが急上昇したその他の時間のマーカーや、アラー"
+"ト条件が解除されたことを示すマーカーも表示されるでしょう。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:73 ../../alerts-detectors-notifications/alerts-and-detectors/preview-detector-alerts.rst:93
 msgid "You have different options for adjusting sensitivity depending on the type of alert condition you are using."
@@ -5406,7 +5451,7 @@ msgstr ""
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/delay-detectors.rst:18
 msgid "In order to account for delayed data points from ``productcatalog``, Kai configures a Min Delay value for :strong:`Service error` by making an API call to the ``/detector`` endpoint. The Min Delay configuration forces the detector to wait a set amount of time before running the computation."
-msgstr "``productcatalog`` からの遅延したデータポイントを考慮に入れるため、Kaiは ``/detector`` エンドポイントへのAPIコールを実行することによって :strong:`「サービスエラー」` の「最小遅延」の値を設定します。「最小遅延」設定により、ディテクターは計算を実行する前に一定時間待機しなければなりません。"
+msgstr "``productcatalog`` からの遅延したデータポイントを考慮に入れるため、Kaiは ``/detector`` エンドポイントへのAPIコールを実行することによって :strong:` 「サービスエラー」` の「最小遅延」の値を設定します。「最小遅延」設定により、ディテクターは計算を実行する前に一定時間待機しなければなりません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/delay-detectors.rst:20
 msgid "Kai charts the lag from the sparse MTS and determines that it is usually less than 30 seconds but has never been higher than 1 minute, so they set a Min Delay of 1 minute for :strong:`Service error`."
@@ -5549,17 +5594,17 @@ msgstr "シナリオ：Kaiが遅延の突然の変化を考慮してディテク
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/max-delay-detectors.rst:12
 #, fuzzy, python-format
 msgid "In Splunk Observability Cloud, the site reliability engineering (SRE) team at Buttercup Game has set up a detector called :strong:`Store sales` that monitors Buttercup Games stores and alerts when any store's hourly sales decrease by more than 10% compared to the previous week."
-msgstr "Splunk Observability Cloudで、Buttercup Gameのサイト信頼性エンジニアリング（SRE）チームは :strong:`「店舗の売上」` というディテクターを設定しています。このディテクターはButtercup Gamesの店舗を監視し、いずれかの店舗の1時間あたりの売上が前週に比べて10%以上減少した場合にアラートを発します。"
+msgstr "Splunk Observability Cloudで、Buttercup Gamesのサイト信頼性エンジニアリング（SRE）チームが :strong:`「店舗の売上」` というディテクターを設定しています。このディテクターはButtercup Gamesの店舗を監視し、いずれかの店舗の1時間あたりの売上が前週に比べて10%以上減少した場合にアラートを発します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/max-delay-detectors.rst:14
 msgid "Kai, an SRE on the team, notices that sometimes the :strong:`Store sales` detector fires, but when they look at the chart 30 minutes later, everything seems normal."
 msgstr "チームのSREであるKaiは、:strong:`「店舗の売上」` ディテクターがアラートを発しても30分後にチャートを見るとすべてが正常に見えることがあるということに気づきました。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/max-delay-detectors.rst:16
+#, fuzzy
 msgid ""
-"After some investigation, they find out that the data from some stores has a sudden, momentary increase in delay caused by the network infrastructure in that region. Data points missing from the initial computation caused the alert to fire. However, when Kai goes look at the chart 30 minutes later, the data points have arrived, causing them to think that the detector misfired. In cases like this, the analytics engine can't predict the sudden change "
-"indelay."
-msgstr "調査の結果、いくつかの店舗からのデータについて、その地域のネットワークインフラに起因する突然の瞬間的な遅延の増加があることが判明しました。最初の計算から欠落したデータポイントによってアラートが発されたのです。しかし、30分後にKaiがチャートを見るとそれらのデータポイントは到着しており、ディテクターが誤作動したように見える原因になっていました。このような場合、分析エンジンは遅延の急激な変化を予測できません。"
+"After some investigation, they find out that the data from some stores has a sudden, momentary increase in delay caused by the network infrastructure in that region. Data points missing from the initial computation caused the alert to fire. However, when Kai goes look at the chart 30 minutes later, the data points have arrived, causing them to think that the detector misfired. In cases like this, the analytics engine can't predict the sudden change in delay."
+msgstr "調査の結果、いくつかの店舗からのデータについて、その地域のネットワークインフラに起因する突然で瞬間的な遅延の増加があることが判明しました。最初の計算から欠落したデータポイントによってアラートが発されたのです。しかし、30分後にKaiがチャートを見るとそれらのデータポイントは到着しており、ディテクターが誤作動したように見える原因になっていました。このような場合、分析エンジンは遅延における急激な変化を予測できません。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/max-delay-detectors.rst:18
 msgid "To make sure that the data from sudden lags is included in the detector computation, Kai configures a Max Delay value for :strong:`Store sales`."
@@ -6076,7 +6121,7 @@ msgstr "このスクリーンショットは、1日で22個のアラートが予
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/troubleshoot-noisy-detectors.rst:118
 #, fuzzy
 msgid "If Kai has a large number of missing data points, the detector still might not trigger an alert when Kai expects it to. In this case, Kai should find out why the data points are missing or use other methods to account for missing data points, such as extrapolation."
-msgstr "欠落データポイントが多数ある場合、このディテクターはKaiが期待したタイミングでアラートをトリガーしない可能性があります。この場合、Kaiはデータポイントが欠落している原因を突き止めるか、外挿などの他の方法を使用して欠落データポイントを考慮に入れる必要があります。"
+msgstr "欠落したデータポイントが多数ある場合、依然としてこのディテクターはKaiが期待したタイミングでアラートをトリガーしない可能性があります。この場合、Kaiはデータポイントが欠落している原因を突き止めるか、外挿などの他の方法を使用して欠落データポイントを考慮に入れる必要があります。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/scenarios-detectors-alerts/troubleshoot-noisy-detectors.rst:120
 msgid "To learn more about troubleshooting missing data points, see :ref:`timestamp-issues`."
@@ -6279,12 +6324,12 @@ msgid "Use the count function to determine whether an instance should be down"
 msgstr "count関数を使用して、インスタンスが停止しているかどうかを判断する"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/troubleshoot-detectors.rst:125
+#, fuzzy
 msgid ""
-"In an ephemeral infrastructure environment where things are constantly going up and down, traditional monitoring mechanisms require repeated manual configuration. Traditional monitoring mechanisms assume that non-reporting of a metric is always alert-worthy. This is a problem when non-reporting is the expected effect of autoscaling, as when an instance is turned down on purpose. By using analytics, however, you can alert only when non-reporting "
-"isunexpected."
+"In an ephemeral infrastructure environment where things are constantly going up and down, traditional monitoring mechanisms require repeated manual configuration. Traditional monitoring mechanisms assume that non-reporting of a metric is always alert-worthy. This is a problem when non-reporting is the expected effect of autoscaling, as when an instance is turned down on purpose. By using analytics, however, you can alert only when non-reporting isunexpected."
 msgstr ""
-"常にアップダウンが繰り返される刹那的なインフラストラクチャ環境では、従来の監視メカニズムでは、手動による設定を繰り返す必要があります。従来の監視メカニズムは、メトリクスのレポートがないことは常にアラートに値すると仮定しています。これは、インスタンスを意図的に停止する場合のように、レポートがないことがオートスケールによって期待される効果である場合に問題となります。しかし、分析を使用することで、レポートがないことが予期しない事態である場合にのみアラートを発す"
-"ることができます。"
+"常にアップダウンが繰り返される刹那的なインフラストラクチャ環境では、従来の監視メカニズムでは、手動による設定を繰り返す必要があります。従来の監視メカニズムは、メトリクスのレポートがないことは常にアラートに値すると仮定しています。これは、インスタンスを意図的に停止する場合のように、レポートがないことがオートスケールによって期待される効果である場合に問題となります。しかし、分析を使用することで、レポートがないことが予期しない事態である場合にのみアラートを発するこ"
+"とができます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/troubleshoot-detectors.rst:127
 msgid "The ``count`` analytics function tells you how many time series are reporting a value at a given point in time. If an instance stops reporting a metric, for example, because it has been terminated purposefully, then its time series is not counted."
@@ -6421,7 +6466,7 @@ msgstr "ディテクターに対してアクティブなアラートを確認す
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-alerts.rst:69
 msgid "To view active alerts for a detector, go to the :guilabel:`Detectors` tab in :guilabel:`Alerts` and select a detector."
-msgstr "ディテクターのアクティブなアラートを表示するには、:guilabel:`Alerts` の :guilabel:`Detectors` タブに移動して、ディテクターを選択します。"
+msgstr "ディテクターのアクティブなアラートを表示するには、 :guilabel:`Alerts` の :guilabel:`Detectors` タブに移動して、ディテクターを選択します。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-alerts.rst:67
 msgid "Detectors tab in Alerts"
@@ -6509,17 +6554,18 @@ msgid "View an individual detector"
 msgstr "個々のディテクターを見る"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-detectors.rst:38
+#, fuzzy
 msgid ""
 "There are two charts in the detector view. On the right side, you can see a detailed view. It shows each datapoint at the native resolution of the detector and represents exactly the datapoints that the detector sees. On the left side, you can see a summary view. It shows a summary of the data over a longer period of time. Because it is a summary, short spikes are not visible. The yellow box controls which part of the summary chart displays in the "
 "detailchart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired."
 msgstr ""
-"ディテクタービューには2つのチャートがあります。右側には、詳細ビューがあります。これは、ディテクターのネイティブ解像度で各データポイントを表示し、ディテクターが見ているデータポイントそのものを表示します。左側には、概要ビューがあります。これは、より長期間のデータの概要を表示するものです。概要であるため、短期間のスパイク（急上昇）は目に見えません。黄色のボックスは、概要チャートのどの部分を詳細チャートに表示するかをコントロールします。アラートが発動したエリア"
-"に黄色のボックスをドラッグすると、詳細ビューに短期間のスパイクが表示されます。"
+"ディテクタービューには2つのチャートがあります。右側にあるのは詳細ビューです。これは、ディテクターのネイティブ解像度で各データポイントを表示し、ディテクターが見ているデータポイントそのものを表示します。左側には、概要ビューがあります。これは、より長期間のデータの概要を表示するものです。概要であるため、短期間のスパイク（急上昇）は目に見えません。黄色のボックスは、概要チャートのどの部分を詳細チャートに表示するかをコントロールします。アラートが発動したエリアに黄"
+"色のボックスをドラッグすると、詳細ビューに短期間のスパイクが表示されます。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-detectors.rst:40
 #, fuzzy
 msgid "The Alert Rules tab is open when you open a detector, showing a chart that represents values for the visible signals. The list of detector rules and the number of currently active alerts for each rule are visible. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on which type of detector you are creating."
-msgstr "ディテクターを開くと、「アラートルール」タブが開き、表示可能なシグナルの値を表すチャートが表示されます。ディテクタールールのリストと、各ルールの現在アクティブなアラートの数を表示できます。詳細については、:ref:`view-alerts-within-detector` を参照してください。ルールの作成については、作成するディテクターの種類に応じて、:ref:`build-rules` または :ref:`apm-alerts` を参照してください。"
+msgstr "ディテクターを開くと、「アラートルール」タブが開き、表示可能なシグナルの値を表すチャートが表示されます。ディテクタールールのリストと、各ルールの現在アクティブなアラートの数を見ることができます。詳細については、:ref:`view-alerts-within-detector` を参照してください。ルールの作成に関する情報は、作成するディテクターの種類に応じて、:ref:`build-rules` または :ref:`apm-alerts` を参照してください。"
 
 #: ../../alerts-detectors-notifications/alerts-and-detectors/view-detectors.rst:42
 msgid "As with charts, the resolution of data displayed is determined by the chart's time range. The detail view at right displays data at the detector's resolution, that is, the frequency at which the detector evaluates the signal. Any events that have occurred during the detector's time range are shown under the X axis."
@@ -6802,7 +6848,7 @@ msgstr "SignalFlowエディターで、以下のコードサンプルが表示�
 
 #: ../../alerts-detectors-notifications/slo/create-slo.rst:59
 msgid "Line 1 defines ``G`` as a data stream of ``good.metric`` metric time series (MTS). The SignalFlow ``filter()`` function queries for a collection of MTS with value ``false`` for the ``sf_error`` dimension. The filter distinguishes successful requests from total requests, making ``G`` the good events variable."
-msgstr "1行目は、``good.metric`` メトリック時系列（MTS）のデータストリームとして ``G``  を定義しています。SignalFlowの ``filter()`` 関数は、``sf_error`` ディメンションに ``false`` の値を持つMTSの集合をクエリします。このフィルターによって、成功したリクエスト数とリクエスト総数を区別し、 ``G``  を成功イベントの変数にしています。"
+msgstr "1行目は、``good.metric`` メトリック時系列（MTS）のデータストリームとして ``G``  を定義しています。SignalFlowの ``filter()`` 関数は、 ``sf_error`` ディメンションに  ``false`` の値を持つMTSの集合をクエリします。このフィルターによって、成功したリクエスト数とリクエスト総数を区別し、 ``G``  を成功イベントの変数にしています。"
 
 #: ../../alerts-detectors-notifications/slo/create-slo.rst:60
 msgid "Line 2 defines ``T`` as a data stream ``total.metric`` MTS. ``T`` is the total events variable."
@@ -6917,7 +6963,7 @@ msgstr "Embyサービスの健全性メトリクスを測定し追跡するた�
 #: ../../alerts-detectors-notifications/slo/custom-metric-scenario.rst:16
 #, fuzzy
 msgid "Use custom metric as service level indicator (SLI)"
-msgstr "サービスレベルインジケータ（SLI）にカスタムメトリクスを使用する"
+msgstr "サービスレベル指標（SLI）としてカスタムメトリクスを使用する"
 
 #: ../../alerts-detectors-notifications/slo/custom-metric-scenario.rst:18
 #, fuzzy
@@ -6933,12 +6979,13 @@ msgid "Kai enters following program into the SignalFlow editor:"
 msgstr "SignalFlowエディターに以下のプログラムを入力します："
 
 #: ../../alerts-detectors-notifications/slo/custom-metric-scenario.rst:28
+#, fuzzy
 msgid ""
-"Kai defines variables ``G`` and ``T`` as two streams of ``synthetics.run.count`` metric time series (MTS) measuring the health of requests sent to the Emby service. To distinguish between the two data streams, Kai applies an additional filter on the ``success`` dimension in the definition for ``G``. This filter queries for a specific collection of MTS that track successful requests for the Emby service. In Kai's SignalFlow program, ``G`` is a data "
-"streamof good events and ``T`` is a data stream of total events."
+"Kai defines variables ``G`` and ``T`` as two streams of ``synthetics.run.count`` metric time series (MTS) measuring the health of requests sent to the Emby service. To distinguish between the two data streams, Kai applies an additional filter on the ``success`` dimension in the definition for ``G``. This filter queries for a specific collection of MTS that track successful requests for the Emby service. In Kai's SignalFlow program, ``G`` is a data stream "
+"ofgood events and ``T`` is a data stream of total events."
 msgstr ""
-"Kaiは、変数 ``G``   と ``T``  を、Embyサービスに送信されたリクエストの健全性を測定する ``synthetics.run.count`` メトリック時系列（MTS）の2つのストリームとして定義します。この2つのデータストリームを区別するため、 ``G``   の定義において、``success`` ディメンションに追加のフィルターを適用します。このフィルターは、Embyサービスに対する成功したリクエストを追跡するMTSの特定の集合をクエリします。KaiのSignalFlowプログラムでは、 ``G``   は成功イベントのデータスト"
-"リームであり、 ``T``  はイベント総数のデータストリームです。"
+"Kaiは、変数 ``G``   と ``T``  を、Embyサービスに送信されたリクエストの健全性を測定する ``synthetics.run.count`` メトリック時系列（MTS）の2つのストリームとして定義します。この2つのデータストリームを区別するため、 ``G``   の定義において、``success`` ディメンションに追加のフィルターを適用します。このフィルターは、Embyサービスに対する成功したリクエストを追跡するMTSの特定の集合をクエリします。KaiのSignalFlowプログラムでは、 ``G``   は成功イベントのデータストリー"
+"ムであり、 ``T``  はイベント総数のデータストリームです。"
 
 #: ../../alerts-detectors-notifications/slo/custom-metric-scenario.rst:30
 msgid "This image shows Kai's SLO configuration using the ``synthetics.run.count`` metric and appropriate filters."
@@ -6991,7 +7038,7 @@ msgstr "Synthetics Browserテストの詳細については、:ref:`browser-test
 #: ../../alerts-detectors-notifications/slo/custom-metric-scenario.rst:69
 #, fuzzy
 msgid "For more information on SignalFlow, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` in the Splunk Observability Cloud Developer Guide."
-msgstr "SignalFlowの詳細情報は、Splunk Observability Cloud開発者ガイドの「 :new-page:`SignalFlowを使用したデータ分析<https://dev.splunk.com/observability/docs/signalflow>` 」を参照してください。"
+msgstr "SignalFlowの詳細情報は、『Splunk Observability Cloud開発者ガイド』の「 :new-page:`SignalFlowを使用したデータ分析<https://dev.splunk.com/observability/docs/signalflow>` 」を参照してください。"
 
 #: ../../alerts-detectors-notifications/slo/slo-intro.rst:11
 msgid "Measure and track your service health metrics with SLOs"
