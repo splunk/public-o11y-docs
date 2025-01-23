@@ -576,36 +576,36 @@ Install a private runner
     .. code:: json
 
       {
-    "requiresCompatibilities": [
-      "EC2"
-    ],
-    "containerDefinitions": [
-        {
-            "name": "splunk-synthetics-runner",
-            "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
-            "memory": 7680,
-            "cpu": 2048,
-            "essential": true,
-            "environment": [
-              {
-                  "name": "RUNNER_TOKEN",
-                  "value": "YOUR_TOKEN_HERE"
-              }
-            ],
-            "linuxParameters": {
-                  "capabilities": {
-                    "add": ["NET_ADMIN"]
-                  }
-            }
-        }
-    ],
-    "volumes": [],
-    "networkMode": "none",
-    "memory": "7680",
-    "cpu": "2048",
-    "placementConstraints": [],
-    "family": "splunk-synthetics"
-  }
+       "requiresCompatibilities": [
+       "EC2"
+       ],
+       "containerDefinitions": [
+           {
+               "name": "splunk-synthetics-runner",
+               "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
+               "memory": 7680,
+               "cpu": 2048,
+               "essential": true,
+               "environment": [
+                 {
+                     "name": "RUNNER_TOKEN",
+                     "value": "YOUR_TOKEN_HERE"
+                 }
+               ],
+               "linuxParameters": {
+                     "capabilities": {
+                       "add": ["NET_ADMIN"]
+                     }
+               }
+           }
+       ],
+       "volumes": [],
+       "networkMode": "none",
+       "memory": "7680",
+       "cpu": "2048",
+       "placementConstraints": [],
+       "family": "splunk-synthetics"
+     }
 
 #. Select :guilabel:`Save` to close the JSON input panel.
 
