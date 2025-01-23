@@ -10,9 +10,7 @@ Private locations
 
 
 .. toctree::
-  :maxdepth: 2
-  :titlesonly:
-  :hidden:
+   :maxdepth: 1
 
 
 A private location is a name you create in Splunk Synthetic Monitoring to represent a custom location from which you can run synthetic tests. The name you give to a private location allows you to specify that name in a synthetic test's :guilabel:`Locations` field. To run synthetic tests from private locations, you must also set up one or more private runners within the private location to do the actual communication with your test targets and with Splunk Synthetic Monitoring.  
@@ -759,7 +757,7 @@ Install a private runner
 #. Create the deployment YAML:
 
    .. code:: yaml
-    
+
     apiVersion: apps/v1
     kind: Deployment
     metadata:
@@ -1096,8 +1094,7 @@ Follow these steps to limit logging in Docker:
 
 #. In the file, add: 
 
-.. code:: json
-
+   .. code:: json
     {
       "log-driver": "local",
       "log-opts": {
@@ -1165,20 +1162,20 @@ In this example:
 
 Ensure that these variables are correctly configured to comply with your network policies. This setup allows the synthetic tests to communicate securely and efficiently in a controlled network environment.
 
-When using a private runner, it's important to correctly configure the proxy settings to avoid issues with browser-based tests. The following steps should be followed when setting up their environment:
+When using a private runner, it's important to correctly configure the proxy settings to avoid issues with browser-based tests. Follow these steps when setting up the environment of the private runners:
 
-#. :strong:`Ensure proper no_proxy setup`:
+#. Ensure proper no_proxy setup:
    
-   - When configuring ``no_proxy`` always include the following addresses:
+   When configuring ``no_proxy`` always include the following addresses:
    
      - ``127.0.0.1`` (for localhost communication)
      - ``localhost`` (for resolving local tests)
    
    These addresses ensure that internal services and tests run correctly without routing through a proxy, preventing potential failures.
 
-#. :strong:`Dockerfile defaults`:
+#. Understand Dockerfile defaults:
    
-   - By default, the private runner sets the ``no_proxy`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``no_proxy``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
+   By default, the private runner sets the ``no_proxy`` variable in the Dockerfile to include ``127.0.0.1``. If you override ``no_proxy``, you must ensure that ``127.0.0.1`` and ``localhost`` are still present, or browser tests may fail.
 
 
 .. note:: 
