@@ -107,7 +107,7 @@ For more information on configuration options, see :new-page:`rrweb guide <https
 
 Redact information
 ==============================
-Text is redacted by default, you can optionally configure image redaction as well. The following image shows how the Splunk RUM homepage looks with text redaction enabled. All text is replaced by * symbols. 
+Text and inputs are redacted by default, you can optionally configure image redaction as well. The following image shows how the Splunk RUM homepage looks with text redaction enabled. All text is replaced by * symbols. 
 
 .. image:: /_images/rum/SR-text-redaction.png
    :alt: Example home screen of a website with the text replaced by the star symbol to show redacted text. 
@@ -116,8 +116,10 @@ Text is redacted by default, you can optionally configure image redaction as wel
 
 To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting the ``maskTextClass`` option to a custom value, which can also accept a regular expression, or you can set custom selector to ``maskTextSelector`` option.
 
+Input redaction is handled separately. To disable all input redaction, set ``maskAllInputs: false``. To customize which inputs are redacted use the ``maskInputOptions`` option.
+
 .. note::
-    In the rrweb documentation, the default value of ``maskTextSelector`` is specified as ``null``. However, we have changed the default value to ``'*'``. As a result, you must explicitly set ``maskTextSelector`` to ``false`` when no text redaction is desired.
+    In the rrweb documentation, the default value of ``maskTextSelector`` is specified as ``null`` and ``maskAllInputs`` as ``false``. However, we have changeded these default values in our configuration to ensure that all text and inputs are redacted by default As a result, you must explicitly set ``maskTextSelector`` to ``false`` or ``null`` when no text redaction is desired.
 
 Examples:
 
@@ -141,6 +143,15 @@ Examples:
         // ...
         maskTextClass: /^sensitive-.*$/,
         maskTextSelector: '#private-info, #hidden-section'
+    });
+
+    // Will disable input redaction on all elements except password inputs
+    SplunkSessionRecorder.init({
+        // ...
+        maskAllInputs: false,
+        maskInputOptions: {
+            password: true
+        }
     });
 
 
