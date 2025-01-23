@@ -606,10 +606,7 @@ Install a private runner
 
 #. Select :guilabel:`Create` to create the task.
 
-#. Create a service in your cluster using the
-    :guilabel:`splunk-synthetics-runner`. For steps, see the
-    :new-page:`AWS <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-service.html>`__
-    documentation.
+#. Create a service in your cluster using the :guilabel:`splunk-synthetics-runner`. For steps, see the    :new-page:`AWS <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-service.html>` documentation.
 
 .. _upgrade-a-private-runner-3:
 
