@@ -5,9 +5,10 @@
 Session replay in Splunk RUM
 **********************************************************************
 
-Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next. Sessions have a maximum duration of four hours. 
+Replay a session to take a look at exactly what a user experienced and make informed decisions about what to do next. Sessions have a maximum duration of four hours. 
 
-.. note:: Customer is responsible for using Splunk Observability Cloud in compliance with applicable laws, including but not limited to providing notice to and obtaining any necessary consent form individuals whose data will be collected by Customer's use of the services. 
+.. note:: 
+   You are responsible for using Splunk Observability Cloud in compliance with applicable laws, including but not limited to providing notice to and obtaining any necessary consent from individuals whose data will be collected by Customer's use of the services. 
 
 
 Use cases
@@ -107,19 +108,19 @@ For more information on configuration options, see :new-page:`rrweb guide <https
 
 Redact information
 ==============================
-Text and inputs are redacted by default, you can optionally configure image redaction as well. The following image shows how the Splunk RUM homepage looks with text redaction enabled. All text is replaced by * symbols. 
+Text and inputs are redacted by default. You can optionally configure image redaction as well. The following image illustrates what the Splunk RUM homepage looks with text redaction enabled. All text is replaced by ``*`` characters. 
 
 .. image:: /_images/rum/SR-text-redaction.png
    :alt: Example home screen of a website with the text replaced by the star symbol to show redacted text. 
    :width: 70%
 
 
-To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting the ``maskTextClass`` option to a custom value, which can also accept a regular expression, or you can set custom selector to ``maskTextSelector`` option.
+To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting the ``maskTextClass`` option to a custom selector, ``maskTextSelector`` or to custom value. The custom value can be a regular expression.
 
 Input redaction is handled separately. To disable all input redaction, set ``maskAllInputs: false``. To customize which inputs are redacted use the ``maskInputOptions`` option.
 
 .. note::
-    In the rrweb documentation, the default value of ``maskTextSelector`` is specified as ``null`` and ``maskAllInputs`` as ``false``. However, we have changeded these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or ``maskAllInputs`` to ``false`` when no redaction is desired.
+    In the rrweb documentation, the default value of ``maskTextSelector`` is ``null`` and the default value of ``maskAllInputs`` is ``false``. However, Splunk RUM changes these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or ``maskAllInputs`` to ``false`` when no redaction is desired.
 
 Examples:
 
