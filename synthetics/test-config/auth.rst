@@ -191,7 +191,9 @@ Prerequisites
 ------------------------------------------------------------------
 
 -  Virtual phone number
+
    To authenticate through SMS, you must have a virtual phone number that can receive one time passcodes through SMS. Several services offer virtual phone numbers and provide SMS content through an API, such as the :new-page:`Sinch service <http://sinch.com>`. For instructions on receiving messages through this service, see :new-page:`the Sinch API <https://developers.sinch.com/docs/sms/api-reference/sms/tag/Inbounds/#tag/Inbounds/operation/ListInboundMessages>`.
+   
    Certain services, such as Twilio, may block incoming SMS messages containing OTPs. For more information regarding this issue, see Twilio's documentation on :new-page:`OTP Message Body Filtered <https://www.twilio.com/docs/api/errors/30038>`.
 
 -  SMS notifications
@@ -283,7 +285,7 @@ Prerequisites
 
 You must have an email service that supports connecting to your email account and managing your emails through an API. The steps below feature an example using the :new-page:`Nylas service <http://nylas.com>`. For detailed information on how to retrieve messages from this service, refer to its :new-page:`API documentation <https://developer.nylas.com/docs/api/v3/ecc/?redirect=api#get-/v3/grants/-grant_id-/messages>`.
 
-Additionally, the steps below demonstrate the use of :new-page:`GitHub <http://github.com>`` to send an authorization email, which is essential for extracting the OTP from it.
+Additionally, the steps below demonstrate the use of :new-page:`GitHub <http://github.com>` to send an authorization email, which is essential for extracting the OTP from it.
 
 Limitations
 ------------------------------------------------------------------
@@ -292,7 +294,7 @@ Your email service must be accessible through an API. Some services may not be a
 
 #. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
 
-#. select :guilabel:`Edit steps or synthetic transactions`.
+#. Select :guilabel:`Edit steps or synthetic transactions`.
 
 #. Add a step of type :guilabel:`Go to url`, and in :guilabel:`URL`, enter the URL of the target's authentication page.
 
@@ -334,7 +336,7 @@ Your email service must be accessible through an API. Some services may not be a
       }
       return getOtp();
 
-#. Add a step of type :guilabel:`Wait`:, and specify a wait time in milliseconds. This time needs to be long enough for the target to send the OTP code to your email service, and for your JavaScript to process the OTP.
+#. Add a step of type :guilabel:`Wait`, and specify a wait time in milliseconds. This time needs to be long enough for the target to send the OTP code to your email service, and for your JavaScript to process the OTP.
 
 #. Add a step of type :guilabel:`Fill in field`, and set it up as follows:
 
@@ -367,9 +369,9 @@ Multifactor authentication through SSO and Active Directory
     :description: Multifactor authentication allows your test to authenticate to a target page by logging in through an SSO or Active Directory service.
 
 
-Authorization through Single Sign-On (SSO) is similar to :ref:`basic authentication <auth-basic-html-login>`. To create a test of that uses SSO or AD login, you must configure a series of steps that include opening the webpage, selecting the SSO authentication link, and entering the required information for SSO authentication. Additional webpages may load during this process, so it's crucial that you include steps to confirm that all the components of each webpage have fully loaded before proceeding.
+Authorization through Single Sign-On (SSO) is similar to :ref:`basic authentication <auth-basic-html-login>`. To create a test of that uses SSO or Active Directory (AD) login, you must configure a series of steps that include opening the webpage, selecting the SSO authentication link, and entering the required information for SSO authentication. Additional webpages may load during this process, so it's crucial that you include steps to confirm that all the components of each webpage have fully loaded before proceeding.
 
-SSO authentication frequently involves additional authentication factors. If the identity provider (such as Google, Microsoft, Okta, Duo, and so on) does not mandate an extra login factor, your test might only need the authentication steps that are illustrated in the example below,
+SSO authentication frequently involves additional authentication factors. If the identity provider (such as Google, Microsoft, Okta, Duo, and so on) does not mandate an extra login factor, your test might only need the authentication steps that are illustrated in the example below:
 
 ..  image:: /_images/synthetics/auth-multifactor-sso-sample.png
     :width: 90%
