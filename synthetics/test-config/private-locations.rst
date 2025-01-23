@@ -167,8 +167,7 @@ To find the browser type and version, look at the labels ``browser-type`` and ``
 Security
 --------------------------------------------------------------
 
-The Docker image as based on a Debian image which some vulnerability scanners might incorrectly flag as having a common vulnerability and exposure (CVE). To verify the presence and the severity of any CVE, look at the Debian Security Tracker to verify its status in Debian. For example, :new-page:`quay.io <http://quay.io/>` (the Docker repository that hosts the published private runner Docker
-images) reports CVE-2023-45853 as a critical severity vulnerability but the Debian Security Tracker describes the status of https://security-tracker.debian.org/tracker/CVE-2023-45853 and explains why it's marked as ignored by the Debian security team.
+The Docker image as based on a Debian image which some vulnerability scanners might incorrectly flag as having a common vulnerability and exposure (CVE). To verify the presence and the severity of any CVE, look at the Debian Security Tracker to verify its status in Debian. For example, :new-page:`quay.io <http://quay.io/>` (the Docker repository that hosts the published private runner Docker images) reports CVE-2023-45853 as a critical severity vulnerability but the Debian Security Tracker describes the status of https://security-tracker.debian.org/tracker/CVE-2023-45853 and explains why it's marked as ignored by the Debian security team.
 
 Required container permissions
 --------------------------------------------------------------
@@ -571,37 +570,39 @@ Install a private runner
 
 .. code:: json
 
-    {
-    "requiresCompatibilities": [
+{
+  "requiresCompatibilities": [
     "EC2"
-    ],
-    "containerDefinitions": [
+  ],
+  "containerDefinitions": [
     {
-    "name": "splunk-synthetics-runner",
-    "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
-    "memory": 7680,
-    "cpu": 2048,
-    "essential": true,
-    "environment": [
-    {
-    "name": "RUNNER_TOKEN",
-    "value": "YOUR_TOKEN_HERE"
+      "name": "splunk-synthetics-runner",
+      "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
+      "memory": 7680,
+      "cpu": 2048,
+      "essential": true,
+      "environment": [
+        {
+          "name": "RUNNER_TOKEN",
+          "value": "YOUR_TOKEN_HERE"
+        }
+      ],
+      "linuxParameters": {
+        "capabilities": {
+          "add": [
+            "NET_ADMIN"
+          ]
+        }
+      }
     }
-    ],
-    "linuxParameters": {
-    "capabilities": {
-    "add": ["NET_ADMIN"]
-    }
-    }
-    }
-    ],
-    "volumes": [],
-    "networkMode": "none",
-    "memory": "7680",
-    "cpu": "2048",
-    "placementConstraints": [],
-    "family": "splunk-synthetics"
-    }
+  ],
+  "volumes": [],
+  "networkMode": "none",
+  "memory": "7680",
+  "cpu": "2048",
+  "placementConstraints": [],
+  "family": "splunk-synthetics"
+}
 
 #. Select :guilabel:`Save` to close the JSON input panel.
 
@@ -690,7 +691,8 @@ Uninstall a private runner
 
 #. Verify the information in the `Deregister` window, and then select `Deregister` to finish.
 
-Private runners deployed with Helm NEW
+
+Private runners deployed with Helm
 --------------------------------------------------------------
 
 
@@ -736,7 +738,7 @@ Run the helm uninstall command:
 
   helm uninstall my-splunk-synthetics-runner
 
-Private runners on Kubernetes NEW
+Private runners on Kubernetes
 --------------------------------------------------------------
 
 .. _install-a-private-runner-5:
@@ -758,39 +760,39 @@ Install a private runner
    apiVersion: apps/v1
    kind: Deployment
    metadata:
-   name: splunk-o11y-synthetics-runner
+    name: splunk-o11y-synthetics-runner
    spec:
-   replicas: 3
-   selector:
-   matchLabels:
-   app: splunk-o11y-synthetics-runner
-   template:
-   metadata:
-   labels:
-   app: splunk-o11y-synthetics-runner
-   spec:
-   containers:
-   - name: splunk-o11y-synthetics-runner
-   image: quay.io/signalfx/splunk-synthetics-runner:latest
-   imagePullPolicy: Always
-   env:
-   - name: RUNNER_TOKEN
-   valueFrom:
-   secretKeyRef:
-   name: runner-token-secret
-   key: RUNNER_TOKEN
-   securityContext:
-   capabilities:
-   add:
-   - NET_ADMIN
-   allowPrivilegeEscalation: true
-   resources:
-   limits:
-   cpu: "2"
-   memory: 8Gi
-   requests:
-   cpu: "2"
-   memory: 8Gi
+     replicas: 3
+     selector:
+       matchLabels:
+         app: splunk-o11y-synthetics-runner
+     template:
+       metadata:
+         labels:
+           app: splunk-o11y-synthetics-runner
+       spec:
+         containers:
+           - name: splunk-o11y-synthetics-runner
+             image: quay.io/signalfx/splunk-synthetics-runner:latest
+             imagePullPolicy: Always
+             env:
+               - name: RUNNER_TOKEN
+                 valueFrom:
+                   secretKeyRef:
+                     name: runner-token-secret
+                     key: RUNNER_TOKEN
+             securityContext:
+               capabilities:
+                 add:
+                   - NET_ADMIN
+               allowPrivilegeEscalation: true
+             resources:
+               limits:
+                 cpu: "2"
+                 memory: 8Gi
+               requests:
+                 cpu: "2"
+                 memory: 8Gi
 
 
 #. Apply the Deployment YAML:
@@ -823,7 +825,7 @@ Run the kubectl delete command:
    
    kubectl delete -f deployment.yaml
 
-Private runners on OpenShift NEW
+Private runners on OpenShift
 --------------------------------------------------------------
 
 .. _install-a-private-runner-6:
@@ -841,42 +843,42 @@ Install a private runner
 
 .. code:: yaml
 
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-  name: splunk-o11y-synthetics-runner
-  spec:
-  replicas: 3
-  selector:
-  matchLabels:
-  app: splunk-o11y-synthetics-runner
-  template:
-  metadata:
-  labels:
-  app: splunk-o11y-synthetics-runner
-  spec:
-   containers:
-   - name: splunk-o11y-synthetics-runner
-   image: quay.io/signalfx/splunk-synthetics-runner:latest
-   imagePullPolicy: Always
-   env:
-   - name: RUNNER_TOKEN
-   valueFrom:
-   secretKeyRef:
-   name: runner-token-secret
-   key: RUNNER_TOKEN
-   securityContext:
-   capabilities:
-   add:
-   - NET_ADMIN
-   allowPrivilegeEscalation: true
-   resources:
-   limits:
-   cpu: "2"
-   memory: 8Gi
-   requests:
-   cpu: "2"
-   memory: 8Gi
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+    name: splunk-o11y-synthetics-runner
+   spec:
+     replicas: 3
+     selector:
+       matchLabels:
+         app: splunk-o11y-synthetics-runner
+     template:
+       metadata:
+         labels:
+           app: splunk-o11y-synthetics-runner
+       spec:
+         containers:
+           - name: splunk-o11y-synthetics-runner
+             image: quay.io/signalfx/splunk-synthetics-runner:latest
+             imagePullPolicy: Always
+             env:
+               - name: RUNNER_TOKEN
+                 valueFrom:
+                   secretKeyRef:
+                     name: runner-token-secret
+                     key: RUNNER_TOKEN
+             securityContext:
+               capabilities:
+                 add:
+                   - NET_ADMIN
+               allowPrivilegeEscalation: true
+             resources:
+               limits:
+                 cpu: "2"
+                 memory: 8Gi
+               requests:
+                 cpu: "2"
+                 memory: 8Gi
 
  
 
@@ -911,7 +913,7 @@ Run the oc delete command:
    
    oc delete -f deployment.yaml
 
-Private runners on Podman NEW
+Private runners on Podman
 --------------------------------------------------------------
 
 .. _install-a-private-runner-7:
@@ -979,7 +981,7 @@ Uninstall a private runner
 
    podman rm -f my_running_container
 
-Private runners on Podman for MacOS or Windows NEW
+Private runners on Podman for MacOS or Windows
 --------------------------------------------------------------
 
 .. _install-a-private-runner-8:
@@ -1045,7 +1047,7 @@ Uninstall a private runner
 
    podman rm -f my_running_container
 
-Private runners on ARM64 machines on AWS and GCP NEW
+Private runners on ARM64 machines on AWS and GCP
 --------------------------------------------------------------
 
 There are no special instructions to install or upgrade a Docker image running on an ARM64-based machine. You can deploy this image manually with Docker or Docker Compose, deploy it to Kubernetes hosted on AWS EKS, GCP GKE, self-hosted, or deploy it on AWS ECS.
