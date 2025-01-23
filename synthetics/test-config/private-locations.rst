@@ -1095,6 +1095,7 @@ Follow these steps to limit logging in Docker:
 #. In the file, add: 
 
    .. code:: json
+    
     {
       "log-driver": "local",
       "log-opts": {
