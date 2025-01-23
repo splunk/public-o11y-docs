@@ -171,7 +171,7 @@ If your test target expects login credentials to be included in an an API reques
 
    #. Select :guilabel:`Add request header`.
 
-   #. Select the Authorization header, and for its value, enter the word ``Basic`` followed by a space and then the name of the global variable containing your base64-encoded combined username and password. The variable must be prefixed with ``env.`` and enclosed in double curly braces. For example, ``{{env.est1_base64_auth}}``. To see the list of available global variables, expand the pane on the right.
+   #. Select the :guilabel:`Authorization` header, and for its value, enter the word ``Basic`` followed by a space and then the name of the global variable containing your base64-encoded combined username and password. The variable must be prefixed with ``env.`` and enclosed in double curly braces. For example, ``{{env.est1_base64_auth}}``. To see the list of available global variables, expand the pane on the right.
 
 #. Select :guilabel:`Submit`.
 
@@ -353,7 +353,7 @@ Your email service must be accessible through an API. Some services may not be a
 
    #. In :guilabel:`Value`, enter the name of the custom varialble your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
 
-     .. image:: /_images/synthetics/auth-multifactor-email-fillinfield.ping
+     .. image:: /_images/synthetics/auth-multifactor-email-fillinfield.png
           :width: 70%
           :alt: Screenshot showing the "Fill in field" step. 
 
@@ -378,7 +378,7 @@ Multifactor authentication through SSO and Active Directory
     :description: Multifactor authentication allows your test to authenticate to a target page by logging in through an SSO or Active Directory service.
 
 
-Authorization through Single Sign-On (SSO) is similar to :ref:`basic authentication <auth-basic-html-login>`. To create a test of that uses SSO or Active Directory (AD) login, you must configure a series of steps that include opening the webpage, selecting the SSO authentication link, and entering the required information for SSO authentication. Additional webpages may load during this process, so it's crucial that you include steps to confirm that all the components of each webpage have fully loaded before proceeding.
+Authentication through Single Sign-On (SSO) is similar to :ref:`basic authentication <auth-basic-html-login>`. To create a test of that uses SSO or Active Directory (AD) login, you must configure a series of steps that include opening the webpage, selecting the SSO authentication link, and entering the required information for SSO authentication. Additional webpages may load during this process, so it's crucial that you include steps to confirm that all the components of each webpage have fully loaded before proceeding.
 
 SSO authentication frequently involves additional authentication factors. If the identity provider (such as Google, Microsoft, Okta, Duo, and so on) does not mandate an extra login factor, your test might only need the authentication steps that are illustrated in the example below:
 
