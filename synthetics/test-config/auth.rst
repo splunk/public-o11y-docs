@@ -8,8 +8,7 @@ Authentication
     :description: Your synthetic test can incorporate any authentication method that Splunk Synthetic Monitoring supports for that test type.
 
 
-The following authentication methods are available for you to configure
-in your Synthetics tests:
+The following authentication methods are available for you to configure in your Synthetics tests:
 
 .. list-table::
    :header-rows: 1
@@ -19,7 +18,15 @@ in your Synthetics tests:
      - :strong:`Authentication method`
    
    * - Browser
-     - :ref:`auth-basic-html-login`, :ref:`auth-basic-http-headers`, :ref:`auth-multifactor-sms`, :ref:`auth-multifactor-email`, :ref:`auth-multifactor-sso` 
+     - :ref:`auth-basic-html-login`
+
+       :ref:`auth-basic-http-headers`
+       
+       :ref:`auth-multifactor-sms`
+       
+       :ref:`auth-multifactor-email`
+       
+       :ref:`auth-multifactor-sso` 
 
    * - Uptime
      - None 
@@ -147,8 +154,7 @@ If your test target expects login credentials to be included in an an API reques
     :alt: Screenshot showing how to set up a synthetic test with basic authentication through API request headers. 
 
 
-#. Get the *base64-encoded string* of the username and password
-     combination for your test target. There are several ways to get a base64-encoded string. For example:
+#. Get the *base64-encoded string* of the username and password combination for your test target. There are several ways to get a base64-encoded string. For example:
 
    -  Run the JavaScript function btoa from your browser's console: ``btoa("myusername:mypassword")``
 
@@ -157,8 +163,7 @@ If your test target expects login credentials to be included in an an API reques
 #. Store the base64 value in a concealed global variable. For more information, see
    :ref:`global-variables`.
 
-#. On the API test's configuration page, select an existing request in
-   the test or select :guilabel:`Add requests`.
+#. On the API test's configuration page, select an existing request in the test or select :guilabel:`Add requests`.
 
 #. Expand the :guilabel:`Request` section, and enter the following information:
 
@@ -192,19 +197,19 @@ Prerequisites
 
 -  Virtual phone number
 
-   To authenticate through SMS, you must have a virtual phone number that can receive one time passcodes through SMS. Several services offer virtual phone numbers and provide SMS content through an API, such as the :new-page:`Sinch service <http://sinch.com>`. For instructions on receiving messages through this service, see :new-page:`the Sinch API <https://developers.sinch.com/docs/sms/api-reference/sms/tag/Inbounds/#tag/Inbounds/operation/ListInboundMessages>`.
+     To authenticate through SMS, you must have a virtual phone number that can receive one time passcodes through SMS. Several services offer virtual phone numbers and provide SMS content through an API, such as the :new-page:`Sinch service <http://sinch.com>`. For instructions on receiving messages through this service, see :new-page:`the Sinch API <https://developers.sinch.com/docs/sms/api-reference/sms/tag/Inbounds/#tag/Inbounds/operation/ListInboundMessages>`.
 
-   Certain services, such as Twilio, may block incoming SMS messages containing OTPs. For more information regarding this issue, see Twilio's documentation on :new-page:`OTP Message Body Filtered <https://www.twilio.com/docs/api/errors/30038>`.
+     Certain services, such as Twilio, may block incoming SMS messages containing OTPs. For more information, see Twilio's :new-page:`OTP Message Body Filtered <https://www.twilio.com/docs/api/errors/30038>` documentation.
 
 -  SMS notifications
 
-   To enhance the authorization process, you must have a service that sends SMS notifications, such as :new-page:`GitHub <https://github.com>`.
+     To enhance the authorization process, you must have a service that sends SMS notifications, such as :new-page:`GitHub <https://github.com>`.
 
 
 Limitations
 ------------------------------------------------------------------
 
-Some services may not be accessible during Synthetics tests due to violations of Content-Security-Policy (CSP). In such instances, a workaround is to implement third-party services on your server and provide an endpoint configured with CSP to allow connect-src.
+Some services may not be accessible during Synthetics tests due to violations of Content-Security-Policy (CSP). In such instances, a workaround is to implement third-party services on your server and provide an endpoint configured with CSP to allow ``connect-src``.
 
 
 #. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
