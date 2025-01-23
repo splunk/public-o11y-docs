@@ -38,7 +38,7 @@ Basic authentication through HTML login forms
     :description: Basic authentication allows your tests to send a username and password to a login form on a target test page.
 
 
-.. :note:: This authentication method applies to browser tests only.
+.. note:: This authentication method applies to browser tests only.
 
 If your test target provides an HTML form for entering username and password, configure your browser test as follows.
 
@@ -91,7 +91,7 @@ Basic authentication through HTTP headers
     :description: Basic authentication allows your tests to send a username and password through HTTP headers.
 
 
-.. :note:: This authentication method applies to browser tests only.
+.. note:: This authentication method applies to browser tests only.
 
 If your test target expects login credentials to be included in an HTTP header, configure your browser test as follows.
 
@@ -137,8 +137,7 @@ Basic authentication through API request headers
     :description: Basic authentication allows your tests to send a username and password through API request headers.
 
 
-.. :note:: This authentication method applies to API tests only. The steps below are for targets that support “Basic auth”, in other words, API methods like ``curl -G https://api.twilio.com/2010-04-01/Accounts.json -u <YOUR_ACCOUNT_SID>:<YOUR_AUTH_TOKEN>``.  
-    You can modify these steps for targets that support a Bearer token.
+.. note:: This authentication method applies to API tests only. The steps below are for targets that support “Basic auth”, in other words, API methods like ``curl -G https://api.twilio.com/2010-04-01/Accounts.json -u <YOUR_ACCOUNT_SID>:<YOUR_AUTH_TOKEN>``.  You can modify these steps for targets that support a Bearer token.
 
 If your test target expects login credentials to be included in an an API request header, configure your browser test as follows.
 
@@ -182,7 +181,7 @@ Multifactor authentication through SMS
     :description: Multifactor authentication allows your test to authenticate to a target page by sending it a code it receives through SMS.
 
 
-.. :note:: This authentication method applies to browser tests only.
+.. note:: This authentication method applies to browser tests only.
 
 If your test target sends a one time passcode (OTP) through SMS for multifactor authentication, your browser test must retrieve the OTP from the SMS message and enter it into the input field on the target's page. To do this, configure your browser test as follows.
 
@@ -193,7 +192,7 @@ Prerequisites
 -  Virtual phone number
 
    To authenticate through SMS, you must have a virtual phone number that can receive one time passcodes through SMS. Several services offer virtual phone numbers and provide SMS content through an API, such as the :new-page:`Sinch service <http://sinch.com>`. For instructions on receiving messages through this service, see :new-page:`the Sinch API <https://developers.sinch.com/docs/sms/api-reference/sms/tag/Inbounds/#tag/Inbounds/operation/ListInboundMessages>`.
-   
+
    Certain services, such as Twilio, may block incoming SMS messages containing OTPs. For more information regarding this issue, see Twilio's documentation on :new-page:`OTP Message Body Filtered <https://www.twilio.com/docs/api/errors/30038>`.
 
 -  SMS notifications
@@ -214,7 +213,7 @@ Some services may not be accessible during Synthetics tests due to violations of
 
 #. Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a global variable named ``otp``.
 
-   .. :note::  In the script, set the variable url to the URL of your own virtual phone number's SMS service.
+   .. note::  In the script, set the variable url to the URL of your own virtual phone number's SMS service.
 
    .. code-block:: javascript
 
@@ -275,7 +274,7 @@ Multifactor authentication through email
     :description: Multifactor authentication allows your test to authenticate to a target page by sending it a code it receives through email.
 
 
-.. :note:: This authentication method applies to browser tests only.
+.. note:: This authentication method applies to browser tests only.
 
 If your test target sends a one-time passcode (OTP) through email for multifactor authentication, your browser test must retrieve the OTP from the email message and enter it into the input field on the target's page. To do this, configure your browser test as follows.
 
@@ -300,9 +299,9 @@ Your email service must be accessible through an API. Some services may not be a
 
 #. Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a custom variable named ``otp``. 
 
-   .. :note:: In the script, set the variable url to the URL of your own email inbox API endpoint.
+   .. note:: In the script, set the variable url to the URL of your own email inbox API endpoint.
 
-   .. :note::  If you are utilizing the Nylas service, you can locate unread emails by searching for specific text in the subject line or other parameters. For more information, please refer to the :new-page:`Nylas API documentation for messages <https://developer.nylas.com/docs/api/v3/ecc/?redirect=api#get-/v3/grants/-grant_id-/messages>`.
+   .. note::  If you are utilizing the Nylas service, you can locate unread emails by searching for specific text in the subject line or other parameters. For more information, please refer to the :new-page:`Nylas API documentation for messages <https://developer.nylas.com/docs/api/v3/ecc/?redirect=api#get-/v3/grants/-grant_id-/messages>`.
 
    .. code-block:: javascript
 
