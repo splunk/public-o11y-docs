@@ -116,6 +116,9 @@ Text is redacted by default, you can optionally configure image redaction as wel
 
 To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting the ``maskTextClass`` option to a custom value, which can also accept a regular expression, or you can set custom selector to ``maskTextSelector`` option.
 
+.. note::
+    In the rrweb documentation, the default value of ``maskTextSelector`` is specified as ``null``. However, we have changed the default value to ``'*'``. As a result, you must explicitly set ``maskTextSelector`` to ``false`` when no text redaction is desired.
+
 Examples:
 
 .. code-block:: javascript
