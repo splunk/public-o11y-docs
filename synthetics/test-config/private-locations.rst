@@ -759,43 +759,42 @@ Install a private runner
 #. Create the deployment YAML:
 
    .. code:: yaml
-
-   apiVersion: apps/v1
-   kind: Deployment
-   metadata:
-    name: splunk-o11y-synthetics-runner
-   spec:
-     replicas: 3
-     selector:
-       matchLabels:
-         app: splunk-o11y-synthetics-runner
-     template:
-       metadata:
-         labels:
-           app: splunk-o11y-synthetics-runner
-       spec:
-         containers:
-           - name: splunk-o11y-synthetics-runner
-             image: quay.io/signalfx/splunk-synthetics-runner:latest
-             imagePullPolicy: Always
-             env:
-               - name: RUNNER_TOKEN
-                 valueFrom:
-                   secretKeyRef:
-                     name: runner-token-secret
-                     key: RUNNER_TOKEN
-             securityContext:
-               capabilities:
-                 add:
-                   - NET_ADMIN
-               allowPrivilegeEscalation: true
-             resources:
-               limits:
-                 cpu: "2"
-                 memory: 8Gi
-               requests:
-                 cpu: "2"
-                 memory: 8Gi
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+     name: splunk-o11y-synthetics-runner
+    spec:
+      replicas: 3
+      selector:
+        matchLabels:
+          app: splunk-o11y-synthetics-runner
+      template:
+        metadata:
+          labels:
+            app: splunk-o11y-synthetics-runner
+        spec:
+          containers:
+            - name: splunk-o11y-synthetics-runner
+              image: quay.io/signalfx/splunk-synthetics-runner:latest
+              imagePullPolicy: Always
+              env:
+                - name: RUNNER_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: runner-token-secret
+                      key: RUNNER_TOKEN
+              securityContext:
+                capabilities:
+                  add:
+                    - NET_ADMIN
+                allowPrivilegeEscalation: true
+              resources:
+                limits:
+                  cpu: "2"
+                  memory: 8Gi
+                requests:
+                  cpu: "2"
+                  memory: 8Gi
 
 
 #. Apply the Deployment YAML:
@@ -812,8 +811,9 @@ Upgrade a private runner
 Run the kubectl apply command:
 
 .. code:: shell
-   
-   kubectl apply -f deployment.yaml
+  
+  kubectl apply -f deployment.yaml
+
 
 Since you're using the latest tag with ``imagePullPolicy: Always``, you don't need to make changes to the deployment.yaml file. Reapplying the deployment pulls the latest image.
 
@@ -845,45 +845,44 @@ Install a private runner
 #.  Create the deployment YAML:
 
    .. code:: yaml
+    
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+     name: splunk-o11y-synthetics-runner
+    spec:
+      replicas: 3
+      selector:
+        matchLabels:
+          app: splunk-o11y-synthetics-runner
+      template:
+        metadata:
+          labels:
+            app: splunk-o11y-synthetics-runner
+        spec:
+          containers:
+            - name: splunk-o11y-synthetics-runner
+              image: quay.io/signalfx/splunk-synthetics-runner:latest
+              imagePullPolicy: Always
+              env:
+                - name: RUNNER_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: runner-token-secret
+                      key: RUNNER_TOKEN
+              securityContext:
+                capabilities:
+                  add:
+                    - NET_ADMIN
+                allowPrivilegeEscalation: true
+              resources:
+                limits:
+                  cpu: "2"
+                  memory: 8Gi
+                requests:
+                  cpu: "2"
+                  memory: 8Gi
 
-   apiVersion: apps/v1
-   kind: Deployment
-   metadata:
-    name: splunk-o11y-synthetics-runner
-   spec:
-     replicas: 3
-     selector:
-       matchLabels:
-         app: splunk-o11y-synthetics-runner
-     template:
-       metadata:
-         labels:
-           app: splunk-o11y-synthetics-runner
-       spec:
-         containers:
-           - name: splunk-o11y-synthetics-runner
-             image: quay.io/signalfx/splunk-synthetics-runner:latest
-             imagePullPolicy: Always
-             env:
-               - name: RUNNER_TOKEN
-                 valueFrom:
-                   secretKeyRef:
-                     name: runner-token-secret
-                     key: RUNNER_TOKEN
-             securityContext:
-               capabilities:
-                 add:
-                   - NET_ADMIN
-               allowPrivilegeEscalation: true
-             resources:
-               limits:
-                 cpu: "2"
-                 memory: 8Gi
-               requests:
-                 cpu: "2"
-                 memory: 8Gi
-
- 
 
 
 #.  Apply the deployment YAML:
