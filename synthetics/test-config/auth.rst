@@ -348,9 +348,9 @@ Your email service must be accessible through an API. Some services may not be a
 
    #. In :guilabel:`Value`, enter the name of the custom varialble your JavaScript stored the OTP in, prefixed with custom. and enclosed in double curly braces. For example, ``{{custom.otp}}``.
 
-    ..  image:: /_images/synthetics/auth-multifactor-email-fillinfield.png
-        :width: 70%
-        :alt: Screenshot showing the "Fill in field" step. 
+     .. image:: /_images/synthetics/auth-multifactor-email-fillinfield.ping
+          :width: 70%
+          :alt: Screenshot showing the "Fill in field" step. 
 
 #. To verify that the login succeeded, add a step of type :guilabel:`Assert text present`, and set it up as follows:
 
