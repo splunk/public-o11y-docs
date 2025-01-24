@@ -942,7 +942,7 @@ Upgrade a private runner
     
     podman pull http://quay.io/signalfx/splunk-synthetics-runner:latest
 
-#. Stop the running container
+#. Stop the running container:
 
    .. code:: shell
     
