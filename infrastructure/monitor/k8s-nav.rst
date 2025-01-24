@@ -117,7 +117,7 @@ To use a predefined metric class:
 #. Select a Kubernetes navigator.
 #. In the table view, select the :guilabel:`Metric class` drop-down menu to apply a metric class.
 
-For more information on the available predefined metric classes, see :ref:`k8s-predefined-metric-classes-list`.
+For more information on the available predefined metric classes, see :ref:`k8s-predefined-metric-classes`.
 
 .. _k8s-nav-analyzer-overview:
 

@@ -11,7 +11,7 @@ Available predefined metric classes
 
 In Splunk Infrastructure Monitoring, a metric class is a grouping of related metrics and KPIs. You can use predefined metric classes to customize your Kubernetes navigator table view to troubleshoot specific aspects of your deployment.
 
-For more information on using predefined metric classes, see :ref:`k8s-nav-metric-class-overview`.
+For more information on using predefined metric classes, see :ref:`k8s-nav-metric-class-ui`.
 
 List of predefined metric classes
 ===================================
