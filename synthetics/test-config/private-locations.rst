@@ -934,7 +934,7 @@ Start your container using the Podman run command and the following flags.
 Upgrade a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Pull the latest image
+#. Pull the latest image:
 
    .. code:: shell
     
