@@ -493,7 +493,7 @@ To upgrade the Docker image manually, follow these steps:
     
     docker stop <container_id_or_name>
 
-#. Remove the old container
+#. Remove the old container:
 
    .. code:: shell
     
