@@ -1,7 +1,7 @@
 .. _navigators-list-imm:
 
 *******************************************************
-Navigators available
+Available navigators
 *******************************************************
 
 .. meta::

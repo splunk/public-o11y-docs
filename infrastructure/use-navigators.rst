@@ -25,7 +25,7 @@ On the Infrastructure Monitoring landing page, each card represents a navigator,
 Monitor all instances in a navigator
 ---------------------------------------
 
-  .. note:: The following section applies to most navigators, except the Network Explorer and Kubernetes navigators. For more information, see :ref:`network-explorer-network-map` and :ref:`infrastructure-k8s-nav`.
+  .. note:: The following section describes components shared by all navigators. For components specific the Network Explorer and Kubernetes navigators, see :ref:`network-explorer-network-map` and :ref:`infrastructure-k8s-nav`.
 
 In most navigators, you have two options to monitor your instances: table view and heat map view.
 
@@ -65,7 +65,7 @@ For information on customizing the content and format of the navigator, includin
 
 For interactive walkthroughs of how to use navigators in Infrastructure Monitoring to troubleshoot your web server or observe your application and the underlying infrastructure, see :new-page:`Splunk Infrastructure Monitoring web server troubleshooting scenario <https://splunko11y.com/imt/webserver-troubleshooting.html>` and :new-page:`Splunk Infrastructure Monitoring application monitoring scenario <https://splunko11y.com/imt/application-monitoring.html>`.
 
-For a list of all the navigators available, see :ref:`navigators-list-imm`.
+For a list of all the available navigators, see :ref:`navigators-list-imm`.
 
 .. note::
 
@@ -105,9 +105,9 @@ The following example shows you how to navigate from the drilldown view of a sin
 
 #. Select :guilabel:`Navigation menu` then :guilabel:`Infrastructure`.
 #. Select :guilabel:`Hosts` under :guilabel:`My Data Center`.
-#. Click a square to select a host instance you want to drill down into. For instance, you want to look into the details of a host named ``ip-10-0-3-92.us-west-2.compute.internal``.
-#. Once you are in the drilldown view for ``ip-10-0-3-92.us-west-2.compute.internal``, you can navigate to Splunk Log Observer to see all logs for the same host by clicking :guilabel:`Logs for host ip-10-0-3-92.us-west-2.compute.internal` on the related resources navigation menu.
-#. If you click any log on the list, the related resources navigation menu shows up. To navigate back to the drilldown view for the same host instance, click :guilabel:`Host called ip-10-0-3-92.us-west-2.compute.internal` on the related resources navigation menu.
+#. Select a square to select a host instance you want to drill down into. For instance, you want to look into the details of a host named ``ip-10-0-3-92.us-west-2.compute.internal``.
+#. Once you are in the drilldown view for ``ip-10-0-3-92.us-west-2.compute.internal``, you can navigate to Splunk Log Observer to see all logs for the same host by selecting :guilabel:`Logs for host ip-10-0-3-92.us-west-2.compute.internal` on the related resources navigation menu.
+#. If you select any log on the list, the related resources navigation menu shows up. To navigate back to the drilldown view for the same host instance, click :guilabel:`Host called ip-10-0-3-92.us-west-2.compute.internal` on the related resources navigation menu.
 
 
 .. _dashboard-section:
@@ -226,37 +226,41 @@ While both outlier strategies highlight instances that are behaving differently 
 
 The Find Outliers feature also provides a population selector that lets you restrict the comparison population to only those instances that have similar characteristics (as defined by the Group By dimension). For example, you might not want to compare a server against others that are running different software. It is more relevant to determine outliers among servers providing the same service. Grouping instances by the service that they run and using that as your population basis ensures that instances are compared only with their peers to determine if they behave abnormally.
 
+View data links
+-----------------
+
+By default, Splunk Infrastructure Monitoring automatically displays :ref:`data links<data-link-def>` in the navigator table view and :guilabel:`Metadata` tab.
+
+To configure additional data links to appear in the :guilabel:`Metadata` tab, see:
+* :ref:`local-links`
+* :ref:`link-metadata-to-content`
+
 .. _navigator-sidebar-metadata:
 
-View metadata in the navigator sidebar
----------------------------------------------------
+View metadata
+----------------
 
-In table or heat map view, select a single instance to display the navigator sidebar. The :guilabel:`About this \<Entity_Type\>` panel displays the tags and metadata associated with the instance.
-
-View data links
-=================
-
-You can configure data links to appear in the navigator sidebar. For more information on data links and how to configure them, see :ref:`data-link-def` and :ref:`navigate-with-data-links`.
+In table or heat map view, select a single instance and then select the :guilabel:`Metadata` tab to display the tags and metadata associated with the instance.
 
 .. _navigator-sidebar:
 
-View dependencies in the navigator sidebar
-----------------------------------------------------
+View dependencies
+--------------------
 
-In the navigator sidebar, you can track the dependencies for:
+In table view, heat map view, or the single instance view, select the :guilabel:`Dependencies` tab to track the dependencies for:
 
 -  Kubernetes containers.
 -  Hosts (:guilabel:`My Data Center` hosts, virtual hosts, Amazon EC2 hosts, Azure Virtual Machines, and Google Cloud Platform hosts).
 -  Services running on Kubernetes containers or hosts.
 
-The following table describes the content displayed in the :guilabel:`Dependencies` section of the sidebar for different navigators:
+The following table describes the content displayed in the :guilabel:`Dependencies` tab for different navigators:
 
 .. list-table::
    :header-rows: 1
    :widths: 40, 60
 
    * - :strong:`Navigator`
-     - :strong:`What you see in the Dependencies section`
+     - :strong:`What you see in the Dependencies tab`
 
    * - Kubernetes navigators
      - The services and hosts that are running on the Kubernetes entity.
@@ -271,7 +275,7 @@ The following table describes the content displayed in the :guilabel:`Dependenci
 Best practice
 ============================
 
-To get the most out of the navigator sidebar, configure the services you want to track in the Splunk Distribution of OpenTelemetry Collector configuration file as ``service.name`` values under ``extraDimensions``. By configuring ``service.name`` values, you can see more details about your data, such as which individual services are running on specific host instances.
+To get the most out of the `Dependencies` tab, configure the services you want to track in the Splunk Distribution of OpenTelemetry Collector configuration file as ``service.name`` values under ``extraDimensions``. By configuring ``service.name`` values, you can see more details about your data, such as which individual services are running on specific host instances.
 
 Example
 +++++++++++
@@ -292,37 +296,6 @@ For example, the ``redis-cart`` service is included in this Splunk Distribution 
              service.name: redis-cart
 
 For more information on the Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-components`.
-
-Navigate to services using the navigator sidebar
-===================================================
-
-The following example shows you how to navigate to a Cassandra service from the Amazon EC2 navigator, assuming you have the Cassandra ``service.name`` configured.
-
-In this Amazon EC2 navigator, Cassandra and Kafka services are running on the Amazon EC2 instances. Each tile in the navigator sidebar represents a service type.
-
-.. image:: /_images/infrastructure/navigator-sidebar.png
-    :width: 70%
-    :alt: This image shows what the navigator sidebar looks like in a navigator.
-
-#. To see the full list of Cassandra services, hover over or select the Cassandra tile.
-
-    .. image:: /_images/infrastructure/cassandra-services.png
-        :width: 70%
-        :alt: This image shows the list of Cassandra services.
-
-#. To search for a specific service, type the name of the service in the search field.
-
-   .. note:: You can only search when there are configured services. If no individual services are configured, the search bar doesn't appear.
-
-   When you have a large number of running service types or services, the navigator sidebar might hide some of them and instead display the text :strong:`Show all services`. Use search to find a specific service without having to expand the entire list.
-
-   For example, type ``metadata`` to look for service names containing the keyword.
-
-    .. image:: /_images/infrastructure/service-search.png
-        :width: 70%
-        :alt: This image shows the search result for ``metadata`` services.
-
-#. Select a Cassandra service to navigate to the navigator or dashboard for that service. When both navigator and dashboard are available for a service, clicking that service opens the navigator.
 
 .. _view-alerts-in-navigators:
 
@@ -385,7 +358,7 @@ Follow these steps to remove an inactive navigator:
 List available navigators
 -------------------------------
 
-For a list of all the navigators available, see :ref:`navigators-list-imm`.
+For a list of all the available navigators, see :ref:`navigators-list-imm`.
 
 Customize navigators
 -------------------------------
