@@ -232,6 +232,7 @@ View data links
 By default, Splunk Infrastructure Monitoring automatically displays :ref:`data links<data-link-def>` in the navigator table view and :guilabel:`Metadata` tab.
 
 To configure additional data links to appear in the :guilabel:`Metadata` tab, see:
+
 * :ref:`local-links`
 * :ref:`link-metadata-to-content`
 
@@ -275,7 +276,7 @@ The following table describes the content displayed in the :guilabel:`Dependenci
 Best practice
 ============================
 
-To get the most out of the `Dependencies` tab, configure the services you want to track in the Splunk Distribution of OpenTelemetry Collector configuration file as ``service.name`` values under ``extraDimensions``. By configuring ``service.name`` values, you can see more details about your data, such as which individual services are running on specific host instances.
+To get the most out of the :guilabel:`Dependencies` tab, configure the services you want to track in the Splunk Distribution of OpenTelemetry Collector configuration file as ``service.name`` values under ``extraDimensions``. By configuring ``service.name`` values, you can see more details about your data, such as which individual services are running on specific host instances.
 
 Example
 +++++++++++

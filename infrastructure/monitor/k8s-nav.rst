@@ -102,6 +102,7 @@ Left navigation panel
 Use the left navigation panel in the table or heat map view to quickly switch between Kubernetes entity types, search for filters, and access predefined filters.
 
 To use the left navigation panel:
+
 * :guilabel:`Select entity type`: Use this drop-down menu to switch between Kubernetes entity types.
 * :guilabel:`Refine by`: Use this panel to search for filters or access a list of predefined filters. The list of predefined filters is searchable and organized by :guilabel:`Relationship` and :guilabel:`Attribute`.
 
@@ -113,6 +114,7 @@ Customize your navigator display with metric classes
 By default, the navigator table view displays a subset of metrics used to monitor the performance of your instances. You can customize the table view by using predefined metric classes, which are groupings of related metrics and KPIs useful for troubleshooting specific aspects of your deployment.
 
 To use a predefined metric class:
+
 #. From the Splunk Observability Cloud main menu, select :guilabel:`Infrastructure`, then :guilabel:`Kubernetes`.
 #. Select a Kubernetes navigator.
 #. In the table view, select the :guilabel:`Metric class` drop-down menu to apply a metric class.
@@ -121,7 +123,7 @@ For more information on the available predefined metric classes, see :ref:`k8s-p
 
 .. _k8s-nav-analyzer-overview:
 
-Troubleshoot Kubernetes performance with the analyzer
+Troubleshoot performance with the analyzer
 ======================================================
 
 .. note:: The analyzer is only available on the Kubernetes nodes, pods, and containers navigators.
@@ -166,8 +168,3 @@ You can also export and monitor data related to your Kubernetes clusters, as des
    * - :ref:`get-started-application`
      - :ref:`get-started-apm`
      - Collect metrics and spans from applications running in Kubernetes clusters.
-
-.. toctree::
-   :hidden:
-
-   predefined-metric-classes

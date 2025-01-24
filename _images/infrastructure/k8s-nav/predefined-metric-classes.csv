@@ -1,0 +1,49 @@
+Navigator,Metric class,Description
+Kubernetes clusters,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes clusters.
+Kubernetes nodes,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes nodes.
+Kubernetes nodes,Node CPU,A group of metrics and KPIs related to node CPU troubleshooting.
+Kubernetes nodes,Node memory,A group of metrics and KPIs related to node memory troubleshooting.
+Kubernetes nodes,Node file system,A group of metrics and KPIs related to node storage troubleshooting.
+Kubernetes nodes,Node network metrics,A group of metrics and KPIs related to node network troubleshooting.
+Kubernetes pods,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes pods.
+Kubernetes pods,Pod status,A group of metrics and KPIs related to pod status troubleshooting.
+Kubernetes pods,Pod CPU,A group of metrics and KPIs related to pod CPU troubleshooting. Note: Pod Limits & requests is the sum of individual container limits and requests in the pod. 
+Kubernetes pods,Pod memory,A group of metrics and KPIs related to pod memory troubleshooting. Note: Pod Limits & requests is the sum of individual container limits and requests in the pod.
+Kubernetes pods,Pod file system,A group of metrics and KPIs related to pod storage troubleshooting.
+Kubernetes containers,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes containers.
+Kubernetes containers,Container CPU,A group of metrics and KPIs related to container CPU troubleshooting.
+Kubernetes containers,Container memory,A group of metrics and KPIs related to container memory troubleshooting.
+Kubernetes containers,Container file system,A group of metrics and KPIs related to container storage troubleshooting.
+Kubernetes containers,Container network metrics ,A group of metrics and KPIs related to container network troubleshooting.
+Kubernetes workloads,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes workloads.
+Kubernetes workloads,Workload pods,A group of metrics and KPIs related to troubleshooting the pods of a workload.
+Kubernetes workloads,Workload churn,A group of metrics and KPIs related to workload churn troubleshooting.
+Kubernetes workloads,Workload scaling,A group of metrics and KPIs related to workload scaling troubleshooting.
+Kubernetes workloads,Workload attributes,A group of metrics and KPIs related to workload attributes.
+Kubernetes deployments,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes deployments.
+Kubernetes deployments,Deployment pods,A group of metrics and KPIs related to troubleshooting the pods of a deployment.
+Kubernetes deployments,Deployment churn,A group of metrics and KPIs related to deployment churn troubleshooting.
+Kubernetes deployments,Deployment scaling,A group of metrics and KPIs related to deployment scaling troubleshooting.
+Kubernetes deployments,Deployment attributes,A group of metrics and KPIs related to deployment attributes.
+Kubernetes ReplicaSets,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes ReplicaSets.
+Kubernetes ReplicaSets,ReplicaSet pods,A group of metrics and KPIs related to troubleshooting the pods of a ReplicaSet.
+Kubernetes ReplicaSets,ReplicaSet churn,A group of metrics and KPIs related to ReplicaSet churn troubleshooting.
+Kubernetes ReplicaSets,ReplicaSet scaling,A group of metrics and KPIs related to ReplicaSet scaling troubleshooting.
+Kubernetes ReplicaSets,ReplicaSet attributes,A group of metrics and KPIs related to ReplicaSet attributes.
+Kubernetes DaemonSets,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes DaemonSets.
+Kubernetes DaemonSets,DaemonSet nodes,A group of metrics and KPIs related to troubleshooting the pods of a DaemonSet.
+Kubernetes DaemonSets,DaemonSet churn,A group of metrics and KPIs related to DaemonSet churn troubleshooting.
+Kubernetes DaemonSets,DaemonSet attributes,A group of metrics and KPIs related to DaemonSet attributes.
+Kubernetes StatefulSets,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes StatefulSets.
+Kubernetes StatefulSets,StatefulSet pods,A group of metrics and KPIs related to troubleshooting the pods of a StatefulSet.
+Kubernetes StatefulSets,StatefulSet churn,A group of metrics and KPIs related to StatefulSet churn troubleshooting.
+Kubernetes StatefulSets,StatefulSet attributes,A group of metrics and KPIs related to StatefulSet attributes.
+Kubernetes namespaces,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes namespaces.
+Kubernetes namespaces,Namespace workloads,A group of metrics and KPIs related to troubleshooting the workloads of a namespace.
+Kubernetes namespaces,Namespace resources,A group of metrics and KPIs related to troubleshooting namespace resources.
+Kubernetes CronJobs,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes CronJobs.
+Kubernetes CronJobs,CronJob jobs,A group of metrics and KPIs related to troubleshooting the jobs of a CronJob.
+Kubernetes CronJobs,CronJob pods,A group of metrics and KPIs related to troubleshooting the pods of a CronJob.
+Kubernetes CronJobs,CronJob attributes,A group of metrics and KPIs related to CronJob attributes.
+Kubernetes jobs,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes jobs.
+Kubernetes jobs,Job attributes,A group of metrics and KPIs related to job attributes.
