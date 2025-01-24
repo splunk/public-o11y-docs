@@ -970,7 +970,7 @@ Uninstall a private runner
     
     podman ps -a
 
-#. Remove a stopped container by ID or name
+#. Remove a stopped container by ID or name:
 
    .. code:: shell
     
