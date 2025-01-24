@@ -47,7 +47,7 @@ In Splunk Observability Cloud, metadata (data about your data) includes :ref:`di
 
   * Spans
 
-For example, here is a global data link displaying for a host property on a dashboard. The global data link leads to an :guilabel:`EC2 Cost and Usage` dashboard in Splunk Observability Cloud, where the system automatically narrows the dashboard is automatically show data that's relevant to the :guilabel:`server4` host.
+For example, here is a global data link displaying for a host property on a dashboard. The global data link leads to an :guilabel:`EC2 Cost and Usage` dashboard in Splunk Observability Cloud, where the system automatically narrows the dashboard to automatically show data that's relevant to the :guilabel:`server4` host.
 
 .. image:: /_images/admin/gdl-ec2-cost-and-usage.png
   :width: 100%
