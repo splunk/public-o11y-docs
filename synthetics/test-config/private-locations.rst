@@ -964,7 +964,7 @@ Upgrade a private runner
 Uninstall a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. List all containers
+#. List all containers:
 
    .. code:: shell
     
