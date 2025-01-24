@@ -115,7 +115,7 @@ Text and inputs are redacted by default. You can optionally configure image reda
    :width: 70%
 
 
-To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting the ``maskTextClass``, or ``maskTextSelector`` to custom value. The custom value can be a regular expression.
+To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting ``maskTextClass`` or ``maskTextSelector`` to a custom value. The custom value can be a regular expression.
 
 Input redaction is handled separately. To disable all input redaction, set ``maskAllInputs: false``. To customize which inputs are redacted use the ``maskInputOptions`` option.
 
