@@ -326,6 +326,8 @@ To upgrade the Docker image manually, follow these steps:
 Automatic upgrades
 ###################################
 
+.. _watchtower-automation-1:
+
 You can automate the upgrade of the private location Docker images by using an automated upgrade solution such as :new-page:`Watchtower <https://github.com/v2tec/watchtower>`, a third party open-source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker images you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality.
 
 When Watchtower finds an updated image, it instructs your Docker host to pull the newest image from the repository, stop the container, and start it again. It also ensures that environment variables, network settings, and links between containers are intact. 
@@ -433,7 +435,7 @@ To upgrade the Docker image manually, follow these steps:
 Automatic upgrades
 ###################################
 
-You can automate the upgrade process by using your CI/CD pipelines or by using :new-page:`Watchtower <#watchtower-automation>`.
+You can automate the upgrade process by using your CI/CD pipelines or by using :ref:`Watchtower <watchtower-automation-1>`.
 
 .. _uninstall-a-private-runner-1:
 
@@ -514,7 +516,7 @@ Automatic upgrades
 ###################################
 
 You can automate the upgrade of the private location Docker images by using an automated upgrade solution such as
-`Watchtower <https://github.com/v2tec/watchtower>`__, a third party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker images you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality.
+`Watchtower <https://github.com/v2tec/watchtower>`, a third party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker images you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality.
 
 When Watchtower finds an updated image, it instructs your Docker host to pull the newest image from the repository, stop the container, and start it again. It also ensures that environment variables, network settings, and links between containers are intact.
 
@@ -1060,7 +1062,9 @@ Docker downloads the correct image based on the architecture of your machine.
 Troubleshoot a private runner
 --------------------------------------------------------------
 
-**Docker health check**
+Docker health check
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 The private location Docker image utilizes the Docker health check to communicate when its container has entered an unhealthy state. The container state is healthy if the private runner is able to authenticate with the API and has successfully fetched a synthetics test in the last 30 minutes. If the container state is unhealthy, try the following
 troubleshooting tips in this order: 
@@ -1069,7 +1073,9 @@ troubleshooting tips in this order:
 
 #. Restart the container.
 
-**Automatically restart unhealthy Docker containers**
+Automatically restart unhealthy Docker containers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 If you plan on running a private location for an extended period of time, it can be helpful to allow the container to automatically restart in the event that it becomes unhealthy.
 
