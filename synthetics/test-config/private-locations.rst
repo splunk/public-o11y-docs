@@ -694,7 +694,7 @@ Uninstall a private runner
 
 #. On the :guilabel:`Task definition name` page, select the revisions to delete, and then select :guilabel:`Actions` and :guilabel:`Deregister`.
 
-#. Verify the information in the `Deregister` window, and then select `Deregister` to finish.
+#. Verify the information in the :guilabel:`Deregister` window, and then select :guilabel:`Deregister` to finish.
 
 
 Private runners deployed with Helm
