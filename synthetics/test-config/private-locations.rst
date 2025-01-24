@@ -1013,7 +1013,7 @@ Upgrade a private runner
     
     podman stop <container_id_or_name>
 
-#. Remove the old container
+#. Remove the old container:
 
    .. code:: shell
     
