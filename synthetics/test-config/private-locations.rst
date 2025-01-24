@@ -976,7 +976,7 @@ Uninstall a private runner
     
     podman rm -f <container_id_or_name>
 
-3. Force remove a running container
+3. Force remove a running container:
 
    .. code:: shell
     
