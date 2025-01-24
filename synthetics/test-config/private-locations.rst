@@ -569,45 +569,45 @@ Private runners on AWS ECS
 Install a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#.  In your AWS ECS console, go to :guilabel:`Task definitions`.
+#. In your AWS ECS console, go to :guilabel:`Task definitions`.
 
-#.  Select :guilabel:`Create new task definition with JSON` from the yellow dropdown menu.
+#. Select :guilabel:`Create new task definition with JSON` from the yellow dropdown menu.
 
-#.  Copy the following JSON and paste it into the console:
+#. Copy the following JSON and paste it into the console:
 
-    .. code:: json
+   .. code:: json
 
-      {
-       "requiresCompatibilities": [
-       "EC2"
-       ],
-       "containerDefinitions": [
-           {
-               "name": "splunk-synthetics-runner",
-               "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
-               "memory": 7680,
-               "cpu": 2048,
-               "essential": true,
-               "environment": [
-                 {
-                     "name": "RUNNER_TOKEN",
-                     "value": "YOUR_TOKEN_HERE"
-                 }
-               ],
-               "linuxParameters": {
-                     "capabilities": {
-                       "add": ["NET_ADMIN"]
-                     }
-               }
-           }
-       ],
-       "volumes": [],
-       "networkMode": "none",
-       "memory": "7680",
-       "cpu": "2048",
-       "placementConstraints": [],
-       "family": "splunk-synthetics"
-     }
+     {
+      "requiresCompatibilities": [
+      "EC2"
+      ],
+      "containerDefinitions": [
+          {
+              "name": "splunk-synthetics-runner",
+              "image": "quay.io/signalfx/splunk-synthetics-runner:latest",
+              "memory": 7680,
+              "cpu": 2048,
+              "essential": true,
+              "environment": [
+                {
+                    "name": "RUNNER_TOKEN",
+                    "value": "YOUR_TOKEN_HERE"
+                }
+              ],
+              "linuxParameters": {
+                    "capabilities": {
+                      "add": ["NET_ADMIN"]
+                    }
+              }
+          }
+      ],
+      "volumes": [],
+      "networkMode": "none",
+      "memory": "7680",
+      "cpu": "2048",
+      "placementConstraints": [],
+      "family": "splunk-synthetics"
+    }
 
 #. Select :guilabel:`Save` to close the JSON input panel.
 
@@ -845,7 +845,7 @@ Install a private runner
     
     oc create secret generic runner-token-secret --from-literal=RUNNER_TOKEN=YOUR_TOKEN_HERE
 
-#.  Create the deployment YAML:
+#. Create the deployment YAML:
 
    .. code:: yaml
     
@@ -886,7 +886,7 @@ Install a private runner
                   cpu: "2"
                   memory: 8Gi
 
-#.  Apply the deployment YAML:
+#. Apply the deployment YAML:
 
     .. code:: shell
       
