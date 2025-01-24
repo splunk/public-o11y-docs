@@ -516,7 +516,7 @@ You can automate the upgrade of the private location Docker images by using an a
 
 When Watchtower finds an updated image, it instructs your Docker host to pull the newest image from the repository, stop the container, and start it again. It also ensures that environment variables, network settings, and links between containers are intact.
 
-On your Docker host, launch the Watchtower container from command line:
+On your Docker host, launch the Watchtower container from the command line:
 
 .. code:: shell
 
