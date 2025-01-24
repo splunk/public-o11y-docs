@@ -342,7 +342,7 @@ Using the ``label-enable`` flag ensures that only containers with the correct la
 There are additional options available in the :new-page:`Watchtower documentation <https://github.com/v2tec/watchtower#options>` that you can explore, including auto-cleanup of old images to ensure that your Docker host does not hold onto outdated images.
 
 .. note::
-  In order for Watchtower to issue commands to the Docker host, it requires the ``docker.sock`` volume or TCP connection, which provides Watchtower with full administrative access to your Docker host. If you are unable to provide Watchtower with this level of access, you can explore other options for automating updates.
+  For Watchtower to issue commands to the Docker host, it requires the ``docker.sock`` volume or TCP connection, which provides Watchtower with full administrative access to your Docker host. If you are unable to provide Watchtower with this level of access, you can explore other options for automating updates.
 
 Uninstall a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
