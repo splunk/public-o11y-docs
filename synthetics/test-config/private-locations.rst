@@ -1001,7 +1001,7 @@ Install a private runner
 Upgrade a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Pull the latest image
+#. Pull the latest image:
 
    .. code:: shell
     
