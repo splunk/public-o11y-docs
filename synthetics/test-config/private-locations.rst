@@ -458,7 +458,7 @@ Private runners on Docker for Mac or Windows
 Install a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Install Docker. For steps, see the docs to install Docker Community Edition for `Mac <https://docs.docker.com/desktop/install/mac-install/>` or for `Windows <https://docs.docker.com/desktop/install/windows-install/>`.
+#. Install Docker. For steps, see the docs to install Docker Community Edition for :new-page:`Mac <https://docs.docker.com/desktop/install/mac-install/>` or for :new-page:`Windows <https://docs.docker.com/desktop/install/windows-install/>`.
 
 #. Start your Docker container with the following flags:
 
