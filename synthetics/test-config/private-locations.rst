@@ -189,7 +189,9 @@ The container must have the following permissions at a minimum. The private runn
 
 -  Read and write access to ``/tmp`` (the system grants this permission to all users by default)
 
-Don't set the container's root filesystem to read-only (the ``readOnlyRootFilesystem`` flag), because this prevents the container from starting up.
+.. note::
+  Don't set the container's root filesystem to read-only (the ``readOnlyRootFilesystem`` flag), because this prevents the container from starting up.
+
 
 Optional permissions for custom CA certificates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
