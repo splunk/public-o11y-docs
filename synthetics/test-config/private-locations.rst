@@ -408,9 +408,9 @@ Manual upgrades
 
 To upgrade the Docker image manually, follow these steps:
 
-#. Navigate to the directory containing your docker-compose.yml
+#. Navigate to the directory containing your ``docker-compose.yml``
 
-  .. code:: shell
+   .. code:: shell
     
     cd /path/to/your/docker-compose-file
 
@@ -882,13 +882,11 @@ Install a private runner
                   cpu: "2"
                   memory: 8Gi
 
-
-
 #.  Apply the deployment YAML:
 
-   .. code:: shell
-    
-    oc apply -f deployment.yaml
+    .. code:: shell
+      
+      oc apply -f deployment.yaml
 
 .. _upgrade-a-private-runner-6:
 
@@ -1095,7 +1093,7 @@ Follow these steps to limit logging in Docker:
 #. In the file, add: 
 
    .. code:: json
-    
+
     {
       "log-driver": "local",
       "log-opts": {
