@@ -207,7 +207,7 @@ To verify that the container allows privilege escalation, see if it runs the ``s
 Optional permissions for network shaping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the tests you send to the private runner need to simulate different network throughputs, the Docker container must support privilege escalation along with the NET_ADMIN capability (for network shaping).
+If the tests you send to the private runner need to simulate different network throughputs, the Docker container must support privilege escalation along with the ``NET_ADMIN`` capability (for network shaping).
 
 .. code:: yaml
 
