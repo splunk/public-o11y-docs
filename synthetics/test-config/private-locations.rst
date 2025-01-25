@@ -354,7 +354,7 @@ Uninstall a private runner
     
     docker rm <container_id_or_name>
 
-#. Force-remove a running container
+#. Force-remove a running container:
 
    .. code:: shell
     
