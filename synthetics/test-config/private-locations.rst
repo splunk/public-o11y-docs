@@ -534,7 +534,7 @@ Uninstall a private runner
 
 To upgrade the Docker image manually, follow these steps:
 
-#. List all containers
+#. List all containers:
 
    .. code:: shell
     
