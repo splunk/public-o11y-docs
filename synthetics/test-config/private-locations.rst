@@ -415,7 +415,7 @@ To upgrade the Docker image manually, follow these steps:
     
     docker-compose pull
 
-#. Recreate containers with the updated images
+#. Recreate containers with the updated images:
 
    .. code:: shell
     
