@@ -307,7 +307,7 @@ To upgrade the Docker image manually, follow these steps:
     
     docker rm <container_id_or_name>
 
-#. Start a new container with the updated image
+#. Start a new container with the updated image:
 
    .. code:: shell
     
