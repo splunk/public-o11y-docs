@@ -136,23 +136,14 @@ Supported platforms
 --------------------------------------------------------------
 
 -  Docker
-
 -  Docker Compose
-
 -  AWS ECS
-
 -  Docker for Mac or Windows
-
--  Kubernetes using Helm
-
+-  Helm
 -  Kubernetes
-
 -  OpenShift
-
 -  Podman
-
 -  Podman for MacOS or Windows
-
 -  ARM64 machines on AWS and GCP
 
 
