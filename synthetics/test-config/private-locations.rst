@@ -295,7 +295,7 @@ To upgrade the Docker image manually, follow these steps:
     
     docker pull http://quay.io/signalfx/splunk-synthetics-runner:latest
 
-#. Stop the running container
+#. Stop the running container:
 
    .. code:: shell
     
