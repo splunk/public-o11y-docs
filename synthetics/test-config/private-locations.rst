@@ -540,7 +540,7 @@ To upgrade the Docker image manually, follow these steps:
     
     docker ps -a
 
-#. Remove a stopped container by ID or name
+#. Remove a stopped container by ID or name:
 
    .. code:: shell
     
