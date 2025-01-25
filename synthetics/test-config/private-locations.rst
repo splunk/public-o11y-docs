@@ -361,7 +361,7 @@ Uninstall a private runner
 
    .. code:: shell
     
-    docker rm - <container_id_or_name>
+    docker rm <container_id_or_name>
 
 #. Force-remove a running container
 
@@ -553,7 +553,7 @@ To upgrade the Docker image manually, follow these steps:
 
    .. code:: shell
     
-    docker rm -f <container_id_or_name>
+    docker rm <container_id_or_name>
 
 #. Force-remove a running container
 
