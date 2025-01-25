@@ -342,7 +342,7 @@ There are additional options available in the :new-page:`Watchtower documentatio
 Uninstall a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. List all containers
+#. List all containers:
 
    .. code:: shell
     
