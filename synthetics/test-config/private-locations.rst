@@ -439,7 +439,7 @@ Uninstall a private runner
     
     cd /path/to/your/docker-compose-directory
 
-#. Run the docker-compose down command
+#. Run the docker-compose down command:
 
    .. code:: shell
     
