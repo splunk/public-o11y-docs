@@ -35,7 +35,7 @@ Set up a new private location
 Follow these steps to set up a new private location:
 
 1. In Splunk Synthetic Monitoring, select the settings gear icon, then :guilabel:`Private locations`.  
-2. Select :guilabel:`+ Add` and add a name. 
+2. Select :guilabel:`Create private location` and add a name. 
 3. Follow the steps in the guided setup to set up one or more private runners for that private location. 
 4. Save your private location. 
 
