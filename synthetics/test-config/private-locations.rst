@@ -289,7 +289,7 @@ Manual upgrades
 
 To upgrade the Docker image manually, follow these steps:
 
-#. Pull the latest image
+#. Pull the latest image:
 
    .. code:: shell
     
