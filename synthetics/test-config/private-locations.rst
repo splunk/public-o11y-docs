@@ -361,7 +361,7 @@ Uninstall a private runner
 
    .. code:: shell
     
-    docker rm -f <container_id_or_name>
+    docker rm - <container_id_or_name>
 
 #. Force-remove a running container
 
@@ -976,7 +976,7 @@ Uninstall a private runner
 
    .. code:: shell
     
-    podman rm -f <container_id_or_name>
+    podman rm <container_id_or_name>
 
 3. Force remove a running container:
 
@@ -1042,7 +1042,7 @@ Uninstall a private runner
 
    .. code:: shell
     
-    podman rm -f <container_id_or_name>
+    podman rm <container_id_or_name>
 
 #. Force remove a running container:
 
