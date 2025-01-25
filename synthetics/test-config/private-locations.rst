@@ -433,7 +433,7 @@ You can automate the upgrade process by using your CI/CD pipelines or by using :
 Uninstall a private runner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Navigate to your project directory
+#. Navigate to your project directory:
 
    .. code:: shell
     
