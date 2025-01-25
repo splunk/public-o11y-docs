@@ -409,7 +409,7 @@ To upgrade the Docker image manually, follow these steps:
     
     cd /path/to/your/docker-compose-file
 
-#. Pull the latest images
+#. Pull the latest images:
 
    .. code:: shell
     
