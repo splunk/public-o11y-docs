@@ -159,7 +159,7 @@ Examples:
 Image redaction 
 ----------------
 
-To redact images, set ``inlineImages: false`` in  the ``splunksessionrecorder.init`` function. 
+To redact images, set ``inlineImages: false`` in  the ``SplunkSessionRecorder.init`` function. 
 
 For more information on how to customize your instrumentation, see the Privacy section of the :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#privacy>` on GitHub. 
 
