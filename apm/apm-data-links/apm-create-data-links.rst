@@ -13,7 +13,6 @@ You can also use global data links to dynamically transfer contextual informatio
 
 For information about how to access global data links, see :ref:`apm-use-data-links`.
 
-
 Prerequisite
 ================
 
@@ -138,6 +137,8 @@ Link APM properties to Splunk AppDynamics tiers
 
 .. note::
     You can only create a global data link to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
+
+This section describes how to create global data links to Splunk AppDynamics tiers using the user interface. To programmatically create global data links with Terraform, see :ref:`apm-create-data-links-terraform`.
 
 #. In the Splunk Observability Cloud main menu, select :guilabel:`Settings` then :guilabel:`Global Data Links`.
 #. Select :guilabel:`New link`.
