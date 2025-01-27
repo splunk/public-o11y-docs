@@ -96,9 +96,9 @@ The following screenshot shows the muting rule dialog box:
 
 To create a new muting rule, follow these steps:
 
-#. Use :guilabel:`Add property` to add or modify one or more properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one property, the muting rule interprets the properties using the AND logical operator.
-#. Include a :guilabel:`Reason` for the muting rule. The text you enter in this field is displayed when you hover over a rule in the :guilabel:`Muting Rules` tab, and can help others understand why alerts are being muted.
-#. Specify the :guilabel:`Schedule` during which notifications should be muted (muting period) using the predefined periods or by creating a custom period. You can also mute indefinitely.
+#. Include a :guilabel:`Description` for the muting rule. The text you enter in this field is displayed when you hover over a rule in the :guilabel:`Muting Rules` tab, and can help others understand why alerts are being muted.
+#. Use :guilabel:`Select detectors` and :guilabel:`Select properties` to add one or more detectors and properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one detector or property, the muting rule interprets the detectors and properties using the AND logical operator.
+#. Specify the :guilabel:`Muting schedule` during which notifications are muted (muting period) using the predefined periods or by creating a custom period. You can also mute indefinitely.
 #. (Optional) If the rule follows a schedule, you can set a :guilabel:`Recurrence` period for the muting rule. When scheduling a muting rule, the rule repeats after a set number of days, starting with the start time of the original rule. The daily and weekly options set that number to ``1`` and ``7`` respectively. The :menuselection:`Custom` option lets you set the number of days or set a number of weeks.
 #. Select whether you want to clear any existing alerts that match the conditions you have set. If you're muting certain alerts to address a known problem, you might want to clear existing alerts so you are starting from a clean slate. Clearing these alerts also notifies downstream systems, such as Splunk On-Call, OpsGenie, and PagerDuty.
 #. Select whether you want to receive notifications for alerts that are still active when the muting period ends.
