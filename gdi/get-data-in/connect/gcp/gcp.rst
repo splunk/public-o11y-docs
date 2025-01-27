@@ -10,7 +10,7 @@ Connect to Google Cloud Platform
 .. toctree::
    :hidden:
 
-   GCP prerequisites <gcp-prereqs>
+   Authentication, permission and regions <gcp-prereqs>
    Supported GCP services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-gcp.html>
    Connect to GCP <gcp-connect> 
    GCP metrics and metadata <gcp-metrics>

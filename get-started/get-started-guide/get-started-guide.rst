@@ -27,9 +27,9 @@ The journey for getting started with Splunk Observability Cloud has 3 phases: on
 
 .. note:: This guide is for Splunk Observability Cloud users with the admin role. 
   
-.. image:: /_images/get-started/onboarding-guide-2point0-flowonly.svg
+.. image:: /_images/get-started/o11y_onboardingGuideFlow_full-flow.svg
    :width: 100%
-   :alt: .
+   :alt: Flow showing the 3 phases of the get started journey: onboarding, initial rollout, and scaled rollout.
 
 .. list-table:: 
    :header-rows: 1
@@ -79,7 +79,7 @@ The journey for getting started with Splunk Observability Cloud has 3 phases: on
        See :ref:`Phase 1 optional and advanced configurations <phase1-advanced-config>`.
 
      - * :ref:`advanced-config-3rd-party`
-       * :ref:`phase3-network-exp`
+       * :ref:`phase2-network-exp`
        * :ref:`phase2-profiling`
        * :ref:`phase2-related-content`
 

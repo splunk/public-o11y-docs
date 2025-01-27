@@ -1,21 +1,39 @@
 .. _tshoot-logs:
 
 ****************************************************************
-Troubleshoot Collector logs
+Troubleshoot log collection
 ****************************************************************
 
 .. meta::
-      :description: Describes known issues when collecting logs with the Splunk Distribution of OpenTelemetry Collector.
+      :description: Describes known issues when collecting logs with the Splunk Distribution of the OpenTelemetry Collector.
 
+This document describes common issues related to log collection with the Collector.
 
-.. note:: To activate the Collector's debug logging, see the :new-page:`OpenTelemetry project documentation in GitHub <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#logs>`.
+To troubleshoot the health and performance of the Collector see the :new-page:`OpenTelemetry Project troublehooting docs <https://opentelemetry.io/docs/collector/troubleshooting>`. It includes information about troubleshooting tools and debugging.
 
-Here are some common issues related to log collection on the Collector.
+For more information on log collection see:
 
-Source isn't generating logs
+.. list-table::
+    :width: 100%
+    :widths: 25 75
+    :header-rows: 1
+
+    * - Platform
+      - Docs
+
+    * - Kubernetes
+      - :ref:`kubernetes-config-logs`
+
+    * - Linux
+      - :ref:`linux-config-logs`
+
+    * - Windows
+      - :ref:`windows-config-logs`
+  
+My source isn't generating logs
 =========================================
 
-If using Linux, run the following commands to check if the source is generating Collector logs:
+If using Linux, run the following commands to check if the source is generating logs:
 
 .. code-block:: bash
 
@@ -23,7 +41,7 @@ If using Linux, run the following commands to check if the source is generating 
   journalctl -u my-service.service -f
 
 
-If using Windows, run the following command to check if the source is generating Collector logs:
+If using Windows, run the following command to check if the source is generating logs:
 
 .. code-block:: shell
 
@@ -44,11 +62,11 @@ Do the following to check the Fluentd configuration:
 
 While every attempt is made to properly configure permissions, it is possible that td-agent does not have the permission required to collect logs. Debug logging should indicate this issue.
 
-It is possible that the ``<parser>`` section configuration does not match the log events.
+It's possible that the ``<parser>`` section configuration does not match the log events.
 
 If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new socket", Fluentd is working as expected. You need to activate debug logging to see this message.
 
-Collector isn't configured properly
+The Collector isn't configured properly
 =========================================
 
 .. note:: Fluentd is part of the Splunk Distribution of OpenTelemetry Collector, but deactivated by default for Linux and Windows. To activate it, use the ``--with-fluentd`` option when installing the Collector for Linux, or the ``with_fluentd = 1`` option when installing the Collector for Windows.
@@ -70,9 +88,7 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
   echo "2021-03-17 02:14:44 +0000 [debug]: test" >>/var/log/syslog.log
   echo "2021-03-17 02:14:44 +0000 [debug]: test" | systemd-cat
 
-.. note::
-
-  Properly structured syslog is required for Fluentd to properly pick up the log line.
+.. caution:: Fluentd requires properly structured syslog to pick up the log line.
 
 .. _unwanted_profiling_logs:
 
@@ -90,8 +106,7 @@ Depending on its configuration, the Splunk Distribution of the OpenTelemetry Col
 
 To turn off logs colletion, see :ref:`exclude-log-data` for more information.
 
-
-Send logs from the Collector to Splunk Cloud Platform or Enterprise
+Send logs to Splunk Cloud Platform or Enterprise using the Collector
 ==================================================================================
 
 To send logs from the Collector to Splunk Cloud Platform or Splunk Enterprise, see :ref:`send_logs_to_splunk`.

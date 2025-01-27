@@ -179,7 +179,7 @@ If the chart is deployed successfully, the output displays a message informing t
 Use the Kubernetes Operator in OpenTelemetry
 ============================================================================================
 
-Using the Splunk Helm chart, you can install the Splunk Collector along with an upstream OpenTelemetry Kubernetes Operator for Auto Instrumentation. For more information, see :ref:`discovery-kubernetes`.
+Using the Splunk Helm chart, you can install the Splunk Collector along with an upstream OpenTelemetry Kubernetes Operator for zero-code instrumentation. For more information, see :ref:`discovery-kubernetes`.
 
 This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Operator project. See the :new-page:`OpenTelemetry Operator documentation <https://github.com/open-telemetry/opentelemetry-operator>` in GitHub for more information.
 

@@ -17,6 +17,7 @@ Metrics in Splunk Observability Cloud
   Histogram metrics <histograms>
   Get histogram data in <histograms-gdi>
   Metadata: Dimensions, properties, tags, attributes <metrics-dimensions-mts>
+  metrics-usage-analytics
   Naming conventions <metric-names>
   Events <view-data-events>
   

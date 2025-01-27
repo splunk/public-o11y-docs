@@ -9,6 +9,21 @@ Instrument your Java application for Splunk Observability Cloud
 
 The Java agent from the Splunk Distribution of OpenTelemetry Java can automatically instrument your Java application by injecting instrumentation to Java classes. To get started, use the guided setup or follow the instructions manually.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="zero-code-info.rst"></div>
+
+.. include:: /_includes/zero-code-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="zero-code-info.rst"></div>
+
+
+
+
 Generate customized instructions using the guided setup
 ====================================================================
 
@@ -258,12 +273,16 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
    .. code-tab:: bash Linux
 
       export SPLUNK_ACCESS_TOKEN=<access_token>
-      export SPLUNK_REALM=<realm>
+      export OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=http/protobuf
+      export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace/otlp
+      export OTEL_LOGS_EXPORTER=none
 
    .. code-tab:: shell Windows PowerShell
 
       $env:SPLUNK_ACCESS_TOKEN=<access_token>
-      $env:SPLUNK_REALM=<realm>
+      $env:OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=http/protobuf
+      $env:OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace/otlp
+      $env:OTEL_LOGS_EXPORTER=none
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
@@ -276,7 +295,20 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 Set the source host 
 -----------------------------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+
 
 
 .. _instrument_aws_lambda_functions:

@@ -45,7 +45,7 @@ To activate the logging exporter, add it to any pipeline you want to diagnose. F
          - memory_limiter
          - batch
          - resourcedetection
-         exporters: [sapm, signalfx, logging]
+         exporters: [otlphttp, signalfx, logging]
        metrics:
          receivers: [hostmetrics, otlp, signalfx]
          processors: [memory_limiter, batch, resourcedetection]
@@ -110,4 +110,17 @@ The following table shows the configuration options for the logging exporter:
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

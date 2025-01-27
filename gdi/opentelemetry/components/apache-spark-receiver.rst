@@ -67,7 +67,15 @@ The following settings are optional:
   
   * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
 
-* .. include:: /_includes/gdi/collector-settings-initialdelay.rst
+* .. raw:: html 
+
+     <div class="include-start" id="gdi/collector-settings-initialdelay.rst"></div>
+
+  .. include:: /_includes/gdi/collector-settings-initialdelay.rst
+
+  .. raw:: html 
+
+     <div class="include-stop" id="gdi/collector-settings-initialdelay.rst"></div>
 
 * ``endpoint``. ``http://localhost:4040`` by default. Apache Spark endpoint to connect to in the form of ``[http][://]{host}[:{port}]``.
 
@@ -89,9 +97,35 @@ The following metrics, resource attributes, and attributes are available.
 
   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/apachesparkreceiver.yaml"></div>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="activate-deactivate-native-metrics.rst"></div>
+
 .. include:: /_includes/activate-deactivate-native-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="activate-deactivate-native-metrics.rst"></div>
+
+
+
 
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

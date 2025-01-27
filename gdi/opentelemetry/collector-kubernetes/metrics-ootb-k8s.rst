@@ -182,6 +182,36 @@ Pod level metrics and dimensions
     - Attributes
     - Exported?
 
+  * - ``k8s.cronjob.active_jobs``
+    - Active cronjob jobs    
+    -   
+    - Yes  
+
+  * - ``k8s.job.active_pods``
+    - Active pod jobs    
+    -   
+    - Yes  
+
+  * - ``k8s.job.desired_successful_pods``
+    - Desired number of successful pods   
+    -   
+    - Yes  
+
+  * - ``k8s.job.failed_pods``
+    - Number of failed pods    
+    -   
+    - Yes  
+
+  * - ``k8s.job.max_parallel_pods``
+    - Maximum number of parallel pods   
+    -   
+    - Yes  
+
+  * - ``k8s.job.successful_pods``
+    - Succesful pod jobs   
+    -   
+    - Yes 
+
   * - ``k8s.pod.cpu.time``
     - Pod CPU time
     - 
@@ -255,6 +285,26 @@ Pod level metrics and dimensions
     - Information on the pod status
     - 
     - Yes
+
+  * - ``k8s.statefulset.desired_pods``
+    - Desired number of StatefulSets in the pod    
+    -   
+    - Yes  
+
+  * - ``k8s.statefulset.current_pods``
+    - Current number of StatefulSets in the pod        
+    -   
+    - Yes  
+
+  * - ``k8s.statefulset.ready_pods``
+    - Number of ready StatefulSets in the pod        
+    -   
+    - Yes  
+
+  * - ``k8s.statefulset.updated_pods``
+    - Number of updated StatefulSets in the pod      
+    -   
+    - Yes  
 
 Node level metrics and dimensions
 ============================================================================
@@ -604,31 +654,16 @@ Other available metrics include:
     - Yes
 
   * - ``k8s.hpa.max_replicas``
-    - No
+    - Yes
 
   * - ``k8s.hpa.min_replicas``
-    - No
+    - Yes
 
   * - ``k8s.hpa.current_replicas``
-    - No
+    - Yes
 
   * - ``k8s.hpa.desired_replicas``
-    - No
-
-  * - ``k8s.job.active_pods``
-    - No
-
-  * - ``k8s.job.desired_successful_pods``
-    - No
-
-  * - ``k8s.job.failed_pods``
-    - No
-
-  * - ``k8s.job.max_parallel_pods``
-    - No
-
-  * - ``k8s.job.successful_pods``
-    - No
+    - Yes
 
   * - ``k8s.namespace.phase``
     - Yes
@@ -650,18 +685,6 @@ Other available metrics include:
 
   * - ``k8s.resource_quota.used``
     - Yes
-
-  * - ``k8s.statefulset.desired_pods``
-    - No
-
-  * - ``k8s.statefulset.ready_pods``
-    - No
-
-  * - ``k8s.statefulset.current_pods``
-    - No
-
-  * - ``k8s.statefulset.updated_pods``
-    - No
 
   * - ``openshift.clusterquota.limit``
     - Yes

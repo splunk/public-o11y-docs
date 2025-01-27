@@ -86,6 +86,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 2. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
+.. _existing-setup-unified-identity:
 
 Set up Unified Identity for existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
@@ -104,7 +105,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
     a. To pair with command-line interface, enter the following Admin Config Services (ACS) command:
 
-      .. code-block:: bash
+       .. code-block:: bash
     
               acs observability pair --o11y-access-token "<enter-o11y-access-token>"
 
@@ -122,38 +123,33 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
        .. code-block:: bash
 
-               curl --location 
-               'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing' \
-               --header 'Content-Type: application/json' \
-               --header 'Authorization: Bearer <enter-splunk-admin-api-token>' \
-               --header 'o11y-access-token': '<enter-o11y-api-token>'
+              curl -X POST 'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing' \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
+              -H "o11y-access-token: <enter-o11y-api-token>" 
 
+       Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
 
-   Whether you used the command-line interface or API endpoints, the pairing command returns a pairing id:
+       .. code-block:: bash
 
-   .. code-block:: bash
-
-          "id": "<pairing-id>"
+              "id": "<pairing-id>"
 
 4. You can use the pairing id to get the current status of the pairing. 
 
-   a. To get the status using command-line interface, run the following ACS command:
+   a. To get the status using command-line interface, run the following ACS command then replace the pairing id and the access token with your own values:
 
       .. code-block:: bash
 
               acs observability pairing-status-by-id --pairing-id "<enter-pairing-id>" --o11y-access-token "<enter-o11y-access-token>"
-
-      Replace the pairing id and the access token with your own values. 
     
     b. To get the status using API endpoints, run the following curl command with the data you obtained in step 3b:
 
       .. code-block:: bash
     
-              curl --location --request GET 
-              'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
-              --header 'Content-Type: application/json' \
-              --header 'Authorization: Bearer <enter-splunk-admin-api-token>'
-              --header 'o11y-access-token': '<enter-o11y-api-token>'
+              curl -X GET 'https://admin.splunk.com/<enter-stack-name>/adminconfig/v2/observability/sso-pairing/<enter-pairing-id>' \
+              -H "Content-Type: application/json" \
+              -H "Authorization: Bearer <enter-splunk-admin-api-token>" \
+              -H "o11y-access-token: <enter-o11y-api-token>"
 
 5. The system returns a status message showing whether or not the pairing was a success. Statuses are SUCCESS, FAILED, or IN_PROGRESS. 
 
@@ -163,7 +159,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
               "status": "SUCCESS"
 
 
-Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Managemen > Available integrations` in Splunk Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
+Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Management > Available integrations` in Splunk Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
 
 
 .. _unified-id-user-provisioning:
@@ -171,8 +167,9 @@ Users will receive an email telling them to authenticate to Splunk Observability
 User provisioning
 ==========================================================================================
 
-To benefit from Unified Identity, all users must have a Splunk Cloud Platform user with the ``o11y_access`` role.
+To benefit from Unified Identity, all users must have a Splunk Cloud Platform user with the ``o11y_access`` role. 
 
+If your organization uses Okta for SSO (Single Sign On), the ``o11y_access`` role is mapped to the Okta group. The Okta admin must add the ``o11y_access`` role to the Okta group to complete the authorization process. If the Okta admin is not available, contact Splunk Support to enable local authentication.
 
 .. _existing-scp-users:
 
@@ -274,6 +271,8 @@ Point-and-click log analysis
 ------------------------------------------------------------------------------------------
 
 One important advantage of the integration is that users can now query their Splunk Cloud Platform logs in Log Observer's no-code UI. Users can create advanced queries without knowing SPL with Log Observer's filters and aggregations. See :ref:`logs-queries` for more information.
+
+When you use Log Observer Connect, your logs remain in  your Splunk Cloud Platform instance and are accessible only to Log Observer Connect. Log Observer Connect does not store or index your logs data.
 
 
 Related Content

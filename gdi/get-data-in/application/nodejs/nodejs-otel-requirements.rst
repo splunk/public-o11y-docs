@@ -1,4 +1,4 @@
-.. _nodejs-otel-requirements:
+.. _nodejs-otel-requirements-3x:
 
 *************************************************************
 Splunk OTel JS compatibility and requirements 
@@ -11,12 +11,25 @@ Meet these requirements to instrument Node.js applications for Splunk Observabil
 
 .. note:: For front-end applications built using JavaScript libraries like React, use Splunk Real User Monitoring (RUM) for Browser. See :ref:`browser-rum-gdi`.
 
-.. _nodes-requirements:
+.. _nodes-requirements-3x:
 
 Ensure you have supported Node.js and library versions
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/nodejs.rst"></div>
+
 .. include:: /_includes/requirements/nodejs.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/nodejs.rst"></div>
+
+
+
 
 Dependencies
 ---------------
@@ -25,7 +38,7 @@ Dependencies
 
     <div class="instrumentation" section="dependencies" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"name": "Dependency", "source_href": "Link to source", "version": "Version", "stability": "Stability"}'></div>
 
-.. _supported-nodejs-otel-libraries:
+.. _supported-nodejs-otel-libraries-3x:
 
 Supported libraries
 =================================================
@@ -39,7 +52,7 @@ The Splunk Distribution of OpenTelemetry JS instruments the following libraries 
 For a complete list, see :new-page:`the plugins folder <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/plugins/node>` in the OpenTelemetry upstream repository on GitHub. To use any additional instrumentation, install it using npm before running your application.
 
 
-.. _nodejs-otel-connector-requirement:
+.. _nodejs-otel-connector-requirement-3x:
 
 Install and configure the Splunk Distribution of OpenTelemetry Collector
 ======================================================================================================

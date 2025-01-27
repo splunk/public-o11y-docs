@@ -26,9 +26,6 @@ A
    automatic discovery
       Automatic discovery is a feature of the Splunk Distribution of the OpenTelemetry Collector that identifies the services, such as third-party databases and web servers, running in your environment and sends telemetry data from them to Splunk Application Performance Monitoring (APM) and Infrastructure Monitoring. The Collector configures service-specific receivers that collect data from an endpoint exposed on each service. For more information, see :ref:`discovery_mode`.
 
-   automatic instrumentation
-      Automatic instrumentation allows you to instrument your applications and export telemetry data without having to modify the application source files. The language-specific instrumentation agent configures the source application to export data in a supported format to an OTLP endpoint, on either an OTLP receiver or the Splunk Observability Cloud back end. Automatic instrumentation is available for applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP and automatically collects telemetry data for code written using supported libraries in each language. For more information, see :ref:`get-started-application`.
-
 C
 ==
 
@@ -192,3 +189,10 @@ T
    trace
       A trace is a collection of operations that represents a unique transaction handled by an application and its constituent services. Traces are made of spans, which are calls that microservices make to each other.
 
+Z
+==
+
+.. glossary::
+
+   zero-code instrumentation
+      Zero-code instrumentation allows you to instrument your applications and export telemetry data without having to modify the application source files. The language-specific instrumentation agent configures the source application to export data in a supported format to an OTLP endpoint, on either an OTLP receiver or the Splunk Observability Cloud back end. Zero-code instrumentation is available for applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP and automatically collects telemetry data for code written using supported libraries in each language. For more information, see :ref:`get-started-application`.

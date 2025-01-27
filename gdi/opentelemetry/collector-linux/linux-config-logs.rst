@@ -2,7 +2,7 @@
 .. _linux-config-logs:
 
 ***************************************************************
-Collect logs for the Collector for Linux
+Collect logs with the Collector for Linux
 ***************************************************************
 
 .. meta::

@@ -9,12 +9,27 @@ Java agent compatibility and requirements
 
 Meet the following requirements to instrument Java applications for Splunk Observability Cloud.
 
+.. note:: Splunk does not officially support compatibility with Java agents from other vendors. 
+
 .. _java-requirements:
 
 Make sure you are using compatible Java and JVM versions
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/java.rst"></div>
+
 .. include:: /_includes/requirements/java.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/java.rst"></div>
+
+
+
 
 Dependencies
 ---------------

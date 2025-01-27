@@ -34,7 +34,7 @@ Routing rule options
 You have the following options to route your MTS:
 
 * Ingest and keep metrics real-time (default). Metrics stored in the real-time tier are available in charts and detectors.
-* Send your data to archived metrics. Archived metrics are not available in charts and detectors. You can change routing to real time or filter a subset of data to real time to make those metrics available in charts and detectors again. You can restore archived data from up to 8 days ago in case you need it.
+* Send your data to archived metrics. Archived metrics are not available in charts and detectors. You can change routing to real time or filter a subset of data to real time to make those metrics available in charts and detectors again. You can restore archived data from up to 31 days ago in case you need it.
 * Drop your metrics. If you select this option, metrics are dropped and aren't available for monitoring. You can still keep aggregated MTS derived from those metrics.
 
 .. note:: You cannot archive histogram metrics.

@@ -55,6 +55,8 @@ Next, include the receiver in the ``metrics`` pipeline of the ``service`` sectio
         receivers:
           - sqlserver
 
+.. caution:: To retrieve out-of-the-box content properly you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. Read more at :ref:`mssql-server-receiver-ootb`.
+
 Configure a named instance on Windows
 --------------------------------------------
 
@@ -99,7 +101,35 @@ Enable built-in content
 
 Splunk Observability Cloud provides built-in dashboards with charts that give you immediate visibility into the technologies and services being used in your environment. Learn more at :ref:`collector-builtin-dashboard`.
 
-For the MS SQL Server receiver out-of-the-box content to work properly, you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. See the configuration that enables built-in content at :new-page:`SQL Server discovery yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/confmapprovider/discovery/bundle/bundle.d/receivers/sqlserver.discovery.yaml>` in GitHub.
+.. caution:: For the MS SQL Server receiver out-of-the-box content to work properly you need to explicitly enable and disable specific metrics and resource attributes in your configuration file. 
+
+For more information:
+
+* See the configuration that enables built-in content at :new-page:`SQL Server discovery yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/confmapprovider/discovery/bundle/bundle.d/receivers/sqlserver.discovery.yaml>` in GitHub.
+
+* See the list of default and optional metrics at :new-page:`SQL server default and optional metrics <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/sqlserverreceiver/documentation.md#optional-metrics>` in GitHub. 
+
+Enable metrics and resource attributes
+--------------------------------------------
+
+Some resource attributes, such as ``sqlserver.instance.name``, are disabled by default. 
+
+To enable them, specify the option in your config file: 
+
+.. code:: yaml
+
+  receivers:
+      sqlserver:
+        collection_interval: 10s
+      sqlserver/1:
+        collection_interval: 5s
+        username: sa
+        password: securepassword
+        server: 0.0.0.0
+        port: 1433
+        resource_attributes:
+          sqlserver.instance.name:
+            enabled: true
 
 .. _mssql-server-receiver-settings:
 
@@ -123,9 +153,35 @@ The following metrics, resource attributes, and attributes, are available.
 
   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/sqlserverreceiver.yaml"></div>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="activate-deactivate-native-metrics.rst"></div>
+
 .. include:: /_includes/activate-deactivate-native-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="activate-deactivate-native-metrics.rst"></div>
+
+
+
 
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

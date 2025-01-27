@@ -13,6 +13,7 @@ Collector components: Extensions
     :hidden:
 
     basic-auth-extension
+    bearertokenauth-extension
     docker-observer-extension
     ecs-observer-extension
     ecstask-observer-extension
@@ -33,19 +34,13 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
 
 The following extensions are available:
 
-* :ref:`basic-auth-extension`
-* :ref:`docker-observer-extension`
-* :ref:`ecs-observer-extension`
-* :ref:`ecstask-observer-extension`
-* :ref:`file-storage-extension`
-* :ref:`health-check-extension`
-* :ref:`host-observer-extension`
-* :ref:`http-forwarder-extension`
-* :ref:`kubernetes-observer-extension` 
-* :ref:`memory-ballast-extension`
-* :ref:`oauth2client-extension`
-* :ref:`pprof-extension`
-* :ref:`smartagent-extension`
-* :ref:`zpages-extension`    
+.. raw:: html
 
+   <div class="include-start" id="collector-available-extensions.rst"></div>
+
+.. include:: /_includes/gdi/collector-available-extensions.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-available-extensions.rst"></div>
 

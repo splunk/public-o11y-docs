@@ -85,7 +85,7 @@ In summary, the default Collector container definition does the following:
 * Sets the default configuration file path using environment variable ``SPLUNK_CONFIG``.
 * Excludes ``ecs-metadata`` metrics from the Collector image using environment variable ``ECS_METADATA_EXCLUDED_IMAGES``.
 
-Assign a stringified array of metrics you want excluded to environment variable ``METRICS_TO_EXCLUDE``. You can set the memory limit for the ``memory_limiter`` processor using environment variable ``SPLUNK_MEMORY_LIMIT_MIB``. The default memory limit is 512 MiB. 
+You can set the memory limit for the ``memory_limiter`` processor using environment variable ``SPLUNK_MEMORY_LIMIT_MIB``. The default memory limit is 512 MiB.
 
 .. _fargate-custom-config:
 

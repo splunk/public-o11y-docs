@@ -4,6 +4,7 @@ The Splunk Distribution of the OpenTelemetry Collector has the following compone
 * :ref:`Processors <collector-components-processors>`: Configure which operations you'll perform on data before it's exported. For example, filtering.
 * :ref:`Exporters <collector-components-exporters>`: Set up where to send data to. It can be one or more backends or destinations. 
 * :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
+* :ref:`Connectors <collector-components-connectors>`: Connect two pipelines, consuming data as an exporter at the end of one pipeline and emitting data as a receiver at the start of another pipeline.
 * Services. It consists of two elements:
 
   * List of the :ref:`extensions <collector-components-extensions>` you've configured.

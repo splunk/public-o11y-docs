@@ -37,18 +37,19 @@ To install, configure and use the Splunk Distribution of the Collector for Kuber
     <h2>Install the Collector for Kubernetes<a name="k8s-install" class="headerlink" href="#k8s-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To install the Splunk Distribution of the OpenTelemetry Collector for Kubernetes using the Helm chart, read and follow these docs:
+To install the Splunk Distribution of the OpenTelemetry Collector for Kubernetes using the Helm chart read and follow these docs:
 
 * :ref:`otel-install-k8s`
 * :ref:`kubernetes-helm-architecture`
 * :ref:`kubernetes-helm-releases`
 
+.. note:: By default you'll obtain these :ref:`Kubernetes metrics <ootb-metrics-k8s>`. 
+
 Optionally, you can also:
 
 * :ref:`otel-install-k8s-manifests`
 * :ref:`Deploy the Collector as an AWS EKS Add-on <install-k8s-addon-eks>`
-
-.. note:: By default, you'll obtain these :ref:`Kubernetes metrics <ootb-metrics-k8s>`. 
+* Deploy the Collector using the Technical Add-on, which provides out-of-the box Collector content and configuration. Learn more at :ref:`collector-addon-intro`
 
 .. raw:: html
 
@@ -56,15 +57,29 @@ Optionally, you can also:
     <h2>Configure the Collector for Kubernetes<a name="k8s-configure" class="headerlink" href="#k8s-configure" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To configure the Collector, including adding additional components or activating automatic discovery, see:
+.. note:: To deploy the Collector for Kubernetes and automatically find services and applications running in your environment refer to :ref:`discovery-kubernetes`.   
+
+To configure the Collector see:
 
 * :ref:`otel-kubernetes-config`
 * :ref:`kubernetes-config-add` 
-* :ref:`discovery-mode-k8s`
 * :ref:`kubernetes-config-logs`
 * :ref:`otel-kubernetes-config-advanced`
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-common-options.rst"></div>
+
 .. include:: /_includes/gdi/collector-common-options.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-common-options.rst"></div>
+
+
+
 
 .. raw:: html
 
@@ -72,7 +87,7 @@ To configure the Collector, including adding additional components or activating
     <h2>Upgrade, uninstall and troubleshoot<a name="k8s-ts" class="headerlink" href="#k8s-ts" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To upgrade or uninstall, see:
+To upgrade or uninstall the Collector see:
 
 * :ref:`otel-kubernetes-upgrade`
 * :ref:`otel-kubernetes-uninstall`

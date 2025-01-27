@@ -14,7 +14,20 @@ Apply the following changes to the Collector configuration files for specific ve
 From 0.96.1 to 0.97.0
 ------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-upgrade-memory-ballast.rst"></div>
+
 .. include:: /_includes/collector-upgrade-memory-ballast.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-upgrade-memory-ballast.rst"></div>
+
+
+
 
 From 0.68.0 to 0.69.0
 ------------------------------------

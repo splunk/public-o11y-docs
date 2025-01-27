@@ -37,7 +37,20 @@ Alternatively, you can also install the Collector for Linux:
     <h2>Prerequisites<a name="install-windows-tools-prereqs" class="headerlink" href="#install-windows-tools-prereqs" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/collector-linux.rst"></div>
+
 .. include:: /_includes/requirements/collector-linux.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/collector-linux.rst"></div>
+
+
+
 
 .. _linux-deployments:
 
@@ -96,7 +109,20 @@ The following deployment and configuration management tools for the Splunk Distr
     <h2>Next steps<a name="install-linux-next" class="headerlink" href="#install-linux-next" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-linux-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-linux-next-steps.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-linux-next-steps.rst"></div>
+
+
+
 
 
 

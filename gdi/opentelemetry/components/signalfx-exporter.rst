@@ -63,7 +63,20 @@ Send histogram metrics in OTLP format
 
 The Splunk Distribution of OpenTelemetry Collector supports OTLP histogram metrics starting from version 0.98 and higher. See :ref:`explicit-bucket-histograms` for more information.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/histograms.rst"></div>
+
 .. include:: /_includes/gdi/histograms.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/histograms.rst"></div>
+
+
+
 
 .. _sfx-exporter-default-metric-filter:
 
@@ -249,7 +262,7 @@ Filter metrics using service or environment
 
 The SignalFx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Splunk Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment.
 
-.. note:: You need to send traces using :ref:`splunk-apm-exporter` to see them in Splunk Observability Cloud.
+.. note:: You need to send traces using :ref:`otlphttp-exporter` to see them in Splunk Observability Cloud.
 
 Use the ``correlation`` setting to control the syncing of service and environment properties onto dimensions. It has the following options:
 
@@ -291,7 +304,20 @@ Translation rules currently allow the following actions:
 
 .. _default-translation-rules-sfx-exporter:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/default-translation-metrics.rst"></div>
+
 .. include:: /_includes/gdi/default-translation-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/default-translation-metrics.rst"></div>
+
+
+
 
 .. _drop-histogram-metrics:
 
@@ -318,4 +344,17 @@ The following table shows the configuration options for the SignalFx exporter:
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

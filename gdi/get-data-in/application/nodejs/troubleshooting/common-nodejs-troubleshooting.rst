@@ -1,4 +1,4 @@
-.. _common-nodejs-troubleshooting:
+.. _common-nodejs-troubleshooting-3x:
 
 *******************************************************************
 Troubleshoot Node.js instrumentation for Splunk Observability Cloud
@@ -9,7 +9,7 @@ Troubleshoot Node.js instrumentation for Splunk Observability Cloud
 
 When you instrument a Node.js application using the Splunk Distribution of OpenTelemetry JS and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
-.. _basic-nodejs-troubleshooting:
+.. _basic-nodejs-troubleshooting-3x:
 
 Steps for troubleshooting Node.js OpenTelemetry issues
 =======================================================
@@ -19,7 +19,7 @@ The following steps can help you troubleshoot Node.js instrumentation issues:
 #. :ref:`enable-nodejs-debug-logging`
 #. :ref:`enable-debug-metrics`
 
-.. _enable-nodejs-debug-logging:
+.. _enable-nodejs-debug-logging-3x:
 
 Activate diagnostic logging
 -------------------------------------------------------
@@ -46,16 +46,7 @@ You can also activate debug logging programmatically by setting the ``logLevel``
       },
    });
 
-To deactivate debug logging in your code, call ``setLogger()`` as in the following example:
-
-.. code-block:: js
-
-   const { diag } = require('@opentelemetry/api');
-   diag.setLogger();
-
-.. note:: Activate debug logging only when needed. Debug mode requires more resources.
-
-.. _enable-debug-metrics:
+.. _enable-debug-metrics-3x:
 
 Activate debug metrics
 ---------------------------------
@@ -64,7 +55,7 @@ You can activate internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_EN
 
 For more information, see :ref:`nodejs-otel-debug-metrics`.
 
-.. _nodejs-trace-exporter-issues:
+.. _nodejs-trace-exporter-issues-3x:
 
 Trace exporter issues
 =====================================================
@@ -86,7 +77,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
 #. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
-#. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
+#. Check that the OTel Collector points to the following address: ``http://<host>:4318``. Verify that your URL is correct.
 
 401 error when sending spans
 --------------------------------------------------------
@@ -99,7 +90,7 @@ If you send traces directly to Splunk Observability Cloud and receive a 401 erro
 
 Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
-.. _nodejs-webpack-issues:
+.. _nodejs-webpack-issues-3x:
 
 Webpack compatibility issues
 =====================================================
@@ -132,7 +123,7 @@ When added to ``externals``, the ``express`` framework loads through the ``requi
 
 .. note:: You don't need to add Node.js core modules such as ``http``, ``net``, and ``dns`` to the ``externals`` list.
 
-.. _nodejs-profiler-issues:
+.. _nodejs-profiler-issues-3x:
 
 Troubleshoot AlwaysOn Profiling for Node.js
 ===============================================================
@@ -168,7 +159,7 @@ The following snippet contains a sample ``profiling`` pipeline:
    receivers:
      otlp:
        protocols:
-         grpc:
+         http:
 
    exporters:
      # Profiling
@@ -190,4 +181,16 @@ The following snippet contains a sample ``profiling`` pipeline:
          processors: [memory_limiter, batch]
          exporters: [splunk_hec, splunk_hec/profiling]
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

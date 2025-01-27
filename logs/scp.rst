@@ -16,7 +16,20 @@ When you set up Log Observer Connect, your logs remain in your Splunk Cloud Plat
 Region and version availability
 ==============================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="logs/loc-availability.rst"></div>
+
 .. include:: /_includes/logs/loc-availability.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="logs/loc-availability.rst"></div>
+
+
+
 
 .. _logs-scp-prereqs:
 
@@ -50,9 +63,9 @@ Splunk Observability Cloud
 
 In Splunk Observability Cloud, do the following:
 
-1. Go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
+1. Go to :guilabel:`Settings` then  :guilabel:`Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
 
-2. Select :guilabel:`Splunk Cloud Platform`. 
+2. Select :guilabel:`Splunk Cloud Platform`. Next, log in to Splunk Cloud Platform as an administrator and follow the instructions in the next section.
 
 Splunk Cloud Platform
 ----------------------------------------------------------------
@@ -61,27 +74,27 @@ To configure the Splunk Cloud service account user in the following section you 
 
 In Splunk Cloud Platform, follow the instructions in the guided setup for the integration to do the following:
 
-1. To configure a role in Splunk Cloud Platform for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
+1. To configure a role in Splunk Cloud Platform for the Log Observer Connect service account, select :guilabel:`Settings` then select :guilabel:`Roles`.
 
       .. image:: /_images/logs/setupLOC1.png
          :width: 100%
          :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
       
-2. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect. 
+   Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect. 
       
+2. On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
+
+      .. image:: /_images/logs/IndexesTab1.png
+         :width: 100%
+         :alt: This screenshot shows the Indexes tab in user configuration.
+
 3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` and ``search`` are selected. Also, ensure that ``indexes_list_all`` is not selected.
 
       .. image:: /_images/logs/CapabilitiesTab1.png
          :width: 100%
          :alt: This screenshot shows the Capabilities tab in user configuration.
 
-4. On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
-
-      .. image:: /_images/logs/IndexesTab1.png
-         :width: 100%
-         :alt: This screenshot shows the Indexes tab in user configuration.
-
-5. On the :guilabel:`Resources` tab, enter a :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
+4. On the :guilabel:`Resources` tab, enter a :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
 
    The limit of 40 assumes that you have 10 Log Observer Connect users. To determine your ideal :guilabel:`Standard search limit`, multiply the number of Log Observer Connect users you have by 4. For example, if you have 20 Log Observer users, enter a :guilabel:`Standard search limit` of 80 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`.
 
@@ -89,20 +102,20 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
 
-6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. Do not use commas when entering numbers. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
+5. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. Do not use commas when entering numbers. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB. Select :guilabel:`Save`.
 
       .. image:: /_images/logs/ResourcesTab2.png
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
 
-7. Next, in Splunk Cloud Platform, go to :guilabel:`Settings > Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created in the preceeding steps for the Log Observer Connect service account.
+6. Next, in Splunk Cloud Platform, go to :guilabel:`Settings` then :guilabel:`Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created in the preceeding steps for the Log Observer Connect service account.
    
       .. image:: /_images/logs/CreateUser.png
          :width: 100%
          :alt: The Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
 
-8. Add a Workload Rule in Splunk Cloud Platform to limit Log Observer Connect searches to 5 minutes. This limit maintains a responsive experience for Log Observer users and reduces the chances that Log Observer Connect searches are queued. Follow the guidance in :new-page:`Create a Workload Rule in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Admin/CreateWLMRules#Create_a_workload_rule_in_Splunk_Web>` and configure the rule as follows:
+7. Add a Workload Rule in Splunk Cloud Platform to limit Log Observer Connect searches to 5 minutes. This limit maintains a responsive experience for Log Observer users and reduces the chances that Log Observer Connect searches are queued. Follow the guidance in :new-page:`Create a Workload Rule in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Admin/CreateWLMRules#Create_a_workload_rule_in_Splunk_Web>` and configure the rule as follows:
 
    .. code-block:: none
 
@@ -118,17 +131,28 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 .. _download-certificate:
 
-9. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. See :ref:`logs-scp-prereqs` for more information on the IPs to allow.
+8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. See :ref:`logs-scp-prereqs` for more information on the IPs to allow.
 
-  * To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. 
+   * To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. 
 
-  * To do it yourself, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
+   * To do it yourself, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
 
-10. Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL ``https://<stackname>.splunkcloud.com:8089`` to complete the guided setup.
+9. Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter the following:
 
-11.  Remove your IPv4 address from the IP allowlist that you added in step 9. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
+    * Connection name (Be sure to give each connection a unique name.)
+   
+    * Service account username
+   
+    * Password
+   
+    * Splunk platform URL ``https://<stackname>.splunkcloud.com:8089``
 
-12.  Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
+10.  Remove your IPv4 address from the IP allowlist that you added in step 9. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8. Select :guilabel:`Next`.
+
+11. On the :guilabel:`Configure permissions` page of the guided setup, select the Splunk Observability Cloud users who you want to give access to this connection and the associated Splunk Cloud Platform indexes.
+
+12. Select :guilabel:`Save and activate`.
+
 
    .. note:: Manage concurrent search limits using your current strategy in Splunk Cloud Platform. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Cloud Platform. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in Log Observer Connect. For example, if there are three users accessing Log Observer Connect at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Cloud Platform.
 

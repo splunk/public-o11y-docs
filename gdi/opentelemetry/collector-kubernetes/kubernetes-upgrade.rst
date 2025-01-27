@@ -8,7 +8,20 @@ Upgrade the Collector for Kubernetes and other updates
 .. meta::
   :description: Upgrade the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-upgrade.rst"></div>
+
 .. include:: /_includes/collector-upgrade.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-upgrade.rst"></div>
+
+
+
 
 .. _otel-upgrade-k8s:
 

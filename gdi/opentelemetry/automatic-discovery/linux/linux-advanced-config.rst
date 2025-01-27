@@ -5,24 +5,22 @@ Advanced customization for automatic discovery in Linux
 *****************************************************************************
 
 .. meta:: 
-    :description: Learn how to customize your deployment of automatic discovery in a Linux environment.
+    :description: Learn how to customize your deployment of automatic discovery and instrumentation in a Linux environment.
 
-Learn how to customize automatic discovery and configuration for advanced scenarios. 
+Learn how to customize automatic discovery and zero-code instrumentation for advanced scenarios. 
 
 Through advanced customization, you can achieve the following tasks:
 
-* :ref:`Override automatic discovery settings <override-default-settings-linux>`
+* :ref:`Override automatic instrumentation settings <override-default-settings-linux>`
 * :ref:`Use automatic discovery with gateway mode <use-with-gateway-linux>`
 * :ref:`Customize discovery settings for third-party applications <customize-third-party-settings-linux>`
 
-.. note:: For advanced customization options in Kubernetes, see :ref:`k8s-advanced-auto-discovery-config`.
-
 .. _override-default-settings-linux:
 
-Override default automatic discovery settings
+Override default automatic instrumentation settings
 =====================================================
 
-You can override default automatic discovery settings to use features for profiling and runtime metrics collection. 
+You can override default automatic instrumentation settings to use features for profiling and runtime metrics collection. 
 
 Activate AlwaysOn Profiling
 --------------------------------------
@@ -75,6 +73,8 @@ To activate runtime metrics collection for an individual language, follow these 
 #. Open the <language>.conf file located in the ``/etc/splunk/zeroconfig`` directory.
 #. Set the environment variable ``SPLUNK_METRICS_ENABLED=true``.
 #. Restart your applications.
+
+
 
 .. _use-with-gateway-linux:
 
@@ -175,7 +175,7 @@ To define a custom directory for discovery settings, use the ``--config-dir`` op
 Additional settings for language runtimes
 =============================================
 
-There are many other settings you can customize using automatic discovery and configuration.
+There are many other settings you can customize using automatic instrumentation.
 
 For a list of settings that you can change for each language, see the following resources:
 

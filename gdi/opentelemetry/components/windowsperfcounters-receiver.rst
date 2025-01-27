@@ -167,7 +167,7 @@ The following example shows how to scrape performance counters using different c
               attributes:
                 state: active
         - object: "Processor"
-          instances: [1, 2]
+          instances: ["0", "1"]
           counters:
             - name: "% Idle Time"
               metric: processor.time
@@ -371,4 +371,17 @@ The following table shows the configuration options for the Windows Performance 
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

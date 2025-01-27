@@ -1,4 +1,4 @@
-.. _instrument-nodejs-applications:
+.. _instrument-nodejs-applications-3x:
 
 ********************************************************************
 Instrument your Node.js application for Splunk Observability Cloud
@@ -7,6 +7,21 @@ Instrument your Node.js application for Splunk Observability Cloud
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="zero-code-info.rst"></div>
+
+.. include:: /_includes/zero-code-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="zero-code-info.rst"></div>
+
+
+
+   
 The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
 
 To get started, use the guided setup or follow the instructions manually.
@@ -41,7 +56,7 @@ If you don't use the guided setup, follow these instructions to manually install
 - :ref:`configure-nodejs-instrumentation`
 - :ref:`nodejs-programmatically-instrument`
 
-.. _install-enable-nodejs-agent:
+.. _install-enable-nodejs-agent-3x:
 
 Install and activate the Node.js instrumentation
 ------------------------------------------------------
@@ -104,7 +119,7 @@ If no data appears in APM, see :ref:`common-nodejs-troubleshooting`.
 
 .. note:: To instrument applications that use Webpack, see :ref:`nodejs-webpack-issues`.
 
-.. _enable_profiling_nodejs:
+.. _enable_profiling_nodejs-3x:
 
 Activate AlwaysOn Profiling
 --------------------------------------------
@@ -127,7 +142,7 @@ The following example shows how to activate the profiler from your application c
 
 See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-nodejs`.
 
-.. _enable_automatic_metric_collection_nodejs:
+.. _enable_automatic_metric_collection_nodejs-3x:
 
 Activate metrics collection
 ------------------------------------------------
@@ -144,14 +159,14 @@ To activate automatic runtime metric collection, activate the metrics feature us
 
       $env:SPLUNK_METRICS_ENABLED='true'
 
-.. _configure-nodejs-instrumentation:
+.. _configure-nodejs-instrumentation-3x:
 
 Configure the Node.js distribution
 -----------------------------------------------------
 
-In most cases, the only configuration setting you need to enter is the service name. For advanced configuration, like changing trace propagation formats or configuring server trace data, see :ref:`advanced-nodejs-otel-configuration`.
+In most cases, the only configuration setting you need to enter is the service name. For advanced configuration, such as changing trace propagation formats or configuring server trace data, see :ref:`advanced-nodejs-otel-configuration`.
 
-.. _nodejs-programmatically-instrument:
+.. _nodejs-programmatically-instrument-3x:
 
 Instrument your application programmatically
 -----------------------------------------------------
@@ -166,7 +181,7 @@ To instrument your application programmatically, add the following lines at the 
 
    start({
       serviceName: 'my-node-service',
-      endpoint: 'http://localhost:4317'
+      endpoint: 'http://localhost:4318'
    });
 
    // Rest of your main module
@@ -187,7 +202,7 @@ After you add the ``start()`` function to your entry point script, run your appl
 
    node -r <entry-point.js> <your-app.js>
 
-.. _add-custom-instrumentation:
+.. _add-custom-instrumentation-3x:
 
 Add custom instrumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -209,11 +224,11 @@ To add custom or third-party instrumentations that implement the OpenTelemetry J
       },
    });
    
-For a list of supported instrumentations, see :new-page:`https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations>` on GitHub.
+For a list of bundled instrumentations, see :new-page:`https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations>` on GitHub.
 
 .. note:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
 
-.. _kubernetes_nodejs_agent:
+.. _kubernetes_nodejs_agent-3x:
 
 Deploy the Node.js distribution in Kubernetes
 =======================================================
@@ -252,7 +267,7 @@ To deploy the Collector for Node.js in a Kubernetes environment, follow these st
                    fieldRef:
                      fieldPath: status.hostIP
                - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
+                 value: "http://$(SPLUNK_OTEL_AGENT):4318"
                - name: OTEL_SERVICE_NAME
                  value: "<serviceName>"
                - name: OTEL_RESOURCE_ATTRIBUTES
@@ -262,7 +277,7 @@ To deploy the Collector for Node.js in a Kubernetes environment, follow these st
                - -r @splunk/otel/instrument
                - <your-app>.js
 
-.. _export-directly-to-olly-cloud-nodejs:
+.. _export-directly-to-olly-cloud-nodejs-3x:
 
 Send data directly to Splunk Observability Cloud
 =============================================================
@@ -294,7 +309,20 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 Specify the source host 
 -----------------------------------------------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
+
 .. include:: /_includes/gdi/apm-api-define-host.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
+
+
+
 
 Instrument Lambda functions
 =============================================================

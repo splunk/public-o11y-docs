@@ -19,7 +19,8 @@ Supported integrations in Splunk Observability Cloud
   Infrastructure monitoring <get-data-in/compute/compute>
   APM instrumentation <get-data-in/application/application>
   RUM instrumentation <get-data-in/rum/rum-instrumentation>  
-  OpenTelemetry receivers <opentelemetry/components/a-components-receivers>
+  OpenTelemetry: Receivers <opentelemetry/components/a-components-receivers>
+  OpenTelemetry: Other ingestion methods <opentelemetry/otel-other/otel-other-landing>
   Applications: Caches and memory TOGGLE <caches-memory>
   Applications: Cloud platforms TOGGLE <cloud>
   Applications: Cloudfoundry <monitors-cloudfoundry/cloudfoundry-firehose-nozzle>
@@ -70,16 +71,17 @@ See :ref:`get-started-compute` for information on how to collect data for:
       <h2>APM instrumentation<a name="apm-instrumentation" class="headerlink" href="#apm-instrumentation" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-See :ref:`Available APM instrumentation <get-started-application>`, including:
+See the :ref:`available APM instrumentation <get-started-application>` to send spans to Splunk Observability Cloud:
 
 - :ref:`Java <get-started-java>`
-- :ref:`Node.js <get-started-nodejs>`
+- :ref:`Node.js <get-started-nodejs-3x>`
 - :ref:`.NET <get-started-dotnet-otel>`
 - :ref:`Go <get-started-go>`
 - :ref:`Python <get-started-python>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
 - :ref:`C++ <get-started-cpp>`
+- You can also :ref:`get-started-istio`
 
 You can also instrument your applications to send metrics to Infrastructure Monitoring.
 
@@ -113,14 +115,36 @@ For more information, see :ref:`get-started-rum`.
 .. raw:: html
 
    <embed>
-      <h3>OpenTelemetry receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h3>
+      <h3>Native OTel receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-You can monitor your applications and services with native OpenTelementry receivers. Learn more at :ref:`OpenTelemetry receivers <otel-components-receivers>`.
+You can monitor your applications and services with the Collector and the following native :ref:`OpenTelemetry receivers <otel-components-receivers>`:
 
-These are the available OpenTelemetry receivers:
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/otel-receivers-table.rst"></div>
 
 .. include:: /_includes/gdi/otel-receivers-table.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/otel-receivers-table.rst"></div>
+
+
+
+
+.. raw:: html
+
+   <embed>
+      <h3>Other ingestion methods<a name="native-otel-other" class="headerlink" href="#native-otel-other" title="Permalink to this headline">¶</a></h3>
+   </embed>
+
+You can also send data to Splunk Observability Cloud with OpenTelemetry with the following options:
+
+* :ref:`prometheus-generic`
+* :ref:`telegraf-generic`
 
 .. raw:: html
 
@@ -128,9 +152,24 @@ These are the available OpenTelemetry receivers:
       <h3>Smart Agent integrations<a name="app-monitors" class="headerlink" href="#app-monitors" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-Smart Agent integrations are available and supported through the Splunk Distribution of the OpenTelemetry Collector. For more information, see :ref:`migration-monitors`.    
+Smart Agent integrations are available and supported through the Splunk Distribution of the OpenTelemetry Collector. For more information, see :ref:`migration-monitors`. You can use these integrations to send your apps and services' metrics to Splunk Observability Cloud:
 
-Browse available monitors by category:
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/application-receiver-table.rst"></div>
+
+.. include:: /_includes/gdi/application-receiver-table.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/application-receiver-table.rst"></div>
+
+
+
+
+Browse the available monitors by category:
 
 * :ref:`Applications: Caches and memory <caches-memory>`
 * :ref:`Applications: Cloud platforms <cloud>`
@@ -146,10 +185,6 @@ Browse available monitors by category:
 * :ref:`Applications: Orchestration <orchestration>`
 * :ref:`Applications: Prometheus <prometheus>`
 
-These are the available Smart Agent integrations:
-
-.. include:: /_includes/gdi/application-receiver-table.rst
-
 .. raw:: html
 
    <embed>
@@ -158,7 +193,20 @@ These are the available Smart Agent integrations:
 
 These Smart Agent integrations are deprecated:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/application-receiver-table-deprecated.rst"></div>
+
 .. include:: /_includes/gdi/application-receiver-table-deprecated.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/application-receiver-table-deprecated.rst"></div>
+
+
+
 
 .. raw:: html
 

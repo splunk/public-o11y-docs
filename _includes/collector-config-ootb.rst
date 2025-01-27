@@ -165,7 +165,7 @@ The following diagram shows the default traces pipeline:
 
       subgraph Exporters
          direction LR
-         traces/sapm:::exporter
+         traces/otlphttp:::exporter
          traces/signalfx/out:::exporter
       end
 
@@ -173,7 +173,7 @@ The following diagram shows the default traces pipeline:
       traces/jaeger --> traces/memory_limiter
       traces/otlp --> traces/memory_limiter
       traces/zipkin --> traces/memory_limiter
-      traces/resourcedetection --> traces/sapm
+      traces/resourcedetection --> traces/otlphttp
       traces/resourcedetection --> traces/signalfx/out
 
 Learn more about these receivers:
@@ -190,5 +190,5 @@ Learn more about these processors:
 
 Learn more about these exporters:
 
-* :ref:`splunk-apm-exporter`
+* :ref:`otlphttp-exporter`
 * :ref:`signalfx-exporter`

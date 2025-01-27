@@ -10,26 +10,63 @@ Exec Input (deprecated)
    
    The Exec Input monitor is now deprecated and will reach of End of Support on February 3, 2025. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
-   To monitor your system with Telegraf Exec you can use native OpenTelemetry instead. See more at :new-page:`OpenTelemetry Output Plugin <https://github.com/influxdata/telegraf/blob/master/plugins/outputs/opentelemetry/README.md>` in GitHub. 
+   To collect exec file data use the OpenTelemetry Collector and the :new-page:`Telegraf Exec Input plugin <https://github.com/influxdata/telegraf/tree/master/plugins/inputs/exec>`. See how in :ref:`telegraf-generic`.
 
-The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
-Exec Input monitor type, an embedded form of the Telegraf Exec plugin,
-to receive metrics or logs from exec files.
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the Exec Input monitor type, an embedded form of the Telegraf Exec plugin, to receive metrics or logs from exec files.
 
 Benefits
 --------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="benefits.rst"></div>
+
 .. include:: /_includes/benefits.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="benefits.rst"></div>
+
+
+
 
 Installation
 ------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="collector-installation.rst"></div>
+
 .. include:: /_includes/collector-installation.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-installation.rst"></div>
+
+
+
 
 Configuration
 -------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="configuration.rst"></div>
+
 .. include:: /_includes/configuration.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="configuration.rst"></div>
+
+
+
 
 Example
 ~~~~~~~
@@ -408,4 +445,17 @@ Cloud, use one of the following options:
 Troubleshooting
 ---------------
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

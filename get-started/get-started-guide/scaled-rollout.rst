@@ -10,9 +10,9 @@ To get a high-level overview of the entire getting started journey for Splunk Ob
 .. note:: This guide is for Splunk Observability Cloud users with the admin role. 
 
 
-.. image:: /_images/get-started/onboarding-guide-2point0-scaled.svg
+.. image:: /_images/get-started/o11y_onboardingGuideFlow_3-scaled.svg
    :width: 100%
-   :alt: 
+   :alt: Flow showing the 3 phases of the get started journey: onboarding, initial rollout, and scaled rollout. The scaled rollout phase is highlighted in this scaled rollout topic.
 
 To increase usage across all user teams and establish repeatable observability practices through automation, data management, detectors, and dashboards, complete the following tasks:
 

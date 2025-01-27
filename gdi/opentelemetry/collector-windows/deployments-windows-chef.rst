@@ -28,6 +28,7 @@ The following Windows versions. All versions require using PowerShell 3.0 or new
 
 * Windows Server 2019 64-bit
 * Windows Server 2022 64-bit
+* Windows Server 2025 64-bit
 
 .. caution:: On Windows, the Collector is installed as a Windows service and its environment variables are set at the service scope, so they're only available to the Collector service and not to the entire machine.
 
@@ -110,4 +111,16 @@ On Windows, the variables/values will be added to the Environment value under th
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-windows-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-windows-next-steps.rst
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-windows-next-steps.rst"></div>
+
+
+

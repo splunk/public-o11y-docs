@@ -9,9 +9,9 @@ To get a high-level overview of the entire getting started journey for Splunk Ob
 
 .. note:: This guide is for Splunk Observability Cloud users with the admin role. 
 
-.. image:: /_images/get-started/onboarding-guide-2point0-initial.svg
+.. image:: /_images/get-started/o11y_onboardingGuideFlow_2-initial.svg
    :width: 100%
-   :alt: 
+   :alt: Flow showing the 3 phases of the get started journey: onboarding, initial rollout, and scaled rollout. The initial rollout phase is highlighted in this initial rollout topic.
 
 To configure Splunk Observability Cloud solutions for initial rollout, complete the following tasks if they are relevant to your organization:  
 
@@ -105,7 +105,7 @@ When using the Splunk Distribution of OpenTelemetry Collector, you can use recei
 
 See :ref:`monitor-data-sources` for a list of receivers.
 
-.. _phase3-network-exp:
+.. _phase2-network-exp:
 
 Set up Network Explorer to monitor network environment
 ----------------------------------------------------------

@@ -7,17 +7,25 @@ Azure metrics in Splunk Observability Cloud
 .. meta::
    :description: These are the metrics available for the Azure integration with Splunk Observability Cloud, grouped according to Azure resource.
 
-By default Splunk Observability Cloud includes all available metrics from any Azure integration. 
 
-Azure services metrics
-=================================
 
-Metric names and descriptions are generated dynamically from data provided by Microsoft. See all details in Microsoft's :new-page:`Supported metrics with Azure Monitor <https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported>`.
+.. raw:: html
+
+   <div class="include-start" id="gdi/available-azure.rst"></div>
 
 .. include:: /_includes/gdi/available-azure.rst
 
-Types of available metrics
--------------------------------------------
+.. raw:: html
+
+   <div class="include-stop" id="gdi/available-azure.rst"></div>
+
+
+
+
+Azure services metric information
+================================================
+
+Metric names and descriptions are generated dynamically from data provided by Microsoft. See all details in Microsoft's :new-page:`Supported metrics with Azure Monitor <https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported>`.
 
 Every metric can either be a counter or a gauge, depending on what dimension is being looked at. If the MTS contains the dimension ``aggregation_type: total`` or ``aggregation_type: count``, then it is sent as a counter. Otherwise, it is sent as a gauge. To learn more, see :ref:`metric-types` and :ref:`metric-time-series`. 
 

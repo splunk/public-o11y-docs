@@ -48,7 +48,20 @@ Native Smart Agent monitors are grouped into three types:
 
 The following matrices list support for each monitor in each architecture.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/processor-architecture-native.rst"></div>
+
 .. include:: /_includes/gdi/processor-architecture-native.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/processor-architecture-native.rst"></div>
+
+
+
 
 .. _subprocess-monitors-support-matrices:
 
@@ -65,7 +78,20 @@ Subprocess monitor types are those that initiate the creation and management of 
 
 These types derive from integrations that produce metrics in the Smart Agent and are not reflective of the current ability to run arbitrary Python or Java applications.
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/processor-architecture-subprocess.rst"></div>
+
 .. include:: /_includes/gdi/processor-architecture-subprocess.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/processor-architecture-subprocess.rst"></div>
+
+
+
 
 Benefits
 =================================
@@ -141,4 +167,17 @@ To configure Smart Agent monitors, see the documentation on each monitor type in
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

@@ -50,17 +50,17 @@ For example:
 
 .. code-block:: 
 
-  2021-11-12T00:22:32.172Z	info	exporterhelper/queued_retry.go:325	Exporting failed. Will retry the request after interval.	{"kind": "exporter", "name": "sapm", "error": "server responded with 429", "interval": "4.4850027s"}
-  2021-11-12T00:22:38.087Z	error	exporterhelper/queued_retry.go:190	Dropping data because sending_queue is full. Try increasing queue_size.	{"kind": "exporter", "name": "sapm", "dropped_items": 1348}
+  2021-11-12T00:22:32.172Z	info	exporterhelper/queued_retry.go:325	Exporting failed. Will retry the request after interval.	{"kind": "exporter", "name": "otlphttp", "error": "server responded with 429", "interval": "4.4850027s"}
+  2021-11-12T00:22:38.087Z	error	exporterhelper/queued_retry.go:190	Dropping data because sending_queue is full. Try increasing queue_size.	{"kind": "exporter", "name": "otlphttp", "dropped_items": 1348}
 
-If you can't fix throttling by bumping limits on the backend or reducing amount of data sent through the Collector, you can avoid OOMs by reducing the sending queue of the failing exporter. For example, you can reduce ``sending_queue`` for the ``sapm`` exporter:
+If you can't fix throttling by bumping limits on the backend or reducing amount of data sent through the Collector, you can avoid OOMs by reducing the sending queue of the failing exporter. For example, you can reduce ``sending_queue`` for the ``otlphttp`` exporter:
 
 .. code-block:: yaml
 
   agent:
     config:
       exporters:
-        sapm:
+        otlphttp:
           sending_queue:
             queue_size: 512
 

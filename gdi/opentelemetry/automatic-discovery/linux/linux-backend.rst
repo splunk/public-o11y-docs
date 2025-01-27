@@ -1,33 +1,31 @@
 .. _linux-backend-auto-discovery:
 
 *****************************************************************************
-Automatic discovery and configuration for back-end applications in Linux
+Zero-code instrumentation for back-end applications in Linux
 *****************************************************************************
 
 .. meta:: 
-    :description: Get started with automatic discovery and configuration for back-end applications in Linux environments.
+    :description: Get started with zero-code instrumentation for back-end applications in Linux environments.
 
-When using automatic discovery and configuration, the Splunk Distribution of OpenTelemetry Collector automatically detects back-end applications running in your Linux environment. 
+The Splunk Distribution of the OpenTelemetry Collector uses automatic discovery with zero-code instrumentation to automatically detect back-end applications running in your Linux environment. By deploying the Collector with zero-code instrumentation, you can monitor applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
 
-By deploying the Collector with automatic discovery, you can instrument applications and send data to Splunk Observability Cloud without editing your application's code or configuring files.
-
-Automatic discovery for Linux can detect and configure the following applications and language runtimes:
+Zero-code instrumentation for Linux can detect and configure the following applications and language runtimes:
 
 * Java
 * Node.js
 * .NET
 
-How automatic discovery for Linux works
+How zero-code instrumentation for Linux works
 ===================================================
 
-Automatic discovery for Linux operates as a mode of the Splunk Distribution of OpenTelemetry Collector. You install and activate automatic discovery for the Collector by using the Linux installer script or package manager. During installation, you can specify the types of language runtimes you want the Collector to detect. 
+Zero-code instrumentation for Linux operates as a mode of the Splunk Distribution of the OpenTelemetry Collector. You install and activate zero-code instrumentation for the Collector by using the Linux installer script or package manager. During installation, you can specify the types of language runtimes you want the Collector to detect. 
 
 After installation, the Collector runs in your Linux environment and listens for requests to your applications. When the Collector detects activity, it gathers telemetry data from your application runtime and sends this data to Splunk Application Performance Monitoring (APM).
 
 Requirements
 ==================================================
 
-You need the following components to use automatic discovery for back-end Linux applications:
+You need the following components to use zero-code instrumentation for back-end Linux applications:
 
 * ``systemd``
 * ``curl``
@@ -49,12 +47,12 @@ Make sure you've also installed the components specific to your language runtime
 
         .NET version 6.0 or higher and supported libraries. See :ref:`dotnet-otel-requirements` for more information.
 
-        Automatic discovery for .NET is only supported for x86_64/AMD64 architectures.
+        Zero-code instrumentation for .NET is only supported for x86_64/AMD64 architectures.
 
 Get started
 ===============================
 
-To install and use automatic discovery for Linux, follow these steps:
+To install and use zero-code instrumentation for Linux, follow these steps:
 
 #. :ref:`auto-discovery-linux-install`
 #. :ref:`auto-discovery-linux-verify`
@@ -65,7 +63,7 @@ To install and use automatic discovery for Linux, follow these steps:
 Install the package
 =======================================
 
-Using the installer script, you can install and activate automatic discovery for either all supported applications on the host via the system-wide method or only for applications running as ``systemd`` services. 
+Using the installer script, you can install and activate zero-code instrumentation for either all supported applications on the host via the system-wide method or only for applications running as ``systemd`` services. 
 
 
 .. tabs:: 
@@ -76,9 +74,9 @@ Using the installer script, you can install and activate automatic discovery for
 
             .. tab:: Installer script
 
-                Using the installer script, you can install the automatic discovery package for Java and activate automatic discovery for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
+                Using the installer script, you can install the zero-code instrumentation package for Java and activate zero-code instrumentation for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
 
-                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+                .. note:: By default, zero-code instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate zero-code instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
                 
                 .. tabs:: 
 
@@ -93,7 +91,7 @@ Using the installer script, you can install and activate automatic discovery for
 
                         .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
-                        The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
+                        The system-wide zero-code instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
 
                         To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
@@ -209,7 +207,7 @@ Using the installer script, you can install and activate automatic discovery for
 
             .. tab:: Installer script
 
-                Using the installer script, you can install and activate automatic discovery for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
+                Using the installer script, you can install and activate zero-code instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
 
                 The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
 
@@ -217,7 +215,7 @@ Using the installer script, you can install and activate automatic discovery for
 
                     --npm-path /custom/path/to/npm
 
-                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+                .. note:: By default, zero-code instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate zero-code instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
 
                 .. tabs::
 
@@ -234,7 +232,7 @@ Using the installer script, you can install and activate automatic discovery for
 
                             .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
-                        The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
+                        The system-wide zero-code instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
 
                         You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
 
@@ -257,7 +255,7 @@ Using the installer script, you can install and activate automatic discovery for
                                 curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                                 sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
                             
-                            The ``systemd`` automatic discovery method automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+                            The ``systemd`` zero-code instrumentation method automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
 
                             .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
@@ -296,9 +294,9 @@ Using the installer script, you can install and activate automatic discovery for
 
             .. tab:: Installer script 
 
-                Using the installer script, you can install and activate automatic discovery for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
+                Using the installer script, you can install and activate zero-code instrumentation for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
 
-                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+                .. note:: By default, zero-code instrumentation is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate zero-code instrumentation for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
 
                 .. tabs::
 
@@ -313,7 +311,7 @@ Using the installer script, you can install and activate automatic discovery for
 
                         .. note:: If you wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
-                        The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/dotnet.conf``.
+                        The system-wide zero-code instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/dotnet.conf``.
 
                         To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
@@ -415,7 +413,7 @@ If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCE
 Start your applications
 ------------------------------------------------
 
-For automatic discovery to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the automatic discovery package for the first time and whenever you make any changes to the configuration file. 
+For zero-code instrumentation to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the zero-code instrumentation package for the first time and whenever you make any changes to the configuration file. 
 
 After your applications are running, you can verify your data. See :ref:`auto-discovery-view-results-linux`. You can also configure instrumentation settings. See :ref:`auto-discovery-configure-linux`. 
 
@@ -433,9 +431,8 @@ To learn more, see the following resources:
 
 .. _auto-discovery-upgrade-package:
 
-Update automatic discovery and configuration
-============================================
-
+Update zero-code instrumentation
+==================================================
 
 .. tabs:: 
 
@@ -589,7 +586,7 @@ Update automatic discovery and configuration
             sudo npm install /usr/lib/splunk-instrumentation/splunk-otel-js.tgz
 
 
-        The default automatic discovery configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
+        The default zero-code instrumentation configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
 
         If the Node.js agent is installed under a different path, manually update the path for the ``NODE_OPTIONS`` environment variable in either ``/etc/splunk/zeroconfig/node.conf`` for system-wide services or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` for ``systemd`` services. For example:
 
@@ -683,5 +680,5 @@ To troubleshoot common errors that occur when instrumenting applications, see th
 View results in Splunk APM
 ====================================================
 
-After activating automatic discovery, ensure your data is flowing into Splunk Observability Cloud. See :ref:`verify-apm-data`. 
+After activating zero-code instrumentation, ensure your data is flowing into Splunk Observability Cloud. See :ref:`verify-apm-data`. 
     

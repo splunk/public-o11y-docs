@@ -1,34 +1,47 @@
-.. _nodejs-otel-performance:
+.. _nodejs-otel-performance-3x:
 
 ***************************************************
-Performance reference for Splunk OTel Node.js agent
+Performance reference for Splunk OTel JS agent
 ***************************************************
 
 .. meta::
-   :description: Minimum requirements of the Splunk OTel Node.js agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
+   :description: Minimum requirements of the Splunk OTel JS agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
-The Splunk OTel Node.js agent instruments your application at runtime. Like any other software agent, the Node.js agent requires system resources like CPU, memory, and network bandwidth. The use of resources by the agent is called agent overhead or performance overhead. The Splunk OTel Node.js agent has minimal impact on system performance when instrumenting Node.js applications, although the final agent overhead depends on multiple factors.
+The Splunk OTel JS agent instruments your application at runtime. Like any other software agent, the JS agent requires system resources like CPU, memory, and network bandwidth. The use of resources by the agent is called agent overhead or performance overhead. The Splunk OTel JS agent has minimal impact on system performance when instrumenting Node.js applications, although the final agent overhead depends on multiple factors.
 
 Some factors that might increase agent overhead are environmental, such as the physical machine architecture, CPU frequency, amount and speed of memory, system temperature, and resource contention. Other factors include virtualization and containerization, the operating system and its libraries, the Node.js version, Node.js configuration, the algorithmic design of the software being monitored, and software dependencies.
 
 Due to the complexity of modern software and the broad diversity in deployment scenarios, it is impossible to come up with a single agent overhead estimate. To find the overhead of any instrumentation agent in a given deployment, you have to conduct experiments and collect measurements directly. Therefore, all statements about performance must be treated as general information and guidelines that are subject to evaluation in a specific system.
 
-The following sections describe the minimum requirements of the Splunk OTel Node.js agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
+The following sections describe the minimum requirements of the Splunk OTel JS agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
-.. _nodejs-overhead-requirements:
+.. _nodejs-overhead-requirements-3x:
 
 Minimum requirements for production deployments
 =================================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="requirements/nodejs.rst"></div>
+
 .. include:: /_includes/requirements/nodejs.rst
 
+.. raw:: html
 
-.. _nodejs-overhead-guidelines:
+   <div class="include-stop" id="requirements/nodejs.rst"></div>
+
+
+
+
+
+.. _nodejs-overhead-guidelines-3x:
 
 Guidelines to reduce agent overhead
 =================================================================
 
-The following best practices and techniques might help in reducing overhead caused by the Node.js agent.
+The following best practices and techniques might help in reducing overhead caused by the Splunk OTel JS agent.
 
 Configure trace sampling
 -----------------------------------------------------------------
@@ -60,7 +73,7 @@ The following example shows how to configure trace sampling in the code to drop 
    });
 
 
-.. _turn-on-nodejs-instrumentations:
+.. _turn-on-nodejs-instrumentations-3x:
 
 Turn on only the instrumentation you need
 -----------------------------------------------------------------
@@ -89,9 +102,9 @@ Provision adequate resources
 Make sure to provision enough resources for your instrumentation and for the Collector. The amount of resources such as memory or disk depend on your application architecture and needs. For example, a common setup is to run the instrumented application on the same host as the Splunk Distribution of OpenTelemetry Collector. In that case, consider rightsizing the resources for the Collector and optimize its settings. See :ref:`otel-sizing`.
 
 
-.. _nodejs-overhead-constraints:
+.. _nodejs-overhead-constraints-3x:
 
-Constraints impacting the performance of the Node.js agent
+Constraints impacting the performance of the Splunk OTel JS agent
 =================================================================
 
 In general, the more telemetry you collect from your application, the bigger is the impact on agent overhead. For example, tracing methods that aren't relevant to your application can still produce considerable agent overhead because tracing such methods is computationally more expensive than running the method itself. Similarly, high cardinality tags in metrics might increase memory usage. Debug logging also increases write operations to disk and memory usage.
@@ -101,7 +114,7 @@ Some instrumentations, for example JDBC or Redis, produce high span volumes that
 .. note:: Experimental features of the Node.js agent might increase agent overhead due to the experimental focus on functionality over performance. Stable features are safer in terms of agent overhead.
 
 
-.. _nodejs-overhead-troubleshooting:
+.. _nodejs-overhead-troubleshooting-3x:
 
 Troubleshooting agent overhead issues
 ====================================================================
@@ -124,7 +137,7 @@ Consider taking the following actions to decrease agent overhead:
 - Turn on runtime metrics to check event loop lag. See :ref:`enable_automatic_metric_collection_nodejs`.
 
 
-.. _nodejs-overhead-measure-diy:
+.. _nodejs-overhead-measure-diy-3x:
 
 Guidelines for measuring agent overhead
 =================================================================
@@ -188,4 +201,17 @@ You can also compare your results with the official OpenTelemetry JS benchmarks 
 How to get support
 =================================================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

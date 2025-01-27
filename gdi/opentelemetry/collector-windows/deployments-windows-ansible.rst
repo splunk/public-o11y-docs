@@ -21,6 +21,7 @@ Currently, the following Windows versions are supported:
 * Windows Server 2016 64-bit
 * Windows Server 2019 64-bit
 * Windows Server 2022 64-bit
+* Windows Server 2025 64-bit
 
 Requirements
 ==========================================
@@ -120,4 +121,16 @@ The following table describes the variables that can be configured for this role
 Next steps
 ==================================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/collector-windows-next-steps.rst"></div>
+
 .. include:: /_includes/gdi/collector-windows-next-steps.rst
+.. raw:: html
+
+   <div class="include-stop" id="gdi/collector-windows-next-steps.rst"></div>
+
+
+

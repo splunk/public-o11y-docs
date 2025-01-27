@@ -60,6 +60,9 @@ The following table shows the retention time period for each data type in RUM.
    * - :ref:`Monitoring MetricSets <monitoring-metricsets>`
      - 
        * 13 months 
+   * - :ref:`Session Replay <rum-session-replay>` 
+     - 
+       * 8 days
 
 .. _apm-data-retention:
 

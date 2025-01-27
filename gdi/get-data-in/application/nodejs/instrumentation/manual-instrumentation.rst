@@ -1,4 +1,4 @@
-.. _nodejs-manual-instrumentation:
+.. _nodejs-manual-instrumentation-3x:
 
 ************************************************************************
 Manually instrument Node.js applications for Splunk Observability Cloud
@@ -7,11 +7,11 @@ Manually instrument Node.js applications for Splunk Observability Cloud
 .. meta::
    :description: Manually instrument your Node.js application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Node.js application for Splunk Observability Cloud.
 
-Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Node.js covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
+Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry JS covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
 
 .. note:: Manual OTel instrumentation is fully compatible with Splunk automatic Node.js instrumentation and is fully supported by Splunk.
 
-.. _nodejs-otel-custom-traces:
+.. _nodejs-otel-custom-traces-3x:
 
 Custom traces
 =====================================
@@ -46,7 +46,7 @@ To send custom traces to Splunk Observability Cloud, add the required dependenci
 .. note:: For more examples of manual instrumentation, see :new-page:`Manual instrumentation <https://opentelemetry.io/docs/instrumentation/js/manual/>` in the OpenTelemetry official documentation.
 
 
-.. _nodejs-otel-custom-metrics:
+.. _nodejs-otel-custom-metrics-3x:
 
 Custom metrics
 =====================================
@@ -72,8 +72,8 @@ To send custom application metrics to Splunk Observability Cloud, add ``@opentel
          }));
        },
        exportIntervalMillis: 1000, // default: 5000
-       // The default exporter used is OTLP over gRPC
-       endpoint: 'http://collector:4317',
+       // The default exporter used is OTLP over HTTP
+       endpoint: 'http://collector:4318',
      },
    });
 
@@ -127,7 +127,7 @@ To configure aggregation temporality in your custom metrics, use ``AggregationTe
 .. code-block:: javascript
 
    const { start } = require('@splunk/otel');
-   const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-grpc');
+   const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-http');
    const { AggregationTemporality, PeriodicExportingMetricReader } = require('@opentelemetry/sdk-metrics-base');
 
    start({

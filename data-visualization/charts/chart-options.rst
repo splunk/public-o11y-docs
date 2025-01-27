@@ -1,7 +1,7 @@
 .. _chart-options-tab:
 
 *****************************************************************
-Chart Options in the Chart Builder
+Chart options in the Chart Builder
 *****************************************************************
 
 
@@ -109,7 +109,7 @@ In the following illustration, the border on the left indicates that value is or
 Color theme
 =============================================================================
 
-Use this option to specify the color family to use when you populate a histogram chart. To learn more, see :ref:`graph-chart-type`. The color you select represents the darkest value on the chart; other values are shown with progressively less saturation. 
+Use this option to specify the color family to use when you populate a histogram chart. To learn more, see :ref:`histogram-charts`. The color you select represents the darkest value on the chart; other values are shown with progressively less saturation. 
 
 Similar options are available for heatmap charts (see :ref:`color-threshold`) and for single value and list charts. To learn more, see :ref:`color-value`.
 
@@ -499,7 +499,7 @@ This option lets you specify whether Y-axis values are shown in decimal units (1
 Visualization type
 =============================================================================
 
-See :ref:`choose-chart-type`.
+See :ref:`chart-types`.
 
 .. _chart-option-compatibility-matrix:
 

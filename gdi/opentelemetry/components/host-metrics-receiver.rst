@@ -11,6 +11,7 @@ The host metrics receiver generates metrics scraped from host systems when the C
 
 By default, the host metrics receiver is activated in the Splunk Distribution of OpenTelemetry Collector and collects the following metrics:
 
+- System metrics
 - CPU usage metrics
 - Disk I/O metrics
 - CPU load metrics
@@ -89,6 +90,10 @@ Scrapers extract data from endpoints and then send that data to a specified targ
 
       - Scraper
       - Description
+   - 
+
+      - ``system``
+      - System metrics
    - 
 
       - ``cpu``
@@ -356,7 +361,20 @@ processes scraper
 For more information, see the :new-page:`processes scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processesscraper/documentation.md>` in GitHub.
 
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="gdi/default-translation-metrics.rst"></div>
+
 .. include:: /_includes/gdi/default-translation-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="gdi/default-translation-metrics.rst"></div>
+
+
+
 
 
 Resource attributes
@@ -370,7 +388,20 @@ To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` 
 
    export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="activate-deactivate-native-metrics.rst"></div>
+
 .. include:: /_includes/activate-deactivate-native-metrics.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="activate-deactivate-native-metrics.rst"></div>
+
+
+
 
 Settings
 ======================
@@ -384,4 +415,17 @@ The following table shows the configuration options for the host metrics receive
 Troubleshooting
 ======================
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
 .. include:: /_includes/troubleshooting-components.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
+
+

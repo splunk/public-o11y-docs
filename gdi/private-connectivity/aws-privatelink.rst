@@ -315,15 +315,15 @@ To use AWS PrivateLink URLs in your Collector instance, update the necessary var
     - Example
 
   * - Metric ingest endpoint
-    - ``private-ingest.<REGION>.signalfx.com``
+    - ``private-ingest.<realm>.signalfx.com``
     - ``private-ingest.us0.signalfx.com``
 
   * - Traces ingest endpoint
-    - ``private-ingest.<REGION>.signalfx.com/v2/trace``
+    - ``private-ingest.<realm>.signalfx.com/v2/trace``
     - ``private-ingest.us0.signalfx.com/v2/trace``
 
   * - API endpoint URL
-    - ``http://<REGION>.signalfx.com``
+    - ``http://private-api.<realm>.signalfx.com``
     - ``http://private-api.us0.signalfx.com``
 
 
@@ -356,4 +356,17 @@ Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs pee
 
 .. _aws-privatelink-support:
 
+
+
+.. raw:: html
+
+   <div class="include-start" id="report-issue.rst"></div>
+
 .. include:: /_includes/report-issue.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="report-issue.rst"></div>
+
+
+
