@@ -9,15 +9,16 @@ Advanced test configurations
 
 .. toctree::
 
-   synth-alerts
    built-in-variables
    custom-variables
+   synth-alerts
+   devices
+   syn-downtimes
    global-variables
-   public-locations
    private-locations
+   public-locations
    rum-synth
    try-now
-   syn-downtimes
 
 To simulate diverse types of traffic to your site or application, use a range of configuration options to customize each of your tests.
 
