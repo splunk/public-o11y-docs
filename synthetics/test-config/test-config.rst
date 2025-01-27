@@ -11,6 +11,7 @@ Advanced test configurations
 
    synth-alerts
    built-in-variables
+   custom-variables
    global-variables
    public-locations
    private-locations
