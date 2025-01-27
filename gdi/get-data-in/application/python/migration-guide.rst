@@ -78,7 +78,7 @@ See the following table for new function names in Python 2.0:
       - Version 2.0 name
       - Description
     * - `start_tracing()`, `start_metrics()`
-      - `start_otel()`
+      - `init_splunk_otel()`
       - Configures tracing, metrics, and logs for Splunk OpenTelemetry Python.
 
 .. _python-2.x-troubleshooting:

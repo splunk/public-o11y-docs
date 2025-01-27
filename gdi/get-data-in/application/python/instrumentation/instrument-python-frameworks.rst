@@ -40,11 +40,11 @@ When using uWSGI, you must configure tracing as a response to the ``post_fork`` 
 .. code-block:: python
 
    import uwsgidecorators
-   from splunk_otel.tracing import start_otel
+   from splunk_otel import init_splunk_otel
 
    @uwsgidecorators.postfork
    def start_otel():
-      start_otel()
+      init_splunk_otel()
 
 Customize and use the following snippet to run the application:
 
@@ -65,7 +65,7 @@ When using both uSWGI and Flask, calling ``start_tracing()`` only autoinstrument
 
    # app.py
    import uwsgidecorators
-   from splunk_otel.tracing import start_otel
+   from splunk_otel import init_splunk_otel
    from opentelemetry.instrumentation.flask import FlaskInstrumentor
    from flask import Flask
 
@@ -73,7 +73,7 @@ When using both uSWGI and Flask, calling ``start_tracing()`` only autoinstrument
 
    @uwsgidecorators.postfork
    def setup_otel():
-      start_otel()
+      init_splunk_otel()
       # Instrument the Flask app instance explicitly
       FlaskInstrumentor().instrument_app(app)
 
