@@ -19,6 +19,6 @@ List of predefined metric classes
 Splunk Infrastructure Monitoring includes the following predefined metric classes:
 
 .. csv-table:: Predefined metric classes
-   :file:  /_images/infrastructure/k8s-nav/predefined-metric-classes.csv
+   :file:  /_images/infrastructure/k8s-nav/k8s-predefined-metric-classes.csv
    :widths: 33, 30, 70
    :header-rows: 1
