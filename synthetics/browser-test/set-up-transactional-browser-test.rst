@@ -69,19 +69,22 @@ The following table describes the types of steps you can include for actions:
      - Dismiss an alert that appears on the page.
 
    * - Fill in field
-     - Fill a field you identify under :guilabel:`Selector` with a value you provide under :guilabel:`Value`. Optionally, wait for navigation. For security and reusability, use a built-in, custom, or global variable to provide the value. See :ref:`global-variables` to learn more.
+     - Fill in the field you identify under :guilabel:`Selector` with a value you provide in the :guilabel:`Value` field. For security and reusability, use a :ref:`built-in  <built-in-variables>`, :ref:`custom <custom-variables>`, or :ref:`global <global-variables>` variable in the :guilabel:`Value` field. Reference a custom variable as ``{{custom.your-variable-name}}``. Optionally, wait for navigation.
 
    * - Go to URL
-     - Navigate to a URL you provide under :guilabel:`Value`. 
+     - Navigate to a URL you provide in the :guilabel:`URL` field. 
 
    * - Execute JavaScript
      - Execute a piece of JavaScript you provide under :guilabel:`Value`. Optionally, wait for navigation. 
 
-   * - Select 
-     - Select an element you identify under :guilabel:`Selector`. Choose the value you identify under :guilabel:`Value`. Optionally, wait for navigation.
+   * - Save return value from Javascript 
+     - Execute a piece of JavaScript you specify in the :guilabel:`JavaScript` field. If the script returns a value you want to save, specify a name for the saved value in the :guilabel:`Variable` field. This creates a custom variable which you can reference in subsequent steps as ``{{custom.your-variable-name}}``. Optionally, wait for navigation.
 
    * - Save text from element 
      - Save the text an element you identify under :guilabel:`Selector`, as the variable you provide under :guilabel:`Variable`. 
+
+   * - Select 
+     - Select an element you identify under :guilabel:`Selector`. Choose the value you identify under :guilabel:`Value`. Optionally, wait for navigation.
 
    * - Switch to iframe
      - Switch focus to an embedded document in an inline frame, identified under :guilabel:`Selector`. 
