@@ -1,7 +1,7 @@
 .. _collector-common-config-grcp:
 
 *********************************************************************************
-Configure gRCP 
+Configure gRPC 
 *********************************************************************************
 
 gRPC exposes a variety of settings you can adjust within individual receivers or exporters of the Collector. 
@@ -10,10 +10,10 @@ gRPC exposes a variety of settings you can adjust within individual receivers or
    
    To configure transport, see :ref:`collector-common-config-net`.
 
-Configure gRCP clients 
+Configure gRPC clients 
 =============================================================================================
 
-To configure gRCP clients in :ref:`exporters <otel-components-exporters>` use these settings:
+To configure gRPC clients in :ref:`exporters <otel-components-exporters>` use these settings:
 
 * ``auth``. See :ref:`collector-common-config-auth`
 
@@ -21,7 +21,7 @@ To configure gRCP clients in :ref:`exporters <otel-components-exporters>` use th
 
   * Defaults: ``pick_first`` before version 0.103.0, ``round_robin`` for v0.103.0 or higher 
 
-  * Learn more at gRCP's :new-page:`Load Balancing README <https://github.com/grpc/grpc-go/blob/master/examples/features/load_balancing/README.md>`. 
+  * Learn more at gRPC's :new-page:`Load Balancing README <https://github.com/grpc/grpc-go/blob/master/examples/features/load_balancing/README.md>`. 
 
 * ``compression`` 
 
@@ -58,10 +58,10 @@ For example:
             test1: "value1"
             "test 2": "value 2"
 
-Configure gRCP servers 
+Configure gRPC servers 
 =============================================================================================
 
-To configure gRCP servers in :ref:`collector receivers <otel-components-receivers>` use these settings:
+To configure gRPC servers in :ref:`collector receivers <otel-components-receivers>` use these settings:
 
 * ``auth``. See :ref:`collector-common-config-auth`
 
@@ -83,4 +83,4 @@ Learn more
 For more details on the available settings refer to: 
 
 * :new-page:`gRPC Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configgrpc>` in OTel's GitHub repo
-* :new-page:`Golang's gRCP documentation <https://pkg.go.dev/google.golang.org/grpc>`
+* :new-page:`Golang's gRPC documentation <https://pkg.go.dev/google.golang.org/grpc>`
