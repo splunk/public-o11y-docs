@@ -8,12 +8,12 @@ Manage global data links to Splunk AppDynamics tiers with Terraform
    :description: An overview of how to use Terraform to create and delete global data links to Splunk AppDynamics tiers.
 
 .. toctree::
-   :hidden:
-   :maxdepth:  3
+      :hidden:
+      :maxdepth:  3
 
-   apm-create-data-links-terraform-batch
-   apm-create-data-links-terraform-file
-   apm-delete-data-links-terraform
+      apm-create-data-links-terraform-batch
+      apm-create-data-links-terraform-file
+      apm-delete-data-links-terraform
 
 .. note::
     You can only create a global data link to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.

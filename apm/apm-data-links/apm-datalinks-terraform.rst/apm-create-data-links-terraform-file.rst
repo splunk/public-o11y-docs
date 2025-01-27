@@ -138,6 +138,7 @@ To create data links with a Terraform configuration file:
             url         = "https://www.example.saas.appdynamics.com/#/application=4321&component=8765"
         }
         }
+
 #. In the working directory with your Terraform configuration file, run the following command to initialize the directory:
     .. code-block:: terraform
 

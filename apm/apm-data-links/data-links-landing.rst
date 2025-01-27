@@ -8,12 +8,12 @@ Use data links to connect APM properties to relevant resources
    :description: Use global data links for services, traces, and spans to transfer APM context to other resources.
 
 .. toctree::
-   :hidden:
-   :maxdepth:  3
+      :hidden:
+      :maxdepth:  3
 
-   apm-create-data-links
-   apm-data-links-terraform
-   apm-use-data-links
+      apm-create-data-links
+      apm-data-links-terraform
+      apm-use-data-links
 
 Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring dashboards, Splunk instances, Kibana logs, or custom URLs.
 
