@@ -226,15 +226,12 @@ While both outlier strategies highlight instances that are behaving differently 
 
 The Find Outliers feature also provides a population selector that lets you restrict the comparison population to only those instances that have similar characteristics (as defined by the Group By dimension). For example, you might not want to compare a server against others that are running different software. It is more relevant to determine outliers among servers providing the same service. Grouping instances by the service that they run and using that as your population basis ensures that instances are compared only with their peers to determine if they behave abnormally.
 
-View data links
------------------
+View global data links
+-----------------------
 
-By default, Splunk Infrastructure Monitoring automatically displays :ref:`data links<data-link-def>` in the navigator table view and :guilabel:`Metadata` tab.
+By default, Splunk Infrastructure Monitoring automatically creates and displays :ref:`global data links<data-link-def>` in the navigator table view and :guilabel:`Metadata` tab.
 
-To configure additional data links to appear in the :guilabel:`Metadata` tab, see:
-
-* :ref:`local-links`
-* :ref:`link-metadata-to-content`
+To configure additional global data links to appear in the :guilabel:`Metadata` tab, see :ref:`link-metadata-to-content`.
 
 .. _navigator-sidebar-metadata:
 
