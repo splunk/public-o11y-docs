@@ -111,7 +111,7 @@ To use the left navigation panel:
 Customize your navigator display with metric classes
 =======================================================
 
-By default, the navigator table view displays a subset of metrics used to monitor the performance of your instances. You can customize the table view by using predefined metric classes, which are groupings of related metrics and KPIs useful for troubleshooting specific aspects of your deployment.
+By default, the navigator table view displays a subset of metrics and KPIs used to monitor the performance of your instances. You can customize the table view by using predefined metric classes, which are groupings of related metrics and KPIs useful for troubleshooting specific aspects of your deployment.
 
 To use a predefined metric class:
 

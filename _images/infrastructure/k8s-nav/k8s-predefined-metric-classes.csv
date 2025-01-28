@@ -1,15 +1,15 @@
 Navigator,Metric class name,Description
-Kubernetes clusters,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes clusters. Note: Cluster CPU and Memory utilization is the average of all containers in the cluster.  
+Kubernetes clusters,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes clusters. Note: Cluster CPU and Memory Utilization is the average of all containers in the cluster.  
 Kubernetes nodes,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes nodes. 
-Kubernetes nodes,Node CPU,"A group of metrics and KPIs related to node CPU troubleshooting. Note: At the node level, CPU Request and CPU Limit is the sum of the respective values for all containers in the node.
+Kubernetes nodes,Node CPU,"A group of metrics and KPIs related to node CPU troubleshooting. Note: At the node level, CPU Limit and CPU Request is the sum of the respective values for all containers in the node.
 "
-Kubernetes nodes,Node memory,"A group of metrics and KPIs related to node memory troubleshooting. Note: At the node level, CPU Request and CPU Limit is the sum of the respective values for all containers in the node."
-Kubernetes nodes,Node file system,"A group of metrics and KPIs related to node storage troubleshooting. Note: At the node level, CPU Request and CPU Limit is the sum of the respective values for all containers in the node."
+Kubernetes nodes,Node memory,"A group of metrics and KPIs related to node memory troubleshooting. Note: At the node level, Memory Limit and Memory Request is the sum of the respective values for all containers in the node."
+Kubernetes nodes,Node file system,"A group of metrics and KPIs related to node storage troubleshooting. Note: At the node level, Storage Limit and Storage Request is the sum of the respective values for all containers in the node."
 Kubernetes nodes,Node network metrics,A group of metrics and KPIs related to node network troubleshooting.
 Kubernetes pods,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes pods.
 Kubernetes pods,Pod status,A group of metrics and KPIs related to pod status troubleshooting.
 Kubernetes pods,Pod CPU,"A group of metrics and KPIs related to pod CPU troubleshooting. Note: At the pod level, CPU Limit and CPU Request is the sum of the respective values for all containers in the pod. "
-Kubernetes pods,Pod memory,"A group of metrics and KPIs related to pod memory troubleshooting. Note: At the pod level, CPU Limit and CPU Request is the sum of the respective values for all containers in the pod. "
+Kubernetes pods,Pod memory,"A group of metrics and KPIs related to pod memory troubleshooting. Note: At the pod level, Memory Limit and Memory Request is the sum of the respective values for all containers in the pod. "
 Kubernetes pods,Pod file system,A group of metrics and KPIs related to pod storage troubleshooting.
 Kubernetes containers,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes containers.
 Kubernetes containers,Container CPU,A group of metrics and KPIs related to container CPU troubleshooting.
@@ -32,7 +32,7 @@ Kubernetes ReplicaSets,ReplicaSet churn,A group of metrics and KPIs related to t
 Kubernetes ReplicaSets,ReplicaSet scaling,A group of metrics and KPIs related to scaling up/down the pods in a ReplicaSet.
 Kubernetes ReplicaSets,ReplicaSet attributes,A group of metrics and KPIs related to ReplicaSet attributes.
 Kubernetes DaemonSets,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes DaemonSets.
-Kubernetes DaemonSets,DaemonSet nodes,A group of metrics and KPIs related to troubleshooting the pods in a DaemonSet.
+Kubernetes DaemonSets,DaemonSet nodes,A group of metrics and KPIs related to troubleshooting the nodes in a DaemonSet.
 Kubernetes DaemonSets,DaemonSet churn,A group of metrics and KPIs related to the churn rate of the pods in a DaemonSet.
 Kubernetes DaemonSets,DaemonSet attributes,A group of metrics and KPIs related to DaemonSet attributes.
 Kubernetes StatefulSets,Default,A default group of metrics and KPIs that are essential for troubleshooting Kubernetes StatefulSets.
