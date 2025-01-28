@@ -21,11 +21,11 @@ You can use the AI Assistant to do the following:
 
 The AI Assistant provides an intelligent chatbot experience to empower users to craft complex SignalFlow by simply writing plain English prompts.
 
-The AI Assistant has access only to data from Splunk APM and Splunk Infrastructure Monitoring. While you can access the assistant throughout Splunk Observability Cloud, responses are geared toward use cases for APM, Infrastructure Monitoring, and Log Observer Connect.
+The AI Assistant has access only to data from Splunk APM and Splunk Infrastructure Monitoring. While you can access the AI Assistant throughout Splunk Observability Cloud, responses are geared toward use cases for APM, Infrastructure Monitoring, and Log Observer Connect.
 
 What is supported
 ==================================================================================
-The AI Assistant understands and supports natural language. The assistant responds in natural language with a summary of insights synthesized from multiple sources. Currently, the assistant supports only English. 
+The AI Assistant understands and supports natural language. The AI Assistant responds in natural language with a summary of insights synthesized from multiple sources. Currently, the AI Assistant supports only English. 
 
 How to access the AI Assistant in Observability Cloud
 ==================================================================================
@@ -47,7 +47,7 @@ Alternatively, you can select from the two suggested prompts:
     :width: 40%
     :alt: This image shows the location of the AI Assistant for Observability.
 
-.. note:: When you ask questions or submit instructions that require the Assistant to query logs, there will be an impact on your SVC quota.
+.. note:: When you ask questions or submit instructions that require the AI Assistant to query logs, there will be an impact on your SVC quota.
 
 feedback
 ----------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ You can give feedback to the AI Assistant in development team by selecting the t
 
 Context limitations
 ==================================================================================
-Context length is the amount of text that the AI assistant can process in a single conversation due to LLM limitations. Think of it as the short-term memory of the AI assistant. Each interaction with the assistant is limited to the context set from the beginning of that conversation. The AI Assistant tells you when you exceed the chat limit and prompts you to copy the information that you want to save and start a new chat to continue. Select the New chat button in the upper right corner of the assistant to create a new chat with a new context.
+Context length is the amount of text that the AI assistant can process in a single conversation due to LLM limitations. Think of it as the short-term memory of the AI assistant. Each interaction with the AI Assistant is limited to the context set from the beginning of that conversation. The AI Assistant tells you when you exceed the chat limit and prompts you to copy the information that you want to save and start a new chat to continue. Select the :guilabel:`New chat` button in the upper right corner of the AI Assistant to create a new chat with a new context.
 
 Chat history
 ----------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ You can only access the most recent chat interaction within the last thirty days
 
 ChatId
 ----------------------------------------------------------------------------------
-Chatid is the unique identifier for each AI Assistant in Observability Cloud conversation. Use ChatId when you want to report something about a particular conversation. Find it near the top of the chat below AI Assistant.
+Chatid is the unique identifier for each conversation in AI Assistant in Observability Cloud. Use ChatId when you want to report something about a particular conversation. Find it near the top of the chat below :guilabel:`AI Assistant`.
 
 ..  image:: /_images/ai/ai3.png
     :width: 40%
@@ -72,7 +72,7 @@ Chatid is the unique identifier for each AI Assistant in Observability Cloud con
 
 Data sharing and use
 ==================================================================================
-When you interact with AI Assistant in Observability, Splunk collects and might use inputs, outputs, grounding data, feedback, and usage data to provide and maintain the the AI Assistant in Observability, comply with applicable law, enforce our policies, and develop and improve the AI Assistant in Observability, including to train AI models.  If you do not want your data used for these purposes, do not click on the button and do not install, download, access, or otherwise use AI Assistant in Observability. The following table explains the categories of data the assistant collects:
+When you interact with AI Assistant in Observability Cloud, Splunk collects and might use inputs, outputs, grounding data, feedback, and usage data to provide and maintain the the AI Assistant, comply with applicable law, enforce our policies, and develop and improve the AI Assistant in Observability, including to train AI models.  If you do not want your data used for these purposes, do not click on the button and do not install, download, access, or otherwise use AI Assistant in Observability. The following table explains the categories of data the AI Assistant collects:
 
 .. list-table::
    :header-rows: 1
@@ -83,13 +83,13 @@ When you interact with AI Assistant in Observability, Splunk collects and might 
    * - User prompts or inputs 
      - Refers to a question or an input by a user to the AI Assistant. Examples are “Show me all K8 nodes with more than 90% memory utilization”, and “What is wrong with my payment service?”
    * - Grounding observability data
-     - Refers to observability metrics, traces, and logs data. Not every user prompt may require grounding observability data. For environment-specific questions like “What is wrong with my payment service?”, the assistant leverages payment service-related observability data to answer the question.
+     - Refers to observability metrics, traces, and logs data. Not every user prompt may require grounding observability data. For environment-specific questions like “What is wrong with my payment service?”, the AI Assistant leverages payment service-related observability data to answer the question.
    * - Assistant responses
      - Refer to the output generated by the AI assistant. This might contain observability data in a summarized text chart form. 
    * - Feedback
      - Refers to any user-entered feedback.
    * - Usage data
-     - Usage data is more fully described in the Splunk Privacy Statement. Examples include “thumbs up”, “thumbs down”, “chat id”, “copy”, “tokens used”, and “response length” 
+     - Usage data is more fully described in the Splunk Privacy Statement. Examples include “thumbs up”, “thumbs down”, “chat id”, “copy”, “tokens used”, and “response length”. 
 
 Service limitations
 ==================================================================================
