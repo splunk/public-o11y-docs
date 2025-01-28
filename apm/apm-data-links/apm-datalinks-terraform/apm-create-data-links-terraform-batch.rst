@@ -34,12 +34,13 @@ To create a batch of global data links:
     .. image:: /_images/apm/apm-data-links/appd-data-links-sample-csv.png
         :width: 100%
         :alt: This image shows a sample file for creating a batch of global data links to Splunk AppDynamics.
-   - For OllyInferredServiceName, enter the Splunk APM inferred service name.
-   - For AppDLinkLabel, enter a label for the data link. This label appears in the Splunk O11y user interface.
-   - For AppDLink, enter the Splunk AppDynamics tier URL.
+
+    - For OllyInferredServiceName, enter the Splunk APM inferred service name.
+    - For AppDLinkLabel, enter a label for the data link. This label appears in the Splunk O11y user interface.
+    - For AppDLink, enter the Splunk AppDynamics tier URL.
         To obtain the tier URL, navigate to the tier in the Splunk AppDynamics UI and copy the URL from the browser. Ensure that you capture the entire URL and that it contains the controller URL, application ID, and application component.
 
-#. Download the Node.js script from :ref:`the Splunk GitHub repository <https://github.com/splunk>`. The Node.js script uses the CSV file as an input to run a Terraform script that creates the data links.
+#. Download the Node.js script from the Splunk GitHub repository (link TBA). The Node.js script uses the CSV file as an input to run a Terraform script that creates the data links.
 
 #. To install the dependencies in the Node.js script package, run: 
     .. code-block:: none

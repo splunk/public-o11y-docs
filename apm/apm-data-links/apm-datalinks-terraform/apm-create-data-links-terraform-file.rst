@@ -157,11 +157,10 @@ To create data links with a Terraform configuration file:
     - For <realm>, enter your Splunk Observability Cloud realm. To obtain your realm, navigate to the Splunk Observability Cloud user interface and view the browser URL, which is in the format api.<realm>.signalfx.com.
     - For <plan-file-name>, enter your desired name for the plan file that Terraform will create for the changes.
 
-#. Use the output to review the changes. To run the changes:
+#. Use the output to review the changes. To run the changes and create a terraform.tf.state file that lists the resources that Terraform created:
     .. code-block:: none
 
         terraform apply “<plan-file-name>”
-    This command creates a terraform.tf.state file that lists the resources that Terraform created.
 
 #. To verify that the global data links were successfully created, use one of the following methods:
     - View the output of the command. Sample output for a successful execution: ``Apply complete! Resources: 3 added, 0 changed, 0 destroyed``.
