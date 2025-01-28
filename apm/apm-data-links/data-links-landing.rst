@@ -12,7 +12,7 @@ Use data links to connect APM properties to relevant resources
       :maxdepth:  3
 
       apm-create-data-links
-      apm-data-links-terraform
+      apm-datalinks-terraform/apm-data-links-terraform
       apm-use-data-links
 
 Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring dashboards, Splunk instances, Kibana logs, or custom URLs.

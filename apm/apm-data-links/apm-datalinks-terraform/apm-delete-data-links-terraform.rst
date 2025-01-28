@@ -31,7 +31,7 @@ To delete all global data links that you created with Terraform:
     #. Copy the API access token.
 
 #. Open your terminal and navigate to the Terraform directory. Run:
-     .. code-block:: terraform 
+     .. code-block:: none
 
         terraform destroy -var=”signalfx_auth_token=<api-access-token>” -var=”signalfx_api_url=https://api.<realm>.signalfx.com”
     

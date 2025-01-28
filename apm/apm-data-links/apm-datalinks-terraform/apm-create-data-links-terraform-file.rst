@@ -14,7 +14,7 @@ Create a global data link to link a Splunk APM inferred service to a Splunk AppD
 
 You can programmatically create global data links to Splunk AppDynamics tiers with a Terraform configuration file.
 
-This method can only be used to create global data links for inferred services that do not have existing global data links. If your inferred service already has an existing global data link, :ref:`use the UI<apm-create-gdl-to-appd>` to create additional global data links.
+This method can only be used to create global data links for inferred services that do not have existing global data links. If your inferred service already has an existing global data link, :ref:`use the UI <apm-create-gdl-to-appd>` to create additional global data links.
 
 Prerequisites
 =================
@@ -60,11 +60,11 @@ To create data links with a Terraform configuration file:
         api_url = "${var.signalfx_api_url}"
         }
 
-    - For version, enter the current Splunk Observability Cloud Terraform provider version. To check the latest version, see :new-page:`Releases <https://github.com/splunk-terraform/terraform-provider-signalfx/releases>`. This value must be 9.6.0 or higher.
+    - For `version`, enter the current Splunk Observability Cloud Terraform provider version. To check the latest version, see :new-page:`Releases <https://github.com/splunk-terraform/terraform-provider-signalfx/releases>`. This value must be 9.6.0 or higher.
     - (Optional) Add arguments as needed for your configuration. For more information on the supported arguments, see :new-page:`Splunk Observability Cloud provider <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs#arguments>` in the Terraform documentation.
 
 #. Add the :new-page:`signalfx_data_link <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/data_link>` resource to the Terraform file:
-    .. code-block:: terraform
+    .. code-block:: none
 
         # A link to a Splunk AppDynamics service
         resource "signalfx_data_link" "<data-link-id>" {
@@ -140,7 +140,7 @@ To create data links with a Terraform configuration file:
         }
 
 #. In the working directory with your Terraform configuration file, run the following command to initialize the directory:
-    .. code-block:: terraform
+    .. code-block:: none
 
         terraform init
 
@@ -149,7 +149,7 @@ To create data links with a Terraform configuration file:
     #. Select :guilabel:`Show User API Access Token`. Copy the API access token.
 
 #. To set your signalfx_auth_token and signalfx_api_url variables and generate a preview of the changes that Terraform will make, run:
-    .. code-block:: terraform
+    .. code-block:: none
 
         terraform plan -var=”signalfx_auth_token=<api-access-token>” -var=”signalfx_api_url=https://api.<realm>.signalfx.com” -out=<plan-file-name>
         
@@ -158,7 +158,7 @@ To create data links with a Terraform configuration file:
     - For <plan-file-name>, enter your desired name for the plan file that Terraform will create for the changes.
 
 #. Use the output to review the changes. To run the changes:
-    .. code-block:: terraform
+    .. code-block:: none
 
         terraform apply “<plan-file-name>”
     This command creates a terraform.tf.state file that lists the resources that Terraform created.

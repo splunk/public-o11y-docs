@@ -12,7 +12,7 @@ Create a batch of global data links to Splunk AppDynamics tiers with a Node.js s
 
 Create a global data link to link a Splunk APM inferred service to a Splunk AppDynamics tier. When you view the inferred service in Splunk APM, you can select the data link to navigate to the service in the Splunk AppDynamics user interface.
 
-You can programmatically create global data links to Splunk AppDynamics tiers with a CSV file and Splunk Node.js script, which executes a Terraform script that creates the data links. This process does not require running Terraform commands.
+You can programmatically create global data links to Splunk AppDynamics tiers with a CSV file and Splunk Node.js script, which generates and runs a Terraform script that creates the data links. This process does not require running Terraform commands.
 
 This method can only be used to create global data links for inferred services that do not have existing global data links. If your inferred service already has an existing global data link, :ref:`use the UI <apm-create-gdl-to-appd>` to create additional global data links.
 
@@ -39,10 +39,10 @@ To create a batch of global data links:
    - For AppDLink, enter the Splunk AppDynamics tier URL.
         To obtain the tier URL, navigate to the tier in the Splunk AppDynamics UI and copy the URL from the browser. Ensure that you capture the entire URL and that it contains the controller URL, application ID, and application component.
 
-#. Download the Node.js script from :ref:`the Splunk GitHub repository <link>`. The Node.js script uses the CSV file as an input to run a Terraform script that creates the data links.
+#. Download the Node.js script from :ref:`the Splunk GitHub repository <https://github.com/splunk>`. The Node.js script uses the CSV file as an input to run a Terraform script that creates the data links.
 
 #. To install the dependencies in the Node.js script package, run: 
-    .. code-block:: bash
+    .. code-block:: none
 
         npm install
 
@@ -51,7 +51,7 @@ To create a batch of global data links:
     #. Select :guilabel:`Show User API Access Token`. Copy the API access token.
 
 #. To run the Node.js script, run:
-    .. code-block:: bash
+    .. code-block:: none
 
         node createAppDLinkTerraformScript.js <csv-file-path> <o11y-api-url> <o11y-auth-token>
 
