@@ -2,6 +2,8 @@
 
 .. _grafana-create-queries:
 
+.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+
 **************************************
 Create queries to filter dashboards
 **************************************
@@ -34,10 +36,10 @@ To add a query to a dashboard using the query editor:
 #. In the Grafana main menu, select :guilabel:`Connections` and then :guilabel:`Data sources`.
 #. Select your Splunk Observability Cloud data source.
 #. Select :guilabel:`Explore data`.
-#. Select :guilabel:`SignalFlow`, :guilabel:`Suggest API`, or :guilabel:`Pending Alerts`` to create a query.
+#. Select :guilabel:`SignalFlow`, :guilabel:`Suggest API`, or :guilabel:`Pending Alerts` to create a query.
 #. Configure the query fields.
     - For more information on SignalFlow query syntax, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` and :new-page:`Intermediate to advanced SignalFlow <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/docs/flow.md>`.
-    - For more information on the SignalFlow query fields (Max Delay and Resolution), see :new-page:`Input lag management <https://dev.splunk.com/observability/docs/signalflow/#Input-lag-management>` and :new-page:`Resolution of computations <https://dev.splunk.com/observability/docs/signalflow/#Resolution-of-computations>`. The Splunk plugin measures resolution in milliseconds.
+    - For more information on the SignalFlow query fields (:guilabel:`Max Delay` and :guilabel:`Resolution`), see :new-page:`Input lag management <https://dev.splunk.com/observability/docs/signalflow/#Input-lag-management>` and :new-page:`Resolution of computations <https://dev.splunk.com/observability/docs/signalflow/#Resolution-of-computations>`. The Splunk plugin measures resolution in milliseconds.
 #. Select :guilabel:`Run query`. The query editor selects a panel on your dashboard to run the query on, based on the required data input.
 #. To view the query output on your dashboard:
     #. In the Grafana main menu, select :guilabel:`Dashboards`.
@@ -56,7 +58,7 @@ To add a query directly from the dashboard view:
 #. On the :guilabel:`Query` tab, select :guilabel:`SignalFlow`, :guilabel:`Suggest API`, or :guilabel:`Pending Alerts` to create a query.
 #. Configure the query fields.
     - For more information on SignalFlow query syntax, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` and :new-page:`Intermediate to advanced SignalFlow <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/docs/flow.md>`.
-    - For more information on the SignalFlow query fields (Max Delay and Resolution), see :new-page:`Input lag management <https://dev.splunk.com/observability/docs/signalflow/#Input-lag-management>` and :new-page:`Resolution of computations <https://dev.splunk.com/observability/docs/signalflow/#Resolution-of-computations>`. The Splunk plugin measures resolution in milliseconds.
+    - For more information on the SignalFlow query fields (:guilabel:`Max Delay` and :guilabel:`Resolution`), see :new-page:`Input lag management <https://dev.splunk.com/observability/docs/signalflow/#Input-lag-management>` and :new-page:`Resolution of computations <https://dev.splunk.com/observability/docs/signalflow/#Resolution-of-computations>`. The Splunk plugin measures resolution in milliseconds.
 #. Select :guilabel:`Apply`.
 
 Example queries
@@ -69,7 +71,7 @@ SignalFlow examples
 
  .. list-table::
     :header-rows: 1
-    :widths: 40 40
+    :widths: 50 50
 
     * - :strong:`Description`
       - :strong:`Example SignalFlow query`
@@ -103,47 +105,47 @@ Suggest API examples
 
  .. list-table::
     :header-rows: 1
-    :widths: 40 40
+    :widths: 50 50
 
     * - :strong:`Description`
       - :strong:`Example query field values`
     
     * - Get a list of tag names
-      - * :guilabel:`Metric Name`= spans
-        * :guilabel:`isHistogram`= true
-        * :guilabel:`Tag Name`= <leave-blank>
+      - * :guilabel:`Metric Name` = spans
+        * :guilabel:`isHistogram` = true
+        * :guilabel:`Tag Name` = <leave-blank>
     * - Get a list of values for a specific tag
-      - * :guilabel:`Metric Name`= spans
-        * :guilabel:`isHistogram`= true
-        * :guilabel:`Tag Name`= sf_environment
+      - * :guilabel:`Metric Name` = spans
+        * :guilabel:`isHistogram` = true
+        * :guilabel:`Tag Name` = sf_environment
     * - Get a list of values for a specific tag, filtered by another variables (cascading variables)
-      - * :guilabel:`Metric Name`= spans
-        * :guilabel:`isHistogram`= true
-        * :guilabel:`Tag Name`= sf_service
+      - * :guilabel:`Metric Name` = spans
+        * :guilabel:`isHistogram` = true
+        * :guilabel:`Tag Name` = sf_service
         * :guilabel:`Filter 0:`
-            * :guilabel:`Tag Name`= sf_environment
-            * :guilabel:`Value`= $env
+            * :guilabel:`Tag Name` = sf_environment
+            * :guilabel:`Value` = $env
     * - Support an “all” option for variables
       - SignalFlow honors the use of * as an open filter. Navigate to the Grafana variable configuration and set the following:
-        - :guilabel:`Include All`= true
-        - :guilabel:`Custom All`= *
+          - :guilabel:`Include All` = true
+          - :guilabel:`Custom All` = *
 
 Pending Alerts examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
  .. list-table::
     :header-rows: 1
-    :widths: 40 40
+    :widths: 50 50
 
     * - :strong:`Description`
       - :strong:`Example query field values`
     
     * - Fetch incidents for a specified service
-      - :guilabel:`Services`= MyService
+      - :guilabel:`Services` = MyService
     * - Fetch incidents for multiple specified services
-      - :guilabel:`Services`= MyService, YourService
+      - :guilabel:`Services` = MyService, YourService
     * - Fetch incidents using a Grafana variable as a filter service name
-      - :guilabel:`Services`= $service
+      - :guilabel:`Services` = $service
     * - Fetch incidents for all services
-      - :guilabel:`Services`= *
+      - :guilabel:`Services` = *
 

@@ -2,6 +2,8 @@
 
 .. _integrate-o11y-with-grafana:
 
+.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+
 ***************************************************
 Integrate Splunk Observability Cloud with Grafana
 ***************************************************
@@ -20,4 +22,4 @@ Get started
 =============
 
 1. Deploy the plugin on :ref:`Kubernetes <deploy-grafana-k8s>` or the :ref:`Grafana Helm chart <deploy-grafana-helm>`.
-2. Learn how to :ref:`configure-grafana-plugin`.
+2. Learn how to :ref:`Configure the Grafana plugin <configure-grafana-plugin>`.

@@ -2,28 +2,29 @@
 
 .. _deploy-grafana-helm:
 
-*****************************************
-Configure the Splunk plugin for Grafana
-*****************************************
+.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+
+****************************************************************
+Deploy the Splunk plugin for Grafana on the Grafana Helm chart
+****************************************************************
 
 Use the following high-level steps to deploy the Splunk plugin for Grafana on the Grafana Helm chart:
 
-#. Ensure that you meet the :ref:`prerequisites <grafana-plugin-prerequisites>`.
+#. Ensure that you meet the :ref:`prerequisites <grafana-plugin-prerequisites-helm>`.
 #. :ref:`grafana-plugin-install-helm`.
 #. :ref:`grafana-add-new-data-source-helm`.
 #. :ref:`grafana-import-default-dashboard-helm`.
 
-.. _grafana-plugin-prerequisites:
+.. _grafana-plugin-prerequisites-helm:
 
 Prerequisites
 ===============
 
 To deploy and configure the Splunk plugin for Grafana, ensure that:
 
-#. Your environment meets the requirements to install Grafana. See :new-page:`Install Grafana <https://grafana.com/docs/grafana/latest/setup-grafana/installation/#install-grafana>`.
-    The Splunk plugin is compatible with Grafana versions 10.4.0-11.2.x.
-#. You have the Grafana permissions to add a data source and import default dashboards. The required permission level may vary depending on your Grafana settings. 
-#. You have a Splunk Observability Cloud access token. See Create and manage organization access tokens using Splunk Observability Cloud.
+* Your environment meets the requirements to install Grafana. See :new-page:`Install Grafana <https://grafana.com/docs/grafana/latest/setup-grafana/installation/#install-grafana>`.
+* You have the Grafana permissions to add a data source and import default dashboards. The required permission level may vary depending on your Grafana settings. 
+* You have a Splunk Observability Cloud access token. See :new-page:`Create and manage organization access tokens using Splunk Observability Cloud <https://docs.splunk.com/observability/en/admin/authentication/authentication-tokens/org-tokens.html>`.
     Only Splunk Observability Cloud admins can create and grant access to access tokens.
 
 .. _grafana-plugin-install-helm:
@@ -31,10 +32,12 @@ To deploy and configure the Splunk plugin for Grafana, ensure that:
 Install a new Grafana instance and deploy the Splunk plugin
 =============================================================
 
-To deploy the plugin on a Grafana Helm chart:
+To deploy the plugin on the Grafana Helm chart:
 
-#. Download the plugin from the :new-page:`Splunk GitHub repository <download-location>`.
-#. Install the :new-page:`Grafana Helm chart <https://github.com/grafana/helm-charts/tree/main/charts/grafana>`.
+#. Download the plugin from :new-page:`https://voc.splunk.com/preview/grafana_plugin`.
+
+#. Install the :new-page:`Grafana Helm chart <https://github.com/grafana/helm-charts/tree/main/charts/grafana>`. The Splunk plugin is compatible with Grafana versions 10.4.0-11.2.x.
+
 #. Make the following changes to the values.yaml file:
     #. In the ``env`` section, add an environment variable to allow an unsigned plugin. If you self-signed the plugin, you can skip this skip.
         .. code-block:: yaml
@@ -55,51 +58,52 @@ To deploy the plugin on a Grafana Helm chart:
 
             datasources:
 
-                  # Splunk Observability Cloud plugin
+              # Splunk Observability Cloud plugin
 
-                  datasources.yaml:
+              datasources.yaml:
 
-                    apiVersion: 1
+                apiVersion: 1
 
-                    datasources:
+                datasources:
+                    
+                - name: cisco-splunko11y-datasource
 
-                    - name: cisco-splunko11y-datasource
+                    type: cisco-splunko11y-datasource
+                        
+                    isDefault: true
 
-                      type: cisco-splunko11y-datasource
+                    editable: true
 
-                      isDefault: true
+                    version: 1
 
-                      editable: true
+                    jsonData:
 
-                      version: 1
+                      realm: <splunk-o11y-realm>
 
-                      jsonData:
+                      apiKey: <splunk-o11y-access-token>
 
-                        realm: <splunk-o11y-realm>
-
-                        apiKey: <splunk-o11y-access-token>
-            
         - To obtain your ``realm``, navigate to the Splunk Observability Cloud user interface and reference the browser URL, which is in the format <realm>.signalfx.com.
+
         - To obtain your ``apiKey``, navigate to the Splunk Observability Cloud user interface. From the main menu, select :guilabel:`Settings` and then :guilabel:`Access Tokens`. Select your access token and copy the :guilabel:`Token Secret`.
 
-    #. To upgrade the Helm chart with the updates that you made to the values.yaml file, run:
+#. To upgrade the Helm chart with the updates that you made to the values.yaml file, run:
         .. code-block:: none
 
             helm upgrade <test-release> grafana/grafana -f values.yaml
         
         For <test-release>, enter your preferred release name.
     
-    #. To expose the service on an external IP, run:
+#. To expose the service on an external IP, run:
         .. code-block:: none
 
             kubectl expose service <grafana-service-name> --target-port 3000 --name <external-service-name> --external-ip <external-IP> --port 80
 
-    #. To access Grafana by using an external IP, enter the following URL in your browser:
+#. To access Grafana by using an external IP, enter the following URL in your browser:
         .. code-block:: none
 
             http://<external-IP>/login
 
-    #. To verify that the data source was created:
+#. To verify that the data source was created:
         #. In the Grafana main menu, select :guilabel:`Connections` and then :guilabel:`Data sources`.
         #. Verify that your data source appears in the list.
 
@@ -117,9 +121,11 @@ To add a new data source with the Grafana user interface:
 
 #. In the Grafana main menu, select :guilabel:`Connections` and then :guilabel:`Data sources`.
 #. Select :guilabel:`Add new data source`.
-#. Search for :guilabel:`Cisco-SplunkO11y-datasource`` and select the plugin.
-#. Enter your :guilabel:`Realm`. To obtain your realm, navigate to the Splunk Observability Cloud user interface and reference the browser URL, which is in the format <realm>.signalfx.com.
-#. Enter your :guilabel:`API Key`. To obtain your API key, navigate to the Splunk Observability Cloud user interface. From the main menu, select :guilabel:`Settings` and then :guilabel:`Access Tokens`. Select your access token and copy the :guilabel:`Token Secret`.
+#. Search for :guilabel:`Cisco-SplunkO11y-Datasource` and select the plugin.
+#. Enter your :guilabel:`Realm`.
+    To obtain your realm, navigate to the Splunk Observability Cloud user interface and reference the browser URL, which is in the format <realm>.signalfx.com.
+#. Enter your :guilabel:`API Key`.
+    To obtain your API key, navigate to the Splunk Observability Cloud user interface. From the main menu, select :guilabel:`Settings` and then :guilabel:`Access Tokens`. Select your organization access token and copy the :guilabel:`Token Secret`.
 #. (Optional) To set this data source as the default data source, toggle :guilabel:`Default` on.
 #. Select :guilabel:`Save & exit`.
 
@@ -130,6 +136,8 @@ Import default dashboard
 
 Default dashboards monitor and visualize your Splunk Observability Cloud data on Grafana. The Splunk plugin includes the O11y Basic dashboard, which monitors application performance monitoring data.
 
+To import the default dashboard:
+
 #. Launch the Grafana UI by entering the following URL in your browser:
         .. code-block:: none
 
@@ -138,7 +146,7 @@ Default dashboards monitor and visualize your Splunk Observability Cloud data on
 #. In the Grafana main menu, select :guilabel:`Connections` and then :guilabel:`Data sources`.
 #. Select your Splunk Observability Cloud data source.
 #. Select the :guilabel:`Dashboards` tab.
-#. On the :guilabel:`O11y Basic Dashboard` row, select Import.
+#. On the :guilabel:`O11y Basic Dashboard` row, select :guilabel:`Import`.
 #. To view or edit the dashboard and its underlying queries:
     #. In the Grafana main menu, select :guilabel:`Dashboards`.
     #. Select :guilabel:`O11y Basic Dashboard`.
@@ -147,4 +155,4 @@ Default dashboards monitor and visualize your Splunk Observability Cloud data on
 Next steps
 ============
 
-Learn how to :ref:`configure-grafana-plugin`.
+Learn how to :ref:`Configure the Splunk plugin for Grafana <configure-grafana-plugin>`.
