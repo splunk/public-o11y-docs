@@ -725,6 +725,11 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    rum/rum-third-party-software
 
 .. toctree::
+   :maxdepth:   3
+
+   rum/rum-deprecations
+
+.. toctree::
    :caption: Synthetics
    :maxdepth:   3
 
