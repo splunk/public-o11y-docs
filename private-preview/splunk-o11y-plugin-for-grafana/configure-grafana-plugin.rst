@@ -1,6 +1,9 @@
+:orphan:
+
 .. _configure-grafana-plugin:
 
 .. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
+    :start-after: :orphan:
 
 ************************************************************
 Configure the Splunk Observability Cloud plugin for Grafana

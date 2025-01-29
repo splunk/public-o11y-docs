@@ -1,3 +1,5 @@
+:orphan:
+
 .. _toc:
 
 .. admonition:: Table of contents

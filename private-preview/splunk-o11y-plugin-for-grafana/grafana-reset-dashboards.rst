@@ -1,6 +1,9 @@
+:orphan:
+
 .. _grafana-reset-dashboards:
 
 .. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
+    :start-after: :orphan:
 
 ***************************
 Reset a Grafana dashboard

@@ -1,6 +1,9 @@
+:orphan:
+
 .. _deploy-grafana-k8s:
 
 .. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
+    :start-after: :orphan:
 
 ***********************************************************************
 Deploy the Splunk Observability Cloud plugin for Grafana on Kubernetes
@@ -37,6 +40,7 @@ Install a new Grafana instance and deploy the Splunk plugin
 To deploy the plugin on Kubernetes:
 
 #. Download the plugin from :new-page:`https://voc.splunk.com/preview/grafana_plugin`.
+    If you’re unable to access this link, contact your Splunk account team representative.
 
 #. Create a Docker file by referring to the following sample file. Edit the Grafana image version, environment variables, and file paths as needed for your environment.
     - The Splunk plugin is compatible with Grafana versions 10.4.0-11.2.x.

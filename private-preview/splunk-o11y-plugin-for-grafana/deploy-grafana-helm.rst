@@ -1,6 +1,9 @@
+:orphan:
+
 .. _deploy-grafana-helm:
 
 .. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
+    :start-after: :orphan:
 
 ***********************************************************************************
 Deploy the Splunk Observability Cloud plugin for Grafana on the Grafana Helm chart
@@ -33,6 +36,7 @@ Install a new Grafana instance and deploy the Splunk plugin
 To deploy the plugin on the Grafana Helm chart:
 
 #. Download the plugin from :new-page:`https://voc.splunk.com/preview/grafana_plugin`.
+    If you’re unable to access this link, contact your Splunk account team representative.
 
 #. Install the :new-page:`Grafana Helm chart <https://github.com/grafana/helm-charts/tree/main/charts/grafana>`. The Splunk plugin is compatible with Grafana versions 10.4.0-11.2.x.
 
