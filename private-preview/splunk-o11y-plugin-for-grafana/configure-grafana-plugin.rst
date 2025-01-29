@@ -1,5 +1,3 @@
-:orphan:
-
 .. _configure-grafana-plugin:
 
 .. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
