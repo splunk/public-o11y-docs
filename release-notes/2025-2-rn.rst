@@ -18,8 +18,50 @@ February 4, 2025
 
    * - New feature or enhancement
      - Description
-   * - 
-     - 
-   * - 
-     - 
+   * - AI Assistant in Splunk Observability Cloud (Available in select US and EU regions)
+     - Use the new GenAI-powered experience to extract insights in Splunk Observability Cloud and accelerate your investigations by asking questions using natural language. Available in AWS US East Virginia (us-east-1), AWS US West Oregon (us-west-2), AWS EU Dublin (eu-west-1) and AWS AP Sydney (ap-southeast-2).
+   * - Datalinks for Splunk AppDynamics Tiers in Splunk Observability Cloud
+     - Use Datalink for AppDynamics Tiers, a new type in Global Datalinks, to connect your Splunk Observability Cloud and AppDynamics environments. Jump from inferred services in your service map to the corresponding tiers in AppDynamics. Administrators can configure and manage datalinks, so all users benefit from simplified workflows and unified visibility. For large-scale deployments, administrators can use a provided Terraform script to automate the bulk creation of AppDynamics Tier datalinks.
+   * - Kubernetes proactive troubleshooting journey
+     - Use new faceted filters to improve search capabilities. Use enhanced metrics categorization for deeper troubleshooting. View entity status icons and metrics as fraction that align with Kubernetes nomenclature. 
+     
+     For more information, see :ref:`infrastructure-k8s-nav`.
+   * - Splunk Synthetic Monitoring private location support on Kubernetes, OpenShift, and ARM 64 Architectures
+     - Use new faceted filters to improve search capabilities. Use enhanced metrics categorization for deeper troubleshooting. View entity status icons and metrics as fraction that align with Kubernetes nomenclature. 
+   * - Splunk Synthetic Monitoring private location deployment with Helm charts
+     - Use Helm charts deploy and maintain your synthetic monitoring in Splunk Synthetic Monitoring more efficiently.
+   * - Splunk Synthetic Monitoring improved security and stability
+     - In this release, we've fixed a large number of security vulnerabilities, making the Splunk Synthetics private location image more secure and safer to deploy. We're committed to keeping your monitoring environment safe while maintaining performance and reliability.
+   * - Muting rules creation and list view updates
+     - Use the enhanced user experience for creating and managing muting rules in Splunk Observability Cloud to reduce alert noise and silence notifications during maintenance windows and other expected high-alert periods. Cover multiple detectors with 1 rule, pick relative time windows, and view affected active alerts. View past muting rules, clear active rules, and filter rules by status from the updated list view. 
 
+     For more information, see :ref:`mute-notifications`.
+   * - Discovered services in Data Management
+     - Use new discovered services to track third-party applications running in your environment such as, databases and web servers that are discovered by the Splunk Distribution of the OpenTelemetry Collector. Follow the steps in the data management interface to add credentials and other necessary information for applications that require them.
+   * - Related Content for logs in APM
+     - Get more control over your log consumption with the option to include logs in Related Content in APM. Admins can use this option to control whether logs are searched when their users run a Related Content search in APM.
+
+     For more information, see :ref:`related-logs-in-apm`.
+
+   * - Splunk Observability Cloud instrumentation updates: Node.js version 3.0.0  and Python version 2.0.0 
+     - New versions of the Splunk Distribution of the OpenTelemetry Collector are now available for Node.JS and Python applications. 
+
+     For more information, see :ref:`get-started-nodejs-3x` and :ref:`get-started-python`.
+   * - Metrics Usage Analytics (MUA) expanded to all Amazon Web Services (AWS) realms
+     - Metrics Usage Analytics, which launched in November 2024, is now expanded to every AWS realms. Use MUA within Metrics Pipeline Management to get visibility into Metric Time Series (MTS) usage. 
+
+
+Deprecated from Splunk Observability Cloud
+============================================================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - Deprecated feature
+     - Description
+   * - Deprecation of Kubernetes classic Navigator interface
+     - As of January 30, 2025, Splunk Observability Cloud users can no longer access the Kubernetes classic Navigator interface. 
+
+     For more information, see :new-page:`https://community.splunk.com/t5/Product-News-Announcements/Deprecation-of-Splunk-Observability-Kubernetes-Classic-Navigator/ba-p/709016` in Splunk Community.
