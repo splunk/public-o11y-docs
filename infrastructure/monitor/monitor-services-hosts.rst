@@ -17,7 +17,6 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     k8s-nav
     k8s
     hosts
-    predefined-metric-classes
     scenario-k8s-nav
     
     

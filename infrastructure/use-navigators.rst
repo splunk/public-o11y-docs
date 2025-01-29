@@ -226,6 +226,17 @@ While both outlier strategies highlight instances that are behaving differently 
 
 The Find Outliers feature also provides a population selector that lets you restrict the comparison population to only those instances that have similar characteristics (as defined by the Group By dimension). For example, you might not want to compare a server against others that are running different software. It is more relevant to determine outliers among servers providing the same service. Grouping instances by the service that they run and using that as your population basis ensures that instances are compared only with their peers to determine if they behave abnormally.
 
+.. _nav-metric-class-ui:
+
+Use metric classes
+===================
+
+By default, the navigator table view displays a subset of metrics and KPIs used to monitor the performance of your instances. You can customize the table view by using predefined metric classes, which are groupings of related metrics and KPIs useful for troubleshooting specific aspects of your deployment.
+
+To use a predefined metric class, select a navigator. In the table view, select the :guilabel:`Metric class` drop-down menu to apply a metric class.
+
+For more information on the available predefined metric classes, see :ref:`predefined-metric-classes`.
+
 View global data links
 -----------------------
 
@@ -368,6 +379,7 @@ For instructions on how to customize navigators by adding to or removing from th
    :hidden:
 
    navigators-list
+   monitor/predefined-metric-classes
    manage-navigator-dashbds
    
 
