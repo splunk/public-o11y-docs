@@ -34,8 +34,7 @@ If you don't see your desired relative time range on the menu, enter it into the
 
 * To view data from a relative time window up to now, enter the time unit preceded by a minus ( - ) into the time range selector. For example, if you want to see a metric from the last 5 minutes, enter :strong:`-5m`.
 
-* To set a time range from now into the future, enter the time unit preceded by a plus ( + ) into the time range selector. For example, 
-if you want to set a time window for the next 6 hours, enter :strong:`+6h`.
+* To set a time range from now into the future, enter the time unit preceded by a plus ( + ) into the time range selector. For example, if you want to set a time window for the next 6 hours, enter :strong:`+6h`.
 
 * You can also set a relative time window up to some time before now, or from some time in the future onward. 
 
