@@ -2,13 +2,13 @@
 
 .. _deploy-grafana-k8s:
 
-.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+.. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
 
-***************************************************
-Deploy the Splunk plugin for Grafana on Kubernetes
-***************************************************
+***********************************************************************
+Deploy the Splunk Observability Cloud plugin for Grafana on Kubernetes
+***********************************************************************
 
-Use the following high-level steps to deploy the Splunk plugin for Grafana on Kubernetes:
+Use the following high-level steps to deploy the Splunk Observability Cloud plugin for Grafana on Kubernetes:
 
 #. Ensure that you meet the :ref:`prerequisites <grafana-plugin-prerequisites-k8s>`.
 #. :ref:`grafana-plugin-install-k8s`.
@@ -20,7 +20,7 @@ Use the following high-level steps to deploy the Splunk plugin for Grafana on Ku
 Prerequisites
 ===============
 
-To deploy and configure the Splunk plugin for Grafana, ensure that:
+To deploy and configure the Splunk Observability Cloud plugin for Grafana, ensure that:
 
 * Your Kubernetes cluster is running.
 * Your environment meets the requirements to install Grafana. See :new-page:`Install Grafana <https://grafana.com/docs/grafana/latest/setup-grafana/installation/#install-grafana>`.
@@ -29,7 +29,7 @@ To deploy and configure the Splunk plugin for Grafana, ensure that:
     Only Splunk Observability Cloud admins can create and grant access to access tokens.
 
 .. note::
-    By default, the Splunk plugin for Grafana is unsigned. To optionally self-sign the private plugin, see :new-page:`Sign a plugin <https://grafana.com/developers/plugin-tools/publish-a-plugin/sign-a-plugin>`. If you don’t self-sign the plugin, you’ll need to set an environment variable during installation.
+    By default, the Splunk Observability Cloud plugin for Grafana is unsigned. To optionally self-sign the private plugin, see :new-page:`Sign a plugin <https://grafana.com/developers/plugin-tools/publish-a-plugin/sign-a-plugin>`. If you don’t self-sign the plugin, you’ll need to set an environment variable during installation.
 
 .. _grafana-plugin-install-k8s:
 
@@ -272,4 +272,4 @@ To import the default dashboard:
 Next steps
 ============
 
-Learn how to :ref:`Configure the Splunk plugin for Grafana <configure-grafana-plugin>`.
+Learn how to :ref:`Configure the Splunk Observability Cloud plugin for Grafana <configure-grafana-plugin>`.

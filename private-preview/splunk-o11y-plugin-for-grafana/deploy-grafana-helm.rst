@@ -2,13 +2,13 @@
 
 .. _deploy-grafana-helm:
 
-.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+.. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
 
-****************************************************************
-Deploy the Splunk plugin for Grafana on the Grafana Helm chart
-****************************************************************
+***********************************************************************************
+Deploy the Splunk Observability Cloud plugin for Grafana on the Grafana Helm chart
+***********************************************************************************
 
-Use the following high-level steps to deploy the Splunk plugin for Grafana on the Grafana Helm chart:
+Use the following high-level steps to deploy the Splunk Observability Cloud plugin for Grafana on the Grafana Helm chart:
 
 #. Ensure that you meet the :ref:`prerequisites <grafana-plugin-prerequisites-helm>`.
 #. :ref:`grafana-plugin-install-helm`.
@@ -20,7 +20,7 @@ Use the following high-level steps to deploy the Splunk plugin for Grafana on th
 Prerequisites
 ===============
 
-To deploy and configure the Splunk plugin for Grafana, ensure that:
+To deploy and configure the Splunk Observability Cloud plugin for Grafana, ensure that:
 
 * Your environment meets the requirements to install Grafana. See :new-page:`Install Grafana <https://grafana.com/docs/grafana/latest/setup-grafana/installation/#install-grafana>`.
 * You have the Grafana permissions to add a data source and import default dashboards. The required permission level may vary depending on your Grafana settings. 
@@ -155,4 +155,4 @@ To import the default dashboard:
 Next steps
 ============
 
-Learn how to :ref:`Configure the Splunk plugin for Grafana <configure-grafana-plugin>`.
+Learn how to :ref:`Configure the Splunk Observability Cloud plugin for Grafana <configure-grafana-plugin>`.

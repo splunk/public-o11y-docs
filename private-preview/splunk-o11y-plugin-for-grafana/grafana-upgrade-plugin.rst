@@ -2,13 +2,13 @@
 
 .. _grafana-upgrade-plugin:
 
-.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+.. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
 
-**************************************
-Upgrade the Splunk plugin for Grafana
-**************************************
+**********************************************************
+Upgrade the Splunk Observability Cloud plugin for Grafana
+**********************************************************
 
-To upgrade the Splunk plugin for Grafana:
+To upgrade the Splunk Observability Cloud plugin for Grafana:
 
 #. Download the updated plugin file from :new-page:`https://voc.splunk.com/preview/grafana_plugin`.
 #. Delete the plugins/cisco-splunko11y-datasource directory.

@@ -2,13 +2,13 @@
 
 .. _grafana-create-queries:
 
-.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+.. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
 
 **************************************
 Create queries to filter dashboards
 **************************************
 
-You can manually add queries to Grafana and view the query output on your dashboards. The Splunk plugin for Grafana supports the following query types:
+You can manually add queries to Grafana and view the query output on your dashboards. The Splunk Observability Cloud plugin for Grafana supports the following query types:
 
 * SignalFlow queries: Filters dashboards based on SignalFlow computations.
     For more information on SignalFlow and its syntax, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` and :new-page:`Intermediate to advanced SignalFlow <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/docs/flow.md>`.

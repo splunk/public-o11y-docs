@@ -2,13 +2,13 @@
 
 .. _integrate-o11y-with-grafana:
 
-.. include:: /private-preview/splunk-plugin-for-grafana/toc.rst
+.. include:: /private-preview/splunk-o11y-plugin-for-grafana/toc.rst
 
 ***************************************************
 Integrate Splunk Observability Cloud with Grafana
 ***************************************************
 
-Use the Splunk plugin for Grafana to monitor Splunk Observability Cloud data in Grafana. With this data source plugin, you can:
+Use the Splunk Observability Cloud plugin for Grafana to monitor Splunk Observability Cloud data in Grafana. With this data source plugin, you can:
 
 * Add and configure data sources from different Splunk Observability Cloud organizations in Grafana.
 * Import and customize an application performance monitoring dashboard for data visualization.
