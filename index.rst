@@ -727,7 +727,7 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-deprecations
+   Deprecation notice <rum/rum-deprecations>
 
 .. toctree::
    :caption: Synthetics
