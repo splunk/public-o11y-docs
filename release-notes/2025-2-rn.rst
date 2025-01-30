@@ -33,7 +33,7 @@ February 4, 2025
    * - Splunk Synthetic Monitoring improved security and stability
      - In this release, we've fixed a large number of security vulnerabilities, making the Splunk Synthetics private location image more secure and safer to deploy. We're committed to keeping your monitoring environment safe while maintaining performance and reliability.
    * - Muting rules creation and list view updates
-     - Use the enhanced user experience for creating and managing muting rules in Splunk Observability Cloud to reduce alert noise and silence notifications during maintenance windows and other expected high-alert periods. Cover multiple detectors with 1 rule, pick relative time windows, and view affected active alerts. View past muting rules, clear active rules, and filter rules by status from the updated list view. 
+     - Use the enhanced user experience for creating and managing muting rules in Splunk Observability Cloud to reduce alert noise and silence notifications during maintenance windows and other expected high-alert periods. Mute multiple detectors and properties with one rule, set relative or absolute muting time windows, and view affected active alerts. View expired muting rules, clear active rules, and filter rules by status from the updated list view.
 
        For more information, see :ref:`mute-notifications`.
    * - Discovered services in Data Management
@@ -43,8 +43,8 @@ February 4, 2025
 
        For more information, see :ref:`related-logs-in-apm`.
 
-   * - Splunk Observability Cloud instrumentation updates: Node.js version 3.0.0  and Python version 2.0.0 
-     - New versions of the Splunk Distribution of the OpenTelemetry Collector are now available for Node.JS and Python applications. 
+   * - Splunk Observability Cloud instrumentation updates: Node.js version 3.0.0 and Python version 2.0.0 
+     - New versions of the Splunk Distribution of the OpenTelemetry JS and Splunk Distribution of OpenTelemetry Python are available. 
 
        For more information, see :ref:`get-started-nodejs-3x` and :ref:`get-started-python`.
    * - Metrics Usage Analytics (MUA) expanded to all Amazon Web Services (AWS) realms
