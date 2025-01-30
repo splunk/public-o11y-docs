@@ -26,12 +26,10 @@ February 4, 2025
      - Use new faceted filters to improve search capabilities. Use enhanced metrics categorization for deeper troubleshooting. View entity status icons and metrics as fraction that align with Kubernetes nomenclature. 
      
        For more information, see :ref:`infrastructure-k8s-nav`.
-   * - Splunk Synthetic Monitoring private location support on Kubernetes, OpenShift, and ARM 64 Architectures
-     - Deploy Splunk Synthetics private locations on additional environments, including Kubernetes, OpenShift, and ARM 64 architectures. 
-   * - Splunk Synthetic Monitoring private location deployment with Helm charts
-     - Use Helm charts deploy and maintain your synthetic monitoring in Splunk Synthetic Monitoring more efficiently.
-   * - Splunk Synthetic Monitoring improved security and stability
-     - In this release, we've fixed a large number of security vulnerabilities, making the Splunk Synthetics private location image more secure and safer to deploy. We're committed to keeping your monitoring environment safe while maintaining performance and reliability.
+   * - Splunk Synthetic Monitoring private location enhancements
+     - * Deploy Splunk Synthetics private locations on additional environments, including Kubernetes, OpenShift, and ARM 64 architectures. This gives you the freedom to deploy in the trusted environments of your choice, offering more flexibility in how you deploy and maintain your monitoring infrastructure.
+     *  Use Splunk Synthetic Monitoring private location deployment with Helm charts to deploy and maintain your synthetic monitoring in Splunk Synthetic Monitoring more efficiently.
+     * In this release, we've fixed a large number of security vulnerabilities, making the Splunk Synthetics private location image more secure and safer to deploy. We're committed to keeping your monitoring environment safe while maintaining performance and reliability.
    * - Muting rules creation and list view updates
      - Use the enhanced user experience for creating and managing muting rules in Splunk Observability Cloud to reduce alert noise and silence notifications during maintenance windows and other expected high-alert periods. Mute multiple detectors and properties with one rule, set relative or absolute muting time windows, and view affected active alerts. View expired muting rules, clear active rules, and filter rules by status from the updated list view.
 
