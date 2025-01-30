@@ -13,12 +13,12 @@ Certain APIs and data model attributes in the iOS and Android instrumentation li
 What deprecation means
 =================================================================
 
-Deprecated iOS and Android instrumentation APIs and data model attributes continue to work and Splunk supports them until support is removed. However, you need to begin planning now for the future removal of support.
+Deprecated iOS and Android instrumentation APIs and data model attributes continue to work until Splunk RUM stops supporting them. You need to begin planning for the future removal of their support.
 
 
 What removal means
 =================================================================
 
-When Splunk removes support for these iOS and Android instrumentation APIs and data model attributes it means that they no longer work with Splunk RUM and you must find an alternative.
+When Splunk RUM removes support for these iOS and Android instrumentation APIs and data model attributes it means that they no longer work with Splunk RUM and you must find an alternative.
 
 
