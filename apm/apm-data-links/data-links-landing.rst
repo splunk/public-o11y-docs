@@ -19,10 +19,7 @@ Create global data links to link Splunk APM properties, such as services, traces
 
 Global data links are useful because they dynamically transfer contextual information about the property you're viewing to the resource, helping you get to relevant information faster.
 
-For information about creating global data links, see:
-
-* :ref:`apm-create-data-links`
-* :ref:`apm-create-data-links-terraform`
+For information about creating global data links, see :ref:`apm-create-data-links` and :ref:`apm-create-data-links-terraform`.
 
 For information about using global data links, see :ref:`apm-use-data-links`.
 

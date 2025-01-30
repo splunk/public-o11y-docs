@@ -5,16 +5,17 @@ Create global data links to Splunk AppDynamics tiers with a Terraform file
 *****************************************************************************
 
 .. meta::
-   :description: An overview of how to use a Terraform configuration file to create global data links to Splunk AppDynamics tiers.
+   :description: Learn how to use a Terraform configuration file to create global data links to Splunk AppDynamics tiers.
 
 .. note::
     You can only create a global data link to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
 
-Create a global data link to link a Splunk APM inferred service to a Splunk AppDynamics tier. When you view the inferred service in Splunk APM, you can select the data link to navigate to the service in the Splunk AppDynamics user interface.
+Create a global data link to link a Splunk APM inferred service to a Splunk AppDynamics tier. When you view the inferred service in Splunk APM, you can select the data link to navigate to the tier in the Splunk AppDynamics user interface.
 
 You can programmatically create global data links to Splunk AppDynamics tiers with a Terraform configuration file.
 
-This method can only be used to create global data links for inferred services that do not have existing global data links. If your inferred service already has an existing global data link, :ref:`use the UI <apm-create-gdl-to-appd>` to create additional global data links.
+.. note::
+    This method can only be used to create global data links for inferred services that do not have existing global data links. If your inferred service already has an existing global data link, :ref:`use the UI <apm-create-gdl-to-appd>` to create additional global data links.
 
 Prerequisites
 =================
@@ -60,7 +61,7 @@ To create data links with a Terraform configuration file:
         api_url = "${var.signalfx_api_url}"
         }
 
-    - For `version`, enter the current Splunk Observability Cloud Terraform provider version. To check the latest version, see :new-page:`Releases <https://github.com/splunk-terraform/terraform-provider-signalfx/releases>`. This value must be 9.6.0 or higher.
+    - For ``version``, enter the current Splunk Observability Cloud Terraform provider version. To check the latest version, see :new-page:`Releases <https://github.com/splunk-terraform/terraform-provider-signalfx/releases>`. This value must be 9.6.0 or higher.
     - (Optional) Add arguments as needed for your configuration. For more information on the supported arguments, see :new-page:`Splunk Observability Cloud provider <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs#arguments>` in the Terraform documentation.
 
 #. Add the :new-page:`signalfx_data_link <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/data_link>` resource to the Terraform file:
@@ -68,8 +69,8 @@ To create data links with a Terraform configuration file:
 
         # A link to a Splunk AppDynamics service
         resource "signalfx_data_link" "<data-link-id>" {
-        property_name        = "<splunk-inferred-service>"
-        property_value       = "<inferred-service-value>"
+        property_name        = "sf_service"
+        property_value       = "<inferred-service-value / splunk-inferred-service>"
 
         target_appd_url {
             name        = "<data-link-ui-label>"
@@ -78,10 +79,10 @@ To create data links with a Terraform configuration file:
         }
 
     - For <data-link-id>, enter an identifier for the data link. This value is only visible in the Terraform file and must be unique for each data link. For example, you can use my_data_link_appd_1 or my_data_link_appd_2.
-    - For property_name, enter the Splunk APM inferred service name.
-    - For property_value, enter the value within the inferred service that you want to add the data link to.
-    - For name, enter a label for the data link. This label appears in the Splunk Observability Cloud user interface.
-    - For URL, enter the Splunk AppDynamics tier URL.
+    - For ``property_name``, use ``sf_service``.
+    - For ``property_value``, enter the value within the inferred service that you want to add the data link to. / enter the Splunk APM inferred service name.
+    - For ``name``, enter a label for the data link. This label appears in the Splunk Observability Cloud user interface.
+    - For ``URL``, enter the Splunk AppDynamics tier URL.
         To obtain the tier URL, navigate to the tier in the Splunk AppDynamics UI and copy the URL from the browser. Ensure that you capture the entire URL and that it contains the controller URL, application ID, and application component.
 
 #. Repeat the previous step for each data link to a Splunk AppDynamics tier you want to create. The following example displays a Terraform configuration file with multiple data links to Splunk AppDynamics tiers:
@@ -119,7 +120,7 @@ To create data links with a Terraform configuration file:
 
         # A link to a Splunk AppDynamics service
         resource "signalfx_data_link" "my_data_link_appd_1" {
-        property_name        = "sf-service"
+        property_name        = "sf_service"
         property_value       = "placed_orders"
 
         target_appd_url {
@@ -130,7 +131,7 @@ To create data links with a Terraform configuration file:
 
         # A link to a Splunk AppDynamics service
         resource "signalfx_data_link" "my_data_link_appd_2" {
-        property_name        = "sj-service"
+        property_name        = "sf_service"
         property_value       = "returned_orders"
 
         target_appd_url {
@@ -144,23 +145,19 @@ To create data links with a Terraform configuration file:
 
         terraform init
 
-#. Obtain the API access token from the Splunk Observability Cloud UI:
-    #. In Splunk Observability Cloud, select your user profile in the header. Then, select :guilabel:`My Profile`.
-    #. Select :guilabel:`Show User API Access Token`. Copy the API access token.
-
 #. To set your signalfx_auth_token and signalfx_api_url variables and generate a preview of the changes that Terraform will make, run:
     .. code-block:: none
 
-        terraform plan -var=”signalfx_auth_token=<api-access-token>” -var=”signalfx_api_url=https://api.<realm>.signalfx.com” -out=<plan-file-name>
+        terraform plan -var="signalfx_auth_token=<api-access-token>" -var="signalfx_api_url=https://api.<realm>.signalfx.com" -out=<plan-file-name>
         
-    - For <api-access-token>, enter the API access token you obtained in the previous step.
-    - For <realm>, enter your Splunk Observability Cloud realm. To obtain your realm, navigate to the Splunk Observability Cloud user interface and view the browser URL, which is in the format api.<realm>.signalfx.com.
+    - For <api-access-token>, enter your Splunk Observability Cloud API access token. To obtain it, navigate to Splunk Observability and select your profile in the header. Select :guilabel:`My Profile`, then :guilabel:`Show User API Access Token`, and copy the API access token.
+    - For <realm>, enter your Splunk Observability Cloud realm. To obtain your realm, navigate to Splunk Observability Cloud and select your profile in the header. Select :guilabel:`My Profile`, then :guilabel:`Organizations`, and copy the :guilabel:`Realm`.
     - For <plan-file-name>, enter your desired name for the plan file that Terraform will create for the changes.
 
 #. Use the output to review the changes. To run the changes and create a terraform.tf.state file that lists the resources that Terraform created:
     .. code-block:: none
 
-        terraform apply “<plan-file-name>”
+        terraform apply "<plan-file-name>"
 
 #. To verify that the global data links were successfully created, use one of the following methods:
     - View the output of the command. Sample output for a successful execution: ``Apply complete! Resources: 3 added, 0 changed, 0 destroyed``.

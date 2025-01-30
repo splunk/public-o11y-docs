@@ -18,11 +18,11 @@ Manage global data links to Splunk AppDynamics tiers with Terraform
 .. note::
     You can only create a global data link to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
 
-Create a global data link to link a Splunk APM inferred service to a Splunk AppDynamics tier. When you view the inferred service in Splunk APM, you can select the data link to navigate to the service in the Splunk AppDynamics user interface.
+Create a global data link to link a Splunk APM inferred service to a Splunk AppDynamics tier. When you view the inferred service in Splunk APM, you can select the data link to navigate to the tier in the Splunk AppDynamics user interface.
 
 Using Terraform, you can programmatically:
 
-* :ref:`apm-create-data-links-terraform-batch`
+* (Recommended):ref:`apm-create-data-links-terraform-batch`
 * :ref:`apm-create-data-links-terraform-file`
 * :ref:`apm-delete-data-links-terraform`
 
