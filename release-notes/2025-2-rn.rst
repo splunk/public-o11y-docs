@@ -19,7 +19,7 @@ February 4, 2025
    * - New feature or enhancement
      - Description
    * - AI Assistant in Splunk Observability Cloud (Available in select US and EU regions)
-     - Use the new GenAI-powered experience to extract insights in Splunk Observability Cloud and accelerate your investigations by asking questions using natural language. Available in AWS US East Virginia (us-east-1), AWS US West Oregon (us-west-2), AWS EU Dublin (eu-west-1) and AWS AP Sydney (ap-southeast-2).
+     - Use natural language to interact with your observability data in the AI Assistant and extract insights from Splunk Observability Cloud. Available in AWS US East Virginia (us-east-1), AWS US West Oregon (us-west-2), AWS EU Dublin (eu-west-1) and AWS AP Sydney (ap-southeast-2).
    * - Datalinks for Splunk AppDynamics Tiers in Splunk Observability Cloud
      - Use Datalink for AppDynamics Tiers, a new type in Global Datalinks, to connect your Splunk Observability Cloud and AppDynamics environments. Jump from inferred services in your service map to the corresponding tiers in AppDynamics. Administrators can configure and manage datalinks, so all users benefit from simplified workflows and unified visibility. For large-scale deployments, administrators can use a provided Terraform script to automate the bulk creation of AppDynamics Tier datalinks.
    * - Kubernetes proactive troubleshooting journey
