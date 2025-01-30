@@ -194,6 +194,10 @@ Follow these steps to install the Android RUM agent using Maven Central:
 
    See :ref:`android-rum-http-client-settings` for more information.
 
+   .. note:: 
+      This form of support for OkHttp is deprecated in Splunk RUM as of January 30, 2025. Although ``createRumOkHttpCallFactory(OkHttpClient client)`` continues to function, it will be removed in a future version, and replaced with an option for automatic instrumentation of OkHttp3 or a new API for manual instrumentation. See :ref:`rum-deprecations`.
+
+
 5. Release the changes to the Android application.
 
 6. Generate some user activity in your application. After you've interacted with the application, verify that the data is appearing in the RUM dashboard.

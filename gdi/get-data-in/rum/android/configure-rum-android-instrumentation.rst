@@ -105,6 +105,9 @@ The Android RUM agent includes instrumentation for the OkHttp and Volley HTTP cl
 OkHttp
 -----------------------------------------------
 
+.. note:: 
+   This form of support for OkHttp is deprecated in Splunk RUM as of January 30, 2025. Although ``createRumOkHttpCallFactory(OkHttpClient client)`` continues to function, it will be removed in a future version, and replaced with an option for automatic instrumentation of OkHttp3 or a new API for manual instrumentation. See :ref:`rum-deprecations`.
+
 Instrument OkHttp using the ``Call.Factory`` wrapper, as in the following example:
 
 .. code-block:: java

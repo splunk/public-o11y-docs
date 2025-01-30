@@ -21,7 +21,6 @@ The following example shows how to configure the RUM token, realm, environment n
       //..
       SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
         // Call functions to configure additional options
-        .allowInsecureBeacon(enabled: true)
         .debug(enabled: true)
         .globalAttributes(globalAttributes: ["strKey": "strVal", "intKey": 7, "doubleKey": 1.5, "boolKey": true])
         .deploymentEnvironment(environment: "env")
@@ -37,7 +36,6 @@ The following example shows how to configure the RUM token, realm, environment n
       //...
 
       SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum"  rumAuth: @"<rum-token>"]];
-      [builder allowInsecureBeaconWithEnabled:true];
       [builder globalAttributesWithGlobalAttributes:[NSDictionary dictionary]];
       [builder debugWithEnabled:true];
       [builder deploymentEnvironmentWithEnvironment:@"environment-name"];
@@ -94,7 +92,7 @@ Use the following settings to configure the behavior of iOS RUM instrumentation:
    * - :code:`sessionSamplingRatio`
      - Percentage of sessions to sample. Expressed as a proportion in the range ``0.0`` to ``1.0``. The default value is ``1.0``.
    * - :code:`allowInsecureBeacon`
-     - If set to ``true``, this setting allows beacon URLs that use the HTTP protocol. The default value is ``false``.
+     - If set to ``true``, this setting allows beacon URLs that use the HTTP protocol. The default value is ``false``. ``allowInsecureBeacon`` is deprecated in Splunk RUM as of January 30, 2025. Although this setting continues to function, it will be removed in a future version. See :ref:`rum-deprecations`.
    * - :code:`enableDiskCache`
      - Activates caching of exported spans. All spans are written to local storage and deleted after a successful export. The default value is ``false``. This setting is deprecated in Splunk RUM as of January 30, 2025. Although this setting continues to function, it will be removed in a future version. There is no replacement for this annotation. See :ref:`rum-deprecations`.
    * - :code:`spanDiskCacheMaxSize`
