@@ -49,7 +49,7 @@ February 4, 2025
      - Metrics Usage Analytics, which launched in November 2024, is now expanded to every AWS realms. Use MUA within Metrics Pipeline Management to get visibility into Metric Time Series (MTS) usage. 
 
 
-Deprecated from Splunk Observability Cloud
+Deprecated and removed from Splunk Observability Cloud
 ============================================================
 
 .. list-table::
@@ -69,3 +69,14 @@ Deprecated from Splunk Observability Cloud
        * :ref:`manual-android-instrumentation`
        * :ref:`manual-android-instrumentation`
        * :ref:`rum-ios-data`
+
+What deprecation means
+=================================================================
+
+Deprecated features will continue to work until Splunk stops supporting them. You need to begin planning for the future removal of their support.
+
+
+What removal means
+=================================================================
+
+When Splunk removes support it means that they no longer work with Splunk and you must find an alternative.
