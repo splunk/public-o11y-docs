@@ -421,6 +421,9 @@ App start monitoring produces spans with the name ``AppStart`` and the following
 Location data
 =============
 
+.. note:: 
+   The ``setLocation`` method is deprecated in Splunk RUM as of January 30, 2025. Although this method continues to function, it will be removed in a future version. There is no replacement for this annotation. See :ref:`rum-deprecations`.
+
 If you choose to set the latitude and longitude for location data by using the Splunk RUM for iOS APIs, Splunk Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
 
 .. list-table::

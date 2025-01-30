@@ -116,7 +116,8 @@ Instrument OkHttp using the ``Call.Factory`` wrapper, as in the following exampl
 Volley HTTP (Experimental)
 -------------------------------------------------
 
-.. note:: All methods in ``VolleyTracing`` and ``VolleyTracingBuilder`` are deprecated in Splunk RUM as of January 30, 2025. Although these methods continue to function, they will be removed in a future version. There is no replacement for these methods. See :ref:`rum-deprecations`.
+.. note:: 
+  All methods in ``VolleyTracing`` and ``VolleyTracingBuilder`` are deprecated in Splunk RUM as of January 30, 2025. Although these methods continue to function, they will be removed in a future version. There is no replacement for these methods. See :ref:`rum-deprecations`.
 
 To instrument Volley HTTP, add the ``splunk-otel-android-volley`` dependency to the ``build.gradle.kts`` file:
 
