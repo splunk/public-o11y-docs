@@ -37,7 +37,7 @@ February 4, 2025
 
        For more information, see :ref:`mute-notifications`.
    * - Discovered services in Data Management
-     - Use new discovered services to track third-party applications running in your environment such as, databases and web servers that are discovered by the Splunk Distribution of the OpenTelemetry Collector. Follow the steps in the data management interface to add credentials and other necessary information for applications that require them.
+     - Use the new discovered services tab to track which third-party applications, such as databases or web servers, your Splunk Distribution of the OpenTelemetry Collector instance has detected running in your environment. Follow the steps in the data management interface to add credentials and other necessary information to monitor these services.
    * - Related Content for logs in APM
      - Get more control over your log consumption with the option to include logs in Related Content in APM. Admins can use this option to control whether logs are searched when their users run a Related Content search in APM.
 
