@@ -52,13 +52,13 @@ February 4, 2025
 Deprecated and removed from Splunk Observability Cloud
 ============================================================
 
-What deprecation means
--------------------------
+What does deprecation mean?
+---------------------------
 
 Deprecated features, platforms, and browsers continue to work and Splunk supports them until support is removed. However, customers need to begin planning now for the future removal of support.
 
 
-What removal means
+What does removal means?
 ------------------------
 
 When Splunk removes support for a feature, platform, or browser it means that the feature, platform, or browser no longer works with the Splunk platform and customers must find an alternative.
