@@ -52,6 +52,17 @@ February 4, 2025
 Deprecated and removed from Splunk Observability Cloud
 ============================================================
 
+What deprecation means
+-------------------------
+
+Deprecated features, platforms, and browsers continue to work and Splunk supports them until support is removed. However, customers need to begin planning now for the future removal of support.
+
+
+What removal means
+------------------------
+
+When Splunk removes support for a feature, platform, or browser it means that the feature, platform, or browser no longer works with the Splunk platform and customers must find an alternative.
+
 .. list-table::
    :header-rows: 1
    :widths: 1 2
@@ -70,13 +81,5 @@ Deprecated and removed from Splunk Observability Cloud
        * :ref:`manual-android-instrumentation`
        * :ref:`rum-ios-data`
 
-What deprecation means
-=================================================================
-
-Deprecated features will continue to work until Splunk stops supporting them. You need to begin planning for the future removal of their support.
 
 
-What removal means
-=================================================================
-
-When Splunk removes support it means that they no longer work with Splunk and you must find an alternative.
