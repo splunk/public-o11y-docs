@@ -20,7 +20,7 @@ To instrument your Android application and get data into Splunk RUM, follow the 
 Decide which version to run in your environment
 =======================================================
 
-Latest updates automatically whenever Splunk RUM releases a new version. In pre-production, use latest to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle.
+The latest version updates automatically whenever Splunk RUM releases a new version. In pre-production, use ``latest`` to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle. 
 
 
 Check compatibility and requirements
