@@ -94,7 +94,7 @@ The following screenshot shows the muting rule dialog box:
 
 To configure a new muting rule, follow these steps:
 
-#. Include a :guilabel:`Description` for the muting rule. The text you enter in this field is displayed when you hover over a rule in the :guilabel:`Muting rules` tab, and can help others understand why alerts are being muted.
+#. Include a :guilabel:`Description` for the muting rule. The text you enter in this field displays as the name of the muting rule in the :guilabel:`Muting rules` tab.
 #. Use :guilabel:`Select detectors` and :guilabel:`Select properties` to add one or more detectors and properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one detector or property, the muting rule interprets the detectors and properties using the AND logical operator.
 #. Specify the :guilabel:`Muting schedule` during which notifications are muted (muting period) using the predefined periods or by creating a custom period. You can also mute indefinitely.
 #. (Optional) If the rule follows a schedule, you can set a :guilabel:`Time window` and a :guilabel:`Recurrence` period for the muting rule. When scheduling a muting rule, the rule repeats after a set number of days, starting with the start time of the original rule. The daily and weekly options set that number to ``1`` and ``7`` respectively. The :menuselection:`Custom` option lets you set the number of days or set a number of weeks. To learn more about setting a time window, see :ref:`time-range-selector`.
