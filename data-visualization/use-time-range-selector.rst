@@ -1,7 +1,7 @@
 .. _time-range-selector:
 
 *****************************************************************
-Select the time range with the time range selector
+Select time range with the time range selector
 *****************************************************************
 
 .. meta::
