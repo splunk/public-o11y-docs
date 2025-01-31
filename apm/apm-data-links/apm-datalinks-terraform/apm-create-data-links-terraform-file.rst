@@ -70,7 +70,7 @@ To create data links with a Terraform configuration file:
         # A link to a Splunk AppDynamics service
         resource "signalfx_data_link" "<data-link-id>" {
         property_name        = "sf_service"
-        property_value       = "<inferred-service-value / splunk-inferred-service>"
+        property_value       = "<splunk-inferred-service-name>"
 
         target_appd_url {
             name        = "<data-link-ui-label>"
@@ -80,7 +80,7 @@ To create data links with a Terraform configuration file:
 
     - For <data-link-id>, enter an identifier for the data link. This value is only visible in the Terraform file and must be unique for each data link. For example, you can use my_data_link_appd_1 or my_data_link_appd_2.
     - For ``property_name``, use ``sf_service``.
-    - For ``property_value``, enter the value within the inferred service that you want to add the data link to. / enter the Splunk APM inferred service name.
+    - For ``property_value``, enter the Splunk APM inferred service name.
     - For ``name``, enter a label for the data link. This label appears in the Splunk Observability Cloud user interface.
     - For ``URL``, enter the Splunk AppDynamics tier URL.
         To obtain the tier URL, navigate to the tier in the Splunk AppDynamics UI and copy the URL from the browser. Ensure that you capture the entire URL and that it contains the controller URL, application ID, and application component.
