@@ -7,7 +7,7 @@ Mute alert notifications
 .. meta::
    :description: Learn how to stop sending alert notifications based on conditions.
 
-Muting is helpful when you need to stop sending alert notifications during situations that are known to trigger alerts, such as maintenance windows or tests. Muting allows you to reduce noise and focus on what really matters.
+Muting is helpful when you need to stop sending alert notifications during situations known to trigger alerts, such as maintenance windows or tests. Muting lets you reduce noise and focus on what matters.
 
 You can stop sending, or mute, alert notifications based on certain conditions you can specify. You can mute notifications for a specified period of time or indefinitely, although alerts and events are still generated, and appear in Splunk Observability Cloud.
 
@@ -136,7 +136,7 @@ You can also view information about muting rules from different places on the :g
 Muted notifications
 -------------------------------------------------------------------
 
-If a notification was muted, an indicator is displayed wherever the event might send the notification, such as on the :guilabel:`Active alerts` tab or in an event feed.
+If a notification is muted, an indicator is displayed wherever the event might send the notification, such as on the :guilabel:`Active alerts` tab or in an event feed.
 
 To see events related to past muting rules, you can use the :ref:`Events sidebar <events-sidebar>` or the :ref:`Event overlay<dashboard-event-overlay>`. Events are generated when the rule becomes active (notifications stop) and when the rule becomes inactive (notifications resume).
 
