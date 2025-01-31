@@ -65,7 +65,7 @@ Use the following settings to configure the Android RUM agent:
    * - :code:`enableDebug()`
      - Activates debug mode. This feature is inactive by default. Activating debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
    * - :code:`enableExperimentalOtlpExporter()`
-     - Activates the experimental OTLP exporter. The exporter is not compatible with disk buffering. ``enableExperimentalOtlpExporter()`` is deprecated in Splunk RUM as of January 30, 2025. Although ``enableExperimentalOtlpExporter()`` continues to function, it will be removed in a future version. Use the OTLP exporter instead. 
+     - Activates the experimental OTLP exporter. The exporter is not compatible with disk buffering. ``enableExperimentalOtlpExporter()`` is deprecated in Splunk RUM as of January 30, 2025. Although ``enableExperimentalOtlpExporter()`` continues to function, it will be removed in a future version, where OTLP will be the default exporter format. 
 
 .. _android-rum-instrumentation-settings:
 
