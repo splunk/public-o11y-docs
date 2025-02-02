@@ -1,1 +1,1 @@
-Splunk RUM for Mobile supports Java and Kotlin applications for Android API Level 21 and higher. API levels 21 to 25 require core library desugaring activated. See :ref:`enable-desugaring`. Android 7.0 (also known as Nougat) corresponds to API level 24.
+Splunk RUM for Mobile supports Java and Kotlin applications for Android API level 21 and higher. API levels 21 to 25 require core library desugaring activated. See :ref:`enable-desugaring`. Android 7.0 (also known as Nougat) corresponds to API level 24.
