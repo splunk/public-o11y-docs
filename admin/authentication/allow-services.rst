@@ -28,7 +28,7 @@ Ensure that you give the proxy the ability to resolve the network names and make
 Use the Splunk Distribution of the OpenTelemetry Collector
 =======================================================================
 
-The :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` supports proxies. You can configure proxies on each collector, or more typically, you would configure a collector in data forwarding (gateway) mode. In the gateway mode, you only need to configure the gateway collector(s) with the proxy settings; all other collectors can simply send data to the gateway collector.
+The :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` supports proxies. You can configure proxies on each collector, or more typically, you would configure a collector in data forwarding (gateway) mode. In the gateway mode, you only need to configure the gateway collectors with the proxy settings; all other collectors can simply send data to the gateway collector.
 
 Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`. Verify also the list of :ref:`exposed ports and endpoints <otel-exposed-endpoints>`.
 
