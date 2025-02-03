@@ -20,8 +20,10 @@ February 4, 2025 release
      - Description
    * - AI Assistant in Splunk Observability Cloud (Available in select US and EU regions)
      - Use natural language to interact with your observability data in the AI Assistant and extract insights from Splunk Observability Cloud. Available in AWS US East Virginia (us-east-1), AWS US West Oregon (us-west-2), AWS EU Dublin (eu-west-1) and AWS AP Sydney (ap-southeast-2).
-   * - Datalinks for Splunk AppDynamics Tiers in Splunk Observability Cloud
-     - Use Datalink for AppDynamics Tiers, a new type in Global Datalinks, to connect your Splunk Observability Cloud and AppDynamics environments. Jump from inferred services in your service map to the corresponding tiers in AppDynamics. Administrators can configure and manage datalinks, so all users benefit from simplified workflows and unified visibility. For large-scale deployments, administrators can use a provided Terraform script to automate the bulk creation of AppDynamics Tier datalinks.
+   * - Data links to Splunk AppDynamics tiers in Splunk Observability Cloud
+     - You can now create a global data link from a Splunk APM inferred service to a Splunk AppDynamics tier using the user interface or Terraform. See:
+         - :ref:`apm-create-gdl-to-appd`
+         - :ref:`apm-create-data-links-terraform`
    * - Kubernetes proactive troubleshooting journey
      - Use new faceted filters to improve search capabilities. Use enhanced metrics categorization for deeper troubleshooting. View entity status icons and metrics as fraction that align with Kubernetes nomenclature. 
      
