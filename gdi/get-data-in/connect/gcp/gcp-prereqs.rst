@@ -19,21 +19,25 @@ You must be an administrator of your Splunk Observability Cloud organization to 
 Authenticate your Google account 
 ============================================
 
-Before you proceed read Google's official announcement on GCP permission policies at :new-page:`Introducing stronger default Org Policies for our customers <https://cloud.google.com/blog/products/identity-security/introducing-stronger-default-org-policies-for-our-customers/>`.
-
-Authenticate using Workload Identity Federation
+Authenticate using Workload Identity Federation (recommended)
 --------------------------------------------------------------------------------------
 
 Use Workload Identity Federation (WIF) to authenticate your GCP account in Splunk Observability Cloud. It's safer, and with WIF you won't have to export and rotate service account keys.
 
-Go to :new-page:`GCP's Workload Identity Federation (WIF) <https://cloud.google.com/iam/docs/workload-identity-federation>` to access your Google Cloud resources and authenticate them. 
+To set up Workload Identity Federation to authenticate Splunk Observability Cloud to access your GCP Cloud Monitoring data take these steps: 
+
+#. Follow the instructions in the :new-page:`Workload Identity Federation Setup Utils <https://github.com/signalfx/gcp_workload_identity_federation>` GitHub repo.
+
+#. Run the :new-page:`Workload Identity Federation Setup Script <https://github.com/signalfx/gcp_workload_identity_federation/blob/main/cli/README.md>` or use the :new-page:`Terraform Setup Module <https://github.com/signalfx/gcp_workload_identity_federation/blob/main/terraform/README.md>`.
+
+To learn more refer to GCP's :new-page:`Workload Identity Federation <https://cloud.google.com/iam/docs/workload-identity-federation>` documentation.
 
 Authenticate using Service Account Keys
 --------------------------------------------------------------------------------------
 
-Alternatively you can use your service account keys to integrate your GCP services with Splunk Observability Cloud. 
+Alternatively you can use your service account keys to integrate your GCP services with Splunk Observability Cloud. Before you proceed read Google's official announcement on GCP permission policies at :new-page:`Introducing stronger default Org Policies for our customers <https://cloud.google.com/blog/products/identity-security/introducing-stronger-default-org-policies-for-our-customers/>`.
 
-To do so, go to the GCP console and follow these steps:
+To authenticate using your service account keys go to the GCP console and follow these steps:
 
 #. From the sidebar, select :menuselection:`IAM & admin`, then :menuselection:`Service Accounts`.
 
@@ -45,7 +49,7 @@ To do so, go to the GCP console and follow these steps:
 
    * **Service account description**. Enter the description for your service account.
 
-#. (Optional) Select a role to grant this Service account access to the selected project, then select :guilabel:`CONTINUE`.
+#. Select a role to grant this Service account access to the selected project, then select :guilabel:`CONTINUE`.
 
 #. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer. You will need this key to authenticate in the :guilabel:`Import Service Account Key` step in Splunk Observability Cloud.
 
