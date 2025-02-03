@@ -8,8 +8,8 @@ Splunk Observability Cloud released the following new features and enhancements 
 
 .. _2025-2-4-rn:
 
-February 4, 2025
-=================
+February 4, 2025 release
+==========================
 
 .. list-table::
    :header-rows: 1
@@ -75,11 +75,13 @@ When Splunk removes support for a feature, platform, or browser it means that th
 
        For more information, see :new-page:`https://community.splunk.com/t5/Product-News-Announcements/Deprecation-of-Splunk-Observability-Kubernetes-Classic-Navigator/ba-p/709016` in Splunk Community.
    * - Deprecation of Android, iOS, and React instrumentation APIs  
-     - Certain APIs and data model attributes in the Android, iOS, and React instrumentation libraries have been deprecated or changed in Splunk RUM as of January 30, 2025. There are no breaking changes at this time, but support for deprecated APIs and data model attributes will be removed in a future release. See the following topics for deprecation details.
-       * :ref:`configure-android-instrumentation`
-       * :ref:`manual-android-instrumentation`
-       * :ref:`manual-android-instrumentation`
-       * :ref:`rum-ios-data`
+     - Certain APIs and data model attributes in the Android, iOS, and React instrumentation libraries have been deprecated or changed in Splunk RUM as of January 30, 2025. There are no breaking changes at this time, but support for deprecated APIs and data model attributes will be removed in a future release. 
+     
+       See the following topics for deprecation details.
+        * :ref:`configure-android-instrumentation`
+        * :ref:`manual-android-instrumentation`
+        * :ref:`manual-android-instrumentation`
+        * :ref:`rum-ios-data`
 
 
 
