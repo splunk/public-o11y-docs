@@ -14,13 +14,13 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 Start tracing using code
 ===============================
 
-If you can't use the ``splunk-py-trace`` command to launch the application, you can instead import and configure ``start_tracing`` by adding the following snippet to your application code: 
+If you can't use the ``opentelemetry-instrument`` command to launch the application, you can instead import and configure ``start_otel`` by adding the following snippet to your application code: 
    
    .. code:: python
 
-      from splunk_otel.tracing import start_tracing
+      from splunk_otel.tracing import start_otel
 
-      start_tracing()
+      start_otel()
 
       # Also accepts optional settings. For example:
       #
