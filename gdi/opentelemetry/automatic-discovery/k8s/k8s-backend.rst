@@ -86,17 +86,21 @@ You might need to populate the file with additional values depending on your env
 
 .. _k8s-auto-discovery-add-certificates:
 
-Add certificates
-----------------------------------------
+Add certificates and OpenTelemetry CRDs
+------------------------------------------
 
-The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
+The Operator requires certain TLS certificates to work. Use the following command to check whether a certificate manager is available:
 
 .. code-block:: yaml
 
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
-If a certification manager isn't available in the cluster, then you'll need to add ``certmanager.enabled=true`` to your values.yaml file. For example:
+If a certificate manager isn't available in the cluster, add ``certmanager.enabled=true`` to your values.yaml file. 
+
+The Operator for Kubernetes also requires you to install OpenTelemetry Custom Resource Definitions (CRDs). To do this, add ``operatorcrds.install=true`` to your values.yaml file.
+
+The following example YAML includes ``certmanager.enabled=true`` and ``operatorcrds.install=true``:
 
 .. code-block:: yaml
   :emphasize-lines: 7,8
@@ -111,6 +115,8 @@ If a certification manager isn't available in the cluster, then you'll need to a
     enabled: true
   operator:
     enabled: true
+  operatorcrds:
+    install: true
 
 .. _k8s-auto-discovery-setup-traces:
 

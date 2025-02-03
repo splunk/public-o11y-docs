@@ -1,4 +1,4 @@
-.. _instrument-python-applications:
+.. _instrument-python-applications-1x:
 
 **********************************************************************
 Instrument your Python application for Splunk Observability Cloud
@@ -6,21 +6,6 @@ Instrument your Python application for Splunk Observability Cloud
 
 .. meta::
    :description: The Splunk OpenTelemetry Python agent can automatically instrument your Python application or service. Follow these steps to get started.
-
-
-
-.. raw:: html
-
-   <div class="include-start" id="zero-code-info.rst"></div>
-
-.. include:: /_includes/zero-code-info.rst
-
-.. raw:: html
-
-   <div class="include-stop" id="zero-code-info.rst"></div>
-
-
-
 
 The Python agent from the Splunk Distribution of OpenTelemetry Python can automatically instrument your Python application by dynamically patching supported libraries.
 
@@ -50,10 +35,10 @@ Install the Splunk Distribution of OpenTelemetry Python manually
 
 If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Python:
 
-- :ref:`install-enable-python-agent`
-- :ref:`configure-python-instrumentation`
+- :ref:`install-enable-python-agent-1x`
+- :ref:`configure-python-instrumentation-1x`
 
-.. _install-enable-python-agent:
+.. _install-enable-python-agent-1x:
 
 Install and activate the Python agent
 ----------------------------------------------------
@@ -74,9 +59,9 @@ Follow these steps to automatically instrument your application using the Python
 
    .. code-block:: bash
 
-      opentelemetry-bootstrap
+      splunk-py-trace-bootstrap
 
-   To print the instrumentation packages to the console instead of installing them, run ``opentelemetry-bootstrap --action=requirements``. You can then add the output to your requirements or Pipfile.
+   To print the instrumentation packages to the console instead of installing them, run ``splunk-py-trace-bootstrap --action=requirements``. You can then add the output to your requirements or Pipfile.
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
 
@@ -122,11 +107,11 @@ Follow these steps to automatically instrument your application using the Python
 
          python3 main.py --port=8000
 
-   prefix the command with ``opentelemetry-instrument``:
+   prefix the command with ``splunk-py-trace``:
 
       .. code-block:: bash
 
-         opentelemetry-instrument python3 main.py --port=8000
+         splunk-py-trace python3 main.py --port=8000
 
    .. note:: To instrument uWSGI applications, see :ref:`python-manual-instrumentation`.
 
@@ -138,7 +123,7 @@ Application metrics are collected by default. See :ref:`python-otel-metrics` for
 
 If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
-.. _enable-profiling-python:
+.. _enable-profiling-python-1x:
 
 Activate AlwaysOn Profiling
 ------------------------------------------------
@@ -167,7 +152,7 @@ The following example shows how to activate the profiler from your application c
 
 See :ref:`get-data-in-profiling` for more information. For additional settings, see :ref:`profiling-configuration-python`.
 
-.. _configure-python-instrumentation:
+.. _configure-python-instrumentation-1x:
 
 Configure the Python agent
 ----------------------------------------------------
@@ -176,7 +161,7 @@ In most cases, the only configuration setting you need to enter is the service n
 
 For advanced configuration of the Python agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-python-otel-configuration`.
 
-.. _kubernetes_python_agent:
+.. _kubernetes_python_agent-1x:
 
 Deploy the Python agent in Kubernetes
 ===================================================
@@ -209,7 +194,7 @@ The following example shows how to update a deployment to expose environment var
                - name: OTEL_RESOURCE_ATTRIBUTES
                  value: "deployment.environment=<environmentName>"
 
-.. _export-directly-to-olly-cloud-python:
+.. _export-directly-to-olly-cloud-python-1x:
 
 Send data directly to Splunk Observability Cloud
 ==========================================================
@@ -241,22 +226,9 @@ To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 Specify the source host
 ----------------------------------------------------
 
-
-
-.. raw:: html
-
-   <div class="include-start" id="gdi/apm-api-define-host.rst"></div>
-
 .. include:: /_includes/gdi/apm-api-define-host.rst
 
-.. raw:: html
-
-   <div class="include-stop" id="gdi/apm-api-define-host.rst"></div>
-
-
-
-
-.. _instrument_aws_python_functions:
+.. _instrument_aws_python_functions-1x:
 
 Instrument Lambda functions
 =============================================

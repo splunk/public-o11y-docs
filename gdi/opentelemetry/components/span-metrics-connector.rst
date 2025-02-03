@@ -245,15 +245,6 @@ For example, the generated calls OTel sum metric can result in multiple Promethe
 
 .. _span-metrics-connector-settings:
 
-Settings
-======================
-
-The following table shows the configuration options for the ``spanmetrics`` connector:
-
-.. raw:: html
-
-  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector-contrib/main/connector/spanmetricsconnector/config.go"></div>
-
 Troubleshooting
 ======================
 
