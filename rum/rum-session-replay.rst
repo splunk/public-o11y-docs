@@ -5,9 +5,10 @@
 Session replay in Splunk RUM
 **********************************************************************
 
-Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next. Sessions have a maximum duration of four hours. 
+Replay a session to take a look at exactly what a user experienced and make informed decisions about what to do next. Sessions have a maximum duration of four hours. 
 
-.. note:: Customer is responsible for using Splunk Observability Cloud in compliance with applicable laws, including but not limited to providing notice to and obtaining any necessary consent form individuals whose data will be collected by Customer's use of the services. 
+.. note:: 
+   You are responsible for using Splunk Observability Cloud in compliance with applicable laws, including but not limited to providing notice to and obtaining any necessary consent from individuals whose data will be collected by Customer's use of the services. 
 
 
 Use cases
@@ -103,24 +104,64 @@ To deactivate session replay you can either:
 Additional instrumentation settings
 ------------------------------------
 
-For more information on configuration options, see :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#guide>` on GitHub. 
+For more information on configuration options, see :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#guide>` on GitHub. 
 
 Redact information
 ==============================
-Text is redacted by default, you can optionally configure image redaction as well. The following image shows how the Splunk RUM homepage looks with text redaction enabled. All text is replaced by * symbols. 
+Text and inputs are redacted by default. You can optionally configure image redaction as well. The following image illustrates what the Splunk RUM homepage looks with text redaction enabled. All text is replaced by ``*`` characters. 
 
 .. image:: /_images/rum/SR-text-redaction.png
    :alt: Example home screen of a website with the text replaced by the star symbol to show redacted text. 
    :width: 70%
 
 
+To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting ``maskTextClass`` or ``maskTextSelector`` to a custom value. The custom value can be a regular expression.
+
+Input redaction is handled separately. To disable all input redaction, set ``maskAllInputs: false``. To customize which inputs are redacted use the ``maskInputOptions`` option.
+
+.. note::
+    In the rrweb documentation, the default value of ``maskTextSelector`` is ``null`` and the default value of ``maskAllInputs`` is ``false``. However, Splunk RUM changes these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or ``maskAllInputs`` to ``false`` when no redaction is desired.
+
+Examples:
+
+.. code-block:: javascript
+
+    // Will disable text redaction on all elements except elements with default 'rr-mask' class
+    SplunkSessionRecorder.init({
+        // ... other configuration options
+        maskTextSelector: false
+    });
+    
+    // Will redact only elements with 'my-custom-mask-class' class
+    SplunkSessionRecorder.init({
+        // ...
+        maskTextClass: 'my-custom-mask-class',
+        maskTextSelector: false
+    });
+    
+    // Redacts elements with class names starting with "sensitive-" or with specified IDs
+    SplunkSessionRecorder.init({
+        // ...
+        maskTextClass: /^sensitive-.*$/,
+        maskTextSelector: '#private-info, #hidden-section'
+    });
+
+    // Will disable input redaction on all elements except password inputs
+    SplunkSessionRecorder.init({
+        // ...
+        maskAllInputs: false,
+        maskInputOptions: {
+            password: true
+        }
+    });
+
 
 Image redaction 
 ----------------
 
-To redact images, set ``inlineImages: false`` in  the ``splunksessionrecorder.init`` function. 
+To redact images, set ``inlineImages: false`` in  the ``SplunkSessionRecorder.init`` function. 
 
-For more information on how to customize your instrumentation, see the Privacy section of the :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#privacy>` on GitHub. 
+For more information on how to customize your instrumentation, see the Privacy section of the :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#privacy>` on GitHub. 
 
 
 Replay a session

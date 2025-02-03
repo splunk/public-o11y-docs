@@ -79,6 +79,8 @@ Populate values.yaml with the following fields and values:
     accessToken: <splunk_access_token>
   
   # Activates the OpenTelemetry Kubernetes Operator
+  operatorcrds:
+    install: true
   operator:
     enabled: true
 
@@ -113,6 +115,8 @@ The following example YAML includes ``certmanager.enabled=true`` and ``operatorc
   
   certmanager:
     enabled: true
+  operatorcrds:
+    install: true
   operator:
     enabled: true
   operatorcrds:
@@ -165,6 +169,8 @@ The following examples show how to set the attribute using each method:
           
           certmanager:
             enabled: true
+          operatorcrds:
+            install: true
           operator:
             enabled: true
 
@@ -174,6 +180,8 @@ The following examples show how to set the attribute using each method:
 
       .. code-block:: yaml
 
+          operatorcrds:
+            install: true
           operator:
             enabled: true
           instrumentation:
