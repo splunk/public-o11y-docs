@@ -6,11 +6,11 @@ View AutoDetect alerts and detectors
 .. meta::
    :description: Splunk Observability Cloud automatically creates alerts and detectors when you have supported integrations configured. Learn how to use and customize with AutoDetect alerts and detectors.
 
-You can view AutoDetect detectors on the :guilabel:`Alerts & Detectors` page, in a navigator or dashboard for a service, or in a chart.
+You can view AutoDetect detectors on the :guilabel:`Detectors & SLOs` page, in a navigator or dashboard for a service, or in a chart.
 
 To view a complete list of all available AutoDetect alerts and detectors in your organization, do the following:
 
-#. From the Splunk Observability Cloud home page, go to the :guilabel:`Alerts & Detectors` page.
+#. From the Splunk Observability Cloud home page, go to the :guilabel:`Detectors & SLOs` page.
 #. Select the :guilabel:`Active Alerts` or :guilabel:`Detectors` tab. Alerts genereated by AutoDetect detectors have an :guilabel:`Auto` badge. 
 #. You can also select :guilabel:`AutoDetect` or :guilabel:`Customized AutoDetect` in the filter on the :guilabel:`Active Alerts` or :guilabel:`Detectors` tabs.
 
