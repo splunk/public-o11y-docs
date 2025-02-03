@@ -136,7 +136,7 @@ Link APM properties to Splunk AppDynamics tiers
 =================================================
 
 .. note::
-    You can only create a global data link to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
+    You can only create a global data link from a Splunk APM inferred service to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
 
 This section describes how to create global data links to Splunk AppDynamics tiers using the user interface. To programmatically create global data links with Terraform, see :ref:`apm-create-data-links-terraform`.
 
@@ -173,3 +173,8 @@ Create a global data link specifically for a single inferred service to associat
 Triggers for global data links for navigators or dashboards that use wildcards (:guilabel:`*`) for service names can't be top-ranked navigators or dashboards for inferred services.
 
 For example, a navigator or dashboard associated with a global data link that contains a :guilabel:`Show On` value of ``sf_service:*`` can't be a top-ranked navigator or dashboard for an inferred service. To create a global data link that acts as a default navigator or dashboard for an inferred service from the :guilabel:`Monitoring` tab, the :guilabel:`Show On` value must include the name of the inferred service. For example, if you are creating a global data link for a default navigator or dashboard for the inferred service ``mydb``, the :guilabel:`Show On` value must be ``sf_service:mydb``.
+
+Next steps
+=============
+
+To use global data links in the user interface, see :ref:`apm-use-data-links`.

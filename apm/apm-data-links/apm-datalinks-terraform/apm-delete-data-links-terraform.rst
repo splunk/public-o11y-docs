@@ -37,4 +37,4 @@ To delete all global data links that you created with Terraform:
     #. In the Splunk Observability Cloud main menu, select :guilabel:`Settings` then :guilabel:`Global Data Link`.
     #. Search for the names of the data links you created.
         - If you used the :ref:`Node.js script method <apm-create-data-links-terraform-batch>`, search for the AppDLinkLabel values that you specified in the CSV file.
-        - If you used the :ref:`Terraform file method <apm-create-data-links-terraform-file>`, search for the name values that you specified in the Terraform configuration file.
+        - If you used the :ref:`Terraform file method <apm-create-data-links-terraform-file>`, search for the ``name`` values that you specified in the Terraform configuration file.

@@ -8,14 +8,15 @@ Create a batch of global data links to Splunk AppDynamics tiers with a Node.js s
    :description: Learn how to use a Node.js script to create a batch of global data links to Splunk AppDynamics tiers.
 
 .. note::
-    You can only create a global data link to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
+    You can only create a global data link from a Splunk APM inferred service to a Splunk AppDynamics tier if the tier is monitored by a Splunk AppDynamics SaaS environment.
+
+    This method can only be used to create global data links for inferred services that do not have existing global data links. If your inferred service already has an existing global data link, :ref:`use the UI <apm-create-gdl-to-appd>` to create additional global data links.
+
+When a transaction goes through a service monitored by Splunk APM as well as a tier monitored by Splunk AppDynamics, the service monitored by Splunk APM is considered an inferred service.
 
 Create a global data link to link a Splunk APM inferred service to a Splunk AppDynamics tier. When you view the inferred service in Splunk APM, you can select the data link to navigate to the tier in the Splunk AppDynamics user interface.
 
 You can programmatically create global data links to Splunk AppDynamics tiers with a CSV file and Splunk Node.js script, which generates and runs a Terraform script that creates the data links. This process does not require running Terraform commands.
-
-.. note::
-    This method can only be used to create global data links for inferred services that do not have existing global data links. If your inferred service already has an existing global data link, :ref:`use the UI <apm-create-gdl-to-appd>` to create additional global data links.
 
 Prerequisites
 =================
