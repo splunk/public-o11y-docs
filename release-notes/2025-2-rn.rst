@@ -22,12 +22,13 @@ February 4, 2025 release
      - Use natural language to interact with your observability data in the AI Assistant and extract insights from Splunk Observability Cloud. Available in AWS US East Virginia (us-east-1), AWS US West Oregon (us-west-2), AWS EU Dublin (eu-west-1) and AWS AP Sydney (ap-southeast-2).
    * - Data links to Splunk AppDynamics tiers in Splunk Observability Cloud
      - You can now create a global data link from a Splunk APM inferred service to a Splunk AppDynamics tier using the user interface or Terraform. See:
-         - :ref:`apm-create-gdl-to-appd`
-         - :ref:`apm-create-data-links-terraform`
-   * - Kubernetes proactive troubleshooting journey
-     - Use new faceted filters to improve search capabilities. Use enhanced metrics categorization for deeper troubleshooting. View entity status icons and metrics as fraction that align with Kubernetes nomenclature. 
-     
-       For more information, see :ref:`infrastructure-k8s-nav`.
+         * :ref:`apm-create-gdl-to-appd`
+         * :ref:`apm-create-data-links-terraform`
+   * - Infrastructure proactive troubleshooting journey
+     - The Infrastructure Monitoring navigators now include the following enhancements:
+         * Metric classes to customize the navigator multi-metric table view. See :ref:`nav-metric-class-ui` and :ref:`predefined-metric-classes`.
+         * Dependencies and metadata are now displayed in tabs. See :ref:`navigator-sidebar` and :ref:`navigator-sidebar-metadata`.
+         * Kubernetes navigators have a new left navigation menu. See :ref:`k8s-nav-left-nav`.
    * - Splunk Synthetic Monitoring private location enhancements
      - * Deploy Splunk Synthetics private locations on additional environments, including Kubernetes, OpenShift, and ARM 64 architectures. This gives you the freedom to deploy in the trusted environments of your choice, offering more flexibility in how you deploy and maintain your monitoring infrastructure.
        *  Use Splunk Synthetic Monitoring private location deployment with Helm charts to deploy and maintain your synthetic monitoring more efficiently.
@@ -60,7 +61,7 @@ What does deprecation mean?
 Deprecated features, platforms, and browsers continue to work and Splunk supports them until support is removed. However, customers need to begin planning now for the future removal of support.
 
 
-What does removal means?
+What does removal mean?
 ------------------------
 
 When Splunk removes support for a feature, platform, or browser it means that the feature, platform, or browser no longer works with the Splunk platform and customers must find an alternative.
