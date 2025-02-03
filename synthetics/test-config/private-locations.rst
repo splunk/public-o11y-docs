@@ -161,11 +161,6 @@ To find the browser type and version, look at the labels ``browser-type`` and ``
   docker inspect -f '{{ index .Config.Labels "browser-version" }}' quay.io/signalfx/splunk-synthetics-runner:latest
 
 
-Security
---------------------------------------------------------------
-
-The Docker image is based on a Debian image which some vulnerability scanners might incorrectly flag as having a common vulnerability and exposure (CVE). To verify the presence and the severity of any CVE, look at the :new-page:`Debian Security Tracker <https://security-tracker.debian.org/tracker/>` to verify its status in Debian. For example, :new-page:`quay.io <http://quay.io/>` (the Docker repository that hosts the published private runner Docker images) reports CVE-2023-45853 as a critical severity vulnerability but the Debian Security Tracker describes the status of https://security-tracker.debian.org/tracker/CVE-2023-45853 and explains why it's marked as ignored by the Debian security team.
-
 Required container permissions
 --------------------------------------------------------------
 
