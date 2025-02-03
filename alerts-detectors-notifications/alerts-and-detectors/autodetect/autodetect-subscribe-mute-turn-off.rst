@@ -24,7 +24,7 @@ Turn off AutoDetect detectors
 
 To turn off an AutoDetect detector, do the following:
 
-#. In the navigation menu, select :menuselection:`Alerts & Detectors`. 
+#. In the navigation menu, select :guilabel:`Detectors & SLOs`. 
 #. Select the :strong:`Detectors` tab.
 #. In the search field, enter the name of the detector you want to turn off.
     
