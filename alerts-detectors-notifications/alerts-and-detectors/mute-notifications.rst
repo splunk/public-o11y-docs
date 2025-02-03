@@ -11,7 +11,7 @@ Muting is helpful when you need to stop sending alert notifications during situa
 
 You can stop sending, or mute, alert notifications based on certain conditions you can specify. You can mute notifications for a specified period of time or indefinitely, although alerts and events are still generated, and appear in Splunk Observability Cloud.
 
-To see your existing muting rules or create new ones, go to :guilabel:`Alerts`, then select the :guilabel:`Muting rules` tab.
+To see your existing muting rules or create new ones, go to :guilabel:`Detectors & SLOs`, then select the :guilabel:`Muting rules` tab.
 
 .. image:: /_images/alerts-detectors-notifications/muting-notifications/mutingtab.png
       :width: 99%
@@ -49,7 +49,7 @@ Creating muting rules from existing detectors or alerts is the fastest way of mu
 
 To mute a specific detector or alert:
 
-#. Open the :guilabel:`Alerts` page, and locate the detector or active alert you want to mute.
+#. Open the :guilabel:`Detectors & SLOs` page, and locate the detector or active alert you want to mute.
 #. Select the more icon (|more|) next to the detector or alert, and select :menuselection:`Create Muting Rule`.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
@@ -64,7 +64,7 @@ Muting rules automatically include dimensions specified in :guilabel:`Group By`,
 
 To create muting rules based on group-by dimensions:
 
-#. Open :guilabel:`Alerts`, then select either the :guilabel:`Active alerts` or :guilabel:`Detectors` tab.
+#. Open :guilabel:`Detectors & SLOs`, then select either the :guilabel:`Active alerts` or :guilabel:`Detectors` tab.
 #. Specify the grouping dimensions using the :guilabel:`Group By` buttons.
 #. Select the more button (|more|) next any grouped item, and select :menuselection:`Create Muting Rule`.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
@@ -78,7 +78,7 @@ Create muting rules from scratch
 
 To create a new muting rule from scratch:
 
-#. Open :guilabel:`Alerts`, then select the :guilabel:`Muting rules` tab.
+#. Open :guilabel:`Detectors & SLOs`, then select the :guilabel:`Muting rules` tab.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
 .. _rule-configure:
@@ -114,9 +114,9 @@ You can search muting rules and view their details at any time, as well as brows
 Muting rules
 -----------------------------------------------------------------------------
 
-To find muting rules, use the search field in the :guilabel:`Muting rules` tab on the :guilabel:`Alerts` page.
+To find muting rules, use the search field in the :guilabel:`Muting rules` tab on the :guilabel:`Detectors & SLOs` page.
 
-You can also view information about muting rules from different places on the :guilabel:`Alerts` page.
+You can also view information about muting rules from different places on the :guilabel:`Detectors & SLOs` page.
 
 .. _view-all-rules:
 
@@ -154,7 +154,7 @@ You can only edit active and scheduled muting rules. Expired muting rules are re
 
 To edit a muting rule:
 
-#. Open :guilabel:`Alerts`, then select the :guilabel:`Muting rules` tab.
+#. Open :guilabel:`Detectors & SLOs`, then select the :guilabel:`Muting rules` tab.
 #. Select the more icon (|more|), then select :menuselection:`Edit`.
 #. Make any edits you want to your muting rule.
 
@@ -169,7 +169,7 @@ Cancel or delete muting rules
 
 Canceling an active muting rule and resuming notifications for an alert or detector are the same thing. A canceled muting rules is deleted from Splunk Observability Cloud before it expires. Scheduled muting rules that are not yet active can also be deleted before they start.
 
-To cancel an active muting rule or delete a scheduled muting rule from :guilabel:`Alerts`:
+To cancel an active muting rule or delete a scheduled muting rule from :guilabel:`Detectors & SLOs`:
 
 - Select the :guilabel:`Muting rules` tab, and locate the muting rule you want to cancel or delete.
 
