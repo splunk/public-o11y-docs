@@ -257,7 +257,7 @@ The following table explains different types of email notifications:
 
 .. note:: Tips
 
-   - If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option on the Detectors tab under :guilabel:`Detectors & SLOs` after you save the detector.
+   - If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs` after you save the detector.
 
    - You can temporarily stop a detector from sending notifications by :ref:`muting notifications<mute-notifications>`.
 
