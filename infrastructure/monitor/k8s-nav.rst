@@ -7,8 +7,6 @@ Monitor Kubernetes
 .. meta::
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
 
-.. note:: The following topic describes the new Kubernetes navigator. See :ref:`infrastructure-k8s` for documentation on the classic Kubernetes navigator.
-
 You can monitor Kubernetes metrics with Splunk Observability Cloud. Splunk Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. To learn more, see :ref:`otel-intro`.
 
 Prerequisites
@@ -113,9 +111,9 @@ Troubleshoot performance with the analyzer
 
 .. note:: The analyzer is only available on the Kubernetes nodes, pods, and containers navigators.
 
-The Kubernetes analyzer, accessed through the :guilabel:`K8s analyzer` tab, helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes instances that are in a bad state, such as nodes that are not ready. The analyzer produces theories about what those instances might have in common, such as that all of the instances are running the same workload or all instances are located in the same AWS region. Select a finding in the analyzer tab to filter the map.
+You can access the Kubernetes analyzer through the :guilabel:`K8s analyzer` tab. The analyzer helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes instances that are in a bad state, such as nodes that are not ready. The analyzer produces theories about what those instances might have in common, such as that all of the instances are running the same workload or all instances are located in the same AWS region. Select a finding in the analyzer to filter the map.
 
-The analyzer tab displays suggested filters for the elements selected in the table or heat map view. Select links in the analyzer tab to add filters to the table or heat map view and explore conditions across your entire Kubernetes environment.
+The analyzer displays suggested filters for the elements selected in the table or heat map view. Select links in the analyzer to add filters to the table or heat map view and explore conditions across your entire Kubernetes environment.
 
 The analyzer uses AI-driven insights to examine potential patterns between nodes, pods, or containers. The trouble indicators are:
 
