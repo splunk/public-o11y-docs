@@ -133,7 +133,7 @@ The setting ``access_token_passthrough`` from the :ref:`splunk-apm-exporter` in 
 To associate datapoints with an organization access token, make sure of the following:
 
 * ``include_metadata`` is set to ``true`` in your ``otlp`` configuration
-* ``X-SF-Token`` is configured in the :ref:`batch-processor`
+* ``metadata_keys`` is set to the org token in the :ref:`batch-processor`
 
 For example:
 
