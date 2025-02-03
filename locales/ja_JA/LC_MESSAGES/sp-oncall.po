@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-10 15:12+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -277,6 +277,7 @@ msgstr "カスタムアウトバウンドWebhookを使用して、Splunk On-Call
 #: ../../sp-oncall/reports/on-call-report.rst:15
 #: ../../sp-oncall/spoc-integrations/appdynamics-integration.rst:12
 #: ../../sp-oncall/spoc-integrations/appoptics-integration.rst:17
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:12
 #: ../../sp-oncall/spoc-integrations/atatus-integration.rst:13
 #: ../../sp-oncall/spoc-integrations/aws-cloudwatch-integration-guide.rst:15
 #: ../../sp-oncall/spoc-integrations/azure-monitoring-integration-guide.rst:12
@@ -375,6 +376,7 @@ msgstr "要件"
 #: ../../sp-oncall/reports/incident-frequency-report.rst:19
 #: ../../sp-oncall/reports/on-call-report.rst:17
 #: ../../sp-oncall/spoc-integrations/appoptics-integration.rst:19
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:14
 #: ../../sp-oncall/spoc-integrations/atatus-integration.rst:15
 #: ../../sp-oncall/spoc-integrations/aws-cloudwatch-integration-guide.rst:17
 #: ../../sp-oncall/spoc-integrations/azure-monitoring-integration-guide.rst:14
@@ -450,6 +452,7 @@ msgstr "このインテグレーションは以下のバージョンのSplunk On
 #: ../../sp-oncall/reports/incident-frequency-report.rst:21
 #: ../../sp-oncall/reports/on-call-report.rst:19
 #: ../../sp-oncall/spoc-integrations/appoptics-integration.rst:23
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:18
 #: ../../sp-oncall/spoc-integrations/atatus-integration.rst:19
 #: ../../sp-oncall/spoc-integrations/aws-cloudwatch-integration-guide.rst:21
 #: ../../sp-oncall/spoc-integrations/azure-monitoring-integration-guide.rst:18
@@ -780,8 +783,9 @@ msgid "Fill out the Payload information with the desired fields you want include
 msgstr "Webhookに含ませたいフィールドをペイロード情報に入力し、オプションで説明を追加すれば、条件付きでWebhookを起動する準備は完了です。"
 
 #: ../../sp-oncall/admin/get-started/deprecation-of-splunk-on-call-phone-notifications-to-china.rst:7
-msgid "Deprecation of Splunk On-Call phonw notifications to China"
-msgstr "中国へのSplunk On-Call phonw通知の廃止"
+#, fuzzy
+msgid "Deprecation of Splunk On-Call phone notifications to China"
+msgstr "中国へのSplunk On-Call 電話通知の廃止"
 
 #: ../../sp-oncall/admin/get-started/deprecation-of-splunk-on-call-phone-notifications-to-china.rst:15
 msgid ":strong:`Effective September 29th, 2023`:"
@@ -2134,7 +2138,7 @@ msgstr "古いインシデントを手動で管理することが組織にとっ
 
 #: ../../sp-oncall/alerts/auto-pause-high-alert-lag.rst:44
 msgid "If you have many alerts coming in that don't necessarily need to page anyone, you can use the :ref:`Alert Rules Engine <alert-rules-engine>` to transform them into Info alerts, which will appear on the timeline for tracking but not trigger an incident."
-msgstr "必ずしも誰かをページングする必要のないアラートが多数寄せられる場合、:ref:`アラートルールエンジン <alert-rules-engine>` を使用して、それらをInfoアラートに変換することができます。このアラートは、追跡のためにタイムラインに表示されますが、インシデントをトリガーすることはありません。"
+msgstr "必ずしも誰かをページングする必要のないアラートが多数寄せられる場合、:ref:`アラートルールエンジン<alert-rules-engine>` を使用して、それらをInfoアラートに変換することができます。このアラートは、追跡のためにタイムラインに表示されますが、インシデントをトリガーすることはありません。"
 
 #: ../../sp-oncall/alerts/auto-pause-high-alert-lag.rst:47
 msgid "onfiguration"
@@ -2624,7 +2628,7 @@ msgstr ":guilabel:`Teams` タブでは、:guilabel:`Your On-call`、:guilabel：
 
 #: ../../sp-oncall/alerts/filtering-options.rst:44
 msgid "Under the :guilabel: `Users` tab you can filter by On-call, Engaged, Teammates, or All Users."
-msgstr ":guilabel:`Users` タブの下では、On-call、Engaged、Teammates、またはAll Usersでフィルターできます。"
+msgstr ":guilabel: `ユーザー` タブの下では、On-call、Engaged、Teammates、またはAll Usersでフィルターできます。"
 
 #: ../../sp-oncall/alerts/filtering-options.rst:43
 msgid "On-call users are denoted by the orange and black oak leaf to the right of their name."
@@ -2640,7 +2644,7 @@ msgstr "メインページのフィルターリング："
 
 #: ../../sp-oncall/alerts/filtering-options.rst:49
 msgid "Within the Timeline, you have 3 panes; People, Timeline, and Incidents. You can filter these panes under the :guilabel: `Customize View` button on the top right of the page."
-msgstr "タイムラインには、ピープル、タイムライン、インシデントの3つのペインがあります。これらのペインはページの右上にある :guilabel:`Customize View` ボタンの下でフィルターすることができます："
+msgstr "タイムラインには、ピープル、タイムライン、インシデントの3つのペインがあります。これらのペインはページの右上にある`表示をカスタマイズする` ボタンの下でフィルターすることができます："
 
 #: ../../sp-oncall/alerts/filtering-options.rst:50
 msgid "When you click on People, Timeline, or Incidents, it will hide that pane."
@@ -2701,7 +2705,7 @@ msgstr "``message_type``"
 
 #: ../../sp-oncall/alerts/incident-fields-glossary.rst:52
 msgid "The ``message_type`` field is the one required field in Splunk On-Call. All other fields would be filled in automatically. ``message_type`` determines the behavior of the alert when it arrives."
-msgstr "``message_type``  フィールドはSplunk On-Callの必須フィールドです。他のフィールドはすべて自動的に入力されます。 ``message_type``  はアラートが到着したときの動作を決定します。"
+msgstr "``message_type``  フィールドはSplunk On-Callの必須フィールドです。他のフィールドはすべて自動的に入力されます。  ``message_type``  はアラートが到着したときの動作を決定します。"
 
 #: ../../sp-oncall/alerts/incident-fields-glossary.rst:54
 msgid "Possible values:"
@@ -3298,7 +3302,7 @@ msgstr "メンテナンスモードを終了する"
 
 #: ../../sp-oncall/alerts/maintenance-mode.rst:61
 msgid "End Maintenance Mode: Navigate to the Manage Maintenance Mode page either through Settings under the main navigation or by clicking on the button from the Maintenance Mode banner. Identify the Maintenance Mode you want to end, and then click on the X icon from the row."
-msgstr "メンテナンスモードを終了します：メインナビゲーションの[設定]から、またはメンテナンスモードのバナーから[メンテナンスモードの管理]ページに移動します。終了したいメンテナンスモードを確認し、行のXアイコンをクリックします。"
+msgstr "メンテナンスモードを終了します：メインナビゲーションの[設定]から、またはメンテナンスモードのバナーからボタンをクリックして、[メンテナンスモードの管理]ページに移動します。終了したいメンテナンスモードを確認し、行のXアイコンをクリックします。"
 
 #: ../../sp-oncall/alerts/maintenance-mode.rst:68
 msgid "End Maintenance Mode Behavior:"
@@ -5150,7 +5154,7 @@ msgstr "エスカレーションポリシーにハードコードされたユー
 
 #: ../../sp-oncall/incidents/manual-take-call.rst:48
 msgid "When you :guilabel:`Take On-Call` for a user who is hard-coded in the first step of an Escalation Policy, that is they are in a :guilabel:`Notify User` step, Splunk On-Call imposes a thirty day limit on the take. The end day and time will appear in the descriptive text beneath the escalation policy that you took on-call for in the user profile card."
-msgstr "エスカレーションポリシーの最初のステップにハードコードされているユーザー( :guilabel:`Notify User` ステップにいるユーザー)を :guilabel:`Take On-Call` に呼び出すと、Splunk On-Callは呼び出しを30日間に制限します。終了日と時間は、ユーザープロファイルカードのオンコールを受けたエスカレーションポリシーの下の説明テキストに表示されます。"
+msgstr "エスカレーションポリシーの最初のステップにハードコードされているユーザー( :guilabel:`Notify User` ステップにいるユーザー)を :guilabel:`Take On-Call` すると、Splunk On-Callは呼び出しを30日間に制限します。終了日と時間は、ユーザープロファイルカードのオンコールを受けたエスカレーションポリシーの下の説明テキストに表示されます。"
 
 #: ../../sp-oncall/incidents/manual-take-call.rst:46
 msgid "Withi"
@@ -8656,7 +8660,7 @@ msgstr ":guilabel:`Use HTTP Basic Auth` は未選択のままにしておきま�
 
 #: ../../sp-oncall/spoc-integrations/GCP-monitoring-integration.rst:26
 msgid "Select :guilabel:`Test Connection`. The :guilabel:`Test Connection` button doesn't trigger an incident in Splunk On-Call but you have to select it to save. To test the integration you need to manually trigger an alert in GCP Monitoring."
-msgstr ":guilabel:`Test Connection`  を選択します。 :guilabel:`Test Connection`  ボタンはSplunk On-Callでインシデントをトリガーしませんが、保存するには選択する必要があります。インテグレーションをテストするには、GCP Monitoringで手動でアラートをトリガーする必要があります。"
+msgstr ":guilabel:`Test Connection`  を選択します。  :guilabel:`Test Connection`  ボタンはSplunk On-Callでインシデントをトリガーしませんが、保存するには選択する必要があります。インテグレーションをテストするには、GCP Monitoringで手動でアラートをトリガーする必要があります。"
 
 #: ../../sp-oncall/spoc-integrations/GCP-monitoring-integration.rst:28
 msgid "Add the on-call webhook notification channel you created to your desired alerting policies."
@@ -8700,11 +8704,11 @@ msgstr "*$routing_key* は、アラートをルーティングするチームの
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:33
 msgid "db212e48-……8669\\:strong:`+databaseteam`\\ @alert.victorops.com"
-msgstr "db212e48-……8669\\:strong:`+databaseteam`\\ @alert.victorops.com"
+msgstr "db212e48-……8669\\ :strong:`+databaseteam` \\ @alert.victorops.com"
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:35
 msgid "Team routing keys are configured at the bottom of the Settings > Integrations page. For details, see `Routing Keys <http://help.victorops.com/knowledge-base/routing-keys/>`."
-msgstr "チームルーティングキーは、[設定] > [インテグレーション]ページの下部で設定します。詳細については、`ルーティングキー <http://help.victorops.com/knowledge-base/routing-keys/>` を参照してください。"
+msgstr "チームルーティングキーは、[設定] >[インテグレーション]ページの下部で設定します。詳細については、`ルーティングキー <http://help.victorops.com/knowledge-base/routing-keys/>` を参照してください。"
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:37
 msgid "If you do not use routing, remove the *+$routing_key* part, including the plus sign, so that the email looks like this:"
@@ -8748,7 +8752,7 @@ msgstr "テンプレートリストをフィルターして、アラートタイ
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:59
 msgid "On the list, select the AlertSite Template for :strong:`Site Error`` with the delivery method :strong:`Text`."
-msgstr "リストで、配信方法 :strong:`テキスト` を使用して、:strong:`サイトエラー`` のアラートサイトテンプレートを選択します。"
+msgstr "リストで、配信方法 :strong:` テキスト` を使用して、:strong:`サイトエラー`` のアラートサイトテンプレートを選択します。"
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:60
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:80
@@ -9140,6 +9144,7 @@ msgid "With the Splunk On-Call integration with AppOptics you can send all AppOp
 msgstr "Splunk On-CallとAppOpticsのインテグレーションにより、AppOpticsのすべてのアラートをSplunk On-Callのタイムラインに送信し、チームが迅速に対応できるようになります。"
 
 #: ../../sp-oncall/spoc-integrations/appoptics-integration.rst:21
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:16
 #: ../../sp-oncall/spoc-integrations/atatus-integration.rst:17
 #: ../../sp-oncall/spoc-integrations/aws-cloudwatch-integration-guide.rst:19
 #: ../../sp-oncall/spoc-integrations/azure-monitoring-integration-guide.rst:16
@@ -9200,6 +9205,7 @@ msgid "Starter"
 msgstr "Starter"
 
 #: ../../sp-oncall/spoc-integrations/appoptics-integration.rst:22
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:17
 #: ../../sp-oncall/spoc-integrations/atatus-integration.rst:18
 #: ../../sp-oncall/spoc-integrations/aws-cloudwatch-integration-guide.rst:20
 #: ../../sp-oncall/spoc-integrations/azure-monitoring-integration-guide.rst:17
@@ -9258,6 +9264,7 @@ msgid "Growth"
 msgstr "Growth"
 
 #: ../../sp-oncall/spoc-integrations/appoptics-integration.rst:26
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:22
 #: ../../sp-oncall/spoc-integrations/atatus-integration.rst:25
 #: ../../sp-oncall/spoc-integrations/big-panda-integration-guide.rst:24
 #: ../../sp-oncall/spoc-integrations/bmc-truesight-pulse-integration.rst:21
@@ -9350,6 +9357,71 @@ msgstr "インテグレーション設定にタイトルを付け、Splunk On-Ca
 #: ../../sp-oncall/spoc-integrations/appoptics-integration.rst:41
 msgid "Save the changes"
 msgstr "変更を保存する"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:-1
+#, fuzzy
+msgid "Configure the Arista CloudVision integration for Splunk On-Call."
+msgstr "Splunk On-Call の Arista CloudVision インテグレーションを設定します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:4
+#, fuzzy
+msgid "Arista CloudVision for Splunk On-Call"
+msgstr "Splunk On-Call 用 Arista CloudVision"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:9
+msgid "Arista CloudVision is a multi-domain management platform that uses cloud networking principles to deliver a simplified NetOps experience."
+msgstr "Arista CloudVision は、クラウド・ネットワーキングの原理を利用して 簡素化された NetOps のエクスペリエンスを提供するマルチドメイン管理プラットフォームです。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:24
+#, fuzzy
+msgid "From the Splunk On-Call web portal, select :guilabel:`Integrations` then :guilabel:`Prometheus`."
+msgstr "Splunk On-Call Webポータルから :guilabel:`Integrations`、:guilabel:`Prometheus` の順に選択します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:25
+#, fuzzy
+msgid "Select  the :guilabel:`Prometheus` integration and copy the :guilabel:`Service API Endpoint` to your clipboard."
+msgstr ":guilabel:`Prometheus` インテグレーションを選択し、:guilabel:`Service API Endpoint` をクリップボードにコピーします。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:28
+#, fuzzy
+msgid "CloudVision configuration"
+msgstr "CloudVision 設定"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:30
+#, fuzzy
+msgid "In Arista CloudVision, go to :guilabel:`Events` then :guilabel:`Notification Configuration` then :guilabel:`Platforms`."
+msgstr "Arista CloudVision で、:guilabel:`Events`、:guilabel:`Notification Configuration`、:guilabel:`Platforms` の順に移動します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:31
+msgid "Scroll to the :guilabel:`VictorOps` section and paste the Service API Endpoint you previously copied in the :guilabel:`VictorOps API Key` field. Leave the :guilabel:`VictorOps URL` field blank."
+msgstr ":guilabel:`VictorOps` セクションまでスクロールし、:guilabel:`VictorOps API Key` フィールドでコピーしておいた Service API Endpoint を貼り付けます。:guilabel:`VictorOps URL` フィールドは空白のままにしておきます。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:32
+#, fuzzy
+msgid "Next, configure this platform in a receiver by going to :guilabel:`Events` then :guilabel:`Notification Configuration` then :guilabel:`Receivers`."
+msgstr "次に、:guilabel:`Events`、:guilabel:`Notification Configuration`、:guilabel:`Receivers` の順に移動してレシーバーでこのプラットフォームを設定します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:33
+#, fuzzy
+msgid "Select :guilabel:`Add Receivers`."
+msgstr ":guilabel:`Add Receivers` を選択します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:34
+#, fuzzy
+msgid "Enter the receiver name in the :guilabel:`Receiver Name` field and select :guilabel:`Add Configuration`."
+msgstr ":guilabel:`Receiver Name` フィールドにレシーバー名を入力し、:guilabel:`Add Configuration` を選択します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:35
+msgid "Select the :guilabel:`VictorOps` option in the table, including the :guilabel:`routing key` you want to notify in Splunk On-Call. For more information on routing keys or instructions on creating a new one, see :ref:`spoc-routing-keys`. If required, select the :guilabel:`Send alert when events are resolved` checkbox."
+msgstr "Splunk On-Call で通知したい :guilabel:`routing key` を含め、テーブルで :guilabel:`VictorOps` オプションを選択します。ルーティングキーの詳細や新規作成方法については、:ref:`spoc-routing-keys` を参照してください。必要に応じて、:guilabel:`Send alert when events are resolved` チェックボックスを選択します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:36
+msgid "Next, configure rules to define when the receiver is used. Go to :guilabel:`Events` then :guilabel:`Notification Configuration` then :guilabel:`Rules` and select :guilabel:`Add Rules`. Enter the appropriate settings and select the :guilabel:`VictorOps` receiver."
+msgstr "次に、レシーバーを使用するタイミングを定義するルールを設定する。:guilabel:`Events`、:guilabel:`Notification Configuration`、:guilabel:`Rules` の順に移動して、:guilabel:`Add Rules` を選択します。適切な設定を入力し、:guilabel:`VictorOps` レシーバーを選択します。"
+
+#: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:38
+msgid "For additional information, see the Arista CloudVision documentation at :new-page:`https://www.arista.com/en/cg-cv/cv-accessing-events#task_zxl_5yv_klb`."
+msgstr "詳細については、:new-page:`https://www.arista.com/en/cg-cv/cv-accessing-events#task_zxl_5yv_klb` で Arista CloudVision のドキュメントを参照してください。"
 
 #: ../../sp-oncall/spoc-integrations/atatus-integration.rst:-1
 msgid "Configure the Atatus integration for Splunk On-Call."
@@ -9594,7 +9666,7 @@ msgstr "新しいインシデントが発生"
 
 #: ../../sp-oncall/spoc-integrations/aws-cloudwatch-integration-guide.rst:93
 msgid "To send in a ``RECOVERY`` to Splunk On-Call, replace the ``Alarm`` variable in the field ``NewStateValue`` to ``OK`` in the provided payload and publish the message again:"
-msgstr "Splunk On-Callに ``RECOVERY`` を送信するには、提供されたペイロードのフィールド ``NewStateValue`` の変数 ``Alarm`` を ``OK`` に置き換えて、再度メッセージを発行します："
+msgstr "Splunk On-Callに ``RECOVERY`` を送信するには、提供されたペイロードのフィールド ``NewStateValue`` の変数 ``Alarm``  を ``OK`` に置き換えて、再度メッセージを発行します："
 
 #: ../../sp-oncall/spoc-integrations/aws-cloudwatch-integration-guide.rst:100
 msgid "Auto-recovery alarms from CloudWatch"
@@ -10334,7 +10406,7 @@ msgstr "# 新しい :menuselection:`Contact Group` を作成します。"
 
 #: ../../sp-oncall/spoc-integrations/circonus-integration.rst:57
 msgid "Give it a name, select :guilabel:`Splunk On-Call` for the :menuselection:`Use Third Party` option. Select :guilabel:`OK`."
-msgstr "名前を付け、:menuselection:`Use Third Party` オプションで :guilabel:`Splunk On-Call` を選択します。:guilabel:`OK` を選択します。"
+msgstr "名前を付け、 :menuselection:`Use Third Party` オプションで :guilabel:`Splunk On-Call` を選択します。:guilabel:`OK` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/circonus-integration.rst:60
 msgid "Copy your API key from the REST Endpoint URL on the Splunk On-Call integrations page. From the main timeline select :guilabel:`Settings`, then :guilabel:`Integrations` and :guilabel:`Circonus`, as described in the previous Splunk On-Call section."
@@ -12126,7 +12198,7 @@ msgstr "ルールエンジンのサンプルルール"
 
 #: ../../sp-oncall/spoc-integrations/generic-email-endpoint.rst:118
 msgid "This rule looks for the keyword or phrase ``UP`` in the email body (``state_message`` in the payload) using wildcard matching, denoted by the asterisks. If the keyword or phrase ``UP`` is present in the body of the email, then the ``message_type`` turns to ``RECOVERY``. You can replace this with any of the parseable fields listed in :ref:`formatting-emails-spoc`."
-msgstr "このルールは、アスタリスクで示されるワイルドカードマッチングを使用して、メール本文（ペイロード内の ``state_message`` ）内のキーワードまたはフレーズ  ``UP``  を検索します。キーワードまたはフレーズ  ``UP``  がメール本文に存在する場合、``message_type`` は ``RECOVERY`` に変わります。これを :ref:`formatting-emails-spoc` にリストされている解析可能なフィールドで置き換えることができます。"
+msgstr "このルールは、アスタリスクで示されるワイルドカードマッチングを使用して、メール本文（ペイロード内の ``state_message`` ）内のキーワードまたはフレーズ ``UP`` を検索します。キーワードまたはフレーズ   ``UP``  がメール本文に存在する場合、``message_type`` は ``RECOVERY`` に変わります。これを :ref:`formatting-emails-spoc` にリストされている解析可能なフィールドで置き換えることができます。"
 
 #: ../../sp-oncall/spoc-integrations/generic-email-endpoint.rst:122
 msgid "Regular expressions"
@@ -12884,7 +12956,7 @@ msgstr "Honeybadgerの設定"
 
 #: ../../sp-oncall/spoc-integrations/honeybadger-integration.rst:38
 msgid "From the web portal select :guilabel:`Settings` and then :guilabel:`Alerts & Integrations`.:guilabel:`"
-msgstr "Webポータルから :guilabel:`Settings`、次に :guilabel:`Alerts & Integrations` を選択します。:guilabel:``"
+msgstr "Webポータルから :guilabel:`Settings`、次に :guilabel:`Alerts & Integrations` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/honeybadger-integration.rst:36
 msgid "Alerts and integrations"
@@ -13041,7 +13113,7 @@ msgstr "**名前** フィールドに :strong:`Splunk On-Call` と入力し、**
 
 #: ../../sp-oncall/spoc-integrations/hp-sitescope-integration.rst:111
 msgid "Check **SiteScope** in the guilabel:`Alert Targets` section. In the :guilabel:`Alert Actions` section, select :guilabel:`New Alert Action`."
-msgstr ":guilabel:`Alert Targets` セクションの **SiteScope** をチェックします。:guilabel:`Alert Actions` セクションで、:guilabel:`New Alert Action` を選択します。"
+msgstr "guilabel:`アラートターゲット` セクションの **SiteScope** をチェックします。 :guilabel:`Alert Actions` セクションで、:guilabel:`New Alert Action` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/hp-sitescope-integration.rst:102
 msgid "Configure new alert"
@@ -13085,7 +13157,7 @@ msgstr ":guilabel:`Action name` フィールドに :guilabel:`Warning Action` �
 
 #: ../../sp-oncall/spoc-integrations/hp-sitescope-integration.rst:143
 msgid "Select :guilabel:`Splunk On-Call_WARNING` from the template menu and :guilabel:`Warning` in the :guilabel:`Status Trigger` section, then select :guilabel:`OK`."
-msgstr "テンプレートメニューから :guilabel:`Splunk On-Call_WARNING` を選択し、:guilabel:`Status Trigger` のセクションで :guilabel:`Warning` を選択し、:guilabel:`OK` を選択します。"
+msgstr "テンプレートメニューから :guilabel:`Splunk On-Call_WARNING` を選択し、 :guilabel:`Status Trigger` のセクションで :guilabel:`Warning` を選択し、:guilabel:`OK` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/hp-sitescope-integration.rst:149
 msgid "Configure recovery action"
@@ -13801,7 +13873,7 @@ msgstr "作成後のチャネルは次のようになります："
 msgid "Splunk On-Call integrations"
 msgstr "Splunk On-Callインテグレーション"
 
-#: ../../sp-oncall/spoc-integrations/integrations-main.rst:136
+#: ../../sp-oncall/spoc-integrations/integrations-main.rst:137
 msgid "Get step-by-step instructions on how to integrate your Splunk On-Call account. Select one of the integrations listed in the table of content in the left-hand navigation menu."
 msgstr "Splunk On-Callアカウントを統合する方法をステップバイステップで説明します。左側のナビゲーションメニューの目次に記載されているインテグレーションのいずれかを選択してください。"
 
@@ -13993,7 +14065,7 @@ msgstr "同じセクションの**API ID**フィールドに、上記のSplunk O
 
 #: ../../sp-oncall/spoc-integrations/jira-app-integration-guide-victorops.rst:46
 msgid "Copy the Splunk On-Call Org ID displayed in your VictorOps URL (for example :samp:`https://portal.victorops.com/client/%7BOrg_ID`) and paste it in Jira's **Organization ID** field. This is appended to the incident link within Jira tickets."
-msgstr "VictorOps URLに表示されているSplunk On-Call Org ID (例 :samp:`https://portal.victorops.com/client/%7BOrg_ID` )をコピーし、Jiraの**Organization ID**フィールドに貼り付けます。これはJiraチケット内のインシデントリンクに付加されます。"
+msgstr "VictorOps URLに表示されているSplunk On-Call Org ID (例 :samp:`https://portal.victorops.com/client/%7BOrg_ID` )をコピーし、Jiraの **Organization ID** フィールドに貼り付けます。これはJiraチケット内のインシデントリンクに付加されます。"
 
 #: ../../sp-oncall/spoc-integrations/jira-app-integration-guide-victorops.rst:50
 msgid "Once all three fields have been populated, click **Connect**.  On success, a new entry will appear in the *Connected VictorOps Organizations* section, and display a green “VALID” flag."
@@ -14837,7 +14909,7 @@ msgstr "形式： :guilabel:`JSON`"
 
 #: ../../sp-oncall/spoc-integrations/logicmonitor-integration.rst:59
 msgid "For the Alert Data paste the following message. Note that this sample assigns a value of ``CRITICAL`` to the ``message_type``:"
-msgstr "アラートデータには以下のメッセージを貼り付けます。このサンプルでは、``message_type`` に ``CRITICAL`` という値を割り当てていることに注意してください："
+msgstr "アラートデータには以下のメッセージを貼り付けます。このサンプルでは、 ``message_type`` に ``CRITICAL`` という値を割り当てていることに注意してください："
 
 #: ../../sp-oncall/spoc-integrations/logicmonitor-integration.rst:86
 msgid "Repeat steps 1 through 4 for an alert status of Acknowledged and again for Cleared. For each, within the Alert Data change the ``message_type`` field to reflect the alert status. Map the field as follows and refer to the screenshot for clarification:"
@@ -14938,7 +15010,7 @@ msgstr "「名前」と「説明」のフィールドに記入します。"
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:45
 msgid "Paste the :strong:`URL to notify` from the :strong:`In VictorOps`` section into the URL field."
-msgstr ":strong:`In VictorOps`` セクションから :strong:`に通知するURL` をURLフィールドに貼り付けます。"
+msgstr ":strong:`In VictorOps `` セクションからに :strong:`通知するURL` をURLフィールドに貼り付けます。"
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:46
 msgid "Select POST for the Method."
@@ -14962,7 +15034,7 @@ msgstr "これで、Splunk On-Call通知エンドポイントをアラートに�
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:67
 msgid "Select :strong:`Equal to` from the :strong:`Condition`` dropdown menu. Enter :strong:`99` in the :strong:`Threshold` field, then select :strong:`Continue`."
-msgstr ":strong:`条件`` ドロップダウンメニューから、:strong:`等しい` を選択します。:strong:`しきい値` フィールドに :strong:`99` と入力し、:strong:`続行` を選択します。"
+msgstr ":strong:`条件`` ドロップダウンメニューから、:strong:`等しい` を選択します。:strong:`しきい値` フィールドに :strong:` 99` と入力し、:strong:`続行` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:72
 msgid "Enter a name in the :strong:`Name` field, then click :strong:`CONTINUE`."
@@ -14970,7 +15042,7 @@ msgstr ":strong:`名前` フィールドに名前を入力し、:strong:`続行`
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:74
 msgid "Set :strong:`Suppress notifications for` to :strong:`5 minutes`, then select :strong:`SplunSplunk On-Call` (formerly VictorOps) from the :strong:`Notifications endpoint` dropdown menu, then click :strong:`CREATE ALERT`."
-msgstr ":strong:`Suppress notifications for` を :strong:`5 minutes` に設定し、:strong:`通知エンドポイント` ドロップダウンメニューから :strong:`SplunSplunk On-Call` (旧VictorOps)を選択し、:strong:`CREATE ALERT` をクリックします。"
+msgstr ":strong:`通知を止める時間` を :strong:`5分` に設定し、:strong:`通知エンドポイント ` ドロップダウンメニューから :strong:`SplunSplunk On-Call ` (旧VictorOps)を選択し、:strong:`CREATE ALERT` をクリックします。"
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:80
 msgid "Confirm that an alert shows up in the Splunk On-Call timeline."
@@ -16900,7 +16972,7 @@ msgstr "ObserviumのAPIエンドポイントURL"
 
 #: ../../sp-oncall/spoc-integrations/observium-integration.rst:40
 msgid "The variable name at the end of the API service endpoint might vary. For example, ``$incident_alert`` instead of ``$routing_key``."
-msgstr "APIサービスエンドポイントの最後の変数名は異なる場合があります。例えば、``$routing_key`` ではなく ``$incident_alert`` となります。"
+msgstr "APIサービスエンドポイントの最後の変数名は異なる場合があります。例えば、 ``$routing_key`` ではなく ``$incident_alert`` となります。"
 
 #: ../../sp-oncall/spoc-integrations/observium-integration.rst:43
 msgid "Observium configuration"
@@ -18036,7 +18108,7 @@ msgstr "URL文字列からAPIキーを取得します："
 
 #: ../../sp-oncall/spoc-integrations/puppet-enterprise-integration-guide.rst:23
 msgid "API key for Puppet Enteprise"
-msgstr "Puppet EntepriseのAPIキー"
+msgstr "Puppet EnterpriseのAPIキー"
 
 #: ../../sp-oncall/spoc-integrations/puppet-enterprise-integration-guide.rst:37
 msgid "Configure Puppet Enterprise in Splunk Enterprise"
@@ -18969,7 +19041,7 @@ msgstr "以下の例では、``scalyrMessageType`` というペイロードフ�
 
 #: ../../sp-oncall/spoc-integrations/scalyr-integration.rst:100
 msgid "A corresponding Rules Engine rule can match on the field of ``scalyrMessageType`` with a value of ``WARNING``, and transform the ``message_type`` field to a value of ``WARNING``. The ``message_type`` field is what tells Splunk On-Call how to treat the alert."
-msgstr "対応するルールエンジンのルールは、 ``WARNING``  の値を持つ ``scalyrMessageType`` のフィールドにマッチし、``message_type``  のフィールドを ``WARNING``  の値に変換することができます。``message_type``  のフィールドは、Splunk On-Callにアラートの処理方法を伝えるものです。"
+msgstr "対応するルールエンジンのルールは、 ``WARNING``  の値を持つ ``scalyrMessageType`` のフィールドにマッチし、``message_type``  のフィールドを ``WARNING``  の値に変換することができます。``message_type`` のフィールドは、Splunk On-Callにアラートの処理方法を伝えるものです。"
 
 #: ../../sp-oncall/spoc-integrations/scalyr-integration.rst:102
 msgid "You can apply the same process to nearly any pertinent payload field. For more information, see :ref:`incident-fields-glossary`."
@@ -19265,7 +19337,7 @@ msgstr ":guilabel:`Settings`、:guilabel:`Alert`、:guilabel:`Rules Engine` の�
 
 #: ../../sp-oncall/spoc-integrations/servicenow-integration.rst:108
 msgid "Add a rule which defines a matching condition to send Splunk On-Call incidents to ServiceNow. See :ref:`rules-engine-matching-conditions`. For example, to send all critical incidents to ServiceNow, use: When ``message_type`` matches ``CRITICAL`` using ``Wildcard`` Set ``ServiceNow_Integration`` to new value ``true``. This example also includes resolution field information to enable auto-resolution of incidents to ServiceNow."
-msgstr "Splunk On-CallインシデントをServiceNowに送信するマッチング条件を定義するルールを追加します。:ref:`rules-engine-matching-conditions` を参照してください。たとえば、すべての重要なインシデントをServiceNowに送信するには、次のようにします： ``Wildcard`` を使用して ``message_type`` が ``CRITICAL`` に一致する場合 ``ServiceNow_Integration`` を新しい値 ``true`` に設定します。この例には、ServiceNowへのインシデントの自動解決を有効にするための解決フィールド情報も含まれています。"
+msgstr "Splunk On-CallインシデントをServiceNowに送信するマッチング条件を定義するルールを追加します。:ref:`rules-engine-matching-conditions` を参照してください。たとえば、すべての重要なインシデントをServiceNowに送信するには、次のようにします： ``Wildcard`` を使用して ``message_type``  が ``CRITICAL`` に一致する場合 ``ServiceNow_Integration`` を新しい値 ``true`` に設定します。この例には、ServiceNowへのインシデントの自動解決を有効にするための解決フィールド情報も含まれています。"
 
 #: ../../sp-oncall/spoc-integrations/servicenow-integration.rst:115
 msgid "Map fields from Splunk On-Call to ServiceNow"
@@ -20696,7 +20768,7 @@ msgstr ":guilabel:`Body to POST` に、ペイロード例から対応する :gui
 
 #: ../../sp-oncall/spoc-integrations/solarwinds-integration.rst:43
 msgid "Select:guilabel:`Next` through the Summary tab, review, then :guilabel:`Submit`."
-msgstr "概要タブ、レビュー、:guilabel:`Submit` を介して :guilabel:`Next` を選択します。"
+msgstr "概要タブ、レビュー、 :guilabel:`Submit` を介して :guilabel:`Next` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/solarwinds-integration.rst:46
 msgid "Alert Splunk On-Call for multiple actions"
@@ -21188,7 +21260,7 @@ msgstr "In Splunk Cloud Platform"
 
 #: ../../sp-oncall/spoc-integrations/splunk-integration-guide.rst:166
 msgid "Under :guilabel:`Apps`, select :guilabel:`Find More Apps`, then in the search bar type :guilabel:`Splunk On-Call:guilabel:`. Select :guilabel:`Install`. Once the app is installed it shows up under :guilabel:`Apps`."
-msgstr ":guilabel:`Apps`  で :guilabel:`Find More Apps` を選択し、検索バーで :guilabel:`Splunk On-Call:guilabel:` と入力します。:guilabel:`Install` を選択します。アプリがインストールされると、 :guilabel:`Apps`  の下に表示されます。"
+msgstr ":guilabel:`Apps`  で :guilabel:`Find More Apps` を選択し、検索バーで :guilabel:`Splunk On-Call:guilabel:` と入力します。:guilabel:`Install` を選択します。アプリがインストールされると、  :guilabel:`Apps`  の下に表示されます。"
 
 #: ../../sp-oncall/spoc-integrations/splunk-integration-guide.rst:168
 msgid "Open the app to go to the Splunk On-Call Incident Response Home page, which guides you through setting up the account, configuring API keys, and testing alerts. Once your configuration is complete a check next to each configuration step appears."
@@ -21792,7 +21864,7 @@ msgstr "お客様は、Splunk On-Callとのhttps通信用に**ポート443**を�
 
 #: ../../sp-oncall/spoc-integrations/splunking-victorops-data.rst:48
 msgid "Proxy is supported (available with 1.0.5 version and above) from the Splunk base `HERE <https://splunkbase.splunk.com/app/4886/>`__ or `contact support <https://victorops.com/contact/>`__ for the most recent version."
-msgstr "Proxyは、Splunkのベース`こちら<https://splunkbase.splunk.com/app/4886/>`__または`サポートにお問い合わせください<https://victorops.com/contact/>`__からサポートされています（1.0.5バージョン以上で利用可能）。"
+msgstr "Proxy は、Splunk のベース`こちら<https://splunkbase.splunk.com/app/4886/>`__ または`サポートにお問い合わせください<https://victorops.com/contact/>`__ からサポートされています（1.0.5 バージョン以上で利用可能）。"
 
 #: ../../sp-oncall/spoc-integrations/splunking-victorops-data.rst:53
 #: ../../sp-oncall/spoc-integrations/splunking-victorops-data.rst:208
@@ -26674,8 +26746,9 @@ msgid "View escalation policies"
 msgstr "エスカレーションポリシーを表示する"
 
 #: ../../sp-oncall/user-roles/user-roles-permissions.rst:258
-msgid "Create, edit, or delete escation policies"
-msgstr "エスケーションポリシーを作成、編集、削除する"
+#, fuzzy
+msgid "Create, edit, or delete escalation policies"
+msgstr "エスカレーションポリシーを作成、編集、または削除する"
 
 #: ../../sp-oncall/user-roles/user-roles-permissions.rst:265
 msgid "Take a scheduled Override"

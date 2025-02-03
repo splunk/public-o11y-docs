@@ -16,7 +16,7 @@ Reduce excessive alerts
 
 Kai creates a detector to report on latency by following these steps:
 
-#. In the :guilabel:`Alerts & Detectors` page, Kai selects :guilabel:`New Detector`.
+#. In the :guilabel:`Detectors & SLOs` page, Kai selects :guilabel:`New Detector`.
 #. Kai selects :guilabel:`Infrastructure or Custom Metrics Alert Rule`.
 #. Kai enters the signal they want to alert on: :code:`latency`. 
 #. Kai selects the :guilabel:`Static Threshold` alert condition.

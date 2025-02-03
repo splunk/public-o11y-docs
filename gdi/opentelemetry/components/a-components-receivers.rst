@@ -45,6 +45,7 @@ Collector components: Receivers
     otlp-receiver                
     postgresql-receiver
     prometheus-receiver
+    purefa-receiver
     rabbitmq-receiver
     receiver-creator-receiver
     redis-receiver
@@ -53,6 +54,7 @@ Collector components: Receivers
     signalfx-gateway-prometheus-remote-write-receiver
     signalfx-receiver
     smartagent-receiver
+    snowflake-receiver
     splunk-enterprise-receiver
     splunk-hec-receiver
     sqlquery-receiver 
@@ -67,9 +69,11 @@ Collector components: Receivers
     windowsperfcounters-receiver
     zipkin-receiver 
 
+The Splunk Distribution of the OpenTelemetry Collector includes and supports the receivers listed on this doc. To see other components, refer to :ref:`otel-components`.
+
+.. note:: The following list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
+
 The following receivers are available:
-
-
 
 .. raw:: html
 
@@ -84,4 +88,3 @@ The following receivers are available:
 
 
 
-To see other components, refer to :ref:`otel-components`.

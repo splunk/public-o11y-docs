@@ -86,7 +86,7 @@ You can then add the filter processors to any compatible pipeline. For example:
          - memory_limiter
          - batch
          - resourcedetection
-         exporters: [sapm, signalfx]
+         exporters: [otlphttp, signalfx]
        metrics:
          receivers: [hostmetrics, otlp, signalfx]
          processors:

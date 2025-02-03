@@ -1,48 +1,48 @@
 .. _global-variables:
 
 *****************************************
-Create and use global variables 
+Global variables 
 *****************************************
 
 .. meta::
     :description: Define a variable that you can use in multiple browser and API tests in Splunk Synthetic Monitoring.
 
-Define a global variable once, and then use it across all of your browser and API tests.
+Global variables are pre-saved, reusable variables that you define once and use across all your browser and API tests. 
 
 
 How can you use a global variable?
 ===================================
 Use global variables to store non-sensitive information for your browser and API tests. Splunk Synthetic Monitoring saves your global variables, but note that their values are visible to all users in your account. 
 
-To preserve your account's security, don't use global variables to store sensitive information such as login credentials, API keys, or credit card information. Instead, either use placeholder values or permanently conceal the global variables that contain sensitive information. 
+To preserve your account's security, don't use global variables to store sensitive information such as login credentials, API keys, or credit card information. 
 
 .. _concealed-gv:
 
 What happens when you conceal a global variable?
 ==================================================
-When you conceal a global variable, Splunk Synthetic Monitoring permanently hides its value from all users of your account. Concealed values are never revealed; they are scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages. However, if you send a concealed value to a test endpoint, that endpoint receives its unconcealed value.
+When you conceal a global variable, Splunk Synthetic Monitoring encrypts the variable's value in its database and scrubs its value from the Splunk Synthetic Monitoring UI, from test results, and from alert messages. However, concealed global variables were not designed to safeguard sensitive information or critical data; do not misuse them for such purposes.
 
 
 Create a global variable
 ===============================
 There are two ways to create a global variable:
 
-#. Add a new global variable in the vault:
+* Add a new global variable in the vault:
 
-    a. From the Splunk Synthetic Monitoring landing page, select :guilabel:`Synthetics configuration`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab.
-    b. Select :guilabel:`+ Add` to open the creation dialog box. 
+    #. From the Splunk Synthetic Monitoring landing page, select :guilabel:`Synthetics configuration`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab.
+    #. Select :guilabel:`+ Add` to open the creation dialog box. 
 
-#. Add a new global variable while editing a test: 
+* Add a new global variable while editing a test: 
 
-   a. In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global variables` and select :guilabel:`Add`. 
+   In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global variables` and select :guilabel:`Add`. 
 
-Once you're in the :guilabel:`Add global variable` dialog box, enter the following:
+When you're in the :guilabel:`Add global variable` dialog box, enter the following:
  
 #. In the :guilabel:`env` field, enter the name of the variable. You will use this key to access your variable within a test.
 #. In the :guilabel:`value` field, enter the value that will replace the variable when the test is run.
 #. (Optional) In the :guilabel:`Description` field, enter a description to explain the purpose of the variable for future reference. A description is particularly helpful when you conceal the variable and cannot reveal its value. 
-#. (Optional) Select :guilabel:`Conceal value` to permanently conceal the value to all users. 
-#. Once you're satisfied with your global variable, select :guilabel:`Add`. 
+#. (Optional) Select :guilabel:`Conceal value`. 
+#. Select :guilabel:`Add`. 
 
 
 Edit a global variable

@@ -109,7 +109,7 @@ In the following table, follow the instrumentation steps for the language that e
 
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS
-     - :ref:`get-started-nodejs`
+     - :ref:`get-started-nodejs-3x`
 
    * - Go
      - Splunk Distribution of OpenTelemetry Go

@@ -16,7 +16,7 @@ Export chart contents
 
 For line charts, area charts, and column charts, you can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them.
 
-To export a chart, select :strong:`Export Chart as CSV` from the chart's :guilabel:`Actions` menu (|more|).
+To export a chart, first select :strong:`Data table` tab, next select :strong:`Export as CSV` download icon in the table headers row on the last column (the right side corner).
 
 .. note:: List charts and table charts can't be exported because they don't have a data table.
 

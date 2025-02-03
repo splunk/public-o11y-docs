@@ -1,7 +1,7 @@
 .. _synth-alerts:
 
 ************************************************************
-Set up detectors and alerts in Splunk Synthetic Monitoring
+Detectors and alerts
 ************************************************************
 
 .. meta::
@@ -11,32 +11,68 @@ In Splunk Observability Cloud, detectors monitor your tests and metrics for anom
 
 To learn more about advanced alerts and detectors in Splunk Observability Cloud, see :ref:`get-started-detectoralert`. Read on to learn about creating static threshold detectors specific to Synthetics. 
 
-Use cases for detectors in Synthetics
+Types of detectors in Synthetics
 =======================================
 
-You can use detectors to alert on metrics at the test level, or at the page level or synthetic transaction level for Browser tests. The following table provides example use cases for detectors at each of these levels:
+In Synthetics, there are detectors to alert on metrics at the test level, at the page level, or at the synthetic transaction level for browser tests. The following table explains each of these detector types:
 
 .. list-table::
    :header-rows: 1
    :widths: 25 75
   
    * - :strong:`Detector type`
-     - :strong:`Use case`
+     - :strong:`Description`
 
    * - Test-level detectors
-     - | Create test-level detectors to trigger alerts on metrics that correspond to the entire test.
+     - | Test-level detectors send alerts on metrics that correspond to an entire test.
        | 
-       | For example, alert when the count of failed runs, % Uptime, or duration of the entire test exceeds a given threshold. 
+       | Examples: Send an alert when the count of failed runs, % uptime, or duration of the entire test exceeds a given threshold. 
 
    * - Page-level detectors
-     - | In Browser tests, create page-level detectors to trigger alerts on metrics corresponding to a single page within a test. For example, alert when the DOM load time, largest contentful paint (LCP), or total image size on a given page exceeds a given threshold. 
+     - | Page-level detectors send alerts on metrics that correspond to a single page within a browser test. 
+       | 
+       | Examples: Send an alert when the DOM load time, largest contentful paint (LCP), or total image size on a given page exceeds a given threshold. 
        | 
        | If you don't scope your alerts to the page level for page-level metrics, the detector monitors the average metric value across pages. See :ref:`page-level-detector` to learn more.
   
    * - Transaction-level detectors
-     - | In Browser tests, create synthetic transaction-level detectors to trigger alerts on metrics based on a synthetic transaction within a test. 
+     - | Synthetic transaction-level detectors send alerts on metrics that correspond to a synthetic transaction within a browser test. 
        | 
-       | You can alert on the three transaction-level metrics that Splunk Synthetic Monitoring captures: Duration, Requests, and Size. See :ref:`transaction-level-detector` to learn more.
+       | Examples: Send an alert on the three transaction-level metrics that Splunk Synthetic Monitoring captures (duration, requests, and size). See :ref:`transaction-level-detector` to learn more.
+
+
+Best practices for sending an alert when a synthetic test fails
+===============================================================
+
+You can set up a detector while initially creating or editing a test, or from the results view for a particular test. A detector can track one or more synthetic tests.
+
+To set up a detector, do one of the following:
+
+* When creating or editing a test, select :guilabel:`Create detector` to open the detector dialog box.
+* From the :guilabel:`Test results` page for a particular test, select :guilabel:`Create detector` to open the detector dialog box.
+
+In the detector dialog box, enter the following fields:
+
+#. In the test name list, select the tests you want to include in your detector. Best practice is to select tests that have a similar run length.
+#. In the metric list, select :strong:`Uptime`. The uptime metric is 0 when the test fails.
+#. In :strong:`+ Add filters` don't add filters for :guilabel:`failed` or :guilabel:`success`. Omit these filters to ensure that the detector sees all datapoints for the test run.
+
+#. In the :guilabel:`Alert details` section, enter the following:
+
+    * :guilabel:`Trigger threshold`: The threshold to trigger the alert.
+    * :guilabel:`Orientation`: Whether the metric must fall below or exceed the threshold to trigger the alert.
+    * :guilabel:`Violates threshold`: How many times the metric must violate the threshold to trigger the alert.
+    * :guilabel:`Split by location`: Whether to split the detector by test location. If you don't split by location, the detector monitors the average value across all locations. 
+
+#. Use the severity selector to set the severity of the alert.
+#. Add recipients.
+#. Select :guilabel:`Activate`. 
+
+..  image:: /_images/synthetics/detector-one.png
+    :width: 100%
+    :alt: Setting up a detector for failed tests. 
+
+Your detector is now set up to check for failed test runs every minute and to send an alert based on your settings in :guilabel:`Alert details`.
 
 .. _synth-detector-setup:
 

@@ -9,7 +9,7 @@ Heroku
 The Splunk OpenTelemetry Connector for Heroku is a buildpack for the Splunk Distribution of the OpenTelemetry Collector. The buildpack installs
 and runs the Splunk OpenTelemetry Connector on a Dyno to receive, process and export metric and trace data for Splunk Observability Cloud:
 
--  Splunk APM through the ``sapm`` exporter. The ``otlphttp`` exporter can be used with a custom configuration.
+-  Splunk APM through the ``otlphttp`` exporter.
 -  Splunk Infrastructure Monitoring through the ``signalfx`` exporter.
 
 See :ref:`otel-intro` to learn more.

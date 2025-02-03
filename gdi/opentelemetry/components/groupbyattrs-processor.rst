@@ -70,7 +70,7 @@ Use the processor to perform the following actions:
 * :ref:`Compact multiple records <groupbyattrs-processor-compact>` that share the same ``resource`` and ``InstrumentationLibrary`` attributes but are under multiple ``ResourceSpans`` or ``ResourceMetrics`` or ``ResourceLogs`` into a single ``ResourceSpans`` or ``ResourceMetrics`` or ``ResourceLogs``, when an empty list of keys is provided. 
   
   * This happens, for example, when you use the ``groupbytrace`` processor, or when data comes in multiple requests. 
-  * If you compact data it takes less memory, it's more efficiently processed and serialized, and the number of export requests is reduced, for example if you use the ``sapm`` exporter. See more at :ref:`splunk-apm-exporter`.
+  * If you compact data it takes less memory, it's more efficiently processed and serialized, and the number of export requests is reduced.
 
 .. tip:: Use the ``groupbyattrs`` processor together with ``batch`` processor, as a consecutive step. Grouping records together under matching resource and/or InstrumentationLibrary reduces the fragmentation of data.
 

@@ -8,11 +8,11 @@ The Collector supports the following Windows versions, depending on the installa
   * - Install method
     - Supported versions (64-bit)
   * - Installer script
-    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022
+    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022, 2025
   * - Windows installer (MSI)
-    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022
+    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022, 2025
   * - Ansible
-    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022
+    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022, 2025
   * - Chef
     - Windows 10 Pro and Home, Windows Server 2019, 2022
   * - Nomad
