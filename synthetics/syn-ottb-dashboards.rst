@@ -44,9 +44,9 @@ Dashboards for alerts and detectors
 
 To create charts and dashboards for your Synthetics alerts and detectors, see:   
 
-* :ref:`Link detectors to charts <linking-detectors>` in Alerts & Detectors.    
+* :ref:`Link detectors to charts <linking-detectors>`
 
-* :ref:`Dashboards in Splunk Observability Cloud <dashboards>` in Dashboards and Charts. 
+* :ref:`Dashboards in Splunk Observability Cloud <dashboards>` 
 
 
 Learn more 
