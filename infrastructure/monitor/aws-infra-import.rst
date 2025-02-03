@@ -119,7 +119,7 @@ Splunk Observability Cloud also imports metrics, metadata, and logs for some of 
       - :strong:`Description`
 
    *  - :ref:`get-started-k8s`
-      - :ref:`infrastructure-k8s`
+      - :ref:`infrastructure-k8s-nav`
       - Import metrics and logs from Kubernetes clusters running in EC2 instances or EKS.
 
    *  -  - :ref:`get-started-linux`

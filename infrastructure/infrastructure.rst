@@ -77,7 +77,7 @@ Splunk Observability Cloud also provides metrics and other data :ref:`for the fo
      - View key metrics and visualize incidents for every supported cloud service. The Infrastructure Overview provides default dashboards for each cloud service. For example, there are separate dashboards for AWS EC2 instances and AWS EBS instances.
 
    * - Containers
-     - :ref:`infrastructure-k8s`
+     - :ref:`infrastructure-k8s-nav`
      - View key metrics and visualize incidents for your Kubernetes infrastructure at the cluster, node, pod, and container level.
 
    * - My Data Center

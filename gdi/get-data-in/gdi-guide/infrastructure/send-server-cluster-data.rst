@@ -69,7 +69,7 @@ For example, the host navigator shows charts and other visualizations of host da
 To learn how to use Infrastructure Monitoring navigators, see the following:
 
 * :ref:`monitor-hosts`
-* :ref:`use-the-k8s-navigator`
+* :ref:`infrastructure-k8s-nav`
 
 .. _view-metrics-inframon:
 
