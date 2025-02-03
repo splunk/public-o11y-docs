@@ -124,6 +124,48 @@ By default, gzip compression is turned on. To turn it off use the following conf
       ...
       compression: none
 
+
+Associate passthroughs to an access token
+------------------------------------------
+
+The setting ``access_token_passthrough`` from the :ref:`splunk-apm-exporter` in no longer available.
+
+To associate datapoints with an organization access token, make sure of the following:
+
+* ``include_metadata`` is set to ``true`` in your ``otlp`` configuration
+* ``X-SF-Token`` is configured in the :ref:`batch-processor`
+
+For example:
+
+.. code-block:: yaml
+
+  extensions:
+    headers_setter:
+      headers:
+        - action: insert
+          key: X-SF-TOKEN
+          from_context: X-SF-TOKEN
+
+  receivers:
+    otlp:
+      protocols:
+        http:
+          include_metadata: true
+
+  processors:
+    batch:
+      metadata_keys:
+      - X-SF-Token
+
+  exporters:
+    otlphttp:
+      metrics_endpoint: https://ingest.lab0.signalfx.com/v2/datapoint/otlp
+      traces_endpoint: https://ingest.lab0.signalfx.com/v2/trace/otlp
+      headers:
+          "X-SF-Token": "mytoken"
+      auth:
+        authenticator: headers_setter
+
 .. _otlphttp-exporter-settings:
 
 Settings
