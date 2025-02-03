@@ -25,7 +25,7 @@ On the Infrastructure Monitoring landing page, each card represents a navigator,
 Monitor all instances in a navigator
 ---------------------------------------
 
-  .. note:: The following section describes components shared by all navigators. For components specific to the Network Explorer and Kubernetes navigators, see :ref:`network-explorer-network-map` and :ref:`infrastructure-k8s-nav`.
+  .. note:: The following section describes components shared by most navigators. For components specific to the Network Explorer and Kubernetes navigators, see :ref:`network-explorer-network-map` and :ref:`infrastructure-k8s-nav`.
 
 In most navigators, you have two options to monitor your instances: table view and heat map view.
 
@@ -233,7 +233,7 @@ Use metric classes
 
 By default, some navigators display a multi-metric table view with a subset of metrics and KPIs used to monitor the performance of your instances. You can customize the multi-metric table view by using predefined metric classes, which are groupings of related metrics and KPIs useful for troubleshooting specific aspects of your deployment.
 
-If predefined metric classes are available for the navigator, you can use the :guilabel:`Metric class` drop-down menu in the table view to apply a predefined metric class and customize your view.
+If predefined metric classes are available for the navigator, you can use the :guilabel:`Metric class` drop-down menu in the table view to customize your view.
 
 The :guilabel:`Metric class` drop-down menu only appears if the navigator has predefined metric classes. For more information on the available predefined metric classes, see :ref:`predefined-metric-classes`.
 
