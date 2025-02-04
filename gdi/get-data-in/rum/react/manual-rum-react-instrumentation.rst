@@ -1,4 +1,4 @@
-.. _manual-android-instrumentation:
+.. _manual-rum-react-instrumentation:
 
 *******************************************************************************
 Manually instrument React Native applications
