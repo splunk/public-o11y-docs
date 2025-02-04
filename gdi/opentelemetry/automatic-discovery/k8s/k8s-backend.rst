@@ -84,6 +84,11 @@ Populate values.yaml with the following fields and values:
   operator:
     enabled: true
 
+  # Installs the Custom Resource Definitions (CRDs) required by the operator
+  # Must be set unless CRDs are pre-installed manually
+  operatorcrds: 
+    install: true
+  
 You might need to populate the file with additional values depending on your environment. See :ref:`k8s-auto-discovery-add-certificates` and :ref:`k8s-auto-discovery-setup-traces` for more information.
 
 .. _k8s-auto-discovery-add-certificates:
