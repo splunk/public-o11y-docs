@@ -49,7 +49,7 @@ Creating muting rules from existing detectors or alerts is the fastest way of mu
 
 To mute a specific detector or alert:
 
-#. Open the :guilabel:`Detectors & SLOs` page, and locate the detector or active alert you want to mute.
+#. Open :guilabel:`Detectors & SLOs`, then select either the :guilabel:`Active alerts` or :guilabel:`Detectors` tab.
 #. Select the more icon (|more|) next to the detector or alert, and select :menuselection:`Create Muting Rule`.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
@@ -65,7 +65,7 @@ Muting rules automatically include dimensions specified in :guilabel:`Group By`,
 To create muting rules based on group-by dimensions:
 
 #. Open :guilabel:`Detectors & SLOs`, then select either the :guilabel:`Active alerts` or :guilabel:`Detectors` tab.
-#. Specify the grouping dimensions using the :guilabel:`Group By` buttons.
+#. Specify the grouping dimensions by selecting the :guilabel:`Group By` button.
 #. Select the more button (|more|) next any grouped item, and select :menuselection:`Create Muting Rule`.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
