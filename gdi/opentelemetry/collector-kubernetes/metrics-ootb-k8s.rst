@@ -183,7 +183,7 @@ Pod level metrics and dimensions
     - Exported?
 
   * - ``k8s.cronjob.active_jobs``
-    - Active cronjob jobs    
+    - Active CronJob jobs    
     -   
     - Yes  
 
@@ -208,7 +208,7 @@ Pod level metrics and dimensions
     - Yes  
 
   * - ``k8s.job.successful_pods``
-    - Succesful pod jobs   
+    - Successful pod jobs   
     -   
     - Yes 
 

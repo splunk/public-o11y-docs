@@ -80,13 +80,13 @@ To update the access token for your Collector for Kubernetes instance follow the
 
     helm get values <Release_Name> 
 
-5. Restart the Collector's daemonset and deployments: 
+5. Restart the Collector's DaemonSet and deployments: 
 
-  * If ``agent.enabled=true``, restart the Collector's agent daemonset:
+  * If ``agent.enabled=true``, restart the Collector's agent DaemonSet:
 
   .. code-block:: bash
 
-    kubectl rollout restart daemonset <Release_Name>-agent
+    kubectl rollout restart DaemonSet <Release_Name>-agent
     
   * If ``clusterReceiver.enabled=true``, restart the Collector's cluster receiver deployment:
 

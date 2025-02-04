@@ -86,7 +86,7 @@ Search for "Autopilot overview" on the :new-page:`Google Cloud documentation sit
 
 .. note:: GKE Autopilot doesn't support native OpenTelemetry logs collection.
 
-The Collector agent daemonset can have problems scheduling in Autopilot mode. If this happens, do the following to assign the daemonset a higher priority class to ensure that the daemonset pods are always present on each node:
+The Collector agent DaemonSet can have problems scheduling in Autopilot mode. If this happens, do the following to assign the DaemonSet a higher priority class to ensure that the DaemonSet pods are always present on each node:
 
 1. Create a new priority class for the Collector agent:
 
@@ -134,7 +134,7 @@ To run the Collector in the Amazon EKS with Fargate profiles, set the required `
 
 This distribution operates similarly to the ``eks`` distribution, but with the following distinctions:
 
-* The Collector agent daemonset is not applied since Fargate does not support daemonsets. Any desired Collector instances running as agents must be configured manually as sidecar containers in your custom deployments. This includes any application logging services like Fluentd. Set ``gateway.enabled`` to ``true`` and configure your instrumented applications to report metrics, traces, and logs to the gateway ``<installed-chart-name>-splunk-otel-collector`` service address. Any desired agent instances that would run as a daemonset should instead run as sidecar containers in your pods.
+* The Collector agent DaemonSet is not applied since Fargate does not support DaemonSets. Any desired Collector instances running as agents must be configured manually as sidecar containers in your custom deployments. This includes any application logging services like Fluentd. Set ``gateway.enabled`` to ``true`` and configure your instrumented applications to report metrics, traces, and logs to the gateway ``<installed-chart-name>-splunk-otel-collector`` service address. Any desired agent instances that would run as a DaemonSet should instead run as sidecar containers in your pods.
 * Since Fargate nodes use a VM boundary to prevent access to host-based resources used by other pods, pods are not able to reach their own kubelet. The cluster receiver for the Fargate distribution has two primary differences between regular ``eks`` to work around this limitation:
    * The configured cluster receiver is deployed as a two-replica StatefulSet instead of a Deployment, and uses a Kubernetes Observer extension that discovers the cluster's nodes and, on the second replica, its pods for user-configurable receiver creator additions.Using this observer dynamically creates the Kubelet Stats receiver instances that report kubelet metrics for all observed Fargate nodes. The first replica monitors the cluster with a ``k8s_cluster`` receiver, and the second cluster monitors all kubelets except its own (due to an EKS/Fargate networking restriction).
    * The first replica's Collector monitors the second's kubelet. This is made possible by a Fargate-specific ``splunk-otel-eks-fargate-kubeletstats-receiver-node`` node label. The Collector ClusterRole for ``eks/fargate`` allows the ``patch`` verb on ``nodes`` resources for the default API groups to allow the cluster receiver's init container to add this node label for designated self monitoring.
