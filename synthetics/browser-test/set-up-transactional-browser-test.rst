@@ -69,7 +69,7 @@ The following table describes the types of steps you can include for actions:
      - Dismiss an alert that appears on the page.
 
    * - Fill in field
-     - Fill in the field you identify under :guilabel:`Selector` with a value you provide in the :guilabel:`Value` field. For security and reusability, use a :ref:`built-in  <built-in-variables>`, :ref:`custom <custom-variables>`, or :ref:`global <global-variables>` variable in the :guilabel:`Value` field. Reference a custom variable as ``{{custom.your-variable-name}}``. Optionally, wait for navigation.
+     - Fill in the field you identify under :guilabel:`Selector` with a value you provide in the :guilabel:`Value` field. For security and reusability, you may want to use a :ref:`built-in  <built-in-variables>`, :ref:`custom <custom-variables>`, or :ref:`global <global-variables>` variable in the :guilabel:`Value` field. Reference a custom variable as ``{{custom.your-variable-name}}``. Optionally, wait for navigation.
 
    * - Go to URL
      - Navigate to a URL you provide in the :guilabel:`URL` field. 
