@@ -80,7 +80,7 @@ Providing entity names and types will generally lead to more focused, better, an
 
 What makes a prompt poor quality?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Not providing entity names and types in your prompt makes the prompt unhelpful. The prompt, “What’s wrong with the api-gateway?” does not provide entity names or types. The level of specificity is low and returns an overwhelming set of responses that might or might not be useful in your troubleshooting.
+Not providing entity names and types in your prompt makes the prompt unhelpful. The prompt “What’s wrong with the api-gateway?” does not provide entity names or types. The level of specificity is low and returns an overwhelming set of responses that might or might not be useful in your troubleshooting.
 
 What makes a prompt good quality?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -189,7 +189,7 @@ This prompt is good because it gives the service and the time range. Telling the
 
 Example prompt 3: Excellent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-:guilabel:`Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. Once you've identified the exemplar traces, analyze each full trace by its trace ID`
+:guilabel:`Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. After identifying the exemplar traces, analyze each full trace by its trace ID`
 
 The third example prompt expands on the second example prompt. The second example prompt was good, but the third is excellent. One way to improve a prompt when you don’t know more specific information is to instruct the Assistant to extract certain details, then you can further prompt the Assistant using the extracted details. In this excellent example prompt, the Assistant extracts traces. Then it examines the traces and provides you with its analysis. From there, you can ask more and more specific questions based on information in the Assistant’s analysis. You might want to tell the Assistant how many exemplar traces to analyze so that the Assistant does not overwhelm you with a very large response and exceed context limitations of the conversation.
 
@@ -209,8 +209,8 @@ When you want to create a chart in Splunk Observability Cloud, you might prompt 
 
 The preceding prompt is excellent because it gives the Assistant a fair amount of detail on what you want to know. The Assistant can make a functional chart based on the information you provide. You can follow up to adjust your chart after you see it. For example, you can then tell the Assistant to adjust the chart to a particular 30-minute window.
 
+Other resources
+==================================================================================
+For specific instructions on how access and use the AI Assistant, see :guilabel:`o11y-ai:`.
 
-
-
-
-
+To learn about Splunk's commitment to responsible AI, see :new-page:`Responsible AI for AI Assistant in Observability Cloud <http://splunk.com/en_us/about-splunk/splunk-data-security-and-privacy/responsible-ai-for-ai-assistant-in-observability-cloud.html>`.

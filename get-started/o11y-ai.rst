@@ -47,9 +47,9 @@ Alternatively, you can select from the two suggested prompts:
     :width: 40%
     :alt: This image shows the location of the AI Assistant for Observability.
 
-.. note:: When you ask questions or submit instructions that require the AI Assistant to query logs, there will be an impact on your SVC quota.
+.. note:: When you ask questions or submit instructions that require the AI Assistant to query logs, there is an impact on your SVC quota.
 
-feedback
+Feedback
 ----------------------------------------------------------------------------------
 You can give feedback to the AI Assistant in development team by selecting the thumbs up or thumbs down icon that appears after each AI Assistant response.
 
@@ -91,7 +91,20 @@ When you interact with AI Assistant in Observability Cloud, Splunk collects and 
    * - Usage data
      - Usage data is more fully described in the Splunk Privacy Statement. Examples include “thumbs up”, “thumbs down”, “chat id”, “copy”, “tokens used”, and “response length”. 
 
+You can activate and deactivate data sharing by going to :guilabel:`Settings`. On the General Organization Settings page, go to the AI Assistant Management section. Select :guilabel:`AI Assistant in Observability` to activate the AI Assistant for your organization. 
+
+If you do not want to share your data, deselect :guilabel:`Allow my AI service data to be used for research and development purposes`.
+
+.. image:: /_images/get-started/activate-assistant.png
+  :width: 70%
+  :alt: This screenshot shows how Splunk Observability Cloud products serve the different layers and processes in an organization's environment.
+
 Service limitations
 ==================================================================================
 A Splunk Observability Cloud organization has a limit of 3,000 prompts per month and no more than 10 prompts per minute.
 
+Other resources
+==================================================================================
+Learn how to prompt the AI Assistant effectively by reading :ref:`o11y-ai-promptlibrary`. You can find general guidance on how to prompt the Assistant to achieve the best results, as well as see sample prompts and learn what makes a prompt excellent, good, or poor.
+
+To learn about Splunk's commitment to responsible AI, see :new-page:`Responsible AI for AI Assistant in Observability Cloud <http://splunk.com/en_us/about-splunk/splunk-data-security-and-privacy/responsible-ai-for-ai-assistant-in-observability-cloud.html>`.
