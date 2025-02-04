@@ -211,6 +211,6 @@ The preceding prompt is excellent because it gives the Assistant a fair amount o
 
 Other resources
 ==================================================================================
-For specific instructions on how access and use the AI Assistant, see :ref:`o11y-ai:`.
+For specific instructions on how access and use the AI Assistant, see :ref:`o11y-ai`.
 
 To learn about Splunk's commitment to responsible AI, see :new-page:`Responsible AI for AI Assistant in Observability Cloud <http://splunk.com/en_us/about-splunk/splunk-data-security-and-privacy/responsible-ai-for-ai-assistant-in-observability-cloud.html>`.
