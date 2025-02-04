@@ -16,7 +16,7 @@ Export chart contents
 
 For line charts, area charts, and column charts, you can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them.
 
-To export a chart, first select :strong:`Data table` tab, next select :strong:`Export as CSV` download icon in the table headers row on the last column (the right side corner).
+To export a chart, first select :guilabel:`Data table` tab, next select :guilabel:`Export as CSV` download icon in the table headers row on the last column (the right side corner).
 
 .. note:: List charts and table charts can't be exported because they don't have a data table.
 
@@ -38,7 +38,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - :strong:`Notes`
 
    * - In the Chart Builder
-     - Use the Share icon at top right or select :strong:`Share` from the chart's Actions menu (|more|)
+     - Use the Share icon at top right or select :guilabel:`Share` from the chart's Actions menu (|more|)
      - Version you are viewing, including any unsaved changes
      - URL that links to a copy of the chart, which you can send to others (see :ref:`share-feature-to-share`) or :ref:`pasting-chart-url-into-slack`
      - In most cases, can be viewed only by other users
@@ -56,7 +56,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - Can be viewed by anyone
 
    * - On a dashboard
-     - Select :strong:`Share` from the chart's Action menu (|more|)
+     - Select :guilabel:`Share` from the chart's Action menu (|more|)
      - Most recently saved version
      - URL that links to a copy of the chart, which you can send to others (see :ref:`share-feature-to-share`) or :ref:`pasting-chart-url-into-slack`
      - In most cases, can be viewed only by other users
@@ -68,7 +68,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - Can be viewed only by other users
 
    * -
-     - Select :strong:`Download chart as image` from the chart's Actions menu
+     - Select :guilabel:`Download chart as image` from the chart's Actions menu
      - Most recently saved version
      - Provides a graphic representation of the chart
      - Can be viewed by anyone
@@ -91,9 +91,9 @@ Use the Share feature to share a chart
 
 You can share a copy of a chart. Copies include unsaved changes at the time you share, and autoexpire unless the recipient saves them. Sharing a copy is perfect for when you make a change that you want to show your team members, but don't want to modify the original chart.
 
-- To share a chart you are viewing in the Chart Builder, select the :strong:`Share` icon near the upper right corner of the chart or select :strong:`Share` from the chart's Actions menu (|more|).
+- To share a chart you are viewing in the Chart Builder, select the :guilabel:`Share` icon near the upper right corner of the chart or select :guilabel:`Share` from the chart's Actions menu (|more|).
 
-- To share a chart you are viewing in a dashboard, select :strong:`Share` from the chart's Actions menu (|more|).
+- To share a chart you are viewing in a dashboard, select :guilabel:`Share` from the chart's Actions menu (|more|).
 
 You'll see options for sharing, discussed below.
 
@@ -104,7 +104,7 @@ Share a copy directly from Infrastructure Monitoring
 
 You can send a copy of the chart to an email address or to any available third-party services (See :ref:`admin-notifs-index`.).
 
-After adding recipients, select :strong:`Share`. Recipients receive a link to the copy. When they open it, they can edit and save their copy without affecting the original.
+After adding recipients, select :guilabel:`Share`. Recipients receive a link to the copy. When they open it, they can edit and save their copy without affecting the original.
 
 .. caution:: 
 
@@ -116,7 +116,7 @@ After adding recipients, select :strong:`Share`. Recipients receive a link to th
 Share a copy by using a link
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You might want to send out a personal email or post a link to the copy on an internal website. To do this, select :strong:`Copy`. Only members of your organization with a login will be able to see the chart you share.
+You might want to send out a personal email or post a link to the copy on an internal website. To do this, select :guilabel:`Copy`. Only members of your organization with a login will be able to see the chart you share.
 
 .. _pasting-chart-url-into-slack:
 
