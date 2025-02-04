@@ -14,7 +14,7 @@ You can view detectors as line items in a list, or individually. When you open a
 View a list of all detectors
 ================================
 
-You can see a list of existing detectors in the Detectors tab on the Alerts page. If a detector is currently :ref:`muted<mute-notifications>` or scheduled to be muted, a red or grey indicator (respectively) appears next to the detector. For more information, see :ref:`view-muting-rules`.
+You can see a list of existing detectors in the :guilabel:`Detectors` tab on the :guilabel:`Detectors & SLOs` page. If a detector is currently :ref:`muted<mute-notifications>` or scheduled to be muted, a red or grey indicator (respectively) appears next to the detector. For more information, see :ref:`view-muting-rules`.
 
 
 .. _view-related-detectors:

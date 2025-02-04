@@ -4,13 +4,8 @@
 Monitor Kubernetes
 **********************************
 
-
 .. meta::
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
-
-
-.. note:: The following topic describes the new Kubernetes navigator. See :ref:`infrastructure-k8s` for documentation on the classic Kubernetes navigator.
-
 
 You can monitor Kubernetes metrics with Splunk Observability Cloud. Splunk Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. To learn more, see :ref:`otel-intro`.
 
@@ -25,7 +20,7 @@ To start monitoring Kubernetes resources, you must:
 
 .. _use-k8s-nav:
 
-Kubernetes navigators
+About Kubernetes navigators
 ===============================
 
 .. note:: The following sections describe components specific to the Kubernetes navigators. For information on components shared by all navigators, see :ref:`use-navigators-imm`.
@@ -46,13 +41,14 @@ The following table describes the Kubernetes navigators:
         * Pods
         * Containers
       - * Provides a :ref:`table, heat map <navigator-views>`, and :ref:`hierarchy map <k8s-nav-hierarchy-map>` view of your Kubernetes infrastructure
-        * Provides a :ref:`Kubernetes Analyzer<k8s-nav-analyzer-overview>` that helps you troubleshoot Kubernetes problems at scale
+        * Provides a :ref:`Kubernetes analyzer<k8s-nav-analyzer-overview>` that helps you troubleshoot Kubernetes problems at scale
       - * Get an overview of your Kubernetes infrastructure
         * Monitor the health of part of your Kubernetes infrastructure
         * Identify and diagnose an issue with part of your Kubernetes infrastructure
         * View services and hosts running on Kubernetes
 
-    * - * Workloads
+    * - * Clusters
+        * Workloads
         * Deployments
         * ReplicaSets
         * StatefulSets
@@ -77,13 +73,10 @@ Monitor your Kubernetes infrastructure with an interactive hierarchical map that
 
 To navigate to the hierarchy map:
 
-1. On the :guilabel:`Infrastructure` landing page, select the Kubernetes nodes, pods, or containers navigator.
-2. The table view displays by default. Select an instance from the table.
-3. Expand the hierarchy map.
-
-   .. image:: /_images/infrastructure/k8s-nav/k8s-nav-hierarchy-map.png
-      :alt: Hierarchy map view in the Kubernetes nodes navigator.
-      :width: 90%
+#. From the Splunk Observability Cloud main menu, select :guilabel:`Infrastructure`, then :guilabel:`Kubernetes`.
+#. Select the Kubernetes nodes, pods, or containers navigator.
+#. The table view displays by default. Select an instance from the table.
+#. Expand the :guilabel:`Hierarchy Map`.
 
 Nodes, pods, and containers are colored by health and status, as reported by Kubernetes:
 
@@ -95,42 +88,34 @@ Investigate instances in the hierarchy map
 ---------------------------------------------
 
 * Breadcrumb navigation: Switch to different instances and jump across entity levels using the breadcrumb navigation bar.
-
-    ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-breadcrumb.gif
-        :width: 100%
-        :alt: How to select a different node to investigate and jump to the cluster level.
-
-
 * Hover: Get more information about an instance, including its status or phase, by hovering over that instance.
-
-    .. image:: /_images/infrastructure/k8s-nav/k8s-nav-hover.png
-        :alt: Hovering over a pod shows its information and phase.
-        :width: 50%
-
-* Select and zoom: Drill down into an instance and change the zoom level of the map, if applicable, by selecting the instance. Details about the instance display in the sidebar, in the :guilabel:`About this <Entity_Type>` panel.
-    
-    ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-zoom.gif
-      :width: 100%
-      :alt: From the node-level hierarchy map, selecting a pod zooms the view to the pod level. Details about the selected pod display in the sidebar in the :guilabel:`About this pod` panel. From the pod level, selecting a container zooms the view to the container level.
-
+* Select and zoom: Drill down into an instance and change the zoom level of the map, if applicable, by selecting the instance.
 * Filter: Filter the map by any available metadata in your Kubernetes data, such as a namespace, a workload, or any other key-value pair. When you apply a filter, the map highlights instances that match the filter. You can still hover over the dimmed instances to view details about them.
 
-    ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-filter.gif
-      :width: 100%
-      :alt: Filtering ``k8s.container.name`` to ``config-reloader`` and ``core-metrics-exporter`` highlights matching pods and dims pods that don't match.
+.. _k8s-nav-left-nav:
+
+Left navigation panel
+============================
+
+Use the left navigation panel in the table or heat map view to quickly switch between Kubernetes entity types, search for filters, and access predefined filters.
+
+To use the left navigation panel:
+
+* :guilabel:`Select entity type`: Use this drop-down menu to switch between Kubernetes entity types.
+* :guilabel:`Refine by`: Use this panel to search for filters or access a list of predefined filters. The list of predefined filters is searchable and organized by :guilabel:`Relationship` and :guilabel:`Attribute`.
 
 .. _k8s-nav-analyzer-overview:
 
-Analyzer
-==============
+Troubleshoot performance with the analyzer
+======================================================
 
-.. note:: The Analyzer is only available on the Kubernetes nodes, pods, and containers navigators.
+.. note:: The analyzer is only available on the Kubernetes nodes, pods, and containers navigators.
 
-The Analyzer, accessed through the :guilabel:`K8s analyzer` tab, helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes instances that are in a bad state, such as nodes that are not ready. The Analyzer produces theories about what those instances might have in common, such as that all of the instances are running the same workload or all instances are located in the same AWS region. Select a finding in the Analyzer panel to filter the map.
+You can access the Kubernetes analyzer through the :guilabel:`K8s analyzer` tab. The analyzer helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes instances that are in a bad state, such as nodes that are not ready. The analyzer produces theories about what those instances might have in common, such as that all of the instances are running the same workload or all instances are located in the same AWS region. Select a finding in the analyzer to filter the map.
 
-The Analyzer panel displays suggested filters for the elements selected in the table or heat map view. Select links in the Analyzer panel to add filters to the table or heat map view and explore conditions across your entire Kubernetes environment.
+The analyzer displays suggested filters for the elements selected in the table or heat map view. Select links in the analyzer to add filters to the table or heat map view and explore conditions across your entire Kubernetes environment.
 
-The Analyzer uses AI-driven insights to examine patterns that nodes, pods, or containers could have in common. The trouble indicators are:
+The analyzer uses AI-driven insights to examine potential patterns between nodes, pods, or containers. The trouble indicators are:
 
 -  Pods that are in pending status
 -  Pods that are in failed status
@@ -141,18 +126,7 @@ The Analyzer uses AI-driven insights to examine patterns that nodes, pods, or co
 -  Nodes experiencing high CPU
 -  Nodes experiencing high memory
 
-The Analyzer displays overrepresented metrics properties for known conditions, such as pods in pending status, pods in failed status, and so on. You can use properties that are highly correlated with these conditions to filter the table or heat map. You can explore data about each of those elements in the navigator using context-sensitive dashboards. This enables you to identify the underlying patterns noticeable on the filtered map that might be correlated with Kubernetes issues. For example, if all failed pods are in certain types of clusters, the Analyzer provides suggested paths to follow to troubleshoot such issues.
-
-.. _k8s-nav-view-services:
-
-View services and hosts running on Kubernetes
-=======================================================
-
-Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts running on Kubernetes in the navigator sidebar. When you select a service or host from the sidebar, you are switching to the navigator for that service or host instance.
-
-  ..  image:: /_images/infrastructure/k8s-nav/k8s-nav-dependencies.gif
-    :width: 100%
-    :alt: Starting on the Kubernetes pod navigator, switching to the MySQL host navigator, and then switching back to the Kubernetes pod navigator.
+The analyzer displays overrepresented metrics properties for known conditions, such as pods in pending status, pods in failed status, and so on. You can use properties that are highly correlated with these conditions to filter the table or heat map. You can explore data about each of those elements in the navigator using context-sensitive dashboards. This enables you to identify the underlying patterns noticeable on the filtered map that might be correlated with Kubernetes issues. For example, if all failed pods are in certain types of clusters, the analyzer provides suggested paths to follow to troubleshoot such issues.
 
 Next steps
 =====================

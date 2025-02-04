@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-09 16:17+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -38,67 +38,27 @@ msgstr "Buttercup Gamesのサイト信頼性エンジニア（SRE）とサービ
 msgid "This scenario describes how Kai, an SRE, and Deepu, a service owner, perform the following tasks using Splunk Observability Cloud to troubleshoot and identify the root cause of a recent Buttercup Games site incident:"
 msgstr "このシナリオでは、SREのKaiとサービスオーナーのDeepuがSplunk Observability Cloudを使用して以下のタスクを実行し、Buttercup Gamesのサイトで最近発生したインシデントのトラブルシューティングと根本原因の特定を行った方法について説明します："
 
-#: ../../scenarios-tutorials/scenario.rst:16
-msgid ":ref:`receive-alerts-xpuc`"
-msgstr ":ref:`receive-alerts-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:18
-msgid ":ref:`assess-user-impact-xpuc` using Splunk Real User Monitoring (RUM)"
-msgstr "Splunk Real User Monitoring（RUM）を使用して、:ref:`assess-user-impact-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:20
-msgid ":ref:`investigate-root-cause-xpuc` using Splunk Application Performance Monitoring (APM)"
-msgstr "Splunk Application Performance Monitoring（APM）を使用して、:ref:`investigate-root-cause-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:22
-msgid ":ref:`check-infra-health-xpuc` using Splunk Infrastructure Monitoring"
-msgstr "Splunk Infrastructure Monitoringを使用して、:ref:`check-infra-health-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:24
-msgid ":ref:`look-for-patterns-xpuc` in Splunk APM"
-msgstr "Splunk APMで、:ref:`look-for-patterns-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:26
-msgid ":ref:`review-logs-xpuc` using Splunk Log Observer"
-msgstr "Splunk Log Observer を使用して、:ref:`review-logs-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:28
-msgid ":ref:`monitor-a-fix-xpuc` using Splunk Log Observer"
-msgstr "Splunk Log Observer を使用して、:ref:`monitor-a-fix-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:30
-msgid ":ref:`take-preventative-action-xpuc`"
-msgstr ":ref:`take-preventative-action-xpuc`"
-
-#: ../../scenarios-tutorials/scenario.rst:32
+#: ../../scenarios-tutorials/scenario.rst:33
 msgid "For a video version of this scenario, watch :new-page:`the Splunk Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`."
 msgstr "このシナリオの動画版は、:new-page:`Splunk Observability Cloudのデモ<https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>` をご覧ください。"
 
-#: ../../scenarios-tutorials/scenario.rst:37
-msgid "Receive alerts about outlier behavior"
-msgstr "異常な挙動に関するアラートを受け取る"
-
-#: ../../scenarios-tutorials/scenario.rst:39
+#: ../../scenarios-tutorials/scenario.rst:41
 msgid "Kai, the SRE on call, receives an alert showing that the number of purchases on the Buttercup Games site has dropped significantly in the past hour and the checkout completion rate is too low. Kai trusts that these are true outlier behaviors because the alert rule their team set up in Splunk Observability Cloud takes into account the time and day of week as a dynamic baseline, rather than using a static threshold."
 msgstr "オンコール対応のSREであるKaiは、Buttercup Gamesサイトでの購入数が過去1時間において大幅に減少し、精算の完了率が極めて低いことを示すアラートを受け取りました。Kaiは、自分のチームがSplunk Observability Cloudで設定したアラートルールが、静的閾値を使用するのではなく動的なベースラインとして時間と曜日を考慮に入れていることから、これらのアラートが本当に異常な挙動を示すものであることを信用しています。"
 
-#: ../../scenarios-tutorials/scenario.rst:41
+#: ../../scenarios-tutorials/scenario.rst:43
 msgid "Kai logs in to Splunk Observability Cloud on their laptop to investigate."
 msgstr "KaiはラップトップでSplunk Observability Cloudにログインして調査します。"
 
-#: ../../scenarios-tutorials/scenario.rst:47
-msgid "Assess user impact"
-msgstr "ユーザーへの影響を評価する"
-
-#: ../../scenarios-tutorials/scenario.rst:49
+#: ../../scenarios-tutorials/scenario.rst:51
 msgid "The first thing Kai wants to know about the alert they received is: What's the user impact?"
 msgstr "Kaiが受信したアラートについてまず知りたいのは：ユーザーへの影響"
 
-#: ../../scenarios-tutorials/scenario.rst:51
+#: ../../scenarios-tutorials/scenario.rst:53
 msgid "Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue based on the site's browser-based performance. They notice two issues that might be related to the drop in purchases and the low checkout completion rate:"
 msgstr "KaiはSplunk Real User Monitoring（RUM）を開いて、サイト上のブラウザベースのパフォーマンスを基に、問題の手がかりを探します。購入数の減少と精算の完了率の低さに関連している可能性のある、以下の2つの問題に気が付きました："
 
-#: ../../scenarios-tutorials/scenario.rst:53
+#: ../../scenarios-tutorials/scenario.rst:55
 msgid "A spike in the number of front-end errors"
 msgstr "フロントエンドのエラーの急増"
 
@@ -106,7 +66,7 @@ msgstr "フロントエンドのエラーの急増"
 msgid "This screenshot shows the FE (frontend) Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second."
 msgstr "このスクリーンショットは、Splunk Real User MonitoringのFE（フロントエンドの）エラーのモジュールを示しています。このモジュールは過去15分間のエラー率を示しており、エラー率は74件/秒です。"
 
-#: ../../scenarios-tutorials/scenario.rst:59
+#: ../../scenarios-tutorials/scenario.rst:61
 msgid "High back-end endpoint latency"
 msgstr "バックエンドのエンドポイントの高レイテンシ"
 
@@ -114,101 +74,89 @@ msgstr "バックエンドのエンドポイントの高レイテンシ"
 msgid "This screenshot shows the Endpoint Latency module in Splunk Real User Monitoring. The module shows a latency of 8 seconds for the /cart/checkout endpoint."
 msgstr "このスクリーンショットは、Splunk Real User Monitoringのエンドポイントのレイテンシのモジュールを示しています。このモジュールは、「/cart/checkout」エンドポイントのレイテンシが8秒であることを示しています。"
 
-#: ../../scenarios-tutorials/scenario.rst:65
+#: ../../scenarios-tutorials/scenario.rst:67
 msgid "Kai isn't sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :strong:`/cart/checkout` endpoint because the page load time and largest contentful paint for :strong:`cart/checkout` are also high."
 msgstr "Kaiは、この2つの問題には関連があるのか、また、これらがサイトの問題の原因であるかどうかについて、確信が持てません。「 :strong:`/cart/checkout` 」のエンドポイントのレイテンシが高いことについて調査することにしました。「 :strong:`cart/checkout` 」のページ読み込み時間と最大コンテンツの描画も高くなっているためです。"
 
-#: ../../scenarios-tutorials/scenario.rst:67
+#: ../../scenarios-tutorials/scenario.rst:69
 msgid "Kai selects the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don't seem to be related to any one tag in particular, so they select the :strong:`User sessions` tab to look at user sessions."
 msgstr "Kaiは「 :strong:`/cart/checkout` 」エンドポイントのリンクを選択し、Splunk RUMのTag Spotlightビューで複数のエラーを確認します。エラーは特定のどのタグにも関連していないようなので、「 :strong:`ユーザーセッション` 」タブを選択してユーザーセッションを調べます。"
 
-#: ../../scenarios-tutorials/scenario.rst:69
+#: ../../scenarios-tutorials/scenario.rst:71
 msgid "Kai sees one session that seems to be taking longer than the others. They select it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn't a front end problem and that they need to follow the trace through to the back end."
 msgstr "Kaiは、他のセッションよりも時間がかかっているように見えるセッションを1つ見つけました。フロントエンドからバックエンドまでの完全なトレースを見るためにそのセッションを選択すると、このセッションに通常よりも長い時間がかかっていることが分かりました。このデータ例に基づいて、Kaiは、このレイテンシはフロントエンドの問題ではなく、バックエンドまでトレースをたどる必要があることを理解しました。"
 
-#: ../../scenarios-tutorials/scenario.rst:71
+#: ../../scenarios-tutorials/scenario.rst:73
 msgid "This screenshot shows the Session Details page in Splunk RUM displaying the session timeline from the front end through to the back end, where the /cart/checkout endpoint is taking longer than expected to complete."
 msgstr "このスクリーンショットはSplunk RUMの「セッションの詳細」ページであり、フロントエンドからバックエンドまでのセッションタイムラインが表示されています。「/cart/checkout」エンドポイントの完了に、想定よりも長い時間がかかっています。"
 
-#: ../../scenarios-tutorials/scenario.rst:75
+#: ../../scenarios-tutorials/scenario.rst:77
 msgid "Kai selects the :strong:`APM` link to get a performance summary, as well as access to the session's trace and workflow details."
 msgstr "Kaiは :strong:`APM` のリンクを選択して、パフォーマンスサマリーとこのセッションのトレースおよびワークフローの詳細にアクセスします。"
 
-#: ../../scenarios-tutorials/scenario.rst:77
+#: ../../scenarios-tutorials/scenario.rst:79
 msgid "This screenshot shows the Performance Summary menu in Splunk RUM displaying a link to the frontend:/cart/checkout workflow, as well as performance and trace details."
 msgstr "このスクリーンショットはSplunk RUMの「パフォーマンスサマリー」メニューで、「frontend:/cart/checkout」ワークフローとパフォーマンスおよびトレースの詳細につながるリンクが表示されています。"
 
-#: ../../scenarios-tutorials/scenario.rst:81
+#: ../../scenarios-tutorials/scenario.rst:83
 msgid "Kai decides to take a look at the end-to-end transaction workflow."
 msgstr "Kaiは、エンドツーエンドのトランザクションのワークフローを見てみることにしました。"
 
-#: ../../scenarios-tutorials/scenario.rst:87
-msgid "Investigate the root cause of a business workflow error"
-msgstr "ビジネスワークフローのエラーの根本原因を調査する"
-
-#: ../../scenarios-tutorials/scenario.rst:89
+#: ../../scenarios-tutorials/scenario.rst:91
 msgid "In Splunk RUM, Kai selects the :strong:`frontend:/cart/checkout` business workflow link to display its service map in Splunk Application Performance Monitoring (APM). A business workflow is a group of logically related traces, such as a group of traces that reflect an end-to-end transaction in your system."
 msgstr "Splunk RUMで、Kaiは :strong:`frontend:/cart/checkout` のビジネスワークフローのリンクを選択し、Splunk Application Performance Monitoring（APM）でそのサービスマップを表示します。ビジネスワークフローとは、システム内のエンドツーエンドのトランザクションを反映するトレースのグループのような、論理的に関連付けられたトレースのグループです。"
 
-#: ../../scenarios-tutorials/scenario.rst:91
+#: ../../scenarios-tutorials/scenario.rst:93
 msgid "The service map shows Kai the dependency interactions among  the full set of services backing the :strong:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another."
 msgstr "このサービスマップを見て、Kaiは、あるサービスから別のサービスへのエラーの伝搬を含め、トラブルシューティング対象の「 :strong:`/cart/checkout` 」のアクションを支えるサービスの全一式における依存関係の相互作用を理解します。"
 
-#: ../../scenarios-tutorials/scenario.rst:93
+#: ../../scenarios-tutorials/scenario.rst:95
 msgid "In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow."
 msgstr "特に、:strong:`paymentservice`  に問題があることが分かります。Splunk APMはこの問題を根本原因エラーとして特定しました。つまり、:strong:`paymentservice`  では、ワークフローのエクスペリエンス低下の原因となっているダウンストリームエラーの数が最も多いということです。"
 
-#: ../../scenarios-tutorials/scenario.rst:91
+#: ../../scenarios-tutorials/scenario.rst:93
 msgid "This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors."
 msgstr "このスクリーンショットは、Splunk APMのサービスマップを示すもので、ルートエラーの発生源としてpaymentserviceが表示されています。"
 
-#: ../../scenarios-tutorials/scenario.rst:99
+#: ../../scenarios-tutorials/scenario.rst:101
 msgid "Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application."
 msgstr "Kaiは、:strong:`paymentservice` を選択します。サービスのエラーとレイテンシの詳細が表示されるだけでなく、Splunk Observability Cloudによって、アプリケーションの他領域にある関連データへのアクセスを提供する「関連コンテンツ」のタイルも表示されます。"
 
-#: ../../scenarios-tutorials/scenario.rst:101
+#: ../../scenarios-tutorials/scenario.rst:103
 msgid "For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`."
 msgstr "例えば、Kaiは、:strong:`paymentservice`  を実行するKubernetesクラスターの健全性を調べたり、:strong:`paymentservice`  によって発行されるログを調べたりすることができます。"
 
-#: ../../scenarios-tutorials/scenario.rst:101
+#: ../../scenarios-tutorials/scenario.rst:103
 msgid "This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s clusters for paymentservice and Logs for paymentservice."
 msgstr "このスクリーンショットはSplunk APMのサービスマップを示すもので、2つの「関連コンテンツ」タイル（paymentserviceのK8sクラスターとpaymentserviceのログ）へのアクセスが提示されています。"
 
-#: ../../scenarios-tutorials/scenario.rst:107
+#: ../../scenarios-tutorials/scenario.rst:109
 msgid "Kai decides to take a look at the Kubernetes cluster to see if the errors are based on an infrastructure issue."
 msgstr "KaiはKubernetesクラスターを調べて、このエラーがインフラストラクチャの問題に基づいているものかどうかを確認することにしました。"
 
-#: ../../scenarios-tutorials/scenario.rst:114
-msgid "Check on infrastructure health"
-msgstr "インフラストラクチャの健全性をチェックする"
-
-#: ../../scenarios-tutorials/scenario.rst:116
+#: ../../scenarios-tutorials/scenario.rst:117
 msgid "Kai selects the :strong:`K8s cluster(s) for paymentservice` Related Content tile in Splunk APM to display the Kubernetes navigator in Splunk Infrastructure Monitoring, where their view is automatically narrowed down to the :strong:`paymentservice` to preserve the context they were just looking at in Splunk APM."
 msgstr "Kaiは、Splunk APMで「 :strong:`paymentserviceのK8sクラスター` 」の「関連コンテンツ」タイルを選択し、Splunk Infrastructure MonitoringのKubernetesのナビゲーターを表示します。ここでは、Splunk APMで表示していたコンテキストを保持するため、自動的にビューが「 :strong:`paymentservice` 」に絞り込まれています。"
 
-#: ../../scenarios-tutorials/scenario.rst:118
+#: ../../scenarios-tutorials/scenario.rst:119
 msgid "They select the :strong:`paymentservice` pod in the cluster map to dive deeper into the data."
 msgstr "クラスターマップの「 :strong:`paymentservice` 」ポッドを選択して、データを深く掘り下げます。"
 
-#: ../../scenarios-tutorials/scenario.rst:120
+#: ../../scenarios-tutorials/scenario.rst:121
 msgid "This screenshot shows a Kubernetes pod menu in Splunk Infrastructure Monitoring displaying details about the pod, including its name and status."
 msgstr "このスクリーンショットは、Splunk Infrastructure Monitoringの「Kubernetes」のポッドメニューを示すもので、ポッド名やステータスなど、ポッドに関する詳細が表示されています。"
 
-#: ../../scenarios-tutorials/scenario.rst:124
+#: ../../scenarios-tutorials/scenario.rst:125
 msgid "Kai sees that the pod looks stable with no errors or events."
 msgstr "Kaiは、このポッドがエラーもイベントもなく安定していることを確認します。"
 
-#: ../../scenarios-tutorials/scenario.rst:126
+#: ../../scenarios-tutorials/scenario.rst:127
 msgid "This screenshot shows the Kubernetes Pod Detail tab in Splunk Infrastructure Monitoring displaying metrics that indicate the pod is stable."
 msgstr "このスクリーンショットは、Splunk Infrastructure Monitoringの「Kubernetes」の「ポッド詳細」タブを示すもので、ポッドが安定していることを示すメトリクスが表示されています。"
 
-#: ../../scenarios-tutorials/scenario.rst:130
+#: ../../scenarios-tutorials/scenario.rst:131
 msgid "Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai selects the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring."
 msgstr "問題の原因としてKubernetesインフラストラクチャを除外できたので、Splunk APMでの調査に戻ることにしました。Splunk Infrastructure Monitoringの現在のビューで、:strong:`マップ内のpaymentservice` の「関連コンテンツ」タイルを選択します。"
-
-#: ../../scenarios-tutorials/scenario.rst:137
-msgid "Look for patterns in application errors"
-msgstr "アプリケーションエラーのパターンを探す"
 
 #: ../../scenarios-tutorials/scenario.rst:139
 msgid "In Splunk APM, Kai selects :strong:`Tag Spotlight`` to look for correlations in tag values for the errors they're seeing."
@@ -219,7 +167,8 @@ msgid "For example, when Kai looks at the :strong:`tenant.level` module, they se
 msgstr "例えば、Kaiが :strong:`tenant.level` モジュールを見ると、すべてのレベルでエラーが発生していることが分かります。このため、根本原因はテナント固有のものではない可能性が高いです。"
 
 #: ../../scenarios-tutorials/scenario.rst:141
-msgid "This screenshot shows the tenant.level module in Splunk APM displaying errors evenly spread across gold, silver, and bronze tenant levels."
+#, fuzzy
+msgid "This screenshot shows the tenant.level module in Splunk APM displaying errors evenly distributed across gold, silver, and bronze tenant levels."
 msgstr "このスクリーンショットは、Splunk APMの「tenant.level」モジュールを示すもので、ゴールド、シルバー、ブロンズのテナントレベルにエラーが均等に分散していることを示しています。"
 
 #: ../../scenarios-tutorials/scenario.rst:147
@@ -234,139 +183,131 @@ msgstr "このスクリーンショットはSplunk APMのバージョンモジ�
 msgid "This seems like a strong lead, so Kai decides to dig into the log details. They select the :strong:`Logs for paymentservice` Related Content tile."
 msgstr "これは有力な手がかりのようなので、Kaiはログの詳細を調べることにしました。:strong:`paymentserviceのログ` の「関連コンテンツ」タイルを選択します。"
 
-#: ../../scenarios-tutorials/scenario.rst:161
-msgid "Examine error logs for meaningful messages and patterns"
-msgstr "エラーログを調査して重要なメッセージやパターンを探す"
+#: ../../scenarios-tutorials/scenario.rst:162
+#, fuzzy
+msgid "Now, in Splunk Log Observer Connect, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only."
+msgstr "さて、Splunk Log Observer ConnectではKaiのビューが自動的に絞り込まれ、「 :strong:`paymentservice` 」について受信したログデータのみが表示されています。"
 
-#: ../../scenarios-tutorials/scenario.rst:163
-msgid "Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only."
-msgstr "さて、Splunk Log ObserverでKaiのビューは自動的に絞り込まれて、「 :strong:`paymentservice` 」について受信したログデータのみが表示されています。"
-
-#: ../../scenarios-tutorials/scenario.rst:165
-msgid "Kai sees some error logs, so they select one to see more details in a structured view. As Kai looks at the log details, they see this error message: \"Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)\"."
+#: ../../scenarios-tutorials/scenario.rst:164
+#, fuzzy
+msgid "Kai sees some error logs, so they select 1 to see more details in a structured view. As Kai looks at the log details, they see this error message: \"Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)\"."
 msgstr "いくつかのエラーログを見て、1つのログを選択し、構造化されたビューで詳細を確認します。ログの詳細を見ると、次のエラーメッセージが表示されています：「ButtercupPaymentsで決済処理が失敗：無効なAPIトークン（test-20e26e90-356b-432e-a2c6-956fc03f5609）」。"
 
-#: ../../scenarios-tutorials/scenario.rst:167
-msgid "This screenshot shows the details of an error log in Splunk Log Observer, including the error severity and an error message."
-msgstr "このスクリーンショットは、エラーの重大度とエラーメッセージを含む、Splunk Log Observerのエラーログの詳細を示しています。"
+#: ../../scenarios-tutorials/scenario.rst:166
+#, fuzzy
+msgid "This screenshot shows the details of an error log in Splunk Log Observer Connect, including the error severity and an error message."
+msgstr "このスクリーンショットは、エラーの重大度とエラーメッセージを含む、Splunk Log Observer Connectのエラーログの詳細を示しています。"
 
-#: ../../scenarios-tutorials/scenario.rst:171
+#: ../../scenarios-tutorials/scenario.rst:170
 msgid "In the error message, Kai sees what they think is a clear indication of the error. The API token starts with \"test\". It seems that a team pushed v350.10 live with a test token that doesn't work in production."
 msgstr "エラーメッセージの中に、Kaiはエラーの明確な兆候と思われるものを見つけました。APIトークンが「test」で始まっています。あるチームが、本番環境では動作しないテストトークンを使ってv350.10をライブ環境にプッシュしたと考えられます。"
 
-#: ../../scenarios-tutorials/scenario.rst:173
+#: ../../scenarios-tutorials/scenario.rst:172
 msgid "To check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message."
 msgstr "この仮説をチェックするために、Kaiはこのエラーメッセージを選択し、このエラーメッセージを含むログのみを表示するため、:strong:`フィルターに追加` を選択します。"
 
-#: ../../scenarios-tutorials/scenario.rst:175
+#: ../../scenarios-tutorials/scenario.rst:174
 msgid "Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`."
 msgstr "次に、「 :strong:`グループ化の方法` 」を「 :strong:`重大度` 」から「 :strong:`バージョン` 」に変更します。"
 
-#: ../../scenarios-tutorials/scenario.rst:177
+#: ../../scenarios-tutorials/scenario.rst:176
 msgid "Now, Kai can see that all of the logs that contain this test API token error are on version :strong:`v350.10` and none are on version v350.9."
 msgstr "これでKaiは、このテストAPIトークンのエラーを含むログのすべてがバージョン :strong:`v350.10` のものであり、バージョンv350.9のものは1つもないことを確認しました。"
 
-#: ../../scenarios-tutorials/scenario.rst:177
-msgid "This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs."
-msgstr "このスクリーンショットはLog Observerページを示すもので、イベントがエラーメッセージでフィルタリングされ、バージョン350.10でグループ化されています。表示されているログはすべてエラーログです。"
+#: ../../scenarios-tutorials/scenario.rst:176
+#, fuzzy
+msgid "This screenshot shows the Log Observer Connect page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs."
+msgstr "このスクリーンショットはLog Observer Connectのページを示すもので、イベントがエラーメッセージでフィルタリングされ、バージョン350.10でグループ化されています。表示されているログはすべてエラーログです。"
 
-#: ../../scenarios-tutorials/scenario.rst:183
-msgid "To be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message."
-msgstr "確認のため、Kaiは一時的にこのフィルターを除外するために、このメッセージのフィルター値の目型のアイコンを選択します。これでバージョンv350.9のログも表示されましたが、それらのログにはエラーメッセージは含まれていません。"
+#: ../../scenarios-tutorials/scenario.rst:182
+#, fuzzy
+msgid "To be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that appear for version v350.9 too, but they don't include the error message."
+msgstr "確認のため、Kaiは、このフィルターを一時的に除外するために、このメッセージフィルター値の目型のアイコンを選択します。これでバージョンv350.9のログも表示されましたが、それらのログにはエラーメッセージは含まれていません。"
 
-#: ../../scenarios-tutorials/scenario.rst:185
+#: ../../scenarios-tutorials/scenario.rst:184
 msgid "This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings."
 msgstr "この調査により、Kaiはv350.10のテストAPIトークンが問題の原因である可能性が最も高いと確信しました。Kaiは、:strong:`paymentservice` のオーナーであるDeepuに、この調査結果を通知します。"
 
 #: ../../scenarios-tutorials/scenario.rst:192
-msgid "Monitor a fix"
-msgstr "修正を監視する"
+#, fuzzy
+msgid "Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the error logs in Splunk Log Observer Connect. They agree with Kai's assessment that the test API token is the likely cause of the problem."
+msgstr "Kaiの調査結果に基づいて、:strong:`paymentservice` のオーナーであるDeepuがSplunk Log Observer Connectでエラーログを確認します。そして、テストAPIトークンが問題の原因である可能性が高いというKaiの評価に同意しました。"
 
 #: ../../scenarios-tutorials/scenario.rst:194
-msgid "Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the error logs in Splunk Log Observer. They agree with Kai's assessment that the test API token is the likely cause of the problem."
-msgstr "Kaiの調査結果に基づいて、:strong:`paymentservice` のオーナーであるDeepuがSplunk Log Observerでエラーログを確認します。そして、テストAPIトークンが問題の原因である可能性が高いというKaiの評価に同意しました。"
-
-#: ../../scenarios-tutorials/scenario.rst:196
 msgid "Deepu decides to implement a temporary fix by reverting back to version v350.9 to try to bring the Buttercup Games site back into a known good state, while the team works on a fix to v350.10."
 msgstr "Deepuは、Buttercup Gamesのサイトを既知の正常な状態に戻すことを試みるために、バージョンをv350.9に戻して暫定的な修正を実施し、その間にチームでv350.10への修正に取り組むことを決定しました。"
 
+#: ../../scenarios-tutorials/scenario.rst:196
+#, fuzzy
+msgid "As one way to see if reverting to version v350.9 fixes the issue, Deepu opens the time picker in the upper left corner of Splunk Log Observer Connect and selects :strong:`Live Tail`. Live Tail provides Deepu with a real-time streaming view of a sample of incoming logs."
+msgstr "バージョンv350.9に戻すことで問題が解決するかどうかを確認するための1つの方法として、DeepuはSplunk Log Observer Connectの左上隅にあるタイムピッカーを開き、:strong:`Live Tail` を選択します。Live Tailは、受信ログのサンプルのリアルタイムストリーミングビューを提供します。"
+
 #: ../../scenarios-tutorials/scenario.rst:198
-msgid "As one way to see if reverting to version v350.9 fixes the issue, Deepu opens the time picker in the upper left corner of Splunk Log Observer and selects :strong:`Live Tail`. Live Tail provides Deepu with a real-time streaming view of a sample of incoming logs."
-msgstr "バージョンv350.9に戻すことで問題が解決するかどうかを確認するための1つの方法として、DeepuはSplunk Log Observerの左上隅にあるタイムピッカーを開き、:strong:`Live Tail` を選択します。Live Tailは、受信ログのサンプルのリアルタイムストリーミングビューを提供します。"
+#, fuzzy
+msgid "This animated GIF shows Deepu opening the time picker of Splunk Log Observer Connect and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received."
+msgstr "このアニメーションGIFは、DeepuがSplunk Log Observer Connectのタイムピッカーを開き、Live Tailを選択する様子を示すものです。DeepuがLive Tailを選択すると、決済の失敗を示すメッセージを含むエラーログは消え、エラーメッセージを含む新しいログは受信されなくなりました。"
 
-#: ../../scenarios-tutorials/scenario.rst:200
-msgid "This animated GIF shows Deepu opening the time picker of Splunk Log Observer and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received."
-msgstr "このアニメーションGIFは、DeepuがSplunk Log Observerのタイムピッカーを開き、Live Tailを選択する様子を示すものです。DeepuがLive Tailを選択すると、決済の失敗を示すメッセージを含むエラーログは消え、エラーメッセージを含む新しいログは受信されなくなりました。"
-
-#: ../../scenarios-tutorials/scenario.rst:204
+#: ../../scenarios-tutorials/scenario.rst:202
 msgid "Deepu watches the Live Tail view and sure enough, the failed payment messages have stopped appearing in :strong:`paymentservice` logs. Reassured that the Buttercup Games site is back in a stable state, Deepu moves on to helping their team fix v350.10."
 msgstr "DeepuがLive Tailビューを見ると、確かに :strong:`paymentservice` のログに、決済の失敗を示すメッセージが現れなくなりました。Buttercup Gamesのサイトが安定した状態に戻ったことを確認して、Deepuは、チームによるv350.10の修正作業のサポートを開始します。"
 
-#: ../../scenarios-tutorials/scenario.rst:211
-msgid "Take preventative action and create metrics from logs to power dashboards and alerts"
-msgstr "予防措置を講じ、ログからダッシュボードやアラートの動力となるメトリクスを作成する"
+#: ../../scenarios-tutorials/scenario.rst:210
+#, fuzzy
+msgid "Now that Kai knows that this particular issue can cause a problem on the Buttercup Games site, they decide to do some preventative work for their SRE team. Kai takes the query they created in Splunk Log Observer Connect and saves it as a metric."
+msgstr "Kaiは、この特定の問題がButtercup Gamesサイトでの問題を引き起こす可能性があると分かったため、SREチームのための予防的な作業を行うことにしました。KaiはSplunk Log Observer Connectで作成したクエリを選んで、メトリクスとして保存します。"
 
-#: ../../scenarios-tutorials/scenario.rst:213
-msgid "Now that Kai knows that this particular issue can cause a problem on the Buttercup Games site, they decide to do some preventative work for their SRE team. Kai takes the query they created in Splunk Log Observer and saves it as a metric."
-msgstr "Kaiは、この特定の問題がButtercup Gamesサイトで問題を引き起こす可能性があると分かったため、SREチームのための予防的な作業を行うことにしました。KaiはSplunk Log Observerで作成したクエリを選んで、メトリクスとして保存します。"
+#: ../../scenarios-tutorials/scenario.rst:5
+#, fuzzy
+msgid "This screenshot shows the Save as Metric option in the More menu in Log Observer Connect."
+msgstr "このスクリーンショットは、Log Observer Connectの「その他の操作」メニューの「メトリクスとして保存」オプションを示しています。"
 
-#: ../../scenarios-tutorials/scenario.rst:211
-msgid "This screenshot shows the Save as Metric option in the More menu in Log Observer."
-msgstr "このスクリーンショットは、Log Observerの「その他の操作」メニューの「メトリクスとして保存」オプションを示しています。"
-
-#: ../../scenarios-tutorials/scenario.rst:219
+#: ../../scenarios-tutorials/scenario.rst:216
 msgid "Doing this defines log metricization rules that create a log-derived metric that shows aggregate counts. Kai's team can embed this log-derived metric in charts, dashboards, and alerts that can help them identify this issue faster if it comes up again in the future."
 msgstr "これにより、集計カウントを示すログ由来のメトリクスを作成するログのメトリクス化ルールが定義されます。Kaiのチームは、このログ由来のメトリクスをチャート、ダッシュボード、アラートに埋め込むことができます。これで、将来この問題が再び発生した場合に、問題をより早く特定するのに役立ちます。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:104 ../../scenarios-tutorials/scenario.rst:223
-msgid "Summary"
-msgstr "まとめ"
-
-#: ../../scenarios-tutorials/scenario.rst:225
+#: ../../scenarios-tutorials/scenario.rst:224
+#, fuzzy
 msgid ""
-"Kai was able to respond to and resolve front-end issues with the Buttercup Games website that were preventing users from completing their purchases. Kai used RUM to begin troubleshooting the errors, isolating spikes in front-end errors and back-end latency as possible causes. Digging into the :strong:`/cart/checkout` endpoint, Kai used the Tag Spotlight view in RUM to investigate the full trace. Based on this, Kai realized the latency wasn't a front-end issue. Next, Kai viewed a performance summary and the end-to-end transaction workflow in APM. Looking "
-"atthe service map, Kai noted that Splunk APM identified the :strong:`paymentservice` as the root cause of the errors. After ruling out Kubernetes issues, Kai used Tag Spotlight to look for correlations in tag values for the errors. Kai noticed that the errors were only happening on a specific version and decided to look into the log details. Using Log Observer, Kai looked at the log details and noticed that the error messages for the API token started with \"test\"."
+"Kai was able to respond to and resolve front-end issues with the Buttercup Games website that were preventing users from completing their purchases. Kai used RUM to begin troubleshooting the errors, isolating spikes in front-end errors and back-end latency as possible causes. Digging into the :strong:`/cart/checkout` endpoint, Kai used the Tag Spotlight view in RUM to investigate the full trace. Based on this, Kai realized the latency wasn't a front-end issue. Next, Kai viewed a performance summary and the end-to-end transaction workflow in APM. Looking at "
+"theservice map, Kai noted that Splunk APM identified the :strong:`paymentservice` as the root cause of the errors. After ruling out Kubernetes issues, Kai used Tag Spotlight to look for correlations in tag values for the errors. Kai noticed that the errors were only happening on a specific version and decided to look into the log details. Using Log Observer Connect, Kai looked at the log details and noticed that the error messages for the API token started with \"test\"."
 msgstr ""
-"Kaiは、Buttercup Gamesのウェブサイトで、ユーザーの購入完了を妨げていたフロントエンドの問題に対応し、解決することができました。RUMを使用してエラーのトラブルシューティングを開始し、考えられる原因としてフロントエンドのエラーの急増とバックエンドのレイテンシを特定しました。:strong:`/cart/checkout` のエンドポイントを掘り下げ、RUMのTag Spotlightビューを使用して完全なトレースを調査しました。これに基づいて、レイテンシがフロントエンドの問題ではないことが分かりました。次に、APMでパフォーマンスサマリーとエンドツーエンドのトランザクションワークフローを確認しました。"
-"サービスマップを見ると、Splunk APMが :strong:`paymentservice` をエラーの根本原因として特定したことに気が付きました。Kubernetesによる問題の可能性を排除した後、Tag Spotlightを使ってエラーのタグ値の相関関係を探しました。エラーが特定のバージョンでのみ発生していることに気づき、ログの詳細を調べることにしました。Log Observerを使用し、ログの詳細を見て、APIトークンのエラーメッセージが「test」で始まっていることに気が付きました。"
+"Kaiは、Buttercup Gamesのウェブサイトでユーザーの購入完了を妨げていたフロントエンドの問題に対応し、解決することができました。RUMを使用してエラーのトラブルシューティングを開始し、考えられる原因としてフロントエンドのエラーの急増とバックエンドのレイテンシを特定しました。:strong:`/cart/checkout` のエンドポイントを掘り下げ、RUMのTag Spotlightビューを使用して完全なトレースを調査しました。これに基づいて、レイテンシがフロントエンドの問題ではないことが分かりました。次に、APMでパフォーマンスサマリーとエンドツーエンドのトランザクションワークフローを確認しました。サービス"
+"マップを見ると、Splunk APMが :strong:`paymentservice` をエラーの根本原因として特定したことに気が付きました。Kubernetesによる問題の可能性を排除した後、Tag Spotlightを使ってエラーのタグ値の相関関係を探しました。エラーが特定のバージョンでのみ発生していることに気づき、ログの詳細を調べることにしました。Log Observer Connectを使用し、ログの詳細を見て、APIトークンのエラーメッセージが「test」で始まっていることに気が付きました。"
 
-#: ../../scenarios-tutorials/scenario.rst:227
-msgid "Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. After implementing a fix, Deepu used Log Observer Long Tail reports to monitor a real-time streaming view of the incoming logs. Deepu confirmed that the payment errors were no longer occurring. As a final step, Kai saved the Splunk Log Observer query as a metric in order to alert the team and help resolve similar issues faster in the future."
-msgstr ":strong:`paymentservice` のオーナーであるDeepuと相談し、テストAPIトークンが問題の原因である可能性が高いということで合意しました。Deepは修正を実施した後、Log ObserverのLive Tailレポートを使用して、受信ログのリアルタイムストリーミングビューを監視しました。そして、決済のエラーが発生しなくなったことを確認しました。最終手順として、KaiはSplunk Log Observerのクエリをメトリクスとして保存することで、チームにアラートを通知し、今後同様の問題を迅速に解決できるようにしました。"
+#: ../../scenarios-tutorials/scenario.rst:226
+#, fuzzy
+msgid "Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. After implementing a fix, Deepu used Log Observer Connect Long Tail reports to monitor a real-time streaming view of the incoming logs. Deepu confirmed that the payment errors were no longer occurring. As a final step, Kai saved the Splunk Log Observer Connect query as a metric in order to alert the team and help resolve similar issues faster in the future."
+msgstr ":strong:`paymentservice` のオーナーであるDeepuと相談し、テストAPIトークンが問題の原因である可能性が高いということで合意しました。Deepは修正を実施した後、Log Observer ConnectのLive Tailレポートを使用して、受信ログのリアルタイムストリーミングビューを監視しました。そして、決済のエラーが発生しなくなったことを確認しました。最終手順として、KaiはSplunk Log Observer Connectのクエリをメトリクスとして保存することで、チームにアラートを通知し、今後同様の問題を迅速に解決できるようにしました。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:109 ../../scenarios-tutorials/scenario.rst:230
-msgid "Learn more"
-msgstr "さらに詳しく"
-
-#: ../../scenarios-tutorials/scenario.rst:232
+#: ../../scenarios-tutorials/scenario.rst:235
 msgid "For details about creating detectors to issue alerts based on charts or metrics, see :ref:`create-detectors`."
 msgstr "チャートまたはメトリクスに基づいてアラートを発するディテクターの作成方法の詳細については、:ref:`create-detectors` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario.rst:234
+#: ../../scenarios-tutorials/scenario.rst:237
 msgid "For details about setting up detectors and alerts, see :ref:`get-started-detectoralert`."
 msgstr "ディテクターとアラートの設定方法の詳細については、:ref:`get-started-detectoralert` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario.rst:236
+#: ../../scenarios-tutorials/scenario.rst:239
 msgid "For details about integrating alerts with notification services, like Splunk On-Call, PagerDuty, and Jira, see :ref:`admin-notifs-index`."
 msgstr "Splunk On-Call、PagerDuty、Jiraなどの通知サービスとのアラートの統合方法の詳細については、:ref:`admin-notifs-index` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario.rst:238
+#: ../../scenarios-tutorials/scenario.rst:241
 msgid "For details about using Splunk RUM to identify and troubleshoot frontend errors, see :ref:`rum-identify-span-problems`."
 msgstr "Splunk RUMを使用してフロントエンドのエラーを特定しトラブルシューティングする方法の詳細については、:ref:`rum-identify-span-problems` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario.rst:240
+#: ../../scenarios-tutorials/scenario.rst:243
 msgid "For details about business workflows, see :ref:`apm-workflows`."
 msgstr "ビジネスワークフローの詳細については、:ref:`apm-workflows` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario.rst:242
+#: ../../scenarios-tutorials/scenario.rst:245
 msgid "For details about using Related Content, see :ref:`get-started-relatedcontent`."
 msgstr "「関連コンテンツ」の使用方法に関する詳細は、:ref:`get-started-relatedcontent` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario.rst:244
+#: ../../scenarios-tutorials/scenario.rst:247
 msgid "For details about using the Kubernetes navigator and other navigators, see :ref:`use-navigators-imm`."
 msgstr "Kubernetesナビゲーターやその他のナビゲーターの使用方法に関する詳細は、:ref:`use-navigators-imm` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario.rst:246
+#: ../../scenarios-tutorials/scenario.rst:249
 msgid "For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`."
 msgstr "Tag Spotlightの使用方法に関する詳細は、:ref:`apm-tag-spotlight` を参照してください。"
 
@@ -390,147 +331,115 @@ msgstr "PonyBankは、Splunk Observability Cloudを使用しています。こ�
 msgid "To instrument their infrastructure using the Splunk OTel Collector, Kai takes the following steps:"
 msgstr "Splunk OTel Collectorを使用してインフラストラクチャをインストルメントするために、Kaiは以下の手順をとります："
 
-#: ../../scenarios-tutorials/scenario-collector.rst:16
-msgid ":ref:`set-up-eks-monitoring`"
-msgstr ":ref:`set-up-eks-monitoring`"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:17
-msgid ":ref:`instrument-ec2-instances`"
-msgstr ":ref:`instrument-ec2-instances`"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:18
-msgid ":ref:`instrument-java-svc`"
-msgstr ":ref:`instrument-java-svc`"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:19
-msgid ":ref:`related-content-use-case`"
-msgstr ":ref:`related-content-use-case`"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:24
-msgid "Enable EKS monitoring using custom Helm charts"
-msgstr "カスタムHelmチャートを使用したEKS監視を有効にする"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:26
+#: ../../scenarios-tutorials/scenario-collector.rst:33
 msgid "Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Splunk Observability Cloud using the guided setup, which they access from the home page. Guided setups allow Kai to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation."
 msgstr "クラウドへの移行以来、PonyBankのアプリケーションはEKSで稼働しています。Kaiは、ホームページからアクセスできるガイド付きのセットアップを使用して、Splunk Observability Cloudからクラウドインテグレーションをセットアップすることから開始します。ガイド付きセットアップを使用すると、適切な取り込みトークンを選択して、選択したオプションからインストールコマンドと設定スニペットを生成することができます。Kaiはこれらを使用して迅速にインストルメンテーションをデプロイします。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:24
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Guided setup for Kubernetes in Data Management"
 msgstr "「データ管理」でのKubernetes用のガイド付きセットアップ"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:31
+#: ../../scenarios-tutorials/scenario-collector.rst:38
 msgid "As the cluster contains hundreds of containers in a virtual private cloud (VPC) with no direct access to the cloud, Kai uses the guided setup to add a cluster of Splunk OTel Collector instances in data forwarding (gateway) mode, so that they can receive and forward data while preserving the safety of the original configuration. In the next step, the guided setup provides customized commands for Helm."
 msgstr "クラウドに直接アクセスできない数百のコンテナを含むクラスターが仮想プライベートクラウド（VPC）内にあるため、Kaiはガイド付きセットアップを使用して、データ転送（ゲートウェイ）モードでSplunk OTel Collectorインスタンスのクラスターを追加し、元の構成の安全性を維持しながらデータの受信と転送ができるようにしました。次のステップでは、ガイド付きセットアップによってHelm用にカスタマイズされたコマンドが提供されます。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:33
+#: ../../scenarios-tutorials/scenario-collector.rst:40
 msgid "At the end of the guided setup, Kai enters the Kubernetes map of Infrastructure Monitoring and sees the cluster status. They select the nodes on the Kubernetes map, which appear as colored cubes in a grid, to learn more about the status of each element, including workloads and system metrics."
 msgstr "ガイド付きセットアップの最後で、KaiはInfrastructure MonitoringのKubernetesマップに入り、クラスターのステータスを確認します。Kubernetesマップ上のノードを選択します。これは、グリッド内に色付きのキューブとして表示されており、ワークロードやシステムメトリクスといった各要素のステータスの詳細を知ることができます。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:24
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Cluster view of the Kubernetes infrastructure in Infrastructure Monitoring"
 msgstr "Infrastructure MonitoringのKubernetesインフラストラクチャのクラスタービュー"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:41
-msgid "Use the Collector to instrument all EC2 instances"
-msgstr "Collectorを使用して、すべてのEC2インスタンスをインストルメントする"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:43
+#: ../../scenarios-tutorials/scenario-collector.rst:51
 msgid "For the hosts managed by IT as Elastic Compute Cloud (EC2) instances, Kai decides to deploy the Splunk OTel Collector using the existing Puppet setup at PonyBank. They open the guided setup for Linux monitoring in Splunk Observability Cloud and select the Puppet tab. After filling out the required information, Kai only has to follow two steps:"
 msgstr "IT部門がElastic Compute Cloud（EC2）インスタンスとして管理するホストについて、Kaiは、PonyBankの既存のPuppet設定を使用してSplunk OTel Collectorをデプロイすることにしました。Splunk Observability CloudでLinux監視用のガイド付きセットアップを開き、Puppetタブを選択します。必要な情報を入力した後は、2つのステップに従うだけです："
 
-#: ../../scenarios-tutorials/scenario-collector.rst:45
+#: ../../scenarios-tutorials/scenario-collector.rst:53
 msgid "Install the Splunk OTel Collector module from Puppet Forge."
 msgstr "Puppet ForgeからSplunk OTel Collectorモジュールをインストールする"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:46
+#: ../../scenarios-tutorials/scenario-collector.rst:54
 msgid "Include a new class in the manifest file:"
 msgstr "以下のように、マニフェストファイルに新しいクラスを含める："
 
-#: ../../scenarios-tutorials/scenario-collector.rst:57
+#: ../../scenarios-tutorials/scenario-collector.rst:65
 msgid "Kai also uses the Linux guided setup for the few stray EC2 instances in the organization that are not managed through Puppet, following the steps from the Installer script tab. The customized installer script command downloads and runs the collector with the desired configuration."
 msgstr "またKaiは、Puppetで管理されていない、組織内に散在するいくつかのEC2インスタンスに対しても、Linuxガイド付きセットアップを使用し、インストーラスクリプトタブの手順に従います。カスタマイズされたインストーラスクリプトコマンドによって、必要な構成でコレクターのダウンロードと実行が行われます。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:59
+#: ../../scenarios-tutorials/scenario-collector.rst:67
 msgid "Now, Kai can see data from each host is flowing into Infrastructure Monitoring. For each host, Kai can see metadata, system metrics, and processes, among other data points."
 msgstr "これで、Kaiは、各ホストからのデータがInfrastructure Monitoringに流れていることを確認できます。各ホストについて、データポイントの中でも特にメタデータ、システムメトリクス、プロセスを見ることができます。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:41
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Dashboard with host metrics in Infrastructure Monitoring"
 msgstr "Infrastructure Monitoringのホストメトリクスを表示したダッシュボード"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:64
+#: ../../scenarios-tutorials/scenario-collector.rst:72
 msgid "At the same time, Kai can also see logs coming from each host and node in Splunk Log Observer:"
 msgstr "同時に、KaiはSplunk Log Observerで各ホストとノードからのログを確認することもできます："
 
-#: ../../scenarios-tutorials/scenario-collector.rst:41
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Log Observer showing host logs"
 msgstr "ホストのログを表示するLog Observer"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:72
-msgid "Instrument the Java service for Splunk APM"
-msgstr "Splunk APM用にJavaサービスをインストルメントする"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:74
+#: ../../scenarios-tutorials/scenario-collector.rst:83
 msgid "Kai's final goal is to instrument the corporate Java service of PonyBank for Splunk APM, so that the team can analyze spans and traces in Splunk Observability Cloud, as well as use AlwaysOn Profiling to quickly identify inefficient code that's using too much CPU or memory."
 msgstr "Kaiの最終目標は、PonyBank社のJavaサービスをSplunk APM用にインストルメントして、チームがSplunk Observability Cloudでスパンとトレースを分析し、AlwaysOn Profilingを使ってCPUやメモリを使いすぎている非効率なコードを迅速に特定できるようにすることです。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:76
+#: ../../scenarios-tutorials/scenario-collector.rst:85
 msgid "To do that, Kai selects the Java guided setup, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. Kai defines an environment and service name, which are essential to enable the Related Content feature between APM and Infrastructure Monitoring."
 msgstr "これを行うために、Javaのガイド付きセットアップを選択します。これには、Collectorのデプロイ後にSplunkのJavaエージェントを有効にするために必要なすべての手順が含まれています。Kaiは、APMとInfrastructure Monitoring間での「関連コンテンツ」機能を有効にするために不可欠な環境とサービス名を定義します。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:78
+#: ../../scenarios-tutorials/scenario-collector.rst:87
 msgid "After selecting all the features and options they need, Kai obtains a YAML snippet they can add to the current Kubernetes configuration, as well as a customized runtime command."
 msgstr "必要な機能とオプションをすべて選択した後に、現在のKubernetes構成に追加できるYAMLスニペット、ならびにカスタマイズされたランタイムコマンドを取得します。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:72
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Guided setup for the Java tracing instrumentation"
 msgstr "Javaトレースインストルメンテーションのガイド付きセットアップ"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:83
+#: ../../scenarios-tutorials/scenario-collector.rst:92
 msgid "For the EC2 instances that also contain Java services, Kai uses the same guided setup, running the customized commands in the console. Instrumenting the application takes a few seconds."
 msgstr "同様にJavaサービスを含むEC2インスタンスについても、Kaiは同じガイド付きセットアップを使用して、カスタマイズされたコマンドをコンソールで実行します。アプリケーションのインストルメンテーションには数秒かかります。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:72
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Console output of the Java agent install"
 msgstr "Javaエージェントのインストールを示すコンソールの出力"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:91
-msgid "Explore links between telemetry using Related Content"
-msgstr "「関連コンテンツ」機能を使ってテレメトリ間のリンクを探索する"
-
-#: ../../scenarios-tutorials/scenario-collector.rst:93
+#: ../../scenarios-tutorials/scenario-collector.rst:103
 msgid "Thanks to the Related Content feature, when Kai selects the node running the checkout service of the application, the service appears as a link to Splunk APM in the related content bar."
 msgstr "「関連コンテンツ」機能のおかげで、アプリケーションの精算サービスを実行しているノードを選択すると、関連コンテンツバーに、Splunk APMへのリンクとしてサービスが表示されます。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:91
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Infrastructure Monitoring showing the Related Content bar"
 msgstr "「関連コンテンツ」バーが表示されたInfrastructure Monitoring"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:98
+#: ../../scenarios-tutorials/scenario-collector.rst:108
 msgid "The same happens when Kai opens Splunk APM and selects the checkout service in the service map, shown in the following image. The EKS cluster for checkoutservice appears in the Related Content bar following the map. Splunk Observability Cloud suggests both links thanks to the APM and Infrastructure mapping that Splunk Observability Cloud performs using OpenTelemetry attributes and data."
 msgstr "下の画像に示すように、KaiがSplunk APMを開いてサービスマップ内で精算サービスを選択すると同じことが起きます。checkoutserviceのEKSクラスターが、マップに続く「関連コンテンツ」バーに表示されます。Splunk Observability CloudがOpenTelemetryの属性とデータを使って実行するAPMとInfrastructureのマッピングのおかげで、Splunk Observability Cloudは、両方のリンクを提案できます。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:91
+#: ../../scenarios-tutorials/scenario-collector.rst:5
 msgid "Application Monitoring showing the Related Content bar"
 msgstr "「関連コンテンツ」バーが表示されたApplication Monitoring"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:106
+#: ../../scenarios-tutorials/scenario-collector.rst:119
 msgid "Kai used Splunk OTel Collector to instrument PonyBank's entire cloud infrastructure, quickly obtaining configuration files and commands for each environment and situation. Through the Java instrumentation for APM, they also retrieved traces from the Java services running on the EKS clusters with related content available to access."
 msgstr "Kaiは、Splunk OTel Collectorを使用してPonyBank のクラウドインフラストラクチャ全体をインストルメントし、各環境と状況に合わせた設定ファイルとコマンドを迅速に取得しました。また、APM用のJavaインストルメンテーションを通じて、EKSクラスター上で実行されているJavaサービスからのトレースと、利用可能な関連コンテンツへのアクセスを取得しました。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:111
+#: ../../scenarios-tutorials/scenario-collector.rst:127
 msgid "Learn about sending data to Splunk Observability Cloud in :ref:`get-started-get-data-in`."
 msgstr "Splunk Observability Cloudへのデータ送信方法については、:ref:`get-started-get-data-in` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:112
+#: ../../scenarios-tutorials/scenario-collector.rst:128
 msgid "To collect infrastructure metrics and logs from multiple platforms, see :ref:`otel-intro`."
 msgstr "複数のプラットフォームからインフラストラクチャメトリクスとログを収集する方法は、:ref:`otel-intro` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:113
+#: ../../scenarios-tutorials/scenario-collector.rst:129
 msgid "To instrument Java services for Splunk APM, see :ref:`get-started-java`."
 msgstr "Splunk APM用にJavaサービスをインストルメントする方法は、:ref:`get-started-java` を参照してください。"
 
-#: ../../scenarios-tutorials/scenario-collector.rst:114
+#: ../../scenarios-tutorials/scenario-collector.rst:130
 msgid "For more information on Related Content in Splunk Observability Cloud, see :ref:`get-started-enablerelatedcontent`."
 msgstr "Splunk Observability Cloudの「関連コンテンツ」機能の詳細については、:ref:`get-started-enablerelatedcontent` を参照してください。"
 
@@ -566,11 +475,11 @@ msgstr ":ref:`otel-collector-scenario`"
 msgid "The following use case scenarios show how you can use Splunk Observability Cloud with the Splunk platform:"
 msgstr "以下のユースケースシナリオは、Splunk Observability CloudをSplunkプラットフォームで使用する方法を示しています："
 
-#: ../../scenarios-tutorials/scenario-cross.rst:25 ../../scenarios-tutorials/scenario-landing.rst:99
+#: ../../scenarios-tutorials/scenario-cross.rst:25 ../../scenarios-tutorials/scenario-landing.rst:111
 msgid ":ref:`integration-scenario1`"
 msgstr ":ref:`integration-scenario1`"
 
-#: ../../scenarios-tutorials/scenario-cross.rst:26 ../../scenarios-tutorials/scenario-landing.rst:97
+#: ../../scenarios-tutorials/scenario-cross.rst:26 ../../scenarios-tutorials/scenario-landing.rst:109
 msgid ":ref:`logs-LOconnect-scenario`"
 msgstr ":ref:`logs-LOconnect-scenario`"
 
@@ -602,183 +511,225 @@ msgstr ":ref:`Splunk Observability Cloud<overview>`"
 msgid ":ref:`scenario-security`"
 msgstr ":ref:`scenario-security`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:28
+#: ../../scenarios-tutorials/scenario-landing.rst:28 ../../scenarios-tutorials/scenario-landing.rst:30
 msgid ":ref:`OpenTelemetry <otel-intro>`"
 msgstr ":ref:`OpenTelemetry <otel-intro>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:30 ../../scenarios-tutorials/scenario-landing.rst:32 ../../scenarios-tutorials/scenario-landing.rst:34 ../../scenarios-tutorials/scenario-landing.rst:36
+#: ../../scenarios-tutorials/scenario-landing.rst:31
+msgid ":ref:`deployments-fargate-java`"
+msgstr ":ref:`deployments-fargate-java`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:32 ../../scenarios-tutorials/scenario-landing.rst:34 ../../scenarios-tutorials/scenario-landing.rst:36 ../../scenarios-tutorials/scenario-landing.rst:38 ../../scenarios-tutorials/scenario-landing.rst:40 ../../scenarios-tutorials/scenario-landing.rst:42
 msgid ":ref:`Alerts and detectors <scenarios-alerts-detectors>`"
 msgstr ":ref:`アラートとディテクター<scenarios-alerts-detectors>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:31
+#: ../../scenarios-tutorials/scenario-landing.rst:33
 msgid ":ref:`monitor-server-latency`"
 msgstr ":ref:`monitor-server-latency`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:33
+#: ../../scenarios-tutorials/scenario-landing.rst:35
 msgid ":ref:`monitor-autodetect`"
 msgstr ":ref:`monitor-autodetect`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:35
+#: ../../scenarios-tutorials/scenario-landing.rst:37
 msgid ":ref:`find-detectors`"
 msgstr ":ref:`find-detectors`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:37
+#: ../../scenarios-tutorials/scenario-landing.rst:39
 msgid ":ref:`troubleshoot-noisy-detectors`"
 msgstr ":ref:`troubleshoot-noisy-detectors`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:38 ../../scenarios-tutorials/scenario-landing.rst:40 ../../scenarios-tutorials/scenario-landing.rst:42 ../../scenarios-tutorials/scenario-landing.rst:44 ../../scenarios-tutorials/scenario-landing.rst:46 ../../scenarios-tutorials/scenario-landing.rst:48 ../../scenarios-tutorials/scenario-landing.rst:50 ../../scenarios-tutorials/scenario-landing.rst:52 ../../scenarios-tutorials/scenario-landing.rst:54 ../../scenarios-tutorials/scenario-landing.rst:56 ../../scenarios-tutorials/scenario-landing.rst:58
+#: ../../scenarios-tutorials/scenario-landing.rst:41
+#, fuzzy
+msgid ":ref:`min-delay-detectors-scenario`"
+msgstr ":ref:`min-delay-detectors-scenario`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:43
+#, fuzzy
+msgid ":ref:`max-delay-detectors-scenario`"
+msgstr ":ref:`max-delay-detectors-scenario`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:44
+#, fuzzy
+msgid ":ref:`SLOs <slo-intro>`"
+msgstr ":ref:`SLOs <slo-intro>`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:45
+#, fuzzy
+msgid ":ref:`custom-metric-slo-scenario`"
+msgstr ":ref:`custom-metric-slo-scenario`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:46 ../../scenarios-tutorials/scenario-landing.rst:48 ../../scenarios-tutorials/scenario-landing.rst:50 ../../scenarios-tutorials/scenario-landing.rst:52 ../../scenarios-tutorials/scenario-landing.rst:54 ../../scenarios-tutorials/scenario-landing.rst:56 ../../scenarios-tutorials/scenario-landing.rst:58 ../../scenarios-tutorials/scenario-landing.rst:60 ../../scenarios-tutorials/scenario-landing.rst:62 ../../scenarios-tutorials/scenario-landing.rst:64 ../../scenarios-tutorials/scenario-landing.rst:66
+#: ../../scenarios-tutorials/scenario-landing.rst:68 ../../scenarios-tutorials/scenario-landing.rst:70
 msgid ":ref:`APM <apm-scenarios-intro>`"
 msgstr ":ref:`APM<apm-scenarios-intro>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:39
+#: ../../scenarios-tutorials/scenario-landing.rst:47
 msgid ":ref:`service-map`"
 msgstr ":ref:`service-map`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:41
+#: ../../scenarios-tutorials/scenario-landing.rst:49
+#, fuzzy
+msgid ":ref:`specific-trace`"
+msgstr ":ref:`specific-trace`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:51
 msgid ":ref:`services-impact-business-workflows`"
 msgstr ":ref:`services-impact-business-workflows`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:43
+#: ../../scenarios-tutorials/scenario-landing.rst:53
 msgid ":ref:`troubleshoot-tag-spotlight`"
 msgstr ":ref:`troubleshoot-tag-spotlight`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:45
+#: ../../scenarios-tutorials/scenario-landing.rst:55
 msgid ":ref:`troubleshoot-business-workflows`"
 msgstr ":ref:`troubleshoot-business-workflows`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:47
+#: ../../scenarios-tutorials/scenario-landing.rst:57
 msgid ":ref:`apm-scenario-trace-analyzer`"
 msgstr ":ref:`apm-scenario-trace-analyzer`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:49
+#: ../../scenarios-tutorials/scenario-landing.rst:59
+#, fuzzy
+msgid ":ref:`apm-scenario-trace-analyzer-trace-duration`"
+msgstr ":ref:`apm-scenario-trace-analyzer-trace-duration`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:61
 msgid ":ref:`monitor-services`"
 msgstr ":ref:`monitor-services`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:51
+#: ../../scenarios-tutorials/scenario-landing.rst:63
 msgid ":ref:`configure-business-workflows`"
 msgstr ":ref:`configure-business-workflows`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:53
+#: ../../scenarios-tutorials/scenario-landing.rst:65
 msgid ":ref:`monitor-business-workflows`"
 msgstr ":ref:`monitor-business-workflows`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:55
+#: ../../scenarios-tutorials/scenario-landing.rst:67
 msgid ":ref:`historical-data`"
 msgstr ":ref:`historical-data`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:57
+#: ../../scenarios-tutorials/scenario-landing.rst:69
 msgid ":ref:`custom-metricset`"
 msgstr ":ref:`custom-metricset`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:59
+#: ../../scenarios-tutorials/scenario-landing.rst:71
 msgid ":ref:`apm-scenario-endpoint-performance`"
 msgstr ":ref:`apm-scenario-endpoint-performance`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:60 ../../scenarios-tutorials/scenario-landing.rst:62
+#: ../../scenarios-tutorials/scenario-landing.rst:72 ../../scenarios-tutorials/scenario-landing.rst:74
 msgid ":ref:`APM database query performance <db-query-performance>`"
 msgstr ":ref:`APMデータベースクエリパフォーマンス<db-query-performance>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:61
+#: ../../scenarios-tutorials/scenario-landing.rst:73
 msgid ":ref:`db-perf-scenario`"
 msgstr ":ref:`db-perf-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:63
+#: ../../scenarios-tutorials/scenario-landing.rst:75
 msgid ":ref:`redis-scenario`"
 msgstr ":ref:`redis-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:64 ../../scenarios-tutorials/scenario-landing.rst:66
+#: ../../scenarios-tutorials/scenario-landing.rst:76 ../../scenarios-tutorials/scenario-landing.rst:78
 msgid ":ref:`APM Profiling <profiling-scenario-landingpage>`"
 msgstr ":ref:`APMプロファイリング<profiling-scenario-landingpage>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:65
+#: ../../scenarios-tutorials/scenario-landing.rst:77
 msgid ":ref:`profiling-scenario`"
 msgstr ":ref:`profiling-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:67
+#: ../../scenarios-tutorials/scenario-landing.rst:79
 msgid ":ref:`memory-profiling-scenario`"
 msgstr ":ref:`memory-profiling-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:68 ../../scenarios-tutorials/scenario-landing.rst:70
-msgid ":ref:`Infrastructure Monitoring <apm-scenarios-intro>`"
-msgstr ":ref:`Infrastructure Monitoring<apm-scenarios-intro>`"
+#: ../../scenarios-tutorials/scenario-landing.rst:80
+#, fuzzy
+msgid ":ref:`Infrastructure Monitoring <get-started-infrastructure>`"
+msgstr ":ref:`Infrastructure Monitoring <get-started-infrastructure>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:69
+#: ../../scenarios-tutorials/scenario-landing.rst:81
 msgid ":ref:`troubleshoot-k8s-nav-scenario`"
 msgstr ":ref:`troubleshoot-k8s-nav-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:71
+#: ../../scenarios-tutorials/scenario-landing.rst:82 ../../scenarios-tutorials/scenario-landing.rst:84
+#, fuzzy
+msgid ":ref:`Infrastructure: Metrics pipeline management <metrics-pipeline-intro>`"
+msgstr ":ref:`Infrastructure: メトリクスパイプライン管理<metrics-pipeline-intro>`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:83
 msgid ":ref:`aggregate-drop-use-case`"
 msgstr ":ref:`aggregate-drop-use-case`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:72 ../../scenarios-tutorials/scenario-landing.rst:74 ../../scenarios-tutorials/scenario-landing.rst:76
+#: ../../scenarios-tutorials/scenario-landing.rst:85
+#, fuzzy
+msgid ":ref:`use-case-archive`"
+msgstr ":ref:`use-case-archive`"
+
+#: ../../scenarios-tutorials/scenario-landing.rst:86 ../../scenarios-tutorials/scenario-landing.rst:88 ../../scenarios-tutorials/scenario-landing.rst:90
 msgid ":ref:`Infrastructure Monitoring\\: Network Explorer <network-explorer-scenarios>`"
 msgstr ":ref:`Infrastructure Monitoring\\: Network Explorer<network-explorer-scenarios>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:73
+#: ../../scenarios-tutorials/scenario-landing.rst:87
 msgid ":ref:`find-network-error`"
 msgstr ":ref:`find-network-error`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:75
+#: ../../scenarios-tutorials/scenario-landing.rst:89
 msgid ":ref:`cross-zone-traffic-cost`"
 msgstr ":ref:`cross-zone-traffic-cost`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:77
+#: ../../scenarios-tutorials/scenario-landing.rst:91
 msgid ":ref:`examine-service-dependencies`"
 msgstr ":ref:`examine-service-dependencies`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:78 ../../scenarios-tutorials/scenario-landing.rst:80
+#: ../../scenarios-tutorials/scenario-landing.rst:92 ../../scenarios-tutorials/scenario-landing.rst:94
 msgid ":new-page:`IT Service Intelligence <https://docs.splunk.com/Documentation/ITSI>`"
 msgstr ":new-page:`IT Service Intelligence<https://docs.splunk.com/Documentation/ITSI>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:79
+#: ../../scenarios-tutorials/scenario-landing.rst:93
 msgid ":new-page:`Scenario\\: Lauren groups related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`"
 msgstr ":new-page:`Scenario\\: LaurenがITSIを使って関連のあるアラートをグループ化する<https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:81
+#: ../../scenarios-tutorials/scenario-landing.rst:95
 msgid ":new-page:`Scenario\\: Kai monitors business service degradation and identifies the root cause <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`"
 msgstr ":new-page:`Scenario\\: Kaiがビジネスサービスの低下を監視して根本原因を特定する<https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:82 ../../scenarios-tutorials/scenario-landing.rst:84 ../../scenarios-tutorials/scenario-landing.rst:86 ../../scenarios-tutorials/scenario-landing.rst:88
+#: ../../scenarios-tutorials/scenario-landing.rst:96 ../../scenarios-tutorials/scenario-landing.rst:98 ../../scenarios-tutorials/scenario-landing.rst:100
 msgid ":ref:`RUM <scenario-landingpage>`"
 msgstr ":ref:`RUM<scenario-landingpage>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:83
+#: ../../scenarios-tutorials/scenario-landing.rst:97
 msgid ":ref:`scenario-monitoring`"
 msgstr ":ref:`scenario-monitoring`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:85
+#: ../../scenarios-tutorials/scenario-landing.rst:99
 msgid ":ref:`spa-custom-event`"
 msgstr ":ref:`spa-custom-event`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:87
-msgid ":ref:`rum-identify-span-problems`"
-msgstr ":ref:`rum-identify-span-problems`"
-
-#: ../../scenarios-tutorials/scenario-landing.rst:89
+#: ../../scenarios-tutorials/scenario-landing.rst:101
 msgid ":ref:`rum-mobile-scenario`"
 msgstr ":ref:`rum-mobile-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:90 ../../scenarios-tutorials/scenario-landing.rst:92 ../../scenarios-tutorials/scenario-landing.rst:94
+#: ../../scenarios-tutorials/scenario-landing.rst:102 ../../scenarios-tutorials/scenario-landing.rst:104 ../../scenarios-tutorials/scenario-landing.rst:106
 msgid ":ref:`Synthetic Monitoring <synth-landing>`"
 msgstr ":ref:`Synthetic Monitoring<synth-landing>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:91
+#: ../../scenarios-tutorials/scenario-landing.rst:103
 msgid ":ref:`browser-test-scenario`"
 msgstr ":ref:`browser-test-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:93
+#: ../../scenarios-tutorials/scenario-landing.rst:105
 msgid ":ref:`api-test-scenario`"
 msgstr ":ref:`api-test-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:95
+#: ../../scenarios-tutorials/scenario-landing.rst:107
 msgid ":ref:`uptime-test-scenario`"
 msgstr ":ref:`uptime-test-scenario`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:96
+#: ../../scenarios-tutorials/scenario-landing.rst:108
 msgid ":ref:`Log Observer Connect <logs-intro-logconnect>`"
 msgstr ":ref:`Log Observer Connect<logs-intro-logconnect>`"
 
-#: ../../scenarios-tutorials/scenario-landing.rst:98
+#: ../../scenarios-tutorials/scenario-landing.rst:110
 msgid ":ref:`Splunk platform integration <scenarios-integration-scenario-landing>`"
 msgstr ":ref:`Splunkプラットフォームのインテグレーション<scenarios-integration-scenario-landing>`"
 
@@ -825,3 +776,84 @@ msgstr "具体的なシナリオやユースケースについては、:ref:`sce
 #: ../../scenarios-tutorials/tutorial-landing.rst:21
 msgid "For an overview of Splunk Observability Cloud and how to send your data in, go to :ref:`overview` and :ref:`get-started-get-data-in`."
 msgstr "Splunk Observability Cloudの概要とデータの取り込み方法については、:ref:`overview` および :ref:`get-started-get-data-in` を参照してください。"
+
+#~ msgid ":ref:`receive-alerts-xpuc`"
+#~ msgstr ":ref:`receive-alerts-xpuc`"
+
+#~ msgid ":ref:`assess-user-impact-xpuc` using Splunk Real User Monitoring (RUM)"
+#~ msgstr "Splunk Real User Monitoring（RUM）を使用して、:ref:`assess-user-impact-xpuc`"
+
+#~ msgid ":ref:`investigate-root-cause-xpuc` using Splunk Application Performance Monitoring (APM)"
+#~ msgstr "Splunk Application Performance Monitoring（APM）を使用して、:ref:`investigate-root-cause-xpuc`"
+
+#~ msgid ":ref:`check-infra-health-xpuc` using Splunk Infrastructure Monitoring"
+#~ msgstr "Splunk Infrastructure Monitoringを使用して、:ref:`check-infra-health-xpuc`"
+
+#~ msgid ":ref:`look-for-patterns-xpuc` in Splunk APM"
+#~ msgstr "Splunk APMで、:ref:`look-for-patterns-xpuc`"
+
+#~ msgid ":ref:`review-logs-xpuc` using Splunk Log Observer"
+#~ msgstr "Splunk Log Observer を使用して、:ref:`review-logs-xpuc`"
+
+#~ msgid ":ref:`monitor-a-fix-xpuc` using Splunk Log Observer"
+#~ msgstr "Splunk Log Observer を使用して、:ref:`monitor-a-fix-xpuc`"
+
+#~ msgid ":ref:`take-preventative-action-xpuc`"
+#~ msgstr ":ref:`take-preventative-action-xpuc`"
+
+#~ msgid "Receive alerts about outlier behavior"
+#~ msgstr "異常な挙動に関するアラートを受け取る"
+
+#~ msgid "Assess user impact"
+#~ msgstr "ユーザーへの影響を評価する"
+
+#~ msgid "Investigate the root cause of a business workflow error"
+#~ msgstr "ビジネスワークフローのエラーの根本原因を調査する"
+
+#~ msgid "Check on infrastructure health"
+#~ msgstr "インフラストラクチャの健全性をチェックする"
+
+#~ msgid "Look for patterns in application errors"
+#~ msgstr "アプリケーションエラーのパターンを探す"
+
+#~ msgid "Examine error logs for meaningful messages and patterns"
+#~ msgstr "エラーログを調査して重要なメッセージやパターンを探す"
+
+#~ msgid "Monitor a fix"
+#~ msgstr "修正を監視する"
+
+#~ msgid "Take preventative action and create metrics from logs to power dashboards and alerts"
+#~ msgstr "予防措置を講じ、ログからダッシュボードやアラートの動力となるメトリクスを作成する"
+
+#~ msgid "Summary"
+#~ msgstr "まとめ"
+
+#~ msgid "Learn more"
+#~ msgstr "さらに詳しく"
+
+#~ msgid ":ref:`set-up-eks-monitoring`"
+#~ msgstr ":ref:`set-up-eks-monitoring`"
+
+#~ msgid ":ref:`instrument-ec2-instances`"
+#~ msgstr ":ref:`instrument-ec2-instances`"
+
+#~ msgid ":ref:`instrument-java-svc`"
+#~ msgstr ":ref:`instrument-java-svc`"
+
+#~ msgid ":ref:`related-content-use-case`"
+#~ msgstr ":ref:`related-content-use-case`"
+
+#~ msgid "Enable EKS monitoring using custom Helm charts"
+#~ msgstr "カスタムHelmチャートを使用したEKS監視を有効にする"
+
+#~ msgid "Use the Collector to instrument all EC2 instances"
+#~ msgstr "Collectorを使用して、すべてのEC2インスタンスをインストルメントする"
+
+#~ msgid "Instrument the Java service for Splunk APM"
+#~ msgstr "Splunk APM用にJavaサービスをインストルメントする"
+
+#~ msgid "Explore links between telemetry using Related Content"
+#~ msgstr "「関連コンテンツ」機能を使ってテレメトリ間のリンクを探索する"
+
+#~ msgid ":ref:`rum-identify-span-problems`"
+#~ msgstr ":ref:`rum-identify-span-problems`"

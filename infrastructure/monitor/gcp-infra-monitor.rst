@@ -93,7 +93,7 @@ You can also export and monitor data from these sources running in your GCP envi
     - :strong:`Description`
 
   * - :ref:`get-started-k8s`
-    - :ref:`infrastructure-k8s`
+    - :ref:`infrastructure-k8s-nav`
     - Collect metrics and logs from Kubernetes clusters running in Google Compute Engine (GCE) or Google Kubernetes Engine (GKE) instances.
 
   * - - :ref:`get-started-linux`
@@ -139,4 +139,4 @@ In order to populate GCP Kubernetes Engine navigators and dashboards, Splunk Obs
 
 If you have a private GKE cluster, refer to the :new-page:`official Google documentation on setting up limited access to the public control plane endpoint<https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#public_cp>`, and reach out to Support to obtain the IP ranges that you need to authorize.
 
-Alternatively, you can collect Kubernetes data using the OpenTelemetry Collector for Kubernetes and use the provided dashboards and navigators. Learn more at :ref:`get-started-k8s` and :ref:`infrastructure-k8s`.
+Alternatively, you can collect Kubernetes data using the OpenTelemetry Collector for Kubernetes and use the provided dashboards and navigators. Learn more at :ref:`get-started-k8s` and :ref:`infrastructure-k8s-nav`.

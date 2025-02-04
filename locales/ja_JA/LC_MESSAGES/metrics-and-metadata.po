@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-10 15:12+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -285,7 +285,7 @@ msgstr "Prometheus レシーバーを含むさまざまなレシーバーを使�
 msgid "You can collect histogram data using a variety of receivers, including the Prometheus receiver, and send them to Splunk Observability Cloud using the OpenTelemetry Collector. See :ref:`Prometheus receiver <prometheus-receiver>`."
 msgstr "Prometheus レシーバーを含むさまざまなレシーバーを使用してヒストグラムデータを収集し、OpenTelemetry Collector を使用して Splunk Observability Cloud に送信することができます。:ref:`Prometheus レシーバー <prometheus-receiver>` を参照してください。"
 
-#: ../../12
+#: ../../metrics-and-metadata/histograms-gdi.rst:12
 msgid "The Splunk Distribution of OpenTelemetry Collector supports explicit-bucket histogram metrics. You can send histogram metric using the OTLP exporter or, starting from version 0.98, through the :ref:`signalfx-exporter`."
 msgstr "OpenTelemetry Collector の Splunk ディストリビューションは、明示的バケットのヒストグラムメトリクスをサポートしています。ヒストグラムメトリクスを送信するには、OTLP エクスポーターを使用するか、バージョン0.98以降では :ref:`signalfx-exporter` を使用します。"
 
@@ -340,7 +340,8 @@ msgstr "デルタ集計の一時性は、Splunk Observability Cloud のヒスト
 #: ../../metrics-and-metadata/histograms-gdi.rst:44
 msgid "To activate delta aggretation temporality in your instrumentation, set the ``OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE`` environment variable to ``delta``. See the :new-page:`compliance matrix <https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables>` in the OpenTelemetry Specification repository to check SDK support for your language."
 msgstr ""
-"デルタ集計の一時性をインストルメンテーションで有効にするには、 環境変数 ``OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE`` を ``delta`` に設定します。お使いの言語のSDKサポートを確認するには、OpenTelemetry Specification リポジトリの :new-page:`コンプライアンスマトリックス <https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables>` を参照してください。"
+"デルタ集計の一時性をインストルメンテーションで有効にするには、 環境変数 ``OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE`` を ``delta`` に設定します。お使いの言語のSDKサポートを確認するには、OpenTelemetry Specification リポジトリの :new-page:`コンプライアンスマトリックス <https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables>` を参照してくださ"
+"い。"
 
 #: ../../metrics-and-metadata/histograms-gdi.rst:48
 msgid "Send histogram data using the API"
@@ -631,11 +632,11 @@ msgstr "オプションとして、:strong:`Custom URL` および :strong:`Kiban
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:122
 msgid "``{{key}}``: Use this variable to populate the key name from the context where the link displays. For example, if you set :strong:`Show on` to :strong:`aggregation_type`, ``aggregation_type`` replaces ``{{key}}`` in the URL."
-msgstr " ``{{key}}`` ：この変数を使用して、リンクが表示されるコンテキストからキー名を入力します。例えば、:strong:`Show on` を :strong:`aggregation_type` に設定した場合、``aggregation_type`` がURLの  ``{{key}}`` を置き換えます。"
+msgstr "``{{key}}`` ：この変数を使用して、リンクが表示されるコンテキストからキー名を入力します。例えば、:strong:`Show on` を :strong:`aggregation_type` に設定した場合、``aggregation_type`` がURLの  ``{{key}}`` を置き換えます。"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:124
 msgid "``{{value}}``: Use this variable to populate the key value from the context where the link displays. For example, if you set :strong:`Show on` to :strong:`aggregation_type` and the :strong:`aggregation_type` value in context is :strong:`average`,  ``average`` replaces ``{{value}}`` in the URL."
-msgstr " ``{{value}}`` ：この変数を使用して、リンクが表示されるコンテキストからキー値を入力します。例えば、:strong:`Show on` を  :strong:`aggregation_type`  に設定し、コンテキストの  :strong:`aggregation_type`  の値が :strong:`average` の場合、``average`` がURLの  ``{{value}}`` を置き換えます。"
+msgstr "``{{value}}`` ：この変数を使用して、リンクが表示されるコンテキストからキー値を入力します。例えば、:strong:`Show on` を  :strong:`aggregation_type`  に設定し、コンテキストの  :strong:`aggregation_type`  の値が :strong:`average` の場合、``average`` がURLの  ``{{value}}`` を置き換えます。"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:126
 msgid "``{{start_time}}``: Use this variable to populate the start time of the time window from the context where the link displays. The system inserts the timestamp using the format you select in the :strong:`Time Format` field."
@@ -646,12 +647,13 @@ msgid "``{{end_time}}``: Use this variable to populate the end time of the time 
 msgstr "``{{end_time}}``：この変数を使用して、リンクが表示されるコンテキストからタイムウィンドウの終了時刻を入力します。システムは、:strong:`Time Format` フィールドで選択したフォーマットを使用してタイムスタンプを挿入します。"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:130
+#, fuzzy
 msgid ""
-"``{{properties.<property_name>}}``: Use this variable to populate other metadata from the context of the link display. For example, ``properties`` contains a map of the metadata key names and values that appear in the context of the global data link display. To insert a name and value from this map, use ``{{properties.<your_property_name>}}``. If your property name has a period in it, use square brackets around "
-"thevalue. For example, ``{{properties.[<property.name>]}}``."
+"``{{properties.<property_name>}}``: Use this variable to populate other metadata from the context of the link display. For example, ``properties`` contains a map of the metadata key names and values that appear in the context of the global data link display. To insert a name and value from this map, use ``{{properties.<your_property_name>}}``. If your property name has a period in it, use square brackets "
+"aroundthe value. For example, ``{{properties.[<property.name>]}}``."
 msgstr ""
-" ``{{properties.<property_name>}}``：この変数を使用して、リンク表示のコンテキストから他のメタデータを入力します。例えば、``properties`` には、グローバル・データリンク表示のコンテキストに表示されるメタデータのキー名と値のマップが格納されています。このマップから名前と値を挿入するには、``{{properties.<your_property_name>}}`` を使用します。プロパティ名にピリオドがある場合は、値を角括弧で囲みます。例えば、 ``{{properties."
-"[<property.name>]}}``。"
+" ``{{properties.<property_name>}}``：この変数を使用して、リンク表示のコンテキストから他のメタデータを入力します。例えば、``properties`` には、グローバル・データリンク表示のコンテキストに表示されるメタデータのキー名と値のマップが格納されています。このマップから名前と値を挿入するには、``{{properties.<your_property_name>}}`` を使用します。プロパティ名にピリオドがある場合は、値を角括弧で囲みます。例えば、"
+"``{{properties.[<property.name>]}}``。"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:132
 msgid "If you select a :strong:`Link to` value of :strong:`Custom URL` or :strong:`Kibana`, the :strong:`Time Format` field appears. Set this field to select the timestamp format used for the global data link's starting and ending timestamps. Setting this field also helps ensure compatibility with the external system you are linking to. Select one of the following time formats:"
@@ -670,12 +672,13 @@ msgid ":strong:`Unix Time: epoch seconds`"
 msgstr ":strong:`ユニックス時間：エポック秒`"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:140
+#, fuzzy
 msgid ""
-"If you select a :strong:`Link to` value of :strong:`Custom URL`, :strong:`Splunk`, or :strong:`Kibana`, the :strong:`Minimum Time Window` field appears. The time window is the interval during which the system captured the chart, dashboard, service map, or trace data. If this interval is shorter than the minimum time window value you select here, the global data link adjusts the start time to an earlier time so "
-"theinterval is as long as the minimum time window."
+"If you select a :strong:`Link to` value of :strong:`Custom URL`, :strong:`Splunk`, or :strong:`Kibana`, the :strong:`Minimum Time Window` field appears. The time window is the interval during which the system captured the chart, dashboard, service map, or trace data. If this interval is shorter than the minimum time window value you select here, the global data link adjusts the start time to an earlier time "
+"sothe interval is as long as the minimum time window."
 msgstr ""
-" :strong:`Link to` の値として :strong:`Custom URL`、:strong:`Splunk`、または :strong:`Kibana` を選択すると、:strong:`Minimum Time Window` フィールドが表示されます。タイムウィンドウは、システムがチャート、ダッシュボード、サービスマップ、またはトレースデータをキャプチャした間隔です。この間隔がここで選択した最小時間ウィンドウ値より短い場合、グローバル・データリンクは開始時刻を早い時刻に調整し、間隔が最小時間ウィンドウと"
-"同じ長さになるようにします。"
+" :strong:`Link to` の値として :strong:`Custom URL`、:strong:`Splunk`、または :strong:`Kibana` を選択すると、:strong:`Minimum Time Window` フィールドが表示されます。タイムウィンドウは、システムがチャート、ダッシュボード、サービスマップ、またはトレースデータをキャプチャした間隔です。この間隔がここで選択した最小時間ウィンドウ値より短い場合、グローバル・データリンクは開始時刻を早い時刻に調整し、間隔が最小時間ウィンド"
+"ウと同じ長さになるようにします。"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:142
 msgid "If you select a :strong:`Link to` value of :strong:`Custom URL`, :strong:`Splunk`, or :strong:`Kibana`, the :strong:`Property mapping` options appear. Use property mapping if your :strong:`URL` value contains Splunk Observability Cloud key names and values that are referred to differently in the external system you're linking to."
@@ -683,11 +686,11 @@ msgstr ":strong:`Custom URL`、:strong:`Splunk`、または :strong:`Kibana` の
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:144
 msgid ""
-"For example, you can use property mapping to map a Splunk Observability Cloud key name, such as :strong:`host`, to an external system key name, such as :strong:`hostname`. You can also use property mapping to map an Observability key name, such as :strong:`host`, and key value, such as :strong:`west-internal-123456`, to an external system key name, such as :strong:`hostname`, and key value, such as :strong:`123456-"
-"west-int`."
+"For example, you can use property mapping to map a Splunk Observability Cloud key name, such as :strong:`host`, to an external system key name, such as :strong:`hostname`. You can also use property mapping to map an Observability key name, such as :strong:`host`, and key value, such as :strong:`west-internal-123456`, to an external system key name, such as :strong:`hostname`, and key value, such as :strong:"
+"`123456-west-int`."
 msgstr ""
-"例えば、プロパティマッピングを使用して、:strong:`host` のような Splunk Observability Cloud のキー名を、:strong:`hostname` のような外部システムのキー名にマッピングすることができます。また、プロパティマッピングを使用して、:strong:`host` などの Observability キー名と、:strong:`west-internal-123456` などのキー値を、:strong:`hostname` などの外部システムキー名と、:strong:`123456-west-int` などのキー値にマッピングすることも"
-"できます。"
+"例えば、プロパティマッピングを使用して、:strong:`host` のような Splunk Observability Cloud のキー名を、:strong:`hostname` のような外部システムのキー名にマッピングすることができます。また、プロパティマッピングを使用して、:strong:`host` などの Observability キー名と、:strong:`west-internal-123456` などのキー値を、:strong:`hostname` などの外部システムキー名と、:strong:`123456-west-int` などのキー値にマッピングするこ"
+"ともできます。"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:146
 msgid "To use property mapping, select :strong:`Choose a Property` to select a Splunk Observability Cloud key name or key name and value pair. Then, enter the external key name or key name and value pair that you want to map to in the :strong:`External Term` field."
@@ -707,7 +710,7 @@ msgstr "データリンクを含むアラートメッセージを表示する場
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:154
 msgid "When you are on a dashboard, select :guilabel:`Data Links` from the :guilabel:`Dashboard actions` menu. If there are existing global data links defined for your organization, you can see a message to that effect on the :strong:`Data Links` tab. Select :guilabel:`Global Data Links`."
-msgstr "ダッシュボードで、:guilabel:`Dashboard actions` メニューから :guilabel:`Data Links` を選択します。組織に既存のグローバル・データリンクが定義されている場合は、:strong:`[データリンク]` タブにその旨のメッセージが表示されます。:guilabel:`Global Data Links` を選択します。"
+msgstr "ダッシュボードで、 :guilabel:`Dashboard actions` メニューから :guilabel:`Data Links` を選択します。組織に既存のグローバル・データリンクが定義されている場合は、:strong:`[データリンク] ` タブにその旨のメッセージが表示されます。 :guilabel:`Global Data Links` を選択します。"
 
 #: ../../metrics-and-metadata/link-metadata-to-content.rst:156
 msgid "When you view a list in a Splunk Infrastructure Monitoring navigator, select the :guilabel:`Actions` menu for any property and select :guilabel:`Configure data links`."
@@ -838,245 +841,144 @@ msgstr "メトリクスカテゴリ"
 msgid "These are the available categories for metrics in Splunk Observability Cloud:"
 msgstr "これらは、Splunk Observability Cloudで利用可能なメトリクスのカテゴリです。"
 
-#: ../../_includes/metric-categories.rst:6
-msgid ":strong:`Category type`"
-msgstr ":strong:`カテゴリ`"
+#: ../../_includes/metric-classes.rst:6
+#, fuzzy
+msgid ":strong:`Billing class`"
+msgstr ":strong:`請求分類`"
 
-#: ../../_includes/metric-categories.rst:7 ../../metrics-and-metadata/metric-types.rst:20 ../../metrics-and-metadata/metrics-dimensions-mts.rst:18 ../../metrics-and-metadata/metrics.rst:182
-msgid ":strong:`Description`"
-msgstr ":strong:`説明`"
+#: ../../_includes/metric-classes.rst:7
+#, fuzzy
+msgid ":strong:`Metrics included`"
+msgstr ":strong:`含まれるメトリクス`"
 
-#: ../../_includes/metric-categories.rst:9
-msgid "0"
-msgstr "0"
+#: ../../_includes/metric-classes.rst:8
+#, fuzzy
+msgid "Custom metrics"
+msgstr "カスタムメトリクス"
 
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "No information about the category type of the metric."
-msgstr "メトリクスのカテゴリタイプに関する情報はありません。"
-
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "Note: Category type information for metrics is only available after 03/16/2023. Any metrics created before that date has category type ``0``."
-msgstr "注： メトリクスのカテゴリタイプ情報は、2023年3月16日以降にのみ利用可能になります。それ以前に作成されたメトリクスのカテゴリタイプは ``0`` です。"
-
-#: ../../_includes/metric-categories.rst:13
-msgid "1"
-msgstr "1"
-
-#: ../../_includes/metric-categories.rst:14
-msgid "Host"
-msgstr "ホスト"
-
-#: ../../_includes/metric-categories.rst:16
-msgid "2"
-msgstr "2"
-
-#: ../../_includes/metric-categories.rst:17
-msgid "Container"
-msgstr "コンテナ"
-
-#: ../../_includes/metric-categories.rst:19
-msgid "3"
-msgstr "3"
-
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "Custom"
-msgstr "カスタム"
-
-#: ../../metrics-and-metadata/metric-categories.rst
+#: ../../_includes/metric-classes.rst:9
 #, fuzzy
 msgid "Metrics reported to Splunk Observability Cloud outside of those reported by default, such as host, container, or bundled metrics. Custom metrics might result in increased data ingest costs."
 msgstr "ホスト、コンテナ、バンドルメトリクスなど、デフォルトで報告される以外のメトリクスがSplunk Observability Cloudに報告されます。カスタムメトリクスを使用すると、データ取り込みコストが増加する場合があります。"
 
-#: ../../_includes/metric-categories.rst:23
-msgid "4"
-msgstr "4"
-
-#: ../../_includes/metric-categories.rst:24
-msgid "Hi-resolution"
-msgstr "高解像度"
-
-#: ../../_includes/metric-categories.rst:26
-msgid "5"
-msgstr "5"
-
-#: ../../_includes/metric-categories.rst:27
-msgid "Internal"
-msgstr "内部"
-
-#: ../../_includes/metric-categories.rst:29
-msgid "6"
-msgstr "6"
-
-#: ../../_includes/metric-categories.rst:30
-msgid "Tracing metrics"
-msgstr "トレースメトリクス"
-
-#: ../../_includes/metric-categories.rst:32
-msgid "7"
-msgstr "7"
-
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "Bundled"
-msgstr "バンドル"
-
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "In host-based subscription plans, additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers."
-msgstr "ホストベースのサブスクリプションプランでは、特定のホストまたはコンテナに帰属しない、Infrastructure Monitoringパブリッククラウド インテグレーションを通じて追加のメトリクスが送信されます。"
-
-#: ../../_includes/metric-categories.rst:36
-msgid "8"
-msgstr "8"
-
-#: ../../_includes/metric-categories.rst:37
-msgid "APM hosts"
-msgstr "APMホスト"
-
-#: ../../_includes/metric-categories.rst:39
-msgid "9"
-msgstr "9"
-
-#: ../../_includes/metric-categories.rst:40
-msgid "APM container"
-msgstr "APMコンテナ"
-
-#: ../../_includes/metric-categories.rst:42
-msgid "10"
-msgstr "10"
-
-#: ../../_includes/metric-categories.rst:43
-msgid "APM identity"
-msgstr "APM ID"
-
-#: ../../_includes/metric-categories.rst:45
-msgid "11"
-msgstr "11"
-
-#: ../../_includes/metric-categories.rst:46
-msgid "APM bundled metrics"
-msgstr "APMバンドル メトリクス"
-
-#: ../../_includes/metric-categories.rst:48
-msgid "12"
-msgstr "12"
-
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "APM Troubleshooting MetricSets"
-msgstr "APM Troubleshooting MetricSets"
-
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "This category is not part of the report."
-msgstr "このカテゴリはレポートには含まれていません。"
-
-#: ../../_includes/metric-categories.rst:52
-msgid "13"
-msgstr "13"
-
-#: ../../_includes/metric-categories.rst:53
+#: ../../_includes/metric-classes.rst:10
 msgid "APM Monitoring MetricSets"
 msgstr "APM Monitoring MetricSets"
 
-#: ../../_includes/metric-categories.rst:55
-msgid "14"
-msgstr "14"
+#: ../../_includes/metric-classes.rst:11
+msgid "Includes metrics from APM Monitoring MetricSets. See :ref:`apm-metricsets` for more information."
+msgstr "APM Monitoring MetricSetsのメトリクスを含みます。詳細は、:ref:`apm-metricsets` を参照してください。"
 
-#: ../../_includes/metric-categories.rst:56
-msgid "Infrastructure Monitoring function"
-msgstr "Infrastructure Monitoringの機能"
-
-#: ../../_includes/metric-categories.rst:58
-msgid "15"
-msgstr "15"
-
-#: ../../_includes/metric-categories.rst:59
-msgid "APM function"
-msgstr "APM機能"
-
-#: ../../_includes/metric-categories.rst:61
-msgid "16"
-msgstr "16"
-
-#: ../../metrics-and-metadata/metric-categories.rst
-msgid "RUM Troubleshooting MetricSets"
-msgstr "RUM Troubleshooting MetricSets"
-
-#: ../../_includes/metric-categories.rst:65
-msgid "17"
-msgstr "17"
-
-#: ../../_includes/metric-categories.rst:66
+#: ../../_includes/metric-classes.rst:12
 msgid "RUM Monitoring MetricSets"
 msgstr "RUM Monitoring MetricSets"
 
-#: ../../_includes/metric-categories.rst:68
-msgid "18"
-msgstr "18"
+#: ../../_includes/metric-classes.rst:13
+msgid "Includes metrics from RUM Monitoring MetricSets. See :ref:`rum-custom-indexed-tags` for more information."
+msgstr "RUM Monitoring MetricSetsのメトリクスを含みます。詳細は、:ref:`rum-custom-indexed-tags` を参照してください。"
 
-#: ../../_includes/metric-categories.rst:69
-msgid "Network Explorer metrics"
-msgstr "Network Explorerメトリクス"
+#: ../../_includes/metric-classes.rst:14
+msgid "Default/bundled metrics (Infrastructure)"
+msgstr "デフォルトのメトリクス/バンドルメトリクス（インフラストラクチャ）"
 
-#: ../../_includes/metric-categories.rst:71
-msgid "19"
-msgstr "19"
+#: ../../_includes/metric-classes.rst:15 ../../_includes/metric-classes.rst:20
+msgid "Host"
+msgstr "ホスト"
 
-#: ../../_includes/metric-categories.rst:72
-msgid "Runtime metrics"
-msgstr "ランタイム メトリクス"
+#: ../../_includes/metric-classes.rst:16 ../../_includes/metric-classes.rst:21
+msgid "Container"
+msgstr "コンテナ"
 
-#: ../../_includes/metric-categories.rst:74
-msgid "20"
-msgstr "20"
+#: ../../_includes/metric-classes.rst:17 ../../_includes/metric-classes.rst:23
+msgid "Bundled"
+msgstr "バンドル"
 
-#: ../../_includes/metric-categories.rst:75
-msgid "Synthetics metrics"
-msgstr "Syntheticsメトリクス"
+#: ../../_includes/metric-classes.rst:18
+#, fuzzy
+msgid "Additional metrics sent through infrastructure monitoring public cloud integrations that aren't attributed to specific hosts or containers."
+msgstr "インフラストラクチャ監視のパブリッククラウドインテグレーションを通じて送信される、特定のホストやコンテナに帰属しない追加のメトリクス。"
 
-#: ../../_includes/metric-categories.rst:77
-msgid "In subscription plans based on metric time series (MTS), all metrics are categorized as custom metrics and billed accordingly."
-msgstr "メトリック時系列（MTS）に基づくサブスクリプションプランでは、すべてのメトリクスはカスタムメトリクスに分類され、それに応じて課金されます。"
+#: ../../_includes/metric-classes.rst:19
+#, fuzzy
+msgid "Default/bundled metrics (APM)"
+msgstr "デフォルトのメトリクス/バンドルメトリクス（APM）"
 
-#: ../../metrics-and-metadata/metric-categories.rst:16
+#: ../../_includes/metric-classes.rst:22
+#, fuzzy
+msgid "Identity"
+msgstr "ID"
+
+#: ../../_includes/metric-classes.rst:24
+#, fuzzy
+msgid "Tracing"
+msgstr "トレース"
+
+#: ../../_includes/metric-classes.rst:25
+#, fuzzy
+msgid "Runtime"
+msgstr "Runtime"
+
+#: ../../_includes/metric-classes.rst:26
+#, fuzzy
+msgid "Synthetics"
+msgstr "Synthetics"
+
+#: ../../_includes/metric-classes.rst:27
+#, fuzzy
+msgid "Other metrics"
+msgstr "その他のメトリクス"
+
+#: ../../_includes/metric-classes.rst:28
+#, fuzzy
+msgid "Internal metrics"
+msgstr "仮想メトリクスス"
+
+#: ../../metrics-and-metadata/metric-categories.rst:15
+msgid "Usage analytics doesn't support APM Monitoring MetricSets, RUM Monitoring MetricSets, or default/bundles APM metrics, so you can't view these metrics in usage analytics. To learn more about usage analytics, see :ref:`metrics-usage-analytics-intro`."
+msgstr "使用状況分析では、APM Monitoring MetricSets、RUM Monitoring MetricSets、またはデフォルト/バンドル APM メトリクスはサポートされていないため、使用状況分析でこれらのメトリクスを表示することはできません。使用状況分析の詳細については、:ref:`metrics-usage-analytics-intro` を参照してください。"
+
+#: ../../metrics-and-metadata/metric-categories.rst:18
 msgid "Identify and track the category of a metric"
 msgstr "メトリクスのカテゴリを特定し、追跡する"
 
-#: ../../metrics-and-metadata/metric-categories.rst:18
+#: ../../metrics-and-metadata/metric-categories.rst:20
 msgid "In :ref:`host-based plans <monitor-imm-billing-usage>`, the category of a metric might impact billing."
 msgstr ":ref:`ホストベースのプラン<monitor-imm-billing-usage>` では、メトリクスのカテゴリが課金に影響する可能性があります。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:20
+#: ../../metrics-and-metadata/metric-categories.rst:22
 #, fuzzy
 msgid "To keep track of the type of metrics you're ingesting, Splunk Observability Cloud provides you with different tools and reports:"
 msgstr "インジェストしているメトリクスのタイプを追跡するために、Splunk Observability Cloudはさまざまなツールとレポートを提供します。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:22
+#: ../../metrics-and-metadata/metric-categories.rst:24
 msgid ":ref:`custom-metric-report`. It shows the information on MTS associated with data points sent from hosts or containers, as well as information related to custom, high-resolution, and bundled MTS, for a specified date."
 msgstr ":ref:`custom-metric-report`。.ホストまたはコンテナから送信されたデータポイントに関連する MTS の情報、およびカスタム、高解像度、バンドルされた MTS に関連する情報を、指定された日付について表示します。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:23
+#: ../../metrics-and-metadata/metric-categories.rst:25
 msgid "Metric Pipeline Management's :ref:`usage report <metrics-usage-report>`. It gives a detailed breakdown of your MTS creation and usage."
 msgstr "Metric Pipeline Management の :ref:`使用レポート<metrics-usage-report>`。このレポートには、MTS の作成と使用に関する詳細な内訳が記載されています。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:24
+#: ../../metrics-and-metadata/metric-categories.rst:26
 msgid "Track specific org metrics with custom metric information. See more in :ref:`org-metrics`."
 msgstr "カスタムメトリクス情報で特定の組織メトリクスを追跡します。詳しくは :ref:`org-metrics` を参照してください。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:27
+#: ../../metrics-and-metadata/metric-categories.rst:29
 msgid "Use Signalflow to look for a metric's category"
 msgstr "SignalFlowを使ってメトリクスのカテゴリを探す"
 
-#: ../../metrics-and-metadata/metric-categories.rst:29
+#: ../../metrics-and-metadata/metric-categories.rst:31
 msgid "You can use SignalFlow to query for the ``sf_mtsCategoryType`` dimension, which indicates the metric category."
 msgstr "SignalFlowを使用して、メトリクスのカテゴリを示す ``sf_mtsCategoryType`` ディメンションをクエリできます。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:31
+#: ../../metrics-and-metadata/metric-categories.rst:33
 msgid "For example, to look for the top 10 custom metrics you're ingesting, use the following query with the ``*`` character:"
 msgstr "例えば、インジェストしているカスタムメトリクスのトップ10を検索するには、``*`` 文字を使用した次のクエリを使用します。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:37
+#: ../../metrics-and-metadata/metric-categories.rst:39
 msgid "To only look at specific metrics, use their specific metric name."
 msgstr "特定のメトリクスだけを見るには、そのメトリクス名を使用します。"
 
-#: ../../metrics-and-metadata/metric-categories.rst:39
+#: ../../metrics-and-metadata/metric-categories.rst:41
 msgid "Learn more in :ref:`signalflow-analytics-intro`."
 msgstr "詳しくは :ref:`signalflow-analytics-intro` を参照してください。"
 
@@ -1256,8 +1158,8 @@ msgid ""
 "In this example, all of these metrics have a dimension key called :code:`hostname` with values such as analytics-1, analytics-2, and so forth. These metrics also have a customer dimension key with values org-x, org-y, and so on. The dimensions provide an infrastructure-focused or a customer-focused view of the analytics service usage. For more information on gauge metrics, see :ref:`Identify metric types <metric-"
 "types>`."
 msgstr ""
-"この例では、これらのメトリクスはすべて、analytics-1、analytics-2 などの値を持つ、:code:`hostname` というディメンションキーを持ちます。これらのメトリクスは、org-x、org-y などの値を持つ Customer ディメンションキーも持っています。このディメンションは、分析サービスの使用状況について、インフラストラクチャに重点を置いたビュー、または顧客に重点を置いたビューを提供します。ゲージメトリクスの詳細については、:ref:`メトリクスタ"
-"イプの識別 <metric-types>` を参照してください。"
+"この例では、これらのメトリクスはすべて、analytics-1、analytics-2 などの値を持つ、:code:`hostname` というディメンションキーを持ちます。これらのメトリクスは、org-x、org-y などの値を持つ Customer ディメンションキーも持っています。このディメンションは、分析サービスの使用状況について、インフラストラクチャに重点を置いたビュー、または顧客に重点を置いたビューを提供します。ゲージメトリクスの詳細については、:ref:`メトリク"
+"スタイプの識別 <metric-types>` を参照してください。"
 
 #: ../../metrics-and-metadata/metric-names.rst:104
 msgid "Start with a domain or namespace that the metric belongs to, such as analytics or web."
@@ -1335,7 +1237,7 @@ msgstr "アンダースコア文字(_)で始まってはならない。"
 #: ../../metrics-and-metadata/metric-names.rst:134
 #, fuzzy
 msgid "Must not start with the prefix :code:`sf_`, except for dimensions defined by Splunk Observability Cloud such as :code:`sf_hires`."
-msgstr ":code:`sf_hires` のようなSplunk Observability Cloudで定義されたディメンションを除き、接頭辞 :code:`sf_` で始まってはなりません。"
+msgstr ":code:`sf_hires` のようなSplunk Observability Cloudで定義されたディメンションを除き、プレフィックス :code:`sf_` で始まってはなりません。"
 
 #: ../../metrics-and-metadata/metric-names.rst:136
 msgid "Dimension values are UTF-8 strings with a maximum length of 256 UTF-8 characters (1024 bytes)."
@@ -1402,12 +1304,13 @@ msgid "Send low-cardinality data only in metric names or dimension key names. Lo
 msgstr "カーディナリティの低いデータは、メトリクス名またはディメンションキー名でのみ送信します。低基数性データには、少数の明確な値があります。例えば、HTTP 要求エラーの数をレポートするゲージメトリクスのメトリクス名 ``web.http.error.count`` の値は 1 つです。この名前も読みやすく、自明です。ゲージメトリクスの詳細については、:ref:`メトリクスタイプの識別<metric-types>` を参照してください。"
 
 #: ../../metrics-and-metadata/metric-names.rst:171
+#, fuzzy
 msgid ""
 "High-cardinality data has a large number of distinct values. For example, timestamps are high-cardinality data. Only send this kind of high-cardinality data in dimension values. If you send high-cardinality data in metric names, Infrastructure Monitoring might not ingest the data. Infrastructure Monitoring rejects metrics with names that contain timestamps. High-cardinality data does have legitimate uses. "
 "Forexample, in containerized environments, ``container_id`` is usually a high-cardinality field. If you include ``container_id`` in a metric name such as :code:`system.cpu.utilization.<container_id>`, instead of having one MTS, you have as many MTS as you have containers."
 msgstr ""
-"カーディナリティの高いデータは、明確な値の数が多い。例えば、タイムスタンプは高基数データです。この種の高基準データは、ディメンション値でのみ送信してください。カーディナリティの高いデータをメトリクス名で送信すると、Infrastructure Monitoring はそのデータを取り込まない場合があります。Infrastructure Monitoring は、タイムスタンプを含む名前のメトリクスを拒否します。カーディナリティの高いデータには正当な用途があります。たと"
-"えば、コンテナ化された環境では、 ``container_id``  は通常高カーディナリティのフィールドです。:code:`system.cpu.utilization.<container_id>` などのメトリクス名に ``container_id``  を含めると、MTS が 1 つではなく、コンテナの数だけ MTS が存在することになります。"
+"カーディナリティの高いデータは、明確な値の数が多い。例えば、タイムスタンプは高基数データです。この種の高基準データは、ディメンション値でのみ送信してください。カーディナリティの高いデータをメトリクス名で送信すると、Infrastructure Monitoring はそのデータを取り込まない場合があります。Infrastructure Monitoring は、タイムスタンプを含む名前のメトリクスを拒否します。カーディナリティの高いデータには正当な用途があります。"
+"たとえば、コンテナ化された環境では、``container_id`` は通常高カーディナリティのフィールドです。``container_id`` などのメトリクス名に :code:`system.cpu.utilization.<container_id>` を含めると、MTS が 1 つではなく、コンテナの数だけ MTS が存在することになります。"
 
 #: ../../metrics-and-metadata/metric-names.rst:174
 msgid "When to use metrics or dimensions"
@@ -1426,12 +1329,13 @@ msgid "To track a measurable value using two different metric types, use two met
 msgstr "2つの異なるメトリクスタイプを使用して測定可能な値を追跡するには、2つのディメンションを持つ1つのメトリクスではなく、2つのメトリクスを使用します。"
 
 #: ../../metrics-and-metadata/metric-names.rst:183
+#, fuzzy
 msgid ""
-"For example, suppose you have a :code:`network_latency` measurement that you want to send as two different metric types: a gauge metric (the average network latency in milliseconds) and a counter metric (the total number of latency values sent in an interval). In this case, send the measurement using two different metric names, such as :code:`network_latency.average` and :code:`network_latency.count`, instead of "
-"onemetric name with two dimensions ``type:average`` and ``type:count``."
+"For example, suppose you have a :code:`network_latency` measurement that you want to send as two different metric types: a gauge metric (the average network latency in milliseconds) and a counter metric (the total number of latency values sent in an interval). In this case, send the measurement using two different metric names, such as :code:`network_latency.average` and :code:`network_latency.count`, instead "
+"ofone metric name with two dimensions ``type:average`` and ``type:count``."
 msgstr ""
-"たとえば、:code:`network_latency` の測定があり、ゲージメトリクス (ミリ秒単位の平均ネットワーク待ち時間) とカウンターメトリクス (ある間隔で送信された待ち時間値の合計数) の 2 つの異なるメトリクスタイプとして送信したいとします。この場合、``type:average`` と ``type:count`` の 2 つのディメンションを持つ 1 つのメトリクス名ではなく、:code:`network_latency.average` と :code:`network_latency.count` のような 2 つの異なるメトリ"
-"クス名を使用して測定を送信します。"
+"たとえば、:code:`network_latency` の測定があり、ゲージメトリクス (ミリ秒単位の平均ネットワーク待ち時間) とカウンターメトリクス (ある間隔で送信された待ち時間値の合計数) の 2 つの異なるメトリクスタイプとして送信したいとします。この場合、:code:`network_latency.average` と :code:`network_latency.count` の 2 つのディメンションを持つ 1 つのメトリクス名ではなく、``type:average`` と ``type:count`` のような 2 つの異なるメ"
+"トリクス名を使用して測定を送信します。"
 
 #: ../../metrics-and-metadata/metric-names.rst:188
 msgid "Type of information suitable for dimensions"
@@ -1572,6 +1476,10 @@ msgstr "次の表は、Splunk Observability Cloudでサポートされるメト�
 msgid ":strong:`Metric`"
 msgstr ":strong:`メトリクス`"
 
+#: ../../metrics-and-metadata/metric-types.rst:20 ../../metrics-and-metadata/metrics-dimensions-mts.rst:18 ../../metrics-and-metadata/metrics.rst:182
+msgid ":strong:`Description`"
+msgstr ":strong:`説明`"
+
 #: ../../metrics-and-metadata/metric-types.rst:21
 msgid ":strong:`Rollup`"
 msgstr ":strong:`ロールアップ`"
@@ -1627,11 +1535,11 @@ msgstr "ヒストグラム"
 #: ../../metrics-and-metadata/metric-types.rst:35
 #, fuzzy
 msgid ""
-"The type of the metric determines which default :strong:`rollup` function Splunk Observability Cloud applies to summarize individual incoming data points to match a specified data resolution. A rollup is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Splunk Observability Cloud applies rollups after it retrieves the data "
-"pointsfrom storage but before it applies analytics functions. To learn more about rollups and data resolution, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts."
+"The type of the metric determines which default :strong:`rollup` function Splunk Observability Cloud applies to summarize individual incoming data points to match a specified data resolution. A rollup is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Splunk Observability Cloud applies rollups after it retrieves the "
+"datapoints from storage but before it applies analytics functions. To learn more about rollups and data resolution, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts."
 msgstr ""
-"メトリクスのタイプによって、Splunk Observability Cloudがどのデフォルト :strong:`ロールアップ` 関数を適用して、指定されたデータ分解能に一致するように個々の受信データポイントを要約するかが決まります。ロールアップは、ある期間にわたるメトリック時系列（MTS）のすべてのデータポイントを取得し、単一のデータポイントを出力する統計関数です。Splunk Observability Cloudは、ストレージからデータポイントを取得した後、分析機能を適用す"
-"る前にロールアップを適用します。ロールアップとデータ解決の詳細については、「データ解像度」の :ref:`ロールアップ<rollups>` とチャートのロールアップを参照してください。"
+"メトリクスのタイプによって、Splunk Observability Cloudがどのデフォルト :strong:`ロールアップ` 関数を適用して、指定されたデータ分解能に一致するように個々の受信データポイントを要約するかが決まります。ロールアップは、ある期間にわたるメトリック時系列（MTS）のすべてのデータポイントを取得し、単一のデータポイントを出力する統計関数です。Splunk Observability Cloudは、ストレージからデータポイントを取得した後、分析機能を適"
+"用する前にロールアップを適用します。ロールアップとデータ解決の詳細については、「データ解像度」の :ref:`ロールアップ<rollups>` とチャートのロールアップを参照してください。"
 
 #: ../../metrics-and-metadata/metric-types.rst:37
 #, fuzzy
@@ -1686,8 +1594,8 @@ msgid ""
 "Splunk Observability Cloud applies the SignalFlow ``delta()`` function to data points for cumulative counter metrics. When you specify a ten second resolution for a line graph plot, and Splunk Observability Cloud is receiving data for the metric every second, each point on the line represents the change between the first data point received and the 10th data point received. As a result, you don't have to "
 "createcustom SignalFlow to apply the ``delta()`` function, and the plot line represents variations."
 msgstr ""
-"Splunk Observability Cloudは、累積カウンターメトリクスのデータ ポイントにSignalFlow ``delta()`` 関数を適用します。折れ線グラフのプロットに10秒の解像度を指定し、Splunk Observability Cloudがメトリクスのデータを1秒ごとに受信している場合、折れ線上の各ポイントは、最初に受信したデータポイントと10番目に受信したデータポイントとの間の変化を表します。その結果、``delta()``  関数を適用するためにカスタムSignalFlowを作成する必要は"
-"なく、プロット線は変動を表します。"
+"Splunk Observability Cloud は、累積カウンターメトリクスのデータ ポイントに SignalFlow ``delta()`` 関数を適用します。折れ線グラフのプロットに 10 秒の解像度を指定し、Splunk Observability Cloud がメトリクスのデータを 1 秒ごとに受信している場合、折れ線上の各ポイントは、最初に受信したデータポイントと 10 番目に受信したデータポイントとの間の変化を表します。その結果、``delta()`` 関数を適用するためにカスタム SignalFlow を"
+"作成する必要はなく、プロット線は変動を表します。"
 
 #: ../../metrics-and-metadata/metric-types.rst:72 ../../metrics-and-metadata/metrics.rst:136
 msgid "Histograms"
@@ -1715,21 +1623,22 @@ msgid "Metrics, data points, and metric time series in Splunk Observability Clou
 msgstr "Splunk Observability Cloudのメトリクス、データポイント、メトリック時系列"
 
 #: ../../metrics-and-metadata/metrics.rst:11
+#, fuzzy
 msgid ""
-"In Splunk Observability Cloud, metric data consists of a numerical measurement called a metric, the metric type, and one or more dimensions. Each piece of data in this form is a :ref:`data point <data-points>`. For example, a data point can be the CPU utilization of host ``server1`` with metric type ``gauge``, metric value ``0.7``, dimensions ``\"hostname\":\"server1\"`` and ``\"host_location\":\"Tokyo\"``, and "
-"thetimestamp ``1557225030000``."
+"In Splunk Observability Cloud, metric data consists of a numerical measurement called a metric, the metric type, and one or more dimensions. Each piece of data in this form is a :ref:`data point <data-points>`. For example, a data point can be the CPU utilization of host ``server1`` with metric type ``gauge``, metric value ``0.7``, dimensions ``\"hostname\":\"server1\"`` and ``\"host_location\":\"Tokyo\"``, "
+"andthe timestamp ``1557225030000``."
 msgstr ""
-"Splunk Observability Cloudでは、メトリクスデータはメトリクスと呼ばれる数値測定、メトリクスタイプ、および1つ以上のディメンションで構成されます。この形式の各データは、:ref:`データポイント<data-points>` です。たとえば、データポイントは、メトリクスタイプ ``gauge``、メトリクス値 ``0.7``、ディメンション ``\"hostname\":\"server1\"`` および ``\"host_location\":\"Tokyo\"``、タイムスタンプ ``1557225030000`` を持つホスト "
-"``server1`` の CPU 使用率になります。"
+"Splunk Observability Cloud では、メトリクスデータはメトリクスと呼ばれる数値測定、メトリクスタイプ、および 1 つ以上のディメンションで構成されます。この形式の各データは、:ref:`データポイント<data-points>` です。たとえば、データポイントは、メトリクスタイプ ``server1``、メトリクス値 ``gauge``、ディメンション ``0.7`` および ``\"hostname\":\"server1\"``、タイムスタンプ ``\"host_location\":\"Tokyo\"`` を持つホスト "
+"``1557225030000`` の CPU 使用率になります。"
 
 #: ../../metrics-and-metadata/metrics.rst:13
 #, fuzzy
 msgid ""
-"A :ref:`metric time series (MTS) <metric-time-series>` contains all the data points that have the same metric name, metric type, and set of dimensions. Splunk Observability Cloud automatically creates MTS from incoming data points. For example, the following data points for the ``cpu.utilization`` metric with the same ``\"hostname\":\"server1\"`` and ``\"location\":\"Tokyo\"`` dimensions, but with different "
-"valuesand timestamps, make up a single MTS."
+"A :ref:`metric time series (MTS) <metric-time-series>` contains all the data points that have the same metric name, metric type, and set of dimensions. Splunk Observability Cloud automatically creates MTS from incoming data points. For example, the following data points for the ``cpu.utilization`` metric with the same ``\"hostname\":\"server1\"`` and ``\"location\":\"Tokyo\"`` dimensions, but with "
+"differentvalues and timestamps, make up a single MTS."
 msgstr ""
-" :ref:`メトリック時系列（MTS）<metric-time-series>` には、同じメトリクス名、メトリクスタイプ、ディメンションのセットを持つすべてのデータポイントが含まれます。Splunk Observability Cloudは、入力されたデータポイントから自動的にMTSを作成します。たとえば、``\"hostname\":\"server1\"`` および ``\"location\":\"Tokyo\"`` ディメンションが同じで、値とタイムスタンプが異なる ``cpu.utilization`` メトリクスの次のデータポイントは、1"
-"つのMTSを構成します。"
+" :ref:`メトリック時系列（MTS）<metric-time-series>` には、同じメトリクス名、メトリクスタイプ、ディメンションのセットを持つすべてのデータポイントが含まれます。Splunk Observability Cloudは、入力されたデータポイントから自動的にMTSを作成します。たとえば、``cpu.utilization`` および ``\"hostname\":\"server1\"`` ディメンションが同じで、値とタイムスタンプが異なる ``\"location\":\"Tokyo\"`` メトリクスの次のデータポイント"
+"は、1つのMTSを構成します。"
 
 #: ../../metrics-and-metadata/metrics.rst:108
 msgid "Metrics"
@@ -1747,7 +1656,7 @@ msgstr "メトリクスタイプ"
 msgid "There are three types of metrics: gauge, cumulative counter, and counter. See more in :ref:`metric-types`."
 msgstr "メトリクスには、ゲージ、累積カウンター、カウンターの3種類があります。詳しくは :ref:`metric-types` を参照してください。"
 
-#: ../../metrics-and-metadata/metrics.rst:125
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:69 ../../metrics-and-metadata/metrics-usage-analytics.rst:107 ../../metrics-and-metadata/metrics.rst:125
 msgid "Description"
 msgstr "説明"
 
@@ -1875,7 +1784,7 @@ msgstr "メトリクスタイプの詳細については、:ref:`metric-types` �
 msgid "One of three metric types: ``counter``, ``cumulative counter``, or ``gauge``."
 msgstr "3つのメトリクスタイプのうちの1つ： ``counter``、``cumulative counter`` または ``gauge``。"
 
-#: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:65 ../../metrics-and-metadata/metrics.rst:191
+#: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:65 ../../metrics-and-metadata/metrics-usage-analytics.rst:70 ../../metrics-and-metadata/metrics.rst:191
 msgid "Metric name"
 msgstr "メトリクス名"
 
@@ -1908,7 +1817,7 @@ msgstr "メトリクス値は、符号付き整数、浮動小数点数、また
 msgid "``99.98751``, ``0.7``, ``\"1.13\"``"
 msgstr "``99.98751``、``0.7``、``\"1.13\"``"
 
-#: ../../metrics-and-metadata/metrics-dimensions-mts.rst:21 ../../metrics-and-metadata/metrics-dimensions-mts.rst:58 ../../metrics-and-metadata/metrics-dimensions-mts.rst:182 ../../metrics-and-metadata/metrics.rst:203
+#: ../../metrics-and-metadata/metrics-dimensions-mts.rst:21 ../../metrics-and-metadata/metrics-dimensions-mts.rst:58 ../../metrics-and-metadata/metrics-dimensions-mts.rst:182 ../../metrics-and-metadata/metrics-usage-analytics.rst:109 ../../metrics-and-metadata/metrics.rst:203
 msgid "Dimensions"
 msgstr "ディメンション"
 
@@ -2083,7 +1992,7 @@ msgstr "メトリクスにメタデータを追加するには、:ref:`metrics-f
 msgid "For more tools to leverage your data, see the following:"
 msgstr "データを活用するためのツールについては、以下を参照してください："
 
-#: ../../metrics-and-metadata/metrics-dimensions-mts.rst:51 ../../metrics-and-metadata/metrics-landing.rst:65
+#: ../../metrics-and-metadata/metrics-dimensions-mts.rst:51 ../../metrics-and-metadata/metrics-landing.rst:66
 msgid ":ref:`data-visualization-charts`"
 msgstr ":ref:`data-visualization-charts`"
 
@@ -2159,7 +2068,7 @@ msgstr "最初の文字以降には、名前にアルファベット、数字、
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:85
 #, fuzzy
 msgid "Must not start with the prefix ``sf_``, except for dimensions defined by Splunk Observability Cloud such as ``sf_hires``."
-msgstr "``sf_hires`` のようなSplunk Observability Cloudで定義されたディメンションを除き、接頭辞 ``sf_`` で始まってはなりません。"
+msgstr "``sf_hires`` のようなSplunk Observability Cloudで定義されたディメンションを除き、プレフィックス ``sf_`` で始まってはなりません。"
 
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:92
 msgid "Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don't support multiple values."
@@ -2173,8 +2082,8 @@ msgstr "例えば、カスタムプロパティ  ``use: QA``  をメトリクス
 #, fuzzy
 msgid "When Splunk Observability Cloud assigns a different name to a dimension coming from an integration or monitor, the dimension also becomes a custom property as it is assigned to the metric after ingest. For example, the AWS EC2 integration sends the ``instance-id`` dimension, and Splunk Observability Cloud renames the dimension to ``aws_instance_id``. This renamed dimension is a custom property."
 msgstr ""
-"Splunk Observability Cloudがインテグレーションまたはモニタからのディメンションに別の名前を割り当てると、インジェスト後にそのディメンションがメトリクスに割り当てられるため、そのディメンションもカスタムプロパティになります。たとえば、AWS EC2インテグレーションは ``instance-id`` ディメンションを送信し、Splunk Observability Cloudはディメンションの名前を ``aws_instance_id`` に変更します。この名前を変更したディメンションは"
-"カスタムプロパティになります。"
+"Splunk Observability Cloudがインテグレーションまたはモニタからのディメンションに別の名前を割り当てると、インジェスト後にそのディメンションがメトリクスに割り当てられるため、そのディメンションもカスタムプロパティになります。たとえば、AWS EC2インテグレーションは ``instance-id`` ディメンションを送信し、Splunk Observability Cloudはディメンションの名前を ``aws_instance_id`` に変更します。この名前を変更したディメンショ"
+"ンはカスタムプロパティになります。"
 
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:98
 #, fuzzy
@@ -2184,7 +2093,7 @@ msgstr "Splunk Observability Cloudがカスタムプロパティを使用して�
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:100
 #, fuzzy
 msgid "You can also apply custom properties to tags. When you do this, anything that has that tag inherits the properties associated with the tag. For example, if you associate the ``tier:web`` custom property with the ``apps-team`` tag, Splunk Observability Cloud attaches the ``tier:web`` custom property to any metric or dimension that has the ``apps-team`` tag."
-msgstr "タグにカスタムプロパティを適用することもできます。これを実行すると、そのタグを持つものはすべて、タグに関連付けられたプロパティを継承します。例えば、  ``tier:web``  カスタムプロパティを  ``apps-team``  タグに関連付けると、Splunk Observability Cloudは  ``apps-team``  タグを持つメトリクスまたはディメンションに ``tier:web``  カスタムプロパティを付けます。"
+msgstr "タグにカスタムプロパティを適用することもできます。これを実行すると、そのタグを持つものはすべて、タグに関連付けられたプロパティを継承します。例えば、``tier:web`` カスタムプロパティを ``apps-team`` タグに関連付けると、Splunk Observability Cloudは ``tier:web`` タグを持つメトリクスまたはディメンションに ``apps-team`` カスタムプロパティを付けます。"
 
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:103
 msgid "Custom properties criteria"
@@ -2405,8 +2314,8 @@ msgid ""
 "Suppose you send in a metric called ``cpu.utilization`` from two data centers. Within each data center, you have 10 servers with unique names represented by these key-value pairs: ``host:server1``, ``host:server2``,..., ``host:server10``. However, your server names are only unique within a data center and not within your whole environment. You want to add more metadata for your data centers, ``dc:west`` and ``dc:"
 "east``, to help with the distinction. In this case, you need send metadata about the hosts and the data centers as dimensions because you know before ingesting that you want a separate MTS for every host in your environment."
 msgstr ""
-"2つのデータセンターから ``cpu.utilization`` というメトリクスを送信したとします。各データセンター内には、``host:server1``、``host:server2``、…、``host:server10`` というキーと値のペアで表される一意の名前を持つサーバーが10台あります。しかし、サーバー名はデータセンター内で一意であるだけで、環境全体で一意ではありません。``dc:west`` と ``dc:east`` というデータセンターのメタデータを追加して、区別できるようにしたいと思ってい"
-"ます。この場合、環境内の各ホストに個別のMTSが必要であることがインジェスト前に分かっているため、ホストとデータセンターに関するメタデータをディメンションとして送信する必要があります。"
+"2つのデータセンターから ``cpu.utilization`` というメトリクスを送信したとします。各データセンター内には、``host:server1``、``host:server2``、…、``host:server10`` というキーと値のペアで表される一意の名前を持つサーバーが10台あります。しかし、サーバー名はデータセンター内で一意であるだけで、環境全体で一意ではありません。``dc:west`` と ``dc:east`` というデータセンターのメタデータを追加して、区別できるようにしたいと思っ"
+"ています。この場合、環境内の各ホストに個別のMTSが必要であることがインジェスト前に分かっているため、ホストとデータセンターに関するメタデータをディメンションとして送信する必要があります。"
 
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:225
 msgid "Example: Tracking and comparing historical values"
@@ -2418,8 +2327,8 @@ msgid ""
 "Suppose you collect a metric called ``latency`` to measure the latency of requests made to your application. You already have a dimension for customers, but you also want to track the improvement between versions 1.0 and 2.0 of your application. In this case, you need to make ``version:1.0`` and ``version:2.0`` dimensions. If you make ``version:1.0`` a custom property, then change it to ``version:2.0`` when "
 "yourelease a new version of your application, you lose all the historical values for the ``latency`` MTS defined by ``version:1.0``."
 msgstr ""
-"アプリケーションへのリクエストの待ち時間を測定するために、``latency`` というメトリクスを収集するとします。顧客用のディメンションはすでにありますが、アプリケーションのバージョン1.0と2.0の間の改善も追跡したいとします。この場合、``version:1.0``   および  ``version:2.0``  ディメンションを作成する必要があります。``version:1.0``   をカスタムプロパティにし、アプリケーションの新バージョンをリリースするときにそれを "
-"``version:2.0``  に変更すると、``version:1.0``   で定義された ``latency``  MTSの履歴値がすべて失われます。"
+"アプリケーションへのリクエストの待ち時間を測定するために、``latency`` というメトリクスを収集するとします。顧客用のディメンションはすでにありますが、アプリケーションのバージョン 1.0 と 2.0 の間の改善も追跡したいとします。この場合、``version:1.0`` および  ``version:2.0`` ディメンションを作成する必要があります。``version:1.0`` をカスタムプロパティにし、アプリケーションの新バージョンをリリースするときにそれを "
+"``version:2.0`` に変更すると、``version:1.0`` で定義された ``latency`` MTS の履歴値がすべて失われます。"
 
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:229
 msgid "Use custom properties in the following situations:"
@@ -2443,8 +2352,8 @@ msgid ""
 "Suppose you collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific "
 "servicedimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS."
 msgstr ""
-" ``service.errors`` と呼ばれるメトリクスを収集し、顧客がいつサービスで問題に遭遇しているかを知るとします。このメトリクスのMTSは、顧客およびサービスディメンションによって既に一意に識別可能です。各顧客の各サービスのエスカレーションコンタクトをメトリクスに添付したいとします。この場合、特定のサービスディメンションまたは顧客ディメンションに、カスタムプロパティとしてエスカレーション連絡先を割り当てます。チームが成長し、再"
-"編成が行われると、このメタデータを変更できるようにします。また、顧客ディメンションとサービスディメンションはすでに個別のMTSを生成しているため、ディメンションとしてのエスカレーション連絡先は必要ありません。"
+" ``service.errors`` と呼ばれるメトリクスを収集し、顧客がいつサービスで問題に遭遇しているかを知るとします。このメトリクスのMTSは、顧客およびサービスディメンションによって既に一意に識別可能です。各顧客の各サービスのエスカレーションコンタクトをメトリクスに添付したいとします。この場合、特定のサービスディメンションまたは顧客ディメンションに、カスタムプロパティとしてエスカレーション連絡先を割り当てます。チームが成長"
+"し、再編成が行われると、このメタデータを変更できるようにします。また、顧客ディメンションとサービスディメンションはすでに個別の MTS を生成しているため、ディメンションとしてのエスカレーション連絡先は必要ありません。"
 
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:240
 msgid "Use Infrastructure Monitoring tags"
@@ -2461,7 +2370,7 @@ msgstr "例：カナリアテスト"
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:247
 #, fuzzy
 msgid "Suppose you do canary testing in your environment. When you create a canary deployment, you can use the ``canary`` tag to mark the hosts that received the new code, so you can identify their metrics and compare their performance to those hosts that didn't receive the new code. You don't need a key-value pair as there's only a single value, ``canary``."
-msgstr "自分の環境でカナリアテストを行うとします。カナリアデプロイを作成するとき、 ``canary``  タグを使って新しいコードを受け取ったホストをマークし、そのホストのメトリクスを特定して、新しいコードを受け取らなかったホストとパフォーマンスを比較することができます。値は ``canary``  だけなので、キーと値のペアは必要ありません。"
+msgstr "自分の環境でカナリアテストを行うとします。カナリアデプロイを作成するとき、 ``canary`` タグを使って新しいコードを受け取ったホストをマークし、そのホストのメトリクスを特定して、新しいコードを受け取らなかったホストとパフォーマンスを比較することができます。値は ``canary`` だけなので、キーと値のペアは必要ありません。"
 
 #: ../../metrics-and-metadata/metrics-dimensions-mts.rst:250
 msgid "Example: Host running multiple applications"
@@ -2521,10 +2430,11 @@ msgid "Search guidance and syntax"
 msgstr "検索ガイダンスと構文"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:28
+#, fuzzy
 msgid ""
 "Refine a search by entering more search terms or by adding filters. You can add filters by selecting in the main menu, or matching metadata in any of the search results. The following table outlines guidance for search syntax. The Metric Finder doesn't support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on "
 "multiplesearch terms aren't supported."
-msgstr "さらに検索語を入力するか、フィルタを追加して検索を絞り込みます。フィルタを追加するには、メインメニューで選択するか、検索結果のメタデータにマッチするものを選択します。次の表は、検索構文のガイダンスの概要です。Metric Finderは、検索語とブール演算子との組み合わせ、プレーンテキスト検索語のワイルドカード・マッチング、複数の検索語の完全一致などの高度な検索操作をサポートしていません。"
+msgstr "さらに検索語を入力するか、フィルタを追加して検索を絞り込みます。フィルタを追加するには、メインメニューで選択するか、検索結果のメタデータにマッチするものを選択します。次の表は、検索構文のガイダンスの概要です。Metric Finder は、検索語とブール演算子との組み合わせ、プレーンテキスト検索語のワイルドカード・マッチング、複数の検索語の完全一致などの高度な検索操作をサポートしていません。"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:36
 msgid ":strong:`Syntax`"
@@ -2556,7 +2466,7 @@ msgstr ":strong:`*`"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:44
 msgid "Option to include wildcards in your filters. For example, ``host:test-*`` filters the results to only those with a value of ``host`` beginning with ``test-``."
-msgstr "フィルタにワイルドカードを含めるオプション。例えば、``host:test-*`` は、``test-`` で始まる ``host`` の値を持つものだけに結果をフィルタリングします。"
+msgstr "フィルタにワイルドカードを含めるオプション。例えば、``host:test-*`` は、 ``test-`` で始まる ``host`` の値を持つものだけに結果をフィルタリングします。"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:45
 msgid ":strong:`!`"
@@ -2580,9 +2490,10 @@ msgid "Add metric descriptions"
 msgstr "メトリクスの説明を追加する"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:61
+#, fuzzy
 msgid ""
-"Descriptions help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions like integrations, this provided description is always shown and isn't editable. The maximum length of "
-"ametric description is 1,024 characters."
+"Descriptions help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions like integrations, this provided description is always shown and isn't editable. The maximum length "
+"ofa metric description is 1,024 characters."
 msgstr "特に、メトリクスの名前が専門用語であったり、わかりにくかったりする場合に役立ちます。メトリクスの説明を追加するには、:guilabel:`Add description` を選択するか、カスタムの説明を編集するには、:guilabel:`Edit description` を選択します。メトリクスの中には、インテグレーションのように説明が組み込まれているものがあります。メトリクスの説明の最大長は 1,024 文字です。"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:63
@@ -2632,8 +2543,8 @@ msgstr "検索結果がどのメトリクスにもマッチしない場合は、
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:95
 msgid "You can also uncheck :guilabel:`Active metrics only` to include inactive metrics that are no longer actively sending data to Infrastructure Monitoring in your search. By default, the Metric Finder looks for metrics that actively send data. If you uncheck this control, the time series count shown when you hover over a metric name include matching inactive time series as well as active time series."
 msgstr ""
-"また、:guilabel:`Active metrics only` のチェックを外すと、Infrastructure Monitoring にアクティブにデータを送信しなくなった非アクティブなメトリクスを検索に含めることができます。デフォルトでは、メトリクス・ファインダーは、アクティブにデータを送信しているメトリクスを検索します。このコントロールをオフにすると、メトリクス名にカーソルを合わせたときに表示される時系列数には、アクティブな時系列だけでなく、一致する非アクティブ"
-"な時系列も含まれます。"
+"また、:guilabel:`Active metrics only` のチェックを外すと、Infrastructure Monitoring にアクティブにデータを送信しなくなった非アクティブなメトリクスを検索に含めることができます。デフォルトでは、メトリクス・ファインダーは、アクティブにデータを送信しているメトリクスを検索します。このコントロールをオフにすると、メトリクス名にカーソルを合わせたときに表示される時系列数には、アクティブな時系列だけでなく、一致する非アク"
+"ティブな時系列も含まれます。"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:101
 msgid "Open a chart from a metric"
@@ -2678,7 +2589,8 @@ msgstr "メタデータ・カタログを検索する"
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:129
 msgid "Use the Metadata Catalog to find, view, and edit information about the :ref:`metadata <metrics-dimensions-mts>` in your system, such as dimensions, properties, and tags. In the Metadata Catalog, the search bar automatically expands a menu with a matching list of results. The list contains metrics, properties, and tags. Both dimensions and custom properties are marked as :strong:`property`."
 msgstr ""
-"メタデータ・カタログを使用して、ディメンション、プロパティ、タグなど、システム内の :ref:`メタデータ<metrics-dimensions-mts>` に関する情報を検索、表示、および編集します。メタデータ・カタログでは、検索バーによって、一致するリストを含むメニューが自動的に展開されます。このリストには、メトリクス、プロパティ、およびタグが含まれます。ディメンションとカスタムプロパティは、どちらも :strong:`プロパティ` としてマークされます。"
+"メタデータ・カタログを使用して、ディメンション、プロパティ、タグなど、システム内の :ref:`メタデータ<metrics-dimensions-mts>` に関する情報を検索、表示、および編集します。メタデータ・カタログでは、検索バーによって、一致するリストを含むメニューが自動的に展開されます。このリストには、メトリクス、プロパティ、およびタグが含まれます。ディメンションとカスタムプロパティは、どちらも :strong:`プロパティ` としてマークされま"
+"す。"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:131
 msgid "You can't add or edit a new dimension to any object after data ingest in Splunk Observability Cloud. To learn more, see :ref:`metadata-best-practices`."
@@ -2753,7 +2665,7 @@ msgstr "カスタムプロパティ"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:171
 msgid "Select :guilabel:`Edit` or :guilabel:`Add new property...` in the :strong:`Properties` section."
-msgstr ":strong:`プロパティ` セクションで :guilabel:`Edit` または :guilabel:`Add new property...` を選択します。"
+msgstr ":strong:`プロパティ ` セクションで :guilabel:`Edit` または :guilabel:`Add new property...` を選択します。"
 
 #: ../../metrics-and-metadata/metrics-finder-metadata-catalog.rst:172
 msgid "Tag"
@@ -2812,105 +2724,451 @@ msgstr "Splunk Observability Cloud のメトリクスを紹介します。"
 msgid "Metrics in Splunk Observability Cloud"
 msgstr "Splunk Observability Cloud のメトリクス"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:23
+#: ../../metrics-and-metadata/metrics-landing.rst:24
 msgid "To learn about metrics, metric metadata and events in the Splunk Cloud Observability platform, see the following docs:"
 msgstr "Splunk Cloud Observability プラットフォームのメトリクス、メトリクスメタデータ、イベントについては、以下のドキュメントを参照してください。"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:25
+#: ../../metrics-and-metadata/metrics-landing.rst:26
 msgid ":ref:`get-started-metrics`"
 msgstr ":ref:`get-started-metrics`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:26
+#: ../../metrics-and-metadata/metrics-landing.rst:27
 msgid ":ref:`metric-types`"
 msgstr ":ref:`metric-types`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:27
+#: ../../metrics-and-metadata/metrics-landing.rst:28
 msgid ":ref:`metric-categories`"
 msgstr ":ref:`metric-categories`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:28
+#: ../../metrics-and-metadata/metrics-landing.rst:29
 #, fuzzy
 msgid ":ref:`histograms`"
 msgstr ":ref:`histograms`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:29
+#: ../../metrics-and-metadata/metrics-landing.rst:30
 msgid ":ref:`metrics-dimensions-mts`"
 msgstr ":ref:`metrics-dimensions-mts`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:30
+#: ../../metrics-and-metadata/metrics-landing.rst:31
 msgid ":ref:`metric-dimension-names`"
 msgstr ":ref:`metric-dimension-names`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:31
+#: ../../metrics-and-metadata/metrics-landing.rst:32
 msgid ":ref:`events-intro`"
 msgstr ":ref:`events-intro`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:33
+#: ../../metrics-and-metadata/metrics-landing.rst:34
 msgid "For information about our data model, see :ref:`data-model`."
 msgstr "データモデルについては、:ref:`data-model` を参照してください。"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:43
+#: ../../metrics-and-metadata/metrics-landing.rst:44
 msgid "For metrics from specific data sources, see:"
 msgstr "特定のデータソースからのメトリクスについては、こちらを参照してください。"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:45
+#: ../../metrics-and-metadata/metrics-landing.rst:46
 msgid ":ref:`monitor-services-hosts`"
 msgstr ":ref:`monitor-services-hosts`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:46
+#: ../../metrics-and-metadata/metrics-landing.rst:47
 msgid ":ref:`apm-metricsets`"
 msgstr ":ref:`apm-metricsets`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:47
+#: ../../metrics-and-metadata/metrics-landing.rst:48
 msgid ":ref:`RUM-metrics`"
 msgstr ":ref:`RUM-metrics`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:48
+#: ../../metrics-and-metadata/metrics-landing.rst:49
 msgid ":ref:`browser-metrics`"
 msgstr ":ref:`browser-metrics`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:49
+#: ../../metrics-and-metadata/metrics-landing.rst:50
 msgid ":ref:`uptime-metrics`"
 msgstr ":ref:`uptime-metrics`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:50
+#: ../../metrics-and-metadata/metrics-landing.rst:51
 msgid ":ref:`api-test-metrics`"
 msgstr ":ref:`api-test-metrics`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:51
+#: ../../metrics-and-metadata/metrics-landing.rst:52
 msgid ":ref:`org-metrics`"
 msgstr ":ref:`org-metrics`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:61
+#: ../../metrics-and-metadata/metrics-landing.rst:62
 #, fuzzy
 msgid "Splunk Observability Cloud offers you metric access, visualization, and management tools, such as:"
 msgstr "Splunk Observabilityクラウドは、以下のようなメトリクスアクセス、可視化、管理ツールを提供します。"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:63
+#: ../../metrics-and-metadata/metrics-landing.rst:64
 msgid ":ref:`metrics-finder-and-metadata-catalog`"
 msgstr ":ref:`metrics-finder-and-metadata-catalog`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:64
+#: ../../metrics-and-metadata/metrics-landing.rst:65
 #, fuzzy
 msgid ":ref:`metrics-pipeline-intro`"
 msgstr ":ref:`metrics-pipeline-intro`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:66
+#: ../../metrics-and-metadata/metrics-landing.rst:67
 msgid ":ref:`dashboards`"
 msgstr ":ref:`dashboards`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:67
+#: ../../metrics-and-metadata/metrics-landing.rst:68
 msgid ":ref:`get-started-signalflow`"
 msgstr ":ref:`get-started-signalflow`"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:69
+#: ../../metrics-and-metadata/metrics-landing.rst:70
 msgid "To access them log in to Splunk Observability Cloud and go to :strong:`Navigation menu > Data Management > Data tools`."
 msgstr "これらにアクセスするには、Splunk Observability Cloudにログインし、:strong:`ナビゲーションメニュー > データ管理 > データツール` に進みます。"
 
-#: ../../metrics-and-metadata/metrics-landing.rst:71
+#: ../../metrics-and-metadata/metrics-landing.rst:72
 #, fuzzy
 msgid "For more information, see :ref:`data-tools-landing`."
 msgstr "詳細は :ref:`data-tools-landing` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:-1
+#, fuzzy
+msgid "Use usage analytics to determine the usage of your metrics in Splunk Observability Cloud."
+msgstr "使用状況分析を使用して、Splunk Observability Cloud での使用状況を判断します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:5
+#, fuzzy
+msgid "Analyze your metric usage in Splunk Observability Cloud"
+msgstr "Splunk Observability Cloud のメトリクス使用状況を分析する"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:10
+msgid "Usage analytics gives you in-depth visualizations of your metric usage in Splunk Observability Cloud. Usage analytics can help you make informed decisions about your metrics, for example, if you're deciding whether to aggregate, archive, or drop certain metrics."
+msgstr "使用状況分析では、Splunk Observability Cloud でのメトリクスの使用状況を詳細に視覚化できます。例えば、特定のメトリクスを集計、アーカイブ、削除するかどうかを決定する場合など、使用状況分析はメトリクスについて十分な情報に基づいた決定を下すのに役立ちます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:12
+msgid "To learn how to use usage analytics, see :ref:`mua-understand-metrics`."
+msgstr "使用状況分析の使用方法については、:ref:`mua-understand-metrics` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:14
+msgid "For guidance in using usage analytics to manage and reduce your overall metric usage, see :ref:`mua-reduce-usage`."
+msgstr "使用状況分析を使って、全体的なメトリクス使用量を管理し、削減するためのガイダンスについては、:ref:`mua-reduce-usage` をご覧ください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:16
+#, fuzzy
+msgid "To learn more about metric usage and billing, see :ref:`subscription-overview`."
+msgstr "メトリクスタイプの使用状況と請求については、:ref:`subscription-overview` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:19
+msgid "Benefits of usage analytics"
+msgstr "使用状況分析のメリット"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:21
+msgid "With usage analytics, you can quickly find and visualize which metrics your organization is using and how these metrics contribute to your overall monthly usage. With this information, you can accurately decide how to manage individual metrics for the purpose of reducing your overall usage."
+msgstr "使用状況アナリティクスを使用すると、組織がどのメトリクスを使用しているのか、またこれらのメトリクスが月全体の使用量にどのように寄与しているのかをすばやく見つけ、視覚化することができます。この情報があれば、全体的な使用量を削減する目的で、個々のメトリクスをどのように管理するかを正確に決定できます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:23
+msgid "Usage analytics can help you complete the following example scenarios:"
+msgstr "使用状況分析は、以下のシナリオ例を完成させるのに役立ちます："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:25
+msgid "You want to view high-cardinality custom metrics that are taking up large chunks of your metric usage plan."
+msgstr "メトリクス使用プランの大部分を占めているカーディナリティの高いカスタムメトリクスを表示したいと思っています。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:26
+msgid "You want to identify what metrics your team is producing so you can assess their usefulness."
+msgstr "チームがどのようなメトリクスを出しているかを特定し、その有用性を評価できるようにしたいと思います。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:27
+msgid "You want to find the source and ownership of a certain metric so that you can modify or adjust it."
+msgstr "あるメトリクスのソースと所有権を見つけ、それを修正または調整できるようにしたいと思っています。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:32
+msgid "View and understand your metric usage"
+msgstr "メトリクスの使用状況を表示し、理解する"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:34
+msgid "Usage analytics displays several charts and visualizations that help you determine your metric usage relative to your usage plan."
+msgstr "使用状況分析では、使用計画に対するメトリクスの使用状況を判断するのに役立ついくつかのチャートや視覚エフェクトが表示されます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:36
+msgid "With usage analytics, you can also find more details about individual metrics, such as which dimensions the metric uses, which tokens the metric is associated with, and which charts the metric appears in."
+msgstr "使用状況分析では、メトリクスがどのディメンションを使用しているか、メトリクスがどのトークンに関連付けられているか、メトリクスがどのチャートに表示されているかなど、個々のメトリクスの詳細を確認することもできます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:39
+msgid "Access usage analytics"
+msgstr "アクセス使用状況分析"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:41
+#, fuzzy
+msgid "To access usage analytics in Splunk Observability Cloud, follow these steps:"
+msgstr "Splunk Observability Cloudで 使用状況分析にアクセスするには、以下の手順に従います："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:43
+#, fuzzy
+msgid "In Splunk Observability Cloud, select :guilabel:`Settings`."
+msgstr "Splunk Observability Cloudで、:guilabel:`Settings` を選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:44
+msgid "Under :guilabel:`Data Configuration`, select :guilabel:`Metrics Management`."
+msgstr ":guilabel:`Data Configuration` で、:guilabel:`Metrics Management` を選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:45
+msgid "Select the :guilabel:`Usage analytics` tab."
+msgstr ":guilabel:`Usage analytics` タブを選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:47
+msgid "The usage analytics home page contains the following visualizations:"
+msgstr "使用状況分析のホームページには、以下の視覚エフェクトが含まれています："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:49
+msgid "A card displaying the average number of metric time series (MTS) per hour for your selected time frame."
+msgstr "選択した時間枠の 1 時間あたりの平均メトリック時系列（MTS）数を表示するカード。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:50
+msgid "A chart displaying the average number of MTS per half hour over the selected time frame."
+msgstr "選択した時間枠での 30 分ごとの平均 MTS 数を表示するグラフ。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:51
+msgid "The metrics table, displaying each of your metrics and their usage. See :ref:`mua-metrics-table` to interpret these values."
+msgstr "各メトリクスとその使用状況を表示する、メトリクステーブル。これらの値の解釈については、:ref:`mua-metrics-table` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:39
+msgid "The usage analytics home page, which displays the total MTS count, trends for hourly MTS count, and metrics with the highest utilization."
+msgstr "使用状況分析ホームページ。総 MTS 数、時間ごとの MTS 数のトレンド、利用率の高いメトリクスが表示されます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:56
+msgid "Usage analytics doesn't show APM Monitoring MetricSets, RUM Monitoring MetricSets, or default/bundled APM metrics. To learn more about usage analytics, see :ref:`metrics-usage-analytics-intro`."
+msgstr "使用状況分析では、APM Monitoring MetricSets、RUM Monitoring MetricSets、またはデフォルト/バンドル APM メトリクスは表示されません。使用状況分析の詳細については、:ref:`metrics-usage-analytics-intro` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:61
+msgid "Understand metric usage with the metrics table"
+msgstr "メトリクステーブルでメトリクスの使用状況を把握する"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:63
+msgid "The metric usage table displays the following fields:"
+msgstr "メトリクス使用状況テーブルには、以下のフィールドが表示されます："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:68
+msgid "Field"
+msgstr "フィールド"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:71
+#, fuzzy
+msgid "The name of the metric."
+msgstr "メトリクスの名前。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:72
+msgid "Billing class"
+msgstr "請求分類"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:73
+msgid "Class of metric for billing purposes (host, billing, or custom). Usage analytics doesn't show APM Monitoring MetricSets or RUM Monitoring MetricSets. To learn more about billing classes, see :ref:`metric-categories`."
+msgstr "課金目的のメトリクスのクラス（ホスト、課金、またはカスタム）。使用状況分析では、APM Monitoring MetricSets または RUM Monitoring MetricSets は表示されません。課金クラスの詳細については、:ref:`metric-categories` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:74
+msgid "Utilization"
+msgstr "使用率"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:75
+msgid "Whether the metric is used. \"Unused\" indicates that the metric is producing MTS, but these values aren't utilized in Splunk Observability Cloud."
+msgstr "メトリクスが使用されているかどうか。[未使用] は、メトリクスが MTS を生成していることを示しますが、これらの値は Splunk Observability Cloud では利用されません。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:76
+msgid "Utility score"
+msgstr "ユーティリティスコア"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:77
+msgid "Indicates how much the metric is used. A high utility score means higher usage."
+msgstr "そのメトリクスがどの程度使用されているかを示します。高いユーティリティのスコアは、使用量が多いことを意味します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:78
+#, fuzzy
+msgid "Metric time series (MTS)"
+msgstr "メトリック時系列（MTS）"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:79
+msgid "The average number of MTS associated with this metric, measured per hour."
+msgstr "1 時間当たりのこのメトリクスに関連する平均 MTS 数。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:80
+#, fuzzy
+msgid "Percentage of total"
+msgstr "合計の割合"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:81
+msgid "How much of your total usage plan this metric utilizes."
+msgstr "総使用プランのうち、このメトリクスが利用する割合。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:83
+msgid "You can use the options at the top of the page to filter metrics by time, billing class, utilization, and token."
+msgstr "ページ上部のオプションを使用して、時間、課金クラス、使用状況、トークンでメトリクスをフィルタリングできます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:85
+msgid "For example, if you only want to see metrics that are unused, follow these steps:"
+msgstr "例えば、未使用のメトリクスだけを表示したい場合は、以下のステップに従います："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:87
+msgid "Select the box with :guilabel:`Utilization: Any`."
+msgstr ":guilabel:`Utilization: Any` のあるボックスを選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:88
+msgid "In the menu, select :guilabel:`Unused`."
+msgstr "メニューで、:guilabel:`Unused` を選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:89
+#, fuzzy
+msgid "Select :guilabel:`Run search`."
+msgstr ":guilabel:`Run search` を選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:91
+msgid "After running the search, the usage analytics page displays only metrics which are unused. To revert the search, select :guilabel:`Reset`."
+msgstr "サーチを実行した後、使用状況分析ページには未使用のメトリクスのみが表示されます。サーチを元に戻すには、:guilabel:`Reset` を選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:93
+msgid "Running searches with filters that yield more results, such as searching for metrics from the previous 30 days instead of the previous 24 hours, might cause the search to run slower."
+msgstr "過去 24 時間ではなく過去 30 日間のメトリクスをサーチするなど、より多くの結果が得られるフィルタでサーチを実行すると、サーチの実行速度が遅くなる場合があります。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:96
+msgid "View dimensions, tokens, and charts with metric profiles"
+msgstr "メトリクスプロファイルでディメンション、トークン、チャートを表示する"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:98
+msgid "Usage analytics includes metric profiles for each of your metrics. To access a metric profile, select one of the metrics in your metric usage table."
+msgstr "使用状況分析には、各メトリクスのメトリクスプロファイルが含まれます。メトリクスプロファイルにアクセスするには、メトリクスの使用状況テーブルでメトリクスのいずれかを選択します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:100
+msgid "Metric profiles provide the following tables with additional information about the metric:"
+msgstr "メトリクスプロファイルでは、メトリクスに関する追加情報が記載されている以下のテーブルが利用できます："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:106
+#, fuzzy
+msgid "Table"
+msgstr "テーブル"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:108
+#, fuzzy
+msgid "Notes"
+msgstr "備考"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:110
+msgid "Displays the dimension name of each metric sorted by average hourly MTS count. High-cardinality dimensions appear at the top of the list."
+msgstr "各メトリクスのディメンション名を 1 時間あたりの平均 MTS 数でソートして表示します。カーディナリティの高いディメンションがリストの最上位に表示されます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:111
+msgid "Displays up to 5000 dimensions."
+msgstr "最大5000のディメンションを表示します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:112
+msgid "Tokens"
+msgstr "トークン"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:113
+msgid "Displays the token name and ID for each metric, sorted by the number of metric time series associated with the token."
+msgstr "各メトリクスのトークン名と ID をトークンに関連付けられたメトリック時系列の数でソートして表示します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:114
+msgid "Displays up to 5000 tokens."
+msgstr "最大5000のトークンを表示します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:115
+#, fuzzy
+msgid "Charts"
+msgstr "チャート"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:116
+msgid "Displays the charts and dashboards associated with each of your metrics, as well as the user who last updated the chart and the time they updated it."
+msgstr "各メトリクスに関連するグラフとダッシュボード、およびグラフを最後に更新したユーザーと更新時刻を表示します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:117 ../../metrics-and-metadata/metrics-usage-analytics.rst:120
+#, fuzzy
+msgid "None"
+msgstr "なし"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:118
+#, fuzzy
+msgid "Detectors"
+msgstr "ディテクター"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:119
+msgid "Displays the detectors associated with each of your metrics, as well as the user who last updated the detector and the time they updated it."
+msgstr "各メトリクスに関連付けられたディテクターと、そのディテクターを最後に更新したユーザーと更新時刻を表示します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:122
+msgid "For example, the following metric profile displays information about the CPUUtilization metric, including the metric's dimensions:"
+msgstr "たとえば、次のメトリクスプロファイルは、メトリクスのディメンションを含む CPUUtilization メトリクスに関する情報を表示します："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:96
+msgid "Information about the CPUUtilization metric, including the total MTS, the percentage of total MTS, and related tokens, dimensions, charts, and detectors."
+msgstr "総 MTS、総 MTS の割合、関連するトークン、ディメンション、チャート、ディテクターを含む、CPUUtilization メトリクスに関する情報。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:130
+msgid "Manage and reduce your metric usage"
+msgstr "メトリクス使用量の管理と削減"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:132
+msgid "This section contains tips for identifying metrics that you can aggregate, archive, or drop for the purpose of reducing your metric usage."
+msgstr "このセクションには、メトリクスの使用量を削減する目的で、集約、アーカイブ、または削除できるメトリクスを特定するためのヒントが含まれています。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:135
+#, fuzzy
+msgid "Archive or drop unused metrics"
+msgstr "未使用メトリクスをアーカイブまたはドロップ"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:137
+msgid "Using the metrics table, you can find metrics that aren't used. If you have any unused metrics, you can archive them so they take up less of your usage plan."
+msgstr "メトリクステーブルを使用すると、使用されていないメトリクスを見つけることができます。使用していないメトリクスがある場合は、アーカイブして使用プランの占有を減らすことができます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:139
+msgid "Archived metrics go to an archival route in Splunk Observability Cloud, where they remain unused and have a lower billing cost. You can bring them out of the archival route whenever you need to use them again."
+msgstr "アーカイブされたメトリクスは、Splunk Observability Cloud 内のアーカイブルートに移動します。そこで未使用の状態を維持して、請求コストを抑えます。再度使用する必要がある場合は、いつでもアーカイブルートから取り出すことができます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:141
+#, fuzzy
+msgid "To learn more about archiving metrics, see :ref:`archived-metrics-intro`."
+msgstr "メトリクスのアーカイブの詳細については、:ref:`archived-metrics-intro` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:143
+msgid "If you aren't using these metrics and don't plan on using them in the future, consider dropping them to save usage space. To learn more about dropping metrics, see :ref:`mpm-rule-routing`."
+msgstr "これらのメトリクスを使用しておらず、将来も使用する予定がない場合は、使用領域を節約するためにメトリクスを削除することを検討してください。メトリクスの削除について詳しくは、:ref:`mpm-rule-routing` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:146
+msgid "Find metrics with low utility scores and aggregate them"
+msgstr "ユーティリティスコアが低いメトリクスを見つけて集約する"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:148
+msgid "If you have metrics with low utility scores, consider aggregating them to reduce the total number of metrics."
+msgstr "ユーティリティスコアが低いメトリクスがある場合は、それらを集約してメトリクスの総数を減らすことを検討してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:150
+msgid "To help decide whether to aggregate these metrics, follow these steps:"
+msgstr "これらのメトリクスを集計するかどうかを決めるには、以下の手順に従ってください："
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:152
+msgid "Select the metric you're considering aggregating to open the metric profile."
+msgstr "集計を検討しているメトリクスを選択して、メトリクスプロファイルを開きます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:153
+msgid "Select the :guilabel:`Detectors` tab to check whether the metric appears in any detectors."
+msgstr ":guilabel:`Detectors` タブを選択し、メトリクスがディテクターに表示されるかどうかをチェックします。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:154
+msgid "If the metric doesn't appear in detectors, check the :guilabel:`Charts` tab to see which charts use it."
+msgstr "ディテクターにそのメトリクスが表示されない場合は、:guilabel:`Charts` タブをチェックし、どのチャートがそのメトリクスを使用しているかを確認します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:155
+msgid "Consider whether the metric is important to keep in the respective charts. If not, then aggregate the metric with other dimensions to reduce usage."
+msgstr "そのメトリクスが、それぞれのチャートで維持することが重要かどうかを検討します。重要でない場合は、使用量を減らすためにメトリクスを他のディメンションと集約します。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:157
+#, fuzzy
+msgid "To learn more about how to aggregate metrics, see :ref:`mpm-rule-agreggation`."
+msgstr "メトリクスを集計する方法については、:ref:`mpm-rule-agreggation` を参照してください。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:160
+msgid "Reduce the cardinality of your metrics"
+msgstr "メトリクスのカーディナリティを減らす"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:162
+msgid "If you have metrics with high cardinality, consider using a routing exception rule to reroute specific MTS. For example, you can archive or drop MTS with dimensions that you aren't using."
+msgstr "カーディナリティの高いメトリクスがある場合は、ルーティング例外ルールを使用して特定の MTS を再ルーティングすることを検討してください。例えば、使用していないディメンションを持つ MTS をアーカイブまたは削除できます。"
+
+#: ../../metrics-and-metadata/metrics-usage-analytics.rst:164
+#, fuzzy
+msgid "To learn more about using routing exception rules, see :ref:`mpm-rule-routing-exception`."
+msgstr "ルーティング例外ルールについて詳しくは、:ref:`mpm-rule-routing-exception` を参照してください。"
 
 #: ../../metrics-and-metadata/relatedcontent.rst:-1
 msgid "Related Content functionality: introduction, requirements, how to use."
@@ -3053,8 +3311,9 @@ msgid "Use the Splunk Distribution of the OpenTelemetry Collector to enable Rela
 msgstr "Splunk Distribution of the OpenTelemetry Collector を使用して関連コンテンツを有効にする"
 
 #: ../../metrics-and-metadata/relatedcontent.rst:76
-msgid "Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud."
-msgstr "Splunk Observability Cloud は OpenTelemetry を使用してテレメトリタイプを相関させます。この機能を有効にするには、テレメトリフィールド名またはメタデータキー名が、OpenTelemetry と Splunk Observability Cloud の両方で使用されるメタデータキー名と完全に一致している必要があります。"
+#, fuzzy
+msgid "Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To do this, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud."
+msgstr "Splunk Observability Cloud は OpenTelemetry を使用してテレメトリタイプを相関させます。そのためには、テレメトリフィールド名またはメタデータキー名が、OpenTelemetry と Splunk Observability Cloud の両方で使用されるメタデータキー名と完全に一致している必要があります。"
 
 #: ../../metrics-and-metadata/relatedcontent.rst:78
 #, fuzzy
@@ -3113,11 +3372,11 @@ msgstr "必要な Collector コンポーネント"
 #: ../../metrics-and-metadata/relatedcontent.rst:111
 #, fuzzy
 msgid ""
-"If you're using the Splunk Distribution of the OpenTelemetry Collector, another distribution of the Collector, or the :ref:`upstream Collector <using-upstream-otel>` and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for "
-"the``metrics`` and ``traces`` pipelines."
+"If you're using the Splunk Distribution of the OpenTelemetry Collector, any other distribution of the Collector, or the :ref:`upstream Collector <using-upstream-otel>` and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled "
+"forthe ``metrics`` and ``traces`` pipelines."
 msgstr ""
-"Splunk Distribution of OpenTelemetry Collector、Collectorの別のディストリビューション、または :ref:`アップストリームコレクター<using-upstream-otel>` を使用していて、Splunk Observability Cloudの関連コンテンツが正しく動作するようにしたい場合は、SignalFxエクスポーターが設定に含まれていることを確認してください。このエクスポーターは ``hostmetrics`` レシーバーからのメトリクスを集約し、``metrics`` および ``traces`` パイプラ"
-"インで有効にする必要があります。"
+"Splunk Distribution of OpenTelemetry Collector、Collector の別のディストリビューション、または :ref:`アップストリーム Collector<using-upstream-otel>` を使用していて、Splunk Observability Cloud の関連コンテンツが正しく動作するようにしたい場合は、SignalFx エクスポーターが設定に含まれていることを確認してください。このエクスポーターは ``hostmetrics`` レシーバーからのメトリクスを集約し、``metrics`` および ``traces`` "
+"パイプラインで有効にする必要があります。"
 
 #: ../../metrics-and-metadata/relatedcontent.rst:113
 msgid "The Collector uses the correlation flag of the SignalFx exporter to make relevant API calls to correlate your spans with the infrastructure metrics. This flag is enabled by default. To adjust the correlation option further, see the SignalFx exporter's options at :ref:`signalfx-exporter-settings`."
@@ -3140,231 +3399,260 @@ msgid "Splunk APM"
 msgstr "Splunk APM"
 
 #: ../../metrics-and-metadata/relatedcontent.rst:127
-msgid "The following APM span tags are required to enable Related Content:"
-msgstr "関連コンテンツを有効にするには、以下のAPMスパンタグが必要です。"
+msgid "To enable Related Content for APM use one of these span tags:"
+msgstr "APMの関連コンテンツを有効にするには、以下のスパンタグのいずれかを使用します："
 
-#: ../../metrics-and-metadata/relatedcontent.rst:129 ../../metrics-and-metadata/relatedcontent.rst:180
+#: ../../metrics-and-metadata/relatedcontent.rst:129 ../../metrics-and-metadata/relatedcontent.rst:166 ../../metrics-and-metadata/relatedcontent.rst:181
 msgid "``service.name``"
 msgstr "``service.name``"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:130 ../../metrics-and-metadata/relatedcontent.rst:181
-msgid "``deployment.environment``"
-msgstr "``deployment.environment``"
+#: ../../metrics-and-metadata/relatedcontent.rst:130 ../../metrics-and-metadata/relatedcontent.rst:183
+msgid "``trace_id``"
+msgstr "``trace_id``"
 
 #: ../../metrics-and-metadata/relatedcontent.rst:132
+msgid "Optionally, you can also use ``deployment.environment`` with ``service.name``."
+msgstr "オプションで、``deployment.environment`` を ``service.name`` と使うこともできます。"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:134
 msgid "The default configuration of the Splunk Distribution of the OpenTelemetry Collector already provides these span tags. To ensure full functionality of Related Content, do not change any of the metadata key names or span tags provided by the Splunk OTel Collector."
 msgstr "Splunk Distribution of the OpenTelemetry Collector のデフォルト設定では、これらのスパンタグがすでに提供されています。関連コンテンツの完全な機能を確保するため、Splunk OTel Collector が提供するメタデータキー名やスパンタグは変更しないでください。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:134
+#: ../../metrics-and-metadata/relatedcontent.rst:136
 msgid "Learn more:"
 msgstr "詳細："
 
-#: ../../metrics-and-metadata/relatedcontent.rst:136
+#: ../../metrics-and-metadata/relatedcontent.rst:138
 msgid "About span tags in Splunk APM, see :ref:`apm-traces-spans`."
 msgstr "Splunk APM のスパンタグについては、:ref:`apm-traces-spans` を参照してください。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:137
+#: ../../metrics-and-metadata/relatedcontent.rst:139
 msgid "About deployment environments in Splunk APM, see :ref:`apm-environments`."
 msgstr "Splunk APM のデプロイ環境については、:ref:`apm-environments` を参照してください。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:140
+#: ../../metrics-and-metadata/relatedcontent.rst:142
 msgid "Leverage Related Content for APM and pod-specific Kubernetes data"
 msgstr "APM とポッド固有の Kubernetes データのための関連コンテンツの活用"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:142
+#: ../../metrics-and-metadata/relatedcontent.rst:144
 msgid "For a Related Content tile in APM to link to data for a specific Kubernetes pod (``k8s.pod.name``), you must first filter on a specific Kubernetes cluster (``k8s.cluster.name``). APM cannot guarantee an accurate Related Content Kubernetes pod destination in Infrastructure Monitoring without both values because Kubernetes pod names are not required to be unique across clusters."
 msgstr "APMの関連コンテンツタイルが特定のKubernetesポッド( ``k8s.pod.name`` )のデータにリンクするには、まず特定のKubernetesクラスタ( ``k8s.cluster.name`` )でフィルタリングする必要があります。Kubernetesポッド名はクラスタ間で一意である必要はないため、APMは両方の値がない場合、Infrastructure Monitoringの正確なRelated Content Kubernetesポッドデスティネーションを保証できません。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:144
+#: ../../metrics-and-metadata/relatedcontent.rst:146
 msgid ""
 "For example, consider a scenario in which Related Content needs to return data for a Kubernetes pod named :strong:`Pod-B`. As shown the following diagram, a Kubernetes implementation can have multiple pods with the same name. For Related Content to return the data for the correct :strong:`Pod-B`, you must also provide the name of the Kubernetes cluster the pod resides in. In this case, that name would be either :"
 "strong:`Cluster-West` or :strong:`Cluster-East`. This combination of filtering on cluster and pod names creates the unique combination that Related Content needs to link to the correct pod data in Infrastructure Monitoring."
 msgstr ""
-"例えば、Related Contentが :strong:`Pod-B` という名前のKubernetesポッドのデータを返す必要があるシナリオを考えてみましょう。以下の図に示すように、Kubernetesの実装では、同じ名前の複数のポッドを持つことができます。Related Contentが正しい :strong:`Pod-B` のデータを返すには、ポッドが存在するKubernetesクラスタの名前も提供する必要があります。この場合、その名前は :strong:`Cluster-West` または :strong:`Cluster-East` のいずれか"
-"になります。クラスタ名とポッド名でフィルタリングするこの組み合わせは、Infrastructure MonitoringでRelated Contentが正しいポッドデータにリンクするために必要な一意の組み合わせを作成します。"
+"例えば、Related Contentが :strong:`Pod-B` という名前のKubernetesポッドのデータを返す必要があるシナリオを考えてみましょう。以下の図に示すように、Kubernetesの実装では、同じ名前の複数のポッドを持つことができます。Related Contentが正しい :strong:`Pod-B` のデータを返すには、ポッドが存在するKubernetesクラスタの名前も提供する必要があります。この場合、その名前は :strong:`Cluster-West` または :strong:`Cluster-East` のいず"
+"れかになります。クラスタ名とポッド名でフィルタリングするこの組み合わせは、Infrastructure MonitoringでRelated Contentが正しいポッドデータにリンクするために必要な一意の組み合わせを作成します。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:140
+#: ../../metrics-and-metadata/relatedcontent.rst:142
 msgid "This diagram shows two uniquely named Kubernetes clusters, each containing pods that share names across clusters."
 msgstr "この図は、2つのユニークな名前のKubernetesクラスタを示しており、それぞれがクラスタ間で名前を共有するポッドを含んでいます。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:155
+#: ../../metrics-and-metadata/relatedcontent.rst:157
 msgid "Splunk Infrastructure Monitoring"
 msgstr "Splunk Infrastructure Monitoring"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:157
-msgid "The following Infrastructure Monitoring metadata keys are required to enable Related Content:"
-msgstr "関連コンテンツを有効にするには、以下のInfrastructure Monitoringメタデータキーが必要です。"
+#: ../../metrics-and-metadata/relatedcontent.rst:159
+msgid "To enable Related Content for IM use one of these metadata combinations:"
+msgstr "IM の関連コンテンツを有効にするには、以下のメタデータの組み合わせのいずれかを使用します："
 
-#: ../../metrics-and-metadata/relatedcontent.rst:159 ../../metrics-and-metadata/relatedcontent.rst:182
-msgid "``host.name``"
-msgstr "``host.name``"
+#: ../../metrics-and-metadata/relatedcontent.rst:161
+msgid "``host.name``. It falls back on ``host``, ``aws_private_dns_name`` (AWS), ``instance_name`` (GCP), ``azure_computer_name`` (Azure)"
+msgstr "``host.name``。``host`` 、``aws_private_dns_name`` （AWS）、``instance_name`` （GCP）、``azure_computer_name`` （Azure）にフォールバックします。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:160 ../../metrics-and-metadata/relatedcontent.rst:226
+#: ../../metrics-and-metadata/relatedcontent.rst:162 ../../metrics-and-metadata/relatedcontent.rst:196
 msgid "``k8s.cluster.name``"
 msgstr "``k8s.cluster.name``"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:161 ../../metrics-and-metadata/relatedcontent.rst:227
-msgid "``k8s.node.name``"
-msgstr "``k8s.node.name``"
+#: ../../metrics-and-metadata/relatedcontent.rst:163 ../../metrics-and-metadata/relatedcontent.rst:205
+#, fuzzy
+msgid "``k8s.cluster.name`` + ``k8s.node.name``"
+msgstr "``k8s.cluster.name`` + ``k8s.node.name``"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:162 ../../metrics-and-metadata/relatedcontent.rst:228
-msgid "``k8s.pod.name``"
-msgstr "``k8s.pod.name``"
+#: ../../metrics-and-metadata/relatedcontent.rst:164 ../../metrics-and-metadata/relatedcontent.rst:206
+msgid "``k8s.cluster.name`` + ``k8s.node.name`` (optional) + ``k8s.pod.name``"
+msgstr "``k8s.cluster.name`` + ``k8s.node.name`` (オプション) + ``k8s.pod.name``"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:163 ../../metrics-and-metadata/relatedcontent.rst:229
-msgid "``container.id``"
-msgstr "``container.id``"
-
-#: ../../metrics-and-metadata/relatedcontent.rst:164 ../../metrics-and-metadata/relatedcontent.rst:230
-msgid "``k8s.namespace.name``"
-msgstr "``k8s.namespace.name``"
-
-#: ../../metrics-and-metadata/relatedcontent.rst:165 ../../metrics-and-metadata/relatedcontent.rst:231
-msgid "``kubernetes.workload.name``"
-msgstr "``kubernetes.workload.name``"
+#: ../../metrics-and-metadata/relatedcontent.rst:165 ../../metrics-and-metadata/relatedcontent.rst:207
+msgid "``k8s.cluster.name`` + ``k8s.node.name`` (optional) + ``k8s.pod.name`` (optional) + ``container.id``"
+msgstr "``k8s.cluster.name`` + ``k8s.node.name`` (オプション) + ``k8s.pod.name`` (オプション) + ``container.id``"
 
 #: ../../metrics-and-metadata/relatedcontent.rst:167
+msgid "``service.name`` + ``deployment.environment`` (optional) + ``k8s.cluster.name`` (optional)"
+msgstr "``service.name`` + ``deployment.environment`` (オプション) + ``k8s.cluster.name`` (オプション)"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:169
 msgid "If you're using the default configuration of the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, the required Infrastructure Monitoring metadata is provided. See more at :ref:`otel-install-k8s`."
 msgstr "Splunk Distribution of the OpenTelemetry Collector のデフォルト設定を使用している場合、必要な Infrastructure Monitoring メタデータが提供されます。詳しくは :ref:`otel-install-k8s` を参照してください。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:169
+#: ../../metrics-and-metadata/relatedcontent.rst:171
 msgid "If you're using other distributions of the OpenTelemetry Collector or non-default configurations of the Splunk Distribution to collect infrastructure data, Related Content won't work out of the box."
 msgstr "OpenTelemetry Collector の他のディストリビューションや、Splunk ディストリビューションのデフォルト以外の設定を使用してインフラストラクチャデータを収集している場合、関連コンテンツはそのままでは動作しません。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:174
-msgid "Splunk Log Observer"
-msgstr "Splunk Log Observer"
+#: ../../metrics-and-metadata/relatedcontent.rst:176
+#, fuzzy
+msgid "Splunk logs"
+msgstr "Splunk ログ"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:178
+msgid "To enable Related Content for logs use one of these fields:"
+msgstr "ログの関連コンテンツを有効にするには、以下のフィールドのいずれかを使用します："
+
+#: ../../metrics-and-metadata/relatedcontent.rst:180
+msgid "``host.name``"
+msgstr "``host.name``"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:182
+msgid "``span_id``"
+msgstr "``span_id``"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:185
+msgid "To ensure full functionality of both Log Observer and Related Content, verify that your log events fields are correctly mapped. Correct log field mappings enable built-in log filtering, embed logs in APM and Infrastructure Monitoring functionality, and enable fast searches as well as the Related Content bar."
+msgstr "Log ObserverとRelated Contentの両方が完全に機能するように、ログイベントフィールドが正しくマッピングされていることを確認してください。正しいログフィールドマッピングは、組み込みのログフィルタリングを可能にし、APMと Infrastructure Monitoring 機能にログを埋め込み、関連コンテンツバーと同様に高速検索を可能にします。"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:187
+#, fuzzy
+msgid ""
+"If the key names in the preceding list use different names in your log fields, remap them to the key names listed here. For example, if you don't see values for :strong:`host.name` in the Log Observer UI, check to see whether your logs use a different field name, such as :strong:`host_name`. If your logs do not contain the default field names exactly as they appear in the preceding list, remap your logs using "
+"oneof the methods in the following section."
+msgstr ""
+"前のリストのキー名がログのフィールドで異なる名前を使用している場合、それらをここにリストされたキー名に再マップしてください。例えば、:strong:`host.name` の値が Log Observer UI に表示されない場合、:strong:`host_name` のような異なるフィールド名を使用していないか確認してください。ログに前述のリストに表示されているようなデフォルトのフィールド名が含まれていない場合は、次のセクションのいずれかの方法を使用してログを再"
+"マップしてください。"
 
 #: ../../_includes/log-observer-transition.rst:1
 msgid "Customers with a Splunk Log Observer entitlement in Splunk Observability Cloud must transition from Log Observer to Log Observer Connect by December 2023. With Log Observer Connect, you can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging. See :ref:`lo-transition` to learn how."
 msgstr "Splunk Observability Cloud の Splunk Log Observer エンタイトルメントをお持ちのお客様は、2023年12月までに Log Observer から Log Observer Connect に移行する必要があります。Log Observer Connect を使用すると、より多様なデータソースからより多くのログをインジェストし、より高度なログパイプラインを利用し、セキュリティロギングに拡張できます。その方法については、:ref:`lo-transition` を参照してください。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:178
-msgid "The following key names are required to enable Related Content for Log Observer:"
-msgstr "Log Observerの関連コンテンツを有効にするには、以下のキー名が必要です。"
+#: ../../metrics-and-metadata/relatedcontent.rst:192
+msgid "Kubernetes log fields"
+msgstr "Kubernetesのログフィールド"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:183
-msgid "``trace_id``"
-msgstr "``trace_id``"
+#: ../../metrics-and-metadata/relatedcontent.rst:194
+msgid "The Splunk Distribution of the OpenTelemetry Collector injects the following fields into your Kubernetes logs. Do not modify them if you want to use Related Content."
+msgstr "Splunk Distribution of the OpenTelemetry Collector は、以下のフィールドを Kubernetes ログに注入します。関連コンテンツを使用する場合は、これらを変更しないでください。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:184
-msgid "``span_id``"
-msgstr "``span_id``"
+#: ../../metrics-and-metadata/relatedcontent.rst:197
+msgid "``k8s.node.name``"
+msgstr "``k8s.node.name``"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:186
-msgid "To ensure full functionality of both Log Observer and Related Content, verify that your log events fields are correctly mapped. Correct log field mappings enable built-in log filtering, embed logs in APM and Infrastructure Monitoring functionality, and enable fast searches as well as the Related Content bar."
-msgstr "Log ObserverとRelated Contentの両方が完全に機能するように、ログイベントフィールドが正しくマッピングされていることを確認してください。正しいログフィールドマッピングは、組み込みのログフィルタリングを可能にし、APMと Infrastructure Monitoring 機能にログを埋め込み、関連コンテンツバーと同様に高速検索を可能にします。"
+#: ../../metrics-and-metadata/relatedcontent.rst:198
+msgid "``k8s.pod.name``"
+msgstr "``k8s.pod.name``"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:188
-msgid ""
-"If the key names in the preceding list use different names in your log fields, remap them to the key names listed here. For example, if you don't see values for :strong:`host.name` in the Log Observer UI, check to see whether your logs use a different field name, such as :strong:`host_name`. If your logs do not contain the default field names exactly as they appear in the preceding list, remap your logs using one "
-"ofthe methods in the following section."
-msgstr ""
-"前のリストのキー名がログのフィールドで異なる名前を使用している場合、それらをここにリストされたキー名に再マップしてください。例えば、:strong:`host.name` の値がLog Observer UIに表示されない場合、:strong:`host_name` のような異なるフィールド名を使用していないか確認してください。ログに前述のリストに表示されているようなデフォルトのフィールド名が含まれていない場合は、次のセクションのいずれかの方法を使用してログを再マップし"
-"てください。"
+#: ../../metrics-and-metadata/relatedcontent.rst:199
+msgid "``container.id``"
+msgstr "``container.id``"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:193
+#: ../../metrics-and-metadata/relatedcontent.rst:200
+msgid "``k8s.namespace.name``"
+msgstr "``k8s.namespace.name``"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:201
+msgid "``kubernetes.workload.name``"
+msgstr "``kubernetes.workload.name``"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:203
+#, fuzzy
+msgid "Use one of these tag combinations to enable Related Content:"
+msgstr "これらのタグの組み合わせを使用して、以下の関連コンテンツを有効にします："
+
+#: ../../metrics-and-metadata/relatedcontent.rst:209
+msgid "Learn more about the Collector for Kubernetes at :ref:`collector-kubernetes-intro`."
+msgstr "Collector for Kubernetesの詳細については、:ref:`collector-kubernetes-intro` を参照してください。"
+
+#: ../../metrics-and-metadata/relatedcontent.rst:214
 msgid "Remap log fields"
 msgstr "ログフィールドの再マップ"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:195
+#: ../../metrics-and-metadata/relatedcontent.rst:216
 msgid "The following table describes the four methods for remapping log fields:"
 msgstr "以下の表は、ログフィールドを再マッピングする4つの方法について説明しています。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:201
+#: ../../metrics-and-metadata/relatedcontent.rst:222
 msgid ":strong:`Remapping Method`"
 msgstr ":strong:`再マッピング方法`"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:202
+#: ../../metrics-and-metadata/relatedcontent.rst:223
 msgid ":strong:`Instructions`"
 msgstr ":strong:`手順`"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:204
+#: ../../metrics-and-metadata/relatedcontent.rst:225
 msgid "Log Field Aliasing"
 msgstr "ログフィールドのエイリアシング"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:205
+#: ../../metrics-and-metadata/relatedcontent.rst:226
 msgid "Create and activate a field alias. See :ref:`logs-alias` to learn how. Learn when to use Log Field Aliasing in the next section."
 msgstr "フィールドエイリアスを作成し、有効にします。方法は :ref:`logs-alias` を参照してください。次のセクションでは、ログフィールドのエイリアシングを使用するタイミングについて説明します。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:207
+#: ../../metrics-and-metadata/relatedcontent.rst:228
 msgid "Client-side"
 msgstr "クライアント側"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:208
+#: ../../metrics-and-metadata/relatedcontent.rst:229
 msgid "Configure your app to remap the necessary fields."
 msgstr "必要なフィールドを再マップするようにアプリを設定します。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:212
+#: ../../metrics-and-metadata/relatedcontent.rst:232
 msgid "When to use Log Field Aliasing"
 msgstr "ログフィールドのエイリアシングの使用時期"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:214
+#: ../../metrics-and-metadata/relatedcontent.rst:234
 #, fuzzy
 msgid "Use Log Field Aliasing to remap fields in Splunk Observability Cloud when you cannot or do not want to create a copy processor because any of the following are true:"
 msgstr "以下のいずれかに該当するため、コピープロセッサーを作成できない、または作成したくない場合は、ログフィールドのエイリアシングを使用してSplunk Observability Cloudのフィールドを再マッピングします。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:216
+#: ../../metrics-and-metadata/relatedcontent.rst:236
 msgid "You use Log Observer Connect to get logs data and do not have access to Log Observer Pipeline Management."
 msgstr "ログデータの取得に Log Observer Connect を使用しており、Log Observer Pipeline Management にアクセスできません。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:217
+#: ../../metrics-and-metadata/relatedcontent.rst:237
 msgid "You do not want to use indexing capacity by creating additional log processing rules."
 msgstr "追加のログ処理ルールを作成することで、インデックス作成容量を使用したくありません。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:218
+#: ../../metrics-and-metadata/relatedcontent.rst:238
 msgid "You do not want to transform your data at index time."
 msgstr "インデックス時にデータを変換したくありません。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:219
+#: ../../metrics-and-metadata/relatedcontent.rst:239
 msgid "You want the new alias to affect every log message, even those that came in from a time before you created the alias."
 msgstr "新しいエイリアスは、エイリアスを作成する前の時点から入ってきたものであっても、すべてのログメッセージに影響するようにしたいと思います。"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:222
-msgid "Kubernetes log fields"
-msgstr "Kubernetesのログフィールド"
-
-#: ../../metrics-and-metadata/relatedcontent.rst:224
-msgid "The Splunk Distribution of the OpenTelemetry Collector injects the following fields into your Kubernetes logs. Do not modify them if you want to use Related Content."
-msgstr "Splunk Distribution of the OpenTelemetry Collector は、以下のフィールドを Kubernetes ログに注入します。関連コンテンツを使用する場合は、これらを変更しないでください。"
-
-#: ../../metrics-and-metadata/relatedcontent.rst:233
-msgid "Learn more about the Collector for Kubernetes at :ref:`collector-kubernetes-intro`."
-msgstr "Collector for Kubernetesの詳細については、:ref:`collector-kubernetes-intro` を参照してください。"
-
-#: ../../metrics-and-metadata/relatedcontent.rst:236
+#: ../../metrics-and-metadata/relatedcontent.rst:242
 msgid "How to change your metadata key names"
 msgstr "メタデータのキー名を変更する方法"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:239
+#: ../../metrics-and-metadata/relatedcontent.rst:245
 msgid "Change metric and traces names"
 msgstr "メトリクス名とトレース名の変更"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:241
+#: ../../metrics-and-metadata/relatedcontent.rst:247
 #, fuzzy
 msgid ""
-"Use the Splunk Distribution of the OpenTelemetry Collector to ensure that your metrics and traces have the metadata key names required to use Splunk Observability Cloud's Related Content feature. If you did not use the Collector and your metrics or traces do not include the required metadata key names, you can instrument your applications and serverless functions to include them. See the following pages to learn how:"
+"Use the Splunk Distribution of the OpenTelemetry Collector to ensure that your metrics and traces have the metadata key names required to use Splunk Observability Cloud's Related Content feature. If you did not use the Collector and your metrics or traces do not include the required metadata key names, you can instrument your applications and serverless functions to include them. See the following pages to "
+"learnhow:"
 msgstr ""
-"Splunk Distribution of the OpenTelemetry Collectorを使用して、メトリクスとトレースにSplunk Observability CloudのRelated Content機能を使用するために必要なメタデータキー名が含まれていることを確認します。Collectorを使用せず、メトリクスやトレースに必要なメタデータキー名が含まれていない場合は、アプリケーションやサーバーレス関数にそれらを含めるようにインストルメンテーションを行うことができます。方法については、次のページを"
-"参照してください："
+"Splunk Distribution of the OpenTelemetry Collectorを使用して、メトリクスとトレースにSplunk Observability CloudのRelated Content機能を使用するために必要なメタデータキー名が含まれていることを確認します。Collectorを使用せず、メトリクスやトレースに必要なメタデータキー名が含まれていない場合は、アプリケーションやサーバーレス関数にそれらを含めるようにインストルメンテーションを行うことができます。方法については、次のペー"
+"ジを参照してください："
 
-#: ../../metrics-and-metadata/relatedcontent.rst:243
+#: ../../metrics-and-metadata/relatedcontent.rst:249
 msgid ":ref:`get-started-application`"
 msgstr ":ref:`get-started-application`"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:244
+#: ../../metrics-and-metadata/relatedcontent.rst:250
 msgid ":ref:`instrument-serverless-functions`"
 msgstr ":ref:`instrument-serverless-functions`"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:245
+#: ../../metrics-and-metadata/relatedcontent.rst:251
 msgid ":ref:`rum-gdi`"
 msgstr ":ref:`rum-gdi`"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:248
+#: ../../metrics-and-metadata/relatedcontent.rst:254
 msgid "Change log names"
 msgstr "ログ名を変更する"
 
-#: ../../metrics-and-metadata/relatedcontent.rst:250
+#: ../../metrics-and-metadata/relatedcontent.rst:256
 msgid "If the required key names use different names in your log fields, remap them using one of the methods listed in :ref:`remap-log-fields`."
 msgstr "必要なキー名がログフィールドで異なる名前を使用している場合は、:ref:`remap-log-fields` に記載されている方法のいずれかを使用して、それらを再マッピングします。"
 
@@ -3607,136 +3895,153 @@ msgid "Prerequisites"
 msgstr "前提条件"
 
 #: ../../metrics-and-metadata/search.rst:15
-msgid "Search only shows results for Splunk APM if your organization has access to Splunk APM."
-msgstr "検索結果は、Splunk APM にアクセスできる場合のみ表示されます。"
+#, fuzzy
+msgid "Search currently includes results for Splunk APM if your organization has access to Splunk APM."
+msgstr "組織が Splunk APM にアクセスできる場合、サーチには、現在、Splunk APM の結果のみが含まれます。"
 
-#: ../../metrics-and-metadata/search.rst:17
-msgid "Search is currently limited to Splunk APM, dashboards, charts, Infrastructure Monitoring navigators, and docs results."
-msgstr "検索は現在、Splunk APM、ダッシュボード、チャート、Infrastructure Monitoring ナビゲーター、ドキュメント結果に限定されています。"
-
-#: ../../metrics-and-metadata/search.rst:22
+#: ../../metrics-and-metadata/search.rst:20
 msgid "Supported search prefixes"
 msgstr "対応する検索プレフィックス"
 
-#: ../../metrics-and-metadata/search.rst:24
+#: ../../metrics-and-metadata/search.rst:22
 msgid "Narrow your search results to specific types of objects by using one of the supported search prefixes to indicate what type of information you're searching for. While wildcard characters are not supported, search does match on substrings."
 msgstr "検索結果を特定の種類のオブジェクトに絞り込むには、サポートされている検索プレフィックスのいずれかを使用して、検索する情報の種類を示します。ワイルドカード文字はサポートされていませんが、検索は部分文字列に一致します。"
 
-#: ../../metrics-and-metadata/search.rst:26
+#: ../../metrics-and-metadata/search.rst:24
 msgid "Supported search prefixes include:"
 msgstr "対応する検索プレフィックスは以下が含まれます："
 
-#: ../../metrics-and-metadata/search.rst:28
-#, fuzzy
-msgid "metric search"
-msgstr "metric search"
-
-#: ../../metrics-and-metadata/search.rst:29
+#: ../../metrics-and-metadata/search.rst:26
 #, fuzzy
 msgid "dashboard"
 msgstr "ダッシュボード"
 
-#: ../../metrics-and-metadata/search.rst:30
+#: ../../metrics-and-metadata/search.rst:27
 #, fuzzy
 msgid "chart"
 msgstr "チャート"
 
-#: ../../metrics-and-metadata/search.rst:31
+#: ../../metrics-and-metadata/search.rst:28
 msgid "team"
 msgstr "team"
 
-#: ../../metrics-and-metadata/search.rst:32
+#: ../../metrics-and-metadata/search.rst:29
 #, fuzzy
 msgid "metric"
 msgstr "メトリクス"
 
-#: ../../metrics-and-metadata/search.rst:33
+#: ../../metrics-and-metadata/search.rst:30
 #, fuzzy
 msgid "integration"
 msgstr "インテグレーション"
 
-#: ../../metrics-and-metadata/search.rst:34
+#: ../../metrics-and-metadata/search.rst:31
 msgid "detector"
 msgstr "ディテクター"
 
-#: ../../metrics-and-metadata/search.rst:35
+#: ../../metrics-and-metadata/search.rst:32
 msgid "help"
 msgstr "help"
 
-#: ../../metrics-and-metadata/search.rst:36
+#: ../../metrics-and-metadata/search.rst:33
 #, fuzzy
 msgid "dimension"
 msgstr "ディメンション"
 
-#: ../../metrics-and-metadata/search.rst:37
+#: ../../metrics-and-metadata/search.rst:34
 #, fuzzy
 msgid "tag"
 msgstr "タグ"
 
-#: ../../metrics-and-metadata/search.rst:38
+#: ../../metrics-and-metadata/search.rst:35
 #, fuzzy
 msgid "property"
 msgstr "プロパティ"
 
-#: ../../metrics-and-metadata/search.rst:39
+#: ../../metrics-and-metadata/search.rst:36
 msgid "navigation (takes you to the corresponding page)"
 msgstr "navigation（該当ページに移動）"
 
-#: ../../metrics-and-metadata/search.rst:40
-#, fuzzy
-msgid "action"
-msgstr "アクション"
+#: ../../metrics-and-metadata/search.rst:37
+msgid "navigator"
+msgstr "ナビゲーター"
 
-#: ../../metrics-and-metadata/search.rst:41
+#: ../../metrics-and-metadata/search.rst:38
 msgid "trace (APM trace)"
 msgstr "trace（APMトレース）"
 
-#: ../../metrics-and-metadata/search.rst:42
+#: ../../metrics-and-metadata/search.rst:39
 #, fuzzy
 msgid "service (APM service)"
 msgstr "service（APMサービス）"
 
-#: ../../metrics-and-metadata/search.rst:43
+#: ../../metrics-and-metadata/search.rst:40
 msgid "business workflow (APM workflow)"
 msgstr "business workflow（APMワークフロー）"
 
-#: ../../metrics-and-metadata/search.rst:49
+#: ../../metrics-and-metadata/search.rst:41
+msgid "application, app (RUM application)"
+msgstr "アプリケーション、App（RUMアプリケーション）"
+
+#: ../../metrics-and-metadata/search.rst:42
+msgid "session (RUM session ID)"
+msgstr "セッション（RUMセッションID）"
+
+#: ../../metrics-and-metadata/search.rst:43
+#, fuzzy
+msgid "test (Synthetics test)"
+msgstr "テスト (Synthetics テスト)"
+
+#: ../../metrics-and-metadata/search.rst:44
+msgid "private location (Synthetics private location)"
+msgstr "プライベートロケーション（Syntheticsプライベートロケーション）"
+
+#: ../../metrics-and-metadata/search.rst:45
+msgid "saved query (Log Observer saved query)"
+msgstr "保存されたクエリ (Log Observer で保存されたクエリ)"
+
+#: ../../metrics-and-metadata/search.rst:46
+msgid "connection (Log Observer connection)"
+msgstr "接続（Log Observer 接続）"
+
+#: ../../metrics-and-metadata/search.rst:52
 msgid "Use the prefix in a 'key value pair' format to narrow your search. For example, enter ``service: checkoutservice`` to search for a service named ``checkoutservice``."
 msgstr "検索を絞り込むには、プレフィックスを「キーと値のペア」形式で使用します。例えば、``checkoutservice`` という名前のサービスを検索するには ``service: checkoutservice`` と入力します。"
 
-#: ../../metrics-and-metadata/search.rst:51
+#: ../../metrics-and-metadata/search.rst:54
 msgid "You can also search using only the prefix to search for all objects of that type."
 msgstr "また、プレフィックスのみを使って検索し、そのタイプのオブジェクトをすべて検索することもできます。"
 
-#: ../../metrics-and-metadata/search.rst:55
-msgid "How to use observability search"
+#: ../../metrics-and-metadata/search.rst:57
+#, fuzzy
+msgid "How to use Observability search"
 msgstr "観測可能性検索の使い方"
 
-#: ../../metrics-and-metadata/search.rst:57
+#: ../../metrics-and-metadata/search.rst:59
 msgid "You can either search a specific term, or define what type of object you're looking for by using one of the supported prefixes to narrow the search to specific result types. This allows you to search for a specific object, if you know the type and name. Or, you can search by prefix type if you're unsure of the name."
 msgstr "特定の語句を検索することもできますし、サポートされているプレフィックスのいずれかを使用して検索対象のオブジェクトの種類を定義し、特定の検索結果の種類に絞り込むこともできます。これにより、種類と名前がわかっていれば、特定のオブジェクトを検索することができます。また、名前がわからない場合は、プレフィックスの種類で検索することもできます。"
 
-#: ../../metrics-and-metadata/search.rst:59
+#: ../../metrics-and-metadata/search.rst:61
 msgid "Navigate to the top right-hand corner and locate the magnifying glass icon. You can also search using the keyboard shortcut Ctrl+Shift+A."
 msgstr "右上の虫眼鏡アイコンをクリックします。キーボードショートカットCtrl+Shift+Aでも検索できます。"
 
-#: ../../metrics-and-metadata/search.rst:60
+#: ../../metrics-and-metadata/search.rst:62
 msgid "Select the search icon (magnifying glass) to launch search. From there, enter the service name you want to search. The results include APM services, dashboards and more. Search displays results by category."
 msgstr "検索アイコン（虫眼鏡）を選択して検索を起動します。そこから検索したいサービス名を入力します。検索結果には、APMサービス、ダッシュボードなどが含まれます。検索はカテゴリ別に結果を表示します。"
 
-#: ../../metrics-and-metadata/search.rst:62
+#: ../../metrics-and-metadata/search.rst:64
 msgid "Search results for \"“checkoutservice\"."
 msgstr "\"checkoutservice\"の検索結果。"
 
-#: ../../metrics-and-metadata/search.rst:66
+#: ../../metrics-and-metadata/search.rst:68
 msgid "(Optional) You can narrow the search to specific types of results using the following supported prefixes. Use prefixes to focus search results to a single category. For details, see :ref:`prefix`."
 msgstr "(オプション)以下の対応プレフィックスを使用して、検索結果を特定のタイプに絞り込むことができます。接頭辞を使うと、検索結果を1つのカテゴリに絞り込めます。詳細については、:ref:`prefix` を参照してください。"
 
-#: ../../metrics-and-metadata/search.rst:67
+#: ../../metrics-and-metadata/search.rst:69
 msgid "(Optional) Select a \"more results\" link to see more matching results in the search category."
 msgstr "(オプション) \"more results \"リンクを選択すると、検索カテゴリに一致する検索結果がさらに表示されます。"
 
-#: ../../metrics-and-metadata/search.rst:68
+#: ../../metrics-and-metadata/search.rst:70
 msgid "Select one of the search results to be taken to that object."
 msgstr "検索結果の1つを選択すると、そのオブジェクトに移動します。"
 
@@ -3771,8 +4076,8 @@ msgstr ":ref:`ディテクター<create-detectors>` がアラートをトリガ�
 #: ../../metrics-and-metadata/view-data-events.rst:23
 msgid "The SessionLog events capture 2 actions: \"session created\" or \"session deleted\". A SessionLog event is created when a user explicitly logs into or out of your organization. Users who navigate to Splunk Observability Cloud who already have an active session aren't prompted to log in and, therefore, don't create a SessionLog event. SessionLog events include the userId, email, and a timestamp."
 msgstr ""
-"SessionLog イベントは、「セッションの作成」と「セッションの削除」の2つのアクションを捕捉します。SessionLog イベントは、ユーザーが明示的に組織にログインまたは組織からログアウトしたときに作成されます。すでにアクティブなセッションを持っているユーザーが Splunk Observability Cloud に移動しても、ログインを促されることはないため、SessionLog イベントは作成されません。SessionLog イベントには、userId、メール、タイムスタンプが"
-"含まれます。"
+"SessionLog イベントは、「セッションの作成」と「セッションの削除」の2つのアクションを捕捉します。SessionLog イベントは、ユーザーが明示的に組織にログインまたは組織からログアウトしたときに作成されます。すでにアクティブなセッションを持っているユーザーが Splunk Observability Cloud に移動しても、ログインを促されることはないため、SessionLog イベントは作成されません。SessionLog イベントには、userId、メール、タイムスタン"
+"プが含まれます。"
 
 #: ../../metrics-and-metadata/view-data-events.rst:25
 msgid "A custom event is created when you capture and send an event to Splunk Observability Cloud. For example, you might send a custom \"code push\" event each time your development team deploys new code, so that you can correlate it with the resource consumption profiles of your infrastructure before and after the event."
@@ -3974,11 +4279,11 @@ msgstr "すべての種類のイベントの保持期間は12か月です。"
 #~ msgstr "Splunk Observability Cloud で関連コンテンツを有効にする"
 
 #~ msgid ""
-#~ "Although these refer to the same trace ID value, the log and the trace cannot be correlated in Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, rename your log metadata key ``trace.id`` to ``trace_id`` using the field copy processor in Logs Pipeline Management. Alternatively, you can re-instrument your log collection to make metadata key names align. When "
-#~ "thefield names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer."
+#~ "Although these refer to the same trace ID value, the log and the trace cannot be correlated in Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, rename your log metadata key ``trace.id`` to ``trace_id`` using the field copy processor in Logs Pipeline Management. Alternatively, you can re-instrument your log collection to make metadata key names align. "
+#~ "Whenthefield names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer."
 #~ msgstr ""
-#~ "これらは同じトレース ID 値を参照していますが、 ``trace_id``  と  ``trace.id``  というフィールド名が一致しないため、Observability Cloud ではログとトレースを関連付けることができません。この場合、ログ・パイプライン管理のフィールドコピープロセッサを使用して、ログ・メタデータ・キー  ``trace.id``  の名前を ``trace_id``  に変更します。または、メタデータキー名を一致させるために、ログコレクションを再測定することもできま"
-#~ "す。APMとLog Observerのフィールド名が一致すると、同じトレースID値を持つトレースとログをObservability Cloudで相関させることができます。その後、APMでトレースを表示しているときに、同じトレースID値を持つログを直接クリックして、Log Observerで相関したログを表示できます。"
+#~ "これらは同じトレース ID 値を参照していますが、 ``trace_id``  と  ``trace.id``  というフィールド名が一致しないため、Observability Cloud ではログとトレースを関連付けることができません。この場合、ログ・パイプライン管理のフィールドコピープロセッサを使用して、ログ・メタデータ・キー  ``trace.id``  の名前を ``trace_id``  に変更します。または、メタデータキー名を一致させるために、ログコレクションを再測定することもでき"
+#~ "ます。APMとLog Observerのフィールド名が一致すると、同じトレースID値を持つトレースとログをObservability Cloudで相関させることができます。その後、APMでトレースを表示しているときに、同じトレースID値を持つログを直接クリックして、Log Observerで相関したログを表示できます。"
 
 #~ msgid "Logs"
 #~ msgstr "ログ"
@@ -4081,3 +4386,132 @@ msgstr "すべての種類のイベントの保持期間は12か月です。"
 
 #~ msgid "Use a Fluentd or FluentBit configuration. See :ref:`Configure Fluentd to send logs <fluentd>` to learn how."
 #~ msgstr "Fluentd か FluentBit の設定を使います。:ref:`ログを送るために Fluentd を設定する<fluentd>` を見てください。"
+
+#~ msgid ":strong:`Category type`"
+#~ msgstr ":strong:`カテゴリ`"
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "No information about the category type of the metric."
+#~ msgstr "メトリクスのカテゴリタイプに関する情報はありません。"
+
+#~ msgid "Note: Category type information for metrics is only available after 03/16/2023. Any metrics created before that date has category type ``0``."
+#~ msgstr "注： メトリクスのカテゴリタイプ情報は、2023年3月16日以降にのみ利用可能になります。それ以前に作成されたメトリクスのカテゴリタイプは ``0`` です。"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "Custom"
+#~ msgstr "カスタム"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "Hi-resolution"
+#~ msgstr "高解像度"
+
+#~ msgid "5"
+#~ msgstr "5"
+
+#~ msgid "Internal"
+#~ msgstr "内部"
+
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgid "7"
+#~ msgstr "7"
+
+#~ msgid "8"
+#~ msgstr "8"
+
+#~ msgid "APM hosts"
+#~ msgstr "APMホスト"
+
+#~ msgid "9"
+#~ msgstr "9"
+
+#~ msgid "APM container"
+#~ msgstr "APMコンテナ"
+
+#~ msgid "10"
+#~ msgstr "10"
+
+#~ msgid "11"
+#~ msgstr "11"
+
+#~ msgid "12"
+#~ msgstr "12"
+
+#~ msgid "APM Troubleshooting MetricSets"
+#~ msgstr "APM Troubleshooting MetricSets"
+
+#~ msgid "This category is not part of the report."
+#~ msgstr "このカテゴリはレポートには含まれていません。"
+
+#~ msgid "13"
+#~ msgstr "13"
+
+#~ msgid "14"
+#~ msgstr "14"
+
+#~ msgid "Infrastructure Monitoring function"
+#~ msgstr "Infrastructure Monitoringの機能"
+
+#~ msgid "15"
+#~ msgstr "15"
+
+#~ msgid "APM function"
+#~ msgstr "APM機能"
+
+#~ msgid "16"
+#~ msgstr "16"
+
+#~ msgid "RUM Troubleshooting MetricSets"
+#~ msgstr "RUM Troubleshooting MetricSets"
+
+#~ msgid "17"
+#~ msgstr "17"
+
+#~ msgid "18"
+#~ msgstr "18"
+
+#~ msgid "Network Explorer metrics"
+#~ msgstr "Network Explorerメトリクス"
+
+#~ msgid "19"
+#~ msgstr "19"
+
+#~ msgid "20"
+#~ msgstr "20"
+
+#~ msgid "In subscription plans based on metric time series (MTS), all metrics are categorized as custom metrics and billed accordingly."
+#~ msgstr "メトリック時系列（MTS）に基づくサブスクリプションプランでは、すべてのメトリクスはカスタムメトリクスに分類され、それに応じて課金されます。"
+
+#~ msgid "The following APM span tags are required to enable Related Content:"
+#~ msgstr "関連コンテンツを有効にするには、以下のAPMスパンタグが必要です。"
+
+#~ msgid "``deployment.environment``"
+#~ msgstr "``deployment.environment``"
+
+#~ msgid "The following Infrastructure Monitoring metadata keys are required to enable Related Content:"
+#~ msgstr "関連コンテンツを有効にするには、以下のInfrastructure Monitoringメタデータキーが必要です。"
+
+#~ msgid "The following key names are required to enable Related Content for Log Observer:"
+#~ msgstr "Log Observerの関連コンテンツを有効にするには、以下のキー名が必要です。"
+
+#~ msgid "Search is currently limited to Splunk APM, dashboards, charts, Infrastructure Monitoring navigators, and docs results."
+#~ msgstr "検索は現在、Splunk APM、ダッシュボード、チャート、Infrastructure Monitoring ナビゲーター、ドキュメント結果に限定されています。"
+
+#~ msgid "metric search"
+#~ msgstr "metric search"
+
+#~ msgid "action"
+#~ msgstr "アクション"
