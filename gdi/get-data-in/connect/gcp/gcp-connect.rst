@@ -44,21 +44,7 @@ To configure your GCP service:
 
 #. Log into your GCP account and select the project you want to monitor in the GCP web console.
 
-#. From the sidebar, select :menuselection:`IAM & admin`, then :menuselection:`Service Accounts`.
-
-#. Go to :guilabel:`Create Service Account` at the top of the screen, complete the following fields, and select :guilabel:`CREATE`.
-
-   * **Service account name**. Enter ``Splunk``.
-
-   * **Service account ID**. This field autofills after you enter ``Splunk`` for Service account name.
-
-   * **Service account description**. Enter the description for your service account.
-
-#. (Optional) Select a role to grant this Service account access to the selected project, then select :guilabel:`CONTINUE`.
-
-#. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer. You will need this key to authenticate in Splunk Observability Cloud.
-
-#. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and activate the Cloud Resource Manager API. You need to activate this API so Splunk Observability Cloud can use it to validate permissions on the service account keys.
+#. Authenticate your GCP project using Workload Identity Federation or Service Account Keys. For more details, see :ref:`gcp-prereqs-authenticate`.
 
 .. _gcp-projects:
 
@@ -85,7 +71,7 @@ By default, Splunk Observability Cloud monitors all supported services, and any 
 
   * Name. Type in the name of the GCP integration.
 
-  * Project. Select :guilabel:`Add Project`, next select :guilabel:`Import Service Account Key` and import one or more of the JSON key files that you downloaded from GCP in :ref:`Configure GCP <gcp-two>`.
+  * Project. Select :guilabel:`Add Project` to add a new project and follow the prompts to authenticate it. For more details, see :ref:`gcp-prereqs-authenticate`.
 
   * Services. By default the new integration syncs with all supported GCP services. Select :guilabel:`All services > Sync only selected services` to select specific services to sync with.  
 
