@@ -49,6 +49,8 @@ The following example shows how to set the user ID globally:
 
 .. code-block:: javascript
 
+   import SplunkRum from '@splunk/otel-web';
+
    SplunkRum.setGlobalAttributes({
       'enduser.id': 'Test User'
    });

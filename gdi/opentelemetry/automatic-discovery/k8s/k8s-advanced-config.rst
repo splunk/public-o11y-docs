@@ -37,6 +37,8 @@ By default, the Splunk Distribution of OpenTelemetry Collector uses the latest v
         environment: prd
         certmanager:
           enabled: true
+        operatorcrds:
+          install: true
         operator:
           enabled: true
         instrumentation:
@@ -78,6 +80,8 @@ Follow these steps to activate Profiling for a language:
 
     .. code-block:: yaml
 
+        operatorcrds:
+          install: true
         operator:
           enabled: true
         instrumentation:  
@@ -112,6 +116,8 @@ Follow these steps to activate runtime metrics collection:
 
     .. code-block:: yaml
 
+      operatorcrds:
+        install: true
       operator:
         enabled: true
       instrumentation:  
@@ -126,6 +132,8 @@ Follow these steps to activate runtime metrics collection:
 
     .. code-block:: yaml
 
+      operatorcrds:
+        install: true
       operator:
         enabled: true
       instrumentation:
@@ -169,6 +177,8 @@ Follow these steps to send data to a gateway endpoint:
         environment: prd
         certmanager:
           enabled: true
+        operatorcrds:
+          install: true
         operator:
           enabled: true
         instrumentation:
@@ -194,6 +204,8 @@ You can also automatically send data to a deployed gateway endpoint by setting `
     environment: prd
     certmanager:
       enabled: true
+    operatorcrds:
+      install: true
     operator:
       enabled: true
                 
