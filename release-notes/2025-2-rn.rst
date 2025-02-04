@@ -51,3 +51,29 @@ February 4, 2025 release
        For more information, see :ref:`get-started-nodejs-3x` and :ref:`get-started-python`.
    * - Metrics Usage Analytics (MUA) expanded to all Amazon Web Services (AWS) realms
      - Metrics Usage Analytics, which launched in November 2024, is now expanded to every AWS realms. Use MUA within Metrics Pipeline Management to get visibility into Metric Time Series (MTS) usage. 
+
+Deprecated and removed from Splunk Observability Cloud
+============================================================
+
+What does deprecation mean?
+---------------------------
+
+Deprecated features, platforms, and browsers continue to work and Splunk supports them until support is removed. However, customers need to begin planning now for the future removal of support.
+
+
+What does removal mean?
+------------------------
+
+When Splunk removes support for a feature, platform, or browser it means that the feature, platform, or browser no longer works with the Splunk platform and customers must find an alternative.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - Deprecated feature
+     - Description
+   * - Deprecation of Kubernetes classic Navigator interface
+     - As of January 30, 2025, Splunk Observability Cloud users can no longer access the Kubernetes classic Navigator interface. 
+
+       For more information, see :new-page:`https://community.splunk.com/t5/Product-News-Announcements/Deprecation-of-Splunk-Observability-Kubernetes-Classic-Navigator/ba-p/709016` in Splunk Community.
