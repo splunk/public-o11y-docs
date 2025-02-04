@@ -7,11 +7,11 @@ Mute alert notifications
 .. meta::
    :description: Learn how to stop sending alert notifications based on conditions.
 
-Muting is helpful when you need to stop sending alert notifications during situations that are known to trigger alerts, such as maintenance windows or tests. Muting allows you to reduce noise and focus on what really matters.
+Muting is helpful when you need to stop sending alert notifications during situations known to trigger alerts, such as maintenance windows or tests. Muting lets you reduce noise and focus on what matters.
 
 You can stop sending, or mute, alert notifications based on certain conditions you can specify. You can mute notifications for a specified period of time or indefinitely, although alerts and events are still generated, and appear in Splunk Observability Cloud.
 
-To see your existing muting rules or create new ones, go to :guilabel:`Alerts`, then select the :guilabel:`Muting Rules` tab.
+To see your existing muting rules or create new ones, go to :guilabel:`Detectors & SLOs`, then select the :guilabel:`Muting rules` tab.
 
 .. image:: /_images/alerts-detectors-notifications/muting-notifications/mutingtab.png
       :width: 99%
@@ -34,7 +34,7 @@ After the muting period ends, Splunk Observability Cloud restarts sending to sub
 Create muting rules
 =============================================================================
 
-To create a muting rule, you can either:
+To create a muting rule, you can do one of the following:
 
 - :ref:`Mute specific detectors or alerts <rule-from-alerts-page>`.
 - :ref:`Create muting rules based on group-by dimensions <rule-from-group-by>`.
@@ -49,7 +49,7 @@ Creating muting rules from existing detectors or alerts is the fastest way of mu
 
 To mute a specific detector or alert:
 
-#. Open the :guilabel:`Alerts` page, and locate the detector or active alert you want to mute.
+#. Open :guilabel:`Detectors & SLOs`, then select either the :guilabel:`Active alerts` or :guilabel:`Detectors` tab.
 #. Select the more icon (|more|) next to the detector or alert, and select :menuselection:`Create Muting Rule`.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
@@ -64,8 +64,8 @@ Muting rules automatically include dimensions specified in :guilabel:`Group By`,
 
 To create muting rules based on group-by dimensions:
 
-#. Open :guilabel:`Alerts`, then select either the :guilabel:`Active Alerts` or :guilabel:`Detectors` tab.
-#. Specify the grouping dimensions using the :guilabel:`Group By` buttons.
+#. Open :guilabel:`Detectors & SLOs`, then select either the :guilabel:`Active alerts` or :guilabel:`Detectors` tab.
+#. Specify the grouping dimensions by selecting the :guilabel:`Group By` button.
 #. Select the more button (|more|) next any grouped item, and select :menuselection:`Create Muting Rule`.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
@@ -76,11 +76,9 @@ To create muting rules based on group-by dimensions:
 Create muting rules from scratch
 --------------------------------------------------------------------------
 
-Create or edit muting rules at any time from the :guilabel:`Muting Rules` tab in :guilabel:`Alerts`.
-
 To create a new muting rule from scratch:
 
-#. Open :guilabel:`Alerts`, then select the :guilabel:`Muting Rules` tab.
+#. Open :guilabel:`Detectors & SLOs`, then select the :guilabel:`Muting rules` tab.
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
 .. _rule-configure:
@@ -94,15 +92,15 @@ The following screenshot shows the muting rule dialog box:
       :width: 90%
       :alt: Configure a muting rule
 
-To create a new muting rule, follow these steps:
+To configure a new muting rule, follow these steps:
 
-#. Use :guilabel:`Add property` to add or modify one or more properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one property, the muting rule interprets the properties using the AND logical operator.
-#. Include a :guilabel:`Reason` for the muting rule. The text you enter in this field is displayed when you hover over a rule in the :guilabel:`Muting Rules` tab, and can help others understand why alerts are being muted.
-#. Specify the :guilabel:`Schedule` during which notifications should be muted (muting period) using the predefined periods or by creating a custom period. You can also mute indefinitely.
-#. (Optional) If the rule follows a schedule, you can set a :guilabel:`Recurrence` period for the muting rule. When scheduling a muting rule, the rule repeats after a set number of days, starting with the start time of the original rule. The daily and weekly options set that number to ``1`` and ``7`` respectively. The :menuselection:`Custom` option lets you set the number of days or set a number of weeks.
+#. Include a :guilabel:`Description` for the muting rule. The text you enter in this field displays as the name of the muting rule in the :guilabel:`Muting rules` tab.
+#. Use :guilabel:`Select detectors` and :guilabel:`Select properties` to add one or more detectors and properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one detector or property, the muting rule interprets the detectors and properties using the AND logical operator.
+#. Specify the :guilabel:`Muting schedule` during which notifications are muted (muting period) using the predefined periods or by creating a custom period. You can also mute indefinitely.
+#. (Optional) If the rule follows a schedule, you can set a :guilabel:`Time window` and a :guilabel:`Recurrence` period for the muting rule. When scheduling a muting rule, the rule repeats after a set number of days, starting with the start time of the original rule. The daily and weekly options set that number to ``1`` and ``7`` respectively. The :menuselection:`Custom` option lets you set the number of days or set a number of weeks. To learn more about setting a time window, see :ref:`time-range-selector`.
 #. Select whether you want to clear any existing alerts that match the conditions you have set. If you're muting certain alerts to address a known problem, you might want to clear existing alerts so you are starting from a clean slate. Clearing these alerts also notifies downstream systems, such as Splunk On-Call, OpsGenie, and PagerDuty.
 #. Select whether you want to receive notifications for alerts that are still active when the muting period ends.
-#. Select :guilabel:`Next` to view a summary of the muting conditions. If you want to turn on the muting rule, select :guilabel:`Save`. It can take up to a minute before a new muting rule goes into effect.
+#. Select :guilabel:`Create` to activate the muting rule. It can take up to a minute before a new muting rule goes into effect.
 
 .. note:: Splunk Observability Cloud allows a maximum of 9,500 muting rules.
 
@@ -111,35 +109,58 @@ To create a new muting rule, follow these steps:
 Search and view muting rules
 =============================================================================
 
-You can search existing muting rules and view their details at any time, as well as browse muted notifications.
+You can search muting rules and view their details at any time, as well as browse muted notifications.
 
-Active and scheduled muting rules
+Muting rules
 -----------------------------------------------------------------------------
 
-To find active or scheduled muting rules, use the search field in the :guilabel:`Muting Rules` tab on the :guilabel:`Alerts` page.
+To find muting rules, use the search field in the :guilabel:`Muting rules` tab on the :guilabel:`Detectors & SLOs` page.
 
-You can also view information about active and scheduled muting rules from different places on the Alerts page.
+You can also view information about muting rules from different places on the :guilabel:`Detectors & SLOs` page.
 
 .. _view-all-rules:
 
--  On the :guilabel:`Muting Rules` tab, you can view a list of all active and scheduled muting rules.
+-  On the :guilabel:`Muting rules` tab, by default, you can view a list of all active and scheduled muting rules.
 
--  On the :guilabel:`Detectors` and the :guilabel:`Active Alerts` tabs, running or scheduled muting rules are indicated by :guilabel:`NOTIFICATIONS MUTED` labels next to the muted detector. You can select the label to view muting rules for the associated detector.
+   - Use the :guilabel:`Status` filter to view different lists of muting rules. You can filter muting rules by :strong:`Active and Scheduled`, :strong:`Active`, :strong:`Scheduled`, :strong:`Expired`, or :strong:`Any`.
+   - Select the arrow next to a muting rule name to expand the row and see more details about the muting rule.
 
-.. note:: If you select :guilabel:`NOTIFICATIONS MUTED` and the :strong:`Muting Rules` tab displays an empty page, then the muting rule was created based on properties instead of created for a detector.
+-  On the :guilabel:`Active alerts` tab, you can view a list of muted alerts by selecting the :guilabel:`All alerts` filter and changing it to :guilabel:`Only muted alerts`. Select the :strong:`Notifications muted` label next to the duration to view and edit muting rules for the associated alert.
+
+-  On the :guilabel:`Detectors` tab, you can view a list of muted detectors by selecting the :guilabel:`All detectors` filter and changing it to :guilabel:`Only muted detectors`. Select the :strong:`Muted` label next to the detector name to view and edit muting rules for the associated detector.
+
+.. note:: If you select :guilabel:`Muted` or :strong:`Notifications muted` and the :strong:`Muting rules` tab displays an empty page, then the muting rule was created based on properties instead of created for a detector.
 
 .. _muted-notifications:
 
 Muted notifications
 -------------------------------------------------------------------
 
-If a notification was muted, an indicator is displayed wherever the event might send the notification, such as on the :guilabel:`Active Alerts` tab or in an event feed.
+If a notification is muted, an indicator is displayed wherever the event might send the notification, such as on the :guilabel:`Active alerts` tab or in an event feed.
 
 To see events related to past muting rules, you can use the :ref:`Events sidebar <events-sidebar>` or the :ref:`Event overlay<dashboard-event-overlay>`. Events are generated when the rule becomes active (notifications stop) and when the rule becomes inactive (notifications resume).
 
    -  To find muting events in the Events sidebar, search for :guilabel:`sf_eventType:alertMuting`.
 
    -  To overlay muting events on a dashboard, search for :guilabel:`alertMuting` in the Event Overlay search box.
+
+
+.. _edit-muting-rules:
+
+Edit muting rules
+=============================================================
+
+You can only edit active and scheduled muting rules. Expired muting rules are read-only.
+
+To edit a muting rule:
+
+#. Open :guilabel:`Detectors & SLOs`, then select the :guilabel:`Muting rules` tab.
+#. Select the more icon (|more|), then select :menuselection:`Edit`.
+#. Make any edits you want to your muting rule.
+
+      .. note:: For active muting rules, you can't change the detector and property filters as well as the muting start date.
+
+#. Select :guilabel:`Save`.
 
 .. _cancel-muting-rules:
 
@@ -148,17 +169,17 @@ Cancel or delete muting rules
 
 Canceling an active muting rule and resuming notifications for an alert or detector are the same thing. A canceled muting rules is deleted from Splunk Observability Cloud before it expires. Scheduled muting rules that are not yet active can also be deleted before they start.
 
-To cancel an active muting rule or delete a scheduled muting rule from :guilabel:`Alerts`:
+To cancel an active muting rule or delete a scheduled muting rule from :guilabel:`Detectors & SLOs`:
 
-- Select the :guilabel:`Muting Rules` tab, and locate the muting rule you want to cancel or delete.
+- Select the :guilabel:`Muting rules` tab, and locate the muting rule you want to cancel or delete.
 
--  Select the more icon (|more|) next to the muting rule and select :menuselection:`Resume Notifications` or :menuselection:`Delete`.
+- Select the more icon (|more|) next to the muting rule and select :menuselection:`Resume notifications` or :menuselection:`Delete`.
 
 You can also cancel muting rules from a muted alert or detector:
 
--  On the :guilabel:`Active Alerts` or the :guilabel:`Detectors` tab, select the :guilabel:`muted` or the :guilabel:`notifications muted` label.
+- On the :guilabel:`Active alerts` or the :guilabel:`Detectors` tab, select the :guilabel:`Muted` or the :guilabel:`Notifications muted` label.
 
-   - For a detector, select the muting rule, then select :menuselection:`Resume Notifications`.
-   - For an active alert, select the more icon (|more|), then select :menuselection:`Resume Notifications`.
+   - For a detector, select the muting rule, then select :menuselection:`Resume notifications`.
+   - For an active alert, select the more icon (|more|), then select :menuselection:`Resume notifications`.
 
 If there are multiple rules, select the rule for which you want to resume notifications. In each case, you can confirm that you want to resume sending notifications.
