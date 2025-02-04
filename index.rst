@@ -570,9 +570,9 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    Monitor Database Query Performance TOGGLE <apm/db-query-perf/db-query-performance>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
-   Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
+   Use data links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
 
 .. toctree::
    :maxdepth:   3
