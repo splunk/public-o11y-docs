@@ -29,6 +29,7 @@ February 4, 2025 release
          * Metric classes to customize the navigator multi-metric table view. See :ref:`nav-metric-class-ui` and :ref:`predefined-metric-classes`.
          * Dependencies and metadata are now displayed in tabs. See :ref:`navigator-sidebar` and :ref:`navigator-sidebar-metadata`.
          * Kubernetes navigators have a new left navigation menu. See :ref:`k8s-nav-left-nav`.
+         * Kubernetes nodes, pods, and containers navigators now display entity status in a new :guilabel:`Phases` column in the table view. This feature requires OpenTelemetry version 0.116.0 or higher.
    * - Splunk Synthetic Monitoring private location enhancements
      - * Deploy Splunk Synthetics private locations on additional environments, including Kubernetes, OpenShift, and ARM 64 architectures. This gives you the freedom to deploy in the trusted environments of your choice, offering more flexibility in how you deploy and maintain your monitoring infrastructure.
        *  Use Splunk Synthetic Monitoring private location deployment with Helm charts to deploy and maintain your synthetic monitoring more efficiently.
