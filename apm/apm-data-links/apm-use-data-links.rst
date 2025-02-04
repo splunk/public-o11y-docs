@@ -13,9 +13,13 @@ For example, you can use a global data link to easily navigate from an APM prope
 
 For information about creating global data links, see :ref:`apm-create-data-links`.
 
+.. _apm-access-gdl-service:
 
 Access global data links for a service
 =========================================
+
+.. note::
+    For global data links to Splunk AppDynamics: If selecting the global data link does not load a tier in the Splunk AppDynamics user interface, check if Splunk AppDynamics has data for the time range. If there is no data for the time range and Splunk AppDynamics is experiencing issues, contact  :new-page:`Splunk AppDynamics support <https://www.splunk.com/en_us/customer-success/appdynamics-support.html>`.
 
 **To access global data links for a service on the Overview page:**
 
@@ -36,7 +40,6 @@ Access global data links for a service
 #. In the service map, select the service you're investigating. The service detail drawer displays.
 
 #. In the service detail drawer, select the :guilabel:`More` icon next to the service name. The menu displays global data links for the service.
-
 
 Access global data links for a trace
 =======================================
