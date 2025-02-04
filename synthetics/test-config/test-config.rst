@@ -11,6 +11,7 @@ Advanced test configurations
 
    auth
    built-in-variables
+   custom-variables
    synth-alerts
    devices
    syn-downtimes
@@ -19,6 +20,7 @@ Advanced test configurations
    public-locations
    rum-synth
    try-now
+
    
 
 To simulate diverse types of traffic to your site or application, use a range of configuration options to customize each of your tests.
