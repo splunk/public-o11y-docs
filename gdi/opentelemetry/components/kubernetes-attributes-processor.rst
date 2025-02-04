@@ -135,7 +135,7 @@ The following example shows how to give a ServiceAccount the necessary permissio
 Discovery filters
 -------------------------------------
 
-You can use the Kubernetes attributes processor in Collectors deployed either as agents or as gateways, using DaemonSets or Deployments respectively. See :ref:`otel-deployment-mode` for more information.
+You can use the Kubernetes attributes processor in Collectors deployed either as agents or as gateways, using DaemonSets or deployments respectively. See :ref:`otel-deployment-mode` for more information.
 
 Agent configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^

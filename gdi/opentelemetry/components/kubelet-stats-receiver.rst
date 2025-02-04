@@ -115,7 +115,7 @@ The following example shows how to configure the ``kubeletstats`` receiver with 
          receivers: [kubeletstats]
          exporters: [file]
 
-.. caution:: A missing or empty ``endpoint`` value causes the host name on which the Collector is running to be used as the endpoint. If the ``hostNetwork`` flag is set, and the Collector is running in a Pod, the host name resolves to the node's network namespace.
+.. caution:: A missing or empty ``endpoint`` value causes the host name on which the Collector is running to be used as the endpoint. If the ``hostNetwork`` flag is set, and the Collector is running in a pod, the host name resolves to the node's network namespace.
 
 Advanced use cases
 ==================================================================
@@ -142,7 +142,7 @@ By default, all produced metrics get resource attributes based on what kubelet t
 The kubelet stats receiver supports the following metadata:
 
 -  ``container.id``: Enriches metric metadata with the Container ID label obtained from container statuses exposed using ``/pods``.
--  ``k8s.volume.type``: Collects the volume type from the Pod spec exposed using ``/pods`` and add it as an attribute to volume metrics. If more metadata than the volume type is available, the receiver syncs it depending on the available fields and the type of volume. For example, ``aws.volume.id`` is synced from ``awsElasticBlockStore`` and ``gcp.pd.name`` is synced from ``gcePersistentDisk``.
+-  ``k8s.volume.type``: Collects the volume type from the pod spec exposed using ``/pods`` and add it as an attribute to volume metrics. If more metadata than the volume type is available, the receiver syncs it depending on the available fields and the type of volume. For example, ``aws.volume.id`` is synced from ``awsElasticBlockStore`` and ``gcp.pd.name`` is synced from ``gcePersistentDisk``.
 
 To add the ``container.id`` label to your metrics, set the ``extra_metadata_labels`` field. For example:
 
@@ -177,7 +177,7 @@ When dealing with persistent volume claims, you can sync metadata from the under
        k8s_api_config:
          auth_type: serviceAccount
 
-If ``k8s_api_config`` is set, the receiver attempts to collect metadata from underlying storage resources for persistent volume claims. For example, if a Pod is using a persistent volume claim backed by an Elastic Block Store (EBS) instance on AWS, the receiver sets the ``k8s.volume.type`` label to ``awsElasticBlockStore`` rather than ``persistentVolumeClaim``.
+If ``k8s_api_config`` is set, the receiver attempts to collect metadata from underlying storage resources for persistent volume claims. For example, if a pod is using a persistent volume claim backed by an Elastic Block Store (EBS) instance on AWS, the receiver sets the ``k8s.volume.type`` label to ``awsElasticBlockStore`` rather than ``persistentVolumeClaim``.
 
 Configure metric groups
 --------------------------------------------------------------

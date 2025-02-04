@@ -143,8 +143,8 @@ To properly ingest trace telemetry data, the attribute ``deployment.environment`
   * - Through the values.yaml file and ``instrumentation.env`` or ``instrumentation.{instrumentation_library}.env`` configuration
     - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
     - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
-  * - Through your Kubernetes application deployment, daemonset, or pod specification
-    - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
+  * - Through your Kubernetes application deployment, DaemonSet, or pod specification
+    - Allows you to set ``deployment.environment`` at the level of individual deployments, DaemonSets, or pods.
     - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=prd``.
 
 The following examples show how to set the attribute using each method:
@@ -283,7 +283,7 @@ The instrumentation in the collector namespace must include the following:
 Set annotations to instrument applications
 ==============================================================
 
-If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-java`` annotation to the application object YAML.
+If the related Kubernetes object (deployment, DaemonSet, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-java`` annotation to the application object YAML.
 
 The annotation you set depends on the language runtime you're using. You can set multiple annotations in the same Kubernetes object. See the following available annotations:
 

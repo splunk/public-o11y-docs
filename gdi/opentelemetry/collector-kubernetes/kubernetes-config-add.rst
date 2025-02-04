@@ -67,7 +67,7 @@ This example shows how to add the :ref:`mysql-receiver` to your configuration fi
 Add the MySQL receiver in the ``agent`` section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To use the Collector agent daemonset to collect ``mysql`` metrics from every node the agent is deployed to, add this to your configuration:
+To use the Collector agent DaemonSet to collect ``mysql`` metrics from every node the agent is deployed to, add this to your configuration:
 
 .. code:: yaml
 
@@ -100,7 +100,7 @@ This example shows how to add the :ref:`rabbitmq` integration to your configurat
 Add RabbitMQ in the ``agent`` section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to activate the RabbitMQ monitor in the Collector agent daemonset, add ``mysql`` to the ``receivers`` section of your agent section in the configuration file:
+If you want to activate the RabbitMQ monitor in the Collector agent DaemonSet, add ``mysql`` to the ``receivers`` section of your agent section in the configuration file:
 
 .. code:: yaml
 
