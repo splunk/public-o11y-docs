@@ -65,7 +65,7 @@ Use the following settings to configure the Android RUM agent:
    * - :code:`enableDebug()`
      - Activates debug mode. This feature is inactive by default. Activating debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
    * - :code:`enableExperimentalOtlpExporter()`
-     - Activates the experimental OTLP exporter. The exporter is not compatible with disk buffering. ``enableExperimentalOtlpExporter()`` is deprecated in Splunk RUM as of January 30, 2025. Although ``enableExperimentalOtlpExporter()`` continues to function, it will be removed in a future version, where OTLP will be the default exporter format. 
+     - Activates the experimental OTLP exporter. The exporter is not compatible with disk buffering. ``enableExperimentalOtlpExporter()`` is deprecated in Splunk RUM as of February 4, 2025. Although ``enableExperimentalOtlpExporter()`` continues to function, it will be removed in a future version, where OTLP will be the default exporter format. 
 
 .. _android-rum-instrumentation-settings:
 
@@ -106,7 +106,7 @@ OkHttp
 -----------------------------------------------
 
 .. note:: 
-   This form of support for OkHttp is deprecated in Splunk RUM as of January 30, 2025. Although ``createRumOkHttpCallFactory(OkHttpClient client)`` continues to function, it will be removed in a future version, and replaced with an option for automatic instrumentation of OkHttp3 or a new API for manual instrumentation. 
+   This form of support for OkHttp is deprecated in Splunk RUM as of February 4, 2025. Although ``createRumOkHttpCallFactory(OkHttpClient client)`` continues to function, it will be removed in a future version, and replaced with an option for automatic instrumentation of OkHttp3 or a new API for manual instrumentation. 
 
 Instrument OkHttp using the ``Call.Factory`` wrapper, as in the following example:
 
@@ -120,7 +120,7 @@ Volley HTTP (Experimental)
 -------------------------------------------------
 
 .. note:: 
-  All methods in ``VolleyTracing`` and ``VolleyTracingBuilder`` are deprecated in Splunk RUM as of January 30, 2025. Although these methods continue to function, they will be removed in a future version. There is no replacement for these methods. 
+  All methods in ``VolleyTracing`` and ``VolleyTracingBuilder`` are deprecated in Splunk RUM as of February 4, 2025. Although these methods continue to function, they will be removed in a future version. There is no replacement for these methods. 
 
 To instrument Volley HTTP, add the ``splunk-otel-android-volley`` dependency to the ``build.gradle.kts`` file:
 
