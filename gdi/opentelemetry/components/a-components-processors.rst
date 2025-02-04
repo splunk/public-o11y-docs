@@ -18,6 +18,7 @@ Collector components: Processors
     groupbyattrs-processor
     kubernetes-attributes-processor
     memory-limiter-processor
+    metrics-generation-processor    
     metrics-transform-processor
     probabilistic-sampler-processor
     redaction-processor
@@ -30,7 +31,7 @@ Collector components: Processors
 
 The Splunk Distribution of the OpenTelemetry Collector includes and supports the processors listed on this doc. To see other components, refer to :ref:`otel-components`.
 
-.. note:: The following list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
+.. note:: The following list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of the OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 The following processors are available:
 
