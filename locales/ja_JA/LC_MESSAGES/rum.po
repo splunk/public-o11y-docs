@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-09 16:19+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -43,6 +43,7 @@ msgid "Use case"
 msgstr "ユースケース"
 
 #: ../../rum/RUM-custom-events.rst:21
+#, fuzzy
 msgid ""
 "Suppose you are an online retailer. A meaningful custom event for your business might be understanding behavior around conversion rates and why users drop off and don't finish a checkout workflow. You might also want to understand where users are stagnating in your application. You can create a custom event to discover which events precipitate an unsuccessful customer journey."
 "Perhaps users are stopped by an error in your checkout workflow, or are unable to enter a promo code. Custom events provide the opportunity for you to see a unique perspective on your data driven by the questions that matter most to you."
@@ -527,6 +528,7 @@ msgid "How alerts work in Splunk RUM"
 msgstr "Splunk RUM におけるアラートの仕組み"
 
 #: ../../rum/rum-alerts.rst:16
+#, fuzzy
 msgid ""
 "In Splunk RUM for Browser, alerts are triggered on aggregate metrics for the entire application. If you want to create an alert for a page level metric, first create a custom event for the metric, then create an alert for the custom event. To learn more, see :ref:`Create custom events <rum-custom-event>`. If you are new to alerts and detectors, see :ref:`Introduction to "
 "alertsand detectors in Splunk Observability Cloud <get-started-detectoralert>`."
@@ -677,7 +679,7 @@ msgid "Alert trigger conditions"
 msgstr "アラートトリガー条件"
 
 #: ../../rum/rum-alerts.rst:87
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "RUM alert conditions are designed to reduce noise and provide clear, actionable insights on your data. You can configure the sensitivity of the alert to suit your needs. If you want an alert that is more sensitive to smaller changes, you can reduce the percentage. For example, if you set your sensitivity to 10%, then you'd be alerted when only 10% of the data in the given "
 "timeframe crosses the threshold you set."
@@ -688,12 +690,13 @@ msgid "Page level metrics"
 msgstr "ページレベルのメトリクス"
 
 #: ../../rum/rum-alerts.rst:93
+#, fuzzy
 msgid ""
 "To create a page level metric, first create a custom rule to map to the page you want to monitor. See :ref:`rum-rules` to learn how to create a custom rule. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule "
 "byselecting the rule from the list. The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``."
 msgstr ""
-"ページレベルのメトリクスを作成するには、まず、監視したいページにマッピングするカスタムルールを作成します。カスタムルールの作成方法については、:ref:`rum-rules` を参照してください。たとえば、オンラインストアButtercup Gamesの製品タイプでグループ化したいので、パターン  ``https://buttercupgames.com/product/<?>`` を使用するとします。ディテクターを作成する際、リストからルールを選択して"
-"カスタムルールを適用します。次の画像は、カスタムパターン  ``https://buttercupgames.com/product/<?>`` のページレベルディテクターです。"
+"ページレベルのメトリクスを作成するには、まず、監視したいページにマッピングするカスタムルールを作成します。カスタムルールの作成方法については、:ref:`rum-rules` を参照してください。たとえば、オンラインストアButtercup Gamesの製品タイプでグループ化したいので、パターン ``https://buttercupgames.com/product/<?>`` を使用するとします。ディテクターを作成する際、リストからルールを選択してカ"
+"スタムルールを適用します。次の画像は、カスタムパターン   ``https://buttercupgames.com/product/<?>`` のページレベルディテクターです。"
 
 #: ../../rum/rum-alerts.rst:91 ../../rum/rum-alerts.rst:101 ../../rum/rum-alerts.rst:111
 msgid "This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert."
@@ -704,6 +707,7 @@ msgid "App level metrics"
 msgstr "アプリレベルのメトリクス"
 
 #: ../../rum/rum-alerts.rst:103
+#, fuzzy
 msgid ""
 "Web vitals have a standard range that denotes good performance. For example, a largest contentful paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the "
 "stepson how to remedy the slow LCP."
@@ -842,12 +846,13 @@ msgid "Span tags"
 msgstr "スパンタグ"
 
 #: ../../_includes/synthetics/metricset-def.rst:4
+#, fuzzy
 msgid ""
 "Use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. To get additional value from a span tag or process, an  administrator can run an action known as indexing, which activates additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated metrics, called MetricSets, across "
 "allspans that contain a specified indexed tag or process."
 msgstr ""
-"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行して、インデックス化したスパンタグやプロセスの追加的分析を有効にすることができます。インデックス化のメリットの1つは、指定したインデックス済みタグまたはプロセスを含むすべてのスパンを"
-"対象にして、MetricSetsと呼ばれる集約メトリクスを取得できることです。"
+"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行することができます。これにより、インデックス化したスパンタグやプロセスの追加的分析が有効になります。インデックス化のメリットの1つは、指定したインデックス済みタグまたはプロセスを含む"
+"すべてのスパンを対象にして、MetricSetsと呼ばれる集約メトリクスを取得できることです。"
 
 #: ../../_includes/synthetics/metricset-def.rst:8
 #, fuzzy
@@ -1103,6 +1108,7 @@ msgid "Review a larger time range of data"
 msgstr "より多くの時間範囲のデータを確認する"
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:73
+#, fuzzy
 msgid ""
 "Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mobile to monitor releases, find root causes of user reported issues, and measure important metrics. Kai looks at the :guilabel:`Application summary dashboard` to see an overview of mobile performance metrics. If Kai sees a troublesome trend, they can open the built-in dashboard to see a longer "
 "periodof time for the data they're interested in. Data from RUM is retained for 8 days. Data from a built-in dashboard is kept for 13 months. For more on data retention, see :ref:`data-o11y`."
@@ -1167,6 +1173,7 @@ msgid "Page level dashboards"
 msgstr "ページレベルのダッシュボード"
 
 #: ../../rum/rum-dashboards/rum-custom-dashboards.rst:31
+#, fuzzy
 msgid ""
 "Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. For example, ``rum.node.workflow.count`` represents the total number of spans with the selected custom event in the given time range sorted by page. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on "
 "specificpages."
@@ -1181,6 +1188,7 @@ msgid "Monitor custom events and page level metrics"
 msgstr "カスタムイベントとページレベルのメトリクスを監視する"
 
 #: ../../rum/rum-dashboards/rum-custom-dashboards.rst:45
+#, fuzzy
 msgid ""
 "Kai uses custom dashboards to get a high level assessment of the health of the Buttercup Industries applications. They go to :menuselection:`Dashboards` to create a new dashboard. Kai wants to look at custom events and page level metrics for page views. The first chart utilizes the metric ``rum.node.workflow.count``. The second chart shows the metric ``rum.node.page_view."
 "count``which shows custom events and page level metrics for page views. Here is how Kai set up their dashboard:"
@@ -1273,6 +1281,7 @@ msgid "Uncaught JavaScript errors"
 msgstr "捕捉されないJavaScriptエラー"
 
 #: ../../rum/rum-identify-span-problems.rst:35
+#, fuzzy
 msgid ""
 "An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors typically don't have custom error messages. Uncaught JavaScript errors can contain important information in an unedited format like a stack trace. Both caught and uncaught JavaScript errors can contain stack traces. This example span of an uncaught error from the fictitious application shows whatfields "
 "you might see in Splunk RUM in the sesion details view."
@@ -1293,6 +1302,7 @@ msgid "Resource errors"
 msgstr "リソースエラー"
 
 #: ../../rum/rum-identify-span-problems.rst:68
+#, fuzzy
 msgid ""
 "In Splunk RUM for Browser, resource errors are explicit HTTP event errors like fetch errors, AJAX errors and XHR requests. An XHR/fetch error happens when the server encounters an error. For example, if a user requested to access data on an application and the data was deleted from the server. A third-party resource error is when a user tries to access resource over a networkand "
 "the resource is unavailable. For example, if a user on your application tries to load a JavaScript, CSS, or image resource, but it didn't load."
@@ -1509,6 +1519,7 @@ msgid "Support for # in URLs"
 msgstr "URLにおける#のサポート"
 
 #: ../../rum/rum-rules.rst:81
+#, fuzzy
 msgid ""
 "Single-page applications use a ``#`` token at the end of a URL path to append the fragment. The following URL shows how blog posts from a single-page application are listed after the # symbol: ``https://example.com/#/blogpost``. By default, fragments after a # are ignored by Splunk RUM, unless you specify that you would like to include it in a rule. For example, the "
 "fragment``#title`` is excluded from the path in this example: ``https://example.com/path/page.html#title``."
@@ -1594,7 +1605,8 @@ msgid "<??> Wildcard for one or more trailing tokens"
 msgstr "1つ以上の末尾トークンの <??> ワイルドカード"
 
 #: ../../rum/rum-rules.rst:125
-msgid "This example shows how to use a ``<??>`` wildcard to group together URLs by one or more tokens. The ``<??>`` wildcard is supported only as the last wild card in a pattern at this time."
+#, fuzzy
+msgid "This example shows how to use a ``<??>`` wildcard to group together URLs by one or more tokens. The ``<??>`` wildcard is supported only as the last wildcard in a pattern at this time."
 msgstr "この例では、``<??>`` ワイルドカードを使用して、1つ以上のトークンで URL をグループ化する方法を示します。``<??>`` ワイルドカードは、現時点ではパターンの最後のワイルドカードとしてのみサポートされています。"
 
 #: ../../rum/rum-rules.rst:134
@@ -2141,6 +2153,7 @@ msgid "Scenario: Kai identifies performance bottlenecks with Splunk RUM for Brow
 msgstr "シナリオ：Kai が Splunk RUM for Browser でパフォーマンスのボトルネックを特定する"
 
 #: ../../rum/rum-scenario-library/scenario-monitoring.rst:15
+#, fuzzy
 msgid ""
 "Kai is a site reliability engineer at Buttercup Industries e-commerce company. One of Kai's main concerns is monitoring the performance of the Buttercup Industries website. When sites are sluggish, users get frustrated and are more likely to abandon a slow site in favor of a faster competitor. In this example, Kai uses Splunk RUM for Browser and Splunk Observability Cloud "
 "toidentify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website."
@@ -2149,6 +2162,7 @@ msgstr ""
 "マンスのボトルネックを特定し、ウェブバイタル を監視することで、Buttercup Industries のウェブサイトで顧客が直面する問題のトラブルシューティングを行っています。"
 
 #: ../../rum/rum-scenario-library/scenario-monitoring.rst:19
+#, fuzzy
 msgid ""
 "Google's Core Web Vitals quantify user experience in terms of page load, visual stability, and interactivity, making them valuable metrics to improve frontend performance. Web Vitals also affect page ranking in Google, which is important for many businesses that rely on search engines for users to discover their sites. Splunk RUM automatically measures Web Vital metrics so "
 "Kaican tune into the overview page to check in on the metric scores."
@@ -2297,6 +2311,7 @@ msgid "Scenario: Create custom events and monitor a single page application"
 msgstr "シナリオ：カスタムイベントを作成し単一ページのアプリケーションを監視する"
 
 #: ../../rum/rum-scenario-library/spa-custom-event.rst:16
+#, fuzzy
 msgid ""
 "Buttercup Industries recently started a blog to share customer success stories and engage with their user base. The engineers at Buttercup Industries created the blog as a single-page application (SPA). Kai, a site reliability engineer at Buttercup Industries, monitors the blog with RUM to learn more about route changes, route durations, and back-end calls. Kai also "
 "leveragescustom events in RUM to monitor how users engage with content on the blog."
@@ -2349,6 +2364,7 @@ msgid "Create a custom event to measure user engagement on blog posts"
 msgstr "ブログ記事のユーザーエンゲージメントを測定するカスタムイベントを作成する"
 
 #: ../../rum/rum-scenario-library/spa-custom-event.rst:54
+#, fuzzy
 msgid ""
 "Kai wants to capture metrics for like and share actions on blog posts to help Buttercup Industries gauge how users are interacting with the content. Since there is no route change, and no URL change when someone likes a blog post, Kai creates a custom event to capture this workflow. Custom events are a great tool for Kai to leverage with multiple-page apps single-page apps "
 "whenthey want to monitor a workflow with custom JavaScript logic."
@@ -2597,6 +2613,7 @@ msgid "Search for global attributes"
 msgstr "グローバル属性を検索する"
 
 #: ../../rum/rum-tag-search.rst:40
+#, fuzzy
 msgid ""
 "Global attributes are key-value pairs added to all reported data. Global attributes are useful for reporting app or user-specific values as tags. You can create global attributes either at the time of library initialization, or afterwards. Span attributes are custom attributes that you can add to specific spans. Custom events capture logic for a specific workflow you define, "
 "forexample a checkout workflow. For more, see :ref:`rum-custom-event`."
@@ -2957,6 +2974,7 @@ msgid "Session"
 msgstr "セッション"
 
 #: ../../rum/rum-terminology-concepts.rst:58
+#, fuzzy
 msgid ""
 "A session refers to a group of user interactions on an application for a maximum of 4 hours. A Session begins when a user loads the front-end application and ends when the application is terminated or expires. Sessions expire after 15 minutes of inactivity. The definitions for trace and span are the same in both Splunk RUM and Splunk APM. For more information about traces inAPM, "
 "see :ref:`apm-traces-spans`."
@@ -3317,6 +3335,7 @@ msgid "What is sensitive data ?"
 msgstr "機密データとは何ですか？"
 
 #: ../../rum/sensitive-data-rum.rst:21
+#, fuzzy
 msgid ""
 "Sensitive data may fall within the categories of personally identifiable information (PII), customer-identifiable information (CII), cardholder data (CHD), or protected health information (PHI). It is necessary to protect these types of data to ensure compliance with industry requirements such as the Payment Card Industry Data Security Standard (PCI DSS), the Health "
 "InsurancePortability and Accountability Act (HIPAA), and the General Data Protection Regulation (GDPR)."
@@ -3378,7 +3397,7 @@ msgstr "このコードスニペットは、失敗したステータスを持つ
 
 #: ../../rum/sensitive-data-rum.rst:78 ../../rum/sensitive-data-rum.rst:158
 msgid "Use the format ``(string\\|regex)[]`` with ``ignoreUrls`` to drop all URLs that contain ``/payment/``:"
-msgstr "``/payment/`` を含むURLをすべて削除するには、``(string\\|regex)[]`` with ``ignoreUrls`` の形式を使用します："
+msgstr "``/payment/`` を含むURLをすべて削除するには、 ``(string\\|regex)[]`` with ``ignoreUrls`` の形式を使用します："
 
 #: ../../rum/sensitive-data-rum.rst:87
 msgid "Splunk RUM for Mobile Android instrumentation"

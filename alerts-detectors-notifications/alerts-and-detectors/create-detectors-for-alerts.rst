@@ -13,7 +13,7 @@ Detectors are made up of alert rules. When you create an alert rule you can sele
 
 When a detector determines that the conditions for a rule are met, it triggers an alert, creates an event, and sends notifications, if specified. Detectors can send notifications through email, as well as through other systems, such as Slack, or by using a webhook. To learn more, see :ref:`admin-notifs-index`.
 
-You can find active alerts, existing detectors, and muting rules under :guilabel:`Alerts & Detectors`. You can also find alerts in the Events Feed, available within any dashboard.
+You can find active alerts, existing detectors, and muting rules under :guilabel:`Detectors & SLOs`. You can also find alerts in the Events Feed, available within any dashboard.
 
 .. note:: This topic covers Infrastructure and Custom Metrics detectors. You can create a Splunk APM detector to monitor request rates, error rates, and latency for your service. To learn more about Splunk APM detectors, visit :ref:`apm-alerts`.
 
@@ -45,7 +45,7 @@ There are several ways to create a detector.
 Clone an existing detector
 -------------------------------------------------------------------
 
-You can see a list of existing detectors on the :guilabel:`Detectors` tab under Alerts & Detectors. 
+You can see a list of existing detectors on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs`. 
 
 1. Look for a detector that is similar to the detector you want to create. 
 2. Select the detector.
@@ -73,7 +73,7 @@ After you create a detector from a chart, a :ref:`link to the new detector<link-
 Create a detector from scratch
 -------------------------------------------------------------------
 
-To create a new detector for Infrastructure or Custom Metrics from scratch, you can either select :guilabel:`New Detector` under Alerts & Detectors, or select :menuselection:`Custom Detector` from the create menu on the navigation bar. Enter a detector name and then select :guilabel:`Create Alert Rule` to proceed to the alert rule builder. For instructions on building the rule, see :ref:`build-rules`.
+To create a new detector for Infrastructure or Custom Metrics from scratch, you can either select :guilabel:`New Detector` under :guilabel:`Detectors & SLOs`, or select :menuselection:`Custom Detector` from the create menu on the navigation bar. Enter a detector name and then select :guilabel:`Create Alert Rule` to proceed to the alert rule builder. For instructions on building the rule, see :ref:`build-rules`.
 
 .. _create-via-api:
 
@@ -257,7 +257,7 @@ The following table explains different types of email notifications:
 
 .. note:: Tips
 
-   - If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option on the Detectors tab under Alerts & Detectors after you save the detector.
+   - If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs` after you save the detector.
 
    - You can temporarily stop a detector from sending notifications by :ref:`muting notifications<mute-notifications>`.
 
@@ -269,7 +269,7 @@ Activate
 
 On the :strong:`Activate` tab you see a summary of the detector settings you specified. Review the summary and make any necessary changes in the associated tabs, then name the rule; by default, the rule name is the same as the detector name. The rule name is displayed on the Alerts page and in notifications.
 
-Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the Detectors tab under Alerts & Detectors. You can also provide additional descriptive text below the name, for example, to clarify the purpose of the detector for others.
+Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs`. You can also provide additional descriptive text below the name, for example, to clarify the purpose of the detector for others.
 
 
 .. note:: If you make any changes to the detector name or description, select the :guilabel:`Save` button. If you select the :strong:`Close` button without saving, your changes will be lost.

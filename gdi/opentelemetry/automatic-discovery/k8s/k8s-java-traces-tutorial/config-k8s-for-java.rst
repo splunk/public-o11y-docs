@@ -56,6 +56,9 @@ Now, you need to configure Helm to correctly install the Splunk Distribution of 
         * - ``certmanager.enabled``
           - ``true``
           - Activates the certification manager for Helm
+        * - ``operatorcrds.install``
+          - ``true``
+          - Installs the CRDs used by the OpenTelemetry Kubernetes Operator
         * - ``operator.enabled``
           - ``true``
           - Activates the OpenTelemetry Kubernetes Operator
@@ -75,6 +78,8 @@ Now, you need to configure Helm to correctly install the Splunk Distribution of 
         environment: prd
         certmanager:
           enabled: true
+        operatorcrds:
+          install: true
         operator:
           enabled: true
 

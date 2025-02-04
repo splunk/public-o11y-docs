@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-09 16:17+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -41,7 +41,7 @@ msgstr "請求"
 #: ../../_includes/activate-deactivate-native-metrics.rst:33
 #, fuzzy
 msgid "If you're in a MTS-based subscription, all metrics count towards metrics usage."
-msgstr "MTSベースのサブスクリプションの場合、すべてのメトリクスがメトリクスの使用量にカウントされます。"
+msgstr "MTSベースのサブスクリプションでは、すべてのメトリクスがメトリクスの使用量にカウントされます。"
 
 #: ../../_includes/activate-deactivate-native-metrics.rst:34
 msgid "If you're in a host-based plan, metrics listed as active (Active: Yes) on this document are considered default and are included free of charge."
@@ -606,26 +606,27 @@ msgid ""
 "To maximize responsiveness when processing incoming metric data, Splunk Observability Cloud limits the number of :term:`metric time series` (MTS) processed in a signal (single plot line) on a chart or detector. If the total number of time series for the metric specified in your signal exceeds this limit, Splunk Observability Cloud displays an orange border around the MTS number. This border notifies you that "
 "theprocessed data reflects only a subset of the time series in the data."
 msgstr ""
-"受信したメトリクスデータを処理する際の応答性を最大化するため、Splunk Observability Cloudは、チャートまたはディテクター上のシグナル（単一のプロットライン）で処理される :term:`metric time series` （MTS）の数を制限しています。シグナル内で指定したメトリクスのメトリック時系列の合計数がこの制限を超えると、Splunk Observability Cloudでは、MTS番号の周囲にオレンジ色の境界線を表示します。この境界線が表示されている場合は、処理"
-"済みのデータが反映しているのはデータ内の時系列のサブセットのみであることを意味します。"
+"受信したメトリクスデータを処理する際の応答性を最大化するため、Splunk Observability Cloudは、チャートまたはディテクター上のシグナル（単一のプロット線）で処理される :term:`metric time series` （MTS）の数を制限しています。シグナル内で指定したメトリクスの時系列の総数がこの制限を超えると、Splunk Observability Cloudは、MTS番号の周囲にオレンジ色の境界線を表示します。この境界線が表示されている場合は、処理済みのデータが反映"
+"しているのはデータ内の時系列のサブセットのみであることを意味します。"
 
 #: ../../_includes/chart-mts-count.rst:14
 msgid "To ensure that your charts and detectors are processing all the time series in the data, apply as many filters as necessary to make the MTS number less than the maximum. You'll know you've succeeded when the orange outline around the MTS number and the message at the top of the chart or detector no longer appear."
-msgstr "チャートやディテクターがデータ内のすべての時系列を処理していることを保証するには、MTSの数が最大値より小さくなるようにするために必要な数のフィルタを適用します。MTS番号の周囲のオレンジ色の囲い線と、チャートまたはディテクターの上部のメッセージが表示されなくなれば、成功です。"
+msgstr "チャートやディテクターがデータ内のすべての時系列を処理していることを保証するには、MTSの数が最大値より小さくなるようにするために必要な数のフィルターを適用します。MTS番号の周囲のオレンジ色の囲い線と、チャートまたはディテクターの上部のメッセージが表示されなくなれば、成功です。"
 
 #: ../../_includes/chart-mts-count.rst:17
+#, fuzzy
 msgid ""
-"For example, suppose you want to display the sum of available disk capacity per availability zone. You might use ``df.complex.free`` as your signal, then apply the Sum analytics function, grouped by availability zone. If you have a large number of disks, the number of MTS returned by this signal might exceed the limit. To reduce the number of MTS, use filters and multiple plots instead of the group-by option inthe "
-"Sum analytics function."
-msgstr "例えば、アベイラビリティゾーンごとに利用可能なディスク容量の合計を表示したいとします。この場合、``df.complex.free`` をシグナルとして使用し、アベイラビリティゾーンごとにグループ化されたSum分析関数を適用します。ディスクの数が多い場合、このシグナルが返すMTSの数が制限を超える可能性があります。MTSの数を減らすには、Sum分析関数の「group-by」オプションの代わりにフィルタと複数のプロットを使用します。"
+"For example, suppose you want to display the sum of available disk capacity per availability zone. You might use ``df.complex.free`` as your signal, then apply the Sum analytics function, grouped by availability zone. If you have a large number of disks, the number of MTS returned by this signal might exceed the limit. To reduce the number of MTS, use filters and multiple plots instead of the group-by option in "
+"theSum analytics function."
+msgstr "例えば、アベイラビリティゾーンごとに利用可能なディスク容量の合計を表示したいとします。この場合、``df.complex.free`` をシグナルとして使用し、アベイラビリティゾーンごとにグループ化してSum分析関数を適用するかもしれません。ディスクの数が多い場合、このシグナルが返すMTSの数が制限を超える可能性があります。MTSの数を減らすには、Sum分析関数の「group-by」オプションの代わりに、フィルターと複数のプロットを使用します。"
 
 #: ../../_includes/chart-mts-count.rst:21
 msgid "To use filters and multiple plots instead of the group-by option, follow these steps:"
-msgstr "「group-by」オプションの代わりにフィルタと複数のプロットを使用するには、以下の手順に従います。"
+msgstr "「group-by」オプションの代わりにフィルターと複数のプロットを使用するには、以下の手順に従います。"
 
 #: ../../_includes/chart-mts-count.rst:23
 msgid "Apply a filter for the plot that selects a single availability zone, then use the Sum analytic function without the group-by option."
-msgstr "単一のアベイラビリティゾーンを選択するフィルタをプロットに適用し、「group-by」オプションを使用せずにSum分析関数を使用します。"
+msgstr "単一のアベイラビリティゾーンを選択するフィルターをプロットに適用し、「group-by」オプションを使用せずにSum分析関数を使用します。"
 
 #: ../../_includes/chart-mts-count.rst:24
 msgid "At the end of the plot row, select :guilabel:`Configure plot` to open :guilabel:`Visualization Options`, then select a color from :guilabel:`Plot Color`."
@@ -637,11 +638,11 @@ msgstr "このプロットを複製します。これを行うには、:guilabel
 
 #: ../../_includes/chart-mts-count.rst:27
 msgid "In the cloned plot, change the availability zone filter to select another availability zone, and change the :guilabel:`Plot Color` to give the cloned plot a color that's different from the original plot."
-msgstr "複製したプロット内で、アベイラビリティゾーンフィルタを変更して別のアベイラビリティゾーンを選択し、:guilabel:`Plot Color` を変更して、複製したプロットに元のプロットとは異なる色を付けます。"
+msgstr "複製したプロット内で、アベイラビリティゾーンフィルターを変更して別のアベイラビリティゾーンを選択し、:guilabel:`Plot Color` を変更して、複製したプロットに元のプロットとは異なる色を付けます。"
 
 #: ../../_includes/chart-mts-count.rst:29
 msgid "Continue to clone plots, change the availability zone filter, and change the plot color until you have one plot for each availability zone."
-msgstr "各アベイラビリティゾーンにつきプロットが1つずつ作成されるまで、プロットの複製、アベイラビリティゾーンフィルタの変更、プロットカラーの変更を繰り返します。"
+msgstr "各アベイラビリティゾーンにつきプロットが1つずつ作成されるまで、プロットの複製、アベイラビリティゾーンフィルターの変更、プロットカラーの変更を繰り返します。"
 
 #: ../../_includes/chart-mts-count.rst:31
 msgid "The result is one chart with a separate plot line for each availability zone. Each plot line has a distinct color."
@@ -708,7 +709,7 @@ msgstr "これらのレシーバーについて詳しく学びます："
 msgid ":ref:`signalfx-receiver`"
 msgstr ":ref:`signalfx-receiver`"
 
-#: ../../_includes/collector-config-ootb.rst:54 ../../_includes/gdi/application-receiver-table.rst:143
+#: ../../_includes/collector-config-ootb.rst:54 ../../_includes/gdi/application-receiver-table.rst:34
 msgid ":ref:`processlist`"
 msgstr ":ref:`processlist`"
 
@@ -772,7 +773,7 @@ msgstr "トレースのデフォルトのパイプライン"
 msgid "The following diagram shows the default traces pipeline:"
 msgstr "以下の図は、デフォルトのトレース・パイプラインを示しています："
 
-#: ../../_includes/collector-config-ootb.rst:181 ../../_includes/gdi/application-receiver-table.rst:155
+#: ../../_includes/collector-config-ootb.rst:181 ../../_includes/gdi/application-receiver-table.rst:36
 msgid ":ref:`jaeger-grpc`"
 msgstr ":ref:`jaeger-grpc`"
 
@@ -1011,7 +1012,7 @@ msgstr "``memory_ballast`` をカスタマイズしていない場合は、設�
 
 #: ../../_includes/collector-upgrade-memory-ballast.rst:7
 msgid "If you have customized ``memory_ballast`` using ``SPLUNK_BALLAST_SIZE_MIB`` (or ``extensions::memory_ballast::size_mib config``), remove the ``memory_ballast`` extension and use the ``GOMEMLIMIT`` environment variable to set a custom soft memory limit:"
-msgstr "``SPLUNK_BALLAST_SIZE_MIB`` （または ``extensions::memory_ballast::size_mib config`` ）を使用して ``memory_ballast``  をカスタマイズしている場合は、 ``memory_ballast``  拡張機能を削除し、``GOMEMLIMIT`` 環境変数を使用してカスタムのソフトメモリ制限を設定します："
+msgstr "``SPLUNK_BALLAST_SIZE_MIB`` （または ``extensions::memory_ballast::size_mib config`` ）を使用して ``memory_ballast`` をカスタマイズしている場合は、  ``memory_ballast``  拡張機能を削除し、``GOMEMLIMIT`` 環境変数を使用してカスタムのソフトメモリ制限を設定します："
 
 #: ../../_includes/collector-upgrade-memory-ballast.rst:9
 msgid "To increase frequency of garbage collection set ``GOMEMLIMIT`` to a higher value than the default 90% of total memory."
@@ -1031,7 +1032,7 @@ msgstr "0.68.0から0.69.0"
 
 #: ../../_includes/collector-upgrade.rst:22
 msgid "The ``gke`` and ``gce`` resource detectors in the ``resourcedetection`` processor have been replaced with the ``gcp`` resource detector. If you have ``gke`` and ``gce`` detectors configured in the ``resourcedetection`` processor, update your configuration accordingly."
-msgstr "``resourcedetection``  プロセッサーの  ``gke``  および  ``gce``  リソースディテクターは、``gcp`` リソースディテクターに置き換えられました。  ``resourcedetection``  プロセッサーに  ``gke``  および  ``gce``  ディテクターを設定している場合は、それに応じて設定を更新してください。"
+msgstr "``resourcedetection``  プロセッサーの ``gke`` および  ``gce`` リソースディテクターは、``gcp`` リソースディテクターに置き換えられました。 ``resourcedetection``  プロセッサーに  ``gke``  および  ``gce``  ディテクターを設定している場合は、それに応じて設定を更新してください。"
 
 #: ../../_includes/collector-upgrade.rst:24
 msgid "For more information, see :ref:`resourcedetection-processor`."
@@ -1070,12 +1071,13 @@ msgid "The OpenTelemetry Collector is a tech-agnostic way to receive, process an
 msgstr "OpenTelemetry Collectorは、テレメトリーデータを受信、処理、エクスポートするための技術にとらわれない方法です。"
 
 #: ../../_includes/collector-works.rst:3
+#, fuzzy
 msgid ""
-"After you've installed the Collector in your platform, update your config file to define the different Collector components (receivers, processors, and exporters) you want to use. However, receivers and exporters are not enabled until they are in a pipeline, as explained in the next paragraph. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnosticsand "
-"health checks. Find the available components at :ref:`otel-components`."
+"After you've installed the Collector in your platform, update your config file to define the different Collector components (receivers, processors, and exporters) you want to use. However, receivers and exporters are not enabled until they are in a pipeline, as explained in the next paragraph. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics "
+"andhealth checks. Find the available components at :ref:`otel-components`."
 msgstr ""
-"プラットフォームにCollectorをインストールしたら、設定ファイルを更新して、使用するCollectorコンポーネント（レシーバー、プロセッサー、エクスポーター）を定義します。ただし、レシーバーとエクスポーターは、次の段落で説明するように、パイプラインに入るまで有効になりません。診断やヘルスチェックなど、OpenTelemetry Collector に追加機能を提供する拡張機能を追加することもできます。使用可能なコンポーネントは、:ref:`otel-"
-"components` を参照してください。"
+"プラットフォームにCollectorをインストールしたら、設定ファイルを更新して、使用するさまざまなCollectorコンポーネント（レシーバー、プロセッサー、エクスポーター）を定義します。ただし、レシーバーとエクスポーターは、次のパラグラフで説明するように、パイプラインに入るまでは有効になりません。また、診断やヘルスチェックといった追加機能をOpenTelemetry Collectorに提供する、拡張機能を追加することもできます。使用可能なコンポーネン"
+"トは、:ref:`otel-components` を参照してください。"
 
 #: ../../_includes/collector-works.rst:5
 msgid ""
@@ -1116,7 +1118,7 @@ msgstr "Collectorの詳細は、:ref:`otel-understand-use` を参照してくだ
 #: ../../_includes/event-sending-functionality.rst:1
 #, fuzzy
 msgid "This monitor includes event-sending functionality to let you post your own custom events to Splunk Observability Cloud. For example, you can send your own custom event when you deploy a new version of your software or update other parts of your infrastructure. You can then view these events in the Splunk Observability Cloud user interface (UI)."
-msgstr "このモニターには、お客様独自のカスタムイベントをSplunk Observability Cloudにポストするためのイベント送信機能があります。たとえば、ソフトウェアの新しいバージョンをデプロイしたり、ご利用のインフラストラクチャの他の部分を更新したりするときに、独自のカスタムイベントを送信できます。すると、Splunk Observability Cloudのユーザーインターフェイス（UI）でこれらのイベントを表示できるようになります。"
+msgstr "このモニターには、独自のカスタムイベントをSplunk Observability Cloudにポストすることを可能にするイベント送信機能が含まれます。たとえば、ソフトウェアの新しいバージョンのデプロイ時や、ご利用のインフラストラクチャの他の部分の更新時に、独自のカスタムイベントを送信できます。そして、Splunk Observability Cloudのユーザーインターフェイス（UI）でそれらのイベントを表示できます。"
 
 #: ../../_includes/event-sending-functionality.rst:7
 msgid "Make monitors with event-sending functionality members of a logs pipeline that uses a SignalFx exporter to make the event submission requests. Use a Resource Detection processor to ensure that host identity and other useful information is made available as event dimensions."
@@ -1130,445 +1132,381 @@ msgstr "例："
 msgid "To override the host used by the agent, use the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` to set your host's name to the desired source:"
 msgstr "エージェントが使用するホストを上書きするには、環境変数 ``OTEL_RESOURCE_ATTRIBUTES`` を使用して、ホストの名前を希望するソースに設定します："
 
-#: ../../_includes/gdi/application-receiver-table.rst:7
-msgid ":strong:`Data source`"
-msgstr ":strong:`データソース`"
-
-#: ../../_includes/gdi/application-receiver-table.rst:8 ../../_includes/gdi/available-aws.rst:11 ../../_includes/gdi/available-gcp.rst:10
-msgid ":strong:`Provides metrics`"
-msgstr ":strong:`メトリクスの提供`"
-
-#: ../../_includes/gdi/application-receiver-table.rst:9 ../../_includes/gdi/available-aws.rst:12
-msgid ":strong:`Provides traces`"
-msgstr ":strong:`トレースを提供`"
-
-#: ../../_includes/gdi/application-receiver-table.rst:11
+#: ../../_includes/gdi/application-receiver-table.rst:1
 #, fuzzy
 msgid ":ref:`activemq`"
 msgstr ":ref:`activemq`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:12 ../../_includes/gdi/application-receiver-table.rst:16 ../../_includes/gdi/application-receiver-table.rst:20 ../../_includes/gdi/application-receiver-table.rst:24 ../../_includes/gdi/application-receiver-table.rst:28 ../../_includes/gdi/application-receiver-table.rst:32 ../../_includes/gdi/application-receiver-table.rst:36
-#: ../../_includes/gdi/application-receiver-table.rst:40 ../../_includes/gdi/application-receiver-table.rst:44 ../../_includes/gdi/application-receiver-table.rst:48 ../../_includes/gdi/application-receiver-table.rst:52 ../../_includes/gdi/application-receiver-table.rst:56 ../../_includes/gdi/application-receiver-table.rst:60 ../../_includes/gdi/application-receiver-table.rst:64
-#: ../../_includes/gdi/application-receiver-table.rst:68 ../../_includes/gdi/application-receiver-table.rst:72 ../../_includes/gdi/application-receiver-table.rst:76 ../../_includes/gdi/application-receiver-table.rst:80 ../../_includes/gdi/application-receiver-table.rst:84 ../../_includes/gdi/application-receiver-table.rst:88 ../../_includes/gdi/application-receiver-table.rst:92
-#: ../../_includes/gdi/application-receiver-table.rst:96 ../../_includes/gdi/application-receiver-table.rst:100 ../../_includes/gdi/application-receiver-table.rst:104 ../../_includes/gdi/application-receiver-table.rst:108 ../../_includes/gdi/application-receiver-table.rst:112 ../../_includes/gdi/application-receiver-table.rst:116 ../../_includes/gdi/application-receiver-table.rst:120
-#: ../../_includes/gdi/application-receiver-table.rst:124 ../../_includes/gdi/application-receiver-table.rst:128 ../../_includes/gdi/application-receiver-table.rst:132 ../../_includes/gdi/application-receiver-table.rst:136 ../../_includes/gdi/application-receiver-table.rst:140 ../../_includes/gdi/application-receiver-table.rst:148 ../../_includes/gdi/application-receiver-table.rst:152
-#: ../../_includes/gdi/application-receiver-table.rst:153 ../../_includes/gdi/application-receiver-table.rst:156 ../../_includes/gdi/application-receiver-table.rst:160 ../../_includes/gdi/application-receiver-table.rst:164 ../../_includes/gdi/application-receiver-table.rst:168 ../../_includes/gdi/application-receiver-table.rst:172 ../../_includes/gdi/application-receiver-table.rst:176
-#: ../../_includes/gdi/application-receiver-table.rst:180 ../../_includes/gdi/application-receiver-table.rst:184 ../../_includes/gdi/application-receiver-table.rst:188 ../../_includes/gdi/application-receiver-table.rst:196 ../../_includes/gdi/application-receiver-table.rst:200 ../../_includes/gdi/application-receiver-table.rst:204 ../../_includes/gdi/application-receiver-table.rst:208
-#: ../../_includes/gdi/application-receiver-table.rst:212 ../../_includes/gdi/application-receiver-table.rst:216 ../../_includes/gdi/application-receiver-table.rst:220 ../../_includes/gdi/application-receiver-table.rst:224 ../../_includes/gdi/application-receiver-table.rst:228 ../../_includes/gdi/application-receiver-table.rst:232 ../../_includes/gdi/application-receiver-table.rst:236
-#: ../../_includes/gdi/application-receiver-table.rst:240 ../../_includes/gdi/application-receiver-table.rst:244 ../../_includes/gdi/application-receiver-table.rst:248 ../../_includes/gdi/application-receiver-table.rst:252 ../../_includes/gdi/application-receiver-table.rst:256 ../../_includes/gdi/application-receiver-table.rst:260 ../../_includes/gdi/application-receiver-table.rst:264
-#: ../../_includes/gdi/application-receiver-table.rst:268 ../../_includes/gdi/application-receiver-table.rst:272 ../../_includes/gdi/application-receiver-table.rst:276 ../../_includes/gdi/application-receiver-table.rst:280 ../../_includes/gdi/application-receiver-table.rst:284 ../../_includes/gdi/application-receiver-table.rst:288 ../../_includes/gdi/application-receiver-table.rst:292
-#: ../../_includes/gdi/application-receiver-table.rst:296 ../../_includes/gdi/application-receiver-table.rst:300 ../../_includes/gdi/application-receiver-table.rst:304 ../../_includes/gdi/application-receiver-table.rst:308 ../../_includes/gdi/application-receiver-table.rst:312 ../../_includes/gdi/application-receiver-table.rst:316 ../../_includes/gdi/application-receiver-table.rst:320
-#: ../../_includes/gdi/application-receiver-table.rst:324 ../../_includes/gdi/application-receiver-table.rst:328 ../../_includes/gdi/application-receiver-table.rst:332 ../../_includes/gdi/available-aws.rst:18 ../../_includes/gdi/available-aws.rst:25 ../../_includes/gdi/available-aws.rst:27 ../../_includes/gdi/available-aws.rst:32 ../../_includes/gdi/available-aws.rst:35 ../../_includes/gdi/available-aws.rst:39
-#: ../../_includes/gdi/available-aws.rst:41 ../../_includes/gdi/available-aws.rst:42 ../../_includes/gdi/available-aws.rst:46 ../../_includes/gdi/available-aws.rst:53 ../../_includes/gdi/available-aws.rst:60 ../../_includes/gdi/available-aws.rst:63 ../../_includes/gdi/available-aws.rst:67 ../../_includes/gdi/available-aws.rst:74 ../../_includes/gdi/available-aws.rst:81 ../../_includes/gdi/available-aws.rst:84
-#: ../../_includes/gdi/available-aws.rst:88 ../../_includes/gdi/available-aws.rst:91 ../../_includes/gdi/available-aws.rst:95 ../../_includes/gdi/available-aws.rst:97 ../../_includes/gdi/available-aws.rst:98 ../../_includes/gdi/available-aws.rst:102 ../../_includes/gdi/available-aws.rst:109 ../../_includes/gdi/available-aws.rst:116 ../../_includes/gdi/available-aws.rst:118 ../../_includes/gdi/available-aws.rst:123
-#: ../../_includes/gdi/available-aws.rst:125 ../../_includes/gdi/available-aws.rst:130 ../../_includes/gdi/available-aws.rst:137 ../../_includes/gdi/available-aws.rst:144 ../../_includes/gdi/available-aws.rst:151 ../../_includes/gdi/available-aws.rst:154 ../../_includes/gdi/available-aws.rst:158 ../../_includes/gdi/available-aws.rst:161 ../../_includes/gdi/available-aws.rst:165
-#: ../../_includes/gdi/available-aws.rst:166 ../../_includes/gdi/available-aws.rst:168 ../../_includes/gdi/available-aws.rst:172 ../../_includes/gdi/available-aws.rst:175 ../../_includes/gdi/available-aws.rst:179 ../../_includes/gdi/available-aws.rst:180 ../../_includes/gdi/available-aws.rst:182 ../../_includes/gdi/available-aws.rst:186 ../../_includes/gdi/available-aws.rst:193
-#: ../../_includes/gdi/available-aws.rst:194 ../../_includes/gdi/available-aws.rst:196 ../../_includes/gdi/available-aws.rst:200 ../../_includes/gdi/available-aws.rst:203 ../../_includes/gdi/available-aws.rst:209 ../../_includes/gdi/available-aws.rst:210 ../../_includes/gdi/available-aws.rst:214 ../../_includes/gdi/available-aws.rst:215 ../../_includes/gdi/available-aws.rst:216
-#: ../../_includes/gdi/available-aws.rst:217 ../../_includes/gdi/available-aws.rst:221 ../../_includes/gdi/available-aws.rst:223 ../../_includes/gdi/available-aws.rst:224 ../../_includes/gdi/available-aws.rst:228 ../../_includes/gdi/available-aws.rst:235 ../../_includes/gdi/available-aws.rst:238 ../../_includes/gdi/available-aws.rst:242 ../../_includes/gdi/available-aws.rst:249
-#: ../../_includes/gdi/available-aws.rst:252 ../../_includes/gdi/available-aws.rst:256 ../../_includes/gdi/available-aws.rst:259 ../../_includes/gdi/available-aws.rst:263 ../../_includes/gdi/available-aws.rst:265 ../../_includes/gdi/available-aws.rst:270 ../../_includes/gdi/available-aws.rst:272 ../../_includes/gdi/available-aws.rst:273 ../../_includes/gdi/available-aws.rst:277
-#: ../../_includes/gdi/available-aws.rst:284 ../../_includes/gdi/available-aws.rst:291 ../../_includes/gdi/available-aws.rst:294 ../../_includes/gdi/available-aws.rst:298 ../../_includes/gdi/available-aws.rst:301 ../../_includes/gdi/available-aws.rst:305 ../../_includes/gdi/available-aws.rst:312 ../../_includes/gdi/available-aws.rst:314 ../../_includes/gdi/available-aws.rst:319
-#: ../../_includes/gdi/available-aws.rst:326 ../../_includes/gdi/available-aws.rst:328 ../../_includes/gdi/available-aws.rst:329 ../../_includes/gdi/available-aws.rst:333 ../../_includes/gdi/available-aws.rst:334 ../../_includes/gdi/available-aws.rst:336 ../../_includes/gdi/available-aws.rst:340 ../../_includes/gdi/available-aws.rst:341 ../../_includes/gdi/available-aws.rst:343
-#: ../../_includes/gdi/available-aws.rst:347 ../../_includes/gdi/available-aws.rst:354 ../../_includes/gdi/available-aws.rst:361 ../../_includes/gdi/available-aws.rst:362 ../../_includes/gdi/available-aws.rst:363 ../../_includes/gdi/available-aws.rst:364 ../../_includes/gdi/available-aws.rst:368 ../../_includes/gdi/available-aws.rst:375 ../../_includes/gdi/available-aws.rst:382
-#: ../../_includes/gdi/available-aws.rst:389 ../../_includes/gdi/available-aws.rst:396 ../../_includes/gdi/available-aws.rst:403 ../../_includes/gdi/available-aws.rst:410 ../../_includes/gdi/available-aws.rst:417 ../../_includes/gdi/available-aws.rst:420 ../../_includes/gdi/available-aws.rst:424 ../../_includes/gdi/available-aws.rst:427 ../../_includes/gdi/available-aws.rst:431
-#: ../../_includes/gdi/available-aws.rst:434 ../../_includes/gdi/available-aws.rst:438 ../../_includes/gdi/available-aws.rst:441 ../../_includes/gdi/available-aws.rst:445 ../../_includes/gdi/available-aws.rst:447 ../../_includes/gdi/available-aws.rst:448 ../../_includes/gdi/available-aws.rst:452 ../../_includes/gdi/available-aws.rst:455 ../../_includes/gdi/available-aws.rst:459
-#: ../../_includes/gdi/available-aws.rst:461 ../../_includes/gdi/available-aws.rst:466 ../../_includes/gdi/available-aws.rst:473 ../../_includes/gdi/available-aws.rst:474 ../../_includes/gdi/available-aws.rst:476 ../../_includes/gdi/available-aws.rst:480 ../../_includes/gdi/available-aws.rst:481 ../../_includes/gdi/available-aws.rst:483 ../../_includes/gdi/available-aws.rst:487
-#: ../../_includes/gdi/available-aws.rst:489 ../../_includes/gdi/available-aws.rst:494 ../../_includes/gdi/available-aws.rst:497 ../../_includes/gdi/available-aws.rst:501 ../../_includes/gdi/available-aws.rst:503 ../../_includes/gdi/available-aws.rst:504 ../../_includes/gdi/available-aws.rst:508 ../../_includes/gdi/available-aws.rst:515 ../../_includes/gdi/available-aws.rst:517
-#: ../../_includes/gdi/available-aws.rst:522 ../../_includes/gdi/available-aws.rst:524 ../../_includes/gdi/available-aws.rst:529 ../../_includes/gdi/available-aws.rst:531 ../../_includes/gdi/available-aws.rst:536 ../../_includes/gdi/available-aws.rst:538 ../../_includes/gdi/available-aws.rst:543 ../../_includes/gdi/available-aws.rst:550 ../../_includes/gdi/available-aws.rst:557
-#: ../../_includes/gdi/available-aws.rst:558 ../../_includes/gdi/available-aws.rst:560 ../../_includes/gdi/available-aws.rst:564 ../../_includes/gdi/available-aws.rst:565 ../../_includes/gdi/available-aws.rst:567 ../../_includes/gdi/available-aws.rst:571 ../../_includes/gdi/available-aws.rst:574 ../../_includes/gdi/available-aws.rst:578 ../../_includes/gdi/available-aws.rst:585
-#: ../../_includes/gdi/available-aws.rst:592 ../../_includes/gdi/available-aws.rst:599 ../../_includes/gdi/available-aws.rst:606 ../../_includes/gdi/available-aws.rst:613 ../../_includes/gdi/available-aws.rst:620 ../../_includes/gdi/available-aws.rst:623 ../../_includes/gdi/available-aws.rst:627 ../../_includes/gdi/available-aws.rst:634 ../../_includes/gdi/available-aws.rst:641
-#: ../../_includes/gdi/available-aws.rst:644 ../../_includes/gdi/available-aws.rst:648 ../../_includes/gdi/available-aws.rst:655 ../../_includes/gdi/available-aws.rst:657 ../../_includes/gdi/available-aws.rst:662 ../../_includes/gdi/available-aws.rst:669 ../../_includes/gdi/available-aws.rst:676 ../../_includes/gdi/available-gcp.rst:15 ../../_includes/gdi/available-gcp.rst:20 ../../_includes/gdi/available-gcp.rst:25
-#: ../../_includes/gdi/available-gcp.rst:30 ../../_includes/gdi/available-gcp.rst:31 ../../_includes/gdi/available-gcp.rst:35 ../../_includes/gdi/available-gcp.rst:40 ../../_includes/gdi/available-gcp.rst:41 ../../_includes/gdi/available-gcp.rst:45 ../../_includes/gdi/available-gcp.rst:50 ../../_includes/gdi/available-gcp.rst:55 ../../_includes/gdi/available-gcp.rst:56 ../../_includes/gdi/available-gcp.rst:60
-#: ../../_includes/gdi/available-gcp.rst:65 ../../_includes/gdi/available-gcp.rst:70 ../../_includes/gdi/available-gcp.rst:75 ../../_includes/gdi/available-gcp.rst:80 ../../_includes/gdi/available-gcp.rst:85 ../../_includes/gdi/available-gcp.rst:90 ../../_includes/gdi/available-gcp.rst:95 ../../_includes/gdi/available-gcp.rst:100 ../../_includes/gdi/available-gcp.rst:105 ../../_includes/gdi/available-gcp.rst:106
-#: ../../_includes/gdi/available-gcp.rst:110 ../../_includes/gdi/available-gcp.rst:115 ../../_includes/gdi/available-gcp.rst:120 ../../_includes/gdi/available-gcp.rst:125 ../../_includes/gdi/available-gcp.rst:130 ../../_includes/gdi/available-gcp.rst:131 ../../_includes/gdi/available-gcp.rst:135 ../../_includes/gdi/available-gcp.rst:140 ../../_includes/gdi/available-gcp.rst:145
-#: ../../_includes/gdi/available-gcp.rst:146 ../../_includes/gdi/available-gcp.rst:150 ../../_includes/gdi/available-gcp.rst:155 ../../_includes/gdi/available-gcp.rst:156 ../../_includes/gdi/available-gcp.rst:160 ../../_includes/gdi/available-gcp.rst:161 ../../_includes/gdi/available-gcp.rst:165
-msgid ":strong:`X`"
-msgstr ":strong:`X`"
-
-#: ../../_includes/gdi/application-receiver-table.rst:15
+#: ../../_includes/gdi/application-receiver-table.rst:2
 #, fuzzy
 msgid ":ref:`apache-couchdb`"
 msgstr ":ref:`apache-couchdb`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:19
+#: ../../_includes/gdi/application-receiver-table.rst:3
 #, fuzzy
 msgid ":ref:`apache-httpserver`"
 msgstr ":ref:`apache-httpserver`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:23
+#: ../../_includes/gdi/application-receiver-table.rst:4
 #, fuzzy
 msgid ":ref:`kafka`"
 msgstr ":ref:`kafka`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:27
+#: ../../_includes/gdi/application-receiver-table.rst:5
 #, fuzzy
 msgid ":ref:`spark`"
 msgstr ":ref:`spark`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:31
+#: ../../_includes/gdi/application-receiver-table.rst:6
 #, fuzzy
 msgid ":ref:`apache-tomcat`"
 msgstr ":ref:`apache-tomcat`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:35
+#: ../../_includes/gdi/application-receiver-table.rst:7
 #, fuzzy
 msgid ":ref:`zookeeper`"
 msgstr ":ref:`zookeeper`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:39
+#: ../../_includes/gdi/application-receiver-table.rst:8
 #, fuzzy
 msgid ":ref:`appmesh`"
 msgstr ":ref:`appmesh`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:43
+#: ../../_includes/gdi/application-receiver-table.rst:9
 #, fuzzy
 msgid ":ref:`cadvisor`"
 msgstr ":ref:`cadvisor`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:47
+#: ../../_includes/gdi/application-receiver-table.rst:10
 #, fuzzy
 msgid ":ref:`cassandra`"
 msgstr ":ref:`cassandra`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:51
+#: ../../_includes/gdi/application-receiver-table.rst:11
 #, fuzzy
 msgid ":ref:`cgroups`"
 msgstr ":ref:`cgroups`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:55
+#: ../../_includes/gdi/application-receiver-table.rst:12
 #, fuzzy
 msgid ":ref:`cloudfoundry-firehose-nozzle`"
 msgstr ":ref:`cloudfoundry-firehose-nozzle`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:59
+#: ../../_includes/gdi/application-receiver-table.rst:13
 #, fuzzy
 msgid ":ref:`collectd-plugin`"
 msgstr ":ref:`collectd-plugin`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:63
+#: ../../_includes/gdi/application-receiver-table.rst:14
 #, fuzzy
 msgid ":ref:`collectd-uptime`"
 msgstr ":ref:`collectd-uptime`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:67
+#: ../../_includes/gdi/application-receiver-table.rst:15
 #, fuzzy
 msgid ":ref:`conviva`"
 msgstr ":ref:`conviva`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:71
+#: ../../_includes/gdi/application-receiver-table.rst:16
 #, fuzzy
 msgid ":ref:`coredns`"
 msgstr ":ref:`coredns`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:75
+#: ../../_includes/gdi/application-receiver-table.rst:17
 #, fuzzy
 msgid ":ref:`couchbase`"
 msgstr ":ref:`couchbase`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:79
+#: ../../_includes/gdi/application-receiver-table.rst:18
 #, fuzzy
 msgid ":ref:`cpu`"
 msgstr ":ref:`cpu`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:83
+#: ../../_includes/gdi/application-receiver-table.rst:19
 #, fuzzy
 msgid ":ref:`cpufreq`"
 msgstr ":ref:`cpufreq`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:87
+#: ../../_includes/gdi/application-receiver-table.rst:20
 #, fuzzy
 msgid ":ref:`dns`"
 msgstr ":ref:`dns`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:91
+#: ../../_includes/gdi/application-receiver-table.rst:21
 #, fuzzy
 msgid ":ref:`docker`"
 msgstr ":ref:`docker`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:95
+#: ../../_includes/gdi/application-receiver-table.rst:22
 #, fuzzy
 msgid ":ref:`elasticsearch`"
 msgstr ":ref:`elasticsearch`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:99
+#: ../../_includes/gdi/application-receiver-table.rst:23
 #, fuzzy
 msgid ":ref:`elasticsearch-query`"
 msgstr ":ref:`elasticsearch-query`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:103
+#: ../../_includes/gdi/application-receiver-table.rst:24
 #, fuzzy
 msgid ":ref:`expvar`"
 msgstr ":ref:`expvar`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:107
+#: ../../_includes/gdi/application-receiver-table.rst:25
 #, fuzzy
 msgid ":ref:`filesystems`"
 msgstr ":ref:`filesystems`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:111
+#: ../../_includes/gdi/application-receiver-table.rst:26
 #, fuzzy
 msgid ":ref:`genericjmx`"
 msgstr ":ref:`genericjmx`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:115
+#: ../../_includes/gdi/application-receiver-table.rst:27
 #, fuzzy
 msgid ":ref:`gitlab`"
 msgstr ":ref:`gitlab`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:119
+#: ../../_includes/gdi/application-receiver-table.rst:28
 #, fuzzy
 msgid ":ref:`hadoop`"
 msgstr ":ref:`hadoop`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:123
+#: ../../_includes/gdi/application-receiver-table.rst:29
 #, fuzzy
 msgid ":ref:`hadoopjmx`"
 msgstr ":ref:`hadoopjmx`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:127
+#: ../../_includes/gdi/application-receiver-table.rst:30
 #, fuzzy
 msgid ":ref:`haproxy`"
 msgstr ":ref:`haproxy`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:131
+#: ../../_includes/gdi/application-receiver-table.rst:31
 #, fuzzy
 msgid ":ref:`heroku`"
 msgstr ":ref:`heroku`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:135
+#: ../../_includes/gdi/application-receiver-table.rst:32
 #, fuzzy
 msgid ":ref:`host-metadata`"
 msgstr ":ref:`host-metadata`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:139
+#: ../../_includes/gdi/application-receiver-table.rst:33
 #, fuzzy
 msgid ":ref:`processes`"
 msgstr ":ref:`processes`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:147
+#: ../../_includes/gdi/application-receiver-table.rst:35
 #, fuzzy
 msgid ":ref:`http`"
 msgstr ":ref:`http`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:151
-#, fuzzy
-msgid ":ref:`get-started-istio`"
-msgstr ":ref:`get-started-istio`"
-
-#: ../../_includes/gdi/application-receiver-table.rst:159
+#: ../../_includes/gdi/application-receiver-table.rst:37
 #, fuzzy
 msgid ":ref:`jenkins`"
 msgstr ":ref:`jenkins`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:163
+#: ../../_includes/gdi/application-receiver-table.rst:38
 #, fuzzy
 msgid ":ref:`jmx`"
 msgstr ":ref:`jmx`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:167
+#: ../../_includes/gdi/application-receiver-table.rst:39
 #, fuzzy
 msgid ":ref:`kafka-consumer`"
 msgstr ":ref:`kafka-consumer`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:171
+#: ../../_includes/gdi/application-receiver-table.rst:40
 #, fuzzy
 msgid ":ref:`kafka-producer`"
 msgstr ":ref:`kafka-producer`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:175
+#: ../../_includes/gdi/application-receiver-table.rst:41
 #, fuzzy
 msgid ":ref:`kubernetes-apiserver`"
 msgstr ":ref:`kubernetes-apiserver`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:179
+#: ../../_includes/gdi/application-receiver-table.rst:42
 #, fuzzy
 msgid ":ref:`kubernetes-events`"
 msgstr ":ref:`kubernetes-events`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:183
+#: ../../_includes/gdi/application-receiver-table.rst:43
 #, fuzzy
 msgid ":ref:`kubernetes-proxy`"
 msgstr ":ref:`kubernetes-proxy`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:187
+#: ../../_includes/gdi/application-receiver-table.rst:44
 #, fuzzy
 msgid ":ref:`kubernetes-scheduler`"
 msgstr ":ref:`kubernetes-scheduler`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:191
+#: ../../_includes/gdi/application-receiver-table.rst:45
 #, fuzzy
 msgid ":ref:`telegraf-logparser`"
 msgstr ":ref:`telegraf-logparser`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:195
+#: ../../_includes/gdi/application-receiver-table.rst:46
 #, fuzzy
 msgid ":ref:`logstash`"
 msgstr ":ref:`logstash`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:199
+#: ../../_includes/gdi/application-receiver-table.rst:47
 #, fuzzy
 msgid ":ref:`logstash-tcp`"
 msgstr ":ref:`logstash-tcp`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:203
+#: ../../_includes/gdi/application-receiver-table.rst:48
 #, fuzzy
 msgid ":ref:`memcached`"
 msgstr ":ref:`memcached`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:207
+#: ../../_includes/gdi/application-receiver-table.rst:49
 #, fuzzy
 msgid ":ref:`memory`"
 msgstr ":ref:`memory`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:211
-#, fuzzy
-msgid ":ref:`get-started-dotnet-otel`"
-msgstr ":ref:`get-started-dotnet-otel`"
-
-#: ../../_includes/gdi/application-receiver-table.rst:215
+#: ../../_includes/gdi/application-receiver-table.rst:50
 #, fuzzy
 msgid ":ref:`microsoft-sql-server`"
 msgstr ":ref:`microsoft-sql-server`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:219
+#: ../../_includes/gdi/application-receiver-table.rst:51
 #, fuzzy
 msgid ":ref:`windows-iis`"
 msgstr ":ref:`windows-iis`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:223
+#: ../../_includes/gdi/application-receiver-table.rst:52
 #, fuzzy
 msgid ":ref:`net-io`"
 msgstr ":ref:`net-io`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:227
+#: ../../_includes/gdi/application-receiver-table.rst:53
 #, fuzzy
 msgid ":ref:`protocols`"
 msgstr ":ref:`protocols`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:231
+#: ../../_includes/gdi/application-receiver-table.rst:54
 #, fuzzy
 msgid ":ref:`nginx`"
 msgstr ":ref:`nginx`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:235
+#: ../../_includes/gdi/application-receiver-table.rst:55
 #, fuzzy
 msgid ":ref:`telegraf-ntpq`"
 msgstr ":ref:`telegraf-ntpq`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:239
+#: ../../_includes/gdi/application-receiver-table.rst:56
 #, fuzzy
 msgid ":ref:`ntp`"
 msgstr ":ref:`ntp`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:243
+#: ../../_includes/gdi/application-receiver-table.rst:57
 #, fuzzy
 msgid ":ref:`opcache`"
 msgstr ":ref:`opcache`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:247
+#: ../../_includes/gdi/application-receiver-table.rst:58
 #, fuzzy
 msgid ":ref:`openshift-cluster`"
 msgstr ":ref:`openshift-cluster`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:251
+#: ../../_includes/gdi/application-receiver-table.rst:59
 #, fuzzy
 msgid ":ref:`openstack`"
 msgstr ":ref:`openstack`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:255
+#: ../../_includes/gdi/application-receiver-table.rst:60
 #, fuzzy
 msgid ":ref:`collectd-php-fpm`"
 msgstr ":ref:`collectd-php-fpm`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:259
+#: ../../_includes/gdi/application-receiver-table.rst:61
 #, fuzzy
 msgid ":ref:`procstat`"
 msgstr ":ref:`procstat`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:263
+#: ../../_includes/gdi/application-receiver-table.rst:62
 msgid ":ref:`Prometheus - any app exposing Prometheus metrics <prometheus-generic>`"
 msgstr ":ref:`Prometheus - Prometheusメトリクスを公開するすべてのアプリ<prometheus-generic>`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:267
-#, fuzzy
-msgid ":ref:`prometheus-exporter`"
-msgstr ":ref:`prometheus-exporter`"
-
-#: ../../_includes/gdi/application-receiver-table.rst:271
+#: ../../_includes/gdi/application-receiver-table.rst:63
 #, fuzzy
 msgid ":ref:`prometheus-go`"
 msgstr ":ref:`prometheus-go`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:275
+#: ../../_includes/gdi/application-receiver-table.rst:64
 #, fuzzy
 msgid ":ref:`prometheus-nginx-ingress`"
 msgstr ":ref:`prometheus-nginx-ingress`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:279
+#: ../../_includes/gdi/application-receiver-table.rst:65
 #, fuzzy
 msgid ":ref:`prometheus-nginx-vts`"
 msgstr ":ref:`prometheus-nginx-vts`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:283
+#: ../../_includes/gdi/application-receiver-table.rst:66
 #, fuzzy
 msgid ":ref:`prometheus-node`"
 msgstr ":ref:`prometheus-node`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:287
+#: ../../_includes/gdi/application-receiver-table.rst:67
 #, fuzzy
 msgid ":ref:`prometheus-velero`"
 msgstr ":ref:`prometheus-velero`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:291
+#: ../../_includes/gdi/application-receiver-table.rst:68
 #, fuzzy
 msgid ":ref:`rabbitmq`"
 msgstr ":ref:`rabbitmq`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:295
+#: ../../_includes/gdi/application-receiver-table.rst:69
 #, fuzzy
 msgid ":ref:`hana`"
 msgstr ":ref:`hana`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:299
+#: ../../_includes/gdi/application-receiver-table.rst:70
 #, fuzzy
 msgid ":ref:`snmp`"
 msgstr ":ref:`snmp`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:303
+#: ../../_includes/gdi/application-receiver-table.rst:71
 #, fuzzy
 msgid ":ref:`solr`"
 msgstr ":ref:`solr`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:307
+#: ../../_includes/gdi/application-receiver-table.rst:72
 #, fuzzy
 msgid ":ref:`sql`"
 msgstr ":ref:`sql`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:311
+#: ../../_includes/gdi/application-receiver-table.rst:73
 #, fuzzy
 msgid ":ref:`supervisor`"
 msgstr ":ref:`supervisor`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:315
+#: ../../_includes/gdi/application-receiver-table.rst:74
 #, fuzzy
 msgid ":ref:`collectd-systemd`"
 msgstr ":ref:`collectd-systemd`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:319
+#: ../../_includes/gdi/application-receiver-table.rst:75
 #, fuzzy
 msgid ":ref:`traefik`"
 msgstr ":ref:`traefik`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:323
+#: ../../_includes/gdi/application-receiver-table.rst:76
 #, fuzzy
 msgid ":ref:`telegraf-varnish`"
 msgstr ":ref:`telegraf-varnish`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:327
+#: ../../_includes/gdi/application-receiver-table.rst:77
 #, fuzzy
 msgid ":ref:`vsphere`"
 msgstr ":ref:`vsphere`"
 
-#: ../../_includes/gdi/application-receiver-table.rst:331
+#: ../../_includes/gdi/application-receiver-table.rst:78
 #, fuzzy
 msgid ":ref:`telegraf-win-services`"
 msgstr ":ref:`telegraf-win-services`"
@@ -1691,6 +1629,18 @@ msgstr ":ref:`statsd`"
 msgid ":ref:`telegraf-win-perf-counters`"
 msgstr ":ref:`telegraf-win-perf-counters`"
 
+#: ../../_includes/gdi/auto-discovery-intro.rst:1
+msgid "Automatic discovery detects and collects signal data from third-party services, such as databases and web servers. Through auto discovery the Collector automatically generates a configuration snipet that you can modify and incorporate into your existing configuration to retrieve your services' data. Auto discovery of services is only available for the Collector in Linux and Kubernetes environments."
+msgstr "オートディスカバリーは、データベースやWebサーバーといったサードパーティのサービスからシグナルデータを検出して収集します。Collectorがオートディスカバリーを介して構成スニペットを自動生成しますが、これを変更して既存の構成に組み込むことにより、サービスのデータを取得することができます。サービスのオートディスカバリーは、LinuxおよびKubernetes環境のCollectorでのみ使用できます。"
+
+#: ../../_includes/gdi/auto-discovery-intro.rst:3
+msgid ""
+"With automatic discovery you can also enable zero-code instrumentation of back-end applications, which allows the Collector to retrieve data from application language runtimes without having to modify the source application code or adding any new installation or configuration steps. With this option you won't have to install and configure your instrumentation agents separately. Zero-code instrumentation using "
+"theCollector's automatic discovery feature is only available for the Java, Node.js, and .NET language runtimes. Alternatively you can deploy zero-code instrumentation independently from the Collector for 8 back-end languages, as described in :ref:`get-started-application`."
+msgstr ""
+"オートディスカバリーを使用すると、バックエンドアプリケーションのゼロコードインストルメンテーションを有効にすることもできます。これにより、Collectorは、ソースアプリケーションコードを変更したり、新しいインストールや設定手順を追加したりすることなく、アプリケーションの言語ランタイムからデータを取得できます。このオプションを使用すると、インストルメンテーション・エージェントを個別にインストールおよび構成する必要がなくなり"
+"ます。Collectorのオートディスカバリー機能を使用したゼロコードインストルメンテーションは、Java、Node.js、および.NETの言語ランタイムでのみ使用できます。他の方法として、:ref:`get-started-application` で説明するように、8つのバックエンド言語に対して、Collectorからは独立してゼロコードインストルメンテーションをデプロイすることもできます。"
+
 #: ../../_includes/gdi/available-aws.rst:1
 msgid "You can collect data from the following AWS services:"
 msgstr "以下のAWSサービスからデータを収集できます："
@@ -1704,6 +1654,14 @@ msgstr ":strong:`名前空間`"
 #, fuzzy
 msgid ":strong:`Service`"
 msgstr ":strong:`サービス`"
+
+#: ../../_includes/gdi/available-aws.rst:11 ../../_includes/gdi/available-gcp.rst:10
+msgid ":strong:`Provides metrics`"
+msgstr ":strong:`メトリクスの提供`"
+
+#: ../../_includes/gdi/available-aws.rst:12
+msgid ":strong:`Provides traces`"
+msgstr ":strong:`トレースを提供`"
 
 #: ../../_includes/gdi/available-aws.rst:13
 msgid ":strong:`Provides logs`"
@@ -1721,6 +1679,32 @@ msgstr "AWS/ACMPrivateCA"
 #: ../../_includes/gdi/available-aws.rst:17
 msgid "ACM Private CA"
 msgstr "ACMプライベートCA"
+
+#: ../../_includes/gdi/available-aws.rst:18 ../../_includes/gdi/available-aws.rst:25 ../../_includes/gdi/available-aws.rst:27 ../../_includes/gdi/available-aws.rst:32 ../../_includes/gdi/available-aws.rst:35 ../../_includes/gdi/available-aws.rst:39 ../../_includes/gdi/available-aws.rst:41 ../../_includes/gdi/available-aws.rst:42 ../../_includes/gdi/available-aws.rst:46 ../../_includes/gdi/available-aws.rst:53
+#: ../../_includes/gdi/available-aws.rst:60 ../../_includes/gdi/available-aws.rst:63 ../../_includes/gdi/available-aws.rst:67 ../../_includes/gdi/available-aws.rst:74 ../../_includes/gdi/available-aws.rst:81 ../../_includes/gdi/available-aws.rst:84 ../../_includes/gdi/available-aws.rst:88 ../../_includes/gdi/available-aws.rst:91 ../../_includes/gdi/available-aws.rst:95 ../../_includes/gdi/available-aws.rst:97
+#: ../../_includes/gdi/available-aws.rst:98 ../../_includes/gdi/available-aws.rst:102 ../../_includes/gdi/available-aws.rst:109 ../../_includes/gdi/available-aws.rst:116 ../../_includes/gdi/available-aws.rst:118 ../../_includes/gdi/available-aws.rst:123 ../../_includes/gdi/available-aws.rst:125 ../../_includes/gdi/available-aws.rst:130 ../../_includes/gdi/available-aws.rst:137 ../../_includes/gdi/available-aws.rst:144
+#: ../../_includes/gdi/available-aws.rst:151 ../../_includes/gdi/available-aws.rst:154 ../../_includes/gdi/available-aws.rst:158 ../../_includes/gdi/available-aws.rst:161 ../../_includes/gdi/available-aws.rst:165 ../../_includes/gdi/available-aws.rst:166 ../../_includes/gdi/available-aws.rst:168 ../../_includes/gdi/available-aws.rst:172 ../../_includes/gdi/available-aws.rst:175
+#: ../../_includes/gdi/available-aws.rst:179 ../../_includes/gdi/available-aws.rst:180 ../../_includes/gdi/available-aws.rst:182 ../../_includes/gdi/available-aws.rst:186 ../../_includes/gdi/available-aws.rst:193 ../../_includes/gdi/available-aws.rst:194 ../../_includes/gdi/available-aws.rst:196 ../../_includes/gdi/available-aws.rst:200 ../../_includes/gdi/available-aws.rst:203
+#: ../../_includes/gdi/available-aws.rst:209 ../../_includes/gdi/available-aws.rst:210 ../../_includes/gdi/available-aws.rst:214 ../../_includes/gdi/available-aws.rst:215 ../../_includes/gdi/available-aws.rst:216 ../../_includes/gdi/available-aws.rst:217 ../../_includes/gdi/available-aws.rst:221 ../../_includes/gdi/available-aws.rst:223 ../../_includes/gdi/available-aws.rst:224
+#: ../../_includes/gdi/available-aws.rst:228 ../../_includes/gdi/available-aws.rst:235 ../../_includes/gdi/available-aws.rst:238 ../../_includes/gdi/available-aws.rst:242 ../../_includes/gdi/available-aws.rst:249 ../../_includes/gdi/available-aws.rst:252 ../../_includes/gdi/available-aws.rst:256 ../../_includes/gdi/available-aws.rst:259 ../../_includes/gdi/available-aws.rst:263
+#: ../../_includes/gdi/available-aws.rst:265 ../../_includes/gdi/available-aws.rst:270 ../../_includes/gdi/available-aws.rst:272 ../../_includes/gdi/available-aws.rst:273 ../../_includes/gdi/available-aws.rst:277 ../../_includes/gdi/available-aws.rst:284 ../../_includes/gdi/available-aws.rst:291 ../../_includes/gdi/available-aws.rst:294 ../../_includes/gdi/available-aws.rst:298
+#: ../../_includes/gdi/available-aws.rst:301 ../../_includes/gdi/available-aws.rst:305 ../../_includes/gdi/available-aws.rst:312 ../../_includes/gdi/available-aws.rst:314 ../../_includes/gdi/available-aws.rst:319 ../../_includes/gdi/available-aws.rst:326 ../../_includes/gdi/available-aws.rst:328 ../../_includes/gdi/available-aws.rst:329 ../../_includes/gdi/available-aws.rst:333
+#: ../../_includes/gdi/available-aws.rst:334 ../../_includes/gdi/available-aws.rst:336 ../../_includes/gdi/available-aws.rst:340 ../../_includes/gdi/available-aws.rst:341 ../../_includes/gdi/available-aws.rst:343 ../../_includes/gdi/available-aws.rst:347 ../../_includes/gdi/available-aws.rst:354 ../../_includes/gdi/available-aws.rst:361 ../../_includes/gdi/available-aws.rst:362
+#: ../../_includes/gdi/available-aws.rst:363 ../../_includes/gdi/available-aws.rst:364 ../../_includes/gdi/available-aws.rst:368 ../../_includes/gdi/available-aws.rst:375 ../../_includes/gdi/available-aws.rst:382 ../../_includes/gdi/available-aws.rst:389 ../../_includes/gdi/available-aws.rst:396 ../../_includes/gdi/available-aws.rst:403 ../../_includes/gdi/available-aws.rst:410
+#: ../../_includes/gdi/available-aws.rst:417 ../../_includes/gdi/available-aws.rst:420 ../../_includes/gdi/available-aws.rst:424 ../../_includes/gdi/available-aws.rst:427 ../../_includes/gdi/available-aws.rst:431 ../../_includes/gdi/available-aws.rst:434 ../../_includes/gdi/available-aws.rst:438 ../../_includes/gdi/available-aws.rst:441 ../../_includes/gdi/available-aws.rst:445
+#: ../../_includes/gdi/available-aws.rst:447 ../../_includes/gdi/available-aws.rst:448 ../../_includes/gdi/available-aws.rst:452 ../../_includes/gdi/available-aws.rst:455 ../../_includes/gdi/available-aws.rst:459 ../../_includes/gdi/available-aws.rst:461 ../../_includes/gdi/available-aws.rst:466 ../../_includes/gdi/available-aws.rst:473 ../../_includes/gdi/available-aws.rst:474
+#: ../../_includes/gdi/available-aws.rst:476 ../../_includes/gdi/available-aws.rst:480 ../../_includes/gdi/available-aws.rst:481 ../../_includes/gdi/available-aws.rst:483 ../../_includes/gdi/available-aws.rst:487 ../../_includes/gdi/available-aws.rst:489 ../../_includes/gdi/available-aws.rst:494 ../../_includes/gdi/available-aws.rst:497 ../../_includes/gdi/available-aws.rst:501
+#: ../../_includes/gdi/available-aws.rst:503 ../../_includes/gdi/available-aws.rst:504 ../../_includes/gdi/available-aws.rst:508 ../../_includes/gdi/available-aws.rst:515 ../../_includes/gdi/available-aws.rst:517 ../../_includes/gdi/available-aws.rst:522 ../../_includes/gdi/available-aws.rst:524 ../../_includes/gdi/available-aws.rst:529 ../../_includes/gdi/available-aws.rst:531
+#: ../../_includes/gdi/available-aws.rst:536 ../../_includes/gdi/available-aws.rst:538 ../../_includes/gdi/available-aws.rst:543 ../../_includes/gdi/available-aws.rst:550 ../../_includes/gdi/available-aws.rst:557 ../../_includes/gdi/available-aws.rst:558 ../../_includes/gdi/available-aws.rst:560 ../../_includes/gdi/available-aws.rst:564 ../../_includes/gdi/available-aws.rst:565
+#: ../../_includes/gdi/available-aws.rst:567 ../../_includes/gdi/available-aws.rst:571 ../../_includes/gdi/available-aws.rst:574 ../../_includes/gdi/available-aws.rst:578 ../../_includes/gdi/available-aws.rst:585 ../../_includes/gdi/available-aws.rst:592 ../../_includes/gdi/available-aws.rst:599 ../../_includes/gdi/available-aws.rst:606 ../../_includes/gdi/available-aws.rst:613
+#: ../../_includes/gdi/available-aws.rst:620 ../../_includes/gdi/available-aws.rst:623 ../../_includes/gdi/available-aws.rst:627 ../../_includes/gdi/available-aws.rst:634 ../../_includes/gdi/available-aws.rst:641 ../../_includes/gdi/available-aws.rst:644 ../../_includes/gdi/available-aws.rst:648 ../../_includes/gdi/available-aws.rst:655 ../../_includes/gdi/available-aws.rst:657
+#: ../../_includes/gdi/available-aws.rst:662 ../../_includes/gdi/available-aws.rst:669 ../../_includes/gdi/available-aws.rst:676 ../../_includes/gdi/available-gcp.rst:15 ../../_includes/gdi/available-gcp.rst:20 ../../_includes/gdi/available-gcp.rst:25 ../../_includes/gdi/available-gcp.rst:30 ../../_includes/gdi/available-gcp.rst:31 ../../_includes/gdi/available-gcp.rst:35 ../../_includes/gdi/available-gcp.rst:40
+#: ../../_includes/gdi/available-gcp.rst:41 ../../_includes/gdi/available-gcp.rst:45 ../../_includes/gdi/available-gcp.rst:50 ../../_includes/gdi/available-gcp.rst:55 ../../_includes/gdi/available-gcp.rst:56 ../../_includes/gdi/available-gcp.rst:60 ../../_includes/gdi/available-gcp.rst:65 ../../_includes/gdi/available-gcp.rst:70 ../../_includes/gdi/available-gcp.rst:75 ../../_includes/gdi/available-gcp.rst:80
+#: ../../_includes/gdi/available-gcp.rst:85 ../../_includes/gdi/available-gcp.rst:90 ../../_includes/gdi/available-gcp.rst:95 ../../_includes/gdi/available-gcp.rst:100 ../../_includes/gdi/available-gcp.rst:105 ../../_includes/gdi/available-gcp.rst:106 ../../_includes/gdi/available-gcp.rst:110 ../../_includes/gdi/available-gcp.rst:115 ../../_includes/gdi/available-gcp.rst:120 ../../_includes/gdi/available-gcp.rst:125
+#: ../../_includes/gdi/available-gcp.rst:130 ../../_includes/gdi/available-gcp.rst:131 ../../_includes/gdi/available-gcp.rst:135 ../../_includes/gdi/available-gcp.rst:140 ../../_includes/gdi/available-gcp.rst:145 ../../_includes/gdi/available-gcp.rst:146 ../../_includes/gdi/available-gcp.rst:150 ../../_includes/gdi/available-gcp.rst:155 ../../_includes/gdi/available-gcp.rst:156
+#: ../../_includes/gdi/available-gcp.rst:160 ../../_includes/gdi/available-gcp.rst:161 ../../_includes/gdi/available-gcp.rst:165
+msgid ":strong:`X`"
+msgstr ":strong:`X`"
 
 #: ../../_includes/gdi/available-aws.rst:23
 msgid "AWS/AmazonMQ"
@@ -2545,8 +2529,8 @@ msgid "AWS doesn't currently provide FIPS-complaint endpoints to retrieve tags. 
 msgstr "AWSは現在、タグを取得するためのFIPS準拠のエンドポイントを提供していません。AWS GovCloudインフラストラクチャでタグを設定する場合は、機密情報を含めないようにしてください。Splunk Observability Cloudでは、AWSタグはプレフィックス ``aws_tag`` で識別されます。"
 
 #: ../../_includes/gdi/available-azure.rst:1
-msgid "You can collect data from the following Azure services out-of-the-box:"
-msgstr "以下の Azureサービスから、すぐにデータを収集できます："
+msgid "By default Splunk Observability Cloud collects metrics from the Azure services listed on the table below as explained in :ref:`connect-to-azure`."
+msgstr "デフォルトでは、Splunk Observability Cloudは、:ref:`connect-to-azure` で説明するように、以下の表にリストされているAzureサービスからメトリクスを収集します。"
 
 #: ../../_includes/gdi/available-azure.rst:8
 #, fuzzy
@@ -2608,7 +2592,7 @@ msgstr "microsoft.web/sites/slots"
 #: ../../_includes/gdi/available-azure.rst:35
 #, fuzzy
 msgid "Application Gateway"
-msgstr "Application Gateway"
+msgstr "アプリケーションゲートウェイ"
 
 #: ../../_includes/gdi/available-azure.rst:36
 msgid "microsoft.network/applicationgateways"
@@ -2788,7 +2772,7 @@ msgstr "microsoft.containerinstance/containergroups"
 #: ../../_includes/gdi/available-azure.rst:104
 #, fuzzy
 msgid "Cognitive Services"
-msgstr "Cognitive Services"
+msgstr "コグニティブサービス"
 
 #: ../../_includes/gdi/available-azure.rst:105
 msgid "microsoft.cognitiveservices/accounts"
@@ -2797,7 +2781,7 @@ msgstr "microsoft.cognitiveservices/accounts"
 #: ../../_includes/gdi/available-azure.rst:107
 #, fuzzy
 msgid "Container Registry"
-msgstr "Container Registry"
+msgstr "コンテナレジストリ"
 
 #: ../../_includes/gdi/available-azure.rst:108
 msgid "microsoft.containerregistry/registries"
@@ -3049,7 +3033,7 @@ msgstr "microsoft.servicebus/namespaces"
 #: ../../_includes/gdi/available-azure.rst:209 ../../_includes/gdi/available-azure.rst:212 ../../_includes/gdi/available-azure.rst:215 ../../_includes/gdi/available-azure.rst:218 ../../_includes/gdi/available-azure.rst:221
 #, fuzzy
 msgid "Storage"
-msgstr "Storage"
+msgstr "ストレージ"
 
 #: ../../_includes/gdi/available-azure.rst:210
 msgid "microsoft.storage/storageaccounts"
@@ -3107,7 +3091,7 @@ msgstr "microsoft.sql/servers"
 #: ../../_includes/gdi/available-azure.rst:236
 #, fuzzy
 msgid "Traffic Manager"
-msgstr "Traffic Manager"
+msgstr "トラフィックマネージャー"
 
 #: ../../_includes/gdi/available-azure.rst:237
 msgid "microsoft.network/trafficmanagerprofiles"
@@ -3116,7 +3100,7 @@ msgstr "microsoft.network/trafficmanagerprofiles"
 #: ../../_includes/gdi/available-azure.rst:239
 #, fuzzy
 msgid "Virtual Machines"
-msgstr "Virtual Machines"
+msgstr "仮想マシン"
 
 #: ../../_includes/gdi/available-azure.rst:240
 msgid "microsoft.compute/virtualmachines"
@@ -3150,6 +3134,31 @@ msgstr "VPN Gateway"
 msgid "microsoft.network/virtualnetworkgateways"
 msgstr "microsoft.network/virtualnetworkgateways"
 
+#: ../../_includes/gdi/available-azure.rst:255
+#, fuzzy
+msgid "Add additional services"
+msgstr "その他のサービスの追加"
+
+#: ../../_includes/gdi/available-azure.rst:257
+msgid "If you want to collect data from other Azure services you need to add them as a custom service in the UI, or with the field ``additionalServices`` if you're using the API. Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication."
+msgstr "他のAzureサービスからデータを収集したい場合は、UI でカスタムサービスとして追加するか、APIを使用する場合はフィールド ``additionalServices`` を使用して追加する必要があります。Splunk Observability Cloudは、サービスおよびカスタムサービスで指定したリソースタイプを同期します。両方のフィールドにリソースタイプを追加した場合、Splunk Observability Cloudは、重複を無視します。"
+
+#: ../../_includes/gdi/available-azure.rst:259
+msgid "Any resource type you specify as a custom service must meet the following criteria:"
+msgstr "カスタムサービスとして指定するリソースタイプは、以下の条件を満たす必要があります："
+
+#: ../../_includes/gdi/available-azure.rst:261
+msgid "The resource must be an Azure GenericResource type."
+msgstr "リソースは、Azure GenericResourceタイプでなければなりません。"
+
+#: ../../_includes/gdi/available-azure.rst:263
+msgid "If the resource type has a hierarchical structure, only the root resource type is a GenericResource. For example, a Storage Account type can have a File Service type, which in turn can have a File Storage type. In this case, only Storage Account is a GenericResource."
+msgstr "リソースタイプが階層構造を持つ場合、ルートリソースタイプのみがGenericResourceとなります。例えば、Storage AccountタイプがFile Serviceタイプを持ち、次にFile ServiceタイプがFile Storageタイプを持つとします。この場合、Storage AccountのみがGenericResourceです。"
+
+#: ../../_includes/gdi/available-azure.rst:265
+msgid "The resource type stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation."
+msgstr "リソースタイプは、そのメトリクスをAzure Monitorに保存します。Azure Monitorの詳細については、Microsoft Azureのドキュメントを参照してください。"
+
 #: ../../_includes/gdi/available-gcp.rst:1
 msgid "You can collect data from the following GCP services out-of-the-box:"
 msgstr "以下のGCPサービスから、すぐにデータを収集できます："
@@ -3165,7 +3174,7 @@ msgstr ":strong:`製品名（GUIに表示されるもの）`"
 #: ../../_includes/gdi/available-gcp.rst:11
 #, fuzzy
 msgid ":strong:`Provides metadata (properties)`"
-msgstr ":strong:`メタデータの提供（プロパティ）`"
+msgstr ":strong:`メタデータ（プロパティ）の提供`"
 
 #: ../../_includes/gdi/available-gcp.rst:13
 msgid "appengine"
@@ -3174,7 +3183,7 @@ msgstr "appengine"
 #: ../../_includes/gdi/available-gcp.rst:14
 #, fuzzy
 msgid "App Engine"
-msgstr "App Engine"
+msgstr "アプリエンジン"
 
 #: ../../_includes/gdi/available-gcp.rst:18
 msgid "bigquery"
@@ -3200,7 +3209,7 @@ msgstr "cloudfunctions"
 #: ../../_includes/gdi/available-gcp.rst:29
 #, fuzzy
 msgid "Cloud Functions"
-msgstr "Cloud Functions"
+msgstr "クラウド機能"
 
 #: ../../_includes/gdi/available-gcp.rst:33
 msgid "cloudiot"
@@ -3250,7 +3259,7 @@ msgstr "container"
 #: ../../_includes/gdi/available-gcp.rst:59
 #, fuzzy
 msgid "Container Engine"
-msgstr "Container Engine"
+msgstr "コンテナエンジン"
 
 #: ../../_includes/gdi/available-gcp.rst:63
 msgid "dataflow"
@@ -4174,23 +4183,19 @@ msgstr ":ref:`windowsperfcounters-receiver`"
 msgid "Monitor"
 msgstr "モニター"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:10 ../../_includes/gdi/processor-architecture-native.rst:214 ../../_includes/gdi/processor-architecture-native.rst:288 ../../_includes/gdi/processor-architecture-subprocess.rst:10 ../../_includes/gdi/processor-architecture-subprocess.rst:74 ../../_includes/gdi/processor-architecture-subprocess.rst:118
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:202
+#: ../../_includes/gdi/processor-architecture-native.rst:10 ../../_includes/gdi/processor-architecture-native.rst:214 ../../_includes/gdi/processor-architecture-native.rst:288 ../../_includes/gdi/processor-architecture-subprocess.rst:10 ../../_includes/gdi/processor-architecture-subprocess.rst:74 ../../_includes/gdi/processor-architecture-subprocess.rst:118 ../../_includes/gdi/processor-architecture-subprocess.rst:202
 msgid "Support for AMD64 Linux"
 msgstr "AMD64 Linuxのサポート"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:11 ../../_includes/gdi/processor-architecture-native.rst:215 ../../_includes/gdi/processor-architecture-native.rst:289 ../../_includes/gdi/processor-architecture-subprocess.rst:11 ../../_includes/gdi/processor-architecture-subprocess.rst:75 ../../_includes/gdi/processor-architecture-subprocess.rst:119
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:203
+#: ../../_includes/gdi/processor-architecture-native.rst:11 ../../_includes/gdi/processor-architecture-native.rst:215 ../../_includes/gdi/processor-architecture-native.rst:289 ../../_includes/gdi/processor-architecture-subprocess.rst:11 ../../_includes/gdi/processor-architecture-subprocess.rst:75 ../../_includes/gdi/processor-architecture-subprocess.rst:119 ../../_includes/gdi/processor-architecture-subprocess.rst:203
 msgid "Support for AMD64 Windows"
 msgstr "AMD64 Windowsのサポート"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:12 ../../_includes/gdi/processor-architecture-native.rst:216 ../../_includes/gdi/processor-architecture-native.rst:290 ../../_includes/gdi/processor-architecture-subprocess.rst:12 ../../_includes/gdi/processor-architecture-subprocess.rst:76 ../../_includes/gdi/processor-architecture-subprocess.rst:120
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:204
+#: ../../_includes/gdi/processor-architecture-native.rst:12 ../../_includes/gdi/processor-architecture-native.rst:216 ../../_includes/gdi/processor-architecture-native.rst:290 ../../_includes/gdi/processor-architecture-subprocess.rst:12 ../../_includes/gdi/processor-architecture-subprocess.rst:76 ../../_includes/gdi/processor-architecture-subprocess.rst:120 ../../_includes/gdi/processor-architecture-subprocess.rst:204
 msgid "Support for ARM64 Linux"
 msgstr "ARM64 Linuxのサポート"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:13 ../../_includes/gdi/processor-architecture-native.rst:217 ../../_includes/gdi/processor-architecture-native.rst:291 ../../_includes/gdi/processor-architecture-subprocess.rst:13 ../../_includes/gdi/processor-architecture-subprocess.rst:77 ../../_includes/gdi/processor-architecture-subprocess.rst:121
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:205
+#: ../../_includes/gdi/processor-architecture-native.rst:13 ../../_includes/gdi/processor-architecture-native.rst:217 ../../_includes/gdi/processor-architecture-native.rst:291 ../../_includes/gdi/processor-architecture-subprocess.rst:13 ../../_includes/gdi/processor-architecture-subprocess.rst:77 ../../_includes/gdi/processor-architecture-subprocess.rst:121 ../../_includes/gdi/processor-architecture-subprocess.rst:205
 msgid "Support for ppc64le Linux"
 msgstr "ppc64le Linuxのサポート"
 
@@ -4614,7 +4619,7 @@ msgstr "トラブルシューティング"
 #: ../../_includes/gdi/troubleshoot-zeroconfig-k8s.rst:4
 #, fuzzy
 msgid "If you're having trouble setting up automatic discovery, see the following troubleshooting guidelines."
-msgstr "自動検出の設定に問題がある場合は、以下のトラブルシューティングガイドラインを参照してください。"
+msgstr "オートディスカバリーの設定において問題がある場合は、以下のトラブルシューティングガイドラインを参照してください。"
 
 #: ../../_includes/gdi/troubleshoot-zeroconfig-k8s.rst:7
 msgid "Check the logs for failures"
@@ -4674,7 +4679,7 @@ msgstr "cert-managerポッドを再起動します。"
 
 #: ../../_includes/gdi/troubleshoot-zeroconfig-k8s.rst:31
 msgid "Ensure that your cluster has only one instance of cert-manager. This includes ``certmanager``, ``certmanager-cainjector``, and ``certmanager-webhook``."
-msgstr "クラスターにcert-managerのインスタンスが1つしかないことを確認してください。これには ``certmanager``、``certmanager-cainjector``、および ``certmanager-webhook`` が含まれます。"
+msgstr "クラスタにcert-managerのインスタンスが1つしかないことを確認してください。これには ``certmanager``、``certmanager-cainjector``、および ``certmanager-webhook`` が含まれます。"
 
 #: ../../_includes/gdi/troubleshoot-zeroconfig-k8s.rst:33
 msgid "See the official cert manager troubleshooting guide for more information: :new-page:`https://cert-manager.io/docs/troubleshooting/`."
@@ -4701,12 +4706,13 @@ msgid "You cannot access logs from a GovCloud environment through Log Observer C
 msgstr "Log Observer Connectを通じてGovCloud環境のログにアクセスすることはできません。ただし、グローバルデータリンクを使用してLog Observer ConnectからGovCloud環境にリンクさせると、ログにアクセスすることができます。グローバルデータリンクの詳細については、:ref:`link-metadata-to-content` を参照してください。"
 
 #: ../../_includes/logs/query-logs.rst:1
+#, fuzzy
 msgid ""
 "Navigate to :guilabel:`Log Observer`. Upon opening, Log Observer runs an initial search of all indexes you have access to and returns the most recent 150,000 logs. The search then defaults to Pause in order to save Splunk Virtual Compute (SVC) resources. Control your SVC resources, which impact performance and cost, by leaving your search on Pause when you are not monitoring incoming logs, and select Play when "
 "youwant to see more incoming logs."
 msgstr ""
-" :guilabel:`Log Observer` に移動します。開くと、Log Observerはアクセス可能なすべてのインデックスの初期検索を実行し、最新の150,000件のログを返します。その後、Splunk Virtual Compute (SVC) リソースを節約するために、検索はデフォルトで一時停止になります。受信ログを監視していないときは検索を「一時停止」にし、より多くの受信ログを見たいときは「再生」を選択することで、パフォーマンスとコストに影響するSVCリソースを制御しま"
-"す。"
+" :guilabel:`Log Observer` に移動します。開くと、Log Observerはアクセス可能なすべてのインデックスの初期検索を実行し、最新の150,000件のログを返します。その後、Splunk Virtual Compute (SVC)リソースを節約するために、検索はデフォルトで「一時停止」になります。受信ログを監視していないときは検索を「一時停止」のままにし、より多くの受信ログを見たいときは「再生」を選択することで、パフォーマンスとコストに影響するSVCリソースの制"
+"御を行います。"
 
 #: ../../_includes/logs/query-logs.rst
 msgid "The Log Observer UI is displayed."
@@ -4723,8 +4729,8 @@ msgstr "コンテンツコントロールバーで、特定の過去の期間の
 #: ../../_includes/logs/query-logs.rst:11
 #, fuzzy
 msgid ""
-"Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. When you do not select an index, Log Observer runs your query on all indexes to which you have access. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select which index you want to "
-"queryin Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions."
+"Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. When you do not select an index, Log Observer runs your query on all indexes to which you have access. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select which index you want to queryin "
+"Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions."
 msgstr ""
 " :guilabel:`Saved Queries` の横にある :guilabel:`Index` を選択し、クエリするインデックスを選択します。インデックスを選択しない場合、Log Observerは、アクセス可能なすべてのインデックスに対してクエリを実行します。Splunkプラットフォーム（Splunk Cloud PlatformまたはSplunk Enterprise）のデータを検索する場合は、最初に適切なSplunkプラットフォームインスタンスのインテグレーションを選択し、次にLog Observerでクエリするインデッ"
 "クスを選択します。一度にクエリできるのは、1つのSplunkプラットフォームインスタンスまたはSplunk Observability Cloudインスタンスからのインデックスのみです。適切なロールおよび権限を持っている場合にのみ、Splunkプラットフォームのインデックスをクエリできます。"
@@ -4735,7 +4741,7 @@ msgstr "インデックスピッカーの隣にあるコンテンツコントロ
 
 #: ../../_includes/logs/query-logs.rst:15
 msgid "Next, select :guilabel:`Unlimited` or :guilabel:`150,000` from the :guilabel:`Search Records` field to determine the number of logs you want to return on a single search. Select :guilabel:`150,000` to optimize your Splunk Virtual Compute (SVC) resources and control performance and cost. However, only the most recent 150,000 logs display. To see a specific time range, you must select :guilabel:`Infinite`."
-msgstr "次に、:guilabel:`Search Records` フィールドから :guilabel:`Unlimited` または :guilabel:`150,000`  を選択し、1回の検索で返すログの数を決定します。 :guilabel:`150,000`  を選択すると、Splunk Virtual Compute (SVC)リソースを最適化し、パフォーマンスとコストを制御できます。ただし、最新の150,000件のログのみが表示されます。特定の時間範囲を表示するには、:guilabel:`Infinite` を選択する必要があります。"
+msgstr "次に、:guilabel:`Search Records` フィールドから :guilabel:`Unlimited` または :guilabel:`150,000`  を選択し、1回の検索で返すログの数を決定します。  :guilabel:`150,000`  を選択すると、Splunk Virtual Compute (SVC)リソースを最適化し、パフォーマンスとコストを制御できます。ただし、最新の150,000件のログのみが表示されます。特定の時間範囲を表示するには、:guilabel:`Infinite` を選択する必要があります。"
 
 #: ../../_includes/logs/query-logs.rst:17
 msgid "To narrow your search, use the :guilabel:`Group by` drop-down list to select the field or fields by which you want to group your results, then select :guilabel:`Apply`. To learn more about aggregations, see :ref:`logs-aggregations`."
@@ -4755,172 +4761,102 @@ msgstr "右側の :guilabel:`Fields` パネルで、クエリの上位の値を�
 #: ../../_includes/logs/query-logs.rst:23
 #, fuzzy
 msgid "Optionally, if you are viewing Splunk platform data, you can open your query results in the Splunk platform and use SPL to further query the resulting logs. You must have an account in Splunk platform. To open the log results in the Splunk platform, select the :guilabel:`Open in Splunk platform` icon at the top of the Logs table."
-msgstr "オプションとして、Splunkプラットフォームのデータを表示中の場合は、Splunkプラットフォームでクエリ結果を開き、SPLを使用して結果ログをさらにクエリできます。これにはSplunkプラットフォームのアカウントが必要です。Splunkプラットフォームでログ結果を開くには、「ログ」テーブルの上部にある :guilabel:`Open in Splunk platform` アイコンを選択します。"
+msgstr "オプションとして、Splunkプラットフォームのデータを表示している場合は、Splunkプラットフォームでクエリ結果を開き、SPLを使用して結果ログをさらにクエリできます。Splunkプラットフォームのアカウントが必要です。Splunkプラットフォームでログ結果を開くには、「ログ」テーブルの上部にある :guilabel:`Open in Splunk platform` アイコンを選択します。"
 
 #: ../../_includes/logs/query-logs.rst
 msgid "The Open in Splunk platform icon is at the top, right-hand side of the Logs table."
 msgstr "[Splunkプラットフォームで開く]アイコンは、Logsテーブル上部の右側にあります。"
 
-#: ../../_includes/metric-categories.rst:6
-msgid ":strong:`Category type`"
-msgstr ":strong:`カテゴリタイプ`"
+#: ../../_includes/metric-classes.rst:6
+#, fuzzy
+msgid ":strong:`Billing class`"
+msgstr ":strong:`請求分類`"
 
-#: ../../_includes/metric-categories.rst:7
-msgid ":strong:`Description`"
-msgstr ":strong:`説明`"
+#: ../../_includes/metric-classes.rst:7
+#, fuzzy
+msgid ":strong:`Metrics included`"
+msgstr ":strong:`含まれるメトリクス`"
 
-#: ../../_includes/metric-categories.rst:9
-msgid "0"
-msgstr "0"
+#: ../../_includes/metric-classes.rst:8
+#, fuzzy
+msgid "Custom metrics"
+msgstr "カスタムメトリクス"
 
-#: ../../_includes/metric-categories.rst:13
-msgid "1"
-msgstr "1"
+#: ../../_includes/metric-classes.rst:9
+msgid "Metrics reported to Splunk Observability Cloud outside of those reported by default, such as host, container, or bundled metrics. Custom metrics might result in increased data ingest costs."
+msgstr "ホストメトリクス、コンテナメトリクス、バンドルメトリクスといったデフォルトで報告されるメトリクス以外で、Splunk Observability Cloudに報告されるメトリクス。カスタムメトリクスは、データ取り込みコストの増加につながる可能性があります。"
 
-#: ../../_includes/metric-categories.rst:14
-msgid "Host"
-msgstr "ホスト"
-
-#: ../../_includes/metric-categories.rst:16
-msgid "2"
-msgstr "2"
-
-#: ../../_includes/metric-categories.rst:17
-msgid "Container"
-msgstr "コンテナ"
-
-#: ../../_includes/metric-categories.rst:19
-msgid "3"
-msgstr "3"
-
-#: ../../_includes/metric-categories.rst:23
-msgid "4"
-msgstr "4"
-
-#: ../../_includes/metric-categories.rst:24
-msgid "Hi-resolution"
-msgstr "高解像度"
-
-#: ../../_includes/metric-categories.rst:26
-msgid "5"
-msgstr "5"
-
-#: ../../_includes/metric-categories.rst:27
-msgid "Internal"
-msgstr "内部"
-
-#: ../../_includes/metric-categories.rst:29
-msgid "6"
-msgstr "6"
-
-#: ../../_includes/metric-categories.rst:30
-msgid "Tracing metrics"
-msgstr "トレースメトリクス"
-
-#: ../../_includes/metric-categories.rst:32
-msgid "7"
-msgstr "7"
-
-#: ../../_includes/metric-categories.rst:36
-msgid "8"
-msgstr "8"
-
-#: ../../_includes/metric-categories.rst:37
-msgid "APM hosts"
-msgstr "APMホスト"
-
-#: ../../_includes/metric-categories.rst:39
-msgid "9"
-msgstr "9"
-
-#: ../../_includes/metric-categories.rst:40
-msgid "APM container"
-msgstr "APMコンテナ"
-
-#: ../../_includes/metric-categories.rst:42
-msgid "10"
-msgstr "10"
-
-#: ../../_includes/metric-categories.rst:43
-msgid "APM identity"
-msgstr "APM ID"
-
-#: ../../_includes/metric-categories.rst:45
-msgid "11"
-msgstr "11"
-
-#: ../../_includes/metric-categories.rst:46
-msgid "APM bundled metrics"
-msgstr "APMバンドル メトリクス"
-
-#: ../../_includes/metric-categories.rst:48
-msgid "12"
-msgstr "12"
-
-#: ../../_includes/metric-categories.rst:52
-msgid "13"
-msgstr "13"
-
-#: ../../_includes/metric-categories.rst:53
+#: ../../_includes/metric-classes.rst:10
 #, fuzzy
 msgid "APM Monitoring MetricSets"
 msgstr "APM Monitoring MetricSets"
 
-#: ../../_includes/metric-categories.rst:55
-msgid "14"
-msgstr "14"
+#: ../../_includes/metric-classes.rst:11
+msgid "Includes metrics from APM Monitoring MetricSets. See :ref:`apm-metricsets` for more information."
+msgstr "APM Monitoring MetricSetsのメトリクスを含みます。詳細は、:ref:`apm-metricsets` を参照してください。"
 
-#: ../../_includes/metric-categories.rst:56
-msgid "Infrastructure Monitoring function"
-msgstr "Infrastructure Monitoringの機能"
-
-#: ../../_includes/metric-categories.rst:58
-msgid "15"
-msgstr "15"
-
-#: ../../_includes/metric-categories.rst:59
-msgid "APM function"
-msgstr "APM機能"
-
-#: ../../_includes/metric-categories.rst:61
-msgid "16"
-msgstr "16"
-
-#: ../../_includes/metric-categories.rst:65
-msgid "17"
-msgstr "17"
-
-#: ../../_includes/metric-categories.rst:66
+#: ../../_includes/metric-classes.rst:12
 msgid "RUM Monitoring MetricSets"
 msgstr "RUM Monitoring MetricSets"
 
-#: ../../_includes/metric-categories.rst:68
-msgid "18"
-msgstr "18"
+#: ../../_includes/metric-classes.rst:13
+msgid "Includes metrics from RUM Monitoring MetricSets. See :ref:`rum-custom-indexed-tags` for more information."
+msgstr "RUM Monitoring MetricSetsのメトリクスを含みます。詳細は、:ref:`rum-custom-indexed-tags` を参照してください。"
 
-#: ../../_includes/metric-categories.rst:69
-msgid "Network Explorer metrics"
-msgstr "Network Explorerメトリクス"
+#: ../../_includes/metric-classes.rst:14
+msgid "Default/bundled metrics (Infrastructure)"
+msgstr "デフォルトのメトリクス/バンドルメトリクス（インフラストラクチャ）"
 
-#: ../../_includes/metric-categories.rst:71
-msgid "19"
-msgstr "19"
+#: ../../_includes/metric-classes.rst:15 ../../_includes/metric-classes.rst:20
+msgid "Host"
+msgstr "ホスト"
 
-#: ../../_includes/metric-categories.rst:72
-msgid "Runtime metrics"
-msgstr "ランタイム メトリクス"
+#: ../../_includes/metric-classes.rst:16 ../../_includes/metric-classes.rst:21
+msgid "Container"
+msgstr "コンテナ"
 
-#: ../../_includes/metric-categories.rst:74
-msgid "20"
-msgstr "20"
+#: ../../_includes/metric-classes.rst:17 ../../_includes/metric-classes.rst:23
+msgid "Bundled"
+msgstr "バンドル"
 
-#: ../../_includes/metric-categories.rst:75
-msgid "Synthetics metrics"
-msgstr "Syntheticsメトリクス"
+#: ../../_includes/metric-classes.rst:18
+msgid "Additional metrics sent through infrastructure monitoring public cloud integrations that aren't attributed to specific hosts or containers."
+msgstr "インフラストラクチャ監視のパブリッククラウドインテグレーションを通じて送信される、特定のホストやコンテナに帰属しない追加のメトリクス。"
 
-#: ../../_includes/metric-categories.rst:77
-msgid "In subscription plans based on metric time series (MTS), all metrics are categorized as custom metrics and billed accordingly."
-msgstr "メトリック時系列（MTS）に基づくサブスクリプションプランでは、すべてのメトリクスはカスタムメトリクスに分類され、それに応じて請求が行われます。"
+#: ../../_includes/metric-classes.rst:19
+#, fuzzy
+msgid "Default/bundled metrics (APM)"
+msgstr "デフォルトのメトリクス/バンドルメトリクス（APM）"
+
+#: ../../_includes/metric-classes.rst:22
+#, fuzzy
+msgid "Identity"
+msgstr "ID"
+
+#: ../../_includes/metric-classes.rst:24
+#, fuzzy
+msgid "Tracing"
+msgstr "トレース"
+
+#: ../../_includes/metric-classes.rst:25
+#, fuzzy
+msgid "Runtime"
+msgstr "ランタイム"
+
+#: ../../_includes/metric-classes.rst:26
+#, fuzzy
+msgid "Synthetics"
+msgstr "Synthetics"
+
+#: ../../_includes/metric-classes.rst:27
+#, fuzzy
+msgid "Other metrics"
+msgstr "その他のメトリクス"
+
+#: ../../_includes/metric-classes.rst:28
+#, fuzzy
+msgid "Internal metrics"
+msgstr "内部メトリクス"
 
 #: ../../_includes/metric-defs.rst:1
 #, fuzzy
@@ -4930,7 +4866,7 @@ msgstr "Splunk Observability Cloudで利用可能なメトリクスタイプの�
 #: ../../_includes/metric-defs.rst:3
 #, fuzzy
 msgid "In host-based subscription plans, default metrics are those metrics included in host-based subscriptions in Splunk Observability Cloud, such as host, container, or bundled metrics. Custom metrics are not provided by default and might be subject to charges. See :ref:`metric-categories` for more information."
-msgstr "ホストベースのサブスクリプションプランでは、デフォルトのメトリクスは、ホスト、コンテナ、バンドルメトリクスなど、Splunk Observability Cloudのホストベースのサブスクリプションに含まれるメトリクスです。カスタムメトリクスはデフォルトで提供されないメトリクスであり、料金が発生する場合があります。詳細については、:ref:`metric-categories` を参照してください。"
+msgstr "ホストベースのサブスクリプションプランでは、デフォルトのメトリクスは、ホストメトリクス、コンテナメトリクス、バンドルメトリクスなど、Splunk Observability Cloudのホストベースのサブスクリプションに含まれるメトリクスです。カスタムメトリクスはデフォルトでは提供されず、料金が発生する場合があります。詳細は、:ref:`metric-categories` を参照してください。"
 
 #: ../../_includes/metric-defs.rst:8
 msgid "In MTS-based subscription plans, all metrics are custom."
@@ -5045,12 +4981,13 @@ msgid "A realm is a self-contained deployment of Splunk Observability Cloud in w
 msgstr "レルムとは、あなたの組織がホストされているSplunk Observability Cloudの自己完結型のデプロイメントのことです。異なるレルムには異なるAPIエンドポイントがあります。例えば、``us1`` レルムでデータを送信するためのエンドポイントは ``https://ingest.us1.signalfx.com`` で、``eu0`` レルムでデータを送信するためのエンドポイントは ``https://ingest.eu0.signalfx.com``、というようになります。"
 
 #: ../../_includes/realm-note.rst:5
+#, fuzzy
 msgid ""
 "When you see a placeholder realm name in the documentation, such as ``<YOUR_REALM>``, replace it with your actual realm name. To find your realm name, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. Locate the realm name in the :guilabel:`Organizations` section If you don't include the realm name when specifying an endpoint, Splunk "
 "ObservabilityCloud defaults to the ``us0`` realm."
 msgstr ""
-" ``<YOUR_REALM>`` のようなプレースホルダのレルム名がドキュメントに記載されている場合は、実際のレルム名に置き換えてください。自分のレルム名を見つけるには、Splunk Observability Cloudのナビゲーションメニューを開き、:menuselection:`Settings` を選択し、ユーザー名を選択します。レルム名は :guilabel:`Organizations` セクションにあります。エンドポイントを指定する際にレルム名を含めない場合は、Splunk Observability Cloudがデ"
-"フォルトで ``us0`` レルムを設定します。"
+" ``<YOUR_REALM>`` のようなプレースホルダのレルム名がドキュメントに記載されている場合は、実際のレルム名に置き換えてください。自分のレルム名を見つけるには、Splunk Observability Cloudのナビゲーションメニューを開き、:menuselection:`Settings` を選択し、ユーザー名を選択します。レルム名は :guilabel:`Organizations` セクションにあります。エンドポイントを指定する際にレルム名を含めない場合は、Splunk Observability Cloudがデフォ"
+"ルトで ``us0`` レルムを設定します。"
 
 #: ../../_includes/report-issue.rst:2
 msgid "Report an issue"
@@ -5138,7 +5075,7 @@ msgstr "Chromiumベースのブラウザ"
 
 #: ../../_includes/requirements/browser.rst:16
 msgid "Microsoft Internet Explorer 11 is supported by a separate legacy build, available as ``splunk-otel-web-legacy.js`` in the :new-page:`release assets on GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`."
-msgstr "Microsoft Internet Explorer 11は別のレガシービルドでサポートされており、:new-page:`release assets on GitHubのリリースアセット<https://github.com/signalfx/splunk-otel-js-web/releases>` で ``splunk-otel-web-legacy.js`` として利用可能です。"
+msgstr "Microsoft Internet Explorer 11は別のレガシービルドでサポートされており、release assets on GitHub<https://github.com/signalfx/splunk-otel-js-web/releases>`の :new-page:`リリースアセットで`` splunk-otel-web-legacy.js`` として利用可能です。"
 
 #: ../../_includes/requirements/browser.rst:18
 msgid "Splunk APM is not required to instrument Splunk RUM for Browser."
@@ -5187,7 +5124,7 @@ msgstr "対応バージョン（64ビット）"
 
 #: ../../_includes/requirements/collector-windows.rst:10
 msgid "Installer script"
-msgstr "インストーラ・スクリプト"
+msgstr "インストーラスクリプト"
 
 #: ../../_includes/requirements/collector-windows.rst:11 ../../_includes/requirements/collector-windows.rst:13 ../../_includes/requirements/collector-windows.rst:15
 msgid "Windows 10 Pro and Home, Windows Server 2016, 2019, 2022"
@@ -5285,7 +5222,7 @@ msgstr "ARMアーキテクチャはサポートされていません。"
 #: ../../_includes/requirements/go.rst:1
 #, fuzzy
 msgid "The Splunk Distribution of OpenTelemetry Go is compatible with Go 1.22 and higher."
-msgstr "The Splunk Distribution of OpenTelemetry Goは、Go 1.22以降と互換性があります。"
+msgstr "Splunk Distribution of OpenTelemetry Goは、Go 1.22以降と互換性があります。"
 
 #: ../../_includes/requirements/ios.rst:1
 msgid "Splunk RUM for Mobile supports the following versions:"
@@ -5335,7 +5272,7 @@ msgstr "Java 8u40以降、またはAlwaysOn Profilingの場合は8u262以降"
 #: ../../_includes/requirements/java.rst:4
 #, fuzzy
 msgid "Java LTS versions 11 and higher"
-msgstr "バージョン11以降のJava LTS版"
+msgstr "Java LTS版のバージョン11以降"
 
 #: ../../_includes/requirements/java.rst:6
 msgid "The following Java Virtual Machines (JVMs) are compatible as JDK or JRE:"
@@ -5453,6 +5390,23 @@ msgstr "React Navigation 5および6"
 msgid "To instrument applications using React Native 0.67 and lower, see :ref:`rn-lower-versions`."
 msgstr "React Native 0.67以下を使用しているアプリケーションをインストルメンテーションするには、:ref:`rn-lower-versions` を参照してください。"
 
+#: ../../_includes/requirements/realm.rst:1
+#, fuzzy
+msgid "The Browser RUM agent runs in the following realms:"
+msgstr "ブラウザRUMエージェントは、以下のレルムで実行されます："
+
+#: ../../_includes/requirements/realm.rst:3
+msgid "United States: ``us0``, ``us1``, ``us2``"
+msgstr "アメリカ合衆国： ``us0``、``us1``、``us2``"
+
+#: ../../_includes/requirements/realm.rst:4
+msgid "Europe: ``eu0``, ``eu1``, ``eu2``"
+msgstr "ヨーロッパ： ``eu0``、``eu1``、``eu2``"
+
+#: ../../_includes/requirements/realm.rst:5
+msgid "Asia-Pacific: ``au0``, ``jp0``"
+msgstr "アジア太平洋： ``au0``、``jp0``"
+
 #: ../../_includes/requirements/ruby.rst:1
 msgid "The OpenTelemetry instrumentation for Ruby is compatible with Ruby 3.0 and higher."
 msgstr "Ruby用のOpenTelemetryインストルメンテーションは、Ruby 3.0以降と互換性があります。"
@@ -5466,12 +5420,13 @@ msgid "Trace"
 msgstr "トレース"
 
 #: ../../_includes/rum-data-model.rst:7
+#, fuzzy
 msgid ""
 "A set of events triggered as a result of a single logical operation, distributed across various components of an application. Traces contain events that cross process, network, and security boundaries. A RUM trace can, for example, initiate when someone taps on a button to start an action on a website. If you use RUM and APM together, traces represent calls made between the downstream services that handle "
 "therequests initiated by the user action."
 msgstr ""
-"アプリケーションの様々なコンポーネントに分散された、1つの論理操作の結果としてトリガーされるイベントのセット。トレースには、プロセス、ネットワーク、セキュリティの境界を越えるイベントが含まれます。RUM のトレースは、例えば、誰かがウェブサイト上でアクションを開始するためにボタンをタップしたときに開始することができます。RUMとAPMを併用する場合、トレースは、ユーザーアクションによって開始されたリクエストを処理するダウンス"
-"トリームサービス間のコールを表します。"
+"アプリケーションの様々なコンポーネントに分散された、1つの論理操作の結果としてトリガーされるイベントのセット。トレースには、プロセス、ネットワーク、セキュリティの境界を越えるイベントが含まれます。RUMのトレースは、例えば、ある人がウェブサイト上で操作を開始するためにボタンをタップしたときに開始します。RUMとAPMを併用する場合、トレースは、ユーザーアクションによって開始されたリクエストを処理するダウンストリームサービス間"
+"のコールを表します。"
 
 #: ../../_includes/rum-data-model.rst:8
 msgid "Span"
@@ -5504,6 +5459,72 @@ msgstr "ユーザー"
 #: ../../_includes/rum-data-model.rst:15
 msgid "By default, Splunk RUM doesn't collect identity data. Mapping a trace to a specific user requires manual instrumentation. Users can be represented by their username, email addresses, or using a synthetic identifier. Synthetic representation is useful in situations where PII regulations do not allow users to be identified."
 msgstr "デフォルトでは、Splunk RUM は ID データを収集しません。トレースを特定のユーザーにマッピングするには、手作業によるインストルメンテーションが必要です。ユーザーは、ユーザー名、メールアドレス、または合成識別子で表すことができます。合成識別子は、PII の規制によりユーザーを特定できない場合に便利です。"
+
+#: ../../_includes/synthetics/chrome-flags.rst:6
+#, fuzzy
+msgid ":strong:`Chrome flag`"
+msgstr ":strong:`Chromeフラグ`"
+
+#: ../../_includes/synthetics/chrome-flags.rst:7
+msgid ":strong:`Description`"
+msgstr ":strong:`説明`"
+
+#: ../../_includes/synthetics/chrome-flags.rst:8
+msgid "``--disable-http2``"
+msgstr "``--disable-http2``"
+
+#: ../../_includes/synthetics/chrome-flags.rst:9
+msgid "Requests are made using using ``http/1.1`` instead of ``http/2.0``. This HTTP version is viewable in the HAR file."
+msgstr "リクエストは ``http/2.0`` の代わりに ``http/1.1`` を使って行われます。このHTTPバージョンはHARファイルで見ることができます。"
+
+#: ../../_includes/synthetics/chrome-flags.rst:10
+#, fuzzy
+msgid "``--disable-quic``"
+msgstr "``--disable-quic``"
+
+#: ../../_includes/synthetics/chrome-flags.rst:11
+msgid "Deactivates QUIC, which also deactivates HTTP3."
+msgstr "QUICを無効にします。これによりHTTP3も無効になります。"
+
+#: ../../_includes/synthetics/chrome-flags.rst:12
+msgid "``--disable-web-security``"
+msgstr "``--disable-web-security``"
+
+#: ../../_includes/synthetics/chrome-flags.rst:13
+msgid "Deactivate enforcement of same origin policy."
+msgstr "同一オリジンポリシーの強制を無効にします。"
+
+#: ../../_includes/synthetics/chrome-flags.rst:14
+msgid "``--unsafely-treat-insecure-origin-as-secure=http://a.test,http://b.test``"
+msgstr "``--unsafely-treat-insecure-origin-as-secure=http://a.test,http://b.test``"
+
+#: ../../_includes/synthetics/chrome-flags.rst:15
+msgid "Treat given insecure origin as secure. Multiple origins can be supplied in a comma-separated list."
+msgstr "指定された安全でないオリジンを安全なものとして扱います。複数のオリジンは、カンマ区切りのリストで指定することができます。"
+
+#: ../../_includes/synthetics/chrome-flags.rst:16
+msgid "``--proxy-bypass-list=\"*.google.com;*foo.com;127.0.0.1:8080\"``"
+msgstr "``--proxy-bypass-list=\"*.google.com;*foo.com;127.0.0.1:8080\"``"
+
+#: ../../_includes/synthetics/chrome-flags.rst:17
+msgid "Proxy bypass list for any specified proxy for the given semi-colon-separated list of hosts. This flag must be used with ``--proxy-server``."
+msgstr "与えられたセミコロン区切りのホストリストの任意の指定プロキシのプロキシバイパスリスト。このフラグは ``--proxy-server`` と一緒に使用する必要があります。"
+
+#: ../../_includes/synthetics/chrome-flags.rst:18
+msgid "``--proxy-server=\"foopy:8080\"``"
+msgstr "``--proxy-server=\"foopy:8080\"``"
+
+#: ../../_includes/synthetics/chrome-flags.rst:19
+msgid "Uses a specified proxy server to override default settings."
+msgstr "指定したプロキシサーバーを使用してデフォルト設定を上書きします。"
+
+#: ../../_includes/synthetics/chrome-flags.rst:20
+msgid "``--no-proxy-server``"
+msgstr "``--no-proxy-server``"
+
+#: ../../_includes/synthetics/chrome-flags.rst:21
+msgid "Don't use a proxy server, always make direct connections. This flag can be used to override any other proxy server flags that you may have set up in a private location."
+msgstr "プロキシサーバーを使用せず、常に直接接続を行います。このフラグは、プライベートロケーションに設定した他のプロキシサーバーフラグを上書きするために使用できます。"
 
 #: ../../_includes/synthetics/configure-test.rst:2
 msgid "Customize your test details"
@@ -5559,12 +5580,13 @@ msgid "Span tags"
 msgstr "スパンタグ"
 
 #: ../../_includes/synthetics/metricset-def.rst:4
+#, fuzzy
 msgid ""
-"Use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. To get additional value from a span tag or process, an  administrator can run an action known as indexing, which activates additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated metrics, called MetricSets, across all spans that contain a specifiedindexed "
-"tag or process."
+"Use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. To get additional value from a span tag or process, an  administrator can run an action known as indexing, which activates additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated metrics, called MetricSets, across all spans that contain a specified "
+"indexedtag or process."
 msgstr ""
-"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行して、インデックス化したスパンタグやプロセスの追加的分析を有効にすることができます。インデックス化のメリットの1つは、指定したインデックス済みタグまたはプロセスを含むすべてのスパンを対象にして、MetricSetsと呼ばれる集約"
-"メトリクスを取得できることです。"
+"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行することができます。これにより、インデックス化したスパンタグやプロセスの追加的分析が有効になります。インデックス化のメリットの1つは、指定したインデックス済みタグまたはプロセスを含むすべてのスパンを対象にして、MetricSets"
+"と呼ばれる集約メトリクスを取得できることです。"
 
 #: ../../_includes/synthetics/metricset-def.rst:8
 msgid "MetricSets"
@@ -5622,12 +5644,13 @@ msgid "When you add span tags to spans via application instrumentation, you have
 msgstr "アプリケーションのインストルメンテーション経由でスパンにスパンタグを追加する場合、アプリケーションレベルのコントロールを最も高めることができます。この場合のトレードオフは、アプリケーションごとのインストルメンテーションを介して属性を追加するために、より時間がかかる可能性があるということです。"
 
 #: ../../_includes/tag-decision-support.rst:5
+#, fuzzy, python-format
 msgid ""
-"Adding span tags in a downstream OpenTelemetry Collector can save time, at the cost of granularity. If a tag is applicable to 100% of the data received by the OpenTelemetry Collector in which you are adding it, adding the tag in your OpenTelemetry Collector config file is fastest. But if you need to apply logic to differentiate the spans that receive a tag via the OpenTelemetry Collector, it is likely faster toadd "
-"the tags at the application level via instrumentation."
+"Adding span tags in a downstream OpenTelemetry Collector can save time, at the cost of granularity. If a tag is applicable to 100% of the data received by the OpenTelemetry Collector in which you are adding it, adding the tag in your OpenTelemetry Collector config file is fastest. But if you need to apply logic to differentiate the spans that receive a tag via the OpenTelemetry Collector, it is likely faster to "
+"addthe tags at the application level via instrumentation."
 msgstr ""
-"ダウンストリームのOpenTelemetry Collectorでスパンタグを追加すると、粒度を犠牲にして時間を節約できます。タグを追加するOpenTelemetry Collectorが受信するデータの100%にタグが適用される場合は、OpenTelemetry Collectorの設定ファイルでタグを追加するのが最速です。ただし、OpenTelemetry Collector経由でタグを受信するスパンを区別するロジックを適用する必要がある場合は、インストルメンテーション経由でアプリケーションレベルでタグを"
-"追加する方が速いでしょう。"
+"ダウンストリームのOpenTelemetry Collectorにスパンタグを追加すると、粒度を犠牲にして時間を節約できます。タグの追加先のOpenTelemetry Collectorが受信するデータの100%にタグが適用可能な場合は、OpenTelemetry Collectorの設定ファイルにタグを追加するのが最速です。ただし、OpenTelemetry Collector経由でタグを受信するスパンを区別するためのロジックを適用する必要がある場合は、インストルメンテーション経由で、アプリケーションレベル"
+"でタグを追加する方が速いでしょう。"
 
 #: ../../_includes/tag-decision-support.rst:7
 msgid "For instance, if multiple applications exist on the same host in a K8s deployment, but in different environments (for instance, ``production``, ``development``, and ``staging``), setting the ``deployment.environment`` tag using the instrumentation library allows you to differentiate environments among spans from the same host."
@@ -5662,6 +5685,10 @@ msgstr ":new-page:`Splunk Answers<https://community.splunk.com/t5/Splunk-Observa
 #: ../../_includes/troubleshooting-components.rst:13
 msgid "Join the Splunk :new-page:`#observability <https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` user group Slack channel to communicate with customers, partners, and Splunk employees worldwide. To join, see :new-page:`Chat groups <https://docs.splunk.com/Documentation/Community/current/community/Chat>` in the *Get Started with Splunk Community* manual."
 msgstr "Splunk :new-page:`#observability<https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` ユーザーグループの Slack チャンネルに参加して、世界中の顧客、パートナー、Splunk 社員とのコミュニケーションを図る。参加するには、*Get Started with Splunk Community* マニュアルの :new-page:`チャットグループ<https://docs.splunk.com/Documentation/Community/current/community/Chat>` を参照してください。"
+
+#: ../../_includes/zero-code-info.rst:1
+msgid "Due to changes in the upstream OpenTelemetry documentation, \"automatic instrumentation\" has been changed to \"zero-code instrumentation\". For more information, see :ref:`zero-code-overview`."
+msgstr "アップストリームのOpenTelemetryのドキュメントに変更があったため、「自動インストルメンテーション」は「ゼロコードインストルメンテーション」に変更されました。詳細は :ref:`zero-code-overview` を参照してください。"
 
 #~ msgid "Read more on how to [Use Smart Agent monitors with the Collector](https://docs.splunk.com/Observability/gdi/opentelemetry/smart-agent-migration-monitors.html)."
 #~ msgstr "[コレクターでスマートエージェントモニターを使用する方法については、](https://docs.splunk.com/Observability/gdi/opentelemetry/smart-agent-migration-monitors.html) を参照してください。"
@@ -6105,3 +6132,108 @@ msgstr "Splunk :new-page:`#observability<https://splunk-usergroups.slack.com/arc
 
 #~ msgid "To learn about even more support options, see :new-page:`Splunk Customer Success <https://www.splunk.com/en_us/customer-success.html>`."
 #~ msgstr "その他のサポートオプションについては、:new-page:`Splunkカスタマーサクセス<https://www.splunk.com/en_us/customer-success.html>` を参照してください。"
+
+#~ msgid ":strong:`Data source`"
+#~ msgstr ":strong:`データソース`"
+
+#~ msgid ":ref:`get-started-istio`"
+#~ msgstr ":ref:`get-started-istio`"
+
+#~ msgid ":ref:`get-started-dotnet-otel`"
+#~ msgstr ":ref:`get-started-dotnet-otel`"
+
+#~ msgid ":ref:`prometheus-exporter`"
+#~ msgstr ":ref:`prometheus-exporter`"
+
+#~ msgid "You can collect data from the following Azure services out-of-the-box:"
+#~ msgstr "以下の Azureサービスから、すぐにデータを収集できます："
+
+#~ msgid ":strong:`Category type`"
+#~ msgstr ":strong:`カテゴリタイプ`"
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "Hi-resolution"
+#~ msgstr "高解像度"
+
+#~ msgid "5"
+#~ msgstr "5"
+
+#~ msgid "Internal"
+#~ msgstr "内部"
+
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgid "7"
+#~ msgstr "7"
+
+#~ msgid "8"
+#~ msgstr "8"
+
+#~ msgid "APM hosts"
+#~ msgstr "APMホスト"
+
+#~ msgid "9"
+#~ msgstr "9"
+
+#~ msgid "APM container"
+#~ msgstr "APMコンテナ"
+
+#~ msgid "10"
+#~ msgstr "10"
+
+#~ msgid "11"
+#~ msgstr "11"
+
+#~ msgid "12"
+#~ msgstr "12"
+
+#~ msgid "13"
+#~ msgstr "13"
+
+#~ msgid "14"
+#~ msgstr "14"
+
+#~ msgid "Infrastructure Monitoring function"
+#~ msgstr "Infrastructure Monitoringの機能"
+
+#~ msgid "15"
+#~ msgstr "15"
+
+#~ msgid "APM function"
+#~ msgstr "APM機能"
+
+#~ msgid "16"
+#~ msgstr "16"
+
+#~ msgid "17"
+#~ msgstr "17"
+
+#~ msgid "18"
+#~ msgstr "18"
+
+#~ msgid "Network Explorer metrics"
+#~ msgstr "Network Explorerメトリクス"
+
+#~ msgid "19"
+#~ msgstr "19"
+
+#~ msgid "20"
+#~ msgstr "20"
+
+#~ msgid "In subscription plans based on metric time series (MTS), all metrics are categorized as custom metrics and billed accordingly."
+#~ msgstr "メトリック時系列（MTS）に基づくサブスクリプションプランでは、すべてのメトリクスはカスタムメトリクスに分類され、それに応じて請求が行われます。"

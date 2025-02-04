@@ -21,6 +21,8 @@ Instrument Python applications for Splunk Observability Cloud
    Troubleshoot the Python instrumentation <troubleshooting/common-python-troubleshooting>
    About Splunk OTel Python <splunk-python-otel-distribution>
    Migrate from SignalFx Python agent <troubleshooting/migrate-signalfx-python-agent-to-otel>
+   Migrate to Splunk Python 2.X <migration-guide>
+   Version 1.X (deprecated) <version1x/get-started-1x>
 
 The Splunk Distribution of OpenTelemetry Python provides a Python agent that automatically adds APM instrumentation to your Python application. The instrumentation captures distributed traces and metrics and sends them to Splunk Observability Cloud.
 

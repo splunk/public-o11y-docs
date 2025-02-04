@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-09 16:18+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 16:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -590,12 +590,13 @@ msgid "Link APM properties to Splunk Infrastructure Monitoring dashboards"
 msgstr "APMのプロパティをSplunk Infrastructure Monitoringのダッシュボードにリンクする"
 
 #: ../../apm/apm-data-links/apm-create-data-links.rst:76
+#, fuzzy
 msgid ""
-"You can create a global data link that passes information about APM services, traces, and spans to custom dashboards available in Splunk Observability Cloud. When you select a global data link to an Infrastructure Monitoring dashboard, the entire context of the property you were viewing transfers to the dashboard. For example, if you were viewing a service, the global data link transfers information about any endpoints you filtered for, the selected environments, and any tags you filtered "
-"forwithin the selected time range to the dashboard."
+"You can create a global data link that passes information about APM services, traces, and spans to custom dashboards available in Splunk Observability Cloud. When you select a global data link to an Infrastructure Monitoring dashboard, the entire context of the property you were viewing transfers to the dashboard. For example, if you were viewing a service, the global data link transfers information about any endpoints you filtered for, the selected environments, and any tags you filtered for "
+"withinthe selected time range to the dashboard."
 msgstr ""
-"APMのサービス、トレース、スパンに関する情報を、Splunk Observability Cloudで利用可能なカスタムダッシュボードに渡すグローバルデータリンクを作成できます。Infrastructure Monitoringのダッシュボードへのグローバルデータリンクを選択すると、表示していたプロパティの完全なコンテキストがそのダッシュボードに転送されます。たとえば、サービスを表示していた場合、グローバルデータリンクは、選択した時間範囲内でフィルタリングしたエンドポイント、選択した環境、およびフィルタリングしたタグに関する情報を、ダッシュボード"
-"に転送します。"
+"APMのサービス、トレース、スパンに関する情報を、Splunk Observability Cloudで利用可能なカスタムダッシュボードに渡すグローバルデータリンクを作成できます。Infrastructure Monitoringのダッシュボードへのグローバルデータリンクを選択すると、表示していたプロパティの完全なコンテキストがそのダッシュボードに転送されます。たとえば、サービスを表示していた場合、グローバルデータリンクは、選択した時間範囲内でフィルタリングしたエンドポイント、選択した環境、およびフィルタリングしたタグに関する情報を、ダッシュボードに転送"
+"します。"
 
 #: ../../apm/apm-data-links/apm-create-data-links.rst:78
 msgid "The following task describes how to create a global data link for a service that links to an Infrastructure Monitoring dashboard. You can set up a global data link for any service or a specific service."
@@ -715,7 +716,7 @@ msgstr "例えば、次のようなカスタムURLを指定して、サービス
 
 #: ../../apm/apm-data-links/apm-create-data-links.rst:143 ../../apm/apm-scenarios/configure-business-workflows.rst:47 ../../apm/apm-scenarios/custom-metricset.rst:64 ../../apm/apm-scenarios/endpoint-performance.rst:90 ../../apm/apm-scenarios/historical-data.rst:44 ../../apm/apm-scenarios/monitor-business-workflows.rst:48 ../../apm/apm-scenarios/monitor-services.rst:39 ../../apm/apm-scenarios/service-map.rst:66 ../../apm/apm-scenarios/services-impact-business-workflows.rst:53
 #: ../../apm/apm-scenarios/specific-trace.rst:55 ../../apm/apm-scenarios/troubleshoot-business-workflows.rst:80 ../../apm/apm-scenarios/troubleshoot-slow-traces.rst:82 ../../apm/apm-scenarios/troubleshoot-tag-spotlight.rst:80 ../../apm/apm-scenarios/troubleshoot-traces.rst:64 ../../apm/apm-spans-traces/trace-analyzer.rst:149 ../../apm/db-query-perf/db-perf-redis-scenario.rst:75 ../../apm/db-query-perf/db-perf-reference.rst:95 ../../apm/db-query-perf/db-perf-scenario.rst:111
-#: ../../apm/db-query-perf/db-perf-troubleshooting.rst:75 ../../apm/db-query-perf/turn-on-db-perf.rst:47 ../../apm/profiling/memory-profiling-scenario.rst:54 ../../apm/profiling/profiling-scenario.rst:96 ../../apm/span-tags/tag-spotlight.rst:54
+#: ../../apm/db-query-perf/db-perf-troubleshooting.rst:75 ../../apm/db-query-perf/turn-on-db-perf.rst:47 ../../apm/profiling/memory-profiling-scenario.rst:54 ../../apm/profiling/profiling-scenario.rst:96 ../../apm/span-tags/tag-spotlight.rst:62
 msgid "Learn more"
 msgstr "さらに詳しく"
 
@@ -738,7 +739,7 @@ msgstr "データベースと推定サービスをInfrastructure Monitoringの�
 #: ../../apm/apm-data-links/apm-create-data-links.rst:155
 #, fuzzy
 msgid "Create a global data link specifically for a single inferred service to associate a navigator or dashboard with the inferred service as the top-ranked navigator or dashboard. The top-ranked entity is the :strong:`View Navigator/View Dashboard` option in the :strong:`Monitoring` tab when you view a service from the service list or service map."
-msgstr "単一の推定サービス専用のグローバルデータリンクを作成して、ナビゲーターまたはダッシュボードを、トップランクのナビゲーターまたはダッシュボードとして推定サービスに関連付けます。トップランクのエンティティは、サービスリストまたはサービスマップからサービスを表示する際の「 :strong:`監視` 」タブの「 :strong:`ナビゲーターの表示/ダッシュボードの表示` 」のオプションです。"
+msgstr "単一の推定サービス専用のグローバルデータリンクを作成して、ナビゲーターまたはダッシュボードを、トップランクのナビゲーターまたはダッシュボードとして推定サービスに関連付けます。トップランクのエンティティは、サービスリストまたはサービスマップからサービスを表示する際の「 :strong:` 監視` 」タブの「 :strong:`ナビゲーターの表示/ダッシュボードの表示` 」のオプションです。"
 
 #: ../../apm/apm-data-links/apm-create-data-links.rst:157
 msgid "Triggers for global data links for navigators or dashboards that use wildcards (:strong:`*`) for service names can't be top-ranked navigators or dashboards for inferred services."
@@ -747,11 +748,11 @@ msgstr "サービス名にワイルドカード（ :strong:`*` ）を使用す�
 #: ../../apm/apm-data-links/apm-create-data-links.rst:159
 #, fuzzy
 msgid ""
-"For example, a navigator or dashboard associated with a global data link that contains a :strong:`Show On` value of ``sf_service:*`` can't be a top-ranked navigator or dashboard for an inferred service. To create a global data link that acts as a default navigator or dashboard for an inferred service from the :strong:`Monitoring` tab, the :strong:`Show On` value must include the name of the inferred service. For example, if you are creating a global data link for a default navigator ordashboard "
-"for the inferred service ``mydb``, the :strong:`Show On` value must be ``sf_service:mydb``."
+"For example, a navigator or dashboard associated with a global data link that contains a :strong:`Show On` value of ``sf_service:*`` can't be a top-ranked navigator or dashboard for an inferred service. To create a global data link that acts as a default navigator or dashboard for an inferred service from the :strong:`Monitoring` tab, the :strong:`Show On` value must include the name of the inferred service. For example, if you are creating a global data link for a default navigator or dashboard "
+"forthe inferred service ``mydb``, the :strong:`Show On` value must be ``sf_service:mydb``."
 msgstr ""
-"たとえば、:strong:`表示先`   の値として ``sf_service:*`` を含むグローバルデータリンクに関連付けられるナビゲーター/ダッシュボードには、推定サービスのトップランクナビゲーター/ダッシュボードを指定できません。:strong:`監視` タブから推定サービスのデフォルトのナビゲーター/ダッシュボードとして機能するグローバルデータリンクを作成する場合は、:strong:`表示先`   の値に推定サービスの名前を含める必要があります。たとえば、推定サービス ``mydb`` のデフォルトのナビゲーター/ダッシュボードのグローバルデータリンク"
-"を作成する場合、:strong:`表示先`   の値には ``sf_service:mydb`` を指定する必要があります。"
+"たとえば、:strong:`表示先`   の値として ``sf_service:*`` を含むグローバルデータリンクに関連付けられるナビゲーター/ダッシュボードには、推定サービスのトップランクナビゲーター/ダッシュボードを指定できません。:strong:`監視` タブから推定サービスのデフォルトのナビゲーター/ダッシュボードとして機能するグローバルデータリンクを作成する場合は、:strong:`表示先`   の値に推定サービスの名前を含める必要があります。たとえば、推定サービス ``mydb`` のデフォルトのナビゲーター/ダッシュボードのグローバルデータリンクを作成す"
+"る場合、:strong:`表示先`   の値には ``sf_service:mydb`` を指定する必要があります。"
 
 #: ../../apm/apm-data-links/apm-use-data-links.rst:-1
 msgid "Get stated with global data links using this scenario."
@@ -844,11 +845,11 @@ msgstr ":guilabel:`Waterfall` タブで、関心対象の :guilabel:`Service: Op
 
 #: ../../apm/apm-data-links/apm-use-data-links.rst:72
 msgid "Select the :guilabel:`More` icon next to the :guilabel:`Span ID` value. The menu displays global data links for the span. The :guilabel:`More` icon displays only if global data links have been created for the span."
-msgstr ":guilabel:`Span ID` の値の隣にある :guilabel:`More`  アイコンを選択します。メニューに、そのスパンのグローバルデータリンクが表示されます。 :guilabel:`More`  アイコンは、そのスパンにグローバルデータリンクが作成されている場合にのみ表示されます。"
+msgstr ":guilabel:`Span ID` の値の隣にある :guilabel:`More` アイコンを選択します。メニューに、そのスパンのグローバルデータリンクが表示されます。  :guilabel:`More`   アイコンは、そのスパンにグローバルデータリンクが作成されている場合にのみ表示されます。"
 
 #: ../../apm/apm-data-links/apm-use-data-links.rst:74
 msgid "If the span has a parent, you can select the :guilabel:`More` icon next to the :guilabel:`Parent ID` value. The menu displays global data links for the span. The :guilabel:`More` icon displays only if global data links have been created for the span."
-msgstr "スパンに親がある場合は、:guilabel:`Parent ID` の値の横にある :guilabel:`More`  アイコンを選択できます。メニューには、そのスパンのグローバルデータリンクが表示されます。 :guilabel:`More`  アイコンは、そのスパンにグローバルデータリンクが作成されている場合にのみ表示されます。"
+msgstr "スパンに親がある場合は、:guilabel:`Parent ID` の値の横にある :guilabel:`More` アイコンを選択できます。メニューには、そのスパンのグローバルデータリンクが表示されます。 :guilabel:`More`   アイコンは、そのスパンにグローバルデータリンクが作成されている場合にのみ表示されます。"
 
 #: ../../apm/apm-data-links/apm-use-data-links.rst:78
 msgid "Access global data links for a span tag"
@@ -910,7 +911,7 @@ msgstr ":ref:`service-map`"
 msgid ":ref:`services-impact-business-workflows`"
 msgstr ":ref:`services-impact-business-workflows`"
 
-#: ../../apm/apm-scenarios/apm-scenarios-intro.rst:39 ../../apm/span-tags/tag-spotlight.rst:58
+#: ../../apm/apm-scenarios/apm-scenarios-intro.rst:39 ../../apm/span-tags/tag-spotlight.rst:66
 msgid ":ref:`troubleshoot-tag-spotlight`"
 msgstr ":ref:`troubleshoot-tag-spotlight`"
 
@@ -918,7 +919,7 @@ msgstr ":ref:`troubleshoot-tag-spotlight`"
 msgid ":ref:`apm-scenario-endpoint-performance`"
 msgstr ":ref:`apm-scenario-endpoint-performance`"
 
-#: ../../apm/apm-scenarios/apm-scenarios-intro.rst:41 ../../apm/span-tags/tag-spotlight.rst:59
+#: ../../apm/apm-scenarios/apm-scenarios-intro.rst:41 ../../apm/span-tags/tag-spotlight.rst:67
 msgid ":ref:`troubleshoot-business-workflows`"
 msgstr ":ref:`troubleshoot-business-workflows`"
 
@@ -1587,12 +1588,13 @@ msgid "Kai breaks down the services by workflow to see error details by workflow
 msgstr "Kaiがサービスをワークフロー別に分解し、ワークフロー別のエラー詳細を確認する"
 
 #: ../../apm/apm-scenarios/services-impact-business-workflows.rst:41
+#, fuzzy
 msgid ""
 "Kai uses the :strong:`Breakdown` menu to break down each service by :strong:`Workflow` and selects each workflow node to see charts that provide error and latency details. Kai discovers that the :strong:`paymentservice` contributes to the errors for :strong:`PaymentService/Charge` and :strong:`frontend/chart/checkout` workflows, and the :strong:`checkoutservice` doesn't impact any Business Workflows. Kai sends this information to the payment service owner to resolve the errors impacting "
 "overallbusiness KPIs."
 msgstr ""
-"Kaiは :strong:`内訳` メニューを使用して各サービスを :strong:`ワークフロー` 別に分解し、各ワークフローのノードを選択してエラーとレイテンシの詳細を提供するチャートを表示します。:strong:`paymentservice` が、:strong:`PaymentService/Charge` および :strong:`frontend/chart/checkout` のワークフローのエラーに寄与していること、そして :strong:`checkoutservice` はどのビジネスワークフローにも影響を及ぼしていないことを発見します。Kaiは、ビジネスKPI全体に影響するエラーを解決するために、この情報を決済サービスの"
-"オーナーに送信します。"
+"Kaiは :strong:`内訳` メニューを使用して各サービスを :strong:`ワークフロー` 別に分解し、各ワークフローのノードを選択してエラーとレイテンシの詳細を提供するチャートを表示します。:strong:`paymentservice` が、:strong:`PaymentService/Charge` および :strong:`frontend/chart/checkout` のワークフローのエラーに寄与していること、そして :strong:`checkoutservice` はどのビジネスワークフローにも影響を及ぼしていないことを発見します。Kaiは、ビジネスKPI全体に影響するエラーを解決するために、この情報を決済サービスのオー"
+"ナーに送信します。"
 
 #: ../../apm/apm-scenarios/services-impact-business-workflows.rst:39
 msgid "This screenshot shows charts and numerical data of the requests, errors, and root causes in the Business Workflow node."
@@ -2024,7 +2026,7 @@ msgstr "アレックスが特定のタグでトレースをグループ化する
 
 #: ../../apm/apm-scenarios/troubleshoot-traces.rst:30
 msgid "Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a breakdown in requests and errors by ``http.url``. So, Alex goes to Trace Analyzer and selects ``http.url`` in the :guilabel:`Group traces by` menu to quickly understand the prevalence of errors for the specific ``http.url`` value that they made note of from the problematic trace. Alex notes that over 10% of traces for the ``/checkout/{cardId}`` request have errors."
-msgstr "   ``http.url``    はインデックスされていないスパンであるため、Tag Spotlightを使用して    ``http.url``    別でリクエストとエラーの内訳を見ることはできません。そこで、AlexはTrace Analyzerに移動し、:guilabel:`Group traces by` メニューから    ``http.url``    を選択して、問題のあるトレースからメモした特定の    ``http.url``    値のエラーの蔓延状況を素早く把握します。Alexは、``/checkout/{cardId}`` リクエストのトレースの10%以上にエラーがあることに気づきます。"
+msgstr "  ``http.url``    はインデックスされていないスパンであるため、Tag Spotlightを使用して    ``http.url``    別でリクエストとエラーの内訳を見ることはできません。そこで、AlexはTrace Analyzerに移動し、:guilabel:`Group traces by` メニューから ``http.url`` を選択して、問題のあるトレースからメモした特定の    ``http.url``    値のエラーの蔓延状況を素早く把握します。Alexは、``/checkout/{cardId}`` リクエストのトレースの10%以上にエラーがあることに気づきます。"
 
 #: ../../apm/apm-scenarios/troubleshoot-traces.rst:28
 msgid "This screenshot shows the Group traces by option and the resulting grouped metrics in Trace Analyzer"
@@ -2095,7 +2097,7 @@ msgstr "OpenTelemetryのインストルメンテーションでどのステー�
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:22
 msgid "See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation."
-msgstr "OpenTelemetryのインストルメンテーションでどの ``rpc.grpc.status_code`` タグ値が ``otel.status_code`` を ``ERROR`` と設定するかについては、:ref:`apm-grpc-status` を参照してください。"
+msgstr "OpenTelemetryのインストルメンテーションでどの ``rpc.grpc.status_code`` タグ値が ``otel.status_code`` を ``ERROR``  と設定するかについては、:ref:`apm-grpc-status` を参照してください。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:23
 msgid "The ``error`` tag for the span is set to a truthy value, which is any value other than ``False`` or ``0``."
@@ -2192,8 +2194,7 @@ msgid "CANCELLED"
 msgstr "CANCELLED"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:73 ../../apm/apm-spans-traces/apm-errors.rst:76 ../../apm/apm-spans-traces/apm-errors.rst:77 ../../apm/apm-spans-traces/apm-errors.rst:81 ../../apm/apm-spans-traces/apm-errors.rst:84 ../../apm/apm-spans-traces/apm-errors.rst:85 ../../apm/apm-spans-traces/apm-errors.rst:89 ../../apm/apm-spans-traces/apm-errors.rst:93 ../../apm/apm-spans-traces/apm-errors.rst:97 ../../apm/apm-spans-traces/apm-errors.rst:101 ../../apm/apm-spans-traces/apm-errors.rst:105
-#: ../../apm/apm-spans-traces/apm-errors.rst:109 ../../apm/apm-spans-traces/apm-errors.rst:113 ../../apm/apm-spans-traces/apm-errors.rst:116 ../../apm/apm-spans-traces/apm-errors.rst:117 ../../apm/apm-spans-traces/apm-errors.rst:120 ../../apm/apm-spans-traces/apm-errors.rst:121 ../../apm/apm-spans-traces/apm-errors.rst:124 ../../apm/apm-spans-traces/apm-errors.rst:125 ../../apm/apm-spans-traces/apm-errors.rst:128 ../../apm/apm-spans-traces/apm-errors.rst:129
-#: ../../apm/apm-spans-traces/apm-errors.rst:133
+#: ../../apm/apm-spans-traces/apm-errors.rst:109 ../../apm/apm-spans-traces/apm-errors.rst:113 ../../apm/apm-spans-traces/apm-errors.rst:116 ../../apm/apm-spans-traces/apm-errors.rst:117 ../../apm/apm-spans-traces/apm-errors.rst:120 ../../apm/apm-spans-traces/apm-errors.rst:121 ../../apm/apm-spans-traces/apm-errors.rst:124 ../../apm/apm-spans-traces/apm-errors.rst:125 ../../apm/apm-spans-traces/apm-errors.rst:128 ../../apm/apm-spans-traces/apm-errors.rst:129 ../../apm/apm-spans-traces/apm-errors.rst:133
 msgid "ERROR"
 msgstr "エラー"
 
@@ -2348,7 +2349,7 @@ msgstr "たとえば、``service_a`` が ``service_b`` にコールし、両方�
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:153
 msgid "``span_1``, a span with ``span.kind = CLIENT`` that captures ``service_a`` making the call to ``service_b``"
-msgstr "``span_1``。``service_b`` へのコールを行う ``service_a`` をキャプチャする ``span.kind = CLIENT`` のスパン。"
+msgstr "``span_1``。 ``service_b`` へのコールを行う ``service_a`` をキャプチャする ``span.kind = CLIENT`` のスパン。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:154
 msgid "``span_2``, a span with ``span.kind = SERVER`` that captures ``service_b`` receiving the request"
@@ -2384,11 +2385,11 @@ msgstr "このスクリーンショットは、Splunk APMのトレースビュ�
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:178
 msgid "The ``checkout`` service makes HTTP requests to the ``authorization`` service, the ``checkout`` service, and the ``payment`` service. The HTTP request to the ``payment`` service results in a ``402`` \"Payment Required\" error. Because the request to the ``payment`` service failed, the initiating requests to ``checkout`` service and ``http.Request`` also result in errors."
-msgstr "``checkout``   サービスは、``authorization`` サービス、  ``checkout``   サービス、および ``payment``   サービスにHTTPリクエストを行っています。 ``payment``   サービスへのHTTPリクエストの結果、``402`` \"Payment Required\"というエラーが発生しています。 ``payment``   サービスへのリクエストが失敗したため、  ``checkout``   サービスへの開始リクエストと ``http.Request`` もエラーになります。"
+msgstr "``checkout``   サービスは、``authorization`` サービス、   ``checkout``   サービス、および ``payment``   サービスにHTTPリクエストを行っています。 ``payment``   サービスへのHTTPリクエストの結果、``402`` \"Payment Required\"というエラーが発生しています。 ``payment``   サービスへのリクエストが失敗したため、   ``checkout``   サービスへの開始リクエストと ``http.Request`` もエラーになります。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:180
 msgid "In this case, the source error, or root cause error, is the ``402`` error in the ``payment`` service. The ``500`` errors appearing in the ``checkout`` and ``api`` services are subsequent errors."
-msgstr "この場合、ソースエラー、つまり根本原因エラーは、``payment`` サービス内の ``402`` エラーです。``checkout`` および ``api`` のサービスに現れる ``500`` のエラーは、その結果として生じたエラーです。"
+msgstr "この場合、ソースエラー、つまり根本原因エラーは、``payment`` サービス内の ``402`` エラーです。 ``checkout`` および ``api`` のサービスに現れる ``500`` のエラーは、その結果として生じたエラーです。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:182
 msgid "The root cause error count indicates the count of these root cause errors, while the standard error count indicates the total count of all root cause errors as well as any subsequent errors."
@@ -2461,8 +2462,8 @@ msgstr "例えば、サーバー側のスパンにおける ``503``   \"service 
 #: ../../apm/apm-spans-traces/apm-errors.rst:220
 msgid "Depending on your application's logic, however, you might not consider ``5xx`` codes to be meaningful errors. For example, if your service is a batch processor, a ``503`` error can be a normal flow control mechanism, triggering clients to retry their requests later. To override the default that counts ``503`` status codes as errors, you can modify your instrumentation to set ``span.status`` to ``OK`` in the spans where a ``503`` error is not a concern."
 msgstr ""
-"しかし、アプリケーションのロジックによっては、``5xx`` コードを意味のあるエラーと考えない可能性もあります。例えば、サービスがバッチプロセッサーである場合、``503``   のエラーは正常なフロー制御メカニズムで、後でのクライアントによるプロセスの再試行をトリガーするものである可能性があります。``503``   ステータスコードをエラーとしてカウントするデフォルト設定をオーバーライドするには、``503``   エラーが問題にならないスパンでは ``span.status`` を ``OK`` に設定するようにインストルメンテーションを修正するこ"
-"とができます。"
+"しかし、アプリケーションのロジックによっては、``5xx`` コードを意味のあるエラーと考えない可能性もあります。例えば、サービスがバッチプロセッサーである場合、``503``   のエラーは正常なフロー制御メカニズムで、後でのクライアントによるプロセスの再試行をトリガーするものである可能性があります。``503``   ステータスコードをエラーとしてカウントするデフォルト設定をオーバーライドするには、``503`` エラーが問題にならないスパンでは ``span.status`` を ``OK`` に設定するようにインストルメンテーションを修正することができま"
+"す。"
 
 #: ../../apm/apm-spans-traces/download-traces.rst:-1
 msgid "Learn about downloading traces from Splunk APM in JSON."
@@ -2683,12 +2684,13 @@ msgid "What information about inferred services is available?"
 msgstr "推定サービスについて利用可能な情報は？"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:55
+#, fuzzy
 msgid ""
-"Because inferred services are not instrumented, Splunk APM only has access to spans from instrumented services that call inferred services. Splunk APM places inferred services in their inferred locations in the service map and provides :ref:`Troubleshooting MetricSets<troubleshooting-metricsets>` (TMS), or request, error, and duration (RED) metrics, based on the associated client-side spans. You can continue to troubleshoot with these metrics in :ref:`Tag Spotlight<apm-tag-spotlight>`. If "
-"theinferred service is servicing other uninstrumented services, these reported RED metrics might not provide a complete picture of the inferred service's interactions."
+"Because inferred services are not instrumented, Splunk APM only has access to spans from instrumented services that call inferred services. Splunk APM places inferred services in their inferred locations in the service map and provides :ref:`Troubleshooting MetricSets<troubleshooting-metricsets>` (TMS), or request, error, and duration (RED) metrics, based on the associated client-side spans. You can continue to troubleshoot with these metrics in :ref:`Tag Spotlight<apm-tag-spotlight>`. If the "
+"inferredservice is servicing other uninstrumented services, these reported RED metrics might not provide a complete picture of the inferred service's interactions."
 msgstr ""
-"推定サービスはインストルメントされていないため、Splunk APMは、推定サービスを呼び出すインストルメント済みサービスからのスパンにしかアクセスできません。Splunk APMは推定サービスをサービスマップ内の推定された場所に配置し、関連するクライアント側のスパンに基づいて、:ref:`Troubleshooting MetricSets<troubleshooting-metricsets>` （TMS）、またはリクエスト、エラーおよび時間（RED）メトリクスを提供します。これらのメトリクスを使用して、:ref:`Tag Spotlight<apm-tag-spotlight>` でトラブルシューティングを続けるこ"
-"とができます。推定サービスが他の未インストルメントのサービスにサービスを提供している場合、これらのレポートされるREDメトリクスでは、推定サービスのインタラクションの全体像を把握できないことがあります。"
+"推定サービスはインストルメントされていないため、Splunk APMは、推定サービスを呼び出すインストルメント済みサービスからのスパンにしかアクセスできません。Splunk APMは推定サービスをサービスマップ内の推定された場所に配置し、関連するクライアント側のスパンに基づいて、:ref:`Troubleshooting MetricSets<troubleshooting-metricsets>` （TMS）、またはリクエスト、エラーおよび時間（RED）メトリクスを提供します。これらのメトリクスを使用して、:ref:`Tag Spotlight<apm-tag-spotlight>` でトラブルシューティングを続けることがで"
+"きます。推定サービスが他の未インストルメントのサービスにサービスを提供している場合、これらのレポートされるREDメトリクスでは、推定サービスのインタラクションの全体像を把握できないことがあります。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:60
 msgid "Viewing inferred services in the service map"
@@ -2745,12 +2747,13 @@ msgid "The table in :ref:`inferred-service-types` provides a list of types of in
 msgstr ":ref:`inferred-service-types` の表は、推定サービスのタイプと、Splunk APMが各タイプの推定サービスを識別するために使用するタグおよび推定メソッドの一覧です。pub/sub推定サービスの場合、推定スパンは対応するクライアントスパンまたはプロデューサースパンからメタデータを継承し、そのスパンに直接添付されます。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:95
+#, fuzzy
 msgid ""
 "For inferred service types other than pub/sub, Splunk APM applies additional logic to ensure it captures only the most important application-level information. If there are multiple client spans without a corresponding server span, the inferred span inherits the metadata from the parent-most of these client spans. The inferred service span is then attached to the most recent of these client spans. Otherwise, if there is a single client span without a corresponding server span, the inferred "
 "spaninherits the metadata from that client span and is attached to that same span."
 msgstr ""
-"pub/sub以外の推定サービスタイプでは、Splunk APMは追加のロジックを適用して、最も重要なアプリケーションレベルの情報のみを確実に取得します。対応するサーバースパンを持たない複数のクライアントスパンが存在する場合、推定スパンはこれらのクライアントスパンのうち最も親となるスパンのメタデータを継承します。そして、推定サービススパンは、これらのクライアントスパンのうち最も新しいスパンに添付されます。そうでない場合、対応するサーバースパンを持たない単一のクライアントスパンが存在する場合は、推定スパンはそのク"
-"ライアントスパンからメタデータを継承し、同じスパンに添付されます。"
+"pub/sub以外の推定サービスタイプでは、Splunk APMは追加のロジックを適用して、最も重要なアプリケーションレベルの情報のみを確実に取得します。対応するサーバースパンを持たない複数のクライアントスパンが存在する場合、推定スパンはこれらのクライアントスパンのうち最も親となるスパンのメタデータを継承します。そして、推定サービススパンは、これらのクライアントスパンのうち最も新しいスパンに添付されます。そうでない場合、対応するサーバースパンを持たない単一のクライアントスパンが存在する場合は、推定スパンはそのクライアン"
+"トスパンからメタデータを継承し、同じスパンに添付されます。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:100
 msgid "Manage inferring HTTP services"
@@ -2844,7 +2847,7 @@ msgstr "``peer.service`` がHTTPサービスであることを保証するため
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:155
 msgid "If ``peer.service`` exists and 1 or more of following also exist, the service name is extracted from ``peer.service``."
-msgstr "``peer.service``  が存在し、かつ、以下のうち1つ以上が存在する場合、 ``peer.service``  からサービス名が抽出されます。"
+msgstr "``peer.service``  が存在し、かつ、以下のうち1つ以上が存在する場合、  ``peer.service``  からサービス名が抽出されます。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:154
 #, fuzzy
@@ -2952,7 +2955,7 @@ msgstr "``peer.service`` タグからサービス名を探します。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:192
 msgid "If the ``peer.service`` tag exists, infer the service name from it. If the ``peer.service`` tag doesn't exist, the span isn't considered to be related to a generic inferred service."
-msgstr "``peer.service``  タグが存在する場合、そのタグからサービス名を推定します。  ``peer.service``  タグが存在しない場合、そのスパンは推定汎用サービスに関連していないものと見なされます。"
+msgstr "``peer.service``  タグが存在する場合、そのタグからサービス名を推定します。   ``peer.service``  タグが存在しない場合、そのスパンは推定汎用サービスに関連していないものと見なされます。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:194
 msgid "**Note on AWS services:** To identify AWS services, the span must contain ``http.url``. Splunk APM applies heuristics on this tag's value to determine the AWS Service type from the URL."
@@ -2976,7 +2979,7 @@ msgstr "スパンが ``messaging.destination`` （OpenTelemetryのセマンテ�
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:206
 msgid "If both ``messaging.system`` and ``messaging.destination.name`` exist, the inferred service name is equal to <Value of ``messaging.system`` tag>:<Value of ``messaging.destination.name`` tag>."
-msgstr " ``messaging.system``  と  ``messaging.destination.name``  の両方が存在する場合、推定サービス名は<  ``messaging.system``  タグの値>:<  ``messaging.destination.name``  タグの値> と等しくなる。"
+msgstr "``messaging.system``  と  ``messaging.destination.name``  の両方が存在する場合、推定サービス名は<  ``messaging.system``  タグの値>:<  ``messaging.destination.name``  タグの値> と等しくなる。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:207
 msgid "If ``messaging.system`` is null, the inferred service name is equal to <Value of ``messaging.destination.name`` tag>."
@@ -3032,8 +3035,8 @@ msgid ""
 "If the ``db.connection_string`` tag is present and its value conforms to a known format such as Java database connectivity (JDBC), Splunk APM extracts the database name portion of the URL and concatenates it with the value of ``db.system`` to form the database name, such as ``mysql:dbname``. If the value of ``db.connection_string`` does not conform to a known format or the database portion cannot be extracted and ``db.name`` also does not exist, Splunk APM uses the raw value of ``db."
 "connection_string`` as the database name. If ``db.system`` also exists, the 2 values are concatenated."
 msgstr ""
-"  ``db.connection_string``   タグが存在し、その値がJavaデータベース接続（JDBC）などの既知のフォーマットに適合している場合、Splunk APMはURLのデータベース名部分を抽出し、``db.system``  の値と連結して、``mysql:dbname`` のようなデータベース名を形成します。  ``db.connection_string``   の値が既知のフォーマットに適合していない場合や、データベース部分が抽出できず、``db.name`` も存在しない場合、Splunk APMは  ``db.connection_string``   の生の値をデータベース名として使用します。 ``db.system``  も存在する場"
-"合は、その2つの値が連結されます。"
+"  ``db.connection_string``  タグが存在し、その値がJavaデータベース接続（JDBC）などの既知のフォーマットに適合している場合、Splunk APMはURLのデータベース名部分を抽出し、``db.system``   の値と連結して、``mysql:dbname`` のようなデータベース名を形成します。  ``db.connection_string``   の値が既知のフォーマットに適合していない場合や、データベース部分が抽出できず、``db.name`` も存在しない場合、Splunk APMは  ``db.connection_string``  の生の値をデータベース名として使用します。 ``db.system`` も存在する場合は、そ"
+"の2つの値が連結されます。"
 
 #: ../../apm/apm-spans-traces/inferred-services.rst:230
 msgid "Splunk APM also provides additional analytics for supported SQL databases. See :ref:`db-query-performance` to learn more."
@@ -3153,7 +3156,7 @@ msgstr "Splunk APMのサービスマップの例。``paymentservice`` ノード�
 #: ../../apm/apm-spans-traces/service-map.rst:67
 #, fuzzy
 msgid "The following image shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` originate in the ``/placeOrder`` endpoint of the ``checkoutservice``."
-msgstr "次のスクリーンショットは、同じサービスマップで ``checkoutservice``  をさらにエンドポイント別に分解したものを示しています。これを見ると、``paymentservice`` の ``/Charge`` エンドポイントで発生しているエラーが、 ``checkoutservice``  の ``/placeOrder`` エンドポイントから生じているものであることが分かります。"
+msgstr "次のスクリーンショットは、同じサービスマップで ``checkoutservice``   をさらにエンドポイント別に分解したものを示しています。これを見ると、``paymentservice`` の ``/Charge`` エンドポイントで発生しているエラーが、``checkoutservice`` の ``/placeOrder`` エンドポイントから生じているものであることが分かります。"
 
 #: ../../apm/apm-spans-traces/service-map.rst:59
 msgid "This screenshot shows an example of the service map in Splunk APM. The ``paymentservice`` and ``checkoutservice`` nodes are broken down by endpoint."
@@ -3471,7 +3474,7 @@ msgid ""
 "Select :guilabel:`Logs` to view logs for the environment and service you are viewing. By default, logs are displayed for all indices that correspond to first listed Log Observer Connect connection. Logs are filtered by the service you are viewing using the ``service.name`` value. If your logs do not have a ``service.name`` value, you can create an alias in Splunk Web. See :new-page:`Create field aliases in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Knowledge/"
 "Addaliasestofields>`."
 msgstr ""
-":guilabel:`Logs` を選択すると、閲覧中の環境およびサービスのログが表示されます。デフォルトでは、最初にリストされているLog Observer Connect接続に対応するすべてのインデックスに関するログが表示されます。ログは、 ``service.name``  の値を使用して、表示中のサービスでフィルタリングされます。ログに ``service.name``  の値がない場合は、Splunk Webでエイリアスを作成できます。:new-page:`Splunk Web でフィールドエイリアスを作成する <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Knowledge/"
+" :guilabel:`Logs` を選択すると、閲覧中の環境およびサービスのログが表示されます。デフォルトでは、最初にリストされているLog Observer Connect接続に対応するすべてのインデックスに関するログが表示されます。ログは、 ``service.name``  の値を使用して、表示中のサービスでフィルタリングされます。ログに ``service.name``  の値がない場合は、Splunk Webでエイリアスを作成できます。:new-page:`Splunk Web でフィールドエイリアスを作成する <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Knowledge/"
 "Addaliasestofields>` を参照してください。"
 
 #: ../../apm/apm-spans-traces/service-view.rst:95
@@ -4166,12 +4169,13 @@ msgid "View connected spans and traces using span links"
 msgstr "スパンリンクを使用して、接続されたスパンとトレースを表示する"
 
 #: ../../apm/apm-spans-traces/span-search.rst:63
+#, fuzzy
 msgid ""
-"Span links connect spans that don't have a direct parent-child relationship but are otherwise causally related. Span links help you to manage operations in distributed systems, where operations don't follow linear execution patterns. Use span links to preserve span context when producer spans create jobs that are asynchronously processed later. These might be remote jobs that are added to a job queue or local jobs handled by an event listener. In this case, span links connect the producer "
-"spansto the consumer spans that represent the processing of the jobs created by the producer. These consumer spans might start long after the producer span has ended."
+"Span links connect spans that don't have a direct parent-child relationship but are otherwise causally related. Span links help you to manage operations in distributed systems, where operations don't follow linear execution patterns. Use span links to preserve span context when producer spans create jobs that are asynchronously processed later. These might be remote jobs that are added to a job queue or local jobs handled by an event listener. In this case, span links connect the producer spans to "
+"theconsumer spans that represent the processing of the jobs created by the producer. These consumer spans might start long after the producer span has ended."
 msgstr ""
-"スパンリンクは、直接の親子関係はないものの因果関係のあるスパン同士を接続します。スパンリンクは、オペレーションが線形実行パターンに従わない分散システムでのオペレーション管理に役立ちます。スパンリンクを使用すると、プロデューサースパンが後で非同期処理されるジョブを作成するときにスパンのコンテキストを保持できます。これらは、ジョブキューに追加されるリモートジョブや、イベントリスナーによって処理されるローカルジョブである可能性があります。この場合、スパンリンクは、プロデューサースパンを、プロデューサー"
-"によって作成されたジョブの処理を表すコンシューマースパンに接続します。これらのコンシューマースパンは、プロデューサースパンが終了したずっと後に開始される可能性があります。"
+"スパンリンクは、直接の親子関係はないものの因果関係のあるスパン同士を接続します。スパンリンクは、オペレーションが線形実行パターンに従わない分散システムでのオペレーション管理に役立ちます。スパンリンクを使用すると、プロデューサースパンが後で非同期処理されるジョブを作成するときにスパンのコンテキストを保持できます。これらは、ジョブキューに追加されるリモートジョブや、イベントリスナーによって処理されるローカルジョブである可能性があります。この場合、スパンリンクは、プロデューサースパンを、プロデューサーによっ"
+"て作成されたジョブの処理を表すコンシューマースパンに接続します。これらのコンシューマースパンは、プロデューサースパンが終了したずっと後に開始される可能性があります。"
 
 #: ../../apm/apm-spans-traces/span-search.rst:65
 msgid "See :new-page:`https://opentelemetry.io/docs/concepts/signals/traces/#span-links` to learn about the OpenTelemetry concept."
@@ -5386,12 +5390,13 @@ msgid "Jax could also use the database picker to select from among available SQL
 msgstr "データベースピッカーを使って利用可能なSQLデータベースから選択することもできますが、今は ``mysql:mysql-prod-1`` に焦点を当てる必要があります。"
 
 #: ../../apm/db-query-perf/db-perf-scenario.rst:69
+#, fuzzy
 msgid ""
-"The table under :guilabel:`Top Queries` shows a list of the top 10 queries to ``mysql:mysql-prod-1``, sorted by default in descending order by total time. Jax can use the :guilabel:`Sort` picker to sort by P90 latency or requests per second instead. They can also use the :guilabel:`Compare to:` picker to compare the current data against a past time range. This overlays a historical line based on the selected time range on the chart in each row of the query table, enabling Jax to "
-"determinewhether the problem is recent, or has been occurring over time."
+"The table under :guilabel:`Top Queries` shows a list of the top 10 queries to ``mysql:mysql-prod-1``, sorted by default in descending order by total time. Jax can use the :guilabel:`Sort` picker to sort by P90 latency or requests per second instead. They can also use the :guilabel:`Compare to:` picker to compare the current data against a past time range. This overlays a historical line based on the selected time range on the chart in each row of the query table, enabling Jax to determine whether "
+"theproblem is recent, or has been occurring over time."
 msgstr ""
-" :guilabel:`Top Queries` の下にあるテーブルは、``mysql:mysql-prod-1`` に対する上位10個のクエリのリストを示しており、デフォルトでは合計時間の降順でソートされています。Jaxは、:guilabel:`Sort` ピッカーを使用して、P90レイテンシまたはリクエスト数/秒でソートすることができます。また、:guilabel:`Compare to:` ピッカーを使って、現在のデータを過去の時間範囲と比較することもできます。これにより、クエリテーブルの各行のチャートに、選択した時間範囲に基づく履歴線が重なり、問題が最近発生したものなのか、それとも長"
-"期にわたって発生しているものなのかを判断することができます。"
+" :guilabel:`Top Queries` の下にあるテーブルは、``mysql:mysql-prod-1`` に対する上位10個のクエリのリストを示しており、デフォルトでは合計時間の降順でソートされています。Jaxは、:guilabel:`Sort` ピッカーを使用して、P90レイテンシまたはリクエスト数/秒でソートすることができます。また、:guilabel:`Compare to:` ピッカーを使って、現在のデータを過去の時間範囲と比較することもできます。これにより、クエリテーブルの各行のチャートに、選択した時間範囲に基づく履歴線が重なり、問題が最近発生したものなのか、それとも長期にわ"
+"たって発生しているものなのかを判断することができます。"
 
 #: ../../apm/db-query-perf/db-perf-scenario.rst:71
 msgid "The charts under :guilabel:`Database Overview` in the sidebar summarize the latency and request and error rate for all queries in the selected database, illustrating trends in query latency over time. The charts are based on the current state of the filter bar. Changing the time range or environment pickers in the filter bar changes the data shown in the chart."
@@ -6921,7 +6926,7 @@ msgstr "手順については :ref:`get-data-in-profiling` を参照してくだ
 
 #: ../../apm/profiling/memory-profiling-scenario.rst:-1
 msgid "Learn how you can use AlwaysOn Profiling in Splunk APM to analyze memory usage in your applications, and pin down the causes of memory leaks and other issues."
-msgstr "Splunk APMのAlwaysOn Pfofilingを使用してアプリケーションのメモリ使用量を分析し、メモリリークやその他の問題の原因を突き止める方法を学習します。"
+msgstr "Splunk APMのAlwaysOn Profilingを使用してアプリケーションのメモリ使用量を分析し、メモリリークやその他の問題の原因を突き止める方法を学習します。"
 
 #: ../../apm/profiling/memory-profiling-scenario.rst:4
 msgid "Scenario: Sasha analyzes memory usage using AlwaysOn Profiling"
@@ -7317,7 +7322,7 @@ msgstr "アプリケーションがインストルメント済みであること
 
 #: ../../apm/profiling/profiling-troubleshooting.rst:28
 msgid "You can extract AlwaysOn Profiling data only if you've instrumented your application or service for Splunk APM. If the APM instrumentation is not loading or isn't working, the profiler cannot work."
-msgstr "AlwaysOn Pofilingのデータは、Splunk APM用にアプリケーションまたはサービスをインストルメントした場合にのみ抽出できます。APMのインストルメンテーションが読み込まれない、または機能しない場合は、プロファイラーは動作しません。"
+msgstr "AlwaysOn Profilingのデータは、Splunk APM用にアプリケーションまたはサービスをインストルメントした場合にのみ抽出できます。APMのインストルメンテーションが読み込まれない、または機能しない場合は、プロファイラーは動作しません。"
 
 #: ../../apm/profiling/profiling-troubleshooting.rst:30
 msgid "To solve this, check that you've instrumented your application and that the application is sending trace data to APM. See :ref:`profiling-setup-step-instrument`."
@@ -7584,8 +7589,7 @@ msgstr "フレームテーブルの解釈"
 
 #: ../../apm/profiling/using-the-flamegraph.rst:83
 msgid "In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces. :guilabel:`Self time` is the time spent executing the function, minus the time spent calling other functions. A high self time value might also indicate performance issues. Though, in some cases, it might mean the thread is idle and doesn't consume resources. The following image shows the flame graph with the frame table of threads highlighted:"
-msgstr ""
-"AlwaysOn Profilingのテーブル内で、:guilabel:`Count` は、ある行がスタックトレース内に何回出現したかを示しています。:guilabel:`Self time` は、その関数の実行に費やされた時間から他の関数の呼び出しに費やされた時間を差し引いた値を示します。セルフタイムの値が高い場合は、パフォーマンスに問題がある可能性があります。しかし、スレッドがアイドル状態でリソースを消費していないことを意味している場合もあります。以下の画像はフレームグラフを示すものであり、スレッドのフレームテーブルがハイライトされています："
+msgstr "AlwaysOn Profilingのテーブル内で、:guilabel:`Count` は、ある行がスタックトレース内に何回出現したかを示しています。:guilabel:`Self time` は、その関数の実行に費やされた時間から他の関数の呼び出しに費やされた時間を差し引いた値を示します。セルフタイムの値が高い場合は、パフォーマンスに問題がある可能性があります。しかし、スレッドがアイドル状態でリソースを消費していないことを意味している場合もあります。以下の画像はフレームグラフを示すものであり、スレッドのフレームテーブルがハイライトされています："
 
 #: ../../apm/profiling/using-the-flamegraph.rst:81
 msgid "Information panel on a highlighted thread."
@@ -7813,7 +7817,7 @@ msgstr "多くのソースからスパンをまとめてバッチ処理するこ
 #: ../../apm/set-up-apm/apm-gdi.rst:54
 #, fuzzy
 msgid "To deploy the Splunk Distribution of OpenTelemetry Collector on a host, follow these steps:"
-msgstr "Splunk Distribution the OpenTelemetry Collectorをホストにデプロイするには、以下の手順に従います："
+msgstr "Splunk Distribution of OpenTelemetry Collectorをホストにデプロイするには、以下の手順に従います："
 
 #: ../../apm/set-up-apm/apm-gdi.rst:57
 #, fuzzy
@@ -7822,7 +7826,7 @@ msgstr "左のナビゲーションメニューで、:menuselection:`Data Manage
 
 #: ../../apm/set-up-apm/apm-gdi.rst:58
 msgid "Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab."
-msgstr ":guilabel:`Available integrations` タブに移動するか、:guilabel:`Deployed integrations` タブで :guilabel:`Add Integration` を選択します。"
+msgstr ":guilabel:`Available integrations` タブに移動するか、 :guilabel:`Deployed integrations` タブで :guilabel:`Add Integration` を選択します。"
 
 #: ../../apm/set-up-apm/apm-gdi.rst:59
 msgid "Select the setup wizard for the Collector, and follow the instructions according to your host."
@@ -8150,8 +8154,8 @@ msgstr "追加のスパンタグのインデックス化"
 #: ../../apm/set-up-apm/customize-apm.rst:27
 msgid "As a Splunk APM administrator, you can index additional span tags to generate custom request, error, and duration (RED) metrics for tag values within a service. Indexed span tags become filter options within Tag Spotlight, enable breakdowns in the service map, and generate RED metrics. RED metrics for indexed span tags are known as :ref:`Troubleshooting MetricSets<troubleshooting-metricsets>`. To learn more about adding and indexing span tags, see :ref:`apm-span-tags`."
 msgstr ""
-"Splunk APMの管理者は、追加のスパンタグにインデックスを付けて、サービス内のタグ値に対してカスタムのリクエスト、エラーおよび時間（RED）メトリクスを生成できます。インデックス化されたスパンタグはTag Spotlightのフィルターオプションとなり、サービスマップの分解機能を有効にし、REDメトリクスを生成します。インデックス化されたスパンタグのREDメトリクスは、:ref:`Troubleshooting MetricSets<troubleshooting-metricsets>` と呼ばれます。スパンタグの追加とインデックス化の詳細については、:ref:`apm-span-tags` を参照"
-"してください。"
+"Splunk APMの管理者は、追加のスパンタグにインデックスを付けて、サービス内のタグ値に対してカスタムのリクエスト、エラーおよび時間（RED）メトリクスを生成できます。インデックス化されたスパンタグはTag Spotlightのフィルターオプションとなり、サービスマップの分解機能を有効にし、REDメトリクスを生成します。インデックス化されたスパンタグのREDメトリクスは、:ref:`Troubleshooting MetricSets<troubleshooting-metricsets>` と呼ばれます。スパンタグの追加とインデックス化の詳細については、:ref:`apm-span-tags` を参照してくだ"
+"さい。"
 
 #: ../../apm/set-up-apm/customize-apm.rst:30
 msgid "Filter APM by deployment environment"
@@ -8270,12 +8274,13 @@ msgid "Set ``deployment.environment`` in the Splunk Distribution of OpenTelemetr
 msgstr "Splunk Distribution of OpenTelemetry Collectorで ``deployment.environment`` を設定する"
 
 #: ../../apm/set-up-apm/environments.rst:39
+#, fuzzy
 msgid ""
-"The :new-page:`Splunk Distribution of OpenTelemetry Collector agent config file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L117>` includes the following ``resource`` processor for adding the ``deployment.environment`` tag, but it is commented out by default. Uncomment this section and add the ``resource/add_environment`` processor to a pipeline if you want to set the ``deployment.environment`` span tag via the Splunk "
-"Distributionof OpenTelemetry Collector instead of via instrumentation:"
+"The :new-page:`Splunk Distribution of OpenTelemetry Collector agent config file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L117>` includes the following ``resource`` processor for adding the ``deployment.environment`` tag, but it is commented out by default. Uncomment this section and add the ``resource/add_environment`` processor to a pipeline if you want to set the ``deployment.environment`` span tag via the Splunk Distribution "
+"ofOpenTelemetry Collector instead of via instrumentation:"
 msgstr ""
-" :new-page:`Splunk Distribution of OpenTelemetry Collectorエージェント設定ファイル<https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L117>` には、 ``deployment.environment``  タグを追加するための ``resource`` プロセッサーが含まれますが、デフォルトではコメントアウトされています。インストルメンテーション経由ではなくSplunk Distribution of OpenTelemetry Collector経由で ``deployment.environment``  スパンタグを設定したい場合は、このセクションの"
-"コメントアウトを解除して、``resource/add_environment`` プロセッサーをパイプラインに追加してください："
+" :new-page:`Splunk Distribution of OpenTelemetry Collectorエージェント設定ファイル<https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L117>` には、``deployment.environment``  タグを追加するための ``resource`` プロセッサーが含まれますが、デフォルトではコメントアウトされています。インストルメンテーション経由ではなくSplunk Distribution of OpenTelemetry Collector経由で ``deployment.environment``  スパンタグを設定したい場合は、このセクションのコメント"
+"アウトを解除して、``resource/add_environment`` プロセッサーをパイプラインに追加してください："
 
 #: ../../apm/set-up-apm/environments.rst:49
 msgid "Note that unlike standard attributes, the ``deployment.environment`` tag is set with the ``resource`` processor in OpenTelemetry, because this tag is typically associated with the host or container in which the application is running."
@@ -8414,12 +8419,13 @@ msgid "If you know that sensitive information might be leaked from instances of 
 msgstr "特定のサービスの特定の操作に関連付けられた特定のタグのインスタンスから機密情報が漏れる可能性があることがわかっている場合、Splunk APMのUI内の特定の操作に関連付けられた場所で、そのタグとその値を非表示にすることができます。"
 
 #: ../../apm/set-up-apm/sensitive-data-controls.rst:127
+#, fuzzy
 msgid ""
-"For example, imagine that Moira's ``checkoutService`` recently introduced a new operation, ``readCartDetails``, which has the potential to leak customer information. They can make the following API call to hide custom span tags associated with that operation only in the given service. They can also set the start and end time of the possible leak, to enact blocking only during the period between the release of the operation and the service's scheduled deployment of a security patch. Thisgranular "
-"data hiding allows Moira to be specific about what they want to hide, so as to minimally impact her team's monitoring and troubleshooting experience."
+"For example, imagine that Moira's ``checkoutService`` recently introduced a new operation, ``readCartDetails``, which has the potential to leak customer information. They can make the following API call to hide custom span tags associated with that operation only in the given service. They can also set the start and end time of the possible leak, to enact blocking only during the period between the release of the operation and the service's scheduled deployment of a security patch. This granular "
+"datahiding allows Moira to be specific about what they want to hide, so as to minimally impact her team's monitoring and troubleshooting experience."
 msgstr ""
-"例えば、Moiraの ``checkoutService`` で最近 ``readCartDetails`` という新しい操作を導入し、この操作が顧客情報を漏洩する可能性を持っているとします。そこで、以下のAPI呼び出しを行うことで、指定したサービスにおいてのみ、この操作に関連するカスタムスパンタグを非表示にすることができます。また、漏えいの可能性の開始時刻と終了時刻を設定して、この操作のリリースからサービスのセキュリティパッチのデプロイ予定までの期間のみブロッキングを実行することもできます。このようなきめ細かなデータ非表示設定により、非表示に"
-"したいものを限定することができ、チームのモニタリングやトラブルシューティングのエクスペリエンスに最小限の影響しか与えないようにすることができます。"
+"例えば、Moiraの ``checkoutService`` で最近 ``readCartDetails`` という新しい操作を導入し、この操作が顧客情報を漏洩する可能性を持っているとします。そこで、以下のAPI呼び出しを行うことで、指定したサービスにおいてのみ、この操作に関連するカスタムスパンタグを非表示にすることができます。また、漏えいの可能性の開始時刻と終了時刻を設定して、この操作のリリースからサービスのセキュリティパッチのデプロイ予定までの期間のみブロッキングを実行することもできます。このようなきめ細かなデータ非表示設定により、非表示にしたい"
+"ものを限定することができ、チームのモニタリングやトラブルシューティングのエクスペリエンスに最小限の影響しか与えないようにすることができます。"
 
 #: ../../apm/set-up-apm/sensitive-data-controls.rst:154
 msgid "Remove sensitive information from database queries"
@@ -8595,7 +8601,7 @@ msgstr "例えば、以下のコードサンプルは、既存の ``myTenant`` �
 
 #: ../../apm/span-tags/add-context-trace-span.rst:222
 msgid "Add the attributes processor you've created to the list of processors under ``pipelines``. Place it after the ``batch`` processor and before the ``queued_retry`` processor, as the ``attributes/settenant`` processor is placed in the following code sample:"
-msgstr "作成した属性プロセッサーを、``pipelines`` の下のプロセッサーリストに追加します。以下のコードサンプル内の ``attributes/settenant`` プロセッサーの位置と同じように、``batch`` プロセッサーの後、``queued_retry`` プロセッサーの前に配置します："
+msgstr "作成した属性プロセッサーを、``pipelines`` の下のプロセッサーリストに追加します。以下のコードサンプル内の  ``attributes/settenant`` プロセッサーの位置と同じように、 ``batch`` プロセッサーの後、 ``queued_retry`` プロセッサーの前に配置します："
 
 #: ../../apm/span-tags/add-context-trace-span.rst:236
 msgid "Where do host-specific span tags come from?"
@@ -8949,7 +8955,7 @@ msgstr ":guilabel:`APM MetricSets` ページで、:guilabel:`Inferred Service Mo
 msgid "Select the inferred service for which you want to create a Monitoring MetricSet."
 msgstr "作成するMonitoring MetricSetsの対象としたい推定サービスを選択します。"
 
-#: ../../apm/span-tags/cmms.rst:151
+#: ../../apm/span-tags/cmms.rst:151 ../../apm/span-tags/tag-spotlight.rst:40
 #, fuzzy
 msgid "Select :guilabel:`Save`."
 msgstr ":guilabel:`Save` を選択します。"
@@ -8974,11 +8980,10 @@ msgstr "組織の制限を超えて総カーディナリティ寄与度を増加
 
 #: ../../apm/span-tags/cmms.rst:171
 msgid ""
-"To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Monitoring MetricSets` panel to view your subscription limit for MMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-"
-"index`."
+"To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Monitoring MetricSets` panel to view your subscription limit for MMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`."
 msgstr ""
-"MMSのサブスクリプション制限を確認するには、 :guilabel:`Settings`、:guilabel:`Subscription Usage` の順に移動します。組織のサブスクリプションによっては、この移動先が :guilabel:`Settings`、:guilabel:`Billing and Usage` の順になる場合があります。:guilabel:`APM` タブを選択し、:guilabel:`Monitoring MetricSets` パネルを選択して、MMSのサブスクリプション制限を表示します。サブスクリプション制限を表示するには、adminまたはusageのロールが必要です。APMの使用状況と請求の詳細については、:ref:`apm-billing-usage-"
-"index` を参照してください。"
+"MMSのサブスクリプション制限を確認するには、 :guilabel:`Settings`、:guilabel:`Subscription Usage` の順に移動します。組織のサブスクリプションによっては、この移動先が :guilabel:`Settings`、:guilabel:`Billing and Usage` の順になる場合があります。:guilabel:`APM` タブを選択し、:guilabel:`Monitoring MetricSets` パネルを選択して、MMSのサブスクリプション制限を表示します。サブスクリプション制限を表示するには、adminまたはusageのロールが必要です。APMの使用状況と請求の詳細については、:ref:`apm-billing-usage-index` "
+"を参照してください。"
 
 #: ../../apm/span-tags/cmms.rst:176
 msgid "Set up charts, dashboards, and alerts for custom dimensions"
@@ -9190,11 +9195,10 @@ msgstr "カーディナリティ寄与度の合計が制限を超えて増加す
 
 #: ../../apm/span-tags/index-span-tags.rst:104
 msgid ""
-"To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Troubleshooting MetricSets` panel to view your subscription limit for TMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-"
-"index`."
+"To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Troubleshooting MetricSets` panel to view your subscription limit for TMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`."
 msgstr ""
-"TMSのサブスクリプション制限を確認するには、 :guilabel:`Settings`、:guilabel:`Subscription Usage` の順に移動します。組織のサブスクリプションによっては、この移動先が :guilabel:`Settings`、:guilabel:`Billing and Usage` の順になる場合があります。:guilabel:`APM` タブを選択し、:guilabel:`Troubleshooting MetricSets` パネルを選択して、TMSのサブスクリプション制限を表示します。サブスクリプション制限を表示するには、adminまたはusageのロールが必要です。APMの使用状況と請求の詳細については、:ref:`apm-billing-"
-"usage-index` を参照してください。"
+"TMSのサブスクリプション制限を確認するには、 :guilabel:`Settings`、:guilabel:`Subscription Usage` の順に移動します。組織のサブスクリプションによっては、この移動先が :guilabel:`Settings`、:guilabel:`Billing and Usage` の順になる場合があります。:guilabel:`APM` タブを選択し、:guilabel:`Troubleshooting MetricSets` パネルを選択して、TMSのサブスクリプション制限を表示します。サブスクリプション制限を表示するには、adminまたはusageのロールが必要です。APMの使用状況と請求の詳細については、:ref:`apm-billing-usage-"
+"index` を参照してください。"
 
 #: ../../apm/span-tags/index-span-tags.rst:109
 msgid "Manage existing Troubleshooting MetricSets"
@@ -9457,12 +9461,13 @@ msgid "Limits on indexing span tags"
 msgstr "スパンタグのインデックス作成の制限"
 
 #: ../../apm/span-tags/index-tag-tips.rst:108
+#, fuzzy
 msgid ""
 "APM generates a Troubleshooting MetricSet for every unique set of indexed span tag values, so the number of span tags you can index depends on the number of Troubleshooting MetricSets that the span tags generate. This is also known as the cardinality contribution of indexed tags. The number of Troubleshooting MetricSets you can generate might be limited in your Splunk APM contract, so keep this limit in mind when you're indexing span tags. For more information, see :new-page:`Splunk APM "
 "Pricing<https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`."
 msgstr ""
-"APMは、インデックス化されたスパンタグの値のすべての一意なセットごとにTroubleshooting MetricSetsを生成するため、インデックス化できるスパンタグの数は、スパンタグが生成するTroubleshooting MetricSetsの数に依存します。これは、インデックス付きタグのカーディナリティ寄与度としても知られています。生成できるTroubleshooting MetricSetsの数はSplunk APMの契約で制限されている場合があるので、スパンタグをインデックス化する際にはこの制限のことを覚えておいてください。詳細については、:new-page:`Splunk APMの料金"
-"<https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>` を参照してください。"
+"APMは、インデックス化されたスパンタグの値のすべての一意なセットごとにTroubleshooting MetricSetsを生成するため、インデックス化できるスパンタグの数は、スパンタグが生成するTroubleshooting MetricSetsの数に依存します。これは、インデックス付きタグのカーディナリティ寄与度としても知られています。生成できるTroubleshooting MetricSetsの数はSplunk APMの契約で制限されている場合があるので、スパンタグをインデックス化する際にはこの制限のことを覚えておいてください。詳細については、:new-page:`Splunk APMの料金<https://"
+"www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>` を参照してください。"
 
 #: ../../apm/span-tags/index-tag-tips.rst:111
 msgid "Determining the number of possible Troubleshooting MetricSets"
@@ -9477,10 +9482,9 @@ msgid "For example, consider two services, ``frontend`` and ``checkoutservice``.
 msgstr "例えば、``frontend``  と ``checkoutservice``  という2つのサービスについて考えてみましょう。それぞれのサービスは2つのリージョンに存在しています。``frontend``  サービスには5つのエンドポイントがあり、 ``checkoutservice``  には2つのエンドポイントがあります。``region`` と ``endpoint`` は各サービスのインデックス付きタグです。このシナリオでは、他のインデックス付きタグはありません。"
 
 #: ../../apm/span-tags/index-tag-tips.rst:116
-msgid ""
-"Multiplying the five endpoints for ``frontend`` by two, the number of unique regions, and then adding the result of multiplying the two endpoints for ``checkoutservice`` by two for the unique regions, we get a maximum of 14 possible combinations: ``(2 * 5) + (2 * 2) = 14``. This doesn't always mean there will be 14 Troubleshooting MetricSets. If you collect traces in a certain ``region`` or with a certain ``endpoint``, the Troubleshooting MetricSet exists only for that ``region`` or``endpoint``."
-msgstr ""
-" ``frontend`` の5つのエンドポイントに、一意なリージョンの数である2を掛け、``checkoutservice`` の2つのエンドポイントに、一意なリージョンの数である2を掛けた結果を足すと、可能な組み合わせは最大14、という結果が得られます： ``(2 * 5) + (2 * 2) = 14``。これは、常に14のTroubleshooting MetricSetsがあるということを意味するわけではありません。ある  ``region`` 、またはある  ``endpoint``  でトレースを収集した場合、Troubleshooting MetricSetは、その  ``region`` または  ``endpoint``  に対してのみ存在します。"
+#, fuzzy
+msgid "Multiplying the five endpoints for ``frontend`` by two, the number of unique regions, and then adding the result of multiplying the two endpoints for ``checkoutservice`` by two for the unique regions, we get a maximum of 14 possible combinations: ``(2 * 5) + (2 * 2) = 14``. This doesn't always mean there will be 14 Troubleshooting MetricSets. If you collect traces in a certain ``region`` or with a certain ``endpoint``, the Troubleshooting MetricSet exists only for that ``region`` or ``endpoint``."
+msgstr "``frontend`` の5つのエンドポイントに、一意なリージョンの数である2を掛け、``checkoutservice`` の2つのエンドポイントに、一意なリージョンの数である2を掛けた結果を足すと、可能な組み合わせは最大14、という結果が得られます： ``(2 * 5) + (2 * 2) = 14``。これは、常に14のTroubleshooting MetricSetsがあるということを意味するわけではありません。ある  ``region`` 、またはある ``endpoint``  でトレースを収集した場合、Troubleshooting MetricSetは、その  ``region`` または   ``endpoint``  に対してのみ存在します。"
 
 #: ../../apm/span-tags/index-tag-tips.rst:118
 msgid "The following table illustrates the sample set of possible Troubleshooting MetricSets given these two services and two indexed tags with multiple values:"
@@ -9614,11 +9618,11 @@ msgstr "APMのMetricSetsについて"
 #: ../../apm/span-tags/metricsets.rst:10
 #, fuzzy
 msgid ""
-"MetricSets are key performance indicators, like request rate, error rate, and request duration, that are calculated from traces and spans in Splunk APM. There are 2 categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring. MetricSets are similar to the metric time series (MTS) used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See :ref:`metric-time-series`to "
-"learn more. MetricSets are MTS that are specific to Splunk APM."
+"MetricSets are key performance indicators, like request rate, error rate, and request duration, that are calculated from traces and spans in Splunk APM. There are 2 categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring. MetricSets are similar to the metric time series (MTS) used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See :ref:`metric-time-series` to "
+"learnmore. MetricSets are MTS that are specific to Splunk APM."
 msgstr ""
-"MetricSetsは、Splunk APMでトレースとスパンから計算されるリクエスト率、エラー率、時間といった主要なパフォーマンス指標です。MetricSetsには2つのカテゴリがあります。高カーディナリティのトラブルシューティングに使用されるTroubleshooting MetricSets（TMS）と、リアルタイムの監視に使用されるMonitoring MetricSets（MMS）です。MetricSetsは、Splunk Infrastructure Monitoringでチャートへのデータ投入およびアラートの生成のために使用されるメトリック時系列（MTS）と似ています。詳細は :ref:`metric-time-series` を参照"
-"してください。MetricSetsは、Splunk APM固有のMTSです。"
+"MetricSetsは、Splunk APMでトレースとスパンから計算されるリクエスト率、エラー率、時間といった主要なパフォーマンス指標です。MetricSetsには2つのカテゴリがあります。高カーディナリティのトラブルシューティングに使用されるTroubleshooting MetricSets（TMS）と、リアルタイムの監視に使用されるMonitoring MetricSets（MMS）です。MetricSetsは、Splunk Infrastructure Monitoringでチャートへのデータ投入およびアラートの生成のために使用されるメトリック時系列（MTS）と似ています。詳細は :ref:`metric-time-series` を参照してく"
+"ださい。MetricSetsは、Splunk APM固有のMTSです。"
 
 #: ../../apm/span-tags/metricsets.rst:15
 msgid "Troubleshooting MetricSets"
@@ -10134,12 +10138,13 @@ msgid "Time your update"
 msgstr "アップデートのタイミングを調整する"
 
 #: ../../apm/span-tags/migrate-apm-custom-reporting.rst:89
+#, fuzzy
 msgid ""
-"As of August 7, 2023, Splunk APM began populating the new attributes of raw trace data. However, TMS and MMS for these new attributes have not been created. you need to create TMS and MMS in order to receive any data. To prepare for the update you need to index the new attributes as tags so custom TMS and MMS begin receiving data for reporting. For TMS, which are used in Tag Spotlight, plan to index the new data at least 8 days in advance of the update. For MMS, which are used in "
-"dashboardcharts and detectors, you'll need to update the SignalFlow for charts and dashboards to filter for both the old and new tags to prevent gaps in data."
+"As of August 7, 2023, Splunk APM began populating the new attributes of raw trace data. However, TMS and MMS for these new attributes have not been created. you need to create TMS and MMS in order to receive any data. To prepare for the update you need to index the new attributes as tags so custom TMS and MMS begin receiving data for reporting. For TMS, which are used in Tag Spotlight, plan to index the new data at least 8 days in advance of the update. For MMS, which are used in dashboard charts "
+"anddetectors, you'll need to update the SignalFlow for charts and dashboards to filter for both the old and new tags to prevent gaps in data."
 msgstr ""
-"2023年8月7日時点で、Splunk APMは生トレースデータの新しい属性の入力を開始しています。しかし、これらの新しい属性のTMSとMMSはまだ作成されていません。データを受信するには、TMSとMMSを作成する必要があります。アップデートの準備として、新しい属性をタグとしてインデックス化し、カスタムのTMSおよびMMSがレポーティング用のデータを受信できるようにする必要があります。Tag Spotlightで使用されるTMSの場合は、アップデートの少なくとも8日前に、新しいデータのインデックス化を予定してください。ダッシュボードのチャートや"
-"ディテクターで使用されるMMSの場合は、データのギャップを防ぐために、新旧両方のタグをフィルタリングするように、チャートやダッシュボードのSignalFlowを更新する必要があります。"
+"2023年8月7日時点で、Splunk APMは生トレースデータの新しい属性の入力を開始しています。しかし、これらの新しい属性のTMSとMMSはまだ作成されていません。データを受信するには、TMSとMMSを作成する必要があります。アップデートの準備として、新しい属性をタグとしてインデックス化し、カスタムのTMSおよびMMSがレポーティング用のデータを受信できるようにする必要があります。Tag Spotlightで使用されるTMSの場合は、アップデートの少なくとも8日前に、新しいデータのインデックス化を予定してください。ダッシュボードのチャートやディテク"
+"ターで使用されるMMSの場合は、データのギャップを防ぐために、新旧両方のタグをフィルタリングするように、チャートやダッシュボードのSignalFlowを更新する必要があります。"
 
 #: ../../apm/span-tags/migrate-apm-custom-reporting.rst:94
 msgid "Index the new attributes as tags to generate Troubleshooting Metric Sets (TMS) or Monitoring Metric Sets (MMS)"
@@ -10320,11 +10325,11 @@ msgstr "Splunk Observability CloudでTag Spotlightを使用してサービスの
 #: ../../apm/span-tags/tag-spotlight.rst:11
 #, fuzzy
 msgid ""
-"For every service, Tag Spotlight provides time-series charts for request, error, and duration (RED) metrics for every value of each indexed span tag. Request and error charts display the total number of requests, errors, and root cause errors, and duration charts display p50, p90, and p99 latency. These values are based on Troubleshooting MetricSets (TMS), which Splunk APM generates for every indexed span tag. When you select span tag values or a time range, you can view relevant traces tolearn "
-"more about outlying incidents."
+"For every service, Tag Spotlight provides time-series charts for request, error, and duration (RED) metrics for every value of each indexed span tag. Request and error charts display the total number of requests, errors, and root cause errors, and duration charts display p50, p90, and p99 latency. These values are based on Troubleshooting MetricSets (TMS), which Splunk APM generates for every indexed span tag. When you select span tag values or a time range, you can view relevant traces to learn "
+"moreabout outlying incidents."
 msgstr ""
-"すべてのサービスについて、Tag Spotlightが、各インデックス済みスパンタグのすべての値について、リクエスト、エラーおよび時間（RED）メトリクスのメトリック時系列チャートを提供します。リクエストチャートとエラーチャートには、リクエスト、エラー、および根本原因エラーの合計数が表示され、時間チャートには、p50、p90、およびp99レイテンシが表示されます。これらの値は、Splunk APMがすべてのインデックス済みスパンタグに対して生成するTroubleshooting MetricSets（TMS）に基づいています。スパンタグ値または時間範囲を選択"
-"すると、関連トレースを表示して、異常なインシデントの詳細を確認することができます。"
+"すべてのサービスについて、Tag Spotlightが、各インデックス済みスパンタグのすべての値について、リクエスト、エラーおよび時間（RED）メトリクスのメトリック時系列チャートを提供します。リクエストチャートとエラーチャートには、リクエスト、エラー、および根本原因エラーの合計数が表示され、時間チャートには、p50、p90、およびp99レイテンシが表示されます。これらの値は、Splunk APMがすべてのインデックス済みスパンタグに対して生成するTroubleshooting MetricSets（TMS）に基づいています。スパンタグ値または時間範囲を選択する"
+"と、関連トレースを表示して、異常なインシデントの詳細を確認することができます。"
 
 #: ../../apm/span-tags/tag-spotlight.rst:13
 #, fuzzy
@@ -10389,46 +10394,63 @@ msgid "Select the menu on the top left of the bar chart section to select which 
 msgstr "棒グラフセクションの左上にあるメニューを選択すると、各タグパネルに表示するメトリクスを選択できます。このメニューを使用して、値のないタグの表示/非表示も選択できます。"
 
 #: ../../apm/span-tags/tag-spotlight.rst:35
+msgid "Customize tags display on Tag Spotlight"
+msgstr "Tag Spotlightのタグ表示をカスタマイズ"
+
+#: ../../apm/span-tags/tag-spotlight.rst:36
+msgid "To configure the layout of the cards on the Tag Spotlight page, follow these steps:"
+msgstr "Tag Spotlightページのカードのレイアウトを設定するには、以下の手順に従ってください："
+
+#: ../../apm/span-tags/tag-spotlight.rst:38
+#, fuzzy
+msgid "From the menu on the top left of the bar chart, select :guilabel:`Customize card display order`."
+msgstr "棒グラフの左上のメニューから、:guilabel:`Customize card display order` を選択する。"
+
+#: ../../apm/span-tags/tag-spotlight.rst:39
+msgid "Drag each of the span tags to arrange the order that cards are displayed on the page. Arrange the tags by priority, order of importance, or other criteria."
+msgstr "各スパンタグをドラッグして、カードがページに表示される順番を並べる。優先順位、重要度、その他の基準でタグを並べる。"
+
+#: ../../apm/span-tags/tag-spotlight.rst:43
 msgid "Explore the distribution of span tags and values to find trends"
 msgstr "スパンのタグと値の分布を調べて傾向を見つける"
 
-#: ../../apm/span-tags/tag-spotlight.rst:37
+#: ../../apm/span-tags/tag-spotlight.rst:45
 msgid "To understand the source of an incident use 1 of these options to drill down into indexed span tags for a selected service:"
 msgstr "インシデントの発生源を理解するには、以下のオプションのいずれかを使用して、選択したサービスのインデックス済みスパンタグを掘り下げます："
 
-#: ../../apm/span-tags/tag-spotlight.rst:39
+#: ../../apm/span-tags/tag-spotlight.rst:47
 msgid "Use the filter bar to filter the requests shown in Tag Spotlight by environment, service, and operation. You can also create a custom filter based on indexed or unindexed tags. The filter context is preserved even when you navigate away from the page."
 msgstr "フィルターバーを使用して、Tag Spotlightに表示されるリクエストを環境、サービス、および操作でフィルタリングする。インデックス付きタグまたはインデックスのないタグに基づいてカスタムフィルターを作成することもできます。フィルターのコンテキストは、ページから移動しても保持されます。"
 
-#: ../../apm/span-tags/tag-spotlight.rst:41
+#: ../../apm/span-tags/tag-spotlight.rst:49
 msgid "Select the menu on the top left of the bar chart section to select which metrics to display for any indexed span tag."
 msgstr "棒グラフセクションの左上にあるメニューを選択して、インデックス済みスパンタグについて表示するメトリクスを選択する。"
 
-#: ../../apm/span-tags/tag-spotlight.rst:43
+#: ../../apm/span-tags/tag-spotlight.rst:51
 msgid "Select a span tag value then select :guilabel:`Add to filter` to filter the RED metrics charts to spans containing that value."
 msgstr "スパンタグの値を選択し、:guilabel:`Add to filter` を選択して、REDメトリクスチャートを、その値を含むスパンでフィルタリングする。"
 
-#: ../../apm/span-tags/tag-spotlight.rst:45
+#: ../../apm/span-tags/tag-spotlight.rst:53
 #, fuzzy
 msgid "Hover over the RED metrics charts to view a summary of metrics for the specified time. The resolution of data for the RED metrics chart is 10 seconds."
 msgstr "REDメトリクスチャートにカーソルを合わせて、指定した時間のメトリクスのサマリーを表示する。REDメトリクスチャートのデータの解像度は10秒です。"
 
-#: ../../apm/span-tags/tag-spotlight.rst:47
+#: ../../apm/span-tags/tag-spotlight.rst:55
 #, fuzzy
 msgid "Select within the RED metrics charts to load example traces for the time you selected."
 msgstr "REDメトリクスチャート内で選択して、選択した時間のトレース例を読み込む。"
 
-#: ../../apm/span-tags/tag-spotlight.rst:49
+#: ../../apm/span-tags/tag-spotlight.rst:57
 #, fuzzy
 msgid "Select a span tag card header to add the top 5 span tag values in the card to the RED metrics charts."
 msgstr "スパンタグカードのヘッダーを選択して、そのカード内のスパンタグ値の上位5つをREDメトリクスチャートに追加する。"
 
-#: ../../apm/span-tags/tag-spotlight.rst:51
+#: ../../apm/span-tags/tag-spotlight.rst:59
 #, fuzzy
 msgid "Control what appears in the RED metrics chart by showing or hiding metrics in the chart's legend. For example, you can select the eye icon beside :guilabel:`Requests` to view only errors."
 msgstr "チャートの凡例でメトリクスの表示/非表示を切り替えることで、REDメトリクスチャートに表示する内容を制御する。例えば、:guilabel:`Requests` の横にある目のアイコンを選択すると、エラーのみを表示できます。"
 
-#: ../../apm/span-tags/tag-spotlight.rst:56
+#: ../../apm/span-tags/tag-spotlight.rst:64
 #, fuzzy
 msgid "To view a detailed examples using Tag Spotlight, see:"
 msgstr "Tag Spotlightの詳しい使用例については、以下を参照してください："
@@ -10459,8 +10481,8 @@ msgid ""
 "If the cardinality of your Monitoring MetricSets (MMS) is high, you might reach your subscription limit. If a new MMS you are creating exceeds your subscription limit you are unable to create the new Monitoring MetricSet. To see your MMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:"
 "`Monitoring MetricSets` panel to view your subscription limit for MMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`."
 msgstr ""
-"Monitoring MetricSets（MMS）のカーディナリティが高い場合、サブスクリプションの制限に達する可能性があります。新しく作成しようとするMMSがサブスクリプションの制限を超える場合、その新しいMonitoring MetricSetsは作成できません。MMSのサブスクリプション制限を確認するには、 :guilabel:`Settings`、:guilabel:`Subscription Usage` の順に移動します。組織のサブスクリプションモデルによっては、この移動先が :guilabel:`Settings`、:guilabel:`Billing and Usage` の順になる場合があります。:guilabel:`APM` タブを選択"
-"し、:guilabel:`Monitoring MetricSets` パネルを選択して、MMSのサブスクリプション制限を表示します。サブスクリプション制限を表示するには、adminまたはusageロールが必要です。APMの使用と請求の詳細については、:ref:`apm-billing-usage-index` を参照してください。"
+"Monitoring MetricSets（MMS）のカーディナリティが高い場合、サブスクリプションの制限に達する可能性があります。新しく作成しようとするMMSがサブスクリプションの制限を超える場合、その新しいMonitoring MetricSetsは作成できません。MMSのサブスクリプション制限を確認するには、 :guilabel:`Settings`、:guilabel:`Subscription Usage` の順に移動します。組織のサブスクリプションモデルによっては、この移動先が :guilabel:`Settings`、:guilabel:`Billing and Usage` の順になる場合があります。:guilabel:`APM` タブを選択し、:"
+"guilabel:`Monitoring MetricSets` パネルを選択して、MMSのサブスクリプション制限を表示します。サブスクリプション制限を表示するには、adminまたはusageロールが必要です。APMの使用と請求の詳細については、:ref:`apm-billing-usage-index` を参照してください。"
 
 #: ../../apm/span-tags/troubleshoot-mms.rst:23
 msgid "Solution: Configure your MMS to be more efficient"
@@ -10569,11 +10591,11 @@ msgstr "この例では、カスタムディメンションは :code:`customer.i
 #: ../../apm/span-tags/troubleshoot-mms.rst:69
 #, fuzzy
 msgid ""
-"Suppose you want to track a checkout workflow on your application. In your environment, this workflow is called the checkout service. You create a Monitoring MetricSet with 2 endpoints, add-to-cart, and checkout. However, you find that your cardinality is high for the Monitoring MetricSet for these 2 endpoints because there are 10,000 unique customer IDs for the :code:`customer.id` tag associated with these endpoints. To reduce the overall cardinality for this Monitoring MetricSet, you "
-"canfilter by tag values to a smaller subset of customer IDs that are of interest to you instead of needlessly processing 10,000 unique tags."
+"Suppose you want to track a checkout workflow on your application. In your environment, this workflow is called the checkout service. You create a Monitoring MetricSet with 2 endpoints, add-to-cart, and checkout. However, you find that your cardinality is high for the Monitoring MetricSet for these 2 endpoints because there are 10,000 unique customer IDs for the :code:`customer.id` tag associated with these endpoints. To reduce the overall cardinality for this Monitoring MetricSet, you can filter "
+"bytag values to a smaller subset of customer IDs that are of interest to you instead of needlessly processing 10,000 unique tags."
 msgstr ""
-"アプリケーション上の精算のワークフローを追跡したいとします。あなたの環境では、このワークフローは精算サービスと呼ばれます。あなたは「add-to-cart」と「checkout」という2つのエンドポイントを持つMonitoring MetricSetを作成しましたが、これらの2つのエンドポイントのMonitoring MetricSetのカーディナリティが高いことに気づきました。これは、これらのエンドポイントに関連付けられた :code:`customer.id` タグに一意の顧客IDが10,000個あるためです。このMonitoring MetricSetの全体的なカーディナリティを減らすには、一意の"
-"タグを無駄に10,000個処理する代わりに、タグ値でフィルタリングして、関心のある顧客IDを含むより小さなサブセットに絞り込みます。"
+"アプリケーション上の精算のワークフローを追跡したいとします。あなたの環境では、このワークフローは精算サービスと呼ばれます。あなたは「add-to-cart」と「checkout」という2つのエンドポイントを持つMonitoring MetricSetを作成しましたが、これらの2つのエンドポイントのMonitoring MetricSetのカーディナリティが高いことに気づきました。これは、これらのエンドポイントに関連付けられた :code:`customer.id` タグに一意の顧客IDが10,000個あるためです。このMonitoring MetricSetの全体的なカーディナリティを減らすには、一意のタグを"
+"無駄に10,000個処理する代わりに、タグ値でフィルタリングして、関心のある顧客IDを含むより小さなサブセットに絞り込みます。"
 
 #: ../../apm/workflows/create-workflow-rule.rst:-1
 msgid "Learn how Business Workflow rules make trace behavior in transaction processing explicit and transparent."
@@ -10742,7 +10764,7 @@ msgstr "ビジネスワークフローの設定例"
 
 #: ../../apm/workflows/example-business-workflow.rst:16
 msgid "Suppose you want to identify every trace that goes through ``service.example``. To do this, create a Business Workflow. The following example creates a service rule for ``service.example`` that creates workflows based on endpoints for the service."
-msgstr "``service.example``  を通過するすべてのトレースを識別したいとします。これを行うには、ビジネスワークフローを作成します。次の例では、  ``service.example``  のサービス ルールを作成し、このサービスのエンドポイントに基づいてワークフローを作成します。"
+msgstr "``service.example``  を通過するすべてのトレースを識別したいとします。これを行うには、ビジネスワークフローを作成します。次の例では、   ``service.example``  のサービス ルールを作成し、このサービスのエンドポイントに基づいてワークフローを作成します。"
 
 #: ../../apm/workflows/example-business-workflow.rst:21 ../../apm/workflows/workflows.rst:32
 msgid "To configure Business Workflows, you must have the admin role."
@@ -10758,7 +10780,7 @@ msgstr ":strong:`データ設定 > ビジネスワークフロー` に移動し�
 
 #: ../../apm/workflows/example-business-workflow.rst:30
 msgid "Select ``Service`` for the :strong:`Rule Type`."
-msgstr ":strong:`ルールタイプ` に ``Service`` を選択します。"
+msgstr ":strong:`ルールタイプ ` に ``Service`` を選択します。"
 
 #: ../../apm/workflows/example-business-workflow.rst:32
 msgid "Select ``service.example`` for the :strong:`Target Service`."
@@ -11301,10 +11323,10 @@ msgstr "ビジネスワークフローを使用した監視とトラブルシュ
 
 #~ msgid ""
 #~ "Splunk APM does not create :ref:`Monitoring MetricSets<monitoring-metricsets>` (MMS) for inferred services because MMS are created in real time from spans where ``span.kind = SERVER`` or ``span.kind = CONSUMER``, and Splunk APM does not receive server or consumer-side spans from uninstrumented services. This means that even though inferred services appear in the list of services on the landing page, you can't get real-time MMS data on inferred services in the APM landing page or indashboards "
-#~ "and alerts, and you can't create detectors based on inferred services."
+#~ "andalerts, and you can't create detectors based on inferred services."
 #~ msgstr ""
-#~ "Splunk APMは、推定サービスの :ref:`Monitoring MetricSets<monitoring-metricsets>` （MMS）を作成しません。なぜなら、MMSは ``span.kind = SERVER`` または ``span.kind = CONSUMER`` のスパンからリアルタイムで作成されるものであり、Splunk APMは、インストルメントされていないサービスからサーバー側またはコンシューマー側のスパンを受信しないからです。つまり、推定サービスがランディングページのサービスリストに表示されていても、APMのランディングページやダッシュボード、アラートでは推定サービスに関するリアルタ"
-#~ "イムのMMSデータを取得することはできず、推定サービスに基づいてディテクターを作成することもできません。"
+#~ "Splunk APMは、推定サービスの :ref:`Monitoring MetricSets<monitoring-metricsets>` （MMS）を作成しません。なぜなら、MMSは ``span.kind = SERVER`` または ``span.kind = CONSUMER`` のスパンからリアルタイムで作成されるものであり、Splunk APMは、インストルメントされていないサービスからサーバー側またはコンシューマー側のスパンを受信しないからです。つまり、推定サービスがランディングページのサービスリストに表示されていても、APMのランディングページやダッシュボード、アラートでは推定サービスに関するリアルタイムの"
+#~ "MMSデータを取得することはできず、推定サービスに基づいてディテクターを作成することもできません。"
 
 #~ msgid "If one or more of ``http.host``, ``http.url`` or ``net.peer.name`` exist, and ``peer.service`` exists as well, use ``peer.service`` for the service name. This ensures that the ``peer.service`` is an HTTP service."
 #~ msgstr "``http.host``、``http.url``、``net.peer.name`` のうち1つ以上が存在し、``peer.service``   も存在する場合は、``peer.service``   をサービス名に使用します。これにより、``peer.service``   がHTTPサービスであることが保証されます。"
@@ -11401,8 +11423,8 @@ msgstr "ビジネスワークフローを使用した監視とトラブルシュ
 
 #~ msgid "For example, a service ``myService`` reports a tenant span tag ``something`` for its endpoint ``/foo/bar``, and doesn't report a tenant span tag for its endpoint ``/another/endpoint``. Because ``myService`` reports a tenant span tag for one endpoint and not another, it forces the endpoint without a specified tenant span tag to have a tenant span tag value of ``unknown``. As a result, the service has two unique sets of span tags, and two identities."
 #~ msgstr ""
-#~ "例えば、あるサービス ``myService``  は、エンドポイント ``/foo/bar`` についてテナントスパンタグ ``something`` を報告し、エンドポイント ``/another/endpoint`` についてはテナントスパンタグを報告しないとします。 ``myService``  は、あるエンドポイントのテナントスパンタグを報告し、別のエンドポイントのテナントスパンタグは報告しないため、指定されたテナントスパンタグを持たないエンドポイントに、強制的にテナントスパンタグ値 ``unknown`` を持たせます。 その結果、このサービスは、一意のスパンタグセットを2つ持"
-#~ "ち、2つのIDを持つことになります。"
+#~ "例えば、あるサービス ``myService``  は、エンドポイント ``/foo/bar`` についてテナントスパンタグ ``something`` を報告し、エンドポイント ``/another/endpoint`` についてはテナントスパンタグを報告しないとします。 ``myService``  は、あるエンドポイントのテナントスパンタグを報告し、別のエンドポイントのテナントスパンタグは報告しないため、指定されたテナントスパンタグを持たないエンドポイントに、強制的にテナントスパンタグ値 ``unknown`` を持たせます。 その結果、このサービスは、一意のスパンタグセットを2つ持ち、2つ"
+#~ "のIDを持つことになります。"
 
 #~ msgid "An identity can represent any one of these APM objects:"
 #~ msgstr "IDは、以下のAPMオブジェクトのいずれかを表すことができます："
