@@ -48,51 +48,6 @@ To install the Collector, include the ``splunk_otel_collector::default`` recipe 
         }
     }
 
-Configure automatic discovery for SignalFx .NET 
-=================================================================
-
-You can automatically instrument your .NET applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure the SignalFx .NET agent separately. See :ref:`discovery_mode` for more information. 
-
-The cookbook accepts the attributes described in the following table:
-
-.. list-table:: 
-   :widths: 20 50 30
-   :header-rows: 1
-
-   * - Name
-     - Description
-     - Default value
-   * - ``with_signalfx_dotnet_instrumentation``
-     - Whether to install or manage automatic discovery for .NET. When set to ``true``, the ``signalfx-dotnet-tracing`` MSI package will be downloaded and installed, and the Windows registry will be updated based on other configuration options. To learn more, see :ref:`windows-backend-auto-discovery`
-     - ``false``
-   * - ``signalfx_dotnet_auto_instrumentation_version``
-     - Version of the ``signalfx-dotnet-tracing`` MSI package to download and install.
-     - ``1.1.0``
-   * - ``signalfx_dotnet_auto_instrumentation_msi_url``
-     - Specify the URL to download the MSI from a custom host, for example ``https://my.host/signalfx-dotnet-tracing-1.0.0-x64.msi``. If specified, the ``signalfx_dotnet_auto_instrumentation_version`` option is ignored.
-     - ``https://github.com/signalfx/signalfx-dotnet-tracing/releases/download/v{{ signalfx_dotnet_auto_instrumentation_version }}/signalfx-dotnet-tracing-{{ signalfx_dotnet_auto_instrumentation_version }}-x64.msi``
-   * - ``signalfx_dotnet_auto_instrumentation_iisreset``
-     - By default, the ``iisreset.exe`` command will be executed after installation/configuration in order for any changes to take effect for IIS applications. Set this option to ``false`` to skip this step if IIS is managed separately or is not applicable.
-     -  ``false``
-   * - ``signalfx_dotnet_auto_instrumentation_system_wide``
-     - Whether to configure automatic discovery for all .NET applications on the node. When set to ``true``, all attributes and environment variables are added to the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment`` registry key.
-     - ``false``
-   * - ``signalfx_dotnet_auto_instrumentation_environment``
-     - Sets the deployment environment variable that is reported to Splunk APM, for example ``production``. The value is assigned to the ``SIGNALFX_ENV`` environment variable in the Windows registry.
-     - ``''``
-   * - ``signalfx_dotnet_auto_instrumentation_service_name``
-     - Sets the service name for the instrumented application, for example, ``my-service``. The value is assigned to the ``SIGNALFX_SERVICE_NAME`` environment variable in the Windows registry.
-     - ``''``
-   * - ``signalfx_dotnet_auto_instrumentation_enable_profiler``
-     - Activates or deactivates AlwaysOn Profiling. The value will be assigned to the ``SIGNALFX_PROFILER_ENABLED`` environment variable in the Windows registry.
-     - ``false``
-   * - ``signalfx_dotnet_auto_instrumentation_enable_profiler_memory``
-     - Activates or deactivates AlwaysOn Memory Profiling. The value will be assigned to the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable in the Windows registry.
-     - ``false``
-   * - ``signalfx_dotnet_auto_instrumentation_additional_options``
-     - Hash of additional options to be added to the Windows registry in addition to the options above. To learn more, see :ref:`advanced-dotnet-configuration`.
-     - ``{}``
-
 Additional environment variables
 ======================================================
 

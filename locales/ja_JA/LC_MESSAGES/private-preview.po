@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 15:48+0000\n"
-"PO-Revision-Date: 2024-12-09 16:18+0000\n"
+"POT-Creation-Date: 2024-12-11 13:18+0000\n"
+"PO-Revision-Date: 2025-01-13 15:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -31,6 +31,7 @@ msgid "Preview: Role-based access"
 msgstr "プレビュー：ロールベースのアクセス"
 
 #: ../../_includes/private-preview.rst:3
+#, fuzzy
 msgid ""
 "Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use "
 "ofpreview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
@@ -63,12 +64,13 @@ msgid ":strong:`Available in Enterprise Edition`"
 msgstr ":strong:`Enterprise Editionで利用できる機能です`"
 
 #: ../../private-preview/rbac/roles-and-capabilities-table.rst:22
+#, fuzzy
 msgid ""
 "Splunk Observability Cloud lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions "
 "areavailable to roles. For example, capabilities determine whether someone with a particular role has capabilities to create detectors or dashboards."
 msgstr ""
-"Splunk Observability Cloud では、ロールベースのアクセス制御を使用して、特定のユーザーグループに対して特定の機能へのアクセスを制限できます。ユーザーにロールを割り当てます。ロールには一連の機能が含まれています。これらの能力は、ロールがどのようなアク"
-"ションを利用できるかを定義します。たとえば、特定のロールを持つユーザーがディテクターやダッシュボードを作成する権限を持っているかどうかは、権限によって決まります。"
+"Splunk Observability Cloud では、ロールベースアクセス制御を使用して、特定のユーザーグループに対して特定の機能へのアクセスを制限できます。お客様がユーザーにロールを割り当てます。ロールには一連の機能が含まれています。これらの能力は、ロールがどのような"
+"アクションを利用できるかを定義します。たとえば、特定のロールを持つユーザーがディテクターやダッシュボードを作成する権限を持っているかどうかは、権限によって決まります。"
 
 #: ../../private-preview/rbac/roles-and-capabilities-table.rst:27
 msgid "Metrics pipeline management"
@@ -214,6 +216,7 @@ msgid ":strong:`Delete entire metrics pipeline management ruleset`"
 msgstr ":strong:`メトリクスパイプライン管理ルールセット全体を削除する`"
 
 #: ../../_includes/admin/roles_mpm.rst:71
+#, fuzzy
 msgid ""
 "Yes, if default routing is real-time storage and the user deletes all aggregation rules. No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management doesn't delete the ruleset. An Admin needs to "
 "changethe routing to real-time storage and delete the ruleset."

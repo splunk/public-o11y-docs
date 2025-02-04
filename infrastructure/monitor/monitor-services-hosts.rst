@@ -15,7 +15,6 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     azure
     gcp
     k8s-nav
-    k8s
     hosts
     scenario-k8s-nav
     
@@ -32,7 +31,6 @@ See the following pages for more information about using :ref:`navigators <use-n
 * Containers
 
   - :ref:`infrastructure-k8s-nav`
-  - :ref:`infrastructure-k8s`
 
 * My Data Center
   

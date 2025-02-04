@@ -34,6 +34,13 @@ In the preceding example, the user navigates through the following sequence:
 
 .. note:: Related Content is different from data links, a separate capability, which lets you dynamically transfer contextual information about the property you're viewing to the resource, helping you get to relevant information faster. To learn more about data links, see :ref:`apm-create-data-links`.
 
+.. _related-logs-in-apm:
+
+Related logs in APM 
+-----------------------------------------------------------------
+Splunk APM displays related logs in the Related Content bar by default. To save resources, Unified Identity and Log Observer Connect customers can deactivate the display of related logs in Splunk APM. To deactivate Related Content for logs in APM, an administrator must go to :strong:`Settings` then select :strong:`General Settings` and toggle the switch to :strong:`Deactivate Related Content for logs`.
+
+If you want to display Related Content for logs in APM again, go to :strong:`Settings`, select :strong:`General Settings`, and toggle the switch to :strong:`Activate Related Content for logs`. 
 
 Where can I see Related Content?
 -----------------------------------------------------------------

@@ -25,7 +25,7 @@ You can also export and monitor data from sources running in your Azure environm
      - :strong:`Description`
 
    * - :ref:`get-started-k8s`
-     - :ref:`infrastructure-k8s`
+     - :ref:`infrastructure-k8s-nav`
      - Collect metrics and logs from Kubernetes clusters running in Azure Kubernetes Service.
 
    * - - :ref:`get-started-linux`
