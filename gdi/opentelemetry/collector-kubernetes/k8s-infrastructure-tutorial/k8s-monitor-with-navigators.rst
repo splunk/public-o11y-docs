@@ -79,5 +79,5 @@ Learn more
 ----------
 
 * For more details about using navigators in general, see :ref:`Use navigators in Splunk Infrastructure Monitoring <use-navigators-imm>`.
-* For more details about the data displayed in the Kubernetes navigator, see :ref:`Use the Kubernetes navigator <use-the-k8s-navigator>`.
+* For more details about the data displayed in the Kubernetes navigator, see :ref:`Use the Kubernetes navigator <infrastructure-k8s-nav>`.
 * For more details about working with charts, see :ref:`Charts in Splunk Observability Cloud <data-visualization-charts>`.
