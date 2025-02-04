@@ -34,7 +34,7 @@ After the muting period ends, Splunk Observability Cloud restarts sending to sub
 Create muting rules
 =============================================================================
 
-To create a muting rule, you can either:
+To create a muting rule, you can do one of the following:
 
 - :ref:`Mute specific detectors or alerts <rule-from-alerts-page>`.
 - :ref:`Create muting rules based on group-by dimensions <rule-from-group-by>`.
