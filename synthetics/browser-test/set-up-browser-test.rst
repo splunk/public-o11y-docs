@@ -30,7 +30,7 @@ Follow these steps to set up a Browser test:
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring.
 
-#. Under Tests, select :guilabel:`Add New Test` and select :guilabel:`Browser Test` from the drop-down list. The test creation view opens.
+#. Under :guilabel:`Tests`, select :guilabel:`Create new test` and then select :guilabel:`Browser test` from the drop-down list. The test creation view opens.
 
 #. In the :guilabel:`Name` field, enter a name for your test.
 

@@ -38,14 +38,15 @@ To access the AI Assistant in Observability Cloud, select the AI Assistant icon 
 
 Enter your prompt in plain English in the text box. Ask about anything in your environment.
 
-Alternatively, you can select from the two suggested prompts:
+Alternatively, you can select from the suggested prompts:
 
+* What can you help with?
 * List active incidents
-* List services experiencing high error rates
+* List error traces from the past 15 minutes
 
 ..  image:: /_images/ai/ai2.png
     :width: 40%
-    :alt: This image shows the location of the AI Assistant for Observability.
+    :alt: This image shows the suggested prompts for the AI Assistant.
 
 .. note:: When you ask questions or submit instructions that require the AI Assistant to query logs, there is an impact on your SVC quota.
 

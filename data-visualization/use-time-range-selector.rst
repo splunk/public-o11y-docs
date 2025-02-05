@@ -1,13 +1,19 @@
 .. _time-range-selector:
 
 *****************************************************************
-Select the time range with the Time Range Selector
+Select time range with the time range selector
 *****************************************************************
 
 .. meta::
-   :description: The Time Range selector is located at the top right of dashboards and charts, and in the Chart Options tab. By default, Splunk Infrastructure Monitoring chooses the best time range based on the characteristics of the chart's data. However, you can use the Time Range selector to override the default for all charts in a dashboard. 
+   :description: The time range selector is located at the top right of dashboards and charts, and in the Chart Options tab and in muting rule configuration.
 
-The time range selector is used through Splunk Observability Cloud. It can specify a chart's :ref:`default time range<default-time>` in the Chart Options tab. By default, Splunk Observability Cloud chooses the best time range for a chart or data view based on the characteristics of the data that it shows. However, you can use the time range selector to :ref:`override the default<dashboard-time-range>` for all charts in a dashboard. The time range selector supports both relative and absolute time ranges.
+The time range selector is used through Splunk Observability Cloud.
+
+* In charts and dashboards, it can specify a chart's :ref:`default time range<default-time>`. By default, Splunk Observability Cloud chooses the best time range for a chart or data view based on the characteristics of the data that it shows. However, you can use the time range selector to :ref:`override the default<dashboard-time-range>` for all charts in a dashboard.
+* In muting rule configuration, the time range selector indicates a time window for muting rule activation.
+
+The time range selector supports both relative and absolute time ranges.
+
 
 
 Specify a relative time range
@@ -19,36 +25,34 @@ You can specify a relative time range by selecting a provided time range from th
 Select a time range from the menu
 -------------------------------------------------------------------
 
-To change the relative time range of a dashboard or chart, select the Time Range selector and choose your desired time range from the menu that appears.
+To change the relative time range of a dashboard or chart, select the time range selector and choose your desired time range from the menu that appears.
 
 Enter a relative time range
 -------------------------------------------------------------------
 
-If you don't see your desired relative time range on the menu, you can enter it into the Time Range selector field. Valid time units for time ranges are:
+If you don't see your desired relative time range on the menu, enter it into the time range selector field. Valid time units for time ranges are: m (minute), h (hour), d (day), and w (week).
 
-- m (minute)
-- h (hour)
-- d (day)
-- w (week) 
- 
-For example, -4h (past 4 hours), or -2d13h30m (past 2 days, 13 hours and 30 mins).
+* To view data from a relative time window up to now, enter the time unit preceded by a minus ( - ) into the time range selector. For example, if you want to see a metric from the last 5 minutes, enter :strong:`-5m`.
 
-To view data from a relative time window up to now, enter the time unit preceded by a :strong:`-` (minus sign) into the Time Range selector. For example, if you want to see a metric from the last five minutes, select the Time Range selector and enter :strong:`-5m`.
+* To set a time range from now into the future, enter the time unit preceded by a plus ( + ) into the time range selector. For example, if you want to set a time window for the next 6 hours, enter :strong:`+6h`.
 
-You can also view data from a relative time window up to some time before now using "start time to end time." For example, if you want to see a metric from between 1 and 3 minutes ago, select the Time Range selector and enter :strong:`-3m to -1m`. 
+* You can also set a relative time window up to some time before now, or from some time in the future onward. 
 
-.. note:: The earlier time point must come first. In this example, typing :strong:`-1m to -3m` doesn't work.
+   * For example, if you want to see a metric from between 1 and 3 minutes ago, select the time range selector and enter :strong:`-3m to -1m`.
+   * For example, if you want to schedule a future time window for your muting rule between tomorrow and 2 days from now, select the time range selector and enter :strong:`+1d to +2d`.
 
-The Time Range selector shows your most recently used custom time range under the heading "Recent".
+   .. note:: The earlier time point must come first. For example, typing :strong:`-1m to -3m` doesn't work.
+
+The time range selector shows your most recently used custom time range under the heading "Recent".
 
 .. _absolute-time-range:
 
 Specify an absolute time range
 =============================================================================
 
-You can also view data from an absolute time window with a defined start and end time. Select the Time Range selector and select :guilabel:`Custom` from the menu. A custom Time Range selector appears. Select the starting and ending date and time of your desired time range, then select :guilabel:`Apply` to show data for that time range only.
+To set an absolute time window with a defined start and end time, select the time range selector and select :guilabel:`Custom`. A custom time range selector appears. Select the starting and ending date and time of your desired time range, then select :guilabel:`Apply` to show data for that time range only.
 
-Time zone abbreviations are based on the user's browser locale for both the time stamp and time range selections. If you are sharing time stamps with team members across locales, take care to avoid confusion over time zone abbreviations, which may have ambiguous meanings depending on the language. For example, CST is UTC -6:00 in US English, while it is UTC +9:30 in Australian English. Using ISO with UTC offsets is the preferred method. Preferred absolute time formats include:
+Time zone abbreviations are based on the user's browser locale for both the time stamp and time range selections. If you are sharing time stamps with team members across locales, take care to avoid confusion over time zone abbreviations, which might have ambiguous meanings depending on the language. For example, CST is UTC -6:00 in US English, while it is UTC +9:30 in Australian English. Using ISO with UTC offsets is the preferred method. Preferred absolute time formats include:
 
 - 18 Sep 10:18 to 19 Sep 10:18
 - If the same date: 10:18 to 10:20
@@ -57,7 +61,7 @@ Time zone abbreviations are based on the user's browser locale for both the time
 Select a custom time range
 ================================
 
-You can also view data from a relative or absolute time window with a defined start and end time. Select the Time Range selector and select :guilabel:`Custom` from the menu. A custom Time Range selector appears. Select the starting and ending date and time of your desired time range, then select :guilabel:`Apply` to show data for that time range only.
+You can also view data from a relative or absolute time window with a defined start and end time. Select the time range selector and select :guilabel:`Custom` from the menu. A custom time range selector appears. Select the starting and ending date and time of your desired time range, then select :guilabel:`Apply`.
 
 .. _panning:
 

@@ -432,7 +432,7 @@ By default, data is persisted in the ``/var/addon/splunk/exporter_queue`` direct
 
 Check the :new-page:`Data Persistence in the OpenTelemetry Collector <https://community.splunk.com/t5/Community-Blog/Data-Persistence-in-the-OpenTelemetry-Collector/ba-p/624583>` for a detailed explantion.
 
-.. note:: Data can only be persisted for agent daemonsets.
+.. note:: Data can only be persisted for agent DaemonSets.
 
 Config examples
 -----------------------------------------------------------------------------
