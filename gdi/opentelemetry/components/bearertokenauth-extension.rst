@@ -7,134 +7,100 @@ Authenticator - Bearer extension
 .. meta::
       :description: Implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator``. It can be used in both http and gRPC exporters inside the ``auth`` settings to embed a static token for every RPC call made. 
 
-The ``basicauth`` extension implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator`` to authenticate clients and servers using basic authentication. The authenticator type has to be set to ``basicauth``. 
+The ``bearertokenauth`` extension implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator``. It can be used in both http and gRPC exporters inside the ``auth`` settings to embed a static token for every RPC call made.
 
-When used to authenticate servers, if the authentication is successful, ``client.Info.Auth`` exposes the following attributes:
+The following is required:
 
-* ``username``: The username of the authenticated user.
-* ``raw``: Raw base64 encoded credentials.
+* You need to set the authenticator type to ``bearertokenauth``.
 
-.. caution:: You can either authenticate servers or clients with the extension. If you configure both options, the extension throws an error. See more in :ref:`basic-auth-extension-settings`.
+* You need to enable transport layer security on the exporter.
 
 Get started
 ======================
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of the the OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
 
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
   - :ref:`otel-install-k8s`
 
-2. Configure the ``basicauth`` extension as described in the next section.
+2. Configure the ``bearertokenauth`` extension as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Configuration options
 --------------------------------------------
 
-To activate the component add ``basicauth`` to the ``extensions`` section of your configuration file, as shown in the following example:
+The following configuration options are available:
+
+* ``filename``. Name of file that contains the authorization token sent in every client call.
+
+* ``token``. Static authorization token sent on every gRPC client call as metadata. The value of the token is prepended by ``${scheme}`` before being sent as a value of the authorization key in the request header (for HTTP) and metadata (for gRPC).
+
+.. note:: Either ``filename`` or ``token`` are required. If both are specified, then the ``token`` field value is ignored. 
+
+Optionally, you can also configure:
+
+* ``scheme``. ``Bearer`` by default. Specifies the auth scheme name. 
+
+Sample configuration
+--------------------------------------------
+
+To activate the component add ``bearertokenauth`` to the ``extensions`` section of your configuration file and include the extension in any pipeline of the ``service`` section. For example:
 
 .. code:: yaml
 
   extensions:
-    basicauth/server:
-      htpasswd: 
-        file: .htpasswd
-        inline: |
-          ${env:BASIC_AUTH_USERNAME}:${env:BASIC_AUTH_PASSWORD}
-  
-    basicauth/client:
-      client_auth: 
-        username: username
-        password: password
+    bearertokenauth:
+      token: "somerandomtoken"
+      filename: "file-containing.token"
+    bearertokenauth/withscheme:
+      scheme: "Bearer"
+      token: "randomtoken"
 
   receivers:
+    hostmetrics:
+      scrapers:
+        memory:
     otlp:
       protocols:
-        http:
-          auth:
-            authenticator: basicauth/server
-
-  processors:
+        grpc:
 
   exporters:
-    otlp:
+    otlp/withauth:
+      endpoint: 0.0.0.0:5000
+      ca_file: /tmp/certs/ca.pem
       auth:
-        authenticator: basicauth/client
+        authenticator: bearertokenauth
 
-To complete the configuration, include the extension in any pipeline of the ``service`` section of your
-configuration file. For example:
-
-.. code:: yaml
+    otlphttp/withauth:
+      endpoint: http://localhost:9000
+      auth:
+        authenticator: bearertokenauth/withscheme
 
   service:
-    extensions: [basicauth/server, basicauth/client]
-    pipelines:
-      traces:
-        receivers: [otlp]
-        processors: []
-        exporters: [otlp]
-
-.. _basic-auth-lightprometheus-settings:
-
-Configuration example: Simple Prometheus receiver
----------------------------------------------------
-
-The following example illustrates how to configure the ``basicauth`` extension for the :ref:`simple-prometheus-receiver`:
-
-.. code:: yaml
-
-  receivers:
-    lightprometheus/myjob:
-      auth:
-        authenticator: basicauth
-      collection_interval: 1s
-      endpoint: "http://localhost:8000/metrics"
-
-  exporters:
-    otlp:
-      endpoint: "${OTLP_ENDPOINT}"
-      tls:
-        insecure: true
-
-  extensions:
-    basicauth:
-      client_auth:
-        username: foo
-        password: bar
-
-  service:
-    extensions: [ basicauth ]
+    extensions: [bearertokenauth, bearertokenauth/withscheme]
     pipelines:
       metrics:
-        receivers: [ lightprometheus/myjob ]
-        exporters: [ otlp ]
+        receivers: [hostmetrics]
+        processors: []
+        exporters: [otlp/withauth, otlphttp/withauth]
 
-.. _basic-auth-extension-settings:
+.. _bearertokenauth-extension-settings:
 
 Settings
 ======================
 
-The following table shows the configuration options for the ``basicauth`` extension:
+The following table shows the configuration options for the extension:
 
 .. raw:: html
 
-  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/extension/basicauth.yaml"></div>
+  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/extension/bearertokenauth.yaml"></div>
 
-Authenticate servers or clients
---------------------------------------------
-
-You can either authenticate servers or clients with the extension. If you configure both options, the extension throws an error.
-
-* To configure the extension as a server authenticator, set either ``htpasswd.file`` or ``htpasswd.inline``. If you configure both, ``htpasswd.inline`` credentials takes precedence.
-
-* To configure the extension as a client authenticator, set ``client_auth``.
 
 Troubleshooting
 ======================
-
-
 
 .. raw:: html
 
