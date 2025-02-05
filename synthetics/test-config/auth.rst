@@ -26,7 +26,9 @@ The following authentication methods are available for you to configure in your 
        
        :ref:`auth-multifactor-email`
        
-       :ref:`auth-multifactor-sso` 
+       :ref:`auth-multifactor-sso`
+
+       :ref:`auth-multifactor-totp` 
 
    * - Uptime
      - None 
@@ -392,5 +394,15 @@ Limitations
 
 Identity providers often require various additional factors for login, such as verification via email, SMS, or TOTP. In such cases, it is essential to modify or add steps to accommodate these additional login factors.
 
+
+
+.. _auth-multifactor-totp:
+
+Multifactor authentication through time-based OTP  
+==================================================================
+
+
+
+PLACEHOLDER.
 
 
