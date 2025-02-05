@@ -38,7 +38,7 @@ To access the AI Assistant in Observability Cloud, select the AI Assistant icon 
 
 Enter your prompt in plain English in the text box. Ask about anything in your environment.
 
-Alternatively, you can select from the two suggested prompts:
+Alternatively, you can select from the suggested prompts:
 
 * What can you help with?
 * List active incidents
