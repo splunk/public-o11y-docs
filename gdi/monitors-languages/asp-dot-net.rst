@@ -8,7 +8,7 @@ ASP.NET (deprecated)
 
 .. caution:: 
    
-   This integration is deprecated and reached End of Support in February 2025 and removed from the Splunk Distribution of the OpenTelemetry Collector after version v0.118.0.
+   This integration is deprecated and reached End of Support in February 2025 and it was removed from the Splunk Distribution of the OpenTelemetry Collector after version v0.118.0.
 
    To forward data from a .NET application to Splunk Observability Cloud use the :ref:`Splunk Distribution of OpenTelemetry .NET <get-started-dotnet-otel>` instead. 
 
