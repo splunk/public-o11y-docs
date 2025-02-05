@@ -52,7 +52,7 @@ The following diagram shows how automatic discovery finds data sources:
   
   <h2>Supported host services and applications for automatic discovery</h2>
 
-.. note:: If you're in a Kubernetes environment and are using the Collector version 0.109.0 or higher, log in to Splunk Observability Cloud and go to the :guilabel:`Discovered entities` tab in the :guilabel:`Data Management` menu to see which of your services and third-party applications the Collector has detected and can monitor automatically.   
+.. note:: If you're in a Kubernetes environment and are using the Collector version 0.109.0 or higher, log in to Splunk Observability Cloud and go to the :guilabel:`Discovered services` tab in the :guilabel:`Data Management` menu to see which of your services and third-party applications the Collector has detected and can monitor automatically.   
 
 Automatic discovery of third-party applications is supported in Linux and Kubernetes environments for the following services:
 
