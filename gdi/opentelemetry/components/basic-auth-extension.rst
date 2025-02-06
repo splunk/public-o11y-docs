@@ -21,7 +21,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
 
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
@@ -33,7 +33,7 @@ Follow these steps to configure and activate the component:
 Sample configurations
 --------------------------------------------
 
-To activate the resource processor, add ``basicauth`` to the ``extensions`` section of your configuration file, as shown in the following example:
+To activate this component add ``basicauth`` to the ``extensions`` section of your configuration file, as shown in the following example:
 
 .. code:: yaml
 
