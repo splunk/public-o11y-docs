@@ -103,6 +103,10 @@ Read more:
 
 If you're in a Kubernetes environment and are using the Collector version 0.109.0 or higher, log in to Splunk Observability Cloud and go to the :guilabel:`Discovered services` tab in the :guilabel:`Data Management` menu to see which of your services and third-party applications the Collector has detected and can monitor automatically.  
 
+.. image:: /_images/gdi/gdi-discovered-services-tab.png
+  :width: 80%
+  :alt: Discovered services tab
+
 
 .. raw:: html
 
