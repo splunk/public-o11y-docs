@@ -18,7 +18,6 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    Instrument Azure Web Jobs <instrumentation/azure-webjobs>
    Configure the .NET instrumentation <configuration/advanced-dotnet-configuration>
    Connect trace data with logs <instrumentation/connect-traces-logs>
-   Metrics and attributes <configuration/dotnet-metrics-attributes>
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
    Performance overhead <performance>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
