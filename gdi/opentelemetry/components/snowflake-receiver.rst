@@ -26,7 +26,7 @@ Follow these steps to configure and activate the component:
 Sample configuration
 ----------------------------------------------------------------------
 
-To activate the vCenter receiver in the Collector, add ``vecenter`` to the ``receivers`` section of your configuration file, as shown in the following example:
+To activate the receiver in the Collector, add ``snowflake`` to the ``receivers`` section of your configuration file, as shown in the following example:
 
 .. code:: yaml
 
@@ -83,7 +83,7 @@ The following settings are optional:
 Settings
 ======================
 
-The following table shows the configuration options for the vCenter receiver:
+The following table shows the configuration options for the Snowflake receiver:
 
 .. raw:: html
 
