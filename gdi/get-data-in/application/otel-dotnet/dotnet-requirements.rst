@@ -50,7 +50,7 @@ The Splunk Distribution of OpenTelemetry .NET instruments the following librarie
 
 .. _dotnet-otel-collector-requirement:
 
-Install and configure the Splunk Distribution of OpenTelemetry Collector
+Install and configure the Splunk Distribution of the OpenTelemetry Collector
 ======================================================================================================
 
 The Splunk Distribution of OpenTelemetry .NET exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
