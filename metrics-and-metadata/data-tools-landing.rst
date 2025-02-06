@@ -26,7 +26,7 @@ Splunk Observability Cloud provides a wide array of features and tools to help y
 * :ref:`Metrics pipeline management <metrics-pipeline-intro>`
 * :ref:`RUM URL grouping <rum-rules>`
 
-Other data tools include:
+Other data management and visualization tools include:
 
 * :ref:`Logs timeline <logs-timeline>`
 * :ref:`Related Content <get-started-relatedcontent>`
