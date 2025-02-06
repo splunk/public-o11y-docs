@@ -10,7 +10,7 @@ Microsoft .NET (deprecated)
    
    This integration is deprecated and reached End of Support in February 2025. It was removed from the Splunk Distribution of the OpenTelemetry Collector starting from version v0.118.0.
 
-To forward data to Splunk Observability Cloud, use the Splunk Distribution of OpenTelemetry .NET. For a full list of collected metrics, refer to :ref:`dotnet-otel-metrics-attributes`. 
+To forward data to Splunk Observability Cloud, use the Splunk Distribution of OpenTelemetry .NET. To learn more refer to :ref:`instrument-otel-dotnet-applications`. 
 
 The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 ``dotnet`` monitor type to report metrics for .NET applications.
