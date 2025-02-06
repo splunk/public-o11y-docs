@@ -117,7 +117,7 @@ To send custom application metrics to Splunk Observability Cloud, follow these s
 
    - :ref:`java-otel-metrics-attributes`
    - :ref:`nodejs-otel-metrics`
-   - :ref:`dotnet-otel-metrics-attributes`
+   - :ref:`dotnet-otel-requirements`
    - :ref:`go-otel-metrics`
    - :ref:`python-otel-metrics`
 
