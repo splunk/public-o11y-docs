@@ -31,7 +31,9 @@ When running in Kubernetes, discovery mode tests bundled metric receiver configu
 Deploy the Collector with automatic discovery
 =================================================
 
-You can configure the DaemonSet from the Splunk Distribution of OpenTelemetry Collector for Kubernetes to run in discovery mode. Edit the properties to add required credentials or service-specific information.
+You can configure the DaemonSet from the Splunk Distribution of the OpenTelemetry Collector for Kubernetes to run in discovery mode. Edit the properties to add required credentials or service-specific information.
+
+.. note:: To activate auto-discovery in the UI use ``featureGates: splunk.continuousDiscovery``.    
 
 The following example shows how to activate discovery mode in the Helm chart and adds authentication properties for PostgreSQL service discovery:
 
@@ -56,6 +58,8 @@ The following example shows how to activate discovery mode in the Helm chart and
                password: '${env:POSTGRES_PASSWORD}'
                tls:
                  insecure: true
+     # Activates auto discovery in UI
+     featureGates: splunk.continuousDiscovery             
 
    # ...
 
@@ -71,6 +75,7 @@ The following example shows how to activate discovery mode in the Helm chart and
           secretKeyRef:
             name: postgres-monitoring
             key: password
+       
 
 To check discovery progress and statement evaluations, see the agent startup logs or use kubectl. For example:
 
