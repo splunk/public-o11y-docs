@@ -86,7 +86,7 @@ Verify the supported .NET versions
 
 Make sure that your application targets :ref:`the supported versions of .NET <dotnet-requirements>`.
 
-If the .NET version you're using is not supported, your logs entries might be similar to the following:
+If the .NET version you're using is not supported, your log entries might be similar to the following:
 
 .. code-block:: bash
    
