@@ -13,7 +13,7 @@ To learn about the different metric types, see :ref:`metric-types`.
 
 For examples of custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
 
-.. caution:: This feature is experimental, and exported metric data and configuration properties might change. To learn more, see :new-page:`https://github.com/signalfx/splunk-otel-python/blob/main/docs/advanced-config.md`.
+.. caution:: This feature is experimental, and exported metric data and configuration properties might change. To learn more, see :new-page:`https://github.com/signalfx/splunk-otel-python/blob/main/README.md`.
 
 .. _python-app-metrics:
 
