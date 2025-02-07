@@ -49,7 +49,7 @@ Configuration settings
 
 The following settings are required:
 
-* ``endpoint``. ``http://127.0.0.0:9490/metrics/array`` by default. The URL of the scraper selected endpoint.
+* ``endpoint``. The URL of the scraper selected endpoint. If void the receiver runs without fetching any metrics.
 
 * ``fa_array_name``. The array's pretty name to be used as a metrics label.
 
