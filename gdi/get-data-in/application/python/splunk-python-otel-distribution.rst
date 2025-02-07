@@ -38,7 +38,7 @@ Support for previous versions
 
 Splunk is committed to supporting all customers who use this distribution. All major versions of Splunk OpenTelemetry distributions receive critical patches for one year after the next major release. Splunk stops feature development on a major release after it introduces the next major release.
 
-For more information on versioning of the Splunk Distribution of OpenTelemetry Python, see :new-page:`the release guidelines <https://github.com/signalfx/splunk-otel-python/blob/main/RELEASING.md>` on GitHub.
+For more information on versioning of the Splunk Distribution of OpenTelemetry Python, see :new-page:`the release guidelines <https://github.com/signalfx/splunk-otel-python/blob/main/README.md>` on GitHub.
 
 How to contribute
 =========================================================
