@@ -14,13 +14,10 @@ The Splunk Distribution of OpenTelemetry .NET supports the following .NET versio
 
       .. note:: .NET Framework is not supported for AlwaysOn Profiling.
 
-.. warning::
+.. caution:: 
 
-   Version 1.9.0 of Splunk Distribution of OpenTelemetry .NET will no longer work with .NET 6 or .NET 7.
-   .NET 6 reached End of Life on November 12, 2024 and .NET 7 reached End of Life on May 14, 2024.
-   Customers who want to continue instrumenting .NET 6 or .NET 7 services must use Splunk Distribution of OpenTelemetry .NET version 1.8.0 or less.
-   Best effort support for Splunk Distribution of OpenTelemetry .NET is provided up to November 12, 2025
-   for the last versions of .NET 6 (version 6.0.36) or .NET 7 (version 7.0.20) only.
+   The Splunk Distribution of OpenTelemetry .NET version 1.9.0 is not compatible with .NET 6 or .NET 7 since both have reached End of Life. If you want to continue instrumenting .NET 6 or .NET 7 services use the Splunk Distribution of OpenTelemetry .NET version 1.8.0 or lower. 
+   Best effort support for Splunk Distribution of OpenTelemetry .NET is provided up to November 12, 2025 only for the last versions of .NET 6 (version 6.0.36) and .NET 7 (version 7.0.20).
 
 The distribution supports the following architectures:
 
