@@ -65,19 +65,6 @@ Add the following libraries using NuGet in Visual Studio:
          - :new-page:`OpenTelemetry.Instrumentation.Http <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Http>`
          - :new-page:`OpenTelemetry.ResourceDetectors.Azure <https://www.nuget.org/packages/OpenTelemetry.ResourceDetectors.Azure>`
 
-   .. tab:: .NET 6 In-process function
-
-      #. Activate the :strong:`Include prerelease` setting.
-      #. Install the specified version of the following libraries:
-   
-         - :new-page:`OpenTelemetry version 1.3.2 <https://www.nuget.org/packages/OpenTelemetry/1.3.2>`
-         - :new-page:`OpenTelemetry.Exporter.OpenTelemetryProtocol version 1.3.2 <https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol/1.3.2>`
-         - :new-page:`OpenTelemetry.Instrumentation.Http version 1.0.0-rc9.4 <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Http/1.0.0-rc9.4>`
-         - :new-page:`OpenTelemetry.Instrumentation.AspNetCore version 1.0.0-rc9.4 <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AspNetCore/1.0.0-rc9.4>`
-         - :new-page:`Microsoft.Azure.Functions.Extensions version 1.1.0 <https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0>`
-
-      .. note:: Due to runtime dependencies, only the indicated versions are guaranteed to work when instrumenting in-process functions.
-
    .. tab:: .NET 8 In-process function
 
       #. Activate the :strong:`Include prerelease` setting.
@@ -160,69 +147,6 @@ After adding the dependencies, initialize OpenTelemetry in your function.
          host.Run();
 
       .. note:: When instrumenting isolated worker process functions, you can encapsulate startup initialization and parameters into other functions.
-
-   .. tab:: .NET 6 In-process function
-
-      Define a startup function and decorate the assembly with it. The startup function uses the Azure.Functions.Extensions package to collect useful metadata. 
-
-      .. code-block:: csharp
-
-         using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-         using Microsoft.Extensions.DependencyInjection;
-         using OpenTelemetry;
-         using OpenTelemetry.Exporter;
-         using OpenTelemetry.Resources;
-         using OpenTelemetry.Trace;
-         using System;
-         using System.Collections.Generic;
-         
-         // Decorate assembly with startup function
-         [assembly: FunctionsStartup(typeof(OtelManualExample.Startup))]
-         
-         namespace OtelManualExample
-         {
-            public class Startup : FunctionsStartup
-            {
-               public override void Configure(IFunctionsHostBuilder builder)
-               {
-                  // Get environment variables from function configuration
-                  // You need a valid Splunk Observability Cloud access token and realm
-                  var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
-                  var accessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim();
-                  var realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim();
-
-                  ArgumentNullException.ThrowIfNull(accessToken, "SPLUNK_ACCESS_TOKEN");
-                  ArgumentNullException.ThrowIfNull(realm, "SPLUNK_REALM");
-
-                  var tp = Sdk.CreateTracerProviderBuilder()
-                     // Use Add[instrumentation-name]Instrumentation to instrument missing services
-                     // Use Nuget to find different instrumentation libraries
-                     .AddHttpClientInstrumentation(opts => 
-                        // This filter prevents background (parent-less) http client activity
-                        opts.Filter = req => Activity.Current?.Parent != null)
-                     .AddAspNetCoreInstrumentation()
-                     // Use AddSource to add your custom DiagnosticSource source names
-                     //.AddSource("My.Source.Name")
-                     .SetSampler(new AlwaysOnSampler())
-                     // Add resource attributes to all spans
-                     .SetResourceBuilder(
-                        ResourceBuilder.CreateDefault()
-                        .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
-                        .AddAttributes(new Dictionary<string, object>() {
-                           { "faas.instance", Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID") }
-                        }))
-                     .AddOtlpExporter(opts =>
-                     {
-                        opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
-                        opts.Protocol = OtlpExportProtocol.HttpProtobuf;
-                        opts.Headers = $"X-SF-TOKEN={accessToken}";
-                     })
-                     .Build();
-
-                  builder.Services.AddSingleton(tp);
-               }
-            }
-         }
 
    .. tab:: .NET 8 In-process function
 

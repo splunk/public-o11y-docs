@@ -79,7 +79,21 @@ To find your runtime identifier, follow these steps:
 Traces don't appear in Splunk Observability Cloud
 ==================================================================
 
-If traces from your instrumented application or service are not available in Splunk Observability Cloud, verify the OpenTelemetry Collector configuration:
+Traces from your instrumented application or service are not available in Splunk Observability Cloud
+
+Verify the supported .NET versions
+----------------------------------------------------------------
+
+Make sure that your application targets :ref:`supported versions of .NET <dotnet-requirements>`.
+If the version is not supported you might find in the logs entries similar to:
+
+.. code-block:: bash
+   
+   [Information] Rule Engine: Error in StartupHook initialization: 6.0.36 is not supported 
+   [Error] Rule 'Minimum Supported Framework Version Validator' failed: Verifies that the application is running on a supported version of the .NET runtime. 
+
+Verify the OpenTelemetry Collector configuration
+----------------------------------------------------------------
 
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
@@ -152,7 +166,7 @@ If AlwaysOn Profiling is :ref:`not working as intended <profiling-intro>`, check
 Unsupported .NET version
 -----------------------------------------------
 
-To use AlwaysOn Profiling, upgrade your .NET version to .NET 6.0 or higher.
+To use AlwaysOn Profiling, upgrade your .NET version to 8.0 or higher.
 
 None of the .NET Framework versions is supported.
 
