@@ -102,6 +102,10 @@ The following example shows how to report a custom error:
 Update location data
 ======================================
 
+.. note:: 
+   The ``updateLocation`` method is deprecated in Splunk RUM as of February 4, 2025. Although this method continues to function, it will be removed in a future version. There is no replacement for this annotation. 
+
+
 The RUM library includes a method for setting latitude ang longitde as global attributes. For example:
 
 .. code-block::

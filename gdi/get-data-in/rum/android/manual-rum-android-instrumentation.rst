@@ -143,6 +143,9 @@ The following example shows how to start a workflow for which metrics are record
 Customize screen names
 =====================================
 
+.. note:: 
+   The ``@RumScreenName`` annotation is deprecated in Splunk RUM as of February 4, 2025. Although this annotation continues to function, it will be removed in a future version. There is no replacement for this annotation. 
+
 By default, the Android RUM agent uses the simple class name of each ``Fragment`` and ``Activity`` type as the value of the ``screen.name`` attribute. To customize the screen name, use the ``@RumScreenName`` annotation.
 
 For example, the following activity appears with the ``screen.name`` attribute set to the value ``Buttercup``:
