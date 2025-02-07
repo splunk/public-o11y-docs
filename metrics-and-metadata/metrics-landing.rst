@@ -67,7 +67,5 @@ Splunk Observability Cloud offers you metric access, visualization, and manageme
 * :ref:`dashboards`
 * :ref:`get-started-signalflow`
 
-To access them log in to Splunk Observability Cloud and go to :strong:`Navigation menu > Data Management > Data tools`. 
-
-For more information, see :ref:`data-tools-landing`.
+For more information see :ref:`data-tools-landing`.
 
