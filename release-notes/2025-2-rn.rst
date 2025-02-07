@@ -82,8 +82,8 @@ When Splunk removes support for a feature, platform, or browser it means that th
      
        See the following topics for deprecation details.
         * :ref:`configure-android-instrumentation`
-        * :ref:`install-rum-android`
-        * :ref:`manual-rum-android-instrumentation`
-        * :ref:`configure-rum-ios-instrumentation`
-        * :ref:`rum-ios-data-model`
+        * :ref:`android-rum-install`
+        * :ref:`manual-android-instrumentation`
+        * :ref:`configure-ios-instrumentation`
+        * :ref:`rum-ios-data`
         * :ref:`manual-rum-react-instrumentation`
