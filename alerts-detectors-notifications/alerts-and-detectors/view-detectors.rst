@@ -21,7 +21,7 @@ To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and 
 * To filter detectors by type, select the :guilabel:`Type` menu. You can filter detectors by the following types:
 
    * Standard detectors are user-created detectors, including all RUM, APM, and Synthetics detectors.
-   * AutoDetect detectors are read-only detectors Splunk Observability Cloud automatically creates when you have supported integrations configured. To learn more, see :ref:`autodetect-intro`.
+   * AutoDetect detectors are read-only detectors Splunk Observability Cloud automatically creates when you configure supported integrations. To learn more, see :ref:`autodetect-intro`.
    * Customized AutoDetect detectors are AutoDetect detectors that have been copied and customized. To learn more, see :ref:`autodetect-customize`.
 
 * To filter detectors by tags, enter the tags you want to find.
