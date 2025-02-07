@@ -101,7 +101,7 @@ The Operator requires certain TLS certificates to work. Use the following comman
 .. code-block:: yaml
 
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
-   kubectl get pods -l app=cert-manager --all-namespaces
+   kubectl get pods -l app=certmanager --all-namespaces
 
 If a certificate manager isn't available in the cluster, add ``certmanager.enabled=true`` to your values.yaml file. 
 
