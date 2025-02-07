@@ -7,7 +7,7 @@ View detectors
 
 
 .. meta::
-  :description: View detector list and individual detectors in Splunk Observability Cloud.
+  :description: How to view detector list and individual detectors in Splunk Observability Cloud.
 
 You can view detectors as line items in a list, or individually. When you open an individual detector, you can see also see its rules and settings.
 
