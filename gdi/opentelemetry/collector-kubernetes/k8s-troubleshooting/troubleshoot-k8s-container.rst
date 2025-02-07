@@ -35,7 +35,7 @@ Troubleshoot the container runtime compatibility
 
 To check if you're having compatibility issues with Kubernets and the container runtime, follow these steps:
 
-#. Run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. 
+1. Run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. 
 
   The ``-o wide`` flag prints the output in the plain-text format with any additional information. For pods, the node name is included. In the following example, ``node-1`` uses Kubernetes 1.19.6 and containerd 1.4.1:
 
@@ -45,18 +45,17 @@ To check if you're having compatibility issues with Kubernets and the container 
       NAME         STATUS   VERSION   CONTAINER-RUNTIME
       node-1       Ready    v1.19.6   containerd://1.4.1
 
-#. Verify that you are using a container runtime compatible with your Kubernetes version. Refer to the following vendor documentation to see the container runtime compatibility:
+2. Verify that you are using a container runtime compatible with your Kubernetes version. Refer to the following vendor documentation to see the container runtime compatibility:
 
-  - :new-page:`containerd <https://containerd.io/releases/#kubernetes-support>`
-  - :new-page:`CRI-O <https://github.com/cri-o/cri-o#compatibility-matrix-cri-o--kubernetes>`
-  - :new-page:`Mirantis <https://docs.mirantis.com/container-cloud/latest/compat-matrix.html>`
+    - :new-page:`containerd <https://containerd.io/releases/#kubernetes-support>`
+    - :new-page:`CRI-O <https://github.com/cri-o/cri-o#compatibility-matrix-cri-o--kubernetes>`
+    - :new-page:`Mirantis <https://docs.mirantis.com/container-cloud/latest/compat-matrix.html>`
 
-#. Check the integrity of your container stats. See how at :ref:`ts-k8s-stats`.
+3. Check the integrity of your container stats. See how at :ref:`ts-k8s-stats`.
 
-#. Check that you have the right certificate.
+4. Check that you have the right certificate.
 
-#. In non production environments, try skipping the certificate verification with the following command: 
-:code:`agent.config.receivers.kubeletstats.insecure_skip_verify=true`.
+5. In non production environments, try skipping the certificate verification with the command ``agent.config.receivers.kubeletstats.insecure_skip_verify=true``.
 
 .. _ts-k8s-stats:
 
