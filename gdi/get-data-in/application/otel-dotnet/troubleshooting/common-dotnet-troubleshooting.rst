@@ -79,13 +79,14 @@ To find your runtime identifier, follow these steps:
 Traces don't appear in Splunk Observability Cloud
 ==================================================================
 
-Traces from your instrumented application or service are not available in Splunk Observability Cloud
+If traces from your instrumented application or service are not available in Splunk Observability Cloud, check the following:
 
 Verify the supported .NET versions
 ----------------------------------------------------------------
 
-Make sure that your application targets :ref:`supported versions of .NET <dotnet-requirements>`.
-If the version is not supported you might find in the logs entries similar to:
+Make sure that your application targets :ref:`the supported versions of .NET <dotnet-requirements>`.
+
+If the .NET version you're using is not supported, your logs entries might be similar to the following:
 
 .. code-block:: bash
    
