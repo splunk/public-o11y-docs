@@ -54,7 +54,7 @@ View custom and APM detectors
 When you open a custom or APM detector, you can see a summary chart and a detailed chart. The summary chart shows the data over a longer period of time. Because it is a summary, short spikes are not visible. The detailed chart shows each data point at the native resolution of the detector and represents exactly the data points that the detector sees. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
 
 .. image:: /_images/images-detectors-alerts/custom-detector-view.png
-   :width: 50%
+   :width: 80%
    :alt: View of a custom and APM detector.
 
 As with charts, the resolution of data displayed is determined by the detector's time range. The detail view displays data at the detector's resolution, the frequency at which the detector evaluates the signal. Any events occurring during the detector's time range are shown under the X axis.
@@ -85,7 +85,7 @@ To see a detector's properties, such as its description and creator, follow thes
 
 
 .. image:: /_images/images-detectors-alerts/detector-info.png
-  :width: 90%
+  :width: 70%
   :alt: Detector info panel showing description, creator, and other properties.
 
 
