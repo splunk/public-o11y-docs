@@ -23,7 +23,7 @@ To create custom spans and traces, follow these steps:
 
    .. code:: xml
 
-      <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.0" />
+      <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="9.0.0" />
 
 3. Create an ``ActivitySource`` instance:
 
@@ -56,7 +56,7 @@ To create custom metrics, follow these steps:
 
    .. code:: xml
 
-      <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.0" />
+      <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="9.0.0" />
 
 2. Create a ``Meter`` instance:
 
