@@ -7,7 +7,11 @@ Connect .NET trace data with logs using OpenTelemetry instrumentation
 .. meta::
    :description: Automatic correlation between logs and traces provided by the Splunk Distribution of OpenTelemetry .NET.
 
-The Splunk Distribution of OpenTelemetry .NET automatically exports logs enriched with tracing context from any application that uses logging API from :new-page:`Microsoft.Extensions.Logging <https://www.nuget.org/packages/Microsoft.Extensions.Logging>` for logging.
+The Splunk Distribution of OpenTelemetry .NET automatically exports logs enriched with tracing context from any application that uses logging API from:
+
+* :new-page:`Microsoft.Extensions.Logging <https://www.nuget.org/packages/Microsoft.Extensions.Logging>`,
+* :new-page:`log4net <https://www.nuget.org/packages/log4net>`.
+
 
 Application logs are enriched with tracing metadata and then exported to a local instance of the OpenTelemetry Collector in ``OTLP`` format.
 
@@ -48,9 +52,10 @@ The following is an example of logs produced by a sample console application:
 Check compatibility and requirements
 ====================================================
 
-.. note:: Automatic log to trace correlation only works for .NET applications. For .NET Framework use manual correlation. See :ref:`manual-trace-logs-correlation-otel`.
+.. note:: Automatic log to trace correlation for ``Microsoft.Extensions.Logging`` only works for .NET applications. For .NET Framework use manual correlation. See :ref:`manual-trace-logs-correlation-otel`.
 
-``Microsoft.Extensions.Logging`` version ``9.0.0`` and higher are supported.
+* ``Microsoft.Extensions.Logging`` version ``9.0.0`` and higher are supported,
+* ``log4net`` version from ``2.0.13`` to ``4.0.0`` are supported. Environmental variable ``OTEL_DOTNET_AUTO_LOGS_ENABLE_LOG4NET_BRIDGE`` needs to be set to ``true``.
 
 .. _dotnet-otel-enable-log-correlation:
 
@@ -94,8 +99,27 @@ Manual log to trace correlation
 
 You can configure logging libraries to include tracing attributes in logs written to existing logs destination.
 
+``log4net``
+-----------------------------------------------
+
+You can modify ``conversionPattern`` in your log4net appender to include tracing attributes in logs written to existing logs destination. Following properties are set by default on the collection of logging event's properties:
+
+* `trace_id`
+* `span_id`
+* `trace_flags`.
+
+Example how to configure ``ConsoleAppender``
+
+.. code-block:: text
+
+   <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+      <layout type="log4net.Layout.PatternLayout">
+         <conversionPattern value="%date [%thread] %-5level %logger - %message span_id=%property{span_id} trace_id=%property{trace_id} trace_flags=%property{trace_flags} test_key=%property{test_key}%newline" />
+      </layout>
+   </appender>
+
 ``NLog``
-----------------------------------------------------
+-----------------------------------------------
 
 You can use :new-page:`NLog.DiagnosticSource <https://www.nuget.org/packages/NLog.DiagnosticSource>`. See the :new-page:`NLog official documentation <https://github.com/NLog/NLog.DiagnosticSource>` for more information.
 
