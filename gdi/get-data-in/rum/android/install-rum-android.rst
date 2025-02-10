@@ -20,7 +20,7 @@ To instrument your Android application and get data into Splunk RUM, follow the 
 Decide which version to run in your environment
 =======================================================
 
-Latest updates automatically whenever Splunk RUM releases a new version. In pre-production, use latest to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle.
+The latest version updates automatically whenever Splunk RUM releases a new version. In pre-production, use ``latest`` to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle. 
 
 
 Check compatibility and requirements
@@ -193,6 +193,10 @@ Follow these steps to install the Android RUM agent using Maven Central:
       }
 
    See :ref:`android-rum-http-client-settings` for more information.
+
+   .. note:: 
+      This form of support for OkHttp is deprecated in Splunk RUM as of February 4, 2025. Although ``createRumOkHttpCallFactory(OkHttpClient client)`` continues to function, it will be removed in a future version, and replaced with an option for automatic instrumentation of OkHttp3 or a new API for manual instrumentation. 
+
 
 5. Release the changes to the Android application.
 

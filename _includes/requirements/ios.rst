@@ -1,6 +1,6 @@
 Splunk RUM for Mobile supports the following versions:
 
-* iOS 11 and higher
+* iOS 15 and higher
 * iPadOS 13 and higher
 
 Splunk RUM supports Apple Silicon.

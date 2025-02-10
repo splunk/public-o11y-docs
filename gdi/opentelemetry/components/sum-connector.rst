@@ -9,5 +9,5 @@ Sum connector
 
 The Splunk Distribution of the OpenTelemetry Collector supports the Sum connector. Documentation is planned for a future release. 
 
-To find information about this component in the meantime, see :new-page:`Sum connector <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/sumconnector>` on GitHub.
+To find information about this component in the meantime, see :new-page:`Sum connector <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/connector/sumconnector>` on GitHub.
 
