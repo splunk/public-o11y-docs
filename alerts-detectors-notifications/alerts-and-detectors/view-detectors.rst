@@ -20,7 +20,7 @@ To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and 
 * To filter detectors by assigned teams, select the :guilabel:`Team` menu and select or enter the team name you want to find.
 * To filter detectors by type, select the :guilabel:`Type` menu. You can filter detectors by the following types:
 
-   * Standard detectors are user-created detectors, including all RUM, APM, and Synthetics detectors.
+   * Standard detectors are user-created detectors, including all RUM, APM, Synthetics, and custom detectors.
    * AutoDetect detectors are read-only detectors Splunk Observability Cloud automatically creates when you configure supported integrations. To learn more, see :ref:`autodetect-intro`.
    * Customized AutoDetect detectors are AutoDetect detectors that you copy and customize. To learn more, see :ref:`autodetect-customize`.
 
@@ -37,7 +37,7 @@ In dashboards and navigators, you can link detectors and view detectors linked t
 
 To add or view linked detectors, select the bell icon in a chart.
 
-The following illustration shows two linked detectors for this chart. If you hover over a linked detector, you see options that let you :ref:`subscribe to the detector<subscribe>` by adding a new notification, open the detector for viewing or editing, or view the alerts triggered by the detector. To learn more, go to :ref:`view-alerts`.
+The following illustration shows two linked detectors for this chart. If you hover over a linked detector, you see options that let you view active alerts, open the detector for viewing and editing, :ref:`subscribe to the detector<subscribe>` by adding a new notification, or edit linked detectors for the chart. 
 
 .. image:: /_images/images-detectors-alerts/detectors-related.png
    :width: 50%
@@ -45,15 +45,32 @@ The following illustration shows two linked detectors for this chart. If you hov
 View an individual detector
 ================================================================
 
-There are two charts in the detector view. On the right side, you can see a detailed view. It shows each data point at the native resolution of the detector and represents exactly the datapoints that the detector sees. On the left side, you can see a summary view. It shows a summary of the data over a longer period of time. Because it is a summary, short spikes are not visible. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
+Custom detectors and other standard detectors have different views.
 
-The Alert Rules tab is open when you open a detector, showing a chart that represents values for the visible signals. The list of detector rules and the number of currently active alerts for each rule are visible. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on which type of detector you are creating.
+View custom and APM detectors
+-----------------------------------------
 
-As with charts, the resolution of data displayed is determined by the chart's time range. The detail view at right displays data at the detector's resolution, that is, the frequency at which the detector evaluates the signal. Any events that have occurred during the detector's time range are shown under the X axis.
+When you open a custom or APM detector, you can see a summary chart and a detailed chart. The summary chart shows the data over a longer period of time. Because it is a summary, short spikes are not visible. The detailed chart shows each data point at the native resolution of the detector and represents exactly the data points that the detector sees. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
+
+.. image:: /_images/images-detectors-alerts/custom-detector-view.png
+   :width: 50%
+
+As with charts, the resolution of data displayed is determined by the detector's time range. The detail view displays data at the detector's resolution, the frequency at which the detector evaluates the signal. Any events occurring during the detector's time range are shown under the X axis.
+
+The :guilabel:`Alert Rules` tab is open when you open a detector, showing a chart that represents values for the visible signals. The list of detector rules and the number of currently active alerts for each rule are visible. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on the type of detector.
 
 .. note:: If a detector contains a SignalFlow tab, you are viewing a detector that created using the API.
 
    If you are familiar with the API, you can use this tab to view and edit the detector code and make changes to the detector rules. For more information, see :ref:`v2-detector-signalflow`.
+
+View RUM and Synthetics detectors
+---------------------------------------------
+
+When you open a RUM or Synthetics detector, you can see alert configurations and a summary chart for the detector's data.
+
+To learn more about RUM detectors, see :ref:`rum-alerts`.
+
+To learn more about Synthetics detectors, see :ref:`synth-alerts`.
 
 
 View a detector's properties
