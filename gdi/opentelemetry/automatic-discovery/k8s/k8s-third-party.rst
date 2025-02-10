@@ -58,7 +58,7 @@ The following example shows how to activate discovery mode in the Helm chart and
                password: '${env:POSTGRES_PASSWORD}'
                tls:
                  insecure: true
-     # Activates auto discovery in UI
+     # Activates auto discovery in UI. Only available for the Collector version 0.109.0 or higher
      featureGates: splunk.continuousDiscovery             
 
    # ...
