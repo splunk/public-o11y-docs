@@ -97,18 +97,20 @@ Additionally, the instrumentation adds the following attributes:
 Manual log to trace correlation
 ===================================================
 
-You can configure logging libraries to include tracing attributes in logs written to existing logs destination.
+You can configure logging libraries to include tracing attributes in logs written to existing log destinations.
 
 ``log4net``
 -----------------------------------------------
 
-You can modify ``conversionPattern`` in your log4net appender to include tracing attributes in logs written to existing logs destination. Following properties are set by default on the collection of logging event's properties:
+You can modify ``conversionPattern`` in your log4net appender to include tracing attributes in logs written to existing log destinations. 
+
+The following properties are set by default for the collection of logging events:
 
 * `trace_id`
 * `span_id`
-* `trace_flags`.
+* `trace_flags`
 
-Example how to configure ``ConsoleAppender``
+Example on how to configure ``ConsoleAppender``:
 
 .. code-block:: text
 
