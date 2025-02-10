@@ -71,7 +71,7 @@ The following settings control the AlwaysOn Profiling feature for the .NET instr
 
     <div class="instrumentation" section="settings" group="category" filter="profiling" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
-.. note:: AlwaysOn Profiling for .NET is compatible with .NET 6.0 and higher. For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
+.. note:: AlwaysOn Profiling for .NET is compatible with .NET 8.0 and higher. For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
 .. _dotnet-otel-trace-propagation-settings:
 
