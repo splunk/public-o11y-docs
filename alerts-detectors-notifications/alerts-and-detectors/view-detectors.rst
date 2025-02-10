@@ -78,7 +78,7 @@ To learn more about Synthetics detectors, see :ref:`synth-alerts`.
 View a detector's properties
 -----------------------------------
 
-You can see a detector's properties, such as its description and creator, by following these steps:
+To see a detector's properties, such as its description and creator, follow these steps:
 
 #. Open the detector.
 #. Select the detector's actions menu (|more|), then select :guilabel:`Info`.
