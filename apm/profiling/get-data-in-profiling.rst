@@ -187,7 +187,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       :strong:`Requirements`
 
-      AlwaysOn Profiling requires .NET 6.0 or higher.
+      AlwaysOn Profiling requires .NET 8.0 or higher.
 
       .. note:: .NET Framework is not supported.
 

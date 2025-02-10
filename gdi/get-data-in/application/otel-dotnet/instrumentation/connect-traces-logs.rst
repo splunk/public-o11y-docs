@@ -50,7 +50,7 @@ Check compatibility and requirements
 
 .. note:: Automatic log to trace correlation only works for .NET applications. For .NET Framework use manual correlation. See :ref:`manual-trace-logs-correlation-otel`.
 
-``Microsoft.Extensions.Logging`` version ``8.0.0`` and higher are supported.
+``Microsoft.Extensions.Logging`` version ``9.0.0`` and higher are supported.
 
 .. _dotnet-otel-enable-log-correlation:
 

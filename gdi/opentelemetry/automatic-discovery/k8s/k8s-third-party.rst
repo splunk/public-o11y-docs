@@ -13,7 +13,7 @@ You can use automatic discovery to find third-party applications (such as databa
   
   Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
 
-  If you're using the Collector version 0.109.0 or higher, log in to Splunk Observability Cloud and go to the :guilabel:`Discovered services` tab in the :guilabel:`Data Management` menu to see which of your services and third-party applications the Collector has detected and can monitor automatically.   
+  If you're using the Collector version 0.109.0 or higher, log in to Splunk Observability Cloud and go to the :guilabel:`Discovered services` tab in the :guilabel:`Data Management` menu to see which of your services and third-party applications the Collector has detected and can monitor automatically.   See :ref:`discovery-mode-k8s` for more details.
 
 How automatic discovery works
 ================================================
@@ -31,7 +31,9 @@ When running in Kubernetes, discovery mode tests bundled metric receiver configu
 Deploy the Collector with automatic discovery
 =================================================
 
-You can configure the DaemonSet from the Splunk Distribution of OpenTelemetry Collector for Kubernetes to run in discovery mode. Edit the properties to add required credentials or service-specific information.
+You can configure the DaemonSet from the Splunk Distribution of the OpenTelemetry Collector for Kubernetes to run in discovery mode. Edit the properties to add required credentials or service-specific information.
+
+.. note:: If you're using the Collector version 0.109.0 or higher, activate auto-discovery in the UI using ``featureGates: splunk.continuousDiscovery``.    
 
 The following example shows how to activate discovery mode in the Helm chart and adds authentication properties for PostgreSQL service discovery:
 
@@ -56,6 +58,8 @@ The following example shows how to activate discovery mode in the Helm chart and
                password: '${env:POSTGRES_PASSWORD}'
                tls:
                  insecure: true
+     # Activates auto discovery in UI. Only available for the Collector version 0.109.0 or higher
+     featureGates: splunk.continuousDiscovery             
 
    # ...
 
@@ -71,6 +75,7 @@ The following example shows how to activate discovery mode in the Helm chart and
           secretKeyRef:
             name: postgres-monitoring
             key: password
+       
 
 To check discovery progress and statement evaluations, see the agent startup logs or use kubectl. For example:
 
