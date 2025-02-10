@@ -106,7 +106,7 @@ This example configuration sums numerical values found within the attribute ``at
          receivers: [foo]
          exporters: [sum]
 
-Configuration example: Sum attribute values
+Configuration example: Check payment logs
 --------------------------------------------
 
 In this example the Sum connector ingests logs and creates an output metric named ``checkout.total`` with numerical values found in the ``source_attribute`` ``total.payment``. It also checks any incoming log telemetry for values present in the attribute ``payment.processor`` and creates a datapoint within the metric time series for each unique value. 
