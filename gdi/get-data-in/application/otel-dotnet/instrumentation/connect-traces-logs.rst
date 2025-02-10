@@ -9,8 +9,8 @@ Connect .NET trace data with logs using OpenTelemetry instrumentation
 
 The Splunk Distribution of OpenTelemetry .NET automatically exports logs enriched with tracing context from any application that uses logging API from:
 
-* :new-page:`Microsoft.Extensions.Logging <https://www.nuget.org/packages/Microsoft.Extensions.Logging>`,
-* :new-page:`log4net <https://www.nuget.org/packages/log4net>`.
+* :new-page:`Microsoft.Extensions.Logging <https://www.nuget.org/packages/Microsoft.Extensions.Logging>`
+* :new-page:`log4net <https://www.nuget.org/packages/log4net>`
 
 
 Application logs are enriched with tracing metadata and then exported to a local instance of the OpenTelemetry Collector in ``OTLP`` format.
@@ -54,8 +54,11 @@ Check compatibility and requirements
 
 .. note:: Automatic log to trace correlation for ``Microsoft.Extensions.Logging`` only works for .NET applications. For .NET Framework use manual correlation. See :ref:`manual-trace-logs-correlation-otel`.
 
-* ``Microsoft.Extensions.Logging`` version ``9.0.0`` and higher are supported,
-* ``log4net`` version from ``2.0.13`` to ``4.0.0`` are supported. Environmental variable ``OTEL_DOTNET_AUTO_LOGS_ENABLE_LOG4NET_BRIDGE`` needs to be set to ``true``.
+The following applies:
+
+* ``Microsoft.Extensions.Logging`` version ``9.0.0`` and higher are supported
+* ``log4net`` version from ``2.0.13`` to ``4.0.0`` are supported
+* The environmental variable ``OTEL_DOTNET_AUTO_LOGS_ENABLE_LOG4NET_BRIDGE`` needs to be set to ``true``
 
 .. _dotnet-otel-enable-log-correlation:
 
