@@ -161,9 +161,11 @@ Follow these steps:
 .. code-block:: none
 
   {
-  "name": "lorem-ipsum-cluster",
-  "valueFrom": "^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$""
+    "valueFrom": "splunk-otel-collector-config",
+    "name": "SPLUNK_CONFIG_YAML"
   }
 
 .. caution:: The AWS Parameter Store limits the size of the config file to 4096 bytes.
+
+
 
