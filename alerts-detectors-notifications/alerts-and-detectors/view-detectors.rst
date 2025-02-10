@@ -41,6 +41,7 @@ The following illustration shows two linked detectors for this chart. If you hov
 
 .. image:: /_images/images-detectors-alerts/detectors-related.png
    :width: 50%
+   :alt: View of list of detectors linked to a chart.
 
 View an individual detector
 ================================================================
@@ -54,6 +55,7 @@ When you open a custom or APM detector, you can see a summary chart and a detail
 
 .. image:: /_images/images-detectors-alerts/custom-detector-view.png
    :width: 50%
+   :alt: View of a custom and APM detector.
 
 As with charts, the resolution of data displayed is determined by the detector's time range. The detail view displays data at the detector's resolution, the frequency at which the detector evaluates the signal. Any events occurring during the detector's time range are shown under the X axis.
 
@@ -79,9 +81,7 @@ View a detector's properties
 You can see a detector's properties, such as its description and creator, by following these steps:
 
 #. Open the detector.
-#. Select the detector's actions menu (|more|), then select :menuselection:`Info`.
-
-This displays the detector's properties, as shown in the illustration.
+#. Select the detector's actions menu (|more|), then select :guilabel:`Info`.
 
 
 .. image:: /_images/images-detectors-alerts/detector-info.png
