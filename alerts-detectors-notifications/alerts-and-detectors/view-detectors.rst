@@ -22,7 +22,7 @@ To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and 
 
    * Standard detectors are user-created detectors, including all RUM, APM, and Synthetics detectors.
    * AutoDetect detectors are read-only detectors Splunk Observability Cloud automatically creates when you configure supported integrations. To learn more, see :ref:`autodetect-intro`.
-   * Customized AutoDetect detectors are AutoDetect detectors that have been copied and customized. To learn more, see :ref:`autodetect-customize`.
+   * Customized AutoDetect detectors are AutoDetect detectors that you copy and customize. To learn more, see :ref:`autodetect-customize`.
 
 * To filter detectors by tags, enter the tags you want to find.
 * Detectors with active or scheduled muting rules directly applied to them have a muting indicator. If a detector is muted but the muting rule applies only to the detector's properties, the detector doesn't have a muting indicator.
@@ -30,15 +30,14 @@ To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and 
 
 .. _view-related-detectors:
 
-View detectors related to a chart or the Infrastructure Navigator
+View detectors linked to a chart
 ====================================================================================
 
-When you are looking at the Detector menu for a chart, or in the Infrastructure Navigator, you might see one or more Related Detectors. Making related detectors easy to find helps ensure that everyone using Infrastructure Monitoring in your organization is using the same detectors to monitor the same data.
+In dashboards and navigators, you can link detectors and view detectors linked to a chart. Linking detectors helps ensure that everyone in your organization is using the same detectors to monitor the same data.
 
-..
-	|openmenu| is defined in conf.py
+To add or view linked detectors, select the bell icon in a chart.
 
-|openmenu| The following illustration shows two related detectors for this chart. If you hover over a related detector, you see options that let you :ref:`subscribe to the detector<subscribe>` by adding a new notification, open the detector for viewing or editing, or view the alerts triggered by the detector. To learn more, go to :ref:`view-alerts`.
+The following illustration shows two linked detectors for this chart. If you hover over a linked detector, you see options that let you :ref:`subscribe to the detector<subscribe>` by adding a new notification, open the detector for viewing or editing, or view the alerts triggered by the detector. To learn more, go to :ref:`view-alerts`.
 
 .. image:: /_images/images-detectors-alerts/detectors-related.png
    :width: 50%
