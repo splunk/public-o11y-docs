@@ -1,7 +1,7 @@
 .. _k8s-advanced-auto-discovery-config:
 
 ********************************************************************************
-Advanced customization for automatic discovery and instrumtenation in Kubernetes
+Advanced customization for automatic discovery and instrumentation in Kubernetes
 ********************************************************************************
 
 .. meta:: 
