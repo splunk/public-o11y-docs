@@ -34,7 +34,7 @@ The AI Assistant understands and supports natural language. The AI Assistant res
 .. raw:: html
   
     <embed>
-      <h2>How to access the AI Assistant in Observability Cloud<a name="how-to-access-the-AI-assistant-in-Observability-Cloud" class="headerlink" href="#how-to-access-the-AI-assistant-in-observability-cloud" title="Permalink to this headline">¶</a></h2>
+      <h2>How to access the AI Assistant in Observability Cloud<a name="how-to-access-the-ai-assistant-in-observability-cloud" class="headerlink" href="#how-to-access-the-ai-assistant-in-observability-cloud" title="Permalink to this headline">¶</a></h2>
     </embed>
 
 To access the AI Assistant in Observability Cloud, select the AI Assistant icon from the toolbar on the right side.
