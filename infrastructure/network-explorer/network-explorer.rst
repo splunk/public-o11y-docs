@@ -16,6 +16,16 @@ Network Explorer in Splunk Infrastructure Monitoring
     network-explorer-troubleshoot
 
 
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
+.. include:: /_includes/network-explorer-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
+
 Use the following links to navigate the documentation set for Network Explorer in Splunk Infrastructure Monitoring:
 
     * :ref:`network-explorer-intro`
