@@ -51,13 +51,13 @@ Custom detectors and other standard detectors have different views.
 View custom and APM detectors
 -----------------------------------------
 
-When you open a custom or APM detector, you can see a summary chart and a detailed chart. The summary chart shows the data over a longer period of time. Because it is a summary, short spikes are not visible. The detailed chart shows each data point at the native resolution of the detector and represents exactly the data points that the detector sees. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
+When you open a custom or APM detector, you can see a summary chart and a detailed chart. The summary chart shows the data over a longer period of time. Short spikes are not visible in the summary chart. The detailed chart shows each data point at the native resolution of the detector and represents exactly the data points that the detector sees. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
 
 .. image:: /_images/images-detectors-alerts/custom-detector-view.png
    :width: 80%
    :alt: View of a custom and APM detector.
 
-As with charts, the resolution of data displayed is determined by the detector's time range. The detail view displays data at the detector's resolution, the frequency at which the detector evaluates the signal. Any events occurring during the detector's time range are shown under the X axis.
+The resolution of data displayed is determined by the detector's time range. The detail view displays data at the detector's resolution, the frequency at which the detector evaluates the signal. Any events occurring during the detector's time range are shown under the X axis.
 
 The :guilabel:`Alert Rules` tab is open when you open a detector, showing a chart that represents values for the visible signals. The list of detector rules and the number of currently active alerts for each rule are visible. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on the type of detector.
 
