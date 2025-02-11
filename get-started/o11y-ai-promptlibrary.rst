@@ -180,7 +180,7 @@ The most reliable way to construct time ranges in natural language is by relativ
 .. raw:: html
   
     <embed>
-      <h2>Scenarios for using the AI Assistant in Observability Cloud<a name="scenarios-for-using-the-ai-assistant-in-observability-cloud" class="headerlink" href="#scenarios-for-using-the-AI-Assistant-in-Observability-Cloud" title="Permalink to this headline">¶</a></h2>
+      <h2>Scenarios for using the AI Assistant in Observability Cloud<a name="scenarios-for-using-the-ai-assistant-in-observability-cloud" class="headerlink" href="#scenarios-for-using-the-ai-assistant-in-observability-cloud" title="Permalink to this headline">¶</a></h2>
     </embed>
 
 This section shows examples of situations in which you can use the Assistant to resolve situations faster.
