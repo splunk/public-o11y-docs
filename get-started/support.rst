@@ -20,7 +20,7 @@ Splunk Observability Cloud provides multiple ways to get help with the product. 
 - Ask a question and get answers through a community support forum at :new-page:`Splunk Answers <https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx>`
    - Available to Splunk Observability Cloud customers and free trial users
 
-- Join the Splunk :new-page:`#observability <https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` user group Slack channel to communicate with customers, partners, and Splunk employees worldwide
+- Join the Splunk :new-page:`#observability <https://splunkcommunity.slack.com/archives/C01AK4CCWR4>` user group Slack channel to communicate with customers, partners, and Splunk employees worldwide
    - Available to Splunk Observability Cloud customers and free trial users
    - To learn how to join, see :new-page:`Get Started with Splunk Community - Chat groups <https://docs.splunk.com/Documentation/Community/current/community/Chat>`
 
