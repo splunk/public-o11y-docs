@@ -32,4 +32,12 @@ Get started with Network Explorer
 
 For information on how to set up Network Explorer, see :ref:`network-explorer-setup`.
 
+.. raw:: html
 
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
+.. include:: /_includes/network-explorer-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
