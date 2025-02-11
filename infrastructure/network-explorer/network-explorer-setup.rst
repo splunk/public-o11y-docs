@@ -7,11 +7,15 @@ Set up Network Explorer in Kubernetes
 .. meta::
     :description: Install and configure Network Explorer on Kubernetes systems using the OpenTelemetry Collector eBPF Helm chart.
 
-.. note:: 
-  
-  While Splunk Observability Cloud fully supports the Network Explorer navigator, the upstream OpenTelemetry eBPF Helm chart is not covered under official Splunk support. Any feature updates, security, or bug fixes to it are not bound by any SLAs. 
-  
-  If you wish to continue using Network Explorer to see data in Splunk Observability Cloud, point the upstream eBPF Helm chart to the OpenTelemetry Collector running as a gateway. 
+.. raw:: html
+
+   <div class="include-start" id="troubleshooting-components.rst"></div>
+
+.. include:: /_includes/network-explorer-info.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="troubleshooting-components.rst"></div>
 
 You can install and configure Network Explorer as part of the Splunk Distribution of the OpenTelemetry Collector Helm chart. You also need the OpenTelemetry Collector eBPF Helm chart.
 
