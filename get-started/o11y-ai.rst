@@ -23,12 +23,20 @@ The AI Assistant provides an intelligent chatbot experience to empower users to 
 
 The AI Assistant has access only to data from Splunk APM and Splunk Infrastructure Monitoring. While you can access the AI Assistant throughout Splunk Observability Cloud, responses are geared toward use cases for APM, Infrastructure Monitoring, and Log Observer Connect.
 
-What is supported
-==================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>What is supported<a name="what-is-supported" class="headerlink" href="#what-is-supported" title="Permalink to this headline">¶</a></h2>
+    </embed>
+
 The AI Assistant understands and supports natural language. The AI Assistant responds in natural language with a summary of insights synthesized from multiple sources. Currently, the AI Assistant supports only English. 
 
-How to access the AI Assistant in Observability Cloud
-==================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>How to access the AI Assistant in Observability Cloud<a name="how-to-access-the-AI-assistant-in-Observability-Cloud" class="headerlink" href="#how-to-access-the-AI-assistant-in-observability-cloud" title="Permalink to this headline">¶</a></h2>
+    </embed>
+
 To access the AI Assistant in Observability Cloud, select the AI Assistant icon from the toolbar on the right side.
 
 ..  image:: /_images/ai/ai1.png
@@ -50,29 +58,48 @@ Alternatively, you can select from the suggested prompts:
 
 .. note:: When you ask questions or submit instructions that require the AI Assistant to query logs, there is an impact on your SVC quota.
 
-Feedback
-----------------------------------------------------------------------------------
+.. raw:: html
+  
+    <embed>
+      <h3>Feedback<a name="feedback" class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h3>
+    </embed>
+
 You can give feedback to the AI Assistant in development team by selecting the thumbs up or thumbs down icon that appears after each AI Assistant response.
 
+.. raw:: html
+  
+    <embed>
+      <h2>Context limitations<a name="context-limitations" class="headerlink" href="#context-limitations" title="Permalink to this headline">¶</a></h2>
+    </embed>
 
-Context limitations
-==================================================================================
 Context length is the amount of text that the AI Assistant can process in a single conversation due to LLM limitations. Think of it as the short-term memory of the AI Assistant. Each interaction with the AI Assistant is limited to the context set from the beginning of that conversation. The AI Assistant tells you when you exceed the chat limit and prompts you to copy the information that you want to save and start a new chat to continue. Select the :guilabel:`New chat` button in the upper right corner of the AI Assistant to create a new chat with a new context.
 
-Chat history
-----------------------------------------------------------------------------------
-You can only access the most recent chat interaction within the last thirty days.
+.. raw:: html
+  
+    <embed>
+      <h3>Chat history<a name="chat-history" class="headerlink" href="#chat-history" title="Permalink to this headline">¶</a></h3>
+    </embed>
 
-ChatId
-----------------------------------------------------------------------------------
+You can only access the most recent chat interaction within the last 30 days.
+
+.. raw:: html
+  
+    <embed>
+      <h3>ChatId<a name="chatid" class="headerlink" href="#chatid" title="Permalink to this headline">¶</a></h3>
+    </embed>
+
 Chatid is the unique identifier for each conversation in AI Assistant in Observability Cloud. Use ChatId when you want to report something about a particular conversation. Find it near the top of the chat below :guilabel:`AI Assistant`.
 
 ..  image:: /_images/ai/ai3.png
     :width: 40%
     :alt: This image shows the location of the chatId.
 
-Data sharing and use
-==================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Data sharing and use<a name="data-sharing-and-use" class="headerlink" href="#data-sharing-and-use" title="Permalink to this headline">¶</a></h2>
+    </embed>
+
 When you interact with AI Assistant in Observability Cloud, Splunk collects and might use inputs, outputs, grounding data, feedback, and usage data to provide and maintain the the AI Assistant, comply with applicable law, enforce our policies, and develop and improve the AI Assistant in Observability, including to train AI models.  
 
 If you do not want your data used for these purposes, do not click on the button and do not install, download, access, or otherwise use AI Assistant in Observability. 
@@ -104,12 +131,20 @@ If you do not want to share your data, deselect :guilabel:`Allow my AI service d
   :width: 70%
   :alt: This screenshot shows how Splunk Observability Cloud products serve the different layers and processes in an organization's environment.
 
-Service limitations
-==================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Service limitations<a name="service-limitations" class="headerlink" href="#service-limitations" title="Permalink to this headline">¶</a></h2>
+    </embed>
+
 A Splunk Observability Cloud organization has a limit of 3,000 prompts per month and no more than 10 prompts per minute.
 
-Other resources
-==================================================================================
+.. raw:: html
+  
+    <embed>
+      <h2>Other resources<a name="other-resources" class="headerlink" href="#other-resources" title="Permalink to this headline">¶</a></h2>
+    </embed>
+
 Learn how to prompt the AI Assistant effectively by reading :ref:`o11y-ai-promptlibrary`. You can find general guidance on how to prompt the Assistant to achieve the best results, as well as see sample prompts and learn what makes a prompt excellent, good, or poor.
 
 To learn about Splunk's commitment to responsible AI, see :new-page:`Responsible AI for AI Assistant in Observability Cloud <http://splunk.com/en_us/about-splunk/splunk-data-security-and-privacy/responsible-ai-for-ai-assistant-in-observability-cloud.html>`.
