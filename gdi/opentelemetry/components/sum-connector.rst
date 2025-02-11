@@ -57,7 +57,7 @@ The following settings are required:
 
 * Telemetry type. Nested below the ``sum:`` connector declaration. Can be any of ``spans`` or ``spanevents`` for ``traces``, ``datapoints`` for ``metrics``, or ``logs``.
 
-  * In :ref:`sum-connector-example-sum`, it's declared as ``logs``.
+  * In :ref:`sum-connector-example-sum`, it's declared as ``spans``.
 
 * Metric name. Nested below the telemetry type; this is the metric name the sum connector will output summed values to. 
 
