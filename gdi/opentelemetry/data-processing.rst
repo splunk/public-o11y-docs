@@ -45,7 +45,7 @@ Connect pipelines with connectors
 
 You can use connectors to connect two pipelines. Connectors consume data as an exporter at the end of one pipeline and emit data as a receiver at the start of another pipeline. They can consume and emit data of the same data type, or of different data types. Use connectors to generate and emit data which summarizes the data you've already consumed, or to simply replicate or route data. 
 
-Learn more at:ref:`otel-components-connectors`.
+Learn more at :ref:`otel-components-connectors`.
 
 Example of a pipeline configuration
 --------------------------------------------------------------------

@@ -279,6 +279,16 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    Overview <get-started/overview>
 
 .. toctree::
+   :maxdepth:   3  
+
+   Architecture <get-started/o11y-architecture>
+
+.. toctree::
+   :maxdepth: 3
+
+   Get started guide for admins TOGGLE <get-started/get-started-guide/get-started-guide>
+
+.. toctree::
    :maxdepth:   3
 
    AI Assistant in Observability Cloud <get-started/o11y-ai>
@@ -289,19 +299,9 @@ To keep up to date with changes in the products, see the Splunk Observability Cl
    Prompt guide and library for AI Assistant in Observability Cloud <get-started/o11y-ai-promptlibrary>
 
 .. toctree::
-   :maxdepth:   3  
-
-   Architecture <get-started/o11y-architecture>
-
-.. toctree::
    :maxdepth: 3
 
    Service description <get-started/service-description>
-
-.. toctree::
-   :maxdepth: 3
-
-   Get started guide for admins TOGGLE <get-started/get-started-guide/get-started-guide>
 
 .. toctree::
    :maxdepth:   3
