@@ -85,7 +85,7 @@ If you use the default configuration for the Splunk Distribution of the Collecto
 To obtain additional telemetry from other sources see:
 
 * :ref:`kubernetes-config-add`
-* :ref:`receiver-creator-receiver`
+* :ref:`receiver-creator-receiver` to create new receivers at runtime  
 
 .. raw:: html
 
