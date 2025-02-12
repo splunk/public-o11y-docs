@@ -193,11 +193,11 @@ This section shows examples of situations in which you can use the Assistant to 
 
 When you receive an alert, possible prompts you might use in the Assistant to help resolve the incident include the following:
 
-* I received an alert related to the paymentservice. What's happening?
+* Example 1: I received an alert related to the paymentservice. What's happening?
 
-* I received an alert with incident ID Ggn_D1TA4BU. What's going on?
+* Example 2: I received an alert with incident ID Ggn_D1TA4BU. What's going on?
 
-* Can you look at my APM data and logs to understand the root cause of this issue?
+* Example 3: Can you look at my APM data and logs to understand the root cause of this issue?
 
 .. raw:: html
   
@@ -237,11 +237,11 @@ If you are looking at an alert in the UI, this prompt is excellent because the A
 
 When a service is experiencing problems, possible prompts you might use to help resolve the incident include the following:
 
-* Show me the last 3 traces for apm-classic errors.
+* Example 1: Show me the last 3 traces for apm-classic errors.
 
-* Paymentservice in online boutique env is having issues in past 15 mins. What's going on?
+* Example 2: Paymentservice in online boutique env is having issues in past 15 mins. What's going on?
 
-* Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. Once you've identified the exemplar traces, analyze each full trace by its trace ID
+* Example 3: Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. Once you've identified the exemplar traces, analyze each full trace by its trace ID
 
 .. raw:: html
   
