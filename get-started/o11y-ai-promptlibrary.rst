@@ -193,16 +193,16 @@ This section shows examples of situations in which you can use the Assistant to 
 
 When you receive an alert, possible prompts you might use in the Assistant to help resolve the incident include the following:
 
-* Example 1: I received an alert related to the paymentservice. What's happening?
+* I received an alert related to the paymentservice. What's happening?
 
-* Example 2: I received an alert with incident ID Ggn_D1TA4BU. What's going on?
+* I received an alert with incident ID Ggn_D1TA4BU. What's going on?
 
-* Example 3: Can you look at my APM data and logs to understand the root cause of this issue?
+* Can you look at my APM data and logs to understand the root cause of this issue?
 
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 1: Poor<a name="example-prompt-1-poor" class="headerlink" href="#example-prompt-1-poor" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt: Poor<a name="example-prompt-1-poor" class="headerlink" href="#example-prompt-1-poor" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`I received an alert related to the paymentservice. What's happening?`
@@ -212,7 +212,7 @@ This example is poor because it does not give the Assistant enough specific info
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 2: Good<a name="example-prompt-2-good" class="headerlink" href="#example-prompt-2-good" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt: Good<a name="example-prompt-2-good" class="headerlink" href="#example-prompt-2-good" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`I received an alert with incident ID Ggn_D1TA4BU. What's going on?`
@@ -222,7 +222,7 @@ This example is good because it is focused. It states that you received an alert
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 3: Excellent<a name="example-prompt-3-excellent" class="headerlink" href="#example-prompt-3-excellent" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt: Excellent<a name="example-prompt-3-excellent" class="headerlink" href="#example-prompt-3-excellent" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`Can you look at my APM data and logs to understand the root cause of this issue?`
@@ -237,16 +237,16 @@ If you are looking at an alert in the UI, this prompt is excellent because the A
 
 When a service is experiencing problems, possible prompts you might use to help resolve the incident include the following:
 
-* Example 1: Show me the last 3 traces for apm-classic errors.
+* Show me the last 3 traces for apm-classic errors.
 
-* Example 2: Paymentservice in online boutique env is having issues in past 15 mins. What's going on?
+* Paymentservice in online boutique env is having issues in past 15 mins. What's going on?
 
-* Example 3: Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. Once you've identified the exemplar traces, analyze each full trace by its trace ID
+* Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. Once you've identified the exemplar traces, analyze each full trace by its trace ID
 
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 1: Poor<a name="id1" class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt: Poor<a name="id1" class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`Show me the last 3 traces for apm-classic errors.`
@@ -256,7 +256,7 @@ This prompt is poor because you do not give the Assistant a time range or enviro
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 2: Good<a name="id2" class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt: Good<a name="id2" class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`Paymentservice in online boutique env is having issues in past 15 mins. What's going on?`
@@ -266,7 +266,7 @@ This prompt is good because it gives the service and the time range. Telling the
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 3: Excellent<a name="id3" class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt: Excellent<a name="id3" class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. After identifying the exemplar traces, analyze each full trace by its trace ID`
