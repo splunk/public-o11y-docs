@@ -212,7 +212,7 @@ This example is poor because it does not give the Assistant enough specific info
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 1: Good<a name="example-prompt-1-good" class="headerlink" href="#example-prompt-1-good" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt 2: Good<a name="example-prompt-2-good" class="headerlink" href="#example-prompt-2-good" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`I received an alert with incident ID Ggn_D1TA4BU. What's going on?`
@@ -222,7 +222,7 @@ This example is good because it is focused. It states that you received an alert
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 1: Excellent<a name="example-prompt-1-excellent" class="headerlink" href="#example-prompt-1-excellent" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt 3: Excellent<a name="example-prompt-3-excellent" class="headerlink" href="#example-prompt-3-excellent" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`Can you look at my APM data and logs to understand the root cause of this issue?`
@@ -256,7 +256,7 @@ This prompt is poor because you do not give the Assistant a time range or enviro
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 1: Good<a name="id2" class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt 2: Good<a name="id2" class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`Paymentservice in online boutique env is having issues in past 15 mins. What's going on?`
@@ -266,7 +266,7 @@ This prompt is good because it gives the service and the time range. Telling the
 .. raw:: html
   
     <embed>
-      <h4>Example prompt 1: Excellent<a name="id3" class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+      <h4>Example prompt 3: Excellent<a name="id3" class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
     </embed>
 
 :guilabel:`Paymentservice in online boutique env is having issues in past 15 mins. Look for any relevant error exemplar traces. After identifying the exemplar traces, analyze each full trace by its trace ID`
