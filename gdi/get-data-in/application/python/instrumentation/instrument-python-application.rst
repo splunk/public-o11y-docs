@@ -214,7 +214,7 @@ The following example shows how to update a deployment to expose environment var
 Send data directly to Splunk Observability Cloud
 ==========================================================
 
-By default, the agent sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
+By default, the agent sends all telemetry to the local instance of the Splunk Distribution of the OpenTelemetry Collector.
 
 To send data directly to Splunk Observability Cloud, set the following environment variables:
 
