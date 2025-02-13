@@ -59,6 +59,7 @@ Support bundle scripts
 
 Run support bundle scripts to collect information:
 
-* Kubernetes: Run ``kubectl-splunk support``
-* Linux (if installer script was used): Run ``/etc/otel/collector/splunk-support-bundle.sh``
-* Windows (if MSI installer version 0.34.0 or higher was used): Run ``C:\Program Files\Splunk\OpenTelemetry Collector\splunk-support-bundle.ps1``
+* For Kubernetes, run ``kubectl-splunk support``
+* For Linux, if you used the installer script, run ``/etc/otel/collector/splunk-support-bundle.sh``
+* For Windows, if you used the MSI installer version 0.34.0 or higher, run ``C:\Program Files\Splunk\OpenTelemetry Collector\splunk-support-bundle.ps1``
+* If you used the :ref:`collector-addon-intro` to deploy the Collector see :new-page:`Generate a diagnostic file <https://docs.splunk.com/Documentation/Splunk/9.4.0/Troubleshooting/Generateadiag>` 
