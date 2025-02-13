@@ -38,7 +38,7 @@ Get started with the available options to install, deploy, and configure the Spl
     <h2>Install the Collector using packages and deployment tools<a name="collector-package-install" class="headerlink" href="#collector-package-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The Splunk Distribution of the OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. Use one of the following packages to gather data for Splunk Observability Cloud:
+The Splunk Distribution of the OpenTelemetry Collector is supported on Kubernetes, Linux, and Windows. Use one of the following packages to gather data for Splunk Observability Cloud:
 
 * :ref:`collector-kubernetes-intro`
 * :ref:`collector-linux-intro`
