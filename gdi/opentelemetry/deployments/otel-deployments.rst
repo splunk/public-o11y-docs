@@ -35,3 +35,5 @@ See also the install options available for each platform:
 * :ref:`collector-kubernetes-intro` and :ref:`otel-install-k8s`
 * :ref:`collector-linux-intro` and :ref:`otel-install-linux`, including instructions on how to deploy using Ansible, Chef, Puppet and Salt
 * :ref:`collector-windows-intro` and :ref:`otel-install-windows`, including instructions on how to deploy using Ansible, Chef and Puppet
+
+.. note:: To install the Collector in a Mac environment refer to the :new-page:`binary available in the Splunk Distribution of the OpenTelemetry Collector GitHub repo <https://github.com/signalfx/splunk-otel-collector/releases>`.

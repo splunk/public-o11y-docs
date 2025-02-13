@@ -96,12 +96,12 @@ Deploy the Spring Petclinic Java application in your Kubernetes cluster:
                 annotations:
                   # Activates zero-code instrumentation for the Java application
                   instrumentation.opentelemetry.io/inject-java: "true"
-              spec:
-                containers:
-                - name: petclinic-app
-                  # Java application to instrument
-                  image: ghcr.io/pavolloffay/spring-petclinic:latest
-                  imagePullPolicy: Always
+          spec:
+            containers:
+              - name: petclinic-app
+                # Java application to instrument
+                image: ghcr.io/pavolloffay/spring-petclinic:latest
+                imagePullPolicy: Always
 
 #. Run the following command to start the application deployment:
 
