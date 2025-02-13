@@ -47,7 +47,7 @@ Use the host monitoring (agent) mode when you want to do these things:
 Data forwarding (gateway) mode
 ======================================================================
 
-Data forwarding (gateway) mode is typically deployed per cluster, data center, or region. It collects data both from Kubernetes and from one or more Collectors running in standalone agent mode and sends it to Splunk Observability Cloud. For the default gateway config file see :new-page:`data forwarding (gateway) mode configuration in GitHub <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`.
+Data forwarding (gateway) mode is typically deployed per cluster, data center, or region. A Collector in gateway mode collects data both from Kubernetes and from one or more Collectors running in standalone agent mode and sends it to Splunk Observability Cloud. For the default gateway config file see :new-page:`data forwarding (gateway) mode configuration in GitHub <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`.
 
 The following image shows the architecture for the data forwarding (gateway) mode:
 
