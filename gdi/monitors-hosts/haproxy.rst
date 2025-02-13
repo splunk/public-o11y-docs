@@ -170,7 +170,7 @@ section of your configuration file:
    service:
      pipelines:
        metrics:
-         monitors: [smartagent/haproxy]
+         receivers: [smartagent/haproxy]
 
 Configuration options
 ~~~~~~~~~~~~~~~~~~~~~
