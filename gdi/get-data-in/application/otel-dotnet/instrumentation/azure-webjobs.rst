@@ -55,7 +55,7 @@ Isolated worker process function
    - :new-page:`OpenTelemetry.Instrumentation.Http <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Http>`
    - :new-page:`OpenTelemetry.Instrumentation.Process <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Process>`
    - :new-page:`OpenTelemetry.Instrumentation.Runtime <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Runtime>`
-   - :new-page:`OpenTelemetry.ResourceDetectors.Azure <https://www.nuget.org/packages/OpenTelemetry.ResourceDetectors.Azure>`
+   - :new-page:`OpenTelemetry.Resources.Azure <https://www.nuget.org/packages/OpenTelemetry.Resources.Azure>`
 
 .. _azure-webjob-step-3:
 
@@ -72,7 +72,6 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
     using OpenTelemetry.Exporter;
     using OpenTelemetry.Logs;
     using OpenTelemetry.Metrics;
-    using OpenTelemetry.ResourceDetectors.Azure;
     using OpenTelemetry.Resources;
     using OpenTelemetry.Trace;
     using System.Diagnostics;
@@ -100,11 +99,12 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
             var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
             var enableTraceResponseHeaderValue = Environment.GetEnvironmentVariable("SPLUNK_TRACE_RESPONSE_HEADER_ENABLED")?.Trim();
 
-            // See https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.Azure
-            // for other types of Azure detectors
-            var resourceDetector = new AppServiceResourceDetector();
-
             builder.Services.AddOpenTelemetry()
+                .ConfigureResource(cfg => cfg
+                    .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
+                    // See https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.Resources.Azure
+                    // for other types of Azure detectors
+                    .AddAzureAppServiceDetector())
                 .WithTracing(t => t
                     // Use Add[instrumentation-name]Instrumentation to instrument missing services
                     // Use Nuget to find different instrumentation libraries
@@ -119,9 +119,6 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
                     // Automatically creates the root span with function start
                     .AddSource(SplunkFunctionAttribute.ActivitySourceName)
                     .SetSampler(new AlwaysOnSampler())
-                    .ConfigureResource(cfg => cfg
-                        .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
-                        .AddDetector(resourceDetector))
                     .AddConsoleExporter()
                     .AddOtlpExporter(opts =>
                     {
@@ -135,9 +132,6 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
                     .AddHttpClientInstrumentation()
                     .AddRuntimeInstrumentation()
                     .AddProcessInstrumentation()
-                    .ConfigureResource(cfg => cfg
-                        .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
-                        .AddDetector(resourceDetector))
                     .AddOtlpExporter(opts =>
                     {
                         opts.Endpoint = new Uri($"https://ingest.{Realm}.signalfx.com/v2/datapoint/otlp");
