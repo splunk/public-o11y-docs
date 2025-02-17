@@ -115,7 +115,7 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - No
 
   * - :strong:`Edit notification policy`
-    - Yes
+    - Yes, if on a team
     - Yes
     - Yes
     - No
