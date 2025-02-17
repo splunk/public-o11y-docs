@@ -5,16 +5,14 @@ When you update the Collector using the official packages, configuration files a
 General guidelines
 =================================
 
-Apply the following changes to the Collector configuration files for specific version upgrades. 
-
-.. :important::
+.. :note::
 
   For every configuration update use the default agent config as a reference.
 
+Apply the following changes to the Collector configuration files for specific version upgrades. For more details refer to :new-page:`Upgrade guidelines <ttps://github.com/signalfx/splunk-otel-collector?tab=readme-ov-file#upgrade-guidelines>` in GitHub. 
+
 From 0.96.1 to 0.97.0
 ------------------------------------
-
-
 
 .. raw:: html
 
@@ -25,9 +23,6 @@ From 0.96.1 to 0.97.0
 .. raw:: html
 
    <div class="include-stop" id="collector-upgrade-memory-ballast.rst"></div>
-
-
-
 
 From 0.68.0 to 0.69.0
 ------------------------------------
