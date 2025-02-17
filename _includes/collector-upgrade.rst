@@ -1,7 +1,3 @@
-The installer script uses one of the supported package managers to install the Collector.
-
-When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped. 
-
 General guidelines
 =================================
 
@@ -9,7 +5,7 @@ General guidelines
 
   For every configuration update use the default agent config as a reference.
 
-Apply the following changes to the Collector configuration files for specific version upgrades. For more details refer to :new-page:`Upgrade guidelines <ttps://github.com/signalfx/splunk-otel-collector?tab=readme-ov-file#upgrade-guidelines>` in GitHub. 
+Apply the following changes to the Collector configuration files for specific version upgrades. For more details refer to the :new-page:`Upgrade guidelines <https://github.com/signalfx/splunk-otel-collector?tab=readme-ov-file#upgrade-guidelines>` in GitHub. 
 
 From 0.96.1 to 0.97.0
 ------------------------------------

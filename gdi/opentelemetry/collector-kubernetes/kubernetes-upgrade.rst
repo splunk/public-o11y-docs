@@ -35,11 +35,15 @@ Read more in the official :new-page:`Helm upgrade options <https://helm.sh/docs/
 Upgrade guidelines
 =================================
 
+The installer script uses one of the supported package managers to install the Collector.
+
+When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped. 
+
 .. :note::
 
   For every configuration update use the default agent config as a reference.
 
-Apply the following changes to the Collector configuration files for specific version upgrades. For more details refer to :new-page:`Upgrade guidelines <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/UPGRADING.md>` in GitHub.
+Apply the following changes to the Collector configuration files for specific version upgrades. For more details refer to :new-page:`Helm chart upgrade guidelines <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/UPGRADING.md>` in GitHub. For generic guidelines see :ref:`otel-upgrade-k8s-guidelines-generic`.
 
 From 0.113.0 to 0.116.0
 ---------------------------------------
@@ -59,14 +63,20 @@ New users
 
 New users are advised to deploy CRDs via the crds/ directory. For a fresh installation, use the following Helm values:
 
-operatorcrds:
-  install: true
-operator:
-  enabled: true
+  .. code-block:: yaml
+
+  operatorcrds:
+    install: true
+  operator:
+    enabled: true
+
 To install the chart:
 
 helm install <release-name> splunk-otel-collector-chart/splunk-otel-collector --set operatorcrds.install=true,operator.enabled=true <extra_args>
-Current Users (Recommended Migration to crds/ Directory)
+
+Current users 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 If you're using chart versions 0.110.0 to 1.113.0, CRDs are likely deployed via Helm templates. To migrate to the recommended crds/ directory deployment:
 
 Step 1: Delete the Existing Chart
@@ -87,14 +97,58 @@ helm install <release-name> splunk-otel-collector --set operatorcrds.install=tru
 Previous Users (Maintaining Legacy Helm Templates)
 If you're using chart versions 0.110.0 to 1.113.0 and prefer to continue deploying CRDs via Helm templates (not recommended), you can do so with the following values:
 
-operator:
-  enabled: true
-operator:
-  crds:
-    create: true
-Warning: This method may cause race conditions during installation or upgrades
+.. code-block:: yaml
 
+  operator:
+    enabled: true
+  operator:
+    crds:
+      create: true
 
+.. caution:: This method may cause race conditions during installation or upgrades
+
+From 0.105.5 to 0.108.0
+---------------------------------------
+
+We've simplified the Helm chart configuration for operator auto-instrumentation. The values previously under .Values.operator.instrumentation.spec.* have been moved to .Values.instrumentation.*.
+
+No Action Needed: If you have no customizations under .Values.operator.instrumentation.spec.*, no migration is required.
+Action Required: Continuing to use the old values path will result in a Helm install or upgrade error, blocking the process.
+Migration Steps:
+
+Find any references to .Values.operator.instrumentation.spec.* in your Helm values with custom values.
+Migrate them from .Values.operator.instrumentation.spec.* to .Values.instrumentation.*.
+Example Migration:
+
+The updated path looks like this:
+
+.. code-block:: yaml
+
+  instrumentation:
+    endpoint: XXX
+    ...
+
+The deprecated path was:
+
+.. code-block:: yaml
+
+  operator:
+    instrumentation:
+      spec:
+        endpoint: XXX
+        ...
+
+.. _otel-upgrade-k8s-guidelines-generic:
+
+.. raw:: html
+
+   <div class="include-start" id="collector-upgrade.rst"></div>
+
+.. include:: /_includes/collector-upgrade.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-upgrade.rst"></div>
 
 .. _otel-upgrade-k8s-access-token:
 
