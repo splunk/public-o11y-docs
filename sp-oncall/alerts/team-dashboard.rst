@@ -19,71 +19,44 @@ All incidents derived from integrated monitoring tools in the incident table inc
 source of an alert. Manually created incidents, along with incidents originating from the Email Endpoint or the REST API integrations, will
 remain logo free.
 
-Information Alerts can still be found on the `Timeline Page. <https://help.victorops.com/knowledge-base/timeline/>`__
-
-|image|
-
+Information Alerts can still be found on the timeline page. See :ref:`timeline`.
 
 Filters
 -------
 
 The filters provide an easy way for you to see exactly what you are looking for and nothing else. Whether you want to filter by team or by incident state, these filters allow for you to see only what is relevant to you. You can filter the incident table first by team status (with default team associations), as well as incident state.
 
-image _images/spoc/Filters-scaled.jpg
-
 Incident Table
 --------------
 
 Quickly identify responsible parties during a firefight by easily seeing which policies are being paged, take action on an incident (acknowledge, add responder, reroute, snooze, resolve), and see the status of incidents. You can also find annotation counts, chats, and associated alerts.
 
-image: _images/spoc/Incidents-scaled.jpg
-
 Manual Incident Creation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can create a manual incident from the team dashboard by selecting
-“Create Incident” in the top right corner `following these
-instructions <https://help.victorops.com/knowledge-base/manual-incident-creation/>`__.
+You can create a manual incident from the team dashboard by selecting :guilabel:`Create Incident`. See :ref:`manual-incident`.
 
 Incident War Rooms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Access *Incident Details* directly from the *Team Dashboard* by clicking
-the *incident number* link—this will expand the incident and its event
-history in the `Incident War
-Room. <https://help.victorops.com/knowledge-base/war-room/>`__ 
+Access incident details directly from the team dashboard by selecting the incident number link. This will expand the incident and its event history in the incident war
+room. See :ref:`war-room`. 
 
 People Table
 ------------
 
-See a list of users that are on-call for the teams that you have
-filtered for. You can see which teams that these users are on call for,
-as well as clicking the user's name to take on-call or see these user's
-upcoming shifts.
+See a list of users that are on-call for the teams that you have filtered for. You can see which teams that these users are on call for, as well as clicking the user's name to take on-call or see these user's upcoming shifts.
 
-You can navigate to the team's view below to see other user's associated
-with teams.
+You can navigate to the team's view below to see other user's associated with teams.
 
 Take On-Call from Another User
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Navigate to a user in the on-call list, and click the user's name. From
-here, you can take the shift from a user from the pop over.
+Navigate to a user in the on-call list, and click the user's name. From here, you can take the shift from a user from the pop over.
 
-To revert an on-call take, click the “clear take” button from the
-popover associated with your profile.
-
-_images/spoc/People-Table.jpg
-
-_images/spoc/Take-On-Call.jpg
-
- 
+To revert an on-call take, click the “clear take” button from the popover associated with your profile.
 
 Status Page
 ~~~~~~~~~~~
 
-You can relay service status updates via statuspage.io by `following
-these
-instructions. <https://help.victorops.com/knowledge-base/victorops-statuspage-integration/>`__
-
-.. |image| image:: /_images/spoc/Screen-Shot-2020-08-18-at-9.22.05-AM.png
+You can relay service status updates through statuspage.io. See :ref:`Statuspage-spoc`.

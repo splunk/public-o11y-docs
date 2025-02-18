@@ -1,17 +1,13 @@
 .. _post-incident-review:
 
 ************************************************************************
-About the Splunk On-Call post-incident review
+Creating a post-incident review report
 ************************************************************************
 
 .. meta::
-   :description: Learn about the .
-
+   :description: 
 
 The post-incident review report from Splunk On-Call allows you to gain historical insight on events surrounding a particular incident or range of time, so the next time a similar situation arises, you have a documented account of how you solved the problem. We believe it's important to not just catalog what happened in an incident, but to analyze the event in its entirety, and define actionable steps that help a team or organization dive deeper into the data.
-
-Creating a post-incident review report
------------------------------------------
 
 To create a Post-Incident Review Report, access the Splunk On-Call web portal, and then select :guilabel:`Reports`.
 
