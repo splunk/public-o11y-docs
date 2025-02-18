@@ -10,9 +10,10 @@ Configure Single Sign-On for Splunk On-Call
 .. toctree::
    :hidden: 
 
-   sp-sso-okta
-   sp-sso-google
-   sp-sso-adfs
+   Configure SSO for Okta<sp-sso-okta>
+   Configure SSO for Google<sp-sso-google>
+   Configure SSO for ADFS<sp-sso-adfs>
+   Configure SSO for other IDPs<sp-sso-other>
    sp-sso-users
 
 .. raw:: html
@@ -36,7 +37,7 @@ If your IDP does not have SAML capability, please contact Splunk On-Call Support
 .. raw:: html
    
   <embed>
-    <h2>Administrator setup<a name="admin-setup" class="headerlink" href="#admin-setup" title="Permalink to this headline">¶</a></h2>
+    <h2>Configure SSO: Admin guides<a name="admin-setup" class="headerlink" href="#admin-setup" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 Instructions to complete the SSO configuration with Splunk On-Call and your IDP are provided for:
@@ -50,46 +51,7 @@ Instructions to complete the SSO configuration with Splunk On-Call and your IDP 
 .. raw:: html
    
   <embed>
-    <h3>OneLogin<a name="sso-onelogin-spoc" class="headerlink" href="#sso-onelogin-spoc" title="Permalink to this headline">¶</a></h3>
+    <h2>Sign in to Splunk On-Call through SSO: User guide<a name="user-guide" class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-If you are configuring SSO for OneLogin, the Default relay state is:
-
-   https://portal.victorops.com/auth/sso/<<org-slug-here>>
-
-
-.. raw:: html
-   
-  <embed>
-    <h3>Azure Active Directory (SAML-based sign-on)<a name="sso-azure-spoc" class="headerlink" href="#sso-azure-spoc" title="Permalink to this headline">¶</a></h3>
-  </embed>
-
-If you are configuring SSO for Azure Active Directory, use the following values:
-
--  Identifier: :samp:`https://victorops.com`
--  Reply URL: :samp:`https://sso.victorops.com/sp/ACS.saml2`
--  Sign on URL: :samp:`https://portal.victorops.com/auth/sso/<<org-slug-here>>`
--  Relay State: :samp:`https://portal.victorops.com/auth/sso/<<org-slug-here>>`
-
-
-.. raw:: html
-   
-  <embed>
-    <h3>AWS IAM Identity Center - SAML<a name="sso-aws-spoc" class="headerlink" href="#sso-aws-spoc" title="Permalink to this headline">¶</a></h3>
-  </embed>
-
-If you are configuring SSO for AWS IAM Identity Center:
-
-#. In the IAM Identity Center console find the :guilabel:`Applications` tab.
-#.  Select :guilabel:`Add Application` and look for VictorOps.
-#.  In the configuration settings ensure you set the fields as follows:
-
-   -  Important: Ensure the Session Duration is set to 1hour.
-
-.. image:: /_images/spoc/sso-aws1.png
-    :width: 100%
-    :alt: Application properties page.
-
-.. image:: /_images/spoc/sso-aws2.png
-    :width: 100%
-    :alt: Application metadata page.
+See :ref:`sp-sso-users`.
