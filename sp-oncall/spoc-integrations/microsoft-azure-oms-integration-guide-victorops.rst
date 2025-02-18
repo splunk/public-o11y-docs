@@ -22,8 +22,7 @@ Select the **Microsoft Azure OMS** integration option.
 Click **Enable Integration**.
 
 Copy the **Service API Endpoint** to your clipboard. Make sure to
-update the `Routing
-Key <https://help.victorops.com/knowledge-base/routing-keys/>`__.
+update the `Routing Key.
 
 .. image/_images/spoc/API-key-for-Azure-Integration.png
 

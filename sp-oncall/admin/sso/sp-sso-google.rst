@@ -27,7 +27,7 @@ To configure SSO for Splunk On-Call using Google Apps:
        :width: 100%
        :alt: Splunk On-Call SSO Google Apps Setup 3
 
-  #. Save the Splunk On-Call logo file found `HERE <https://help.victorops.com/wp-content/uploads/2016/11/256x256-VictorOps-Oakleaf.png>`__.
+#. Save the Splunk On-Call logo file found `HERE <https://help.victorops.com/wp-content/uploads/2016/11/256x256-VictorOps-Oakleaf.png>`__.
 #. Enter a name for the application (Splunk On-Call) and upload the logo file.
 
    .. image:: /_images/spoc/sso-google4.png

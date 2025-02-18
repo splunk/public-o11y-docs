@@ -1,34 +1,22 @@
 HipChat integration for Splunk On-Call
 **********************************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+Use the bi-directional integration between HipChat and Splunk On-Call to fight fires from either platform and never miss a beat. All messages entered in the Splunk On-Call timeline, including alerts, on-call changes, escalations and chats appear in the HipChat room, and vice versa.
 
-**Splunk On-Call Version Required: Starter / Growth** for **Single Room,
-Enterprise** for **Multi-Room**
+Requirements
+==============
 
-**What you need to know: Multi-Room requires the Rules Engine and
-Webhooks i.e. Splunk On-Call Enterprise**
+* Splunk On-Call required version: Starter or Growth for Single Room, Enterprise for Multi-Room
 
-[/ht_toggle]
+Use these step by step instructions to set up the integration for a Single Room or Multi-Room configuration.
 
-This bi-directional integration between HipChat and Splunk On-Call
-(formerly called VictorOps) allows you to fight fires from either
-platform and never miss a beat. All messages entered in the Splunk
-On-Call timeline, including alerts, on-call changes, escalations and
-chats will appear in the HipChat room, and vice versa.
-
-This article provides step by step instructions for setting up the
-integration for a Single Room or Multi-Room configuration.
-
---------------
-
-**Single Room**
+Single Room
 ===============
 
-**In Splunk On-Call**
+In Splunk On-Call
 ---------------------
 
-In Splunk On-Call, select *Integrations >> Hipchat*\ **.**
+#. In Splunk On-Call, select :guilabel:`Integrations` then :guilabel:`Hipchat`.
 
 If the integration has not yet been enabled, click the *Enable
 Integration* button to generate your endpoint URL.  Be sure to replace
@@ -143,9 +131,8 @@ This will allow you to change the room_id and auth_token depending on
 the type of alert. In the example we match on the routing key “devops”
 but you can match on any alert field.
 
-Next we will need to set up an `Outbound
-Webhook <https://help.victorops.com/knowledge-base/custom-outbound-webhooks/>`__
-to send Splunk On-Call information to your HipChat room(s).
+Next we will need to set up an Outbound
+Webhook to send Splunk On-Call information to your HipChat room(s). See :ref:`custom-outbound-webhooks` for steps.
 
 From the Splunk On-Call timeline select Integrations *>> Outgoing
 Webhooks >>* *Add Webhook*.

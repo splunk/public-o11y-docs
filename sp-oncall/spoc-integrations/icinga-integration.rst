@@ -277,7 +277,7 @@ You need to link the timeout command to a directory that is in the path.
 Icinga version 2 configuration
 ===================================
 
-After going through the preceeding installation instructions for Icinga (or `Nagios <https://help.victorops.com/knowledge-base/victorops-nagios-integration/>`__), use the following steps to add the VictorOps plugin to your Icinga 2 instance.
+After going through the preceding installation instructions for Icinga (or Nagios see :ref:`nagios-spoc`), use the following steps to add the VictorOps plugin to your Icinga 2 instance.
 
 You can find these steps in the README.md file in /opt/victorops/nagios_plugin/icinga2_conf
 
