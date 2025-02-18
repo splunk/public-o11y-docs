@@ -95,4 +95,4 @@ Features and Benefits of using Multiple Escalation Policies
 
 - Reuse Policies Across Teams: Reuse globally available escalation policies across multiple teams.
 
-For more detailed examples on how to benefit from the use of multiple escalation policies, see :ref:`mult-escalation-policies`.
+For more detailed examples on how to benefit from the use of multiple escalation policies, see :ref:`multi-escalation-policies`.
