@@ -69,7 +69,6 @@ Splunk On-Call integrations
    logz-io-integration
    mailhop-integration
    manage-splunk-oncall-using-terraform
-   microsoft-azure-oms-integration-guide-victorops
    microsoft-scom-integration
    microsoft-teams-integration-guide
    nagios-integration-guide
