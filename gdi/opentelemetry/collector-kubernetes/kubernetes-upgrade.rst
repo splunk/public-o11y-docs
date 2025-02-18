@@ -75,13 +75,13 @@ You might need to migrate if using ``operator.enabled=true``.
 
 If you're using versions 0.110.0 to 1.113.0, CRDs are likely deployed via Helm templates. To migrate to the recommended ``crds/`` directory deployment:
 
-#. Delete the existing chart running
+1. Delete the existing chart running
 
   .. code-block:: bash
 
     helm delete <release-name>
 
-#. Verify if the following CRDs are present and delete them if necessary:
+2. Verify if the following CRDs are present and delete them if necessary:
 
   .. code-block:: bash
 
@@ -90,7 +90,7 @@ If you're using versions 0.110.0 to 1.113.0, CRDs are likely deployed via Helm t
     kubectl delete crd opampbridges.opentelemetry.io
     kubectl delete crd instrumentations.opentelemetry.io
 
-#. Reinstall the chart with the updated configuration:
+3. Reinstall the chart with the updated configuration:
 
   .. code-block:: bash
 
