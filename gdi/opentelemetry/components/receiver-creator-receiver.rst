@@ -7,9 +7,9 @@ Receiver creator receiver
 .. meta::
       :description: Use the receiver creator to create receivers at runtime in the OpenTelemetry Collector based on rules. Read on to learn how to configure the component.
 
-The receiver creator receiver allows the Splunk Distribution of the OpenTelemetry Collector to create new receivers at runtime based on configured rules and observer extensions. The supported pipeline types are ``metrics``, ``traces``, and ``logs``. See :ref:`otel-data-processing` for more information.
+Use the Receiver creator receiver with the Splunk Distribution of the OpenTelemetry Collector to create new receivers at runtime based on configured rules and observer extensions. The supported pipeline types are ``metrics``, ``traces``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-You can use any of the following observer extensions as listeners for the receiver creator:
+You can use any of the following observer extensions as listeners for the Receiver creator:
 
 - ``docker_observer``: Detects and reports running container endpoints through the Docker API.
 - ``ecs_task_observer``: Detects and reports container endpoints for running ECS tasks.
@@ -29,16 +29,15 @@ Follow these steps to configure and activate the component:
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the receiver creator receiver as described in the next section.
+2. Configure the Receiver creator receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 ----------------------
 
-To activate the receiver creator receiver, add the desired extensions to the ``extensions`` section of your configuration file, followed by ``receiver_creator`` instances in the ``receivers`` section. For example:
+To activate the Receiver creator receiver add the desired extensions to the ``extensions`` section of your configuration file, followed by ``receiver_creator`` instances in the ``receivers`` section. For example:
 
 .. code-block:: yaml
-
 
    extensions:
       # Configures the Kubernetes observer to watch for pod start and stop events.
@@ -76,16 +75,10 @@ To activate the receiver creator receiver, add the desired extensions to the ``e
 
 You can nest and configure any supported receiver inside the ``receivers`` section of a ``receiver_creator`` configuration. Which receiver you can nest depends on the type of infrastructure the receiver creator is watching through the extensions defined in ``watch_observers``.
 
-Rules expressions
+Example: Docker observer 
 ------------------------------------
 
-New receivers are created dynamically based on rules. Each rule must start with ``type == ("pod"|"port"|"hostport"|"container"|"k8s.node") &&`` such that the rule matches only one endpoint type. For a list of variable available to each endpoint type, see :new-page:`Rules expressions <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/receivercreator/README.md#rule-expressions>` on GitHub.
-
-
-Docker observer example
-------------------------------------
-
-The following example shows how to configure the receiver creator using the Docker observer:
+The following example shows how to configure the Receiver creator receiver using the Docker observer:
 
 .. code-block:: yaml
 
@@ -113,10 +106,10 @@ The following example shows how to configure the receiver creator using the Dock
 
 .. note:: See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/observer/dockerobserver/README.md` for a complete list of settings.
 
-Kubernetes observer example
+Example: Kubernetes observer 
 ------------------------------------
 
-The following example shows how to configure the receiver creator using the Kubernetes observer:
+The following example shows how to configure the receiver creator receiver using the Kubernetes observer:
 
 .. code-block:: yaml
 
@@ -149,10 +142,18 @@ The following example shows how to configure the receiver creator using the Kube
 
 .. note:: See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/observer/k8sobserver/README.md` for a complete list of settings.
 
+Rules to create new receivers
+============================================
+
+You can use this receiver to dynamically create new receivers based on rules. Each rule must start with ``type == ("pod"|"port"|"hostport"|"container"|"k8s.node") &&`` such that the rule matches only one endpoint type. 
+
+For a list of variables available to each endpoint type, see :new-page:`Rules expressions <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/receivercreator/README.md#rule-expressions>` on GitHub.
+
+
 Settings
 ======================
 
-The following table shows the configuration options for the receiver creator receiver:
+The following table shows the configuration options for the Receiver creator receiver:
 
 .. raw:: html
 
@@ -160,8 +161,6 @@ The following table shows the configuration options for the receiver creator rec
 
 Troubleshooting
 ======================
-
-
 
 .. raw:: html
 
