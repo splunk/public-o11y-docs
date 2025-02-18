@@ -6,27 +6,16 @@ Upgrade the Collector for Kubernetes and other updates
 *********************************************************************************
 
 .. meta::
-  :description: Upgrade the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
-
-
-
-.. raw:: html
-
-   <div class="include-start" id="collector-upgrade.rst"></div>
-
-.. include:: /_includes/collector-upgrade.rst
-
-.. raw:: html
-
-   <div class="include-stop" id="collector-upgrade.rst"></div>
-
-
-
+  :description: Upgrade the Splunk Distribution of the OpenTelemetry Collector for Kubernetes.
 
 .. _otel-upgrade-k8s:
 
 Upgrade the Collector for Kubernetes
 =======================================
+
+The installer script uses one of the supported package managers to install the Collector. When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped. 
+
+.. :note:: For every configuration update use the default agent config as a reference.
 
 To upgrade the Collector for Kubernetes run the following commands:
 
@@ -43,7 +32,119 @@ To upgrade the Collector for Kubernetes run the following commands:
 
   helm upgrade splunk-otel-collector --values config.yaml splunk-otel-collector-chart/splunk-otel-collector --reuse-values
 
-Read more in the official Helm upgrade options documentation at :new-page:`https://helm.sh/docs/helm/helm_upgrade/#options <https://helm.sh/docs/helm/helm_upgrade/#options>`.
+Read more in the official :new-page:`Helm upgrade options <https://helm.sh/docs/helm/helm_upgrade/#options>` documentation.
+
+.. _otel-upgrade-k8s-guidelines:
+
+Upgrade guidelines
+=================================
+
+Apply the following changes to the Collector configuration files for specific version upgrades. For more details refer to :new-page:`Helm chart upgrade guidelines <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/UPGRADING.md>` in GitHub. 
+
+From 0.113.0 to 0.116.0
+---------------------------------------
+
+Custom resource definition (CRD) configuration has been modified. 
+
+* Before v0.110.0 CRDs were deployed via a ``crds/`` directory (upstream default).
+* From v0.110.0 to v1.113.0 CRDs were deployed using Helm templates (upstream default), which had reported issues.
+* From v0.116.0 and higher, you must explicitly configure your preferred CRD deployment method or deploy the CRDs manually to avoid potential issues. You can deploy CRDs via a ``crds/`` directory again by enabling a newly added value.
+
+New users
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you're a new user deploy CRDs via the ``crds/`` directory. For a fresh installation use the following Helm values:
+
+.. code-block:: yaml
+
+  operatorcrds:
+    install: true
+  operator:
+    enabled: true
+
+To install the chart run:
+
+.. code-block:: bash
+
+  helm install <release-name> splunk-otel-collector-chart/splunk-otel-collector --set operatorcrds.install=true,operator. enabled=true <extra_args>
+
+Current users 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You might need to migrate if using ``operator.enabled=true``.
+
+If you're using versions 0.110.0 to 1.113.0, CRDs are likely deployed via Helm templates. To migrate to the recommended ``crds/`` directory deployment:
+
+1. Delete the existing chart running
+
+  .. code-block:: bash
+
+    helm delete <release-name>
+
+2. Verify if the following CRDs are present and delete them if necessary:
+
+  .. code-block:: bash
+
+    kubectl get crds | grep opentelemetry
+    kubectl delete crd opentelemetrycollectors.opentelemetry.io
+    kubectl delete crd opampbridges.opentelemetry.io
+    kubectl delete crd instrumentations.opentelemetry.io
+
+3. Reinstall the chart with the updated configuration:
+
+  .. code-block:: bash
+
+    helm install <release-name> splunk-otel-collector --set operatorcrds.install=true,operator.enabled=true <extra_args>
+
+Current users maintaining legacy templates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you're using chart versions 0.110.0 to 1.113.0 and prefer to continue deploying CRDs via Helm templates (not recommended), use the following values:
+
+.. code-block:: yaml
+
+  operator:
+    enabled: true
+  operator:
+    crds:
+      create: true
+
+.. caution:: This method might cause race conditions during installation or upgrades.
+
+From 0.105.5 to 0.108.0
+---------------------------------------
+
+.. note:: If you have no customizations under ``.Values.operator.instrumentation.spec.*`` no migration is required.
+
+The Helm chart configuration for operator auto-instrumentation has been simplified, and the values previously under ``.Values.operator.instrumentation.spec.*`` have been moved to ``.Values.instrumentation.*``.
+
+The updated path looks like this:
+
+.. code-block:: yaml
+
+  instrumentation:
+    endpoint: XXX
+    ...
+
+The deprecated path was:
+
+.. code-block:: yaml
+
+  operator:
+    instrumentation:
+      spec:
+        endpoint: XXX
+        ...
+
+.. raw:: html
+
+   <div class="include-start" id="collector-upgrade.rst"></div>
+
+.. include:: /_includes/collector-upgrade.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="collector-upgrade.rst"></div>
 
 .. _otel-upgrade-k8s-access-token:
 
