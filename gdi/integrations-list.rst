@@ -145,6 +145,7 @@ You can also send data to Splunk Observability Cloud with OpenTelemetry with the
 
 * :ref:`prometheus-generic`
 * :ref:`telegraf-generic`
+* :ref:`other-ingestion-collectd`
 
 .. raw:: html
 
