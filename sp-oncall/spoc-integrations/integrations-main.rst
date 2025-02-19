@@ -109,7 +109,6 @@ Splunk On-Call integrations
    solarwinds-integration
    splunk-integration-guide
    splunk-synthetic-monitoring-integration-guide
-   splunking-victorops-data
    statuscast-integration-guide
    statushub-integration-guide
    statuspage-integration
