@@ -55,11 +55,11 @@ See the following table for a list of changes:
     * - Version 1.x name
       - Version 2.0 name
       - Description
-    * - `splunk-py-trace`, `splk-py-trace`
-      - `opentelemetry-instrument`
+    * - ``splunk-py-trace``, ``splk-py-trace``
+      - ``opentelemetry-instrument``
       - Activates the Splunk OpenTelemetry Python agent and sends traces and metrics to Splunk Observability Cloud. 
-    * - `splunk-py-trace-bootstrap`, `splk-py-trace-bootstrap`
-      - `opentelemetry-bootstrap`
+    * - ``splunk-py-trace-bootstrap``, ``splk-py-trace-bootstrap``
+      - ``opentelemetry-bootstrap``
       - Installs instrumentation libraries and dependencies for Splunk OpenTelemetry Python.
 
 .. _python-2.x-new-functions:
@@ -77,8 +77,8 @@ See the following table for new function names in Python 2.0:
     * - Version 1.x name
       - Version 2.0 name
       - Description
-    * - `start_tracing()`, `start_metrics()`
-      - `init_splunk_otel()`
+    * - ``start_tracing()``, ``start_metrics()``
+      - ``init_splunk_otel()``
       - Configures tracing, metrics, and logs for Splunk OpenTelemetry Python.
 
 .. _python-2.x-troubleshooting:
