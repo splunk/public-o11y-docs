@@ -7,18 +7,19 @@ Export and share charts in Splunk Observability Cloud
 .. meta::
     :description: Share and export charts in Splunk Observability Cloud
 
-Infrastructure Monitoring provides a number of ways to `share a chart <sharing-a-chart_>`_ with someone else. The technique to use depends on several factors, such as the version you want to share (last saved version or version you are viewing that has unsaved changes) and whether you want to share the original or a copy.
+Splunk Observability Cloud provides a number of ways to `share a chart <sharing-a-chart_>`_ with someone else. The technique to use depends on several factors, such as the version you want to share (last saved version or version you are viewing that has unsaved changes) and whether you want to share the original or a copy.
 
 .. _exporting-chart-contents:
 
 Export chart contents
 ==========================
 
-For line charts, area charts, and column charts, you can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them.
+For line charts, area charts, column charts, and SLI charts, you can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them.
 
-To export a chart, first select :guilabel:`Data table` tab, next select :guilabel:`Export as CSV` download icon in the table headers row on the last column (the right side corner).
+* To export a chart from the chart view, open the :guilabel:`Data table` tab, then select :guilabel:`Export as CSV` download icon in the table headers row on the last column.
+* To export a chart from the dashboard view, select the chart action menu (|more|) and select :guilabel:`Export chart as CSV`. 
 
-.. note:: List charts and table charts can't be exported because they don't have a data table.
+.. note:: SLI charts can only be exported from the dashboard view.
 
 .. _sharing-a-chart:
 
@@ -99,7 +100,7 @@ You'll see options for sharing, discussed below.
 
 .. _share-copy-directly-from-infra-monitoring:
 
-Share a copy directly from Infrastructure Monitoring
+Share a copy directly from Splunk Observability Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can send a copy of the chart to an email address or to any available third-party services (See :ref:`admin-notifs-index`.).
