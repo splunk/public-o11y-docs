@@ -42,43 +42,42 @@ The techniques available for sharing a chart depend on where you are viewing the
      - Use the Share icon at top right or select :guilabel:`Share` from the chart actions menu (|more|)
      - Version you are viewing, including any unsaved changes
      - URL that links to a copy of the chart, which you can send to others (see :ref:`share-feature-to-share`) or :ref:`pasting-chart-url-into-slack`
-     - In most cases, can be viewed only by other users
+     - In most cases, only registered users can view
 
    * -
      - Copy the URL for the chart from your browser's address bar :strong:`(see important note below table)`
      - Most recently saved version
      - URL that links to the actual chart, which you can send to others or :ref:`pasting-chart-url-into-slack`
-     - Can be viewed only by other users
+     - Only registered users can view
 
    * -
      - Take a screenshot of the chart
      - Version you are viewing, including any unsaved changes
      - Provides a graphic representation of the chart
-     - Can be viewed by anyone
+     - Anyone can view
 
    * - In a dashboard
      - Select :guilabel:`Share` from the chart's Action menu (|more|)
      - Most recently saved version
      - URL that links to a copy of the chart, which you can send to others (see :ref:`share-feature-to-share`) or :ref:`pasting-chart-url-into-slack`
-     - In most cases, can be viewed only by other users
+     - In most cases, only registered users can view
 
    * -
      - Right-click on the chart name and copy the link address :strong:`(see important note below table)`
      - Most recently saved version
      - URL that links to the actual chart, which you can send to others or :ref:`pasting-chart-url-into-slack`
-     - Can be viewed only by other users
+     - Only registered users can view
 
    * -
      - Select :guilabel:`Download chart as image` from the chart actions menu (|more|)
      - Most recently saved version
      - Provides a graphic representation of the chart
-     - Can be viewed by anyone
-
+     - Anyone can view
    * -
      - Take a screenshot of the chart
      - Most recently saved version
      - Provides a graphic representation of the chart
-     - Can be viewed by anyone
+     - Anyone can view
 
 .. caution:: 
 
@@ -87,10 +86,10 @@ The techniques available for sharing a chart depend on where you are viewing the
 
 .. _share-feature-to-share:
 
-Use the Share feature to share a chart
+Use the share feature to share a chart
 ----------------------------------------------
 
-You can share a copy of a chart. Copies include unsaved changes at the time you share, and auto-expire unless the recipient saves them. Sharing a copy is perfect for when you make a change that you want to show your team members, but don't want to modify the original chart.
+You can share a copy of a chart. Copies include unsaved changes at the time you share, and autoexpire unless the recipient saves them. Sharing a copy is perfect for when you make a change that you want to show your team members, but don't want to modify the original chart.
 
 - To share a chart you are viewing in the Chart Builder, select the :guilabel:`Share` icon near the upper right corner of the chart or select :guilabel:`Share` from the chart actions menu (|more|).
 
