@@ -19,7 +19,7 @@ For line charts, area charts, column charts, and SLI charts, you can export the 
 * To export a chart from the chart view, open the :guilabel:`Data table` tab, then select :guilabel:`Export as CSV` download icon in the table headers row on the last column.
 * To export a chart from the dashboard view, select the chart action menu (|more|) and select :guilabel:`Export chart as CSV`. 
 
-.. note:: SLI charts can only be exported from the dashboard view.
+.. note:: You can only export SLI charts from the dashboard view.
 
 .. _sharing-a-chart:
 
