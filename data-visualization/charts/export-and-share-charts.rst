@@ -14,7 +14,7 @@ Splunk Observability Cloud provides a number of ways to `share a chart <sharing-
 Export chart contents
 ==========================
 
-For line charts, area charts, column charts, and SLI charts, you can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them.
+For line charts, area charts, column charts, and SLI charts, you can export the chart contents to a CSV file. The file contains the most recent 100 data points and the values of the dimensions associated with them.
 
 * To export a chart from the Chart Builder view, open the :guilabel:`Data table` tab, then select :guilabel:`Export as CSV` download icon in the table headers row on the last column.
 * To export a chart from the dashboard view, select the chart actions menu (|more|) and select :guilabel:`Export chart as CSV`. 
