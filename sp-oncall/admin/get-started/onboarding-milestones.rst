@@ -49,7 +49,7 @@ Team milestones include the following:
    - :ref:`schedule-examples`
 #. Implementation of Team Workflows, including:
    - :ref:`Create escalation policies <team-escalation-policy>`.
-   - :ref:`Tips and tricks for multiple escalation policies <mult-escalation-policies>`.
+   - :ref:`Tips and tricks for multiple escalation policies <multi-escalation-policies>`.
 
 
 Integration milestones

@@ -12,8 +12,8 @@ Escalation policies determine set who is actually on-call for a given team and a
 Some things to note:
 
 - Only Team and Global Admins are able to make changes to Escalation Policies
-- Only users specified in the first step of an Escalation Policy will receive Timeline and Push notifications that they are on-call and will log hours in the on-call report as being on-call. If you would like users in subsequent steps of an escalation policy to receive these notifications and log these hours, see `this guide. <https://help.victorops.com/knowledge-base/tips-tricks-multiple-escalation-policies/#tip-3-surface-secondary-on-call-schedules-in-your-on-call-calendar>`__
-- When an Escalation Policy is executed and a user is being notified, the user's `personal paging policy <https://help.victorops.com/knowledge-base/paging-policy/>`__ determines how they will be contacted.
+- Only users specified in the first step of an Escalation Policy will receive Timeline and Push notifications that they are on-call and will log hours in the on-call report as being on-call. If you would like users in subsequent steps of an escalation policy to receive these notifications and log these hours, see :ref:`multi-escalation-policies`.
+- When an Escalation Policy is executed and a user is being notified, the user's personal paging policy determines how they will be contacted. See :ref:`custom-paging-policy`.
 
 Steps to Creating an Escalation Policy
 ============================================
@@ -64,7 +64,7 @@ A number of escalation actions are available. The different options are as follo
      - This will notify every member of the team that the escalation policy is created for regardless of the time of day. All users on the team will be paged for an incident, but only one user is required to ack the incident. 
 
    * - Execute webhook
-     - This will execute the `Escalation Webhook <https://help.victorops.com/knowledge-base/escalation-webhooks/>`__ of your choosing
+     - This will execute the escalation webhook of your choosing. See :ref:`escalation-webhooks`.
 
    * - Send an email to email address
      - This will send an email to the email address you specify
@@ -95,4 +95,4 @@ Features and Benefits of using Multiple Escalation Policies
 
 - Reuse Policies Across Teams: Reuse globally available escalation policies across multiple teams.
 
-For more detailed examples on how to benefit from the use of multiple escalation policies, see :ref:`mult-escalation-policies`.
+For more detailed examples on how to benefit from the use of multiple escalation policies, see :ref:`multi-escalation-policies`.

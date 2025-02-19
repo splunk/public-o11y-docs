@@ -38,8 +38,7 @@ assuming a routing_key value of "database":
 Routing keys in Splunk On-Call can be set up and associated by clicking
 on *Settings >> Route Keys.*
 
-For more information on routing keys and best practices, see :new-page:`Routing keys in Splunk On-Call <https://help.victorops.com/knowledge-base/routing-keys/>`.
-
+For more information on routing keys and best practices, see :ref:`spoc-routing-keys`.
 
 Pingdom configuration
 ======================
@@ -49,8 +48,7 @@ Select :guilabel:`Integrations` from the menu bar, click the "Integrations" opti
 In the :guilabel:`Add Integration` window, use the drop-down menu for :guilabel:`Type` to
 select :guilabel:`Webhook`. Give the webhook a name, and paste in the webhook URL
 provided by Splunk On-Call. Be sure to replace the "$routing_key" section
-with your actual `routing
-key <https://help.victorops.com/knowledge-base/routing-keys/>`__.
+with your actual routing key.
 
 Click :guilabel:`Save Integration`.
 

@@ -25,8 +25,7 @@ This integration is compatible with the following versions of Splunk On-Call:
 The remainder of this topic walks you through the Jenkins integration with Splunk On-Call.
 
 .. note::
-   There are two Jenkins integrations, this one with Splunk On-Call, and the :new-page:`Jenkins Delivery Insights Integration <https://help.victorops.com/knowledge-base/victorops-jenkins2-integration/>`,
-   which sends notifications to the Timeline about build status.
+   There are two Jenkins integrations, this one with Splunk On-Call, and the Jenkins Delivery Insights Integration which sends notifications to the Timeline about build status. See :ref:`jenkins-delivery-spoc` to learn more.
 
 Splunk On-Call configuration
 ------------------------------

@@ -32,13 +32,11 @@ To enable the AlertSite integration in Splunk OnCall to be able to trigger and r
 
     db212e48-……8669\:strong:`+databaseteam`\ @alert.victorops.com
 
-   Team routing keys are configured at the bottom of the Settings > Integrations page. For details, see `Routing Keys <http://help.victorops.com/knowledge-base/routing-keys/>`. 
+   Team routing keys are configured at the bottom of the :guilabel:`Settings` then :guilabel:`Integrations`` page. For details, see :ref:`spoc-routing-keys`. 
 
 #. If you do not use routing, remove the *+$routing_key* part, including the plus sign, so that the email looks like this:
 
    ``db212e48-……8669@alert.victorops.com``
-
-
 
 Configuring AlertSite
 ==============================

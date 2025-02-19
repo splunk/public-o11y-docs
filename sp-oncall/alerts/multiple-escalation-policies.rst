@@ -1,6 +1,6 @@
 
 
-.. _mult-escalation-policies:
+.. _multi-escalation-policies:
 
 ************************************************************************
 Multiple escalation policies best practices

@@ -35,8 +35,7 @@ From your project select :guilabel:`Settings` then :guilabel:`Integrations` and 
 
 .. image:: /_images/spoc/Screen_Shot_2019-12-16_at_11_59_42_AM.png
 
-Paste in your API key, select the appropriate `Routing
-Key <https://help.victorops.com/knowledge-base/routing-keys/>`__. Next,
+Paste in your API key, select the appropriate Routing Key. Next,
 select :guilabel:`Save Changes` and then :guilabel:`Enable Plugin`.
 
 To send alerts using Splunk On-Call, you need to
