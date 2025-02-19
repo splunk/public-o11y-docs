@@ -7,7 +7,7 @@ Export and share charts in Splunk Observability Cloud
 .. meta::
     :description: Share and export charts in Splunk Observability Cloud
 
-Splunk Observability Cloud provides a number of ways to `share a chart <sharing-a-chart_>`_ with someone else. The technique to use depends on several factors, such as the version you want to share (last saved version or version you are viewing that has unsaved changes) and whether you want to share the original or a copy.
+Splunk Observability Cloud provides a number of ways to export and share a chart. The technique to use depends on several factors, such as the version you want to share, last saved version or version you are viewing that has unsaved changes, and whether you want to share the original or a copy.
 
 .. _exporting-chart-contents:
 
