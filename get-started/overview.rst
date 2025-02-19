@@ -105,7 +105,7 @@ For more information, see :ref:`logs-intro-logconnect`.
 
 Splunk On-Call incident response software aligns log management, monitoring, chat tools, and more, for a single-pane of glass into system health. Splunk On-Call automates delivery of alerts to get the right alert, to the right person, at the right time.
 
-For more information, see the :new-page:`Splunk On-Call documentation <https://help.victorops.com/>`.
+For more information, see the :ref:`about-spoc`.
 
 .. raw:: html
   

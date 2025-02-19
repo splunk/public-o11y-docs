@@ -26,9 +26,7 @@ Important Notes
 ---------------
 
 -  This article explains how to set up SSO using SCIM/ULM configuration.
-   If you need to set up SSO using **SAML configuration** instead,
-   please see `this
-   article <https://help.victorops.com/knowledge-base/single-sign-sso/>`__.
+   If you need to set up SSO using **SAML configuration** instead, see :ref:`single-sign-sso`
 -  Configuring SCIM Single Sign-On and initial activation of Okta
    provisioning with Splunk On-Call (formerly VictorOps) is currently
    not a self-service process and requires contacting the Support team.
@@ -152,10 +150,8 @@ your clipboard, and click **Done**.
 
  
 
-8. Once you configure the **General** and **Sign-On** options, please
-`open a support
-ticket <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__
-with subject “Okta SCIM setup request” and ask to configure Okta SCIM
+8. Once you configure the **General** and **Sign-On** options, please open a support
+ticket with subject “Okta SCIM setup request” and ask to configure Okta SCIM
 SSO for your Splunk On-Call organization. Provide the URL link you
 copied from the **Identity Provider metadata** from step 7 above and the
 list of users you will be assigning to the VictorOps (Beta) App in Okta.
@@ -176,12 +172,12 @@ login as Global Admin to Splunk On-Call.
 
 2. Navigate to **Integrations** >> **API**. If API Access is disabled,
 click on **Activate API Access**. More details on API access can be
-found `here <https://help.victorops.com/knowledge-base/api/>`__.
+found here :ref:`spoc-api`.
 
-3. Click on **Integrations >> 3rd Party Integrations**. Search for
+1. Click on **Integrations >> 3rd Party Integrations**. Search for
    “Okta” in the search bar and click on the resulting tile.
 
-4. In the result page, click on **Enable Integration** which will
+2. In the result page, click on **Enable Integration** which will
 generate a bearer token as shown below. If Okta is already enabled and
 you wish to generate a new token, click **Revoke Token** and reenable
 the integration.

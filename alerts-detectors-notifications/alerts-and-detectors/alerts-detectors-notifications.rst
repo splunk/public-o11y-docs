@@ -85,7 +85,7 @@ To learn more, see :ref:`condition-reference`.
       <h2>Alerts<a name="alerts" class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h2>
     </embed>
 
-When data in an input MTS matches a condition, the detector generates a trigger event and an alert that has a specific severity level. You can configure an alert to send a notification using Splunk On-Call. For more information, see the :new-page:`Splunk On-Call <https://help.victorops.com/>` documentation.
+When data in an input MTS matches a condition, the detector generates a trigger event and an alert that has a specific severity level. You can configure an alert to send a notification using Splunk On-Call. For more information, see the :ref:`about-spoc` documentation.
 
 Alert rules use settings you specify for built-in alert conditions to define thresholds that trigger alerts. When a detector determines that the conditions for a rule are met, it triggers an alert, creates an event, and sends notifications (if specified). Detectors can send notifications via email, as well as via other systems, such as Slack, or via a webhook.
 

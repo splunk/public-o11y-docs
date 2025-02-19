@@ -23,7 +23,6 @@ Manage alerts
     incident-fields-glossary
     maintenance-mode
     notification-alert-aggregation
-    team-dashboard
     team-escalation-policy
     multiple-escalation-policies
     war-room

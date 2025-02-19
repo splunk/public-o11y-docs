@@ -57,7 +57,7 @@ The Team page is your central location for configuring teams, schedules, rotatio
 :ref:`Create Escalation Policies <team-escalation-policy>` - Escalation policies determine which incidents are routed, to whom they are routed, and how they are escalated. Essentially, an escalation policy is how Splunk On-Call escalates a triggered event.
 
 -  Best practice for setting up your escalation policy is to establish a minimum of three escalation paths: on-duty user, previous or next user in a rotation, and manager or team lead.
--  :ref:`Read this post <mult-escalation-policies>` for more tips and tricks on how to manage multiple alert behaviors within a single team.
+-  :ref:`Read this post <multi-escalation-policies>` for more tips and tricks on how to manage multiple alert behaviors within a single team.
 
 - :ref:`Configure Routing Keys <spoc-routing-keys>` - Routing keys tie the alerts from your monitoring tools to the specific team (or escalation policy) in Splunk On-Call. This helps get the right person on the problem and reduce alert noise for those unrelated to a specific incident. These can be found by navigating to :menuselection:`Settings` then :menuselection:`Routing Keys`.
 

@@ -1,14 +1,11 @@
-
 .. _incident-frequency:
 
 ************************************************************************
-Splunk On-Call Incident Frequency Report
+Splunk On-Call incident frequency report
 ************************************************************************
 
 .. meta::
    :description: About the user roll in Splunk On-Call.
-
-
 
 The goal of our Incident Frequency Report is to give your team the data and context around incidents to be proactive in your incident management response.
 
@@ -20,16 +17,12 @@ This integration is compatible with the following versions of Splunk On-Call:
 
 - Enterprise
 
-All users have the ability to reach out to Splunk On-Call support at any time with questions.
 
-Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
+While the Splunk On-Call Timeline gives you the real-time information to give your team full context during a firefight, use the incident frequency report to analyze the flow of incidents after the fact. 
 
-While the Splunk On-Call Timeline gives you the real-time firehose to give your team full context during a firefight, our Incident Frequency Report allows your team to analyze the flow of incidents after the fact. Allowing you to go upstream to solve the incident causing the problem in your system.
+To access the Incident Frequency Report go to :guilabel:`Reports` then :guilabel:`Incident Frequency`.
 
-To access the Incident Frequency Report navigate to :guilabel:`Reports`, then :guilabel:`Incident Frequency`.
-
-
-Team Filtering
+Team filtering
 ========================
 
 Get a holistic overview of all incidents coming into Splunk On-Call by selecting the :guilabel:`All`, or take a deep dive into individual teams to uncover specific problem areas affecting your team.
@@ -48,9 +41,7 @@ Identifying the problem causing area is hard to pin down, so we give you the abi
     :width: 100%
     :alt: There are four options to segment your incidents: integrations, host, service, or route key.
 
-
-
-Date Range & Bucketing
+Date range and bucketing
 --------------------------
 
 See how incident trends impact your team on a daily, weekly, or monthly basis. It's up to you how granular your scope can be.
@@ -58,8 +49,6 @@ See how incident trends impact your team on a daily, weekly, or monthly basis. I
 .. image:: /_images/spoc/reports-ifr3.png
     :width: 100%
     :alt: Segment reports by date range.
-
-
 
 Table view and hover state
 -------------------------------
@@ -83,7 +72,7 @@ Things to note about the CSV:
 -  Timestamps are at millisecond granularity
 -  CSV is sorted by Incident ID in descending order
 
-CSV File Column Headings
+CSV file column headings
 ----------------------------------
 
 When downloading the Incident Frequency CSV file you can expect to find the following columns to include the unit of time/timezone that the incident is recorded in. Time related column headings will appear in these formats:
@@ -94,8 +83,8 @@ Incident Start Time (UTC)
 Acknowledge Time (UTC)
 Resolve Time (UTC)
 
-Incident Frequency Report: CSV field definitions
-=======================================================
+Incident frequency report: CSV field definitions
+-----------------------------------------------------
 
 The following is a quick glossary to define fields in the IFR CSV download. These definitions sometimes differ from the Glossary of Incident Fields.
 
@@ -153,8 +142,3 @@ The following is a quick glossary to define fields in the IFR CSV download. Thes
      - The time of the last alert.
    * - Current phase
      - The state of incident: Triggered, Ack'd, Resolved 
-
-
-
-
-https://help.victorops.com/knowledge-base/incident-fields-glossary/#glossary-of-fields
