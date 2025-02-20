@@ -169,7 +169,7 @@ monitor. For more settings see :new-page:`vSphere monitor <https://github.com/si
       - ``string``
       - * Limits the inventory traversed by the monitor. Leave blank or omit to traverse and get metrics for the entire vSphere inventory. Otherwise, this expression is evaluated per cluster. If ``true``, metrics are collected for the objects in the cluster, otherwise it's skipped. 
         * The expression can use the variables ``Datacenter`` and ``Cluster``. For example, to collect metrics for a specific datacenter and cluster, use ``filter: "Datacenter == 'MyDatacenter' && Cluster == 'MyCluster'"``. 
-        * See :new-page:`expr <https://github.com/antonmedv/expr> in GitHub for advanced syntax.
+        * See :new-page:`expr <https://github.com/antonmedv/expr>` in GitHub for advanced syntax.
    - 
 
       - ``insecureSkipVerify``
