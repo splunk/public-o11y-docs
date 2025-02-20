@@ -47,6 +47,8 @@ To add an SLI chart to a dashboard, follow these steps:
 #. Search for an existing dashboard or create a new dashboard.
 #. Select :strong:`OK` to add the SLI chart to the dashboard.
 
+After adding an SLI chart to a dashboard, you can also save the chart as a CSV file or an image. For more information, see :ref:`export-and-share-charts`.
+
 .. note:: You must have write permission for a dashboard to add an SLI chart to it.
 
 Troubleshooting with an SLI chart
