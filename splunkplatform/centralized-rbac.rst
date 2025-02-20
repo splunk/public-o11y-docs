@@ -108,7 +108,9 @@ To set up centralized user and role management, follow these steps:
 
     .. code-block:: bash
     
-              acs observability enable-centralized-rbac --o11y-access-token <access-token>
+      acs observability enable-centralized-rbac --o11y-access-token <access-token>
+
+.. note:: It takes around 30 minutes for a new role to be available on the :guilabel:`Roles` page. 
 
 How centralized user and role management works
 =================================================================================================
