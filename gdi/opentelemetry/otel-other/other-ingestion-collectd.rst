@@ -92,7 +92,7 @@ The http and metrics configuration files look like this:
       ValuesPercentage true
    </Plugin>
 
-1. Configure the OpenTelemetry Collector
+2. Configure the OpenTelemetry Collector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Set up your Collector instance to listen for traffic from the collectd daemon over HTTP with the :ref:`collectd-receiver`:
