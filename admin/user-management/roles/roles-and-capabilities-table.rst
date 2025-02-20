@@ -32,7 +32,7 @@ Metrics pipeline management
 
 
 
-Log Observer and Log Observer Connect
+Log Observer Connect
 ===============================================================================
 
 
