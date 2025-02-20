@@ -123,8 +123,8 @@ See the following example with extended config options:
 Configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The following table shows the configuration options for the ``vsphere``
-monitor:
+The following table shows the main configuration options for the ``vsphere``
+monitor. For more settings see :new-page:`vSphere monitor <https://github.com/signalfx/signalfx-agent/blob/main/docs/monitors/vsphere.md>` in GitHub.
 
 .. list-table::
    :widths: 18 18 18 18
@@ -155,12 +155,21 @@ monitor:
       - No
       - ``string``
       - vSphere username.
+
    - 
 
       - ``password``
       - No
       - ``string``
       - vSphere password.
+   - 
+
+      - ``filter``
+      - No
+      - ``string``
+      - * Limits the inventory traversed by the monitor. Leave blank or omit to traverse and get metrics for the entire vSphere inventory. Otherwise, this expression is evaluated per cluster. If ``true``, metrics are collected for the objects in the cluster, otherwise it's skipped. 
+        * The expression can use the variables ``Datacenter`` and ``Cluster``. For example, to collect metrics for a specific datacenter and cluster, use ``filter: "Datacenter == 'MyDatacenter' && Cluster == 'MyCluster'"``. 
+        * See :new-page:`expr <https://github.com/antonmedv/expr> in GitHub for advanced syntax.
    - 
 
       - ``insecureSkipVerify``
