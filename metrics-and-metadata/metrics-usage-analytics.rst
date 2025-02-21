@@ -46,9 +46,9 @@ To access usage analytics in Splunk Observability Cloud, follow these steps:
 
 .. caution:: The following message displays when you've requested to view too many metrics at once. If you see this message, reload the page after 2 minutes.
 
-.. image:: /_images/infrastructure/rate-limiting-mua.png
-  :width: 80%
-  :alt: The rate limiting message in Splunk Observability Cloud.
+  .. image:: /_images/infrastructure/rate-limiting-mua.png
+    :width: 80%
+    :alt: The rate limiting message in Splunk Observability Cloud.
 
 The usage analytics home page contains the following visualizations:
 
