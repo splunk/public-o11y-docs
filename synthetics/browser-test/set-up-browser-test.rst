@@ -460,7 +460,12 @@ Host overrides
 ---------------------------------------
 Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
 
-You can also indicate whether to retain the original HOST header by activating :strong:`Keep host headers`. If activated, the original request's headers remain intact (recommended). If deactivated, a change in the HOST header to the new host might occur, potentially leading to an internal direct (307). It is activated by default.
+You can also indicate whether to retain the original HOST header by activating :strong:`Keep host headers`. If activated, the original request's headers remain intact (recommended). If deactivated, a change in the HOST header to the new host might occur, potentially leading to an internal direct (307). :strong:`Keep host headers` is activated by default.
+
+
+.. note:: 
+   Host overrides apply only to the exact hostname specified. They don't automatically apply to subdomains. If you need to override subdomains, you must create a separate host override for each fully qualified domain name (FQDN). In other words, if you create a host override for ``google.com`` to ``mygoogle.com``, requests to ``google.com``  are redirected to ``mygoogle.com``. If you also want to redirect requests to ``mail.google.com`` to ``mail.mygoogle.com`` you must do this explicitly by creating a separate host override for ``mail.mygoogle.com``.
+
 
 .. _browser-wait-times:
 
