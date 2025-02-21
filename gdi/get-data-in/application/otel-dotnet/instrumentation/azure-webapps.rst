@@ -100,10 +100,9 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
 
             builder.Services.AddOpenTelemetry()
                 .ConfigureResource(cfg => cfg
-                    .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
+                    .AddAzureAppServiceDetector()
+                    .AddService(serviceName: serviceName, serviceVersion: "1.0.0"))
                     // See https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.Resources.Azure
-                    // for other types of Azure detectors
-                    .AddAzureAppServiceDetector())
                 .WithTracing(t => t
                     // Use Add[instrumentation-name]Instrumentation to instrument missing services
                     // Use Nuget to find different instrumentation libraries
