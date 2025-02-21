@@ -432,7 +432,7 @@ At this time, Chrome supports the following authentication protocols:
 * Kerberos (with limitations)
 * Digest
 
-Chrome supports Kerberos authentication only when it can infer the correct Kerberos SPN based on standard conventions. This support doesn't include :new-page:`Kerberos Credentials Delegation (Forwardable Tickets) <https://www.chromium.org/developers/design-documents/http-authentication/>`.
+Chrome supports Kerberos authentication only when it can infer the correct Kerberos service principal name (SPN) based on standard conventions. This support doesn't include :new-page:`Kerberos Credentials Delegation (Forwardable Tickets) <https://www.chromium.org/developers/design-documents/http-authentication/>`.
 
 
 .. _browser-headers:
