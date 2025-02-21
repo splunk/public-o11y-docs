@@ -50,6 +50,8 @@ Splunk Log Observer Connect
 
 - :ref:`logs-timeline`
 
+- :ref:`severity-key`
+
 - :ref:`logs-queries`
 
 - :ref:`logs-raw-logs-display`
