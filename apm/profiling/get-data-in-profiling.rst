@@ -139,7 +139,6 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
          -Dsplunk.profiler.enabled=true \
          -Dsplunk.profiler.memory.enabled=true \
          -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
-         -Dsplunk.metrics.endpoint=http(s)://collector:9943
          -jar <your_application>.jar
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-java`.

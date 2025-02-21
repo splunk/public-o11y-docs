@@ -98,7 +98,7 @@ To migrate your instrumentation to the version 2.5.0 or higher of the Java agent
    - Select :guilabel:`Data Migration`.
    - Inside the :guilabel:`Start migration` card, select :guilabel:`Start`.
 
-2. Turn on OTLP histograms in the Splunk Distribution of OpenTelemetry Collector.
+2. Turn on OTLP histograms in the Splunk Distribution of the OpenTelemetry Collector.
 
 
 
