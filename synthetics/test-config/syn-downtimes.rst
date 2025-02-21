@@ -47,7 +47,7 @@ When a downtime configuration is active, you can't edit or delete it. You can ex
 Preview the downtime schedule
 ----------------------------------------
 
-If you selected a value other than :guilabel:`None` in the :guilabel:`Recurrence` menu, the :guilabel:`Create a downtime configuration` form displays a preview of the first ten downtime configurations.
+If you selected a value other than :guilabel:`Does not repeat` in the :guilabel:`Recurrence` menu, the :guilabel:`Create a downtime configuration` form displays a preview of the first ten downtime configurations.
 
 
 Mute alerts during downtime
@@ -64,7 +64,7 @@ To see downtime configurations that apply to any test and time range:
 #. Select that test. 
 #. Zoom in on the time span of either of the test's charts as needed. 
    
-   The start and end time of any applicable downtime configurations are marked on the x-axis of the  chart as triangles.
+   The start and end time of any applicable downtime configurations are marked on the x-axis of the chart as triangles.
 
 
 
