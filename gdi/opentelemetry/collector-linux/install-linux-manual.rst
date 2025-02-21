@@ -109,7 +109,7 @@ To install the Collector for Linux using a RPM package, set up the package repos
          cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
          [splunk-otel-collector]
          name=Splunk OpenTelemetry Collector Repository
-         baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
+         baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/$basearch
          gpgcheck=1
          gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
          enabled=1
