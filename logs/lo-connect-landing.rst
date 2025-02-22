@@ -18,6 +18,7 @@ Splunk Log Observer Connect
     LOconnect-default-index
     LOconnect-scenario
     timeline
+    severity-key
     queries
     raw-logs-display
     keyword
@@ -48,6 +49,8 @@ Splunk Log Observer Connect
 - :ref:`logs-LOconnect-scenario`
 
 - :ref:`logs-timeline`
+
+- :ref:`severity-key`
 
 - :ref:`logs-queries`
 
