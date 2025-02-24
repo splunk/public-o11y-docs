@@ -85,12 +85,19 @@ Use data forwarding (gateway) mode when you want to do one of the following:
 
 .. _collector-gateway-mode-tokens:
 
-Consolidate tokens with a Collector in data forwarding (gateway) mode
+Token usage with a Collector in data forwarding (gateway) mode
+======================================================================
+
+In a set-up where Collectors in host monitoring (agent) mode send data to another Collector in data forwarding (gateway) mode, agent Collectors don't send the data directly to the Splunk Observability Cloud back-end. In this case, only the ingest token in the gateway Collector is used, and tokens in the Collectors that are sending data to a gateway are ignored, unless :ref:`they're using the SignalFx exporter <collector-signalfx-tokens>`. Therefore, you only need one valid token for the gateway Collector to see data in Splunk Observability Cloud, and the rest of Collectors could have invalid or expired tokens.  
+
+.. _collector-signalfx-tokens:
+
+Token usage with the SignalFx exporter
 -------------------------------------------------------------------------------
 
-When Collectors in host monitoring or agent mode send data to another Collector in data forwarding or gateway mode, they are not sending the data directly to Splunk Observability Cloud back-end. In this case, only the ingest token in the gateway Collector is used, and tokens in the Collectors that are sending data to a gateway are ignored.
+If any of your Collectors in agent mode is using the SignalFx exporter with the default configuration or if the exporter's setting ``access_token_passthrough`` is set to true, then data from that specific Collector will be sent to Splunk Observability Cloud using the Collector's access token instead of the Gateway Collector's token.
 
-Therefore, you only need one valid token for the gateway Collector to see data in Splunk Observability Cloud, and the rest of Collectors could have invalid or expired tokens.  
+Learn more at :ref:`signalfx-exporter`.
 
 .. _collector-current-mode:
 
@@ -152,7 +159,7 @@ You can find the different Helm charts in Github:
 Send data from an agent Collector to a gateway Collector
 ======================================================================
 
-You can manually configure a host monitoring (agent) Collector to send data to a Splunk Distribution of OpenTelemetry Collector gateway instance or cluster. This requires changing the :ref:`pipeline exporters <otel-data-processing>` in the agent to point to the gateway.
+You can manually configure a host monitoring (agent) Collector to send data to a Splunk Distribution of the OpenTelemetry Collector gateway instance or cluster. This requires changing the :ref:`pipeline exporters <otel-data-processing>` in the agent to point to the gateway.
 
 To configure the Collector to send data to the another Collector in data forwarding (gateway) mode, see these configurations:
 
@@ -303,7 +310,7 @@ Send metrics with the SignalFx exporter
 
 If you want to use the :ref:`signalfx-exporter` for metrics on both agent and gateway, deactivate the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
 
-.. note:: If you want to collect host metrics from the Gateway, use a different ``signalfx exporter`` with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
+.. note:: If you want to collect host metrics from the Gateway, use a different SignalFx exporter instance with the translation rules intact. For example, use the ``hostmetrics`` option in the metrics/internal pipeline.
 
 .. code-block:: yaml
 
