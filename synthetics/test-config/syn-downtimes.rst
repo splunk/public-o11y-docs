@@ -41,7 +41,7 @@ How to schedule a downtime configuration:
 #. Select :guilabel:`Create`. 
 
 
-When a downtime configuration is active, you can't edit or delete it. You can extend the duration, or end it immediately while it is active.
+When a recurring downtime configuration is active, you can't edit it, delete it, or extend its duration, but you can end it immediately while it's active. When a non-recurring downtime configuration is active, you can't edit or delete it, but you can extend its duration or end it immediately while it's active.
 
 
 Preview the downtime schedule
