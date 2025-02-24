@@ -88,7 +88,7 @@ Use data forwarding (gateway) mode when you want to do one of the following:
 Token usage with a Collector in data forwarding (gateway) mode
 ======================================================================
 
-In a set-up where Collectors in host monitoring (agent) mode send data to another Collector in data forwarding or gateway mode, they don't send the data directly to Splunk Observability Cloud back-end. In this case, only the ingest token in the gateway Collector is used, and tokens in the Collectors that are sending data to a gateway are ignored, unless :ref:`they're using the SignalFx exporter <collector-signalfx-tokens>`. Therefore, you only need one valid token for the gateway Collector to see data in Splunk Observability Cloud, and the rest of Collectors could have invalid or expired tokens.  
+In a set-up where Collectors in host monitoring (agent) mode send data to another Collector in data forwarding (gateway) mode, agent Collectors don't send the data directly to the Splunk Observability Cloud back-end. In this case, only the ingest token in the gateway Collector is used, and tokens in the Collectors that are sending data to a gateway are ignored, unless :ref:`they're using the SignalFx exporter <collector-signalfx-tokens>`. Therefore, you only need one valid token for the gateway Collector to see data in Splunk Observability Cloud, and the rest of Collectors could have invalid or expired tokens.  
 
 .. _collector-signalfx-tokens:
 
@@ -310,7 +310,7 @@ Send metrics with the SignalFx exporter
 
 If you want to use the :ref:`signalfx-exporter` for metrics on both agent and gateway, deactivate the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
 
-.. note:: If you want to collect host metrics from the Gateway, use a different SignalFx exporter instance with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
+.. note:: If you want to collect host metrics from the Gateway, use a different SignalFx exporter instance with the translation rules intact. For example, use the ``hostmetrics`` option in the metrics/internal pipeline.
 
 .. code-block:: yaml
 
