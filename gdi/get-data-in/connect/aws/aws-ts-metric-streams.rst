@@ -28,6 +28,8 @@ If you're experiencing issues streaming metrics, check the following:
 
   * ``SplunkAccessToken`` needs to be a valid organization access token with ``INGEST`` authorization scope. You can find access tokens in the :strong:`Access Tokens` page in the Splunk Observability Cloud settings.
 
+* Make sure the tag ``splunk-metric-streams-firehose = <your_AWS_region>`` (or similar) is present in your Kinesis Data Stream.
+
 * In the AWS Kinesis Streams console, validate that metrics are being delivered to the Kinesis Stream created by the CloudFormation template.
 
 * In the AWS S3 bucket used by Kinesis Firehose, check if there are any records that could not be delivered to Splunk Observability Cloud.
