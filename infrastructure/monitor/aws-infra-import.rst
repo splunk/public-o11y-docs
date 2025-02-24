@@ -31,7 +31,7 @@ By default, Splunk Observability Cloud brings in data from all :ref:`supported A
 AWS data in Splunk Observability Cloud
 --------------------------------------------------------------------------------
 
-During import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS: 
+During import, Splunk Observability Cloud gives the metrics special names so you can identify them as coming from AWS: 
 
 - AWS metadata becomes dimensions and custom properties. 
 - AWS tags are key-value pairs, so Infrastructure Monitoring converts them into custom properties.

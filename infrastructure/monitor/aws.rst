@@ -20,7 +20,7 @@ Splunk Observability Cloud's Infrastructure Monitoring imports data, logs, and m
 
 To monitor AWS resources:
 
-1. Set up the Infrastructure Monitoring AWS integration. To learn more see :ref:`get-started-aws`.
+1. Set up the Splunk Observability Cloud AWS integration. To learn more see :ref:`get-started-aws`.
 2. :ref:`aws-infra-import`.
 3. Next, learn how to :ref:`monitor AWS with Splunk Observability Cloud <aws-infra-monitor>`.
 4. Finally, check :ref:`aws-infra-costs`.
@@ -97,7 +97,7 @@ Infrastructure Monitoring also sends a set of metrics for AWS related to errors 
       <h2>Monitor AWS with the OpenTelemetry Collector<a name="aws-infra-otel" class="headerlink" href="#aws-infra-otel" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-You can also use the Splunk Distribution of OpenTelemetry Collector to import AWS metrics and metadata. The Collector offers much more customization than you have available with the AWS integration, so you might want to use it when you want to see metrics at a finer resolution or when you need more control over the metrics you import. 
+You can also use the Splunk Distribution of the OpenTelemetry Collector to import AWS metrics and metadata. The Collector offers much more customization than you have available with the AWS integration, so you might want to use it when you want to see metrics at a finer resolution or when you need more control over the metrics you import. 
 
 You can only use the Collector when you have direct control over the applications installed on an AWS instance, such as AWS Elastic Compute Cloud (EC2). Some other AWS services require you to use Infrastructure Monitoring AWS integration and AWS CloudWatch. As a result, you might need to use both the AWS integration and OTel.
 
