@@ -164,17 +164,21 @@ Make sure that you're using a valid Splunk access token when sending data direct
 Metrics exporter issues
 ===============================================================
 
-If you see warnings about metrics in your logs, it might mean that the Java agent can't send metrics to your OTel Collector, Smart Agent (now deprecated), or to the Splunk platform endpoints:
+.. note:: See also :ref:`java-metrics-migration-guide`.
+
+If you see warnings about metrics in your logs, it might mean that the Java agent can't send metrics to your OTel Collector instance or to the Splunk platform endpoints:
 
 To troubleshoot connectivity issues affecting application metrics, try the following steps:
 
-1. Make sure that ``splunk.metrics.endpoint`` points to the correct host.
+1. Make sure that you've removed the deprecated property ``splunk.metrics.endpoint`` from your configuration.
 
-2. Check that the OpenTelemetry Collector or Smart Agent instance is configured and running.
+2. Check that the OpenTelemetry Collector is configured and running.
 
-3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:4318/v2/datapoint``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
+  * If you're using the :ref:`otlp-receiver`, make sure it points to the correct host/endpoint, for example ``http://<host>:4318/v1/metrics``.
 
-4. Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
+  * If you're using the :ref:`signalfx-receiver`, make sure it points to ``http://<host>:4318/v2/datapoint``.
+
+3. Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
 
 .. _java-profiler-issues:
