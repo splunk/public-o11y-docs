@@ -426,7 +426,6 @@ There are two ways to create a global variable:
 * From the Splunk Synthetic Monitoring landing page:
 
   #. From the Splunk Synthetic Monitoring landing page, select the settings icon, and then select :guilabel:`Global variables`. 
-
   #. Select :guilabel:`Create variable`.
 
 * From an existing test's page:
@@ -437,53 +436,43 @@ There are two ways to create a global variable:
 
 In the :guilabel:`Add global variable` dialog box, enter the following:
 
-
 #. In the :guilabel:`Variable` type pull-down menu, select either :guilabel:`TOTP` or :guilabel:`TOTP`.
-
 #. In the :guilabel:`Variable name` field, enter the name of the variable. You will use this name to access your variable within a test.
-
 #. Save the secret key either by:
 
-  * Selecting the :guilabel:`QR code` tab and dragging the QR code image to it.
-  * Selecting the :guilabel:`Manual input` tab and pasting the ``<long-string>`` you retrieved from the QR code.
+   * Selecting the :guilabel:`QR code` tab and dragging the QR code image to it.
+   * Selecting the :guilabel:`Manual input` tab and pasting the ``<long-string>`` you retrieved from the QR code.
 
 #. (Optional) In the :guilabel:`Description` field, enter a description to explain the purpose of the variable for future reference. A description is particularly helpful when you conceal the variable and cannot reveal its value.
-
 #. (Optional) Expand :guilabel:`Advanced Settings` and specify optional settings:
 
-  * (Optional) Set :guilabel:`digits` to the number of digits in the generated TOTP. Valid values: 4-8. Default: 6.
-  * (Optional) Set :guilabel:`TOTP expiration` to the the duration of the validity of the TOTP, in seconds. Valid values: 10s-90s. Default: 30s.
+   * (Optional) Set :guilabel:`digits` to the number of digits in the generated TOTP. Valid values: 4-8. Default: 6.
+   * (Optional) Set :guilabel:`TOTP expiration` to the the duration of the validity of the TOTP, in seconds. Valid values: 10s-90s. Default: 30s.
 
 #. (Optional) To validate the secret key you entered, select :guilabel:`Generate TOTP`.
-
 #. Select :guilabel:`Add`.
 
 
 .. note::
-   Splunk Synthetics always automatically conceals the value of variables of type TOTP.
+   Splunk Synthetic Monitoring automatically conceals the value of variables of type TOTP.
 
 
 Set up a browser test that uses a TOTP
 ------------------------------------------------------------------
 
 #. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
-
 #. Select :guilabel:`Edit steps or synthetic transactions`.
-
 #. Add a step of type :guilabel:`Fill in field`, and in :guilabel:`Value`, do one of the following:
 
-  * If you saved the secret key as a variable of type TOTP, set :guilabel:`Type` to :guilabel:`TOTP` and enter the name of the TOTP variable you created as ``{{totp.<variable-name>}}``.
-
-  * If you saved the secret key as a global variable, set :guilabel:`Type` to :guilabel:`ENV` and enter the name of the global variable as as ``{{env.<variable-name>}}``.
-
-  * If you didn't save the secret key as a variable, set :guilabel:`Type` to :guilabel:`TEXT` and paste the secret key. 
+   * If you saved the secret key as a variable of type TOTP, set :guilabel:`Type` to :guilabel:`TOTP` and enter the name of the TOTP variable you created as ``{{totp.<variable-name>}}``.
+   * If you saved the secret key as a global variable, set :guilabel:`Type` to :guilabel:`ENV` and enter the name of the global variable as as ``{{env.<variable-name>}}``.
+   * If you didn't save the secret key as a variable, set :guilabel:`Type` to :guilabel:`TEXT` and paste the secret key. 
 
 #. To verify that the login succeeded, add a step of type :guilabel:`Assert text present`, and set it up as follows:
 
-  #. In :guilabel:`Text`, enter a string that should be visible on the test target page only when login is successful.
+   #. In :guilabel:`Text`, enter a string that should be visible on the test target page only when login is successful.
+   #. (Optional) Set :guilabel:`Wait for up to` to a large enough value, in milliseconds, to ensure that the page loads.
 
-  #. (Optional) Set :guilabel:`Wait for up to` to a large enough value, in milliseconds, to ensure that the page loads.
-  
 #. Select :guilabel:`Submit`.
 
 
