@@ -357,7 +357,11 @@ Database Query Performance settings
 
 Starting from version 1.4.0, the .NET OTel instrumentation collects database queries for Database Query Performance. See :ref:`db-query-performance`.
 
-SQL statements might contain sensitive information. To configure this behavior, see ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT`` and ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT`` in :ref:`dotnet-otel-instrumentation-settings`.
+SQL statements might contain sensitive information. To configure this behavior, use the following settings as described in :ref:`dotnet-otel-requirements`.
+
+* ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT``
+* ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT``
+* ``OTEL_DOTNET_AUTO_ORACLEMDA_SET_DBSTATEMENT_FOR_TEXT``
 
 .. _docker-install-otel-dotnet:
 
