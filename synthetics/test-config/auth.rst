@@ -54,7 +54,7 @@ If your test target provides an HTML form for entering username and password, co
 
 ..  image:: /_images/synthetics/auth-basic-html-steps.png
     :width: 90%
-    :alt: Screenshot showing how to set up a synthetic test with basic authentication through an API request header. 
+    :alt: Screenshot showing how to set up a synthetic test with basic authentication through an HTML form. 
 
 #. Create global variables for this test target's username and password. Best practice is to conceal the global variable you create for the password. For more information, see :ref:`global-variables`.
 
@@ -434,6 +434,10 @@ There are two ways to create a global variable:
   #. Expand the :guilabel:`Variables` panel on the right, scroll to :guilabel:`Global variables` and select :guilabel:`Add`.
 
 
+..  image:: /_images/synthetics/auth-multifactor-totp-add-variable.png
+    :width: 90%
+    :alt: Screenshot showing how to create a global variable. 
+
 In the :guilabel:`Add global variable` dialog box, enter the following:
 
 #. In the :guilabel:`Variable` type pull-down menu, select either :guilabel:`TOTP` or :guilabel:`TOTP`.
@@ -468,6 +472,11 @@ Set up a browser test that uses a TOTP
    * If you saved the secret key as a global variable, set :guilabel:`Type` to :guilabel:`ENV` and enter the name of the global variable as as ``{{env.<variable-name>}}``.
    * If you didn't save the secret key as a variable, set :guilabel:`Type` to :guilabel:`TEXT` and paste the secret key. 
 
+     .. image:: /_images/synthetics/auth-multifactor-totp-fillinfield.png
+          :width: 70%
+          :alt: Screenshot showing the "Fill in field" step. 
+   
+
 #. To verify that the login succeeded, add a step of type :guilabel:`Assert text present`, and set it up as follows:
 
    #. In :guilabel:`Text`, enter a string that should be visible on the test target page only when login is successful.
@@ -478,4 +487,7 @@ Set up a browser test that uses a TOTP
 
 To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
 
+     .. image:: /_images/synthetics/auth-multifactor-totp-trynow.png
+          :width: 70%
+          :alt: Screenshot showing the "Try now" step. 
 
