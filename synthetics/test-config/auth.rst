@@ -398,7 +398,7 @@ Identity providers often require various additional factors for login, such as v
 
 .. _auth-multifactor-totp:
 
-Multifactor authentication through time-based OTP  
+Multifactor authentication through TOTP  
 ==================================================================
 
 .. note::
