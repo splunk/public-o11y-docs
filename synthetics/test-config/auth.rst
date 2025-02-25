@@ -405,7 +405,7 @@ Multifactor authentication through TOTP
     This authentication method applies to browser tests only.
 
 
-If your test target requires your test to submit a time-based one-time passcode (TOTP) for multifactor authentication, configure your browser test as follows.
+If your test needs to send a time-based one-time passcode (TOTP) to its test target, configure your test as follows.
 
 
 Get the secret key for generating a TOTP
