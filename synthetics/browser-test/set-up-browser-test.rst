@@ -458,9 +458,14 @@ To set a cookie, a key and value must be provided. A domain and path may optiona
 
 Host overrides
 ---------------------------------------
-Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
+Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or from a specific CDN edge node.
 
-You can also indicate whether to retain the original HOST header by activating :strong:`Keep host headers`. If activated, the original request's headers remain intact (recommended). If deactivated, a change in the HOST header to the new host might occur, potentially leading to an internal direct (307). It is activated by default.
+You can also indicate whether to retain the original ``HOST`` header by activating :guilabel:`Keep host headers`. If activated, the original request's headers remain intact (recommended). If deactivated, a change in the ``HOST`` header to the new host might occur, potentially leading to an internal direct (307). :guilabel:`Keep host headers` is activated by default.
+
+
+.. note:: 
+   Host overrides apply only to the exact hostname you specify. They don't automatically apply to subdomains. In other words, host overrides don't support wildcards. If you need to override any subdomains, you must create a separate host override for each subdomain's fully qualified domain name (FQDN). For example, if you create a host override for ``domainA.com`` to ``domainB.com``, requests to ``domainA.com``  are redirected to ``domainB.com``, but requests to ``mail.domainA.com`` are not automatically redirected to ``mail.domainB.com``.  You must explicitly create a separate host override for ``mail.domainA.com``.
+
 
 .. _browser-wait-times:
 
@@ -473,10 +478,10 @@ Optimize your test coverage by adding custom wait times to capture longer page l
 
 Follow these steps to configure custom wait times for your Browser tests:
 
-#. In Splunk Synthetic Monitoring, select :strong:`Edit` on the Browser test to open the configuration panel.
-#. Select :strong:`New step > Wait`, from the step type drop down.
+#. In Splunk Synthetic Monitoring, select :guilabel:`Edit` on the Browser test to open the configuration panel.
+#. Select :guilabel:`New step > Wait`, from the step type drop down.
 #. Add a name and the wait time in ms.
-#. When you finish instrumenting your test, save the workflow: :strong:`Return to test > Save`.
+#. When you finish instrumenting your test, save the workflow: :guilabel:`Return to test > Save`.
 
 The following image shows how to configure a test to go to a URL, wait for 10 seconds, then log in.
 
