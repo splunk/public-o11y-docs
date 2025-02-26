@@ -53,7 +53,7 @@ To minimize the number of requests for certain sparse metrics and reduce CloudWa
 Example of sparse metrics lag
 ----------------------------------------------------------------------
 
-Let's consider the last two data points mentioned above:
+Let's consider the following two data points:
 
 .. list-table::
   :header-rows: 1
