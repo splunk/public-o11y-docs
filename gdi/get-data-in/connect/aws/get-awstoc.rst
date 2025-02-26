@@ -23,6 +23,7 @@ Connect AWS to Splunk Observability Cloud
   Send AWS logs to Splunk Platform <aws-logs>
   Next steps <aws-post-install>
   Troubleshoot your AWS integration <aws-troubleshooting>
+  Troubleshoot AWS CloudWatch polling <aws-ts-polling>
   Troubleshoot Splunk-managed Metric Streams <aws-ts-metric-streams>
   Troubleshoot AWS-managed Metric Streams <aws-ts-ms-aws>
   aws-recommended-stats.rst
