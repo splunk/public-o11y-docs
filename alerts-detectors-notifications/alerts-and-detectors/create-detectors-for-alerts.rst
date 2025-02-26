@@ -367,10 +367,12 @@ Delete alert rules
 
 .. _detector-tags:
 
-Add custom tags to detector
+Add custom tags to a detector
 =============================================================================
 
-You can add tags to detectors from the list view. To see a list of detectors and add tags to detectors, do the following:
+Use tags to indicate the state of a detector or its data source. For example, you can label a detector with a ``prod`` tag to indicate that it monitors a production environment.
+
+You can add custom tags to detectors from the list view. To see a list of detectors and add tags to detectors, do the following:
 
 #. To open the list view, open the :guilabel:`Detectors & SLOs` page, then select the :guilabel:`Detectors` tab.
 #. Select the actions menu (|more|) for the detector you want to assign tags to.
@@ -378,8 +380,11 @@ You can add tags to detectors from the list view. To see a list of detectors and
 #. Enter tags for the detector. You can add no more than 20 tags to a detector.
 #. Select :guilabel:`Save`.
 
-.. note:: You can also edit detector tags using the API. For more information, see the :new-page:`Splunk Observability Cloud detectors API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
+Link teams to a detector
+=============================================================================
+
+Link teams to a detector to indicate which team is responsible for the maintenance and monitoring of the detector. To do this, select the detector actions menu (|more|), either from the list view of the individual detector view, then select :guilabel:`Link to teams`.
 
 .. _set-detector-permissions:
 
