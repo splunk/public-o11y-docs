@@ -11,59 +11,77 @@ See the following topics when experiencing AWS Cloudwatch polling related issues
 
 .. note:: See also :ref:`aws-troubleshooting`.
 
-Troubleshoot metric delay 
+Calculate metric polling delay 
 ==========================================================================================================
 
+Splunk Observability Cloud's CloudWatch data point sync consists of two phases:
 
+1. ``list-metrics/`` time series sync
 
+  * It syncs all time series active within the last 3 hours and stores time series info in Splunk Observability Cloud's internal storage. 
 
+  * This sync runs every 15 minutes for each AWS integration. This interval is not configurable.
 
+2. ``get-metric-data/`` data points sync
 
+  * It syncs all data points for all time series saved in Splunk Observability Cloud's internal storage.
 
+  * This sync runs every 1-to-10 minutes depending on the AWS integration settings. You can configure this interval.
 
+  .. caution:: If Splunk Observability Cloud doesn't retrieve any data points from a specific time series for 5 hours, the TS is considered inactive and is removed from Splunk Observability Cloud's internal storage.
 
+Example of delay calculation
+----------------------------------------------------------------------
 
-Splunk Observability Cloud's CloudWatch data points sync consists of two phases:
-list-metrics/ time series (TS) sync
-Sync all time series active within the last 3h and store TS info in our internal storage. 
-This sync runs every 15m for each AWS integration (this 15m interval is not configurable by a customer).
-get-metric-data/ data points sync
-Sync data points for all time series we have in our internal storage. 
-Runs every 1-10m depending on the AWS integration settings (customer configurable).
+For an AWS integration with a 3-minute poll rate expect the following delays:
 
-When we do not get any data points within the last 5h for a given TS we assume such TS is no longer active and we remove it from our internal storage.
-For example for AWS integration with 3m poll rate we can expect the following delays:
-So in case of sparse (or new) metrics::
-15m (TS sync) + 3m (data points sync) + 2-3m (typical CloudWatch delay) == 20-21m (total)
-In case of data points for already known time series:
-3m (data points sync) + 2-3m (typical CloudWatch delay) == 5-6m (total)
+* For sparse or new metrics: 15 minutes (TS sync) + 3 minutes (data point sync) + 2-3 minutes (average CloudWatch delay) -> :strong:`Total delay = 20-21 minutes`. 
 
-
-
+* For data points from known time series (no TS sync required): 3 minutes (data point sync) + 2-3 minutes (average CloudWatch delay) -> :strong:`Total delay = 5-6 minutes`. 
 
 Penalty for sparse metrics
 ==========================================================================================================
 
-Splunk Observability Cloud has one more mechanism that may impact sparse metrics lag.
-When the following two conditions are met…
-get-metric-data response does not contain any data points for a given metric
-and we tried to retrieve data points for such a metric using max lookback window (1h)
-…the metric is ignored for 30 minutes.
-This is to minimize a number of requests for such a metric and to reduce the CloudWatch API cost incurred to a customer.
-Let’s consider the last two data points mentioned above:
-data point            ingest 
-timestamp    lag      timestamp 
+To minimize the number of requests for certain sparse metrics and reduce CloudWatch API costs, Splunk Observability Cloud ignores a metric for 30 minutes if these two conditons are met:
 
-    04:39     5m      04:44
-    05:42    37m      06:19   
-At 04:44 Splunk Observability Cloud retrieves the 04:39 data point
-At 04:47 (3m poll rate) Splunk Observability Cloud does not get any new data points for this metric
-At 04:50 still no new data points
-…
-At 05:46 the max lookback window is used
-lookback window is computed as max(last known data point timestamp, request time - 1h)
-as there are still no new data points for this metric (due to CW internal delay) it is going to be ignored for 30m
-At 06:16 the metric is still ignored
-At 06:19 the penalty is lifted and we retrieve the 05:42 data point
+* The ``get-metric-data`` response does not contain any data points for a given metric.
 
-.. note:: By design sync start times may drift slightly and that’s why some start times may not be aligned to 3m intervals.
+* Splunk Observability Cloud tried to retrieve data points for that specific metric using a lookback window of a maximum of 1 hour. 
+
+  * The lookback window is computed as the highest value between the last known data point timestamp, or the request time minus 1 hour.
+
+Example of sparse metrics lag
+----------------------------------------------------------------------
+
+Let's consider the last two data points mentioned above:
+
+.. list-table::
+  :header-rows: 1
+  :width: 100%
+  :widths: 40 20 40
+
+  * - :strong:`Data point timestamp`
+    - :strong:`Lag`
+    - :strong:`Ingest timestamp`
+
+  * - 04:39
+    - 5 minutes
+    - 04:44
+
+  * - 05:42
+    - 37 minutes
+    - 06:19  
+
+The following is happening:
+
+* At 04:44 Splunk Observability Cloud retrieves the 04:39 data point.
+
+* At 04:47, after a 3-minute poll rate, Splunk Observability Cloud does not get any new data points for this metric.
+
+* At 05:46 Splunk Observability Cloud uses the maximum lookback window. Since there are still no new data points for this metric due to CloudWatch's internal delay, the metrics is going to be ignored for 30 minutes.
+
+* By 06:16 the metric is still ignored.
+
+* At 06:19 the penalty is lifted and Splunk Observability Cloud retrieves the 05:42 data point.
+
+.. note:: By design sync start times might drift slightly and might not be aligned to 3-minute intervals.
