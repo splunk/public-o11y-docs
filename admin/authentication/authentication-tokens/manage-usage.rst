@@ -24,8 +24,8 @@ send data to Infrastructure Monitoring.
 
 When a host uses the token to send data, Infrastructure Monitoring compares the
 token limits to all hosts' cumulative resource usage that use the token. When cumulative
-resource usage exceeds the limit, Infrastructure Monitoring issues an alert and
-stops ingesting data sent by hosts using the token.
+resource usage exceeds the limit, Infrastructure Monitoring issues an alert but continues
+ingesting data for some time. If this continued ingestion causes a system overage, contact Support.
 
 Because the limits for one access token don't affect limits for other access tokens,
 you can set different limits for different types of hosts. For example, set high
