@@ -44,7 +44,7 @@ To access usage analytics in Splunk Observability Cloud, follow these steps:
 #. Under :guilabel:`Data Configuration`, select :guilabel:`Metrics Management`.
 #. Select the :guilabel:`Usage analytics` tab.
 
-.. caution:: The following message displays when you've requested to view too many metrics at once. If you see this message, reload the page after 2 minutes.
+.. caution:: The following message displays if you've sent too many queries in a short time period. If you see this message, reload the page after 2 minutes.
 
   .. image:: /_images/infrastructure/rate-limiting-mua.png
     :width: 80%
