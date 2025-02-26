@@ -286,7 +286,7 @@ Follow these steps to set up AlwaysOn Profiling with a collector in data forward
       service:
          pipelines:
             logs:
-               receivers: [fluentforward, otlp]
+               receivers: [otlp]
                processors:
                - memory_limiter
                - batch
