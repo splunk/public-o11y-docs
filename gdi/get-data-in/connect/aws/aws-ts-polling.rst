@@ -18,7 +18,7 @@ Splunk Observability Cloud's CloudWatch data point sync consists of two phases:
 
 1. ``list-metrics/`` time series sync
 
-  * It syncs all time series active within the last 3 hours and stores time series info in Splunk Observability Cloud's internal storage. 
+  * It syncs all time series (TS) active within the last 3 hours and stores time series info in Splunk Observability Cloud's internal storage. 
 
   * This sync runs every 15 minutes for each AWS integration. This interval is not configurable.
 
