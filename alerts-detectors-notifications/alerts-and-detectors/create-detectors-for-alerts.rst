@@ -378,7 +378,7 @@ You can add tags to detectors from the list view. To see a list of detectors and
 #. Enter tags for the detector. You can add no more than 20 tags to a detector.
 #. Select :guilabel:`Save`.
 
-.. note:: You can also edit detector tags using the API. For more information, see :new-page:`Splunk Observability Cloud detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+.. note:: You can also edit detector tags using the API. For more information, see the :new-page:`Splunk Observability Cloud detectors API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
 
 .. _set-detector-permissions:
