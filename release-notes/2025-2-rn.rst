@@ -6,30 +6,6 @@ February 2025
 
 Splunk Observability Cloud released the following new features and enhancements in February 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
 
-.. _2025-2-25-rn:
-
-February 25, 2025 release
-==============================
-
-.. list-table:: 
-  :header-rows: 1
-  :widths: 1 2
-  :width: 100%
-
-  * - New feature or enhancement
-    - With the recent GA of Related Content in Splunk Cloud, users now have a contextual experience for correlating  Splunk Observability Cloud workloads with their events in Splunk Search. Users, however, still have to manually determine insights from the views and hunt down true root cause. By integrating the O11y AI Assistant into Related Content, Splunk Search users can now get immediate insights across their entire Observability footprint for faster MTTI and MTTR. This RDMP item captures the progress of integrating the O11y AI Assistant into Related Content in Splunk Cloud. 
-  * - Related content integration with AI assistant
-    - Placeholder
-  * - APM profiling on GCP realms
-    - Placeholder
-  * - APM service-centric navigation and filtering
-    - Placeholder
-  * - Downtime configuration for Synthetics
-    - Placeholder
-  * - Multi-factor authentication for Synthetics
-    - Placeholder
-
-
 .. _2025-2-4-rn:
 
 February 4, 2025 release
