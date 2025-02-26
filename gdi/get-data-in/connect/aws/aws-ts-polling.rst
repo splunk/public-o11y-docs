@@ -42,7 +42,7 @@ For an AWS integration with a 3-minute poll rate expect the following delays:
 Penalty for sparse metrics
 ==========================================================================================================
 
-To minimize the number of requests for certain sparse metrics and reduce CloudWatch API costs, Splunk Observability Cloud ignores a metric for 30 minutes if these two conditons are met:
+To minimize the number of requests for certain sparse metrics and reduce CloudWatch API costs, Splunk Observability Cloud ignores a metric for 30 minutes if these two conditions are met:
 
 * The ``get-metric-data`` response does not contain any data points for a given metric.
 
