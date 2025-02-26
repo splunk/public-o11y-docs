@@ -16,13 +16,13 @@ Calculate metric polling delay
 
 Splunk Observability Cloud's CloudWatch data point sync consists of two phases:
 
-1. ``list-metrics/`` time series sync
+1. Time series sync using the ``list-metrics`` API
 
   * It syncs all time series (TS) active within the last 3 hours and stores time series info in Splunk Observability Cloud's internal storage. 
 
   * This sync runs every 15 minutes for each AWS integration. This interval is not configurable.
 
-2. ``get-metric-data/`` data points sync
+2. Data points sync using the ``get-metric-data`` API 
 
   * It syncs all data points for all time series saved in Splunk Observability Cloud's internal storage.
 
@@ -47,8 +47,6 @@ To minimize the number of requests for certain sparse metrics and reduce CloudWa
 * The ``get-metric-data`` response does not contain any data points for a given metric.
 
 * Splunk Observability Cloud tried to retrieve data points for that specific metric using a lookback window of a maximum of 1 hour. 
-
-  * The lookback window is computed as the highest value between the last known data point timestamp, or the request time minus 1 hour.
 
 Example of sparse metrics lag
 ----------------------------------------------------------------------
