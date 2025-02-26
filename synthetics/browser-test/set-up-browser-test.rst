@@ -423,14 +423,16 @@ Authentication
 
 Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. To use Authentication, a username and password need to be provided. The username can be entered as plain text or be defined by a global variable, but the password must be defined using a global variable. It is recommended to use a concealed global variable for your password to create an additional layer of security for your credentials. For more, see :ref:`concealed-gv`.
 
-When executing the browser test, the Chrome browser is configured with the credentials defined in the test configuration. Authentication is not integrated at the OS level, it is only configured in the browser. At this time, Chrome supports the following authentication protocols:
+When executing the browser test, the Chrome browser is configured with the credentials defined in the test configuration. Authentication is not integrated at the OS level, and no authentication processing happens in the runner itself. Credentials are passed directly to Chrome for handling. 
+
+At this time, Chrome supports the following authentication protocols:
 
 * Basic Authentication
 * NTLM
-* Kerberos
+* Kerberos (with limitations)
 * Digest
 
-More details on Chrome authentication are available :new-page:`here list <https://www.chromium.org/developers/design-documents/http-authentication/>`.
+Chrome supports Kerberos authentication only when it can infer the correct Kerberos service principal name (SPN) based on standard conventions. This support doesn't include :new-page:`Kerberos Credentials Delegation (Forwardable Tickets) <https://www.chromium.org/developers/design-documents/http-authentication/>`.
 
 
 .. _browser-headers:
@@ -458,9 +460,14 @@ To set a cookie, a key and value must be provided. A domain and path may optiona
 
 Host overrides
 ---------------------------------------
-Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
+Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or from a specific CDN edge node.
 
-You can also indicate whether to retain the original HOST header by activating :strong:`Keep host headers`. If activated, the original request's headers remain intact (recommended). If deactivated, a change in the HOST header to the new host might occur, potentially leading to an internal direct (307). It is activated by default.
+You can also indicate whether to retain the original ``HOST`` header by activating :guilabel:`Keep host headers`. If activated, the original request's headers remain intact (recommended). If deactivated, a change in the ``HOST`` header to the new host might occur, potentially leading to an internal direct (307). :guilabel:`Keep host headers` is activated by default.
+
+
+.. note:: 
+   Host overrides apply only to the exact hostname you specify. They don't automatically apply to subdomains. In other words, host overrides don't support wildcards. If you need to override any subdomains, you must create a separate host override for each subdomain's fully qualified domain name (FQDN). For example, if you create a host override for ``domainA.com`` to ``domainB.com``, requests to ``domainA.com``  are redirected to ``domainB.com``, but requests to ``mail.domainA.com`` are not automatically redirected to ``mail.domainB.com``.  You must explicitly create a separate host override for ``mail.domainA.com``.
+
 
 .. _browser-wait-times:
 
@@ -473,10 +480,10 @@ Optimize your test coverage by adding custom wait times to capture longer page l
 
 Follow these steps to configure custom wait times for your Browser tests:
 
-#. In Splunk Synthetic Monitoring, select :strong:`Edit` on the Browser test to open the configuration panel.
-#. Select :strong:`New step > Wait`, from the step type drop down.
+#. In Splunk Synthetic Monitoring, select :guilabel:`Edit` on the Browser test to open the configuration panel.
+#. Select :guilabel:`New step > Wait`, from the step type drop down.
 #. Add a name and the wait time in ms.
-#. When you finish instrumenting your test, save the workflow: :strong:`Return to test > Save`.
+#. When you finish instrumenting your test, save the workflow: :guilabel:`Return to test > Save`.
 
 The following image shows how to configure a test to go to a URL, wait for 10 seconds, then log in.
 

@@ -62,7 +62,7 @@ The Collector in the Splunk Add-on for OpenTelemetry is the same Collector offer
 
   * - :ref:`Automatic discovery and configuration <discovery_mode>`
     - Supported
-    - Not supported
+    - Supported for Linux only
 
   * - Distribution and deployment
     - Source code, binary, Operator, Helm Charts, Debian, Ansible, Puppet, Chef, Salt
