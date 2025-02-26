@@ -423,14 +423,16 @@ Authentication
 
 Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. To use Authentication, a username and password need to be provided. The username can be entered as plain text or be defined by a global variable, but the password must be defined using a global variable. It is recommended to use a concealed global variable for your password to create an additional layer of security for your credentials. For more, see :ref:`concealed-gv`.
 
-When executing the browser test, the Chrome browser is configured with the credentials defined in the test configuration. Authentication is not integrated at the OS level, it is only configured in the browser. At this time, Chrome supports the following authentication protocols:
+When executing the browser test, the Chrome browser is configured with the credentials defined in the test configuration. Authentication is not integrated at the OS level, and no authentication processing happens in the runner itself. Credentials are passed directly to Chrome for handling. 
+
+At this time, Chrome supports the following authentication protocols:
 
 * Basic Authentication
 * NTLM
-* Kerberos
+* Kerberos (with limitations)
 * Digest
 
-More details on Chrome authentication are available :new-page:`here list <https://www.chromium.org/developers/design-documents/http-authentication/>`.
+Chrome supports Kerberos authentication only when it can infer the correct Kerberos service principal name (SPN) based on standard conventions. This support doesn't include :new-page:`Kerberos Credentials Delegation (Forwardable Tickets) <https://www.chromium.org/developers/design-documents/http-authentication/>`.
 
 
 .. _browser-headers:
