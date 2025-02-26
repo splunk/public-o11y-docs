@@ -57,7 +57,6 @@ Let's consider the last two data points mentioned above:
 
 .. list-table::
   :header-rows: 1
-  :width: 100%
   :widths: 40 20 40
 
   * - :strong:`Data point timestamp`
