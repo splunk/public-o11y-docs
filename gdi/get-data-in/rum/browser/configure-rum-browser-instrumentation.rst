@@ -85,6 +85,15 @@ Use the following settings to configure the Browser RUM agent:
    * - ``debug``
      - Boolean
      - Activates debug logging in the developer console. The default value is ``false``.
+   * - ``persistence``
+     - ``'cookie'`` | ``'localStorage'``
+     - Specifies where session data should be stored. The default value is ``cookie``. Available from version ``0.20.0``.
+   * - ``disableBots``
+     - Boolean
+     - Disables tracking of bots. The default value is ``false``. Available from version ``0.20.0``.
+   * - ``disableAutomationFrameworks``
+     - Boolean
+     - Disables tracking of automation frameworks. The default value is ``false``. Available from version ``0.20.0``.
 
 .. _browser-rum-instrumentation-settings:
 
