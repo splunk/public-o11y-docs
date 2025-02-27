@@ -74,7 +74,7 @@ Follow these steps to automatically instrument your application using the Python
 
    .. code-block:: bash
 
-      opentelemetry-bootstrap
+      opentelemetry-bootstrap -a install
 
    To print the instrumentation packages to the console instead of installing them, run ``opentelemetry-bootstrap --action=requirements``. You can then add the output to your requirements or Pipfile.
 
