@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 13:18+0000\n"
-"PO-Revision-Date: 2025-01-13 15:33+0000\n"
+"POT-Creation-Date: 2025-01-29 18:45+0000\n"
+"PO-Revision-Date: 2025-02-27 12:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -63,10 +63,9 @@ msgid "automatic discovery"
 msgstr "自動ディスカバリー"
 
 #: ../../references/glossary.rst:27
-#, fuzzy
 msgid ""
-"Automatic discovery is a feature of the Splunk Distribution of the OpenTelemetry Collector that identifies the services, such as third-party databases and web servers, running in your environment and sends telemetry data from them to Splunk Application Performance Monitoring (APM) and Infrastructure Monitoring. The Collector configures service-specific receivers that collect data from an endpoint exposed "
-"oneach service. For more information, see :ref:`discovery_mode`."
+"Automatic discovery is a feature of the Splunk Distribution of the OpenTelemetry Collector that identifies the services, such as third-party databases and web servers, running in your environment and sends telemetry data from them to Splunk Application Performance Monitoring (APM) and Infrastructure Monitoring. The Collector configures service-specific receivers that collect data from an endpoint exposed on "
+"each service. For more information, see :ref:`discovery_mode`."
 msgstr ""
 "自動ディスカバリーは、Splunk Distribution of the OpenTelemetry Collectorの機能であり、お使いの環境で実行されているサードパーティのデータベースや Web サーバーなどのサービスを識別し、それらからの遠隔測定データを Splunk Application Performance Monitoring (APM) と Infrastructure Monitoring に送信します。Collectorは、各サービスで公開されているエンドポイントからデータを収集するサービス固有のレシーバーを構成します。"
 "詳細については、:ref:`discovery_mode` を参照してください。"
@@ -88,10 +87,9 @@ msgid "counter metric"
 msgstr "カウンターメトリクス"
 
 #: ../../references/glossary.rst:38
-#, fuzzy
 msgid ""
-"The counter metric type represents data that is a count of occurrences in a time interval. It measures occurrences of an activity or event, for example, the number of web pages served by a website or the number of exceptions in a process. Summing counters over a period of time produces the net activity in that interval. Counters can only take integer values of zero or greater and are reset to zero at "
-"theconclusion of each reporting interval."
+"The counter metric type represents data that is a count of occurrences in a time interval. It measures occurrences of an activity or event, for example, the number of web pages served by a website or the number of exceptions in a process. Summing counters over a period of time produces the net activity in that interval. Counters can only take integer values of zero or greater and are reset to zero at the "
+"conclusion of each reporting interval."
 msgstr ""
 "カウンターメトリックスタイプは、ある時間間隔内の発生回数のカウントであるデータを表します。これは、アクティビティやイベントの発生を測定するもので、例えば、ウェブサイトが提供するウェブページの数や、プロセス内の例外の数などがあります。ある期間のカウンターを合計すると、その間隔内の正味のアクティビティが計算されます。カウンターはゼロ以上の整数値しか取ることができず、各レポート間隔の終了時にゼロにリセットされます。"
 
@@ -100,10 +98,9 @@ msgid "cumulative counter metric"
 msgstr "累積カウンターメトリクス"
 
 #: ../../references/glossary.rst:41
-#, fuzzy
 msgid ""
-"The cumulative counter metric type represents a running count of occurrences. It typically represents the total activity in the lifetime of an application or process. Cumulative counters are NOT reset with each reporting interval. Examples of cumulative counters include the total number of Splunk Infrastructure Monitoring API calls served since a web server started up, or the total number of bytestransmitted "
-"by an interface since it started up. Cumulative counters can also be used to derive incremental values, just as counters can."
+"The cumulative counter metric type represents a running count of occurrences. It typically represents the total activity in the lifetime of an application or process. Cumulative counters are NOT reset with each reporting interval. Examples of cumulative counters include the total number of Splunk Infrastructure Monitoring API calls served since a web server started up, or the total number of bytes "
+"transmitted by an interface since it started up. Cumulative counters can also be used to derive incremental values, just as counters can."
 msgstr ""
 "累積カウンターメトリクスタイプは、発生回数の累積カウントを表します。これは通常、アプリケーションまたはプロセスの生涯におけるアクティビティの合計を表します。累積カウンターはレポート間隔ごとにリセットされません。累積カウンターの例としては、Webサーバーが起動してからの Splunk Infrastructure Monitoring API呼び出しの総数や、インターフェイスが起動してからの送信バイトの総計などがあります。累積カウンターも、カウンター"
 "と同様に、増分値を導くために使用できます。"
@@ -149,7 +146,6 @@ msgid "event"
 msgstr "イベント"
 
 #: ../../references/glossary.rst:66
-#, fuzzy
 msgid ""
 "An event is a periodic occurrence that can be represented as a structured log line to Splunk Infrastructure Monitoring. For example, the values could be represented as any combination of key/value pairs. Events are secondary to :term:`metrics<Metric>` in Infrastructure Monitoring and are meant to provide context for the metric data. Events can be displayed on charts and viewed in the Events sidebar. See :ref:"
 "`events-intro`."
@@ -174,10 +170,9 @@ msgid "flame graph"
 msgstr "フレームグラフ"
 
 #: ../../references/glossary.rst:77
-#, fuzzy, python-format
 msgid ""
-"The flame graph is a visual representation of a collection of stack traces. For every line of code in the stack trace, there is a corresponding line in the flame graph. The width of each bar in the flame graph represents the number of times the respective line of code appears in the stack traces that have been collected in the time range of the flame graph. For example, if a line of code occupies 100% of "
-"thewidth of the flame graph, then that line of code appears in all of the stack traces in the collection. The  y-axis of the flame graph shows the depth of the stack trace.  The colors of the flame graph are random. The x-axis is not ordered by time. The ordering of stack traces from left to right is random and it does not correlate to a time-based sequence."
+"The flame graph is a visual representation of a collection of stack traces. For every line of code in the stack trace, there is a corresponding line in the flame graph. The width of each bar in the flame graph represents the number of times the respective line of code appears in the stack traces that have been collected in the time range of the flame graph. For example, if a line of code occupies 100% of the "
+"width of the flame graph, then that line of code appears in all of the stack traces in the collection. The  y-axis of the flame graph shows the depth of the stack trace.  The colors of the flame graph are random. The x-axis is not ordered by time. The ordering of stack traces from left to right is random and it does not correlate to a time-based sequence."
 msgstr ""
 "フレームグラフは、スタックトレースの集合を視覚的に表現したものです。スタックトレース内のすべてのコード行に対して、対応する行がフレームグラフ内にあります。フレームグラフの各バーの幅は、フレームグラフの時間範囲内で収集されたスタックトレースにおいてそれぞれのコード行が現れる回数を表しています。例えば、あるコード行がフレームグラフの幅の100％を占める場合、そのコード行は、その集合内のすべてのスタックトレースに現れ"
 "ているということです。フレームグラフのY軸は、スタックトレースの深さを示します。フレ―ムグラフの色はランダムです。X軸は時間順ではありません。スタックトレースの左から右への順序はランダムであり、時間ベースのシーケンスとの相関はありません。"
@@ -187,10 +182,9 @@ msgid "flappy"
 msgstr "フラッピー"
 
 #: ../../references/glossary.rst:80
-#, fuzzy, python-format
 msgid ""
-"A :term:`detector` is said to be \"flappy\" when it triggers and clears alerts too frequently. For example, if you have a detector set to trigger an alert when a value reaches 90%, and the signal you are monitoring regularly spikes and dips around this value, alerts will be triggered and cleared too often to be of value. To reduce this flappiness, you might want to specify that the value must remain at "
-"90%for a specified amount of time before triggering an alert."
+"A :term:`detector` is said to be \"flappy\" when it triggers and clears alerts too frequently. For example, if you have a detector set to trigger an alert when a value reaches 90%, and the signal you are monitoring regularly spikes and dips around this value, alerts will be triggered and cleared too often to be of value. To reduce this flappiness, you might want to specify that the value must remain at 90% "
+"for a specified amount of time before triggering an alert."
 msgstr ""
 "ある :term:`detector` が頻繁にアラートをトリガーしクリアする場合、その状態を「フラッピー」といいます。たとえば、値が90%に達したときにアラートをトリガーするようにディテクターを設定していて、監視している信号がこの値の周辺で定期的に急上昇したり急降下したりする場合、アラートのトリガーとクリアの頻度が高くなりすぎてアラートの意味がありません。このフラッピーな状態を抑えるために、アラートがトリガーされる前に値が90%の"
 "状態を一定時間維持する必要があることを条件で指定するとよいでしょう。"
@@ -212,10 +206,9 @@ msgid "gauge metric"
 msgstr "ゲージメトリクス"
 
 #: ../../references/glossary.rst:91
-#, fuzzy, python-format
 msgid ""
-"The gauge metric type represents data that has a specific value at each point in time. It measures the value of something over time. Examples of gauges used in monitoring include CPU utilization percentage, % free JVM heap, or the size of an internal queue in an application. Reporting frequency (in other words, how often you take a reading) is most important for gauges, as higher frequency is "
-"typicallyassociated with higher accuracy."
+"The gauge metric type represents data that has a specific value at each point in time. It measures the value of something over time. Examples of gauges used in monitoring include CPU utilization percentage, % free JVM heap, or the size of an internal queue in an application. Reporting frequency (in other words, how often you take a reading) is most important for gauges, as higher frequency is typically "
+"associated with higher accuracy."
 msgstr "ゲージメトリクスタイプは、各時点で特定の値を持つデータを表します。これは、一定時間にわたる何らかの値を測定するものです。監視において使用されるゲージの例には、CPU使用率、JVMのヒープ空き率、アプリケーションの内部キューのサイズなどがあります。レポート頻度（つまり、どれくらいの頻度で読み取りを行うか）は、ゲージにとって最も重要です。一般的に、頻度が高いほど精度の高さと結びつくからです。"
 
 #: ../../references/glossary.rst:93
@@ -231,7 +224,6 @@ msgid "integration"
 msgstr "インテグレーション"
 
 #: ../../references/glossary.rst:101
-#, fuzzy
 msgid "An integration is a configurable component of Splunk Observability Cloud that connects Splunk Observability Cloud to a third-party service. Most integrations connect third-party data services, but Splunk Observability Cloud also offers SSO and notification integrations."
 msgstr "インテグレーションとは、Splunk Observability Cloudをサードパーティのサービスに接続するSplunk Observability Cloudの設定可能なコンポーネントです。ほとんどのインテグレーションはサードパーティのデータサービスを接続しますが、Splunk Observability CloudはSSOと通知のインテグレーションも提供します。"
 
@@ -300,10 +292,9 @@ msgid "property"
 msgstr "プロパティ"
 
 #: ../../references/glossary.rst:138
-#, fuzzy
 msgid ""
-"Properties are key-value pairs that can be bound to metrics, dimensions, or time series. They define arbitrary text data that can be used to provide additional operational information on the objects they are associated with. Properties are different from dimensions in the sense that they do not take part in the identity of a time series; changing the value of a property does not affect the identity of "
-"thattime series."
+"Properties are key-value pairs that can be bound to metrics, dimensions, or time series. They define arbitrary text data that can be used to provide additional operational information on the objects they are associated with. Properties are different from dimensions in the sense that they do not take part in the identity of a time series; changing the value of a property does not affect the identity of that "
+"time series."
 msgstr "プロパティとは、メトリクス、ディメンション、または時系列に結び付けることのできるキーと値のペアです。プロパティは、関連付けられているオブジェクトに関する追加の操作情報を提供するために使用できる任意のテキストデータを定義します。プロパティは、時系列IDの一部ではないという意味において、ディメンションとは異なります。プロパティの値を変更しても、その時系列のIDには影響しません。"
 
 #: ../../references/glossary.rst:140
@@ -416,15 +407,13 @@ msgid "Z"
 msgstr "Z"
 
 #: ../../references/glossary.rst:196
-#, fuzzy
 msgid "zero-code instrumentation"
 msgstr "ゼロコードインストルメンテーション"
 
 #: ../../references/glossary.rst:198
-#, fuzzy
 msgid ""
-"Zero-code instrumentation allows you to instrument your applications and export telemetry data without having to modify the application source files. The language-specific instrumentation agent configures the source application to export data in a supported format to an OTLP endpoint, on either an OTLP receiver or the Splunk Observability Cloud back end. Zero-code instrumentation is available forapplications "
-"written in Java, Node.js, .NET, Go, Python, Ruby, and PHP and automatically collects telemetry data for code written using supported libraries in each language. For more information, see :ref:`get-started-application`."
+"Zero-code instrumentation allows you to instrument your applications and export telemetry data without having to modify the application source files. The language-specific instrumentation agent configures the source application to export data in a supported format to an OTLP endpoint, on either an OTLP receiver or the Splunk Observability Cloud back end. Zero-code instrumentation is available for "
+"applications written in Java, Node.js, .NET, Go, Python, Ruby, and PHP and automatically collects telemetry data for code written using supported libraries in each language. For more information, see :ref:`get-started-application`."
 msgstr ""
 "ゼロコードインストルメンテーションにより、アプリケーションのソースファイルを変更することなく、アプリケーションをインストルメンテーションし、遠隔測定データをエクスポートすることができます。言語固有のインストルメンテーションエージェントは、OTLP 受信機または Splunk Observability Cloud バックエンドのいずれかにある OTLP エンドポイントに、サポートされている形式でデータをエクスポートするようにソースアプリケーション"
 "を設定します。ゼロコードインストルメンテーションは、Java、Node.js、.NET、Go、Python、Ruby、PHP で書かれたアプリケーションで利用でき、各言語でサポートされているライブラリを使用して書かれたコードの遠隔測定データを自動的に収集します。詳細については、:ref:`get-started-application` を参照してください。"
