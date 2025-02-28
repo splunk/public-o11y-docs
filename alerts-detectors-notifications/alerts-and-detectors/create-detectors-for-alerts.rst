@@ -384,7 +384,11 @@ You can add custom tags to detectors from the list view. To see a list of detect
 Link teams to a detector
 =============================================================================
 
-Link teams to a detector to indicate which team is responsible for the maintenance and monitoring of the detector. To do this, select the detector actions menu (|more|), either from the list view of the individual detector view, then select :guilabel:`Link to teams`.
+Link teams to a detector to indicate which team is responsible for the maintenance and monitoring of the detector. Teams associated with a detector can see the detector and its active alerts on the team's landing page. 
+
+To link teams to a detector, select the detector actions menu (|more|), either from the list view of the individual detector view, then select :guilabel:`Link to teams`. You can linke no more than 20 teams to a detector.
+
+.. note:: The list of teams linked to a detector is independent of notification settings. Associated teams don't automatically get notified of new alerts. To configure notifications, see :ref:`manage-notifications`.
 
 .. _set-detector-permissions:
 
