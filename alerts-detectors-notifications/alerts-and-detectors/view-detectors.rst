@@ -16,6 +16,10 @@ View a list of all detectors
 
 To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and select the :guilabel:`Detectors` tab.
 
+.. image:: /_images/images-detectors-alerts/detectors-list-view.png
+   :width: 70%
+   :alt: List view of existing detectors
+
 * By default, detectors are sorted by last updated, with the most recently updated detector at the top. To reverse the sorting order or sort detectors by a different criterion, select the corresponding column header.
 * To filter detectors by assigned teams, select the :guilabel:`Team` menu and select or enter the team name you want to find.
 * To filter detectors by type, select the :guilabel:`Type` menu. You can filter detectors by the following types:
