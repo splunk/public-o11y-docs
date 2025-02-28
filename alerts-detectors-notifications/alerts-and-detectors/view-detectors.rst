@@ -17,7 +17,7 @@ View a list of all detectors
 To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and select the :guilabel:`Detectors` tab.
 
 .. image:: /_images/images-detectors-alerts/detectors-list-view.png
-   :width: 70%
+   :width: 100%
    :alt: List view of existing detectors
 
 * By default, detectors are sorted by last updated, with the most recently updated detector at the top. To reverse the sorting order or sort detectors by a different criterion, select the corresponding column header.
