@@ -435,7 +435,7 @@ There are two ways to create a global variable:
 
 
 ..  image:: /_images/synthetics/auth-multifactor-totp-add-variable.png
-    :width: 90%
+    :width: 50%
     :alt: Screenshot showing how to create a global variable. 
 
 In the :guilabel:`Add global variable` dialog box, enter the following:
