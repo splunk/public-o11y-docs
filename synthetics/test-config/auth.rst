@@ -418,7 +418,7 @@ The secret key is a shared value which both your test target and your test's aut
 * The plain-text secret key, which is visible as an embedded string in the test target's QR code when you view the QR code as a URL string.  For example, if the QR code is ``otpauth://totp/Slack:<username>@<somedomain>?secret=<long-string>&issuer=<app-name>&algorithm=SHA1&digits=6&period=30``, the secret key is ``<long-string>``.
 
 
-Save the secret key in a global variable
+Save the secret key in a global variable of type TOTP
 ------------------------------------------------------------------
 
 There are two ways to create a global variable:
@@ -440,7 +440,7 @@ There are two ways to create a global variable:
 
 In the :guilabel:`Add global variable` dialog box, enter the following:
 
-#. In the :guilabel:`Variable` type pull-down menu, select either :guilabel:`TOTP` or :guilabel:`TOTP`.
+#. In the :guilabel:`Variable` type pull-down menu, select :guilabel:`TOTP`.
 #. In the :guilabel:`Variable name` field, enter the name of the variable. You will use this name to access your variable within a test.
 #. Save the secret key either by:
 
@@ -466,15 +466,11 @@ Set up a browser test that uses a TOTP
 
 #. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
 #. Select :guilabel:`Edit steps or synthetic transactions`.
-#. Add a step of type :guilabel:`Fill in field`, and in :guilabel:`Value`, do one of the following:
+#. Add a step of type :guilabel:`Fill in field`, and in :guilabel:`Value`, scroll down to the :guilabel:`TOTP` section (or type ``totp`` into the search field) and select the name of the TOTP variable you created. You can also enter this variable name directly as ``{{totp.<variable-name>}}``. 
 
-   * If you saved the secret key as a variable of type TOTP, set :guilabel:`Type` to :guilabel:`TOTP` and enter the name of the TOTP variable you created as ``{{totp.<variable-name>}}``.
-   * If you saved the secret key as a global variable, set :guilabel:`Type` to :guilabel:`ENV` and enter the name of the global variable as as ``{{env.<variable-name>}}``.
-   * If you didn't save the secret key as a variable, set :guilabel:`Type` to :guilabel:`TEXT` and paste the secret key. 
-
-     .. image:: /_images/synthetics/auth-multifactor-totp-fillinfield.png
-          :width: 70%
-          :alt: Screenshot showing the "Fill in field" step. 
+   .. image:: /_images/synthetics/auth-multifactor-totp-fillinfield.png
+      :width: 70%
+      :alt: Screenshot showing the "Fill in field" step. 
    
 
 #. To verify that the login succeeded, add a step of type :guilabel:`Assert text present`, and set it up as follows:
