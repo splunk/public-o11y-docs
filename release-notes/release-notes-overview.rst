@@ -10,6 +10,7 @@ Release notes overview
 .. toctree::
    :hidden:
 
+   2025-3-rn
    2025-2-rn
    2024-11-rn
    2024-10-rn
