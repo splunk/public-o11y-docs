@@ -19,7 +19,7 @@ March 4, 2025 release
    * - New feature or enhancement
      - Description
    * - Splunk Observability Cloud AI assistant in Splunk Cloud Related Content
-     - Splunk Cloud Platform users can speed up root cause analysis and IT investigations in the Search app with a new AI Assistant tab in the Related Content panel. Now the Related Content panel shows you not only the context of your issues with observability data, but also provides troubleshooting steps and additional information about the health of your services on the AI Assistant tab. Available for customers who have AI Assistant in Observability Cloud and Unified Identity enabled.
+     - Splunk Cloud Platform users can speed up root cause analysis and IT investigations in the Search app with a new :guilabel:`AI Assistant` tab in the :guilabel:`Related Content` panel. Now the :guilabel:`Related Content` panel shows you not only the context of your issues with observability data, but also provides troubleshooting steps and additional information about the health of your services on the :guilabel:`AI Assistant` tab. Available for customers who have AI Assistant in Observability Cloud and Unified Identity enabled.
    * - Synthetics Downtime Configurations
      - Splunk Synthetic Monitoring now supports recurring downtime configurations. Recurring downtimes allow you to sync with your scheduled maintenance windows or planned/unplanned downtimes and keep them from impacting your monitoring metrics or SLAs.
    * - Synthetics multi-factor authentication (MFA)
