@@ -45,7 +45,7 @@ Next, include the receiver in the ``metrics`` pipeline of the ``service`` sectio
     pipelines:
       metrics:
         receivers:
-          - chrony
+          - chrony/defaults
 
 Advanced configuration
 -----------------------------------------------
