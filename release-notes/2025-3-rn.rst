@@ -23,4 +23,4 @@ March 4, 2025 release
    * - Synthetics Downtime Configurations
      - Splunk Synthetic Monitoring now supports recurring downtime configurations. Recurring downtimes allow you to sync with your scheduled maintenance windows or planned/unplanned downtimes and keep them from impacting your monitoring metrics or SLAs.
    * - Synthetics multi-factor authentication (MFA)
-     - Splunk Synthetic Monitoring now supports recurring downtime configurations. Recurring downtimes allow you to sync with your scheduled maintenance windows or planned/unplanned downtimes and keep them from impacting your monitoring metrics or SLAs.
+     - Splunk Synthetic Monitoring now supports tests that need to send a time-based one-time passcode (TOTP) to their test target.
