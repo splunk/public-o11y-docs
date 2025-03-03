@@ -1,0 +1,26 @@
+.. _2025-3-rn:
+
+*********************
+March 2025
+*********************
+
+Splunk Observability Cloud released the following new features and enhancements in March 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+.. _2025-3-4-rn:
+
+March 4, 2025 release
+=======================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Splunk Observability Cloud AI assistant in Splunk Cloud Related Content
+     -  Extend your root cause analysis and IT investigations with a GenAI-powered experience in Splunk Platform. Now, in addition to getting more context of your issues with observability data, you also get an AI Assistant that provides additional insights about related applications and infrastructure, for faster mean time to identify and resolve issues. Available for customers with Unified Identity enabled
+   * - Synthetics Downtime Configurations
+     - TBA
+   * - Synthetics Multi-factor authentication
+     - TBA 
