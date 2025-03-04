@@ -87,7 +87,7 @@ Use the following settings to configure the Browser RUM agent:
      - Activates debug logging in the developer console. The default value is ``false``.
    * - ``persistence``
      - ``'cookie'`` | ``'localStorage'``
-     - Specifies where session data should be stored. Local storage can be used in environments without cookie support. Local storage has a limitation of not being able to track sessions across subdomains. The default value is ``cookie``. Available from version ``0.20.0``.
+     - Specifies where session data should be stored. Use 'localStorage' in environments without cookie support. Local storage has a limitation of not being able to track sessions across subdomains. The default value is ``cookie``. Available from version ``0.20.0``.
    * - ``disableBots``
      - Boolean
      - Disables tracking of bots. The default value is ``false``. Available from version ``0.20.0``.
