@@ -102,11 +102,7 @@ Chatid is the unique identifier for each conversation in AI Assistant in Observa
       <h2>Data sharing and use<a name="data-sharing-and-use" class="headerlink" href="#data-sharing-and-use" title="Permalink to this headline">¶</a></h2>
     </embed>
 
-When you interact with AI Assistant in Observability Cloud, Splunk collects and might use inputs, outputs, grounding data, feedback, and usage data to provide and maintain the the AI Assistant, comply with applicable law, enforce our policies, and develop and improve the AI Assistant in Observability, including to train AI models.  
-
-If you do not want your data used for these purposes, do not click on the button and do not install, download, access, or otherwise use AI Assistant in Observability. 
-
-The following table explains the categories of data the AI Assistant collects:
+The following table explains the categories of data that the AI Assistant uses, collects, or generates:
 
 .. list-table::
    :header-rows: 1
@@ -125,13 +121,23 @@ The following table explains the categories of data the AI Assistant collects:
    * - Usage data
      - Usage data is more fully described in the Splunk Privacy Statement. Examples include “thumbs up”, “thumbs down”, “chat id”, “copy”, “tokens used”, and “response length”. 
 
-You can activate and deactivate data sharing by going to :guilabel:`Settings`. On the General Organization Settings page, go to the AI Assistant Management section. Select or deselect :guilabel:`AI Assistant in Observability` to activate or deactivate the AI Assistant for your organization. 
+When you use the AI Assistant, Splunk relies on certain essential types of data to provide the service, and to enforce compliance with Splunk policy and applicable law; this includes user inputs, outputs, grounding observability data, and usage data (“Essential Purposes”).
 
-If you do not want to share your data, deselect :guilabel:`Allow my AI service data to be used for research and development purposes`.
+In addition to the Essential Purposes, you have the option of allowing Splunk to use the data collected by the AI Assistant for the additional purpose of conducting research and development on the AI Assistant and generative AI in general. This use of your data is optional, and you can choose to allow or disallow it. 
+
+You can activate and deactivate data sharing by updating your preferences in settings. To update your preferences for using the AI Assistant or for sharing data, follow these steps:
+
+1. Go to Settings in Splunk Observability Cloud. 
+
+2. On the :guilabel:`General Organization Settings` page, go to the :guilabel:`AI Assistant Management` section and select or deselect :guilabel:`AI Assistant in Observability` to activate or deactivate the AI Assistant in Observability Cloud for your organization. 
+
+3. If you do not want to share your data, deselect :guilabel:`Allow my AI service data to be used for research and development purposes`.
 
 .. image:: /_images/get-started/activate-assistant.png
   :width: 70%
-  :alt: This screenshot shows how Splunk Observability Cloud products serve the different layers and processes in an organization's environment.
+  :alt: This screenshot shows how to activate or deactivate the AI Assistant in Observability Cloud, as well as how to control whether your data is used for training the Assistant.
+
+Note that any use of AI Assistant in Observability Cloud requires Splunk’s use of your data for the Essential Purposes. If you do not wish to allow Splunk to use your data for the Essential Purposes, do not activate :guilabel:`AI Assistant in Observability` and do not install, download, access, or otherwise use AI Assistant in Observability Cloud. If you elect to activate AI Assistant in Observability Cloud and you wish to allow Splunk to use your data for the purpose of research and development, confirm that you have selected the option to :guilabel:`Allow my AI service data to be used for research and development purposes`. If you do not want to share your data, deselect :guilabel:`Allow my AI service data to be used for research and development purposes`. Deselecting this option means you opt-out of this secondary use of your data.
 
 .. raw:: html
   
