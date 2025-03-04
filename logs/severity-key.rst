@@ -18,4 +18,4 @@ The mapping of your severity key and its values is case sensitive. The key and i
 * ERROR
 * INFO
 * UNKNOWN
-* WARNING
+* WARNING 
