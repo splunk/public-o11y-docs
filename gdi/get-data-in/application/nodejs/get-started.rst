@@ -17,7 +17,7 @@ Instrument Node.js applications for Splunk Observability Cloud
    Manual instrumentation <instrumentation/manual-instrumentation>
    Configure the Node.js agent <configuration/advanced-nodejs-otel-configuration>
    Performance overhead <performance>
-   Version 2.X <version-2x/get-started>
+   Version 2.X (deprecated) <version-2x/get-started>
    Splunk OTel JS 3.0 breaking changes <breaking-changes>
    Troubleshoot the Node.js agent <troubleshooting/common-nodejs-troubleshooting>
    About Splunk OTel JS <splunk-nodejs-otel-distribution>
