@@ -1,0 +1,26 @@
+.. _2025-3-rn:
+
+*********************
+March 2025
+*********************
+
+Splunk Observability Cloud released the following new features and enhancements in March 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+.. _2025-3-4-rn:
+
+March 4, 2025 release
+=======================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Splunk Observability Cloud AI assistant in Splunk Cloud Related Content
+     - Splunk Cloud Platform users can speed up root cause analysis and IT investigations in the Search app with a new :guilabel:`AI Assistant` tab in the :guilabel:`Related Content` panel. Now the :guilabel:`Related Content` panel shows you not only the context of your issues with observability data, but also provides troubleshooting steps and additional information about the health of your services on the :guilabel:`AI Assistant` tab. Available for customers who have AI Assistant in Observability Cloud and Unified Identity enabled.
+   * - Synthetics Downtime Configurations
+     - Splunk Synthetic Monitoring now supports recurring downtime configurations. Recurring downtimes allow you to sync with your scheduled maintenance windows or planned/unplanned downtimes and keep them from impacting your monitoring metrics or SLAs.
+   * - Synthetics multi-factor authentication (MFA)
+     - Splunk Synthetic Monitoring now supports tests that need to send a time-based one-time passcode (TOTP) to their test target.
