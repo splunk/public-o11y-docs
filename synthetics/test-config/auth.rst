@@ -26,7 +26,9 @@ The following authentication methods are available for you to configure in your 
        
        :ref:`auth-multifactor-email`
        
-       :ref:`auth-multifactor-sso` 
+       :ref:`auth-multifactor-sso`
+
+       :ref:`auth-multifactor-totp` 
 
    * - Uptime
      - None 
@@ -52,7 +54,7 @@ If your test target provides an HTML form for entering username and password, co
 
 ..  image:: /_images/synthetics/auth-basic-html-steps.png
     :width: 90%
-    :alt: Screenshot showing how to set up a synthetic test with basic authentication through an API request header. 
+    :alt: Screenshot showing how to set up a synthetic test with basic authentication through an HTML form. 
 
 #. Create global variables for this test target's username and password. Best practice is to conceal the global variable you create for the password. For more information, see :ref:`global-variables`.
 
@@ -378,7 +380,7 @@ Multifactor authentication through SSO and Active Directory
     :description: Multifactor authentication allows your test to authenticate to a target page by logging in through an SSO or Active Directory service.
 
 
-Authentication through Single Sign-On (SSO) is similar to :ref:`basic authentication <auth-basic-html-login>`. To create a test of that uses SSO or Active Directory (AD) login, you must configure a series of steps that include opening the webpage, selecting the SSO authentication link, and entering the required information for SSO authentication. Additional webpages may load during this process, so it's crucial that you include steps to confirm that all the components of each webpage have fully loaded before proceeding.
+Authentication through Single Sign-On (SSO) is similar to :ref:`basic authentication <auth-basic-html-login>`. To create a test that uses SSO or Active Directory (AD), you must configure a series of steps that include opening the webpage, selecting the SSO authentication link, and entering the required information for SSO authentication. Additional webpages may load during this process, so it's crucial that you include steps to confirm that all of the components of each webpage have fully loaded before proceeding.
 
 SSO authentication frequently involves additional authentication factors. If the identity provider (such as Google, Microsoft, Okta, Duo, and so on) does not mandate an extra login factor, your test might only need the authentication steps that are illustrated in the example below:
 
@@ -393,4 +395,96 @@ Limitations
 Identity providers often require various additional factors for login, such as verification via email, SMS, or TOTP. In such cases, it is essential to modify or add steps to accommodate these additional login factors.
 
 
+
+.. _auth-multifactor-totp:
+
+Multifactor authentication through TOTP  
+==================================================================
+
+.. note::
+    This authentication method applies to browser tests only.
+
+
+If your test needs to send a time-based one-time passcode (TOTP) to its test target, configure your test as follows.
+
+
+Get the secret key for generating a TOTP
+------------------------------------------------------------------
+
+The secret key is a shared value which both your test target and your test's authenticator app (such as Okta) will use to generate the same unique TOTP. You can get this secret key from:
+
+* The test target's QR code (an image).
+
+* The plain-text secret key, which is visible as an embedded string in the test target's QR code when you view the QR code as a URL string.  For example, if the QR code is ``otpauth://totp/Slack:<username>@<somedomain>?secret=<long-string>&issuer=<app-name>&algorithm=SHA1&digits=6&period=30``, the secret key is ``<long-string>``.
+
+
+Save the secret key in a global variable of type TOTP
+------------------------------------------------------------------
+
+There are two ways to create a global variable:
+
+* From the Splunk Synthetic Monitoring landing page:
+
+  #. From the Splunk Synthetic Monitoring landing page, select the settings icon, and then select :guilabel:`Global variables`. 
+  #. Select :guilabel:`Create variable`.
+
+* From an existing test's page:
+
+  #. Select :guilabel:`Edit test`.
+  #. Expand the :guilabel:`Variables` panel on the right, scroll to :guilabel:`Global variables` and select :guilabel:`Add`.
+
+
+In the :guilabel:`Add variable` dialog box, enter the following:
+
+..  image:: /_images/synthetics/auth-multifactor-totp-add-variable.png
+    :width: 40%
+    :alt: Screenshot showing how to create a global variable. 
+
+
+#. In the :guilabel:`Variable` type pull-down menu, select :guilabel:`TOTP`.
+#. In the :guilabel:`Variable name` field, enter the name of the variable. You will use this name to access your variable within a test.
+#. Save the secret key either by:
+
+   * Selecting the :guilabel:`QR code` tab and dragging the QR code image to it.
+   * Selecting the :guilabel:`Manual input` tab and pasting the ``<long-string>`` you retrieved from the QR code.
+
+#. (Optional) In the :guilabel:`Description` field, enter a description to explain the purpose of the variable for future reference. A description is particularly helpful when you conceal the variable and cannot reveal its value.
+#. (Optional) Expand :guilabel:`Advanced Settings` and specify optional settings:
+
+   * (Optional) Set :guilabel:`digits` to the number of digits in the generated TOTP. Valid values: 4-8. Default: 6.
+   * (Optional) Set :guilabel:`TOTP expiration` to the the duration of the validity of the TOTP, in seconds. Valid values: 10s-90s. Default: 30s.
+
+#. (Optional) To validate the secret key you entered, select :guilabel:`Generate TOTP`.
+#. Select :guilabel:`Add`.
+
+
+.. note::
+   Splunk Synthetic Monitoring automatically conceals the value of variables of type TOTP.
+
+
+Set up a browser test that uses a TOTP
+------------------------------------------------------------------
+
+#. On the browser test's configuration page, select the :guilabel:`Simple` toggle.
+#. Select :guilabel:`Edit steps or synthetic transactions`.
+#. Add a step of type :guilabel:`Fill in field`, and in :guilabel:`Value`, scroll down to the :guilabel:`TOTP` section (or type ``totp`` into the search field) and select the name of the TOTP variable you created. You can also enter this variable name directly as ``{{totp.<variable-name>}}``. 
+
+   .. image:: /_images/synthetics/auth-multifactor-totp-fillinfield.png
+      :width: 70%
+      :alt: Screenshot showing the "Fill in field" step. 
+   
+
+#. To verify that the login succeeded, add a step of type :guilabel:`Assert text present`, and set it up as follows:
+
+   #. In :guilabel:`Text`, enter a string that should be visible on the test target page only when login is successful.
+   #. (Optional) Set :guilabel:`Wait for up to` to a large enough value, in milliseconds, to ensure that the page loads.
+
+#. Select :guilabel:`Submit`.
+
+
+To verify that the login is working, select :guilabel:`Try now`. Results may take a while. The :guilabel:`Try now result` pane should display each screen that your test navigated to on the target page, plus the message :guilabel:`Success`.
+
+     .. image:: /_images/synthetics/auth-multifactor-totp-trynow.png
+          :width: 70%
+          :alt: Screenshot showing the "Try now" step. 
 

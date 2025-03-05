@@ -60,7 +60,7 @@ See the following table for a list of changes:
       - Activates the Splunk OpenTelemetry Python agent and sends traces and metrics to Splunk Observability Cloud. 
     * - ``splunk-py-trace-bootstrap``, ``splk-py-trace-bootstrap``
       - ``opentelemetry-bootstrap``
-      - Installs instrumentation libraries and dependencies for Splunk OpenTelemetry Python.
+      - Lists instrumentation libraries and dependencies for Splunk OpenTelemetry Python. To install the libraries and dependencies, use ``opentelemetry-bootstrap -a install``.
 
 .. _python-2.x-new-functions:
 
