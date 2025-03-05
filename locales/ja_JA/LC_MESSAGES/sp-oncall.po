@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 13:18+0000\n"
-"PO-Revision-Date: 2025-01-13 15:34+0000\n"
+"POT-Creation-Date: 2025-01-29 18:45+0000\n"
+"PO-Revision-Date: 2025-02-27 12:04+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -772,7 +772,7 @@ msgstr "「To:」フィールドに、ルールエンジンルールで貼り付
 
 #: ../../sp-oncall/admin/get-started/custom-outbound-webhooks.rst:146
 msgid "In this example, the full destination URL we want the webhook to go to is “:samp:`https://dev.oscato.com/2tn6xfh`” and we'd put “:samp:`oscato.com`” in the Rules Engine rule, so the complete “To:” URL will be “:samp:`https://dev.${{ALERT.vo-webhook-field}}/2tn6xfh`”"
-msgstr "この例では、Webhookの完全な宛先URLは\" :samp:`https://dev.oscato.com/2tn6xfh` \"であり、ルールエンジンのルールに\" :samp:`oscato.com` \"と記述するため、完全な\"To: \"URLは\" :samp:`https://dev.${{ALERT.vo-webhook-field}}/2tn6xfh` \"となります。"
+msgstr "この例では、Webhookの完全な宛先URLは\":samp:`https://dev.oscato.com/2tn6xfh` \"であり、ルールエンジンのルールに\":samp:`oscato.com` \"と記述するため、完全な\"To: \"URLは\":samp:`https://dev.${{ALERT.vo-webhook-field}}/2tn6xfh` \"となります。"
 
 #: ../../sp-oncall/admin/get-started/custom-outbound-webhooks.rst:149
 msgid "This will make it so that the URL is only complete (thus allowing the webhook to successfully fire) when the “vo-webhook-field” is present, which will only be present when the Rules Engine matching condition is met."
@@ -783,7 +783,6 @@ msgid "Fill out the Payload information with the desired fields you want include
 msgstr "Webhookに含ませたいフィールドをペイロード情報に入力し、オプションで説明を追加すれば、条件付きでWebhookを起動する準備は完了です。"
 
 #: ../../sp-oncall/admin/get-started/deprecation-of-splunk-on-call-phone-notifications-to-china.rst:7
-#, fuzzy
 msgid "Deprecation of Splunk On-Call phone notifications to China"
 msgstr "中国へのSplunk On-Call 電話通知の廃止"
 
@@ -1798,7 +1797,7 @@ msgstr "Splunk On-Call SSO Google Apps Setup 5"
 
 #: ../../sp-oncall/admin/sso/sp-sso-google.rst:69
 msgid "In the :guilabel:`Service Provider Details` step, enter the following values: - in the :guilabel:`ACS URL` field: :samp:`https://sso.victorops.com:443/sp/ACS.saml2` - in the :guilabel:`Entity ID` field: :samp:`victorops.com` - in the :guilabel:`Start URL` field, enter the following with the correct Organization Slug at the end: :samp:`https://portal.victorops.com/auth/sso/<<org-slug-here>>.`"
-msgstr ":guilabel:`Service Provider Details` ステップで、以下の値を入力する：- :guilabel:`ACS URL` フィールドに次の値を入力： :samp:`https://sso.victorops.com:443/sp/ACS.saml2` - :guilabel:`Entity ID` フィールドに次の値を入力： :samp:`victorops.com` - :guilabel:`Start URL` フィールドに次のように入力し、最後に正しい組織スラグを入力： :samp:`https://portal.victorops.com/auth/sso/<<org-slug-here>>。`"
+msgstr ":guilabel:`Service Provider Details` ステップで、以下の値を入力する：- :guilabel:`ACS URL` フィールドに次の値を入力： :samp:`https://sso.victorops.com:443/sp/ACS.saml2` - :guilabel:`Entity ID` フィールドに次の値を入力： :samp:`victorops.com` - :guilabel:`Start URL` フィールドに次のように入力し、最後に正しい組織スラグを入力： :samp:`https://portal.victorops.com/auth/sso/<<org-slug-here>>.`"
 
 #: ../../sp-oncall/admin/sso/sp-sso-google.rst:75
 msgid "Skip the attribute mapping step and select :guilabel:`Finish`."
@@ -2503,7 +2502,7 @@ msgstr "SSL証明書チェーンの検証"
 
 #: ../../sp-oncall/alerts/escalation-webhooks.rst:60
 msgid "If your webhook uses a secure connection (i.e. the URL starts with “:samp:`https://`”), the receiving endpoint must use a valid SSL certificate signed by a recognized Certificate Authority."
-msgstr "Webhookが安全な接続を使用する場合（すなわち、URLが \" :samp:`https://` \"で始まる場合）、受信側のエンドポイントは、公認の認証局によって署名された有効なSSL証明書を使用する必要があります。"
+msgstr "Webhookが安全な接続を使用する場合（すなわち、URLが \":samp:`https://` \"で始まる場合）、受信側のエンドポイントは、公認の認証局によって署名された有効なSSL証明書を使用する必要があります。"
 
 #: ../../sp-oncall/alerts/escalation-webhooks.rst:63
 msgid "This recommendation was implemented based on :new-page:`SSL Labs Best Practices <https://www.ssllabs.com/projects/best-practices/index.html>`."
@@ -2705,7 +2704,7 @@ msgstr "``message_type``"
 
 #: ../../sp-oncall/alerts/incident-fields-glossary.rst:52
 msgid "The ``message_type`` field is the one required field in Splunk On-Call. All other fields would be filled in automatically. ``message_type`` determines the behavior of the alert when it arrives."
-msgstr "``message_type``  フィールドはSplunk On-Callの必須フィールドです。他のフィールドはすべて自動的に入力されます。  ``message_type``  はアラートが到着したときの動作を決定します。"
+msgstr "``message_type``  フィールドはSplunk On-Callの必須フィールドです。他のフィールドはすべて自動的に入力されます。   ``message_type``  はアラートが到着したときの動作を決定します。"
 
 #: ../../sp-oncall/alerts/incident-fields-glossary.rst:54
 msgid "Possible values:"
@@ -4183,7 +4182,7 @@ msgstr "ANDロジックの例"
 
 #: ../../sp-oncall/alerts/rules-engine/rules-engine-matching-conditions.rst:129
 msgid "In the following example, you want to capture ``disk space`` from the ``entity_id`` field, as well as the name ``stage-db-26`` from the ``host_name`` field to convert these alerts to ``INFO`` events only when both conditions are met."
-msgstr "次の例では、``entity_id`` フィールドの ``disk space`` と、``host_name`` フィールドの ``stage-db-26`` という名前をキャプチャし、両方の条件が満たされた場合にのみ、これらのアラートを ``INFO`` イベントに変換します。"
+msgstr "次の例では、``entity_id`` フィールドの ``disk space`` と、``host_name`` フィールドの  ``stage-db-26`` という名前をキャプチャし、両方の条件が満たされた場合にのみ、これらのアラートを ``INFO`` イベントに変換します。"
 
 #: ../../sp-oncall/alerts/rules-engine/rules-engine-matching-conditions.rst:131
 msgid "The matching condition for the first rule catches the first desired phrase and use variable expansion to import the value of the second field into a newly declared field."
@@ -7123,7 +7122,7 @@ msgstr "リカバリ通知"
 
 #: ../../sp-oncall/notifications/paging-policy-setup.rst:72
 msgid "When :guilabel:`Send a notification when incidents resolve` is checked under :guilabel:`Settings`, then :guilabel:`Alert Configuration` you will be notified of incidents you were paged for or took action on by what is configured in the Recovery Notification setting in your Profile."
-msgstr ":guilabel:`Settings`、次に :guilabel:`Alert Configuration` の下で :guilabel:`Send a notification when incidents resolve` がチェックされている場合、プロファイルのリカバリ通知設定で設定されている内容で、自分がページングされた、またはアクションを起こしたインシデントが通知されます。"
+msgstr ":guilabel:`Settings` 次に :guilabel:`Alert Configuration` の下で :guilabel:`Send a notification when incidents resolve` がチェックされている場合、プロファイルのリカバリ通知設定で設定されている内容で、自分がページングされた、またはアクションを起こしたインシデントが通知されます。"
 
 #: ../../sp-oncall/notifications/snooze.rst:-1
 msgid "Snooze makes on-call more bearable by allowing users to silence paging on unactionable or less-urgent alarms for a specified period of time.."
@@ -7400,7 +7399,7 @@ msgid "In the :guilabel:`Calendar name` field enter a name for the linked calend
 msgstr ":guilabel:`Calendar name` フィールドで、リンクされたカレンダーの名前を入力します。"
 
 #: ../../sp-oncall/on-call-schedules/calendar-export.rst:133
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:93
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:94
 #: ../../sp-oncall/spoc-integrations/GCP-monitoring-integration.rst:27
 #: ../../sp-oncall/spoc-integrations/microsoft-teams-integration-guide.rst:69
 #: ../../sp-oncall/spoc-integrations/microsoft-teams-integration-guide.rst:91
@@ -7642,7 +7641,7 @@ msgid "Multiple people on-call during business hours. One person takes turns doi
 msgstr "営業時間中は複数人でオンコール対応。夜間と週末は1人が交代で対応、24時間365日のセカンダリカバレッジは1人が交代で対応します"
 
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:22
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:111
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:112
 msgid "Main points:"
 msgstr "主なポイント："
 
@@ -7663,235 +7662,237 @@ msgid "Make three escalation policies that use these rotations with \"Notify the
 msgstr "これらのローテーションを使用する3つのエスカレーションポリシーを作成し、ステップ1に「ローテーション中の当番ユーザーに通知する」アクションを設定します。夜間と週末、営業時間のエスカレーションポリシーのステップ2を、セカンダリエスカレーションポリシーを実行するように設定します。"
 
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:31
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:120
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:121
 msgid "Configure the Business Hours rotation"
 msgstr "営業時間ローテーションを設定する"
 
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:33
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:123
 msgid "Navigate to the team you'd like to implement this schedule for and add all of the appropriate users using the :guilabel:`Invite User` button."
 msgstr "このスケジュールを導入したいチームに移動し、:guilabel:`Invite User` ボタンを使用して適切なユーザーをすべて追加します。"
 
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:34
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:124
 msgid "Navigate to the :menuselection:`Rotations` tab and select :guilabel:`Add Rotation`."
 msgstr ":menuselection:`Rotations` タブに移動し、:guilabel:`Add Rotation` を選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:41
-msgid "Name the rotation \"Business Hours\" and select \"Partial Day\" for the shift type"
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:40
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:125
+msgid "Name the rotation \"Business Hours\" and select \"Partial Day\" for the shift type."
 msgstr "ローテーション名を「営業時間」とし、シフトタイプに「部分日勤」を選択します。"
 
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:36
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:126
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:127
 msgid "Name the first shift either after the user who will be occupying it or just call it \"Shift 1\" and set the hours."
 msgstr "最初のシフトに、そのシフトに入るユーザーの名前を付けるか、単に「シフト1」と呼び、勤務時間を設定します。"
 
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:37
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:59
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:128
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:54
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:60
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:73
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:129
 msgid "Select :guilabel:`Save Shift`."
 msgstr ":guilabel:`Save Shift` を選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:39
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:130
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:38
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:131
 msgid "Ignore the \"Handoff happens every X week\" and \"The next handoff happens X\" fields because this shift is being created with the intent to not handoff."
 msgstr "このシフトはハンドオフしないことを意図して作成されているため、\"Handoff happens every X week\"と\"The next handoff happens X\"の項目は無視してください。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:41
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:132
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:39
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:133
 msgid "Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`."
 msgstr "次に、:guilabel:`Manage Members`、:guilabel:`Select a User to add` の順に選択して、このシフトに適切なユーザーを追加します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:42
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:133
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:40
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:134
 msgid "After adding the appropriate user, select :guilabel:`Add Another Shift`."
 msgstr "適切なユーザーを追加したら、:guilabel:`Add Another Shift` を選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:43
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:135
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:42
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:136
 msgid "Select :guilabel:`Partial Day` and repeat the process from the previous steps. You will end up creating one shift for each user you would like on-call simultaneously during the business day."
 msgstr ":guilabel:`Partial Day` を選択し、前の手順を繰り返します。営業日中に同時にオンコールさせたいユーザーごとに1つのシフトを作成することになります。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:44
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:61
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:74
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:136
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:43
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:62
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:75
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:137
 msgid "When finished, select :guilabel:`I'm Done, Save this Rotation`."
 msgstr "終了したら、:guilabel:`I'm Done, Save this Rotation` を選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:47
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:46
 msgid "Configure the Nights and Weekends rotation"
 msgstr "夜間と週末のローテーションを設定する"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:49
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:48
 msgid "Create the \"Nights and Weekends' rotation by selecting :guilabel:`Add a Rotation`."
 msgstr ":guilabel:`Add a Rotation` を選択して「夜間と週末」のローテーションを作成します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:50
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:49
 msgid "Name the rotation \"Nights and Weekends\" and select :guilabel:`Partial Day` for the first shift type."
 msgstr "ローテーション名を「夜間と週末」とし、最初のシフトタイプに :guilabel:`Partial Day` を選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:55
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:50
 msgid "Name the first shift \"Weeknights\"."
 msgstr "最初のシフトを「平日の夜」と名付けます。"
 
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:52
-msgid "#. In the section with Monday through Friday in blue lettering, deselect Friday. Also, change the hours to cover all week-hours that are not covered by the Business Hours rotation. For example, if your  business hours are 8 AM to 5 PM, your Weeknights shift should be 5 PM to 8 AM. If your Business Hours are 9 AM to 4 PM, your Weeknights shift should be 4 PM to 9 AM. #. Change the :guilabel:`The next handoff happens` date to the next upcoming Monday. #. Select :guilabel:`Save Shift`. #. To add users to this shift, select :guilabel:`Manage Members` then :guilabel:`Select a User to add`. The order that you add the users in will dictate the week they end up on-duty. The first user you add will do the current week, the next user the week after, the third user the third week. You can re-order them after adding by dragging them on the :menuselection:`Members` page."
-msgstr "#.月曜日から金曜日までが青文字で表示されているセクションで、金曜日の選択を解除します。また、営業時間のローテーションでカバーされていないすべての週をカバーするように時間を変更してください。例えば、営業時間が午前8時から午後5時までの場合、平日の夜のシフトは午後5時から午前8時までとします。営業時間が午前9時から午後4時までであれば、平日の夜のシフトは午後4時から午前9時までとします。#.:guilabel:`The next handoff happens` の日付を次の月曜日に変更してください。#.:guilabel:`Save Shift` を選択してください。#.このシフトにユーザーを追加するには、:guilabel:`Manage Members` を選択し、次に :guilabel:`Select a User to add` を選択します。ユーザーを追加する順番によって、勤務することになる週が決まります。最初に追加したユーザーは現在の週を、次のユーザーはその次の週を、3番目のユーザーは3番目の週を担当します。追加後、:menuselection:`Members` のページでドラッグすることで、順番を入れ替えることができます。"
+msgid "In the section with Monday through Friday in blue lettering, deselect Friday. Also, change the hours to cover all week-hours that are not covered by the Business Hours rotation. For example, if your  business hours are 8 AM to 5 PM, your Weeknights shift should be 5 PM to 8 AM. If your Business Hours are 9 AM to 4 PM, your Weeknights shift should be 4 PM to 9 AM."
+msgstr "月曜日から金曜日までが青文字で表示されているセクションで、金曜日の選択を解除します。また、「営業時間」のローテーションでカバーされていないすべての平日時間をカバーするように、時間を変更してください。例えば、「営業時間」が午前8時から午後5時までの場合、「平日の夜」のシフトは午後5時から午前8時までとなります。「営業時間」が午前9時から午後4時までの場合、「平日の夜」のシフトは午後4時から午前9時までとなります。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:59
-msgid "After adding the appropriate users, select :guilabel:`Add another Shift` and select :guilabel:`Multi-day` for the type."
-msgstr "適切なユーザーを追加した後、タイプに :guilabel:`Add another Shift`、:guilabel:`Multi-day` の順に選択します。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:58
-msgid "Name this shift “Weekends” and adjust the hours to those desired."
-msgstr "このシフトを「週末」と名付け、希望する時間に調整します。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:60
-msgid "To add users to this shift, select :guilabel:`Manage Members` then :guilabel:`Select a User to add`. The order that you add the users in will dictate the week they end up on-duty. You can re-order these users after adding by dragging them around within this menu."
-msgstr "このシフトにユーザーを追加するには、:guilabel:`Manage Members` を選択し、次に :guilabel:`Select a User to add` を選択します。ユーザーを追加する順番によって、勤務することになる週が決まります。ユーザーを追加した後、このメニューの中でドラッグすることで順番を変更することができます。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:64
-msgid "Configure a Secondary rotation"
-msgstr "セカンダリローテーションを設定する"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:66
-msgid "The next part of the configuration process will involve creating a Secondary rotation to serve as a backup in case either the Business Hours or Nights and Weekends user doesn't respond in a set amount of time."
-msgstr "設定プロセスの次の部分では、営業時間または夜間と週末のユーザーが設定した時間内に応答しなかった場合に備えて、バックアップとして機能するセカンダリローテーションを作成します。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:68
-msgid "Select :guilabel:`Add a Rotation`."
-msgstr ":guilabel:`Add a Rotation` を選択します。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:69
-msgid "Name the rotation “Secondary” and select :guilabel:`24/7` for the shift type."
-msgstr "ローテーションに「セカンダリ」という名前を付け、シフトタイプに :guilabel:`24/7` を選択します。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:70
-msgid "Name the shift “Secondary Shift” and change the handoff time to the appropriate one. This is typically when business hours begin for your organization."
-msgstr "シフトに「セカンダリシフト」と名前を付け、ハンドオフ時間を適切なものに変更します。これは通常、組織の営業時間が始まる時間です。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:71
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:53
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:72
 msgid "Change the :guilabel:`The next handoff happens` date to the next upcoming Monday."
 msgstr ":guilabel:`The next handoff happens` の日付を次の月曜日に変更します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:72
-msgid "Select :guilabel:`Save Shift`/"
-msgstr ":guilabel:`Save Shift` /を選択する"
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:55
+msgid "To add users to this shift, select :guilabel:`Manage Members` then :guilabel:`Select a User to add`. The order that you add the users in will dictate the week they end up on-duty. The first user you add will do the current week, the next user the week after, the third user the third week. You can re-order them after adding by dragging them on the :menuselection:`Members` page."
+msgstr "ユーザーをシフトに追加するには、:guilabel:`Manage Members`、:guilabel:`Select a User to add` の順に選択します。ユーザーを追加する順番によって、ユーザーが勤務する週が決まります。最初に追加したユーザーは現在の週、次に追加したユーザーはその次の週、3番目に追加したユーザーは3番目の週を担当します。ユーザーを追加した後、:menuselection:`Members` ページ内でドラッグすることで順番を変更できます。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:73
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:57
+msgid "After adding the appropriate users, select :guilabel:`Add another Shift` and select :guilabel:`Multi-day` for the type."
+msgstr "適切なユーザーを追加した後、タイプに :guilabel:`Add another Shift`、:guilabel:`Multi-day` の順に選択します。"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:59
+msgid "Name this shift “Weekends” and adjust the hours to those desired."
+msgstr "このシフトを「週末」と名付け、希望する時間に調整します。"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:61
+msgid "To add users to this shift, select :guilabel:`Manage Members` then :guilabel:`Select a User to add`. The order that you add the users in will dictate the week they end up on-duty. You can re-order these users after adding by dragging them around within this menu."
+msgstr "このシフトにユーザーを追加するには、:guilabel:`Manage Members` を選択し、次に :guilabel:`Select a User to add` を選択します。ユーザーを追加する順番によって、勤務することになる週が決まります。ユーザーを追加した後、このメニューの中でドラッグすることで順番を変更することができます。"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:65
+msgid "Configure a Secondary rotation"
+msgstr "セカンダリローテーションを設定する"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:67
+msgid "The next part of the configuration process will involve creating a Secondary rotation to serve as a backup in case either the Business Hours or Nights and Weekends user doesn't respond in a set amount of time."
+msgstr "設定プロセスの次の部分では、営業時間または夜間と週末のユーザーが設定した時間内に応答しなかった場合に備えて、バックアップとして機能するセカンダリローテーションを作成します。"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:69
+msgid "Select :guilabel:`Add a Rotation`."
+msgstr ":guilabel:`Add a Rotation` を選択します。"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:70
+msgid "Name the rotation “Secondary” and select :guilabel:`24/7` for the shift type."
+msgstr "ローテーションに「セカンダリ」という名前を付け、シフトタイプに :guilabel:`24/7` を選択します。"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:71
+msgid "Name the shift “Secondary Shift” and change the handoff time to the appropriate one. This is typically when business hours begin for your organization."
+msgstr "シフトに「セカンダリシフト」と名前を付け、ハンドオフ時間を適切なものに変更します。これは通常、組織の営業時間が始まる時間です。"
+
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:74
 msgid "To add users to the shift :guilabel:`Manage Members` then :guilabel:`Select a User to add`.The order that you add the users in will dictate the week they end up on-duty. The first user you add will do the current week, the next user the week after, the third user the third week. You can re-order these users after adding by dragging them around within this menu."
 msgstr ":guilabel:`Manage Members`、:guilabel:`Select a User to add` の順にシフトにユーザーを追加。ユーザーを追加する順番は、勤務になる週を決定します。最初に追加したユーザーは現在の週、次のユーザーはその次の週、3番目のユーザーは3番目の週を担当します。ユーザーを追加した後、このメニューの中でドラッグすることで順番を変更することができます。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:78
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:79
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:141
 msgid "Configure the Escalation Policies"
 msgstr "エスカレーションポリシーを設定する"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:80
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:81
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:143
 msgid "Next, you will create an escalation policy."
 msgstr "次に、エスカレーションポリシーを作成します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:82
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:83
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:145
 msgid "Navigate to :menuselection:`Escalation Policies` and select :guilabel:`Add Escalation Policy`."
 msgstr ":menuselection:`Escalation Policies` に移動し、:guilabel:`Add Escalation Policy` を選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:83
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:84
 msgid "Name this one \"Secondary\" and set the first step to immediately “Notify the on-duty users in rotation: Secondary”."
 msgstr "これに「セカンダリ」という名前を付け、最初のステップを即座に「ローテーションで勤務中のユーザーに通知する：セカンダリ」と設定します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:84
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:85
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:147
 msgid "Select :guilabel:`Save` and then refresh your page. This will allow the newly-created escalation policy to be available for selection in other escalation policies."
 msgstr ":guilabel:`Save` を選択し、ページを更新します。これにより、新しく作成されたエスカレーションポリシーが他のエスカレーションポリシーで選択できるようになります。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:85
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:86
 msgid "Navigate to :menuselection:`Escalation Policies` and select :guilabel:`Add Escalation Policy`, and call the Policy Name “Business Hours”."
 msgstr ":menuselection:`Escalation Policies` に移動し、:guilabel:`Add Escalation Policy` を選択し、ポリシー名を「営業時間」とします。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:86
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:87
 msgid "Set the first step to Immediately \"Notify the on-duty users in rotation: Business Hours\"."
 msgstr "最初のステップを即座に「ローテーションで勤務中のユーザーに通知する：営業時間」と設定します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:87
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:88
 msgid "Select :guilabel:`Add Step` and set Step 2 to “If still unacked after 15 minutes”, “Execute Policy: Secondary”."
 msgstr ":guilabel:`Add Step` を選択し、ステップ 2を「15 分経過しても確認されていない場合」、「ポリシーの実行」に設定する：セカンダリ」とします。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:88
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:89
 msgid "This will link the Business Hours and Secondary escalation policies together. If the Business Hours users doesn't respond after 15 minutes, the Secondary user will be paged."
 msgstr "これにより、営業時間とセカンダリのエスカレーションポリシーがリンクされます。営業時間のユーザーが15分経っても応答しない場合、セカンダリユーザーがページングされます。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:89
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:90
 msgid "Select :guilabel:`Save` and then refresh your page."
 msgstr ":guilabel:`Save` を選択し、ページを更新してください。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:91
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:92
 msgid "Select :menuselection:`Escalation Policies` and then :guilabel:`Add Escalation Policy`. Name this policy \"Nights and Weekends\"."
 msgstr ":menuselection:`Escalation Policies` を選択し、次に :guilabel:`Add Escalation Policy` を選択します。このポリシーに「夜間と週末」という名前を付けます。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:91
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:92
 msgid "The format of this escalation policy is similar to the Business Hours escalation policy, with the Nights and Weekends rotation specified in Step 1 instead of the Business Hours rotation. This links the Nights and Weekends and Secondary escalation policies together so that if the Nights and Weekends on-call user doesn't respond in 15 minutes, it will escalate to the Seconday user."
 msgstr "このエスカレーションポリシーの形式は、営業時間エスカレーションポリシーと似ていますが、ステップ1では営業時間ローテーションの代わりに夜間と週末のローテーションが指定されています。これにより、夜間と週末とセカンダリエスカレーションポリシーがリンクされ、夜間と週末オンコールユーザーが15分以内に応答しない場合、セカンダリユーザーにエスカレーションされます。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:96
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:97
 #: ../../sp-oncall/user-roles/admin-quick-start.rst:59
 msgid "Configure Routing Keys"
 msgstr "ルーティングキーを設定する"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:98
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:99
 msgid "The final part of this configuration involves assigning routing keys to the Business Hours and Nights and Weekends escalation policies."
 msgstr "この設定の最後の部分は、ルーティングキーを営業時間と夜間と週末のエスカレーションポリシーに割り当てることです。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:100
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:101
 msgid "Navigate to :guilabel:`Settings` then :guilabel:`Routing Keys`."
 msgstr ":guilabel:`Settings` に移動し、次に :guilabel:`Routing Keys` に移動します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:101
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:102
 msgid "On the :menuselection:`Routing Keys` page you can assign an existing routing key to the escalation policies, assign them to the Default Routing Policy, or create a new routing key and assign the escalation policies to it."
 msgstr ":menuselection:`Routing Keys` ページでは、既存のルーティングキーをエスカレーションポリシーに割り当てるか、デフォルトルーティングポリシーに割り当てるか、または新しいルーティングキーを作成してエスカレーションポリシーを割り当てることができます。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:102
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:103
 msgid "To assign the escalation policies to an existing routing key, hover your mouse over the key until a pencil icon shows on the far right, and then select the pencil icon."
 msgstr "既存のルーティングキーにエスカレーションポリシーを割り当てるには、右端に鉛筆のアイコンが表示されるまでマウスをキーの上に置き、鉛筆のアイコンを選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:103
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:104
 msgid "Locate the Business Hours and Nights and Weekends escalation policies which are categorized under the team you've created them on and select them."
 msgstr "作成したチームの下に分類されている営業時間と夜間と週末のエスカレーションポリシーを探し、選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:104
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:105
 #: ../../sp-oncall/on-call-schedules/schedule-examples.rst:159
 msgid "Select the blue checkbox to save your changes."
 msgstr "青いチェックボックスを選択して変更を保存します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:105
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:106
 msgid "To assign the escalation policies to the Default Routing Policy, hover your mouse over the row until a pencil icon shows, and then select the escalation policies."
 msgstr "エスカレーションポリシーをデフォルトルーティングポリシーに割り当てるには、鉛筆のアイコンが表示されるまで行にマウスカーソルを合わせ、エスカレーションポリシーを選択します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:108
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:109
 msgid "Scenario 2: Only get alerted for certain alerts during business hours"
 msgstr "シナリオ2：営業時間内に特定のアラートのみを受け取る"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:113
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:114
 msgid "Create a Rotation called “Business Hours” with one Partial Day type shift for each user you would like on-call during Business Hours."
 msgstr "営業時間中にオンコールさせたい各ユーザーのために、部分日勤タイプのシフトを1つ含む「営業時間」というローテーションを作成します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:114
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:115
 msgid "Specify this Rotation in the first step of an Escalation Policy."
 msgstr "エスカレーションポリシーの最初のステップで、このローテーションを指定します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:115
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:116
 msgid "Create a Routing Key called “bus-hours-only” and direct it at that Escalation Policy"
 msgstr "“bus-hours-only”というルーティングキーを作成し、そのエスカレーションポリシーに向けます。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:116
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:117
 msgid "(Optional) Create Rules Engine  rules to have this Routing Key applied to the appropriate alerts."
 msgstr "(オプション)このルーティングキーが適切なアラートに適用されるように、ルールエンジンルールを作成します。"
 
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:122
-msgid "Navigate to the team you'd like to implement this schedule for and add all of the appropriate users using the :guilabel:`Invite User` button. #. Navigate to the :menuselection:`Rotations` tab and select :guilabel:`Add Rotation`. #. Name the rotation \"Business Hours\" and select \"Partial Day\" for the shift type."
-msgstr "このスケジュールを実行したいチームに移動し、:guilabel:`Invite User` ボタンを使用して適切なユーザーをすべて追加します。#. :menuselection:`Rotations` タブに移動し、:guilabel:`Add Rotation` を選択します。#. ローテーションに\"営業時間\"と名前を付け、シフトタイプに「部分日勤」を選択します。"
-
-#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:127
+#: ../../sp-oncall/on-call-schedules/schedule-examples.rst:128
 msgid "Set the shift hours."
 msgstr "シフト時間を設定します。"
 
@@ -8660,7 +8661,7 @@ msgstr ":guilabel:`Use HTTP Basic Auth` は未選択のままにしておきま�
 
 #: ../../sp-oncall/spoc-integrations/GCP-monitoring-integration.rst:26
 msgid "Select :guilabel:`Test Connection`. The :guilabel:`Test Connection` button doesn't trigger an incident in Splunk On-Call but you have to select it to save. To test the integration you need to manually trigger an alert in GCP Monitoring."
-msgstr ":guilabel:`Test Connection`  を選択します。  :guilabel:`Test Connection`  ボタンはSplunk On-Callでインシデントをトリガーしませんが、保存するには選択する必要があります。インテグレーションをテストするには、GCP Monitoringで手動でアラートをトリガーする必要があります。"
+msgstr ":guilabel:`Test Connection`  を選択します。   :guilabel:`Test Connection`  ボタンはSplunk On-Callでインシデントをトリガーしませんが、保存するには選択する必要があります。インテグレーションをテストするには、GCP Monitoringで手動でアラートをトリガーする必要があります。"
 
 #: ../../sp-oncall/spoc-integrations/GCP-monitoring-integration.rst:28
 msgid "Add the on-call webhook notification channel you created to your desired alerting policies."
@@ -8708,7 +8709,7 @@ msgstr "db212e48-……8669\\ :strong:`+databaseteam` \\ @alert.victorops.com"
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:35
 msgid "Team routing keys are configured at the bottom of the Settings > Integrations page. For details, see `Routing Keys <http://help.victorops.com/knowledge-base/routing-keys/>`."
-msgstr "チームルーティングキーは、[設定] >[インテグレーション]ページの下部で設定します。詳細については、`ルーティングキー <http://help.victorops.com/knowledge-base/routing-keys/>` を参照してください。"
+msgstr "チームルーティングキーは、[設定] > [インテグレーション]ページの下部で設定します。詳細については、`ルーティングキー <http://help.victorops.com/knowledge-base/routing-keys/>` を参照してください。"
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:37
 msgid "If you do not use routing, remove the *+$routing_key* part, including the plus sign, so that the email looks like this:"
@@ -8752,7 +8753,7 @@ msgstr "テンプレートリストをフィルターして、アラートタイ
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:59
 msgid "On the list, select the AlertSite Template for :strong:`Site Error`` with the delivery method :strong:`Text`."
-msgstr "リストで、配信方法 :strong:` テキスト` を使用して、:strong:`サイトエラー`` のアラートサイトテンプレートを選択します。"
+msgstr "リストで、配信方法 :strong:` テキスト` を使用して、:strong:`サイトエラー `` のアラートサイトテンプレートを選択します。"
 
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:60
 #: ../../sp-oncall/spoc-integrations/alertsite-integration.rst:80
@@ -9359,12 +9360,10 @@ msgid "Save the changes"
 msgstr "変更を保存する"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:-1
-#, fuzzy
 msgid "Configure the Arista CloudVision integration for Splunk On-Call."
 msgstr "Splunk On-Call の Arista CloudVision インテグレーションを設定します。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:4
-#, fuzzy
 msgid "Arista CloudVision for Splunk On-Call"
 msgstr "Splunk On-Call 用 Arista CloudVision"
 
@@ -9373,22 +9372,18 @@ msgid "Arista CloudVision is a multi-domain management platform that uses cloud 
 msgstr "Arista CloudVision は、クラウド・ネットワーキングの原理を利用して 簡素化された NetOps のエクスペリエンスを提供するマルチドメイン管理プラットフォームです。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:24
-#, fuzzy
 msgid "From the Splunk On-Call web portal, select :guilabel:`Integrations` then :guilabel:`Prometheus`."
 msgstr "Splunk On-Call Webポータルから :guilabel:`Integrations`、:guilabel:`Prometheus` の順に選択します。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:25
-#, fuzzy
 msgid "Select  the :guilabel:`Prometheus` integration and copy the :guilabel:`Service API Endpoint` to your clipboard."
 msgstr ":guilabel:`Prometheus` インテグレーションを選択し、:guilabel:`Service API Endpoint` をクリップボードにコピーします。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:28
-#, fuzzy
 msgid "CloudVision configuration"
 msgstr "CloudVision 設定"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:30
-#, fuzzy
 msgid "In Arista CloudVision, go to :guilabel:`Events` then :guilabel:`Notification Configuration` then :guilabel:`Platforms`."
 msgstr "Arista CloudVision で、:guilabel:`Events`、:guilabel:`Notification Configuration`、:guilabel:`Platforms` の順に移動します。"
 
@@ -9397,23 +9392,20 @@ msgid "Scroll to the :guilabel:`VictorOps` section and paste the Service API End
 msgstr ":guilabel:`VictorOps` セクションまでスクロールし、:guilabel:`VictorOps API Key` フィールドでコピーしておいた Service API Endpoint を貼り付けます。:guilabel:`VictorOps URL` フィールドは空白のままにしておきます。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:32
-#, fuzzy
 msgid "Next, configure this platform in a receiver by going to :guilabel:`Events` then :guilabel:`Notification Configuration` then :guilabel:`Receivers`."
 msgstr "次に、:guilabel:`Events`、:guilabel:`Notification Configuration`、:guilabel:`Receivers` の順に移動してレシーバーでこのプラットフォームを設定します。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:33
-#, fuzzy
 msgid "Select :guilabel:`Add Receivers`."
 msgstr ":guilabel:`Add Receivers` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:34
-#, fuzzy
 msgid "Enter the receiver name in the :guilabel:`Receiver Name` field and select :guilabel:`Add Configuration`."
 msgstr ":guilabel:`Receiver Name` フィールドにレシーバー名を入力し、:guilabel:`Add Configuration` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:35
 msgid "Select the :guilabel:`VictorOps` option in the table, including the :guilabel:`routing key` you want to notify in Splunk On-Call. For more information on routing keys or instructions on creating a new one, see :ref:`spoc-routing-keys`. If required, select the :guilabel:`Send alert when events are resolved` checkbox."
-msgstr "Splunk On-Call で通知したい :guilabel:`routing key` を含め、テーブルで :guilabel:`VictorOps` オプションを選択します。ルーティングキーの詳細や新規作成方法については、:ref:`spoc-routing-keys` を参照してください。必要に応じて、:guilabel:`Send alert when events are resolved` チェックボックスを選択します。"
+msgstr "Splunk On-Call で通知したい :guilabel:`routing key`  を含め、テーブルで :guilabel:`VictorOps` オプションを選択します。ルーティングキーの詳細や新規作成方法については、:ref:`spoc-routing-keys` を参照してください。必要に応じて、:guilabel:`Send alert when events are resolved` チェックボックスを選択します。"
 
 #: ../../sp-oncall/spoc-integrations/arista-cloudvision-integration.rst:36
 msgid "Next, configure rules to define when the receiver is used. Go to :guilabel:`Events` then :guilabel:`Notification Configuration` then :guilabel:`Rules` and select :guilabel:`Add Rules`. Enter the appropriate settings and select the :guilabel:`VictorOps` receiver."
@@ -10406,7 +10398,7 @@ msgstr "# 新しい :menuselection:`Contact Group` を作成します。"
 
 #: ../../sp-oncall/spoc-integrations/circonus-integration.rst:57
 msgid "Give it a name, select :guilabel:`Splunk On-Call` for the :menuselection:`Use Third Party` option. Select :guilabel:`OK`."
-msgstr "名前を付け、 :menuselection:`Use Third Party` オプションで :guilabel:`Splunk On-Call` を選択します。:guilabel:`OK` を選択します。"
+msgstr "名前を付け、:menuselection:`Use Third Party` オプションで :guilabel:`Splunk On-Call` を選択します。:guilabel:`OK` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/circonus-integration.rst:60
 msgid "Copy your API key from the REST Endpoint URL on the Splunk On-Call integrations page. From the main timeline select :guilabel:`Settings`, then :guilabel:`Integrations` and :guilabel:`Circonus`, as described in the previous Splunk On-Call section."
@@ -11801,7 +11793,7 @@ msgstr ":guilabel:`Create an alert destination` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/dynatrace-synthetic-monitoring-integration.rst:54
 msgid "Select :strong:`VictorOps` from the :guilabel:`Format`` menu, then enter appropriate values for :strong:`Name`` and :strong:`Routing_key`. Paste the API key from the :guilabel:`In VictorOps` (Splunk On-Call) section."
-msgstr ":guilabel:`Format`` メニューから :strong:`VictorOps` を選択し、:strong:`Name`` および :strong:`Routing_key` に適切な値を入力します。:guilabel:`In VictorOps` (Splunk On-Call)セクションからAPIキーを貼り付けます。"
+msgstr ":guilabel:`Format`` メニューから :strong:` VictorOps ` を選択し、:strong:`Name`` および :strong:`Routing_key` に適切な値を入力します。:guilabel:`In VictorOps` (Splunk On-Call)セクションからAPIキーを貼り付けます。"
 
 #: ../../sp-oncall/spoc-integrations/dynatrace-synthetic-monitoring-integration.rst:56
 msgid "Select :guilabel:`Create`."
@@ -14909,7 +14901,7 @@ msgstr "形式： :guilabel:`JSON`"
 
 #: ../../sp-oncall/spoc-integrations/logicmonitor-integration.rst:59
 msgid "For the Alert Data paste the following message. Note that this sample assigns a value of ``CRITICAL`` to the ``message_type``:"
-msgstr "アラートデータには以下のメッセージを貼り付けます。このサンプルでは、 ``message_type`` に ``CRITICAL`` という値を割り当てていることに注意してください："
+msgstr "アラートデータには以下のメッセージを貼り付けます。このサンプルでは、``message_type``  に ``CRITICAL`` という値を割り当てていることに注意してください："
 
 #: ../../sp-oncall/spoc-integrations/logicmonitor-integration.rst:86
 msgid "Repeat steps 1 through 4 for an alert status of Acknowledged and again for Cleared. For each, within the Alert Data change the ``message_type`` field to reflect the alert status. Map the field as follows and refer to the screenshot for clarification:"
@@ -15034,7 +15026,7 @@ msgstr "これで、Splunk On-Call通知エンドポイントをアラートに�
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:67
 msgid "Select :strong:`Equal to` from the :strong:`Condition`` dropdown menu. Enter :strong:`99` in the :strong:`Threshold` field, then select :strong:`Continue`."
-msgstr ":strong:`条件`` ドロップダウンメニューから、:strong:`等しい` を選択します。:strong:`しきい値` フィールドに :strong:` 99` と入力し、:strong:`続行` を選択します。"
+msgstr ":strong:`条件 `` ドロップダウンメニューから、:strong:`等しい ` を選択します。:strong:`しきい値` フィールドに :strong:`  99 ` と入力し、:strong:`続行` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:72
 msgid "Enter a name in the :strong:`Name` field, then click :strong:`CONTINUE`."
@@ -15042,7 +15034,7 @@ msgstr ":strong:`名前` フィールドに名前を入力し、:strong:`続行`
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:74
 msgid "Set :strong:`Suppress notifications for` to :strong:`5 minutes`, then select :strong:`SplunSplunk On-Call` (formerly VictorOps) from the :strong:`Notifications endpoint` dropdown menu, then click :strong:`CREATE ALERT`."
-msgstr ":strong:`通知を止める時間` を :strong:`5分` に設定し、:strong:`通知エンドポイント ` ドロップダウンメニューから :strong:`SplunSplunk On-Call ` (旧VictorOps)を選択し、:strong:`CREATE ALERT` をクリックします。"
+msgstr ":strong:`通知を止める時間` を :strong:`5分` に設定し、:strong:`通知エンドポイント` ドロップダウンメニューから :strong:`SplunSplunk On-Call` (旧VictorOps)を選択し、:strong:`CREATE ALERT` をクリックします。"
 
 #: ../../sp-oncall/spoc-integrations/logz-io-integration.rst:80
 msgid "Confirm that an alert shows up in the Splunk On-Call timeline."
@@ -16972,7 +16964,7 @@ msgstr "ObserviumのAPIエンドポイントURL"
 
 #: ../../sp-oncall/spoc-integrations/observium-integration.rst:40
 msgid "The variable name at the end of the API service endpoint might vary. For example, ``$incident_alert`` instead of ``$routing_key``."
-msgstr "APIサービスエンドポイントの最後の変数名は異なる場合があります。例えば、 ``$routing_key`` ではなく ``$incident_alert`` となります。"
+msgstr "APIサービスエンドポイントの最後の変数名は異なる場合があります。例えば、``$routing_key`` ではなく ``$incident_alert`` となります。"
 
 #: ../../sp-oncall/spoc-integrations/observium-integration.rst:43
 msgid "Observium configuration"
@@ -19041,7 +19033,7 @@ msgstr "以下の例では、``scalyrMessageType`` というペイロードフ�
 
 #: ../../sp-oncall/spoc-integrations/scalyr-integration.rst:100
 msgid "A corresponding Rules Engine rule can match on the field of ``scalyrMessageType`` with a value of ``WARNING``, and transform the ``message_type`` field to a value of ``WARNING``. The ``message_type`` field is what tells Splunk On-Call how to treat the alert."
-msgstr "対応するルールエンジンのルールは、 ``WARNING``  の値を持つ ``scalyrMessageType`` のフィールドにマッチし、``message_type``  のフィールドを ``WARNING``  の値に変換することができます。``message_type`` のフィールドは、Splunk On-Callにアラートの処理方法を伝えるものです。"
+msgstr "対応するルールエンジンのルールは、 ``WARNING`` の値を持つ ``scalyrMessageType`` のフィールドにマッチし、``message_type``  のフィールドを ``WARNING``  の値に変換することができます。``message_type`` のフィールドは、Splunk On-Callにアラートの処理方法を伝えるものです。"
 
 #: ../../sp-oncall/spoc-integrations/scalyr-integration.rst:102
 msgid "You can apply the same process to nearly any pertinent payload field. For more information, see :ref:`incident-fields-glossary`."
@@ -19140,8 +19132,8 @@ msgid "Splunk On-Call Handler"
 msgstr "Splunk On-Callハンドラ"
 
 #: ../../sp-oncall/spoc-integrations/sensu-integration.rst:141
-msgid "For more information, see :new-page:`Sensu documentation on Handlers <https://sensuapp.org/docs/0.29/reference/handlers.html#handler-definition-specification>`."
-msgstr "詳細については、:new-page:`Sensu documentation on Handlers<https://sensuapp.org/docs/0.29/reference/handlers.html#handler-definition-specification>` を参照してください。"
+msgid "For more information, see search \"handlers\" on the Sensu documentation website."
+msgstr "詳細は、Sensuのドキュメントウェブサイトで「ハンドラ」を検索して参照してください。"
 
 #: ../../sp-oncall/spoc-integrations/sentry-integration-guide-victorops.rst:-1
 msgid "Configure the Sentry integration for Splunk On-Call."
@@ -19337,7 +19329,7 @@ msgstr ":guilabel:`Settings`、:guilabel:`Alert`、:guilabel:`Rules Engine` の�
 
 #: ../../sp-oncall/spoc-integrations/servicenow-integration.rst:108
 msgid "Add a rule which defines a matching condition to send Splunk On-Call incidents to ServiceNow. See :ref:`rules-engine-matching-conditions`. For example, to send all critical incidents to ServiceNow, use: When ``message_type`` matches ``CRITICAL`` using ``Wildcard`` Set ``ServiceNow_Integration`` to new value ``true``. This example also includes resolution field information to enable auto-resolution of incidents to ServiceNow."
-msgstr "Splunk On-CallインシデントをServiceNowに送信するマッチング条件を定義するルールを追加します。:ref:`rules-engine-matching-conditions` を参照してください。たとえば、すべての重要なインシデントをServiceNowに送信するには、次のようにします： ``Wildcard`` を使用して ``message_type``  が ``CRITICAL`` に一致する場合 ``ServiceNow_Integration`` を新しい値 ``true`` に設定します。この例には、ServiceNowへのインシデントの自動解決を有効にするための解決フィールド情報も含まれています。"
+msgstr "Splunk On-CallインシデントをServiceNowに送信するマッチング条件を定義するルールを追加します。:ref:`rules-engine-matching-conditions` を参照してください。たとえば、すべての重要なインシデントをServiceNowに送信するには、次のようにします：  ``Wildcard`` を使用して ``message_type``  が ``CRITICAL`` に一致する場合 ``ServiceNow_Integration`` を新しい値 ``true`` に設定します。この例には、ServiceNowへのインシデントの自動解決を有効にするための解決フィールド情報も含まれています。"
 
 #: ../../sp-oncall/spoc-integrations/servicenow-integration.rst:115
 msgid "Map fields from Splunk On-Call to ServiceNow"
@@ -21260,7 +21252,7 @@ msgstr "In Splunk Cloud Platform"
 
 #: ../../sp-oncall/spoc-integrations/splunk-integration-guide.rst:166
 msgid "Under :guilabel:`Apps`, select :guilabel:`Find More Apps`, then in the search bar type :guilabel:`Splunk On-Call:guilabel:`. Select :guilabel:`Install`. Once the app is installed it shows up under :guilabel:`Apps`."
-msgstr ":guilabel:`Apps`  で :guilabel:`Find More Apps` を選択し、検索バーで :guilabel:`Splunk On-Call:guilabel:` と入力します。:guilabel:`Install` を選択します。アプリがインストールされると、  :guilabel:`Apps`  の下に表示されます。"
+msgstr ":guilabel:`Apps`  で :guilabel:`Find More Apps` を選択し、検索バーで :guilabel:`Splunk On-Call:guilabel:` と入力します。:guilabel:`Install` を選択します。アプリがインストールされると、   :guilabel:`Apps`  の下に表示されます。"
 
 #: ../../sp-oncall/spoc-integrations/splunk-integration-guide.rst:168
 msgid "Open the app to go to the Splunk On-Call Incident Response Home page, which guides you through setting up the account, configuring API keys, and testing alerts. Once your configuration is complete a check next to each configuration step appears."
@@ -22875,7 +22867,7 @@ msgstr "残りの設定はTwilioで行います。このインテグレーショ
 
 #: ../../sp-oncall/spoc-integrations/twilio-live-call-routing-guide.rst:103
 msgid "After you have created an account in Twilio pin 3 items to the menu bar on the left. From your main Twilio console, select :guilabel:`Explore Products`` on the left hand side under the :guilabel:`Develop` tab."
-msgstr "Twilioでアカウントを作成したら、左側のメニューバーに3つの項目をピン留めします。Twilioのメインコンソールから、左側の :guilabel:`Develop` タブの下にある :guilabel:`Explore Products`` を選択します。"
+msgstr "Twilioでアカウントを作成したら、左側のメニューバーに3つの項目をピン留めします。Twilioのメインコンソールから、左側の :guilabel:`Develop`  タブの下にある :guilabel:`Explore Products`` を選択します。"
 
 #: ../../sp-oncall/spoc-integrations/twilio-live-call-routing-guide.rst:99
 msgid "Twilio console"
@@ -24262,7 +24254,7 @@ msgstr "次に、:guilabel:`Operations` と :guilabel:`Recovery Operations` タ�
 
 #: ../../sp-oncall/spoc-integrations/zabbix-integration.rst:122
 msgid "Place the following payloads in the :guilabel:`Default Message` section of both tabs. Then update the :guilabel:`Default Subject` to ``Incident: {ESC.HISTORY}`` on the :guilabel:`Operations` tab and ``Resolved: {ESC.HISTORY}`` on the :guilabel:`Recovery Operations` tab."
-msgstr "両方のタブの :guilabel:`Default Message` セクションに次のペイロードを配置します。次に、:guilabel:`Default Subject` を :guilabel:`Operations` タブの ``Incident: {ESC.HISTORY}`` に、:guilabel:`Recovery Operations` タブの ``Resolved: {ESC.HISTORY}`` に更新します。"
+msgstr "両方のタブの :guilabel:`Default Message` セクションに次のペイロードを配置します。次に、:guilabel:`Default Subject` を  :guilabel:`Operations` タブの ``Incident: {ESC.HISTORY}`` に、:guilabel:`Recovery Operations` タブの ``Resolved: {ESC.HISTORY}`` に更新します。"
 
 #: ../../sp-oncall/spoc-integrations/zabbix-integration.rst:125
 msgid "The Javascript payload for the :guilabel:`Operations` tab is available in the GitHub repository at :new-page:`https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-Zabbix4.4/action_trigger_operation.json <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-Zabbix4.4/action_trigger_operation.json>`."
@@ -26746,7 +26738,6 @@ msgid "View escalation policies"
 msgstr "エスカレーションポリシーを表示する"
 
 #: ../../sp-oncall/user-roles/user-roles-permissions.rst:258
-#, fuzzy
 msgid "Create, edit, or delete escalation policies"
 msgstr "エスカレーションポリシーを作成、編集、または削除する"
 
@@ -27124,3 +27115,15 @@ msgstr "ユーザー名を忘れた場合は、ログインページで「ユー
 #: ../../sp-oncall/user-roles/usernames.rst:37
 msgid "Your username is not your email, it is the username you or your organization created when the account was initially configured."
 msgstr "ユーザー名はメールアドレスではなく、アカウントが最初に設定されたときに作成されたユーザー名です。"
+
+#~ msgid "#. In the section with Monday through Friday in blue lettering, deselect Friday. Also, change the hours to cover all week-hours that are not covered by the Business Hours rotation. For example, if your  business hours are 8 AM to 5 PM, your Weeknights shift should be 5 PM to 8 AM. If your Business Hours are 9 AM to 4 PM, your Weeknights shift should be 4 PM to 9 AM. #. Change the :guilabel:`The next handoff happens` date to the next upcoming Monday. #. Select :guilabel:`Save Shift`. #. To add users to this shift, select :guilabel:`Manage Members` then :guilabel:`Select a User to add`. The order that you add the users in will dictate the week they end up on-duty. The first user you add will do the current week, the next user the week after, the third user the third week. You can re-order them after adding by dragging them on the :menuselection:`Members` page."
+#~ msgstr "#.月曜日から金曜日までが青文字で表示されているセクションで、金曜日の選択を解除します。また、営業時間のローテーションでカバーされていないすべての週をカバーするように時間を変更してください。例えば、営業時間が午前8時から午後5時までの場合、平日の夜のシフトは午後5時から午前8時までとします。営業時間が午前9時から午後4時までであれば、平日の夜のシフトは午後4時から午前9時までとします。#.:guilabel:`The next handoff happens` の日付を次の月曜日に変更してください。#.:guilabel:`Save Shift` を選択してください。#.このシフトにユーザーを追加するには、:guilabel:`Manage Members` を選択し、次に :guilabel:`Select a User to add` を選択します。ユーザーを追加する順番によって、勤務することになる週が決まります。最初に追加したユーザーは現在の週を、次のユーザーはその次の週を、3番目のユーザーは3番目の週を担当します。追加後、:menuselection:`Members` のページでドラッグすることで、順番を入れ替えることができます。"
+
+#~ msgid "Select :guilabel:`Save Shift`/"
+#~ msgstr ":guilabel:`Save Shift` /を選択する"
+
+#~ msgid "Navigate to the team you'd like to implement this schedule for and add all of the appropriate users using the :guilabel:`Invite User` button. #. Navigate to the :menuselection:`Rotations` tab and select :guilabel:`Add Rotation`. #. Name the rotation \"Business Hours\" and select \"Partial Day\" for the shift type."
+#~ msgstr "このスケジュールを実行したいチームに移動し、:guilabel:`Invite User` ボタンを使用して適切なユーザーをすべて追加します。#. :menuselection:`Rotations` タブに移動し、:guilabel:`Add Rotation` を選択します。#. ローテーションに\"営業時間\"と名前を付け、シフトタイプに「部分日勤」を選択します。"
+
+#~ msgid "For more information, see :new-page:`Sensu documentation on Handlers <https://sensuapp.org/docs/0.29/reference/handlers.html#handler-definition-specification>`."
+#~ msgstr "詳細については、:new-page:`Sensu documentation on Handlers<https://sensuapp.org/docs/0.29/reference/handlers.html#handler-definition-specification>` を参照してください。"

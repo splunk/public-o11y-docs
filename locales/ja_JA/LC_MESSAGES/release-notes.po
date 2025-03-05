@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 13:18+0000\n"
-"PO-Revision-Date: 2025-01-13 15:34+0000\n"
+"POT-Creation-Date: 2025-01-29 18:45+0000\n"
+"PO-Revision-Date: 2025-02-27 12:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -19,12 +19,10 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #: ../../release-notes/2024-10-rn.rst:5
-#, fuzzy
 msgid "October 2024"
 msgstr "2024年10月1日"
 
 #: ../../release-notes/2024-10-rn.rst:7
-#, fuzzy
 msgid ""
 "Splunk Observability Cloud released the following new features and enhancements in October 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:"
 "`list of changelogs <changelogs>`."
@@ -33,7 +31,6 @@ msgstr ""
 "ては、:ref:`変更履歴リスト <changelogs>` を参照してください。"
 
 #: ../../release-notes/2024-10-rn.rst:12
-#, fuzzy
 msgid "October 23, 2024"
 msgstr "2024年10月23日"
 
@@ -50,12 +47,10 @@ msgid "Token management improvements"
 msgstr "トークン管理の改善"
 
 #: ../../release-notes/2024-10-rn.rst:22
-#, fuzzy
 msgid "Admin and power users have a new token management interface that includes long-lived tokens, improved token visibility and rotation, and a design that is aligned with Splunk Cloud Platform. For more information, see :ref:`admin-org-tokens`."
 msgstr "管理者とパワーユーザーは、トークンの長寿命化、トークンの可視性とローテーションの改善、Splunk Cloud Platformと連携したデザインなど、新しいトークン管理インターフェイスが利用できます。詳細は、:ref:`admin-org-tokens` を参照してください。"
 
 #: ../../release-notes/2024-10-rn.rst:27
-#, fuzzy
 msgid "October 2, 2024"
 msgstr "2024年10月2日"
 
@@ -64,7 +59,6 @@ msgid "SignalFlow editor for custom metrics SLO"
 msgstr "カスタムメトリクス用SignalFlowエディタ SLO"
 
 #: ../../release-notes/2024-10-rn.rst:37
-#, fuzzy
 msgid "You can use SignalFlow to define metrics and filters when creating a custom metric SLO. For more information, see :ref:`create-slo`."
 msgstr "カスタムメトリクスのSLOを作成する際に、SignalFlowを使用してメトリクスとフィルターを定義できます。詳細は、:ref:`create-slo` を参照してください。"
 
@@ -89,10 +83,9 @@ msgid "Kubernetes control plane metrics"
 msgstr "Kubernetesのコントロールプレーンメトリクス"
 
 #: ../../release-notes/2024-10-rn.rst:54
-#, fuzzy
 msgid ""
-"In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are available using OpenTelemetry Prometheus receivers that target Prometheus endpoints. For "
-"moreinformation see :ref:`kubernetes-control-plane-prometheus`."
+"In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are available using OpenTelemetry Prometheus receivers that target Prometheus endpoints. For more "
+"information see :ref:`kubernetes-control-plane-prometheus`."
 msgstr ""
 "Smart AgentのモニターをOpenTelemetry Collectorのレシーバーに置き換えるための継続的な取り組みの中で、PrometheusエンドポイントをターゲットとするOpenTelemetry Prometheusレシーバーを使用してKubernetes制御プレーンメトリクスのコレクションが利用できるよ"
 "うになっています。詳細は :ref:`kubernetes-control-plane-prometheus` を参照してください。"
@@ -114,12 +107,10 @@ msgid "You can use Terraform to archive metrics and create exception rules, such
 msgstr "Terraformを使用してメトリクスをアーカイブし、メトリクスのサブセットをアーカイブ層ではなくリアルタイム層にルーティングするなどの例外ルールを作成することができます。"
 
 #: ../../release-notes/2024-11-rn.rst:5
-#, fuzzy
 msgid "November 2024"
 msgstr "2024年11月"
 
 #: ../../release-notes/2024-11-rn.rst:7
-#, fuzzy
 msgid ""
 "Splunk Observability Cloud released the following new features and enhancements in November 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:"
 "`list of changelogs <changelogs>`."
@@ -128,7 +119,6 @@ msgstr ""
 "ては、:ref:`変更履歴リスト <changelogs>` を参照してください。"
 
 #: ../../release-notes/2024-11-rn.rst:12
-#, fuzzy
 msgid "November 14, 2024"
 msgstr "2024年11月14日"
 
@@ -138,8 +128,8 @@ msgstr "Splunk Cloud PlatformにおけるSplunk Observability Cloudのメトリ�
 
 #: ../../release-notes/2024-11-rn.rst:22
 msgid ""
-"Administrators can now view Splunk Observability Cloud metrics in Splunk Cloud Platform. Create a Splunk Observability Cloud metrics-based chart in Splunk Dashboard Studio or import a chart from Splunk Observability Cloud into Splunk "
-"DashboardStudio."
+"Administrators can now view Splunk Observability Cloud metrics in Splunk Cloud Platform. Create a Splunk Observability Cloud metrics-based chart in Splunk Dashboard Studio or import a chart from Splunk Observability Cloud into Splunk Dashboard "
+"Studio."
 msgstr ""
 "管理者は、Splunk Observability CloudのメトリクスをSplunk Cloud Platformで表示できるようになりました。Splunk Dashboard StudioでSplunk Observability Cloudのメトリクスをベースとしたチャートを作成するか、Splunk Observability CloudからSplunkDashboard "
 "Studioにチャートをインポートします。"
@@ -201,7 +191,6 @@ msgstr ""
 "navigation-with/ba-p/701021>` を参照してください。"
 
 #: ../../release-notes/2024-11-rn.rst:40
-#, fuzzy
 msgid "Global search enhancements"
 msgstr "グローバルサーチの強化"
 
@@ -259,8 +248,8 @@ msgstr "Synthetic Monitoringにおいて、以下の点を強化しました："
 
 #: ../../release-notes/2024-11-rn.rst:58
 msgid ""
-"Dynamic dashboard resolution now automatically adjusts data views based on zoom levels and data density, providing granular detail when zoomed in and summarized data when zoomed out. To adjust the view, you don't need to manually set "
-"frequenciesbased on the time period. See :ref:`test-kpis`."
+"Dynamic dashboard resolution now automatically adjusts data views based on zoom levels and data density, providing granular detail when zoomed in and summarized data when zoomed out. To adjust the view, you don't need to manually set frequencies "
+"based on the time period. See :ref:`test-kpis`."
 msgstr ""
 "動的ダッシュボードの解像度は、ズームレベルとデータ密度に基づいてデータビューを自動的に調整し、ズームイン時には詳細なデータを、ズームアウト時には要約されたデータを提供するようになりました。ビューを調整するために、期間に基づいて頻度を手動で設定する"
 "必要はありません。:ref:`test-kpis` を参照してください。"
@@ -306,7 +295,6 @@ msgid "For more information, see :ref:`centralized-rbac`."
 msgstr "詳細は :ref:`centralized-rbac` を参照してください。"
 
 #: ../../release-notes/2024-11-rn.rst:71
-#, fuzzy
 msgid "Log Observer Connect teams"
 msgstr "Log Observer Connectのチーム"
 
@@ -339,9 +327,8 @@ msgid "Release notes overview"
 msgstr "リリースノートの概要"
 
 #: ../../release-notes/release-notes-overview.rst:16
-#, fuzzy
 msgid ""
-"Keep up to date with the latest new features and enhancements to Splunk Observability Cloud products and components. Splunk Observability Cloud comprises both SaaS products which release on a rolling basis and downloadable versioned components."
+"Keep up to date with the latest new features and enhancements to Splunk Observability Cloud products and components. Splunk Observability Cloud comprises both SaaS products which release on a rolling basis and downloadable versioned components. "
 "Presented here are new feature and enhancement announcements for both SaaS and versioned offerings as well as links to detailed changelogs for versioned components."
 msgstr ""
 "Splunk Observability Cloud製品およびコンポーネントの新機能や機能強化について、常に最新の情報を入手できます。Splunk Observability Cloudは、ローリングベースでリリースされるSaaS製品と、ダウンロード可能なバージョン管理されたコンポーネントの両方で構成"
@@ -352,42 +339,34 @@ msgid "Each release date includes new features and enhancements for SaaS and ver
 msgstr "各リリース日には、SaaSやバージョン管理された製品やコンポーネントの新機能や機能強化が含まれています。"
 
 #: ../../release-notes/release-notes-overview.rst:29
-#, fuzzy
 msgid "Release month"
 msgstr "リリース月"
 
 #: ../../release-notes/release-notes-overview.rst:30
-#, fuzzy
 msgid "Release date"
 msgstr "リリース日"
 
 #: ../../release-notes/release-notes-overview.rst:31
-#, fuzzy
 msgid ":ref:`2024-11-rn`"
 msgstr ":ref:`2024-11-rn`"
 
 #: ../../release-notes/release-notes-overview.rst:32
-#, fuzzy
 msgid ":ref:`2024-11-14-rn`"
 msgstr ":ref:`2024-11-14-rn`"
 
 #: ../../release-notes/release-notes-overview.rst:33
-#, fuzzy
 msgid ":ref:`2024-10-rn`"
 msgstr ":ref:`2024-10-rn`"
 
 #: ../../release-notes/release-notes-overview.rst:34
-#, fuzzy
 msgid ":ref:`2024-10-23-rn`"
 msgstr ":ref:`2024-10-23-rn`"
 
 #: ../../release-notes/release-notes-overview.rst:35
-#, fuzzy
 msgid ":ref:`2024-10-02-rn`"
 msgstr ":ref:`2024-10-02-rn`"
 
 #: ../../release-notes/release-notes-overview.rst:36
-#, fuzzy
 msgid ":ref:`2024-10-01-rn`"
 msgstr ":ref:`2024-10-01-rn`"
 

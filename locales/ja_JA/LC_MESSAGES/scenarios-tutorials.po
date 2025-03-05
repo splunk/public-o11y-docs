@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 13:18+0000\n"
-"PO-Revision-Date: 2025-01-13 15:33+0000\n"
+"POT-Creation-Date: 2025-01-29 18:45+0000\n"
+"PO-Revision-Date: 2025-02-27 12:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -167,7 +167,6 @@ msgid "For example, when Kai looks at the :strong:`tenant.level` module, they se
 msgstr "例えば、Kaiが :strong:`tenant.level` モジュールを見ると、すべてのレベルでエラーが発生していることが分かります。このため、根本原因はテナント固有のものではない可能性が高いです。"
 
 #: ../../scenarios-tutorials/scenario.rst:141
-#, fuzzy
 msgid "This screenshot shows the tenant.level module in Splunk APM displaying errors evenly distributed across gold, silver, and bronze tenant levels."
 msgstr "このスクリーンショットは、Splunk APMの「tenant.level」モジュールを示すもので、ゴールド、シルバー、ブロンズのテナントレベルにエラーが均等に分散していることを示しています。"
 
@@ -184,17 +183,14 @@ msgid "This seems like a strong lead, so Kai decides to dig into the log details
 msgstr "これは有力な手がかりのようなので、Kaiはログの詳細を調べることにしました。:strong:`paymentserviceのログ` の「関連コンテンツ」タイルを選択します。"
 
 #: ../../scenarios-tutorials/scenario.rst:162
-#, fuzzy
 msgid "Now, in Splunk Log Observer Connect, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only."
 msgstr "さて、Splunk Log Observer ConnectではKaiのビューが自動的に絞り込まれ、「 :strong:`paymentservice` 」について受信したログデータのみが表示されています。"
 
 #: ../../scenarios-tutorials/scenario.rst:164
-#, fuzzy
 msgid "Kai sees some error logs, so they select 1 to see more details in a structured view. As Kai looks at the log details, they see this error message: \"Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)\"."
 msgstr "いくつかのエラーログを見て、1つのログを選択し、構造化されたビューで詳細を確認します。ログの詳細を見ると、次のエラーメッセージが表示されています：「ButtercupPaymentsで決済処理が失敗：無効なAPIトークン（test-20e26e90-356b-432e-a2c6-956fc03f5609）」。"
 
 #: ../../scenarios-tutorials/scenario.rst:166
-#, fuzzy
 msgid "This screenshot shows the details of an error log in Splunk Log Observer Connect, including the error severity and an error message."
 msgstr "このスクリーンショットは、エラーの重大度とエラーメッセージを含む、Splunk Log Observer Connectのエラーログの詳細を示しています。"
 
@@ -215,12 +211,10 @@ msgid "Now, Kai can see that all of the logs that contain this test API token er
 msgstr "これでKaiは、このテストAPIトークンのエラーを含むログのすべてがバージョン :strong:`v350.10` のものであり、バージョンv350.9のものは1つもないことを確認しました。"
 
 #: ../../scenarios-tutorials/scenario.rst:176
-#, fuzzy
 msgid "This screenshot shows the Log Observer Connect page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs."
 msgstr "このスクリーンショットはLog Observer Connectのページを示すもので、イベントがエラーメッセージでフィルタリングされ、バージョン350.10でグループ化されています。表示されているログはすべてエラーログです。"
 
 #: ../../scenarios-tutorials/scenario.rst:182
-#, fuzzy
 msgid "To be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that appear for version v350.9 too, but they don't include the error message."
 msgstr "確認のため、Kaiは、このフィルターを一時的に除外するために、このメッセージフィルター値の目型のアイコンを選択します。これでバージョンv350.9のログも表示されましたが、それらのログにはエラーメッセージは含まれていません。"
 
@@ -229,7 +223,6 @@ msgid "This exploration convinces Kai that the test API token in v350.10 is the 
 msgstr "この調査により、Kaiはv350.10のテストAPIトークンが問題の原因である可能性が最も高いと確信しました。Kaiは、:strong:`paymentservice` のオーナーであるDeepuに、この調査結果を通知します。"
 
 #: ../../scenarios-tutorials/scenario.rst:192
-#, fuzzy
 msgid "Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the error logs in Splunk Log Observer Connect. They agree with Kai's assessment that the test API token is the likely cause of the problem."
 msgstr "Kaiの調査結果に基づいて、:strong:`paymentservice` のオーナーであるDeepuがSplunk Log Observer Connectでエラーログを確認します。そして、テストAPIトークンが問題の原因である可能性が高いというKaiの評価に同意しました。"
 
@@ -238,12 +231,10 @@ msgid "Deepu decides to implement a temporary fix by reverting back to version v
 msgstr "Deepuは、Buttercup Gamesのサイトを既知の正常な状態に戻すことを試みるために、バージョンをv350.9に戻して暫定的な修正を実施し、その間にチームでv350.10への修正に取り組むことを決定しました。"
 
 #: ../../scenarios-tutorials/scenario.rst:196
-#, fuzzy
 msgid "As one way to see if reverting to version v350.9 fixes the issue, Deepu opens the time picker in the upper left corner of Splunk Log Observer Connect and selects :strong:`Live Tail`. Live Tail provides Deepu with a real-time streaming view of a sample of incoming logs."
 msgstr "バージョンv350.9に戻すことで問題が解決するかどうかを確認するための1つの方法として、DeepuはSplunk Log Observer Connectの左上隅にあるタイムピッカーを開き、:strong:`Live Tail` を選択します。Live Tailは、受信ログのサンプルのリアルタイムストリーミングビューを提供します。"
 
 #: ../../scenarios-tutorials/scenario.rst:198
-#, fuzzy
 msgid "This animated GIF shows Deepu opening the time picker of Splunk Log Observer Connect and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received."
 msgstr "このアニメーションGIFは、DeepuがSplunk Log Observer Connectのタイムピッカーを開き、Live Tailを選択する様子を示すものです。DeepuがLive Tailを選択すると、決済の失敗を示すメッセージを含むエラーログは消え、エラーメッセージを含む新しいログは受信されなくなりました。"
 
@@ -252,12 +243,10 @@ msgid "Deepu watches the Live Tail view and sure enough, the failed payment mess
 msgstr "DeepuがLive Tailビューを見ると、確かに :strong:`paymentservice` のログに、決済の失敗を示すメッセージが現れなくなりました。Buttercup Gamesのサイトが安定した状態に戻ったことを確認して、Deepuは、チームによるv350.10の修正作業のサポートを開始します。"
 
 #: ../../scenarios-tutorials/scenario.rst:210
-#, fuzzy
 msgid "Now that Kai knows that this particular issue can cause a problem on the Buttercup Games site, they decide to do some preventative work for their SRE team. Kai takes the query they created in Splunk Log Observer Connect and saves it as a metric."
 msgstr "Kaiは、この特定の問題がButtercup Gamesサイトでの問題を引き起こす可能性があると分かったため、SREチームのための予防的な作業を行うことにしました。KaiはSplunk Log Observer Connectで作成したクエリを選んで、メトリクスとして保存します。"
 
 #: ../../scenarios-tutorials/scenario.rst:5
-#, fuzzy
 msgid "This screenshot shows the Save as Metric option in the More menu in Log Observer Connect."
 msgstr "このスクリーンショットは、Log Observer Connectの「その他の操作」メニューの「メトリクスとして保存」オプションを示しています。"
 
@@ -266,16 +255,14 @@ msgid "Doing this defines log metricization rules that create a log-derived metr
 msgstr "これにより、集計カウントを示すログ由来のメトリクスを作成するログのメトリクス化ルールが定義されます。Kaiのチームは、このログ由来のメトリクスをチャート、ダッシュボード、アラートに埋め込むことができます。これで、将来この問題が再び発生した場合に、問題をより早く特定するのに役立ちます。"
 
 #: ../../scenarios-tutorials/scenario.rst:224
-#, fuzzy
 msgid ""
-"Kai was able to respond to and resolve front-end issues with the Buttercup Games website that were preventing users from completing their purchases. Kai used RUM to begin troubleshooting the errors, isolating spikes in front-end errors and back-end latency as possible causes. Digging into the :strong:`/cart/checkout` endpoint, Kai used the Tag Spotlight view in RUM to investigate the full trace. Based on this, Kai realized the latency wasn't a front-end issue. Next, Kai viewed a performance summary and the end-to-end transaction workflow in APM. Looking at "
-"theservice map, Kai noted that Splunk APM identified the :strong:`paymentservice` as the root cause of the errors. After ruling out Kubernetes issues, Kai used Tag Spotlight to look for correlations in tag values for the errors. Kai noticed that the errors were only happening on a specific version and decided to look into the log details. Using Log Observer Connect, Kai looked at the log details and noticed that the error messages for the API token started with \"test\"."
+"Kai was able to respond to and resolve front-end issues with the Buttercup Games website that were preventing users from completing their purchases. Kai used RUM to begin troubleshooting the errors, isolating spikes in front-end errors and back-end latency as possible causes. Digging into the :strong:`/cart/checkout` endpoint, Kai used the Tag Spotlight view in RUM to investigate the full trace. Based on this, Kai realized the latency wasn't a front-end issue. Next, Kai viewed a performance summary and the end-to-end transaction workflow in APM. Looking at the service "
+"map, Kai noted that Splunk APM identified the :strong:`paymentservice` as the root cause of the errors. After ruling out Kubernetes issues, Kai used Tag Spotlight to look for correlations in tag values for the errors. Kai noticed that the errors were only happening on a specific version and decided to look into the log details. Using Log Observer Connect, Kai looked at the log details and noticed that the error messages for the API token started with \"test\"."
 msgstr ""
-"Kaiは、Buttercup Gamesのウェブサイトでユーザーの購入完了を妨げていたフロントエンドの問題に対応し、解決することができました。RUMを使用してエラーのトラブルシューティングを開始し、考えられる原因としてフロントエンドのエラーの急増とバックエンドのレイテンシを特定しました。:strong:`/cart/checkout` のエンドポイントを掘り下げ、RUMのTag Spotlightビューを使用して完全なトレースを調査しました。これに基づいて、レイテンシがフロントエンドの問題ではないことが分かりました。次に、APMでパフォーマンスサマリーとエンドツーエンドのトランザクションワークフローを確認しました。サービス"
-"マップを見ると、Splunk APMが :strong:`paymentservice` をエラーの根本原因として特定したことに気が付きました。Kubernetesによる問題の可能性を排除した後、Tag Spotlightを使ってエラーのタグ値の相関関係を探しました。エラーが特定のバージョンでのみ発生していることに気づき、ログの詳細を調べることにしました。Log Observer Connectを使用し、ログの詳細を見て、APIトークンのエラーメッセージが「test」で始まっていることに気が付きました。"
+"Kaiは、Buttercup Gamesのウェブサイトでユーザーの購入完了を妨げていたフロントエンドの問題に対応し、解決することができました。RUMを使用してエラーのトラブルシューティングを開始し、考えられる原因としてフロントエンドのエラーの急増とバックエンドのレイテンシを特定しました。:strong:`/cart/checkout` のエンドポイントを掘り下げ、RUMのTag Spotlightビューを使用して完全なトレースを調査しました。これに基づいて、レイテンシがフロントエンドの問題ではないことが分かりました。次に、APMでパフォーマンスサマリーとエンドツーエンドのトランザクションワークフローを確認しました。サービスマップを見"
+"ると、Splunk APMが :strong:`paymentservice` をエラーの根本原因として特定したことに気が付きました。Kubernetesによる問題の可能性を排除した後、Tag Spotlightを使ってエラーのタグ値の相関関係を探しました。エラーが特定のバージョンでのみ発生していることに気づき、ログの詳細を調べることにしました。Log Observer Connectを使用し、ログの詳細を見て、APIトークンのエラーメッセージが「test」で始まっていることに気が付きました。"
 
 #: ../../scenarios-tutorials/scenario.rst:226
-#, fuzzy
 msgid "Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. After implementing a fix, Deepu used Log Observer Connect Long Tail reports to monitor a real-time streaming view of the incoming logs. Deepu confirmed that the payment errors were no longer occurring. As a final step, Kai saved the Splunk Log Observer Connect query as a metric in order to alert the team and help resolve similar issues faster in the future."
 msgstr ":strong:`paymentservice` のオーナーであるDeepuと相談し、テストAPIトークンが問題の原因である可能性が高いということで合意しました。Deepは修正を実施した後、Log Observer ConnectのLive Tailレポートを使用して、受信ログのリアルタイムストリーミングビューを監視しました。そして、決済のエラーが発生しなくなったことを確認しました。最終手順として、KaiはSplunk Log Observer Connectのクエリをメトリクスとして保存することで、チームにアラートを通知し、今後同様の問題を迅速に解決できるようにしました。"
 
@@ -540,22 +527,18 @@ msgid ":ref:`troubleshoot-noisy-detectors`"
 msgstr ":ref:`troubleshoot-noisy-detectors`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:41
-#, fuzzy
 msgid ":ref:`min-delay-detectors-scenario`"
 msgstr ":ref:`min-delay-detectors-scenario`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:43
-#, fuzzy
 msgid ":ref:`max-delay-detectors-scenario`"
 msgstr ":ref:`max-delay-detectors-scenario`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:44
-#, fuzzy
 msgid ":ref:`SLOs <slo-intro>`"
 msgstr ":ref:`SLOs <slo-intro>`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:45
-#, fuzzy
 msgid ":ref:`custom-metric-slo-scenario`"
 msgstr ":ref:`custom-metric-slo-scenario`"
 
@@ -569,7 +552,6 @@ msgid ":ref:`service-map`"
 msgstr ":ref:`service-map`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:49
-#, fuzzy
 msgid ":ref:`specific-trace`"
 msgstr ":ref:`specific-trace`"
 
@@ -590,7 +572,6 @@ msgid ":ref:`apm-scenario-trace-analyzer`"
 msgstr ":ref:`apm-scenario-trace-analyzer`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:59
-#, fuzzy
 msgid ":ref:`apm-scenario-trace-analyzer-trace-duration`"
 msgstr ":ref:`apm-scenario-trace-analyzer-trace-duration`"
 
@@ -643,7 +624,6 @@ msgid ":ref:`memory-profiling-scenario`"
 msgstr ":ref:`memory-profiling-scenario`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:80
-#, fuzzy
 msgid ":ref:`Infrastructure Monitoring <get-started-infrastructure>`"
 msgstr ":ref:`Infrastructure Monitoring <get-started-infrastructure>`"
 
@@ -652,7 +632,6 @@ msgid ":ref:`troubleshoot-k8s-nav-scenario`"
 msgstr ":ref:`troubleshoot-k8s-nav-scenario`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:82 ../../scenarios-tutorials/scenario-landing.rst:84
-#, fuzzy
 msgid ":ref:`Infrastructure: Metrics pipeline management <metrics-pipeline-intro>`"
 msgstr ":ref:`Infrastructure: メトリクスパイプライン管理<metrics-pipeline-intro>`"
 
@@ -661,7 +640,6 @@ msgid ":ref:`aggregate-drop-use-case`"
 msgstr ":ref:`aggregate-drop-use-case`"
 
 #: ../../scenarios-tutorials/scenario-landing.rst:85
-#, fuzzy
 msgid ":ref:`use-case-archive`"
 msgstr ":ref:`use-case-archive`"
 
