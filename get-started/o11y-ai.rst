@@ -121,7 +121,7 @@ The following table explains the categories of data that the AI Assistant uses, 
    * - Usage data
      - Usage data is more fully described in the Splunk Privacy Statement. Examples include “thumbs up”, “thumbs down”, “chat id”, “copy”, “tokens used”, and “response length”. 
 
-When you use the AI Assistant, Splunk relies on certain essential types of data to provide the service, and to enforce compliance with Splunk policy and applicable law; this includes user inputs, outputs, grounding observability data, and usage data (“essential purposes”). If you use the AI Assistant in Observability Cloud, you are agreeing to the essential purposes.
+When you use the AI Assistant, Splunk relies on certain essential types of data to provide the service and to enforce compliance with Splunk policy and applicable law; this includes user inputs, outputs, grounding observability data, and usage data (“essential purposes”). If you use the AI Assistant in Observability Cloud, you are agreeing to the essential purposes.
 
 In addition to the essential purposes, you also have the option of allowing Splunk to use the data collected by the AI Assistant for the additional purpose of conducting research and development on the AI Assistant and generative AI in general. This use of your data is optional, and you can choose to allow or disallow it by updating your settings. To manage your AI Assistant settings, follow these steps:
 
