@@ -121,23 +121,19 @@ The following table explains the categories of data that the AI Assistant uses, 
    * - Usage data
      - Usage data is more fully described in the Splunk Privacy Statement. Examples include “thumbs up”, “thumbs down”, “chat id”, “copy”, “tokens used”, and “response length”. 
 
-When you use the AI Assistant, Splunk relies on certain essential types of data to provide the service, and to enforce compliance with Splunk policy and applicable law; this includes user inputs, outputs, grounding observability data, and usage data (“Essential Purposes”).
+When you use the AI Assistant, Splunk relies on certain essential types of data to provide the service, and to enforce compliance with Splunk policy and applicable law; this includes user inputs, outputs, grounding observability data, and usage data (“essential purposes”). If you use the AI Assistant in Observability Cloud, you are agreeing to the essential purposes.
 
-In addition to the Essential Purposes, you have the option of allowing Splunk to use the data collected by the AI Assistant for the additional purpose of conducting research and development on the AI Assistant and generative AI in general. This use of your data is optional, and you can choose to allow or disallow it. 
+In addition to the essential purposes, you also have the option of allowing Splunk to use the data collected by the AI Assistant for the additional purpose of conducting research and development on the AI Assistant and generative AI in general. This use of your data is optional, and you can choose to allow or disallow it by updating your settings. To manage your AI Assistant settings, follow these steps:
 
-You can activate and deactivate data sharing by updating your preferences in settings. To update your preferences for using the AI Assistant or for sharing data, follow these steps:
+1. Go to :guilabel:`Settings` in Splunk Observability Cloud. 
 
-1. Go to Settings in Splunk Observability Cloud. 
+2. On the :guilabel:`General Organization Settings` page, go to the :guilabel:`AI Assistant Management` section and select or deselect :guilabel:`AI Assistant in Observability` to activate or deactivate the AI Assistant in Observability Cloud for your organization. Note that any use of the AI Assisstant in Observability Cloud requires Splunk's use of your data for the essential purposes. If you do not wish to allow Splunk to use your data for the essential purposes, do not activate the AI Assistant or otherwise use the AI Assistant in Observability Cloud.
 
-2. On the :guilabel:`General Organization Settings` page, go to the :guilabel:`AI Assistant Management` section and select or deselect :guilabel:`AI Assistant in Observability` to activate or deactivate the AI Assistant in Observability Cloud for your organization. 
-
-3. If you do not want to share your data, deselect :guilabel:`Allow my AI service data to be used for research and development purposes`.
+3. If you do not want to allow usage of your data for research and development, deselect :guilabel:`Allow my AI service data to be used for research and development purposes`.
 
 .. image:: /_images/get-started/activate-assistant.png
   :width: 70%
   :alt: This screenshot shows how to activate or deactivate the AI Assistant in Observability Cloud, as well as how to control whether your data is used for training the Assistant.
-
-Note that any use of AI Assistant in Observability Cloud requires Splunk’s use of your data for the Essential Purposes. If you do not wish to allow Splunk to use your data for the Essential Purposes, do not activate :guilabel:`AI Assistant in Observability` and do not install, download, access, or otherwise use AI Assistant in Observability Cloud. If you elect to activate AI Assistant in Observability Cloud and you wish to allow Splunk to use your data for the purpose of research and development, confirm that you have selected the option to :guilabel:`Allow my AI service data to be used for research and development purposes`. If you do not want to share your data, deselect :guilabel:`Allow my AI service data to be used for research and development purposes`. Deselecting this option means you opt-out of this secondary use of your data.
 
 .. raw:: html
   
