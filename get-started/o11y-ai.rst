@@ -135,6 +135,8 @@ In addition to the essential purposes, you also have the option of allowing Splu
   :width: 70%
   :alt: This screenshot shows how to activate or deactivate the AI Assistant in Observability Cloud, as well as how to control whether your data is used for training the Assistant.
 
+For detailed data usage information, see :new-page:`Splunk Offerings Usage Data <https://trustportal.cisco.com/c/r/ctp/trust-portal.html?search_keyword=splunk#/19239883822949956>`.
+
 .. raw:: html
   
     <embed>
