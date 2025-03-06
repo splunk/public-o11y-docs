@@ -50,6 +50,20 @@ Next, include the receiver in the ``metrics`` pipeline of the ``service`` sectio
 
 See :ref:`sql-query-receiver-queries-example` for a complete config example.
 
+Sample configuration following MySQL datasource format using tcp
+----------------------------------------------------------------
+
+.. code-block:: yaml
+
+    receivers:
+      sqlquery:
+        driver: mysql
+        datasource: "user:password@tcp(host:port)/schema"
+        queries:
+          - sql: "your_query"
+
+Example of MySQL datasource to connect to database through socket with autocommit mode enabled ``user@unix(/mysql/run/mysql.sock)/schema/autocommit=true``
+
 Advanced configuration
 ----------------------------------
 
