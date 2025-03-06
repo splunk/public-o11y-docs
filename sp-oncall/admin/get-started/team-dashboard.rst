@@ -1,7 +1,7 @@
 .. _team-dashboard:
 
 ************************************************************************
-Splunk On-Call 
+Splunk On-Call team dashboard
 ************************************************************************
 
 .. meta::
@@ -9,9 +9,9 @@ Splunk On-Call
 
 
 
-The Splunk On-Call  provides a comprehensive overview of incidents. This view automatically defaults to the teams that you are a member of and allows teams to dive into the details and understand the status of alerts or incidents. 
+The Splunk On-Call provides a comprehensive overview of incidents. This view automatically defaults to the teams that you are a member of and allows teams to dive into the details and understand the status of alerts or incidents. 
 
-All incidents derived from integrated monitoring tools in the incident table include  their respective logos to help you rapidly identify the source of an alert. Manually created incidents, along with incidents originating from the Email Endpoint or the REST API integrations, will remain logo free.
+All incidents derived from integrated monitoring tools in the incident table include their respective logos to help you rapidly identify the source of an alert. Manually created incidents, along with incidents originating from the Email Endpoint or the REST API integrations, will remain logo free.
 
 Information Alerts can still be found on the Timeline Page.
 
