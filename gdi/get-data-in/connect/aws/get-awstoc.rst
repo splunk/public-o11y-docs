@@ -8,27 +8,27 @@ Connect AWS to Splunk Observability Cloud
   :description: Connection planning information and links to the different ways to connect AWS to Splunk Observability Cloud.
 
 .. toctree::
-  :hidden:
-  :maxdepth: 5
+   :hidden:
+   :maxdepth: 5
 
-  AWS authentication, permissions and regions <aws-prereqs>
-  Supported Amazon services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-aws.html#cloud-aws>
-  Compare connection options <aws-compare-connect>
-  Connect via polling <aws-connect-polling>
-  Connect with Splunk-managed Metrics Streams <aws-connect-ms>
-  Connect with AWS-managed Metric Streams <aws-console-ms>  
-  Connect to AWS using the Splunk API <aws-apiconfig>  
-  Connect to AWS with Terraform <aws-terraformconfig>
-  CloudFormation and Terraform templates <aws-cloudformation>
-  Send AWS logs to Splunk Platform <aws-logs>
-  Next steps <aws-post-install>
-  Troubleshoot your AWS integration <aws-troubleshooting>
-  Troubleshoot AWS CloudWatch polling <aws-ts-polling>
-  Troubleshoot Splunk-managed Metric Streams <aws-ts-metric-streams>
-  Troubleshoot AWS-managed Metric Streams <aws-ts-ms-aws>
-  aws-recommended-stats.rst
-  GetMetricStatistics API deprecation notice <aws-api-notice>
-  aws-tutorial/about-aws-tutorial.rst
+   AWS authentication, permissions and regions <aws-prereqs>
+   Supported Amazon services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-aws.html#cloud-aws>
+   Compare connection options <aws-compare-connect>
+   Connect via polling <aws-connect-polling>
+   Connect with Splunk-managed Metrics Streams <aws-connect-ms>
+   Connect with AWS-managed Metric Streams <aws-console-ms>  
+   Connect to AWS using the Splunk API <aws-apiconfig>  
+   Connect to AWS with Terraform <aws-terraformconfig>
+   CloudFormation and Terraform templates <aws-cloudformation>
+   Send AWS logs to Splunk Platform <aws-logs>
+   Next steps <aws-post-install>
+   Troubleshoot your AWS integration <aws-troubleshooting>
+   Troubleshoot AWS CloudWatch polling <aws-ts-polling>
+   Troubleshoot Splunk-managed Metric Streams <aws-ts-metric-streams>
+   Troubleshoot AWS-managed Metric Streams <aws-ts-ms-aws>
+   aws-recommended-stats.rst
+   GetMetricStatistics API deprecation notice <aws-api-notice>
+   aws-tutorial/about-aws-tutorial.rst
 
 Splunk Observability Cloud offers you several data ingestion and connection methods to monitor your Amazon Web Services (AWS) data. 
 
