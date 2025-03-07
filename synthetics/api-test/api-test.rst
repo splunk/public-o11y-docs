@@ -19,7 +19,7 @@ An API test provides a flexible way to check the functionality and performance o
 The ongoing shift toward API-first development has magnified the necessity of monitoring the back-end services that provide your core front-end functionality. Whether you're interested in testing multi-step API interactions or you want to gain visibility into the performance of your endpoints, an API test can help you accomplish your goals.
 
 
-.. note::  Splunk Synthetic Monitoring API tests support REST APIs only. SOAP APIs are not supported. 
+.. note::  Splunk Synthetic Monitoring API tests support REST APIs only. Although the API tests may allow certain SOAP interactions (such as sending SOAP messages over HTTP/S), SOAP is not officially supported. 
 
 
 .. raw:: html
