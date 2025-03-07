@@ -150,8 +150,6 @@ Next, confirm that the user with login problems has both of the following roles 
 * one of the ``o11y_*`` roles (See the complete step 3 in the previous section.)
 
 
-Lastly, check the signalboost-rest skynet logs, searching for errors containing the keyword ``SplunkCloudPlatformAuthManager``. 
-
 Multiple errors issue
 -------------------------------------------------------------------------------------------------
 After an administrator has set up centralized user and role management, the user sees errors across the UI after logging in.
