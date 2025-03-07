@@ -14,7 +14,7 @@ Connect AWS to Splunk Observability Cloud
    AWS authentication, permissions and regions <aws-prereqs>
    Supported Amazon services <https://docs.splunk.com/observability/en/gdi/integrations/cloud-aws.html#cloud-aws>
    Compare connection options <aws-compare-connect>
-   aws-connect-polling.rst
+   Connect via polling <aws-connect-polling>
    Connect with Splunk-managed Metrics Streams <aws-connect-ms>
    Connect with AWS-managed Metric Streams <aws-console-ms>  
    Connect to AWS using the Splunk API <aws-apiconfig>  
