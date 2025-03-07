@@ -54,7 +54,7 @@ In this step you need to choose the following connection options:
 
   * Metadata.
   * Cost and usage metrics.
-  * CloudWatch metrics. 
+  * CloudWatch metrics.
 
 In the CloudWatch Metrics option, select :guilabel:`Polling` as the ingestion method, and set up the polling rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data.
 
