@@ -142,7 +142,7 @@ For example:
   extensions:
     headers_setter:
       headers:
-        - action: insert
+        - action: upsert
           key: X-SF-TOKEN
           from_context: X-SF-TOKEN
 
