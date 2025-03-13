@@ -1,17 +1,17 @@
 .. caution::
 
-   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support (EOS) on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the EOS date, the library will be archived and no longer maintained.
+   The SignalFx Tracing Library for PHP reached End of Support (EOS) on February 21 2025. The library has been archived and is no longer maintained.
 
    If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar functionalities.
 
 .. _sfx-php-deprecated:
 
 ***********************************************************
-SignalFx Tracing Library for PHP (deprecated)
+SignalFx Tracing Library for PHP (End of Support)
 ***********************************************************
 
 .. meta::
-   :description: The SignalFx Instrumentation for .NET is deprecated. Migrate to the Splunk Distribution of OpenTelemetry .NET to use the latest features.
+   :description: The SignalFx Instrumentation for PHP has reached End of Support. Migrate to the OpenTelemetry PHP instrumentation for the latest features.
 
 .. toctree::
    :hidden:
