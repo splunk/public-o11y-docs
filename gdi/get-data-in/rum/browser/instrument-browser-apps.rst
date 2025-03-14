@@ -1,7 +1,7 @@
-.. _instrument-browser-apps:
+.. _add-browser-js-symbolication:
 
 *********************************************************************
-Instrument browser applications 
+Add browser JavaScript symbolication 
 *********************************************************************
 
 .. meta::
