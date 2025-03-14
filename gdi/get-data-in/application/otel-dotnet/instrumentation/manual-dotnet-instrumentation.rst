@@ -43,7 +43,7 @@ To create custom spans and traces, follow these steps:
 
 5. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
 
-6. Invoke the action that generates an ``Activity``, note the trade ID of the ``Activity``, and locate the trace in Splunk APM. You should now see a span with the display name "Custom Span Name" in the trace tree.
+6. Invoke the action that generates an ``Activity``, note the trace ID of the ``Activity``, and locate the trace in Splunk APM. You should now see a span with the display name "Custom Span Name" in the trace tree.
 
 See the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/languages/net/instrumentation/#traces>` for additional information and examples.
 
