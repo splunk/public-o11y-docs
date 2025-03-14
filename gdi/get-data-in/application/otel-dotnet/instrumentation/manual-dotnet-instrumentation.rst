@@ -38,7 +38,7 @@ To create custom spans and traces, follow these steps:
       using (var activity = RegisteredActivity.StartActivity("Custom Span Name"))
       {
          activity?.SetTag("foo", "bar1");
-         // your logic for your custom activity
+         // your logic for custom activity
       }
 
 5. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
