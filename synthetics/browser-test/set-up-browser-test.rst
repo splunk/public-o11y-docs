@@ -36,7 +36,7 @@ Follow these steps to set up a Browser test:
 
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more.
 
-#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don’t impact persisted run metrics. For more, see :ref:`try-now`.
+#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don't impact persisted run metrics. For more, see :ref:`try-now`.
 
 #. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
 #. (Optional) Turn on automatic test retry in the event a test initially fails.
@@ -528,6 +528,46 @@ Here are the limits for each type of wait time. The maximum limit for a run is 3
 
 
 
+Excluded files
+------------------------------
+
+You can configure your browser test to ignore specific file types or patterns so that it skips all HTTP requests that match those file types or patterns.
+
+Exclusion rules are useful to:
+
+
+* Prevent false alerts from test analytics.
+* Test the performance of a page with or without specific resources loading.
+* Prevent specific third party services from loading, such as random pop-ups from third party services.
+* Ignore files that are known to cause performance problems.
+
+
+To create an exclusion rule:
+
+#. On the browser test's configuration page, select the :guilabel:`Advanced toggle`.
+#. Scroll down to the :guilabel:`Custom content` section.
+#. Select :guilabel:`Add excluded file`.
+#. Select a value in :guilabel:`File type`:
+
+   .. image:: /_images/synthetics/synthetics-browser-test-excluded-files.png
+      :width: 60%
+      :alt: This image shows an exclusion rule for all files of type Crazy Egg.
+
+   * To exclude all files of a common predefined type, select that type.
+   * To exclude all file types except those that match the value you specify, select :guilabel:`All Except` and specify a value or regular expression.
+   * To use regular expressions, select :guilabel:`Custom` and specify a value or regular expression.
+     For example:
+
+     * To exclude specific domains, enter ``domainname\.com``
+     * To exclude specific subdomains, enter ``.+\.domainname\.com``
+     * To exclude a JavaScript app, enter ``domainname\.com/appname\.js``
+     * To exclude entire directories, enter ``domainname\.com/scripts\/.+``
+
+.. note::
+   If you use multiple exclusions or multiple :guilabel:`All Except` rules, the :guilabel:`All Except` inclusions always take precedence over other exclusions. Order is always ignored unless you are using a combination :guilabel:`All Except` and :guilabel:`Custom` exclusions.
+
+ 
+
 Chrome flags 
 ----------------
 Google Chrome flags are a helpful tool for troubleshooting. Activate browser features that are not available by default to test custom browser configurations and specialized use cases, like a proxy server.
@@ -568,14 +608,14 @@ Add custom properties in the test creation page in advanced settings. Use key-va
     :alt: This image shows two custom property key value pairs, env:prod and role:developer.
 
 
-Custom properties are single-valued and don’t support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``.
+Custom properties are single-valued and don't support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``.
 
 
 Key requirements:
 
    * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers.
    * The remainder of the key can contain letters, numbers, underscores and hyphens.
-   * Keys can’t be named ``test_id`` or ``test``.
+   * Keys can't be named ``test_id`` or ``test``.
    * Key size can't exceed 128 characters.
 
    See, :ref:`custom-properties`.
