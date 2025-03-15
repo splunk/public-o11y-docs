@@ -568,7 +568,7 @@ Exclusion rules are useful to:
 
 To create an exclusion rule:
 
-#. On the browser test's configuration page, select the :guilabel:`Advanced toggle`.
+#. On the browser test's configuration page, select the :guilabel:`Advanced` toggle.
 #. Scroll down to the :guilabel:`Custom content` section.
 #. Select :guilabel:`Add excluded file`.
 #. Select a value in :guilabel:`File type`:
