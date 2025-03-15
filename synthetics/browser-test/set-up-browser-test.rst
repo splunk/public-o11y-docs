@@ -588,7 +588,7 @@ To create an exclusion rule:
      * To exclude entire directories, enter ``domainname\.com/scripts\/.+``
 
 .. note::
-   If you use multiple exclusions or multiple :guilabel:`All Except` rules, the :guilabel:`All Except` inclusions always take precedence over other exclusions. Order is always ignored unless you are using a combination :guilabel:`All Except` and :guilabel:`Custom` exclusions.
+   :guilabel:`All Except` inclusions take precedence over other exclusions. The order in which you specify exclusions doesn't matter except when you're using a combination of :guilabel:`All Except` and :guilabel:`Custom`.
 
 
 
