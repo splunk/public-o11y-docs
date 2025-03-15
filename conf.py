@@ -47,7 +47,7 @@ version = ''
 release = ''
 language = 'en'
 
-exclude_patterns = ['_build', 'venv/lib/*/site-packages', '**/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'CONTRIBUTING.md', '.github/pull_request_template.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
+exclude_patterns = ['_build', 'venv/lib/*/site-packages', '**/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'CONTRIBUTING.md', '.github/pull_request_template.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst', '.git']
 
 # THEME CONFIGURATION
 #######################
