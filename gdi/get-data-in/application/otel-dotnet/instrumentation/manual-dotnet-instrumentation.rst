@@ -82,4 +82,4 @@ To create custom metrics, follow these steps:
 
       OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES=My.Application
 
-See the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/languages/net/instrumentation/#metrics` for additional information and examples.
+See the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/languages/net/instrumentation/#metrics>` for additional information and examples.
