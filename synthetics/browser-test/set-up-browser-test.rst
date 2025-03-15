@@ -527,6 +527,30 @@ Here are the limits for each type of wait time. The maximum limit for a run is 3
 
 
 
+Chrome flags 
+----------------
+Google Chrome flags are a helpful tool for troubleshooting. Activate browser features that are not available by default to test custom browser configurations and specialized use cases, like a proxy server.
+
+For more, see 
+:new-page:`What are Chrome flags? <https://developer.chrome.com/docs/web-platform/chrome-flags>` in the Google Chrome Developer guide. 
+
+Note: Global variables are incompatible with Chrome flags. 
+
+These are the flags available: 
+
+
+.. raw:: html
+
+   <div class="include-start" id="synthetics/chrome-flags.rst"></div>
+
+.. include:: /_includes/synthetics/chrome-flags.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="synthetics/chrome-flags.rst"></div>
+
+
+
 
 Excluded files
 ------------------------------
@@ -565,35 +589,6 @@ To create an exclusion rule:
 
 .. note::
    If you use multiple exclusions or multiple :guilabel:`All Except` rules, the :guilabel:`All Except` inclusions always take precedence over other exclusions. Order is always ignored unless you are using a combination :guilabel:`All Except` and :guilabel:`Custom` exclusions.
-
- 
-
-Chrome flags 
-----------------
-Google Chrome flags are a helpful tool for troubleshooting. Activate browser features that are not available by default to test custom browser configurations and specialized use cases, like a proxy server.
-
-For more, see 
-:new-page:`What are Chrome flags? <https://developer.chrome.com/docs/web-platform/chrome-flags>` in the Google Chrome Developer guide. 
-
-Note: Global variables are incompatible with Chrome flags. 
-
-These are the flags available: 
-
-
-
-
-.. raw:: html
-
-   <div class="include-start" id="synthetics/chrome-flags.rst"></div>
-
-.. include:: /_includes/synthetics/chrome-flags.rst
-
-.. raw:: html
-
-   <div class="include-stop" id="synthetics/chrome-flags.rst"></div>
-
-
-
 
 
 
