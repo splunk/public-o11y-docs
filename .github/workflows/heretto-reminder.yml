@@ -10,9 +10,12 @@ jobs:
   reminder:
     runs-on: ubuntu-latest
     permissions:
+      id-token: write
       contents: read
       actions: read
+      issues: write
       checks: write
+      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
