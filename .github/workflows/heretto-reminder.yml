@@ -1,0 +1,80 @@
+name: Pull Request Reminder
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # Runs every day at 9:00 AM UTC. Adjust as needed.
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get Pull Request Info
+        id: pr_info
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo, number } = context.issue;
+            const pr = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: number,
+            });
+
+            const author = pr.data.user.login;
+            const createdAt = new Date(pr.data.created_at);
+            const now = new Date();
+            const diffInDays = Math.floor((now - createdAt) / (1000 * 60 * 60 * 24));
+            const labels = pr.data.labels.map(label => label.name);
+
+            return { author, diffInDays, number, labels };
+
+      - name: Check if Reminder Needed
+        id: check_reminder
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { diffInDays, labels } = ${{ steps.pr_info.outputs }};
+            const reminderLabel = 'reminder sent';
+            const daysThreshold = 1; // Number of days before sending reminder. Adjust as needed.
+
+            if (labels.includes(reminderLabel)) {
+              return { sendReminder: false };
+            }
+
+            if (diffInDays >= daysThreshold) {
+              return { sendReminder: true };
+            } else {
+              return { sendReminder: false };
+            }
+
+      - name: Send Reminder Comment
+        if: ${{ steps.check_reminder.outputs.sendReminder == 'true' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo, number, author } = ${{ steps.pr_info.outputs }};
+            const message = `@${author}, please make sure that you update the files in Heretto and post the Heretto share link in this PR.`;
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: number,
+              body: message,
+            });
+
+      - name: Add Reminder Label
+        if: ${{ steps.check_reminder.outputs.sendReminder == 'true' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo, number } = ${{ steps.pr_info.outputs }};
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: number,
+              labels: ['reminder sent'],
+            });
