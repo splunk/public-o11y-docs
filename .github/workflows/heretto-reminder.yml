@@ -49,6 +49,9 @@ jobs:
             const reminderLabel = 'reminder sent';
             const daysThreshold = 1; // Number of days before sending reminder. Adjust as needed.
 
+            if (!labels) { // Check if labels is undefined or null
+              return { sendReminder: diffInDays >= daysThreshold }; // send reminder if the time threshold is passed, even without labels.
+            }
             if (labels.includes(reminderLabel)) {
               return { sendReminder: false };
             }
