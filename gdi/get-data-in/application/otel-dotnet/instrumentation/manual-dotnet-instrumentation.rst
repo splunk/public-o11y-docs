@@ -37,8 +37,14 @@ To create custom spans and traces, follow these steps:
 
       using (var activity = RegisteredActivity.StartActivity("Custom Span Name"))
       {
-         activity?.SetTag("foo", "bar1");
-         // your logic for custom activity
+         // Check if the activity is sampled and if full data collection is enabled.
+         // This ensures that tags and other custom attributes are only set when the activity is being recorded.
+         // Note: Ensure that skipping logic based on sampling does not interfere with essential business operations.
+         if(activity?.IsAllDataRequested)
+         {
+            // your logic for custom activity
+            activity.SetTag("foo", "bar1");
+         }
       }
 
 5. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
