@@ -22,7 +22,7 @@ To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and 
 
 * By default, detectors are sorted by last updated, with the most recently updated detector at the top. To reverse the sorting order or sort detectors by a different criterion, select the corresponding column header.
 * To filter detectors by assigned teams, select the :guilabel:`Team` menu and select or enter the team name you want to find.
-* To filter detectors by type, select the :guilabel:`Type` menu. You can filter detectors by the following types:
+* To filter detectors by type, select the :guilabel:`Origin` menu. You can filter detectors by the following types:
 
    * Standard detectors are user-created detectors, including all RUM, APM, Synthetics, and custom detectors.
    * AutoDetect detectors are read-only detectors Splunk Observability Cloud automatically creates when you configure supported integrations. To learn more, see :ref:`autodetect-intro`.
