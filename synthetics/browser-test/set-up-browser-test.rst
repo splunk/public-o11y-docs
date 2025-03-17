@@ -585,7 +585,7 @@ To create an exclusion rule:
      * To exclude a specific domain, including all of its subdomains, enter ``domainname\.com``
      * To exclude only the subdomains of a specific domain, but not the domain itself, enter ``.+\.domainname\.com``
      * To exclude a JavaScript app, enter ``domainname\.com/appname\.js``
-     * To exclude entire directories, enter ``domainname\.com/scripts\/.+``
+     * To exclude entire directories, enter ``domainname\.com/directoryname\/.+``
 
 .. note::
    :guilabel:`All Except` inclusions take precedence over other exclusions. The order in which you specify exclusions doesn't matter except when you're using a combination of :guilabel:`All Except` and :guilabel:`Custom`.
