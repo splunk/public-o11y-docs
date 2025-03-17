@@ -80,7 +80,7 @@ For steps on how to make a Google Chrome recording, see :new-page:`Record, repla
 Import a Google Chrome Recorder JSON file
 --------------------------------------------------------
 
-.. Note:: Included within recordings from Google Chrome Recorder is the specific viewport size of the browser window used in the recording. When imported, this recorded viewport is not imported into the browser test. Check that the browser test's device selection accurately represents the viewport size used by the recorded browser window.
+.. Note:: Recordings from Google Chrome Recorder include the specific viewport size of the browser window used in the recording. When you import a recording, Splunk RUM doesn't import the viewport size into the browser test. Therefore, you must check that the test's device setting matches the viewport size used by the recorded browser window.
 
 
 Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing browser test.
@@ -562,7 +562,7 @@ Exclusion rules are useful to:
 
 * Prevent false alerts from test analytics.
 * Test the performance of a page with or without specific resources loading.
-* Prevent specific third party services from loading, such as random pop-ups from third party services.
+* Prevent specific third-party services from loading, such as random pop-ups from third-party services.
 * Ignore files that are known to cause performance problems.
 
 
@@ -603,7 +603,7 @@ Add custom properties in the test creation page in advanced settings. Use key-va
     :alt: This image shows two custom property key value pairs, env:prod and role:developer.
 
 
-Custom properties are single-valued and don't support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``.
+Custom properties are single valued and don't support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``.
 
 
 Key requirements:
