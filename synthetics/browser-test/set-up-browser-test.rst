@@ -20,7 +20,7 @@ For each page checked in a browser test, Splunk Synthetic Monitoring captures an
 
 
 
-Set up a Browser test
+Set up a browser test
 =========================
 
 
