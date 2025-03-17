@@ -582,8 +582,8 @@ To create an exclusion rule:
    * To use regular expressions, select :guilabel:`Custom` and specify a value or regular expression.
      For example:
 
-     * To exclude specific domains, enter ``domainname\.com``
-     * To exclude specific subdomains, enter ``.+\.domainname\.com``
+     * To exclude a specific domain, including all of its subdomains, enter ``domainname\.com``
+     * To exclude only the subdomains of a specific domain, but not the domain itself, enter ``.+\.domainname\.com``
      * To exclude a JavaScript app, enter ``domainname\.com/appname\.js``
      * To exclude entire directories, enter ``domainname\.com/scripts\/.+``
 
