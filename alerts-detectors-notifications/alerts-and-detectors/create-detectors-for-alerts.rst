@@ -377,7 +377,7 @@ You can add custom tags to detectors from the list view. To see a list of detect
 #. To open the list view, open the :guilabel:`Detectors & SLOs` page, then select the :guilabel:`Detectors` tab.
 #. Select the actions menu (|more|) for the detector you want to assign tags to.
 #. Select :guilabel:`Edit tags`.
-#. Enter tags for the detector. You can add no more than 20 tags to a detector.
+#. Enter tags for the detector. You can add no more than 20 tags per detector.
 #. Select :guilabel:`Save`.
 
 
