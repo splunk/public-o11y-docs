@@ -22,13 +22,19 @@ To see a list of existing detectors, open :guilabel:`Detectors & SLOs` page and 
 
 * By default, detectors are sorted by last updated, with the most recently updated detector at the top. To reverse the sorting order or sort detectors by a different criterion, select the corresponding column header.
 * To filter detectors by assigned teams, select the :guilabel:`Team` menu and select or enter the team name you want to find.
-* To filter detectors by type, select the :guilabel:`Origin` menu. You can filter detectors by the following types:
+* To filter detectors by origin, select the :guilabel:`Origin` menu. You can filter detector by the following origins:
 
-   * Standard detectors are user-created detectors, including all RUM, APM, Synthetics, and custom detectors.
-   * AutoDetect detectors are read-only detectors Splunk Observability Cloud automatically creates when you configure supported integrations. To learn more, see :ref:`autodetect-intro`.
-   * Customized AutoDetect detectors are AutoDetect detectors that you copy and customize. To learn more, see :ref:`autodetect-customize`.
+   * Standard: User-created detectors, including all RUM, APM, Synthetics, and custom detectors.
+   * AutoDetect: Read-only detectors Splunk Observability Cloud automatically creates when you configure supported integrations. To learn more, see :ref:`autodetect-intro`.
+   * Customized AutoDetect: AutoDetect detectors that you copy and customize. To learn more, see :ref:`autodetect-customize`.
 
-* To filter detectors by tags, enter the tags you want to find.
+* Detectors with issues are indicated by a warning triangle icon. Hover over the icon to see the issue.
+* To filter detectors by issues, select the :guilabel:`Issues` menu. You can filter detectors by the following issues:
+
+   * Archive metrics: Detectors using archive metrics might misfire alerts or stop alerting.
+   * MTS limit exceeded: Detectors exceeding MTS monitoring limit might not trigger or might trigger incorrectly. To learn more, see :ref:`maximum-number-of-mts-per-detector-data-function`.
+
+* To filter detectors by tags, enter the tags you want to find. Each entry must be an exact match. For example, searching for :strong:`abc` doesn't return results for :strong:`abcd`.
 * Detectors with active or scheduled muting rules directly applied to them have a muting indicator. If a detector is muted but the muting rule applies only to the detector's properties, the detector doesn't have a muting indicator.
 
 
