@@ -367,12 +367,12 @@ Delete alert rules
 
 .. _detector-tags:
 
-Add custom tags to a detector
+Tag a detector
 =============================================================================
 
-Use tags to indicate the state of a detector or its data source. For example, you can label a detector with a ``prod`` tag to indicate that it monitors a production environment.
+Use tags to indicate the state of a detector, its data source, or any other property you want to label. For example, you can label a detector with a ``prod`` tag to indicate that it monitors a production environment.
 
-You can add custom tags to detectors from the list view. To see a list of detectors and add tags to detectors, do the following:
+You tag detectors from the list view. To see a list of detectors and add tags, do the following:
 
 #. To open the list view, open the :guilabel:`Detectors & SLOs` page, then select the :guilabel:`Detectors` tab.
 #. Select the actions menu (|more|) for the detector you want to assign tags to.
