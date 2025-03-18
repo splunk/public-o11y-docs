@@ -41,7 +41,7 @@ Actions
 
 Kai decides to use Archived Metrics to control how Splunk Observability Cloud stores their team's data.
 
-#. In Splunk Observability Cloud, Kai goes to :guilabel:` Settings > Metrics Management`. In the :guilabel:`Pipeline Management` tab Kai searches for the metric ``service.latency`` and configures the ingestion route to Archived Metrics. Kai can now see all the MTS as Archived MTS.
+#. In Splunk Observability Cloud, Kai goes to :guilabel:`Settings` then :guilabel:`Metrics Management`. In the :guilabel:`Pipeline Management` tab Kai searches for the metric ``service.latency`` and configures the ingestion route to Archived Metrics. Kai can now see all the MTS as Archived MTS.
 #. Kai creates a route exception rule and specifies a filter where ``data_center_region = Europe``. This gives them the estimate of 2,497 Real-Time MTS. Kai also restores the previous hour data to make sure they don't have gaps.
 #. Now, Kai views the list of charts and detectors that use ``service.latency``. To learn more about viewing or downloading the list, see :ref:`metrics-usage-report`.
 #. Kai already had a filter set up on the charts and detectors for ``data_center_region = Europe``. Kai verifies the data is visible in one of the charts.
