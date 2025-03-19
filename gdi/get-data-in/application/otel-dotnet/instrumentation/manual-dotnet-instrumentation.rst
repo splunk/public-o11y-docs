@@ -31,17 +31,25 @@ To create custom spans and traces, follow these steps:
 
       private static readonly ActivitySource RegisteredActivity = new ActivitySource("Examples.ManualInstrumentations.Registered");
 
-4. Create an ``Activity``. Optionally, set tags:
+4. Create an ``Activity`` (Span). Optionally, set tags:
 
    .. code:: csharp
 
-      using (var activity = RegisteredActivity.StartActivity("Main"))
+      using (var activity = RegisteredActivity.StartActivity("Custom Span Name"))
       {
-         activity?.SetTag("foo", "bar1");
-         // your logic for Main activity
+         // Check if the activity is sampled and if full data collection is enabled.
+         // This ensures that tags and other custom attributes are only set when the activity is being recorded.
+         // Note: Ensure that skipping logic based on sampling does not interfere with essential business operations.
+         if(activity?.IsAllDataRequested)
+         {
+            // your logic for custom activity
+            activity.SetTag("foo", "bar1");
+         }
       }
 
-4. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
+5. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
+
+6. Invoke the action that generates an ``Activity``, note the trace ID of the ``Activity``, and locate the trace in Splunk APM. You should now see a span with the display name "Custom Span Name" in the trace tree.
 
 See the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/languages/net/instrumentation/#traces>` for additional information and examples.
 
