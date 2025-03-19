@@ -54,6 +54,14 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
    *  Inferred services - un-instrumented third-party services
    *  Pub/sub queues - Publisher/subscriber queues
 
+Error breakdown
+-----------------
+
+Use the following section to troubleshoot service errors, and view relevant traces for specific error types.
+
+* Errors by exception type - Displays errors with the span attribute ``exception.type``. Select a data point on the chart to view related traces and alert details for that time period. 
+* Errors by status code - Displays errors based on the HTTP or gRPC error status code. Select a data point on the chart to view related traces and alert details for that selected time period and error. For more information about error status codes, see :new-page:`Semantic Conventions for HTTP Spans [space] <https://opentelemetry.io/docs/specs/semconv/http/http-spans/>`.
+
 Runtime metrics
 -----------------
 
@@ -81,6 +89,11 @@ View Tag Spotlight view for your service
 =====================================================
 
 Select :guilabel:`Tag Spotlight` to view Tag Spotlight view filtered for your service. See :ref:`apm-tag-spotlight` to learn more about Tag Spotlight.
+
+View errors for your service
+====================================================
+
+Select the :guilabel:`Errors` tab to visualize errors for your service. Select a specific error type to view available traces for that error, and troubleshoot by viewing details such as the ``exception.message`` or ``exception.stacktrace``. 
 
 View endpoints for your service
 =================================
