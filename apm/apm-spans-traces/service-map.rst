@@ -15,7 +15,7 @@ See :ref:`apm-inferred-services` to learn more about inferred services in APM.
 
 The following screenshot shows an example service map: 
 
-..  image:: /_images/apm/spans-traces/service-map-global-search-rename.png
+..  image:: /_images/apm/spans-traces/service-map-updated-view.png
     :width: 95%
     :alt: An example of the service map in Splunk APM Service Map.
 
@@ -28,6 +28,8 @@ Use these steps to access the service map in Splunk APM:
 #. Log into Splunk Observability Cloud. 
 #. Select :guilabel:`APM` in the navigation bar. 
 #. Select :guilabel:`Service Map` on the APM landing page. The service map view opens, with the service map in the center. 
+#. (Optional) Select :guilabel:`Switch to Classic Service Map` to see the old service map view. 
+
 
 Using the service map, you can do the following: 
 
@@ -85,15 +87,6 @@ When configured, you can select tiles in the Related Content bar to seamlessly n
 
 ..  image:: /_images/apm/spans-traces/service-map-related-content-global-search-rename.gif
     :alt: Using Related Content in Splunk Observability Cloud.
-
-Configure and view global data links for your service map
-==========================================================
-
-You can configure global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring navigators and dashboards, Splunk instances, Kibana logs, Splunk AppDynamics tiers, or custom URLs.
-
-For information on how to configure data links to display in your service map, see :ref:`apm-create-data-links`. You can also create a global data link directly from the APM :guilabel:`Service Map` by selecting an inferred service, selecting the :guilabel:`(⋯)` menu next to the inferred service name, and selecting :guilabel:`Configure data links`.
-
-For information on how to view data links in your service map, see :ref:`apm-use-data-links`.
 
 Share your view of the service map
 ======================================
