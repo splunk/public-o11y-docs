@@ -75,7 +75,7 @@ The following table presents the types of setup steps you can create:
      - Extract a variable from formatted data (JSON, XML, or HTML)
 
    * - JavaScript
-     - Run custom JavaScript code
+     - Run custom JavaScript code. Splunk Synthetics only supports some JavaScript functions. For details, see :ref:`api-test-javascript`.
 
 
 .. raw:: html
@@ -115,5 +115,12 @@ The following table presents the types of validation steps you can create:
      - Extract a variable from formatted data (JSON, XML, or HTML)
 
    * - JavaScript
-     - Run custom JavaScript code
+     - Run custom JavaScript code. Splunk Synthetics only supports some JavaScript functions. For details, see :ref:`api-test-javascript`.
 
+
+.. _api-test-javascript:
+
+Synthetics support for JavaScript
+===============================================
+
+Splunk Synthetics only provides the V8 engine for script execution. It doesn't provide a Node.js runtime environment. This means that it doesn't support Node.js features. For example, there is no support for file system access using ``fs``, HTTP requests using ``http``, event loops using ``setTimeout`` or similar functions, modules such as ``require`` or ``module.exports``, and so on.

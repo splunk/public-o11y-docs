@@ -64,8 +64,8 @@ The following table describes the Kubernetes navigators:
 
 .. _k8s-nav-hierarchy-map:
 
-Hierarchy map
-======================
+Investigate instances with the hierarchy map
+===============================================
 
 .. note:: The hierarchy map is only available on the Kubernetes nodes, pods, and containers navigators.
 
@@ -84,8 +84,10 @@ Nodes, pods, and containers are colored by health and status, as reported by Kub
     * Pods are colored by phase: ``Running``, ``Pending``, ``Succeeded``, ``Failed``, and ``Unknown``
     * Containers are colored by status: ``Ready``, ``Not Ready``, and ``Unknown``
 
-Investigate instances in the hierarchy map
----------------------------------------------
+Hierarchy map features
+------------------------
+
+To investigate instances with the hierarchy map, use the following features:
 
 * Breadcrumb navigation: Switch to different instances and jump across entity levels using the breadcrumb navigation bar.
 * Hover: Get more information about an instance, including its status or phase, by hovering over that instance.
@@ -94,15 +96,15 @@ Investigate instances in the hierarchy map
 
 .. _k8s-nav-left-nav:
 
-Left navigation panel
-============================
+Refine your view with the left navigation panel
+==================================================
 
-Use the left navigation panel in the table or heat map view to quickly switch between Kubernetes entity types, search for filters, and access predefined filters.
+Use the left navigation panel in the table or heat map view to quickly switch between Kubernetes entity types, search for filters, use predefined filters, and view or use recently used filters.
 
-To use the left navigation panel:
+To refine your view with the left navigation panel, use the following features:
 
 * :guilabel:`Select entity type`: Use this drop-down menu to switch between Kubernetes entity types.
-* :guilabel:`Refine by`: Use this panel to search for filters or access a list of predefined filters. The list of predefined filters is searchable and organized by :guilabel:`Relationship` and :guilabel:`Attribute`.
+* :guilabel:`Refine by`: Use this panel to search for filters, use predefined filters, or view and use recently used filters. The list of predefined filters is searchable and organized by :guilabel:`Relationship` and :guilabel:`Attribute`.
 
 .. _k8s-nav-analyzer-overview:
 

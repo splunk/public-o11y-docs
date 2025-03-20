@@ -1,7 +1,7 @@
 .. _team-dashboard:
 
 ************************************************************************
-Splunk On-Call 
+Splunk On-Call team dashboard
 ************************************************************************
 
 .. meta::
@@ -9,15 +9,15 @@ Splunk On-Call
 
 
 
-The Splunk On-Call  provides a comprehensive overview of incidents. This view automatically defaults to the teams that you are a member of and allows teams to dive into the details and understand the status of alerts or incidents. 
+The Splunk On-Call provides a comprehensive overview of incidents. This view automatically defaults to the teams that you are a member of and allows teams to dive into the details and understand the status of alerts or incidents. 
 
-All incidents derived from integrated monitoring tools in the incident table include  their respective logos to help you rapidly identify the source of an alert. Manually created incidents, along with incidents originating from the Email Endpoint or the REST API integrations, will remain logo free.
+All incidents derived from integrated monitoring tools in the incident table include their respective logos to help you rapidly identify the source of an alert. Manually created incidents, along with incidents originating from the Email Endpoint or the REST API integrations, will remain logo free.
 
 Information Alerts can still be found on the Timeline Page.
 
 .. image:: /_images/spoc/team-dashboard.png
     :width: 100%
-    :alt: An image of the . On-Call individuals listed on the left; Team incidents are shown in the main pane.
+    :alt: An image of the team dashboard On-Call individuals listed on the left; Team incidents are shown in the main pane.
 
 
 Filters
@@ -44,12 +44,12 @@ Quickly identify responsible parties during a firefight by easily seeing which p
 Manual Incident Creation
 ----------------------------
 
-You can create a manual incident from the  by selecting :guilabel:`Create Incident` in the top right corner.  For instructions, see :ref:`manual-incident`.
+You can create a manual incident from the team dashboard by selecting :guilabel:`Create Incident` in the top right corner. For instructions, see :ref:`manual-incident`.
 
 Incident War Rooms
 ----------------------------
 
-Access Incident Details directly from the  by selecting the incident number link. This will expand the incident and its event history in the :ref:`Incident War Room <war-room>`. 
+Access Incident Details directly from the team dashboard by selecting the incident number link. This will expand the incident and its event history in the :ref:`Incident War Room <war-room>`. 
 
 People Table
 ==================
