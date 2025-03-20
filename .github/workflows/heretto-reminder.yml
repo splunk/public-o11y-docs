@@ -31,32 +31,22 @@ jobs:
             });
 
             const author = pr.data.user.login;
-            const createdAt = new Date(pr.data.created_at);
-            const now = new Date();
-            const diffInDays = Math.floor((now - createdAt) / (1000 * 60 * 60 * 24));
             const labels = pr.data.labels.map(label => label.name);
 
-            return { author, diffInDays, number, labels };
+            return { author, number, labels };
 
       - name: Check if Reminder Needed
         id: check_reminder
         uses: actions/github-script@v7
         with:
           script: |
-            const { diffInDays, labels } = ${{ steps.pr_info.outputs }};
+            const { labels } = ${{ steps.pr_info.outputs }};
             const reminderLabel = 'reminder sent';
-            const daysThreshold = 1; // Number of days before sending reminder. Adjust as needed.
 
             if (!labels) { // Check if labels is undefined or null
-              return { sendReminder: diffInDays >= daysThreshold }; // send reminder if the time threshold is passed, even without labels.
+              return { sendReminder: true }; // send reminder if the time threshold is passed, even without labels.
             }
             if (labels.includes(reminderLabel)) {
-              return { sendReminder: false };
-            }
-
-            if (diffInDays >= daysThreshold) {
-              return { sendReminder: true };
-            } else {
               return { sendReminder: false };
             }
 
