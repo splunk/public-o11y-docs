@@ -158,7 +158,7 @@ Helper functions
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 75
+   :widths: 25 50 25
 
    * - :strong:`Option`
      - :strong:`Description`
