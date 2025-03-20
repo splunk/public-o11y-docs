@@ -29,7 +29,7 @@ You can also access the service view for a specific service within the service m
 
 Finally, you can also access the service view for a specific service by selecting the service from the APM landing page.
 
-Use the service overview to monitor the health of your service
+Use the service view to monitor the health of your service
 =====================================================================
 
 When you open the service view an environment is selected based on your recently viewed environments. Adjust the environment and time range filters if necessary. Use the following sections to monitor the health of your service.
