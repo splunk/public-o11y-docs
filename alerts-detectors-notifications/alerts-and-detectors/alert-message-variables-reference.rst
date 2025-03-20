@@ -42,6 +42,20 @@ Detector and rule details
    * - {{{detectorName}}}
      - The name of this detector
 
+   * - {{detectorId}}
+     - The ID of this detector. You can use this to programmatically reference this detector.
+   
+   * - {{detectorTags}}
+     - List of all tags added to this detector, in the following format:
+         ``[tag1, tag2, ...]``
+   
+   * - {{detectorTeams}}
+     - List of all teams linked to this detector, in the following format:
+         ``[Team{id='E3lSp2ZAIAA', name='Team A'}, Team{id='GbsDUCCAEAI', name='Team B'}]``   
+
+   * - {{detectorUrl}}
+     - The URL of this detector
+
    * - {{{ruleName}}}
      - The name of the rule that triggered the alert
 
@@ -57,11 +71,7 @@ Detector and rule details
    * - {{{tip}}}
      - Plain text suggested first course of action, such as a command line to run.
 
-   * - {{detectorId}}
-     - The ID of this detector. You can use this to programmatically reference this detector.
 
-   * - {{detectorUrl}}
-     - The URL of this detector
 
 Alert details
 -------------
@@ -152,14 +162,24 @@ Helper functions
 
    * - :strong:`Option`
      - :strong:`Description`
+     - :strong:`Example`
 
-   * - {{#if}}  {{else}}   {{/if}}
-     - Conditional, e.g.
-         {{#if anomalous}}Alert triggered at {{timestamp}} {{else}} Alert cleared at {{timestamp}} {{/if}}
+   * - {{#each}} {{/each}}
+     - Iterate over items in a list. Use {{this}} to refer to the element being iterated over.
+     - {{#each detectorTeams}} {{this}} {{/each}}
+   
+   * - {{#if}}  {{else}}  {{/if}}
+     - Conditional
+     - {{#if anomalous}} Alert triggered at {{timestamp}} {{else}} Alert cleared at {{timestamp}} {{/if}}
 
    * - {{#notEmpty dimensions}} {{/notEmpty}}
-     - If there are dimensions associated with the signal, e.g.
-         {{#notEmpty dimensions}} Signal details: {{{dimensions}}} {{/notEmpty}}
+     - Check if there are dimensions associated with the signal
+     - {{#notEmpty dimensions}} Signal details: {{{dimensions}}} {{/notEmpty}}
+   
+   * - {{#unless}} {{/unless}}
+     - Conditional, an inverse of the {{if}} function
+     - Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}.
+   
 
 .. _condition-variables:
 
@@ -280,19 +300,14 @@ The following is an example of a default message that you can customize:
 .. code-block:: none
 
    {{#if anomalous}}
-      Rule "{{ruleName}}" in detector "{{detectorName}}" triggered at {{timestamp}}.
+	   Rule "{{{ruleName}}}" triggered at {{dateTimeFormat timestamp format="full"}}.
    {{else}}
-      Rule "{{ruleName}}" in detector "{{detectorName}}" cleared at {{timestamp}}.
+      Rule "{{{ruleName}}}" cleared at {{dateTimeFormat timestamp format="full"}}.
    {{/if}}
 
-   {{#if anomalous}}
-   Triggering condition: {{{readableRule}}}
-   {{/if}}
-
-   {{#if anomalous}}Signal value: {{inputs.A.value}}
-   {{else}}Current signal value: {{inputs.A.value}}
-   {{/if}}
-
+   {{#if anomalous}}Signal value for {{dimensions.app}} in {{dimensions.sf_environment}} is out of bounds
+   {{else}}Current signal value for {{dimensions.app}} in {{dimensions.sf_environment}}{{/if}}
+   
    {{#notEmpty dimensions}}
    Signal details:
    {{{dimensions}}}
@@ -301,4 +316,9 @@ The following is an example of a default message that you can customize:
    {{#if anomalous}}
    {{#if runbookUrl}}Runbook: {{{runbookUrl}}}{{/if}}
    {{#if tip}}Tip: {{{tip}}}{{/if}}
+   {{/if}}
+
+   {{#if detectorTags}}Tags: {{detectorTags}}{{/if}}
+   {{#if detectorTeams}}
+   Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}.
    {{/if}}
