@@ -75,6 +75,8 @@ Give your login service integration a name that your users recognize. On your cu
 this name appears in the button your users select to sign in. For example, use the name "Log in with Okta"
 for an Okta login service integration.
 
+.. _default-sso-role:
+
 .. raw:: html
 
   <embed>
