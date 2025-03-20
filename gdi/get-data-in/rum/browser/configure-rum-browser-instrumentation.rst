@@ -200,7 +200,7 @@ The following example shows how to restrict sampling to logged in users:
             rumAccessToken: '<your_rum_token>',
             applicationName: '<application-name>',
             tracer: {
-               sampler: shouldTrace ? new AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
+               sampler: shouldTrace ? new SplunkRum.AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
             },
          });
       </script>
