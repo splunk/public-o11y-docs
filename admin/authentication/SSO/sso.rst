@@ -90,7 +90,7 @@ To change the default SSO role, do the following:
 
 1. Go to :guilabel:`Settings` then select :guilabel:`General Settings`.
 
-2. In the :guilabel:`Team Management` section, check the :guilabel:`Set a Default Role for SSO Login` check box, then select a role from the drop-down list. The role you select becomes the role of any new user logging in through an SSO service. You can return to :guilabel:`General Settings` and update the default role for SSO login at any time.
+2. In the :guilabel:`User Management` section, set a default role for SSO login by selecting a role from the drop-down list. The drop-down list defaults to the :guilabel:`power` role. The role you select becomes the role of any new user logging in through an SSO service. You can return to :guilabel:`General Settings` and update the default role for SSO login at any time.
 
 
 .. _multiple-integrations-sso:
