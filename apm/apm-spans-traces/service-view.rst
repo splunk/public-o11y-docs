@@ -95,6 +95,8 @@ View errors for your service
 
 Select the :guilabel:`Errors` tab to visualize errors for your service. Select a specific error type to view available traces for that error, and troubleshoot by viewing details such as the ``exception.message`` or ``exception.stacktrace``. 
 
+You can activate or deactivate these metrics by going to the :guilabel:`Sources of Errors MetricSets` section on the :guilabel:`APM MetricSets` page. 
+
 View endpoints for your service
 =================================
 
