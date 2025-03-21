@@ -43,7 +43,7 @@ jobs:
             const { labels } = ${{ steps.pr_info.outputs }};
             const reminderLabel = 'reminder sent';
 
-            if (!labels) { // Check if labels is undefined or null
+            if (!labels || labels.length === 0) { 
               return { sendReminder: true }; // send reminder if the time threshold is passed, even without labels.
             }
             if (labels.includes(reminderLabel)) {
