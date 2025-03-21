@@ -40,7 +40,7 @@ MMS are available for the following APM components:
 - traces
 - workflows (Workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.)
 
-Monitoring MetricSets in APM are classified as histogram metrics. Previously, MMS were classified as either counter or gauge metrics. A histogram metric type represents a distribution of measurements or metrics, with complete percentile data available. Data is distributed into equally sized intervals, allowing you to compute percentiles across multiple services, and aggregate datapoints from multiple metric time series. Histogram metrics provide a noticeable advantage over other metric types when calculating percentiles, such as the p90 percentile for a single MTS. See more in :ref:`metric-types`.
+Monitoring MetricSets in APM are generated as histogram metrics. Previously, MMS were classified as either a counter or gauge metric type. Histogram metrics represent a distribution of measurements or metrics, with complete percentile data available. Data is distributed into equally sized intervals, allowing you to compute percentiles across multiple services, and aggregate datapoints from multiple metric time series. Histogram metrics provide an advantage over other metric types when calculating percentiles, such as the p90 percentile for a single MTS. See more in :ref:`metric-types`.
 
 For each metric, there is 1 metric time series (MTS) with responses ``sf_error: true`` or ``sf_error: false``.
 
@@ -72,24 +72,23 @@ For each metric, there is 1 metric time series (MTS) with responses ``sf_error: 
     - ``<component>.duration.ns.p99``
 
 
-Example histogram MetricSets in APM
+Example histogram metrics in APM
 ---------------------------------------------
 
-A histogram MTS uses the following syntax using Signalflow:
+A histogram MTS uses the following syntax using SignalFlow:
 
 .. code-block:: none
    histogram(metric=<metric_name>[,filter=<filter_dict>][,resolution=<resolution>)
 
-
+The following table displays example SignalFlow 
 .. list-table::
    :widths: 33 33 33
    :width: 100
    :header-rows: 1
 
-
    * - Description
-    - Previous MMS syntax
-    - Histogram MMS syntax
+    - Previous MMS function
+    - Histogram MMS function
    * - Aggregate count of all MTS
     - ``A = data('spans.count').sum().publish(label='A')``
     - ``A = histogram('spans').count().publish(label='A')``
@@ -101,6 +100,8 @@ A histogram MTS uses the following syntax using Signalflow:
    * - Combined p90 for multiple services
     - ``A = data('service.request.duration.ns.p90', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts'), rollup='average').mean().publish(label='A')``
     - ``A = histogram('service.request', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts')).percentile(pct=90).publish(label='A')``
+
+.. note:: Because an aggregation is applied on histogram(), to display all of the metric sets separately, each dimension needs to be applied as a groupby. 
 
 Each MMS has a set of dimensions you can use to monitor and alert on service performance. 
 
