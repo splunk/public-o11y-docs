@@ -35,6 +35,8 @@ jobs:
 
             return { author, number, labels };
 
+      - name: Debug Output
+        run: echo "sendReminder: ${{ steps.check_reminder.outputs.sendReminder }}"
       - name: Check if Reminder Needed
         id: check_reminder
         uses: actions/github-script@v7
