@@ -51,10 +51,10 @@ jobs:
             }
 
       - name: Debug Output
-        run: echo "Debug Output Step Running"
+        run: echo "check_reminder.outputs: ${{ toJSON(steps.check_reminder.outputs) }}"
 
       - name: Debug PR Info
-        run: echo "Debug PR Info Step Running"
+        run: echo "pr_info.outputs: ${{ toJSON(steps.pr_info.outputs) }}"
 
       - name: Send Reminder Comment
         if: ${{ steps.check_reminder.outputs.sendReminder == true }}
