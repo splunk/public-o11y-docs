@@ -37,8 +37,10 @@ jobs:
 
       - name: Debug Output
         run: echo "sendReminder: ${{ steps.check_reminder.outputs.sendReminder }}"
+
       - name: Debug PR Info
         run: echo "labels: ${{ steps.pr_info.outputs.labels }}"
+
       - name: Check if Reminder Needed
         id: check_reminder
         uses: actions/github-script@v7
