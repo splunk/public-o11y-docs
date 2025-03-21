@@ -50,26 +50,26 @@ For each metric, there is 1 metric time series (MTS) with responses ``sf_error: 
    :header-rows: 1
 
    * - Description
-    - Histogram MMS
-    - MMS (deprecated)
+     - Histogram MMS
+     - MMS (deprecated)
    * - Request count
-    - ``<component>`` with a ``count`` function
-    - ``<component>.count``
+     - ``<component>`` with a ``count`` function
+     - ``<component>.count``
    * - Minimum request duration
-    - ``<component>`` with a ``min`` function
-    - ``<component>.duration.ns.min``
+     - ``<component>`` with a ``min`` function
+     - ``<component>.duration.ns.min``
    * - Maximum request duration
-    - ``<component>`` with a ``max`` function
-    - ``<component>.duration.ns.max``
+     - ``<component>`` with a ``max`` function
+     - ``<component>.duration.ns.max``
    * - Median request duration
-    - ``<component>`` with a ``median`` function
-    - ``<component>.duration.ns.median``
+     - ``<component>`` with a ``median`` function
+     - ``<component>.duration.ns.median``
    * - Percentile request duration
-    - ``<component>`` with a ``percentile`` function and a percentile ``value``
-    - ``<component>.duration.ns.p90``
+     - ``<component>`` with a ``percentile`` function and a percentile ``value``
+     - ``<component>.duration.ns.p90``
    * - Percentile request duration
-    - ``<component>`` with a ``percentile`` function and a percentile ``value``
-    - ``<component>.duration.ns.p99``
+     - ``<component>`` with a ``percentile`` function and a percentile ``value``
+     - ``<component>.duration.ns.p99``
 
 
 Example histogram metrics in APM
@@ -78,28 +78,29 @@ Example histogram metrics in APM
 A histogram MTS uses the following syntax using SignalFlow:
 
 .. code-block:: none
+   
    histogram(metric=<metric_name>[,filter=<filter_dict>][,resolution=<resolution>)
 
+
 The following table displays example SignalFlow functions:  
+
 .. list-table::
    :widths: 33 33 33
    :width: 100
    :header-rows: 1
 
    * - Description
-    - Previous MMS function
-    - Histogram MMS function
+     - Previous MMS function
+     - Histogram MMS function
    * - Aggregate count of all MTS
-    - ``A = data('spans.count').sum().publish(label='A')``
-    - ``A = histogram('spans').count().publish(label='A')``
+     - ``A = data('spans.count').sum().publish(label='A')``
+     - ``A = histogram('spans').count().publish(label='A')``
    * - P90 percentile for single MTS
-    - ``filter_ = filter('sf_environment', 'us1') and filter('sf_service', 'apm-api-peanuts') and filter('sf_operation', 'POST /api/autosuggest/tagvalues') and filter('sf_httpMethod', 'POST') and filter('sf_error', 'false')
-         A = data('spans.duration.ns.p90', filter=filter_, rollup='sum').publish(label='A')``
-    - ``filter_ = filter('sf_environment', 'us1') and filter('sf_service', 'apm-api-peanuts') and filter('sf_operation', 'POST /api/autosuggest/tagvalues') and filter('sf_httpMethod', 'POST') and filter('sf_error', 'false')
-         A = histogram('spans', filter=filter_).percentile(pct=90).publish(label='A')``
+     - ``filter_ = filter('sf_environment', 'us1') and filter('sf_service', 'apm-api-peanuts') and filter('sf_operation', 'POST /api/autosuggest/tagvalues') and filter('sf_httpMethod', 'POST') and filter('sf_error', 'false') A = data('spans.duration.ns.p90', filter=filter_, rollup='sum').publish(label='A')``
+     - ``filter_ = filter('sf_environment', 'us1') and filter('sf_service', 'apm-api-peanuts') and filter('sf_operation', 'POST /api/autosuggest/tagvalues') and filter('sf_httpMethod', 'POST') and filter('sf_error', 'false') A = histogram('spans', filter=filter_).percentile(pct=90).publish(label='A')``
    * - Combined p90 for multiple services
-    - ``A = data('service.request.duration.ns.p90', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts'), rollup='average').mean().publish(label='A')``
-    - ``A = histogram('service.request', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts')).percentile(pct=90).publish(label='A')``
+     - ``A = data('service.request.duration.ns.p90', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts'), rollup='average').mean().publish(label='A')``
+     - ``A = histogram('service.request', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts')).percentile(pct=90).publish(label='A')``
 
 .. note:: Because an aggregation is applied on histogram(), to display all of the metric sets separately, each dimension needs to be applied as a groupby. 
 
