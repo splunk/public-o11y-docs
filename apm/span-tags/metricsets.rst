@@ -9,42 +9,6 @@ Learn about MetricSets in APM
 
 MetricSets are key performance indicators, like request rate, error rate, and request duration, that are calculated from traces and spans in Splunk APM. There are 2 categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring. MetricSets are similar to the metric time series (MTS) used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See :ref:`metric-time-series` to learn more. MetricSets are MTS that are specific to Splunk APM.
 
-.. _troubleshooting-metricsets:
-
-Troubleshooting MetricSets
-==========================
-
-Troubleshooting MetricSets (TMS) are metric time series (MTS) you can use for troubleshooting high-cardinality identities in APM. You can also use TMS to make historical comparisons across spans and workflows. 
-
-Splunk APM indexes and creates Troubleshooting MetricSets for several span tags by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags. 
-
-You can also create custom TMS by indexing additional span tags and processes. To learn how to index span tags and processes to create new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
-
-Available TMS metrics
------------------------
-Every TMS creates the following metrics, known as request, error, and duration (RED) metrics. RED metrics appear when you select a service in the service map. See :ref:`service-map` to learn more about using RED metrics in the service map.
-
-- Request rate
-- Error rate
-- Root cause error rate
-- p50, p90, and p99 latency
-
-The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk APM reports quantiles from a distribution of metrics for each 10-second reporting window. 
-
-Use TMS within Splunk APM
-----------------------------------------
-
-TMS appear on the service map and in Tag Spotlight. Use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. 
-
-See :ref:`apm-service-map` and :ref:`apm-tag-spotlight`.
-
-TMS retention period
------------------------------------
-
-Splunk Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
-
-For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`. 
-
 .. _monitoring-metricsets:
 
 Monitoring MetricSets
@@ -76,37 +40,67 @@ MMS are available for the following APM components:
 - traces
 - workflows (Workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.)
 
-Each MMS includes 6 metrics for each component. For histogram MMS, there is a single metric for each component. Use the histogram functions to access the specific histogram bucket you want to use.
+Monitoring MetricSets in APM are classified as histogram metrics. Previously, MMS were classified as either counter or gauge metrics. A histogram metric type represents a distribution of measurements or metrics, with complete percentile data available. Data is distributed into equally sized intervals, allowing you to compute percentiles across multiple services, and aggregate datapoints from multiple metric time series. Histogram metrics provide a noticeable advantage over other metric types when calculating percentiles, such as the p90 percentile for a single MTS. See more in :ref:`metric-types`.
 
 For each metric, there is 1 metric time series (MTS) with responses ``sf_error: true`` or ``sf_error: false``.
 
 .. list-table::
-    :widths: 33 33 33
-    :width: 100
-    :header-rows: 1
+   :widths: 33 33 33
+   :width: 100
+   :header-rows: 1
 
-    *   - Description
-        - MMS
-        - Histogram MMS
-    *   - Request count
-        - ``<component>.count``
-        - ``<component>`` with a ``count`` function
-    *   - Minimum request duration
-        - ``<component>.duration.ns.min`` 
-        - ``<component>`` with a ``min`` function 
-    *   - Maximum request duration
-        - ``<component>.duration.ns.max`` 
-        - ``<component>`` with a ``max`` function
-    *   - Median request duration
-        - ``<component>.duration.ns.median`` 
-        - ``<component>`` with a ``median`` function
-    *   - Percentile request duration
-        - ``<component>.duration.ns.p90`` 
-        - ``<component>`` with a ``percentile`` function and a percentile ``value``
-    *   - Percentile request duration
-        - ``<component>.duration.ns.p99`` 
-        - ``<component>`` with a ``percentile`` function and a percentile ``value``
+   * - Description
+    - Histogram MMS
+    - MMS (deprecated)
+   * - Request count
+    - ``<component>`` with a ``count`` function
+    - ``<component>.count``
+   * - Minimum request duration
+    - ``<component>`` with a ``min`` function
+    - ``<component>.duration.ns.min``
+   * - Maximum request duration
+    - ``<component>`` with a ``max`` function
+    - ``<component>.duration.ns.max``
+   * - Median request duration
+    - ``<component>`` with a ``median`` function
+    - ``<component>.duration.ns.median``
+   * - Percentile request duration
+    - ``<component>`` with a ``percentile`` function and a percentile ``value``
+    - ``<component>.duration.ns.p90``
+   * - Percentile request duration
+    - ``<component>`` with a ``percentile`` function and a percentile ``value``
+    - ``<component>.duration.ns.p99``
 
+
+Example histogram MetricSets in APM
+---------------------------------------------
+
+A histogram MTS uses the following syntax using Signalflow:
+
+.. code-block:: none
+   histogram(metric=<metric_name>[,filter=<filter_dict>][,resolution=<resolution>)
+
+
+.. list-table::
+   :widths: 33 33 33
+   :width: 100
+   :header-rows: 1
+
+
+   * - Description
+    - Previous MMS syntax
+    - Histogram MMS syntax
+   * - Aggregate count of all MTS
+    - ``A = data('spans.count').sum().publish(label='A')``
+    - ``A = histogram('spans').count().publish(label='A')``
+   * - P90 percentile for single MTS
+    - ``filter_ = filter('sf_environment', 'us1') and filter('sf_service', 'apm-api-peanuts') and filter('sf_operation', 'POST /api/autosuggest/tagvalues') and filter('sf_httpMethod', 'POST') and filter('sf_error', 'false')
+         A = data('spans.duration.ns.p90', filter=filter_, rollup='sum').publish(label='A')``
+    - ``filter_ = filter('sf_environment', 'us1') and filter('sf_service', 'apm-api-peanuts') and filter('sf_operation', 'POST /api/autosuggest/tagvalues') and filter('sf_httpMethod', 'POST') and filter('sf_error', 'false')
+         A = histogram('spans', filter=filter_).percentile(pct=90).publish(label='A')``
+   * - Combined p90 for multiple services
+    - ``A = data('service.request.duration.ns.p90', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts'), rollup='average').mean().publish(label='A')``
+    - ``A = histogram('service.request', filter=filter('sf_service', 'apm-graphql', 'apm-api-peanuts')).percentile(pct=90).publish(label='A')``
 
 Each MMS has a set of dimensions you can use to monitor and alert on service performance. 
 
@@ -196,6 +190,42 @@ MMS retention period
 -----------------------------------
 
 Splunk Observability Cloud stores MMS for 13 months by default.
+
+.. _troubleshooting-metricsets:
+
+Troubleshooting MetricSets
+==========================
+
+Troubleshooting MetricSets (TMS) are metric time series (MTS) you can use for troubleshooting high-cardinality identities in APM. You can also use TMS to make historical comparisons across spans and workflows. 
+
+Splunk APM indexes and creates Troubleshooting MetricSets for several span tags by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags. 
+
+You can also create custom TMS by indexing additional span tags and processes. To learn how to index span tags and processes to create new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
+
+Available TMS metrics
+-----------------------
+Every TMS creates the following metrics, known as request, error, and duration (RED) metrics. RED metrics appear when you select a service in the service map. See :ref:`service-map` to learn more about using RED metrics in the service map.
+
+- Request rate
+- Error rate
+- Root cause error rate
+- p50, p90, and p99 latency
+
+The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk APM reports quantiles from a distribution of metrics for each 10-second reporting window. 
+
+Use TMS within Splunk APM
+----------------------------------------
+
+TMS appear on the service map and in Tag Spotlight. Use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. 
+
+See :ref:`apm-service-map` and :ref:`apm-tag-spotlight`.
+
+TMS retention period
+-----------------------------------
+
+Splunk Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
+
+For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`. 
 
 Comparing Monitoring MetricSets and Troubleshooting MetricSets
 =================================================================
