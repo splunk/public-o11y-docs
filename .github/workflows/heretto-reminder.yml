@@ -41,7 +41,8 @@ jobs:
         with:
           script: |
             const { labels } = ${{ steps.pr_info.outputs }};
-            const reminderLabel = 'reminder sent';
+            const reminderLabel = 'reminder sent'; 
+            let sendReminder = false;
             if (!Array.isArray(labels) || labels.length === 0) {
               return { sendReminder: true };
             } else if (labels.includes(reminderLabel)) {
