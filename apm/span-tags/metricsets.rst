@@ -80,7 +80,7 @@ A histogram MTS uses the following syntax using SignalFlow:
 .. code-block:: none
    histogram(metric=<metric_name>[,filter=<filter_dict>][,resolution=<resolution>)
 
-The following table displays example SignalFlow 
+The following table displays example SignalFlow functions:  
 .. list-table::
    :widths: 33 33 33
    :width: 100
