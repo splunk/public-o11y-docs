@@ -44,11 +44,13 @@ jobs:
             const reminderLabel = 'reminder sent';
 
             if (!labels || labels.length === 0) { 
-              return { sendReminder: true }; // send reminder if the time threshold is passed, even without labels.
+              sendReminder = true; // send reminder if the time threshold is passed, even without labels.
             }
             if (labels.includes(reminderLabel)) {
-              return { sendReminder: false };
+              sendReminder = false;
             }
+            console.log("sendReminder value:", sendReminder); // Added debug log
+            return { sendReminder: sendReminder };
 
       - name: Debug Output
         run: echo "check_reminder.outputs: ${{ toJSON(steps.check_reminder.outputs) }}"
