@@ -7,9 +7,6 @@ Configure Single Sign-On for Okta and Splunk On-Call
 .. meta::
    :description: Enable Splunk On-Call SSO for your organization. 
 
-
-
-
 Requirements
 ==================
 
@@ -20,20 +17,10 @@ This integration is compatible with the following versions of Splunk On-Call:
 To enable single sign-on (SSO) for your organization, you will need to provide an updated metadata file and your IDP. If you are
 interested in setting up SSO, please contact :ref:`Splunk On-Call Support <spoc-support>`.
 
-
-Administrator Setup
+Configure SSO for Okta
 ==========================
 
-Instructions to complete the SSO configuration with Splunk On-Call and your IDP are provided for:
-
-- :ref:`sso-okta-spoc-setup`
-- :ref:`sso-google-spoc`
-- 
-
-.. _sso-okta-spoc-setup:
-
-Okta
-==========
+To configure SSO for Okta complete the following steps.
 
 #. From the Okta user homepage, select :guilabel:`Admin` to access the Okta Admin dashboard.
 

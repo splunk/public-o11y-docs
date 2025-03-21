@@ -7,7 +7,7 @@ Splunk On-Call notification phone numbers
 .. meta::
    :description: Splunk On-Call contacts you for triggered incidents using the following phone numbers and short code. 
 
-Splunk On-Call contacts you for triggered incidents using the following phone numbers and short code. To add these numbers to your contacts in the Splunk On-Call mobile app, go to :guilabel:`Settings` then :guilabel:`Help and Support` then :guilabel:`Add VictorOps to Your Contacts`. For more information about the Splunk On-Call mobile app, see :ref:`spoc-mobile-main`
+Splunk On-Call contacts you for triggered incidents using the following phone numbers and short code. To add these numbers to your contacts in the Splunk On-Call mobile app, go to :guilabel:`Settings` then :guilabel:`Help and Support` then :guilabel:`Add VictorOps to Your Contacts`. For more information about the Splunk On-Call mobile app, see :ref:`spoc-mobile-main`.
 
 .. image:: /_images/spoc/Add-Contacts-Android-1.png
 

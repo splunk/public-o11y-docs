@@ -5,7 +5,7 @@ Incident Pane
 ************************************************************************
 
 .. meta::
-   :description: About the Incident pane in Splunk On-Call which displays incoming alerts.
+   :description: About the incident pane in Splunk On-Call which displays incoming alerts.
 
 .. toctree::
     :hidden:

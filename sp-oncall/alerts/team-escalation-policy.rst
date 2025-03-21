@@ -11,7 +11,7 @@ Escalation policies determine set who is actually on-call for a given team and a
 
 Some things to note:
 
-- Only Team and Global Admins are able to make changes to Escalation Policies
+- Only Team and Global Admins are able to make changes to Escalation Policies.
 - Only users specified in the first step of an Escalation Policy will receive Timeline and Push notifications that they are on-call and will log hours in the on-call report as being on-call. If you would like users in subsequent steps of an escalation policy to receive these notifications and log these hours, see :ref:`multi-escalation-policies`.
 - When an Escalation Policy is executed and a user is being notified, the user's personal paging policy determines how they will be contacted. See :ref:`custom-paging-policy`.
 
