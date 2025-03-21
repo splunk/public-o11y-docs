@@ -42,12 +42,12 @@ jobs:
           script: |
             const { labels } = ${{ steps.pr_info.outputs }};
             const reminderLabel = 'reminder sent';
-
-            if (!labels || labels.length === 0) { 
-              sendReminder = true; // send reminder if the time threshold is passed, even without labels.
-            }
-            if (labels.includes(reminderLabel)) {
-              sendReminder = false;
+            if (!Array.isArray(labels) || labels.length === 0) {
+              return { sendReminder: true };
+            } else if (labels.includes(reminderLabel)) {
+              return { sendReminder: false };
+            } else {
+              return { sendReminder: true };
             }
             console.log("sendReminder value:", sendReminder); // Added debug log
             return { sendReminder: sendReminder };
