@@ -1,9 +1,3 @@
-name: Pull Request Reminder
-
-on:
-  pull_request:
-    types: [opened, synchronize]
-
 jobs:
   reminder:
     runs-on: ubuntu-latest
@@ -20,9 +14,18 @@ jobs:
         with:
           github-token: ${{ secrets.MY_TOKEN }}
           script: |
+            const { owner, repo, number } = context.issue;
+            const pr = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: number,
+            });
+
+            const author = pr.data.user.login;
+
             await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              body: `@${context.repo.owner}, please make sure that you update the files in Heretto and post the Heretto share link in this PR.`
+              owner,
+              repo,
+              issue_number: number,
+              body: `@${author}, please make sure that you update the files in Heretto and post the Heretto share link in this PR.`
             })
