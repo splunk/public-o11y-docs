@@ -178,7 +178,7 @@ Helper functions
    
    * - {{#unless}} {{/unless}}
      - Conditional, an inverse of the {{if}} function
-     - Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}.
+     - Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}
    
 
 .. _condition-variables:
