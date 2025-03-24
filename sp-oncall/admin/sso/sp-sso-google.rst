@@ -7,7 +7,7 @@ Configure Single Sign-On for Splunk On-Call using Google Apps
 .. meta::
    :description: Enable Splunk On-Call SSO for your organization. 
 
-To configure SSO for Splunk On-Call using Google Apps:
+To configure SSO for Splunk On-Call using Google Apps complete the following steps.
 
 #. Access the Admin portal for Google Apps and navigate to :guilabel:`Apps` then :guilabel:`SAML Apps`.
 
