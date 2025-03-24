@@ -265,7 +265,7 @@ The following table explains different types of email notifications:
 Activate
 -------------------------------------------------------------------
 
-On the :strong:`Activate` tab you see a summary of the detector settings you specified. Review the summary and make any necessary changes in the associated tabs, then name the rule. By default, the rule name is the same as the detector name. The rule name is displayed on the :guilabel:`Alerts` page and in notifications.
+On the :guilabel:`Activate` tab you see a summary of the detector settings you specified. Review the summary and make any necessary changes in the associated tabs, then name the rule. By default, the rule name is the same as the detector name. The rule name is displayed on the :guilabel:`Alerts` page and in notifications.
 
 Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs`. You can also provide additional descriptive text to clarify the purpose of the detector for others.
 
