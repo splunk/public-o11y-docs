@@ -283,7 +283,7 @@ Edit detectors through the SignalFlow tab
 
 .. note:: This section assumes you are familiar with the :new-page:`Splunk Observability Cloud detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
-If you are modifying a detector that was created using the API, you can add and edit detector rules using the SignalFlow tab. The SignalFlow program text replaces the Alert signal, Alert condition, and Alert settings tabs that are used when creating and editing detectors using the UI.
+If you are modifying a detector that was created using the API, you can add and edit detector rules using the :guilabel:`SignalFlow` tab. The SignalFlow program text replaces the :guilabel:`Alert signal`, :guilabel:`Alert condition`, and :guilabel:`Alert settings` tabs that are used when creating and editing detectors using the UI.
 
 Every ``publish`` statement in a SignalFlow ``detect`` statement corresponds to a rule on the Alert Rules tab. The label you enter inside the ``publish`` block is displayed next to the number of active alerts displayed on the Alert Rules tab.
 
