@@ -28,7 +28,7 @@ Use these steps to access the service map in Splunk APM:
 #. Log into Splunk Observability Cloud. 
 #. Select :guilabel:`APM` in the navigation bar. 
 #. Select :guilabel:`Service Map` on the APM landing page. The service map view opens, with the service map in the center. 
-#. (Optional) Select :guilabel:`Switch to Classic Service Map` to switch to the previous service map display. The default constellation view displays a larger view of your environment and helps you quickly assess service performance. 
+#. (Optional) Select :guilabel:`Switch to Classic Service Map` to switch to the left-to-right service map layout. The default constellation view displays a larger view of your environment and helps you quickly assess service performance. 
 
 
 Using the service map, you can do the following: 

@@ -57,7 +57,12 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
 Error breakdown
 -----------------
 
-Use the following section to troubleshoot service errors and view relevant traces for specific error types.
+Use the following section to troubleshoot service errors and view relevant traces for specific error types. Select a point on the graph see example traces for a particular data point, or select any value to hide the time series for that value.
+
+
+..  image:: /_images/apm/spans-traces/service-view-errors.png
+    :width: 95%
+    :alt: Screenshot of charts on the service view page that display service errors. 
 
 * Errors by exception type - Displays errors with the span attribute ``exception.type``. Select a data point on the chart to view related traces and alert details for that time period. 
 * Errors by status code - Displays errors based on the HTTP or gRPC error status code. Select a data point on the chart to view related traces and alert details for that selected time period and error. For more information about error status codes, see :new-page:`Semantic Conventions for HTTP Spans <https://opentelemetry.io/docs/specs/semconv/http/http-spans/>`.
@@ -95,7 +100,7 @@ View errors for your service
 
 Select the :guilabel:`Errors` tab to visualize errors for your service. Select a specific error type to view available traces for that error, and troubleshoot by viewing details such as the ``exception.message`` or ``exception.stacktrace``. 
 
-You can activate or deactivate these metrics by going to the :guilabel:`Sources of Errors MetricSets` section on the :guilabel:`APM MetricSets` page. 
+Administrators can pause these metrics by going to the :guilabel:`Sources of Errors MetricSets` section on the :guilabel:`APM MetricSets` page and selecting :guilabel:`Pause Indexing`. These metrics are turned on by default.
 
 View endpoints for your service
 =================================
