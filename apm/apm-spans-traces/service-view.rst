@@ -57,7 +57,7 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
 Error breakdown
 -----------------
 
-Use the following section to troubleshoot service errors and view relevant traces for specific error types. Select a point on the graph see example traces for a particular data point, or select any value to hide the time series for that value.
+Use the following section to troubleshoot service errors and view relevant traces for specific error types. Select a point on the graph to view example traces for a particular data point, or select any value to hide the time series for that value.
 
 ..  image:: /_images/apm/spans-traces/service-view-errors.png
     :width: 95%
