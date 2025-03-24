@@ -166,19 +166,19 @@ Helper functions
 
    * - {{#each}} {{/each}}
      - Iterate over items in a list. Use {{this}} to refer to the element being iterated over.
-     - {{#each detectorTeams}} {{this}} {{/each}}
+     - ``{{#each detectorTeams}} {{this}} {{/each}}``
    
    * - {{#if}}  {{else}}  {{/if}}
      - Conditional
-     - {{#if anomalous}} Alert triggered at {{timestamp}} {{else}} Alert cleared at {{timestamp}} {{/if}}
+     - ``{{#if anomalous}} Alert triggered at {{timestamp}} {{else}} Alert cleared at {{timestamp}} {{/if}}``
 
    * - {{#notEmpty dimensions}} {{/notEmpty}}
      - Check if there are dimensions associated with the signal
-     - {{#notEmpty dimensions}} Signal details: {{{dimensions}}} {{/notEmpty}}
+     - ``{{#notEmpty dimensions}} Signal details: {{{dimensions}}} {{/notEmpty}}``
    
    * - {{#unless}} {{/unless}}
      - Conditional, an inverse of the {{if}} function
-     - Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}
+     - ``Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}``
    
 
 .. _condition-variables:
