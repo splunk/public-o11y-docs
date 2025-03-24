@@ -33,10 +33,6 @@ March 25, 2025 release
      - We are excited to introduce the Excluded Files feature for users to have the flexibility in configuring what resources their Browser tests will load on a page. By excluding certain files, users can prevent skewed analytics due to third-party services and individually test performance of a page with and without specific resources to see the impact on customers.
    * - Log Observer search experience enhancement
      - We’re releasing a new “cancel search” functionality to help users gain more control over their log queries by cancelling a log search whenever one is active, allowing them to eliminate workflow inefficiencies and reduce their SVC consumption as well as resource waste
-   * - SSO default role
-     - When onboarding new Splunk Observability Cloud users, admins who aren’t able to enable Unified Identity can now select what the default role will be assigned to users in the Organization (Non-Enterprise Customers: Admin & Power; Enterprise Customers: Admin, Power, Read_Only, Usage) for more control on user’s scope and privileges.
-   * - Magnetic page header 
-     - We’ve made UI changes in the Observability Cloud wide page headers  to drive a more cohesive experience and enable users to understand where they are in the product. The header includes branding and utilities that trigger menu dropdowns, like profile, help, and notification hub icons.
 
 .. _2025-3-4-rn:
 
