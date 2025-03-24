@@ -31,4 +31,3 @@ To instrument your Python application, follow these steps:
 
 For more information, see :ref:`splunk-python-otel-dist`.
 
-.. note:: The SignalFx Python Agent is deprecated and will reach End of Support on December 17th, 2022. See :ref:`migrate-signalfx-python-agent-to-otel` to migrate to the Splunk Distribution of OpenTelemetry Python.
