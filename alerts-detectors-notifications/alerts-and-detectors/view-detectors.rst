@@ -77,7 +77,7 @@ The resolution of data displayed is determined by the detector's time range. The
 
 The :guilabel:`Alert Rules` tab is open when you open a detector, showing a chart that represents values for the visible signals. The list of detector rules and the number of currently active alerts for each rule are visible. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on the type of detector.
 
-.. note:: If a detector contains a SignalFlow tab, you are viewing a detector that created using the API.
+.. note:: If a detector contains a :guilabel:`SignalFlow` tab, you are viewing a detector that created using the API.
 
    If you are familiar with the API, you can use this tab to view and edit the detector code and make changes to the detector rules. For more information, see :ref:`v2-detector-signalflow`.
 
