@@ -85,7 +85,7 @@ Using the API to create a detector provides a number of capabilities that are no
 
 -  For information on using the UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
 
-.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
+.. note:: If a detector display includes a :guilabel:`SignalFlow` tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
 
 
 .. _build-rules:
