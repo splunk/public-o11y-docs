@@ -6,6 +6,38 @@ March 2025
 
 Splunk Observability Cloud released the following new features and enhancements in March 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
 
+
+.. _2025-3-25-rn:
+
+March 25, 2025 release
+=======================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - APM error based troubleshooting
+     - Helps engineering teams to quickly understand the root cause of an issue for a given service, and if that issue is stemming from latency and/or error based issues. Users can now  surface root cause issues in Splunk APM, without having to manually set up index span tags, refer back to the service map or look at other relevant traces. 
+   * - APM service centric navigation and filtering
+     - Improves user navigation in Splunk APM with a new guided experience for visualizing, navigating and filtering through services.  Service Centric Views in Splunk APM is now more prominently featured on the landing page and now serves up a high level data view to users, so they can quickly understand service health, without additional click-downs in the product. 
+   * - APM service map redesign
+     - Service Maps in Splunk APM help engineering teams to quickly identify error sources and latency in complex application environments. We’ve redesigned the service map in this release to make it easier for users to get a holistic view of a service, with just the right top level information.
+   * - GDI wizard updates for GCP
+     - This latest release streamlines the setup of GCP integrations in Splunk Observability Cloud through an instructional wizard. This new wizard simplifies the process, making it more intuitive and user-friendly. It also provides an additional authentication option - Workload Identity Federation. 
+   * - Tags and issue detection for detectors
+     - We’ve refreshed the Detectors Inventory page to make managing the detectors fleet easier and more efficient. With this update, users can now tag detectors for better organisation, quickly identify if a detector is impacted by archived metrics or has exceeded the MTS limit, and gain more context at a glance.
+   * - Synthetics excluded files
+     - We are excited to introduce the Excluded Files feature for users to have the flexibility in configuring what resources their Browser tests will load on a page. By excluding certain files, users can prevent skewed analytics due to third-party services and individually test performance of a page with and without specific resources to see the impact on customers.
+   * - Log Observer search experience enhancement
+     - We’re releasing a new “cancel search” functionality to help users gain more control over their log queries by cancelling a log search whenever one is active, allowing them to eliminate workflow inefficiencies and reduce their SVC consumption as well as resource waste
+   * - SSO default role
+     - When onboarding new Splunk Observability Cloud users, admins who aren’t able to enable Unified Identity can now select what the default role will be assigned to users in the Organization (Non-Enterprise Customers: Admin & Power; Enterprise Customers: Admin, Power, Read_Only, Usage) for more control on user’s scope and privileges.
+   * - Magnetic page header 
+     - We’ve made UI changes in the Observability Cloud wide page headers  to drive a more cohesive experience and enable users to understand where they are in the product. The header includes branding and utilities that trigger menu dropdowns, like profile, help, and notification hub icons.
+
 .. _2025-3-4-rn:
 
 March 4, 2025 release
