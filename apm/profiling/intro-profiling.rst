@@ -94,8 +94,7 @@ The following programming languages have instrumentation available:
        * :ref:`profiling-configuration-otel-dotnet`
    * - .NET (SignalFx)
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
-
-       .NET versions 6.0 and higher are supported in AlwaysOn Profiling. .NET Framework is not supported. 
+     - .NET versions 6.0 and higher are supported in AlwaysOn Profiling. .NET Framework is not supported. 
    * - Python (in beta)
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
 
