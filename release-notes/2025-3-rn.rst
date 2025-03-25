@@ -28,9 +28,9 @@ March 25, 2025 release
    * - GDI wizard updates for GCP
      - This latest release streamlines the setup of GCP integrations in Splunk Observability Cloud through an instructional setup guide. This new guide simplifies the process, making it more intuitive and user-friendly. It also provides an additional authentication option - Workload Identity Federation. 
    * - Synthetics excluded files
-     - We are excited to introduce the Excluded Files feature for users to have flexibility in configuring what file types their browser tests will exclude from loading on a page. By excluding certain file types, users can prevent skewed analytics due to third-party services and individually test performance of a page with or without certain resources.
+     - We are excited to introduce the Excluded Files feature for users to have flexibility in configuring what file types their browser tests will exclude from loading on a page. By excluding certain file types, users can prevent skewed analytics due to third-party services and individually test performance of a page with or without certain resources. For more information, see :ref:`browser-adv-setting`.
    * - Log Observer Connect search experience enhancements
-     - * We’re releasing a new “cancel search” functionality to help users gain more control over their log queries by cancelling a log search whenever one is active, allowing them to eliminate workflow inefficiencies and reduce their SVC consumption as well as resource waste. For more information, see :ref:`los-keyword`.
+     - * We’re releasing a new “cancel search” functionality to help users gain more control over their log queries by cancelling a log search whenever one is active, allowing them to eliminate workflow inefficiencies and reduce their SVC consumption as well as resource waste. For more information, see :ref:`logs-keyword`.
        * We have expanded automatic mapping of the severity key to include more key and value names. This ensures broader compatibility, including OpenTelemetry field names, and reduces the need for custom alias creation. For more information, see :ref:`los-keyword`.
        * We have added guidance in the UI to help you select the appropriate connection and indexes to sharpen the focus of your searches. For more information, see :ref:`severity-key`.
    * - SSO default role
