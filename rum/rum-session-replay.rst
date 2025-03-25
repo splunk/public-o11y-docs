@@ -85,9 +85,6 @@ Self-hosted
 
 To avoid gaps in your data, load and initialize the Splunk JavaScript Agent asynchronously and as early as possible.
 
-#. (Optional) Activate session replay. Session replay is avaialable for enterprise customers only.
-
-
 
 NPM
 --------------------------------------------
