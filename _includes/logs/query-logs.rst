@@ -8,7 +8,13 @@
 
 2. In the content control bar, enter a time range in the time picker if you want to see logs from a specific historical period. To select a time range, you must select :guilabel:`Unlimited` from the :guilabel:`Search Records` field in step 5 below. When you select :guilabel:`150,000`, Log Observer returns only the most recent 150,000 logs regardless of the time range you select.
 
-3. Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. When you do not select an index, Log Observer runs your query on all indexes to which you have access. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select which index you want to query in Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions. 
+3. Select :guilabel:`Index` next to :guilabel:`Saved Queries`. In the pop-up window, first select a Splunk platform (Splunk Cloud Platform or Splunk Enterprise) connection in the :guilabel:`Connection selection` section. Then, in the :guilabel:`Index selection` section, select which index you want to query in Log Observer Connect. 
+
+   .. image:: /_images/logs/indexSelection.png
+            :width: 90%
+            :alt: The Log Observer index selection pop-up is displayed.
+
+.. note:: You can query indexes from only one Splunk platform instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions in Splunk platform. 
 
 4. In the content control bar next to the index picker, select :guilabel:`Add Filter`. Select the :guilabel:`Keyword` tab to search on a keyword or phrase. Select the :guilabel:`Fields` tab to search on a field. Then press Enter. To continue adding keywords or fields to the search, select :guilabel:`Add Filter` again.
 
@@ -18,9 +24,11 @@
 
 7. Select :guilabel:`Run search`.
 
-8. Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select ``=``. To exclude log records with a particular value from your results, select the field name, then select ``!=``. To see the full list of values and distribution for this field, select :guilabel:`Explore all values`.
+8. [Optional] If you want to stop the current search, select :guilabel:`Cancel search`. Partial results do  not display. To continue your search, select :guilabel:`Run search` again.
 
-9. Optionally, if you are viewing Splunk platform data, you can open your query results in the Splunk platform and use SPL to further query the resulting logs. You must have an account in Splunk platform. To open the log results in the Splunk platform, select the :guilabel:`Open in Splunk platform` icon at the top of the Logs table. 
+9. Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select ``=``. To exclude log records with a particular value from your results, select the field name, then select ``!=``. To see the full list of values and distribution for this field, select :guilabel:`Explore all values`.
+
+10. [Optional] If you are viewing Splunk platform data, you can open your query results in the Splunk platform and use SPL to further query the resulting logs. You must have an account in Splunk platform. To open the log results in the Splunk platform, select the :guilabel:`Open in Splunk platform` icon at the top of the Logs table. 
 
    .. image:: /_images/logs/lo-openinsplunk.png
          :width: 90%
