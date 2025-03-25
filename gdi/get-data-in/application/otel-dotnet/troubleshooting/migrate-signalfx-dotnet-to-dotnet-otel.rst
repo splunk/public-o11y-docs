@@ -1,5 +1,12 @@
 .. _migrate-signalfx-dotnet-to-dotnet-otel: 
 
+.. caution::
+
+   The SignalFx Instrumentation for .NET reached End of Support on February 21, 2025. The library has been archived and is no longer maintained.
+
+   All customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`.
+
+
 **********************************************
 Migrate from the SignalFx .NET Instrumentation
 **********************************************
