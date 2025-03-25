@@ -20,19 +20,21 @@ March 25, 2025 release
    * - New feature or enhancement
      - Description
    * - APM error based troubleshooting
-     - Helps engineering teams to quickly understand the root cause of an issue for a given service, and if that issue is stemming from latency and/or error based issues. Users can now  surface root cause issues in Splunk APM, without having to manually set up index span tags, refer back to the service map or look at other relevant traces. 
+     - Quickly understand the root cause of an issue for a specific service without manually setting up index span tags, looking at other traces, or referring back to the service map.
    * - APM service centric navigation and filtering
-     - Improves user navigation in Splunk APM with a new guided experience for visualizing, navigating and filtering through services.  Service Centric Views in Splunk APM is now more prominently featured on the landing page and now serves up a high level data view to users, so they can quickly understand service health, without additional click-downs in the product. 
+     - Improves user navigation in Splunk APM for visualizing, navigating and filtering through services. Service Centric Views in Splunk APM is now more prominently featured on the landing page so users can quickly understand service health without additional click-downs in the product.
    * - APM service map redesign
-     - Service Maps in Splunk APM help engineering teams to quickly identify error sources and latency in complex application environments. We’ve redesigned the service map in this release to make it easier for users to get a holistic view of a service, with just the right top level information.
+     - Service Maps in Splunk APM help engineering teams to quickly identify error sources and latency in complex application environments. We’ve redesigned the service map in this release to make it easier for users to get a holistic view of a service in the context of the larger environment.
    * - GDI wizard updates for GCP
-     - This latest release streamlines the setup of GCP integrations in Splunk Observability Cloud through an instructional wizard. This new wizard simplifies the process, making it more intuitive and user-friendly. It also provides an additional authentication option - Workload Identity Federation. 
-   * - Tags and issue detection for detectors
-     - We’ve refreshed the Detectors Inventory page to make managing the detectors fleet easier and more efficient. With this update, users can now tag detectors for better organisation, quickly identify if a detector is impacted by archived metrics or has exceeded the MTS limit, and gain more context at a glance.
+     - This latest release streamlines the setup of GCP integrations in Splunk Observability Cloud through an instructional setup guide. This new guide simplifies the process, making it more intuitive and user-friendly. It also provides an additional authentication option - Workload Identity Federation. 
    * - Synthetics excluded files
-     - We are excited to introduce the Excluded Files feature for users to have the flexibility in configuring what resources their Browser tests will load on a page. By excluding certain files, users can prevent skewed analytics due to third-party services and individually test performance of a page with and without specific resources to see the impact on customers.
-   * - Log Observer search experience enhancement
-     - We’re releasing a new “cancel search” functionality to help users gain more control over their log queries by cancelling a log search whenever one is active, allowing them to eliminate workflow inefficiencies and reduce their SVC consumption as well as resource waste
+     - We are excited to introduce the Excluded Files feature for users to have flexibility in configuring what file types their browser tests will exclude from loading on a page. By excluding certain file types, users can prevent skewed analytics due to third-party services and individually test performance of a page with or without certain resources.
+   * - Log Observer Connect search experience enhancements
+     - * We’re releasing a new “cancel search” functionality to help users gain more control over their log queries by cancelling a log search whenever one is active, allowing them to eliminate workflow inefficiencies and reduce their SVC consumption as well as resource waste
+       * We have expanded automatic mapping of the severity key to include more key and value names. This ensures broader compatibility, including OpenTelemetry field names, and reduces the need for custom alias creation.
+       * We have added guidance in the UI to help you select the appropriate connection and indexes to sharpen the focus of your searches.s
+   * - SSO default role
+     - When onboarding new Splunk Observability Cloud users, admins who aren’t able to enable Unified Identity can now select what the default role will be assigned to users in the Organization (Non-Enterprise Customers: Admin & Power; Enterprise Customers: Admin, Power, Read_Only, Usage) for more control on user’s scope and privileges.
 
 .. _2025-3-4-rn:
 
