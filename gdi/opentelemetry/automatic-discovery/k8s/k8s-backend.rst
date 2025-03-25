@@ -53,7 +53,7 @@ Make sure you've also installed the components specific to your language runtime
 
     .. tab:: .NET
 
-        * .NET version 6.0 or higher and supported .NET application libraries. For a list of supported libraries, see :ref:`supported-dotnet-libraries`.
+        * .NET version 6.0 or higher and supported .NET application libraries. 
         * x86 or AMD64 (x86-64) architecture. ARM architectures aren't supported.
 
     .. tab:: Node.js
@@ -646,7 +646,6 @@ To troubleshoot common errors that occur when instrumenting applications, see th
 
 * Java: :ref:`common-java-troubleshooting`
 * Node.js: :ref:`common-nodejs-troubleshooting`
-* .NET: :ref:`common-dotnet-troubleshooting`
 
 Learn more
 ===========================================================================
