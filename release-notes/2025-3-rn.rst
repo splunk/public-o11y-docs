@@ -20,7 +20,7 @@ March 25, 2025 release
    * - New feature or enhancement
      - Description
    * - APM error based troubleshooting
-     - Quickly understand the root cause of an issue for a specific service without manually setting up index span tags, looking at other traces, or referring back to the service map.
+     - Quickly understand the root cause of an issue for a specific service without manually setting up index span tags, looking at other traces, or referring back to the service map. For more information, see :ref:`apm-service-view`.
    * - APM service centric navigation and filtering
      - Improves user navigation in Splunk APM for visualizing, navigating and filtering through services. Service Centric Views in Splunk APM is now more prominently featured on the landing page so users can quickly understand service health without additional click-downs in the product.
    * - APM service map redesign
