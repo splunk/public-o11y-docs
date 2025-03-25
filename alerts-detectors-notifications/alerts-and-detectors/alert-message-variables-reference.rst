@@ -178,7 +178,7 @@ Helper functions
    
    * - {{#unless}} {{/unless}}
      - Conditional, an inverse of the {{if}} function
-     - ``Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}``
+     - ``Teams: {{#each detectorTeams}} {{name}}{{#unless @last}}, {{/unless}}{{/each}}``
    
 
 .. _condition-variables:
@@ -320,5 +320,5 @@ The following is an example of a default message that you can customize:
 
    {{#if detectorTags}}Tags: {{detectorTags}}{{/if}}
    {{#if detectorTeams}}
-   Teams:{{#each detectorTeams}} {{name}}{{#unless @last}},{{/unless}}{{/each}}.
+   Teams: {{#each detectorTeams}} {{name}}{{#unless @last}}, {{/unless}}{{/each}}.
    {{/if}}
