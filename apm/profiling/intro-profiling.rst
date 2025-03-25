@@ -97,7 +97,6 @@ The following programming languages have instrumentation available:
 
        .NET versions 6.0 and higher are supported in AlwaysOn Profiling. .NET Framework is not supported. 
      - * :ref:`instrument-dotnet-applications`
-       * :ref:`profiling-configuration-dotnet`
    * - Python (in beta)
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
 
