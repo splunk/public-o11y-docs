@@ -71,6 +71,24 @@ Initialize this code snippet to set up session replay through Splunk CDN.
 
 
 
+Self-hosted
+--------------------------------------------
+
+#. Download the desired version of :new-page:`splunk-otel-web-session-recorder.js <https://github.com/signalfx/splunk-otel-js-web/releases/latest/download/splunk-otel-web-session-recorder.js>`.
+#. Deploy the file in a location accessible by the users of your application.
+#. Add the following session replay snippet after the ``SplunkRum.init`` snippet:
+
+   .. code-block:: javascript
+
+      <script src="<your-self-hosted-path>/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
+
+
+To avoid gaps in your data, load and initialize the Splunk JavaScript Agent asynchronously and as early as possible.
+
+#. (Optional) Activate session replay. Session replay is avaialable for enterprise customers only.
+
+
+
 NPM
 --------------------------------------------
 
