@@ -673,7 +673,6 @@ To troubleshoot common errors that occur when instrumenting applications, see th
 
 * Java: :ref:`common-java-troubleshooting`
 * Node.js: :ref:`common-nodejs-troubleshooting`
-* .NET: :ref:`common-dotnet-troubleshooting`
 
 .. _auto-discovery-view-results-linux:
 
