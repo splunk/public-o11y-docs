@@ -4,12 +4,12 @@
 
    The SignalFx Instrumentation for .NET reached End of Support on February 21, 2025. The library has been archived and is no longer maintained.
 
-   All customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`.
+   If you want to instrument the .NET ecosystem use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`.
 
 
-**********************************************
-Migrate from the SignalFx .NET Instrumentation
-**********************************************
+*****************************************************************
+Migrate to OpenTelemetry from the SignalFx .NET Instrumentation
+*****************************************************************
 
 .. meta:: 
    :description: The agent of the Splunk Distribution of OpenTelemetry .NET is an alternative to the SignalFx Instrumentation for .NET. To migrate from the SignalFx instrumentation, follow these instructions.
@@ -30,7 +30,7 @@ Migrate to the Splunk Distribution of OpenTelemetry .NET
 
 To migrate from the SignalFx Instrumentation for .NET to the Splunk Distribution of OpenTelemetry .NET, follow these steps:
 
-#. Uninstall the SignalFx Instrumentation for .NET. See :ref:`uninstall-dotnet-sfx`.
+#. Uninstall the SignalFx Instrumentation for .NET. 
 #. Install and activate the Splunk Distribution of OpenTelemetry .NET. See :ref:`install-dotnet-otel-instrumentation`.
 #. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`dotnet-otel-exporter-settings`.
 #. Update your settings. See :ref:`changes-functionality-dotnet-otel`.
