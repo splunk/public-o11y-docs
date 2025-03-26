@@ -5,7 +5,7 @@ Downtime
 ************************************************************
 
 
-When you are working on your site, consider using a downtime configuration to account for maintenance and other planned irregularities in your monitoring. Here is some guidance on how to choose the downtime configuration rule you want to use for your for your situation. 
+When you're working on your site, consider using a downtime configuration to account for maintenance and other planned irregularities in your monitoring. This page provides guidance on how to choose the downtime configuration rule you want to use for your for your situation. 
 
 .. list-table::
   :header-rows: 1
@@ -20,28 +20,56 @@ When you are working on your site, consider using a downtime configuration to ac
 
 
 Schedule a downtime configuration 
-====================================
+============================================================
 
-It's a best practice to schedule maintenance windows with a 15 to 30 minute time buffer before and after you start and stop your maintenance work. This gives the system an opportunity to catch up with the maintenance state and reduces the chances of Splunk Synthetic Monitoring generating false positives during maintenance operations.
+Schedule a downtime configuration to pause synthetic monitoring or augment test metrics ahead of site maintenance or anomalous behavior so that you don't skew your test data. 
+
+The best practice is to schedule a downtime configuration with a 15 to 30 minute buffer before and after you start and stop your maintenance work. This gives the system an opportunity to catch up with the maintenance state and reduces the chances of Splunk Synthetic Monitoring generating false positives during maintenance operations.
 
 Schedule requirements: 
 
-* at least fifteen minutes long
-* up to one year in advance and one year in duration 
+* Downtimes configurations must be at least fifteen minutes long.
+* Downtimes configurations can be a maximum of one year in advance and one year in duration. 
 
 How to schedule a downtime configuration: 
 
-1. In Splunk Synthetic Monitoring, go to settings, then :strong:`Downtime configurations`.
-2. Select :strong:`Create downtime configuration`. 
-3. Enter a name, choose a rule, and select the test you want to include. 
-4. Set up the schedule and select :strong:`Create`. 
+#. In Splunk Synthetic Monitoring, go to settings, then :guilabel:`Downtime configurations`.
+#. Select :guilabel:`Create downtime configuration`. 
+#. Enter a unique name, select a downtime rule, and select the tests that you want this downtime rule to apply to. 
+#. In the :guilabel:`Schedule` section, set a start and end date and time.
+#. Select from the options in :guilabel:`Recurrence`.
+#. Select :guilabel:`Create`. 
+
+
+When a recurring downtime configuration is active, you can't edit, delete, or extend it, but you can end it immediately. When a non-recurring downtime configuration is active, you can't edit or delete it, but you can extend its duration or end it immediately.
+
+
+Preview the downtime schedule
+----------------------------------------
+
+If you selected a value other than :guilabel:`Does not repeat` in the :guilabel:`Recurrence` menu, the :guilabel:`Create a downtime configuration` form displays a preview of the first ten downtime configurations.
+
+
+Mute alerts during downtime
+============================================================
 
 To mute any alerts associated with a test included in a downtime configuration window, see :ref:`mute-notifications`.
 
-When a downtime configuration is active, you can't edit, or delete it. You can extend the duration, or cancel while it is active. 
+
+View the downtime configurations that apply to a given test
+============================================================
+
+To see downtime configurations that apply to any test and time range:
+
+#. Select that test. 
+#. Zoom in on the time span of either of the test's charts as needed. 
+   
+   The start and end time of any applicable downtime configurations are marked on the x-axis of the chart as triangles.
+
+
 
 Records 
-======================
+============================================================
 
 The downtime configuration record shows when the window started and finished. The records are kept for thirteen months. 
 

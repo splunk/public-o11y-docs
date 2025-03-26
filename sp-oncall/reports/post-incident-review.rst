@@ -13,7 +13,7 @@ To create a Post-Incident Review Report, access the Splunk On-Call web portal, a
 
 Select the :guilabel:`Post-Incident Reviews` option and select :guilabel:`New Report`. Enter a title and select :guilabel:`Create Report`.
 
-Configuring post-incident eeview reports
+Configuring post-incident review reports
 ---------------------------------------------
 
 Once you've created a New Report, you'll enter the main report configuration page where you'll be able to provide and define context
