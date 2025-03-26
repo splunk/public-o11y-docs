@@ -2,17 +2,17 @@
 .. _set-up-browser-test:
 
 **************************************
-Set up a Browser test
+Set up a browser test
 **************************************
 
 .. meta::
     :description: Steps to set up a browser test to track the performance of specific site resources, or a multi-step user flow, in Splunk Synthetic Monitoring.
 
 
-Use a Browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
+Use a browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
 
 
-For each page checked in a Browser test, Splunk Synthetic Monitoring captures an HTTP Archive (HAR) file, represented in a waterfall chart, which illustrates the performance of specific resources within the page. Browser tests also capture a set of 40+ metrics. See :ref:`waterfall-chart` and :ref:`browser-metrics` to learn more.
+For each page checked in a browser test, Splunk Synthetic Monitoring captures an HTTP Archive (HAR) file, represented in a waterfall chart, which illustrates the performance of specific resources within the page. Browser tests also capture a set of 40+ metrics. See :ref:`waterfall-chart` and :ref:`browser-metrics` to learn more.
 
 .. note::
    If the site or application you are monitoring uses allow lists or block lists for visitors or an analytics tool to measure traffic, check that it's configured to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for instructions.
@@ -20,13 +20,13 @@ For each page checked in a Browser test, Splunk Synthetic Monitoring captures an
 
 
 
-Set up a Browser test
+Set up a browser test
 =========================
 
 
-For optimal experience, synthetics browser tests use a stable version of Google Chrome: ``116.0.5845.96-1`` to simulate user activity.
+For optimal experience, browser tests use a stable version of Google Chrome: ``116.0.5845.96-1`` to simulate user activity.
 
-Follow these steps to set up a Browser test:
+Follow these steps to set up a browser test:
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring.
 
@@ -34,12 +34,12 @@ Follow these steps to set up a Browser test:
 
 #. In the :guilabel:`Name` field, enter a name for your test.
 
-#. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more.
+#. To add steps and synthetic transactions to your browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more.
 
-#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don’t impact persisted run metrics. For more, see :ref:`try-now`.
+#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don't impact persisted run metrics. See :ref:`try-now`.
 
-#. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
-#. (Optional) Turn on automatic test retry in the event a test initially fails.
+#. (Optional) Add a wait time before a step executes. See :ref:`browser-wait-times`.
+#. (Optional) Enable automatic test retry in the event a test initially fails.
 
 
 #. Save your test.
@@ -80,23 +80,23 @@ For steps on how to make a Google Chrome recording, see :new-page:`Record, repla
 Import a Google Chrome Recorder JSON file
 --------------------------------------------------------
 
-.. Note:: Included within recordings from Google Chrome Recorder is the specific viewport size of the browser window used in the recording. When imported, this recorded viewport is not imported into the Synthetics Browser test. Check that the Synthetics Browser test device selection accurately represents the viewport size used by the recorded browser window.
+.. Note:: Recordings from Google Chrome Recorder include the specific viewport size of the browser window used in the recording. When you import a recording, Splunk RUM doesn't import the viewport size into the browser test. Therefore, you must check that the test's device setting matches the viewport size used by the recorded browser window.
 
 
-Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing Browser test.
+Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing browser test.
 
 
 #. In Splunk Synthetic Monitoring, select :guilabel:`Edit` on an existing Browser test to open the test configuration page, or create a new test.
-#. Select Import.
+#. Select :guilabel:`Import`.
 #. Upload the Google Chrome Recorder JSON file.
-#. If a step is not supported, you need to edit or delete the step in the test configuration page.
+#. If a step is not supported, edit or delete that step in the test configuration page.
 #. (Optional) Add a name to each step.
 #. Save your changes.
 
 
 Troubleshoot unsupported steps
 =======================================
-If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company.
+If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in browser tests. These examples use Buttercup Games, a fictitious gaming company.
 
 
 .. tabs::
@@ -350,7 +350,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
 
 
 
-View your Browser test
+View your browser test
 ====================================
 
 Now that you created and saved a test, check whether it's collecting data as expected:
@@ -358,13 +358,13 @@ Now that you created and saved a test, check whether it's collecting data as exp
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data.
 #. Select the test you're interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
 
-#. See :ref:`browser-test-results` to learn more about Browser test results.
+#. See :ref:`browser-test-results` to learn more about browser test results.
 
 
-Edit your Browser test
+Edit your browser test
 ========================
 
-To edit your Browser test, do the following:
+To edit your browser test, do the following:
 
 #. Select the row for the test you want to edit in the :guilabel:`Tests` list to open the :guilabel:`Test history` view.
 #. Select :guilabel:`Edit test` to edit your test configuration.
@@ -373,7 +373,7 @@ If you change the name of your test or the name of a synthetic transaction, it m
 
 .. _browser-adv-setting:
 
-Advanced settings for Browser tests
+Advanced settings for browser tests
 ============================================================
 
 There are many reasons why you might want to configure advanced settings for your synthetics tests. Here are a few:
@@ -395,7 +395,7 @@ Interactive metrics are collected by default for each page in the test flow, but
 
 * First CPU idle: Time until the page is minimally interactive and responds to user input.
 * Time to interactive: This measures the time until the page responds to user input quickly. It is used to identify when the page is actually usable, not just when the page load looks complete.
-* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v10 of the Lighthouse desktop scoring algorithm. See :new-page:`https://developer.chrome.com/docs/lighthouse/performance/performance-scoring#lighthouse_10` in the Google developer documentation to learn more about Lighthouse scoring.
+* Lighthouse score: A weighted aggregation of several browser test metric values calculated using v10 of the Lighthouse desktop scoring algorithm. See :new-page:`https://developer.chrome.com/docs/lighthouse/performance/performance-scoring#lighthouse_10` in the Google developer documentation to learn more about Lighthouse scoring.
 
 
 .. _auto-retry:
@@ -473,14 +473,14 @@ You can also indicate whether to retain the original ``HOST`` header by activati
 
 Wait times
 ---------------------
-Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a Browser test to fail. If you know that there are certain steps in a workflow that take longer than 10 seconds, add a custom wait time to your Browser test.
+Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a browser test to fail. If you know that there are certain steps in a workflow that take longer than 10 seconds, add a custom wait time to your browser test.
 
-* Wait times are available with Browser tests only.
+* Wait times are available with browser tests only.
 * The maximum custom wait time for each test is 200 seconds.
 
-Follow these steps to configure custom wait times for your Browser tests:
+Follow these steps to configure custom wait times for your browser tests:
 
-#. In Splunk Synthetic Monitoring, select :guilabel:`Edit` on the Browser test to open the configuration panel.
+#. In Splunk Synthetic Monitoring, select :guilabel:`Edit` on the browser test to open the configuration panel.
 #. Select :guilabel:`New step > Wait`, from the step type drop down.
 #. Add a name and the wait time in ms.
 #. When you finish instrumenting your test, save the workflow: :guilabel:`Return to test > Save`.
@@ -527,7 +527,6 @@ Here are the limits for each type of wait time. The maximum limit for a run is 3
 
 
 
-
 Chrome flags 
 ----------------
 Google Chrome flags are a helpful tool for troubleshooting. Activate browser features that are not available by default to test custom browser configurations and specialized use cases, like a proxy server.
@@ -538,8 +537,6 @@ For more, see
 Note: Global variables are incompatible with Chrome flags. 
 
 These are the flags available: 
-
-
 
 
 .. raw:: html
@@ -555,6 +552,44 @@ These are the flags available:
 
 
 
+Excluded files
+------------------------------
+
+You can configure your browser test to ignore specific file types or patterns so that it skips all HTTP requests that match those file types or patterns.
+
+Exclusion rules are useful to:
+
+
+* Prevent false alerts from test analytics.
+* Test the performance of a page with or without specific resources loading.
+* Prevent specific third-party services from loading, such as random pop-ups from third-party services.
+* Ignore files that are known to cause performance problems.
+
+
+To create an exclusion rule:
+
+#. On the browser test's configuration page, select the :guilabel:`Advanced` toggle.
+#. Scroll down to the :guilabel:`Custom content` section.
+#. Select :guilabel:`Add excluded file`.
+#. Select a value in :guilabel:`File type`:
+
+   .. image:: /_images/synthetics/synthetics-browser-test-excluded-files.png
+      :width: 60%
+      :alt: This image shows an exclusion rule for all files of type Crazy Egg.
+
+   * To exclude all files of a common predefined type, select that type.
+   * To exclude all file types except those that match the value you specify, select :guilabel:`All Except` and specify a value or regular expression.
+   * To use regular expressions, select :guilabel:`Custom` and specify a value or regular expression.
+     For example:
+
+     * To exclude a specific domain, including all of its subdomains, enter ``domainname\.com``
+     * To exclude only the subdomains of a specific domain, but not the domain itself, enter ``.+\.domainname\.com``
+     * To exclude a JavaScript app, enter ``domainname\.com/appname\.js``
+     * To exclude entire directories, enter ``domainname\.com/directoryname\/.+``
+
+.. note::
+   :guilabel:`All Except` inclusions take precedence over other exclusions. The order in which you specify exclusions doesn't matter except when you're using a combination of :guilabel:`All Except` and :guilabel:`Custom`.
+
 
 
 .. _browser-custom-props:
@@ -568,14 +603,14 @@ Add custom properties in the test creation page in advanced settings. Use key-va
     :alt: This image shows two custom property key value pairs, env:prod and role:developer.
 
 
-Custom properties are single-valued and don’t support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``.
+Custom properties are single valued and don't support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``.
 
 
 Key requirements:
 
    * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers.
    * The remainder of the key can contain letters, numbers, underscores and hyphens.
-   * Keys can’t be named ``test_id`` or ``test``.
+   * Keys can't be named ``test_id`` or ``test``.
    * Key size can't exceed 128 characters.
 
    See, :ref:`custom-properties`.
