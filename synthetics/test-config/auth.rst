@@ -220,7 +220,7 @@ Some services may not be accessible during Synthetics tests due to violations of
 
 #. Add a step of type :guilabel:`Go to url`, and in :guilabel:`URL`, enter the URL of the target's authentication page.
 
-#. Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a global variable named ``otp``.
+#. Add a step of type :guilabel:`Save return value from JavaScript`, and in the :guilabel:`code` field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a global variable named ``otp``.
 
    .. note::
        In the script, set the variable url to the URL of your own virtual phone number's SMS service.
