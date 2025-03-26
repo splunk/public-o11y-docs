@@ -25,8 +25,6 @@ March 25, 2025 release
      - Improves user navigation in Splunk APM for visualizing, navigating and filtering through services. Service Centric Views in Splunk APM is now more prominently featured on the landing page so users can quickly understand service health without additional click-downs in the product.
    * - APM service map redesign
      - Service Maps in Splunk APM help engineering teams to quickly identify error sources and latency in complex application environments. We’ve redesigned the service map in this release to make it easier for users to get a holistic view of a service in the context of the larger environment.
-   * - GDI wizard updates for GCP
-     - This latest release streamlines the setup of GCP integrations in Splunk Observability Cloud through an instructional setup guide. This new guide simplifies the process, making it more intuitive and user-friendly. It also provides an additional authentication option - Workload Identity Federation. 
    * - Synthetics excluded files
      - We are excited to introduce the Excluded Files feature for users to have flexibility in configuring what file types their browser tests will exclude from loading on a page. By excluding certain file types, users can prevent skewed analytics due to third-party services and individually test performance of a page with or without certain resources. For more information, see :ref:`browser-adv-setting`.
    * - Log Observer Connect search experience enhancements
