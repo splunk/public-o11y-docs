@@ -72,7 +72,7 @@ Main system limits
    * - :ref:`number-of-input-mts-per-job`
      - 250,000
 
-.. note:: To adjust the limit values for your org, contact Splunk Observability Cloud Support. See :ref:`support`.
+.. note:: In most cases, you should use the default system limits. To adjust the limit values for your org, contact Splunk Observability Cloud Support. See :ref:`support`.
 
 
 .. _charts-detectors-and-signalflow-limits:
