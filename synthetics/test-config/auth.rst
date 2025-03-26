@@ -228,7 +228,7 @@ Some services may not be accessible during Synthetics tests due to violations of
    .. code-block:: javascript
 
      function getOtp() {
-       const url = "https://api.alfa.smartlook.cloud/sms";
+       const url = "https://your-page.example.com/sms";
        var request = new XMLHttpRequest();
        request.open("GET", url, false);
        request.send();
