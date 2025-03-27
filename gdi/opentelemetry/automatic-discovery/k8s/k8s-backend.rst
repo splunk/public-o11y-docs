@@ -87,9 +87,9 @@ Populate values.yaml with the following fields and values:
   operatorcrds: 
     install: true
   
-You might need to populate the file with additional values depending on your environment. See :ref:`k8s-auto-discovery-add-certificates` and :ref:`k8s-auto-discovery-setup-traces` for more information.
+You might need to populate the file with additional values depending on your environment. See :ref:`k8s-auto-discovery-add-crds` and :ref:`k8s-auto-discovery-setup-traces` for more information.
 
-.. _k8s-auto-discovery-add-certificates:
+.. _k8s-auto-discovery-add-crds:
 
 Add OpenTelemetry CRDs
 ------------------------------------------
