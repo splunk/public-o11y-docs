@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 13:18+0000\n"
-"PO-Revision-Date: 2025-01-13 15:33+0000\n"
+"POT-Creation-Date: 2025-01-29 18:45+0000\n"
+"PO-Revision-Date: 2025-02-27 12:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -31,13 +31,12 @@ msgid "Preview: Role-based access"
 msgstr "プレビュー：ロールベースのアクセス"
 
 #: ../../_includes/private-preview.rst:3
-#, fuzzy
 msgid ""
-"Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use "
-"ofpreview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+"Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of "
+"preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
 msgstr ""
-"プレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止するこ"
-"とができます。プレビュー機能の使用は、:new-page:`Splunk一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
+"プレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止すること"
+"ができます。プレビュー機能の使用は、:new-page:`Splunk一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
 
 #: ../../_includes/private-preview.rst:5
 msgid "Use these links to navigate to the topics for role-based access control (RBAC):"
@@ -55,24 +54,23 @@ msgstr ":ref:`roles-and-capabilities-table`"
 msgid ":ref:`users-assign-roles-ph3`"
 msgstr ":ref:`users-assign-roles-ph3`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:16 ../../private-preview/rbac/roles-and-capabilities-table.rst:20
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:29 ../../private-preview/rbac/roles-and-capabilities-table.rst:33
 msgid "|hr|"
 msgstr "|hr|"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:18
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:31
 msgid ":strong:`Available in Enterprise Edition`"
 msgstr ":strong:`Enterprise Editionで利用できる機能です`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:22
-#, fuzzy
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:35
 msgid ""
-"Splunk Observability Cloud lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions "
-"areavailable to roles. For example, capabilities determine whether someone with a particular role has capabilities to create detectors or dashboards."
+"Splunk Observability Cloud lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are "
+"available to roles. For example, capabilities determine whether someone with a particular role has capabilities to create detectors or dashboards."
 msgstr ""
 "Splunk Observability Cloud では、ロールベースアクセス制御を使用して、特定のユーザーグループに対して特定の機能へのアクセスを制限できます。お客様がユーザーにロールを割り当てます。ロールには一連の機能が含まれています。これらの能力は、ロールがどのような"
 "アクションを利用できるかを定義します。たとえば、特定のロールを持つユーザーがディテクターやダッシュボードを作成する権限を持っているかどうかは、権限によって決まります。"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:27
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:40
 msgid "Metrics pipeline management"
 msgstr "メトリクスパイプライン管理"
 
@@ -216,15 +214,14 @@ msgid ":strong:`Delete entire metrics pipeline management ruleset`"
 msgstr ":strong:`メトリクスパイプライン管理ルールセット全体を削除する`"
 
 #: ../../_includes/admin/roles_mpm.rst:71
-#, fuzzy
 msgid ""
-"Yes, if default routing is real-time storage and the user deletes all aggregation rules. No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management doesn't delete the ruleset. An Admin needs to "
-"changethe routing to real-time storage and delete the ruleset."
+"Yes, if default routing is real-time storage and the user deletes all aggregation rules. No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management doesn't delete the ruleset. An Admin needs to change "
+"the routing to real-time storage and delete the ruleset."
 msgstr ""
 "デフォルトのルーティングがリアルタイムストレージで、ユーザーがすべての集計ルールを削除する場合は、権限あり。デフォルトのルーティングが［Drop Data］で、ユーザーがすべての集計ルールを削除する場合は、権限なし。メトリクスパイプライン管理は、ルールセット"
 "の削除はしません。管理者がルーティングをリアルタイムストレージに変更して、ルールセットを削除する必要があります。"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:33
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:59
 msgid "Log Observer and Log Observer Connect"
 msgstr "Log ObserverとLog Observer Connect"
 
@@ -296,7 +293,7 @@ msgstr ":strong:`組織のサブスクリプション使用状況を表示する
 msgid ":strong:`Set up Log Observer Connect connection to Splunk platform`"
 msgstr ":strong:`Splunk プラットフォームに Log Observer Connect 接続をセットアップする`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:39
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:78
 msgid "Alerts and detectors roles and capabilities"
 msgstr "アラートとディテクターのロールと機能"
 
@@ -349,16 +346,14 @@ msgid ":strong:`Create or delete muting rules for a detector`"
 msgstr ":strong:`ディテクターのミュートルールを作成および削除する`"
 
 #: ../../_includes/admin/roles_alerts_detectors.rst:87
-#, fuzzy
 msgid ":strong:`Create, delete, and modify service level objectives (SLOs)`"
 msgstr ":strong:`サービスレベル目標（SLO）を作成、削除、変更する`"
 
 #: ../../_includes/admin/roles_alerts_detectors.rst:93
-#, fuzzy
 msgid ":strong:`View service level objectives (SLOs)`"
 msgstr ":strong:`サービスレベル目標（SLO）を表示する`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:44
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:96
 msgid "Infrastructure Monitoring navigators"
 msgstr "Infrastructure Monitoringナビゲーター"
 
@@ -374,7 +369,7 @@ msgstr ":strong:`ナビゲーターを編集する`"
 msgid ":strong:`Delete navigator`"
 msgstr ":strong:`ナビゲーターを削除する`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:50
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:115
 msgid "Splunk Synthetic Monitoring"
 msgstr "Splunk Synthetic Monitoring"
 
@@ -403,16 +398,14 @@ msgid ":strong:`Create, read, or delete runners`"
 msgstr ":strong:`ランナーを作成、読み込み、または削除する`"
 
 #: ../../_includes/admin/synth-roles-caps.rst:48
-#, fuzzy
 msgid ":strong:`Create, update, or delete downtime configuration`"
 msgstr ":strong:`ダウンタイム設定を作成、更新または削除する`"
 
 #: ../../_includes/admin/synth-roles-caps.rst:53
-#, fuzzy
 msgid ":strong:`Read downtime configuration`"
 msgstr ":strong:`ダウンタイム設定を読み取る`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:58
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:136
 msgid "Splunk Real User Monitoring"
 msgstr "Splunk Real User Monitoring"
 
@@ -452,7 +445,7 @@ msgstr ":strong:`URL グループ化ルールを作成、削除、無効化す�
 msgid ":strong:`Edit or filter URL grouping rule`"
 msgstr ":strong:`URL グループ化ルールを編集またはフィルターする`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:64
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:155
 msgid "Splunk Application Performance Monitoring"
 msgstr "Splunk Application Performance Monitoring（APM）"
 
@@ -480,11 +473,11 @@ msgstr ":strong:`トレース保持の拡張設定を表示する`"
 msgid ":strong:`Configure extended trace retention settings`"
 msgstr ":strong:`トレース保持の拡張設定を設定する`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:68
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:172
 msgid "Settings"
 msgstr "設定"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:71
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:175
 msgid "General settings"
 msgstr "一般設定"
 
@@ -548,7 +541,7 @@ msgstr "権限なし。チームセキュリティ強化が有効化され、ユ
 msgid ":strong:`Edit notification policy`"
 msgstr ":strong:`通知ポリシーを編集する`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:77
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:194
 msgid "Data configuration"
 msgstr "データ設定"
 
@@ -564,7 +557,7 @@ msgstr ":strong:`グローバルデータリンクを作成、削除、複製す
 msgid ":strong:`View APM MetricSets`"
 msgstr ":strong:` APM MetricSet を表示する`"
 
-#: ../../private-preview/rbac/roles-and-capabilities-table.rst:83
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:213
 msgid "Help and support"
 msgstr "ヘルプとサポート"
 

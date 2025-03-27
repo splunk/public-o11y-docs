@@ -53,7 +53,7 @@ To authenticate using your service account keys go to the GCP console and follow
 
 #. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer. You will need this key to authenticate in the :guilabel:`Import Service Account Key` step in Splunk Observability Cloud.
 
-#. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and activate the Cloud Resource Manager API. You need to activate this API so Splunk Observability Cloud can use it to validate permissions on the service account keys.
+#. In a new window or tab, go to :new-page:`Cloud Monitoring API <https://cloud.google.com/monitoring/api/v3>` and activate it. Splunk Observability Cloud uses this API to validate permissions on the service account keys.
 
 For more information, refer to GCP's docs on :new-page:`Service account keys <https://cloud.google.com/iam/docs/service-account-creds#key-types>`. 
 

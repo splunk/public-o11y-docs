@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 13:18+0000\n"
-"PO-Revision-Date: 2025-01-13 15:34+0000\n"
+"POT-Creation-Date: 2025-01-29 18:45+0000\n"
+"PO-Revision-Date: 2025-02-27 12:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -19,7 +19,6 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #: ../../get-started/contribute.rst:-1
-#, fuzzy
 msgid "Anyone can update the Splunk Observability Cloud documentation by adding examples, documenting new settings, or fixing issues. Read on to learn how to edit the documentation."
 msgstr "Splunk Observability Cloudのドキュメントは、例を追加したり、新しい設定を文書化したり、問題を修正したりすることによって、誰でも更新することができます。ドキュメントの編集方法については、この情報を参照してください。"
 
@@ -32,22 +31,18 @@ msgid "You can update the Splunk Observability Cloud documentation to fix typos 
 msgstr "Splunk Observability Cloudドキュメントを更新して、誤字やその他の問題を修正したり、例を追加したり、新しい設定を文書化したりすることができます。また、すべてのユーザーに役立つ概念の説明や図、さらには完全に新しいトピックなど、より大規模な変更を投稿することもできます。"
 
 #: ../../get-started/contribute.rst:18
-#, fuzzy
 msgid "If you're unsure about a change or have a different question about the docs, use the feedback form at the bottom of every page to send questions or comments to the Splunk Observability Cloud documentation team."
 msgstr "変更について不明な点がある場合、またはドキュメントについて別の質問がある場合は、各ページの下部にあるフィードバックフォームを使用して、Splunk Observability Cloudのドキュメントチームに質問やコメントを送信してください。"
 
 #: ../../get-started/contribute.rst:26
-#, fuzzy
 msgid "To update the Splunk Observability Cloud documentation you need a GitHub account."
 msgstr "Splunk Observability Cloudのドキュメントを更新するには、GitHubアカウントが必要です。"
 
 #: ../../get-started/contribute.rst:28
-#, fuzzy
 msgid "You can use an existing GitHub account or create a new account for free in the GitHub website."
 msgstr "既存のGitHubアカウントを使用するか、GitHubウェブサイトで新規アカウントを無料で作成することができます。"
 
 #: ../../get-started/contribute.rst:36
-#, fuzzy
 msgid "On every page of the Splunk Observability Cloud documentation you can find an :guilabel:`Edit this page` link. Select the link to load the source of the document in a GitHub preview and start editing."
 msgstr "Splunk Observability Cloudのドキュメントの各ページには、:guilabel:`Edit this page` のリンクがあります。このリンクを選択すると、GitHubのプレビューでドキュメントのソースが読み込まれ、編集が開始されます。"
 
@@ -60,7 +55,6 @@ msgid "After you've completed your edit, GitHub prompts you to open a pull reque
 msgstr "編集が完了すると、GitHubが、プルリクエストを開き、テンプレートを使用して変更の説明を記入することを促します。"
 
 #: ../../get-started/contribute.rst:44
-#, fuzzy
 msgid "Within 3 days, the Splunk Observability Cloud documentation team reviews your pull request and might ask you to make some edits. If the changes are approved, the pull requests is approved and merged."
 msgstr "3日以内に、Splunk Observability Cloudのドキュメントチームがお客様のプルリクエストを検討します。この際、いくつかの編集をお願いする場合があります。変更が承認されると、プルリクエストが承認され、取り込まれます。"
 
@@ -177,7 +171,6 @@ msgid "Download Splunk Observability Cloud for Mobile."
 msgstr "Splunk Observability Cloud for Mobileをダウンロードします。"
 
 #: ../../get-started/download-mobile.rst:77
-#, fuzzy
 msgid "Due to Chinese network restrictions, you can't access the Splunk Observability Cloud for Mobile app from the iOS App Store or the Google Play store if you are in mainland China and have a device that is on a Chinese network carrier."
 msgstr "中国のネットワーク制限により、中国本土にお住まいで、中国のネットワークキャリアでデバイスをご利用の場合は、iOS App StoreまたはGoogle PlayストアからSplunk Observability Cloud for Mobileアプリにアクセスできません。"
 
@@ -198,7 +191,6 @@ msgid "Select your realm or enter a custom URL."
 msgstr "レルムを選択するか、カスタムURLを入力します。"
 
 #: ../../get-started/download-mobile.rst:88
-#, fuzzy
 msgid "When your Splunk Observability Cloud admin set up Single Sign On (SSO), they created a custom URL for your organization. The URL must be a subdomain of signalfx.com. An example of a custom URL is https://your_org.signalfx.com. The :strong:`Enter Custom URL` field is prepopulated with ``signalfx.com``. Enter the unique portion of your organization's custom URL before ``signalfx.com``."
 msgstr "Splunk Observability Cloudの管理者がシングルサインオン（SSO）を設定する際に、組織のカスタムURLを作成しています。このURLは、signalfx.comのサブドメインでなければなりません。カスタムURLの例は、https://your_org.signalfx.comです。:strong:`カスタムURLを入力` のフィールドには、あらかじめ ``signalfx.com``  が入力されています。 ``signalfx.com``  の前に、自分の組織のカスタムURLの固有部分を入力してください。"
 
@@ -207,7 +199,6 @@ msgid "Choose from :strong:`User Credentials`, :strong:`Google`, or :strong:`SSO
 msgstr ":strong:`ユーザー認証情報`、:strong:`Google`、または :strong:`SSO` から選択してください。"
 
 #: ../../get-started/education-resources.rst:-1
-#, fuzzy
 msgid "Where to learn more about Splunk Observability Cloud with free and paid education classes."
 msgstr "Splunk Observability Cloudについて詳しく学習するための無料および有料の教育クラスについて説明します。"
 
@@ -216,7 +207,6 @@ msgid "Education classes for Splunk Observability Cloud"
 msgstr "Splunk Observability Cloudの教育クラス"
 
 #: ../../get-started/education-resources.rst:12
-#, fuzzy
 msgid "There are many resources available to help you learn more about Splunk Observability Cloud or connect with other observability practitioners."
 msgstr "Splunk Observability Cloudを詳しく学習したり、他のオブザーバビリティ実践者とつながったりすることを助ける多数のリソースがあります。"
 
@@ -285,7 +275,6 @@ msgid "To explore the free and paid education offerings, see :new-page:`Splunk O
 msgstr "無料および有料の教育コースについては、:new-page:`Splunk Observability Cloudのコース<https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights>` を参照してください。"
 
 #: ../../get-started/get-started.rst:-1
-#, fuzzy
 msgid "Learn how to get started with Splunk Observability Cloud."
 msgstr "Splunk Observability Cloudの利用を開始する方法を学習します。"
 
@@ -294,32 +283,26 @@ msgid "Get started with Splunk Observability Cloud"
 msgstr "Splunk Observability Cloudの利用開始"
 
 #: ../../get-started/get-started.rst:9
-#, fuzzy
 msgid "Everything you need to know to get started with Splunk Observability Cloud."
 msgstr "Splunk Observability Cloudの利用開始にあたって知っておく必要があるすべての点。"
 
 #: ../../get-started/get-started.rst:14
-#, fuzzy
 msgid ":icon-info:`.` :strong:`Introduction to Splunk Observability Cloud`"
 msgstr ":icon-info:`.` :strong:`Splunk Observability Cloudの概要`"
 
 #: ../../get-started/get-started.rst:18
-#, fuzzy
 msgid ":strong:`Overview` Splunk Observability Cloud overview :ref:`overview`"
 msgstr ":strong:`概要` Splunk Observability Cloudの概要 :ref:`overview`"
 
 #: ../../get-started/get-started.rst:23
-#, fuzzy
 msgid ":strong:`Architecture` Splunk Observability Cloud architecture :ref:`architecture`"
 msgstr ":strong:`アーキテクチャ` Splunk Observability Cloudのアーキテクチャ :ref:`architecture`"
 
 #: ../../get-started/get-started.rst:28
-#, fuzzy
 msgid ":strong:`Service description` Benefits and service terms :ref:`o11y-service-description`"
 msgstr ":strong:`サービスの説明` メリットとサービス規約 :ref:`o11y-service-description`"
 
 #: ../../get-started/get-started.rst:34
-#, fuzzy
 msgid ":icon-cogs:`.` :strong:`Get started for Splunk Observability Cloud admins`"
 msgstr ":icon-cogs:`.` :strong:`Splunk Observability Cloud管理者のための利用開始ガイド`"
 
@@ -328,7 +311,6 @@ msgid ":strong:`Get started guide for admins` Get started guide for Splunk Obser
 msgstr ":strong:`管理者向けスタートガイド` Splunk Observability Cloud管理者のための利用開始ガイド :ref:`get-started-guide`"
 
 #: ../../get-started/get-started.rst:43
-#, fuzzy
 msgid ":strong:`Get your data in` Guide for getting your data into Splunk Observability Cloud :ref:`get-started-get-data-in`"
 msgstr ":strong:`データの取り込み` Splunk Observability Cloudへのデータの取り込みガイド :ref:`get-started-get-data-in`"
 
@@ -341,7 +323,6 @@ msgid ":icon-info:`.` :strong:`Scenarios and tutorials`"
 msgstr ":icon-info:`.` :strong:`シナリオとチュートリアル`"
 
 #: ../../get-started/get-started.rst:58
-#, fuzzy
 msgid ":strong:`Scenarios` Goal-based scenarios for using Splunk Observability Cloud :ref:`scenario-landing`"
 msgstr ":strong:`シナリオ` Splunk Observability Cloudの使用に関する目標ベースのシナリオ :ref:`scenario-landing`"
 
@@ -354,7 +335,6 @@ msgid ":icon-users:`.` :strong:`Education and community resources`"
 msgstr ":icon-users:`.` :strong:`教育とコミュニティリソース`"
 
 #: ../../get-started/get-started.rst:73
-#, fuzzy
 msgid ":strong:`Course offerings` Splunk Observability Cloud course offerings :new-page:`https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights`"
 msgstr ":strong:`コース内容` Splunk Observability Cloudのコース内容 :new-page:`https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights`"
 
@@ -379,15 +359,13 @@ msgid "Phase 3: Scaled rollout"
 msgstr "フェーズ3：ロールアウトの拡張"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:4
-#, fuzzy
 msgid "Get started guide for Splunk Observability Cloud admins"
 msgstr "Splunk Observability Cloud管理者向け利用開始ガイド"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:14
-#, fuzzy
 msgid ""
-"The journey for getting started with Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. In the onboarding readiness phase, you set up users, teams, and access controls using roles and token management and lay the groundwork for connectivity. Next, in the initial rollout phase, you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud products for your initial project team use cases. In the final scaled rollout phase, "
-"youestablish repeatable observability practices using automation, data management, detectors, and dashboards."
+"The journey for getting started with Splunk Observability Cloud has 3 phases: onboarding readiness, initial rollout, and scaled rollout. In the onboarding readiness phase, you set up users, teams, and access controls using roles and token management and lay the groundwork for connectivity. Next, in the initial rollout phase, you get your data into Splunk Observability Cloud and set up the Splunk Observability Cloud products for your initial project team use cases. In the final scaled rollout phase, you "
+"establish repeatable observability practices using automation, data management, detectors, and dashboards."
 msgstr ""
 "Splunk Observability Cloudの利用開始のための過程には、3つのフェーズがあります。オンボーディング準備、初期ロールアウト、ロールアウトの拡張です。オンボーディング準備のフェーズでは、ロールやトークン管理を使用してユーザー、チーム、アクセス制御を設定し、接続のための基盤を構築します。次に、初期ロールアウトのフェーズでは、Splunk Observability Cloudにデータを取り込み、初期的なプロジェクトチームのユースケースに合わせてSplunk Observability Cloud製品をセットアップします。最後に、ロールアウトの拡張フェーズでは、自動化、"
 "データ管理、ディテクター、ダッシュボードを使用して、反復可能なオブザーバビリティ実践を確立します。"
@@ -409,7 +387,6 @@ msgid "Use the links to education resources for each phase to ensure you have th
 msgstr "各フェーズの教育リソースへのリンクを使用して、Splunk Observability Cloudのセットアップを成功させるための基本的な知識とスキルを習得してください。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:28 ../../get-started/get-started-guide/initial-rollout.rst:10 ../../get-started/get-started-guide/onboarding-readiness.rst:10 ../../get-started/get-started-guide/scaled-rollout.rst:10
-#, fuzzy
 msgid "This guide is for Splunk Observability Cloud users with the admin role."
 msgstr "このガイドは、Splunk Observability Cloudのadminロールを持つユーザー向けのガイドです。"
 
@@ -418,17 +395,14 @@ msgid "Flow showing the 3 phases of the get started journey: onboarding, initial
 msgstr "利用開始過程の3フェーズであるオンボーディング、初期ロールアウト、ロールアウトの拡張を示すフロー。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:39
-#, fuzzy
 msgid ":strong:`Information type`"
 msgstr ":strong:`情報の種類`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:40
-#, fuzzy
 msgid ":strong:`Phase 1: Onboarding readiness`"
 msgstr ":strong:`フェーズ1：オンボーディングの準備`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:41
-#, fuzzy
 msgid ":strong:`Phase 2: Initial rollout`"
 msgstr ":strong:`フェーズ2：初期ロールアウト`"
 
@@ -437,7 +411,6 @@ msgid ":strong:`Phase 3: Scaled rollout`"
 msgstr ":strong:`フェーズ3：ロールアウトの拡張`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:44
-#, fuzzy
 msgid ":strong:`Phase description`"
 msgstr ":strong:`フェーズの説明`"
 
@@ -454,7 +427,6 @@ msgid "Increase usage across all user teams and establish repeatable observabili
 msgstr "ユーザーチーム全体での利用を増やし、自動化、データ管理、ディテクター、ダッシュボードを使用して、反復可能なオブザーバビリティ実践を確立する"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:49
-#, fuzzy
 msgid ":strong:`Primary setup steps`"
 msgstr ":strong:`主なセットアップ手順`"
 
@@ -463,7 +435,6 @@ msgid ":ref:`phase1-create-trial`"
 msgstr ":ref:`phase1-create-trial`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:51 ../../get-started/get-started-guide/onboarding-readiness.rst:20
-#, fuzzy
 msgid ":ref:`phase1-network`"
 msgstr ":ref:`phase1-network`"
 
@@ -472,7 +443,6 @@ msgid ":ref:`phase1-user-access`"
 msgstr ":ref:`phase1-user-access`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:53 ../../get-started/get-started-guide/onboarding-readiness.rst:22
-#, fuzzy
 msgid ":ref:`phase1-teams-tokens`"
 msgstr ":ref:`phase1-teams-tokens`"
 
@@ -485,17 +455,14 @@ msgid ":ref:`phase2-initial-environment`"
 msgstr ":ref:`phase2-initial-environment`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:58 ../../get-started/get-started-guide/initial-rollout.rst:19
-#, fuzzy
 msgid ":ref:`phase2-infra-mon`"
 msgstr ":ref:`phase2-infra-mon`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:59 ../../get-started/get-started-guide/initial-rollout.rst:20
-#, fuzzy
 msgid ":ref:`phase2-apm`"
 msgstr ":ref:`phase2-apm`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:60 ../../get-started/get-started-guide/initial-rollout.rst:21
-#, fuzzy
 msgid ":ref:`phase2-rum`"
 msgstr ":ref:`phase2-rum`"
 
@@ -512,27 +479,22 @@ msgid ":ref:`phase3-pipeline`"
 msgstr ":ref:`phase3-pipeline`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:66 ../../get-started/get-started-guide/scaled-rollout.rst:20
-#, fuzzy
 msgid ":ref:`phase3-rotate-token`"
 msgstr ":ref:`phase3-rotate-token`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:67 ../../get-started/get-started-guide/scaled-rollout.rst:21
-#, fuzzy
 msgid ":ref:`phase3-mpm`"
 msgstr ":ref:`phase3-mpm`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:68 ../../get-started/get-started-guide/scaled-rollout.rst:22
-#, fuzzy
 msgid ":ref:`phase3-names-data`"
 msgstr ":ref:`phase3-names-data`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:69 ../../get-started/get-started-guide/scaled-rollout.rst:23
-#, fuzzy
 msgid ":ref:`phase3-dash-detect`"
 msgstr ":ref:`phase3-dash-detect`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:70 ../../get-started/get-started-guide/scaled-rollout.rst:24
-#, fuzzy
 msgid ":ref:`phase3-onboard-all`"
 msgstr ":ref:`phase3-onboard-all`"
 
@@ -541,7 +503,6 @@ msgid "See :ref:`get-started-guide-scaled-rollout` for detailed steps."
 msgstr "詳しい手順は :ref:`get-started-guide-scaled-rollout` を参照してください。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:74
-#, fuzzy
 msgid ":strong:`Optional and advanced configurations`"
 msgstr ":strong:`オプションの設定と高度な設定`"
 
@@ -554,7 +515,6 @@ msgid ":ref:`advanced-config-parent-child`"
 msgstr ":ref:`advanced-config-parent-child`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:77
-#, fuzzy
 msgid ":ref:`advanced-config-logs`"
 msgstr ":ref:`advanced-config-logs`"
 
@@ -563,22 +523,18 @@ msgid "See :ref:`Phase 1 optional and advanced configurations <phase1-advanced-c
 msgstr ":ref:`フェーズ1の「オプションの設定と高度な設定」<phase1-advanced-config>` を参照してください。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:81
-#, fuzzy
 msgid ":ref:`advanced-config-3rd-party`"
 msgstr ":ref:`advanced-config-3rd-party`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:82
-#, fuzzy
-msgid ":ref:`phase3-network-exp`"
-msgstr ":ref:`phase3-network-exp`"
+msgid ":ref:`phase2-network-exp`"
+msgstr ":ref:`phase2-network-exp`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:83
-#, fuzzy
 msgid ":ref:`phase2-profiling`"
 msgstr ":ref:`phase2-profiling`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:84
-#, fuzzy
 msgid ":ref:`phase2-related-content`"
 msgstr ":ref:`phase2-related-content`"
 
@@ -587,7 +543,6 @@ msgid "See :ref:`Phase 2 optional and advanced configurations <phase2-advanced-c
 msgstr ":ref:`フェーズ2の「オプションの設定と高度な設定」<phase2-advanced-config>` を参照してください。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:88
-#, fuzzy
 msgid ":ref:`phase3-data-links`"
 msgstr ":ref:`phase3-data-links`"
 
@@ -600,17 +555,14 @@ msgid "See :ref:`Phase 3 optional and advanced configurations <phase3-advanced-c
 msgstr ":ref:`フェーズ3の「オプションの設定と高度な設定」<phase3-advanced-config>` を参照してください。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:93
-#, fuzzy
 msgid ":strong:`Education resources`"
 msgstr ":strong:`教育リソース`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:94
-#, fuzzy
 msgid ":new-page:`Free Splunk Observability Cloud courses<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`"
 msgstr ":new-page:`無料のSplunk Observability Cloudコース<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:95
-#, fuzzy
 msgid ":new-page:`Full course catalog for Splunk Observability Cloud <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup4SplunkObservabilityCloud>`"
 msgstr ":new-page:`Splunk Observability Cloudの全コースのカタログ<https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup4SplunkObservabilityCloud>`"
 
@@ -619,7 +571,6 @@ msgid "See the :new-page:`Curated started track for Splunk Observability Cloud <
 msgstr ":new-page:`Splunk Observability Cloud利用開始者向けの要約情報<https://drive.google.com/file/d/1LHZL1jaP8irQvfI3HG71XcgGavgEn5cD/view>` を参照して、優先すべきコースを判断してください。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:97
-#, fuzzy
 msgid ":new-page:`Splunk Observability Cloud metrics user certification <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`"
 msgstr ":new-page:`Splunk Observability Cloudメトリクスユーザー認定<https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`"
 
@@ -628,7 +579,6 @@ msgid ":new-page:`Get familiar with OpenTelemetry concepts <https://opentelemetr
 msgstr ":new-page:`OpenTelemetryの概念に親しむ<https://opentelemetry.io/docs/concepts/>`"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:99
-#, fuzzy
 msgid "To learn more about the data model for Splunk Observability Cloud, see :ref:`data-model`"
 msgstr "Splunk Observability Cloudのデータモデルの詳細については、:ref:`data-model` を参照してください。"
 
@@ -637,7 +587,6 @@ msgid "See :ref:`otel-sizing` to learn about OpenTelemetry sizing requirements."
 msgstr "OpenTelemetryのサイジング要件については、:ref:`otel-sizing` を参照してください。"
 
 #: ../../get-started/get-started-guide/get-started-guide.rst:101
-#, fuzzy
 msgid ":new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`"
 msgstr ":new-page:`Splunk Observability Cloudワークショップ<https://splunk.github.io/observability-workshop/latest/en/index.html>`"
 
@@ -682,17 +631,14 @@ msgid "If you do not have an environment that supports the use of automatic disc
 msgstr "自動検出の使用をサポートする環境やクラウドサービスプロバイダーのインテグレーションがない場合は、以下のセクションで、特定のユースケースにおけるデータ取り込みのための追加オプションを記載しています。また、:ref:`get-started-get-data-in` のガイドでも概要を説明しています。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:39
-#, fuzzy
 msgid "Set up Splunk Infrastructure Monitoring"
 msgstr "Splunk Infrastructure Monitoringのセットアップ"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:41
-#, fuzzy
 msgid "Use Splunk Infrastructure Monitoring to get insight into and run analytics on your infrastructure and resources for physical and virtual components across hybrid and multicloud environments. Infrastructure Monitoring offers support for a broad range of integrations for collecting full-fidelity data, from system metrics for infrastructure components to custom data from your applications."
 msgstr "Splunk Infrastructure Monitoringを使用して、ハイブリッド環境やマルチクラウド環境全体の物理コンポーネントと仮想コンポーネントのインフラストラクチャおよびリソースに対するインサイトを取得し、分析を実行します。Infrastructure Monitoringは、インフラストラクチャコンポーネントのシステムメトリクスから、ご利用のアプリケーションからのカスタムデータまで、完全忠実データを収集するための幅広いインテグレーションへのサポートを提供しています。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:43
-#, fuzzy
 msgid "To set up Splunk Infrastructure Monitoring, complete the following steps:"
 msgstr "Splunk Infrastructure Monitoringをセットアップするには、以下の手順を完了します："
 
@@ -713,18 +659,16 @@ msgid "If automatic discovery does not support your use case, install the Collec
 msgstr "自動検出がお客様のユースケースに対応していない場合は、ご利用のデータソース用のCollectorをインストールしてください。:ref:`get-started-k8s`、:ref:`get-started-linux`、または :ref:`get-started-windows` を参照してください。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:53
-#, fuzzy
 msgid "Set up Splunk Application Performance Monitoring (APM)"
 msgstr "Splunk Application Performance Monitoring（APM）"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:55
 msgid "Use Splunk APM to monitor and troubleshoot microservices-based applications. Splunk APM monitors applications by collecting distributed traces, which are a collection of spans or actions that complete a transaction. After you instrument your applications, Splunk APM collects and analyzes every trace and span and provides full-fidelity, infinite-cardinality exploration of trace data. Use Splunk APM trace data to break down and analyze application performance across any dimension."
 msgstr ""
-"Splunk APMを使用して、マイクロサービスベースのアプリケーションを監視し、トラブルシューティングを行います。Splunk APMは、トランザクションを完了させるスパン（アクション）の集合である分散トレースを収集することで、アプリケーションを監視します。お客様がアプリケーションをインストルメントすると、Splunk APMは、すべてのトレースとスパンを収集・分析し、トレースデータに対する完全忠実で無限カーディナリティの探索を提供します。Splunk APMのトレースデータを使用して、あらゆるディメンションにわたるアプリケーションパフォーマン"
-"スの分解と分析を実行します。"
+"Splunk APMを使用して、マイクロサービスベースのアプリケーションを監視し、トラブルシューティングを行います。Splunk APMは、トランザクションを完了させるスパン（アクション）の集合である分散トレースを収集することで、アプリケーションを監視します。お客様がアプリケーションをインストルメントすると、Splunk APMは、すべてのトレースとスパンを収集・分析し、トレースデータに対する完全忠実で無限カーディナリティの探索を提供します。Splunk APMのトレースデータを使用して、あらゆるディメンションにわたるアプリケーションパフォーマンス"
+"の分解と分析を実行します。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:58
-#, fuzzy
 msgid "To set up Splunk APM, complete the following steps:"
 msgstr "Splunk APMをセットアップするには、以下の手順を完了します："
 
@@ -741,7 +685,6 @@ msgid "To instrument your applications, you can export spans to a Collector runn
 msgstr "アプリケーションをインストルメントするために、前の手順でデプロイしたホスト上またはKubernetesクラスター内で実行されているCollectorにスパンをエクスポートできます。Collectorのエンドポイントは、インストルメントする言語によって異なります。各言語専用のガイド付きセットアップを使用してください。:ref:`get-started-application` を参照してください。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:68
-#, fuzzy
 msgid "Set up Splunk Real User Monitoring (RUM)"
 msgstr "Splunk Real User Monitoring（RUM）のセットアップ"
 
@@ -750,7 +693,6 @@ msgid "Use Splunk RUM to get visibility into the experience of your end users ac
 msgstr "Splunk RUMを使用して、デバイスの種類、Webブラウザー、地域を問わず、エンドユーザーのエクスペリエンスを可視化します。Splunk RUMは、Webブラウザからのトランザクションをバックエンドのサービスを経由して接続するため、オンコールエンジニアは、分散システム全体のどこから問題が発生したかに関係なく、遅延やエラーを発見できます。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:72
-#, fuzzy
 msgid "To set up Splunk RUM, complete the following steps:"
 msgstr "Splunk RUMをセットアップするには、以下の手順を完了します："
 
@@ -763,7 +705,6 @@ msgid "Use the guided setup to create the required code snippets to use to instr
 msgstr "ガイド付きセットアップを使用して、Webページのインストルメントに使用する必須のコードスニペットを作成します。JavaScriptリソースは、セルフホスト、CDNホスト、または、単一ページのWebアプリケーション用のNPMパッケージとして、デプロイが可能です。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:76
-#, fuzzy, python-format
 msgid "Go to the :new-page:`guided setup for browser instrumentation <https://login.signalfx.com/#/gdi/scripted/browser/step-1?category=use-case-user-experience&gdiState=%7B%22integrationId%22:%22browser%22%7D>`."
 msgstr ":new-page:`ブラウザインストルメンテーションのガイド付きセットアップ<https://login.signalfx.com/#/gdi/scripted/browser/step-1?category=use-case-user-experience&gdiState=%7B%22integrationId%22:%22browser%22%7D>` に移動します。"
 
@@ -788,7 +729,6 @@ msgid "To create a complete end-to-end view of every transaction from the end us
 msgstr "エンドユーザーのインタラクションからマイクロサービス、最終的にはデータベース呼び出しやその他のトランザクション終了ポイントに至るまで、すべてのトランザクションの完全なエンドツーエンドのビューを作成するために、RUMとAPMのデータをリンクさせます。RUMとAPMのデータのリンクは、インストルメンテーションパラメータの一部として実行できます。:ref:`rum-apm-connection` を参照してください。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:86
-#, fuzzy
 msgid "Set up Splunk Synthetic Monitoring"
 msgstr "Splunk Synthetic Monitoringのセットアップ"
 
@@ -865,12 +805,10 @@ msgid "Turn on Related Content"
 msgstr "関連コンテンツを有効にする"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:138
-#, fuzzy
 msgid "Turn on Related Content as part of your data integration setup so you can navigate between APM, Log Observer Connect, and Infrastructure Monitoring in Splunk Observability Cloud with your selected filters and context automatically applied to each view. See :ref:`get-started-relatedcontent`."
 msgstr "データインテグレーションのセットアップの一部として「関連コンテンツ」を有効にすると、Splunk Observability Cloud内で、選択したフィルターとコンテキストが各ビューに自動的に適用された状態で、APM、Log Observer Connect、Infrastructure Monitoringの間を移動できます。:ref:`get-started-relatedcontent` を参照してください。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:141 ../../get-started/get-started-guide/onboarding-readiness.rst:136 ../../get-started/get-started-guide/scaled-rollout.rst:160
-#, fuzzy
 msgid "Education resources"
 msgstr "教育リソース"
 
@@ -879,7 +817,6 @@ msgid "Get familiar with OpenTelemetry concepts, including the configuration of 
 msgstr "レシーバー、プロセッサー、エクスポーター、コネクタなどのパイプラインコンポーネントの設定を含むOpenTelemetryの概念に親しみます。:new-page:`https://opentelemetry.io/docs/concepts/` を参照してください。"
 
 #: ../../get-started/get-started-guide/initial-rollout.rst:144
-#, fuzzy
 msgid "To learn more about the data model for Splunk Observability Cloud, see :ref:`data-model`."
 msgstr "Splunk Observability Cloudのデータモデルの詳細については、:ref:`data-model` を参照してください。"
 
@@ -912,7 +849,6 @@ msgid "To configure your users, teams, and tokens, complete the following primar
 msgstr "ユーザー、チーム、およびトークンの設定については、以下の主要タスクを完了させます："
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:30
-#, fuzzy
 msgid "Create a trial for your organization"
 msgstr "自分の組織用のトライアルを作成する"
 
@@ -937,7 +873,6 @@ msgid "If your organization requires a proxy, see :ref:`allow-services`."
 msgstr "組織でプロキシが必要な場合は、:ref:`allow-services` を参照してください。"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:43
-#, fuzzy
 msgid "For Kubernetes, you need administrator access to monitored hosts of Kubernetes clusters to install the Splunk Distribution of the OpenTelemetry Collector."
 msgstr "Kubernetesの場合、Splunk Distribution of the OpenTelemetry Collectorをインストールするためには、Kubernetesクラスターの監視対象ホストに対する管理者アクセス権が必要です。"
 
@@ -986,17 +921,14 @@ msgid "If you plan to roll out Splunk Observability Cloud across your organizati
 msgstr "Splunk Observability Cloudを組織全体にロールアウトする計画の場合は、Splunk Observability Cloudのさまざまな機能に対するアクセス要件が異なる複数の内部顧客が存在することになる可能性があります。以下のステップを完了して、一貫したチーム構造と対応するトークン管理戦略を構築してください。"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:68
-#, fuzzy
 msgid ":ref:`team-token-names`"
 msgstr ":ref:`team-token-names`"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:69
-#, fuzzy
 msgid ":ref:`team-structure`"
 msgstr ":ref:`team-structure`"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:70
-#, fuzzy
 msgid ":ref:`token-mgmt`"
 msgstr ":ref:`token-mgmt`"
 
@@ -1037,7 +969,6 @@ msgid "Use tokens to secure data ingestion and API calls in Splunk Observability
 msgstr "トークンを使用して、Splunk Observability Cloudでのデータ取り込みとAPIコールを保護します。トークンは1年間有効で、さらに60日間延長できます。組織には、組織の作成時に自動的に生成されるデフォルトのトークンがあります。"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:98
-#, fuzzy
 msgid "To learn more about token management, see the following topics:"
 msgstr "トークン管理の詳細については、以下のトピックを参照してください："
 
@@ -1050,7 +981,6 @@ msgid "See :ref:`admin-manage-usage`."
 msgstr ":ref:`admin-manage-usage` を参照してください。"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:113
-#, fuzzy
 msgid "Request a custom URL for your organization"
 msgstr "組織のカスタムURLをリクエストする"
 
@@ -1063,10 +993,9 @@ msgid "Separate your teams with a parent-child setup"
 msgstr "親-子の設定を使用してチームを分ける"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:122
-#, fuzzy
 msgid ""
-"If you want to create separate environments, you can use parent-child organizations. Perhaps you want a development environment and a production environment, or you want to make sure Team A is fully separated from Team B. Parent-child organizations are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more organizations as child organizations within the parent organization. The organizations "
-"arefully separated, including users and data."
+"If you want to create separate environments, you can use parent-child organizations. Perhaps you want a development environment and a production environment, or you want to make sure Team A is fully separated from Team B. Parent-child organizations are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more organizations as child organizations within the parent organization. The organizations are "
+"fully separated, including users and data."
 msgstr "区別された環境を作成したい場合は、親-子組織を使用することができます。開発環境と本番環境が必要な場合や、チームAとチームBを完全に区別したいという場合があるでしょう。親-子組織は2つ以上の独立した組織で、元の組織が親組織であり、元の使用量エンタイトルメントを含むものです。この親組織内に、子組織として1つ以上の組織を持つことができます。これらの組織は、ユーザーおよびデータを含め、完全に分離されています。"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:124
@@ -1074,7 +1003,6 @@ msgid "You can request a parent-child organization setup by creating a support c
 msgstr "サポート・ケースを作成することで、親-子組織のセットアップをリクエストできます。サポートへの連絡オプションについては、:ref:`support` を参照してください。"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:129
-#, fuzzy
 msgid "Set up Log Observer Connect for the Splunk Platform"
 msgstr "Splunkプラットフォーム用にLog Observer Connectをセットアップする"
 
@@ -1087,7 +1015,6 @@ msgid "See :ref:`logs-set-up-logconnect` or :ref:`logs-scp`."
 msgstr ":ref:`logs-set-up-logconnect` または :ref:`logs-scp` を参照してください。"
 
 #: ../../get-started/get-started-guide/onboarding-readiness.rst:138
-#, fuzzy
 msgid "For a list of free Splunk Observability Cloud courses, see :new-page:`Free training<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`."
 msgstr "Splunk Observability Cloudの無料コースのリストは、:new-page:`無料トレーニング<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>` を参照してください。"
 
@@ -1124,7 +1051,6 @@ msgid "To increase usage across all user teams and establish repeatable observab
 msgstr "ユーザーチーム全体での利用を増やし、自動化、データ管理、ディテクター、ダッシュボードを使用して反復可能なオブザーバビリティ実践を確立するには、以下のタスクを完了します："
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:32
-#, fuzzy
 msgid "Add Splunk Observability Cloud to your deployment pipeline"
 msgstr "Splunk Observability Cloudをデプロイメントのパイプラインに追加する"
 
@@ -1133,7 +1059,6 @@ msgid "After completing the initial rollout phase, you have deployed a Collector
 msgstr "初期ロールアウトフェーズを完了すると、限られた構成でCollectorインスタンスがデプロイされています。ロールアウトを拡張するには、Collectorパイプラインをより多くのコンポーネントやサービスで拡大します。"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:36
-#, fuzzy
 msgid "See :ref:`otel-configuration` for an overview of the available options to install, configure, and use the Splunk Distribution of the OpenTelemetry Collector."
 msgstr "Splunk Distribution of the OpenTelemetry Collectorのインストール、設定、および使用に関する利用可能なオプションの概要は、:ref:`otel-configuration` を参照してください。"
 
@@ -1146,12 +1071,10 @@ msgid "See the :ref:`otel-components` documentation to see the available compone
 msgstr "Collector設定に追加できる利用可能なコンポーネントについては、:ref:`otel-components` のドキュメントを参照してください。"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:40
-#, fuzzy
 msgid "You can also use other ingestion methods, like the following:"
 msgstr "他にも、以下のような取り込み方法を使用することができます："
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:42
-#, fuzzy
 msgid "To send data using the Splunk Observability Cloud REST APIs, see :ref:`rest-api-ingest`."
 msgstr "Splunk Observability CloudのREST APIを使用したデータ送信については、:ref:`rest-api-ingest` を参照してください。"
 
@@ -1160,12 +1083,10 @@ msgid "To send metrics using client libraries, see :new-page:`SignalFlow client 
 msgstr "クライアントライブラリを使用したメトリクス送信については、:new-page:`SignalFlowクライアントライブラリ<https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/#SignalFlow-client-libraries>` を参照してください。"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:44
-#, fuzzy
 msgid "For information about using the upstream Collector, see :ref:`using-upstream-otel`."
 msgstr "アップストリームのCollectorの使用については、:ref:`using-upstream-otel` を参照してください。"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:49
-#, fuzzy
 msgid "Automate the token rotation process"
 msgstr "トークンのローテーションプロセスを自動化する"
 
@@ -1178,7 +1099,6 @@ msgid "For example, you can use the API to rotate the token that a Kubernetes cl
 msgstr "例えば、APIを使用して、Kubernetesクラスターがメトリクスとトレースデータの取り込みに使用するトークンをローテーションすることができます。APIを使用して新しいトークンを生成すると、自動化の一部としてKubernetesクラスター内のシークレットに新しいトークンを直接保存できます。"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:55 ../../get-started/get-started-guide/scaled-rollout.rst:154
-#, fuzzy
 msgid "To learn more, see the following topics:"
 msgstr "詳細は、以下のトピックを参照してください："
 
@@ -1239,7 +1159,6 @@ msgid "After bringing in metrics data, review the name and the metrics volume ea
 msgstr "メトリクスデータを取り込んだら、各チームが取り込んでいるメトリクスの名前と量を確認します。取り込むデータが、ディメンションとプロパティの命名規則と一致していることを確認してください。"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:92
-#, fuzzy
 msgid "Build custom dashboards and detectors"
 msgstr "カスタムダッシュボードとディテクターの構築"
 
@@ -1248,7 +1167,6 @@ msgid "Dashboards are groupings of charts that visualize metrics. Use dashboards
 msgstr "ダッシュボードは、メトリクスを視覚化するチャートのグループです。ダッシュボードを使用すると、チームは、一目でシステムに対する実用的なインサイトを取得できます。ディテクターを使用すると、指定した特定の条件に対してストリーミングデータを監視し、特定の条件が満たされたときにユーザーに通知することができます。"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:97
-#, fuzzy
 msgid "Build custom dashboards"
 msgstr "カスタムダッシュボードの構築"
 
@@ -1261,7 +1179,6 @@ msgid "Learn how to create and customize dashboards. Make sure your teams can co
 msgstr "ダッシュボードの作成とカスタマイズの方法を学習します。チームが以下のタスクを完了できるようにしてください："
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:101
-#, fuzzy
 msgid "Clone, share, and mirror dashboards."
 msgstr "ダッシュボードの複製、共有、ミラーリング"
 
@@ -1278,7 +1195,6 @@ msgid "Use data links to dynamically link a dashboard to another dashboard or ex
 msgstr "データリンクを使用した、ダッシュボードから別のダッシュボードや外部システム（Splunk APM、Splunkプラットフォーム、カスタムURL等 ）への動的リンク"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:106
-#, fuzzy
 msgid "For comprehensive documentation on these tasks, see :ref:`dashboards`."
 msgstr "これらのタスクに関する包括的なドキュメントは、:ref:`dashboards` を参照してください。"
 
@@ -1363,7 +1279,6 @@ msgid ":ref:`per-product-limits`"
 msgstr ":ref:`per-product-limits`"
 
 #: ../../get-started/get-started-guide/scaled-rollout.rst:157
-#, fuzzy
 msgid ":ref:`subscription-overview`"
 msgstr ":ref:`subscription-overview`"
 
@@ -1432,7 +1347,6 @@ msgid "Splunk Observability Cloud architecture"
 msgstr "Splunk Observability Cloudのアーキテクチャ"
 
 #: ../../get-started/o11y-architecture.rst:10
-#, fuzzy
 msgid "Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the default way of getting data in, which gives you an open standards-based set of instrumentation across all your data types. With Log Observer Connect, you can also query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities in Splunk Observability Cloud, giving you an overview of all your data in one place."
 msgstr "Splunk Observability CloudはOpenTelemetryをベースに構築されており、データ取り込みのデフォルトの方法としてOpenTelemetryを使用しています。これにより、すべてのデータタイプにわたってオープンな標準ベースのインストルメンテーションセットを利用できます。また、Log Observer Connectを使用すると、Splunk Observability Cloud内の機能を使用してSplunk EnterpriseまたはSplunk Cloud Platformのログをクエリすることもできます。これで、すべてのデータの概要を一か所で確認できるようになります。"
 
@@ -1441,17 +1355,14 @@ msgid "About the free trial available for Splunk Observability Cloud."
 msgstr "Splunk Observability Cloudで利用可能な無料トライアルについて。"
 
 #: ../../get-started/o11y-trial.rst:4
-#, fuzzy
 msgid "Splunk Observability Cloud free trial and guided onboarding"
 msgstr "Splunk Observability Cloudの無料トライアルとガイド付きオンボーディング"
 
 #: ../../get-started/o11y-trial.rst:10
-#, fuzzy
 msgid "The trial guides you through the steps to create your Splunk Observability Cloud trial environment. As part of the trial, Hipster shop - the Splunk Observability Cloud trial shop - is deployed to a local minikube cluster as a set of Docker containers that provide metrics and traces. To set up your minikube cluster and OpenTelemetry collector you also need Helm and the gnu-sed editor installed for the automation to configure the cluster."
 msgstr "このトライアルでは、Splunk Observability Cloudのトライアル環境を作成するための手順を案内します。トライアルの一環として、Hipster shop（Splunk Observability Cloudトライアルショップ）が、メトリクスとトレースを提供するDockerコンテナのセットとしてローカルのminikubeクラスターにデプロイされます。minikubeクラスターとOpenTelemetryコレクターをセットアップする場合は、自動化によってクラスターを設定できるようにするため、Helmおよびgnu-sedエディターもインストールする必要があります。"
 
 #: ../../get-started/o11y-trial.rst:12
-#, fuzzy
 msgid "You can try out Splunk Observability Cloud for 14 days, absolutely free. You can explore the trial in 2 ways:"
 msgstr "Splunk Observability Cloudを完全無料で14日間お試しいただけます。トライアルを利用した検討には2つの方法があります："
 
@@ -1464,7 +1375,6 @@ msgid "Use your own data by instrumenting your applications with OpenTelemetry."
 msgstr "OpenTelemetryを使ってアプリケーションをインストルメントすることにより、独自のデータを使用する。"
 
 #: ../../get-started/o11y-trial.rst:17
-#, fuzzy
 msgid "For an introduction to Splunk Observability Cloud products, see :ref:`overview`."
 msgstr "Splunk Observability Cloud製品のご紹介は、:ref:`overview` を参照してください。"
 
@@ -1477,7 +1387,6 @@ msgid "If this is your first experience with Splunk Observability Cloud, here's 
 msgstr "Splunk Observability Cloudを今回初めてお使いになる方は、以下の無料トライアルの登録方法を参照してください。"
 
 #: ../../get-started/o11y-trial.rst:31
-#, fuzzy
 msgid "Navigate to 1 of the following URLs:"
 msgstr "以下のURLのいずれかに移動します："
 
@@ -1502,7 +1411,6 @@ msgid "The name and email address is used to create the first user on the system
 msgstr "名前とメールアドレスは、システム上の最初のユーザーを作成するために使用され、自動的に管理者ロールが付与されます。"
 
 #: ../../get-started/o11y-trial.rst:36
-#, fuzzy
 msgid "The company name is used to name the organization. Select a name which describes your account as well as its function. For example, Acme Dev platform."
 msgstr "会社名は、組織の命名に使用されます。ご利用のアカウントとその機能を説明する名前を選択してください。例：Acme Dev platform。"
 
@@ -1511,7 +1419,6 @@ msgid "Agree to the terms and conditions and select :guilabel:`Start Free Trial`
 msgstr "利用規約に同意し、:guilabel:`Start Free Trial` を選択します。"
 
 #: ../../get-started/o11y-trial.rst:40
-#, fuzzy
 msgid "You will receive an email with a link to log in to your org. If this takes longer than ten minutes, check your spam folder."
 msgstr "組織にログインするためのリンクが記載されたメールが届きます。10分経っても届かない場合は、迷惑メールフォルダをチェックしてください。"
 
@@ -1528,22 +1435,18 @@ msgid "Free trial first sign-in view"
 msgstr "無料トライアルの初回サインイン時画面"
 
 #: ../../get-started/o11y-trial.rst:52
-#, fuzzy
 msgid "When you first log in, you see your Home page. You can show onboarding content by selecting the action menu (|more|) in the upper right-hand corner. This displays helpful videos and links on most pages to help you get started."
 msgstr "初めてログインすると、ホームページが表示されます。右上の角のアクションメニュー（|more| ）を選択すると、オンボーディングコンテンツが表示されます。これにより、大部分のページに関する動画やリンクが表示され、利用開始に役立てることができます。"
 
 #: ../../get-started/o11y-trial.rst:54
-#, fuzzy
 msgid "You can also expand the navigation menu to show the full names of the sections instead of the icons only, by selecting the double angle brackets in the bottom corner."
 msgstr "また、下の隅にある二重山括弧を選択すると、ナビゲーションメニューを展開して、アイコンのみの表示ではなくセクションの正式名称の表示に変更することもできます。"
 
 #: ../../get-started/o11y-trial.rst:4
-#, fuzzy
 msgid "The right-angle brackets in the bottom, corner of the UI expands the navigation menu."
 msgstr "UIの下の隅にある右向きの山括弧で、ナビゲーションメニューを展開できます。"
 
 #: ../../get-started/o11y-trial.rst:66
-#, fuzzy
 msgid "There are 5 steps to the guided onboarding. The UI guides you through each of the steps, providing the commands and links you require."
 msgstr "ガイド付きオンボーディングには5つのステップがあります。UIにしたがうと各ステップに移動し、必要なコマンドおよびリンクが提示されます。"
 
@@ -1560,7 +1463,6 @@ msgid "Install the Hipster Shop into your local cluster."
 msgstr "ローカルクラスターへのHipster Shopのインストール"
 
 #: ../../get-started/o11y-trial.rst:71
-#, fuzzy
 msgid "Create traffic by exploring the Hipster Shop. Clicking around the Hipster Shop site generates traces and metrics for you to view in Splunk Observability Cloud."
 msgstr "Hipster Shopを探索することによるトラフィックの作成。Hipster Shopサイト内をクリックして回ると、Splunk Observability Cloudで表示するためのトレースとメトリクスが生成されます。"
 
@@ -1569,7 +1471,6 @@ msgid "Explore the results in Application Performance Monitoring (APM)."
 msgstr "Application Performance Monitoring（APM）での結果の調査"
 
 #: ../../get-started/o11y-trial.rst:80
-#, fuzzy
 msgid "The first step is to set up some prerequisites for the demo environment. The trial UI guides you through this and link to the resources you need."
 msgstr "最初のステップは、デモ環境用の前提条件をセットアップすることです。トライアルのUIに従うと、この手順が案内され、必要なリソースへのリンクが提示されます。"
 
@@ -1598,7 +1499,6 @@ msgid "The Hipster Shop cluster requires a minimum 4 GB of memory."
 msgstr "Hipster Shopクラスターは、最低4GBのメモリを必要とします。"
 
 #: ../../get-started/o11y-trial.rst:96
-#, fuzzy
 msgid "To install the OpenTelemetry collector, you need to know:"
 msgstr "OpenTelemetryコレクターをインストールするには、以下を把握している必要があります："
 
@@ -1611,7 +1511,6 @@ msgid "Your Splunk Observability Cloud access token. For details, see :ref:`admi
 msgstr "Splunk Observability Cloudのアクセストークン。詳細については、:ref:`admin-org-tokens` を参照してください。"
 
 #: ../../get-started/o11y-trial.rst:107
-#, fuzzy
 msgid "Use the Hipster Shop to generate sample data. To install the Hipster shop demo locally, you need your Real User Management (RUM) token. For instructions, see :ref:`rum-access-token`."
 msgstr "Hipster Shopを使用して、サンプルデータを生成します。Hipster Shopのデモをローカルにインストールするには、Real User Management（RUM）のトークンが必要です。手順については、:ref:`rum-access-token` を参照してください。"
 
@@ -1624,12 +1523,10 @@ msgid "This page provides an overview of the products and features provided by S
 msgstr "このページでは、Splunk Observability Cloudが提供する製品と機能の概要を説明します。"
 
 #: ../../get-started/overview.rst:5
-#, fuzzy
 msgid "Splunk Observability Cloud overview"
 msgstr "Splunk Observability Cloudの概要"
 
 #: ../../get-started/overview.rst:10
-#, fuzzy
 msgid "Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, to help you:"
 msgstr "Splunk Observability Cloudは、インフラストラクチャ、アプリケーション、ユーザーインターフェイスの全体にわたって完全忠実な監視とトラブルシューティングをリアルタイムに、かつ、あらゆる規模で提供し、以下のような点でお客様をサポートします："
 
@@ -1646,27 +1543,22 @@ msgid "Innovate faster"
 msgstr "より迅速な進化"
 
 #: ../../get-started/overview.rst:18
-#, fuzzy
 msgid "Select from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud."
 msgstr "一般的なデータソースと統合するための :ref:`サポート対象の100種を超えるオープンな標準ベースのインテグレーション<supported-data-sources>` から選択し、オンプレミスおよびクラウドのインフラストラクチャ、アプリケーションとサービス、およびユーザーインターフェイスからSplunk Observability Cloudにデータを取り込みます。"
 
 #: ../../get-started/overview.rst:20
-#, fuzzy
 msgid "When you send data from each layer of your full-stack environment to Splunk Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about the data model for Splunk Observability Cloud, refer to :ref:`data-model`."
 msgstr "フルスタック環境の各レイヤーからSplunk Observability Cloudにデータを送信すると、生のメトリクス、トレース、およびログが、ダッシュボード、視覚エフェクト、アラートといった形の実用的なインサイトに変換されます。Splunk Observability Cloudのデータモデルの詳細については、:ref:`data-model` を参照してください。"
 
 #: ../../get-started/overview.rst:22
-#, fuzzy
 msgid "The Splunk Observability Cloud suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content you are interested in. For details, see :ref:`gsearch`."
 msgstr "Splunk Observability Cloudの製品と機能の一式を使用すると、障害に迅速かつインテリジェントに対応し、根本原因を特定することができます。また、今後のパフォーマンスと生産性を最適化するために必要な、データに基づくガイダンスも提供されます。Splunk Observability Cloudの検索を使用すると、関心のあるサービス、traceID、ダッシュボード、チャート、メトリクスベースのコンテンツをすばやく見つけることができます。詳細については、:ref:`gsearch` を参照してください。"
 
 #: ../../get-started/overview.rst:24
-#, fuzzy
 msgid "The following diagram provides a high-level view of how each Splunk Observability Cloud product plays its part to provide you with full-stack observability:"
 msgstr "次の図は、Splunk Observability Cloudの各製品がお客様にフルスタックのオブザーバビリティを提供する上でどのような役割を果たすかを大まかに示したものです："
 
 #: ../../get-started/overview.rst:5
-#, fuzzy
 msgid "This screenshot shows how Splunk Observability Cloud products serve the different layers and processes in an organization's environment."
 msgstr "このスクリーンショットは、Splunk Observability Cloud製品が組織の環境のさまざまなレイヤーとプロセスにどのように役立っているのかを示しています。"
 
@@ -1675,12 +1567,10 @@ msgid "For information about how these products can be used together to address 
 msgstr "これらの製品を併用して現実のシナリオに対処する方法についての情報は、:ref:`get-started-scenario` を参照してください。"
 
 #: ../../get-started/overview.rst:32 ../../get-started/overview.rst:150
-#, fuzzy
 msgid "For information about Splunk Observability Cloud packaging and pricing, see :new-page:`Pricing - Observability <https://www.splunk.com/en_us/products/pricing/observability.html>`."
 msgstr "Splunk Observability Cloudのパッケージと料金については、:new-page:`Observability - 料金<https://www.splunk.com/en_us/products/pricing/observability.html>` を参照してください。"
 
 #: ../../get-started/overview.rst:34
-#, fuzzy
 msgid "Start learning about how the following Splunk Observability Cloud products work to provide you with unified, end-to-end observability of your environment:"
 msgstr "まずは、以下のSplunk Observability Cloud製品がどのように機能してご利用の環境に対する統合的なエンドツーエンドのオブザーバビリティを提供するかをご確認ください："
 
@@ -1689,17 +1579,14 @@ msgid "For a list of benefits and service terms of Splunk Observability Cloud, s
 msgstr "Splunk Observability Cloudのメリットとサービス条件の一覧については、:ref:`o11y-service-description` を参照してください。"
 
 #: ../../get-started/overview.rst:44
-#, fuzzy
 msgid "The first step toward full-stack observability is getting data from your environment into Splunk Observability Cloud. Get data in using over 100 supported integrations to common data sources."
 msgstr "フルスタックのオブザーバビリティへの第一歩は、ご利用の環境からSplunk Observability Cloudにデータを取り込むことです。一般的なデータソースとの間でサポートされる100種を超えるインテグレーションを利用して、データを取り込みます。"
 
 #: ../../get-started/overview.rst:46
-#, fuzzy
 msgid "For more information about getting data into Splunk Observability Cloud, see :ref:`get-started-get-data-in`."
 msgstr "Splunk Observability Cloudへのデータ取り込みの詳細については、:ref:`get-started-get-data-in` を参照してください。"
 
 #: ../../get-started/overview.rst:54
-#, fuzzy
 msgid "Gain insights into and perform powerful, capable analytics on your infrastructure and resources across hybrid and multicloud environments with Splunk Infrastructure Monitoring. Infrastructure Monitoring offers support for a broad range of integrations for collecting all kinds of data, from system metrics for infrastructure components to custom data from your applications."
 msgstr "Splunk Infrastructure Monitoring を使用して、ハイブリッド環境とマルチクラウド環境全体のインフラストラクチャとリソースに対するインサイトを取得し、強力で有能な分析を実行できます。Infrastructure Monitoringは、インフラストラクチャコンポーネントのシステムメトリクスから、アプリケーションからのカスタムデータまで、あらゆる種類のデータを収集するための幅広いインテグレーションをサポートしています。"
 
@@ -1736,12 +1623,10 @@ msgid "For more information, see the :ref:`intro-synthetics`."
 msgstr "詳しくは、:ref:`intro-synthetics` を参照してください。"
 
 #: ../../get-started/overview.rst:96
-#, fuzzy
 msgid "Troubleshoot your application and infrastructure behavior using high-context logs in Splunk Observability Cloud. With Splunk Log Observer Connect, you can perform codeless queries on logs to detect the source of problems in your systems."
 msgstr "Splunk Observability Cloudでハイコンテキストのログを使用して、アプリケーションやインフラストラクチャの動作をトラブルシューティングします。Splunk Log Observer Connectを使用すると、ログに対してコードレスでクエリを実行し、システム内の問題の原因を検出できます。"
 
 #: ../../get-started/overview.rst:98
-#, fuzzy
 msgid "For more information, see :ref:`logs-intro-logconnect`."
 msgstr "詳細は :ref:`logs-intro-logconnect` を参照してください。"
 
@@ -1790,19 +1675,17 @@ msgid "Welcome to the Splunk Observability Cloud service description."
 msgstr "Splunk Observability Cloudサービスの説明をお読みいただき、ありがとうございます。"
 
 #: ../../get-started/service-description.rst:20
-#, fuzzy
 msgid ""
-"Splunk Observability Cloud is a Software as a Service (SaaS) solution for infrastructure monitoring (Splunk IM), application performance monitoring (Splunk APM), real user monitoring (Splunk RUM), and synthetic monitoring (Splunk Synthetic Monitoring). Splunk Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform and Splunk Enterprise through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and "
-"userinterfaces, in real time and at any scale, Splunk Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster."
+"Splunk Observability Cloud is a Software as a Service (SaaS) solution for infrastructure monitoring (Splunk IM), application performance monitoring (Splunk APM), real user monitoring (Splunk RUM), and synthetic monitoring (Splunk Synthetic Monitoring). Splunk Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform and Splunk Enterprise through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user "
+"interfaces, in real time and at any scale, Splunk Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster."
 msgstr ""
-"Splunk Observability Cloudは、インフラストラクチャ監視（Splunk IM）、アプリケーションパフォーマンス監視（Splunk APM）、リアルユーザー監視（Splunk RUM）、合成監視（Splunk Synthetic Monitoring）のためのSaaS（サービスとしてのソフトウェア）ソリューションです。またSplunk Observability Cloudは、Log Observer Connectを通じて、Splunk Cloud PlatformとSplunk Enterpriseに取り込まれたログとの直接のインテグレーションも提供します。インフラストラクチャ、アプリケーション、ユーザーインターフェイスの全体をリアルタイムかつ任意"
-"のスケールで完全忠実に監視し、トラブルシューティングを行うことで、Splunk Observability Cloudは、サービスの信頼性の維持、優れたカスタマーエクスペリエンスの提供、迅速なイノベーションをサポートします。"
+"Splunk Observability Cloudは、インフラストラクチャ監視（Splunk IM）、アプリケーションパフォーマンス監視（Splunk APM）、リアルユーザー監視（Splunk RUM）、合成監視（Splunk Synthetic Monitoring）のためのSaaS（サービスとしてのソフトウェア）ソリューションです。またSplunk Observability Cloudは、Log Observer Connectを通じて、Splunk Cloud PlatformとSplunk Enterpriseに取り込まれたログとの直接のインテグレーションも提供します。インフラストラクチャ、アプリケーション、ユーザーインターフェイスの全体をリアルタイムかつ任意の"
+"スケールで完全忠実に監視し、トラブルシューティングを行うことで、Splunk Observability Cloudは、サービスの信頼性の維持、優れたカスタマーエクスペリエンスの提供、迅速なイノベーションをサポートします。"
 
 #: ../../get-started/service-description.rst:22
-#, fuzzy
 msgid ""
-"Splunk Observability Cloud helps you respond to outages and identify root causes, while also giving you the guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud. When you send data from each layer of your environment, Splunk Observability "
-"Cloudtransforms it into actionable insights in the form of dashboards, visualizations, alerts, and more."
+"Splunk Observability Cloud helps you respond to outages and identify root causes, while also giving you the guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud. When you send data from each layer of your environment, Splunk Observability Cloud "
+"transforms it into actionable insights in the form of dashboards, visualizations, alerts, and more."
 msgstr ""
 "Splunk Observability Cloudは、障害への対応と根本原因の特定を支援する一方で、今後のパフォーマンスと生産性を最適化するために必要なガイダンスも提供します。サポートされている一般的なデータソースとのオープンな標準ベースのインテグレーション（200種類以上）から選択して、オンプレミスおよびクラウドのインフラストラクチャ、アプリケーションとサービス、およびユーザーインターフェイスから、Splunk Observability Cloudにデータを取り込むことができます。ご利用の環境の各レイヤーからデータを送信すると、Splunk Observability Cloud"
 "は、それをダッシュボード、視覚エフェクト、アラートといった形の実用的なインサイトに変換します。"
@@ -1868,10 +1751,9 @@ msgid "Splunk instrumentation can help you instrument serverless applications to
 msgstr "Splunkのインストルメンテーションを使用すると、サーバーレスアプリケーションをインストルメントして、トレースやアプリケーションメトリクスをSplunk Observability Cloudに取り込むことができます。:ref:`instrument-serverless-functions` を参照してください。"
 
 #: ../../get-started/service-description.rst:80
-#, fuzzy
 msgid ""
-"The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and libraries is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` "
-"formore information."
+"The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and libraries is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for "
+"more information."
 msgstr ""
 "Splunk Distribution of OpenTelemetryのインストルメンテーションは、Splunk APM およびSplunk RUMのバックエンドアプリケーションとフロントエンドエクスペリエンスをインストルメントできるオープンソースソフトウェアのエージェントおよびライブラリです。バージョン互換性の維持と、自動および手動のインストルメンテーションのインストール、設定、管理を含め、セットアップ、構成、変換、インストルメンテーションエージェントとライブラリからのデータ送信は、お客様の責任で行ってください。詳しくは :ref:`get-started-application` および :"
 "ref:`rum-gdi` を参照してください。"
@@ -1901,19 +1783,16 @@ msgid "Your subscription to Splunk Observability Cloud depends on the Splunk pro
 msgstr "Splunk Observability Cloudのサブスクリプションは、Splunk製品によって異なります。Splunk IMおよびSplunk APMの場合はホストベースまたは使用量ベース、Splunk RUMの場合はWebセッション数ベース、Splunk Synthetic Monitoringの場合は合成チェックベースなどです。"
 
 #: ../../get-started/service-description.rst:124
-#, fuzzy
 msgid ""
-"Host-based subscriptions base billing on the total number of unique hosts reporting data to Splunk Observability Cloud on an hourly basis, then calculate the average of those hourly measurements across each billing month. The calculation is done for each host, container, custom metric, and high resolution metric. A host is a physical, non-virtualized environment, or a virtual instance in a virtualized or public cloud environment, that reports metric data to Splunk Observability Cloud. You can increase "
-"theamount of hosts or containers per host if needed."
+"Host-based subscriptions base billing on the total number of unique hosts reporting data to Splunk Observability Cloud on an hourly basis, then calculate the average of those hourly measurements across each billing month. The calculation is done for each host, container, custom metric, and high resolution metric. A host is a physical, non-virtualized environment, or a virtual instance in a virtualized or public cloud environment, that reports metric data to Splunk Observability Cloud. You can increase the "
+"amount of hosts or containers per host if needed."
 msgstr ""
-"ホストベースのサブスクリプションでは、Splunk Observability Cloudにデータを報告する一意のホストの総数を1時間ごとに計算し、各請求月の1時間ごとの測定値の平均を計算して、請求が行われます。この計算は、各ホスト、コンテナ、カスタムメトリクス、高解像度メトリクスに対して行われます。ホストとは、Splunk Observability Cloudにメトリクスデータを報告する物理的な非仮想化環境、または、仮想化環境またはパブリッククラウド環境の仮想インスタンスのことです。必要に応じて、ホスト数またはホストあたりのコンテナ数を増やすことができま"
-"す。"
+"ホストベースのサブスクリプションでは、Splunk Observability Cloudにデータを報告する一意のホストの総数を1時間ごとに計算し、各請求月の1時間ごとの測定値の平均を計算して、請求が行われます。この計算は、各ホスト、コンテナ、カスタムメトリクス、高解像度メトリクスに対して行われます。ホストとは、Splunk Observability Cloudにメトリクスデータを報告する物理的な非仮想化環境、または、仮想化環境またはパブリッククラウド環境の仮想インスタンスのことです。必要に応じて、ホスト数またはホストあたりのコンテナ数を増やすことができます。"
 
 #: ../../get-started/service-description.rst:132
-#, fuzzy
 msgid ""
-"Usage-based pricing is suited for custom metrics, containerized environments, and monitoring serverless environments or cloud services that don't provide a view of underlying hosts. Usage is calculated depending on the product or feature. For example, Splunk Infrastructure Monitoring usage-based pricing relies on metric time series (MTS), whereas Splunk Real User Monitoring calculates usage from the number of web sessions. For more information on subscription usage and monitoring in Splunk "
-"ObservabilityCloud, see :ref:`subscription-overview`."
+"Usage-based pricing is suited for custom metrics, containerized environments, and monitoring serverless environments or cloud services that don't provide a view of underlying hosts. Usage is calculated depending on the product or feature. For example, Splunk Infrastructure Monitoring usage-based pricing relies on metric time series (MTS), whereas Splunk Real User Monitoring calculates usage from the number of web sessions. For more information on subscription usage and monitoring in Splunk Observability "
+"Cloud, see :ref:`subscription-overview`."
 msgstr ""
 "使用量ベースの料金設定は、カスタムメトリクス、コンテナ環境、および、サーバーレス環境やクラウドサービスの監視といった基盤となるホストの概要を提供しないケースに適しています。使用量は製品や機能に応じて計算されます。たとえば、Splunk Infrastructure Monitoringの使用量ベースの価格設定はメトリック時系列（MTS）に依存しますが、Splunk Real User Monitoringはウェブセッション数から使用量を計算します。Splunk Observability Cloudでのサブスクリプションの使用量と監視の詳細については、:ref:`subscription-overview` を参照してくだ"
 "さい。"
@@ -1963,12 +1842,10 @@ msgid ":new-page:`Splunk Observability Cloud Pricing <https://www.splunk.com/en_
 msgstr "Splunk.comの「 :new-page:`Splunk Observability Cloudの料金<https://www.splunk.com/en_us/products/pricing/observability.html>` 」"
 
 #: ../../get-started/service-description.rst:170
-#, fuzzy
 msgid ":new-page:`Splunk Observability Cloud Pricing FAQ <https://www.splunk.com/en_us/products/pricing/faqs/observability.html>` on Splunk.com"
 msgstr "Splunk.comの「 :new-page:`Splunk Observability Cloudの料金に関するFAQ<https://www.splunk.com/en_us/products/pricing/faqs/observability.html>` 」"
 
 #: ../../get-started/service-description.rst:171
-#, fuzzy
 msgid ":new-page:`Splunk Observability Cloud Usage, Subscription Limits Enforcement, and Entitlements <https://www.splunk.com/en_us/legal/usage-subscription-limits-enforcement-and-entitlements.html>` on Splunk.com"
 msgstr "Splunk.comの「 :new-page:`Splunk Observability Cloudの使用状況、サブスクリプションの制限の適用、およびエンタイトルメント<https://www.splunk.com/en_us/legal/usage-subscription-limits-enforcement-and-entitlements.html>` 」"
 
@@ -2033,26 +1910,22 @@ msgid "AWS EU Dublin (eu-west-1)"
 msgstr "AWS欧州ダブリン（eu-west-1）"
 
 #: ../../get-started/service-description.rst:210
-#, fuzzy
 msgid "eu1"
 msgstr "eu1"
 
 #: ../../get-started/service-description.rst:211
-#, fuzzy
 msgid "AWS EU Frankfurt (eu-central-1)"
 msgstr "AWS欧州フランクフルト（eu-central-1）"
 
 #: ../../get-started/service-description.rst:213
-#, fuzzy
 msgid "eu2"
 msgstr "eu2"
 
 #: ../../get-started/service-description.rst:214
-#, fuzzy
 msgid "AWS EU London (eu-west-2)"
 msgstr "AWS欧州ロンドン（eu-west-2）"
 
-#: ../../get-started/service-description.rst:216 ../../get-started/service-description.rst:283
+#: ../../get-started/service-description.rst:216
 msgid "au0"
 msgstr "au0"
 
@@ -2100,7 +1973,7 @@ msgstr "米国：オレゴン（us-west-2）、バージニア（us-east-1）"
 msgid "Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)"
 msgstr "欧州：ダブリン（eu-west-1）、フランクフルト（eu-central-1）、ロンドン（eu-west-2）"
 
-#: ../../get-started/service-description.rst:244 ../../get-started/service-description.rst:255 ../../get-started/service-description.rst:266 ../../get-started/service-description.rst:288
+#: ../../get-started/service-description.rst:244 ../../get-started/service-description.rst:255 ../../get-started/service-description.rst:266 ../../get-started/service-description.rst:277 ../../get-started/service-description.rst:288
 msgid "Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)"
 msgstr "アジア太平洋地域：シドニー（ap-southeast-2）、東京（ap-northeast-1）"
 
@@ -2113,11 +1986,10 @@ msgid "us0, us1, us2"
 msgstr "us0、us1、us2"
 
 #: ../../get-started/service-description.rst:249 ../../get-started/service-description.rst:260 ../../get-started/service-description.rst:271 ../../get-started/service-description.rst:282 ../../get-started/service-description.rst:293
-#, fuzzy
 msgid "eu0, eu1, eu2"
 msgstr "eu0、eu1、eu2"
 
-#: ../../get-started/service-description.rst:250 ../../get-started/service-description.rst:261 ../../get-started/service-description.rst:272 ../../get-started/service-description.rst:294
+#: ../../get-started/service-description.rst:250 ../../get-started/service-description.rst:261 ../../get-started/service-description.rst:272 ../../get-started/service-description.rst:283 ../../get-started/service-description.rst:294
 msgid "au0, jp0"
 msgstr "au0、jp0"
 
@@ -2132,10 +2004,6 @@ msgstr "Log Observer Connect"
 #: ../../get-started/service-description.rst:273
 msgid "Real User Monitoring (RUM)"
 msgstr "Real User Monitoring（RUM）"
-
-#: ../../get-started/service-description.rst:277
-msgid "Asia Pacific: Sydney (ap-southeast-2)"
-msgstr "アジア太平洋地域：シドニー（ap-southeast-2）"
 
 #: ../../get-started/service-description.rst:284
 msgid "Synthetic Monitoring"
@@ -2162,12 +2030,11 @@ msgid ":strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Sp
 msgstr ":strong:`医療保険の携行性と責任に関する法律（HIPAA）`：Splunk Observability Cloudは、1996年米国医療保険の携行性と責任に関する法律（Health Insurance Portability and Accountability Act of 1996）の適用対象主体およびその関連事業体による同法律の遵守を可能にします。この法律は、保護対象保健情報（PHI）へのアクセス、処理、送信、または保存を行うあらゆる事業体のセキュリティに関する基準を確立するものです。"
 
 #: ../../get-started/service-description.rst:315
-#, fuzzy
 msgid ""
-":strong:`Cloud Security Alliance (CSA) Security, Trust, & Assurance Registry (STAR)`: Splunk Observability Cloud participates in the voluntary CSA STAR Level 1 Self Assessment to document compliance with CSA- published best practices. We submit our security and privacy self-assessments using the :new-page:`Cloud Controls Matrix <https://cloudsecurityalliance.org/research/cloud-controls-matrix/>` and :new-page:`GDPR Code of Conduct <https://cloudsecurityalliance.org/privacy/gdpr/code-of-conduct/>` based "
-"onthe CSA Consensus Assessment Initiative Questionnaire (CAIQ)."
+":strong:`Cloud Security Alliance (CSA) Security, Trust, & Assurance Registry (STAR)`: Splunk Observability Cloud participates in the voluntary CSA STAR Level 1 Self Assessment to document compliance with CSA- published best practices. We submit our security and privacy self-assessments using the :new-page:`Cloud Controls Matrix <https://cloudsecurityalliance.org/research/cloud-controls-matrix/>` and :new-page:`GDPR Code of Conduct <https://cloudsecurityalliance.org/privacy/gdpr/code-of-conduct/>` based on "
+"the CSA Consensus Assessment Initiative Questionnaire (CAIQ)."
 msgstr ""
-" :strong:`クラウドセキュリティアライアンス（CSA）のSecurity, Trust, & Assurance Registry（STAR）認証`：Splunk Observability Cloudは、CSAが公表しているベストプラクティスへの準拠を文書化するため、任意のCSA STARレベル1自己評価に参加しています。当社は、CSAのConsensus Assessment Initiative Questionnaire（CAIQ）に基づいて、「 :new-page:`クラウドコントロールマトリクス<https://cloudsecurityalliance.org/research/cloud-controls-matrix/>` 」および「:new-page:`GDPR行動規範<https://cloudsecurityalliance.org/privacy/gdpr/"
+":strong:`クラウドセキュリティアライアンス（CSA）のSecurity, Trust, & Assurance Registry（STAR）認証`：Splunk Observability Cloudは、CSAが公表しているベストプラクティスへの準拠を文書化するため、任意のCSA STARレベル1自己評価に参加しています。当社は、CSAのConsensus Assessment Initiative Questionnaire（CAIQ）に基づいて、「 :new-page:`クラウドコントロールマトリクス<https://cloudsecurityalliance.org/research/cloud-controls-matrix/>` 」および「:new-page:`GDPR行動規範<https://cloudsecurityalliance.org/privacy/gdpr/"
 "code-of-conduct/>`」を使用して、セキュリティおよびプライバシーに関する自己評価を提出しています。"
 
 #: ../../get-started/service-description.rst:325
@@ -2211,7 +2078,6 @@ msgid "The :new-page:`Splunk Observability Cloud Service Level Schedule <https:/
 msgstr ":new-page:`Splunk Observability Cloudのサービスレベルスケジュール<https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` のドキュメントには、アップタイムSLAと例外事項が記載されています。お客様は、Splunk SLAスケジュールに記載されたSLAが不履行の場合に、サービスクレジットを請求することができます。"
 
 #: ../../get-started/service-description.rst:418
-#, fuzzy
 msgid "You can check the current status of Splunk Observability Cloud realms through the :new-page:`https://status.signalfx.com <https://status.signalfx.com>` status page. You can subscribe to updates on the status pages."
 msgstr "Splunk Observability Cloudのレルムの現在のステータスは、:new-page:`https://status.signalfx.com<https://status.signalfx.com>` のステータスページで確認できます。ステータスページでは、最新情報の受信登録を行うことができます。"
 
@@ -2276,10 +2142,9 @@ msgid "You can configure Splunk Observability Cloud to use SAML authentication f
 msgstr "シングルサインオン（SSO）に SAML 認証を使用するようにSplunk Observability Cloudを設定することができます。多要素認証を使用するには、多要素認証をサポートするSAML 2.0 IDプロバイダーを使用する必要があります。IdPとSplunk Observability Cloud間のSAMLメッセージでは、SHA-256署名のみがサポートされています。SHA-256署名の使用を含むIdPのSAML設定はお客様の責任で行ってください。:ref:`sso-about` を参照してください。"
 
 #: ../../get-started/service-description.rst:476
-#, fuzzy
 msgid ""
-"When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user's role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Users can examine logs from the Splunk Cloud Platform instance in "
-"LogObserver Connect upon provisioning with no additional setup. See :ref:`unified-id-unified-identity` for more information."
+"When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user's role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Users can examine logs from the Splunk Cloud Platform instance in Log "
+"Observer Connect upon provisioning with no additional setup. See :ref:`unified-id-unified-identity` for more information."
 msgstr ""
 "Splunk Cloud Platformをご利用のお客様がSplunk Observability Cloudを購入するか、トライアルを開始すると、ユーザーは単一のIDを使用して両方のプラットフォームにアクセスできます。ユーザーのロールベースのSplunk Cloud Platformインデックスへのアクセス権は、Splunk Observability Cloudにも引き継がれます。管理者は、Splunk Cloud Platformですべてのユーザーを一元的に設定できます。ユーザーは、Splunk Cloud Platformの認証情報を使用して、SSOでSplunk Observability Cloudにログインできます。プロビジョニングが完了すると、ユーザー"
 "は、追加の設定なしで、Log Observer Connectで Splunk Cloud Platformインスタンスからのログを調べることができます。詳細は :ref:`unified-id-unified-identity` を参照してください。"
@@ -2297,7 +2162,6 @@ msgid "Splunk Observability Cloud provides multiple ways to get help with the pr
 msgstr "Splunk Observability Cloudでは、製品に関するサポートを取得するための方法を複数ご提供しています。お客様のニーズに合った方法をご利用ください。"
 
 #: ../../get-started/support.rst:14
-#, fuzzy
 msgid "Submit a case in the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`"
 msgstr ":new-page:`Splunkサポートポータル<https://splunk.my.site.com/customer/s/>` でケースを申請する"
 
@@ -2306,7 +2170,6 @@ msgid "Available to Splunk Observability Cloud customers"
 msgstr "Splunk Observability Cloudのお客様がご利用いただけるサービスです。"
 
 #: ../../get-started/support.rst:14
-#, fuzzy
 msgid "For more information, see following section"
 msgstr "詳細は、以下のセクションを参照してください"
 
@@ -2339,7 +2202,6 @@ msgid "To learn about even more support options, see :new-page:`Splunk Customer 
 msgstr "その他のサポートオプションについては、:new-page:`Splunkカスタマーサクセス<https://www.splunk.com/en_us/customer-success.html>` を参照してください。"
 
 #: ../../get-started/support.rst:35
-#, fuzzy
 msgid "On March 17, 2022, the Splunk Observability Cloud (SignalFx) Support site joined the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`, where you can create new cases, update your open cases, and search the knowledge base. You'll continue to receive the same world-class support from your Splunk Observability Cloud support engineers."
 msgstr "2022年3月17日に、Splunk Observability Cloud（SignalFx）サポートサイトが :new-page:`Splunkサポートポータル<https://splunk.my.site.com/customer/s/>` に加わりました。ここでは、新しいケースの申請、オープンケースの情報更新、ナレッジベースの検索が可能です。Splunk Observability Cloudのサポートエンジニアによるワールドクラスのサポートを引き続きご利用いただけます。"
 
@@ -2360,12 +2222,10 @@ msgid "You can't use your existing Splunk Observability Cloud (SignalFx) Support
 msgstr "既存のSplunk Observability Cloud（SignalFx）サポートサイトの認証情報を使用してSplunkサポートポータルにログインすることはできません。これは、Splunk Observability Cloud（SignalFx）サポートサイトにログインするために使用したシングルサインオン機能によってSplunkサポートポータルにログインすることもできないということを意味します。"
 
 #: ../../get-started/support.rst:45
-#, fuzzy
 msgid "For example, if you select the :guilabel:`Splunk Support Portal` link on the Splunk Observability Cloud application home page or navigate to :menuselection:`Settings` then :menuselection:`Support` in the application, you aren't automatically logged in to the Splunk Support Portal."
 msgstr "たとえば、Splunk Observability Cloudアプリケーションのホームページで :guilabel:`Splunk Support Portal` リンクを選択したり、アプリケーション内で :menuselection:`Settings`、:menuselection:`Support` の順に移動したりしても、自動的にSplunkサポートポータルにはログインされません。"
 
 #: ../../get-started/support.rst:47
-#, fuzzy
 msgid "To log in to the Splunk Support Portal, you must create a Splunk account, if you don't already have an account. You use your Splunk account credentials to log in to the Splunk Support Portal."
 msgstr "Splunkサポートポータルにログインするには、Splunkアカウントを作成する必要があります（まだアカウントをお持ちではない場合）。Splunkサポートポータルにログインするには、Splunkアカウントの認証情報を使用してください。"
 
@@ -2378,7 +2238,6 @@ msgid "Go to the :new-page:`Create Your Account page <https://www.splunk.com/pag
 msgstr ":new-page:`アカウント作成ページ<https://www.splunk.com/page/sign_up>` に移動し、フォームに入力してSplunkアカウントを登録します。必ずビジネスメールアドレスを使用して登録してください。"
 
 #: ../../get-started/support.rst:59
-#, fuzzy
 msgid "Check your email for a message from Splunk asking you to verify your email address. You must select the link in the email to verify your email address within 7 days or your account creation request expires. If you don't see the email in your inbox, make sure to check your spam folder."
 msgstr "Splunkからメールアドレスの確認を求めるメッセージが電子メールで届いていることを確認してください。このメールに記載されているリンクを選択して7日以内にメールアドレスを確認しなければ、アカウント作成のリクエストは期限切れとなります。受信トレイにメールが見当たらない場合は、迷惑メールフォルダを確認してください。"
 
@@ -2387,9 +2246,8 @@ msgid "Select the verification link in the email to access a page where you can 
 msgstr "メールに記載されている認証リンクを選択すると、Splunkアカウントにログインできるページにアクセスできます。"
 
 #: ../../get-started/support.rst:63
-#, fuzzy
 msgid "After you've logged in to your Splunk account, you can access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`. You can manually navigate to the Splunk Support Portal by selecting :guilabel:`Support` then :guilabel:`Support Portal` on :new-page:`splunk.com <https://www.splunk.com/>`."
-msgstr "Splunkアカウントにログインすると、:new-page:`Splunkサポートポータル<https://splunk.my.site.com/customer/s/>` にアクセスできます。手動でSplunkサポートポータルに移動する場合は、:new-page:`splunk.com <https://www.splunk.com/>` で :guilabel:`Support`、:guilabel:`Support Portal` の順に選択します。"
+msgstr "Splunkアカウントにログインすると、:new-page:`Splunkサポートポータル<https://splunk.my.site.com/customer/s/>` にアクセスできます。手動でSplunkサポートポータルに移動する場合は、:guilabel:`Support` splunk.com :guilabel:`Support Portal` で :new-page:`、<https://www.splunk.com/>` の順に選択します。"
 
 #: ../../get-started/support.rst:65
 msgid "It can take up to 24 hours after creating your Splunk account for your Splunk Support Portal experience to reflect the correct entitlements for the products and permissions you have access to. A Splunk Support Portal administrator sets the entitlements for you."
@@ -2404,7 +2262,6 @@ msgid "To check on the status of your entitlements:"
 msgstr "資格情報のステータスを確認するには："
 
 #: ../../get-started/support.rst:71
-#, fuzzy
 msgid "Access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`."
 msgstr ":new-page:`Splunkサポートポータル<https://splunk.my.site.com/customer/s/>` にアクセスします"
 
@@ -2421,7 +2278,6 @@ msgid "Submit a Splunk Support Portal case"
 msgstr "Splunkサポートポータルのケースの送信"
 
 #: ../../get-started/support.rst:88
-#, fuzzy
 msgid "Access the :new-page:`Splunk Support Portal <https://splunk.my.site.com/customer/s/>`. You can also access the Splunk Support Portal from the Splunk Observability Cloud application home page or by navigating to :menuselection:`Settings` then :menuselection:`Support` in the application."
 msgstr ":new-page:`Splunkサポートポータル<https://splunk.my.site.com/customer/s/>` にアクセスします。また、Splunk Observability Cloudアプリケーションのホームページから、またはアプリケーション内で :menuselection:`Settings`、:menuselection:`Support` の順に移動することで、Splunkサポートポータルにアクセスすることもできます。"
 
@@ -2450,7 +2306,6 @@ msgid "You can use the dashboards tab to do the following things:"
 msgstr "ダッシュボードタブを使用して以下のことができます："
 
 #: ../../get-started/use-mobile.rst:18
-#, fuzzy
 msgid "View and interact with dashboards from your Splunk Observability Cloud organization."
 msgstr "Splunk Observability Cloudの組織のダッシュボードの表示および操作"
 
@@ -2463,7 +2318,6 @@ msgid "Search and save Dashboards."
 msgstr "ダッシュボードの検索および保存"
 
 #: ../../get-started/use-mobile.rst:21
-#, fuzzy
 msgid "Share dashboards with other Splunk Observability Cloud users."
 msgstr "他のObservability Cloudユーザーとのダッシュボードの共有"
 
@@ -2568,7 +2422,6 @@ msgid "View detailed visualizations that contain alert data about what happened 
 msgstr "アラート発生時に何が起こったかについてのアラートデータを含む詳細な視覚エフェクトの表示"
 
 #: ../../get-started/use-mobile.rst:69
-#, fuzzy
 msgid "Share alerts with other Splunk Observability Cloud users."
 msgstr "他のSplunk Observability Cloudユーザーとのアラートの共有"
 
@@ -3195,8 +3048,8 @@ msgstr "共有したいアラートを選択します。"
 #~ "andtheend-to-end transaction workflow in APM. Looking at the service map, Kai noted that Splunk APM identified the :strong:`paymentservice` as the root cause of the errors. After ruling out Kubernetes issues, Kai used Tag Spotlight to look for correlations in tag values for the errors. Kai noticed that the errors were only happening on a specific version and decided to look into the log details. Using Log Observer, Kai looked at the log details and noticed that the error messages for the API token "
 #~ "startedwith\"test\"."
 #~ msgstr ""
-#~ "Kaiは、Buttercup Gamesのウェブサイトで、ユーザーの購入完了を妨げていたフロントエンドの問題に対応し、解決することができました。RUMを使用してエラーのトラブルシューティングを開始し、考えられる原因としてフロントエンドのエラーの急増とバックエンドのレイテンシを特定しました。:strong:`/cart/checkout` のエンドポイントを掘り下げ、RUMのTag Spotlightビューを使用して完全なトレースを調査しました。これに基づいて、レイテンシがフロントエンドの問題ではないことが分かりました。次に、APMでパフォーマンスサマリーとエンドツーエ"
-#~ "ンドのトランザクションワークフローを確認しました。サービスマップを見ると、Splunk APMが :strong:`paymentservice` をエラーの根本原因として特定したことに気が付きました。Kubernetesによる問題の可能性を排除した後、Tag Spotlightを使ってエラーのタグ値の相関関係を探しました。エラーが特定のバージョンでのみ発生していることに気づき、ログの詳細を調べることにしました。Log Observerを使用し、ログの詳細を見て、APIトークンのエラーメッセージが「test」で始まっていることに気が付きました。"
+#~ "Kaiは、Buttercup Gamesのウェブサイトで、ユーザーの購入完了を妨げていたフロントエンドの問題に対応し、解決することができました。RUMを使用してエラーのトラブルシューティングを開始し、考えられる原因としてフロントエンドのエラーの急増とバックエンドのレイテンシを特定しました。:strong:`/cart/checkout` のエンドポイントを掘り下げ、RUMのTag Spotlightビューを使用して完全なトレースを調査しました。これに基づいて、レイテンシがフロントエンドの問題ではないことが分かりました。次に、APMでパフォーマンスサマリーとエンドツーエン"
+#~ "ドのトランザクションワークフローを確認しました。サービスマップを見ると、Splunk APMが :strong:`paymentservice` をエラーの根本原因として特定したことに気が付きました。Kubernetesによる問題の可能性を排除した後、Tag Spotlightを使ってエラーのタグ値の相関関係を探しました。エラーが特定のバージョンでのみ発生していることに気づき、ログの詳細を調べることにしました。Log Observerを使用し、ログの詳細を見て、APIトークンのエラーメッセージが「test」で始まっていることに気が付きました。"
 
 #~ msgid "Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. After implementing a fix, Deepu used Log Observer Long Tail reports to monitor a real-time streaming view of the incoming logs. Deepu confirmed that the payment errors were no longer occurring. As a final step, Kai saved the Splunk Log Observer query as a metric in order to alert the team and help resolve similar issues faster in the future."
 #~ msgstr ":strong:`paymentservice` のオーナーであるDeepuと相談し、テストAPIトークンが問題の原因である可能性が高いということで合意しました。Deepは修正を実施した後、Log ObserverのLive Tailレポートを使用して、受信ログのリアルタイムストリーミングビューを監視しました。そして、決済のエラーが発生しなくなったことを確認しました。最終手順として、KaiはSplunk Log Observerのクエリをメトリクスとして保存し、チームにアラートを通知し、今後同様の問題を迅速に解決できるようにしました。"
@@ -3244,8 +3097,8 @@ msgstr "共有したいアラートを選択します。"
 #~ "Kai is the lead site reliability engineer in a large fintech company, PonyBank. Their task is to monitor their AWS infrastructure, which consists of several hundred containers running Java applications on Amazon Elastic Kubernetes Service (EKS). Kai also wants to instrument tens of Linux and Windows Elastic Compute Cloud (EC2) instances managed by IT. Kai's primary goal is to extract reliability and performance metrics and logs from each asset, as well as instrumenting the Java application to "
 #~ "monitoritsperformance using Splunk APM."
 #~ msgstr ""
-#~ "Kaiは、大手フィンテック企業「PonyBank」のサイト信頼性エンジニアのリーダーです。Kaiのタスクは、Amazon Elastic Kubernetes Service（EKS）上でJavaアプリケーションを実行する数百のコンテナで構成されるAWSインフラストラクチャの監視です。また、IT部門が管理する数十のLinuxおよびWindowsのElastic Compute Cloud（EC2）インスタンスもインストルメントする必要があります。主な目標は、各アセットから信頼性とパフォーマンスのメトリクスおよびログを抽出することと、Splunk APMを使ったパフォーマンス監視のためにJavaアプリケーションを"
-#~ "インストルメントすることです。"
+#~ "Kaiは、大手フィンテック企業「PonyBank」のサイト信頼性エンジニアのリーダーです。Kaiのタスクは、Amazon Elastic Kubernetes Service（EKS）上でJavaアプリケーションを実行する数百のコンテナで構成されるAWSインフラストラクチャの監視です。また、IT部門が管理する数十のLinuxおよびWindowsのElastic Compute Cloud（EC2）インスタンスもインストルメントする必要があります。主な目標は、各アセットから信頼性とパフォーマンスのメトリクスおよびログを抽出することと、Splunk APMを使ったパフォーマンス監視のためにJavaアプリケーションをイ"
+#~ "ンストルメントすることです。"
 
 #~ msgid "PonyBank uses Splunk Observability Cloud, which brings data in through the open-source Splunk Distribution of the OpenTelemetry Collector, an agent that can collect and export data from multiple sources. The Collector can also forward logs and traces to enable full software observability."
 #~ msgstr "PonyBankは、Splunk Observability Cloudを使用しています。これによって、オープンソースのSplunk Distribution of OpenTelemetry Collector（複数ソースからデータを収集しエクスポートできるエージェント）を通じてデータを取り込みます。このCollectorは、ログとトレースの転送も実行でき、ソフトウェアの完全なオブザーバビリティを可能にします。"
@@ -4971,3 +4824,6 @@ msgstr "共有したいアラートを選択します。"
 
 #~ msgid "."
 #~ msgstr "."
+
+#~ msgid "Asia Pacific: Sydney (ap-southeast-2)"
+#~ msgstr "アジア太平洋地域：シドニー（ap-southeast-2）"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 13:18+0000\n"
-"PO-Revision-Date: 2025-01-13 15:33+0000\n"
+"POT-Creation-Date: 2025-01-29 18:45+0000\n"
+"PO-Revision-Date: 2025-02-27 12:04+0000\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -79,7 +79,6 @@ msgid "Unified Identity"
 msgstr "統合ID"
 
 #: ../../index.rst:338
-#, fuzzy
 msgid "Centralized user and role management"
 msgstr "ユーザーとロールの一元管理"
 
@@ -96,7 +95,6 @@ msgid "User and team management TOGGLE"
 msgstr "ユーザーとチームの管理 TOGGLE"
 
 #: ../../index.rst:367
-#, fuzzy
 msgid "Send alert notifications to other services TOGGLE"
 msgstr "他のサービスへのアラート通知の送信 TOGGLE"
 
@@ -189,7 +187,6 @@ msgid "Navigate with data links"
 msgstr "データリンクを使ったナビゲート"
 
 #: ../../index.rst:487
-#, fuzzy
 msgid "Select the time range"
 msgstr "時間範囲の選択"
 
@@ -198,7 +195,6 @@ msgid "Read and write permissions"
 msgstr "読み取りと書き込みの権限"
 
 #: ../../index.rst:497
-#, fuzzy
 msgid "Alerts and detectors TOGGLE"
 msgstr "アラートと検知器 TOGGLE"
 
@@ -295,7 +291,6 @@ msgid "Resolution and data retention (DPM)"
 msgstr "解像度とデータ保持（DPM）"
 
 #: ../../index.rst:628
-#, fuzzy
 msgid "Log Observer Connect"
 msgstr "Log Observer Connect"
 
@@ -324,26 +319,26 @@ msgid "Synthetics scenario library TOGGLE"
 msgstr "Syntheticsシナリオライブラリ TOGGLE"
 
 #: ../../index.rst:753
-#, fuzzy
 msgid "Browser tests for webpages TOGGLE"
 msgstr "ウェブページのブラウザテスト TOGGLE"
 
 #: ../../index.rst:758
-#, fuzzy
-msgid "Uptime Tests for port and HTTP TOGGLE"
+msgid "Uptime tests for port and HTTP TOGGLE"
 msgstr "ポートおよびHTTP TOGGLEのアップタイムテスト TOGGLE"
 
 #: ../../index.rst:763
-msgid "Use an API test to test an endpoint TOGGLE"
-msgstr "「APIテスト」を使用したエンドポイントのテスト TOGGLE"
+msgid "API tests for endpoints TOGGLE"
+msgstr "エンドポイントのAPIテスト TOGGLE"
+
+#: ../../index.rst:768
+msgid "Test status TOGGLE"
+msgstr "ステータスのテスト TOGGLE"
 
 #: ../../index.rst:773
-#, fuzzy
 msgid "Advanced test configurations TOGGLE"
 msgstr "高度なテスト設定　TOGGLE"
 
 #: ../../index.rst:778
-#, fuzzy
 msgid "Troubleshoot tests TOGGLE"
 msgstr "トラブルシューティングのテスト　TOGGLE"
 
@@ -356,7 +351,6 @@ msgid "Splunk On-Call"
 msgstr "Splunk On-Call"
 
 #: ../../index.rst:790
-#, fuzzy
 msgid "User management TOGGLE"
 msgstr "ユーザーの管理 TOGGLE"
 
@@ -365,27 +359,22 @@ msgid "Create and manage on-call schedules TOGGLE"
 msgstr "オンコールスケジュールの作成と管理 TOGGLE"
 
 #: ../../index.rst:800
-#, fuzzy
 msgid "Alerts TOGGLE"
 msgstr "アラート TOGGLE"
 
 #: ../../index.rst:805
-#, fuzzy
 msgid "Notifications TOGGLE"
 msgstr "通知 TOGGLE"
 
 #: ../../index.rst:810
-#, fuzzy
 msgid "Incidents TOGGLE"
 msgstr "インシデント TOGGLE"
 
 #: ../../index.rst:816
-#, fuzzy
 msgid "Mobile app TOGGLE"
 msgstr "モバイルアプリ TOGGLE"
 
 #: ../../index.rst:822
-#, fuzzy
 msgid "Reports TOGGLE"
 msgstr "レポート TOGGLE"
 
@@ -418,7 +407,6 @@ msgid "Contribute to our documentation"
 msgstr "ドキュメントに貢献する"
 
 #: ../../index.rst:-1
-#, fuzzy
 msgid "Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud."
 msgstr "Splunk Observability Cloud ドキュメントへようこそ。Splunk Observability Cloud の基本的な要素について説明します。"
 
@@ -431,22 +419,18 @@ msgid ":icon-info:`.` :strong:`Welcome to Splunk Observability Cloud` Learn abou
 msgstr ":icon-info:`.` :strong:`Splunk Observability Cloudへようこそ` Splunk Observability Cloudの基本要素や、Splunk Observability Cloudでできることをご紹介します。"
 
 #: ../../index.rst:23
-#, fuzzy
 msgid ":strong:`Overview` Splunk Observability Cloud overview :ref:`overview`"
 msgstr ":strong:`概要` Splunk Observability Cloud の概要 :ref:`overview`"
 
 #: ../../index.rst:28
-#, fuzzy
 msgid ":strong:`Scenarios` A collection of scenarios for using Splunk Observability Cloud to address your goals :ref:`scenario-landing`"
 msgstr ":strong:`シナリオ` Splunk Observability Cloud を使用して目標を達成するためのシナリオ集 :ref:`scenario-landing`"
 
 #: ../../index.rst:33
-#, fuzzy
 msgid ":strong:`Tutorials` A collection of task-based tutorials to achieve a goal in Splunk Observability Cloud :ref:`tutorial-landing`"
 msgstr ":strong:`チュートリアル` Splunk Observability Cloud で目標を達成するためのタスクベースのチュートリアル集 :ref:`tutorial-landing`"
 
 #: ../../index.rst:38
-#, fuzzy
 msgid ":strong:`Get started guide for admins` Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`"
 msgstr ":strong:`管理者向けスタートガイド` Splunk Observability Cloud管理者のための利用開始ガイド :ref:`get-started-guide`"
 
@@ -459,13 +443,12 @@ msgid ":strong:`Architecture` Architecture of Splunk Observability Cloud :ref:`a
 msgstr ":strong:`アーキテクチャ` Splunk Observability Cloudのアーキテクチャ :ref:`architecture`"
 
 #: ../../index.rst:55
-#, fuzzy
 msgid ""
-":icon-cloud-upload:`.` :strong:`Get your data in` The first step toward observability is getting relevant data into Splunk Observability Cloud. View :ref:`all "
-"supportedintegrations <supported-data-sources>`."
+":icon-cloud-upload:`.` :strong:`Get your data in` The first step toward observability is getting relevant data into Splunk Observability Cloud. View :ref:`all supported "
+"integrations <supported-data-sources>`."
 msgstr ""
-" :icon-cloud-upload:`.` :strong:`データの取り込み` オブザーバビリティの最初のステップは、関連データをSplunk Observability Cloudに取り込むことです。:ref:`サポート対象のインテ"
-"グレーションの全リスト <supported-data-sources>` を確認してください。"
+":icon-cloud-upload:`.` :strong:`データの取り込み` オブザーバビリティの最初のステップは、関連データをSplunk Observability Cloudに取り込むことです。:ref:`サポート対象のインテ"
+"グレーションの全リスト<supported-data-sources>` を確認してください。"
 
 #: ../../index.rst:60
 msgid ":strong:`Compatibility and requirements` Systems and languages you can use with Splunk Observability Cloud :ref:`requirements`"
@@ -476,7 +459,6 @@ msgid ":strong:`OpenTelemetry` Install the Splunk Distribution of the OpenTeleme
 msgstr ":strong:`OpenTelemetry` Splunk Distribution of OpenTelemetry Collectorのインストール :ref:`otel-intro`"
 
 #: ../../index.rst:70
-#, fuzzy
 msgid ":strong:`Cloud providers` Integrate to collect service metrics and metadata :ref:`get-started-connect`"
 msgstr ":strong:`クラウドプロバイダ` サービスメトリクスとメタデータを収集するための統合 :ref:`get-started-connect`"
 
@@ -513,20 +495,19 @@ msgid ":strong:`Log Observer Connect` Query logs to identify root causes :ref:`l
 msgstr ":strong:`Log Observer Connect` 根本原因の特定のためのログのクエリ :ref:`logs-intro-logconnect`"
 
 #: ../../index.rst:116
-#, fuzzy
 msgid ":strong:`Synthetic Monitoring` Proactively monitor the performance of web resources :ref:`intro-synthetics`"
 msgstr ":strong:`Synthetic Monitoring` ウェブリソースのパフォーマンスの積極的監視 :ref:`intro-synthetics`"
 
 #: ../../index.rst:121
-#, fuzzy
 msgid ":strong:`All products` Learn more about all Splunk Observability Cloud products :ref:`overview`"
 msgstr ":strong:`すべての製品` すべてのSplunk Observability Cloud製品の詳細 :ref:`overview`"
 
 #: ../../index.rst:127
 msgid ""
-":icon-wrench:`.` :strong:`Set up alerts and customize your account` Prepare for issues that might arise by setting up alerts, custom dashboards, and other advanced features."
+":icon-wrench:`.` :strong:`Set up alerts and customize your account` Prepare for issues that might arise by setting up alerts, custom dashboards, and other advanced "
+"features."
 msgstr ""
-" :icon-wrench:`.` :strong:`アラートの設定とアカウントのカスタマイズ` アラート、カスタムダッシュボード、その他の高度な機能を設定することで、発生する可能性のある問題に備えま"
+":icon-wrench:`.` :strong:`アラートの設定とアカウントのカスタマイズ` アラート、カスタムダッシュボード、その他の高度な機能を設定することで、発生する可能性のある問題に備えま"
 "す。"
 
 #: ../../index.rst:132
@@ -581,7 +562,7 @@ msgstr ":strong:`サブスクリプション使用状況` Infrastructure Monitor
 #: ../../index.rst:194
 msgid ":icon-cloud-upload:`.` :strong:`Popular integrations` Access documentation for some of the most popular integrations used to get data into Splunk Observability Cloud."
 msgstr ""
-" :icon-cloud-upload:`.` :strong:`人気のインテグレーション` Splunk Observability Cloudへのデータ取り込みに使用される最も人気の高いインテグレーションのドキュメントへのアクセス"
+":icon-cloud-upload:`.` :strong:`人気のインテグレーション` Splunk Observability Cloudへのデータ取り込みに使用される最も人気の高いインテグレーションのドキュメントへのアクセス"
 
 #: ../../index.rst:199
 msgid ":strong:`Linux` Collect metrics and logs :ref:`get-started-linux`"
@@ -620,8 +601,8 @@ msgid ":strong:`Ruby` Collect traces :ref:`get-started-ruby`"
 msgstr ":strong:`Ruby` トレースの収集 :ref:`get-started-ruby`"
 
 #: ../../index.rst:244
-msgid ":strong:`Node.js` Collect traces :ref:`get-started-nodejs`"
-msgstr ":strong:`Node.js` トレースの収集 :ref:`get-started-nodejs`"
+msgid ":strong:`Node.js` Collect traces :ref:`get-started-nodejs-3x`"
+msgstr ":strong:`Node.js` トレースの収集 :ref:`get-started-nodejs-3x`"
 
 #: ../../index.rst:249
 msgid ":strong:`PHP` Collect traces :ref:`get-started-php`"

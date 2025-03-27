@@ -84,6 +84,8 @@ To set up centralized user and role management, follow these steps:
     
               acs observability enable-capabilities
 
+    .. note:: It could take around 30 minutes for the new roles ``o11y_*`` to be available on the :guilabel:`Roles` page of Splunk Cloud. 
+
 3. Give all users who should have access to Splunk Observability Cloud the ``o11y_access`` role.
 
 4. Log in to Splunk Cloud Platform as an administrator and go to :guilabel:`Settings` then :guilabel:`Users and Authentication` then :guilabel:`Roles`. Assign Splunk Observability Cloud roles to users. The following Splunk Observability Cloud roles (with ``o11y_*`` prefix) are now visible in Splunk Cloud role management page:
@@ -109,8 +111,6 @@ To set up centralized user and role management, follow these steps:
     .. code-block:: bash
     
       acs observability enable-centralized-rbac --o11y-access-token <access-token>
-
-.. note:: It takes around 30 minutes for a new role to be available on the :guilabel:`Roles` page. 
 
 How centralized user and role management works
 =================================================================================================
@@ -149,8 +149,6 @@ Next, confirm that the user with login problems has both of the following roles 
 
 * one of the ``o11y_*`` roles (See the complete step 3 in the previous section.)
 
-
-Lastly, check the signalboost-rest skynet logs, searching for errors containing the keyword ``SplunkCloudPlatformAuthManager``. 
 
 Multiple errors issue
 -------------------------------------------------------------------------------------------------
