@@ -608,33 +608,28 @@ Other metrics
 These are the metrics related to StatefulSets:
 
 .. list-table::
-  :widths: 30 30 30 10
+  :widths: 40 40 20 
   :width: 100%
   :header-rows: 1
 
   * - Metric name
     - Metric description
-    - Attributes
     - Exported?
 
   * - ``k8s.statefulset.desired_pods``
-    - Desired number of StatefulSets in the pod    
-    -   
+    - Desired number of StatefulSets in the pod     
     - Yes  
 
   * - ``k8s.statefulset.current_pods``
     - Current number of StatefulSets in the pod        
-    -   
     - Yes  
 
   * - ``k8s.statefulset.ready_pods``
-    - Number of ready StatefulSets in the pod        
-    -   
+    - Number of ready StatefulSets in the pod         
     - Yes  
 
   * - ``k8s.statefulset.updated_pods``
-    - Number of updated StatefulSets in the pod      
-    -   
+    - Number of updated StatefulSets in the pod       
     - Yes 
 
 Other available metrics include:
