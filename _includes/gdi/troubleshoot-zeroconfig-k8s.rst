@@ -21,17 +21,6 @@ Examine logs to make sure that the operator and cert manager are working.
       * ``kubectl logs -l app=cainjector``
       * ``kubectl logs -l app=webhook``
 
-Resolve certificate manager issues
-----------------------------------------
-
-A hanging operator can indicate issues with the certificate manager.
-
-* Check the logs of your cert-manager pods.
-* Restart the cert-manager pods.
-* Ensure that your cluster has only one instance of cert-manager. This includes ``certmanager``, ``certmanager-cainjector``, and ``certmanager-webhook``.
-
-See the official cert manager troubleshooting guide for more information: :new-page:`https://cert-manager.io/docs/troubleshooting/`.
-
 Validate certificates
 ---------------------------
 

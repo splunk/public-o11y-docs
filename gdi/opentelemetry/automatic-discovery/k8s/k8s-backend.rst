@@ -91,21 +91,10 @@ You might need to populate the file with additional values depending on your env
 
 .. _k8s-auto-discovery-add-certificates:
 
-Add certificates and OpenTelemetry CRDs
+Add OpenTelemetry CRDs
 ------------------------------------------
 
-The Operator requires certain TLS certificates to work. Use the following command to check whether a certificate manager is available:
-
-.. code-block:: yaml
-
-   # Check if cert-manager is already installed, don't deploy a second cert-manager.
-   kubectl get pods -l app=certmanager --all-namespaces
-
-If a certificate manager isn't available in the cluster, add ``certmanager.enabled=true`` to your values.yaml file. 
-
-The Operator for Kubernetes also requires you to install OpenTelemetry Custom Resource Definitions (CRDs). To do this, add ``operatorcrds.install=true`` to your values.yaml file.
-
-The following example YAML includes ``certmanager.enabled=true`` and ``operatorcrds.install=true``:
+The Operator for Kubernetes requires you to install OpenTelemetry Custom Resource Definitions (CRDs). To do this, add ``operatorcrds.install=true`` to your values.yaml file:
 
 .. code-block:: yaml
   :emphasize-lines: 7,8
@@ -115,9 +104,7 @@ The following example YAML includes ``certmanager.enabled=true`` and ``operatorc
   splunkObservability:
     realm: <splunk_realm>
     accessToken: <splunk_access_token>
-  
-  certmanager:
-    enabled: true
+
   operator:
     enabled: true
   operatorcrds:
@@ -248,7 +235,7 @@ Verify all the OpenTelemetry resources are deployed successfully
 
 Resources include the Collector, the Operator, webhook, and instrumentation. Run the following commands to verify the resources are deployed correctly.
 
-The pods running in the collector namespace must include the following:
+The pods running in the Collector namespace must include the following:
 
 .. code-block:: yaml
    
@@ -256,19 +243,15 @@ The pods running in the collector namespace must include the following:
    # NAME                                                          READY
    # NAMESPACE     NAME                                                            READY   STATUS
    # monitoring    splunk-otel-collector-agent-lfthw                               2/2     Running
-   # monitoring    splunk-otel-collector-cert-manager-6b9fb8b95f-2lmv4             1/1     Running
-   # monitoring    splunk-otel-collector-cert-manager-cainjector-6d65b6d4c-khcrc   1/1     Running
-   # monitoring    splunk-otel-collector-cert-manager-webhook-87b7ffffc-xp4sr      1/1     Running
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
-The webhooks in the collector namespace must include the following:
+The webhooks in the Collector namespace must include the following:
 
 .. code-block:: yaml
 
    kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io
    # NAME                                      WEBHOOKS   AGE
-   # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
 The instrumentation in the collector namespace must include the following:
