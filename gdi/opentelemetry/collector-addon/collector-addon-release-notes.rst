@@ -20,6 +20,14 @@ Release Notes for the Splunk Add-On for the OpenTelemetry Collector
       - Release date
       - Collector version
 
+   *  - 1.4.1 
+      - November 7, 2024
+      - :new-page:`version 0.111 <https://github.com/signalfx/splunk-otel-collector/releases/tag/v0.120.0>`
+
+   *  - 1.4.0 
+      - November 7, 2024
+      - :new-page:`version 0.111 <https://github.com/signalfx/splunk-otel-collector/releases/tag/v0.118.0>`
+
    *  - 1.3.3 
       - November 7, 2024
       - :new-page:`version 0.111 <https://github.com/signalfx/splunk-otel-collector/releases/tag/v0.111.0>`
