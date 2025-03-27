@@ -605,33 +605,6 @@ Other metrics
   
   The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
 
-These are the metrics related to StatefulSets:
-
-.. list-table::
-  :widths: 40 40 20 
-  :width: 100%
-  :header-rows: 1
-
-  * - Metric name
-    - Metric description
-    - Exported?
-
-  * - ``k8s.statefulset.desired_pods``
-    - Desired number of StatefulSets in the pod     
-    - Yes  
-
-  * - ``k8s.statefulset.current_pods``
-    - Current number of StatefulSets in the pod        
-    - Yes  
-
-  * - ``k8s.statefulset.ready_pods``
-    - Number of ready StatefulSets in the pod         
-    - Yes  
-
-  * - ``k8s.statefulset.updated_pods``
-    - Number of updated StatefulSets in the pod       
-    - Yes 
-
 Other available metrics include:
 
 .. list-table::
@@ -659,6 +632,18 @@ Other available metrics include:
 
   * - ``k8s.daemonset.ready_nodes``
     - Yes
+
+  * - ``k8s.statefulset.desired_pods``
+    - Yes  
+
+  * - ``k8s.statefulset.current_pods``    
+    - Yes  
+
+  * - ``k8s.statefulset.ready_pods``   
+    - Yes  
+
+  * - ``k8s.statefulset.updated_pods``  
+    - Yes 
 
   * - ``k8s.hpa.max_replicas``
     - Yes
