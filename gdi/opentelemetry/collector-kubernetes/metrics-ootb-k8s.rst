@@ -286,26 +286,6 @@ Pod level metrics and dimensions
     - 
     - Yes
 
-  * - ``k8s.statefulset.desired_pods``
-    - Desired number of StatefulSets in the pod    
-    -   
-    - Yes  
-
-  * - ``k8s.statefulset.current_pods``
-    - Current number of StatefulSets in the pod        
-    -   
-    - Yes  
-
-  * - ``k8s.statefulset.ready_pods``
-    - Number of ready StatefulSets in the pod        
-    -   
-    - Yes  
-
-  * - ``k8s.statefulset.updated_pods``
-    - Number of updated StatefulSets in the pod      
-    -   
-    - Yes  
-
 Node level metrics and dimensions
 ============================================================================
 
@@ -624,6 +604,38 @@ Other metrics
 .. caution:: 
   
   The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+
+These are the metrics related to StatefulSets:
+
+.. list-table::
+  :widths: 30 30 30 10
+  :width: 100%
+  :header-rows: 1
+
+  * - Metric name
+    - Metric description
+    - Attributes
+    - Exported?
+
+  * - ``k8s.statefulset.desired_pods``
+    - Desired number of StatefulSets in the pod    
+    -   
+    - Yes  
+
+  * - ``k8s.statefulset.current_pods``
+    - Current number of StatefulSets in the pod        
+    -   
+    - Yes  
+
+  * - ``k8s.statefulset.ready_pods``
+    - Number of ready StatefulSets in the pod        
+    -   
+    - Yes  
+
+  * - ``k8s.statefulset.updated_pods``
+    - Number of updated StatefulSets in the pod      
+    -   
+    - Yes 
 
 Other available metrics include:
 
