@@ -84,7 +84,7 @@ for an Okta login service integration.
   </embed>
 
 
-When you set up SSO, the default role for a user signing in to Splunk Observability Cloud through SSO is the :guilabel:`power` role. You can change the default SSO role to any of the available roles in Splunk Observability Cloud. These are admin, power, usage, and read_only. To learn more about roles, see :ref:`roles-and-capabilities`. 
+When you set up SSO, the default role for a user signing in to Splunk Observability Cloud through SSO is the :guilabel:`power` role. You can change the default SSO role to any of the available roles in Splunk Observability Cloud. These are :guilabel:`admin`, :guilabel:`power`, :guilabel:`usage`, and :guilabel:`read_only`. To learn more about roles, see :ref:`roles-and-capabilities`. 
 
 .. note:: Changing the default SSO role affects only new SSO users. If a user already has an existing role defined by the previous default SSO role, you must change it manually. To change a user's role, see :ref:`assign-role-existing`.
 
