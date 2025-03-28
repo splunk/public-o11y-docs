@@ -15,7 +15,8 @@ Install the Ansible collection
 The following Linux distributions and versions are supported:
 
 * Amazon Linux: 2, 2023. Log collection with Fluentd isn't supported for Amazon Linux 2023.
-* CentOS, Red Hat, or Oracle: 7, 8, 9
+* CentOS, or Red Hat: 7, 8, 9
+* Oracle: 8, 9
 * Debian: 11, 12
 * SUSE: 12, 15 for Collector version 0.34.0 or higher. Log collection with Fluentd isn't supported.
 * Ubuntu: 16.04, 18.04, 20.04, and 22.04
