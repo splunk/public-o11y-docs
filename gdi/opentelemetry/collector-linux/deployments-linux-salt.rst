@@ -30,7 +30,7 @@ The following Linux distributions and versions are supported:
 
 * Amazon Linux: 2, 2023. Log collection with Fluentd isn't supported for Amazon Linux 2023.
 * CentOS, Red Hat, Oracle: 7, 8, 9
-* Debian: 9, 10, 11
+* Debian: 11, 12
 * SUSE: 12, 15 (Note: Only for Collector versions 0.34.0 or higher. Log collection with Fluentd not currently supported.)
 * Ubuntu: 18.04, 20.04, 22.04
 
@@ -113,7 +113,7 @@ For Linux, the formula accepts the attributes described in the following table:
      - ``false``
    * - ``td_agent_version``
      -  Version of the td-agent (Fluentd) package to install 
-     -  ``3.7.1-0`` for Debian 9 and ``4.3.0`` for other distros
+     -  ``4.3.0`` 
    * - ``splunk_fluentd_config``
      - The path to the Fluentd configuration file on the remote host.
      - ``/etc/otel/collector/fluentd/fluent.conf``
