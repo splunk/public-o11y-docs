@@ -53,9 +53,6 @@ Now, you need to configure Helm to correctly install the Splunk Distribution of 
         * - ``environment``
           - ``prd`` or your desired environment name
           - Tags data that the application sends to Splunk Observability Cloud, allowing you to see the data in Splunk APM
-        * - ``certmanager.enabled``
-          - ``true``
-          - Activates the certification manager for Helm
         * - ``operatorcrds.install``
           - ``true``
           - Installs the CRDs used by the OpenTelemetry Kubernetes Operator
