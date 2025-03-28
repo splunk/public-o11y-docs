@@ -2,7 +2,7 @@
 .. _linux-ansible:
 
 ********************************************************
-Deploy the Collector with Ansible for Linux
+Deploy the Collector for Linux with Ansible 
 ********************************************************
 
 .. meta::

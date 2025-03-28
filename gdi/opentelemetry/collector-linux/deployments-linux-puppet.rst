@@ -2,7 +2,7 @@
 .. _linux-puppet:
 
 ********************************************************
-Deploy the Collector with Puppet for Linux 
+Deploy the Collector for Linux with Puppet 
 ********************************************************
 
 .. meta::
