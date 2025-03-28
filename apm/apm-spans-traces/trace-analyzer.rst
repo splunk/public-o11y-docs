@@ -74,6 +74,7 @@ To explore your trace data, use the following controls, which are numbered as ca
 #. Use the table of traces to view trace details or group metrics based on a tag. 
 
 Trace Analyzer searches all traces within the default retention period of 8 days. See :ref:`apm-data-retention` to learn more about the default trace retention period.
+(Note: We are deprecating Classic View, so I think we should get rid of this blurb telling customers to use Classic View.)
 
 Explore trace and error counts
 -------------------------------
