@@ -53,3 +53,12 @@ You can instrument the following types of application:
 - :ref:`iOS applications <rum-mobile-ios>`
 - :ref:`Android applications <rum-mobile-android>`
 - :ref:`React Native applications <rum-mobile-react>`
+
+
+.. _rum-gdi-install-cli:
+
+Install the ``splunk-rum`` CLI
+=====================================================================
+
+PLACEHOLDER
+

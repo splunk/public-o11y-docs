@@ -14,6 +14,7 @@ Instrument Android applications for Splunk RUM
    Configure the instrumentation <configure-rum-android-instrumentation>
    Manually instrument applications <manual-rum-android-instrumentation>
    Android RUM data model <rum-android-data-model>
+   Set up crash de-obfuscation <set-up-crash-deobfuscation>
    Troubleshooting <troubleshooting>
 
 Instrument your Android applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM for Mobile, you can gain insight about the performance and health of your mobile apps.
