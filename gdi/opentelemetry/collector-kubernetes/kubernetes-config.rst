@@ -305,3 +305,13 @@ Deactivate the ``clusterReceiver`` on one of the installations to avoid cluster-
 
   clusterReceiver:
     enabled: false
+
+If using the operator, it should be enabled in the Linux configuration only, and it should include a node selector to ensure it targets Linux nodes only: 
+
+.. code-block:: yaml
+
+  operator:
+    enabled: true
+    nodeSelector:
+      kubernetes.io/os: linux
+
