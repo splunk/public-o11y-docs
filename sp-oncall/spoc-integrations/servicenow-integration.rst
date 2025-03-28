@@ -194,6 +194,8 @@ automatically.
 
 .. image:: /_images/spoc/VOSN_conditions.png
 
+If you experience any issues saving Incident Rules or Custom Fields, please ensure that your :guilabel:`Application Scope` is presently set to :guilabel:`Splunk > VictorOps`.
+
 Manually send incidents from ServiceNow to Splunk On-Call
 -------------------------------------------------------------
 
