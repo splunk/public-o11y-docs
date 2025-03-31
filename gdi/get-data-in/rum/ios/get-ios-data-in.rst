@@ -14,7 +14,7 @@ Instrument iOS applications for Splunk RUM
    Configure the instrumentation <configure-rum-ios-instrumentation>
    Manually instrument applications <manual-rum-ios-instrumentation>
    iOS RUM data model <rum-ios-data-model>
-   Set up crash symbolication <set-up-crash-symbolication>
+   Add dSYM files <add-dsym-files>
    Troubleshooting <troubleshooting>
 
 Instrument your iOS applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM for Mobile, you can gain insight about the performance and health of your mobile apps.

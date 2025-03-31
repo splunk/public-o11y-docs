@@ -1,7 +1,7 @@
-.. _set-up-crash-symbolication:
+.. _add-mapping-files:
 
 *********************************************************************
-Set up crash symbolication for iOS applications
+Add mapping files
 *********************************************************************
 
 
