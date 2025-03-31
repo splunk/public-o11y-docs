@@ -239,6 +239,12 @@ The iOS RUM library adds the following crash reporting attributes to spans that 
    * - ``exception.stacktrace``
      - String
      - The stack trace for the exception.
+   * - ``exception.threads``
+     - 
+     - 
+   * - ``exception.images``
+     - 
+     - 
    * - ``component``
      - String
      - Always ``crash``.
@@ -248,9 +254,28 @@ The iOS RUM library adds the following crash reporting attributes to spans that 
    * - ``crash.timestamp``
      - NSDate
      - Date and time when the crash report is generated.
+   * - ``crash.observedTimestamp``
+     - NSDate
+     - Date and time when the crash report is sent.
+   * - ``crash.isNative``
+     - Boolean
+     - 
    * - ``crash.address``
      - Integer
      - Address of the faulty instruction.
+   * - ``crash.processPath``
+     - String
+     - 
+   * - ``crash.batteryLevel``
+     - 
+     - 
+   * - ``crash.app.version``
+     - 
+     - 
+   * - ``crash.os.version``
+     - 
+     - 
+
 
 Network monitoring
 ----------------------------------------------------
