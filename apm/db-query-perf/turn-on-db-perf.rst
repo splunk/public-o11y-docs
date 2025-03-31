@@ -34,9 +34,9 @@ Follow these steps to turn on Database Query Performance and begin indexing data
 
     .. note:: Before proceeding, ensure that you have configured the instrumentation for your specific programming language:
             * Java, see :ref:`instrument-java-applications`.
-            * .NET, see :ref:`instrument-dotnet-application.html#database-query-performance-settings`.
-            * Python, see :ref:`instrument-python-application`. 
-            * Node.js, see :ref:`instrument-nodejs-application`.                   
+            * .NET, see :ref:`install-dotnet-otel-instrumentation`.
+            * Python, see :ref:`instrument-python-applications`. 
+            * Node.js, see :ref:`instrument-nodejs-applications-3x`.                   
 
 2. In the Database Query Performance section, check that the :guilabel:`Status` is Active. If it is, skip to the next step. If it's not, select :guilabel:`Resume Indexing` to initiate cardinality analysis, and then wait for the cardinality analysis to run in the Pending MetricSet section at the top of the table. 
     
