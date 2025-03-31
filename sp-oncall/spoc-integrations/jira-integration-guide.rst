@@ -1,7 +1,7 @@
 .. _Jira-spoc:
 
-Jira integration for Splunk On-Call
-***************************************************
+Jira webhook, service desk and URL integrations for Splunk On-Call
+**********************************************************************
 
 .. meta::
     :description: Configure the Jira integration for Splunk On-Call.
