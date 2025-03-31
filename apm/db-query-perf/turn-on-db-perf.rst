@@ -34,7 +34,7 @@ Follow these steps to turn on Database Query Performance and begin indexing data
 
 .. note:: Before proceeding, ensure that you have configured the instrumentation for your specific programming language:
             * Java, see :ref:`instrument-java-applicationng`.
-            * .NET, see :ref:`instrument-dotnet-application.html#configure-the-instrumentation`.
+            * .NET, see :ref:`instrument-dotnet-application`.
             * Python, see :ref:`instrument-python-application`. 
             * Node.js, see :ref:`instrument-nodejs-application`.                   
 
