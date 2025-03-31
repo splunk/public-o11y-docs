@@ -36,7 +36,7 @@ These are the available prepopulated CloudFormation templates to create AWS Metr
 .. list-table::
   :header-rows: 1
   :widths: 20, 40, 40
-  :width: 100
+  :width: 100%
 
   * - Deployment type
     - QuickLink
@@ -60,7 +60,7 @@ If you are in a FedRAMP-compliant environment use the following templates:
 .. list-table::
   :header-rows: 1
   :widths: 40, 60
-  :width: 100
+  :width: 100%
 
   * - Deployment type
     - QuickLink
