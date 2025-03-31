@@ -206,7 +206,6 @@ Initialize the crash reporting module with your configuration parameters:
 
 * To generate a RUM access token, see :ref:`rum-access-token`.
 
-.. note:: Symbolication is not supported.
 
 .. _xcframeork-ios-rum:
 
