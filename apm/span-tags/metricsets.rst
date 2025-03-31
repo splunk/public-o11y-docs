@@ -25,6 +25,11 @@ Spans might lack a ``kind`` value, or have a different ``kind`` value, in the fo
 * The span originates in self-initiating operations or inferred services
 * An error in instrumentation occurs.
 
+MMS retention period
+-----------------------------------
+
+Splunk Observability Cloud stores MMS for 13 months by default.
+
 .. _default-mms:
 
 Available default MMS metrics and dimensions
@@ -169,11 +174,6 @@ Use MMS for alerting and real-time monitoring in Splunk APM. You can create char
      - :ref:`apm-alerts`
    * - Monitor services in APM dashboards 
      - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
-
-MMS retention period
------------------------------------
-
-Splunk Observability Cloud stores MMS for 13 months by default.
 
 .. _troubleshooting-metricsets:
 
