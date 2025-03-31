@@ -10,14 +10,15 @@ Deploy the Collector for Linux with Puppet
 
 Use this module to install and configure the Collector on Linux. Download and install the module from :new-page:`Puppet Forge <https://forge.puppet.com/modules/signalfx/splunk_otel_collector>`. After downloading the module, you can add customizations using the ``class`` parameter.
 
-Currently, we support the following Linux distributions and versions:
+.. raw:: html
 
-- Amazon Linux: 2, 2023. Log collection with Fluentd isn't supported for Amazon Linux 2023.
-- CentOS / Red Hat: 7, 8, 9
-- Oracle: 8, 9
-- Debian: 11, 12
-- SUSE: 12, 15 (Note: Only applicable for Collector versions v0.34.0 or higher. Log collection with Fluentd not currently supported.)
-- Ubuntu: 16.04, 18.04, 20.04, 22.04
+   <div class="include-start" id="requirements/collector-linux.rst"></div>
+
+.. include:: /_includes/requirements/collector-linux.rst
+
+.. raw:: html
+
+   <div class="include-stop" id="requirements/collector-linux.rst"></div>
 
 On Linux systems, the :new-page:`puppetlabs/stdlib module <https://forge.puppet.com/modules/puppetlabs/stdlib/readme>` is required. 
 
