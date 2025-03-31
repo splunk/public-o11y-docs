@@ -31,6 +31,11 @@ Follow these steps to turn on Database Query Performance and begin indexing data
     .. image:: /_images/apm/db-query-perf/apm-configuration.png
          :width: 25%
          :alt: Screenshot of the APM Configuration menu on the APM landing page.
+        .. note:: Before proceeding, ensure that you have configured the instrumentation for your specific programming language:
+            * Java, see :ref:`instrument-java-applicationng`.
+            * .NET, see :ref:`instrument-dotnet-application.html#configure-the-instrumentation`.
+            * Python, see :ref:`instrument-python-application`. 
+            * Node.js, see :ref:`instrument-nodejs-application`.           
 
 2. In the Database Query Performance section, check that the :guilabel:`Status` is Active. If it is, skip to the next step. If it's not, select :guilabel:`Resume Indexing` to initiate cardinality analysis, and then wait for the cardinality analysis to run in the Pending MetricSet section at the top of the table. 
     
