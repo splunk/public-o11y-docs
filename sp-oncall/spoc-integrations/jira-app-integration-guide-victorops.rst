@@ -1,127 +1,85 @@
-Jira integration for Splunk On-Call
+Jira App integration for Splunk On-Call
 **********************************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+Requirements
+================
 
-**Jira Version Required**: Jira Server 7.7.0 - 8.22.6, Jira Cloud
-(versionless)
-
-**Splunk On-Call Version Required:** Starter, Growth, or Enterprise
-
-[/ht_toggle]
-
-**Configuration in Splunk On-Call**
------------------------------------
-
-**NOTE**\ *: Global Admin privileges are required for the Splunk On-Call
+* Jira Version Required: Jira Server 7.7.0 - 8.22.6, Jira Cloud
+* Splunk On-Call Version Required: Starter, Growth, or Enterprise
+* Global Admin privileges are required for the Splunk On-Call
 portion of the configuration.*
 
-In Splunk On-Call, navigate to **Integrations >> API**.
+Configure in Splunk On-Call
+=====================================
 
-Click the **New Key** button. Give the key a description. Note the
-resulting **API key** and existing **API ID**.
+#. In Splunk On-Call, go to :guilabel:`Integrations` then :guilabel:`API`.
+#. Select :guilabel:`New Key*`. 
+#. Give the key a description and copy the resulting API key and API ID.
 
-**Installing the Splunk On-Call Add-On**
-----------------------------------------
+Install the Splunk On-Call Add-On in Jira
+==========================================
 
-1. Log in as a Jira administrator, then navigate to the Atlassian
-   Marketplace by clicking on **Jira administration gear** **icon >
-   Manage apps**.
-2. In the left-hand sidebar, click **Find new apps** under the Atlassian
-   Marketplace header.
-3. If on Jira Server, search for the app \_Splunk On-Call for Jira
-   Server\_\_.\_ If on Jira Cloud, search for the app *VictorOps for
-   Jira Cloud*.  Once you've located the right app, click *Install*.
+#. Log in as a Jira administrator, then select Jira administration gear icon then :guilabel:`Manage apps` to go to the Atlassian Marketplace.
+#. In the sidebar, select :guilabel:`Find new apps` under the Atlassian Marketplace header.
+#. If you are on Jira Server, search for the app "Splunk On-Call for Jira Server." If you are on Jira Cloud, search for the app "VictorOps for Jira Cloud." After you've located the right app, select :guilabel:`Install`.
+#. After installation completes, select :guilabel:`Configure`.
 
-Once installation completes, click on **Configure**.
-
-Configuring Application Settings
+Configuring application settings
 --------------------------------
 
-1. Insert the API key you generated in VictorOps into the **API Key**
-   field under the *Connect to your VictorOps Organization* section of
-   Jira's *VictorOps for Jira Server Configuration* page.
-2. In the **API ID** field in the same section, insert the API ID you
-   noted in the Splunk On-Call step above.
-3. Copy the Splunk On-Call Org ID displayed in your VictorOps URL
-   (for example :samp:`https://portal.victorops.com/client/%7BOrg_ID`) and paste it in
-   Jira's **Organization ID** field. This is appended to the incident
-   link within Jira tickets.
-4. Once all three fields have been populated, click **Connect**.  On
-   success, a new entry will appear in the *Connected VictorOps
-   Organizations* section, and display a green “VALID” flag.
+#. Insert the API key you generated in VictorOps into the :guilabel:`API Key` field under :guilabel:`Connect to your VictorOps Organization` on VictorOps for Jira Server Configuration page.
+#. In the :guilabel:`API ID` field in the same section, insert the API ID you coped in the preceding Configure Splunk On-Call step.
+#. Copy the Splunk On-Call org ID displayed in your VictorOps URL. The org ID is at the end of the URL you used to log in: `https://portal.victorops.com/client/<Org_ID>`. Paste the org ID in Jira's :guilabel:`Organization ID` field.
+#. Select :guilabel:`Connect`.
+
+A new entry appears in the Connected VictorOps Organizations section with a green VALID flag.
 
 /_images/spoc/1jira.png
 
-**Configuring Jira Project Settings**
+Configure Jira project settings
 -------------------------------------
 
-The Splunk On-Call add-on must be enabled and configured for each Jira
-project you wish to associate.  Note that while multiple projects can
-connect to the same Splunk On-Call organization, projects cannot share
-the same *Default Team Escalation Policy*.
+The Splunk On-Call add-on must be enabled and configured for each Jira project you want to associate. While multiple projects can
+connect to the same Splunk On-Call organization, projects cannot share the same Default Team Escalation Policy.
 
-1. In Jira, click **Projects**
-2. Navigate to **Project settings** of the project **you wish to enable
-   for the Splunk On-Call add-on**, then click **VictorOps Settings**.
-3. Click **Enable VictorOps for this Project**.  This will expand the
-   page to display a list of configurable fields.
+#. In Jira, select :guilabel:`Projects`.
+#. Go to :guilabel:`Project settings` of the project you want to activate for the Splunk On-Call add-on.
+#. Select :guilabel:`VictorOps Settings`.
+#. Select :guilabel:`Enable VictorOps for this Project`.
 
-Default Incident Settings
+The page to displays a list of configurable fields.
+
+Default incident settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Under *VictorOps Instance*, select the Splunk On-Call organization
-   you wish to associate with this project.
-2. Under *Default Team Escalation Policy*, select the Splunk On-Call
-   Escalation Policy you would like to page when Jira issues create
-   incidents in Splunk On-Call.  NOTE:  Incoming VictorOps incidents
-   assigned to this Escalation Policy will be the only ones allowed to
-   create issues in your Jira project.
-3. Under *Default User*, select the Jira user you wish to designate as
-   Reporter for issues generated by incoming Splunk On-Call incidents.
+#. Under *VictorOps Instance*, select the Splunk On-Call organization you wish to associate with this project.
+#. Under *Default Team Escalation Policy*, select the Splunk On-Call Escalation Policy you would like to page when Jira issues create incidents in Splunk On-Call. NOTE: Incoming VictorOps incidents assigned to this Escalation Policy will be the only ones allowed to create issues in your Jira project.
+#. Under *Default User*, select the Jira user you wish to designate as Reporter for issues generated by incoming Splunk On-Call incidents.
 
-Incoming Issue Settings
+Incoming issue settings
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Splunk On-Call incidents created for a project's *Default Team
-Escalation Policy* will automatically generate Jira issues.  The default
-type for such issues (Bug, Epic, Story, or Task) is set by selecting the
-desired option from the **Issue type to use for incoming VictorOps
-incidents** dropdown.
+Splunk On-Call incidents created for a project's *Default Team Escalation Policy* will automatically generate Jira issues. The default type for such issues (Bug, Epic, Story, or Task) is set by selecting the desired option from the **Issue type to use for incoming VictorOps incidents** dropdown.
 
-If you wish to disable such issue creation, deselect the **Allow issues
-to be created from incidents via the REST API** checkbox.
+If you wish to disable such issue creation, deselect the **Allow issues to be created from incidents via the REST API** checkbox.
 
 /_images/spoc/2jira.png
 
-Jira State Configuration
+Jira state configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Defining state mapping allows Jira issues to remain synchronized as
-incidents move through their life cycle in VictorOps.
+Defining state mapping allows Jira issues to remain synchronized as incidents move through their life cycle in VictorOps.
 
 /_images/spoc/3jira.png
 
-**Creating a Splunk On-Call Incident Within Jira**
+Create a Splunk On-Call incident within Jira
 --------------------------------------------------
 
-Currently, Splunk On-Call incidents can only be created from the Jira
-issue view.
+Currently, Splunk On-Call incidents can only be created from the Jira issue view.
 
-1. Click **More** > **Create VictorOps Incident**.  A preview of the
-   Splunk On-Call incident card will display, using the project's
-   *Default Team Escalation Policy*. Note: For Jira Cloud, the More
-   button is an ellipsis button.
-2. You may select a different escalation policy from the *VictorOps Team
-   Escalation Policy* dropdown.  You may also use the *Additional Users*
-   dropdown to optionally include additional users for response.  Note
-   that adding users to an incident will *not* create a “Multi-Responder
-   incident” in Splunk On-Call. 
-3. Click **Create Incident** to generate a Splunk On-Call incident. 
-   This will then display a *Triggered* Splunk On-Call incident card
-   under the *VictorOps* section in the lower right frame of the issue
-   view.
-4. Click the incident card's **Incident Details** link to display the
-   incident in Splunk On-Call in a new browser tab.
+#. Click **More** > **Create VictorOps Incident**. A preview of the Splunk On-Call incident card will display, using the project's *Default Team Escalation Policy*. Note: For Jira Cloud, the More button is an ellipsis button.
+#. You may select a different escalation policy from the *VictorOps Team Escalation Policy* dropdown. You may also use the *Additional Users* dropdown to optionally include additional users for response. Note that adding users to an incident will *not* create a “Multi-Responder incident” in Splunk On-Call.
+#. Click **Create Incident** to generate a Splunk On-Call incident. This will then display a *Triggered* Splunk On-Call incident card under the *VictorOps* section in the lower right frame of the issue view.
+#. Click the incident card's **Incident Details** link to display the incident in Splunk On-Call in a new browser tab.
 
 /_images/spoc/4jira.png
