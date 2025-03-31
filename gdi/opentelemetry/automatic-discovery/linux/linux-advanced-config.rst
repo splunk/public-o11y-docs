@@ -81,7 +81,7 @@ To activate runtime metrics collection for an individual language, follow these 
 Use automatic discovery with gateway mode
 ======================================================
 
-The Splunk OTel Collector Chart uses the agent mode by default. Activating gateway mode deploys an instance of the OpenTelemetry Collector in a separate container, and this instance collects data from the entire cluster.
+The Splunk OpenTelemetry Collector chart uses the agent mode by default. Activating gateway mode deploys an instance of the OpenTelemetry Collector in a separate container, and this instance collects data from the entire cluster.
 
 To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 

@@ -99,6 +99,8 @@ Images are signed using ``cosign``. To verify them:
 #. Save the public key to a file. For example, ``cosign.pub``.
 #. Run the following command:
 
+.. note:: The OpenTelemetry Operator Docker image only supports Linux and cannot run on Windows nodes.
+
 .. code-block:: 
 
   cosign verify --insecure-ignore-tlog --key cosign.pub quay.io/signalfx/splunk-otel-collector:<collector-version>
