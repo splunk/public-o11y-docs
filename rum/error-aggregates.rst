@@ -79,7 +79,7 @@ Session details
 
 .. _mobile-connect-source-files:
 
-Connect source files:
+Connect source files
 ------------------------------------------------------------------------------------------
 
 * To upload Proguard mappping, see ``PLACEHOLDER``
@@ -133,11 +133,11 @@ Session details
 
 .. _browser-connect-source-files:
 
-Connect source files:
+Connect source files
 ------------------------------------------------------------------------------------------
 
-* To upload Proguard mappping, see ``PLACEHOLDER``
-* To upload <other> mapping, see ``PLACEHOLDER``
+* To upload dSYMs for iOS apps, see ``PLACEHOLDER``
+* To upload source maps for Android apps, see ``PLACEHOLDER``
 
 
 
