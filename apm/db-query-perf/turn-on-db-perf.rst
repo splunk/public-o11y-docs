@@ -32,8 +32,8 @@ Follow these steps to turn on Database Query Performance and begin indexing data
          :width: 25%
          :alt: Screenshot of the APM Configuration menu on the APM landing page.
 
-.. note:: Before proceeding, ensure that you have configured the instrumentation for your specific programming language:
-            * Java, see :ref:`instrument-java-applicationng`.
+    .. note:: Before proceeding, ensure that you have configured the instrumentation for your specific programming language:
+            * Java, see :ref:`instrument-java-application`.
             * .NET, see :ref:`instrument-dotnet-application.html#database-query-performance-settings`.
             * Python, see :ref:`instrument-python-application`. 
             * Node.js, see :ref:`instrument-nodejs-application`.                   
