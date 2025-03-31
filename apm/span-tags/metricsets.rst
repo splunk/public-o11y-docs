@@ -34,7 +34,7 @@ MMS are available for the APM components listed in the following table. Each MMS
 
 .. _service-mms: 
 .. _inferred-service-mms-dimensions:
-
+.. _endpoint-mms:
 
 .. list-table::
    :widths: 33 33 33
@@ -128,7 +128,6 @@ A histogram MTS uses the following syntax using SignalFlow:
    
    histogram(metric=<metric_name>[,filter=<filter_dict>][,resolution=<resolution>)
 
-
 The following table displays example SignalFlow functions:  
 
 .. list-table::
@@ -150,76 +149,6 @@ The following table displays example SignalFlow functions:
      - ``A = data('service.request.duration.ns.p90', filter=filter('sf_service', 'service 2', 'service 1'), rollup='average').mean().publish(label='A')``
 
 .. note:: Because an aggregation is applied on histogram(), to display all of the metric sets separately, each dimension needs to be applied as a groupby. 
-
-Dimensions
-=====================
-Each MMS has a set of dimensions you can use to monitor and alert on service performance. 
-
-In addition to the following default MMS, you can create custom MMS to deep dive on your MMS. See :ref:`cmms`.
-
-.. _service-mms: 
-
-Service dimensions
----------------------------------
-
-* ``sf_environment``
-* ``deployment.environment`` - This dimension is only available for histogram MMS.
-* ``sf_service``
-* ``service.name`` - This dimension is only available for histogram MMS.
-* ``sf_error``
-
-.. _inferred-service-mms-dimensions:
-
-Inferred service dimensions
-------------------------------
-
-* ``sf_service``
-* ``service.name`` - This dimension is only available for histogram MMS.
-* ``sf_environment``
-* ``deployment.environment`` - This dimension is only available for histogram MMS.
-* ``sf_error``
-* ``sf.kind``
-* ``sf_operation``
-* ``sf_httpMethod``
-
-.. _endpoint-mms:
-
-Span dimensions
-----------------------------------------------
-
-* ``sf_environment``
-* ``deployment.environment`` - This dimension is only available for histogram MMS.
-* ``sf_service``
-* ``service.name`` - This dimension is only available for histogram MMS.
-* ``sf_operation``
-* ``sf_kind``
-* ``sf_error``
-* ``sf_httpMethod``, where relevant
-
-Trace dimensions
----------------------------------
-
-.. note:: Trace dimensions are not supported for custom MMS.
-
-* ``sf_environment``
-* ``deployment.environment`` - This dimension is only available for histogram MMS.
-* ``sf_service``
-* ``service.name`` - This dimension is only available for histogram MMS.
-* ``sf_operation``
-* ``sf_httpMethod``
-*  ``sf_error``
-
-Workflow dimensions
----------------------------------
-
-Workflow metrics and dimensions are created by default when you create a Business Workflow. 
-
-.. note:: Workflow dimensions are not supported for custom MMS.
-
-* ``sf_environment``
-* ``deployment.environment`` - This dimension is only available for histogram MMS.
-* ``sf_workflow``
-* ``sf_error``
 
 Use MMS within Splunk APM
 ----------------------------------------
