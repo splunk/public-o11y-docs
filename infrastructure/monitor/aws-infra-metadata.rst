@@ -25,7 +25,7 @@ For example, `DBClusterIdentifier` becomes `aws_db_cluster_identifier`.
 Common properties
 =============================================================================
 
-For all services, the system imports the following common properties:
+For all services, Splunk Observability Cloud imports the following common properties:
 
 ..  list-table::
    :header-rows: 1
