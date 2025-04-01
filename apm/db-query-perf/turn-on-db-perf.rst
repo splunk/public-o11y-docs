@@ -34,7 +34,7 @@ Follow these steps to turn on Database Query Performance and begin indexing data
 
     .. note:: Before proceeding, ensure that you have configured the instrumentation for your specific programming language:
             * Java, see :ref:`instrument-java-applications`.
-            * .NET, see :ref:`install-dotnet-otel-instrumentation`.
+            * .NET, see :ref:`configure-otel-dotnet`.
             * Python, see :ref:`instrument-python-applications`. 
             * Node.js, see :ref:`instrument-nodejs-applications-3x`.                   
 
