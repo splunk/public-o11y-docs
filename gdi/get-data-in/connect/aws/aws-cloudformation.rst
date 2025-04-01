@@ -55,7 +55,7 @@ To see other CloudFormation templates offered by Splunk Observability Cloud refe
 Prepopulated CloudFormation templates compliant with FedRAMP
 --------------------------------------------------------------------
 
-If you are in a FedRAMP-compliant environment use the following templates:
+If you are in a FedRAMP-compliant environment use the following QuickLinks:
 
 .. list-table::
   :header-rows: 1
