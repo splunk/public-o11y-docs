@@ -7,15 +7,11 @@ Analytics reference for Splunk Observability Cloud
 .. meta::
    :description: You can run calculations on Splunk observability data and visualize their output in charts using SignalFlow analytics methods. The following page describes each analytics method of SignalFlow.
 
-Splunk Observability Cloud uses the analytics language SignalFlow to power all charts and detectors. All plots generate SignalFlow, which you can see by selecting :guilabel:`View Signalflow` while in the chart builder view.
+Splunk Observability Cloud uses the analytics language SignalFlow to power all charts and detectors. You can run calculations on observability data and visualize the output in charts using SignalFlow analytics methods. To use analytics in your charts, select :strong:`Add Analytics` in the :strong:`Plot Editor` tab.
 
-You can run calculations on observability data and visualize the output in charts using SignalFlow analytics methods. To use analytics in your charts, select :strong:`Add Analytics` in the :strong:`Plot Editor` tab.
-
+Only SignalFlow methods are available in the chart builder view. To use SignalFlow functions, select :guilabel:`View SignalFlow` to see the SignalFlow program. For more information on writing SignalFlow programs, see the :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` topic in the Splunk Observability Cloud Developer Guide.
 
 Use the following list to learn more about each SignalFlow analytics method, including sample calculations.
-
-.. note:: Only SignalFlow methods are available in the chart builder view. To use SignalFlow functions, select :guilabel:`View SignalFlow` to see the SignalFlow program. For more information on SignalFlow programs, see the :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` topic in the Splunk Observability Cloud Developer Guide.
-
 
 
 .. hlist::
