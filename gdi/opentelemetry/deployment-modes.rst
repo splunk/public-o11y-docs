@@ -101,6 +101,13 @@ Learn more at :ref:`signalfx-exporter`.
 
 .. _collector-current-mode:
 
+Token usage with the ``otlphttp`` exporter
+-------------------------------------------------------------------------------
+
+If any of your Collectors in agent mode exports data to the ``otlp`` receiver running on the gateway and you want to use the token set at the source instead of the gateway's token, uncomment ``include_metadata: true`` in the default gateway config. 
+
+For more details see :new-page:`Default gateway config <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` in GitHub and :ref:`otlphttp-exporter-token-passthrough`.
+
 What mode is my Collector deployed as? How can I change it?
 ======================================================================
 
