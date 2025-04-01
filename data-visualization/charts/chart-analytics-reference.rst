@@ -1,15 +1,22 @@
 .. _analytics-ref:
 
 ************************************************************
-Functions reference for Splunk Observability Cloud
+Analytics reference for Splunk Observability Cloud
 ************************************************************
 
 .. meta::
-   :description: You can run calculations on Splunk observability data and visualize their output in charts using SignalFlow analytics functions. The following page describes each analytics function of SignalFlow.
+   :description: You can run calculations on Splunk observability data and visualize their output in charts using SignalFlow analytics methods. The following page describes each analytics method of SignalFlow.
 
-You can run calculations on observability data and visualize the output in :ref:`charts <data-visualization-charts>` using :ref:`SignalFlow <get-started-signalflow>` analytics functions. To use analytics functions in your charts select :strong:`Add Analytics` in the :strong:`Plot Editor` tab.
+Splunk Observability Cloud uses the analytics language SignalFlow to power all charts and detectors. All plots generate SignalFlow, which you can see by selecting :guilabel:`View Signalflow` while in the chart builder view.
 
-Use the following list to learn more about each SignalFlow analytics function, including sample calculations. To use analytics functions in SignalFlow programs, see the :new-page:`SignalFlow Functions and Methods <https://dev.splunk.com/observability/docs/signalflow>` topic in the Splunk Observability Cloud Developer Guide.
+You can run calculations on observability data and visualize the output in charts using SignalFlow analytics methods. To use analytics in your charts, select :strong:`Add Analytics` in the :strong:`Plot Editor` tab.
+
+
+Use the following list to learn more about each SignalFlow analytics method, including sample calculations.
+
+.. note:: Only SignalFlow methods are available in the chart builder view. To use SignalFlow functions, select :guilabel:`View SignalFlow` to see the SignalFlow program. For more information on SignalFlow programs, see the :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>` topic in the Splunk Observability Cloud Developer Guide.
+
+
 
 .. hlist::
    :columns: 3
