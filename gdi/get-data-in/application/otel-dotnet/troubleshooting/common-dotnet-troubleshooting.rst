@@ -245,7 +245,7 @@ To resolve this issue, :ref:`install the .NET instrumentation using the NuGet pa
 
 Alternatively, you can update to the latest version of .NET, as this reduces the likelihood of dependency version conflicts.
 
-IIS - Assembly Grant Set Issue
+Fixing Assembly Permissions IIS - Grant Set Issue
 ======================================
 
 When using the .NET Framework with an IIS-hosted application, you might encounter crashes with an event similar to the following:
@@ -256,7 +256,7 @@ When using the .NET Framework with an IIS-hosted application, you might encounte
    [Message] "Loading this assembly would produce a different grant set from other instances."
 
 To resolve this issue, create a new ``DWARD`` value called ``LoaderOptimization`` and set its value to ``1`` under the registry key ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework``. 
-This allows different versions of the same application to load into different domains, though it may increase CPU and memory usage.
+This allows different versions of the same application to load into different domains, though it might increase CPU and memory usage.
 
 Uninstall the instrumentation
 ======================================
