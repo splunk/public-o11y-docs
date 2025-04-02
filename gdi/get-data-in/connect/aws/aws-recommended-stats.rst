@@ -7,9 +7,9 @@ AWS recommended stats (polling only)
 .. meta::
   :description: List of recommended stats used in the AWS integration.
 
-If you're polling data, by default Splunk Observability Cloud only polls these 5 statistics: SampleCount (``count`` in Splunk Observability Cloud), Average (``mean``), Sum (``sum``), Minimum (``lower``), and Maximum (``upper``).
+By default Splunk Observability Cloud imports all stats from AWS.
 
-If you chose to import recommended stats, instead of default stats Splunk Observability Cloud imports a set of recommended stats which are based on AWS' own recommended stats and vary with service. 
+If you're polling data you can also choose to import these 5 statistics only: SampleCount (``count`` in Splunk Observability Cloud), Average (``mean``), Sum (``sum``), Minimum (``lower``), and Maximum (``upper``).
 
 List of recommended stats
 ==================================================

@@ -101,10 +101,7 @@ After creating an AWS IAM policy and assigning it to a particular role through t
 Modify the scope of data collection
 --------------------------------------------------
 
-By default, Splunk Observability Cloud brings in: 
-
-* Data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
-* 5 default stats per service: SampleCount (``count`` in Splunk Observability Cloud), Average (``mean``), Sum (``sum``), Minimum (``lower``), and Maximum (``upper``).
+By default, Splunk Observability Cloud brings in all data and stats from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
 
 Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
@@ -113,7 +110,7 @@ Use the check box options in the guided setup to limit the scope of your data co
 * Select which :ref:`AWS regions <aws-regions>` to fetch data from.
 * Select which AWS services to fetch data from.
 
-.. note:: You can also choose to import recommended stats. Learn more at :ref:`aws-recommended-stats`.
+.. note:: You can also choose to import recommended stats only. Learn more at :ref:`aws-recommended-stats`.
 
 To limit data collection, you can also:
 

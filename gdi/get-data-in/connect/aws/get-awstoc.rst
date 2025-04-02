@@ -151,9 +151,9 @@ To manage the amount of data to import, see :ref:`aws-infra-import`.
     <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
+By default Splunk Observability Cloud imports all stats from AWS.
 
-If you're using Metric Streams, by default Splunk Observability Cloud streams all stats.
+If you're polling data you can also choose to import certain stats only. These stats are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
 
 .. _aws-data-availability:
 
