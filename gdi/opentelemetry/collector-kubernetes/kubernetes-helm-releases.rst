@@ -26,8 +26,6 @@ Optional releases for subcharts
 
 * :new-page:`https://github.com/open-telemetry/opentelemetry-helm-charts/releases`
 
-* :new-page:`https://github.com/cert-manager/cert-manager/releases` 
-
 .. _helm-chart-images:
 
 Helm chart images
@@ -50,11 +48,6 @@ Optional add-on feature images
 * :new-page:`https://quay.io/signalfx/splunk-otel-collector-windows`
 * :new-page:`https://registry.access.redhat.com`
 * :new-page:`https://ghcr.io/open-telemetry/opentelemetry-operator/opentelemetry-operator`
-* :new-page:`https://quay.io/jetstack/cert-manager-controller`
-* :new-page:`https://quay.io/jetstack/cert-manager-acmesolver`
-* :new-page:`https://quay.io/jetstack/cert-manager-webhook`
-* :new-page:`https://quay.io/jetstack/cert-manager-cainjector`
-* :new-page:`https://quay.io/jetstack/cert-manager-ctl`
 * :new-page:`https://ghcr.io/signalfx/splunk-otel-java/splunk-otel-java`
 * :new-page:`https://ghcr.io/signalfx/splunk-otel-js/splunk-otel-js`
 * :new-page:`https://ghcr.io/signalfx/splunk-otel-dotnet/splunk-otel-dotnet`

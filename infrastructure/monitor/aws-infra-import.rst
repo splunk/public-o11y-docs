@@ -28,13 +28,19 @@ AWS provides a CloudWatch agent that lets you import metrics, logs, and metadata
 
 By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
 
+.. _aws-data-in-splunk:
+
 AWS data in Splunk Observability Cloud
 --------------------------------------------------------------------------------
 
-During import, Splunk Observability Cloud gives the metrics special names so you can identify them as coming from AWS: 
+During import, Splunk Observability Cloud gives metrics special names so you can identify them as coming from AWS: 
 
 - AWS metadata becomes dimensions and custom properties. 
 - AWS tags are key-value pairs, so Infrastructure Monitoring converts them into custom properties.
+
+Splunk Observability Cloud adds the prefix ``aws_tag_`` to the names of tags imported from AWS, which indicates their origin. For example, the AWS tag ``version:canary`` is converted to ``aws_tag_version:canary``. 
+
+.. caution:: For target groups Splunk Observability Cloud adds the prefix ``aws_tag_tg_`` to avoid conflicts with load balancer tags.
 
 To learn more, see :ref:`aws-oc-metrics`, or refer to the AWS documentation site.
 
@@ -235,9 +241,7 @@ To create these specifications, follow these steps:
    * Use :guilabel:`Import some` if you want a filter that only imports data.
    * Use :guilabel:`Exclude some` if you want a filter that only excludes data.
 
-#. To use AWS tags to limit the data Infrastructure Monitoring imports, filter by tag. For this example, specify a filter that excludes data from resources that have the AWS tag ``version:canary``.
-
-Infrastructure Monitoring adds the prefix ``aws_tag_`` to the names of tags imported from AWS, which indicates their origin. For example, the AWS tag ``version:canary`` appears in Infrastructure Monitoring as ``aws_tag_version:canary``. When you filter an AWS integration by tag, enter the name of the tag as it appears in AWS.
+#. To use AWS tags to limit the data Infrastructure Monitoring imports, filter by tag. For this example, specify a filter that excludes data from resources that have the AWS tag ``version:canary``. Infrastructure Monitoring adds the prefix ``aws_tag_`` to the names of tags imported from AWS, which indicates their origin. For example, the AWS tag ``version:canary`` appears in Infrastructure Monitoring as ``aws_tag_version:canary``. When you filter an AWS integration by tag, enter the name of the tag as it appears in AWS.
 
 You can also choose specific metrics to include or exclude. For example, consider the following conditions.
 

@@ -39,6 +39,8 @@ To assign roles when inviting new users, follow these steps:
 #. Select :guilabel:`Send Invitation` to confirm.
 
 
+.. _assign-role-existing:
+
 Assign roles to an existing user
 =====================================
 
@@ -47,7 +49,7 @@ To assign roles to a user that's already a member of your organization, follow t
 #. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. Find the name of the user.
 #. Select the :guilabel:`Actions` (|verticaldots|) menu icon next to the username, then select :menuselection:`Manage Roles`.
-#. In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles, then select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel.
+#. In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles. Make sure to deselect any roles, including the default SSO role, :guilabel:`power`, if you no longer want the user to have that role. Select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel.
 #. Select :guilabel:`Assign Roles` to confirm.
 
 .. note:: You can use the :guilabel:`Add All` link to add all available roles to a user.

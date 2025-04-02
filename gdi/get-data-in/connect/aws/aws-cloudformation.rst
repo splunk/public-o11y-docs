@@ -36,7 +36,7 @@ These are the available prepopulated CloudFormation templates to create AWS Metr
 .. list-table::
   :header-rows: 1
   :widths: 20, 40, 40
-  :width: 100
+  :width: 100%
 
   * - Deployment type
     - QuickLink
@@ -51,6 +51,25 @@ These are the available prepopulated CloudFormation templates to create AWS Metr
     - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>`
 
 To see other CloudFormation templates offered by Splunk Observability Cloud refer to the :new-page:`AWS CloudFormation templates <https://github.com/signalfx/aws-cloudformation-templates/tree/main>` repo in GitHub.
+
+Prepopulated CloudFormation templates compliant with FedRAMP
+--------------------------------------------------------------------
+
+If you are in a FedRAMP-compliant environment use the following QuickLinks:
+
+.. list-table::
+  :header-rows: 1
+  :widths: 40, 60
+  :width: 100%
+
+  * - Deployment type
+    - QuickLink
+
+  * - Once per account (using StackSets)
+    - Deploy this :new-page:`QuickLink <https://console.amazonaws-us-gov.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams.yaml>`
+
+  * - In each region
+    - Deploy :new-page:`this QuickLink <https://console.amazonaws-us-gov.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>` in every region
 
 Custom CloudFormation templates
 -------------------------------------------

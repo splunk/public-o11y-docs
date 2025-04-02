@@ -103,6 +103,8 @@ Images are signed using ``cosign``. To verify them:
 
   cosign verify --insecure-ignore-tlog --key cosign.pub quay.io/signalfx/splunk-otel-collector:<collector-version>
 
+.. note:: The OpenTelemetry Operator Docker image only supports Linux and cannot run on Windows nodes.
+
 .. _otel-config-options:
 
 .. raw:: html

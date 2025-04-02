@@ -255,13 +255,6 @@ For the Operator:
   operator:
     enabled: true
 
-Additionally, deploy the cert-manager for the Operator if it hasn't been already.
-
-.. code-block:: yaml
-  
-  certmanager:
-    enabled: true
-
 With the above configuration:
 
 * The Collector is set up to receive profiling data.

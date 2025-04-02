@@ -286,26 +286,6 @@ Pod level metrics and dimensions
     - 
     - Yes
 
-  * - ``k8s.statefulset.desired_pods``
-    - Desired number of StatefulSets in the pod    
-    -   
-    - Yes  
-
-  * - ``k8s.statefulset.current_pods``
-    - Current number of StatefulSets in the pod        
-    -   
-    - Yes  
-
-  * - ``k8s.statefulset.ready_pods``
-    - Number of ready StatefulSets in the pod        
-    -   
-    - Yes  
-
-  * - ``k8s.statefulset.updated_pods``
-    - Number of updated StatefulSets in the pod      
-    -   
-    - Yes  
-
 Node level metrics and dimensions
 ============================================================================
 
@@ -652,6 +632,18 @@ Other available metrics include:
 
   * - ``k8s.daemonset.ready_nodes``
     - Yes
+
+  * - ``k8s.statefulset.desired_pods``
+    - Yes  
+
+  * - ``k8s.statefulset.current_pods``    
+    - Yes  
+
+  * - ``k8s.statefulset.ready_pods``   
+    - Yes  
+
+  * - ``k8s.statefulset.updated_pods``  
+    - Yes 
 
   * - ``k8s.hpa.max_replicas``
     - Yes

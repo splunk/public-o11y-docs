@@ -75,6 +75,26 @@ Give your login service integration a name that your users recognize. On your cu
 this name appears in the button your users select to sign in. For example, use the name "Log in with Okta"
 for an Okta login service integration.
 
+.. _default-sso-role:
+
+.. raw:: html
+
+  <embed>
+    <h2>Set up default SSO role</h2>
+  </embed>
+
+
+When you set up SSO, the default role for a user signing in to Splunk Observability Cloud through SSO is the :guilabel:`power` role. You can change the default SSO role to any of the available roles in Splunk Observability Cloud. These are :guilabel:`admin`, :guilabel:`power`, :guilabel:`usage`, and :guilabel:`read_only`. To learn more about roles, see :ref:`roles-and-capabilities`. 
+
+.. note:: Changing the default SSO role affects only new SSO users. If a user already has an existing role defined by the previous default SSO role, you must change it manually. To change a user's role, see :ref:`assign-role-existing`.
+
+To change the default SSO role, do the following:
+
+1. Go to :guilabel:`Settings` then select :guilabel:`General Settings`.
+
+2. In the :guilabel:`User Management` section, set a default role for SSO login by selecting a role from the drop-down list. The drop-down list defaults to the :guilabel:`power` role. The role you select becomes the role of any new user logging in through an SSO service. You can return to :guilabel:`General Settings` and update the default role for SSO login at any time.
+
+
 .. _multiple-integrations-sso:
 
 .. raw:: html

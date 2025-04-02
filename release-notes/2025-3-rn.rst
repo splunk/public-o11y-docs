@@ -6,6 +6,34 @@ March 2025
 
 Splunk Observability Cloud released the following new features and enhancements in March 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
 
+
+.. _2025-3-25-rn:
+
+March 25, 2025 release
+=======================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - APM error based troubleshooting
+     - Quickly understand the root cause of an issue for a specific service without manually setting up index span tags, looking at other traces, or referring back to the service map. For more information, see :ref:`apm-service-view`.
+   * - APM service centric navigation and filtering
+     - Improves user navigation in Splunk APM for visualizing, navigating and filtering through services. Service Centric Views in Splunk APM is now more prominently featured on the landing page so users can quickly understand service health without additional click-downs in the product.
+   * - APM service map redesign
+     - Service Maps in Splunk APM help engineering teams to quickly identify error sources and latency in complex application environments. We’ve redesigned the service map in this release to make it easier for users to get a holistic view of a service in the context of the larger environment.
+   * - Synthetics excluded files
+     - We are excited to introduce the Excluded Files feature for users to have flexibility in configuring what file types their browser tests will exclude from loading on a page. By excluding certain file types, users can prevent skewed analytics due to third-party services and individually test performance of a page with or without certain resources. For more information, see :ref:`browser-adv-setting`.
+   * - Log Observer Connect search experience enhancements
+     - * We’re releasing a new “cancel search” functionality to help users gain more control over their log queries by cancelling a log search whenever one is active, allowing them to eliminate workflow inefficiencies and reduce their SVC consumption as well as resource waste. For more information, see :ref:`logs-keyword`.
+       * We have expanded automatic mapping of the severity key to include more key and value names. This ensures broader compatibility, including OpenTelemetry field names, and reduces the need for custom alias creation. For more information, see :ref:`logs-keyword`.
+       * We have added guidance in the UI to help you select the appropriate connection and indexes to sharpen the focus of your searches. For more information, see :ref:`severity-key`.
+   * - SSO default role
+     - When onboarding new Splunk Observability Cloud users, admins who aren’t able to enable Unified Identity can now select what the default role will be assigned to users in the Organization (Non-Enterprise Customers: Admin & Power; Enterprise Customers: Admin, Power, Read_Only, Usage) for more control on user’s scope and privileges. For more information, see :ref:`sso-label`.
+
 .. _2025-3-4-rn:
 
 March 4, 2025 release
