@@ -30,6 +30,11 @@ To set up Workload Identity Federation to authenticate Splunk Observability Clou
 
 #. Run the :new-page:`Workload Identity Federation Setup Script <https://github.com/signalfx/gcp_workload_identity_federation/blob/main/cli/README.md>` or use the :new-page:`Terraform Setup Module <https://github.com/signalfx/gcp_workload_identity_federation/blob/main/terraform/README.md>`.
 
+#. In a new window or tab, activate these two APIs so that Splunk Observability Cloud can validate permissions on WIF.
+
+   * :new-page:`Cloud Monitoring API <https://cloud.google.com/monitoring/api/v3>`
+   * :new-page:`Cloud Resource Manage API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com>`
+
 To learn more refer to GCP's :new-page:`Workload Identity Federation <https://cloud.google.com/iam/docs/workload-identity-federation>` documentation.
 
 Authenticate using Service Account Keys
@@ -53,7 +58,10 @@ To authenticate using your service account keys go to the GCP console and follow
 
 #. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer. You will need this key to authenticate in the :guilabel:`Import Service Account Key` step in Splunk Observability Cloud.
 
-#. In a new window or tab, go to :new-page:`Cloud Monitoring API <https://cloud.google.com/monitoring/api/v3>` and activate it. Splunk Observability Cloud uses this API to validate permissions on the service account keys.
+#. In a new window or tab, activate these two APIs so that Splunk Observability Cloud can validate permissions on the service account keys.
+
+   * :new-page:`Cloud Monitoring API <https://cloud.google.com/monitoring/api/v3>`
+   * :new-page:`Cloud Resource Manage API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com>`
 
 For more information, refer to GCP's docs on :new-page:`Service account keys <https://cloud.google.com/iam/docs/service-account-creds#key-types>`. 
 
