@@ -245,7 +245,7 @@ To resolve this issue, :ref:`install the .NET instrumentation using the NuGet pa
 
 Alternatively, you can update to the latest version of .NET, as this reduces the likelihood of dependency version conflicts.
 
-Fixing Assembly Permissions IIS - Grant Set Issue
+Fixing Assembly Permissions IIS
 ======================================
 
 When using the .NET Framework with an IIS-hosted application, you might encounter crashes with an event similar to the following:
