@@ -1,6 +1,6 @@
 .. _Jira-spoc:
 
-Jira webhook, service desk and URL integrations for Splunk On-Call
+Jira webhook, service desk, and URL integrations for Splunk On-Call
 **********************************************************************
 
 .. meta::
