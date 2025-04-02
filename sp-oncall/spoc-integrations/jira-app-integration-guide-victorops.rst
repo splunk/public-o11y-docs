@@ -6,14 +6,13 @@ Requirements
 
 * Jira Version Required: Jira Server 7.7.0 - 8.22.6, Jira Cloud
 * Splunk On-Call Version Required: Starter, Growth, or Enterprise
-* Global Admin privileges are required for the Splunk On-Call
-portion of the configuration.*
+* Global Admin privileges are required for the Splunk On-Call configuration.
 
 Configure in Splunk On-Call
 =====================================
 
 #. In Splunk On-Call, go to :guilabel:`Integrations` then :guilabel:`API`.
-#. Select :guilabel:`New Key*`. 
+#. Select :guilabel:`New Key`. 
 #. Give the key a description and copy the resulting API key and API ID.
 
 Install the Splunk On-Call Add-On in Jira
@@ -21,7 +20,7 @@ Install the Splunk On-Call Add-On in Jira
 
 #. Log in as a Jira administrator, then select Jira administration gear icon then :guilabel:`Manage apps` to go to the Atlassian Marketplace.
 #. In the sidebar, select :guilabel:`Find new apps` under the Atlassian Marketplace header.
-#. If you are on Jira Server, search for the app "Splunk On-Call for Jira Server." If you are on Jira Cloud, search for the app "VictorOps for Jira Cloud." After you've located the right app, select :guilabel:`Install`.
+#. If you are on Jira Server, search for the app "Splunk On-Call for Jira Server". If you are on Jira Cloud, search for the app "VictorOps for Jira Cloud". After you've located the right app, select :guilabel:`Install`.
 #. After installation completes, select :guilabel:`Configure`.
 
 Configuring application settings
@@ -29,7 +28,7 @@ Configuring application settings
 
 #. Insert the API key you generated in VictorOps into the :guilabel:`API Key` field under :guilabel:`Connect to your VictorOps Organization` on VictorOps for Jira Server Configuration page.
 #. In the :guilabel:`API ID` field in the same section, insert the API ID you coped in the preceding Configure Splunk On-Call step.
-#. Copy the Splunk On-Call org ID displayed in your VictorOps URL. The org ID is at the end of the URL you used to log in: `https://portal.victorops.com/client/<Org_ID>`. Paste the org ID in Jira's :guilabel:`Organization ID` field.
+#. Copy the Splunk On-Call org ID displayed in your VictorOps URL. The org ID is at the end of the URL you used to log in: ``https://portal.victorops.com/client/<Org_ID>``. Paste the org ID in Jira's :guilabel:`Organization ID` field.
 #. Select :guilabel:`Connect`.
 
 A new entry appears in the Connected VictorOps Organizations section with a green VALID flag.
@@ -64,6 +63,7 @@ Splunk On-Call incidents created for a project's Default Team Escalation Policy 
 If you want to disable such issue creation, deselect the :guilabel:`Allow issues to be created from incidents via the REST API` checkbox.
 
 .. image:: /_images/spoc/2jira.png
+   :width: 50%
 
 Jira state configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,6 +72,7 @@ Define state mapping to allows Jira issues to remain synchronized as incidents m
 
 .. image:: /_images/spoc/3jira.png
    :alt: 
+   :width: 50%
 
 Create a Splunk On-Call incident within Jira
 --------------------------------------------------
@@ -80,7 +81,7 @@ Splunk On-Call incidents can only be created from the Jira issue view.
 
 #. Select :guilabel:`More` then :guilabel:`Create VictorOps Incident`. 
 #. A preview of the Splunk On-Call incident card displays using the project's Default Team Escalation Policy. 
-#. (Optional) Select a different escalation policy from the :guilabe:`VictorOps Team Escalation Policy` dropdown menu. 
+#. (Optional) Select a different escalation policy from the :guilabel:`VictorOps Team Escalation Policy` dropdown menu. 
 #. (Optional) Use the :guilabel:`Additional Users` dropdown menu to include additional users for response. Adding users to an incident does not create a multi-responder incident in Splunk On-Call.
 #. Select :guilabel:`Create Incident` to generate a Splunk On-Call incident. A triggered Splunk On-Call incident card displays under the VictorOps section in the issue view.
 #. Select the :guilabel:`Incident Details` in the incident card to display the incident in Splunk On-Call in a new browser tab.
