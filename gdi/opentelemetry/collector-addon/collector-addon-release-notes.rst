@@ -27,7 +27,7 @@ Release Notes for the Splunk Add-On for the OpenTelemetry Collector
       - 
 
    *  - 1.4.0 
-      - November 7, 2024
+      - February 27, 2025
       - :new-page:`version 0.118 <https://github.com/signalfx/splunk-otel-collector/releases/tag/v0.118.0>`
       - * Linux: Adds support for discovery mode flags 
         * Linux: Fixes an issue affecting the setting of the gomemlimit environment variable 
