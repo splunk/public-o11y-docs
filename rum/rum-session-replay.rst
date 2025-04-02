@@ -12,7 +12,8 @@ Replay a session to take a look at exactly what a user experienced and make info
 
 
 Use cases
-===================
+======================================================================
+
 There are many reasons why you might want to replay sessions. Here are a few: 
 
 * Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend a long time investigating a variety of possible causes based on an incomplete description of the problem. 
@@ -21,18 +22,19 @@ There are many reasons why you might want to replay sessions. Here are a few:
 
 
 Prerequisite
-=================
+======================================================================
 
 Session replay is available for enterprise customers only. For more information on each type of subscription, see :new-page:`Splunk RUM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-rum>`.
 
 
 Set up session replay 
-=====================
-There are two ways to set up session replay: CDN or NPM. 
+======================================================================
 
-.. admonition:: Note
-    
+There are three ways to set up session replay: CDN, self-hosted, or NPM. 
+
+.. note::
     Initialize Splunk Browser RUM before you initialize the session recorder package. 
+
 
 This example shows the order in which to initialize the scripts:
 
@@ -71,30 +73,45 @@ Initialize this code snippet to set up session replay through Splunk CDN.
 
 
 
+Self-hosted
+--------------------------------------------
+
+#. Download the desired version of :new-page:`splunk-otel-web-session-recorder.js <https://github.com/signalfx/splunk-otel-js-web/releases/latest/download/splunk-otel-web-session-recorder.js>`.
+#. Deploy the file in a location accessible by the users of your application.
+#. Add the following session replay snippet after the ``SplunkRum.init`` snippet:
+
+   .. code-block:: javascript
+
+      <script src="<your-self-hosted-path>/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
+
+
+To avoid gaps in your data, load and initialize the Splunk JavaScript Agent asynchronously and as early as possible.
+
+
 NPM
 --------------------------------------------
 
-Use the following command to set up session replay with NPM through a package named ``@splunk/otel-web-session-recorder``.
+#. Use the following command to set up session replay with NPM through a package named ``@splunk/otel-web-session-recorder``.
 
+   .. code-block:: html
 
-.. code-block:: html
+      npm install @splunk/otel-web-session-recorder
 
-    npm install @splunk/otel-web-session-recorder
+#. Next, initialize this code snippet: 
 
-Next, initialize this code snippet: 
+   .. code-block:: html
 
-.. code-block:: html
+      import SplunkSessionRecorder from '@splunk/otel-web-session-recorder'
 
-    import SplunkSessionRecorder from '@splunk/otel-web-session-recorder'
-
-    SplunkSessionRecorder.init({
-        realm: '<realm>',
-        rumAccessToken: '<your_rum_token>'
-    });
+      SplunkSessionRecorder.init({
+          realm: '<realm>',
+          rumAccessToken: '<your_rum_token>'
+      });
 
 
 Deactivate session replay 
 --------------------------------------------
+
 To deactivate session replay you can either:
 
 * Turn it off for the particular session replay. 
@@ -102,7 +119,7 @@ To deactivate session replay you can either:
 
 
 Additional instrumentation settings
-------------------------------------
+--------------------------------------------
 
 For more information on configuration options, see :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#guide>` on GitHub. 
 

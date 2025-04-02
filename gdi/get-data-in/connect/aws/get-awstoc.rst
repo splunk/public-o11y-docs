@@ -111,8 +111,7 @@ You can deactivate this check by setting the ``enableCheckLargeVolume`` field in
     <h4>Tag filtering<a name="tag-filtering-aws" class="headerlink" href="#tag-filtering-aws" title="Permalink to this headline">¶</a></h4>
   </embed>
 
-If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease. Read more at :ref:`specify-data-metadata`.
-
+If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Observability Cloud might decrease. Read more at :ref:`specify-data-metadata`. 
 
 
 .. raw:: html
@@ -126,7 +125,7 @@ If you filter data based on tags, your costs for Amazon CloudWatch and Splunk In
    <div class="include-stop" id="gdi/aws-unsupported-chars.rst"></div>
 
 
-
+For more information on tagging see :ref:`aws-data-in-splunk`.
 
 .. raw:: html
 
