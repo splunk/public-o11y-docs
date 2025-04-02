@@ -12,7 +12,7 @@ Release Notes for the Splunk Add-On for the OpenTelemetry Collector
    :hidden:
 
 .. list-table::
-   :widths: 30 35 35
+   :widths: 20 20 20 40
    :header-rows: 1
    :width: 100%
 
