@@ -148,7 +148,7 @@ To manage the amount of data to import, see :ref:`aws-infra-import`.
 .. raw:: html
 
   <embed>
-    <h3>Recommended stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
+    <h3>Imported stats<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 By default Splunk Observability Cloud imports all stats from AWS.
