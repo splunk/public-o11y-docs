@@ -32,7 +32,7 @@ There are two ways to create a global variable:
 
 * Add a new global variable in the vault:
 
-    #. On the Splunk Synthetics landing page, select the settings icon, and then select :guilabel:`Global variables`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab.
+    #. On the Splunk Synthetics landing page, select the settings icon, and then select :guilabel:`Global variables`. The :guilabel:`Synthetics configuration` page opens onto its :guilabel:`Global variables` tab.
     #. Select :guilabel:`Create variable`. 
 
 * Add a new global variable while editing a test: 
