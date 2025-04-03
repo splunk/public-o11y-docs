@@ -33,7 +33,7 @@ There are two ways to create a global variable:
 * Add a new global variable in the vault:
 
     #. On the Splunk Synthetics landing page, select the settings icon, and then select :guilabel:`Global variables`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab.
-    #. Select :guilabel:`Create variable` to open the creation dialog box. 
+    #. Select :guilabel:`Create variable`. 
 
 * Add a new global variable while editing a test: 
 
@@ -43,7 +43,7 @@ There are two ways to create a global variable:
 
 When you're in the :guilabel:`Add variable` dialog box, enter the following:
 
-#. Select :guilabel:`Variable type` ``Environment``.
+#. Set :guilabel:`Variable type` to :guilabel:`Environment`.
 #. In the :guilabel:`env` field, enter the name of the variable. You will use this key to access your variable within a test.
 #. In the :guilabel:`value` field, enter the value that will replace the variable when the test is run.
 #. (Optional) In the :guilabel:`Description` field, enter a description to explain the purpose of the variable for future reference. A description is particularly helpful when you conceal the variable and cannot reveal its value. 
