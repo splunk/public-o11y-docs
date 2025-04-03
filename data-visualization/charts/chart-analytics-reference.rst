@@ -49,7 +49,7 @@ Use the following list to learn more about each SignalFlow analytics method, inc
 Absolute Value
 ========================
 
-SignalFlow function: :new-page:`abs() <https://dev.splunk.com/observability/docs/signalflow/methods/abs_stream_method/>`
+SignalFlow method: :new-page:`abs() <https://dev.splunk.com/observability/docs/signalflow/methods/abs_stream_method/>`
 
 Returns the absolute value of a data point. The absolute value of a number is the number without the sign.
 
@@ -58,7 +58,7 @@ Returns the absolute value of a data point. The absolute value of a number is th
 Ceiling
 =============================================================================
 
-SignalFlow function: :new-page:`ceil() <https://dev.splunk.com/observability/docs/signalflow/methods/ceil_stream_method/>`
+SignalFlow method: :new-page:`ceil() <https://dev.splunk.com/observability/docs/signalflow/methods/ceil_stream_method/>`
 
 Rounds a data point up to the largest (closest to positive infinity) floating-point value that is less than or equal to the argument and is equal to a mathematical integer.
 
@@ -67,35 +67,35 @@ Rounds a data point up to the largest (closest to positive infinity) floating-po
 Count
 =============================================================================
 
-SignalFlow function: :new-page:`count() <https://dev.splunk.com/observability/docs/signalflow/methods/count_event_stream_method/>`
+SignalFlow method: :new-page:`count() <https://dev.splunk.com/observability/docs/signalflow/methods/count_event_stream_method/>`
 
 Counts the number of time series that have values, including extrapolated data points. :strong:`Count` is typically used to determine if data points are missing for whatever reason.
 
 In the following example :strong:`Count` returns the amount of input time series which reported a data point within the time interval.
 
 .. image:: /_images/data-visualization/charts/analytics-reference/fig1.png
-   :alt: Sample results of the Count function. 
+   :alt: Sample results of the Count method. 
 
 .. _delta:
 
 Delta
 =============================================================================
 
-SignalFlow function: :new-page:`delta() <https://dev.splunk.com/observability/docs/signalflow/methods/delta_stream_method/>`
+SignalFlow method: :new-page:`delta() <https://dev.splunk.com/observability/docs/signalflow/methods/delta_stream_method/>`
 
 Calculates the difference between the current value and the previous value for each time interval. :strong:`Delta` operates independently on each time series in the plot.
 
 In the following example, :strong:`Delta` returns the difference between two time series for each time interval.
 
 .. image:: /_images/data-visualization/charts/analytics-reference/fig2.png	
-   :alt: Sample results of the Delta function.
+   :alt: Sample results of the Delta method.
 
 .. _ewma:
 
 EWMA and Double EWMA
 =============================================================================
 
-SignalFlow functions: :new-page:`ewma() <https://dev.splunk.com/observability/docs/signalflow/methods/ewma_stream_method>` and :new-page:`double_ewma() <https://dev.splunk.com/observability/docs/signalflow/methods/double_ewma_stream_method>`
+SignalFlow methods: :new-page:`ewma() <https://dev.splunk.com/observability/docs/signalflow/methods/ewma_stream_method>` and :new-page:`double_ewma() <https://dev.splunk.com/observability/docs/signalflow/methods/double_ewma_stream_method>`
 
 Calculates an exponentially weighted moving average (EWMA), where more recent data points are given higher weight. The weight of a data point decreases exponentially with time.
 
@@ -131,18 +131,18 @@ Use the following parameters with :strong:`EWMA` and :strong:`Double EWMA`.
 Exclude
 =============================================================================
 
-SignalFlow functions: :new-page:`above() <https://dev.splunk.com/observability/docs/signalflow/methods/above_stream_method/>`, :new-page:`below() <https://dev.splunk.com/observability/docs/signalflow/methods/below_stream_method/>`, :new-page:`between() <https://dev.splunk.com/observability/docs/signalflow/methods/between_stream_method/>`, :new-page:`not_between() <https://dev.splunk.com/observability/docs/signalflow/methods/not_between_stream_method/>`
+SignalFlow methods: :new-page:`above() <https://dev.splunk.com/observability/docs/signalflow/methods/above_stream_method/>`, :new-page:`below() <https://dev.splunk.com/observability/docs/signalflow/methods/below_stream_method/>`, :new-page:`between() <https://dev.splunk.com/observability/docs/signalflow/methods/between_stream_method/>`, :new-page:`not_between() <https://dev.splunk.com/observability/docs/signalflow/methods/not_between_stream_method/>`
 
-Restricts the data to be analyzed by filtering out values above or below given thresholds. You can choose whether to include the threshold values themselves. If a time series value meets the criteria set in the function, you can choose to :strong:`Drop excluded points` or :strong:`Set excluded values to their corresponding limit`.
+Restricts the data to be analyzed by filtering out values above or below given thresholds. You can choose whether to include the threshold values themselves. If a time series value meets the criteria set in the method, you can choose to :strong:`Drop excluded points` or :strong:`Set excluded values to their corresponding limit`.
 
-:strong:`Exclude` can be useful in situations where you want to apply a condition to another analytics function. For example, if you want to count the number of servers with a CPU utilization above 80%, then you can use ``CPUUtilization`` as the metric, apply an ``Exclude x < 80`` function, and then apply :ref:`Count <count>`.
+:strong:`Exclude` can be useful in situations where you want to apply a condition to another analytics method. For example, if you want to count the number of servers with a CPU utilization above 80%, then you can use ``CPUUtilization`` as the metric, apply ``Exclude x < 80``, and then apply :ref:`Count <count>`.
 
 .. _floor:
 
 Floor
 =============================================================================
 
-SignalFlow function: :new-page:`floor() <https://dev.splunk.com/observability/docs/signalflow/methods/floor_stream_method>`
+SignalFlow method: :new-page:`floor() <https://dev.splunk.com/observability/docs/signalflow/methods/floor_stream_method>`
 
 Rounds a data point down to the smallest (closest to negative infinity) floating-point value that is greater than or equal to the argument and is equal to a mathematical integer.
 
@@ -151,25 +151,25 @@ Rounds a data point down to the smallest (closest to negative infinity) floating
 Integrate
 =============================================================================
 
-SignalFlow function: :new-page:`integrate() <https://dev.splunk.com/observability/docs/signalflow/methods/integrate_stream_method>`
+SignalFlow method: :new-page:`integrate() <https://dev.splunk.com/observability/docs/signalflow/methods/integrate_stream_method>`
 
 Multiplies the values of each input time series by the resolution (in seconds) of the chart. :strong:`Integrate` is most useful for gauge metrics. 
 
 In the following example, :strong:`Integrate` calculates the change in velocity over a window of time.
 
 .. image:: /_images/data-visualization/charts/analytics-reference/fig3.png
-   :alt: Sample results of the Integrate function.
+   :alt: Sample results of the Integrate method.
 
 |br|
 
-For counters and cumulative counters, :strong:`Integrate` is less useful because a built-in :ref:`rollups` with equivalent functionality already exists. For counters, applying an :strong:`Integrate` function to the :strong:`Rate/sec` (rate per second) rollup is equivalent to using the :strong:`Sum` rollup, assuming no missing data points. The same applies to the :strong:`Delta` rollup for cumulative counters.
+For counters and cumulative counters, :strong:`Integrate` is less useful because a built-in :ref:`rollups` with equivalent functionality already exists. For counters, applying an :strong:`Integrate` method to the :strong:`Rate/sec` (rate per second) rollup is equivalent to using the :strong:`Sum` rollup, assuming no missing data points. The same applies to the :strong:`Delta` rollup for cumulative counters.
 
 .. _logn:
 
 LN or Log natural
 =============================================================================
 
-SignalFlow function: :new-page:`log() <https://dev.splunk.com/observability/docs/signalflow/methods/log_stream_method>`
+SignalFlow method: :new-page:`log() <https://dev.splunk.com/observability/docs/signalflow/methods/log_stream_method>`
 
 :strong:`LN` calculates the natural logarithm (log\ :sub:`e`\ ) of each data point value. For each input time series, :strong:`LN` generates a corresponding output time series.
 
@@ -178,7 +178,7 @@ SignalFlow function: :new-page:`log() <https://dev.splunk.com/observability/docs
 Log10
 =============================================================================
 
-SignalFlow function: :new-page:`log10() <https://dev.splunk.com/observability/docs/signalflow/methods/log10_stream_method>`
+SignalFlow method: :new-page:`log10() <https://dev.splunk.com/observability/docs/signalflow/methods/log10_stream_method>`
 
 Calculates the common logarithm (log\ :sub:`10`\ ) of each data point. For each input time series, :strong:`Log10` generates a corresponding output time series.
 
@@ -187,7 +187,7 @@ Calculates the common logarithm (log\ :sub:`10`\ ) of each data point. For each 
 Mean
 =============================================================================
 
-SignalFlow function: :new-page:`mean() <https://dev.splunk.com/observability/docs/signalflow/methods/mean_stream_method>`
+SignalFlow method: :new-page:`mean() <https://dev.splunk.com/observability/docs/signalflow/methods/mean_stream_method>`
 
 Calculates the arithmetic average or mean of the available data points by dividing the sum of the values of the available data points by the number of available data points.
 
@@ -203,7 +203,7 @@ You can choose to either aggregate or transform the values of :strong:`Mean`.
   The following example shows the averaged time series of a group of three time series.
 
   .. image:: /_images/data-visualization/charts/analytics-reference/fig4.png
-     :alt: Sample results of the Mean:Aggregation function.
+     :alt: Sample results of the Mean:Aggregation method.
 
   |br|
 
@@ -214,27 +214,27 @@ You can choose to either aggregate or transform the values of :strong:`Mean`.
   The following example shows a moving average calculated over a time window of 10 seconds.
 
   .. image:: /_images/data-visualization/charts/analytics-reference/fig5.png
-      :alt: Sample results of the Mean:Transformation function over a time window of 10 seconds.
+      :alt: Sample results of the Mean:Transformation method over a time window of 10 seconds.
 
   |br|
 
-  The :strong:`Mean` function also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
+  The :strong:`Mean` method also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _mean-plus-stddev:
 
 Mean + Standard Deviation
 =============================================================================
 
-SignalFlow function: :new-page:`mean_plus_stddev() <https://dev.splunk.com/observability/docs/signalflow/methods/mean_plus_stddev_stream_method>`
+SignalFlow method: :new-page:`mean_plus_stddev() <https://dev.splunk.com/observability/docs/signalflow/methods/mean_plus_stddev_stream_method>`
 
-Applies the formula μ+n*σ, where μ is the mean, σ is the standard deviation, and n is a given number of standard deviations to add (or subtract, for negative numbers) from the mean. The default number of standard deviations is 1. The aggregation and transformation modes work in the same manner as for the independent mean and standard deviation functions.
+Applies the formula μ+n*σ, where μ is the mean, σ is the standard deviation, and n is a given number of standard deviations to add (or subtract, for negative numbers) from the mean. The default number of standard deviations is 1. The aggregation and transformation modes work in the same manner as for the independent mean and standard deviation methods.
 
 .. _min-max:
 
 Minimum / Maximum
 =============================================================================
 
-SignalFlow functions: :new-page:`min() <https://dev.splunk.com/observability/docs/signalflow/methods/min_stream_method/>`, :new-page:`max() <https://dev.splunk.com/observability/docs/signalflow/methods/max_stream_method/>`
+SignalFlow methods: :new-page:`min() <https://dev.splunk.com/observability/docs/signalflow/methods/min_stream_method/>`, :new-page:`max() <https://dev.splunk.com/observability/docs/signalflow/methods/max_stream_method/>`
 
 Returns either the smallest (:strong:`Minimum`) or the largest (:strong:`Maximum`) value seen in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a time window (transformation).
 
@@ -245,7 +245,7 @@ Returns either the smallest (:strong:`Minimum`) or the largest (:strong:`Maximum
   The following example shows the aggregated minimum and maximum for three time series.
 
   .. image:: /_images/data-visualization/charts/analytics-reference/fig6.png
-     :alt: Sample results of the Minimum and Maximum Aggregation functions.
+     :alt: Sample results of the Minimum and Maximum Aggregation methods.
   
 |br|
 
@@ -256,18 +256,18 @@ Returns either the smallest (:strong:`Minimum`) or the largest (:strong:`Maximum
   The following example shows the minimum and maximum over a time window of 10 seconds.
 
   .. image:: /_images/data-visualization/charts/analytics-reference/fig7.png
-     :alt: Sample results of the Minimum and Maximum Transformation functions over a time window of 10 seconds.
+     :alt: Sample results of the Minimum and Maximum Transformation methods over a time window of 10 seconds.
 
 |br|
 
-  The :strong:`Minimum` and :strong:`Maximum` functions also support transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
+  The :strong:`Minimum` and :strong:`Maximum` methods also support transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _percentile:
 
 Percentile
 =============================================================================
 
-SignalFlow function: :new-page:`percentile() <https://dev.splunk.com/observability/docs/signalflow/methods/percentile_stream_method>`
+SignalFlow method: :new-page:`percentile() <https://dev.splunk.com/observability/docs/signalflow/methods/percentile_stream_method>`
 
 Finds the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
 
@@ -283,14 +283,14 @@ Finds the specified percentile of values in data points collected either from mu
 
   For example, by requesting the 95th percentile of the past hour of an MTS with a 10s resolution (assuming no rollup), you get the 18th largest value from the past hour. In this example, out of the 360 data points from the past hour, approximately 95% of the values are lower than the returned percentile and approximately 5% are higher.
 
-The :strong:`Percentile` function also supports transformation over a dashboard window instead of a moving window. For more information, see :ref:`dashboard-window`.
+The :strong:`Percentile` method also supports transformation over a dashboard window instead of a moving window. For more information, see :ref:`dashboard-window`.
 
 .. _power:
 
 Power
 =============================================================================
 
-SignalFlow function: :new-page:`pow() <https://dev.splunk.com/observability/docs/signalflow/methods/pow_stream_method>` 
+SignalFlow method: :new-page:`pow() <https://dev.splunk.com/observability/docs/signalflow/methods/pow_stream_method>` 
 
 Raises the value of each data point to a specified power, or a specified number to the power of the data point value.
 
@@ -299,7 +299,7 @@ Raises the value of each data point to a specified power, or a specified number 
 Rate of Change
 =============================================================================
 
-SignalFlow function: :new-page:`rateofchange() <https://dev.splunk.com/observability/docs/signalflow/methods/rateofchange_stream_method>`
+SignalFlow method: :new-page:`rateofchange() <https://dev.splunk.com/observability/docs/signalflow/methods/rateofchange_stream_method>`
 
 Calculates the difference between the current value and the previous value for each time interval, then divides the result by the length, in seconds, of that time interval.
 
@@ -308,14 +308,14 @@ Similar to :ref:`Delta<delta>`, except that it divides the difference by the tim
 The following example shows the rate of change over time for a time series.
 
 .. image:: /_images/data-visualization/charts/analytics-reference/fig8.png
-   :alt: Sample results of the Rate of change function.
+   :alt: Sample results of the Rate of change method.
 
 .. _scale:
 
 Scale
 =============================================================================
 
-SignalFlow function: :new-page:`scale() <https://dev.splunk.com/observability/docs/signalflow/methods/scale_stream_method>`
+SignalFlow method: :new-page:`scale() <https://dev.splunk.com/observability/docs/signalflow/methods/scale_stream_method>`
 
 Multiplies each data point by a specified number. 
 
@@ -326,7 +326,7 @@ Multiplies each data point by a specified number.
 Square Root
 =============================================================================
 
-SignalFlow function: :new-page:`sqrt() <https://dev.splunk.com/observability/docs/signalflow/methods/sqrt_stream_method>`
+SignalFlow method: :new-page:`sqrt() <https://dev.splunk.com/observability/docs/signalflow/methods/sqrt_stream_method>`
 
 Calculates the square root of the data point values.
 
@@ -335,7 +335,7 @@ Calculates the square root of the data point values.
 Standard Deviation
 =============================================================================
 
-SignalFlow function: :new-page:`stddev() <https://dev.splunk.com/observability/docs/signalflow/methods/stddev_stream_method>`
+SignalFlow method: :new-page:`stddev() <https://dev.splunk.com/observability/docs/signalflow/methods/stddev_stream_method>`
 
 The standard deviation (σ) is the square root of the variance. See :ref:`Variance<variance>` for how the variance is calculated for both aggregation and transformation modes.
 
@@ -344,7 +344,7 @@ The standard deviation (σ) is the square root of the variance. See :ref:`Varian
 Sum
 =============================================================================
 
-SignalFlow function: :new-page:`sum() <https://dev.splunk.com/observability/docs/signalflow/methods/sum_stream_method>`
+SignalFlow method: :new-page:`sum() <https://dev.splunk.com/observability/docs/signalflow/methods/sum_stream_method>`
 
 Adds up all the values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a time window (transformation).
 
@@ -361,18 +361,18 @@ Adds up all the values in data points collected either from multiple time series
   The following example shows both aggregation and transformation sums over a time window of 10 seconds.
 
   .. image:: /_images/data-visualization/charts/analytics-reference/fig9.png
-     :alt: Sample results of the Sum Aggregation and Transformation functions over a time window of 10 seconds.
+     :alt: Sample results of the Sum Aggregation and Transformation methods over a time window of 10 seconds.
 
 |br|
 
-The :strong:`Sum` function also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
+The :strong:`Sum` method also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _timeshift:
 
 Timeshift
 =============================================================================
 
-SignalFlow function: :new-page:`timeshift() <https://dev.splunk.com/observability/docs/signalflow/methods/timeshift_stream_method>`
+SignalFlow method: :new-page:`timeshift() <https://dev.splunk.com/observability/docs/signalflow/methods/timeshift_stream_method>`
 
 Retrieves data from a previous point in time, offset by a specified time period (for example, one week), to enable comparison of a time series with its own past trends.
 
@@ -382,14 +382,14 @@ For example, a time shift of one day fetches data for time series from one day i
 
 The offset value can specified in weeks(w), days(d), hours(h), minutes(m), and seconds(s). The offset value is always assumed to be towards the past, and must be zero or positive. To specify an offset of two weeks and two hours, enter an offset value of 2w2h.
 
-.. note:: The offset value must be greater than or equal to the minimum resolution of the data used in the current chart. For example, if you set a time shift of 30 seconds, but the resolution of your chart is five minutes, the function will be invalid.
+.. note:: The offset value must be greater than or equal to the minimum resolution of the data used in the current chart. For example, if you set a time shift of 30 seconds, but the resolution of your chart is five minutes, the method will be invalid.
 
 .. _top-bottom:
 
 Top and Bottom
 =============================================================================
 
-SignalFlow functions: :new-page:`top() <https://dev.splunk.com/observability/docs/signalflow/methods/top_stream_method>`, :new-page:`bottom() <https://dev.splunk.com/observability/docs/signalflow/methods/bottom_stream_method>`
+SignalFlow methods: :new-page:`top() <https://dev.splunk.com/observability/docs/signalflow/methods/top_stream_method>`, :new-page:`bottom() <https://dev.splunk.com/observability/docs/signalflow/methods/bottom_stream_method>`
 
 Can be used to select a subset of the time series in the plot.
 
@@ -408,7 +408,7 @@ A line chart using :strong:`Top` or :strong:`Bottom` shows all series that were 
 Variance
 =============================================================================
 
-SignalFlow function: :new-page:`variance() <https://dev.splunk.com/observability/docs/signalflow/methods/variance_stream_method>`
+SignalFlow method: :new-page:`variance() <https://dev.splunk.com/observability/docs/signalflow/methods/variance_stream_method>`
 
 The variance measures how far a set of values is spread out. :strong:`Variance` is calculated by dividing the sum of the squares of the difference of each value to their mean by the number of available data points.
 
