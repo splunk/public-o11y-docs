@@ -2,7 +2,7 @@
 
 You can collect metrics and metadata out-of-the-box from the AWS services listed on this page. 
 
-.. note:: You can also collect data from any custom service you've created in AWS, or from any namespace defined by AWS that Splunk Observability Cloud doesn't support by default and is not on this list. You can select which custom services to monitor at the Splunk Observability Cloud UI or :new-page:`configure them using the API <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview#Specify-AWS-namespaces>`.
+You can also collect data from any custom service you've created in AWS, or from any namespace defined by AWS that Splunk Observability Cloud doesn't support by default and is not on this list. You can select which custom services to monitor at the Splunk Observability Cloud UI or :new-page:`configure them using the API <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview#Specify-AWS-namespaces>`.
 
 .. list-table::
   :header-rows: 1
