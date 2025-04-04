@@ -414,16 +414,17 @@ To deploy the .NET agent in Kubernetes, follow these steps:
    Refer to :ref:`otel-dotnet-nuget-pkg`.
 
 #. Modify the Entrypoint to adjust it to call the appropriate script based on your operating system:
-   For Linux:
+   
+   **For Linux:**
 
    .. code-block:: powershell
 
    splunk-launch.sh dotnet <application>.
 
-   For Windows:
+   **For Windows:**
 
    .. code-block:: powershell
-      
+
    splunk-launch.cmd dotnet <application>.   
 
 #. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
@@ -453,7 +454,6 @@ To deploy the .NET agent in Kubernetes, follow these steps:
                   value: "deployment.environment=<environmentName>"
 
 .. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`k8s-backend-auto-discovery` for more information.
-
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Splunk Observability Cloud
