@@ -453,11 +453,11 @@ To deploy the .NET agent in Kubernetes, follow these steps:
                         fieldRef:
                            fieldPath: status.hostIP
                   - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                  value: "http://$(SPLUNK_OTEL_AGENT):4318"
+                     value: "http://$(SPLUNK_OTEL_AGENT):4318"
                   - name: OTEL_SERVICE_NAME
-                  value: "<serviceName>"
+                     value: "<serviceName>"
                   - name: OTEL_RESOURCE_ATTRIBUTES
-                  value: "deployment.environment=<environmentName>"
+                     value: "deployment.environment=<environmentName>"
 
 .. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`k8s-backend-auto-discovery` for more information.
 .. _export-directly-to-olly-cloud-dotnet-otel:
