@@ -436,28 +436,28 @@ To deploy the .NET agent in Kubernetes, follow these steps:
 #. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
    .. code-block:: yaml
-      
-apiVersion: apps/v1
-kind: Deployment
-spec:
-  selector:
-    matchLabels:
-      app: your-application
-  template:
-    spec:
-      containers:
-        - name: myapp
-          env:
-            - name: SPLUNK_OTEL_AGENT
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.hostIP
-            - name: OTEL_EXPORTER_OTLP_ENDPOINT
-              value: "http://$(SPLUNK_OTEL_AGENT):4318"
-            - name: OTEL_SERVICE_NAME
-              value: "<serviceName>"
-            - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "deployment.environment=<environmentName>"
+
+   apiVersion: apps/v1
+   kind: Deployment
+   spec:
+      selector:
+         matchLabels:
+            app: your-application
+      template:
+         spec:
+            containers:
+               - name: myapp
+                 env:
+                  - name: SPLUNK_OTEL_AGENT
+                     valueFrom:
+                       fieldRef:
+                          fieldPath: status.hostIP
+                  - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                    value: "http://$(SPLUNK_OTEL_AGENT):4318"
+                  - name: OTEL_SERVICE_NAME
+                    value: "<serviceName>"
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                    value: "deployment.environment=<environmentName>"
 
 .. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`k8s-backend-auto-discovery` for more information.
 .. _export-directly-to-olly-cloud-dotnet-otel:
