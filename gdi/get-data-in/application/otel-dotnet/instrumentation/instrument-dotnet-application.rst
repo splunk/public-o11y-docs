@@ -436,6 +436,7 @@ To deploy the .NET agent in Kubernetes, follow these steps:
 #. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
    .. code-block:: yaml
+      
       apiVersion: apps/v1
       kind: Deployment
       spec:
