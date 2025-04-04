@@ -410,7 +410,7 @@ Deploy the .NET agent in Kubernetes
 
 To deploy the .NET agent in Kubernetes, follow these steps:
 
-#. Create a Docker image useing the instructions for creating a NuGet package for Linux or Windows. 
+#. Build a Docker image by following the instructions for configuring instrumentation with the NuGet package for Linux or Windows. 
    Refer to :ref:`otel-dotnet-nuget-pkg`.
 
 #. Modify the Entrypoint to adjust it to call the appropriate script based on your operating system:
@@ -440,18 +440,18 @@ To deploy the .NET agent in Kubernetes, follow these steps:
       apiVersion: apps/v1
       kind: Deployment
       spec:
-      selector:
-         matchLabels:
-            app: your-application
-      template:
-         spec:
-            containers:
-            - name: myapp
-               env:
+         selector:
+            matchLabels:
+               app: your-application
+         template:
+            spec:
+               containers:
+               - name: myapp
+                  env:
                   - name: SPLUNK_OTEL_AGENT
-                  valueFrom:
-                     fieldRef:
-                        fieldPath: status.hostIP
+                     valueFrom:
+                        fieldRef:
+                           fieldPath: status.hostIP
                   - name: OTEL_EXPORTER_OTLP_ENDPOINT
                   value: "http://$(SPLUNK_OTEL_AGENT):4318"
                   - name: OTEL_SERVICE_NAME
