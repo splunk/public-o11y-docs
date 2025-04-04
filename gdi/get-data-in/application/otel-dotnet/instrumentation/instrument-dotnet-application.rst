@@ -415,14 +415,17 @@ Refer to :ref:`otel-dotnet-nuget-pkg`.
 
 #. Modify the Entrypoint to adjust it to call the appropriate script based on your operating system:
 For Linux:
+
 .. code-block:: powershell
    splunk-launch.sh dotnet <application>.
+
 For Windows:
+
 .. code-block:: powershell
    splunk-launch.cmd dotnet <application>.   
 
-#. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. 
-The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
+#. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
+
 .. code-block:: yaml
 
       apiVersion: apps/v1
