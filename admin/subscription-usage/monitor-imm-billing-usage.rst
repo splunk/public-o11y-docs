@@ -87,7 +87,7 @@ View and download usage reports
 
 Go to :menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` to see a chart showing your current usage numbers for hosts, containers, and custom metrics. Below the chart, you might see additional charts representing usage trends that you can customize to show different data or different time periods.
 
-In :guilabel:`View detailed usage reports`, select the :guilabel:`Usage` or :guilabel:`Usage Breakdown` tabs to download available reports as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
+Under the :guilabel:`Current Usage` chart, select :guilabel:`Usage Reports` to view the :guilabel:`Usage` or :guilabel:`Usage Breakdown` tabs to download available reports as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report. 
 
 If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics you monitor with Infrastructure Monitoring, older reports on the :guilabel:`Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
 
