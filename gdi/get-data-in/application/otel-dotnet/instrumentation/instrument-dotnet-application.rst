@@ -411,22 +411,24 @@ Deploy the .NET agent in Kubernetes
 To deploy the .NET agent in Kubernetes, follow these steps:
 
 #. Create a Docker image useing the instructions for creating a NuGet package for Linux or Windows. 
-Refer to :ref:`otel-dotnet-nuget-pkg`.
+   Refer to :ref:`otel-dotnet-nuget-pkg`.
 
 #. Modify the Entrypoint to adjust it to call the appropriate script based on your operating system:
-For Linux:
+   For Linux:
 
-.. code-block:: powershell
+   .. code-block:: powershell
+
    splunk-launch.sh dotnet <application>.
 
-For Windows:
+   For Windows:
 
-.. code-block:: powershell
+   .. code-block:: powershell
+      
    splunk-launch.cmd dotnet <application>.   
 
 #. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
-.. code-block:: yaml
+   .. code-block:: yaml
 
       apiVersion: apps/v1
       kind: Deployment
