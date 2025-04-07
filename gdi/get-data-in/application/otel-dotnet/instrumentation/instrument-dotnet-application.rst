@@ -405,10 +405,10 @@ To install the .NET zero-code instrumentation on Windows hosts that are offline,
       Install-OpenTelemetryCore -LocalPath "C:\Users\Administrator\Downloads\splunk-opentelemetry-dotnet-windows.zip"
 
 
-Deploy the .NET agent in Kubernetes
-====================================================================
+Deploy the .NET zero-code instrumentation in Kubernetes
+----------------------------------------------
 
-To deploy the .NET agent in Kubernetes, follow these steps:
+To deploy the .NET zero-code instrumentation in Kubernetes, follow these steps:
 
 #. Build a Docker image by following the instructions for configuring instrumentation with the NuGet package for Linux or Windows. 
    Refer to :ref:`otel-dotnet-nuget-pkg`.
@@ -417,13 +417,13 @@ To deploy the .NET agent in Kubernetes, follow these steps:
 
    **For Linux:**
 
-   .. code-block:: docker
+   .. code-block:: shell
 
    splunk-launch.sh dotnet <application>.
 
    **For Windows:**
 
-   .. code-block:: docker
+   .. code-block:: powershell
 
    splunk-launch.cmd dotnet <application>.   
 
