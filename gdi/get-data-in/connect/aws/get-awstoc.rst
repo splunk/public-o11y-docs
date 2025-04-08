@@ -141,7 +141,7 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
     <h2>Imported data<a name="aws-imported-data" class="headerlink" href="#aws-imported-data" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>` for a complete list of the services supported by default. 
+By default Splunk Observability Cloud brings in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>` for a complete list of the services supported by default. 
 
 To manage the amount of data to import, see :ref:`aws-infra-import`.  
 
@@ -155,9 +155,9 @@ You can also collect data from any custom service you've created in AWS, or from
 
     <h3>Imported stats<a name="aws-recstats" class="headerlink" href="#aws-recstats" title="Permalink to this headline">¶</a></h3>
 
-By default Splunk Observability Cloud imports all stats from AWS.
+If you connect your AWS services using the UI, Splunk Observability Cloud brings in 5 default stats per service: SampleCount (``count`` in Splunk Observability Cloud), Average (``mean``), Sum (``sum``), Minimum (``lower``), and Maximum (``upper``).
 
-If you're polling data you can also choose to import certain stats only. These stats are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
+If you connect your services :new-page:`using the API <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview#Specify-AWS-statistics>` you can choose to import certain stats only. These stats are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
 
 .. _aws-data-availability:
 
