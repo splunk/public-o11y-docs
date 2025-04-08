@@ -141,27 +141,23 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
     <h2>Imported data<a name="aws-imported-data" class="headerlink" href="#aws-imported-data" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>` for a complete list of the services supported by default. 
+By default Splunk Observability Cloud brings in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>` for a complete list of the services supported by default. 
 
 To manage the amount of data to import, see :ref:`aws-infra-import`.  
 
 .. raw:: html
 
-  <embed>
     <h3>Custom services<a name="aws-custom-services" class="headerlink" href="#aws-custom-services" title="Permalink to this headline">¶</a></h3>
-  </embed>
 
 You can also collect data from any custom service you've created in AWS, or from any namespace defined by AWS that Splunk Observability Cloud doesn't support by default. You can select which custom services to monitor at the Splunk Observability Cloud UI or :new-page:`configure them using the API <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview#Specify-AWS-namespaces>`.
 
 .. raw:: html
 
-  <embed>
-    <h3>Recommended stats<a name="aws-recstats" class="headerlink" href="#aws-recstats" title="Permalink to this headline">¶</a></h3>
-  </embed>
+    <h3>Imported stats<a name="aws-recstats" class="headerlink" href="#aws-recstats" title="Permalink to this headline">¶</a></h3>
 
-If you're polling data, by default Splunk Observability Cloud only imports certain stats, which are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
+If you connect your AWS services using the UI, Splunk Observability Cloud brings in 5 default stats per service: SampleCount (``count`` in Splunk Observability Cloud), Average (``mean``), Sum (``sum``), Minimum (``lower``), and Maximum (``upper``).
 
-If you're using Metric Streams, by default Splunk Observability Cloud streams all stats.
+If you connect your services :new-page:`using the API <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview#Specify-AWS-statistics>` you can choose to import certain stats only. These stats are based on AWS' own recommended stats and vary with each service. See the :ref:`list of recommended stats <aws-recommended-stats>` used by Splunk Observability Cloud.
 
 .. _aws-data-availability:
 
