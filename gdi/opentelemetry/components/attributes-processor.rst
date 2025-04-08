@@ -143,19 +143,18 @@ The following example shows how to remove a token attribute, hash an email, and 
 
 .. code-block:: yaml
 
-
-   attributes/log_body_regexp:
-     include:    
-       match_type: regexp
-         log_bodies: ["AUTH.*"]
-       actions:
-         - key: password
-           action: update
-           value: "Redacted"
-         - key: apitoken
-           action: delete
-         - key: email
-           action: hash
+  attributes/log_body_regexp:
+    include:    
+      match_type: regexp
+        log_bodies: ["AUTH.*"]
+    actions:
+      - key: password
+        action: update
+        value: "Redacted"
+      - key: apitoken
+        action: delete
+      - key: email
+        action: hash
 
 Create a new attribute based on the value of another
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -164,14 +163,13 @@ The following example shows how to create a new attribute based on the value of 
 
 .. code-block:: yaml
 
-
-   attributes/createattributes:
-     actions:
-         # Creates four new attributes (defined in pattern) from the
-         # value of the http.url attribute
-       - key: "http.url"
-           pattern: ^(?P<http_protocol>.*):\\/\\/(?P<http_domain>.*)\\/(?P<http_path>.*)(\\?|\\&)(?P<http_query_params>.*)
-           action: extract
+  attributes/createattributes:
+    actions:
+    # Creates four new attributes (defined in pattern) from the
+    # value of the http.url attribute
+      - key: "http.url"
+        pattern: ^(?P<http_protocol>.*):\\/\\/(?P<http_domain>.*)\\/(?P<http_path>.*)(\\?|\\&)(?P<http_query_params>.*)
+        action: extract
 
 Backfill spans that are missing an attribute
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
