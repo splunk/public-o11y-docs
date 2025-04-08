@@ -80,7 +80,7 @@ Self-hosted
 #. Deploy the file in a location accessible by the users of your application.
 #. Add the following session replay snippet after the ``SplunkRum.init`` snippet:
 
-   .. code-block:: javascript
+   .. code-block:: html
 
       <script src="<your-self-hosted-path>/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
 
