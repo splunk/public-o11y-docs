@@ -110,8 +110,6 @@ Use the check box options in the guided setup to limit the scope of your data co
 * Select which :ref:`AWS regions <aws-regions>` to fetch data from.
 * Select which AWS services to fetch data from.
 
-.. note:: You can also choose to import recommended stats only. Learn more at :ref:`aws-recommended-stats`.
-
 To limit data collection, you can also:
 
 - Manage the amount of data to import. See :ref:`aws-infra-import`.  
