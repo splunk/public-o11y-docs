@@ -43,6 +43,15 @@ How to schedule a downtime configuration:
 
 When a recurring downtime configuration is active, you can't edit, delete, or extend it, but you can end it immediately. When a non-recurring downtime configuration is active, you can't edit or delete it, but you can extend its duration or end it immediately.
 
+.. comment: Update the documentation to state:
+
+   After the first run of a recurring downtime config, it cannot be edited or extended, regardless of its current status.
+
+   Only deletion and manual ending are allowed after the first execution.
+
+   UI may still show it as “Scheduled” but it is functionally locked.
+
+
 
 Preview the downtime schedule
 ----------------------------------------
