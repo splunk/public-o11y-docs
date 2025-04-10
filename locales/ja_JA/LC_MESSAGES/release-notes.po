@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
@@ -7,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 18:45+0000\n"
-"PO-Revision-Date: 2025-02-27 12:03+0000\n"
+"POT-Creation-Date: 2025-03-13 09:38+0000\n"
+"PO-Revision-Date: 2025-04-10 10:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,29 +15,25 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../release-notes/2024-10-rn.rst:5
 msgid "October 2024"
 msgstr "2024年10月1日"
 
 #: ../../release-notes/2024-10-rn.rst:7
-msgid ""
-"Splunk Observability Cloud released the following new features and enhancements in October 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:"
-"`list of changelogs <changelogs>`."
-msgstr ""
-"Splunk Observability Cloudは、2024年10月に以下の新機能と機能強化をリリースしました。このリストは、当オブザーバビリティ・エコシステムにおける変更のすべてを網羅しているわけではありません。バージョン管理されたコンポーネントの変更点の詳細な内訳につい"
-"ては、:ref:`変更履歴リスト <changelogs>` を参照してください。"
+msgid "Splunk Observability Cloud released the following new features and enhancements in October 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`."
+msgstr "Splunk Observability Cloudは、2024年10月に以下の新機能と機能強化をリリースしました。このリストは、当オブザーバビリティ・エコシステムにおける変更のすべてを網羅しているわけではありません。バージョン管理されたコンポーネントの変更点の詳細な内訳については、:ref:`変更履歴リスト <changelogs>` を参照してください。"
 
 #: ../../release-notes/2024-10-rn.rst:12
 msgid "October 23, 2024"
 msgstr "2024年10月23日"
 
-#: ../../release-notes/2024-10-rn.rst:19 ../../release-notes/2024-10-rn.rst:34 ../../release-notes/2024-10-rn.rst:49 ../../release-notes/2024-11-rn.rst:19
+#: ../../release-notes/2024-10-rn.rst:19 ../../release-notes/2024-10-rn.rst:34 ../../release-notes/2024-10-rn.rst:49 ../../release-notes/2024-11-rn.rst:19 ../../release-notes/2025-2-rn.rst:19 ../../release-notes/2025-3-rn.rst:19
 msgid "New feature or enhancement"
 msgstr "新機能または機能強化"
 
-#: ../../release-notes/2024-10-rn.rst:20 ../../release-notes/2024-10-rn.rst:35 ../../release-notes/2024-10-rn.rst:50 ../../release-notes/2024-11-rn.rst:20
+#: ../../release-notes/2024-10-rn.rst:20 ../../release-notes/2024-10-rn.rst:35 ../../release-notes/2024-10-rn.rst:50 ../../release-notes/2024-11-rn.rst:20 ../../release-notes/2025-2-rn.rst:20 ../../release-notes/2025-2-rn.rst:75 ../../release-notes/2025-3-rn.rst:20
 msgid "Description"
 msgstr "説明"
 
@@ -71,24 +66,17 @@ msgid "Splunk virtual compute (SVC) optimization"
 msgstr "Splunk 仮想コンピュート (SVC) の最適化"
 
 #: ../../release-notes/2024-10-rn.rst:52
-msgid ""
-"You can optimize SVC, resulting in performance improvements and cost savings, by using new :guilabel:`Play`, :guilabel:`Pause`, and :guilabel:`Run` search buttons in the UI. The default limit is 150,000 logs. For more information, see :ref:`logs-"
-"keyword`."
-msgstr ""
-"UI の新しい検索ボタン（ :guilabel:`Play` 、:guilabel:`Pause` 、:guilabel:`Run` ）を使用することで、SVC を最適化し、パフォーマンスの向上とコスト削減を実現できます。デフォルトの上限は 150,000 ログです。詳細は :ref:`logs-keyword` を参照してくださ"
-"い。"
+msgid "You can optimize SVC, resulting in performance improvements and cost savings, by using new :guilabel:`Play`, :guilabel:`Pause`, and :guilabel:`Run` search buttons in the UI. The default limit is 150,000 logs. For more information, see :ref:`logs-keyword`."
+msgstr "UI の新しい検索ボタン（ :guilabel:`Play` 、:guilabel:`Pause` 、:guilabel:`Run` ）を使用することで、SVC を最適化し、パフォーマンスの向上とコスト削減を実現できます。デフォルトの上限は 150,000 ログです。詳細は :ref:`logs-keyword` を参照してください。"
 
 #: ../../release-notes/2024-10-rn.rst:53
 msgid "Kubernetes control plane metrics"
 msgstr "Kubernetesのコントロールプレーンメトリクス"
 
 #: ../../release-notes/2024-10-rn.rst:54
-msgid ""
-"In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are available using OpenTelemetry Prometheus receivers that target Prometheus endpoints. For more "
-"information see :ref:`kubernetes-control-plane-prometheus`."
+msgid "In a continued effort to replace Smart Agent monitors with OpenTelemetry Collector receivers, a collection of Kubernetes control plane metrics are available using OpenTelemetry Prometheus receivers that target Prometheus endpoints. For more information see :ref:`kubernetes-control-plane-prometheus`."
 msgstr ""
-"Smart AgentのモニターをOpenTelemetry Collectorのレシーバーに置き換えるための継続的な取り組みの中で、PrometheusエンドポイントをターゲットとするOpenTelemetry Prometheusレシーバーを使用してKubernetes制御プレーンメトリクスのコレクションが利用できるよ"
-"うになっています。詳細は :ref:`kubernetes-control-plane-prometheus` を参照してください。"
+"Smart AgentのモニターをOpenTelemetry Collectorのレシーバーに置き換えるための継続的な取り組みの中で、PrometheusエンドポイントをターゲットとするOpenTelemetry Prometheusレシーバーを使用してKubernetes制御プレーンメトリクスのコレクションが利用できるようになっています。詳細は :ref:`kubernetes-control-plane-prometheus` を参照してください。"
 
 #: ../../release-notes/2024-10-rn.rst:55
 msgid "Data retention for archived metrics extended from 8 to 31 days"
@@ -111,12 +99,8 @@ msgid "November 2024"
 msgstr "2024年11月"
 
 #: ../../release-notes/2024-11-rn.rst:7
-msgid ""
-"Splunk Observability Cloud released the following new features and enhancements in November 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:"
-"`list of changelogs <changelogs>`."
-msgstr ""
-"Splunk Observability Cloudは、2024年11月に以下の新機能と機能強化をリリースしました。このリストは、当オブザーバビリティ・エコシステムにおける変更のすべてを網羅しているわけではありません。バージョン管理されたコンポーネントの変更点の詳細な内訳につい"
-"ては、:ref:`変更履歴リスト <changelogs>` を参照してください。"
+msgid "Splunk Observability Cloud released the following new features and enhancements in November 2024. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`."
+msgstr "Splunk Observability Cloudは、2024年11月に以下の新機能と機能強化をリリースしました。このリストは、当オブザーバビリティ・エコシステムにおける変更のすべてを網羅しているわけではありません。バージョン管理されたコンポーネントの変更点の詳細な内訳については、:ref:`変更履歴リスト <changelogs>` を参照してください。"
 
 #: ../../release-notes/2024-11-rn.rst:12
 msgid "November 14, 2024"
@@ -127,12 +111,8 @@ msgid "Splunk Observability Cloud metrics in Splunk Cloud Platform"
 msgstr "Splunk Cloud PlatformにおけるSplunk Observability Cloudのメトリクス"
 
 #: ../../release-notes/2024-11-rn.rst:22
-msgid ""
-"Administrators can now view Splunk Observability Cloud metrics in Splunk Cloud Platform. Create a Splunk Observability Cloud metrics-based chart in Splunk Dashboard Studio or import a chart from Splunk Observability Cloud into Splunk Dashboard "
-"Studio."
-msgstr ""
-"管理者は、Splunk Observability CloudのメトリクスをSplunk Cloud Platformで表示できるようになりました。Splunk Dashboard StudioでSplunk Observability Cloudのメトリクスをベースとしたチャートを作成するか、Splunk Observability CloudからSplunkDashboard "
-"Studioにチャートをインポートします。"
+msgid "Administrators can now view Splunk Observability Cloud metrics in Splunk Cloud Platform. Create a Splunk Observability Cloud metrics-based chart in Splunk Dashboard Studio or import a chart from Splunk Observability Cloud into Splunk Dashboard Studio."
+msgstr "管理者は、Splunk Observability CloudのメトリクスをSplunk Cloud Platformで表示できるようになりました。Splunk Dashboard StudioでSplunk Observability Cloudのメトリクスをベースとしたチャートを作成するか、Splunk Observability CloudからSplunkDashboard Studioにチャートをインポートします。"
 
 #: ../../release-notes/2024-11-rn.rst:24
 msgid "For more information, see :new-page:`Splunk Observability Cloud metrics in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/DashStudio/o11yMetrics>` in the Splunk Cloud Platform documentation."
@@ -183,12 +163,8 @@ msgid "The user interface is updated to bring together AppDynamics and Splunk Ob
 msgstr "AppDynamicsとSplunk Observabilityを統合するためにユーザーインターフェイスを更新し、上部のナビゲーションバー、新しいユーザープロファイルメニュー、左のナビゲーションパネルのアクセス性を強化しました。"
 
 #: ../../release-notes/2024-11-rn.rst:39
-msgid ""
-"For more information, see :new-page:`Splunk Observability Cloud - Enhanced navigation with a modern look and feel <https://community.splunk.com/t5/Product-News-Announcements/Coming-Soon-Splunk-Observability-Cloud-Enhanced-navigation-with/ba-"
-"p/701021>` in the Splunk Community."
-msgstr ""
-"詳細については、Splunkコミュニティで、:new-page:`Splunk Observability Cloud - モダンなルック＆フィールによるナビゲーションの強化 <https://community.splunk.com/t5/Product-News-Announcements/Coming-Soon-Splunk-Observability-Cloud-Enhanced-"
-"navigation-with/ba-p/701021>` を参照してください。"
+msgid "For more information, see :new-page:`Splunk Observability Cloud - Enhanced navigation with a modern look and feel <https://community.splunk.com/t5/Product-News-Announcements/Coming-Soon-Splunk-Observability-Cloud-Enhanced-navigation-with/ba-p/701021>` in the Splunk Community."
+msgstr "詳細については、Splunkコミュニティで、:new-page:`Splunk Observability Cloud - モダンなルック＆フィールによるナビゲーションの強化 <https://community.splunk.com/t5/Product-News-Announcements/Coming-Soon-Splunk-Observability-Cloud-Enhanced-navigation-with/ba-p/701021>` を参照してください。"
 
 #: ../../release-notes/2024-11-rn.rst:40
 msgid "Global search enhancements"
@@ -247,12 +223,8 @@ msgid "Synthetic Monitoring now includes the following enhancements:"
 msgstr "Synthetic Monitoringにおいて、以下の点を強化しました："
 
 #: ../../release-notes/2024-11-rn.rst:58
-msgid ""
-"Dynamic dashboard resolution now automatically adjusts data views based on zoom levels and data density, providing granular detail when zoomed in and summarized data when zoomed out. To adjust the view, you don't need to manually set frequencies "
-"based on the time period. See :ref:`test-kpis`."
-msgstr ""
-"動的ダッシュボードの解像度は、ズームレベルとデータ密度に基づいてデータビューを自動的に調整し、ズームイン時には詳細なデータを、ズームアウト時には要約されたデータを提供するようになりました。ビューを調整するために、期間に基づいて頻度を手動で設定する"
-"必要はありません。:ref:`test-kpis` を参照してください。"
+msgid "Dynamic dashboard resolution now automatically adjusts data views based on zoom levels and data density, providing granular detail when zoomed in and summarized data when zoomed out. To adjust the view, you don't need to manually set frequencies based on the time period. See :ref:`test-kpis`."
+msgstr "動的ダッシュボードの解像度は、ズームレベルとデータ密度に基づいてデータビューを自動的に調整し、ズームイン時には詳細なデータを、ズームアウト時には要約されたデータを提供するようになりました。ビューを調整するために、期間に基づいて頻度を手動で設定する必要はありません。:ref:`test-kpis` を参照してください。"
 
 #: ../../release-notes/2024-11-rn.rst:59
 msgid "The run history page offers up to 90 days of historical data across all 3 test types, capturing artifacts such as waterfalls and API responses for comprehensive analysis."
@@ -318,6 +290,254 @@ msgstr "ユーザーは、チャートやディテクターで使用されてい
 msgid "For more information, see :ref:`archived-metrics-charts` and :ref:`alert-signal`."
 msgstr "詳細は、:ref:`archived-metrics-charts` および :ref:`alert-signal` を参照してください。"
 
+#: ../../release-notes/2025-2-rn.rst:5
+msgid "February 2025"
+msgstr "2025年2月"
+
+#: ../../release-notes/2025-2-rn.rst:7
+msgid "Splunk Observability Cloud released the following new features and enhancements in February 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`."
+msgstr "Splunk Observability Cloudは、2025年2月に以下の新機能と機能強化をリリースしました。このリストは、当オブザーバビリティ・エコシステムにおける変更のすべてを網羅しているわけではありません。バージョン管理されたコンポーネントの変更点の詳細な内訳については、:ref:`変更履歴リスト <changelogs>` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:12
+msgid "February 4, 2025 release"
+msgstr "2025年2月4日リリース"
+
+#: ../../release-notes/2025-2-rn.rst:21
+msgid "AI Assistant in Splunk Observability Cloud (Available in select US and EU regions)"
+msgstr "Splunk Observability CloudのAIアシスタント (一部の米国およびEUリージョンで利用可能)"
+
+#: ../../release-notes/2025-2-rn.rst:22
+msgid "Use natural language to interact with your observability data in the AI Assistant and extract insights from Splunk Observability Cloud. Available in AWS US East Virginia (us-east-1), AWS US West Oregon (us-west-2), AWS EU Dublin (eu-west-1) and AWS AP Sydney (ap-southeast-2)."
+msgstr "AI Assistantで自然言語を使って観測可能性データと対話し、Splunk Observability Cloudからインサイトを抽出します。AWS米国東部バージニア（us-east-1）、AWS米国西部オレゴン（us-west-2）、AWS欧州ダブリン（eu-west-1）、AWSアジア太平洋シドニー（ap-southeast-2）でご利用いただけます。"
+
+#: ../../release-notes/2025-2-rn.rst:23
+msgid "Data links to Splunk AppDynamics tiers in Splunk Observability Cloud"
+msgstr "Splunk Observability CloudのSplunk AppDynamics階層へのデータリンク"
+
+#: ../../release-notes/2025-2-rn.rst:25
+msgid "You can now create a global data link from a Splunk APM inferred service to a Splunk AppDynamics tier using the user interface or Terraform. See:"
+msgstr "ユーザーインターフェイスまたはTerraformを使用して、Splunk APM推定サービスからSplunk AppDynamics階層へのグローバルデータリンクを作成できるようになりました。次を参照してください："
+
+#: ../../release-notes/2025-2-rn.rst:25
+msgid ":ref:`apm-create-gdl-to-appd`"
+msgstr ":ref:`apm-create-gdl-to-appd`"
+
+#: ../../release-notes/2025-2-rn.rst:26
+msgid ":ref:`apm-create-data-links-terraform`"
+msgstr ":ref:`apm-create-data-links-terraform`"
+
+#: ../../release-notes/2025-2-rn.rst:27
+msgid "Infrastructure proactive troubleshooting journey"
+msgstr "インフラストラクチャプロアクティブトラブルシューティング過程"
+
+#: ../../release-notes/2025-2-rn.rst:31
+msgid "The Infrastructure Monitoring navigators now include the following enhancements:"
+msgstr "Infrastructure Monitoringナビゲーターにおいて、以下の点を強化しました："
+
+#: ../../release-notes/2025-2-rn.rst:29
+msgid "Metric classes to customize the navigator multi-metric table view. See :ref:`nav-metric-class-ui` and :ref:`predefined-metric-classes`."
+msgstr "ナビゲーターのマルチメトリクステーブルビューをカスタマイズするためのメトリクスクラス。:ref:`nav-metric-class-ui` および :ref:`predefined-metric-classes` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:30
+msgid "Dependencies and metadata are now displayed in tabs. See :ref:`navigator-sidebar` and :ref:`navigator-sidebar-metadata`."
+msgstr "依存関係とメタデータがタブで表示されるようになりました。:ref:`navigator-sidebar` および :ref:`navigator-sidebar-metadata` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:31
+msgid "Kubernetes navigators have a new left navigation menu. See :ref:`k8s-nav-left-nav`."
+msgstr "Kubernetesナビゲーターに新しい左ナビゲーションメニューが追加されました。:ref:`k8s-nav-left-nav` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:32
+msgid "Kubernetes nodes, pods, and containers navigators now display entity status in a new :guilabel:`Phases` column in the table view. This feature requires OpenTelemetry version 0.116.0 or higher."
+msgstr "Kubernetesのノード、ポッド、コンテナのナビゲーターが、テーブルビューの新しい :guilabel:`Phases` 列にエンティティステータスを表示するようになりました。この機能には、OpenTelemetryバージョン0.116.0以降が必要です。"
+
+#: ../../release-notes/2025-2-rn.rst:33
+msgid "Splunk Synthetic Monitoring private location enhancements"
+msgstr "Splunk Synthetic Monitoringのプライベートロケーションの機能強化"
+
+#: ../../release-notes/2025-2-rn.rst:34
+msgid "Deploy Splunk Synthetics private locations on additional environments, including Kubernetes, OpenShift, and ARM 64 architectures. This gives you the freedom to deploy in the trusted environments of your choice, offering more flexibility in how you deploy and maintain your monitoring infrastructure."
+msgstr "Splunk Syntheticsのプライベートロケーションを、Kubernetes、OpenShift、ARM 64アーキテクチャーなどの追加環境にデプロイします。これにより、選択した信頼できる環境に自由にデプロイできるようになり、モニタリングインフラストラクチャのデプロイと保守の方法がより柔軟になります。"
+
+#: ../../release-notes/2025-2-rn.rst:35
+msgid "Use Splunk Synthetic Monitoring private location deployment with Helm charts to deploy and maintain your synthetic monitoring more efficiently."
+msgstr "Helmチャートを使用したSplunk Synthetic Monitoringのプライベートロケーションデプロイにより、Synthetic Monitoringのデプロイと保守をより効率的に行えます。"
+
+#: ../../release-notes/2025-2-rn.rst:36
+msgid "In this release, we've fixed a large number of security vulnerabilities, making the Splunk Synthetics private location image more secure and safer to deploy. We're committed to keeping your monitoring environment safe while maintaining performance and reliability."
+msgstr "このリリースでは、多数のセキュリティ脆弱性を修正し、Splunk Syntheticsのプライベートロケーションイメージをより安全かつ安全にデプロイできるようにしました。当社は、パフォーマンスと信頼性を維持しながら、お客様の監視環境を安全に保つことをお約束します。"
+
+#: ../../release-notes/2025-2-rn.rst:37
+msgid "Muting rules creation and list view updates"
+msgstr "ミュートルールの作成とリストビューの更新"
+
+#: ../../release-notes/2025-2-rn.rst:38
+msgid ""
+"Use the enhanced user experience for creating and managing muting rules in Splunk Observability Cloud to reduce alert noise and silence notifications during maintenance windows and other expected high-alert periods. Mute multiple detectors and properties with one rule, set relative or absolute muting time windows, and view affected "
+"active alerts. View expired muting rules, clear active rules, and filter rules by status from the updated list view."
+msgstr ""
+"Splunk Observability Cloudでミュートルールを作成管理するための強化されたユーザーエクスペリエンスを使用して、アラートノイズを低減し、メンテナンスウィンドウやその他の予想される高アラート期間中に通知を停止します。1つのルールで複数のディテクターとプロパティをミュートし、相対的または絶対的なミュート時間ウィンドウを設定して、影響を受けるア"
+"クティブなアラートを表示します。更新されたリストビューから、期限切れのミュートルールの表示、アクティブなルールのクリア、ステータスによるルールのフィルタリングができます。"
+
+#: ../../release-notes/2025-2-rn.rst:40
+msgid "For more information, see :ref:`mute-notifications`."
+msgstr "詳細は :ref:`mute-notifications` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:41
+msgid "Discovered services in Data Management"
+msgstr "データ管理で検出されたサービス"
+
+#: ../../release-notes/2025-2-rn.rst:42
+msgid ""
+"Use the new discovered services tab to track which third-party applications, such as databases or web servers, your Splunk Distribution of the OpenTelemetry Collector instance has detected running in your environment. Follow the steps in the data management interface to add credentials and other necessary information to monitor these "
+"services."
+msgstr ""
+"新しい検出されたサービスタブを使用して、データベースやWebサーバーなどのサードパーティ製アプリケーションのうち、Splunk Distribution of the OpenTelemetry Collectorがお使いの環境で実行されていることを検出したものを追跡します。データ管理インターフェイスの手順に従って、これらのサービスを監視するための認証情報やその他の必要な情報を追加しま"
+"す。"
+
+#: ../../release-notes/2025-2-rn.rst:43
+msgid "Related Content for logs in APM"
+msgstr "APMにおけるログの関連コンテンツ"
+
+#: ../../release-notes/2025-2-rn.rst:44
+msgid "Get more control over your log consumption with the option to include logs in Related Content in APM. Admins can use this option to control whether logs are searched when their users run a Related Content search in APM."
+msgstr "APMの関連コンテンツにログを含めるオプションで、ログの消費をよりコントロールできるようになります。管理者は、このオプションを使用して、ユーザーがAPMで関連コンテンツ検索を実行したときにログを検索するかどうかを制御できます。"
+
+#: ../../release-notes/2025-2-rn.rst:46
+msgid "For more information, see :ref:`related-logs-in-apm`."
+msgstr "詳細は :ref:`related-logs-in-apm` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:48
+msgid "Splunk Observability Cloud instrumentation updates: Node.js version 3.0.0 and Python version 2.0.0"
+msgstr "Splunk Observability Cloudインストルメンテーションの更新：Node.jsバージョン3.0.0およびPythonバージョン2.0.0"
+
+#: ../../release-notes/2025-2-rn.rst:49
+msgid "New versions of the Splunk Distribution of the OpenTelemetry JS and Splunk Distribution of OpenTelemetry Python are available."
+msgstr "Splunk Distribution of OpenTelemetry JSおよびSplunk Distribution of OpenTelemetry Pythonの新バージョンが利用可能です。"
+
+#: ../../release-notes/2025-2-rn.rst:51
+msgid "For more information, see :ref:`get-started-nodejs-3x` and :ref:`get-started-python`."
+msgstr "詳細は、:ref:`get-started-nodejs-3x` および :ref:`get-started-python` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:52
+msgid "Metrics Usage Analytics (MUA) expanded to all Amazon Web Services (AWS) realms"
+msgstr "メトリクス使用状況の分析（MUA）がアマゾン ウェブ サービス（AWS）の全領域に拡大"
+
+#: ../../release-notes/2025-2-rn.rst:53
+msgid "Metrics Usage Analytics, which launched in November 2024, is now expanded to every AWS realms. Use MUA within Metrics Pipeline Management to get visibility into Metric Time Series (MTS) usage."
+msgstr "2024年11月に開始されたメトリクス使用状況の分析は、現在AWSの各領域に拡張されています。メトリクスパイプライン管理内でMUAを使用し、メトリック時系列(MTS)の使用状況を可視化します。"
+
+#: ../../release-notes/2025-2-rn.rst:56
+msgid "Deprecated and removed from Splunk Observability Cloud"
+msgstr "非推奨化されSplunk Observability Cloudから削除されました"
+
+#: ../../release-notes/2025-2-rn.rst:59
+msgid "What does deprecation mean?"
+msgstr "非推奨とはどのような意味ですか？"
+
+#: ../../release-notes/2025-2-rn.rst:61
+msgid "Deprecated features, platforms, and browsers continue to work and Splunk supports them until support is removed. However, customers need to begin planning now for the future removal of support."
+msgstr "非推奨の機能、プラットフォーム、およびブラウザは、サポートが終了するまで引き続き動作し、Splunkはそれらをサポートします。ただし、お客様は、将来的なサポート終了に備え、今から計画を立てる必要があります。"
+
+#: ../../release-notes/2025-2-rn.rst:65
+msgid "What does removal mean?"
+msgstr "サポート終了とはどのような意味ですか？"
+
+#: ../../release-notes/2025-2-rn.rst:67
+msgid "When Splunk removes support for a feature, platform, or browser it means that the feature, platform, or browser no longer works with the Splunk platform and customers must find an alternative."
+msgstr "Splunkがある機能、プラットフォーム、またはブラウザのサポートを終了する場合、その機能、プラットフォーム、またはブラウザはSplunkプラットフォームでは動作しなくなるため、お客様は代替手段を見つける必要があります。"
+
+#: ../../release-notes/2025-2-rn.rst:74
+msgid "Deprecated feature"
+msgstr "非推奨機能"
+
+#: ../../release-notes/2025-2-rn.rst:76
+msgid "Deprecation of Kubernetes classic Navigator interface"
+msgstr "KubernetesクラシックNavigatorインターフェイスの非推奨化"
+
+#: ../../release-notes/2025-2-rn.rst:77
+msgid "As of February 4, 2025, Splunk Observability Cloud users can no longer access the Kubernetes classic Navigator interface."
+msgstr "2025年2月4日より、Splunk Observability Cloud ユーザーはKubernetes classic Navigatorインターフェイスにアクセスできなくなりました。"
+
+#: ../../release-notes/2025-2-rn.rst:79
+msgid "For more information, see :new-page:`https://community.splunk.com/t5/Product-News-Announcements/Deprecation-of-Splunk-Observability-Kubernetes-Classic-Navigator/ba-p/709016` in Splunk Community."
+msgstr "詳細については、Splunk Communityの :new-page:`https://community.splunk.com/t5/Product-News-Announcements/Deprecation-of-Splunk-Observability-Kubernetes-Classic-Navigator/ba-p/709016` を参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:80
+msgid "Deprecation of Android, iOS, and React instrumentation APIs"
+msgstr "Android、iOS、ReactのインストルメンテーションAPIの非推奨化"
+
+#: ../../release-notes/2025-2-rn.rst:81
+msgid "Certain APIs in the Android, iOS, and React instrumentation libraries have been deprecated or changed in Splunk RUM as of February 4, 2025. There are no breaking changes at this time, but support for deprecated APIs will be removed in a future release."
+msgstr "Android、iOS、Reactのインストルメンテーションライブラリの一部のAPIは、2025年2月4日現在、Splunk RUMで非推奨になっているかまたは変更されています。現時点では互換性に影響する変更点はありませんが、非推奨APIのサポートは将来のリリースで削除される予定です。"
+
+#: ../../release-notes/2025-2-rn.rst:88
+msgid "See the following topics for deprecation details."
+msgstr "非推奨の詳細については、以下のトピックを参照してください。"
+
+#: ../../release-notes/2025-2-rn.rst:84
+msgid ":ref:`configure-android-instrumentation`"
+msgstr ":ref:`configure-android-instrumentation`"
+
+#: ../../release-notes/2025-2-rn.rst:85
+msgid ":ref:`android-rum-install`"
+msgstr ":ref:`android-rum-install`"
+
+#: ../../release-notes/2025-2-rn.rst:86
+msgid ":ref:`manual-android-instrumentation`"
+msgstr ":ref:`manual-android-instrumentation`"
+
+#: ../../release-notes/2025-2-rn.rst:87
+msgid ":ref:`configure-ios-instrumentation`"
+msgstr ":ref:`configure-ios-instrumentation`"
+
+#: ../../release-notes/2025-2-rn.rst:88
+msgid ":ref:`rum-ios-data`"
+msgstr ":ref:`rum-ios-data`"
+
+#: ../../release-notes/2025-2-rn.rst:89
+msgid ":ref:`manual-rum-react-instrumentation`"
+msgstr ":ref:`manual-rum-react-instrumentation`"
+
+#: ../../release-notes/2025-3-rn.rst:5
+msgid "March 2025"
+msgstr "2025年3月"
+
+#: ../../release-notes/2025-3-rn.rst:7
+msgid "Splunk Observability Cloud released the following new features and enhancements in March 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`."
+msgstr "Splunk Observability Cloudは 2025年3 月に以下の新機能と機能強化をリリースしました。これは、観測可能性エコシステムの変更点を網羅したリストではありません。バージョン管理されたコンポーネントの変更点の詳細な内訳については、:ref:`の変更点一覧<changelogs>` をご覧ください。"
+
+#: ../../release-notes/2025-3-rn.rst:12
+msgid "March 4, 2025 release"
+msgstr "2025年3月4日リリース"
+
+#: ../../release-notes/2025-3-rn.rst:21
+msgid "Splunk Observability Cloud AI assistant in Splunk Cloud Related Content"
+msgstr "Splunk Cloud関連コンテンツのSplunk Observability Cloud AIアシスタント"
+
+#: ../../release-notes/2025-3-rn.rst:22
+msgid ""
+"Splunk Cloud Platform users can speed up root cause analysis and IT investigations in the Search app with a new :guilabel:`AI Assistant` tab in the :guilabel:`Related Content` panel. Now the :guilabel:`Related Content` panel shows you not only the context of your issues with observability data, but also provides troubleshooting steps "
+"and additional information about the health of your services on the :guilabel:`AI Assistant` tab. Available for customers who have AI Assistant in Observability Cloud and Unified Identity enabled."
+msgstr ""
+"Splunk Cloud Platformユーザーは、:guilabel:`Related Content`  パネルの新しい  :guilabel:`AI Assistant`  タブにより、検索アプリでの根本原因分析とIT調査をスピードアップできます。:guilabel:`Related Content`  パネルでは、観測可能性データによる問題のコンテキストが表示されるだけでなく、トラブルシューティングの手順やサービスの健全性に関する"
+"追加情報が  :guilabel:`AI Assistant`  タブで表示されるようになりました。Observability CloudのAI AssistantとUnified Identityを有効にしているお客様にご利用いただけます。"
+
+#: ../../release-notes/2025-3-rn.rst:23
+msgid "Synthetics Downtime Configurations"
+msgstr "Syntheticsのダウンタイム設定"
+
+#: ../../release-notes/2025-3-rn.rst:24
+msgid "Splunk Synthetic Monitoring now supports recurring downtime configurations. Recurring downtimes allow you to sync with your scheduled maintenance windows or planned/unplanned downtimes and keep them from impacting your monitoring metrics or SLAs."
+msgstr "Splunk Synthetic Monitoringは、定期的なダウンタイム設定をサポートするようになりました。定期的なダウンタイムを使用することで、スケジュールされたメンテナンスウィンドウや計画的/非計画的なダウンタイムと同期し、モニタリングメトリクスやSLAに影響を与えないようにすることができます。"
+
+#: ../../release-notes/2025-3-rn.rst:25
+msgid "Synthetics multi-factor authentication (MFA)"
+msgstr "Synthetics多要素認証（MFA）"
+
+#: ../../release-notes/2025-3-rn.rst:26
+msgid "Splunk Synthetic Monitoring now supports tests that need to send a time-based one-time passcode (TOTP) to their test target."
+msgstr "Splunk Synthetic Monitoringは、時間ベースのワンタイムパスコード (TOTP) をテストターゲットに送信する必要があるテストをサポートするようになりました。"
+
 #: ../../release-notes/release-notes-overview.rst:-1
 msgid "The Splunk Observability Cloud release notes overview page, which lists all the products and components that have release notes."
 msgstr "Splunk Observability Cloud のリリースノート概要ページには、リリースノートがあるすべての製品とコンポーネントが一覧表示されます。"
@@ -326,155 +546,171 @@ msgstr "Splunk Observability Cloud のリリースノート概要ページには
 msgid "Release notes overview"
 msgstr "リリースノートの概要"
 
-#: ../../release-notes/release-notes-overview.rst:16
+#: ../../release-notes/release-notes-overview.rst:18
 msgid ""
-"Keep up to date with the latest new features and enhancements to Splunk Observability Cloud products and components. Splunk Observability Cloud comprises both SaaS products which release on a rolling basis and downloadable versioned components. "
-"Presented here are new feature and enhancement announcements for both SaaS and versioned offerings as well as links to detailed changelogs for versioned components."
+"Keep up to date with the latest new features and enhancements to Splunk Observability Cloud products and components. Splunk Observability Cloud comprises both SaaS products which release on a rolling basis and downloadable versioned components. Presented here are new feature and enhancement announcements for both SaaS and versioned "
+"offerings as well as links to detailed changelogs for versioned components."
 msgstr ""
-"Splunk Observability Cloud製品およびコンポーネントの新機能や機能強化について、常に最新の情報を入手できます。Splunk Observability Cloudは、ローリングベースでリリースされるSaaS製品と、ダウンロード可能なバージョン管理されたコンポーネントの両方で構成"
-"されています。ここには、SaaS製品およびバージョン管理された製品の新機能と機能強化のお知らせ、ならびにバージョン管理されたコンポーネントの詳細な変更履歴へのリンクを記載しています。"
+"Splunk Observability Cloud製品およびコンポーネントの新機能や機能強化について、常に最新の情報を入手できます。Splunk Observability Cloudは、ローリングベースでリリースされるSaaS製品と、ダウンロード可能なバージョン管理されたコンポーネントの両方で構成されています。ここには、SaaS製品およびバージョン管理された製品の新機能と機能強化のお知ら"
+"せ、ならびにバージョン管理されたコンポーネントの詳細な変更履歴へのリンクを記載しています。"
 
-#: ../../release-notes/release-notes-overview.rst:22
+#: ../../release-notes/release-notes-overview.rst:24
 msgid "Each release date includes new features and enhancements for SaaS and versioned products and components."
 msgstr "各リリース日には、SaaSやバージョン管理された製品やコンポーネントの新機能や機能強化が含まれています。"
 
-#: ../../release-notes/release-notes-overview.rst:29
+#: ../../release-notes/release-notes-overview.rst:31
 msgid "Release month"
 msgstr "リリース月"
 
-#: ../../release-notes/release-notes-overview.rst:30
+#: ../../release-notes/release-notes-overview.rst:32
 msgid "Release date"
 msgstr "リリース日"
 
-#: ../../release-notes/release-notes-overview.rst:31
+#: ../../release-notes/release-notes-overview.rst:33
+msgid ":ref:`2025-3-rn`"
+msgstr ":ref:`2025-3-rn`"
+
+#: ../../release-notes/release-notes-overview.rst:34
+msgid ":ref:`2025-3-4-rn`"
+msgstr ":ref:`2025-3-4-rn`"
+
+#: ../../release-notes/release-notes-overview.rst:35
+msgid ":ref:`2025-2-rn`"
+msgstr ":ref:`2025-2-rn`"
+
+#: ../../release-notes/release-notes-overview.rst:36
+msgid ":ref:`2025-2-4-rn`"
+msgstr ":ref:`2025-2-4-rn`"
+
+#: ../../release-notes/release-notes-overview.rst:37
 msgid ":ref:`2024-11-rn`"
 msgstr ":ref:`2024-11-rn`"
 
-#: ../../release-notes/release-notes-overview.rst:32
+#: ../../release-notes/release-notes-overview.rst:38
 msgid ":ref:`2024-11-14-rn`"
 msgstr ":ref:`2024-11-14-rn`"
 
-#: ../../release-notes/release-notes-overview.rst:33
+#: ../../release-notes/release-notes-overview.rst:39
 msgid ":ref:`2024-10-rn`"
 msgstr ":ref:`2024-10-rn`"
 
-#: ../../release-notes/release-notes-overview.rst:34
+#: ../../release-notes/release-notes-overview.rst:40
 msgid ":ref:`2024-10-23-rn`"
 msgstr ":ref:`2024-10-23-rn`"
 
-#: ../../release-notes/release-notes-overview.rst:35
+#: ../../release-notes/release-notes-overview.rst:41
 msgid ":ref:`2024-10-02-rn`"
 msgstr ":ref:`2024-10-02-rn`"
 
-#: ../../release-notes/release-notes-overview.rst:36
+#: ../../release-notes/release-notes-overview.rst:42
 msgid ":ref:`2024-10-01-rn`"
 msgstr ":ref:`2024-10-01-rn`"
 
-#: ../../release-notes/release-notes-overview.rst:44
+#: ../../release-notes/release-notes-overview.rst:50
 msgid "For a detailed breakdown of changes in versioned components, see the following table:"
 msgstr "バージョンアップされたコンポーネントの変更点の詳細な内訳については、以下の表を参照してください。"
 
-#: ../../release-notes/release-notes-overview.rst:51
+#: ../../release-notes/release-notes-overview.rst:57
 msgid "Component"
 msgstr "コンポーネント"
 
-#: ../../release-notes/release-notes-overview.rst:52
+#: ../../release-notes/release-notes-overview.rst:58
 msgid "Changelog"
 msgstr "変更履歴"
 
-#: ../../release-notes/release-notes-overview.rst:53
+#: ../../release-notes/release-notes-overview.rst:59
 msgid "Splunk OpenTelemetry Collector"
 msgstr "Splunk OpenTelemetry Collector"
 
-#: ../../release-notes/release-notes-overview.rst:54
+#: ../../release-notes/release-notes-overview.rst:60
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-collector/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-collector/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:55
+#: ../../release-notes/release-notes-overview.rst:61
 msgid "Splunk OpenTelemetry Collector for Kubernetes"
 msgstr "Kubernetes 用Splunk OpenTelemetry Collector"
 
-#: ../../release-notes/release-notes-overview.rst:56
+#: ../../release-notes/release-notes-overview.rst:62
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:57
+#: ../../release-notes/release-notes-overview.rst:63
 msgid "Splunk OpenTelemetry Java instrumentation"
 msgstr "Splunk OpenTelemetry Javaインストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:58
+#: ../../release-notes/release-notes-overview.rst:64
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-java/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-java/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:59
+#: ../../release-notes/release-notes-overview.rst:65
 msgid "Splunk OpenTelemetry .NET instrumentation"
 msgstr "Splunk OpenTelemetry .NET インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:60
+#: ../../release-notes/release-notes-overview.rst:66
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-dotnet/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-dotnet/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:61
+#: ../../release-notes/release-notes-overview.rst:67
 msgid "Splunk OpenTelemetry Python instrumentation"
 msgstr "Splunk OpenTelemetry Python インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:62
+#: ../../release-notes/release-notes-overview.rst:68
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-python/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-python/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:63
+#: ../../release-notes/release-notes-overview.rst:69
 msgid "Splunk OpenTelemetry Node.JS instrumentation"
 msgstr "Splunk OpenTelemetry Node.JS インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:64
+#: ../../release-notes/release-notes-overview.rst:70
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-js/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-js/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:65
+#: ../../release-notes/release-notes-overview.rst:71
 msgid "Splunk OpenTelemetry Go instrumentation"
 msgstr "Splunk OpenTelemetry Go インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:66
+#: ../../release-notes/release-notes-overview.rst:72
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-go/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-go/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:67
+#: ../../release-notes/release-notes-overview.rst:73
 msgid "Splunk OpenTelemetry Android instrumentation"
 msgstr "Splunk OpenTelemetry Android インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:68
+#: ../../release-notes/release-notes-overview.rst:74
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-android/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-android/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:69
+#: ../../release-notes/release-notes-overview.rst:75
 msgid "Splunk OpenTelemetry Lambda instrumentation"
 msgstr "Splunk OpenTelemetry Lambda インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:70
+#: ../../release-notes/release-notes-overview.rst:76
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-lambda/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-lambda/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:71
+#: ../../release-notes/release-notes-overview.rst:77
 msgid "Splunk OpenTelemetry JavaScript for Web instrumentation"
 msgstr "Webインストルメンテーション用の Splunk OpenTelemetry JavaScript"
 
-#: ../../release-notes/release-notes-overview.rst:72
+#: ../../release-notes/release-notes-overview.rst:78
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-js-web/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-js-web/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:73
+#: ../../release-notes/release-notes-overview.rst:79
 msgid "Splunk OpenTelemetry iOS instrumentation"
 msgstr "Splunk OpenTelemetry iOS インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:74
+#: ../../release-notes/release-notes-overview.rst:80
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-ios/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-ios/blob/main/CHANGELOG.md`"
 
-#: ../../release-notes/release-notes-overview.rst:75
+#: ../../release-notes/release-notes-overview.rst:81
 msgid "Splunk OpenTelemetry React Native instrumentation"
 msgstr "Splunk OpenTelemetry React Native インストルメンテーション"
 
-#: ../../release-notes/release-notes-overview.rst:76
+#: ../../release-notes/release-notes-overview.rst:82
 msgid ":new-page:`https://github.com/signalfx/splunk-otel-react-native/blob/main/CHANGELOG.md`"
 msgstr ":new-page:`https://github.com/signalfx/splunk-otel-react-native/blob/main/CHANGELOG.md`"
 

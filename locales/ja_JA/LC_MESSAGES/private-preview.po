@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
@@ -7,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 18:45+0000\n"
-"PO-Revision-Date: 2025-02-27 12:03+0000\n"
+"POT-Creation-Date: 2025-03-13 09:38+0000\n"
+"PO-Revision-Date: 2025-04-10 10:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../private-preview/rbac/roles-and-capabilities-table.rst:-1
 msgid "Matrix of Splunk Observability Cloud user roles and capabilities."
@@ -32,11 +31,11 @@ msgstr "プレビュー：ロールベースのアクセス"
 
 #: ../../_includes/private-preview.rst:3
 msgid ""
-"Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of "
-"preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+"Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://"
+"www.splunk.com/en_us/legal/splunk-general-terms.html>`."
 msgstr ""
-"プレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止すること"
-"ができます。プレビュー機能の使用は、:new-page:`Splunk一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
+"プレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止することができます。プレビュー機能の使用は、:new-page:`Splunk一般規約<https://"
+"www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
 
 #: ../../_includes/private-preview.rst:5
 msgid "Use these links to navigate to the topics for role-based access control (RBAC):"
@@ -64,38 +63,38 @@ msgstr ":strong:`Enterprise Editionで利用できる機能です`"
 
 #: ../../private-preview/rbac/roles-and-capabilities-table.rst:35
 msgid ""
-"Splunk Observability Cloud lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are "
-"available to roles. For example, capabilities determine whether someone with a particular role has capabilities to create detectors or dashboards."
+"Splunk Observability Cloud lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities determine whether someone with "
+"a particular role has capabilities to create detectors or dashboards."
 msgstr ""
-"Splunk Observability Cloud では、ロールベースアクセス制御を使用して、特定のユーザーグループに対して特定の機能へのアクセスを制限できます。お客様がユーザーにロールを割り当てます。ロールには一連の機能が含まれています。これらの能力は、ロールがどのような"
-"アクションを利用できるかを定義します。たとえば、特定のロールを持つユーザーがディテクターやダッシュボードを作成する権限を持っているかどうかは、権限によって決まります。"
+"Splunk Observability Cloud では、ロールベースアクセス制御を使用して、特定のユーザーグループに対して特定の機能へのアクセスを制限できます。お客様がユーザーにロールを割り当てます。ロールには一連の機能が含まれています。これらの能力は、ロールがどのようなアクションを利用できるかを定義します。たとえば、特定のロールを持つユー"
+"ザーがディテクターやダッシュボードを作成する権限を持っているかどうかは、権限によって決まります。"
 
 #: ../../private-preview/rbac/roles-and-capabilities-table.rst:40
 msgid "Metrics pipeline management"
 msgstr "メトリクスパイプライン管理"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:7 ../../_includes/admin/roles_apm.rst:5 ../../_includes/admin/roles_data_configuration.rst:5 ../../_includes/admin/roles_help_support.rst:6 ../../_includes/admin/roles_log_observer.rst:7
-#: ../../_includes/admin/roles_mpm.rst:7 ../../_includes/admin/roles_navigation.rst:7 ../../_includes/admin/roles_navs_dashbds.rst:6 ../../_includes/admin/rum-roles-caps.rst:5 ../../_includes/admin/synth-roles-caps.rst:5
+#: ../../_includes/admin/roles_alerts_detectors.rst:7 ../../_includes/admin/roles_apm.rst:5 ../../_includes/admin/roles_data_configuration.rst:5 ../../_includes/admin/roles_help_support.rst:6 ../../_includes/admin/roles_log_observer.rst:7 ../../_includes/admin/roles_mpm.rst:7 ../../_includes/admin/roles_navigation.rst:7
+#: ../../_includes/admin/roles_navs_dashbds.rst:6 ../../_includes/admin/rum-roles-caps.rst:5 ../../_includes/admin/synth-roles-caps.rst:5
 msgid ":strong:`Permission`"
 msgstr ":strong:`アクセス許可`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:8 ../../_includes/admin/roles_apm.rst:6 ../../_includes/admin/roles_data_configuration.rst:6 ../../_includes/admin/roles_help_support.rst:7 ../../_includes/admin/roles_log_observer.rst:8
-#: ../../_includes/admin/roles_mpm.rst:8 ../../_includes/admin/roles_navigation.rst:8 ../../_includes/admin/roles_navs_dashbds.rst:7 ../../_includes/admin/rum-roles-caps.rst:6 ../../_includes/admin/synth-roles-caps.rst:6
+#: ../../_includes/admin/roles_alerts_detectors.rst:8 ../../_includes/admin/roles_apm.rst:6 ../../_includes/admin/roles_data_configuration.rst:6 ../../_includes/admin/roles_help_support.rst:7 ../../_includes/admin/roles_log_observer.rst:8 ../../_includes/admin/roles_mpm.rst:8 ../../_includes/admin/roles_navigation.rst:8
+#: ../../_includes/admin/roles_navs_dashbds.rst:7 ../../_includes/admin/rum-roles-caps.rst:6 ../../_includes/admin/synth-roles-caps.rst:6
 msgid ":strong:`admin`"
 msgstr ":strong:`admin`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:9 ../../_includes/admin/roles_apm.rst:7 ../../_includes/admin/roles_data_configuration.rst:7 ../../_includes/admin/roles_help_support.rst:8 ../../_includes/admin/roles_log_observer.rst:9
-#: ../../_includes/admin/roles_mpm.rst:9 ../../_includes/admin/roles_navigation.rst:9 ../../_includes/admin/roles_navs_dashbds.rst:8 ../../_includes/admin/rum-roles-caps.rst:7 ../../_includes/admin/synth-roles-caps.rst:7
+#: ../../_includes/admin/roles_alerts_detectors.rst:9 ../../_includes/admin/roles_apm.rst:7 ../../_includes/admin/roles_data_configuration.rst:7 ../../_includes/admin/roles_help_support.rst:8 ../../_includes/admin/roles_log_observer.rst:9 ../../_includes/admin/roles_mpm.rst:9 ../../_includes/admin/roles_navigation.rst:9
+#: ../../_includes/admin/roles_navs_dashbds.rst:8 ../../_includes/admin/rum-roles-caps.rst:7 ../../_includes/admin/synth-roles-caps.rst:7
 msgid ":strong:`power`"
 msgstr ":strong:`power`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:10 ../../_includes/admin/roles_apm.rst:8 ../../_includes/admin/roles_data_configuration.rst:8 ../../_includes/admin/roles_help_support.rst:9 ../../_includes/admin/roles_log_observer.rst:10
-#: ../../_includes/admin/roles_mpm.rst:10 ../../_includes/admin/roles_navigation.rst:10 ../../_includes/admin/roles_navs_dashbds.rst:9 ../../_includes/admin/rum-roles-caps.rst:8 ../../_includes/admin/synth-roles-caps.rst:8
+#: ../../_includes/admin/roles_alerts_detectors.rst:10 ../../_includes/admin/roles_apm.rst:8 ../../_includes/admin/roles_data_configuration.rst:8 ../../_includes/admin/roles_help_support.rst:9 ../../_includes/admin/roles_log_observer.rst:10 ../../_includes/admin/roles_mpm.rst:10
+#: ../../_includes/admin/roles_navigation.rst:10 ../../_includes/admin/roles_navs_dashbds.rst:9 ../../_includes/admin/rum-roles-caps.rst:8 ../../_includes/admin/synth-roles-caps.rst:8
 msgid ":strong:`usage`"
 msgstr ":strong:`usage`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:11 ../../_includes/admin/roles_apm.rst:9 ../../_includes/admin/roles_data_configuration.rst:9 ../../_includes/admin/roles_help_support.rst:10 ../../_includes/admin/roles_log_observer.rst:11
-#: ../../_includes/admin/roles_mpm.rst:11 ../../_includes/admin/roles_navigation.rst:11 ../../_includes/admin/roles_navs_dashbds.rst:10 ../../_includes/admin/rum-roles-caps.rst:9 ../../_includes/admin/synth-roles-caps.rst:9
+#: ../../_includes/admin/roles_alerts_detectors.rst:11 ../../_includes/admin/roles_apm.rst:9 ../../_includes/admin/roles_data_configuration.rst:9 ../../_includes/admin/roles_help_support.rst:10 ../../_includes/admin/roles_log_observer.rst:11 ../../_includes/admin/roles_mpm.rst:11
+#: ../../_includes/admin/roles_navigation.rst:11 ../../_includes/admin/roles_navs_dashbds.rst:10 ../../_includes/admin/rum-roles-caps.rst:9 ../../_includes/admin/synth-roles-caps.rst:9
 msgid ":strong:`read_only`"
 msgstr ":strong:`read_only`"
 
@@ -103,49 +102,38 @@ msgstr ":strong:`read_only`"
 msgid ":strong:`View metrics pipeline management metric summary (no ruleset)`"
 msgstr ":strong:`メトリクスパイプライン管理メトリクスサマリーを表示する（ルールセットなし）`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:15 ../../_includes/admin/roles_alerts_detectors.rst:16 ../../_includes/admin/roles_alerts_detectors.rst:17 ../../_includes/admin/roles_alerts_detectors.rst:18
-#: ../../_includes/admin/roles_alerts_detectors.rst:22 ../../_includes/admin/roles_alerts_detectors.rst:23 ../../_includes/admin/roles_alerts_detectors.rst:28 ../../_includes/admin/roles_alerts_detectors.rst:29
-#: ../../_includes/admin/roles_alerts_detectors.rst:34 ../../_includes/admin/roles_alerts_detectors.rst:35 ../../_includes/admin/roles_alerts_detectors.rst:40 ../../_includes/admin/roles_alerts_detectors.rst:41
-#: ../../_includes/admin/roles_alerts_detectors.rst:42 ../../_includes/admin/roles_alerts_detectors.rst:43 ../../_includes/admin/roles_alerts_detectors.rst:46 ../../_includes/admin/roles_alerts_detectors.rst:47
-#: ../../_includes/admin/roles_alerts_detectors.rst:52 ../../_includes/admin/roles_alerts_detectors.rst:53 ../../_includes/admin/roles_alerts_detectors.rst:58 ../../_includes/admin/roles_alerts_detectors.rst:59
-#: ../../_includes/admin/roles_alerts_detectors.rst:64 ../../_includes/admin/roles_alerts_detectors.rst:65 ../../_includes/admin/roles_alerts_detectors.rst:70 ../../_includes/admin/roles_alerts_detectors.rst:71
-#: ../../_includes/admin/roles_alerts_detectors.rst:76 ../../_includes/admin/roles_alerts_detectors.rst:77 ../../_includes/admin/roles_alerts_detectors.rst:78 ../../_includes/admin/roles_alerts_detectors.rst:79
-#: ../../_includes/admin/roles_alerts_detectors.rst:82 ../../_includes/admin/roles_alerts_detectors.rst:83 ../../_includes/admin/roles_alerts_detectors.rst:88 ../../_includes/admin/roles_alerts_detectors.rst:89
-#: ../../_includes/admin/roles_alerts_detectors.rst:94 ../../_includes/admin/roles_alerts_detectors.rst:95 ../../_includes/admin/roles_alerts_detectors.rst:96 ../../_includes/admin/roles_alerts_detectors.rst:97 ../../_includes/admin/roles_apm.rst:12
-#: ../../_includes/admin/roles_apm.rst:13 ../../_includes/admin/roles_apm.rst:14 ../../_includes/admin/roles_apm.rst:15 ../../_includes/admin/roles_apm.rst:18 ../../_includes/admin/roles_apm.rst:24 ../../_includes/admin/roles_apm.rst:25
-#: ../../_includes/admin/roles_apm.rst:26 ../../_includes/admin/roles_apm.rst:27 ../../_includes/admin/roles_apm.rst:30 ../../_includes/admin/roles_apm.rst:36 ../../_includes/admin/roles_apm.rst:37 ../../_includes/admin/roles_apm.rst:38
-#: ../../_includes/admin/roles_apm.rst:39 ../../_includes/admin/roles_apm.rst:42 ../../_includes/admin/roles_data_configuration.rst:12 ../../_includes/admin/roles_data_configuration.rst:13 ../../_includes/admin/roles_data_configuration.rst:14
-#: ../../_includes/admin/roles_data_configuration.rst:15 ../../_includes/admin/roles_data_configuration.rst:18 ../../_includes/admin/roles_data_configuration.rst:25 ../../_includes/admin/roles_data_configuration.rst:26
-#: ../../_includes/admin/roles_data_configuration.rst:27 ../../_includes/admin/roles_data_configuration.rst:28 ../../_includes/admin/roles_help_support.rst:13 ../../_includes/admin/roles_help_support.rst:14
-#: ../../_includes/admin/roles_help_support.rst:15 ../../_includes/admin/roles_help_support.rst:16 ../../_includes/admin/roles_help_support.rst:19 ../../_includes/admin/roles_help_support.rst:20 ../../_includes/admin/roles_help_support.rst:21
-#: ../../_includes/admin/roles_help_support.rst:22 ../../_includes/admin/roles_log_observer.rst:15 ../../_includes/admin/roles_log_observer.rst:16 ../../_includes/admin/roles_log_observer.rst:17 ../../_includes/admin/roles_log_observer.rst:18
-#: ../../_includes/admin/roles_log_observer.rst:22 ../../_includes/admin/roles_log_observer.rst:23 ../../_includes/admin/roles_log_observer.rst:24 ../../_includes/admin/roles_log_observer.rst:25 ../../_includes/admin/roles_log_observer.rst:28
-#: ../../_includes/admin/roles_log_observer.rst:29 ../../_includes/admin/roles_log_observer.rst:30 ../../_includes/admin/roles_log_observer.rst:31 ../../_includes/admin/roles_log_observer.rst:34 ../../_includes/admin/roles_log_observer.rst:35
-#: ../../_includes/admin/roles_log_observer.rst:36 ../../_includes/admin/roles_log_observer.rst:37 ../../_includes/admin/roles_log_observer.rst:40 ../../_includes/admin/roles_log_observer.rst:41 ../../_includes/admin/roles_log_observer.rst:46
-#: ../../_includes/admin/roles_log_observer.rst:47 ../../_includes/admin/roles_log_observer.rst:48 ../../_includes/admin/roles_log_observer.rst:49 ../../_includes/admin/roles_log_observer.rst:52 ../../_includes/admin/roles_log_observer.rst:53
-#: ../../_includes/admin/roles_log_observer.rst:58 ../../_includes/admin/roles_log_observer.rst:59 ../../_includes/admin/roles_log_observer.rst:64 ../../_includes/admin/roles_log_observer.rst:65 ../../_includes/admin/roles_log_observer.rst:70
-#: ../../_includes/admin/roles_log_observer.rst:71 ../../_includes/admin/roles_log_observer.rst:72 ../../_includes/admin/roles_log_observer.rst:76 ../../_includes/admin/roles_log_observer.rst:77 ../../_includes/admin/roles_log_observer.rst:82
-#: ../../_includes/admin/roles_log_observer.rst:83 ../../_includes/admin/roles_log_observer.rst:88 ../../_includes/admin/roles_log_observer.rst:94 ../../_includes/admin/roles_log_observer.rst:100 ../../_includes/admin/roles_log_observer.rst:102
-#: ../../_includes/admin/roles_log_observer.rst:106 ../../_includes/admin/roles_mpm.rst:15 ../../_includes/admin/roles_mpm.rst:16 ../../_includes/admin/roles_mpm.rst:17 ../../_includes/admin/roles_mpm.rst:18 ../../_includes/admin/roles_mpm.rst:22
-#: ../../_includes/admin/roles_mpm.rst:23 ../../_includes/admin/roles_mpm.rst:24 ../../_includes/admin/roles_mpm.rst:25 ../../_includes/admin/roles_mpm.rst:28 ../../_includes/admin/roles_mpm.rst:34 ../../_includes/admin/roles_mpm.rst:35
-#: ../../_includes/admin/roles_mpm.rst:40 ../../_includes/admin/roles_mpm.rst:41 ../../_includes/admin/roles_mpm.rst:46 ../../_includes/admin/roles_mpm.rst:47 ../../_includes/admin/roles_mpm.rst:52 ../../_includes/admin/roles_mpm.rst:53
-#: ../../_includes/admin/roles_mpm.rst:58 ../../_includes/admin/roles_mpm.rst:59 ../../_includes/admin/roles_mpm.rst:64 ../../_includes/admin/roles_mpm.rst:65 ../../_includes/admin/roles_mpm.rst:70 ../../_includes/admin/roles_navigation.rst:14
-#: ../../_includes/admin/roles_navigation.rst:20 ../../_includes/admin/roles_navigation.rst:26 ../../_includes/admin/roles_navigation.rst:27 ../../_includes/admin/roles_navigation.rst:28 ../../_includes/admin/roles_navigation.rst:29
-#: ../../_includes/admin/roles_navigation.rst:32 ../../_includes/admin/roles_navigation.rst:38 ../../_includes/admin/roles_navigation.rst:40 ../../_includes/admin/roles_navigation.rst:44 ../../_includes/admin/roles_navigation.rst:45
-#: ../../_includes/admin/roles_navigation.rst:46 ../../_includes/admin/roles_navigation.rst:47 ../../_includes/admin/roles_navigation.rst:50 ../../_includes/admin/roles_navigation.rst:56 ../../_includes/admin/roles_navigation.rst:57
-#: ../../_includes/admin/roles_navigation.rst:58 ../../_includes/admin/roles_navigation.rst:59 ../../_includes/admin/roles_navigation.rst:62 ../../_includes/admin/roles_navigation.rst:68 ../../_includes/admin/roles_navigation.rst:69
-#: ../../_includes/admin/roles_navigation.rst:74 ../../_includes/admin/roles_navigation.rst:81 ../../_includes/admin/roles_navigation.rst:87 ../../_includes/admin/roles_navs_dashbds.rst:13 ../../_includes/admin/roles_navs_dashbds.rst:14
-#: ../../_includes/admin/roles_navs_dashbds.rst:15 ../../_includes/admin/roles_navs_dashbds.rst:16 ../../_includes/admin/roles_navs_dashbds.rst:19 ../../_includes/admin/roles_navs_dashbds.rst:20 ../../_includes/admin/roles_navs_dashbds.rst:25
-#: ../../_includes/admin/rum-roles-caps.rst:12 ../../_includes/admin/rum-roles-caps.rst:13 ../../_includes/admin/rum-roles-caps.rst:14 ../../_includes/admin/rum-roles-caps.rst:15 ../../_includes/admin/rum-roles-caps.rst:18
-#: ../../_includes/admin/rum-roles-caps.rst:19 ../../_includes/admin/rum-roles-caps.rst:24 ../../_includes/admin/rum-roles-caps.rst:25 ../../_includes/admin/rum-roles-caps.rst:26 ../../_includes/admin/rum-roles-caps.rst:27
-#: ../../_includes/admin/rum-roles-caps.rst:30 ../../_includes/admin/rum-roles-caps.rst:31 ../../_includes/admin/rum-roles-caps.rst:32 ../../_includes/admin/rum-roles-caps.rst:33 ../../_includes/admin/rum-roles-caps.rst:36
-#: ../../_includes/admin/rum-roles-caps.rst:37 ../../_includes/admin/rum-roles-caps.rst:38 ../../_includes/admin/rum-roles-caps.rst:39 ../../_includes/admin/rum-roles-caps.rst:42 ../../_includes/admin/rum-roles-caps.rst:43
-#: ../../_includes/admin/rum-roles-caps.rst:44 ../../_includes/admin/rum-roles-caps.rst:45 ../../_includes/admin/rum-roles-caps.rst:48 ../../_includes/admin/rum-roles-caps.rst:49 ../../_includes/admin/rum-roles-caps.rst:50
-#: ../../_includes/admin/rum-roles-caps.rst:51 ../../_includes/admin/rum-roles-caps.rst:54 ../../_includes/admin/rum-roles-caps.rst:55 ../../_includes/admin/rum-roles-caps.rst:60 ../../_includes/admin/rum-roles-caps.rst:61
-#: ../../_includes/admin/synth-roles-caps.rst:12 ../../_includes/admin/synth-roles-caps.rst:13 ../../_includes/admin/synth-roles-caps.rst:18 ../../_includes/admin/synth-roles-caps.rst:19 ../../_includes/admin/synth-roles-caps.rst:20
-#: ../../_includes/admin/synth-roles-caps.rst:21 ../../_includes/admin/synth-roles-caps.rst:25 ../../_includes/admin/synth-roles-caps.rst:31 ../../_includes/admin/synth-roles-caps.rst:32 ../../_includes/admin/synth-roles-caps.rst:33
-#: ../../_includes/admin/synth-roles-caps.rst:34 ../../_includes/admin/synth-roles-caps.rst:37 ../../_includes/admin/synth-roles-caps.rst:43 ../../_includes/admin/synth-roles-caps.rst:49 ../../_includes/admin/synth-roles-caps.rst:54
-#: ../../_includes/admin/synth-roles-caps.rst:55 ../../_includes/admin/synth-roles-caps.rst:56 ../../_includes/admin/synth-roles-caps.rst:57
+#: ../../_includes/admin/roles_alerts_detectors.rst:15 ../../_includes/admin/roles_alerts_detectors.rst:16 ../../_includes/admin/roles_alerts_detectors.rst:17 ../../_includes/admin/roles_alerts_detectors.rst:18 ../../_includes/admin/roles_alerts_detectors.rst:22 ../../_includes/admin/roles_alerts_detectors.rst:23
+#: ../../_includes/admin/roles_alerts_detectors.rst:28 ../../_includes/admin/roles_alerts_detectors.rst:29 ../../_includes/admin/roles_alerts_detectors.rst:34 ../../_includes/admin/roles_alerts_detectors.rst:35 ../../_includes/admin/roles_alerts_detectors.rst:40 ../../_includes/admin/roles_alerts_detectors.rst:41
+#: ../../_includes/admin/roles_alerts_detectors.rst:42 ../../_includes/admin/roles_alerts_detectors.rst:43 ../../_includes/admin/roles_alerts_detectors.rst:46 ../../_includes/admin/roles_alerts_detectors.rst:47 ../../_includes/admin/roles_alerts_detectors.rst:52 ../../_includes/admin/roles_alerts_detectors.rst:53
+#: ../../_includes/admin/roles_alerts_detectors.rst:58 ../../_includes/admin/roles_alerts_detectors.rst:59 ../../_includes/admin/roles_alerts_detectors.rst:64 ../../_includes/admin/roles_alerts_detectors.rst:65 ../../_includes/admin/roles_alerts_detectors.rst:70 ../../_includes/admin/roles_alerts_detectors.rst:71
+#: ../../_includes/admin/roles_alerts_detectors.rst:76 ../../_includes/admin/roles_alerts_detectors.rst:77 ../../_includes/admin/roles_alerts_detectors.rst:78 ../../_includes/admin/roles_alerts_detectors.rst:79 ../../_includes/admin/roles_alerts_detectors.rst:82 ../../_includes/admin/roles_alerts_detectors.rst:83
+#: ../../_includes/admin/roles_alerts_detectors.rst:88 ../../_includes/admin/roles_alerts_detectors.rst:89 ../../_includes/admin/roles_alerts_detectors.rst:94 ../../_includes/admin/roles_alerts_detectors.rst:95 ../../_includes/admin/roles_alerts_detectors.rst:96 ../../_includes/admin/roles_alerts_detectors.rst:97
+#: ../../_includes/admin/roles_apm.rst:12 ../../_includes/admin/roles_apm.rst:13 ../../_includes/admin/roles_apm.rst:14 ../../_includes/admin/roles_apm.rst:15 ../../_includes/admin/roles_apm.rst:18 ../../_includes/admin/roles_apm.rst:24 ../../_includes/admin/roles_apm.rst:25 ../../_includes/admin/roles_apm.rst:26
+#: ../../_includes/admin/roles_apm.rst:27 ../../_includes/admin/roles_apm.rst:30 ../../_includes/admin/roles_apm.rst:36 ../../_includes/admin/roles_apm.rst:37 ../../_includes/admin/roles_apm.rst:38 ../../_includes/admin/roles_apm.rst:39 ../../_includes/admin/roles_apm.rst:42
+#: ../../_includes/admin/roles_data_configuration.rst:12 ../../_includes/admin/roles_data_configuration.rst:13 ../../_includes/admin/roles_data_configuration.rst:14 ../../_includes/admin/roles_data_configuration.rst:15 ../../_includes/admin/roles_data_configuration.rst:18
+#: ../../_includes/admin/roles_data_configuration.rst:25 ../../_includes/admin/roles_data_configuration.rst:26 ../../_includes/admin/roles_data_configuration.rst:27 ../../_includes/admin/roles_data_configuration.rst:28 ../../_includes/admin/roles_help_support.rst:13 ../../_includes/admin/roles_help_support.rst:14
+#: ../../_includes/admin/roles_help_support.rst:15 ../../_includes/admin/roles_help_support.rst:16 ../../_includes/admin/roles_help_support.rst:19 ../../_includes/admin/roles_help_support.rst:20 ../../_includes/admin/roles_help_support.rst:21 ../../_includes/admin/roles_help_support.rst:22
+#: ../../_includes/admin/roles_log_observer.rst:15 ../../_includes/admin/roles_log_observer.rst:16 ../../_includes/admin/roles_log_observer.rst:17 ../../_includes/admin/roles_log_observer.rst:18 ../../_includes/admin/roles_log_observer.rst:21 ../../_includes/admin/roles_log_observer.rst:22
+#: ../../_includes/admin/roles_log_observer.rst:23 ../../_includes/admin/roles_log_observer.rst:24 ../../_includes/admin/roles_log_observer.rst:27 ../../_includes/admin/roles_log_observer.rst:28 ../../_includes/admin/roles_log_observer.rst:29 ../../_includes/admin/roles_log_observer.rst:30
+#: ../../_includes/admin/roles_log_observer.rst:33 ../../_includes/admin/roles_log_observer.rst:34 ../../_includes/admin/roles_log_observer.rst:39 ../../_includes/admin/roles_log_observer.rst:40 ../../_includes/admin/roles_log_observer.rst:41 ../../_includes/admin/roles_log_observer.rst:42
+#: ../../_includes/admin/roles_log_observer.rst:45 ../../_includes/admin/roles_log_observer.rst:46 ../../_includes/admin/roles_log_observer.rst:47 ../../_includes/admin/roles_log_observer.rst:48 ../../_includes/admin/roles_log_observer.rst:51 ../../_includes/admin/roles_log_observer.rst:52
+#: ../../_includes/admin/roles_log_observer.rst:57 ../../_includes/admin/roles_log_observer.rst:58 ../../_includes/admin/roles_log_observer.rst:59 ../../_includes/admin/roles_log_observer.rst:63 ../../_includes/admin/roles_log_observer.rst:65 ../../_includes/admin/roles_log_observer.rst:69
+#: ../../_includes/admin/roles_mpm.rst:15 ../../_includes/admin/roles_mpm.rst:16 ../../_includes/admin/roles_mpm.rst:17 ../../_includes/admin/roles_mpm.rst:18 ../../_includes/admin/roles_mpm.rst:22 ../../_includes/admin/roles_mpm.rst:23 ../../_includes/admin/roles_mpm.rst:24 ../../_includes/admin/roles_mpm.rst:25
+#: ../../_includes/admin/roles_mpm.rst:28 ../../_includes/admin/roles_mpm.rst:34 ../../_includes/admin/roles_mpm.rst:35 ../../_includes/admin/roles_mpm.rst:40 ../../_includes/admin/roles_mpm.rst:41 ../../_includes/admin/roles_mpm.rst:46 ../../_includes/admin/roles_mpm.rst:47 ../../_includes/admin/roles_mpm.rst:52
+#: ../../_includes/admin/roles_mpm.rst:53 ../../_includes/admin/roles_mpm.rst:58 ../../_includes/admin/roles_mpm.rst:59 ../../_includes/admin/roles_mpm.rst:64 ../../_includes/admin/roles_mpm.rst:65 ../../_includes/admin/roles_mpm.rst:70 ../../_includes/admin/roles_navigation.rst:14
+#: ../../_includes/admin/roles_navigation.rst:20 ../../_includes/admin/roles_navigation.rst:26 ../../_includes/admin/roles_navigation.rst:27 ../../_includes/admin/roles_navigation.rst:28 ../../_includes/admin/roles_navigation.rst:29 ../../_includes/admin/roles_navigation.rst:32
+#: ../../_includes/admin/roles_navigation.rst:38 ../../_includes/admin/roles_navigation.rst:40 ../../_includes/admin/roles_navigation.rst:44 ../../_includes/admin/roles_navigation.rst:45 ../../_includes/admin/roles_navigation.rst:46 ../../_includes/admin/roles_navigation.rst:47
+#: ../../_includes/admin/roles_navigation.rst:50 ../../_includes/admin/roles_navigation.rst:56 ../../_includes/admin/roles_navigation.rst:57 ../../_includes/admin/roles_navigation.rst:58 ../../_includes/admin/roles_navigation.rst:59 ../../_includes/admin/roles_navigation.rst:62
+#: ../../_includes/admin/roles_navigation.rst:68 ../../_includes/admin/roles_navigation.rst:69 ../../_includes/admin/roles_navigation.rst:74 ../../_includes/admin/roles_navigation.rst:81 ../../_includes/admin/roles_navigation.rst:87 ../../_includes/admin/roles_navs_dashbds.rst:13
+#: ../../_includes/admin/roles_navs_dashbds.rst:14 ../../_includes/admin/roles_navs_dashbds.rst:15 ../../_includes/admin/roles_navs_dashbds.rst:16 ../../_includes/admin/roles_navs_dashbds.rst:19 ../../_includes/admin/roles_navs_dashbds.rst:20 ../../_includes/admin/roles_navs_dashbds.rst:25
+#: ../../_includes/admin/rum-roles-caps.rst:12 ../../_includes/admin/rum-roles-caps.rst:13 ../../_includes/admin/rum-roles-caps.rst:14 ../../_includes/admin/rum-roles-caps.rst:15 ../../_includes/admin/rum-roles-caps.rst:18 ../../_includes/admin/rum-roles-caps.rst:19 ../../_includes/admin/rum-roles-caps.rst:24
+#: ../../_includes/admin/rum-roles-caps.rst:25 ../../_includes/admin/rum-roles-caps.rst:26 ../../_includes/admin/rum-roles-caps.rst:27 ../../_includes/admin/rum-roles-caps.rst:30 ../../_includes/admin/rum-roles-caps.rst:31 ../../_includes/admin/rum-roles-caps.rst:32 ../../_includes/admin/rum-roles-caps.rst:33
+#: ../../_includes/admin/rum-roles-caps.rst:36 ../../_includes/admin/rum-roles-caps.rst:37 ../../_includes/admin/rum-roles-caps.rst:38 ../../_includes/admin/rum-roles-caps.rst:39 ../../_includes/admin/rum-roles-caps.rst:42 ../../_includes/admin/rum-roles-caps.rst:43 ../../_includes/admin/rum-roles-caps.rst:44
+#: ../../_includes/admin/rum-roles-caps.rst:45 ../../_includes/admin/rum-roles-caps.rst:48 ../../_includes/admin/rum-roles-caps.rst:49 ../../_includes/admin/rum-roles-caps.rst:50 ../../_includes/admin/rum-roles-caps.rst:51 ../../_includes/admin/rum-roles-caps.rst:54 ../../_includes/admin/rum-roles-caps.rst:55
+#: ../../_includes/admin/rum-roles-caps.rst:60 ../../_includes/admin/rum-roles-caps.rst:61 ../../_includes/admin/synth-roles-caps.rst:12 ../../_includes/admin/synth-roles-caps.rst:13 ../../_includes/admin/synth-roles-caps.rst:18 ../../_includes/admin/synth-roles-caps.rst:19 ../../_includes/admin/synth-roles-caps.rst:20
+#: ../../_includes/admin/synth-roles-caps.rst:21 ../../_includes/admin/synth-roles-caps.rst:25 ../../_includes/admin/synth-roles-caps.rst:31 ../../_includes/admin/synth-roles-caps.rst:32 ../../_includes/admin/synth-roles-caps.rst:33 ../../_includes/admin/synth-roles-caps.rst:34
+#: ../../_includes/admin/synth-roles-caps.rst:37 ../../_includes/admin/synth-roles-caps.rst:43 ../../_includes/admin/synth-roles-caps.rst:49 ../../_includes/admin/synth-roles-caps.rst:54 ../../_includes/admin/synth-roles-caps.rst:55 ../../_includes/admin/synth-roles-caps.rst:56
+#: ../../_includes/admin/synth-roles-caps.rst:57
 msgid "Yes"
 msgstr "あり"
 
@@ -157,31 +145,24 @@ msgstr ":strong:`メトリクスパイプライン管理メトリクスサマリ
 msgid ":strong:`Edit default data routing`"
 msgstr ":strong:`デフォルトデータルーティングを編集する`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:24 ../../_includes/admin/roles_alerts_detectors.rst:25 ../../_includes/admin/roles_alerts_detectors.rst:30 ../../_includes/admin/roles_alerts_detectors.rst:31
-#: ../../_includes/admin/roles_alerts_detectors.rst:36 ../../_includes/admin/roles_alerts_detectors.rst:37 ../../_includes/admin/roles_alerts_detectors.rst:48 ../../_includes/admin/roles_alerts_detectors.rst:49
-#: ../../_includes/admin/roles_alerts_detectors.rst:54 ../../_includes/admin/roles_alerts_detectors.rst:55 ../../_includes/admin/roles_alerts_detectors.rst:60 ../../_includes/admin/roles_alerts_detectors.rst:61
-#: ../../_includes/admin/roles_alerts_detectors.rst:66 ../../_includes/admin/roles_alerts_detectors.rst:67 ../../_includes/admin/roles_alerts_detectors.rst:72 ../../_includes/admin/roles_alerts_detectors.rst:73
-#: ../../_includes/admin/roles_alerts_detectors.rst:84 ../../_includes/admin/roles_alerts_detectors.rst:85 ../../_includes/admin/roles_alerts_detectors.rst:90 ../../_includes/admin/roles_alerts_detectors.rst:91 ../../_includes/admin/roles_apm.rst:19
-#: ../../_includes/admin/roles_apm.rst:20 ../../_includes/admin/roles_apm.rst:21 ../../_includes/admin/roles_apm.rst:31 ../../_includes/admin/roles_apm.rst:32 ../../_includes/admin/roles_apm.rst:33 ../../_includes/admin/roles_apm.rst:43
-#: ../../_includes/admin/roles_apm.rst:44 ../../_includes/admin/roles_apm.rst:45 ../../_includes/admin/roles_data_configuration.rst:19 ../../_includes/admin/roles_data_configuration.rst:20 ../../_includes/admin/roles_data_configuration.rst:21
-#: ../../_includes/admin/roles_log_observer.rst:42 ../../_includes/admin/roles_log_observer.rst:43 ../../_includes/admin/roles_log_observer.rst:54 ../../_includes/admin/roles_log_observer.rst:55 ../../_includes/admin/roles_log_observer.rst:60
-#: ../../_includes/admin/roles_log_observer.rst:61 ../../_includes/admin/roles_log_observer.rst:66 ../../_includes/admin/roles_log_observer.rst:67 ../../_includes/admin/roles_log_observer.rst:73 ../../_includes/admin/roles_log_observer.rst:78
-#: ../../_includes/admin/roles_log_observer.rst:79 ../../_includes/admin/roles_log_observer.rst:84 ../../_includes/admin/roles_log_observer.rst:85 ../../_includes/admin/roles_log_observer.rst:89 ../../_includes/admin/roles_log_observer.rst:90
-#: ../../_includes/admin/roles_log_observer.rst:91 ../../_includes/admin/roles_log_observer.rst:96 ../../_includes/admin/roles_log_observer.rst:97 ../../_includes/admin/roles_log_observer.rst:101 ../../_includes/admin/roles_log_observer.rst:103
-#: ../../_includes/admin/roles_log_observer.rst:107 ../../_includes/admin/roles_log_observer.rst:108 ../../_includes/admin/roles_log_observer.rst:109 ../../_includes/admin/roles_mpm.rst:29 ../../_includes/admin/roles_mpm.rst:30
-#: ../../_includes/admin/roles_mpm.rst:31 ../../_includes/admin/roles_mpm.rst:36 ../../_includes/admin/roles_mpm.rst:37 ../../_includes/admin/roles_mpm.rst:42 ../../_includes/admin/roles_mpm.rst:43 ../../_includes/admin/roles_mpm.rst:48
-#: ../../_includes/admin/roles_mpm.rst:49 ../../_includes/admin/roles_mpm.rst:54 ../../_includes/admin/roles_mpm.rst:55 ../../_includes/admin/roles_mpm.rst:60 ../../_includes/admin/roles_mpm.rst:61 ../../_includes/admin/roles_mpm.rst:66
-#: ../../_includes/admin/roles_mpm.rst:67 ../../_includes/admin/roles_mpm.rst:74 ../../_includes/admin/roles_mpm.rst:75 ../../_includes/admin/roles_navigation.rst:15 ../../_includes/admin/roles_navigation.rst:16
-#: ../../_includes/admin/roles_navigation.rst:17 ../../_includes/admin/roles_navigation.rst:21 ../../_includes/admin/roles_navigation.rst:22 ../../_includes/admin/roles_navigation.rst:23 ../../_includes/admin/roles_navigation.rst:33
-#: ../../_includes/admin/roles_navigation.rst:34 ../../_includes/admin/roles_navigation.rst:35 ../../_includes/admin/roles_navigation.rst:39 ../../_includes/admin/roles_navigation.rst:41 ../../_includes/admin/roles_navigation.rst:51
-#: ../../_includes/admin/roles_navigation.rst:52 ../../_includes/admin/roles_navigation.rst:53 ../../_includes/admin/roles_navigation.rst:63 ../../_includes/admin/roles_navigation.rst:64 ../../_includes/admin/roles_navigation.rst:65
-#: ../../_includes/admin/roles_navigation.rst:70 ../../_includes/admin/roles_navigation.rst:71 ../../_includes/admin/roles_navigation.rst:77 ../../_includes/admin/roles_navigation.rst:78 ../../_includes/admin/roles_navigation.rst:83
-#: ../../_includes/admin/roles_navigation.rst:84 ../../_includes/admin/roles_navigation.rst:88 ../../_includes/admin/roles_navigation.rst:89 ../../_includes/admin/roles_navigation.rst:90 ../../_includes/admin/roles_navs_dashbds.rst:21
-#: ../../_includes/admin/roles_navs_dashbds.rst:22 ../../_includes/admin/roles_navs_dashbds.rst:26 ../../_includes/admin/roles_navs_dashbds.rst:27 ../../_includes/admin/roles_navs_dashbds.rst:28 ../../_includes/admin/rum-roles-caps.rst:20
-#: ../../_includes/admin/rum-roles-caps.rst:21 ../../_includes/admin/rum-roles-caps.rst:56 ../../_includes/admin/rum-roles-caps.rst:57 ../../_includes/admin/rum-roles-caps.rst:62 ../../_includes/admin/rum-roles-caps.rst:63
-#: ../../_includes/admin/synth-roles-caps.rst:14 ../../_includes/admin/synth-roles-caps.rst:15 ../../_includes/admin/synth-roles-caps.rst:26 ../../_includes/admin/synth-roles-caps.rst:27 ../../_includes/admin/synth-roles-caps.rst:28
-#: ../../_includes/admin/synth-roles-caps.rst:38 ../../_includes/admin/synth-roles-caps.rst:39 ../../_includes/admin/synth-roles-caps.rst:40 ../../_includes/admin/synth-roles-caps.rst:44 ../../_includes/admin/synth-roles-caps.rst:45
-#: ../../_includes/admin/synth-roles-caps.rst:46 ../../_includes/admin/synth-roles-caps.rst:50 ../../_includes/admin/synth-roles-caps.rst:51 ../../_includes/admin/synth-roles-caps.rst:52
+#: ../../_includes/admin/roles_alerts_detectors.rst:24 ../../_includes/admin/roles_alerts_detectors.rst:25 ../../_includes/admin/roles_alerts_detectors.rst:30 ../../_includes/admin/roles_alerts_detectors.rst:31 ../../_includes/admin/roles_alerts_detectors.rst:36 ../../_includes/admin/roles_alerts_detectors.rst:37
+#: ../../_includes/admin/roles_alerts_detectors.rst:48 ../../_includes/admin/roles_alerts_detectors.rst:49 ../../_includes/admin/roles_alerts_detectors.rst:54 ../../_includes/admin/roles_alerts_detectors.rst:55 ../../_includes/admin/roles_alerts_detectors.rst:60 ../../_includes/admin/roles_alerts_detectors.rst:61
+#: ../../_includes/admin/roles_alerts_detectors.rst:66 ../../_includes/admin/roles_alerts_detectors.rst:67 ../../_includes/admin/roles_alerts_detectors.rst:72 ../../_includes/admin/roles_alerts_detectors.rst:73 ../../_includes/admin/roles_alerts_detectors.rst:84 ../../_includes/admin/roles_alerts_detectors.rst:85
+#: ../../_includes/admin/roles_alerts_detectors.rst:90 ../../_includes/admin/roles_alerts_detectors.rst:91 ../../_includes/admin/roles_apm.rst:19 ../../_includes/admin/roles_apm.rst:20 ../../_includes/admin/roles_apm.rst:21 ../../_includes/admin/roles_apm.rst:31 ../../_includes/admin/roles_apm.rst:32
+#: ../../_includes/admin/roles_apm.rst:33 ../../_includes/admin/roles_apm.rst:43 ../../_includes/admin/roles_apm.rst:44 ../../_includes/admin/roles_apm.rst:45 ../../_includes/admin/roles_data_configuration.rst:19 ../../_includes/admin/roles_data_configuration.rst:20 ../../_includes/admin/roles_data_configuration.rst:21
+#: ../../_includes/admin/roles_log_observer.rst:35 ../../_includes/admin/roles_log_observer.rst:36 ../../_includes/admin/roles_log_observer.rst:53 ../../_includes/admin/roles_log_observer.rst:54 ../../_includes/admin/roles_log_observer.rst:60 ../../_includes/admin/roles_log_observer.rst:64
+#: ../../_includes/admin/roles_log_observer.rst:66 ../../_includes/admin/roles_log_observer.rst:70 ../../_includes/admin/roles_log_observer.rst:71 ../../_includes/admin/roles_log_observer.rst:72 ../../_includes/admin/roles_mpm.rst:29 ../../_includes/admin/roles_mpm.rst:30 ../../_includes/admin/roles_mpm.rst:31
+#: ../../_includes/admin/roles_mpm.rst:36 ../../_includes/admin/roles_mpm.rst:37 ../../_includes/admin/roles_mpm.rst:42 ../../_includes/admin/roles_mpm.rst:43 ../../_includes/admin/roles_mpm.rst:48 ../../_includes/admin/roles_mpm.rst:49 ../../_includes/admin/roles_mpm.rst:54 ../../_includes/admin/roles_mpm.rst:55
+#: ../../_includes/admin/roles_mpm.rst:60 ../../_includes/admin/roles_mpm.rst:61 ../../_includes/admin/roles_mpm.rst:66 ../../_includes/admin/roles_mpm.rst:67 ../../_includes/admin/roles_mpm.rst:74 ../../_includes/admin/roles_mpm.rst:75 ../../_includes/admin/roles_navigation.rst:15
+#: ../../_includes/admin/roles_navigation.rst:16 ../../_includes/admin/roles_navigation.rst:17 ../../_includes/admin/roles_navigation.rst:21 ../../_includes/admin/roles_navigation.rst:22 ../../_includes/admin/roles_navigation.rst:23 ../../_includes/admin/roles_navigation.rst:33
+#: ../../_includes/admin/roles_navigation.rst:34 ../../_includes/admin/roles_navigation.rst:35 ../../_includes/admin/roles_navigation.rst:39 ../../_includes/admin/roles_navigation.rst:41 ../../_includes/admin/roles_navigation.rst:51 ../../_includes/admin/roles_navigation.rst:52
+#: ../../_includes/admin/roles_navigation.rst:53 ../../_includes/admin/roles_navigation.rst:63 ../../_includes/admin/roles_navigation.rst:64 ../../_includes/admin/roles_navigation.rst:65 ../../_includes/admin/roles_navigation.rst:70 ../../_includes/admin/roles_navigation.rst:71
+#: ../../_includes/admin/roles_navigation.rst:77 ../../_includes/admin/roles_navigation.rst:78 ../../_includes/admin/roles_navigation.rst:83 ../../_includes/admin/roles_navigation.rst:84 ../../_includes/admin/roles_navigation.rst:88 ../../_includes/admin/roles_navigation.rst:89
+#: ../../_includes/admin/roles_navigation.rst:90 ../../_includes/admin/roles_navs_dashbds.rst:21 ../../_includes/admin/roles_navs_dashbds.rst:22 ../../_includes/admin/roles_navs_dashbds.rst:26 ../../_includes/admin/roles_navs_dashbds.rst:27 ../../_includes/admin/roles_navs_dashbds.rst:28
+#: ../../_includes/admin/rum-roles-caps.rst:20 ../../_includes/admin/rum-roles-caps.rst:21 ../../_includes/admin/rum-roles-caps.rst:56 ../../_includes/admin/rum-roles-caps.rst:57 ../../_includes/admin/rum-roles-caps.rst:62 ../../_includes/admin/rum-roles-caps.rst:63 ../../_includes/admin/synth-roles-caps.rst:14
+#: ../../_includes/admin/synth-roles-caps.rst:15 ../../_includes/admin/synth-roles-caps.rst:26 ../../_includes/admin/synth-roles-caps.rst:27 ../../_includes/admin/synth-roles-caps.rst:28 ../../_includes/admin/synth-roles-caps.rst:38 ../../_includes/admin/synth-roles-caps.rst:39
+#: ../../_includes/admin/synth-roles-caps.rst:40 ../../_includes/admin/synth-roles-caps.rst:44 ../../_includes/admin/synth-roles-caps.rst:45 ../../_includes/admin/synth-roles-caps.rst:46 ../../_includes/admin/synth-roles-caps.rst:50 ../../_includes/admin/synth-roles-caps.rst:51
+#: ../../_includes/admin/synth-roles-caps.rst:52
 msgid "No"
 msgstr "なし"
 
@@ -214,12 +195,10 @@ msgid ":strong:`Delete entire metrics pipeline management ruleset`"
 msgstr ":strong:`メトリクスパイプライン管理ルールセット全体を削除する`"
 
 #: ../../_includes/admin/roles_mpm.rst:71
-msgid ""
-"Yes, if default routing is real-time storage and the user deletes all aggregation rules. No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management doesn't delete the ruleset. An Admin needs to change "
-"the routing to real-time storage and delete the ruleset."
+msgid "Yes, if default routing is real-time storage and the user deletes all aggregation rules. No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management doesn't delete the ruleset. An Admin needs to change the routing to real-time storage and delete the ruleset."
 msgstr ""
-"デフォルトのルーティングがリアルタイムストレージで、ユーザーがすべての集計ルールを削除する場合は、権限あり。デフォルトのルーティングが［Drop Data］で、ユーザーがすべての集計ルールを削除する場合は、権限なし。メトリクスパイプライン管理は、ルールセット"
-"の削除はしません。管理者がルーティングをリアルタイムストレージに変更して、ルールセットを削除する必要があります。"
+"デフォルトのルーティングがリアルタイムストレージで、ユーザーがすべての集計ルールを削除する場合は、権限あり。デフォルトのルーティングが［Drop Data］で、ユーザーがすべての集計ルールを削除する場合は、権限なし。メトリクスパイプライン管理は、ルールセットの削除はしません。管理者がルーティングをリアルタイムストレージに変更し"
+"て、ルールセットを削除する必要があります。"
 
 #: ../../private-preview/rbac/roles-and-capabilities-table.rst:59
 msgid "Log Observer and Log Observer Connect"
@@ -229,67 +208,39 @@ msgstr "Log ObserverとLog Observer Connect"
 msgid ":strong:`View Timeline`"
 msgstr ":strong:`Timelineの表示`"
 
-#: ../../_includes/admin/roles_log_observer.rst:21
-msgid ":strong:`Live Tail`"
-msgstr ":strong:`Live Tail`"
-
-#: ../../_includes/admin/roles_log_observer.rst:27
+#: ../../_includes/admin/roles_log_observer.rst:20
 msgid ":strong:`Search and filter logs`"
 msgstr ":strong:`ログを検索およびフィルターする`"
 
-#: ../../_includes/admin/roles_log_observer.rst:33
+#: ../../_includes/admin/roles_log_observer.rst:26
 msgid ":strong:`Aggregate logs`"
 msgstr ":strong:`ログを集計する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:39
+#: ../../_includes/admin/roles_log_observer.rst:32
 msgid ":strong:`Create and manage field aliases`"
 msgstr ":strong:`フィールドエイリアスを作成および管理する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:45
+#: ../../_includes/admin/roles_log_observer.rst:38
+msgid ":strong:`View field aliases`"
+msgstr ":strong:`フィールドエイリアスを表示する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:44
 msgid ":strong:`View individual log details`"
 msgstr ":strong:`個々のログの詳細を表示する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:51
-msgid ":strong:`Create and manage log processing rules`"
-msgstr ":strong:`ログ処理ルールを作成および管理する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:57
-msgid ":strong:`Apply processing rules across historical data`"
-msgstr ":strong:`過去のデータに処理ルールを適用する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:63
+#: ../../_includes/admin/roles_log_observer.rst:50
 msgid ":strong:`Save and share Log Observer queries`"
 msgstr ":strong:`Log Observer クエリを保存および共有する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:69
+#: ../../_includes/admin/roles_log_observer.rst:56
 msgid ":strong:`Add logs data to Splunk Observability Cloud dashboards`"
 msgstr ":strong:`ログデータを Splunk Observability Cloud ダッシュボードに追加する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:75
-msgid ":strong:`Transform data with log processing rules`"
-msgstr ":strong:`ログ処理ルールでデータを変換する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:81
-msgid ":strong:`Create and manage log metricization rules`"
-msgstr ":strong:`ログのメトリクス化ルールを作成および管理する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:87
-msgid ":strong:`Create new S3 connection to allow infinite logging rules`"
-msgstr ":strong:`無限のロギングルールを可能にする新しい S3 接続を作成する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:93
-msgid ":strong:`Create and manage infinite logging rules`"
-msgstr ":strong:`無限のロギングルールを作成および管理する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:95
-msgid "Yes - after admin creates S3 connection"
-msgstr "権限あり - 管理者がS3接続を作成した後"
-
-#: ../../_includes/admin/roles_log_observer.rst:99 ../../_includes/admin/roles_navigation.rst:37
+#: ../../_includes/admin/roles_log_observer.rst:62 ../../_includes/admin/roles_navigation.rst:37
 msgid ":strong:`View org subscription usage`"
 msgstr ":strong:`組織のサブスクリプション使用状況を表示する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:105
+#: ../../_includes/admin/roles_log_observer.rst:68
 msgid ":strong:`Set up Log Observer Connect connection to Splunk platform`"
 msgstr ":strong:`Splunk プラットフォームに Log Observer Connect 接続をセットアップする`"
 
@@ -568,3 +519,799 @@ msgstr ":strong:`チャットを表示する`"
 #: ../../_includes/admin/roles_help_support.rst:18
 msgid ":strong:`Training`"
 msgstr ":strong:`トレーニング`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:5
+msgid "Table of contents"
+msgstr "目次"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:13
+msgid "Use these links to navigate to the topics for the Splunk plugin for Grafana:"
+msgstr "これらのリンクを使用して、Grafana用Splunkプラグインのトピックに移動します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:13
+msgid ":ref:`Integrate Splunk Observability Cloud with Grafana <integrate-o11y-with-grafana>`"
+msgstr ":ref:`Splunk Observability CloudとGrafanaを統合する <integrate-o11y-with-grafana>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:9
+msgid ":ref:`Deploy the Splunk plugin for Grafana on Kubernetes <deploy-grafana-k8s>`"
+msgstr ":ref:`Kubernetes上でGrafana用Splunkプラグインをデプロイする <deploy-grafana-k8s>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:10
+msgid ":ref:`Deploy the Splunk plugin for Grafana on the Grafana Helm chart <deploy-grafana-helm>`"
+msgstr ":ref:`Grafana HelmチャートにGrafana用Splunkプラグインをデプロイする <deploy-grafana-helm>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:13
+msgid ":ref:`Configure the Splunk plugin for Grafana <configure-grafana-plugin>`"
+msgstr ":ref:`Grafana用Splunkプラグインを設定する <configure-grafana-plugin>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/configure-grafana-plugin.rst:14 ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:12
+msgid ":ref:`Create queries to filter dashboards <grafana-create-queries>`"
+msgstr ":ref:`ダッシュボードをフィルターするクエリを作成する <grafana-create-queries>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/configure-grafana-plugin.rst:15 ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:13
+msgid ":ref:`Reset a Grafana dashboard <grafana-reset-dashboards>`"
+msgstr ":ref:`Grafanaダッシュボードをリセットする <grafana-reset-dashboards>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/toc.rst:14
+msgid ":ref:`Upgrade the Splunk plugin for Grafana <grafana-upgrade-plugin>`"
+msgstr ":ref:`Grafana用Splunkプラグインをアップグレードする <grafana-upgrade-plugin>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/configure-grafana-plugin.rst:10
+msgid "Configure the Splunk Observability Cloud plugin for Grafana"
+msgstr "Grafana用Splunk Observability Cloudプラグインを設定する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/configure-grafana-plugin.rst:12
+msgid "To configure the Splunk Observability Cloud plugin for Grafana, see:"
+msgstr "Grafana用Splunk Observability Cloudプラグインを設定するには、以下を参照してください："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/configure-grafana-plugin.rst:16
+msgid ":ref:`Upgrade the Splunk Observability Cloud plugin for Grafana <grafana-upgrade-plugin>`"
+msgstr ":ref:`Grafana用Splunk Observability Cloudプラグインをアップグレードする<grafana-upgrade-plugin>`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:10
+msgid "Deploy the Splunk Observability Cloud plugin for Grafana on the Grafana Helm chart"
+msgstr "Grafana用Splunk Observability CloudプラグインをGrafana Helmチャートにデプロイする"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:12
+msgid "Use the following high-level steps to deploy the Splunk Observability Cloud plugin for Grafana on the Grafana Helm chart:"
+msgstr "以下のハイレベルな手順を使用して、Grafana Helmチャート上にGrafana用Splunk Observability Cloudプラグインをデプロイします："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:14
+msgid "Ensure that you meet the :ref:`prerequisites <grafana-plugin-prerequisites-helm>`."
+msgstr ":ref:`前提条件<grafana-plugin-prerequisites-helm>` を満たしていることを確認してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:15
+msgid ":ref:`grafana-plugin-install-helm`."
+msgstr ":ref:`grafana-plugin-install-helm`."
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:16
+msgid ":ref:`grafana-add-new-data-source-helm`."
+msgstr ":ref:`grafana-add-new-data-source-helm`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:17
+msgid ":ref:`grafana-import-default-dashboard-helm`."
+msgstr ":ref:`grafana-import-default-dashboard-helm`."
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:22 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:22
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:24 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:24
+msgid "To deploy and configure the Splunk Observability Cloud plugin for Grafana, ensure that:"
+msgstr "Grafana用Splunk Observability Cloudプラグインをデプロイして設定するには、以下を確認してください："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:26 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:27
+msgid "Your environment meets the requirements to install Grafana. See :new-page:`Install Grafana <https://grafana.com/docs/grafana/latest/setup-grafana/installation/#install-grafana>`."
+msgstr "お使いの環境がGrafanaをインストールするための要件を満たしていること。:new-page:`Grafanaのインストール<https://grafana.com/docs/grafana/latest/setup-grafana/installation/#install-grafana>` を参照してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:27 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:28
+msgid "You have the Grafana permissions to add a data source and import default dashboards. The required permission level may vary depending on your Grafana settings."
+msgstr "データソースを追加し、デフォルトのダッシュボードをインポートするには、Grafanaのアクセス許可が必要です。必要なアクセス許可レベルはGrafanaの設定によって異なる場合があります。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:29 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:30
+msgid "You have a Splunk Observability Cloud access token. See :new-page:`Create and manage organization access tokens using Splunk Observability Cloud <https://docs.splunk.com/observability/en/admin/authentication/authentication-tokens/org-tokens.html>`."
+msgstr "Splunk Observability Cloudアクセストークンがある場合は、:new-page:`Splunk Observability Cloudを使用した組織のアクセストークンの作成および管理<https://docs.splunk.com/observability/en/admin/authentication/authentication-tokens/org-tokens.html>` を参照してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:29 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:30
+msgid "Only Splunk Observability Cloud admins can create and grant access to access tokens."
+msgstr "Splunk Observability Cloudの管理者のみが、アクセストークンの作成とアクセス許可の付与を行うことができます。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:34 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:38
+msgid "Install a new Grafana instance and deploy the Splunk plugin"
+msgstr "新しいGrafanaインスタンスをインストールし、Splunkプラグインをデプロイします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:36
+msgid "To deploy the plugin on the Grafana Helm chart:"
+msgstr "Grafana Helmチャートにプラグインをデプロイするには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:39 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:43
+msgid "Download the plugin from :new-page:`https://voc.splunk.com/preview/grafana_plugin`."
+msgstr ":new-page:`https://voc.splunk.com/preview/grafana_plugin` からプラグインをダウンロードします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:39 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:43 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:15
+msgid "If you’re unable to access this link, contact your Splunk account team representative."
+msgstr "このリンクにアクセスできない場合は、Splunkアカウントチームの担当者にお問い合わせください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:41
+msgid "Install the :new-page:`Grafana Helm chart <https://github.com/grafana/helm-charts/tree/main/charts/grafana>`. The Splunk plugin is compatible with Grafana versions 10.4.0-11.2.x."
+msgstr ":new-page:`Grafana Helm chart<https://github.com/grafana/helm-charts/tree/main/charts/grafana>` をインストールします。SplunkプラグインはGrafanaバージョン10.4.0-11.2.xと互換性があります。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:89
+msgid "Make the following changes to the values.yaml file:"
+msgstr "values.yamlファイルに以下の変更を加えます："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:49
+msgid "In the ``env`` section, add an environment variable to allow an unsigned plugin. If you self-signed the plugin, you can skip this skip."
+msgstr "``env`` セクションで、署名なしプラグインを許可する環境変数を追加します。プラグインを自己署名した場合は、このスキップは省略できます。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:56
+msgid "In the ``plugins`` section, enter the plugin ZIP path:"
+msgstr "``plugins`` セクションに、プラグインZIPのパスを入力します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:89
+msgid "In the ``datasources`` section, configure the data source:"
+msgstr "``datasources`` セクションで、データソースを設定します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:87 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:227
+msgid "To obtain your ``realm``, navigate to the Splunk Observability Cloud user interface and reference the browser URL, which is in the format <realm>.signalfx.com."
+msgstr "``realm`` を取得するには、Splunk Observability Cloudユーザーインターフェイスに移動し、<realm>.signalfx.com 形式のブラウザURLを参照します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:89
+msgid "To obtain your ``apiKey``, navigate to the Splunk Observability Cloud user interface. From the main menu, select :guilabel:`Settings` and then :guilabel:`Access Tokens`. Select your access token and copy the :guilabel:`Token Secret`."
+msgstr "``apiKey`` を取得するには、Splunk Observability Cloudユーザーインターフェイスに移動します。メインメニューから :guilabel:`Settings` を選択し、次に :guilabel:`Access Tokens` を選択します。アクセストークンを選択し、:guilabel:`Token Secret` をコピーします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:96
+msgid "To upgrade the Helm chart with the updates that you made to the values.yaml file, run:"
+msgstr "values.yamlファイルに作成した更新でHelmチャートをアップグレードするには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:96
+msgid "For <test-release>, enter your preferred release name."
+msgstr "<test-release>には、希望するリリース名を入力してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:101
+msgid "To expose the service on an external IP, run:"
+msgstr "外部IPでサービスを公開するには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:106
+msgid "To access Grafana by using an external IP, enter the following URL in your browser:"
+msgstr "外部IPを使ってGrafanaにアクセスするには、ブラウザに以下のURLを入力します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:110
+msgid "To verify that the data source was created:"
+msgstr "データソースが作成されたことを確認するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:109 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:124 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:148
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:183 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:265 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:37
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-reset-dashboards.rst:17
+msgid "In the Grafana main menu, select :guilabel:`Connections` and then :guilabel:`Data sources`."
+msgstr "Grafanaのメインメニューで、:guilabel:`Connections` を選択し、次に :guilabel:`Data sources` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:110
+msgid "Verify that your data source appears in the list."
+msgstr "データソースがリストに表示されていることを確認します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:115
+msgid "(Optional) Add a new data source to Grafana"
+msgstr "（オプション）Grafanaに新しいデータソースを追加する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:117 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:175
+msgid "To add a new data source with the Grafana user interface:"
+msgstr "Grafanaユーザーインターフェイスで新しいデータソースを追加するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:122 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:146 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:181
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:246 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:263
+msgid "Launch the Grafana UI by entering the following URL in your browser:"
+msgstr "ブラウザに以下のURLを入力して、Grafana UIを起動します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:125 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:184
+msgid "Select :guilabel:`Add new data source`."
+msgstr ":guilabel:`Add new data source` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:126 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:185
+msgid "Search for :guilabel:`Cisco-SplunkO11y-Datasource` and select the plugin."
+msgstr ":guilabel:`Cisco-SplunkO11y-Datasource` を検索し、プラグインを選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:127 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:186
+msgid "Enter your :guilabel:`Realm`."
+msgstr ":guilabel:`Realm` を入力してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:128 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:187
+msgid "To obtain your realm, navigate to the Splunk Observability Cloud user interface and reference the browser URL, which is in the format <realm>.signalfx.com."
+msgstr "レルムを取得するには、Splunk Observability Cloudユーザーインターフェイスに移動し、<realm>.signalfx.com形式のブラウザURLを参照します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:129 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:188
+msgid "Enter your :guilabel:`API Key`."
+msgstr ":guilabel:`API Key` を入力してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:130 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:189
+msgid "To obtain your API key, navigate to the Splunk Observability Cloud user interface. From the main menu, select :guilabel:`Settings` and then :guilabel:`Access Tokens`. Select your organization access token and copy the :guilabel:`Token Secret`."
+msgstr "APIキーを取得するには、Splunk Observability Cloudユーザーインターフェイスに移動します。メインメニューから :guilabel:`Settings` を選択し、次に :guilabel:`Access Tokens` を選択します。組織のアクセストークンを選択し、:guilabel:`Token Secret` をコピーします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:131 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:190
+msgid "(Optional) To set this data source as the default data source, toggle :guilabel:`Default` on."
+msgstr "（オプション）このデータソースをデフォルトデータソースとして設定するには、:guilabel:`Default` をオンに切り替えます。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:132 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:191
+msgid "Select :guilabel:`Save & exit`."
+msgstr ":guilabel:`Save & exit` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:137 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:253
+msgid "Import default dashboard"
+msgstr "デフォルトダッシュボードのインポート"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:139 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:255
+msgid "Default dashboards monitor and visualize your Splunk Observability Cloud data on Grafana. The Splunk plugin includes the O11y Basic dashboard, which monitors application performance monitoring data."
+msgstr "デフォルトのダッシュボードは、Grafana上でSplunk Observability Cloudデータを監視し可視化します。Splunkプラグインには、アプリケーションパフォーマンス監視データを監視するO11y Basicダッシュボードが含まれています。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:141 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:257
+msgid "To import the default dashboard:"
+msgstr "デフォルトのダッシュボードをインポートするには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:149 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:266 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:38
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-reset-dashboards.rst:18
+msgid "Select your Splunk Observability Cloud data source."
+msgstr "Splunk Observability Cloudデータソースを選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:150 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:267 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-reset-dashboards.rst:19
+msgid "Select the :guilabel:`Dashboards` tab."
+msgstr ":guilabel:`Dashboards` タブを選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:151 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:268
+msgid "On the :guilabel:`O11y Basic Dashboard` row, select :guilabel:`Import`."
+msgstr ":guilabel:`O11y Basic Dashboard` 行で、:guilabel:`Import` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:155 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:272
+msgid "To view or edit the dashboard and its underlying queries:"
+msgstr "ダッシュボードとその基礎となるクエリを表示または編集するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:153 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:270 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:46
+msgid "In the Grafana main menu, select :guilabel:`Dashboards`."
+msgstr "Grafanaのメインメニューで、:guilabel:`Dashboards` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:155 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:272
+msgid "Select :guilabel:`O11y Basic Dashboard`."
+msgstr ":guilabel:`O11y Basic Dashboard` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:155 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:272
+msgid "The default realm used for the dashboard is us0. To change the realm, select the settings gear icon on the dashboard. Select :guilabel:`Links`, then :guilabel:`O11y Traces Page`, and update the :guilabel:`URL` for your realm."
+msgstr "ダッシュボードで使用されるデフォルトのレルムはus0です。レルムを変更するには、ダッシュボードの設定歯車アイコンを選択します。:guilabel:`Links` を選択し、次に :guilabel:`O11y Traces Page` を選択して、レルムの :guilabel:`URL` を更新します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:158 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:275
+msgid "Next steps"
+msgstr "次のステップ"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-helm.rst:160 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:277
+msgid "Learn how to :ref:`Configure the Splunk Observability Cloud plugin for Grafana <configure-grafana-plugin>`."
+msgstr ":ref:`Grafana用のSplunk Observability Cloudプラグインの設定<configure-grafana-plugin>` 方法を学習します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:10
+msgid "Deploy the Splunk Observability Cloud plugin for Grafana on Kubernetes"
+msgstr "Kubernetes上でGrafana用Splunk Observability Cloudプラグインをデプロイする"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:12
+msgid "Use the following high-level steps to deploy the Splunk Observability Cloud plugin for Grafana on Kubernetes:"
+msgstr "以下のハイレベルな手順を使用して、Kubernetes上にGrafana用Splunk Observability Cloudプラグインをデプロイします："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:14
+msgid "Ensure that you meet the :ref:`prerequisites <grafana-plugin-prerequisites-k8s>`."
+msgstr ":ref:`前提条件<grafana-plugin-prerequisites-k8s>` を満たしていることを確認してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:15
+msgid ":ref:`grafana-plugin-install-k8s`."
+msgstr ":ref:`grafana-plugin-install-k8s`."
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:16
+msgid ":ref:`grafana-add-new-data-source-k8s`."
+msgstr ":ref:`grafana-add-new-data-source-k8s`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:17
+msgid ":ref:`grafana-import-default-dashboard-k8s`."
+msgstr ":ref:`grafana-import-default-dashboard-k8s`."
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:26
+msgid "Your Kubernetes cluster is running."
+msgstr "Kubernetesクラスターが稼働しています。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:33
+msgid ""
+"By default, the Splunk Observability Cloud plugin for Grafana is unsigned. To optionally self-sign the private plugin, see :new-page:`Sign a plugin <https://grafana.com/developers/plugin-tools/publish-a-plugin/sign-a-plugin>`. If you don’t self-sign the plugin, you’ll need to set an environment variable during "
+"installation."
+msgstr ""
+"デフォルトでは、Grafana用Splunk Observability Cloudプラグインは署名されていません。オプションでプライベートプラグインに自己署名するには、:new-page:`Sign a plugin<https://grafana.com/developers/plugin-tools/publish-a-plugin/sign-a-plugin>` を参照してください。プラグインに自己署名しない場合は、インストール時に環境変数を"
+"設定する必要があります。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:40
+msgid "To deploy the plugin on Kubernetes:"
+msgstr "Kubernetesにプラグインをデプロイするには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:75
+msgid "Create a Docker file by referring to the following sample file. Edit the Grafana image version, environment variables, and file paths as needed for your environment."
+msgstr "以下のサンプルファイルを参考にDockerファイルを作成します。Grafanaイメージのバージョン、環境変数、ファイルパスを環境に合わせて編集してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:46
+msgid "The Splunk plugin is compatible with Grafana versions 10.4.0-11.2.x."
+msgstr "SplunkプラグインはGrafanaバージョン10.4.0-11.2.xと互換性があります。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:47
+msgid "If you self-signed the plugin, remove the GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS environment variable."
+msgstr "プラグインに自己署名している場合は、環境変数GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINSを削除します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:77
+msgid "Extract cisco-splunko11y-datasource.zip in the same directory where you created the Docker file."
+msgstr "Dockerファイルを作成したのと同じディレクトリで、cisco-splunko11y-datasource.zipを解凍します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:82
+msgid "To log in to Docker, run:"
+msgstr "Dockerにログインするには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:89
+msgid "To build the Docker image, run:"
+msgstr "Dockerイメージをビルドするには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:89
+msgid "You can use any values for <imageName> and <tagName>. Example command: ``$ docker build -t dockerusr/cisco-splunko11y-datasource:v1``"
+msgstr "<imageName>と<tagName>には任意の値を使うことができます。コマンド例： ``$ docker build -t dockerusr/cisco-splunko11y-datasource:v1``"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:96
+msgid "To push the image to Docker, run:"
+msgstr "イメージをDockerにプッシュするには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:96
+msgid "Example command: ``docker push dockeruser/cisco-splunko11y-datasource:v1``"
+msgstr "コマンドの例： ``docker push dockeruser/cisco-splunko11y-datasource:v1``"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:101
+msgid "To verify that the image successfully pushed to Docker, run:"
+msgstr "イメージがDockerに正常にプッシュされたことを確認するには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:153
+msgid "Create a deploy.yaml file with the following contents:"
+msgstr "以下の内容でdeploy.yamlファイルを作成します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:153
+msgid ""
+"The ``port`` number in the sample file refers to the default Grafana port. The sample file creates a ``nodePort`` service. If the ``nodePort`` service is not supported in your deployment environment, configure a :new-page:`ClusterIP service <https://kubernetes.io/docs/concepts/services-networking/cluster-ip-allocation/"
+">` and expose the service."
+msgstr ""
+"サンプルファイルの ``port`` は、デフォルトのGrafanaポートを指しています。サンプルファイルは ``nodePort``  サービスを作成します。 ``nodePort``  サービスがデプロイ環境でサポートされていない場合は、:new-page:`ClusterIPサービス<https://kubernetes.io/docs/concepts/services-networking/cluster-ip-allocation/>` を設定し、サー"
+"ビスを公開します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:158
+msgid "To deploy the file, run:"
+msgstr "ファイルをデプロイするには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:163
+msgid "Send Splunk Observability Cloud data to Grafana"
+msgstr "Splunk Observability CloudのデータをGrafanaに送信する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:165
+msgid "Use one of the following methods to send Splunk Observability Cloud data to Grafana:"
+msgstr "Splunk Observability CloudのデータをGrafanaに送信するには、次のいずれかの方法を使用します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:167
+msgid ":ref:`grafana-add-new-data-source-k8s-ui`"
+msgstr ":ref:`grafana-add-new-data-source-k8s-ui`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:168
+msgid ":ref:`grafana-add-new-data-source-k8s-configmap`"
+msgstr ":ref:`grafana-add-new-data-source-k8s-configmap`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:173
+msgid "Add a data source with the Grafana user interface"
+msgstr "Grafanaユーザーインターフェイスでデータソースを追加する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:182
+msgid "For <port>, use the port you specified in the deploy.yaml file. For example, \\http://10.46.40.67:32001/."
+msgstr "<port>には、deploy.yamlファイルで指定したポートを使用します。例：\\http://10.46.40.67:32001/。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:196
+msgid "Add a data source with a configuration map"
+msgstr "設定マップでデータソースを追加する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:198
+msgid "To programmatically add a data source using a configuration map YAML file:"
+msgstr "構成マップYAMLファイルを使用して、プログラムによってデータソースを追加するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:229
+msgid "Create a data source configuration map named config_basic.yaml with the following content:"
+msgstr "config_basic.yamlという名前のデータソース設定マップを以下の内容で作成します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:229
+msgid "To obtain your ``apiKey``, navigate to the Splunk Observability Cloud user interface. From the main menu, select :guilabel:`Settings` and then :guilabel:`Access Tokens`. Select your organization access token and copy the :guilabel:`Token Secret`."
+msgstr "``apiKey`` を取得するには、Splunk Observability Cloudユーザーインターフェイスに移動します。メインメニューから :guilabel:`Settings` を選択し、次に :guilabel:`Access Tokens` を選択します。組織のアクセストークンを選択し、:guilabel:`Token Secret` をコピーします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:234
+msgid "To create the configuration map, run:"
+msgstr "設定マップを作成するには、次を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:239
+msgid "To update the deployment, run:"
+msgstr "デプロイを更新するには、以下を実行します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:248
+msgid "To verify that the data sources were created:"
+msgstr "データソースが作成されたことを確認するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:247 ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:264
+msgid "For <port>, use the port you specified in the deploy.yaml file. For example, \\http://10.46.40.67:32001."
+msgstr "<port>には、deploy.yamlファイルで指定したポートを使用します。例：\\http://10.46.40.67:32001。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/deploy-grafana-k8s.rst:248
+msgid "In the Grafana main menu, select :guilabel:`Connections` and then :guilabel:`Data sources`. Verify that your data source appears in the list."
+msgstr "Grafanaのメインメニューで、:guilabel:`Connections` を選択し、次に :guilabel:`Data sources` を選択します。データソースがリストに表示されることを確認します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:10
+msgid "Create queries to filter dashboards"
+msgstr "ダッシュボードをフィルターするクエリを作成する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:12
+msgid "You can manually add queries to Grafana and view the query output on your dashboards. The Splunk Observability Cloud plugin for Grafana supports the following query types:"
+msgstr "Grafanaに手動でクエリを追加し、ダッシュボードでクエリ出力を表示できます。Grafana用Splunk Observability Cloudプラグインは、以下のクエリタイプをサポートしています："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:14
+msgid "SignalFlow queries: Filters dashboards based on SignalFlow computations."
+msgstr "SignalFlowクエリ：SignalFlowの計算に基づいてダッシュボードをフィルターします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:15
+msgid "For more information on SignalFlow and its syntax, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` and :new-page:`Intermediate to advanced SignalFlow <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/docs/flow.md>`."
+msgstr "SignalFlowとその構文の詳細については、:new-page:`SignalFlowを使用したデータ分析<https://dev.splunk.com/observability/docs/signalflow/>` および :new-page:`SignalFlowの中級から上級<https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/docs/flow.md>` を参照してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:16
+msgid "Suggest API: Populates variables on dashboards. You can use this query to create a drop-down menu to filter your dashboard by services."
+msgstr "APIの提案：ダッシュボードに変数を入力します。このクエリを使用して、サービス別にダッシュボードをフィルターするドロップダウンメニューを作成できます。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:17
+msgid "Pending Alerts: Returns a dataframe with rows that represent pending incidents for specified services. You can use this query to create a dashboard panel with a table that lists pending incidents."
+msgstr "保留中のアラート：指定したサービスの保留中のインシデントを表す行を含むデータフレームを返します。このクエリを使用して、保留中のインシデントをリストするテーブルがあるダッシュボードパネルを作成できます。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:20
+msgid "Add a query to a dashboard"
+msgstr "ダッシュボードにクエリを追加する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:23
+msgid "We recommend using one query per dashboard panel."
+msgstr "1つのダッシュボードパネルにつき1つのクエリを使用することをお勧めします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:25
+msgid "You can use either of the following methods to add a query to a dashboard:"
+msgstr "ダッシュボードにクエリを追加するには、以下のいずれかの方法を使用できます："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:27
+msgid ":ref:`add-query-editor`"
+msgstr ":ref:`add-query-editor`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:28
+msgid ":ref:`add-query-dashboard`"
+msgstr ":ref:`add-query-dashboard`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:33
+msgid "Add a query with the query editor"
+msgstr "クエリエディタでクエリを追加する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:35
+msgid "To add a query to a dashboard using the query editor:"
+msgstr "クエリエディタを使用してダッシュボードにクエリを追加するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:39
+msgid "Select :guilabel:`Explore data`."
+msgstr ":guilabel:`Explore data` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:40
+msgid "Select :guilabel:`SignalFlow`, :guilabel:`Suggest API`, or :guilabel:`Pending Alerts` to create a query."
+msgstr ":guilabel:`SignalFlow`、:guilabel:`Suggest API`、:guilabel:`Pending Alerts` を選択してクエリを作成します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:42 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:61
+msgid "Configure the query fields."
+msgstr "クエリフィールドを設定します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:42 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:61
+msgid "For more information on SignalFlow query syntax, see :new-page:`Analyze data using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` and :new-page:`Intermediate to advanced SignalFlow <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/docs/flow.md>`."
+msgstr "SignalFlowクエリ構文の詳細については、:new-page:`SignalFlowを使用したデータ分析<https://dev.splunk.com/observability/docs/signalflow/>` および :new-page:`SignalFlowの中級から上級<https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/docs/flow.md>` を参照してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:43 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:62
+msgid ""
+"For more information on the SignalFlow query fields (:guilabel:`Max Delay` and :guilabel:`Resolution`), see :new-page:`Input lag management <https://dev.splunk.com/observability/docs/signalflow/#Input-lag-management>` and :new-page:`Resolution of computations <https://dev.splunk.com/observability/docs/signalflow/"
+"#Resolution-of-computations>`. The Splunk plugin measures resolution in milliseconds."
+msgstr ""
+"SignalFlowのクエリフィールド ( :guilabel:`Max Delay` および :guilabel:`Resolution` ) の詳細については、:new-page:`入力ラグ管理<https://dev.splunk.com/observability/docs/signalflow/#Input-lag-management>` および :new-page:`計算の分解能<https://dev.splunk.com/observability/docs/signalflow/#Resolution-of-computations>` を"
+"参照してください。Splunkプラグインはミリ秒単位で分解能を測定します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:44
+msgid "Select :guilabel:`Run query`. The query editor selects a panel on your dashboard to run the query on, based on the required data input."
+msgstr ":guilabel:`Run query` を選択します。クエリエディタは、必要なデータ入力に基づいて、クエリを実行するダッシュボード上のパネルを選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:47
+msgid "To view the query output on your dashboard:"
+msgstr "ダッシュボードでクエリ出力を表示するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:47
+msgid "Select your dashboard."
+msgstr "ダッシュボードを選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:52
+msgid "Add a query from the dashboard view"
+msgstr "ダッシュボードビューからクエリを追加する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:54
+msgid "To add a query directly from the dashboard view:"
+msgstr "ダッシュボードビューから直接クエリを追加するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:56
+msgid "In the Grafana main menu, select :guilabel:`Dashboards`. Select your dashboard."
+msgstr "Grafanaのメインメニューで、:guilabel:`Dashboards` を選択します。ダッシュボードを選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:57
+msgid "Select :guilabel:`Add`, then :guilabel:`Visualization`."
+msgstr ":guilabel:`Add` を選択し、次に :guilabel:`Visualization` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:58
+msgid "By default, the :guilabel:`Time series` visualization is selected. Use the drop-down menu to select your preferred visualization type."
+msgstr "デフォルトでは :guilabel:`Time series` の可視化が選択されています。ドロップダウンメニューを使用して、希望する可視化タイプを選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:59
+msgid "On the :guilabel:`Query` tab, select :guilabel:`SignalFlow`, :guilabel:`Suggest API`, or :guilabel:`Pending Alerts` to create a query."
+msgstr ":guilabel:`Query` タブで、:guilabel:`SignalFlow`、:guilabel:`Suggest API`、:guilabel:`Pending Alerts` のいずれかを選択してクエリを作成します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:63
+msgid "Select :guilabel:`Apply`."
+msgstr ":guilabel:`Apply` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:66
+msgid "Example queries"
+msgstr "クエリ例"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:68
+msgid "This section contains examples of queries you can add to your dashboards."
+msgstr "このセクションでは、ダッシュボードに追加できるクエリの例を示します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:71
+msgid "SignalFlow examples"
+msgstr "シグナルフローの例"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:77 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:111 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:141
+msgid ":strong:`Description`"
+msgstr ":strong:`説明`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:78
+msgid ":strong:`Example SignalFlow query`"
+msgstr ":strong:`SignalFlowクエリの例`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:80
+msgid "Query the number of error calls"
+msgstr "エラーコールの番号をクエリする"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:84
+msgid "Query the number of calls for a specific service, with a service name passed via a dashboard variable"
+msgstr "ダッシュボード変数で渡されたサービス名で、特定のサービスのコール数をクエリします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:88
+msgid "Query the number of calls grouped by a metric dimension (sf_operation)"
+msgstr "メトリクスディメンションでグループ化された呼び出しの数をクエリする(sf_operation)"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:92
+msgid "Query various span duration percentiles"
+msgstr "さまざまなスパン期間のパーセンタイルをクエリする"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:101
+msgid "Create a panel that dynamically adjusts the resolution to a selected time window selected"
+msgstr "選択した時間ウィンドウに合わせて解像度を動的に調整するパネルを作成します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:102
+msgid "Set the :guilabel:`Resolution` query field to ``$__interval_ms``."
+msgstr ":guilabel:`Resolution` クエリフィールドを ``$__interval_ms`` に設定します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:105
+msgid "Suggest API examples"
+msgstr "APIの提案例"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:112 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:142
+msgid ":strong:`Example query field values`"
+msgstr ":strong:`クエリフィールド値の例`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:114
+msgid "Get a list of tag names"
+msgstr "タグ名のリストを取得する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:115 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:119 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:123
+msgid ":guilabel:`Metric Name` = spans"
+msgstr ":guilabel:`Metric Name` = スパン"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:116 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:120 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:124
+msgid ":guilabel:`isHistogram` = true"
+msgstr ":guilabel:`isHistogram` = true"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:117
+msgid ":guilabel:`Tag Name` = <leave-blank>"
+msgstr ":guilabel:`Tag Name` = <leave-blank>"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:118
+msgid "Get a list of values for a specific tag"
+msgstr "特定のタグの値のリストを取得する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:121 ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:127
+msgid ":guilabel:`Tag Name` = sf_environment"
+msgstr ":guilabel:`Tag Name` = sf_environment"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:122
+msgid "Get a list of values for a specific tag, filtered by another variables (cascading variables)"
+msgstr "特定のタグの値のリストを、別の変数（カスケード変数）でフィルタリングして取得する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:125
+msgid ":guilabel:`Tag Name` = sf_service"
+msgstr ":guilabel:`Tag Name` = sf_service"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:127
+msgid ":guilabel:`Filter 0:`"
+msgstr ":guilabel:`Filter 0:`"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:128
+msgid ":guilabel:`Value` = $env"
+msgstr ":guilabel:`Value` = $env"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:129
+msgid "Support an “all” option for variables"
+msgstr "変数の \"all \"オプションをサポート"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:131
+msgid "SignalFlow honors the use of * as an open filter. Navigate to the Grafana variable configuration and set the following:"
+msgstr "SignalFlowはオープンフィルターとして*の使用に対応します。Grafanaの変数設定に移動し、以下を設定します："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:131
+msgid ":guilabel:`Include All` = true"
+msgstr ":guilabel:`Include All` = true"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:132
+msgid ":guilabel:`Custom All` = *"
+msgstr ":guilabel:`Custom All` = *"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:135
+msgid "Pending Alerts examples"
+msgstr "保留中アラートの例"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:144
+msgid "Fetch incidents for a specified service"
+msgstr "指定したサービスのインシデントを取得する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:145
+msgid ":guilabel:`Services` = MyService"
+msgstr ":guilabel:`Services` = MyService"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:146
+msgid "Fetch incidents for multiple specified services"
+msgstr "指定した複数のサービスのインシデントを取得する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:147
+msgid ":guilabel:`Services` = MyService, YourService"
+msgstr ":guilabel:`Services` = MyService、YourService"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:148
+msgid "Fetch incidents using a Grafana variable as a filter service name"
+msgstr "フィルターサービス名としてGrafana変数を使用してインシデントを取得する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:149
+msgid ":guilabel:`Services` = $service"
+msgstr ":guilabel:`Services` = $service"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:150
+msgid "Fetch incidents for all services"
+msgstr "全サービスのインシデントを取得する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-create-queries.rst:151
+msgid ":guilabel:`Services` = *"
+msgstr ":guilabel:`Services` = *"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-reset-dashboards.rst:10
+msgid "Reset a Grafana dashboard"
+msgstr "Grafanaダッシュボードをリセットする"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-reset-dashboards.rst:13
+msgid "This process resets the customizations made to an existing dashboard. To save your customizations, copy the dashboard before you reimport it."
+msgstr "このプロセスでは、既存のダッシュボードに対して行ったカスタマイズがリセットされます。カスタマイズを保存するには、再インポートする前にダッシュボードをコピーします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-reset-dashboards.rst:15
+msgid "To reset a dashboard and view the original dashboard bundled with the Splunk Observability Cloud plugin for Grafana:"
+msgstr "ダッシュボードをリセットして、Grafana用Splunk Observability Cloudプラグインにバンドルされている元のダッシュボードを表示するには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-reset-dashboards.rst:20
+msgid "On the :guilabel:`O11y Basic Dashboard` row, select :guilabel:`Re-import`."
+msgstr ":guilabel:`O11y Basic Dashboard` 行で、:guilabel:`Re-import` を選択します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:10
+msgid "Upgrade the Splunk Observability Cloud plugin for Grafana"
+msgstr "Grafana用Splunk Observability Cloudプラグインをアップグレードする"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:12
+msgid "To upgrade the Splunk Observability Cloud plugin for Grafana:"
+msgstr "Grafana用Splunk Observability Cloudプラグインをアップグレードするには："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:14
+msgid "Download the updated plugin file from :new-page:`https://voc.splunk.com/preview/grafana_plugin`."
+msgstr ":new-page:`https://voc.splunk.com/preview/grafana_plugin` から更新されたプラグインファイルをダウンロードします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:16
+msgid "Delete the plugins/cisco-splunko11y-datasource directory."
+msgstr "plugins/cisco-splunko11y-datasourceディレクトリを削除します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:17
+msgid "Extract the updated plugin file into the plugins/cisco-splunko11y-datasource directory."
+msgstr "更新されたプラグインファイルをplugins/cisco-splunko11y-datasourceディレクトリに抽出します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:18
+msgid "Restart the Grafana service."
+msgstr "Grafanaサービスを再起動します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/grafana-upgrade-plugin.rst:21
+msgid "After you upgrade the plugin, you must reimport the dashboards for every data source to view dashboard enhancements. See :ref:`Reset a Grafana dashboard <grafana-reset-dashboards>`."
+msgstr "プラグインをアップグレードした後、ダッシュボードの機能拡張を表示するには、すべてのデータソースのダッシュボードを再インポートする必要があります。:ref:`Grafanaダッシュボードをリセットする<grafana-reset-dashboards>` を参照してください。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:10
+msgid "Integrate Splunk Observability Cloud with Grafana"
+msgstr "Splunk Observability CloudとGrafanaを統合する"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:12
+msgid "Use the Splunk Observability Cloud plugin for Grafana to monitor Splunk Observability Cloud data in Grafana. With this data source plugin, you can:"
+msgstr "GrafanaでSplunk Observability Cloudデータを監視するには、Grafana用Splunk Observability Cloudプラグインを使用します。このデータソースプラグインを使用すると、次のことができます："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:14
+msgid "Add and configure data sources from different Splunk Observability Cloud organizations in Grafana."
+msgstr "異なるSplunk Observability Cloud組織からのデータソースをGrafanaに追加し、設定します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:15
+msgid "Import and customize an application performance monitoring dashboard for data visualization."
+msgstr "Application Performance Monitoringダッシュボードをインポートしてカスタマイズし、データを可視化します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:18
+msgid "Build your own queries, including:"
+msgstr "以下を含む、独自のクエリを構築することができます："
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:17
+msgid "SignalFlow queries."
+msgstr "SignalFlowのクエリ。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:18
+msgid "Templated queries with variables."
+msgstr "変数でテンプレート化されたクエリ。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:19
+msgid "Queries to generate lists of pending incidents."
+msgstr "保留中のインシデントのリストを生成するためのクエリ。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:20
+msgid "Visualize query output on Grafana panels and dashboards."
+msgstr "Grafanaパネルやダッシュボードでクエリ出力を可視化します。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:23
+msgid "Get started"
+msgstr "はじめに"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:25
+msgid "Deploy the plugin on :ref:`Kubernetes <deploy-grafana-k8s>` or the :ref:`Grafana Helm chart <deploy-grafana-helm>`."
+msgstr ":ref:`Kubernetes<deploy-grafana-k8s>` または :ref:`Grafana Helmチャート<deploy-grafana-helm>` にプラグインをデプロイします。"
+
+#: ../../private-preview/splunk-o11y-plugin-for-grafana/integrate-o11y-with-grafana.rst:26
+msgid "Learn how to :ref:`Configure the Grafana plugin <configure-grafana-plugin>`."
+msgstr ":ref:`Grafanaプラグインを設定する<configure-grafana-plugin>` 方法を学習します。"
+
+#~ msgid ":strong:`Live Tail`"
+#~ msgstr ":strong:`Live Tail`"
+
+#~ msgid ":strong:`Create and manage log processing rules`"
+#~ msgstr ":strong:`ログ処理ルールを作成および管理する`"
+
+#~ msgid ":strong:`Apply processing rules across historical data`"
+#~ msgstr ":strong:`過去のデータに処理ルールを適用する`"
+
+#~ msgid ":strong:`Transform data with log processing rules`"
+#~ msgstr ":strong:`ログ処理ルールでデータを変換する`"
+
+#~ msgid ":strong:`Create and manage log metricization rules`"
+#~ msgstr ":strong:`ログのメトリクス化ルールを作成および管理する`"
+
+#~ msgid ":strong:`Create new S3 connection to allow infinite logging rules`"
+#~ msgstr ":strong:`無限のロギングルールを可能にする新しい S3 接続を作成する`"
+
+#~ msgid ":strong:`Create and manage infinite logging rules`"
+#~ msgstr ":strong:`無限のロギングルールを作成および管理する`"
+
+#~ msgid "Yes - after admin creates S3 connection"
+#~ msgstr "権限あり - 管理者がS3接続を作成した後"

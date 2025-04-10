@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-18 11:06+0000\n"
-"PO-Revision-Date: 2025-02-27 12:03+0000\n"
+"PO-Revision-Date: 2025-04-10 10:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:-1
 msgid "Steps to create and configure incident policies to organize incidents for Incident Intelligence in Splunk Observability Cloud."
@@ -160,8 +160,8 @@ msgstr ":guilabel:`Alert grouping` タブを選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:71
 msgid ""
-"Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. However any custom field that is common in the alert routing metadata can be entered as a custom value. If you want add a field that is not displayed, enter the field name and select it from the dropdown to add it as a selected metadata field."
-"Anycustom field that is common in the alert routing metadata can be entered as a ``group by`` field."
+"Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. However any custom field that is common in the alert routing metadata can be entered as a custom value. If you want add a field that is not displayed, enter the field name and select it from the dropdown to add it as a selected metadata "
+"field.Anycustom field that is common in the alert routing metadata can be entered as a ``group by`` field."
 msgstr ""
 ":guilabel:`Alert metadata grouping (optional)` で、グループ化したいメタデータ・フィールドを選択します。アラート・ルーティング条件で使用しているフィールドを選択できます。ただし、アラート・ルーティング・メタデータに共通するカスタム・フィールドは、カスタム値として入力できます。表示されていないフィールドを追加したい場合は、フィールド名を入力してドロップダウンから選択すると、選択されたメタデータ・フィールドとして追加されます。アラー"
 "ト・ルーティング・メタデータに共通するカスタム・フィールドは、``group by`` フィールドとして入力できます。"
@@ -272,11 +272,11 @@ msgstr "インシデント・ポリシーをランク付けし、アラートが
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:124
 msgid ""
-"If you have more than one incident policy, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one incident policy even if they match multiple policies. The incident policy that alerts are routed to is based on your policy's alert routing conditions and incident policy rank order. To rank your incident policies, go to :guilabel:`Incident Management` > :guilabel:"
-"`Incident policies` > :guilabel:`Incident policy ranking`."
+"If you have more than one incident policy, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one incident policy even if they match multiple policies. The incident policy that alerts are routed to is based on your policy's alert routing conditions and incident policy rank order. To rank your incident policies, go to :guilabel:`Incident "
+"Management`> :guilabel:`Incident policies` > :guilabel:`Incident policy ranking`."
 msgstr ""
-"複数のインシデント・ポリシーがある場合は、インフラストラクチャにとって重要な順（上から下）に整理します。アラートは、複数のポリシーに一致する場合でも、1つのインシデント・ポリシーにのみルーティングされます。アラートがルーティングされるインシデント・ポリシーは、ポリシーのアラート・ルーティング条件とインシデント・ポリシーのランク順位に基づいています。インシデント・ポリシーをランク付けするには、 :guilabel:`Incident Management` > :"
-"guilabel:`Incident policies` > :guilabel:`Incident policy ranking` にアクセスしてください。"
+"複数のインシデント・ポリシーがある場合は、インフラストラクチャにとって重要な順（上から下）に整理します。アラートは、複数のポリシーに一致する場合でも、1つのインシデント・ポリシーにのみルーティングされます。アラートがルーティングされるインシデント・ポリシーは、ポリシーのアラート・ルーティング条件とインシデント・ポリシーのランク順位に基づいています。インシデント・ポリシーをランク付けするには、 :guilabel:`Incident "
+"Management`> :guilabel:`Incident policies` > :guilabel:`Incident policy ranking` にアクセスしてください。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:129
 msgid "Mute notifications using incident policy maintenance"
@@ -1022,8 +1022,8 @@ msgstr "インシデント・ポリシーは、ワークフローをトリガー
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:29
 msgid ""
-"You can determine which alert signals are the most important to the performance of your infrastructure and use alerts to intelligently trigger incidents that you want responders to investigate. First, create alert routing and grouping conditions using alert metadata to filter alerts into incidents. This process reduces alert noise and allows responders to map an issue back to the system or service where it occurred. Second,"
-"create an incident workflow that automatically runs time-based hierarchical steps when an incident is triggered. All incident workflows must include a notification to a person, such as a responder in an on-call schedule. If a responder doesn't acknowledge an incident when they are on call, the incident is escalated to the next step in the workflow. This entire process is called an incident policy."
+"You can determine which alert signals are the most important to the performance of your infrastructure and use alerts to intelligently trigger incidents that you want responders to investigate. First, create alert routing and grouping conditions using alert metadata to filter alerts into incidents. This process reduces alert noise and allows responders to map an issue back to the system or service where it occurred. "
+"Second,create an incident workflow that automatically runs time-based hierarchical steps when an incident is triggered. All incident workflows must include a notification to a person, such as a responder in an on-call schedule. If a responder doesn't acknowledge an incident when they are on call, the incident is escalated to the next step in the workflow. This entire process is called an incident policy."
 msgstr ""
 "インフラストラクチャのパフォーマンスにとって最も重要なアラートシグナルを決定し、対応者に調査させたいインシデントをインテリジェントにトリガーするためにアラートを使用できます。まず、アラートのメタデータを使用してアラートのルーティングおよびグループ化条件を作成し、アラートをインシデントにフィルタリングします。このプロセスにより、アラートのノイズを減らし、対応者が問題を発生したシステムまたはサービスにマッピングできるようにします。"
 "次に、インシデントがトリガーされたときに、時間ベースの階層ステップを自動的に実行するインシデント・ワークフローを作成します。すべてのインシデント・ワークフローには、オンコール・スケジュールの対応者などの個人への通知が含まれていなければなりません。対応者がオンコール時にインシデントを認識しない場合、インシデントはワークフローの次のステップにエスカレーションされます。このプロセス全体をインシデント・ポリシーと呼びます。"

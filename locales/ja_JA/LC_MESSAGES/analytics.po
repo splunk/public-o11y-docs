@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-29 18:45+0000\n"
-"PO-Revision-Date: 2025-02-27 12:02+0000\n"
+"PO-Revision-Date: 2025-04-09 18:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:-1
 msgid "Splunk infrastructure monitoring analytics overview, rollup policies, signalflow instructions, and analytics aggregations and transformations"
@@ -412,8 +412,8 @@ msgstr ""
 
 #: ../../analytics/signalflow.rst:138
 msgid ""
-"The timeshift feature in charts is aware of cycles having variable lengths, such as how March has more days than February, and shifts correctly to the end of a previous interval. By contrast, the standalone timeshift analytics function performs a fixed width shift, such as 30 days. For more information, see :ref:"
-"`use-timeshift-function-to-understand-trends`."
+"The timeshift feature in charts is aware of cycles having variable lengths, such as how March has more days than February, and shifts correctly to the end of a previous interval. By contrast, the standalone timeshift analytics function performs a fixed width shift, such as 30 days. For more information, "
+"see :ref:`use-timeshift-function-to-understand-trends`."
 msgstr "チャートのタイムシフト機能は、3月が2月より日数が多いというような、可変長のサイクルを認識し、前の間隔の終わりに正しくシフトします。対照的に、スタンドアローンのタイムシフト分析機能は、30日のような固定幅のシフトを行います。詳しくは :ref:`use-timeshift-function-to-understand-trends` を参照してください。"
 
 #: ../../analytics/signalflow.rst:143
