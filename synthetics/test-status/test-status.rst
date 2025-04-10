@@ -37,20 +37,14 @@ Splunk Synthetics updates the current state of each test every time you load the
    :header-rows: 1
    :widths: 20, 80
 
-   * - :strong:`Current status`
+   * - :strong:`Test state`
      - :strong:`Description`
 
-   * - Pending
-     - Splunk Synthetic Monitoring is still retrieving the status of this test. 
+   * - Active
+     - The test is running. Data is being collected at the set interval. You can view this data on the :guilabel:`Test History` page. 
 
-   * - Available
-     - The test is functioning properly. If the test is active, data is being collected at the set interval and can be viewed in the :guilabel:`Test History` page. If the test is paused, it can be unpaused and will resume collecting data.
-
-   * - No Data 
-     - The test isn't currently collecting data. 
-
-   * - Failure
-     - The test encountered a failure. 
+   * - Paused
+     - The test is paused. To resume data collection, unpause it.
 
 
 
@@ -59,11 +53,28 @@ View run status
 
 The :guilabel:`Last run status` column displays the outcome of each test's last run.  
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20, 80
+
+   * - :strong:`Last run status`
+     - :strong:`Description`
+
+   * - Success
+     - The last run succeeded. 
+
+   * - Pending
+     - Splunk Synthetics is still retrieving the run status.
+
+   * - Failed 
+     - The last run encountered a failure. 
+
+
 
 Single actions
 ========================================================================================
 
-To performm an action on a single test, select the more menu (|more|) in its rightmost column. Supported actions are play and pause.
+To perform an action on a single test, select the kabob menu (|more|) in its rightmost column. Supported actions are play and pause.
 
 
 Bulk actions
@@ -73,10 +84,11 @@ You can perform bulk actions on multiple tests simultaneously. Supported actions
 
 To perform a bulk action on tests:
 
-#. Select the tests to change by either:
+#. Select the tests to change by either: 
 
-   * Selecting the checkbox next in the leftmost column of one or more tests
-   * Selecting the checkbox in the table header. This checkbox selects all tests on the current page -- a maximum of 20 tests. You can scroll through the pages to select more tests. The maximum you can select at one time is 3000.
+    * Selecting the checkbox next in the leftmost column of one or more tests.
+    * Selecting the checkbox in the table header. This checkbox selects all tests on the current page -- a maximum of 20 tests. You can scroll through the pages to select more tests. The maximum you can select at one time is 500. 
 
 #. At the top of the table, select the desired action: :guilabel:`Play`, :guilabel:`Pause`, or :guilabel:`Delete`.
-If the entire bulk action succeeds, the :guilabel:`Test state` column displays the new state of each of the affected tests. If any part of the bulk action fails, the entire bulk action is cancelled and none of the tests are updated.
+If the entire bulk action succeeds, the :guilabel:`Test state` column displays the new state of each of the affected tests. If any part of the bulk action fails, the entire bulk action is cancelled and none of the tests are updated. For example, if the bulk action was to delete 400 tests and one deletion fails, none of the tests are deleted.
+
