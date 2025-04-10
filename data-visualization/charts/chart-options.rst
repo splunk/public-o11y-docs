@@ -224,7 +224,9 @@ If you select :guilabel:`Click here to disable sampling`, or select the :guilabe
 Drilldown link
 =============================================================================
 
-This option lets you add a drilldown link to the chart header when you view the chart in a dashboard. Providing a drilldown link 
+This option lets you add a drilldown link to the chart header when you view the chart in a dashboard. Providing a drilldown link helps other users in your organization navigate to other parts of Splunk Observability Cloud containing data related to the chart. You can also include dashboard variables and time range in the URL. For more information on dashboard variables, see :ref:`customize-dashboard-variables`.
+
+
 
 
 .. _heatmap-group-by:
