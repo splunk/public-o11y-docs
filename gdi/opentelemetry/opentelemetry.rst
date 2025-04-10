@@ -114,7 +114,7 @@ The Splunk Distribution of the OpenTelemetry Collector for Kubernetes ingests, m
     end
 
     Infrastructure -- "metrics, logs (native OTel)" --> receivers
-    B[Back-end services] -- "traces, metrics, logs (native OTel)" --> receivers
+    B[Back-end services] -- "traces, metrics, logs (native OTel only)" --> receivers
     C[Front-end experiences] -- "traces" --> S[Splunk Observability Cloud]
 
     receivers --> processors
