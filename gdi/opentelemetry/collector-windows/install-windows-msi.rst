@@ -177,7 +177,7 @@ Custom MSI URLs
 
 By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>`. 
 
-To specify custom URLs for these downloads, replace ``COLLECTOR_MSI_URL``with the URLs to the desired MSI packages to install:
+To specify custom URLs for these downloads, replace ``COLLECTOR_MSI_URL`` with the URL to the desired MSI packages to install:
 
 .. code-block:: PowerShell
 
