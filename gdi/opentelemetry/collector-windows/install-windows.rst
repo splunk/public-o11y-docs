@@ -32,8 +32,6 @@ Alternatively, you can also install the Collector for Windows:
 Prerequisites
 ==========================
 
-
-
 .. raw:: html
 
    <div class="include-start" id="requirements/collector-windows.rst"></div>
@@ -43,9 +41,6 @@ Prerequisites
 .. raw:: html
 
    <div class="include-stop" id="requirements/collector-windows.rst"></div>
-
-
-
 
 .. _windows-otel-packages:
 
@@ -142,7 +137,6 @@ The Windows installer script supports the following options:
   * - ``hec_token``
     - Set the HEC token if it's different than the specified Splunk access token.
     -
-    - ``$false``
   * - ``with_dotnet_instrumentation``
     - Whether to install and configure .NET tracing to forward .NET application traces to the local collector.
     - ``$false``
