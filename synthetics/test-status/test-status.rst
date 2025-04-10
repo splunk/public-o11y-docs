@@ -86,9 +86,9 @@ To perform a bulk action on tests:
 
 #. Select the tests to change by either: 
 
-    * Selecting the checkbox next in the leftmost column of one or more tests.
-    * Selecting the checkbox in the table header. This checkbox selects all tests on the current page -- a maximum of 20 tests. You can scroll through the pages to select more tests. The maximum you can select at one time is 500. 
+   * Selecting the checkbox next in the leftmost column of one or more tests.
+   * Selecting the checkbox in the table header. This checkbox selects all tests on the current page -- a maximum of 20 tests. You can scroll through the pages to select more tests. The maximum you can select at one time is 500. 
 
 #. At the top of the table, select the desired action: :guilabel:`Play`, :guilabel:`Pause`, or :guilabel:`Delete`.
-If the entire bulk action succeeds, the :guilabel:`Test state` column displays the new state of each of the affected tests. If any part of the bulk action fails, the entire bulk action is cancelled and none of the tests are updated. For example, if the bulk action was to delete 400 tests and one deletion fails, none of the tests are deleted.
+   If the entire bulk action succeeds, the :guilabel:`Test state` column displays the new state of each of the affected tests. If any part of the bulk action fails, the entire bulk action is cancelled and none of the tests are updated. For example, if the bulk action was to delete 400 tests and one deletion fails, none of the tests are deleted.
 
