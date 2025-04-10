@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
@@ -7,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 18:45+0000\n"
-"PO-Revision-Date: 2025-02-27 12:04+0000\n"
+"POT-Creation-Date: 2025-03-13 09:38+0000\n"
+"PO-Revision-Date: 2025-04-10 10:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../index.rst:270
 msgid "Get started"
@@ -31,538 +30,683 @@ msgid "Architecture"
 msgstr "アーキテクチャー"
 
 #: ../../index.rst:286
-msgid "Service description"
-msgstr "サービスの説明"
-
-#: ../../index.rst:291
 msgid "Get started guide for admins TOGGLE"
 msgstr "管理者向けスタートガイド TOGGLE"
 
+#: ../../index.rst:291
+msgid "AI Assistant in Observability Cloud"
+msgstr "Observability CloudのAIアシスタント"
+
 #: ../../index.rst:296
+msgid "Prompt guide and library for AI Assistant in Observability Cloud"
+msgstr "ObservabilityクラウドのAIアシスタント用プロンプトガイドとライブラリ"
+
+#: ../../index.rst:301
+msgid "Service description"
+msgstr "サービスの説明"
+
+#: ../../index.rst:306
 msgid "Free and paid courses"
 msgstr "無料コースと有料コース"
 
-#: ../../index.rst:301
+#: ../../index.rst:311
 msgid "Free trial and guided onboarding"
 msgstr "無料トライアルとガイド付きオンボーディング"
 
-#: ../../index.rst:306
+#: ../../index.rst:316
 msgid "About Mobile TOGGLE"
 msgstr "モバイルについて TOGGLE"
 
-#: ../../index.rst:311
+#: ../../index.rst:321
 msgid "Support"
 msgstr "サポート"
 
-#: ../../index.rst:316 ../../index.rst:343
+#: ../../index.rst:326 ../../index.rst:353
 msgid "Scenarios"
 msgstr "シナリオ"
 
-#: ../../index.rst:316
+#: ../../index.rst:326
 msgid "Scenarios and tutorials"
 msgstr "シナリオとチュートリアル"
 
-#: ../../index.rst:322
+#: ../../index.rst:332
 msgid "Tutorials"
 msgstr "チュートリアル"
 
-#: ../../index.rst:327
+#: ../../index.rst:337
 msgid "Splunk Observability Cloud and the Splunk platform"
 msgstr "Splunk Observability CloudとSplunkプラットフォーム"
 
-#: ../../index.rst:327
+#: ../../index.rst:337
 msgid "Splunk platform users"
 msgstr "Splunkプラットフォームユーザー"
 
-#: ../../index.rst:333
+#: ../../index.rst:343
 msgid "Unified Identity"
 msgstr "統合ID"
 
-#: ../../index.rst:338
+#: ../../index.rst:348
 msgid "Centralized user and role management"
 msgstr "ユーザーとロールの一元管理"
 
-#: ../../index.rst:351
+#: ../../index.rst:361
 msgid "Administer Splunk Observability Cloud"
 msgstr "Splunk Observability Cloudの管理"
 
-#: ../../index.rst:357
+#: ../../index.rst:367
 msgid "Authentication and Security TOGGLE"
 msgstr "認証とセキュリティ TOGGLE"
 
-#: ../../index.rst:362
+#: ../../index.rst:372
 msgid "User and team management TOGGLE"
 msgstr "ユーザーとチームの管理 TOGGLE"
 
-#: ../../index.rst:367
+#: ../../index.rst:377
 msgid "Send alert notifications to other services TOGGLE"
 msgstr "他のサービスへのアラート通知の送信 TOGGLE"
 
-#: ../../index.rst:373
+#: ../../index.rst:383
 msgid "View organization metrics"
 msgstr "組織のメトリクスの表示"
 
-#: ../../index.rst:378
+#: ../../index.rst:388
 msgid "Monitor subscription usage and billing TOGGLE"
 msgstr "サブスクリプションの使用状況の監視と請求 TOGGLE"
 
-#: ../../index.rst:383
+#: ../../index.rst:393
 msgid "Org reference info TOGGLE"
 msgstr "組織の参照情報 TOGGLE"
 
-#: ../../index.rst:389
+#: ../../index.rst:399
 msgid "Get your data in"
 msgstr "データの取り込み"
 
-#: ../../index.rst:395
+#: ../../index.rst:405
 msgid "Compatibility and requirements"
 msgstr "互換性と要件"
 
-#: ../../index.rst:400
+#: ../../index.rst:410
 msgid "Available integrations TOGGLE"
 msgstr "利用可能なインテグレーション TOGGLE"
 
-#: ../../index.rst:405
+#: ../../index.rst:415
 msgid "Connect to your cloud service provider TOGGLE"
 msgstr "ご利用のクラウドサービスプロバイダへの接続 TOGGLE"
 
-#: ../../index.rst:410
+#: ../../index.rst:420
 msgid "Private connectivity TOGGLE"
 msgstr "プライベート接続 TOGGLE"
 
-#: ../../index.rst:415
+#: ../../index.rst:425
 msgid "Splunk Distribution of the OpenTelemetry Collector TOGGLE"
 msgstr "OpenTelemetry Collector TOGGLE の Splunk Distribution"
 
-#: ../../index.rst:420
+#: ../../index.rst:430
 msgid "Collect infrastructure metrics and logs TOGGLE"
 msgstr "インフラストラクチャのメトリクスおよびログの収集 TOGGLE"
 
-#: ../../index.rst:425
+#: ../../index.rst:435
 msgid "Instrument back-end services TOGGLE"
 msgstr "バックエンドサービスのインストルメンテーション TOGGLE"
 
-#: ../../index.rst:430
+#: ../../index.rst:440
 msgid "Instrument serverless functions TOGGLE"
 msgstr "サーバーレス機能のインストルメンテーション TOGGLE"
 
-#: ../../index.rst:435
+#: ../../index.rst:445
 msgid "Instrument front-end applications TOGGLE"
 msgstr "フロントエンドアプリケーションのインストルメンテーション TOGGLE"
 
-#: ../../index.rst:445
+#: ../../index.rst:455
 msgid "Understand and analyze your data"
 msgstr "データの把握と分析"
 
-#: ../../index.rst:451
+#: ../../index.rst:461
 msgid "Use internal search"
 msgstr "内部検索の利用"
 
-#: ../../index.rst:456
+#: ../../index.rst:466
 msgid "Metrics, metadata and events TOGGLE"
 msgstr "メトリクス、メタデータ、イベント TOGGLE"
 
-#: ../../index.rst:461
+#: ../../index.rst:471
 msgid "Data tools TOGGLE"
 msgstr "データツール TOGGLE"
 
-#: ../../index.rst:466
+#: ../../index.rst:476
 msgid "SignalFlow and analytics TOGGLE"
 msgstr "SignalFlowと分析 TOGGLE"
 
-#: ../../index.rst:471
+#: ../../index.rst:481
 msgid "Dashboards TOGGLE"
 msgstr "ダッシュボード TOGGLE"
 
-#: ../../index.rst:471
+#: ../../index.rst:481
 msgid "Dashboards and charts"
 msgstr "ダッシュボードとチャート"
 
-#: ../../index.rst:477
+#: ../../index.rst:487
 msgid "Charts TOGGLE"
 msgstr "チャート TOGGLE"
 
-#: ../../index.rst:482
+#: ../../index.rst:492
 msgid "Navigate with data links"
 msgstr "データリンクを使ったナビゲート"
 
-#: ../../index.rst:487
+#: ../../index.rst:497
 msgid "Select the time range"
 msgstr "時間範囲の選択"
 
-#: ../../index.rst:492
+#: ../../index.rst:502
 msgid "Read and write permissions"
 msgstr "読み取りと書き込みの権限"
 
-#: ../../index.rst:497
+#: ../../index.rst:507
 msgid "Alerts and detectors TOGGLE"
 msgstr "アラートと検知器 TOGGLE"
 
-#: ../../index.rst:497
+#: ../../index.rst:507
 msgid "Alerts, detectors, and SLOs"
 msgstr "アラート、検知器およびSLO"
 
-#: ../../index.rst:503
+#: ../../index.rst:513
 msgid "Service level objectives TOGGLE"
 msgstr "サービス・レベル目標 TOGGLE"
 
-#: ../../index.rst:511
+#: ../../index.rst:521
 msgid "Application Performance Monitoring"
 msgstr "Application Performance Monitoring"
 
-#: ../../index.rst:522
-msgid "Scenarios for troubleshooting errors and monitoring application performance using Splunk APM TOGGLE"
-msgstr "Splunk APMを使用したエラーのトラブルシューティングとアプリケーションパフォーマンスの監視のシナリオ TOGGLE"
+#: ../../index.rst:532
+msgid ""
+"Scenarios for troubleshooting errors and monitoring application performance "
+"using Splunk APM TOGGLE"
+msgstr ""
+"Splunk APMを使用したエラーのトラブルシューティングとアプリケーションパフォーマン"
+"スの監視のシナリオ TOGGLE"
 
-#: ../../index.rst:527
+#: ../../index.rst:537
 msgid "Set up Splunk APM TOGGLE"
 msgstr "Splunk APMのセットアップ TOGGLE"
 
-#: ../../index.rst:532
+#: ../../index.rst:542
 msgid "Manage services, spans, and traces in Splunk APM TOGGLE"
 msgstr "Splunk APMでのサービス、スパン、トレースの管理 TOGGLE"
 
-#: ../../index.rst:537
+#: ../../index.rst:547
 msgid "Analyze services with span tags and MetricSets TOGGLE"
 msgstr "スパンタグとMetricSetを使用したサービスの分析 TOGGLE"
 
-#: ../../index.rst:542
+#: ../../index.rst:552
 msgid "Correlate traces to track Business Workflows TOGGLE"
 msgstr "ビジネスワークフローを追跡するためのトレースの相関付け TOGGLE"
 
-#: ../../index.rst:547
+#: ../../index.rst:557
 msgid "Visualize and alert on your application in Splunk APM TOGGLE"
 msgstr "Splunk APMでのアプリケーションの可視化とアラーティング TOGGLE"
 
-#: ../../index.rst:552
+#: ../../index.rst:562
 msgid "AlwaysOn Profiling TOGGLE"
 msgstr "AlwaysOn Profiling TOGGLE"
 
-#: ../../index.rst:557
+#: ../../index.rst:567
 msgid "Monitor Database Query Performance TOGGLE"
 msgstr "データベースクエリパフォーマンスの監視 TOGGLE"
 
-#: ../../index.rst:562
-msgid "Use Data Links to connect APM properties to relevant resources TOGGLE"
+#: ../../index.rst:572
+msgid "Use data links to connect APM properties to relevant resources TOGGLE"
 msgstr "データリンクを使用したAPMプロパティと関連リソースの接続 TOGGLE"
 
-#: ../../index.rst:572
+#: ../../index.rst:582
 msgid "Introduction"
 msgstr "はじめに"
 
-#: ../../index.rst:572
+#: ../../index.rst:582
 msgid "Infrastructure"
 msgstr "インフラストラクチャ"
 
-#: ../../index.rst:578
+#: ../../index.rst:588
 msgid "Key concepts"
 msgstr "キーコンセプト"
 
-#: ../../index.rst:588
+#: ../../index.rst:598
 msgid "Monitor services and hosts"
 msgstr "サービスとホストの監視"
 
-#: ../../index.rst:593
+#: ../../index.rst:603
 msgid "Use navigators"
 msgstr "ナビゲーターの使用"
 
-#: ../../index.rst:598
+#: ../../index.rst:608
 msgid "Filter data"
 msgstr "フィルターデータ"
 
-#: ../../index.rst:603
+#: ../../index.rst:613
 msgid "Metrics pipeline management TOGGLE"
 msgstr "メトリクスパイプライン管理 TOGGLE"
 
-#: ../../index.rst:608
+#: ../../index.rst:618
 msgid "Network Explorer TOGGLE"
 msgstr "ネットワークエクスプローラー TOGGLE"
 
-#: ../../index.rst:613
+#: ../../index.rst:623
 msgid "Virtual metrics"
 msgstr "仮想メトリクス"
 
-#: ../../index.rst:618
+#: ../../index.rst:628
 msgid "Resolution and data retention"
 msgstr "解像度とデータ保持"
 
-#: ../../index.rst:623
+#: ../../index.rst:633
 msgid "Resolution and data retention (DPM)"
 msgstr "解像度とデータ保持（DPM）"
 
-#: ../../index.rst:628
+#: ../../index.rst:638
 msgid "Log Observer Connect"
 msgstr "Log Observer Connect"
 
-#: ../../index.rst:634
+#: ../../index.rst:644
 msgid "Real User Monitoring"
 msgstr "Real User Monitoring（RUM）"
 
-#: ../../index.rst:645
+#: ../../index.rst:655
 msgid "Splunk RUM scenario library TOGGLE"
 msgstr "Splunk RUMシナリオライブラリ TOGGLE"
 
-#: ../../index.rst:650
+#: ../../index.rst:660
 msgid "Set up Splunk RUM"
 msgstr "Splunk RUMのセットアップ"
 
-#: ../../index.rst:697
+#: ../../index.rst:707
 msgid "Splunk RUM dashboards TOGGLE"
 msgstr "Splunk RUMのダッシュボード TOGGLE"
 
-#: ../../index.rst:727
+#: ../../index.rst:737
 msgid "Synthetics"
 msgstr "Synthetics"
 
-#: ../../index.rst:743
+#: ../../index.rst:753
 msgid "Synthetics scenario library TOGGLE"
 msgstr "Syntheticsシナリオライブラリ TOGGLE"
 
-#: ../../index.rst:753
+#: ../../index.rst:763
 msgid "Browser tests for webpages TOGGLE"
 msgstr "ウェブページのブラウザテスト TOGGLE"
 
-#: ../../index.rst:758
+#: ../../index.rst:768
 msgid "Uptime tests for port and HTTP TOGGLE"
 msgstr "ポートおよびHTTP TOGGLEのアップタイムテスト TOGGLE"
 
-#: ../../index.rst:763
+#: ../../index.rst:773
 msgid "API tests for endpoints TOGGLE"
 msgstr "エンドポイントのAPIテスト TOGGLE"
 
-#: ../../index.rst:768
+#: ../../index.rst:778
 msgid "Test status TOGGLE"
 msgstr "ステータスのテスト TOGGLE"
 
-#: ../../index.rst:773
+#: ../../index.rst:783
 msgid "Advanced test configurations TOGGLE"
 msgstr "高度なテスト設定　TOGGLE"
 
-#: ../../index.rst:778
+#: ../../index.rst:788
 msgid "Troubleshoot tests TOGGLE"
 msgstr "トラブルシューティングのテスト　TOGGLE"
 
-#: ../../index.rst:783
+#: ../../index.rst:793
 msgid "Introduction to Splunk On-Call TOGGLE"
 msgstr "Splunk On-Callの概要 TOGGLE"
 
-#: ../../index.rst:783
+#: ../../index.rst:793
 msgid "Splunk On-Call"
 msgstr "Splunk On-Call"
 
-#: ../../index.rst:790
+#: ../../index.rst:800
 msgid "User management TOGGLE"
 msgstr "ユーザーの管理 TOGGLE"
 
-#: ../../index.rst:795
+#: ../../index.rst:805
 msgid "Create and manage on-call schedules TOGGLE"
 msgstr "オンコールスケジュールの作成と管理 TOGGLE"
 
-#: ../../index.rst:800
+#: ../../index.rst:810
 msgid "Alerts TOGGLE"
 msgstr "アラート TOGGLE"
 
-#: ../../index.rst:805
+#: ../../index.rst:815
 msgid "Notifications TOGGLE"
 msgstr "通知 TOGGLE"
 
-#: ../../index.rst:810
+#: ../../index.rst:820
 msgid "Incidents TOGGLE"
 msgstr "インシデント TOGGLE"
 
-#: ../../index.rst:816
+#: ../../index.rst:826
 msgid "Mobile app TOGGLE"
 msgstr "モバイルアプリ TOGGLE"
 
-#: ../../index.rst:822
+#: ../../index.rst:832
 msgid "Reports TOGGLE"
 msgstr "レポート TOGGLE"
 
-#: ../../index.rst:827
+#: ../../index.rst:837
 msgid "Integrations with Splunk On-Call TOGGLE"
 msgstr "Splunk On-Callとのインテグレーション TOGGLE"
 
-#: ../../index.rst:832
+#: ../../index.rst:842
 msgid "Release notes overview TOGGLE"
 msgstr "リリースノートの概要 TOGGLE"
 
-#: ../../index.rst:832
+#: ../../index.rst:842
 msgid "Release notes"
 msgstr "リリースノート"
 
-#: ../../index.rst:838
+#: ../../index.rst:848
 msgid "Third-party software credits"
 msgstr "サードパーティソフトウェアのクレジット"
 
-#: ../../index.rst:838
+#: ../../index.rst:848
 msgid "Reference and Legal"
 msgstr "参考資料と法的事項"
 
-#: ../../index.rst:845
+#: ../../index.rst:855
 msgid "Glossary"
 msgstr "用語集"
 
-#: ../../index.rst:850
+#: ../../index.rst:860
 msgid "Contribute to our documentation"
 msgstr "ドキュメントに貢献する"
 
 #: ../../index.rst:-1
-msgid "Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud."
-msgstr "Splunk Observability Cloud ドキュメントへようこそ。Splunk Observability Cloud の基本的な要素について説明します。"
+msgid ""
+"Welcome to Splunk Observability Cloud documentation. Learn about the basic "
+"elements of Splunk Observability Cloud."
+msgstr ""
+"Splunk Observability Cloud ドキュメントへようこそ。Splunk Observability Cloud の"
+"基本的な要素について説明します。"
 
 #: ../../index.rst:-1 ../../index.rst:5
 msgid "Welcome"
 msgstr "ようこそ"
 
 #: ../../index.rst:18
-msgid ":icon-info:`.` :strong:`Welcome to Splunk Observability Cloud` Learn about the basic elements of Splunk Observability Cloud and all it can do for you."
-msgstr ":icon-info:`.` :strong:`Splunk Observability Cloudへようこそ` Splunk Observability Cloudの基本要素や、Splunk Observability Cloudでできることをご紹介します。"
+msgid ""
+":icon-info:`.` :strong:`Welcome to Splunk Observability Cloud` Learn about the "
+"basic elements of Splunk Observability Cloud and all it can do for you."
+msgstr ""
+":icon-info:`.` :strong:`Splunk Observability Cloudへようこそ` Splunk "
+"Observability Cloudの基本要素や、Splunk Observability Cloudでできることをご紹介"
+"します。"
 
 #: ../../index.rst:23
 msgid ":strong:`Overview` Splunk Observability Cloud overview :ref:`overview`"
 msgstr ":strong:`概要` Splunk Observability Cloud の概要 :ref:`overview`"
 
 #: ../../index.rst:28
-msgid ":strong:`Scenarios` A collection of scenarios for using Splunk Observability Cloud to address your goals :ref:`scenario-landing`"
-msgstr ":strong:`シナリオ` Splunk Observability Cloud を使用して目標を達成するためのシナリオ集 :ref:`scenario-landing`"
+msgid ""
+":strong:`Scenarios` A collection of scenarios for using Splunk Observability "
+"Cloud to address your goals :ref:`scenario-landing`"
+msgstr ""
+":strong:`シナリオ` Splunk Observability Cloud を使用して目標を達成するためのシナ"
+"リオ集 :ref:`scenario-landing`"
 
 #: ../../index.rst:33
-msgid ":strong:`Tutorials` A collection of task-based tutorials to achieve a goal in Splunk Observability Cloud :ref:`tutorial-landing`"
-msgstr ":strong:`チュートリアル` Splunk Observability Cloud で目標を達成するためのタスクベースのチュートリアル集 :ref:`tutorial-landing`"
+msgid ""
+":strong:`Tutorials` A collection of task-based tutorials to achieve a goal in "
+"Splunk Observability Cloud :ref:`tutorial-landing`"
+msgstr ""
+":strong:`チュートリアル` Splunk Observability Cloud で目標を達成するためのタスク"
+"ベースのチュートリアル集 :ref:`tutorial-landing`"
 
 #: ../../index.rst:38
-msgid ":strong:`Get started guide for admins` Get started guide for Splunk Observability Cloud admins :ref:`get-started-guide`"
-msgstr ":strong:`管理者向けスタートガイド` Splunk Observability Cloud管理者のための利用開始ガイド :ref:`get-started-guide`"
+msgid ""
+":strong:`Get started guide for admins` Get started guide for Splunk "
+"Observability Cloud admins :ref:`get-started-guide`"
+msgstr ""
+":strong:`管理者向けスタートガイド` Splunk Observability Cloud管理者のための利用"
+"開始ガイド :ref:`get-started-guide`"
 
 #: ../../index.rst:43
-msgid ":strong:`Service description` Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`"
-msgstr ":strong:`サービスの説明` Splunk Observability Cloud のメリットとサービス条件 :ref:`o11y-service-description`"
+msgid ""
+":strong:`Service description` Benefits and service terms of Splunk "
+"Observability Cloud :ref:`o11y-service-description`"
+msgstr ""
+":strong:`サービスの説明` Splunk Observability Cloud のメリットとサービス条"
+"件 :ref:`o11y-service-description`"
 
 #: ../../index.rst:48
-msgid ":strong:`Architecture` Architecture of Splunk Observability Cloud :ref:`architecture`"
-msgstr ":strong:`アーキテクチャ` Splunk Observability Cloudのアーキテクチャ :ref:`architecture`"
+msgid ""
+":strong:`Architecture` Architecture of Splunk Observability "
+"Cloud :ref:`architecture`"
+msgstr ""
+":strong:`アーキテクチャ` Splunk Observability Cloudのアーキテク"
+"チャ :ref:`architecture`"
 
 #: ../../index.rst:55
 msgid ""
-":icon-cloud-upload:`.` :strong:`Get your data in` The first step toward observability is getting relevant data into Splunk Observability Cloud. View :ref:`all supported "
-"integrations <supported-data-sources>`."
+":icon-cloud-upload:`.` :strong:`Get your data in` The first step toward "
+"observability is getting relevant data into Splunk Observability Cloud. "
+"View :ref:`all supported integrations <supported-data-sources>`."
 msgstr ""
-":icon-cloud-upload:`.` :strong:`データの取り込み` オブザーバビリティの最初のステップは、関連データをSplunk Observability Cloudに取り込むことです。:ref:`サポート対象のインテ"
-"グレーションの全リスト<supported-data-sources>` を確認してください。"
+":icon-cloud-upload:`.` :strong:`データの取り込み` オブザーバビリティの最初のス"
+"テップは、関連データをSplunk Observability Cloudに取り込むことです。:ref:`サポー"
+"ト対象のインテグレーションの全リスト<supported-data-sources>` を確認してくださ"
+"い。"
 
 #: ../../index.rst:60
-msgid ":strong:`Compatibility and requirements` Systems and languages you can use with Splunk Observability Cloud :ref:`requirements`"
-msgstr ":strong:`互換性と要件` Splunk Observability Cloudで使用可能なシステムおよび言語 :ref:`requirements`"
+msgid ""
+":strong:`Compatibility and requirements` Systems and languages you can use with "
+"Splunk Observability Cloud :ref:`requirements`"
+msgstr ""
+":strong:`互換性と要件` Splunk Observability Cloudで使用可能なシステムおよび言"
+"語 :ref:`requirements`"
 
 #: ../../index.rst:65
-msgid ":strong:`OpenTelemetry` Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`"
-msgstr ":strong:`OpenTelemetry` Splunk Distribution of OpenTelemetry Collectorのインストール :ref:`otel-intro`"
+msgid ""
+":strong:`OpenTelemetry` Install the Splunk Distribution of the OpenTelemetry "
+"Collector :ref:`otel-intro`"
+msgstr ""
+":strong:`OpenTelemetry` Splunk Distribution of OpenTelemetry Collectorのインス"
+"トール :ref:`otel-intro`"
 
 #: ../../index.rst:70
-msgid ":strong:`Cloud providers` Integrate to collect service metrics and metadata :ref:`get-started-connect`"
-msgstr ":strong:`クラウドプロバイダ` サービスメトリクスとメタデータを収集するための統合 :ref:`get-started-connect`"
+msgid ""
+":strong:`Cloud providers` Integrate to collect service metrics and "
+"metadata :ref:`get-started-connect`"
+msgstr ""
+":strong:`クラウドプロバイダ` サービスメトリクスとメタデータを収集するための統"
+"合 :ref:`get-started-connect`"
 
 #: ../../index.rst:75
-msgid ":strong:`Back-end apps and services` Instrument to collect traces and logs :ref:`get-started-application`"
-msgstr ":strong:`バックエンドアプリとサービス` トレースとログを収集するためのインストルメンテーション :ref:`get-started-application`"
+msgid ""
+":strong:`Back-end apps and services` Instrument to collect traces and "
+"logs :ref:`get-started-application`"
+msgstr ""
+":strong:`バックエンドアプリとサービス` トレースとログを収集するためのインストル"
+"メンテーション :ref:`get-started-application`"
 
 #: ../../index.rst:80
-msgid ":strong:`Front-end app user experiences` Instrument to collect user sessions :ref:`rum-gdi`"
-msgstr ":strong:`フロントエンドアプリのユーザーエクスペリエンス` ユーザーセッションを収集するためのインストルメンテーション :ref:`rum-gdi`"
+msgid ""
+":strong:`Front-end app user experiences` Instrument to collect user "
+"sessions :ref:`rum-gdi`"
+msgstr ""
+":strong:`フロントエンドアプリのユーザーエクスペリエンス` ユーザーセッションを収"
+"集するためのインストルメンテーション :ref:`rum-gdi`"
 
 #: ../../index.rst:85
-msgid ":strong:`Serverless functions` Instrument to collect traces and logs :ref:`instrument-serverless-functions`"
-msgstr ":strong:`サーバーレス機能` トレースとログを収集するためのインストルメンテーション :ref:`instrument-serverless-functions`"
+msgid ""
+":strong:`Serverless functions` Instrument to collect traces and "
+"logs :ref:`instrument-serverless-functions`"
+msgstr ""
+":strong:`サーバーレス機能` トレースとログを収集するためのインストルメンテーショ"
+"ン :ref:`instrument-serverless-functions`"
 
 #: ../../index.rst:91
-msgid ":icon-display:`.` :strong:`Explore and monitor your environment` After you have data coming into Splunk Observability Cloud, you can do some exploring."
-msgstr ":icon-display:`.` :strong:`ご利用の環境の探索と監視` Splunk Observability Cloudにデータを取り込んだら、探索を行いましょう。"
+msgid ""
+":icon-display:`.` :strong:`Explore and monitor your environment` After you have "
+"data coming into Splunk Observability Cloud, you can do some exploring."
+msgstr ""
+":icon-display:`.` :strong:`ご利用の環境の探索と監視` Splunk Observability Cloud"
+"にデータを取り込んだら、探索を行いましょう。"
 
 #: ../../index.rst:96
-msgid ":strong:`Infrastructure Monitoring` Monitor server and cluster metrics :ref:`wcidw-imm`"
-msgstr ":strong:`Infrastructure Monitoring` サーバーとクラスターのメトリクスの監視 :ref:`wcidw-imm`"
+msgid ""
+":strong:`Infrastructure Monitoring` Monitor server and cluster "
+"metrics :ref:`wcidw-imm`"
+msgstr ""
+":strong:`Infrastructure Monitoring` サーバーとクラスターのメトリクスの監"
+"視 :ref:`wcidw-imm`"
 
 #: ../../index.rst:101
-msgid ":strong:`Application Performance Monitoring` Monitor back-end app and service traces :ref:`get-started-apm`"
-msgstr ":strong:`Application Performance Monitoring` バックエンドアプリとサービストレースの監視 :ref:`get-started-apm`"
+msgid ""
+":strong:`Application Performance Monitoring` Monitor back-end app and service "
+"traces :ref:`get-started-apm`"
+msgstr ""
+":strong:`Application Performance Monitoring` バックエンドアプリとサービストレー"
+"スの監視 :ref:`get-started-apm`"
 
 #: ../../index.rst:106
-msgid ":strong:`Real User Monitoring` Monitor data about front-end app user experiences :ref:`wcidw-rum`"
-msgstr ":strong:`Real User Monitoring` フロントエンドアプリのユーザーエクスペリエンスに関するデータの監視 :ref:`wcidw-rum`"
+msgid ""
+":strong:`Real User Monitoring` Monitor data about front-end app user "
+"experiences :ref:`wcidw-rum`"
+msgstr ""
+":strong:`Real User Monitoring` フロントエンドアプリのユーザーエクスペリエンスに"
+"関するデータの監視 :ref:`wcidw-rum`"
 
 #: ../../index.rst:111
-msgid ":strong:`Log Observer Connect` Query logs to identify root causes :ref:`logs-intro-logconnect`"
-msgstr ":strong:`Log Observer Connect` 根本原因の特定のためのログのクエリ :ref:`logs-intro-logconnect`"
+msgid ""
+":strong:`Log Observer Connect` Query logs to identify root causes :ref:`logs-"
+"intro-logconnect`"
+msgstr ""
+":strong:`Log Observer Connect` 根本原因の特定のためのログのクエリ :ref:`logs-"
+"intro-logconnect`"
 
 #: ../../index.rst:116
-msgid ":strong:`Synthetic Monitoring` Proactively monitor the performance of web resources :ref:`intro-synthetics`"
-msgstr ":strong:`Synthetic Monitoring` ウェブリソースのパフォーマンスの積極的監視 :ref:`intro-synthetics`"
+msgid ""
+":strong:`Synthetic Monitoring` Proactively monitor the performance of web "
+"resources :ref:`intro-synthetics`"
+msgstr ""
+":strong:`Synthetic Monitoring` ウェブリソースのパフォーマンスの積極的監"
+"視 :ref:`intro-synthetics`"
 
 #: ../../index.rst:121
-msgid ":strong:`All products` Learn more about all Splunk Observability Cloud products :ref:`overview`"
-msgstr ":strong:`すべての製品` すべてのSplunk Observability Cloud製品の詳細 :ref:`overview`"
+msgid ""
+":strong:`All products` Learn more about all Splunk Observability Cloud "
+"products :ref:`overview`"
+msgstr ""
+":strong:`すべての製品` すべてのSplunk Observability Cloud製品の詳"
+"細 :ref:`overview`"
 
 #: ../../index.rst:127
 msgid ""
-":icon-wrench:`.` :strong:`Set up alerts and customize your account` Prepare for issues that might arise by setting up alerts, custom dashboards, and other advanced "
-"features."
+":icon-wrench:`.` :strong:`Set up alerts and customize your account` Prepare for "
+"issues that might arise by setting up alerts, custom dashboards, and other "
+"advanced features."
 msgstr ""
-":icon-wrench:`.` :strong:`アラートの設定とアカウントのカスタマイズ` アラート、カスタムダッシュボード、その他の高度な機能を設定することで、発生する可能性のある問題に備えま"
-"す。"
+":icon-wrench:`.` :strong:`アラートの設定とアカウントのカスタマイズ` アラート、カ"
+"スタムダッシュボード、その他の高度な機能を設定することで、発生する可能性のある問"
+"題に備えます。"
 
 #: ../../index.rst:132
-msgid ":strong:`Detectors and alerts` Receive alerts about conditions you care about :ref:`create-detectors`"
-msgstr ":strong:`ディテクターとアラート` 関心のある条件に関するアラートの受信 :ref:`create-detectors`"
+msgid ""
+":strong:`Detectors and alerts` Receive alerts about conditions you care "
+"about :ref:`create-detectors`"
+msgstr ""
+":strong:`ディテクターとアラート` 関心のある条件に関するアラートの受"
+"信 :ref:`create-detectors`"
 
 #: ../../index.rst:137
-msgid ":strong:`Dashboards and charts` Get actionable insights about the systems you monitor :ref:`dashboards`"
-msgstr ":strong:`ダッシュボードとチャート` 監視対象のシステムに関する実用的なインサイトの取得 :ref:`dashboards`"
+msgid ""
+":strong:`Dashboards and charts` Get actionable insights about the systems you "
+"monitor :ref:`dashboards`"
+msgstr ""
+":strong:`ダッシュボードとチャート` 監視対象のシステムに関する実用的なインサイト"
+"の取得 :ref:`dashboards`"
 
 #: ../../index.rst:142
-msgid ":strong:`Span tags` Use span tags to add useful metadata to traces :ref:`apm-add-context-trace-span`"
-msgstr ":strong:`スパンタグ` スパンタグの使用によるトレースに有用なメタデータの追加 :ref:`apm-add-context-trace-span`"
+msgid ""
+":strong:`Span tags` Use span tags to add useful metadata to traces :ref:`apm-"
+"add-context-trace-span`"
+msgstr ""
+":strong:`スパンタグ` スパンタグの使用によるトレースに有用なメタデータの追"
+"加 :ref:`apm-add-context-trace-span`"
 
 #: ../../index.rst:147
-msgid ":strong:`Related Content` Enable users to seamlessly move across product views :ref:`get-started-relatedcontent`"
-msgstr ":strong:`関連コンテンツ` ユーザーが製品ビューをシームレスに移動可能 :ref:`get-started-relatedcontent`"
+msgid ""
+":strong:`Related Content` Enable users to seamlessly move across product "
+"views :ref:`get-started-relatedcontent`"
+msgstr ""
+":strong:`関連コンテンツ` ユーザーが製品ビューをシームレスに移動可能 :ref:`get-"
+"started-relatedcontent`"
 
 #: ../../index.rst:152
-msgid ":strong:`Global Data Links` Provide convenient access to relevant resources :ref:`link-metadata-to-content`"
-msgstr ":strong:`グローバルデータリンク` 関連リソースへの便利なアクセスを提供 :ref:`link-metadata-to-content`"
+msgid ""
+":strong:`Global Data Links` Provide convenient access to relevant "
+"resources :ref:`link-metadata-to-content`"
+msgstr ""
+":strong:`グローバルデータリンク` 関連リソースへの便利なアクセスを提"
+"供 :ref:`link-metadata-to-content`"
 
 #: ../../index.rst:158
 msgid ""
-":icon-cogs:`.` :strong:`Administer your account` As a Splunk Observability Cloud administrator, use these tools to give your users a secure and relevant user experience."
-msgstr ":icon-cogs:`.` :strong:`アカウントの管理` Splunk Observability Cloudの管理者は、以下のツールを使用してユーザーに安全で適切なユーザーエクスペリエンスを提供します。"
+":icon-cogs:`.` :strong:`Administer your account` As a Splunk Observability "
+"Cloud administrator, use these tools to give your users a secure and relevant "
+"user experience."
+msgstr ""
+":icon-cogs:`.` :strong:`アカウントの管理` Splunk Observability Cloudの管理者は、"
+"以下のツールを使用してユーザーに安全で適切なユーザーエクスペリエンスを提供しま"
+"す。"
 
 #: ../../index.rst:163
-msgid ":strong:`Get started` Learn how to set up and administer your organization :ref:`admin-admin`"
-msgstr ":strong:`はじめに` 組織のセットアップおよび管理の方法の確認 :ref:`admin-admin`"
+msgid ""
+":strong:`Get started` Learn how to set up and administer your "
+"organization :ref:`admin-admin`"
+msgstr ""
+":strong:`はじめに` 組織のセットアップおよび管理の方法の確認 :ref:`admin-admin`"
 
 #: ../../index.rst:168
-msgid ":strong:`Access tokens` Authenticate and track API use :ref:`admin-org-tokens`"
+msgid ""
+":strong:`Access tokens` Authenticate and track API use :ref:`admin-org-tokens`"
 msgstr ":strong:`アクセストークン` API利用の認証と追跡 :ref:`admin-org-tokens`"
 
 #: ../../index.rst:173
-msgid ":strong:`Users` Invite users and set access levels :ref:`admin-manage-users`"
-msgstr ":strong:`ユーザー` ユーザーの招待とアクセスレベルの設定 :ref:`admin-manage-users`"
+msgid ""
+":strong:`Users` Invite users and set access levels :ref:`admin-manage-users`"
+msgstr ""
+":strong:`ユーザー` ユーザーの招待とアクセスレベルの設定 :ref:`admin-manage-"
+"users`"
 
 #: ../../index.rst:178
-msgid ":strong:`Teams` Create teams to help coordinate teamwork :ref:`admin-manage-teams`"
-msgstr ":strong:`チーム` チームワークを調整するためのチームの作成 :ref:`admin-manage-teams`"
+msgid ""
+":strong:`Teams` Create teams to help coordinate teamwork :ref:`admin-manage-"
+"teams`"
+msgstr ""
+":strong:`チーム` チームワークを調整するためのチームの作成 :ref:`admin-manage-"
+"teams`"
 
 #: ../../index.rst:183
-msgid ":strong:`Single sign-on` Set up an integration to an SSO provider :ref:`sso-label`"
+msgid ""
+":strong:`Single sign-on` Set up an integration to an SSO provider :ref:`sso-"
+"label`"
 msgstr ":strong:`シングルサインオン` SSOプロバイダとの統合の設定 :ref:`sso-label`"
 
 #: ../../index.rst:188
-msgid ":strong:`Subscription usage` Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`"
-msgstr ":strong:`サブスクリプション使用状況` Infrastructure Monitoringのサブスクリプション使用状況の監視 :ref:`subscription-overview`"
+msgid ""
+":strong:`Subscription usage` Monitor subscription usage for Infrastructure "
+"Monitoring :ref:`subscription-overview`"
+msgstr ""
+":strong:`サブスクリプション使用状況` Infrastructure Monitoringのサブスクリプショ"
+"ン使用状況の監視 :ref:`subscription-overview`"
 
 #: ../../index.rst:194
-msgid ":icon-cloud-upload:`.` :strong:`Popular integrations` Access documentation for some of the most popular integrations used to get data into Splunk Observability Cloud."
+msgid ""
+":icon-cloud-upload:`.` :strong:`Popular integrations` Access documentation for "
+"some of the most popular integrations used to get data into Splunk "
+"Observability Cloud."
 msgstr ""
-":icon-cloud-upload:`.` :strong:`人気のインテグレーション` Splunk Observability Cloudへのデータ取り込みに使用される最も人気の高いインテグレーションのドキュメントへのアクセス"
+":icon-cloud-upload:`.` :strong:`人気のインテグレーション` Splunk Observability "
+"Cloudへのデータ取り込みに使用される最も人気の高いインテグレーションのドキュメン"
+"トへのアクセス"
 
 #: ../../index.rst:199
 msgid ":strong:`Linux` Collect metrics and logs :ref:`get-started-linux`"
@@ -577,8 +721,10 @@ msgid ":strong:`Windows` Collect metrics and logs :ref:`get-started-windows`"
 msgstr ":strong:`Windows` メトリクスとログの収集 :ref:`get-started-windows`"
 
 #: ../../index.rst:214
-msgid ":strong:`Amazon Web Services` Collect metrics and logs :ref:`get-started-aws`"
-msgstr ":strong:`Amazon Web Services` メトリクスとログの収集 :ref:`get-started-aws`"
+msgid ""
+":strong:`Amazon Web Services` Collect metrics and logs :ref:`get-started-aws`"
+msgstr ""
+":strong:`Amazon Web Services` メトリクスとログの収集 :ref:`get-started-aws`"
 
 #: ../../index.rst:219
 msgid ":strong:`Azure` Collect metrics :ref:`get-started-azure`"
@@ -613,13 +759,22 @@ msgid ":strong:`C++` Collect traces :ref:`get-started-cpp`"
 msgstr ":strong:`C++` トレースの収集 :ref:`get-started-cpp`"
 
 #: ../../index.rst:259
-msgid ":strong:`All supported integrations` View a list of all supported integrations :ref:`supported-data-sources`"
-msgstr ":strong:`サポート対象のインテグレーションの全リスト` サポート対象の全インテグレーションのリストの表示 :ref:`supported-data-sources`"
+msgid ""
+":strong:`All supported integrations` View a list of all supported "
+"integrations :ref:`supported-data-sources`"
+msgstr ""
+":strong:`サポート対象のインテグレーションの全リスト` サポート対象の全インテグ"
+"レーションのリストの表示 :ref:`supported-data-sources`"
 
 #: ../../index.rst:265
 msgid ""
-":icon-info:`.` :strong:`Release notes` To keep up to date with changes in the products, see the Splunk Observability Cloud :ref:`release notes <release-notes-overview>`."
-msgstr ":icon-info:`.` :strong:`リリースノート` 製品の変更に関する最新情報は、Splunk Observability Cloud :ref:`リリースノート<release-notes-overview>` を参照してください。"
+":icon-info:`.` :strong:`Release notes` To keep up to date with changes in the "
+"products, see the Splunk Observability Cloud :ref:`release notes <release-notes-"
+"overview>`."
+msgstr ""
+":icon-info:`.` :strong:`リリースノート` 製品の変更に関する最新情報は、Splunk "
+"Observability Cloud :ref:`リリースノート<release-notes-overview>` を参照してくだ"
+"さい。"
 
 #~ msgid "Measure and alert on your SLIs"
 #~ msgstr "SLIの測定と警告"
@@ -711,5 +866,9 @@ msgstr ":icon-info:`.` :strong:`リリースノート` 製品の変更に関す�
 #~ msgid "Configure your tests TOGGLE"
 #~ msgstr "テストの設定 TOGGLE"
 
-#~ msgid ":strong:`Logs pipeline` Add value to your raw logs by customizing your pipeline :ref:`logs-pipeline`"
-#~ msgstr ":strong:`ログパイプライン` パイプラインのカスタマイズによる生ログへの価値追加 :ref:`logs-pipeline`"
+#~ msgid ""
+#~ ":strong:`Logs pipeline` Add value to your raw logs by customizing your "
+#~ "pipeline :ref:`logs-pipeline`"
+#~ msgstr ""
+#~ ":strong:`ログパイプライン` パイプラインのカスタマイズによる生ログへの価値追"
+#~ "加 :ref:`logs-pipeline`"
