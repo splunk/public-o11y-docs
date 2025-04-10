@@ -55,7 +55,6 @@ Included packages
 The Windows installer script installs the following packages:
 
 * Dotnet autoinstrumentation, if enabled. See :ref:`get-started-dotnet-otel`.
-* Fluentd, if enabled. See :ref:`fluentd-manual-config-windows`.
 * JMX metric gatherer.
 * For Docker environments only, Java JDK and JRE.
 
@@ -64,10 +63,7 @@ The Windows installer script installs the following packages:
 Install the Collector for Windows using the installer script
 ================================================================
 
-The installer script is available for Windows 64-bit environments, and deploys and configures: 
-
-* The Splunk Distribution of the OpenTelemetry Collector for Windows 
-* Fluentd through the ``td-agent``, which is deactivated by default
+The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of the OpenTelemetry Collector for Windows. 
 
 To install the package using the installer script, follow these steps:
 
@@ -146,8 +142,6 @@ The Windows installer script supports the following options:
    * - ``hec_token``
      - Set the HEC token if it's different than the specified Splunk access token.
      -
-   * - ``with_fluentd``
-     - Whether to install and configure fluentd to forward log events to the collector. See :ref:`fluentd-manual-config-windows` for more information.
      - ``$false``
    * - ``with_dotnet_instrumentation``
      - Whether to install and configure .NET tracing to forward .NET application traces to the local collector.
@@ -170,9 +164,6 @@ The Windows installer script supports the following options:
    * - ``collector_msi_url``
      - When installing the Collector, instead of downloading the package, use this local path to a Splunk OpenTelemetry Collector MSI package. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
      - ``https://dl.signalfx.com/splunk-otel-collector/`` |br| ``msi/release/splunk-otel-collector-<version>-amd64.msi``
-   * - ``fluentd_msi_url``
-     - Specify the URL to the Fluentd MSI package to install.
-     - ``https://packages.treasuredata.com/4/windows/td-agent-4.1.0-x64.msi``
    * - ``msi_path``
      - Specify a local path to a Splunk OpenTelemetry Collector MSI package to install instead of downloading the package. If specified, the ``-collector_version`` and ``-stage`` parameters will be ignored.
      -

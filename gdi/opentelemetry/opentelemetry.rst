@@ -78,8 +78,7 @@ Also, the customizations in the Splunk distribution include these additional fea
 * Better defaults for Splunk products
 * Discovery mode for metric sources
 * Automatic discovery and configuration
-* Fluentd for log capture, deactivated by default
-
+  
 .. note:: Check out the :new-page:`Splunk Distribution of the OpenTelemetry Collector repo in GitHub <https://github.com/signalfx/splunk-otel-collector>` for more details.
 
 .. raw:: html
@@ -167,8 +166,6 @@ To collect logs with the Splunk Distribution of the OpenTelemetry Collector:
 
 * In Kubernetes environments, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
 * For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
-
-.. note:: If you wish to collect logs for the target host, install and enable Fluentd in your Collector instance. 
 
 .. _otel-intro-enterprise:
 

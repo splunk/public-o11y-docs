@@ -13,7 +13,7 @@ With a single CPU core, the Collector can ingest the following:
 
 * If handling traces, 15,000 spans per second.
 * If handling metrics, 20,000 data points per second.
-* If handling logs, 10,000 log records per second, including Fluentd ``td-agent``, which forwards logs to the ``fluentforward`` receiver in the Collector. See more at :ref:`fluentd-receiver`.
+* If handling logs, 10,000 log records per second.
 
 Sizing recommendations 
 ==========================================
@@ -59,7 +59,7 @@ Scaling recommendations
 
 To define and scale your architecture, analyze the behavior of your workload to understand the loads and format of each signal type, as well as the load's distribution in time.
 
-For example, consider a scenario with hundreds of Prometheus endpoints to scrape, a terabyte of logs coming from fluentd instances every minute, and some application metrics and OTLP traces.
+For example, consider a scenario with hundreds of Prometheus endpoints to scrape, a terabyte of logs ingested every minute, and some application metrics and OTLP traces.
 
 In this scenario:
 

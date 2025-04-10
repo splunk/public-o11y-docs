@@ -9,9 +9,9 @@ Uninstall the Collector for Linux
 
 Follow these instructions to uninstall the Splunk Distribution of the OpenTelemetry Collector for Linux.
 
-You can use commands to uninstall the Collector and Fluentd packages if you used the :ref:`installer script<linux-scripts>` or :ref:`Debian or RPM package <linux-packages>` to perform the installation.
+You can use commands to uninstall the Collector packages if you used the :ref:`installer script<linux-scripts>` or :ref:`Debian or RPM package <linux-packages>` to perform the installation.
 
-If you installed the Collector and Fluentd using other methods (such as Ansible, Puppet, and Heroku as described in :ref:`otel-install-linux`), follow uninstall instructions specific to the tool you used.
+If you installed the Collector using other methods (such as Ansible, Puppet, and Heroku as described in :ref:`otel-install-linux`), follow uninstall instructions specific to the tool you used.
 
 .. _otel-linux-uninstall-details:
 
@@ -29,25 +29,6 @@ While not an exhaustive list, here are key notes about some of the files that ar
 * On Debian-based systems, the following files are deleted. If you want to keep these files, be sure to back up the individual files or the entire ``/etc/otel/collector`` directory before you perform the uninstall. Files not in this list aren't deleted.
 
   * ``/etc/otel/collector/agent_config.yaml``
-  * ``/etc/otel/collector/fluentd/README``
-  * ``/etc/otel/collector/fluentd/conf.d/apache.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/cassandra.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/docker.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/etcd.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/jetty.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/journald.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/memcached.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/mongodb.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/mysql.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/nginx.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/postgresql.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/rabbitmq.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/redis.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/syslog.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/tomcat.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/zookeeper.conf``
-  * ``/etc/otel/collector/fluentd/fluent.conf``
-  * ``/etc/otel/collector/fluentd/splunk-otel-collector.conf``
   * ``/etc/otel/collector/gateway_config.yaml``
   * ``/etc/otel/collector/splunk-otel-collector.conf.example``
   * ``/etc/otel/collector/splunk-support-bundle.sh``
@@ -55,25 +36,6 @@ While not an exhaustive list, here are key notes about some of the files that ar
 * On RPM-based systems, if you modified any of the following files, the modified files aren't deleted and are renamed with the .rpmsave extension. For example, the uninstall process renames a modified agent_config.yaml to agent_config.yaml.rpmsave. You can delete these .rpmsave files if you don't need them. Unmodified files in this list are deleted. Files not in this list aren't deleted.
 
   * ``/etc/otel/collector/agent_config.yaml``
-  * ``/etc/otel/collector/fluentd/README``
-  * ``/etc/otel/collector/fluentd/conf.d/apache.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/cassandra.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/docker.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/etcd.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/jetty.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/journald.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/memcached.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/mongodb.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/mysql.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/nginx.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/postgresql.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/rabbitmq.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/redis.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/syslog.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/tomcat.conf``
-  * ``/etc/otel/collector/fluentd/conf.d/zookeeper.conf``
-  * ``/etc/otel/collector/fluentd/fluent.conf``
-  * ``/etc/otel/collector/fluentd/splunk-otel-collector.conf``
   * ``/etc/otel/collector/gateway_config.yaml``
   * ``/etc/otel/collector/splunk-otel-collector.conf.example``
   * ``/etc/otel/collector/splunk-support-bundle.sh``
@@ -83,12 +45,12 @@ While not an exhaustive list, here are key notes about some of the files that ar
 .. _otel-linux-uninstall-otel-and-tdagent:
 .. _otel-linux-uninstall-both-otel-and-tdagent:
 
-Uninstall the Collector and Fluentd on Linux
+Uninstall the Collector on Linux
 ================================================================
 
 .. note:: Before you perform the uninstall, be sure to understand its impact. See :ref:`otel-linux-uninstall-details`.
 
-If you installed the Collector and Fluentd using the :ref:`installer script<linux-scripts>` or :ref:`Debian or RPM package <linux-packages>`, you can uninstall both of these packages by running the following command:
+If you installed the Collector using the :ref:`installer script<linux-scripts>` or :ref:`Debian or RPM package <linux-packages>`, you can uninstall both of these packages by running the following command:
 
 .. code-block:: bash
 
@@ -103,33 +65,27 @@ Note that this snippet includes a command that downloads the latest ``splunk-ote
 
 To verify the uninstall, see :ref:`otel-linux-verify-uninstall`.
 
-If you don't want to uninstall :strong:`both` packages and just want to uninstall the Collector package :strong:`or` Fluentd package, see :ref:`otel-linux-uninstall-only-otel-or-tdagent`.
+If you don't want to uninstall :strong:`both` packages and just want to uninstall the Collector package see :ref:`otel-linux-uninstall-only-otel-or-tdagent`.
 
 .. _otel-linux-uninstall-only-otel-or-tdagent:
 
-Uninstall only the Collector or Fluentd on Linux
+Uninstall only the Collector on Linux
 ================================================================
 
-The uninstall command described in :ref:`otel-linux-uninstall-otel-and-tdagent` uninstalls :strong:`both` the Collector and Fluentd packages.
+The uninstall command described in :ref:`otel-linux-uninstall-otel-and-tdagent` uninstalls :strong:`both` the Collector packages.
 
-If you want to uninstall only the Collector package :strong:`or` the Fluentd package, use the following command for your platform.
+If you want to uninstall only the Collector package, use the following command for your platform.
 
 For Debian
 --------------------------------------------------------------------------------------------
 
 .. note:: Before performing an uninstall, see :ref:`otel-linux-uninstall-details`.
 
-* To uninstall the Collector package only, run the following command:
+To uninstall the Collector package only, run the following command:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     sudo apt-get purge splunk-otel-collector
-
-* To uninstall the Fluentd package only, run the following command:
-
-  .. code-block:: bash
-
-     sudo apt-get purge td-agent
+   sudo apt-get purge splunk-otel-collector
 
 For RPM
 --------------------------------------------------------------------------------------------
@@ -154,48 +110,24 @@ For RPM
 
      sudo zypper remove splunk-otel-collector
 
-* To uninstall the Fluentd package only, run the command for the package manager on your system:
-
-  .. code-block:: bash
-
-     sudo yum remove td-agent
-
-  or
-
-  .. code-block:: bash
-
-     sudo dnf remove td-agent
-
-  or
-
-  .. code-block:: bash
-
-     sudo zypper remove td-agent
-
 To verify the uninstall, see :ref:`otel-linux-verify-uninstall`.
 
 .. _otel-linux-verify-uninstall:
 
-Verify the uninstall of the Collector and Fluentd on Linux
+Verify the uninstall of the Collector on Linux
 ================================================================
 
-While you can verify the uninstall of the Collector and Fluentd packages by watching for success messages in your command-line interface after running an uninstall command, you can also verify the uninstall by running a command that checks on the status of the Collector and Fluentd services. If the package has been successfully uninstalled, the status reflects this.
+While you can verify the uninstall of the Collector packages by watching for success messages in your command-line interface after running an uninstall command, you can also verify the uninstall by running a command that checks on the status of the Collector services. If the package has been successfully uninstalled, the status reflects this.
 
-* To verify the uninstall of the Collector package, run this command:
+To verify the uninstall of the Collector package, run this command:
+.. code-block:: bash
 
-  .. code-block:: bash
+  sudo systemctl status splunk-otel-collector
 
-     sudo systemctl status splunk-otel-collector
+The expected result is ``Unit splunk-otel-collector.service could not be found.``
 
-  The expected result is ``Unit splunk-otel-collector.service could not be found.``
 
-* To verify the uninstall of the Fluentd (td-agent) package, run this command:
 
-  .. code-block:: bash
-
-     sudo systemctl status td-agent
-
-  The expected result is ``Unit td-agent.service could not be found.``
 
 
 
