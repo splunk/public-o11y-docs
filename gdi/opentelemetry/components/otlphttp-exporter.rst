@@ -67,6 +67,7 @@ To send traces and metrics to Splunk Observability Cloud using OTLP over HTTP, c
     otlphttp:
       # The target URL to send trace data to. By default it's set to ``https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp``.
       traces_endpoint: https://ingest.<realm>.signalfx.com/v2/trace/otlp
+      metrics_endpoint: https://ingest.us0.signalfx.com/v2/datapoint/otlp
       # Set of HTTP headers added to every request.
       headers:
         # X-SF-Token is the authentication token provided by Splunk Observability Cloud.
