@@ -5,7 +5,7 @@ Connect to Google Cloud Platform: Guided setup and other options
 *********************************************************************
 
 .. meta::
-   :description: Connect your Google Cloud Platform / GCP account to Splunk Observability Cloud.
+  :description: Connect your Google Cloud Platform / GCP account to Splunk Observability Cloud.
 
 You can connect your GCP account and send data to Splunk Observability Cloud with the following methods:
 
@@ -28,7 +28,7 @@ Follow these steps to connect to GCP:
 
 .. _gcp-one:
 
-1. Define a role for your GCP service account
+1. Define a role for your GCP account
 --------------------------------------------------------------------------------------
 
 Use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios.
@@ -37,7 +37,7 @@ To customize the permissions for your role refer to :ref:`gcp-prereqs-role-permi
 
 .. _gcp-two:
 
-2. Configure GCP
+2. Configure your GCP services
 --------------------------------------------------------------------------------------
 
 To configure your GCP service: 
@@ -52,48 +52,86 @@ To configure your GCP service:
 
 .. _gcp-three:
 
-3. Connect to Splunk Observability Cloud and start the integration
+3. Connect your GCP services to Splunk Observability Cloud and start the integration
 --------------------------------------------------------------------------------------
 
-By default, Splunk Observability Cloud monitors all supported services, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
-
-1. Log in to Splunk Observability Cloud and open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
-
-   #. In the left navigation menu, select :menuselection:`Data Management`.
-
-   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
-
-   #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
-
-   #. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
-
-2. Complete the following fields:
-
-  * Name. Type in the name of the GCP integration.
-
-  * Project. Select :guilabel:`Add Project` to add a new project and follow the prompts to authenticate it. For more details, see :ref:`gcp-prereqs-authenticate`.
-
-  * Services. By default the new integration syncs with all supported GCP services. Select :guilabel:`All services > Sync only selected services` to select specific services to sync with.  
-
-  * Poll rate. Select the rate (in seconds) at which you want Splunk Observability Cloud to poll GCP for metric data, with 1 minute as the minimum unit, and 10 minutes as the maximum unit. For example, a value of 300 polls metrics once every 5 minutes.   
-
-  * Specify data to import: Metadata and/or metrics. 
-
-  * Specify if you want to use quota from the project where metrics are stored. See :ref:`gcp-quota` for more information.
-
-3. Optional fields:
-
-  * Custom Metric Type Domains. To list any additional GCP service domain names that you want to monitor, use commas to separate domain names in the :strong:`Custom Metric Type Domains` field. For example, to obtain Apigee metrics, add ``apigee.googleapis.com``.
-
-      - For information on the available GCP metric domains refer to the official GCP docs at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
-
-      - To learn about custom metric type domain syntax, see :new-page:`Custom metric type domain examples <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Custom-metric-type-domain-examples>` in the Splunk developer documentation.
-
-  * Compute Metadata Included List. If you select Compute Engine as one of the services to monitor, you can enter a comma-separated list of Compute Engine Instance metadata keys to send as properties. These metadata keys are sent as properties named ``gcp_metadata_<metadata-key>``.
-
-Your GCP integration is now complete.
+By default, Splunk Observability Cloud monitors all supported services, and any new services added later are also monitored. When you set the parameters for your integration you can choose to import metrics from a subset of the available services.
 
 .. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
+
+Log in to Splunk Observability Cloud and open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
+
+  #. In the left navigation menu, select :menuselection:`Data Management`.
+
+  #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+
+  #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
+
+  #. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
+
+Authenticate with WIF
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. In the wizard, select Workload Identity Federation (WIF) as the authentication method.
+
+2. Continue to define the connection with GCP: 
+  
+  * Poll rate. Select the rate (in seconds) at which you want Splunk Observability Cloud to poll GCP for metric data, with 1 minute as the minimum unit, and 10 minutes as the maximum unit. For example, a value of 300 polls metrics once every 5 minutes.   
+
+  * Specify if you want to use quota from the project where metrics are stored. See more at :ref:`gcp-quota`.
+
+  * Note that GCP metadata is automatically imported.
+
+3. Prepare your GCP account following the steps on the UI.
+
+4. Establish the connection: 
+
+  * Name your integration.
+
+  * Import your WIF configuration.
+  
+  * Add your projects.
+
+  * Select your access token.
+
+5. Select the data to import.
+
+  * Specify which GCP services you want to monitor.
+  
+  * Optionally you can import additional data. See more at :ref:`gcp-additional-data`.
+
+Your GCP integration is now complete!
+
+Authenticate with Service Account keys
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. In the wizard, select Service Account keys as the authentication method.
+
+2. Continue to define the connection with GCP: 
+  
+  * Poll rate. Select the rate (in seconds) at which you want Splunk Observability Cloud to poll GCP for metric data, with 1 minute as the minimum unit, and 10 minutes as the maximum unit. For example, a value of 300 polls metrics once every 5 minutes.   
+
+  * Specify if you want to use quota from the project where metrics are stored. See more at :ref:`gcp-quota`.
+
+  * Note that GCP metadata is automatically imported.
+
+3. Prepare your GCP account following the steps on the UI.
+
+4. Establish the connection: 
+
+  * Name your integration.
+
+  * Project. Add your projects' IDs and select :guilabel:`Import service account keys` to add a new project. Follow the prompts to authenticate it. For more details, see :ref:`gcp-prereqs-authenticate`.
+
+  * Select your access token.
+
+5. Select the data to import.
+
+  * Specify which GCP services you want to monitor.
+  
+  * Optionally you can import additional data. See more at :ref:`gcp-additional-data`.
+
+Your GCP integration is now complete!
 
 .. _gcp-quota:
 
@@ -105,6 +143,21 @@ In IAM you can grant access to your resources to one or more entities called pri
 If you're using a single principal for multiple projects, GCP tracks all API usage quota in the project where the principal originates from, which can result in throttling in your integration. To mitigate this, select :strong:`Use quota from the project where metrics are stored`. To use this option the principal provided for the project needs either the ``serviceusage.services.use`` permission or the Service Usage Consumer role.
 
 For a more detailed description see :new-page:`Principals <https://cloud.google.com/iam/docs/overview#concepts_related_identity>` in GCP's docs.
+
+.. _gcp-additional-data:
+
+Import additional data
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+On step 5 of the guided set-up you can configure the import of the following additional data:
+
+* Custom metric type domains. To list any additional GCP service domain names that you want to monitor, use commas to separate domain names in the :strong:`Custom Metric Type Domains` field. For example, to obtain Apigee metrics, add ``apigee.googleapis.com``.
+
+      - For information on the available GCP metric domains refer to the official GCP docs at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
+
+      - To learn about custom metric type domain syntax, see :new-page:`Custom metric type domain examples <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Custom-metric-type-domain-examples>` in the Splunk developer documentation.
+
+* Compute metadata included list. If you select Compute Engine as one of the services to monitor, you can enter a comma-separated list of Compute Engine Instance metadata keys to send as properties. These metadata keys are sent as properties named ``gcp_metadata_<metadata-key>``.
 
 Alternatives to connect to GCP
 ============================================
