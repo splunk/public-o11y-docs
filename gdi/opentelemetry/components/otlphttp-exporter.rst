@@ -46,7 +46,7 @@ The following settings are optional and can be added to the configuration for mo
 
 * ``logs_endpoint``. The target URL to send log data to. For example, ``https://example.com:4318/v1/logs``.
 
-* ``metrics_endpoint``. The target URL to send metric data to. For example, ``"https://ingest.us0.signalfx.com/v2/trace/otlp"`` to send metrics to Splunk Observability Cloud.
+* ``metrics_endpoint``. The target URL to send metric data to. For example, ``"https://ingest.<realm>.signalfx.com/v2/datapoint/otlp"`` to send metrics to Splunk Observability Cloud.
 
 * ``tls``. See :ref:`TLS Configuration Settings <otlphttp-exporter-settings>` in this document for the full set of available options. Only applicable for sending data to a custom endpoint.
 
@@ -67,6 +67,8 @@ To send traces and metrics to Splunk Observability Cloud using OTLP over HTTP, c
     otlphttp:
       # The target URL to send trace data to. By default it's set to ``https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp``.
       traces_endpoint: https://ingest.<realm>.signalfx.com/v2/trace/otlp
+      # The target URL to send metrics data to. By default it's set to ``https://ingest.${SPLUNK_REALM}.signalfx.com/v2/datapoint/otlp``.
+      metrics_endpoint: https://ingest.<realm>.signalfx.com/v2/datapoint/otlp
       # Set of HTTP headers added to every request.
       headers:
         # X-SF-Token is the authentication token provided by Splunk Observability Cloud.
@@ -92,8 +94,8 @@ This is a detailed configuration example:
 .. code-block:: yaml
 
   endpoint: "https://1.2.3.4:1234"
-  traces_endpoint: https://ingest.us0.signalfx.com/v2/trace/otlp
-  metrics_endpoint: https://ingest.us0.signalfx.com/v2/datapoint/otlp
+  traces_endpoint: https://ingest.<realm>.signalfx.com/v2/trace/otlp
+  metrics_endpoint: https://ingest.<realm>.signalfx.com/v2/datapoint/otlp
   headers:
     X-SF-Token: <access_token>
   timeout: 10s
@@ -160,8 +162,8 @@ For example:
 
   exporters:
     otlphttp:
-      metrics_endpoint: https://ingest.lab0.signalfx.com/v2/datapoint/otlp
-      traces_endpoint: https://ingest.lab0.signalfx.com/v2/trace/otlp
+      metrics_endpoint: https://ingest.<realm>.signalfx.com/v2/datapoint/otlp
+      traces_endpoint: https://ingest.<realm>.signalfx.com/v2/trace/otlp
       headers:
           "X-SF-Token": "mytoken"
       auth:
