@@ -24,7 +24,6 @@ This scenario describes how Kai, an SRE, and Deepu, a service owner, perform the
           <li><a href="#look-for-patterns-xpuc">Look for patterns in application errors</a> in Splunk APM</li>
           <li><a href="#review-logs-xpuc">Examine error logs for meaningful messages and patterns</a> using Splunk Log Observer Connect</li>
           <li><a href="#monitor-a-fix-xpuc">Monitor a fix</a> using Splunk Log Observer Connect</li>
-          <li><a href="#take-preventative-action-xpuc">Take preventative action and create metrics from logs to power dashboards and alerts</a></li>
           
           
       </ol>
@@ -200,20 +199,6 @@ Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the
     :alt: This animated GIF shows Deepu opening the time picker of Splunk Log Observer Connect and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received.
 
 3. Deepu watches the Live Tail view and sure enough, the failed payment messages have stopped appearing in :strong:`paymentservice` logs. Reassured that the Buttercup Games site is back in a stable state, Deepu moves on to helping their team fix v350.10.
-
-.. raw:: html
-  
-    <embed>
-      <h2>Take preventative action and create metrics from logs to power dashboards and alerts<a name="take-preventative-action-xpuc" class="headerlink" href="#take-preventative-action-xpuc" title="Permalink to this headline">¶</a></h2>
-    </embed>
-
-Now that Kai knows that this particular issue can cause a problem on the Buttercup Games site, they decide to do some preventative work for their SRE team. Kai takes the query they created in Splunk Log Observer Connect and saves it as a metric.
-
-.. image:: /_images/get-started/save-as-metric.png
-  :width: 50%
-  :alt: This screenshot shows the Save as Metric option in the More menu in Log Observer Connect.
-
-Doing this defines log metricization rules that create a log-derived metric that shows aggregate counts. Kai's team can embed this log-derived metric in charts, dashboards, and alerts that can help them identify this issue faster if it comes up again in the future.
 
 .. raw:: html
   

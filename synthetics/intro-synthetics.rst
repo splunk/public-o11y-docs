@@ -28,7 +28,6 @@ You can use Splunk Synthetic Monitoring for the following use cases:
 * Proactively monitor site availability before it affects users
 * Report on the availability or impact of third-party services
 * Check how new code deployments improve or degrade performance
-* Test your site performance against competitors' sites
 * Scan for moved or broken links on your site
 
 | To see an example of using Splunk Observability Cloud components together, see :new-page:`APM Scenarios <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-walkthrough&version=current>`. 
