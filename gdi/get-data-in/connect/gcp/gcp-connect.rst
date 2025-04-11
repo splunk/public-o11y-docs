@@ -88,13 +88,13 @@ Authenticate with WIF
 
   * Name your integration.
 
-  * Import your WIF configuration.
+  * Import your WIF configuration. Learn more at :ref:`gcp-prereqs-authenticate`.
   
   * Add your projects.
 
   * Select your access token.
 
-5. Select the data to import.
+5. Select the data to import: 
 
   * Specify which GCP services you want to monitor.
   
@@ -136,7 +136,7 @@ Your GCP integration is now complete!
 .. _gcp-quota:
 
 Use a single principal for your resources
-++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------------------
 
 In IAM you can grant access to your resources to one or more entities called principals, regardless of the authentication method (single Service Account or Workload Identity Federation). 
 
@@ -147,7 +147,7 @@ For a more detailed description see :new-page:`Principals <https://cloud.google.
 .. _gcp-additional-data:
 
 Import additional data
-++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------------------
 
 On step 5 of the guided set-up you can configure the import of the following additional data:
 
