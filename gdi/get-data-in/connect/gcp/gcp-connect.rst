@@ -28,7 +28,7 @@ Follow these steps to connect to GCP:
 
 .. _gcp-one:
 
-1. Define a role for your GCP account
+1. Define a role for your GCP principal
 --------------------------------------------------------------------------------------
 
 Use GCP's :strong:`Viewer` role as it comes with the permissions you need for most scenarios.
