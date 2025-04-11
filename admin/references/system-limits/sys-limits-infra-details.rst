@@ -244,8 +244,8 @@ Maximum SignalFlow programs per minute
 Maximum number of query arguments in a filter() function
 ================================================================================
 
-   * :strong:`Default limit value`: 256
-   * :strong:`Notes`: Limit to the number of query arguments in a SignalFlow filter
+   * :strong:`Default limit value`: 1024
+   * :strong:`Notes`:  Limit to the number of query arguments in a SignalFlow filter. This limit includes global filters in dashboards as well as any internal filters.
    * :strong:`Customer impact`: Maximum number of derived MTS per SignalFlow program, where derived MTS are temporary MTS that a SignalFlow function or method has to maintain in memory. For example, if there are 20,000 MTS for the metric ``jvm.load``, and each MTS comes from a unique host , then ``"data('jvm.load').sum(by=['host']).publish()"`` tracks 40,000 derived MTS. The ``data()`` function uses 20,000, and the ``sum()`` uses another 20,000. The number of input MTS is still 20,000.
 
 .. _maximum-number-of-detectors-per-org:
