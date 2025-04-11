@@ -46,7 +46,7 @@ The following settings are optional and can be added to the configuration for mo
 
 * ``logs_endpoint``. The target URL to send log data to. For example, ``https://example.com:4318/v1/logs``.
 
-* ``metrics_endpoint``. The target URL to send metric data to. For example, ``"https://ingest.us0.signalfx.com/v2/trace/otlp"`` to send metrics to Splunk Observability Cloud.
+* ``metrics_endpoint``. The target URL to send metric data to. For example, ``"https://ingest.us0.signalfx.com/v2/datapoint/otlp"`` to send metrics to Splunk Observability Cloud.
 
 * ``tls``. See :ref:`TLS Configuration Settings <otlphttp-exporter-settings>` in this document for the full set of available options. Only applicable for sending data to a custom endpoint.
 
