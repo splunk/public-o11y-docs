@@ -121,7 +121,7 @@ Authenticate with Service Account keys
 
   * Name your integration.
 
-  * Project. Add your projects' IDs and select :guilabel:`Import service account keys` to add a new project. Follow the prompts to authenticate it. For more details, see :ref:`gcp-prereqs-authenticate`.
+  * Project. Select :guilabel:`Import service account keys` to add a new project. Your project's ID is automatically extracted from the imported file. Follow the prompts to authenticate it. For more details, see :ref:`gcp-prereqs-authenticate`.
 
   * Select your access token.
 
