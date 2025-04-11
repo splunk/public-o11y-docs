@@ -7,16 +7,15 @@ Manage team landing pages in Splunk Observability Cloud
 .. meta::
    :description: Learn how to view and configure an associated landing page that contains information relevant to team members.
 
-Every team has an associated landing page that contains information relevant to team members. A landing page brings together dashboard groups and alerts triggered by detectors that are linked to the team. The landing page has the following sections:
+Every team has an a landing page that contains information relevant to team members. A landing page brings together dashboard groups and alerts triggered by detectors that are linked to the team. The landing page has the following sections:
 
-* A customizable text section to provide helpful information to team members. In this section, you can use Markdown-formatted text.
+* A list of services managed by your team. 
 
 * A count of active alerts from detectors linked to the team, grouped by severity.
 
 * Links to one or more dashboard groups linked to the team.
 
 Anyone can view the landing page for any team.
-
 
 .. _view-team-landing-page:
 
@@ -29,19 +28,15 @@ To see the landing page for any team, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Settings` then :menuselection:`Teams`.
+#. In the left navigation menu, select :guilabel:`Settings` then :guilabel:`Teams management`.
 
 #. A table of current teams appears in the main panel.
 
-#. Select a team name to see its landing page.
+#. Select a team name to view its landing page, or select :guilabel:`Go to team page` from the Actions menu.
 
-To see the landing page for your team, follow these steps:
+#. (Optional) Select :guilabel:`Join team` to add yourself as a member of the team.
 
-#. Log in to Splunk Observability Cloud.
-
-#. In the left navigation menu, select :menuselection:`Dashboards`.
-
-#. In the :guilabel:`My Teams` area, select a team name to see its team landing page.
+Alternatively, you can view the landing page for teams you are already part of as a tab on the Splunk Observability Cloud homepage. 
 
 
 .. _use-team-landing-page:
