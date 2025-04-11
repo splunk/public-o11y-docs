@@ -69,7 +69,7 @@ Log in to Splunk Observability Cloud and open the :new-page:`Google Cloud Platfo
 
   #. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
 
-Authenticate with WIF
+Authenticate with Workload Identity Federation (WIF)
 ++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. In the wizard, select Workload Identity Federation (WIF) as the authentication method.
