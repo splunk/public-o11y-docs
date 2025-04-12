@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
@@ -7,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 18:45+0000\n"
-"PO-Revision-Date: 2025-02-27 12:03+0000\n"
+"POT-Creation-Date: 2025-03-13 09:38+0000\n"
+"PO-Revision-Date: 2025-04-10 10:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../rum/RUM-custom-events.rst:-1
 msgid "Use custom events to capture metrics (errors, page loads, and core web vitals) specific to your organization's use cases, such as understanding drop off rates during a checkout workflow."
@@ -44,11 +43,11 @@ msgstr "ユースケース"
 
 #: ../../rum/RUM-custom-events.rst:21
 msgid ""
-"Suppose you are an online retailer. A meaningful custom event for your business might be understanding behavior around conversion rates and why users drop off and don't finish a checkout workflow. You might also want to understand where users are stagnating in your application. You can create a custom event to discover which events precipitate an unsuccessful customer journey. "
-"Perhaps users are stopped by an error in your checkout workflow, or are unable to enter a promo code. Custom events provide the opportunity for you to see a unique perspective on your data driven by the questions that matter most to you."
+"Suppose you are an online retailer. A meaningful custom event for your business might be understanding behavior around conversion rates and why users drop off and don't finish a checkout workflow. You might also want to understand where users are stagnating in your application. You can create a custom event to discover which events precipitate "
+"an unsuccessful customer journey. Perhaps users are stopped by an error in your checkout workflow, or are unable to enter a promo code. Custom events provide the opportunity for you to see a unique perspective on your data driven by the questions that matter most to you."
 msgstr ""
-"あなたはオンライン小売業者だとします。ビジネスにとって有意義なカスタムイベントは、コンバージョン率に関する行動を理解すること、そして、なぜユーザーがチェックアウトのワークフローを終了せずに離脱してしまうのかを理解することかもしれません。また、ユーザーがアプリケーションのどこで停滞しているかを理解したいかもしれません。カスタマージャーニーに失敗するきっかけとなるイベントを発見するた"
-"めに、カスタムイベントを作成することができます。もしかしたら、ユーザーはチェックアウトワークフローのエラーで止まっているかもしれませんし、プロモーションコードを入力できないかもしれません。カスタムイベントは、あなたにとって最も重要な質問によって駆動されるデータのユニークな視点を見る機会を提供します。"
+"あなたはオンライン小売業者だとします。ビジネスにとって有意義なカスタムイベントは、コンバージョン率に関する行動を理解すること、そして、なぜユーザーがチェックアウトのワークフローを終了せずに離脱してしまうのかを理解することかもしれません。また、ユーザーがアプリケーションのどこで停滞しているかを理解したいかもしれません。カスタマージャーニーに失敗する"
+"きっかけとなるイベントを発見するために、カスタムイベントを作成することができます。もしかしたら、ユーザーはチェックアウトワークフローのエラーで止まっているかもしれませんし、プロモーションコードを入力できないかもしれません。カスタムイベントは、あなたにとって最も重要な質問によって駆動されるデータのユニークな視点を見る機会を提供します。"
 
 #: ../../rum/RUM-custom-events.rst:24
 msgid "Create a custom event"
@@ -359,8 +358,12 @@ msgid "JavaScript error aggregation"
 msgstr "JavaScriptエラー集計"
 
 #: ../../rum/error-aggregates.rst:54
-msgid "The JavaScript Errors metric in RUM show the JavaScript errors (by error ID) which occur most often in your applications. The error ID is created by hashing the associated stack trace, error message, and error type. When you drill into an error, you can see the error type, the error message, associated stack trace, and the trend of the error frequency."
-msgstr "RUM の JavaScript Errors メトリクスは、アプリケーションで最も頻繁に発生する JavaScript エラー (エラー ID による) を表示します。エラー ID は、関連するスタックトレース、エラーメッセージ、エラータイプをハッシュすることで作成されます。エラーをドリルインすると、エラータイプ、エラーメッセージ、関連するスタックトレース、エラー頻度の傾向を見ることができます。"
+msgid ""
+"The JavaScript Errors metric in RUM show the JavaScript errors (by error ID) which occur most often in your applications. The error ID is created by hashing the associated stack trace, error message, and error type. When you drill into an error, you can see the error type, the error message, associated stack trace, and the trend of the error "
+"frequency."
+msgstr ""
+"RUM の JavaScript Errors メトリクスは、アプリケーションで最も頻繁に発生する JavaScript エラー (エラー ID による) を表示します。エラー ID は、関連するスタックトレース、エラーメッセージ、エラータイプをハッシュすることで作成されます。エラーをドリルインすると、エラータイプ、エラーメッセージ、関連するスタックトレース、エラー頻度の傾向を見ることができ"
+"ます。"
 
 #: ../../rum/error-aggregates.rst:58
 msgid "Find the top JavaScript errors across your applications in Tag Spotlight"
@@ -368,7 +371,9 @@ msgstr "Tag Spotlightでアプリケーション全体のJavaScriptエラーの�
 
 #: ../../rum/error-aggregates.rst:60
 msgid "In Splunk RUM, the JavaScript errors view shows the JavaScript errors sorted by page, whereas the metric :strong:`JavaScript Errors (by error ID)` shows the top ten JavaScript errors across your entire application. In the metric :strong:`Frontend Errors by ErrorID` the information is displayed by error type, error ID, then error message."
-msgstr "Splunk RUM の JavaScript エラービューでは、JavaScript エラーがページごとにソートされて表示されます。一方、:strong:`JavaScript Errors (by error ID)` というメトリクスでは、アプリケーション全体の JavaScript エラーのトップ 10 が表示されます。メトリクス :strong:`Frontend Errors by ErrorID` では、エラータイプ、エラー ID、エラーメッセージの順に情報が表示されます。"
+msgstr ""
+"Splunk RUM の JavaScript エラービューでは、JavaScript エラーがページごとにソートされて表示されます。一方、:strong:`JavaScript Errors (by error ID)` というメトリクスでは、アプリケーション全体の JavaScript エラーのトップ 10 が表示されます。メトリクス :strong:`Frontend Errors by ErrorID` では、エラータイプ、エラー ID、エラーメッセージの順に情報が表"
+"示されます。"
 
 #: ../../rum/error-aggregates.rst:62
 msgid "Open RUM. From the left navigation panel, select :strong:`RUM` and :strong:`Browser` as the source and the application you wan to monitor."
@@ -387,8 +392,12 @@ msgid "JS Errors without stacktrace, type, or message"
 msgstr "スタックトレース、タイプ、メッセージのないJSエラー"
 
 #: ../../rum/error-aggregates.rst:71
-msgid "Sometimes, you might see a message in the UI that says ``JavaScript error without a stacktrace, type, or message``. This might happen because the error didn't have any information about the  stack trace before it was ingested by Splunk RUM. To troubleshoot, try narrowing in on a specific time range which shows the JS error only, and explore the related  User sessions."
-msgstr "UI に ``JavaScript error without a stacktrace, type, or message`` というメッセージが表示されることがあります。これは、エラーが Splunk RUM に取り込まれる前にスタックトレースの情報がなかったために起こる可能性があります。トラブルシューティングを行うには、JS エラーのみを表示する特定の時間範囲を絞り込み、関連するユーザーセッションを調査してみてください。"
+msgid ""
+"Sometimes, you might see a message in the UI that says ``JavaScript error without a stacktrace, type, or message``. This might happen because the error didn't have any information about the  stack trace before it was ingested by Splunk RUM. To troubleshoot, try narrowing in on a specific time range which shows the JS error only, and explore the "
+"related  User sessions."
+msgstr ""
+"UI に ``JavaScript error without a stacktrace, type, or message`` というメッセージが表示されることがあります。これは、エラーが Splunk RUM に取り込まれる前にスタックトレースの情報がなかったために起こる可能性があります。トラブルシューティングを行うには、JS エラーのみを表示する特定の時間範囲を絞り込み、関連するユーザーセッションを調査してみてくださ"
+"い。"
 
 #: ../../rum/error-aggregates.rst:77
 msgid "For more examples on how you can use Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`."
@@ -528,11 +537,11 @@ msgstr "Splunk RUM におけるアラートの仕組み"
 
 #: ../../rum/rum-alerts.rst:16
 msgid ""
-"In Splunk RUM for Browser, alerts are triggered on aggregate metrics for the entire application. If you want to create an alert for a page level metric, first create a custom event for the metric, then create an alert for the custom event. To learn more, see :ref:`Create custom events <rum-custom-event>`. If you are new to alerts and detectors, see :ref:`Introduction to alerts "
-"and detectors in Splunk Observability Cloud <get-started-detectoralert>`."
+"In Splunk RUM for Browser, alerts are triggered on aggregate metrics for the entire application. If you want to create an alert for a page level metric, first create a custom event for the metric, then create an alert for the custom event. To learn more, see :ref:`Create custom events <rum-custom-event>`. If you are new to alerts and detectors, "
+"see :ref:`Introduction to alerts and detectors in Splunk Observability Cloud <get-started-detectoralert>`."
 msgstr ""
-"Splunk RUM for Browser では、アラートはアプリケーション全体の集約メトリクスに対してトリガーされます。ページレベルのメトリクスに対してアラートを作成したい場合は、まずメトリクスのカスタムイベントを作成し、次にカスタムイベントのアラートを作成します。詳細については、:ref:`カスタム イベントの作成 <rum-custom-event>` を参照してください。アラートとディテクターを初めて使用する場合は、:"
-"ref:`Splunk Observability Cloud のアラートとディテクターの概要 <get-started-detectoralert>` を参照してください。"
+"Splunk RUM for Browser では、アラートはアプリケーション全体の集約メトリクスに対してトリガーされます。ページレベルのメトリクスに対してアラートを作成したい場合は、まずメトリクスのカスタムイベントを作成し、次にカスタムイベントのアラートを作成します。詳細については、:ref:`カスタム イベントの作成 <rum-custom-event>` を参照してください。アラートとディ"
+"テクターを初めて使用する場合は、:ref:`Splunk Observability Cloud のアラートとディテクターの概要 <get-started-detectoralert>` を参照してください。"
 
 #: ../../rum/rum-alerts.rst:21
 msgid "Integrations"
@@ -675,10 +684,13 @@ msgid "Alert trigger conditions"
 msgstr "アラートトリガー条件"
 
 #: ../../rum/rum-alerts.rst:87
+#, python-format
 msgid ""
-"RUM alert conditions are designed to reduce noise and provide clear, actionable insights on your data. You can configure the sensitivity of the alert to suit your needs. If you want an alert that is more sensitive to smaller changes, you can reduce the percentage. For example, if you set your sensitivity to 10%, then you'd be alerted when only 10% of the data in the given time "
-"frame crosses the threshold you set."
-msgstr "RUMのアラート条件は、ノイズを減らし、データに関する明確で実用的な洞察を提供するように設計されています。ニーズに合わせてアラートの感度を設定することができます。より小さな変化に対してより敏感なアラートが必要な場合は、パーセンテージを下げることができます。例えば、感度を10%に設定した場合、指定した時間枠内のデータの10%のみが設定したしきい値を超えたときにアラートが表示されます。"
+"RUM alert conditions are designed to reduce noise and provide clear, actionable insights on your data. You can configure the sensitivity of the alert to suit your needs. If you want an alert that is more sensitive to smaller changes, you can reduce the percentage. For example, if you set your sensitivity to 10%, then you'd be alerted when only "
+"10% of the data in the given time frame crosses the threshold you set."
+msgstr ""
+"RUMのアラート条件は、ノイズを減らし、データに関する明確で実用的な洞察を提供するように設計されています。ニーズに合わせてアラートの感度を設定することができます。より小さな変化に対してより敏感なアラートが必要な場合は、パーセンテージを下げることができます。例えば、感度を10%に設定した場合、指定した時間枠内のデータの10%のみが設定したしきい値を超えたと"
+"きにアラートが表示されます。"
 
 #: ../../rum/rum-alerts.rst:91
 msgid "Page level metrics"
@@ -686,11 +698,11 @@ msgstr "ページレベルのメトリクス"
 
 #: ../../rum/rum-alerts.rst:93
 msgid ""
-"To create a page level metric, first create a custom rule to map to the page you want to monitor. See :ref:`rum-rules` to learn how to create a custom rule. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by "
-"selecting the rule from the list. The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``."
+"To create a page level metric, first create a custom rule to map to the page you want to monitor. See :ref:`rum-rules` to learn how to create a custom rule. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a "
+"detector, apply a custom rule by selecting the rule from the list. The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``."
 msgstr ""
-"ページレベルのメトリクスを作成するには、まず、監視したいページにマッピングするカスタムルールを作成します。カスタムルールの作成方法については、:ref:`rum-rules` を参照してください。たとえば、オンラインストアButtercup Gamesの製品タイプでグループ化したいので、パターン ``https://buttercupgames.com/product/<?>`` を使用するとします。ディテクターを作成する際、リストからルールを選択してカ"
-"スタムルールを適用します。次の画像は、カスタムパターン   ``https://buttercupgames.com/product/<?>`` のページレベルディテクターです。"
+"ページレベルのメトリクスを作成するには、まず、監視したいページにマッピングするカスタムルールを作成します。カスタムルールの作成方法については、:ref:`rum-rules` を参照してください。たとえば、オンラインストアButtercup Gamesの製品タイプでグループ化したいので、パターン ``https://buttercupgames.com/product/<?>`` を使用するとします。ディテクターを作成す"
+"る際、リストからルールを選択してカスタムルールを適用します。次の画像は、カスタムパターン   ``https://buttercupgames.com/product/<?>`` のページレベルディテクターです。"
 
 #: ../../rum/rum-alerts.rst:91 ../../rum/rum-alerts.rst:101 ../../rum/rum-alerts.rst:111
 msgid "This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert."
@@ -702,11 +714,11 @@ msgstr "アプリレベルのメトリクス"
 
 #: ../../rum/rum-alerts.rst:103
 msgid ""
-"Web vitals have a standard range that denotes good performance. For example, a largest contentful paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps "
-"on how to remedy the slow LCP."
+"Web vitals have a standard range that denotes good performance. For example, a largest contentful paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and "
+"link to the runbook with the steps on how to remedy the slow LCP."
 msgstr ""
-"ウェブバイタルには、良好なパフォーマンスを示す標準的な範囲があります。例えば、最大コンテンツペイント (LCP) メトリクスが2.5秒を超えると、アプリケーションのユーザーエクスペリエンスが低下する可能性があります。Splunk RUM を使えば、集計された LCP が2.5秒を超えたときに通知するアラートを作成し、チームに Slack 通知を送信したり、遅い LCP を改善するためのステップを記載したランブックにリン"
-"クしたりすることができます。"
+"ウェブバイタルには、良好なパフォーマンスを示す標準的な範囲があります。例えば、最大コンテンツペイント (LCP) メトリクスが2.5秒を超えると、アプリケーションのユーザーエクスペリエンスが低下する可能性があります。Splunk RUM を使えば、集計された LCP が2.5秒を超えたときに通知するアラートを作成し、チームに Slack 通知を送信したり、遅い LCP を改善するための"
+"ステップを記載したランブックにリンクしたりすることができます。"
 
 #: ../../rum/rum-alerts.rst:111
 msgid "URL level metrics"
@@ -788,7 +800,7 @@ msgstr "RUMアラートとディテクターのチャートとダッシュボー
 msgid ":ref:`Link detectors to charts <linking-detectors>` in Alerts and Detectors."
 msgstr "アラートとディテクターで :ref:`ディテクターをチャートにリンク<linking-detectors>` します。"
 
-#: ../../rum/rum-alerts.rst:161 ../../rum/rum-dashboards/rum-built-in-dashboards.rst:87 ../../rum/rum-dashboards/rum-dashboards.rst:48
+#: ../../rum/rum-alerts.rst:161 ../../rum/rum-dashboards/rum-dashboards.rst:48
 msgid ":ref:`Dashboards in Splunk Observability Cloud <dashboards>` in Dashboards and Charts."
 msgstr "ダッシュボードとチャートの :ref:`Splunk Observability Cloud のダッシュボード<dashboards>`。"
 
@@ -838,11 +850,11 @@ msgstr "スパンタグ"
 
 #: ../../_includes/synthetics/metricset-def.rst:4
 msgid ""
-"Use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. To get additional value from a span tag or process, an  administrator can run an action known as indexing, which activates additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated metrics, called MetricSets, across all "
-"spans that contain a specified indexed tag or process."
+"Use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. To get additional value from a span tag or process, an  administrator can run an action known as indexing, which activates additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated "
+"metrics, called MetricSets, across all spans that contain a specified indexed tag or process."
 msgstr ""
-"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行することができます。これにより、インデックス化したスパンタグやプロセスの追加的分析が有効になります。インデックス化のメリットの1つは、指定したインデックス済みタグまたはプロセスを含む"
-"すべてのスパンを対象にして、MetricSetsと呼ばれる集約メトリクスを取得できることです。"
+"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行することができます。これにより、インデックス化したスパンタグやプロセスの追加的分析が有効になります。インデックス化のメリットの1つは、指定したイン"
+"デックス済みタグまたはプロセスを含むすべてのスパンを対象にして、MetricSetsと呼ばれる集約メトリクスを取得できることです。"
 
 #: ../../_includes/synthetics/metricset-def.rst:8
 msgid "MetricSets"
@@ -962,11 +974,11 @@ msgstr "MetricSetsでは高いカーディナリティを回避する"
 
 #: ../../rum/rum-custom-indexed-tags.rst:81
 msgid ""
-"Choose tags with a reasonable amount of cardinality. Tags like userID, or sessionID have high cardinality because there is a unique value for users in your organization and visitors to your application. Creating a troubleshooting MetricSet for each userID is not optimal for performance. For high-cardinality, ID-based tags, full-fidelity session search is a better option, see :"
-"ref:`rum-tag-search`."
+"Choose tags with a reasonable amount of cardinality. Tags like userID, or sessionID have high cardinality because there is a unique value for users in your organization and visitors to your application. Creating a troubleshooting MetricSet for each userID is not optimal for performance. For high-cardinality, ID-based tags, full-fidelity session "
+"search is a better option, see :ref:`rum-tag-search`."
 msgstr ""
-"妥当なカーディナリティのタグを選択してください。userIDやsessionIDのようなタグは、組織内のユーザーやアプリケーションへの訪問者が一意の値を持つため、カーディナリティが高くなります。各ユーザーIDのトラブルシューティングMetricSetを作成することは、パフォーマンスにとって最適ではありません。高カーディナリティのIDベースのタグについては、完全忠実セッション検索がより適したオプションです。:"
-"ref:`rum-tag-search` を参照してください。"
+"妥当なカーディナリティのタグを選択してください。userIDやsessionIDのようなタグは、組織内のユーザーやアプリケーションへの訪問者が一意の値を持つため、カーディナリティが高くなります。各ユーザーIDのトラブルシューティングMetricSetを作成することは、パフォーマンスにとって最適ではありません。高カーディナリティのIDベースのタグについては、完全忠実セッション"
+"検索がより適したオプションです。:ref:`rum-tag-search` を参照してください。"
 
 #: ../../rum/rum-custom-indexed-tags.rst:83
 msgid "High cardinality MetricSets can also affect your org limits :ref:`rum-limits`. Limits are determined by your subscription: enterprise and standard. For more information on each type of subscription, see :new-page:`Splunk RUM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-rum>`."
@@ -1078,11 +1090,11 @@ msgstr "内蔵ダッシュボードからトラブルシューティングする
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:62
 msgid ""
-"Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Browser to identify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website. Kai uses built-in dashboards to get a high level assessment of the health of the Buttercup Industries applications. They open RUM through the :"
-"guilabel:`Troubleshoot from this time window` to dig into the data. For example, if Kai wants to explore traffic by Browser type, they can explore more data in Splunk RUM like this:"
+"Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Browser to identify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website. Kai uses built-in dashboards to get a high level assessment of the health of the Buttercup Industries "
+"applications. They open RUM through the :guilabel:`Troubleshoot from this time window` to dig into the data. For example, if Kai wants to explore traffic by Browser type, they can explore more data in Splunk RUM like this:"
 msgstr ""
-"Buttercup Industries のサイト信頼性エンジニアである Kai は、Splunk RUM for Browser を使用してパフォーマンスのボトルネックを特定し、ウェブバイタルを監視することで、Buttercup Industries のウェブサイトで顧客が直面する問題のトラブルシューティングを行っています。Kai は内蔵のダッシュボードを使用して、Buttercup Industries のアプリケーションの健全性を高レベルで評価しています。彼らはデー"
-"タを掘り下げるために :guilabel:`Troubleshoot from this time window` から RUM を開きます。例えば、Kai がブラウザの種類別にトラフィックを調査したい場合、Splunk RUM で次のようにデータを調査することができます："
+"Buttercup Industries のサイト信頼性エンジニアである Kai は、Splunk RUM for Browser を使用してパフォーマンスのボトルネックを特定し、ウェブバイタルを監視することで、Buttercup Industries のウェブサイトで顧客が直面する問題のトラブルシューティングを行っています。Kai は内蔵のダッシュボードを使用して、Buttercup Industries のアプリケーションの健全性を高"
+"レベルで評価しています。彼らはデータを掘り下げるために :guilabel:`Troubleshoot from this time window` から RUM を開きます。例えば、Kai がブラウザの種類別にトラフィックを調査したい場合、Splunk RUM で次のようにデータを調査することができます："
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:60 ../../rum/rum-dashboards/rum-built-in-dashboards.rst:71
 msgid "This image shows how to open a chart in RUM so that you can troubleshoot in greater detail."
@@ -1094,11 +1106,11 @@ msgstr "より多くの時間範囲のデータを確認する"
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:73
 msgid ""
-"Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mobile to monitor releases, find root causes of user reported issues, and measure important metrics. Kai looks at the :guilabel:`Application summary dashboard` to see an overview of mobile performance metrics. If Kai sees a troublesome trend, they can open the built-in dashboard to see a longer period "
-"of time for the data they're interested in. Data from RUM is retained for 8 days. Data from a built-in dashboard is kept for 13 months. For more on data retention, see :ref:`data-o11y`."
+"Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mobile to monitor releases, find root causes of user reported issues, and measure important metrics. Kai looks at the :guilabel:`Application summary dashboard` to see an overview of mobile performance metrics. If Kai sees a troublesome trend, they can open the built-in "
+"dashboard to see a longer period of time for the data they're interested in. Data from RUM is retained for 8 days. Data from a built-in dashboard is kept for 13 months. For more on data retention, see :ref:`data-o11y`."
 msgstr ""
-"Buttercup Industries のサイト信頼性エンジニアである Kai は、Splunk RUM for Mobile を使用してリリースを監視し、ユーザーから報告された問題の根本原因を突き止め、重要なメトリクスを測定しています。Kai は :guilabel:`Application summary dashboard` を見て、モバイルパフォーマンスメトリクスの概要を確認しています。Kai が厄介な傾向を発見した場合、組み込みのダッシュボードを開いて、興味のある"
-"データのより長い期間を見ることができます。RUMからのデータは8日間保持されます。内蔵ダッシュボードからのデータは13か月間保持されます。データ保持の詳細については、:ref:`data-o11y` を参照してください。"
+"Buttercup Industries のサイト信頼性エンジニアである Kai は、Splunk RUM for Mobile を使用してリリースを監視し、ユーザーから報告された問題の根本原因を突き止め、重要なメトリクスを測定しています。Kai は :guilabel:`Application summary dashboard` を見て、モバイルパフォーマンスメトリクスの概要を確認しています。Kai が厄介な傾向を発見した場合、組み込みの"
+"ダッシュボードを開いて、興味のあるデータのより長い期間を見ることができます。RUMからのデータは8日間保持されます。内蔵ダッシュボードからのデータは13か月間保持されます。データ保持の詳細については、:ref:`data-o11y` を参照してください。"
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:81
 msgid "Dashboards for alerts and detectors"
@@ -1109,8 +1121,12 @@ msgid "To create charts and dashboards for your RUM alerts and detectors, see:"
 msgstr "RUMアラートとディテクターのチャートとダッシュボードを作成するには、以下を参照してください："
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:85
-msgid ":ref:`Link detectors to charts <linking-detectors>` in Alerts & Detectors."
-msgstr "アラートとディテクターで :ref:`ディテクターをチャートにリンク<linking-detectors>` します。"
+msgid ":ref:`Link detectors to charts <linking-detectors>`"
+msgstr ":ref:`ディテクターをチャートにリンクする <linking-detectors>`"
+
+#: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:87
+msgid ":ref:`Dashboards in Splunk Observability Cloud <dashboards>`"
+msgstr ":ref:`Splunk Observability Cloudのダッシュボード <dashboards>`"
 
 #: ../../rum/rum-dashboards/rum-built-in-dashboards.rst:93 ../../rum/rum-identify-span-problems.rst:132 ../../rum/rum-scenario-library/rum-mobile-scenario.rst:98 ../../rum/rum-scenario-library/scenario-monitoring.rst:122 ../../rum/rum-scenario-library/spa-custom-event.rst:109
 msgid ":ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`"
@@ -1158,9 +1174,11 @@ msgstr "ページレベルのダッシュボード"
 
 #: ../../rum/rum-dashboards/rum-custom-dashboards.rst:31
 msgid ""
-"Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. For example, ``rum.node.workflow.count`` represents the total number of spans with the selected custom event in the given time range sorted by page. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific "
-"pages."
-msgstr "接頭辞 ``rum.node.`` を持つメトリクスはページレベルのメトリクスであり、接頭辞 ``rum.`` を持つメトリクスはアプリケーションレベルのメトリクスです。例えば、``rum.node.workflow.count`` は、指定された時間範囲内で選択されたカスタムイベントを持つスパンの総数を、ページ別に並べ替えたものです。ページレベルのメトリクスには、``sf_node_name`` というディメンションもあります。"
+"Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. For example, ``rum.node.workflow.count`` represents the total number of spans with the selected custom event in the given time range sorted by page. Page level metrics also have a dimension ``sf_node_name``, which "
+"you can use to filter on specific pages."
+msgstr ""
+"接頭辞 ``rum.node.`` を持つメトリクスはページレベルのメトリクスであり、接頭辞 ``rum.`` を持つメトリクスはアプリケーションレベルのメトリクスです。例えば、``rum.node.workflow.count`` は、指定された時間範囲内で選択されたカスタムイベントを持つスパンの総数を、ページ別に並べ替えたものです。ページレベルのメトリクスには、``sf_node_name`` というディメン"
+"ションもあります。"
 
 #: ../../rum/rum-dashboards/rum-custom-dashboards.rst:38
 msgid "The following use case features an example from Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerce company."
@@ -1172,11 +1190,11 @@ msgstr "カスタムイベントとページレベルのメトリクスを監視
 
 #: ../../rum/rum-dashboards/rum-custom-dashboards.rst:45
 msgid ""
-"Kai uses custom dashboards to get a high level assessment of the health of the Buttercup Industries applications. They go to :menuselection:`Dashboards` to create a new dashboard. Kai wants to look at custom events and page level metrics for page views. The first chart utilizes the metric ``rum.node.workflow.count``. The second chart shows the metric ``rum.node.page_view."
-"count``which shows custom events and page level metrics for page views. Here is how Kai set up their dashboard:"
+"Kai uses custom dashboards to get a high level assessment of the health of the Buttercup Industries applications. They go to :menuselection:`Dashboards` to create a new dashboard. Kai wants to look at custom events and page level metrics for page views. The first chart utilizes the metric ``rum.node.workflow.count``. The second chart shows the "
+"metric ``rum.node.page_view.count`` which shows custom events and page level metrics for page views. Here is how Kai set up their dashboard:"
 msgstr ""
-"Kai はカスタムダッシュボードを使用して、Buttercup Industries のアプリケーションの健全性を高レベルで評価します。新しいダッシュボードを作成するために :menuselection:`Dashboards` に移動します。Kai はカスタムイベントとページビューのページレベルのメトリクスを見たいと考えています。最初のチャートは、メトリクス ``rum.node.workflow.count`` を利用しています。2つ目のチャートは、``rum.node."
-"page_view.count`` というメトリクスを示し、ページビューのカスタムイベントとページレベルのメトリクスを示しています。Kaiがダッシュボードをどのように設定したかを示します："
+"Kai はカスタムダッシュボードを使用して、Buttercup Industries のアプリケーションの健全性を高レベルで評価します。新しいダッシュボードを作成するために :menuselection:`Dashboards` に移動します。Kai はカスタムイベントとページビューのページレベルのメトリクスを見たいと考えています。最初のチャートは、メトリクス ``rum.node.workflow.count`` を利用していま"
+"す。2つ目のチャートは、``rum.node.page_view.count`` というメトリクスを示し、ページビューのカスタムイベントとページレベルのメトリクスを示しています。Kaiがダッシュボードをどのように設定したかを示します："
 
 #: ../../rum/rum-dashboards/rum-custom-dashboards.rst:43
 msgid "This image shows two charts. The first chart shows a line chart of custom events and the second chart shows a line chart for page views represented by page."
@@ -1264,11 +1282,11 @@ msgstr "捕捉されないJavaScriptエラー"
 
 #: ../../rum/rum-identify-span-problems.rst:35
 msgid ""
-"An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors typically don't have custom error messages. Uncaught JavaScript errors can contain important information in an unedited format like a stack trace. Both caught and uncaught JavaScript errors can contain stack traces. This example span of an uncaught error from the fictitious application shows what "
-"fields you might see in Splunk RUM in the sesion details view."
+"An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors typically don't have custom error messages. Uncaught JavaScript errors can contain important information in an unedited format like a stack trace. Both caught and uncaught JavaScript errors can contain stack traces. This example span of an uncaught error from the "
+"fictitious application shows what fields you might see in Splunk RUM in the sesion details view."
 msgstr ""
-"捕捉されないJavaScriptエラーは暗黙のエラーです。捕捉されない JavaScript エラーは通常、カスタムエラーメッセージを持ちません。捕捉されない JavaScript エラーには、スタックトレースのような編集されていない形式で重要な情報が含まれることがあります。捕捉された JavaScript エラーも捕捉されていない JavaScript エラーも、スタックトレースを含むことができます。この架空のアプリケーションの捕捉さ"
-"れなかったエラーのスパン例では、Splunk RUM のセッション詳細ビューでどのようなフィールドが表示されるかを示しています。"
+"捕捉されないJavaScriptエラーは暗黙のエラーです。捕捉されない JavaScript エラーは通常、カスタムエラーメッセージを持ちません。捕捉されない JavaScript エラーには、スタックトレースのような編集されていない形式で重要な情報が含まれることがあります。捕捉された JavaScript エラーも捕捉されていない JavaScript エラーも、スタックトレースを含むことができます。"
+"この架空のアプリケーションの捕捉されなかったエラーのスパン例では、Splunk RUM のセッション詳細ビューでどのようなフィールドが表示されるかを示しています。"
 
 #: ../../rum/rum-identify-span-problems.rst:61
 msgid "Back-end errors and long resource response times"
@@ -1284,11 +1302,11 @@ msgstr "リソースエラー"
 
 #: ../../rum/rum-identify-span-problems.rst:68
 msgid ""
-"In Splunk RUM for Browser, resource errors are explicit HTTP event errors like fetch errors, AJAX errors and XHR requests. An XHR/fetch error happens when the server encounters an error. For example, if a user requested to access data on an application and the data was deleted from the server. A third-party resource error is when a user tries to access resource over a network "
-"and the resource is unavailable. For example, if a user on your application tries to load a JavaScript, CSS, or image resource, but it didn't load."
+"In Splunk RUM for Browser, resource errors are explicit HTTP event errors like fetch errors, AJAX errors and XHR requests. An XHR/fetch error happens when the server encounters an error. For example, if a user requested to access data on an application and the data was deleted from the server. A third-party resource error is when a user tries to "
+"access resource over a network and the resource is unavailable. For example, if a user on your application tries to load a JavaScript, CSS, or image resource, but it didn't load."
 msgstr ""
-"Splunk RUM for Browser では、リソースエラーはフェッチエラー、AJAX エラー、XHR リクエストなどの明示的な HTTP イベントエラーです。XHR/フェッチエラーは、サーバーがエラーに遭遇したときに発生します。たとえば、ユーザーがアプリケーション上のデータへのアクセスを要求し、データがサーバーから削除された場合などです。サードパーティリソースエラーとは、ユーザがネットワーク上のリソースにアクセス"
-"しようとして、そのリソースが利用できない場合のことです。例えば、アプリケーション上のユーザーがJavaScript、CSS、または画像リソースをロードしようとしたが、ロードされなかった場合です。"
+"Splunk RUM for Browser では、リソースエラーはフェッチエラー、AJAX エラー、XHR リクエストなどの明示的な HTTP イベントエラーです。XHR/フェッチエラーは、サーバーがエラーに遭遇したときに発生します。たとえば、ユーザーがアプリケーション上のデータへのアクセスを要求し、データがサーバーから削除された場合などです。サードパーティリソースエラーとは、ユーザが"
+"ネットワーク上のリソースにアクセスしようとして、そのリソースが利用できない場合のことです。例えば、アプリケーション上のユーザーがJavaScript、CSS、または画像リソースをロードしようとしたが、ロードされなかった場合です。"
 
 #: ../../rum/rum-identify-span-problems.rst:71
 msgid "Resource response time"
@@ -1500,11 +1518,11 @@ msgstr "URLにおける#のサポート"
 
 #: ../../rum/rum-rules.rst:81
 msgid ""
-"Single-page applications use a ``#`` token at the end of a URL path to append the fragment. The following URL shows how blog posts from a single-page application are listed after the # symbol: ``https://example.com/#/blogpost``. By default, fragments after a # are ignored by Splunk RUM, unless you specify that you would like to include it in a rule. For example, the fragment "
-"``#title`` is excluded from the path in this example: ``https://example.com/path/page.html#title``."
+"Single-page applications use a ``#`` token at the end of a URL path to append the fragment. The following URL shows how blog posts from a single-page application are listed after the # symbol: ``https://example.com/#/blogpost``. By default, fragments after a # are ignored by Splunk RUM, unless you specify that you would like to include it in a "
+"rule. For example, the fragment ``#title`` is excluded from the path in this example: ``https://example.com/path/page.html#title``."
 msgstr ""
-"シングルページアプリケーションは、URLパスの最後に ``#`` トークンを使用してフラグメントを追加します。次のURLは、シングルページアプリケーションからのブログ投稿が#シンボルの後にどのようにリストされるかを示しています： ``https://example.com/#/blogpost``.デフォルトでは、# の後のフラグメントは、ルールに含めるように指定しない限り、Splunk RUM では無視されます。たとえば、この例では  "
-"``#title`` というフラグメントはパスから除外されます: ``https://example.com/path/page.html#title``."
+"シングルページアプリケーションは、URLパスの最後に ``#`` トークンを使用してフラグメントを追加します。次のURLは、シングルページアプリケーションからのブログ投稿が#シンボルの後にどのようにリストされるかを示しています： ``https://example.com/#/blogpost``.デフォルトでは、# の後のフラグメントは、ルールに含めるように指定しない限り、Splunk RUM では無視さ"
+"れます。たとえば、この例では  ``#title`` というフラグメントはパスから除外されます: ``https://example.com/path/page.html#title``."
 
 #: ../../rum/rum-rules.rst:84
 msgid "Pattern syntax"
@@ -1528,8 +1546,11 @@ msgstr "パターンとは何ですか？"
 
 #: ../../rum/rum-rules.rst:96
 msgid ""
-"The pattern is the most important component of a rule. The pattern defines the common portion in the path or domain that is shared by all URLs that match the rule. Patterns also consist of tokens, like the domain and path in the URL. A wildcard in the pattern matches actual tokens in the URL's path or domain. You can apply a wildcard to a pattern to match one or more tokens."
-msgstr "パターンは、ルールの最も重要な構成要素です。パターンは、ルールに一致するすべてのURLで共有されるパスまたはドメインの共通部分を定義します。パターンはURLのドメインやパスのようなトークンからも構成されます。パターン内のワイルドカードは、URLのパスまたはドメイン内の実際のトークンと一致します。パターンにワイルドカードを適用して、1つまたは複数のトークンに一致させることができます。"
+"The pattern is the most important component of a rule. The pattern defines the common portion in the path or domain that is shared by all URLs that match the rule. Patterns also consist of tokens, like the domain and path in the URL. A wildcard in the pattern matches actual tokens in the URL's path or domain. You can apply a wildcard to a "
+"pattern to match one or more tokens."
+msgstr ""
+"パターンは、ルールの最も重要な構成要素です。パターンは、ルールに一致するすべてのURLで共有されるパスまたはドメインの共通部分を定義します。パターンはURLのドメインやパスのようなトークンからも構成されます。パターン内のワイルドカードは、URLのパスまたはドメイン内の実際のトークンと一致します。パターンにワイルドカードを適用して、1つまたは複数のトークンに"
+"一致させることができます。"
 
 #: ../../rum/rum-rules.rst:100
 msgid "<?> Wildcard for single token"
@@ -1996,10 +2017,12 @@ msgid "About this scenario"
 msgstr "このシナリオについて"
 
 #: ../../rum/rum-scenario-library/rum-mobile-scenario.rst:16
-msgid "Buttercup Industries recently launched a mobile application. Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mobile to monitor releases, find root causes of user reported issues, and measure important metrics. In this scenario, Kai leverages Splunk RUM for Mobile to monitor and improve the experience of the Buttercup Mobile app."
+msgid ""
+"Buttercup Industries recently launched a mobile application. Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mobile to monitor releases, find root causes of user reported issues, and measure important metrics. In this scenario, Kai leverages Splunk RUM for Mobile to monitor and improve the experience of the "
+"Buttercup Mobile app."
 msgstr ""
-"Buttercup Industries は最近、モバイルアプリケーションを発表しました。Buttercup Industries のサイト信頼性エンジニアである Kai は、Splunk RUM for Mobile を使用してリリースを監視し、ユーザーから報告された問題の根本原因を突き止め、重要なメトリクスを測定しています。このシナリオでは、Kai は Splunk RUM for Mobile を活用して Buttercup Mobile アプリのエクスペリエンスを監視し、改善していま"
-"す。"
+"Buttercup Industries は最近、モバイルアプリケーションを発表しました。Buttercup Industries のサイト信頼性エンジニアである Kai は、Splunk RUM for Mobile を使用してリリースを監視し、ユーザーから報告された問題の根本原因を突き止め、重要なメトリクスを測定しています。このシナリオでは、Kai は Splunk RUM for Mobile を活用して Buttercup Mobile アプリのエク"
+"スペリエンスを監視し、改善しています。"
 
 #: ../../rum/rum-scenario-library/rum-mobile-scenario.rst:20
 msgid "Find the root cause of a user-reported error"
@@ -2086,7 +2109,9 @@ msgid "Kai reports the error to the development team and outlines the steps to r
 msgstr "Kai は開発チームにエラーを報告し、クラッシュを再現する手順と影響を受けたコンポーネントの概要を説明します。"
 
 #: ../../rum/rum-scenario-library/rum-mobile-scenario.rst:75
-msgid "In this scenario, Kai searched for a specific session using filters and reviewed a collection of sessions in Tag Spotlight and user sessions. Kai determined that the shopping cart was causing issues in the app and was the reason for a lot of customer complaints. They passed along the crash details to the development team to improve the customer experience."
+msgid ""
+"In this scenario, Kai searched for a specific session using filters and reviewed a collection of sessions in Tag Spotlight and user sessions. Kai determined that the shopping cart was causing issues in the app and was the reason for a lot of customer complaints. They passed along the crash details to the development team to improve the customer "
+"experience."
 msgstr "このシナリオで、Kai はフィルターを使って特定のセッションを検索し、タグスポットライトとユーザーセッションでセッションのコレクションをレビューしました。Kai は、ショッピングカートがアプリで問題を引き起こしており、多くの顧客からのクレームの原因になっていると判断しました。クラッシュの詳細を開発チームに伝え、顧客体験を改善しました。"
 
 #: ../../rum/rum-scenario-library/rum-mobile-scenario.rst:77 ../../rum/rum-scenario-library/scenario-monitoring.rst:103 ../../rum/rum-scenario-library/spa-custom-event.rst:90
@@ -2110,7 +2135,8 @@ msgid "Scenarios for monitoring applications and services using Splunk RUM"
 msgstr "Splunk RUM を使用してアプリケーションとサービスを監視するシナリオ"
 
 #: ../../rum/rum-scenario-library/scenario-landingpage.rst:10
-msgid "The following scenarios feature examples from Buttercup Industries, a fictitious e-commerce company. Each scenario features Kai, a site reliability engineer at the Buttercup Industries e-commerce company, and shares the stories of how they use Splunk RUM and Splunk Observability Cloud to monitor and take action on their applications and services."
+msgid ""
+"The following scenarios feature examples from Buttercup Industries, a fictitious e-commerce company. Each scenario features Kai, a site reliability engineer at the Buttercup Industries e-commerce company, and shares the stories of how they use Splunk RUM and Splunk Observability Cloud to monitor and take action on their applications and services."
 msgstr "以下のシナリオでは、架空の E コマース企業である Buttercup Industries の例を取り上げています。各シナリオでは、Buttercup Industries という E コマース企業のサイト信頼性エンジニアである Kai が登場し、Splunk RUM と Splunk Observability Cloud を使用してアプリケーションとサービスを監視し、対策を講じる方法を紹介しています。"
 
 #: ../../rum/rum-scenario-library/scenario-landingpage.rst:19
@@ -2131,19 +2157,19 @@ msgstr "シナリオ：Kai が Splunk RUM for Browser でパフォーマンス�
 
 #: ../../rum/rum-scenario-library/scenario-monitoring.rst:15
 msgid ""
-"Kai is a site reliability engineer at Buttercup Industries e-commerce company. One of Kai's main concerns is monitoring the performance of the Buttercup Industries website. When sites are sluggish, users get frustrated and are more likely to abandon a slow site in favor of a faster competitor. In this example, Kai uses Splunk RUM for Browser and Splunk Observability Cloud to "
-"identify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website."
+"Kai is a site reliability engineer at Buttercup Industries e-commerce company. One of Kai's main concerns is monitoring the performance of the Buttercup Industries website. When sites are sluggish, users get frustrated and are more likely to abandon a slow site in favor of a faster competitor. In this example, Kai uses Splunk RUM for Browser and "
+"Splunk Observability Cloud to identify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website."
 msgstr ""
-"Kai は Buttercup Industries というEコマース会社でサイトの信頼性エンジニアをしています。Kai の主な関心事のひとつは、Buttercup Industries のウェブサイトのパフォーマンスを監視することです。サイトが遅いと、ユーザーはイライラし、より速い競合サイトを求めて遅いサイトを放棄する可能性が高くなります。この例では、Kai は Splunk RUM for Browser と Splunk Observability Cloud を使用してパフォー"
-"マンスのボトルネックを特定し、ウェブバイタル を監視することで、Buttercup Industries のウェブサイトで顧客が直面する問題のトラブルシューティングを行っています。"
+"Kai は Buttercup Industries というEコマース会社でサイトの信頼性エンジニアをしています。Kai の主な関心事のひとつは、Buttercup Industries のウェブサイトのパフォーマンスを監視することです。サイトが遅いと、ユーザーはイライラし、より速い競合サイトを求めて遅いサイトを放棄する可能性が高くなります。この例では、Kai は Splunk RUM for Browser と Splunk "
+"Observability Cloud を使用してパフォーマンスのボトルネックを特定し、ウェブバイタル を監視することで、Buttercup Industries のウェブサイトで顧客が直面する問題のトラブルシューティングを行っています。"
 
 #: ../../rum/rum-scenario-library/scenario-monitoring.rst:19
 msgid ""
-"Google's Core Web Vitals quantify user experience in terms of page load, visual stability, and interactivity, making them valuable metrics to improve frontend performance. Web Vitals also affect page ranking in Google, which is important for many businesses that rely on search engines for users to discover their sites. Splunk RUM automatically measures Web Vital metrics so Kai "
-"can tune into the overview page to check in on the metric scores."
+"Google's Core Web Vitals quantify user experience in terms of page load, visual stability, and interactivity, making them valuable metrics to improve frontend performance. Web Vitals also affect page ranking in Google, which is important for many businesses that rely on search engines for users to discover their sites. Splunk RUM automatically "
+"measures Web Vital metrics so Kai can tune into the overview page to check in on the metric scores."
 msgstr ""
-"Google のコアウェブバイタルは、ページの読み込み、視覚的な安定性、インタラクティブ性などのユーザーエクスペリエンスを数値化し、フロントエンドのパフォーマンスを改善するための貴重な指標となります。ウェブバイタルは Google のページランキングにも影響するため、検索エンジンに依存してユーザーがサイトを発見する多くの企業にとって重要です。Splunk RUM はウェブバイタルメトリクスを自動的に測定す"
-"るため、Kai は概要ページにアクセスしてメトリクスのスコアを確認することができます。"
+"Google のコアウェブバイタルは、ページの読み込み、視覚的な安定性、インタラクティブ性などのユーザーエクスペリエンスを数値化し、フロントエンドのパフォーマンスを改善するための貴重な指標となります。ウェブバイタルは Google のページランキングにも影響するため、検索エンジンに依存してユーザーがサイトを発見する多くの企業にとって重要です。Splunk RUM はウェブ"
+"バイタルメトリクスを自動的に測定するため、Kai は概要ページにアクセスしてメトリクスのスコアを確認することができます。"
 
 #: ../../rum/rum-scenario-library/scenario-monitoring.rst:21 ../../rum/rum-terminology-concepts.rst:40 ../../rum/rum-terminology-concepts.rst:218
 msgid "Web Vitals are made up of three metrics that measure user experience:"
@@ -2287,11 +2313,11 @@ msgstr "シナリオ：カスタムイベントを作成し単一ページのア
 
 #: ../../rum/rum-scenario-library/spa-custom-event.rst:16
 msgid ""
-"Buttercup Industries recently started a blog to share customer success stories and engage with their user base. The engineers at Buttercup Industries created the blog as a single-page application (SPA). Kai, a site reliability engineer at Buttercup Industries, monitors the blog with RUM to learn more about route changes, route durations, and back-end calls. Kai also leverages "
-"custom events in RUM to monitor how users engage with content on the blog."
+"Buttercup Industries recently started a blog to share customer success stories and engage with their user base. The engineers at Buttercup Industries created the blog as a single-page application (SPA). Kai, a site reliability engineer at Buttercup Industries, monitors the blog with RUM to learn more about route changes, route durations, and "
+"back-end calls. Kai also leverages custom events in RUM to monitor how users engage with content on the blog."
 msgstr ""
-"Buttercup Industries は最近、顧客のサクセスストーリーを共有し、ユーザーベースとエンゲージするためにブログを開始しました。Buttercup Industries のエンジニアは、ブログをシングルページアプリケーション（SPA）として作成しました。Buttercup Industries のサイト信頼性エンジニアである Kai は、RUM を使用してブログを監視し、ルートの変更、ルートの継続時間、バックエンドのコールについて詳しく学"
-"んでいます。Kai はまた、RUM のカスタムイベントを活用して、ユーザーがブログのコンテンツにどのように関与するかをモニターしています。"
+"Buttercup Industries は最近、顧客のサクセスストーリーを共有し、ユーザーベースとエンゲージするためにブログを開始しました。Buttercup Industries のエンジニアは、ブログをシングルページアプリケーション（SPA）として作成しました。Buttercup Industries のサイト信頼性エンジニアである Kai は、RUM を使用してブログを監視し、ルートの変更、ルートの継続時間、"
+"バックエンドのコールについて詳しく学んでいます。Kai はまた、RUM のカスタムイベントを活用して、ユーザーがブログのコンテンツにどのように関与するかをモニターしています。"
 
 #: ../../rum/rum-scenario-library/spa-custom-event.rst:19
 msgid "Instrument an SPA with Splunk RUM"
@@ -2339,11 +2365,11 @@ msgstr "ブログ記事のユーザーエンゲージメントを測定するカ
 
 #: ../../rum/rum-scenario-library/spa-custom-event.rst:54
 msgid ""
-"Kai wants to capture metrics for like and share actions on blog posts to help Buttercup Industries gauge how users are interacting with the content. Since there is no route change, and no URL change when someone likes a blog post, Kai creates a custom event to capture this workflow. Custom events are a great tool for Kai to leverage with multiple-page apps single-page apps when "
-"they want to monitor a workflow with custom JavaScript logic."
+"Kai wants to capture metrics for like and share actions on blog posts to help Buttercup Industries gauge how users are interacting with the content. Since there is no route change, and no URL change when someone likes a blog post, Kai creates a custom event to capture this workflow. Custom events are a great tool for Kai to leverage with "
+"multiple-page apps single-page apps when they want to monitor a workflow with custom JavaScript logic."
 msgstr ""
-"Kaiは、Buttercup Industriesがユーザーがコンテンツとどのようにやり取りしているかを測定するために、ブログ投稿の「いいね！」と共有アクションのメトリクスを取得したいと考えています。誰かがブログ投稿に「いいね！」を押したときにルートが変更されたり、URLが変更されたりすることはないので、Kaiはこのワークフローをキャプチャするためにカスタムイベントを作成します。カスタムイベントは、カスタム"
-"JavaScriptロジックでワークフローを監視したいときに、複数ページアプリやシングルページアプリでKaiが活用できる素晴らしいツールです。"
+"Kaiは、Buttercup Industriesがユーザーがコンテンツとどのようにやり取りしているかを測定するために、ブログ投稿の「いいね！」と共有アクションのメトリクスを取得したいと考えています。誰かがブログ投稿に「いいね！」を押したときにルートが変更されたり、URLが変更されたりすることはないので、Kaiはこのワークフローをキャプチャするためにカスタムイベントを作成し"
+"ます。カスタムイベントは、カスタムJavaScriptロジックでワークフローを監視したいときに、複数ページアプリやシングルページアプリでKaiが活用できる素晴らしいツールです。"
 
 #: ../../rum/rum-scenario-library/spa-custom-event.rst:56
 msgid "To create a custom event in Splunk RUM that measures likes on a blog post, Kai does the following:"
@@ -2390,8 +2416,11 @@ msgid "There are many reasons why you might want to replay sessions. Here are a 
 msgstr "セッションを再生したい理由はたくさんあります。そのいくつかをご紹介しましょう："
 
 #: ../../rum/rum-session-replay.rst:18
-msgid "Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend a long time investigating a variety of possible causes based on an incomplete description of the problem."
-msgstr "サポートチームが問題のトラブルシューティングに要する時間を短縮します。実際のユーザーの視点からエラーを確認することで、サポートチームは何が起こったかを迅速に特定し、対策を講じることができます。セッションの再生がなければ、サポートチームは、問題の不完全な説明に基づいて、さまざまな可能性のある原因を調査するために長い時間を費やす可能性があります。"
+msgid ""
+"Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend a long time investigating a variety of possible causes based on an incomplete description of the "
+"problem."
+msgstr ""
+"サポートチームが問題のトラブルシューティングに要する時間を短縮します。実際のユーザーの視点からエラーを確認することで、サポートチームは何が起こったかを迅速に特定し、対策を講じることができます。セッションの再生がなければ、サポートチームは、問題の不完全な説明に基づいて、さまざまな可能性のある原因を調査するために長い時間を費やす可能性があります。"
 
 #: ../../rum/rum-session-replay.rst:19
 msgid "Introduce fast fixes to your applications by honing in on errors and seeing what errors impact users."
@@ -2486,10 +2515,12 @@ msgid "Example home screen of a website with the text replaced by the star symbo
 msgstr "ウェブサイトのホーム画面の例で、テキストを星印に置き換えて再編集されたテキストを表示したもの。"
 
 #: ../../rum/rum-session-replay.rst:118
-msgid "To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting ``maskTextClass`` or ``maskTextSelector`` to a custom value. The custom value can be a regular expression."
+msgid ""
+"To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting ``maskTextClass`` or ``maskTextSelector`` to a custom value. The custom value can be a "
+"regular expression."
 msgstr ""
-"テキストの再編集をすべて無効にするには、``maskTextSelector: false`` を設定します。どの要素を再編集するかをカスタマイズするには、``rr-mask`` クラスを使用します。このクラスを持つ要素はすべて、そのテキストが再編集されるようになります。さらに、``maskTextClass`` または ``maskTextSelector`` をカスタム値に設定することで、クラス名をカスタマイズできます。カスタム値には正規表現を使用できま"
-"す。"
+"テキストの再編集をすべて無効にするには、``maskTextSelector: false`` を設定します。どの要素を再編集するかをカスタマイズするには、``rr-mask`` クラスを使用します。このクラスを持つ要素はすべて、そのテキストが再編集されるようになります。さらに、``maskTextClass`` または ``maskTextSelector`` をカスタム値に設定することで、クラス名をカスタマイズできます。"
+"カスタム値には正規表現を使用できます。"
 
 #: ../../rum/rum-session-replay.rst:120
 msgid "Input redaction is handled separately. To disable all input redaction, set ``maskAllInputs: false``. To customize which inputs are redacted use the ``maskInputOptions`` option."
@@ -2497,11 +2528,11 @@ msgstr "入力の再編集は個別に処理されます。入力の再編集を
 
 #: ../../rum/rum-session-replay.rst:123
 msgid ""
-"In the rrweb documentation, the default value of ``maskTextSelector`` is ``null`` and the default value of ``maskAllInputs`` is ``false``. However, Splunk RUM changes these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or ``maskAllInputs`` to ``false`` when no redaction is "
-"desired."
+"In the rrweb documentation, the default value of ``maskTextSelector`` is ``null`` and the default value of ``maskAllInputs`` is ``false``. However, Splunk RUM changes these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or "
+"``maskAllInputs``to ``false`` when no redaction is desired."
 msgstr ""
-"rrwebのドキュメントでは、 ``maskTextSelector``  のデフォルト値は ``null`` であり、 ``maskAllInputs``  のデフォルト値は  ``false``  です。しかし、Splunk RUMでは、構成内でこれらのデフォルト値を変更して、デフォルトですべてのテキストと入力が再編集されるようにしています。そのため、再編集を希望しない場合は、明示的に ``maskTextSelector``  または ``maskAllInputs``  を  ``false``  に設定"
-"する必要があります。"
+"rrwebのドキュメントでは、 ``maskTextSelector``  のデフォルト値は ``null`` であり、  ``maskAllInputs``  のデフォルト値は  ``false``  です。しかし、Splunk RUMでは、構成内でこれらのデフォルト値を変更して、デフォルトですべてのテキストと入力が再編集されるようにしています。そのため、再編集を希望しない場合は、明示的に ``maskTextSelector``  または "
+"``maskAllInputs``  を  ``false``  に設定する必要があります。"
 
 #: ../../rum/rum-session-replay.rst:125
 msgid "Examples:"
@@ -2544,7 +2575,9 @@ msgid "If a session is incomplete, it might be because the network bandwidth isn
 msgstr "セッションが不完全な場合、ネットワークの帯域幅が十分でないため、セッションの一部が切断される可能性があります。"
 
 #: ../../rum/rum-session-replay.rst:181
-msgid "If a user has multiple tabs of the same application open, then there is a session replay available for each tab. Make sure to open the tab below session replay and navigate to the tab you're interested in. For example, in the following image, the blue tabs at the top of the chart represent a user loading the page again, or opening the app in a different page."
+msgid ""
+"If a user has multiple tabs of the same application open, then there is a session replay available for each tab. Make sure to open the tab below session replay and navigate to the tab you're interested in. For example, in the following image, the blue tabs at the top of the chart represent a user loading the page again, or opening the app in a "
+"different page."
 msgstr "ユーザーが同じアプリケーションの複数のタブを開いている場合、各タブで利用可能なセッション再生があります。必ずセッション再生の下のタブを開き、興味のあるタブに移動してください。例えば、以下の画像では、チャート上部の青いタブは、ユーザーがページを再度読み込んだり、別のページでアプリを開いたりしたことを表しています。"
 
 #: ../../rum/rum-session-replay.rst:177
@@ -2609,11 +2642,11 @@ msgstr "グローバル属性を検索する"
 
 #: ../../rum/rum-tag-search.rst:40
 msgid ""
-"Global attributes are key-value pairs added to all reported data. Global attributes are useful for reporting app or user-specific values as tags. You can create global attributes either at the time of library initialization, or afterwards. Span attributes are custom attributes that you can add to specific spans. Custom events capture logic for a specific workflow you define, for "
-"example a checkout workflow. For more, see :ref:`rum-custom-event`."
+"Global attributes are key-value pairs added to all reported data. Global attributes are useful for reporting app or user-specific values as tags. You can create global attributes either at the time of library initialization, or afterwards. Span attributes are custom attributes that you can add to specific spans. Custom events capture logic for a "
+"specific workflow you define, for example a checkout workflow. For more, see :ref:`rum-custom-event`."
 msgstr ""
-"グローバル属性は、すべての報告データに追加されるキーと値のペアです。グローバル属性は、アプリやユーザー固有の値をタグとして報告するのに便利です。グローバル属性は、ライブラリの初期化時または初期化後に作成できます。スパン属性は、特定のスパンに追加できるカスタム属性です。カスタムイベントは、チェックアウトのワークフローなど、定義した特定のワークフローのロジックをキャプチャします。詳し"
-"くは、:ref:`rum-custom-event` を参照してください。"
+"グローバル属性は、すべての報告データに追加されるキーと値のペアです。グローバル属性は、アプリやユーザー固有の値をタグとして報告するのに便利です。グローバル属性は、ライブラリの初期化時または初期化後に作成できます。スパン属性は、特定のスパンに追加できるカスタム属性です。カスタムイベントは、チェックアウトのワークフローなど、定義した特定のワークフロー"
+"のロジックをキャプチャします。詳しくは、:ref:`rum-custom-event` を参照してください。"
 
 #: ../../rum/rum-tag-search.rst:42
 msgid "To search for global attributes, type the tag and value into the filter bar like in the following image:"
@@ -2969,11 +3002,11 @@ msgstr "セッション"
 
 #: ../../rum/rum-terminology-concepts.rst:58
 msgid ""
-"A session refers to a group of user interactions on an application for a maximum of 4 hours. A Session begins when a user loads the front-end application and ends when the application is terminated or expires. Sessions expire after 15 minutes of inactivity. The definitions for trace and span are the same in both Splunk RUM and Splunk APM. For more information about traces in "
-"APM, see :ref:`apm-traces-spans`."
+"A session refers to a group of user interactions on an application for a maximum of 4 hours. A Session begins when a user loads the front-end application and ends when the application is terminated or expires. Sessions expire after 15 minutes of inactivity. The definitions for trace and span are the same in both Splunk RUM and Splunk APM. For "
+"more information about traces in APM, see :ref:`apm-traces-spans`."
 msgstr ""
-"セッションは最大4時間のアプリケーション上のユーザーインタラクションのグループを指します。セッションは、ユーザーがフロントエンドのアプリケーションをロードしたときに始まり、アプリケーションが終了するか、有効期限が切れたときに終わります。15分間操作されないとセッションは終了します。トレースとスパンの定義は、Splunk RUM と Splunk APM の両方で同じです。APM におけるトレースの詳細について"
-"は、:ref:`apm-traces-spans` を参照してください。"
+"セッションは最大4時間のアプリケーション上のユーザーインタラクションのグループを指します。セッションは、ユーザーがフロントエンドのアプリケーションをロードしたときに始まり、アプリケーションが終了するか、有効期限が切れたときに終わります。15分間操作されないとセッションは終了します。トレースとスパンの定義は、Splunk RUM と Splunk APM の両方で同じです。"
+"APM におけるトレースの詳細については、:ref:`apm-traces-spans` を参照してください。"
 
 #: ../../rum/rum-terminology-concepts.rst:64
 msgid "Session ID"
@@ -3149,11 +3182,11 @@ msgstr "タグ"
 
 #: ../../rum/rum-terminology-concepts.rst:177
 msgid ""
-"A tag is a field name that is an attribute of your span that you can use to filter events. An example of a tag is a property about the user, such as the operating system or the browser the user uses to view your application. The definition for tags and span tags are the same in both Splunk APM and Splunk RUM. In Splunk APM, tags are called span tags. For more, see :ref:`apm-span-"
-"tags`."
+"A tag is a field name that is an attribute of your span that you can use to filter events. An example of a tag is a property about the user, such as the operating system or the browser the user uses to view your application. The definition for tags and span tags are the same in both Splunk APM and Splunk RUM. In Splunk APM, tags are called span "
+"tags. For more, see :ref:`apm-span-tags`."
 msgstr ""
-"タグは、イベントをフィルタリングするために使用できる、スパンの属性であるフィールド名です。タグの例としては、オペレーティングシステムやユーザーがアプリケーションを表示する際に使用するブラウザなど、ユーザーに関するプロパティが挙げられます。タグとスパンタグの定義は、Splunk APM と Splunk RUM の両方で同じです。Splunk APM では、タグはスパンタグと呼ばれます。詳しくは :ref:`apm-span-"
-"tags` を参照してください。"
+"タグは、イベントをフィルタリングするために使用できる、スパンの属性であるフィールド名です。タグの例としては、オペレーティングシステムやユーザーがアプリケーションを表示する際に使用するブラウザなど、ユーザーに関するプロパティが挙げられます。タグとスパンタグの定義は、Splunk APM と Splunk RUM の両方で同じです。Splunk APM では、タグはスパンタグと呼ばれ"
+"ます。詳しくは :ref:`apm-span-tags` を参照してください。"
 
 #: ../../rum/rum-terminology-concepts.rst:183
 msgid "RUM metrics for mobile applications"
@@ -3273,7 +3306,8 @@ msgstr "Androidデモアプリ"
 
 #: ../../rum/sample-app.rst:15
 msgid "The splunk-otel-android library includes a demo application called sample-app that you can use to test the RUM product. To build and run the sample application, you need to configure a :code:`local.properties` file in the root of the project. To learn more about realms, see :ref:`Note about realms <about-realms>`."
-msgstr "splunk-otel-android ライブラリには、sample-app という RUM 製品をテストするためのデモアプリケーションが含まれています。サンプルアプリケーションをビルドして実行するには、プロジェクトのルートに :code:`local.properties` ファイルを設定する必要があります。レルムについて詳細については、:ref:`レルムについての注意<about-realms>` を参照してください。"
+msgstr ""
+"splunk-otel-android ライブラリには、sample-app という RUM 製品をテストするためのデモアプリケーションが含まれています。サンプルアプリケーションをビルドして実行するには、プロジェクトのルートに :code:`local.properties` ファイルを設定する必要があります。レルムについて詳細については、:ref:`レルムについての注意<about-realms>` を参照してください。"
 
 #: ../../rum/sample-app.rst:17
 msgid "To access the sample app, see the :new-page:`sample-app <https://github.com/signalfx/splunk-otel-android/tree/main/sample-app>` in the splunk-otel-android project on GitHub."
@@ -3329,11 +3363,11 @@ msgstr "機密データとは何ですか？"
 
 #: ../../rum/sensitive-data-rum.rst:21
 msgid ""
-"Sensitive data may fall within the categories of personally identifiable information (PII), customer-identifiable information (CII), cardholder data (CHD), or protected health information (PHI). It is necessary to protect these types of data to ensure compliance with industry requirements such as the Payment Card Industry Data Security Standard (PCI DSS), the Health Insurance "
-"Portability and Accountability Act (HIPAA), and the General Data Protection Regulation (GDPR)."
+"Sensitive data may fall within the categories of personally identifiable information (PII), customer-identifiable information (CII), cardholder data (CHD), or protected health information (PHI). It is necessary to protect these types of data to ensure compliance with industry requirements such as the Payment Card Industry Data Security Standard "
+"(PCI DSS), the Health Insurance Portability and Accountability Act (HIPAA), and the General Data Protection Regulation (GDPR)."
 msgstr ""
-"機微データは、個人を特定できる情報（PII）、顧客を特定できる情報（CII）、カード会員データ（CHD）、または保護された医療情報（PHI）のカテゴリに分類されます。Payment Card Industry Data Security Standard（PCI DSS）、Health Insurance Portability and Accountability Act（HIPAA）、General Data Protection Regulation（GDPR）などの業界要件に確実に準拠するためには、これらの種類のデータを保護"
-"する必要があります。"
+"機微データは、個人を特定できる情報（PII）、顧客を特定できる情報（CII）、カード会員データ（CHD）、または保護された医療情報（PHI）のカテゴリに分類されます。Payment Card Industry Data Security Standard（PCI DSS）、Health Insurance Portability and Accountability Act（HIPAA）、General Data Protection Regulation（GDPR）などの業界要件に確実に準拠するた"
+"めには、これらの種類のデータを保護する必要があります。"
 
 #: ../../rum/sensitive-data-rum.rst:26
 msgid "Splunk RUM for Browser instrumentation"
