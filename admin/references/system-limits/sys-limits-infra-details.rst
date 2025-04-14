@@ -246,7 +246,7 @@ Maximum number of query arguments in a filter() function
 
    * :strong:`Default limit value`: 1024
    * :strong:`Notes`: Limit to the number of query arguments in a SignalFlow filter. This limit includes global filters in dashboards as well as any internal filters.
-   * :strong:`Customer impact`: SignalFlow programs which are violating the limit can't start. You immediately get an error message.
+   * :strong:`Customer impact`: SignalFlow programs that are violating the limit can't start. You immediately get an error message.
 
 .. _maximum-number-of-detectors-per-org:
 
