@@ -22,7 +22,7 @@ Filter tests
 To filter the table, select a test type, location, key-value pair, and more.
 
 .. image:: /_images/synthetics/syn-filter-test.png
-      :width: 90%
+      :width: 80%
       :alt: This image shows the filter env:prod for all tests on the Synthetics homepage.
 
 
