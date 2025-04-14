@@ -80,7 +80,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 100%
          :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
       
-   Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect. 
+   Select the role from which you want the Log Observer Connect service account to inherit capabilities. The Log Observer Connect service account is a role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect. Typically, admins select the Splunk Cloud Platform :guilabel:`user` role as the base role for a Log Observer Connect service account.
       
 2. On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
 
