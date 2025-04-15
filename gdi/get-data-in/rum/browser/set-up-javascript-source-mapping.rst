@@ -78,7 +78,7 @@ Command descriptions
  
         * ``--debug`` Enable debug logs.
 
-        * ``--dry-run=[true|false]`` Preview the files that will be injected for the given options. Default: false.
+        * ``--dry-run=[true|false]`` Preview the files that will be injected for the given options. Default: ``false``.
  
         * ``-h, --help`` Display help for this command.
        
@@ -104,7 +104,7 @@ Command descriptions
 
         * ``--exclude <patterns...>`` A space-separated list of glob file patterns for selecting specific source map files to not upload.
  
-        * ``--dry-run`` Preview the files that will be uploaded for the given options.
+        * ``--dry-run=[true|false]`` Preview the files that will be uploaded for the given options. Default: ``false``.
 
         * ``--debug`` Enable debug logs.
  

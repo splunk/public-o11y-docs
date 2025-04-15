@@ -20,13 +20,12 @@ You can upload dSYMs from your main application code and from third-party framew
 Prerequisites
 =====================================================================
 
-Upgrade the following Splunk components:
+* Upgrade the following Splunk components:
 
-SplunkOtelCrashReporting :  v0.7.0 
+  * SplunkOtelCrashReporting :  v0.7.0 
+  * SplunkOtel : v0.13.0
 
-SplunkOtel : v0.13.0
-
-Install the splunk-rum CLI.
+* :ref:`Install the splunk-rum CLI<rum-gdi-install-cli>`.
 
 
 Find dSYMs
@@ -34,39 +33,40 @@ Find dSYMs
 
 To locate the dSYMs directory for a specific release build:
 
-Open Xcode Organizer (Xcode → Window → Organizer) and right-click (Command-click) on the version number of the archive for your release.
-
-Select Show in Finder. 
-
-In the Finder window that opens, right-click on the listed entry for your release, and select Show Package Contents. 
-The window now shows the dSYMs/ directory, and you can drag that directory entry into a Terminal window to copy its path there for use with the splunk-rum command. If the path has spaces in it, you may need to enclose it in double quotes when invoking the command. For example, splunk-rum ios upload --path "<path-to-dsyms>"
+#. Open Xcode Organizer (Xcode → Window → Organizer) and right-click (Command-click) on the version number of the archive for your release.
+#. Select :guilabel:`Show in Finder`. 
+#. In the Finder window that opens, right-click on the listed entry for your release, and select :guilabel:`Show Package Contents`.
+   The window now shows the dSYMs/ directory, and you can drag that directory entry into a Terminal window to copy its path there for use with the splunk-rum command. If the path has spaces in it, you may need to enclose it in double quotes when invoking the command. For example, ``splunk-rum ios upload --path "<path-to-dsyms>"``
 
 
 Upload dSYMs
 =====================================================================
 
-To upload dSYMs use the splunk-rum CLI as follows.
+To upload dSYMs use the ``splunk-rum`` CLI as follows.
 
-Splunk recommends that you upload dSYMs to Splunk RUM before you distribute corresponding binaries. To ensure this, the best practice is to integrate the splunk-rum CLI into your CI pipeline so that whenever you archive your iOS application, your pipeline uploads the corresponding dSYMs to Splunk RUM.
-
-Upload your application's dSYMs: 
-
+.. note::
+    Splunk recommends that you upload dSYMs to Splunk RUM before you distribute corresponding binaries. To ensure this, the best practice is to integrate the ``splunk-rum`` CLI into your CI pipeline so that whenever you archive your iOS application, your pipeline uploads the corresponding dSYMs to Splunk RUM.
 
 
-splunk-rum ios upload --path <path-to-dSYMs-directory>
-(Optional) Verify that your uploads succeeded: 
+#. Upload your application's dSYMs: 
 
+   .. code-block:: bash
+    
+    splunk-rum ios upload --path <path-to-dSYMs-directory>
 
+#. (Optional) Verify that your uploads succeeded:
 
-splunk-rum ios list
+   .. code-block:: bash
+    
+    splunk-rum ios list
  
 
 Syntax
 ---------------------------------------------------------------------
 
-splunk-rum ios [command] [parameters]
-Command descriptions
-
+.. code-block:: bash
+    
+    splunk-rum ios [command] [parameters]
 
 
 Command descriptions
@@ -79,26 +79,37 @@ Command descriptions
    * - :strong:`Command`
      - :strong:`Description`
 
-   * - ``sourcemaps inject --path <path-to-production-files> [optional-parameters]`` 
-     -  Search ``<path-to-production-files>`` for source map/minified file pairs and compute a source map ID for each pair. Then, inject that source map ID into each minified file as a code snippet.
+   * - ``upload --path <path-to-production-files> [optional-parameters]`` 
+     -  Upload dSYMs within the directory you specify. The directory may contain a single dSYM .zip file or multiple dSYMs, in which case this command will compress and upload all of them.
 
         Parameters:
 
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
+        * ``--path <path-to-production-files>`` Path to the directory containing dSYMs or a single dSYM.zip file.
+ 
+        * ``--realm <value>`` Realm for your organization. For example, us0. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+
+        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+ 
+        * ``--debug`` Enable debug logs.
+
+        * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
+ 
+        * ``-h, --help`` Display help for this command.
        
 
-   * - ``sourcemaps upload --path <path-to-production-files> --realm <value> --token <value> [optional-parameters]``  
-     - 
-        * PLACEHOLDER
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
+   * - ``list [optional-parameters]``  
+     -  List the 100 most recently uploaded dSYMs, sorted in reverse chronological order based on the upload timestamp.
+
+        Parameters:
+
+        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+
+        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+
+        * ``--debug`` Enable debug logs.
+ 
+        * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
+
+        * ``-h, --help`` Display help for this command. 
+
+
