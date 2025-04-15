@@ -76,7 +76,7 @@ To see session details for a specific crash:
 #. Select that crash. This opens the :guilabel:`Error groups` side panel on the right.
 #. In the :guilabel:`Error groups` side panel, select the :guilabel:`User Sessions` tab. This opens the list of user sessions associated with the crash you selected.
 #. Select a specific session ID. This opens the :guilabel:`Crash` side panel with session details.
-#. If you've uploaded source mapping for your application, you can also see a human-readable stack trace: expand  :guilabel:`Stack Trace`.  
+#. If you've uploaded source mapping for your application, you can also see a human-readable stack trace: expand :guilabel:`Stack Trace`.  
 
 
 
