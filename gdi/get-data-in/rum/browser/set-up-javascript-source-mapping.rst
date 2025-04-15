@@ -33,7 +33,7 @@ Option 1: Use the splunk-rum CLI
 
    #. Verify that your production build tool is configured to generate source maps.
    #. Run the production build for your project.
-   #. Verify that your production bundles and source maps were emitted to the same output directory.
+   #. Verify that your production bundles and source maps were written to the same output directory.
 
 #. Find all source map/minified file pairs in the directory you specify, compute a source map ID for each pair, and inject that source map ID into each minified file as a code snippet:
 
