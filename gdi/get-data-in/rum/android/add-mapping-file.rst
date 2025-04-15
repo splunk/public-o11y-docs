@@ -72,76 +72,91 @@ Uploads for production builds
 Uploads for pre-production builds
 =====================================================================
 
- If you're instrumenting pre-production builds where versionCode isn't updated for each build, add a unique identifier as metadata to the AndroidManifest.xml file in your source directory before building the application binary. This identifier must be named splunk.build_id. To add this identifier, follow the steps below:
-
-Add this snippet to the <application> block of the AndroidManifest.XML file in your source directory:
+ If you're instrumenting pre-production builds where ``versionCode`` isn't updated for each build, add a unique identifier as metadata to the ``AndroidManifest.xml`` file in your source directory before building the application binary. This identifier must be named ``splunk.build_id``. To add this identifier, follow the steps below:
 
 
+#. Add this snippet to the ``<application>`` block of the ``AndroidManifest.xml`` file in your source directory:
 
-<meta-data
+   .. code-block:: xml
+
+    <meta-data
     android:name="splunk.build_id"
     android:value="${splunkBuildId}" />
-Add the following code to the android {} block of the Gradle build script of your application. This code generates a new UUID for every application variant and adds it to the merged manifest file after the variant is assembled, where the Splunk RUM agent will retrieve it:
-
-If you use Kotlin add this tobuild.gradle.kts: 
 
 
+#. Add the following code to the ``android {}`` block of the Gradle build script of your application. This code generates a new UUID for every application variant and adds it to the merged manifest file after the variant is assembled, where the Splunk RUM agent will retrieve it:
 
-applicationVariants.configureEach {
-    val uniqueBuildId = UUID.randomUUID().toString()
-    this.mergedFlavor.manifestPlaceholders["splunkBuildId"] = uniqueBuildId
-    logger.lifecycle("Splunk: Variant $name assigned build ID: $uniqueBuildId")
-    val capitalizedVariantName = name.replaceFirstChar { it.uppercase() }
-    tasks.named("process${capitalizedVariantName}Manifest").configure {
-        outputs.upToDateWhen { false }
-    }
-}
-If you use Groovy add this to build.gradle: 
+   * If you use Kotlin add this to ``build.gradle.kts``: 
 
+     .. code-block:: 
 
+        applicationVariants.configureEach {
+            val uniqueBuildId = UUID.randomUUID().toString()
+            this.mergedFlavor.manifestPlaceholders["splunkBuildId"] = uniqueBuildId
 
-applicationVariants.configureEach { variant ->
-    def uniqueBuildId = UUID.randomUUID().toString()
-    variant.mergedFlavor.manifestPlaceholders.put("splunkBuildId", uniqueBuildId)
-    project.logger.lifecycle("Splunk: Variant ${variant.name} assigned build ID: ${uniqueBuildId}")
-    def capitalizedVariantName = variant.name.capitalize()
-    tasks.named("process${capitalizedVariantName}Manifest").configure {
-        outputs.upToDateWhen { false }
-    }
-}
-Upload your application's mapping file and specify its applicationID , versionCode, and splunk.build_id properties. You can do this in either of these ways:
+            logger.lifecycle("Splunk: Variant $name assigned build ID: $uniqueBuildId")
 
-Run the upload command with the --app-id  , --version-code and --splunk-build-id parameters. This option only works if you added splunk.build_id to your Gradle build script (in step 1). Get the build ID from the Gradle build output or from the merged manifest:
+            val capitalizedVariantName = name.replaceFirstChar { it.uppercase() }
+            tasks.named("process${capitalizedVariantName}Manifest").configure {
+                outputs.upToDateWhen { false }
+            }
+        }
 
 
+   * If you use Groovy add this to ``build.gradle``: 
 
-splunk-rum android upload \
---app-id=<applicationID> --version-code=<versionCode> \
---splunk-build-id <value> \
---path=<path-to-mapping-file> \
-[optional-parameters]
-Run the upload-with-manifest command with the path to the application's merged or packaged AndroidManifest.XML file, along with path to the mapping file. Be sure to include the correct manifest, which is the one that's created when your application is built, and is located in the build output directory: 
+     .. code-block:: 
+
+        applicationVariants.configureEach { variant ->
+            def uniqueBuildId = UUID.randomUUID().toString()
+            variant.mergedFlavor.manifestPlaceholders.put("splunkBuildId", uniqueBuildId)
+
+            project.logger.lifecycle("Splunk: Variant ${variant.name} assigned build ID: ${uniqueBuildId}")
+
+            def capitalizedVariantName = variant.name.capitalize()
+            tasks.named("process${capitalizedVariantName}Manifest").configure {
+                outputs.upToDateWhen { false }
+            }
+        }
 
 
+#. Upload your application's mapping file and specify its ``applicationID`` , ``versionCode``, and ``splunk.build_id`` properties. You can do this in either of these ways:
 
-splunk-rum android upload-with-manifest \
---manifest <path-to-merged-manifest> \
---path <path-to-mappping-file> \
-[optional-parameters]
-(Optional) Verify that your upload succeeded:
+   * Run the upload command with the ``--app-id``, ``--version-code``, and ``--splunk-build-id`` parameters. This option only works if you added ``splunk.build_id`` to your Gradle build script (in step 1). Get the build ID from the Gradle build output or from the merged manifest:
+
+      .. code-block:: bash
+
+        splunk-rum android upload \
+        --app-id=<applicationID> --version-code=<versionCode> \
+        --splunk-build-id <value> \
+        --path=<path-to-mapping-file> \
+        [optional-parameters]
 
 
+    * Run the ``upload-with-manifest`` command with the path to the application's merged or packaged ``AndroidManifest.xml`` file, along with path to the mapping file. Be sure to include the correct manifest, which is the one that's created when your application is built, and is located in the build output directory: 
 
-splunk-rum android list --app-id=<applicationID>
+      .. code-block:: bash
+
+        splunk-rum android upload-with-manifest \
+        --manifest <path-to-merged-manifest> \
+        --path <path-to-mappping-file> \
+        [optional-parameters]
+
+
+#. (Optional) Verify that your upload succeeded:
+
+   .. code-block:: bash
+
+      splunk-rum android list --app-id=<applicationID>
  
-
  
 
 Syntax
 ---------------------------------------------------------------------
 
+.. code-block:: bash
 
-splunk-rum android [command] [parameters]
+    splunk-rum android [command] [parameters]
 
 
 
@@ -160,26 +175,60 @@ Command descriptions
 
         Parameters:
 
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
-       
+        * ``--path <path>`` Required. Path to the ``mapping.txt`` file. 
+ 
+        * ``--app-id <applicationID>`` Required. The ``applicationId`` property in your application's ``build.gradle.kts`` file. 
+
+        * ``--version-code <int>`` Required. The ``versionCode`` property of your application. 
+ 
+        * ``--splunk-build-id <value>`` Optional. Splunk build ID for the upload.
+
+        * ``--realm <value>`` Optional. Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+ 
+        * ``--token <your-splunk-org-access-token>``  Optional. API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+
+        * ``--debug`` Enable debug logs.
+
+        * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
+
+        * ``-h, --help`` Display help for this command.
+     
 
    * - ``upload-with-manifest --manifest <path> --path <path> [optional-parameters]``  
-     -  Upload the Android mapping.txt file with required metadata extracted from the AndroidManifest.xml file.
+     -  Upload the Android ``mapping.txt`` file with required metadata extracted from the ``AndroidManifest.xml`` file.
 
         Parameters:
         
-        * PLACEHOLDER
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
-        * PLACEHOLDER 
-        * PLACEHOLDER
+        * ``--manifest <path>`` Path to the merged or the packaged ``AndroidManifest.xml`` file that is generated when the application is built.
+
+        * ``--path <path>`` Path to the ``mapping.txt`` file.
+
+        * ``--realm <value>`` Realm for your organization. For example, ``us0``.  You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+ 
+        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+
+        * ``--dry-run=[true|false]`` Preview the file that will be uploaded and the parameters that will be extracted from ``AndroidManifest.xml``.
+ 
+        * ``--debug`` Enable debug logs.
+
+        * ``-h, --help`` Display help for command. 
+
+
+   * - ``list --app-id <value> [optional-parameters]``  
+     -  List the 100 most recently uploaded mapping files for the given application ID, sorted in reverse chronological order based on the upload timestamp.
+
+        Parameters:
+        
+        * ``--app-id <applicationID>`` The ``applicationId`` property in your app's ``build.gradle.kts`` file.
+
+        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+
+        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+
+        * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
+ 
+        * ``--debug`` Enable debug logs.
+ 
+        * ``-h, --help`` Display help for this subcommand.
 
 
