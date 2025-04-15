@@ -104,7 +104,7 @@ Connect source files
 The information in most raw crash stack traces is not fully human-readable. To make a stack trace readable, you must provide platform-specific mapping information that translates that stack trace into human-readable form:
 
 * To upload mappping files at instrumentation time, see :ref:`add-dsyms` for iOS applications or :ref:`add-mapping-file` for Android applications.
-* To upload mappping files using the widget on this dashboard, select :guilabel:`Add dSYMs` for iOS applications or :guilabel:`Add a mapping file` for Android applications. 
+* To upload mapping files using the widget on this dashboard, select :guilabel:`Add dSYMs` for iOS applications or :guilabel:`Add a mapping file` for Android applications. 
 
 
 
