@@ -14,7 +14,7 @@ When you build your iOS application in release mode, your build process generate
 
 The ``splunk-rum`` CLI compresses dSYM directories into .zip files for you and uploads them. When you upload a zipped dSYM  to Splunk RUM, you enable Splunk RUM to symbolicate the debug symbols contained within that dSYM.  This in turn enables you to view stack traces with the names of functions and offsets into those functions to help you identify the line of code that was executing when the application crashed.
 
-You can upload dSYMs from your main application code and from third-party frameworks, but not from system libraries. This means that Splunk RUM does not yet support the symbolication of stack frames for system libraries.
+You can upload dSYMs from your main application code and from third-party frameworks, but not from system libraries. Splunk RUM does not yet support the symbolication of stack frames for system libraries.
 
 
 Prerequisites
