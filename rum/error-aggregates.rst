@@ -144,7 +144,7 @@ Find the top JavaScript errors across your applications in Tag Spotlight
 
 In Splunk RUM, the JavaScript errors view shows the JavaScript errors sorted by page, whereas the metric :guilabel:`JavaScript Errors (by error ID)` shows the top ten JavaScript errors across your entire application. In the metric :guilabel:`Frontend Errors by ErrorID` the information is displayed by error type, error ID, then error message. 
 
-1. Open RUM. From the left navigation panel, select :guilabel:`RUM` and :guilabel:`Browser` as the source and the application you wan to monitor.  
+1. Open RUM. From the left navigation panel, select :guilabel:`RUM` and :guilabel:`Browser` as the source and the application you want to monitor.  
 
 2. To open Tag Spotlight from either the Application Summary Dashboard, or Overview pages click on any metric. 
 
