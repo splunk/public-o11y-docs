@@ -36,7 +36,7 @@ To locate the dSYMs directory for a specific release build:
 #. Open Xcode Organizer (Xcode → Window → Organizer) and right-click (Command-click) on the version number of the archive for your release.
 #. Select :guilabel:`Show in Finder`. 
 #. In the Finder window that opens, right-click on the listed entry for your release, and select :guilabel:`Show Package Contents`.
-   The window now shows the dSYMs/ directory, and you can drag that directory entry into a Terminal window to copy its path there for use with the ``splunk-rum`` command. 
+   The window now shows the ``dSYMs/`` directory, and you can drag that directory entry into a Terminal window to copy its path there for use with the ``splunk-rum`` command. 
 
 
 Upload dSYMs
