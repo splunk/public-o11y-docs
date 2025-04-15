@@ -45,7 +45,7 @@ To customize the content on your team’s landing page, follow these steps:
 
 #. From a team's landing page, select the :guilabel:`Team details` button. From the side panel that appears, select :guilabel:`Edit page`.
 
-#. Add and remove specific objects from the landing page, such as services and dashboards. 
+#. Add and remove specific objects from the team's landing page page, such as services and detectors, from the :guilabel:`Team page setup`. 
 
 #. Your changes will automatically populate on the team landing page.
 
@@ -56,17 +56,33 @@ Use a team landing page
 
 Use a team landing page as your starting point for monitoring important data.
 
+To review services linked to the team, follow these steps: 
+
+#. To view more details about each service, select the service name.
+
+#. To view additional properties for each service, such as the endpoints or traces associated with each service, select the three-dot :guilabel:`Actions` menu and choose one of the options listed. The corresponding page in Splunk APM opens. To learn more about using the service view in APM, see :ref:`apm-service-view`.
+
+#. To see the details of an alert for one of the services associated with your team, select the alert name in the :guilabel:`Alerts` column. 
+
+#. Select :guilabel:`View APM page` to view additional services in your environment.
+
+To review dashboards linked to the team, follow these steps: 
+
+#. To view a specific dashboard, select the dashboard name. 
+
+#. 
+
 To review alerts associated with a detector linked to the team, follow these steps:
 
-#. To see all active alerts, select :guilabel:`Team Alerts`. The Alerts page for the team appears. You see all active alerts for detectors linked to the team.
+#. To see all active alerts for a specific severity level, select the severity. You see active alerts for detectors linked to the team, filtered by the severity level you selected.
 
-#. To see all active alerts for a specific severity level, select the severity. The Alert page for the team appears. You see active alerts for detectors linked to the team, filtered by the severity level you selected.
+#. To see a list of active alerts for each detector linked to the team, select :guilabel:`All severities`. 
 
-#. To see a list of active alerts for each detector linked to the team, select :guilabel:`Team Detectors`. The Alert page for the team appears, listing the name of the detector that issued each alert.
+#. Select :guilabel:`View Detectors & SLOs page` to view additional detectors in your environment. 
 
-To learn more about linking teams to detectors and dashboard groups, see :ref:`admin-associate-team`,
-
-
+To learn more about linking individual objects to your team landing page, see:
+* :ref:`admin-associate-team`.
+* 
 .. _edit-landing-page-text:
 
 Edit the landing page text
