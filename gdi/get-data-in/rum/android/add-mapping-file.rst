@@ -15,7 +15,7 @@ De-obfuscation is available for Android application crashes only.
 
 
  .. note::
-    Make sure that the mapping file you upload to Splunk RUM matches the binary you deploy  to production. To ensure this, the best practice is to integrate the ``splunk-rum`` usage into your CI pipeline so that whenever you re-build your Android application, you also re-upload its mapping file.
+    Make sure that the mapping file you upload to Splunk RUM matches the binary you deploy to production. To ensure this, the best practice is to integrate the ``splunk-rum`` usage into your CI pipeline so that whenever you re-build your Android application, you also re-upload its mapping file.
 
 
 In order to associate a specific mapping file with a specific application build, Splunk RUM compares the ``applicationId`` and ``versionCode`` properties of the application to the parameters that you specify for the mapping file upload. You specify these parameters either as ``--app-id`` and ``--version-code`` in the ``splunk-rum android upload`` command or by including your application's merged or packaged manifest (``AndroidManifest.xml``), which includes these properties by default, in the ``splunk-rum android upload-with-manifest`` command. 
