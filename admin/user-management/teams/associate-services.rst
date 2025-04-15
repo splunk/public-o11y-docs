@@ -37,94 +37,24 @@ To link a service to a team from the landing page, follow these steps:
 
 #. From the modal, select the services that you want to add to the team.
 
-#. (Optional) Add a service attribute filter in order to populate all services that contain the specified attribute on the team landing page. This filter groups services by a specific attribute or namespace. For example, adding the attribute ``service.namespace = apm`` will display all services with the APM namespace on your team landing page.  
+#. (Optional) Add a service attribute filter in order to populate all services that contain the specified attribute on the team landing page. This filter groups services by a specific property or namespace. For example, adding the attribute ``service.namespace = apm`` will display all services with the APM namespace on your team landing page.  
 
 To link a service to a team from the :guilabel:`Team page setup`, follow these steps: 
 
 #. From the team's landing page, select the :guilabel:`Team details` button, and then select :guilabel:`Edit page`.
-
+#. On the :guilabel:`Team page setup` page, go to the :guilabel:`Services` section. Add services from your environment to your team. 
+#. (Optional) Add a service attribute filter in order to populate all services that contain the specified attribute on the team landing page. This filter groups services by a specific property or namespace. For example, adding the attribute ``service.namespace = apm`` will display all services with the APM namespace on your team landing page.  
 
 .. _remove-link-service-team:
 
 Remove a service from a team 
 --------------------------------------------------------------------------
 
-To remove a team from the landing page, follow these steps:
+To remove a link to a service from the team landing page, follow these steps:
 
-#. From the :guilabel:`Actions` menu for the detector, select :guilabel:`Links to teams`.
-#. Select the :guilabel:`x` to remove a team from the linked teams list, then select :guilabel:`Done`.
-#. If the team is a notification recipient for the detector, Splunk Observability Cloud asks if you want to stop sending notifications to the team. Select :guilabel:`Yes` to remove the team as a recipient from each detector rule. Select :guilabel:`No` to leave all recipients as is.
+#. From the :guilabel:`Services` section, select :guilabel:`Edit services`.
+#. Select the :guilabel:`x` to remove a service or a service attribute filter from their respective lists, then select :guilabel:`Save`.
 
-
-.. _dashboard-groups-link-team-features:
-
-Dashboard groups linked to teams
-============================================================================
-
-When you link a dashboard group to a team, the dashboard group is accessible on the team's landing page.
-
-To link a dashboard group to a team, you need to have write permission for the dashboard group. To learn more, see :ref:`dashboard-manage-permissions`.
-
-The following table provides details about which dashboard group types you can link to a team.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Dashboard group type
-     - Description
-   * - Custom dashboard group
-     - | - You need write permission to link a custom dashboard group to a team.
-       | - To learn more, see :ref:`about-permissions`.
-   * - Built-in dashboard group
-     - | - You can't link a built-in dashboard group to a team. However, you can clone built-in dashboards to a custom dashboard group, and link that group to a team.
-       | - To learn more, see :ref:`clone-built-in-dashboard`.
-   * - User dashboard group
-     - You can't link a user dashboard group to a team.
-
-
-.. _create-link-dashboard-group-team:
-
-Link a dashboard group to a team
---------------------------------------------------------------------------------
-
-You can create a link between a dashboard group and a team from the landing page for the team, or you can create the link from the dashboard group page.
-
-To link a dashboard group to a team from the team landing page, follow these steps:
-
-#. Access the team landing page. To learn how to access team landing pages, see :ref:`view-team-landing-page`.
-
-#. Select :guilabel:`Add Dashboard Group`.
-
-#. Select the dashboard group you want to link.
-
-#. Select :guilabel:`OK`.
-
-To link a dashboard group to a team from the dashboard group:
-
-#. Access the dashboard group. To learn how to access dashboard groups, see :ref:`viewing-dashboards`.
-
-#. Select the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
-
-#. In the text box, start typing a team name. Splunk Observability Cloud autocompletes the team name. If Splunk Observability Cloud finds more than one match, it displays a list.
-
-#. Select the team you want to link to from the list.
-
-#. Select :guilabel:`Done`.
-
-
-.. _remove-link-dashboard-group-team:
-
-Remove the link between a dashboard group and a team
---------------------------------------------------------------------------------
-
-To remove a link between a dashboard group and a team, you need to have write permission for the dashboard group. To learn more, see :ref:`dashboard-manage-permissions`.
-
-To remove the link between a dashboard group and a team, follow these steps:
-
-#. Access the dashboard group. To learn how to access dashboard groups, see :ref:`viewing-dashboards`.
-
-#. Select the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
-
-#. Select the :guilabel:`x` to remove a linked team.
-
-#. Select :guilabel:`Done`.
+To remove a link to a service from the :guilabel:`Team page setup`, follow these steps: 
+#. From the team's landing page, select the :guilabel:`Team details` button, and then select :guilabel:`Edit page`.
+#. On the :guilabel:`Team page setup` page, go to the :guilabel:`Services` section. Select the :guilabel:`x` to remove a service or a service attribute filter from their respective lists. Your changes will be reflected on the team landing page.
