@@ -73,7 +73,7 @@ Prerequisites
 Installation
 ---------------------------------------------------------------------
 
-#. Download ``splunk-rum`` from :rew-page:`the splunk-rum-cli repo<https://github.com/signalfx/splunk-rum-cli>`. This CLI is published to npm as package name ``@splunk/rum-cli``.  
+#. Download ``splunk-rum`` from :new-page:`the splunk-rum-cli repo<https://github.com/signalfx/splunk-rum-cli>`. This CLI is published to npm as package name ``@splunk/rum-cli``.  
 #. Install ``splunk-rum`` in your Linux-based build environment either as:
 
    * A dependency of your build process, and add ``splunk-rum`` to your ``PATH``:
@@ -84,9 +84,9 @@ Installation
 
    * A dependency to your existing package.json file. Note: This option is for browser applications only, not mobile applications: 
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-      npm install @splunk/rum-cli --save-dev
+        npm install @splunk/rum-cli --save-dev
 
 
 #. Set these environment variables: 
