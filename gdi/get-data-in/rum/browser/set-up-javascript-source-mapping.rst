@@ -40,7 +40,7 @@ Option 1: Use the splunk-rum CLI
    .. code-block:: bash
     splunk-rum sourcemaps inject --path <path-to-production-files>
 
-#. Upload the source maps in the directory you specify to Splunk RUM. In this command, use the same values for application name (<applicationName>) and application version  (<applicationVersion>) that you used in Configure the Splunk Browser RUM instrumentation — Splunk Observability Cloud documentation.
+#. Upload the source maps in the directory you specify to Splunk RUM. In this command, use the same values for application name (``<applicationName>``) and application version  (``<applicationVersion>``) that you used in :ref:`configure-browser-instrumentation`.
 
    .. code-block:: bash
     splunk-rum sourcemaps upload \
