@@ -154,7 +154,7 @@ In Splunk RUM, the JavaScript errors view shows the JavaScript errors sorted by 
 JavaScript errors without stacktrace, type, or message 
 ------------------------------------------------------------------------------------------
 
-Sometimes, you might see a message in the UI that says :guilabel:`JavaScript error without a stacktrace, type, or message`. This might happen because the error didn't have any information about the  stack trace before it was ingested by Splunk RUM. To troubleshoot, try narrowing in on a specific time range which shows the JS error only, and explore the related  User sessions.
+Sometimes, you might see a message in the UI that says :guilabel:`JavaScript error without a stacktrace, type, or message`. This might happen because the error didn't have any information about the  stack trace before it was ingested by Splunk RUM. To troubleshoot, try narrowing in on a specific time range that shows the JS error only and explore the related User sessions.
 
 
 
