@@ -133,7 +133,7 @@ If your project uses a different bunding tool or a different version of Webpack,
 
 #. Add the Splunk RUM Webpack plugin to your list of plugins by adding the following lines to your ``webpack.config.js``, where ``<applicationName>`` and ``<applicationVersion>`` are the same values that you used in :ref:`configure-browser-instrumentation`.
 
-   If you don't want source maps to be uploaded while you're doing local builds for your own local development, set disableUpload to true.
+   If you don't want source maps to be uploaded while you're doing local builds for your own local development, set ``disableUpload`` to true.
 
    .. code-block:: json
 
