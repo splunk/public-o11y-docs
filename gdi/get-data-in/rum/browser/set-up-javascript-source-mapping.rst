@@ -46,7 +46,8 @@ Option 1: Use the splunk-rum CLI
    .. code-block:: bash
       
       splunk-rum sourcemaps upload \
-      --app-name <applicationName> --app-version <applicationVersion> \
+      --app-name <applicationName> \
+      --app-version <applicationVersion> \
       --path <path-to-production-files>
 
 
@@ -87,7 +88,7 @@ Command descriptions
        
 
    * - ``sourcemaps upload --path <path-to-production-files> --realm <value> --token <value> [optional-parameters]``  
-     -  Recursively search ``<path-to-production-files> ``for source maps (``.js.map``, ``.cjs.map``, ``.mjs.map``) and upload them to Splunk RUM.
+     -  Recursively search ``<path-to-production-files>`` for source maps (``.js.map``, ``.cjs.map``, ``.mjs.map``) and upload them to Splunk RUM.
 
         Run this command after you run the ``sourcemaps inject`` command.
 
