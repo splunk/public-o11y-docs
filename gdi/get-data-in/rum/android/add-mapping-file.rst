@@ -18,7 +18,7 @@ De-obfuscation is available for Android application crashes only.
     Make sure that the mapping file you upload to Splunk RUM matches the binary you deploy  to production. To ensure this, the best practice is to integrate the ``splunk-rum`` usage into your CI pipeline so that whenever you re-build your Android application, you also re-upload its mapping file.
 
 
-In order to associate a specific mapping file with a specific application build, Splunk RUM compares the ``applicationId`` and ``versionCode`` of the application to the parameters that you specify along with the mapping file. To specify these properties for the mapping file, you can include them as parameters in the ``splunk-rum android upload`` command. Alternatively, you can include your application's merged or packaged manifest (``AndroidManifest.xml``), where these properties are stored by default, in the ``splunk-rum android upload-with-manifest`` command. 
+In order to associate a specific mapping file with a specific application build, Splunk RUM compares the ``applicationId`` and ``versionCode`` properties of the application to the parameters that you specify for the mapping file upload. You specify these parameters either as ``--app-id`` and ``--version-code`` in the ``splunk-rum android upload`` command or by including your application's merged or packaged manifest (``AndroidManifest.xml``), which includes these properties by default, in the ``splunk-rum android upload-with-manifest`` command. 
 
 
 Prerequisites
@@ -41,7 +41,7 @@ Uploads for production builds
 
    * Run the ``upload`` command with the ``--app-id`` and ``--version-code`` parameters: 
 
-     .. code-block:: bash
+     .. code-block:: shell
 
         splunk-rum android upload \
         --app-id=<applicationID> --version-code=<versionCode> \
@@ -50,7 +50,7 @@ Uploads for production builds
 
    * Run the ``upload-with-manifest`` command with the path to the application's merged or packaged ``AndroidManifest.xml`` file, along with path to the mapping file. Be sure to include the correct manifest, which is the one that's created when your application is built, and is located in the build output directory: 
      
-     .. code-block:: bash
+     .. code-block:: shell
 
         splunk-rum android upload-with-manifest \
         --manifest <path-to-merged-manifest> \
@@ -61,7 +61,7 @@ Uploads for production builds
        
 #. (Optional) Verify that your upload succeeded:
 
-    .. code-block:: bash
+    .. code-block:: shell
 
         splunk-rum android list --app-id=<applicationID>
 
@@ -77,9 +77,9 @@ Uploads for pre-production builds
 
    .. code-block:: xml
 
-    <meta-data
-    android:name="splunk.build_id"
-    android:value="${splunkBuildId}" />
+      <meta-data
+      android:name="splunk.build_id"
+      android:value="${splunkBuildId}" />
 
 
 #. Add the following code to the ``android {}`` block of the Gradle build script of your application. This code generates a new UUID for every application variant and adds it to the merged manifest file after the variant is assembled, where the Splunk RUM agent will retrieve it:
@@ -122,7 +122,7 @@ Uploads for pre-production builds
 
    * Run the upload command with the ``--app-id``, ``--version-code``, and ``--splunk-build-id`` parameters. This option only works if you added ``splunk.build_id`` to your Gradle build script (in step 1). Get the build ID from the Gradle build output or from the merged manifest:
 
-      .. code-block:: bash
+      .. code-block:: shell
 
         splunk-rum android upload \
         --app-id=<applicationID> --version-code=<versionCode> \
@@ -133,7 +133,7 @@ Uploads for pre-production builds
 
     * Run the ``upload-with-manifest`` command with the path to the application's merged or packaged ``AndroidManifest.xml`` file, along with path to the mapping file. Be sure to include the correct manifest, which is the one that's created when your application is built, and is located in the build output directory: 
 
-      .. code-block:: bash
+      .. code-block:: shell
 
         splunk-rum android upload-with-manifest \
         --manifest <path-to-merged-manifest> \
@@ -143,7 +143,7 @@ Uploads for pre-production builds
 
 #. (Optional) Verify that your upload succeeded:
 
-   .. code-block:: bash
+   .. code-block:: shell
 
       splunk-rum android list --app-id=<applicationID>
  
@@ -152,7 +152,7 @@ Uploads for pre-production builds
 Syntax
 ---------------------------------------------------------------------
 
-.. code-block:: bash
+.. code-block:: shell
 
     splunk-rum android [command] [parameters]
 
