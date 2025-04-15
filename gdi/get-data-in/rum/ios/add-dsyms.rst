@@ -86,7 +86,7 @@ Command descriptions
 
         * ``--path <path-to-dSYMs>`` Path to the directory containing dSYMs or a single ``dSYM.zip`` file. If the path has spaces in it, enclose it in double quotes. For example, ``--path "<path-to-dsyms>"``.
  
-        * ``--realm <value>`` Realm for your organization. For example, us0. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
         * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
  
