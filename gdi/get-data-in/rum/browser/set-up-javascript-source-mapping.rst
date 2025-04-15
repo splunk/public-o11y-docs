@@ -122,9 +122,11 @@ If your project uses Webpack 5 as its bundling tool, you can add the Splunk RUM 
 
 If your project uses a different bunding tool or a different version of Webpack, use the ``splunk-rum`` CLI instead.
 
-#. Add the Splunk RUM Webpack plugin to your package.json as a dev dependency: 
+#. Add the Splunk RUM Webpack plugin to your ``package.json`` as a dev dependency: 
+
    .. code-block:: bash
-    npm install @splunk/rum-build-plugins --save-dev
+
+      npm install @splunk/rum-build-plugins --save-dev
 
 #. Configure your ``webpack.config.js`` to generate source maps. See :new-page:`Devtool | webpack<https://webpack.js.org/configuration/devtool/>`.
 
@@ -133,24 +135,25 @@ If your project uses a different bunding tool or a different version of Webpack,
    If you don't want source maps to be uploaded while you're doing local builds for your own local development, set disableUpload to true.
 
    .. code-block:: json
-    const { SplunkRumWebpackPlugin } = require('@splunk/rum-build-plugins')
-    module.exports = {
-      ...
-        plugins: [
-            ...,
-            new SplunkRumWebpackPlugin({
-                applicationName: '<applicationName>',
-                appVersion: '<applicationVersion>',
-                sourceMaps: {
-                    token: '<your-splunk-org-access-token>',
-                    realm: '<your-splunk-observability-realm>',
-                    // Optional: conditionally set 'disabledUpload' so that file uploads
-                    // are only performed during your production builds on your CI pipeline
-                    disableUpload: <boolean>
-                }
-            }),
-        ]
-    }
+
+      const { SplunkRumWebpackPlugin } = require('@splunk/rum-build-plugins')
+      module.exports = {
+        ...
+          plugins: [
+              ...,
+              new SplunkRumWebpackPlugin({
+                  applicationName: '<applicationName>',
+                  appVersion: '<applicationVersion>',
+                  sourceMaps: {
+                      token: '<your-splunk-org-access-token>',
+                      realm: '<your-splunk-observability-realm>',
+                      // Optional: conditionally set 'disabledUpload' so that file uploads
+                      // are only performed during your production builds on your CI pipeline
+                      disableUpload: <boolean>
+                  }
+                }),
+            ]
+        }
 
 
 #. Verify that whenever you build your application, its minified files are automatically injected with the ``sourceMapId`` property, and that its source maps are automatically uploaded to Splunk RUM.
@@ -170,6 +173,6 @@ Deploy the injected JavaScript files to your production environment
 Once you've uploaded your application's source maps and deployed its injected minified files to your production environment, Splunk RUM automatically converts this application's stack traces into human-readable form.
 
 .. note::
-    Make sure that the source maps that you upload to Splunk RUM match the minified files you deploy to production. To ensure this, the best practice is to integrate the splunk-rum commands into your build pipeline so that whenever you build an application, you also re-upload its source maps.
+    Make sure that the source maps that you upload to Splunk RUM match the minified files you deploy to production. To ensure this, the best practice is to integrate the ``splunk-rum`` commands into your build pipeline so that whenever you build an application, you also re-upload its source maps.
 
 
