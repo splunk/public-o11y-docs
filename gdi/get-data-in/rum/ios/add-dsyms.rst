@@ -22,8 +22,8 @@ Prerequisites
 
 * Upgrade the following Splunk components:
 
-  * SplunkOtelCrashReporting :  v0.7.0 
-  * SplunkOtel : v0.13.0
+  * :new-page:`SplunkOtelCrashReporting<https://github.com/signalfx/splunk-otel-ios-crashreporting>` :  v0.7.0 
+  * :new-page:`SplunkOtel<https://github.com/signalfx/splunk-otel-ios>` : v0.13.0
 
 * :ref:`Install the splunk-rum CLI<rum-gdi-install-cli>`.
 

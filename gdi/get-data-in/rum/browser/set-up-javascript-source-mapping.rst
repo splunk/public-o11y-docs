@@ -6,7 +6,7 @@ Set up JavaScript source mapping
 
 
 .. meta::
-    :description: Your uploaded mapping file enables Splunk RUM to convert stack traces back into a human-readable form.
+    :description: Your uploaded source map enables Splunk RUM to convert stack traces back into a human-readable form.
 
 
 This page explains how to set up JavaScript source mapping, which allows Splunk RUM to convert stack frames from browser application errors back into a human-readable form so that you can see the exact line of source code related to an error.  
