@@ -58,4 +58,20 @@ Syntax
 Command descriptions
 ---------------------------------------------------------------------
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20, 80
+
+   * - :strong:`Command`
+     - :strong:`Description`
+
+   * - ``sourcemaps inject --path <path-to-production-files> [optional-parameters]`` 
+     -  
+        * PLACEHOLDER 
+        * PLACEHOLDER
+
+   * - ``sourcemaps upload --path <path-to-production-files> --realm <value> --token <value> [optional-parameters]``  
+     - 
+        * PLACEHOLDER
+        * PLACEHOLDER
 
