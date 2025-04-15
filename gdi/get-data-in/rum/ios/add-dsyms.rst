@@ -36,7 +36,7 @@ To locate the dSYMs directory for a specific release build:
 #. Open Xcode Organizer (Xcode → Window → Organizer) and right-click (Command-click) on the version number of the archive for your release.
 #. Select :guilabel:`Show in Finder`. 
 #. In the Finder window that opens, right-click on the listed entry for your release, and select :guilabel:`Show Package Contents`.
-   The window now shows the dSYMs/ directory, and you can drag that directory entry into a Terminal window to copy its path there for use with the splunk-rum command. If the path has spaces in it, you may need to enclose it in double quotes when invoking the command. For example, ``splunk-rum ios upload --path "<path-to-dsyms>"``
+   The window now shows the dSYMs/ directory, and you can drag that directory entry into a Terminal window to copy its path there for use with the ``splunk-rum`` command. 
 
 
 Upload dSYMs
@@ -52,7 +52,7 @@ To upload dSYMs use the ``splunk-rum`` CLI as follows.
 
    .. code-block:: bash
     
-    splunk-rum ios upload --path <path-to-dSYMs-directory>
+    splunk-rum ios upload --path <path-to-dSYMs>
 
 #. (Optional) Verify that your uploads succeeded:
 
@@ -79,12 +79,12 @@ Command descriptions
    * - :strong:`Command`
      - :strong:`Description`
 
-   * - ``upload --path <path-to-production-files> [optional-parameters]`` 
+   * - ``upload --path <path-to-dSYMs> [optional-parameters]`` 
      -  Upload dSYMs within the directory you specify. The directory may contain a single dSYM .zip file or multiple dSYMs, in which case this command will compress and upload all of them.
 
         Parameters:
 
-        * ``--path <path-to-production-files>`` Path to the directory containing dSYMs or a single dSYM.zip file.
+        * ``--path <path-to-dSYMs>`` Path to the directory containing dSYMs or a single ``dSYM.zip`` file. If the path has spaces in it, enclose it in double quotes. For example, ``--path "<path-to-dsyms>"``.
  
         * ``--realm <value>`` Realm for your organization. For example, us0. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
