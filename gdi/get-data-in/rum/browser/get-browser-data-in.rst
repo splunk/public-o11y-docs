@@ -11,7 +11,7 @@ Instrument browser-based web applications for Splunk RUM
    :hidden:
 
    Installation <install-rum-browser>
-   Configuration <configure-browser-instrumentation>
+   Configuration <configure-rum-browser-instrumentation>
    Manual instrumentation <manual-rum-browser-instrumentation>
    Migrate manual instrumentation <migrate-manual-instrumentation>
    Data collected <rum-browser-data-model>
