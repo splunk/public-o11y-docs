@@ -77,12 +77,12 @@ Installation
 #. Install ``splunk-rum`` in your Linux-based build environment either as:
    * A dependency of your build process, and add ``splunk-rum`` to your ``PATH``:
    
-   .. code-block:: shell
+   .. code-block:: bash
       npm install @splunk/rum-cli --global
 
    * A dependency to your existing package.json file. Note: This option is for browser applications only, not mobile applications: 
 
-   .. code-block:: shell
+   .. code-block:: bash
       npm install @splunk/rum-cli --save-dev
 
 
