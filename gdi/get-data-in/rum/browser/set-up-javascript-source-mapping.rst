@@ -90,29 +90,83 @@ Command descriptions
 
         Parameters:
 
-        * --path <path-to-production-files> Path to the directory containing source maps for your production JavaScript bundles.
+        * ``--path <path-to-production-files>`` Path to the directory containing source maps for your production JavaScript bundles.
 
-        * --realm <value>  Realm for your organization. For example, us0. You can omit this parameter and set the environment variable SPLUNK_REALM instead.
+        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
-        * --token <your-splunk-org-access-token>  API access token. You can omit this parameter and set the environment variable SPLUNK_ACCESS_TOKEN instead.
+        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
  
-        * --app-name <applicationName> Optional. The application name used in your agent configuration. This value is attached to each uploaded source map as metadata to help you to identify the source map on the Splunk RUM user interface.
+        * ``--app-name <applicationName>`` Optional. The application name used in your agent configuration. This value is attached to each uploaded source map as metadata to help you to identify the source map on the Splunk RUM user interface.
 
-        *  --app-version <applicationVersion> Optional. The application version used in your agent configuration. This value is attached to each uploaded source map as metadata to help you to identify the source map on the Splunk RUM user interface.
+        *  ``--app-version <applicationVersion>`` Optional. The application version used in your agent configuration. This value is attached to each uploaded source map as metadata to help you to identify the source map on the Splunk RUM user interface.
  
-        * --include <patterns...>  A space-separated list of glob file patterns for selecting specific source map files to upload.
+        * ``--include <patterns...>`` A space-separated list of glob file patterns for selecting specific source map files to upload.
 
-        * --exclude <patterns...>  A space-separated list of glob file patterns for selecting specific source map files to not upload.
+        * ``--exclude <patterns...>`` A space-separated list of glob file patterns for selecting specific source map files to not upload.
  
-        * --dry-run  Preview the files that will be uploaded for the given options.
+        * ``--dry-run`` Preview the files that will be uploaded for the given options.
 
-        * --debug Enable debug logs.
+        * ``--debug`` Enable debug logs.
  
-        * -h, --help Display help for this command. 
+        * ``-h, --help`` Display help for this command. 
 
 
 
 Option 2: Use the Webpack build plugin
 =====================================================================
 
-PLACEHOLDER
+If your project uses Webpack 5 as its bundling tool, you can add the Splunk RUM Webpack build plugin to your project to make it easier to support source mapping. This plugin is a separate npm artifact in the :new-page:`splunk-otel-js-web<https://github.com/signalfx/splunk-otel-js-web/tree/main>` repository. 
+
+If your project uses a different bunding tool or a different version of Webpack, use the ``splunk-rum`` CLI instead.
+
+#. Add the Splunk RUM Webpack plugin to your package.json as a dev dependency: 
+   .. code-block:: bash
+    npm install @splunk/rum-build-plugins --save-dev
+
+#. Configure your ``webpack.config.js`` to generate source maps. See :new-page:`Devtool | webpack<https://webpack.js.org/configuration/devtool/>`.
+
+#. Add the Splunk RUM Webpack plugin to your list of plugins by adding the following lines to your ``webpack.config.js``, where ``<applicationName>`` and ``<applicationVersion>`` are the same values that you used in :ref:`configure-browser-instrumentation`.
+
+   If you don't want source maps to be uploaded while you're doing local builds for your own local development, set disableUpload to true.
+
+   .. code-block:: json
+    const { SplunkRumWebpackPlugin } = require('@splunk/rum-build-plugins')
+    module.exports = {
+      ...
+        plugins: [
+            ...,
+            new SplunkRumWebpackPlugin({
+                applicationName: '<applicationName>',
+                appVersion: '<applicationVersion>',
+                sourceMaps: {
+                    token: '<your-splunk-org-access-token>',
+                    realm: '<your-splunk-observability-realm>',
+                    // Optional: conditionally set 'disabledUpload' so that file uploads
+                    // are only performed during your production builds on your CI pipeline
+                    disableUpload: <boolean>
+                }
+            }),
+        ]
+    }
+
+
+#. Verify that whenever you build your application, its minified files are automatically injected with the ``sourceMapId`` property, and that its source maps are automatically uploaded to Splunk RUM.
+
+
+
+(Optional) Add the ``sourcesContent`` property to your source map
+=====================================================================
+
+You can add  the ``sourcesContent`` property to your source map files so that Splunk RUM can pull and display the code snippet that contributed to each JavaScript error. To add this property, configure your bundler tool to generate source maps that have this property. Alternatively, if you don't want Splunk RUM to have your source code, configure your bundler tool to generate source maps that omit this property.
+
+
+
+Deploy the injected JavaScript files to your production environment
+=====================================================================
+
+Once you've uploaded your application's source maps and deployed its injected minified files to your production environment, Splunk RUM automatically converts this application's stack traces into human-readable form.
+
+.. note::
+    Make sure that the source maps that you upload to Splunk RUM match the minified files you deploy to production. To ensure this, the best practice is to integrate the splunk-rum commands into your build pipeline so that whenever you build an application, you also re-upload its source maps.
+
+
