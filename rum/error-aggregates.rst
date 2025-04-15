@@ -135,7 +135,7 @@ Upload source maps for readable stack traces
 
 The information in most raw stack traces is not fully human readable. To make your raw stack traces easier for you to read, you need to provide source maps that correspond to this browser application. Source maps enable Splunk RUM to translate raw stack traces back into a human-readable form. You can either upload source maps now ("on-demand”) or at the time that you instrument your browser application:
 
-* To upload source maps now, select Upload on this dashboard.
+* To upload source maps now, select :guilabel:`Upload` on this dashboard.
 * To upload source maps at instrumentation time, see :ref:`set-up-javascript-source-mapping`. 
 
 
