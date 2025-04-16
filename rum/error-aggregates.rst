@@ -83,7 +83,7 @@ To see session details for a specific crash:
 Explore top crashes across in Tag Spotlight 
 ------------------------------------------------------------------------------------------
 
-From the Splunk RUM overview dashboard, select :guilabel:`See all` on the Crashes and App Errors chart to open Tag Spotlight. In Tag Spotlight you can explore application based errors, metrics, and events. 
+To open Tag Spotlight from Splunk RUM's :guilabel:`APPLICATION SUMMARY DASHBOARD`, select the :guilabel:`All` tab and then select the crash or error you're interested in. In Tag Spotlight you can explore application based errors, metrics, and events. 
 
 .. image:: /_images/rum/crashes_app_errors.png
    :width: 60%
@@ -146,7 +146,7 @@ In Splunk RUM, the JavaScript errors view shows the JavaScript errors sorted by 
 
 1. Open RUM. From the left navigation panel, select :guilabel:`RUM` and :guilabel:`Browser` as the source and the application you want to monitor.  
 
-2. To open Tag Spotlight from either the Application Summary Dashboard, or Overview pages click on any metric. 
+2. To open Tag Spotlight from either the :guilabel:`APPLICATION SUMMARY DASHBOARD` or :guilabel:`Overview`, click any metric. 
 
 * For example, select :guilabel:`See all` in the metric :guilabel:`JavaScript errors(by error ID)` to explore all of the JavaScript errors in Tag Spotlight. 
 
