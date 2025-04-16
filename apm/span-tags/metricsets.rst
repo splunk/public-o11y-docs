@@ -89,13 +89,13 @@ For each metric, there is 1 metric time series (MTS) with responses ``sf_error: 
         - Histogram MMS
         - MMS (deprecated)
     *   - Request count
-         - ``<component>`` with a ``count`` function
-         - ``<component>.count``
+        - ``<component>`` with a ``count`` function
+        - ``<component>.count``
     *   - Minimum request duration
         - ``<component>`` with a ``min`` function
         - ``<component>.duration.ns.min`` 
     *   - Maximum request duration
-         - ``<component>`` with a ``max`` function
+        - ``<component>`` with a ``max`` function
         - ``<component>.duration.ns.max`` 
     *   - Median request duration
         - ``<component>`` with a ``median`` function
