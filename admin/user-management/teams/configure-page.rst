@@ -101,8 +101,8 @@ To learn about which roles can edit landing page text, see :ref:`about-team-role
 
 To edit landing page text, follow these steps:
 
-#. Select :guilabel:`Edit Description`.
+#. Select the :guilabel:`Edit` button next to the team name.
 
-#. Enter your changes in the edit box.
+#. Enter your changes in the modal.
 
 #. Select :guilabel:`Save`.
