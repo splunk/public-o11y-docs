@@ -69,6 +69,8 @@ To review services linked to the team, follow these steps:
 To review dashboards linked to the team, follow these steps: 
 
 #. To view a specific dashboard, select the dashboard name. 
+#. To view only the dashboards you created, select :guilabel:`Created by me`.
+#. Select :guilabel:`View Dashboards page` to view additional dashboards in your environment. 
 
 To review alerts associated with a detector linked to the team, follow these steps:
 
@@ -78,7 +80,7 @@ To review alerts associated with a detector linked to the team, follow these ste
 
 #. Select :guilabel:`View Detectors & SLOs page` to view additional detectors in your environment. 
 
-To learn more about linking individual objects to your team landing page, see:
+To learn more about linking services and other objects to your team landing page, see:
 
 * :ref:`admin-associate-team`
 * :ref:`admin-associate-services`
