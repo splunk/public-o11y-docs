@@ -10,9 +10,9 @@ Add dSYMs
 
 
 
-When you build your iOS application in release mode, your build process generates one or more debug symbol archives, commonly referred to simply as dSYMs. A dSYM stores debug symbols and exact offsets for a particular build of your application and its modules. With this detailed information, Splunk RUM can convert crash data for that specific build into readable reports labeled with function names and line numbers, showing what code was run, in what order, and where the crash happened. This conversion is called symbolication in iOS terminology. Different dSYMs symbolicate your applications's main application code, third-party frameworks, and system libraries.
+When you build your iOS application in release mode, your build process generates one or more debug symbol archives, commonly referred to simply as dSYMs. A dSYM stores debug symbols and exact offsets for a particular build of your application and its modules. With this detailed information, Splunk RUM can convert crash data into readable reports labeled with function names and line numbers, showing what code was run, in what order, and where the crash happened. This conversion is called symbolication in iOS terminology. By uploading your dSYMs, you enable symbolication for the corresponding application version.
 
-The ``splunk-rum`` CLI compresses dSYM directories into .zip files for you and uploads them. When you upload a zipped dSYM  to Splunk RUM, you enable Splunk RUM to symbolicate the debug symbols contained within that dSYM.  This in turn enables you to view stack traces with the names of functions and offsets into those functions to help you identify the line of code that was executing when the application crashed.
+The ``splunk-rum`` CLI compresses dSYM directories into ``.zip`` files for you and uploads them. When you upload a zipped dSYM  to Splunk RUM, you enable Splunk RUM to symbolicate the debug symbols contained within that dSYM.  This in turn enables you to view stack traces with the names of functions and offsets into those functions to help you identify the line of code that was executing when the application crashed.
 
 You can upload dSYMs from your main application code and from third-party frameworks, but not from system libraries. Splunk RUM does not yet support the symbolication of stack frames for system libraries.
 
@@ -22,8 +22,8 @@ Prerequisites
 
 * Upgrade the following Splunk components:
 
-  * :new-page:`SplunkOtelCrashReporting<https://github.com/signalfx/splunk-otel-ios-crashreporting>` :  v0.7.0 
-  * :new-page:`SplunkOtel<https://github.com/signalfx/splunk-otel-ios>` : v0.13.0
+  * :new-page:`SplunkOtelCrashReporting<https://github.com/signalfx/splunk-otel-ios-crashreporting>`:  v0.7.0 
+  * :new-page:`SplunkOtel<https://github.com/signalfx/splunk-otel-ios>`: v0.13.0
 
 * :ref:`Install the splunk-rum CLI<rum-gdi-install-cli>`.
 
