@@ -67,7 +67,7 @@ Prerequisites
 ---------------------------------------------------------------------
 
 * Install Node v18+ on your build machine.
-* Get an organization access token with an authorization scope of API token (not RUM token) and with the power role. You will save this token in an environment variable named ``SPLUNK_ACCESS_TOKEN``. 
+* Get an organization access token with an authorization scope of ``API token`` (not ``RUM token``) and with the ``power`` role. You will save this token in an environment variable named ``SPLUNK_ACCESS_TOKEN``. 
 
 
 Installation
@@ -82,7 +82,7 @@ Installation
 
         npm install @splunk/rum-cli --global
 
-   * A dependency to your existing package.json file. Note: This option is for browser applications only, not mobile applications: 
+   * A dependency to your existing ``package.json`` file. Note: This option is for browser applications only, not mobile applications: 
 
      .. code-block:: bash
 

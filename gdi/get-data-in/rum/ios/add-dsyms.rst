@@ -33,7 +33,8 @@ Find dSYMs
 
 To locate the dSYMs directory for a specific release build:
 
-#. Open Xcode Organizer (Xcode → Window → Organizer) and right-click (Command-click) on the version number of the archive for your release.
+#. Open Xcode Organizer (in Xcode, select :guilabel:`Window` and then select :guilabel:`Organizer`).
+#. Right-click (command-click) the version number of the archive for your release.
 #. Select :guilabel:`Show in Finder`. 
 #. In the Finder window that opens, right-click on the listed entry for your release, and select :guilabel:`Show Package Contents`.
    The window now shows the ``dSYMs/`` directory, and you can drag that directory entry into a Terminal window to copy its path there for use with the ``splunk-rum`` command. 
@@ -84,15 +85,15 @@ Command descriptions
 
         Parameters:
 
-        * ``--path <path-to-dSYMs>`` Path to the directory containing dSYMs or a single ``dSYM.zip`` file. If the path has spaces in it, enclose it in double quotes. For example, ``--path "<path-to-dsyms>"``.
+        * ``--path <path-to-dSYMs>`` Required. Path to the directory containing dSYMs or a single ``dSYM.zip`` file. If the path has spaces in it, enclose it in double quotes. For example, ``--path "<path-to-dsyms>"``.
  
-        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+        * ``--realm <value>`` Optional. Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
-        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
- 
-        * ``--debug`` Enable debug logs.
+        * ``--token <your-splunk-org-access-token>`` Optional. API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
 
         * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
+
+        * ``--debug`` Enable debug logs.
  
         * ``-h, --help`` Display help for this command.
        
@@ -102,14 +103,14 @@ Command descriptions
 
         Parameters:
 
-        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+        * ``--realm <value>`` Optional.  Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
-        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+        * ``--token <your-splunk-org-access-token>`` Optional. API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+
+        * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
 
         * ``--debug`` Enable debug logs.
  
-        * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
-
         * ``-h, --help`` Display help for this command. 
 
 

@@ -9,9 +9,9 @@ Add a mapping file
     :description: Your uploaded mapping file enables Splunk RUM to convert stack traces back into a human-readable form.
 
 
-When you set the ``minifyEnabled`` property to true in your Android application source code, your build process minifies, optimizes, and obfuscates the code and generates a single mapping file, ``mapping.txt``. This mapping file contains the information Splunk RUM needs to convert stack traces containing obfuscated classes and filenames back into a human readable form. This conversion is called de-obfuscation in Android.
+When you set the ``minifyEnabled`` property to true in your Android application source code, your build process minifies, optimizes, and obfuscates the code and generates a single mapping file, ``mapping.txt``. This mapping file contains the information Splunk RUM needs to convert stack traces containing obfuscated classes and filenames back into a human readable form. This conversion is called deobfuscation in Android.
 
-De-obfuscation is available for Android application crashes only. 
+Deobfuscation is available for Android application crashes only. 
 
 
  .. note::
@@ -185,9 +185,9 @@ Command descriptions
  
         * ``--token <your-splunk-org-access-token>``  Optional. API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
 
-        * ``--debug`` Enable debug logs.
-
         * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
+
+        * ``--debug`` Enable debug logs.
 
         * ``-h, --help`` Display help for this command.
      
@@ -197,13 +197,13 @@ Command descriptions
 
         Parameters:
         
-        * ``--manifest <path>`` Path to the merged or the packaged ``AndroidManifest.xml`` file that is generated when the application is built.
+        * ``--manifest <path>`` Required. Path to the merged or the packaged ``AndroidManifest.xml`` file that is generated when the application is built.
 
-        * ``--path <path>`` Path to the ``mapping.txt`` file.
+        * ``--path <path>`` Required. Path to the ``mapping.txt`` file.
 
-        * ``--realm <value>`` Realm for your organization. For example, ``us0``.  You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+        * ``--realm <value>`` Optional. Realm for your organization. For example, ``us0``.  You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
  
-        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+        * ``--token <your-splunk-org-access-token>`` Optional. API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
 
         * ``--dry-run=[true|false]`` Preview the file that will be uploaded and the parameters that will be extracted from ``AndroidManifest.xml``.
  
@@ -217,11 +217,11 @@ Command descriptions
 
         Parameters:
         
-        * ``--app-id <applicationID>`` The ``applicationId`` property in your app's ``build.gradle.kts`` file.
+        * ``--app-id <applicationID>`` Required. The ``applicationId`` property in your app's ``build.gradle.kts`` file.
 
-        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+        * ``--realm <value>`` Optional. Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
-        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+        * ``--token <your-splunk-org-access-token>`` Optional. API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
 
         * ``--dry-run=[true|false]`` Perform a trial run with no changes made. Default: ``false``.
  

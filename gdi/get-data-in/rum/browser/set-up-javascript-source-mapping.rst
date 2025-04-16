@@ -74,15 +74,15 @@ Command descriptions
 
         Parameters:
 
-        * ``--path <path-to-production-files>`` Path to the directory containing your production JavaScript files (``.js``, ``.cjs``, ``.mjs``) and source maps (``.js.map``, ``.cjs.map``, ``.mjs.map``).  The command recursively searches this directory and when it detects that a JavaScript file (such as ``main.min.js``) has a source map (such as ``main.min.js.map``), it injects a code snippet into that JavaScript file. This code snippet contains a property named ``sourceMapId`` that is needed to successfully perform automatic source mapping.
+        * ``--path <path-to-production-files>`` Required. Path to the directory containing your production JavaScript files (``.js``, ``.cjs``, ``.mjs``) and source maps (``.js.map``, ``.cjs.map``, ``.mjs.map``).  The command recursively searches this directory and when it detects that a JavaScript file (such as ``main.min.js``) has a source map (such as ``main.min.js.map``), it injects a code snippet into that JavaScript file. This code snippet contains a property named ``sourceMapId`` that is needed to successfully perform automatic source mapping.
  
-        * ``--include <patterns...>`` A space-separated list of glob file patterns for selecting specific JavaScript files to inject.
+        * ``--include <patterns...>`` Optional. A space-separated list of glob file patterns for selecting specific JavaScript files to inject.
 
-        * ``--exclude <patterns...>`` A space-separated list of glob file patterns for selecting specific JavaScript files to not inject.
+        * ``--exclude <patterns...>`` Optional. A space-separated list of glob file patterns for selecting specific JavaScript files to not inject.
  
-        * ``--debug`` Enable debug logs.
-
         * ``--dry-run=[true|false]`` Preview the files that will be injected for the given options. Default: ``false``.
+
+        * ``--debug`` Enable debug logs.
  
         * ``-h, --help`` Display help for this command.
        
@@ -94,19 +94,19 @@ Command descriptions
 
         Parameters:
 
-        * ``--path <path-to-production-files>`` Path to the directory containing source maps for your production JavaScript bundles.
+        * ``--path <path-to-production-files>`` Required. Path to the directory containing source maps for your production JavaScript bundles.
 
-        * ``--realm <value>`` Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
+        * ``--realm <value>`` Optional. Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
-        * ``--token <your-splunk-org-access-token>`` API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
+        * ``--token <your-splunk-org-access-token>`` Optional. API access token. You can omit this parameter and set the environment variable ``SPLUNK_ACCESS_TOKEN`` instead.
  
         * ``--app-name <applicationName>`` Optional. The application name used in your agent configuration. This value is attached to each uploaded source map as metadata to help you to identify the source map on the Splunk RUM user interface.
 
         *  ``--app-version <applicationVersion>`` Optional. The application version used in your agent configuration. This value is attached to each uploaded source map as metadata to help you to identify the source map on the Splunk RUM user interface.
  
-        * ``--include <patterns...>`` A space-separated list of glob file patterns for selecting specific source map files to upload.
+        * ``--include <patterns...>`` Optional. A space-separated list of glob file patterns for selecting specific source map files to upload.
 
-        * ``--exclude <patterns...>`` A space-separated list of glob file patterns for selecting specific source map files to not upload.
+        * ``--exclude <patterns...>`` Optional. A space-separated list of glob file patterns for selecting specific source map files to not upload.
  
         * ``--dry-run=[true|false]`` Preview the files that will be uploaded for the given options. Default: ``false``.
 
@@ -135,7 +135,7 @@ If your project uses a different bunding tool or a different version of Webpack,
 
    If you don't want source maps to be uploaded while you're doing local builds for your own local development, set ``disableUpload`` to true.
 
-   .. code-block:: json
+   .. code-block::
 
       const { SplunkRumWebpackPlugin } = require('@splunk/rum-build-plugins')
       module.exports = {
