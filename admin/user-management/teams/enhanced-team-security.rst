@@ -121,8 +121,8 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - No
 
   * - :strong:`Leave team`
-    - * Yes, if on a team
-      * Not applicable, if not on a team
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on
     - Yes
     - Yes
     - Not applicable: A user must be on a team to leave a team
