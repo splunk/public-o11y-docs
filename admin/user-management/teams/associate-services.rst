@@ -56,5 +56,6 @@ To remove a link to a service from the team landing page, follow these steps:
 #. Select the :guilabel:`x` to remove a service or a service attribute filter from their respective lists, then select :guilabel:`Save`.
 
 To remove a link to a service from the :guilabel:`Team page setup`, follow these steps: 
+
 #. From the team's landing page, select the :guilabel:`Team details` button, and then select :guilabel:`Edit page`.
 #. On the :guilabel:`Team page setup` page, go to the :guilabel:`Services` section. Select the :guilabel:`x` to remove a service or a service attribute filter from their respective lists. Your changes will be reflected on the team landing page.

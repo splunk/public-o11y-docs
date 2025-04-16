@@ -63,11 +63,13 @@ To remove a link between a detector and a team, you need to have write permissio
 You can remove the link between a detector and a team when you are viewing the :guilabel:`Detectors` tab on the :guilabel:`Dashboards & SLOs` page or when you are viewing a specific detector.
 
 To remove the link between a detector and a team on the , follow these steps:
+
 #. From the :guilabel:`Actions` menu for the detector, select :guilabel:`Links to teams`.
 #. Select the :guilabel:`x` to remove a team from the linked teams list, then select :guilabel:`Done`.
 #. If the team is a notification recipient for the detector, Splunk Observability Cloud asks if you want to stop sending notifications to the team. Select :guilabel:`Yes` to remove the team as a recipient from each detector rule. Select :guilabel:`No` to leave all recipients as is.
 
 To remove a link to detector from the :guilabel:`Team page setup`, follow these steps: 
+
 #. From the team's landing page, select the :guilabel:`Team details` button, and then select :guilabel:`Edit page`.
 #. On the :guilabel:`Team page setup` page, go to the :guilabel:`Detectors` section. Select the :guilabel:`x` to remove a detector. Your changes will automatically be reflected on the landing page.
 
@@ -130,7 +132,6 @@ To link a dashboard group to a team from the dashboard group:
 #. Select the team you want to link to from the list.
 
 #. Select :guilabel:`Done`.
-
 
 .. _remove-link-dashboard-group-team:
 

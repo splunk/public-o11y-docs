@@ -79,8 +79,10 @@ To review alerts associated with a detector linked to the team, follow these ste
 #. Select :guilabel:`View Detectors & SLOs page` to view additional detectors in your environment. 
 
 To learn more about linking individual objects to your team landing page, see:
-* :ref:`admin-associate-team`.
-* 
+
+* :ref:`admin-associate-team`
+* :ref:`admin-associate-services`
+  
 .. _edit-landing-page-text:
 
 Edit the landing page text
