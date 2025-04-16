@@ -69,7 +69,7 @@ To see crashes from a specific mobile application:
 View session details
 ------------------------------------------------------------------------------------------
 
-The session details pane lists every session ID (span) that belongs to the user session you select. It also displays the entire timeline of the user session so that you have more insight into the events leading up to a crash. For example, you can see which views were loaded, and what requests were made.
+The session details pane lists every session ID (span) that belongs to the user session you select. It also displays the entire timeline of the user session so that you have more insight into the events leading up to a crash. For example, you can see which views were loaded and what requests were made.
 
 To see session details for a specific crash:
 
