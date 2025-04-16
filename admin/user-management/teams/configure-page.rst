@@ -84,7 +84,7 @@ To learn more about linking services and other objects to your team landing page
 
 * :ref:`admin-associate-team`
   
-* :ref:`admin-associate-services`
+* :ref:`admin-associate-service`
     
 .. _edit-landing-page-text:
 
