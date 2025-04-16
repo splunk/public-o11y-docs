@@ -228,9 +228,6 @@ The Android RUM agent adds the following crash reporting attributes to spans tha
    * - ``component``
      - String
      - Always ``crash``.
-   * - ``status``
-     - String
-     - Always ``Error``.
    * - ``service.application_id``
      - String
      - Application ID of the app: Refer to definition of ``applicationId`` in the :new-page:`Android Studio developer documentation <https://developer.android.com/build/configure-app-module#set-application-id>`.

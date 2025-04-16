@@ -249,9 +249,6 @@ The iOS RUM library adds the following crash reporting attributes to spans that 
    * - ``component``
      - String
      - Always ``crash``.
-   * - ``status``
-     - String
-     - Always ``Error``.
    * - ``crash.timestamp``
      - NSDate
      - Date and time when the crash report is generated.
