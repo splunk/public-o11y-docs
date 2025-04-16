@@ -70,8 +70,6 @@ To review dashboards linked to the team, follow these steps:
 
 #. To view a specific dashboard, select the dashboard name. 
 
-#. 
-
 To review alerts associated with a detector linked to the team, follow these steps:
 
 #. To see all active alerts for a specific severity level, select the severity. You see active alerts for detectors linked to the team, filtered by the severity level you selected.
