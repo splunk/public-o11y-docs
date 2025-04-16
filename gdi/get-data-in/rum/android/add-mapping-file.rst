@@ -174,7 +174,7 @@ Command descriptions
 
         * ``--path <path>`` Required. Path to the ``mapping.txt`` file. 
  
-        * ``--app-id <applicationID>`` Required. The ``applicationId`` property in your application's ``build.gradle.kts`` file. 
+        * ``--app-id <applicationID>`` Required. The ``applicationId`` property in your application's ``build.gradle`` file. 
 
         * ``--version-code <int>`` Required. The ``versionCode`` property of your application. 
  
@@ -216,7 +216,7 @@ Command descriptions
 
         Parameters:
         
-        * ``--app-id <applicationID>`` Required. The ``applicationId`` property in your app's ``build.gradle.kts`` file.
+        * ``--app-id <applicationID>`` Required. The ``applicationId`` property in your app's ``build.gradle`` file.
 
         * ``--realm <value>`` Optional. Realm for your organization. For example, ``us0``. You can omit this parameter and set the environment variable ``SPLUNK_REALM`` instead.
 
