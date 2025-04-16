@@ -16,7 +16,7 @@ If you are using Kubernetes, consider the
 expose cAdvisor on a network port, even though they are running it
 within Kubelet.
 
-.. :note:: The Splunk Distribution of OpenTelemetry Collector has limitations in managed environments like Amazon EKS. 
+.. :note:: The Splunk Distribution of OpenTelemetry Collector has limitations in managed environments such as Amazon EKS. 
    For example, the collector cannot collect specific cgroup metrics exposed by cAdvisor, such as ``container_cpu_cfs_*``. 
    The ``kubeletstats`` receiver also does not expose these metrics by default. 
 
