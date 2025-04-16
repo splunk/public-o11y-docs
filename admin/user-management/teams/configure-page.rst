@@ -83,8 +83,9 @@ To review alerts associated with a detector linked to the team, follow these ste
 To learn more about linking services and other objects to your team landing page, see:
 
 * :ref:`admin-associate-team`
-* :ref:`admin-associate-services`
   
+* :ref:`admin-associate-services`
+    
 .. _edit-landing-page-text:
 
 Edit the landing page text
