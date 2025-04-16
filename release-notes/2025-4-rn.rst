@@ -1,0 +1,24 @@
+.. _2025-4-rn:
+
+*********************
+April 2025
+*********************
+
+Splunk Observability Cloud released the following new features and enhancements in April 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+
+.. _2025-4-22-rn:
+
+April 22, 2025 release
+=======================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - 
+     - 
+
