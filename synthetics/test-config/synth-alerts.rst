@@ -105,6 +105,7 @@ In the detector dialog box, enter the following fields:
     * :guilabel:`Orientation`: Only available for uptime metric. Specify whether the metric must fall below or exceed the threshold to trigger the alert.
     * :guilabel:`Violates threshold`: How many times the metric must violate the threshold to trigger the alert.
     * :guilabel:`Split by location`: Select whether to split the detector by test location. If you don't filter by location, the detector monitors the average value across all locations. 
+    * :guilabel:`Auto-clear alerts`: Select the check box and a time duration from the list if you want active alerts to automatically clear after the metric hasn't reported new data for the specified period. To learn more, see :ref:`auto-clearing-alerts`.
 
 #. Use the severity selector to select the severity of the alert.
 #. Add recipients.
