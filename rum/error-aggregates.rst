@@ -1,7 +1,7 @@
 .. _error-aggregates:
 
 ******************************************************************************************
-Error monitoring and crash aggregation in Tag spotlight 
+Error monitoring and crash aggregation in Tag Spotlight 
 ******************************************************************************************
 
 
