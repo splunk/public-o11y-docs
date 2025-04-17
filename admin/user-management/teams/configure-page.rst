@@ -36,7 +36,7 @@ To see the landing page for any team, follow these steps:
 
 #. (Optional) Select :guilabel:`Join team` to add yourself as a member of the team.
 
-Alternatively, you can view the landing page for teams you are already part of on the Splunk Observability Cloud homepage. The teams you are part of display as a tab on the homepage. 
+Alternatively, you can view the landing page for teams you are already part of on the Splunk Observability Cloud home page. The teams you are part of display as a tab on the home page. 
 
 Set up team landing page content
 ============================================================================
