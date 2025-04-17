@@ -22,6 +22,7 @@ Release Notes for the Splunk Add-On for the OpenTelemetry Collector
       - Details
 
    *  - 1.4.2
+      - April 17, 2025
       - :new-page:`https://github.com/signalfx/splunk-otel-collector/releases/tag/v0.122.0`
       - Uses v0.122.0 of the Splunk distribution of the OpenTelemetry Collector
 
