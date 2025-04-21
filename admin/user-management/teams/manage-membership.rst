@@ -54,7 +54,7 @@ To learn which roles can change the name of a team, see :ref:`about-team-roles`.
 
 To change the team name, follow these steps:
 
-#. In the left navigation menu, select :guilabel:`Settings` then :guilabel:`Teams management`.
+#. In the left navigation menu, select :guilabel:`Settings`, then :guilabel:`Teams management`.
 
 #. A table of current teams appears in the main panel.
 
