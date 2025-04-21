@@ -111,7 +111,7 @@ After you choose which type of test you want to use, follow these steps to set u
 Get audit logs
 ============================================================
 
-Use the Synthetics API to retrieve audit logs. These logs provide a detailed history of any changes made to Synthetics resources, such as tests, downtime configurations, TOTP tokens, private locations, and more. Audit logs enable you to track every change within your environment for regulatory and compliance needs, and to identify the root cause of performance issues or failures. 
+Use the Synthetics API to retrieve audit logs. These logs provide a detailed history of any changes made to Synthetics resources, such as tests, downtime configurations, TOTP tokens, private locations, and more. Audit logs enable you to track every change within your environment for regulatory and compliance needs and to identify the root cause of performance issues or failures. 
 
 
 
