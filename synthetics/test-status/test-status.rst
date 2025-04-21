@@ -41,7 +41,7 @@ Splunk Synthetics updates the current state of each test every time you load the
      - :strong:`Description`
 
    * - Active
-     - The test is running. Data is being collected at the set interval. You can view this data on the :guilabel:`Test History` page. 
+     - The test is running. Data is being collected at the set interval. You can view this data on the :guilabel:`Test Summary` page. 
 
    * - Paused
      - The test is paused. To resume data collection, unpause it.
