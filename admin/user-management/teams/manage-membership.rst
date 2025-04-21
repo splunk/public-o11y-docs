@@ -92,7 +92,7 @@ For the roles that can add and remove team members, see :ref:`about-team-roles`.
 
 To remove team members, follow these steps:
 
-#. In the left navigation menu, select :guilabel:`Settings` then :guilabel:`Teams management`. Alternatively, you can also add members by selecting :guilabel:`Team details` from the team's landing page and select :guilabel:`Manage team`.
+#. In the left navigation menu, select :guilabel:`Settings`, then :guilabel:`Teams management`. Alternatively, you can also add members by selecting :guilabel:`Team details` from the team's landing page and select :guilabel:`Manage team`.
 
 #. A table of current teams appears in the main panel.
 
