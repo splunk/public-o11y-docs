@@ -29,7 +29,7 @@ When you link services to a team, you get the following features:
 Link a service to a team
 --------------------------------------------------------------------------------
 
-You can link a service to a team from the team’s landing page, or the :guilabel:`Team page setup`. To link a service to a team, follow these steps: 
+You can link a service to a team from the team’s landing page, or the :guilabel:`Team page setup`. 
 
 To link a service to a team from the landing page, follow these steps:
 

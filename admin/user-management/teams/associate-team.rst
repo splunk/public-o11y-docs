@@ -21,7 +21,7 @@ When you link detectors to a team, you get the following features:
 
 * The team landing page displays a list of recent alerts.
 
-* On the :guilabel:`Dashboards & SLOs` page, users can use filters to display only detectors linked to a specific team.
+* On the :guilabel:`Detectors & SLOs` page, users can use filters to display only detectors linked to a specific team.
 
 .. note:: You can manually add a team as a notification recipient for any detector. You don't have to link the detector to the team.
 
@@ -60,9 +60,9 @@ Remove the link between a detector and a team
 
 To remove a link between a detector and a team, you need to have write permission for the detector. To learn more, see :ref:`detector-manage-permissions`.
 
-You can remove the link between a detector and a team when you are viewing the :guilabel:`Detectors` tab on the :guilabel:`Dashboards & SLOs` page or when you are viewing a specific detector.
+You can remove the link between a detector and a team when you are viewing the :guilabel:`Detectors` tab on the :guilabel:`Detectors & SLOs` page or when you are viewing a specific detector.
 
-To remove the link between a detector and a team on the , follow these steps:
+To remove the link between a detector and a team on the Detectors page, follow these steps:
 
 #. From the :guilabel:`Actions` menu for the detector, select :guilabel:`Links to teams`.
 #. Select the :guilabel:`x` to remove a team from the linked teams list, then select :guilabel:`Done`.

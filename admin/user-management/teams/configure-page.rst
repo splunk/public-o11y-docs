@@ -72,7 +72,7 @@ To review dashboards linked to the team, follow these steps:
 #. To view only the dashboards you created, select :guilabel:`Created by me`.
 #. Select :guilabel:`View Dashboards page` to view additional dashboards in your environment. 
 
-To review alerts associated with a detector linked to the team, follow these steps:
+You can review alerts associated with a detector linked to the team in different ways:
 
 #. To see all active alerts for a specific severity level, select the severity. You see active alerts for detectors linked to the team, filtered by the severity level you selected.
 
