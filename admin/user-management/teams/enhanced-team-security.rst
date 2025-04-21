@@ -121,10 +121,11 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - No
 
   * - :strong:`Leave team`
-    - * Yes, if on a team
+    - * Yes, if on a team 
       * Not applicable, if not on a team
     - Yes
-    - Yes
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on
     - Not applicable: A user must be on a team to leave a team
 
 Permission to link a detector to a team is based on the detector's permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
