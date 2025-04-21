@@ -18,7 +18,7 @@ To create a team, you must be a Splunk Observability Cloud administrator.
 
 To create a team, follow these steps:
 
-#. In the left navigation menu, select :guilabel:`Settings` then :guilabel:`Teams management`.
+#. In the left navigation menu, select :guilabel:`Settings`, then :guilabel:`Teams management`.
 
 #. Select :guilabel:`Create team`.
 
