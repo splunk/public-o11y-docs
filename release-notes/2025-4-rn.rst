@@ -26,9 +26,9 @@ April 22, 2025 release
    * - Curated APM teams landing page updates for the Splunk Observability Cloud homepage
      - View your Splunk APM services, dashboards, top alerts, and the team members of every team you are part of from the teams landing page. Preview potential teams by selecting :guilabel:`View all teams` to join teams you're not yet a member of. See :ref:`admin-configure-page` to learn more.
    * - Guided setup updates for getting GCP data in
-     - Use a streamlined the setup for GCP integrations in Splunk Observability Cloud. It also includes an additional authentication option for Workload Identity Federation. See :ref:`gcp-connect`to learn more. 
+     - Use a streamlined the setup for GCP integrations in Splunk Observability Cloud. It also includes an additional authentication option for Workload Identity Federation. See :ref:`gcp-connect` to learn more. 
    * - Detector tags and issue detection
-     - Use the refreshed the detectors inventory page to manage your detectors. Tag detectors for better organization, quickly identify if a detector is impacted by archived metrics or has exceeded the MTS limit. See :ref:`view-detectors:` and :ref:`detector-tags` to learn more.
+     - Use the refreshed the detectors inventory page to manage your detectors. Tag detectors for better organization, quickly identify if a detector is impacted by archived metrics or has exceeded the MTS limit. See :ref:`view-detectors` and :ref:`detector-tags` to learn more.
    * - Page header updates
      - Use cohesive page headers to understand where you are in are in Splunk Observability Cloud. Use utilities that trigger menu dropdowns, like profile, help, and notification hub icons.
    * - Splunk APM Always-On Profiling for GCP
