@@ -23,7 +23,7 @@ April 22, 2025 release
      - Capture and export detailed history of any changes made to the Synthetics platform (for example, any resources managed by Synthetics API).  Track and record every change within the environment, maintain detailed logs of all activity for regulatory and compliance needs, and identify root cause of performance issues or failures by reviewing historical changes and actions. 
    * - Splunk Synthetic Monitoring bulk pause, play, and delete tests (UI and API)
      - Play, pause, and delete a group of synthetic tests in bulk in the UI or through API calls. See :ref:`test-status` to learn more. 
-   * - Curated APM teams landing page updates for the Splunk Observability Cloud homepage
+   * - Curated APM teams landing page updates
      - View your Splunk APM services, dashboards, top alerts, and the team members of every team you are part of from the teams landing page. Preview potential teams by selecting :guilabel:`View all teams` to join teams you're not yet a member of. See :ref:`admin-configure-page` to learn more.
    * - Guided setup updates for getting GCP data in
      - Use a streamlined the setup for GCP integrations in Splunk Observability Cloud. It also includes an additional authentication option for Workload Identity Federation. See :ref:`gcp-connect` to learn more. 
