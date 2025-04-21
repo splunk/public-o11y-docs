@@ -32,7 +32,7 @@ To see the landing page for any team, follow these steps:
 
 #. A table of current teams appears in the main panel.
 
-#. Select a team name to view its landing page, or select :guilabel:`Go to team page` from the Actions menu.
+#. Select a team name to view its landing page, or select :guilabel:`Go to team page` from the :guilabel:`Actions` menu.
 
 #. (Optional) Select :guilabel:`Join team` to add yourself as a member of the team.
 
