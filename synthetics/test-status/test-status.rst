@@ -12,39 +12,60 @@ Test status
 
    test-kpis
    
-========================================================================================
-Test state and current status
-========================================================================================
-You can use the play and pause buttons in the more menu (|more|) of your tests to pause or resume data collection. 
 
-The current status of a test is updated every time you load the :guilabel:`Test Overview` page in Splunk Synthetic Monitoring. The following table describes the possible status types for each test. 
+The Splunk Synthetics landing page is the :guilabel:`Test Overview`. This page displays a paginated table of all synthetic tests that you have access to. Each page in the table contains a maximum of 20 tests.
+
+
+Filter tests
+========================================================================================
+
+To filter the table, select a test type, location, key-value pair, and more.
+
+.. image:: /_images/synthetics/syn-filter-test.png
+      :width: 80%
+      :alt: This image shows the filter env:prod for all tests on the Synthetics homepage.
+
+
+
+View test state
+========================================================================================
+
+Splunk Synthetics updates the current state of each test every time you load the :guilabel:`Test Overview` page. The following table describes the possible values for the :guilabel:`Test state` column.
+
 
 .. list-table::
    :header-rows: 1
    :widths: 20, 80
 
-   * - :strong:`Current status`
+   * - :strong:`Test state`
      - :strong:`Description`
 
-   * - Pending
-     - Splunk Synthetic Monitoring is still retrieving the status of this test. 
+   * - Active
+     - The test is running. Data is being collected at the set interval. You can view this data on the :guilabel:`Test Summary` page. 
 
-   * - Available
-     - The test is functioning properly. If the test is active, data is being collected at the set interval and can be viewed in the :guilabel:`Test History` page. If the test is paused, it can be unpaused and will resume collecting data.
-
-   * - No Data 
-     - The test isn't currently collecting data. 
-
-   * - Failure
-     - The test encountered a failure. 
+   * - Paused
+     - The test is paused. To resume data collection, unpause it.
 
 
 
+Single actions
 ========================================================================================
-Filter tests
-========================================================================================
-You can filter by test type, key-value pairs, and more. 
 
-.. image:: /_images/synthetics/syn-filter-test.png
-      :width: 60%
-      :alt: This image shows the filter env:prod for all tests on the Synthetic homepage..
+To perform an action on a single test, select the vertical dot menu (|verticaldots|) in its rightmost column. Supported actions are play and pause.
+
+
+Bulk actions
+========================================================================================
+
+You can perform bulk actions on multiple tests simultaneously. Supported actions are play, pause, and delete. No special permissions are required for bulk actions.
+
+To perform a bulk action on tests:
+
+#. Select the tests to change. You can do this by either: 
+
+   * Selecting the check box next in the leftmost column of one or more tests.
+   * Selecting the check box in the table header. This check box selects all tests on the current page (a maximum of 20 tests). You can scroll through the pages to select more tests. The maximum you can select at one time is 500. 
+
+#. At the top of the table, select the desired action: :guilabel:`Play`, :guilabel:`Pause`, or :guilabel:`Delete`.
+   If the entire bulk action succeeds, the :guilabel:`Test state` column displays the new state of each of the affected tests. 
+
