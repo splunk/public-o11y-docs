@@ -156,9 +156,9 @@ You can create dashboards for both web and mobile metrics. To see a list of the 
 
 To create charts and dashboard for your RUM alerts and detectors, see:   
 
-* :ref:`Link detectors to charts <linking-detectors>` in Alerts and Detectors.    
+* :ref:`Link detectors to charts <linking-detectors>` in Alerts, detectors, and SLO.    
 
-* :ref:`Dashboards in Splunk Observability Cloud <dashboards>` in Dashboards and Charts. 
+* :ref:`Dashboards in Splunk Observability Cloud <dashboards>` in Dashboards and charts. 
 
 
 
