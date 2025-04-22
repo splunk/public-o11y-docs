@@ -21,8 +21,6 @@ April 22, 2025 release
      - Description
    * - Splunk Synthetic Monitoring audit logs
      - Use the Synthetics API to retrieve audit logs. These logs provide a detailed history of any changes made to Synthetics resources, such as tests, downtime configurations, TOTP tokens, private locations, and more. Audit logs enable you to track every change within your environment for regulatory and compliance needs, and to identify the root cause of performance issues or failures.
-   * - Splunk Synthetic Monitoring bulk pause, play, and delete tests (UI and API)
-     - Play, pause, or delete multiple synthetic tests through the UI or through API calls. See :ref:`test-status` to learn more.
    * - Curated APM teams landing page updates
      - View your Splunk APM services, dashboards, top alerts, and the team members of every team you are part of from the teams landing page. Preview potential teams by selecting :guilabel:`View all teams` to join teams you're not yet a member of. See :ref:`admin-configure-page` to learn more.
    * - Guided setup updates for getting GCP data in
