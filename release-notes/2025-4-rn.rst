@@ -20,15 +20,15 @@ April 22, 2025 release
    * - New feature or enhancement
      - Description
    * - Splunk Synthetic Monitoring audit logs
-     - Capture and export detailed history of any changes made to the Synthetics platform (for example, any resources managed by Synthetics API).  Track and record every change within the environment, maintain detailed logs of all activity for regulatory and compliance needs, and identify root cause of performance issues or failures by reviewing historical changes and actions. 
+     - Use the Synthetics API to retrieve audit logs. These logs provide a detailed history of any changes made to Synthetics resources, such as tests, downtime configurations, TOTP tokens, private locations, and more. Audit logs enable you to track every change within your environment for regulatory and compliance needs, and to identify the root cause of performance issues or failures.
    * - Splunk Synthetic Monitoring bulk pause, play, and delete tests (UI and API)
-     - Play, pause, and delete a group of synthetic tests in bulk in the UI or through API calls. See :ref:`test-status` to learn more. 
+     - Play, pause, or delete multiple synthetic tests through the UI or through API calls. See :ref:`test-status` to learn more.
    * - Curated APM teams landing page updates
      - View your Splunk APM services, dashboards, top alerts, and the team members of every team you are part of from the teams landing page. Preview potential teams by selecting :guilabel:`View all teams` to join teams you're not yet a member of. See :ref:`admin-configure-page` to learn more.
    * - Guided setup updates for getting GCP data in
      - Use a streamlined the setup for GCP integrations in Splunk Observability Cloud. It also includes an additional authentication option for Workload Identity Federation. See :ref:`gcp-connect` to learn more. 
    * - Detector tags and issue detection
-     - Use the refreshed the detectors inventory page to manage your detectors. Tag detectors for better organization, quickly identify if a detector is impacted by archived metrics or has exceeded the MTS limit. See :ref:`view-detectors` and :ref:`detector-tags` to learn more.
+     - Use the updated detectors list view to manage detectors and quickly identify detectors using archived metrics or exceeding the MTS limit. Tag and assign teams to detectors for better organization. See :ref:`view-detectors`, :ref:`tag-a-detector`, and :ref:`link-teams-to-a-detector` to learn more
    * - Page header updates
      - Use cohesive page headers to understand where you are in are in Splunk Observability Cloud. Use utilities that trigger menu dropdowns, like profile, help, and notification hub icons.
    * - Splunk APM Always-On Profiling for GCP
