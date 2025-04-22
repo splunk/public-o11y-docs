@@ -32,4 +32,4 @@ April 22, 2025 release
    * - Splunk APM Always-On Profiling for GCP
      - Use Splunk APM Always-On Profiling in Google Cloud Platform (GCP) realms. 
    * - GCP Archived Metrics
-     - Use Archived Metrics for GCP deployments. customers deployed on GCP. Use Archived Metrics to route metric data into a low-cost cold storage. 
+     - Use Archived Metrics for GCP deployments. Customers deployed on GCP can use Archived Metrics to route metric data into a low-cost cold storage. See :ref:`archived-metrics-intro` to learn more.
