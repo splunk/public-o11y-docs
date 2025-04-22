@@ -380,6 +380,8 @@ You can tag detectors from the list view. To see a list of detectors and add tag
 #. Enter tags for the detector. You can add no more than 20 tags per detector.
 #. Select :guilabel:`Save`.
 
+.. _link-teams-to-a-detector:
+
 Link teams to a detector
 =============================================================================
 
