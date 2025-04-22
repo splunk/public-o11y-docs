@@ -142,9 +142,9 @@ The matching condition for the second rule, which you must position below the fi
 
 Rule processing order
 ===================================
-Alert Rules consider three criteria for the order in which they'll be processed.
-1. Top-to-bottom order of the alert rules
-2. The optional :guilabel:`Stop after this rule has been applied` setting on each rule
-3. Rules with Routing Key matching via the :guilabel:`Associated routing key` selector
+Alert Rules uses three criteria to determine the processing order:
+* Top-to-bottom order of the alert rules
+* The optional :guilabel:`Stop after this rule has been applied` setting on each rule
+* Rules with a matching routing key based on the :guilabel:`Associated routing key` 
 
-For each alert that is ingested, all rules without an :guilabel:`Associated routing key` match will first process in top-to-bottom order.  If a rule matches with the :guilabel:`Stop after this rule has been applied` setting, it will stop the application of alert rules for that alert.  Lastly, rules with a specific routing key match via the :guilabel:`Associated routing key` selector will apply.  Having these types of rules apply last allows them to match on the final routing key of an alert in case this value is changed by a different alert rule.
+For each ingested alert, all rules without a matching :guilabel:`Associated routing key` will process based on the top-to-bottom order.  If a rule matches with the :guilabel:`Stop after this rule has been applied` setting, it will stop the application of alert rules for that alert.  Lastly, rules with a specific matching routing key based on the :guilabel:`Associated routing key` are applied. These rules are applied last so they can match on the final routing key of an alert, in case this value is changed by a different alert rule.
