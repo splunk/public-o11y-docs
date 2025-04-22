@@ -28,7 +28,7 @@ April 22, 2025 release
    * - Guided setup updates for getting GCP data in
      - Use a streamlined the setup for GCP integrations in Splunk Observability Cloud. It also includes an additional authentication option for Workload Identity Federation. See :ref:`gcp-connect` to learn more. 
    * - Detector tags and issue detection
-     - Use the updated detectors list view to manage detectors and quickly identify detectors using archived metrics or exceeding the MTS limit. Tag and assign teams to detectors for better organization. See :ref:`view-detectors`, :ref:`detector-tags`, and :ref:`link-teams-to-a-detector` to learn more
+     - Use the updated detectors list view to manage detectors and quickly identify detectors using archived metrics or exceeding the MTS limit. Tag and assign teams to detectors for better organization. See :ref:`view-detectors`, :ref:`detector-tags`, and :ref:`link-teams-to-a-detector` to learn more.
    * - Splunk APM Always-On Profiling for GCP
      - Use Splunk APM Always-On Profiling in Google Cloud Platform (GCP) realms. 
    * - GCP Archived Metrics
