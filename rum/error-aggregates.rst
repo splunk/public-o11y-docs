@@ -105,13 +105,9 @@ The information in most raw crash stack traces is not fully human-readable. To m
 JavaScript error aggregation 
 ==========================================================================================
 
-Splunk RUM's :guilabel:`APPLICATION SUMMARY DASHBOARD` groups errors by platform:
+Splunk RUM's :guilabel:`APPLICATION SUMMARY DASHBOARD` groups errors by error ID. Each group's error ID is unique. For more information about the error ID, see :ref:`about-error-id`.
 
-* Browser applications each have their own section.
-* Android applications are grouped by error ID.
-* iOS apps are grouped by error ID.
-
-Each error group has a unique error ID. The JavaScript Errors metric in RUM displays JavaScript errors (grouped by error ID) which occur most often in your applications. The error ID is created by hashing the associated stack trace, error message, and error type. When you drill into an error, you can see the error type, the error message, associated stack trace, and the trend of the error frequency. For more information about the error ID, see :ref:`about-error-id`.
+The JavaScript Errors metric in RUM displays JavaScript errors (grouped by error ID) which occur most often in your applications. The error ID is created by hashing the associated stack trace, error message, and error type. When you drill into an error, you can see the error type, the error message, associated stack trace, and the trend of the error frequency. For more information about the error ID, see :ref:`about-error-id`.
 
 To see errors from a specific browser application:
 
