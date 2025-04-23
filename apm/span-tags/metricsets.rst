@@ -92,7 +92,7 @@ MMS are available for the APM components listed in the following table. Each MMS
        * ``sf_error``
      - No
 
-Monitoring MetricSets in APM are generated as histogram metrics. Histogram metrics represent a distribution of measurements or metrics, with complete percentile data available. Data is distributed into equally sized intervals, allowing you to compute percentiles across multiple services, and aggregate datapoints from multiple metric time series. Histogram metrics provide an advantage over other metric types when calculating percentiles, such as the p90 percentile for a single MTS. See more in :ref:`metric-types`. For histogram MMS, there is a single metric for each component.
+Monitoring MetricSets in APM are generated as histogram metrics. Histogram metrics represent a distribution of measurements or metrics, with complete percentile data available. Data is distributed into equally sized intervals, allowing you to compute percentiles across multiple services and aggregate datapoints from multiple metric time series. Histogram metrics provide an advantage over other metric types when calculating percentiles, such as the p90 percentile for a single MTS. See more in :ref:`metric-types`. For histogram MMS, there is a single metric for each component.
 
 Previously, MMS were classified as either a counter or gauge metric type. The previous MMS included 6 metrics for each component. 
 
