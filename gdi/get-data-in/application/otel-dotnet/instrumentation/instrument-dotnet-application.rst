@@ -180,8 +180,6 @@ Windows
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
-#. (Optional) If needed, uninstall the SignalFx Instrumentation for .NET. See :ref:`uninstall-dotnet-sfx`.
-
 #. Download and install the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: powershell
@@ -305,8 +303,6 @@ Linux
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
-#. (Optional) If needed, uninstall the SignalFx Instrumentation for .NET. See :ref:`uninstall-dotnet-sfx`.
-
 #. Download and install the installation script of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: shell
@@ -362,6 +358,8 @@ SQL statements might contain sensitive information. To configure this behavior, 
 * ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT``
 * ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT``
 * ``OTEL_DOTNET_AUTO_ORACLEMDA_SET_DBSTATEMENT_FOR_TEXT``
+
+For more details on enabling Database Query Performance, visit :ref:`turn-on-db-perf`.
 
 .. _docker-install-otel-dotnet:
 

@@ -1,0 +1,33 @@
+.. _2025-4-rn:
+
+*********************
+April 2025
+*********************
+
+Splunk Observability Cloud released the following new features and enhancements in April 2025. This is not an exhaustive list of changes in the observability ecosystem. For a detailed breakdown of changes in versioned components, see the :ref:`list of changelogs <changelogs>`.
+
+
+.. _2025-4-22-rn:
+
+April 22, 2025 release
+=======================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 2
+   :width: 100%
+
+   * - New feature or enhancement
+     - Description
+   * - Splunk Synthetic Monitoring audit logs
+     - Use the Synthetics API to retrieve audit logs. These logs provide a detailed history of any changes made to Synthetics resources, such as tests, downtime configurations, TOTP tokens, private locations, and more. Audit logs enable you to track every change within your environment for regulatory and compliance needs, and to identify the root cause of performance issues or failures.
+   * - Curated APM teams landing page updates
+     - View your Splunk APM services, dashboards, top alerts, and the team members of every team you are part of from the teams landing page. Preview potential teams by selecting :guilabel:`View all teams` to join teams you're not yet a member of. See :ref:`admin-configure-page` to learn more.
+   * - Guided setup updates for getting GCP data in
+     - Use a streamlined the setup for GCP integrations in Splunk Observability Cloud. It also includes an additional authentication option for Workload Identity Federation. See :ref:`gcp-connect` to learn more. 
+   * - Detector tags and issue detection
+     - Use the updated detectors list view to manage detectors and quickly identify detectors using archived metrics or exceeding the MTS limit. Tag and assign teams to detectors for better organization. See :ref:`view-detectors`, :ref:`detector-tags`, and :ref:`link-teams-to-a-detector` to learn more.
+   * - Splunk APM Always-On Profiling for GCP
+     - Use Splunk APM Always-On Profiling in Google Cloud Platform (GCP) realms. 
+   * - GCP Archived Metrics
+     - Use Archived Metrics for GCP deployments. Customers deployed on GCP can use Archived Metrics to route metric data into a low-cost cold storage. See :ref:`archived-metrics-intro` to learn more.

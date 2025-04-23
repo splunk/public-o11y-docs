@@ -32,6 +32,7 @@ Splunk Observability Cloud stores MMS for 13 months by default.
 
 .. _default-mms:
 
+
 Available default MMS metrics and dimensions
 -----------------------------------------------
 
@@ -122,7 +123,6 @@ Previously, MMS were classified as either a counter or gauge metric type. The pr
    * - Percentile request duration
      - ``<component>`` with a ``percentile`` function and a percentile ``value``
      - ``<component>.duration.ns.p99``
-
 
 Example metrics in APM
 ---------------------------------------------

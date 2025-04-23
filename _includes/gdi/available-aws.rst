@@ -1,6 +1,8 @@
 .. note:: For trace monitoring see :ref:`apm-gdi`.
 
-You can collect metrics and metadata from the following AWS services:
+You can collect metrics and metadata out-of-the-box from the AWS services listed on this page. 
+
+You can also collect data from any custom service you've created in AWS, or from any namespace defined by AWS that Splunk Observability Cloud doesn't support by default and is not on this list. You can select which custom services to monitor at the Splunk Observability Cloud UI or :new-page:`configure them using the API <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview#Specify-AWS-namespaces>`.
 
 .. list-table::
   :header-rows: 1
@@ -371,12 +373,22 @@ You can collect metrics and metadata from the following AWS services:
   * - AWS/SageMaker
     - Amazon SageMaker
     - :strong:`X`
-    - 
+    - :strong:`X`
 
   * - AWS/sagemaker/Endpoints
     - Amazon SageMaker Endpoints
     - :strong:`X`
-    - 
+    - :strong:`X`
+
+  * - AWS/sagemaker/InferenceComponents
+    - Amazon SageMaker Inference Components
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/sagemaker/InferenceRecommendationsJobs
+    - Amazon SageMaker Inference Recommendations Jobs
+    - :strong:`X`
+    - :strong:`X`
 
   * - AWS/sagemaker/TrainingJobs
     - Amazon SageMaker Training Jobs
@@ -494,7 +506,7 @@ The following applies:
 #. EC2 tags & properties only
 #. Collected by the Splunk Distribution of the Collector for Kubernetes
 
-The following applies to GovCloud regions:
+If you're in a GovCloud region the following applies:
 
 * Metric sync in GovCloud regions is limited to namespaces supported by AWS. Verify the specific namespaces available in your GovCloud region in the official AWS documentation :new-page:`Services in AWS GovCloud (US) Regions <https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/using-services.html>`.
 * AWS doesn't currently provide FIPS-complaint endpoints to retrieve tags. If you set up tags in your AWS GovCloud infrastructure do not include any sensitive information. In Splunk Observability Cloud AWS tags are identified by the prefix ``aws_tag``.

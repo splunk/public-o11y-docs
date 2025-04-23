@@ -387,7 +387,7 @@ Using the installer script, you can install and activate zero-code instrumentati
 
 .. _auto-discovery-linux-verify:
 
-Ensure the collector service is running
+Ensure the Collector service is running
 --------------------------------------------
 
 After a successful installation, run the following command to ensure the ``splunk-otel-collector`` service is running:
@@ -422,7 +422,7 @@ After your applications are running, you can verify your data. See :ref:`auto-di
 (Optional) Configure the instrumentation
 ====================================================
 
-You can configure the Splunk Distribution of OpenTelemetry Collector to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
+You can configure the Splunk Distribution of the OpenTelemetry Collector to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
 To learn more, see the following resources:
 
@@ -673,7 +673,6 @@ To troubleshoot common errors that occur when instrumenting applications, see th
 
 * Java: :ref:`common-java-troubleshooting`
 * Node.js: :ref:`common-nodejs-troubleshooting`
-* .NET: :ref:`common-dotnet-troubleshooting`
 
 .. _auto-discovery-view-results-linux:
 

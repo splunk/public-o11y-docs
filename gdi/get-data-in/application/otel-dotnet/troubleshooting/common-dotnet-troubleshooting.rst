@@ -84,8 +84,6 @@ If traces from your instrumented application or service are not available in Spl
 Verify the supported .NET versions
 ----------------------------------------------------------------
 
-Make sure that your application targets :ref:`the supported versions of .NET <dotnet-requirements>`.
-
 If the .NET version you're using is not supported, your log entries might be similar to the following:
 
 .. code-block:: bash
@@ -246,6 +244,19 @@ When installing the .NET instrumentation, you might encounter dependency version
 To resolve this issue, :ref:`install the .NET instrumentation using the NuGet packages <otel-dotnet-nuget-pkg>`, as NuGet automatically installs the correct dependencies that the package requires.
 
 Alternatively, you can update to the latest version of .NET, as this reduces the likelihood of dependency version conflicts.
+
+Fixing Assembly Permissions IIS
+======================================
+
+When using the .NET Framework with an IIS-hosted application, you might encounter crashes with an event similar to the following:
+
+.. code-block:: bash
+   
+   [Exception] System.IO.FileLoadException 
+   [Message] "Loading this assembly would produce a different grant set from other instances."
+
+To resolve this issue, create a new ``DWARD`` value called ``LoaderOptimization`` and set its value to ``1`` under the registry key ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework``. 
+This allows different versions of the same application to load into different domains, though it might increase CPU and memory usage.
 
 Uninstall the instrumentation
 ======================================

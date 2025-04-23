@@ -502,7 +502,7 @@ Automatic upgrades
 ###################################
 
 You can automate the upgrade of the private location Docker images by using an automated upgrade solution such as
-`Watchtower <https://github.com/v2tec/watchtower>`, a third party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker images you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality.
+:new-page:`Watchtower <https://github.com/v2tec/watchtower>`, a third-party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker images, you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality.
 
 When Watchtower finds an updated image, it instructs your Docker host to pull the newest image from the repository, stop the container, and start it again. It also ensures that environment variables, network settings, and links between containers are intact.
 
@@ -517,7 +517,7 @@ On your Docker host, launch the Watchtower container from the command line:
 
 Using the ``label-enable`` flag ensures that only containers with the correct label, like the Splunk private runner, are be auto-updated.
 
-There are additional options available in the `Watchtower documentation <https://github.com/v2tec/watchtower#options>` that you can explore, including auto-cleanup of old images to ensure that your Docker host does not hold onto outdated images.
+There are additional options available in the :new-page:`Watchtower documentation <https://github.com/v2tec/watchtower#options>` that you can explore, including auto-cleanup of old images to ensure that your Docker host does not hold onto outdated images.
 
 .. note::
    In order for Watchtower to issue commands to the Docker host, it requires the ``docker.sock`` volume or TCP connection, which provides Watchtower with full administrative access to your Docker host. If you are unable to provide Watchtower with this level of access you can explore other options for automating updates.

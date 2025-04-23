@@ -124,6 +124,7 @@ By default, gzip compression is turned on. To turn it off use the following conf
       ...
       compression: none
 
+.. _otlphttp-exporter-token-passthrough:
 
 Associate passthroughs to an access token
 ------------------------------------------
