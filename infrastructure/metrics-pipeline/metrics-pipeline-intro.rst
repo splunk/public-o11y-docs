@@ -165,7 +165,7 @@ MPM is not available for the following types of metrics:
 Aggregation rules limitations
 --------------------------------------------------------------------------------
 
-You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`. New aggregation rules are applied to new MTS only, meaning that already existing MTS are only used as reference to create the rule and display the projected outcome. 
 
 Histogram metrics limitations
 --------------------------------------------------------------------------------
