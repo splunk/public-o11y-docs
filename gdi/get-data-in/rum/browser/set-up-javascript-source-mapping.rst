@@ -144,7 +144,7 @@ If your project uses a different bunding tool or a different version of Webpack,
               ...,
               new SplunkRumWebpackPlugin({
                   applicationName: '<applicationName>',
-                  appVersion: '<applicationVersion>',
+                  version: '<applicationVersion>',
                   sourceMaps: {
                       token: '<your-splunk-org-access-token>',
                       realm: '<your-splunk-observability-realm>',
