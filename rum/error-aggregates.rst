@@ -49,18 +49,11 @@ Mobile crash aggregation
 A crash happens when a user encounters an error and has to exit the app. App errors are all other types of errors that occur but don't result in the user having to exit the app. For example, ANR (application not responding). 
 
 
-Splunk RUM's :guilabel:`APPLICATION SUMMARY DASHBOARD` groups errors by platform:
-
-* Browser applications each have their own section.
-* Android applications are grouped by error ID.
-* iOS apps are grouped by error ID.
-
-
-Each error group has a unique error ID. For more information about the error ID, see :ref:`about-error-id`.
+Splunk RUM's :guilabel:`APPLICATION SUMMARY DASHBOARD` groups errors by error ID. Each group's error ID is unique. For more information about the error ID, see :ref:`about-error-id`.
 
 To see crashes from a specific mobile application:
 
-#. Scroll down to the :guilabel:`Android Symbolication` or :guilabel:`iOS Symbolication` section and expand it. 
+#. Scroll down to the application name and expand its section. 
 #. In the expanded section, select the :guilabel:`Crashes`, :guilabel:`App Errors`, or :guilabel:`All` tab in the pane on the right. These tabs display aggregated data with a count of the number of crashes or errors in each aggregation.
 #. To see details about a specific crash or error, select it. This opens the :guilabel:`Error groups` side panel on the right.
 #. In the panel on the right, Splunk RUM displays the stack trace for this crash or error. If Splunk RUM has a mapping file (Android) or dSYM (iOS) for the application that this crash or error originated from, it displays the stack trace in readable form. Otherwise, it displays the message :guilabel:`No mapping file detected`  (Android) or :guilabel:`No dSYM detected` (iOS).
