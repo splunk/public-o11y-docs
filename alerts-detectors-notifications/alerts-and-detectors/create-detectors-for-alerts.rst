@@ -22,7 +22,7 @@ Create detectors
 
 The high-level steps for creating a detector are:
 
-1. Choose :ref:`how to create the detector <how-to-create-detector>`.
+1. Decide :ref:`how you want to create the detector <how-to-create-detector>`.
 
 2. Create :ref:`alert rules <build-rules>` to the detector to specify when to trigger alerts.
 
@@ -35,8 +35,7 @@ There are several ways to create a detector.
 
 * You can clone an existing detector if you have existing detectors that you want to modify. See :ref:`clone-detector`.
 * You can customize AutoDetect detectors. See :ref:`autodetect-customize`.
-* Start from the Detector tab to create detectors based on what you are currently viewing, such as a chart or the Infrastructure Navigator. See :ref:`create-detector-from-chart`.
-* Create a detector from a dashboard chart to preselect one of the chart signals as the signal to be monitored. See :ref:`create-detector-from-chart`.
+* Create a detector from one of the signals on the chart you're viewing. See :ref:`create-detector-from-chart`.
 * Create a detector from scratch. See :ref:`create-detector-from-scratch`.
 * Use the API to programmatically create detectors, instead of creating them through the user interface. See :ref:`create-via-api`.
 
@@ -45,7 +44,7 @@ There are several ways to create a detector.
 Clone an existing detector
 -------------------------------------------------------------------
 
-You can see a list of existing detectors on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs`. 
+You can see a list of existing detectors on the :guilabel:`Detectors` tab of the :guilabel:`Detectors & SLOs` page. 
 
 1. Look for a detector that is similar to the detector you want to create. 
 2. Select the detector.
@@ -62,18 +61,18 @@ If there is a chart that monitors a signal that you want to alert on, you can us
 
 Follow these steps to create the detector:
 
-#. Select the bell icon on a chart to open the :strong:`Detector` menu.
+#. Select the bell icon on a chart.
 #. Select :menuselection:`New detector from chart`.
 #. To continue, see :ref:`build-rules`.
 
-After you create a detector from a chart, a :ref:`link to the new detector<link-detector-to-chart>` is automatically added to the chart.
+After you create a detector from a chart, the detector is automatically linked to the chart.
 
 .. _create-detector-from-scratch:
 
 Create a detector from scratch
 -------------------------------------------------------------------
 
-To create a new detector for Infrastructure or Custom Metrics from scratch, you can either select :guilabel:`New Detector` under :guilabel:`Detectors & SLOs`, or select :menuselection:`Custom Detector` from the create menu on the navigation bar. Enter a detector name and then select :guilabel:`Create Alert Rule` to proceed to the alert rule builder. For instructions on building the rule, see :ref:`build-rules`.
+To create a new detector from scratch, you can either select :guilabel:`Create detector` on the :guilabel:`Detectors & SLOs` page, or select :menuselection:`Detector` from the create menu on the navigation bar. Enter a detector name and then select :guilabel:`Create alert rule` to proceed to the alert rule builder. For instructions on building the rule, see :ref:`build-rules`.
 
 .. _create-via-api:
 
@@ -86,8 +85,7 @@ Using the API to create a detector provides a number of capabilities that are no
 
 -  For information on using the UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
 
-.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to 
-   view and edit the detector code and make changes to the detector rules.
+.. note:: If a detector display includes a :guilabel:`SignalFlow` tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
 
 
 .. _build-rules:
@@ -140,7 +138,7 @@ If the detector has multiple signals, select what signal you want to alert on.
 Select alert conditions
 -------------------------------------------------------------------
 
-On the :strong:`Alert condition` tab, select the type of condition that triggers an alert. If you want to create compound conditions using AND or OR operators on the Alert settings tab, you must use the Custom Threshold condition. This applies whether you are monitoring a single signal or multiple signals.
+On the :strong:`Alert condition` tab, select the type of condition that triggers an alert. If you want to create compound conditions using ``AND`` or ``OR`` operators on the :guilabel:`Alert settings` tab, you must use the Custom Threshold condition. This applies whether you are monitoring a single signal or multiple signals.
 
 See :ref:`condition-reference` for the list of the available built-in alert conditions for Infrastructure Monitoring and Custom Metrics detectors.
 
@@ -161,7 +159,7 @@ In the chart, use a preview of the alerts that are triggered based on the settin
 
 After you have specified settings for triggering alerts, continue to the next tab to create a message that is sent when the alert is triggered.
 
-.. note:: If you don't see the Alert settings tab, you are viewing a detector that was created using the API; alert settings are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
+.. note:: If you don't see the :guilabel:`Alert settings` tab, you are viewing a detector that was created using the API; alert settings are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
 
 .. _alert-message:
 
@@ -267,9 +265,9 @@ The following table explains different types of email notifications:
 Activate
 -------------------------------------------------------------------
 
-On the :strong:`Activate` tab you see a summary of the detector settings you specified. Review the summary and make any necessary changes in the associated tabs, then name the rule; by default, the rule name is the same as the detector name. The rule name is displayed on the Alerts page and in notifications.
+On the :guilabel:`Activate` tab you see a summary of the detector settings you specified. Review the summary and make any necessary changes in the associated tabs, then name the rule. By default, the rule name is the same as the detector name. The rule name is displayed on the :guilabel:`Alerts` page and in notifications.
 
-Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs`. You can also provide additional descriptive text below the name, for example, to clarify the purpose of the detector for others.
+Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :guilabel:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name on the :guilabel:`Detectors` tab under :guilabel:`Detectors & SLOs`. You can also provide additional descriptive text to clarify the purpose of the detector for others.
 
 
 .. note:: If you make any changes to the detector name or description, select the :guilabel:`Save` button. If you select the :strong:`Close` button without saving, your changes will be lost.
@@ -283,9 +281,9 @@ Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring
 Edit detectors through the SignalFlow tab
 ----------------------------------------------------------------------------------
 
-.. note:: This section assumes you are familiar with the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+.. note:: This section assumes you are familiar with the :new-page:`Splunk Observability Cloud detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
-If you are modifying a detector that was created using the API, you can add and edit detector rules using the SignalFlow tab. The SignalFlow program text replaces the Alert signal, Alert condition, and Alert settings tabs that are used when creating and editing detectors using the UI.
+If you are modifying a detector that was created using the API, you can add and edit detector rules using the :guilabel:`SignalFlow` tab. The SignalFlow program text replaces the :guilabel:`Alert signal`, :guilabel:`Alert condition`, and :guilabel:`Alert settings` tabs that are used when creating and editing detectors using the UI.
 
 Every ``publish`` statement in a SignalFlow ``detect`` statement corresponds to a rule on the Alert Rules tab. The label you enter inside the ``publish`` block is displayed next to the number of active alerts displayed on the Alert Rules tab.
 
@@ -346,8 +344,8 @@ On the :guilabel:`Alert Rules` tab of a detector, you can use the actions menu (
 
 .. _disable-enable-rules:
 
-Activate/deactivate alert rules
----------------------------------
+Activate or deactivate alert rules
+-------------------------------------
 
    If a detector has multiple rules, such as different rules for different severity levels, you can specify which ones to activate or deactivate. Deactivating a rule prevents it from generating any events or sending any notifications. Use this option to decrease or increase the number of alerts the detector is triggering.
 
@@ -367,10 +365,36 @@ Delete alert rules
 
    Use this option to remove a rule from the detector.
 
+.. _detector-tags:
+
+Tag a detector
+=============================================================================
+
+Use tags to indicate the state of a detector, its data source, or any other property you want to label. For example, you can tag a detector with ``prod`` to indicate that it monitors a production environment.
+
+You can tag detectors from the list view. To see a list of detectors and add tags, do the following:
+
+#. To open the list view, open the :guilabel:`Detectors & SLOs` page, then select the :guilabel:`Detectors` tab.
+#. Select the actions menu (|more|) for the detector you want to assign tags to.
+#. Select :guilabel:`Edit tags`.
+#. Enter tags for the detector. You can add no more than 20 tags per detector.
+#. Select :guilabel:`Save`.
+
+.. _link-teams-to-a-detector:
+
+Link teams to a detector
+=============================================================================
+
+Link teams to a detector to indicate which team is responsible for the maintenance and monitoring of the detector. Teams associated with a detector can see the detector and its active alerts on the team's landing page. 
+
+To link teams to a detector, select the detector actions menu (|more|), either from the list view of the individual detector view, then select :guilabel:`Link to teams`. You can link no more than 20 teams to a detector.
+
+.. note:: The list of teams linked to a detector is independent of notification settings. Associated teams don't automatically get notified of new alerts. To configure notifications, see :ref:`manage-notifications`.
+
 .. _set-detector-permissions:
 
 Set detector permissions
 =============================================================================
 
-To protect detectors from being edited or deleted by other members of your organization, you can specify which users and teams have permissions for them. 
-For more information, see :ref:`detector-manage-permissions`.
+To protect detectors from being edited or deleted by other members of your organization, you can specify which users and teams have permissions for them. For more information, see :ref:`detector-manage-permissions`.
+

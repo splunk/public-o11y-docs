@@ -68,6 +68,8 @@ Archived metrics
 
 You can scale your metric data by sending and storing low-value, infrequently accessed metrics in a cheaper archival tier. Metrics stored in archived metrics are kept, but you cannot use them in charts or detectors directly. 
 
+Archived metrics are available in realms ``us0``, ``us1``, ``us2``, ``eu0``, ``au0``, and ``jp0``. 
+
 .. note:: Archived Metrics cost one-tenth of real-time metrics.
 
 If you need to use a metric that you've sent to archived metrics you can route it back to real-time metrics and access it in charts or detectors. You can also backfill historical data from up to 8 days and restore it to the real-time tier if you need to. 

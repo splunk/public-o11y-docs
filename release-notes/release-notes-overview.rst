@@ -10,6 +10,7 @@ Release notes overview
 .. toctree::
    :hidden:
 
+   2025-4-rn
    2025-3-rn
    2025-2-rn
    2024-11-rn
@@ -30,6 +31,8 @@ Each release date includes new features and enhancements for SaaS and versioned 
 
    * - Release month
      - Release date
+   * - :ref:`2025-4-rn`
+     - * :ref:`2025-4-22-rn`
    * - :ref:`2025-3-rn`
      - * :ref:`2025-3-4-rn`
        * :ref:`2025-3-25-rn`

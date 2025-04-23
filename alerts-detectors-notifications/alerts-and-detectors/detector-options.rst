@@ -9,7 +9,7 @@ Detector options
 .. meta::
   :description: How to set detector options in the Options tab.
 
-The Options tab lets you specify some of the same settings that are available in the :ref:`Chart Options tab<chart-options-tab>` of a chart.
+The :guilabel:`Options` tab lets you specify some of the same settings that are available in the :ref:`Chart Options tab<chart-options-tab>` of a chart.
 
 
 Show events as lines
