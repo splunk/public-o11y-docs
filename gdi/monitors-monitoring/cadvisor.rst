@@ -27,16 +27,15 @@ even though they are running it within Kubelet.
 
 In some managed Kubernetes environments, such as Amazon EKS, you cannot 
 directly access cAdvisor metrics due to the cluster provider's design 
-choices to enhance security and control. Instead, these metrics are 
-exposed through the Kubernetes proxy metric server and require a specific 
-configuration to collect them. For example, in Amazon EKS, the kubeletstats 
-receiver cannot directly collect cAdvisor metrics.
+choices to enhance security and control. For example, in Amazon EKS, 
+the ``kubeletstats`` receiver cannot directly collect cAdvisor metrics. 
+Instead, these metrics are exposed through the Kubernetes proxy metric 
+server and require a specific configuration to collect them.
+Thus, you are recommended to use the :ref:`Prometheus receiver <prometheus_receiver>` 
+to scrape metrics from the proxy metric server. This constraint is 
+specific to managed environments and is not a restriction of the Splunk 
+Distribution of OpenTelemetry Collector.
 
-To address this limitation, you are recommended to use the 
-:ref:`Prometheus receiver <prometheus_receiver>` to scrape 
-metrics from the proxy metric server. This constraint applies to 
-managed environments and is not a restriction of the Splunk Distribution of 
-OpenTelemetry Collector.
 
 cAdvisor with Docker
 ---------------------
