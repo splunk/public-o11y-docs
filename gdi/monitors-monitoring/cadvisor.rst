@@ -25,13 +25,12 @@ If you are using Kubernetes, consider the Kubelet stats receiver
 because many Kubernetes nodes do not expose cAdvisor on a network port, 
 even though they are running it within Kubelet. 
 
-
 In some managed Kubernetes environments, such as Amazon EKS, you cannot 
 directly access cAdvisor metrics due to the cluster provider's design 
-choices to enhance security and control. Instead, when exposed through 
-the Kubernetes proxy metric server, you can access these metrics, but a 
-specific configuration is required to collect them. For example, in 
-Amazon EKS, the kubeletstats receiver cannot directly collect cAdvisor metrics.
+choices to enhance security and control. Instead, these metrics are 
+exposed through the Kubernetes proxy metric server and require a specific 
+configuration to collect them. For example, in Amazon EKS, the kubeletstats 
+receiver cannot directly collect cAdvisor metrics.
 
 To address this limitation, you are recommended to use the 
 :ref:`Prometheus receiver <prometheus_receiver>` to scrape 
