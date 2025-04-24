@@ -229,9 +229,14 @@ This option lets you add a drilldown link to the chart header when you view the 
 .. image:: /_images/images-charts/charts-drilldown-link.png
     :width: 65%
 
-Providing a drilldown link helps other users in your organization navigate to other parts of Splunk Observability Cloud or external resources containing data related to the chart. For example, you can configure a link to go from a chart to an APM service map for the same metric.
+Providing a drilldown link helps other users in your organization navigate to other parts of Splunk Observability Cloud or external resources containing data related to the chart.
 
-You can include dashboard variables and time range in the URL. For more information on dashboard variables, see :ref:`customize-dashboard-variables`.
+You can include dashboard variables and time range in the URL using curly brackets, such as ``startTime={{{-15m}}}``. For more information on dashboard variables, see :ref:`customize-dashboard-variables`.
+
+For example, you can configure a link to go from a chart to a RUM instance during a specific time window for the same metric.
+
+.. image:: /_images/images-charts/drilldown-example.png
+    :width: 65%
 
 .. _heatmap-group-by:
 
