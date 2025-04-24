@@ -23,11 +23,21 @@ within Kubelet.
 
 If you are using Kubernetes, consider the Kubelet stats receiver 
 because many Kubernetes nodes do not expose cAdvisor on a network port, 
-even though they are running it within Kubelet. Because the Splunk Distribution 
-of OpenTelemetry Collector has limitations in managed environments such as Amazon EKS, 
-you can use a :ref:`Prometheus receiver <prometheus_receiver>` to collect specific 
-cgroup metrics exposed by cAdvisor, such as ``container_cpu_cfs_*``. 
-The kubeletstats receiver also does not expose these metrics by default.
+even though they are running it within Kubelet. 
+
+
+In some managed Kubernetes environments, such as Amazon EKS, you cannot 
+directly access cAdvisor metrics due to the cluster provider's design 
+choices to enhance security and control. Instead, when exposed through 
+the Kubernetes proxy metric server, you can access these metrics, but a 
+specific configuration is required to collect them. For example, in 
+Amazon EKS, the kubeletstats receiver cannot directly collect cAdvisor metrics.
+
+To address this limitation, you are recommended to use the 
+:ref:`Prometheus receiver <prometheus_receiver>` to scrape 
+metrics from the proxy metric server. This constraint applies to 
+managed environments and is not a restriction of the Splunk Distribution of 
+OpenTelemetry Collector.
 
 cAdvisor with Docker
 ---------------------
@@ -113,47 +123,52 @@ section of your configuration file:
 Prometheus receiver
 ###################
 
+The following example shows how to configure a Prometheus receiver 
+to scrape cAdvisor metrics securely from Kubernetes nodes using TLS and authorization 
+credentials.
+
 .. code:: yaml
 
-   receivers:
-     prometheus/cadvisor:
-       config:
-         scrape_configs:
-           - job_name: 'kubernetes-nodes-cadvisor'
-             scheme: https
-             bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
-             kubernetes_sd_configs:
-               - role: node
-             relabel_configs:
-               - target_label: __address__
-                 replacement: kubernetes.default.svc:443
-               - source_labels: [__meta_kubernetes_node_name]
-                 regex: (.+)
-                 target_label: __metrics_path__
-                 replacement: /api/v1/nodes/$$1/proxy/metrics/cadvisor
-             metric_relabel_configs:
-               - source_labels: [__name__]
-                 regex: 'container_cpu_cfs.*'
-                 action: keep
-               - source_labels: [pod]
-                 target_label: k8s.pod.name
-               - source_labels: [namespace]
-                 target_label: k8s.namespace.name
-               - source_labels: [container]
-                 target_label: k8s.container.name
-               - action: labeldrop
-                 regex: 'pod|namespace|name|id|container'
-   service:
-     pipelines:
-       metrics/scrapers:
-         exporters:
-         - signalfx
-         processors:
-         - memory_limiter
-         - batch
-         - resource/add_environment
-         receivers:
-         - prometheus/cadvisor
+   agent:
+     config:
+       receivers:
+         prometheus/cadvisor:
+           config:
+             scrape_configs:
+               - job_name: cadvisor
+                 tls_config:
+                   ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+                 authorization:
+                   credentials_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+                 scheme: https
+                 kubernetes_sd_configs:
+                   - role: node
+                 relabel_configs:
+                   - replacement: 'kubernetes.default.svc.cluster.local:443'
+                     target_label: __address__
+                   - regex: (.+)
+                     replacement: '/api/v1/nodes/$${1}/proxy/metrics/cadvisor'
+                     source_labels:
+                       - __meta_kubernetes_node_name
+                     target_label: __metrics_path__
+       service:
+         pipelines:
+           metrics:
+             exporters:
+               - signalfx
+             processors:
+               - memory_limiter
+               - batch
+               - resourcedetection
+               - resource
+             receivers:
+               - hostmetrics
+               - kubeletstats
+               - otlp
+               - prometheus/cadvisor
+               - receiver_creator
+               - signalfx
+   
 
 Configuration settings
 ^^^^^^^^^^^^^^^^^^^^^^
