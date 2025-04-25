@@ -26,8 +26,8 @@ because many Kubernetes nodes do not expose cAdvisor on a network port,
 even though they are running it within Kubelet. 
 
 In some managed Kubernetes environments, such as Amazon EKS, you cannot 
-directly access cAdvisor metrics due to the cluster provider's design 
-choices to enhance security and control. For example, in Amazon EKS, 
+directly access cAdvisor metrics due to the cluster provider's  
+security and control design. For example, in Amazon EKS, 
 the ``kubeletstats`` receiver cannot directly collect cAdvisor metrics. 
 This constraint is specific to managed environments and is not a restriction 
 of the Splunk Distribution of OpenTelemetry Collector.
