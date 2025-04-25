@@ -101,18 +101,6 @@ The class accepts the parameters described in the following table:
    * - ``service_user and $service_group``
      - Sets the user or group ownership for the Collector service. The user or group is created if they do not exist.
      - ``splunk-otel-collector``
-   * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
-     - ``false``
-   * - ``fluentd_config_source``
-     - Source path to the Fluentd configuration file. This file is copied to the ``$fluentd_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package. Only applicable if ``$with_fluentd`` is set to ``true``.
-     - ``/etc/otel/collector/fluentd/fluent.conf``
-   * - ``fluentd_config_dest``
-     - Destination path to the Fluentd configuration file on the node. Only applicable if ``$with_fluentd`` is set to ``true``.
-     - ``/etc/otel/collector/fluentd/fluent.conf``
-   * - ``manage_repo`` 
-     - In cases where the Collector and Fluentd apt/yum repositories are managed externally, set this to ``false`` to deactivate management of the repositories by this module. If set to ``false``, the externally managed repositories should provide the ``splunk-otel-collector`` and ``td-agent`` packages. Also, the apt (``/etc/apt/sources.list.d/splunk-otel-collector.list`` and ``/etc/apt/sources.list.d/splunk-td-agent.list``) and yum (``/etc/yum.repos.d/splunk-otel-collector.repo`` and ``/etc/yum.repos.d/splunk-td-agent.repo``) repository definition files are deleted if they exist in order to avoid any conflicts.
-     - ``true``
 
 .. _puppet-zero-config:
 

@@ -110,21 +110,6 @@ For Linux, the formula accepts the attributes described in the following table:
    * - ``service_user`` and ``$service_group``
      - Sets the user or group ownership for the Collector service. The user or group is created if they do not exist.
      - ``splunk-otel-collector``
-   * - ``install_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
-     - ``false``
-   * - ``td_agent_version``
-     -  Version of the td-agent (Fluentd) package to install 
-     -  ``4.3.0`` 
-   * - ``splunk_fluentd_config``
-     - The path to the Fluentd configuration file on the remote host.
-     - ``/etc/otel/collector/fluentd/fluent.conf``
-   * - ``splunk_fluentd_config_source``
-     - The source path to a Fluentd configuration file on your control host that is uploaded and set in place of the ``splunk_fluentd_config`` file on remote hosts. To use a custom Fluentd configuration file, add the configuration file into the Salt dir. For example, ``salt://templates/td_agent.conf``. 
-     - ``""`` meaning that nothing is copied and the existing ``splunk_fluentd_config`` file is used.
-   * - ``fluentd_config_dest``
-     - Destination path to the Fluentd configuration file on the node. Only applicable if ``$with_fluentd`` is set to ``true``.
-     - ``/etc/otel/collector/fluentd/fluent.conf``
 
 .. _salt-zero-config:
 

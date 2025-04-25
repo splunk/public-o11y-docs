@@ -7,7 +7,7 @@ Other configuration sources (Alpha/Beta)
 .. meta::
       :description: Configure these optional components to retrieve data from specific configuration sources. After retrieving the data, you can then insert the data into your Splunk Distribution of OpenTelemetry Collector configuration.
 
-In addition to the Collector packages and Fluentd, the following components can be configured:
+In addition to the Collector packages you can configure the following components:
 
 * :ref:`Environment variable (Alpha) <env-variable-config-source>`
 * :ref:`etcd2 (Alpha) <etcd2-config-source>`
