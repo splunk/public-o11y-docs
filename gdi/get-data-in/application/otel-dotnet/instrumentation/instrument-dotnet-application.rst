@@ -406,7 +406,7 @@ To install the .NET zero-code instrumentation on Windows hosts that are offline,
 
 
 Deploy the .NET zero-code instrumentation in Kubernetes
-----------------------------------------------
+----------------------------------------------------------
 
 To deploy the .NET zero-code instrumentation in Kubernetes, follow these steps:
 
