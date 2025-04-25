@@ -459,7 +459,7 @@ To deploy the .NET zero-code instrumentation in Kubernetes, follow these steps:
                         - name: OTEL_RESOURCE_ATTRIBUTES
                           value: "deployment.environment=<environmentName>"
 
-Based on the collector deployment mode, modify the deployment manifest, setting the correct value for OTEL_EXPORTER_OTLP_ENDPOINT environment variable. In case of daemonset deployment mode, Kubernetes Downward API can be used to obtain an address of a collector.
+Based on the Collector deployment mode, modify the deployment manifest, setting the correct value for ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable. In case of daemonset deployment mode, Kubernetes Downward API can be used to obtain an address of a collector.
 
 .. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`k8s-backend-auto-discovery` for more information.
 .. _export-directly-to-olly-cloud-dotnet-otel:
