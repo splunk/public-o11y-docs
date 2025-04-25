@@ -24,7 +24,12 @@ Use Splunk Observability Cloud to achieve full-stack observability of all your d
 - :ref:`Splunk Log Observer Connect <logs-intro-logconnect>`
 - :ref:`Splunk Synthetic Monitoring <intro-synthetics>` - Splunk Synthetic Monitoring does not have a data import component
 
-This guide provides 4 chapters that guide you through the process of setting up each component of Splunk Observability Cloud.
+This guide provides 4 chapters that guide you through the process of setting up each component of Splunk Observability Cloud. The following diagram shows the step-by-step process of setting up each Splunk Observability Cloud component:
+
+.. image:: /_images/gdi/gdi-onboarding-diagram.png
+  :width: 80%
+  :alt: The step-by-step process for setting up each Splunk Observability Cloud component.
+
 
 .. raw:: html 
     

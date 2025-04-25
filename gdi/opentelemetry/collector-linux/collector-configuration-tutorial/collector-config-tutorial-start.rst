@@ -66,7 +66,6 @@ After you've installed the Collector, navigate to /etc/otel/collector to find th
    .
    |-- agent_config.yaml
    |-- config.d
-   |-- fluentd
    |-- gateway_config.yaml
    |-- splunk-otel-collector.conf
    |-- splunk-otel-collector.conf.example

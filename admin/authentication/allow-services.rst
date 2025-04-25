@@ -216,9 +216,6 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
    # RUM ingest endpoint 
    rum-ingest.<YOUR_REALM>.signalfx.com/v1/rum
    
-   # For td-agent/Fluentd on Linux and Windows
-   packages.treasuredata.com
-   
    # For DEB/RPM collector packages
    splunk.jfrog.io 
    jfrog-prod-use1-shared-virginia-main.s3.amazonaws.com

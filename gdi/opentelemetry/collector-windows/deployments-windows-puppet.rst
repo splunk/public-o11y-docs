@@ -85,17 +85,9 @@ The class accepts the parameters described in the following table:
    * - ``collector_config_dest``
      - Destination path of the Collector configuration file on the node. The ``SPLUNK_CONFIG`` environment variable is set with this value for the Collector service.
      - ``%PROGRAMDATA%\Splunk\OpenTelemetry Collector\agent_config.yaml``
-   * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection.
-     - ``false``
-   * - ``fluentd_config_source``
-     - Source path to the Fluentd configuration file. This file is copied to the ``$fluentd_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package. Only applicable if ``$with_fluentd`` is set to ``true``.
-     - ``%PROGRAMFILES\Splunk\OpenTelemetry Collector\fluentd\td-agent.conf``
 
 Next steps
 ==================================
-
-
 
 .. raw:: html
 
