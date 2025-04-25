@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-07 09:20+0000\n"
-"PO-Revision-Date: 2025-02-27 13:35+0000\n"
+"PO-Revision-Date: 2025-04-09 18:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../slo/burn-rate-alerts.rst:-1
 msgid "How burn rate alerting works in Splunk Observability Cloud SLO."
@@ -106,11 +106,11 @@ msgstr "\\\text{燃焼率しきい値} = \\frac{\\\text{SLO コンプライア�
 
 #: ../../slo/burn-rate-alerts.rst:41
 msgid ""
-"The following tables show the burn rate threshold estimates for different long and short windows. Short windows are 1/12 of the long windows, as suggested by Google. To learn more, see :new-page:`Alerting on SLOs <https://sre."
-"google/workbook/alerting-on-slos/>` on Google's Site Reliability Workbook."
+"The following tables show the burn rate threshold estimates for different long and short windows. Short windows are 1/12 of the long windows, as suggested by Google. To learn more, see :new-page:`Alerting on SLOs <https://"
+"sre.google/workbook/alerting-on-slos/>` on Google's Site Reliability Workbook."
 msgstr ""
-"以下の表は、異なるロングウィンドウとショートウィンドウに対する燃焼率のしきい値の推定値を示しています。ショートウィンドウは、Googleが提案するように、ロングウィンドウの1/12です。詳しくは、Google の Site Reliability Workbook の :"
-"new-page:`Alerting on SLOs <https://sre.google/workbook/alerting-on-slos/>` をご覧ください。"
+"以下の表は、異なるロングウィンドウとショートウィンドウに対する燃焼率のしきい値の推定値を示しています。ショートウィンドウは、Googleが提案するように、ロングウィンドウの1/12です。詳しくは、Google の Site Reliability Workbook "
+"の :new-page:`Alerting on SLOs <https://sre.google/workbook/alerting-on-slos/>` をご覧ください。"
 
 #: ../../slo/burn-rate-alerts.rst:44
 msgid "Burn rate for a 99.9% SLO with a 30-day compliance window"
@@ -390,8 +390,8 @@ msgstr "サービスレベル目標（SLO）"
 
 #: ../../slo/slo-intro.rst:41
 msgid ""
-"An SLO defines a target for an SLI and a compliance period over which that target must be met. An SLO contains 3 elements: an SLI, a target, and a compliance period. Compliance periods can be calendar, such as monthly,"
-"orrolling, such as past 30 days."
+"An SLO defines a target for an SLI and a compliance period over which that target must be met. An SLO contains 3 elements: an SLI, a target, and a compliance period. Compliance periods can be calendar, such as "
+"monthly,orrolling, such as past 30 days."
 msgstr ""
 "SLOは、SLIの目標と、その目標を達成するためのコンプライアンス期間を定義します。SLOには、SLI、目標、コンプライアンス期間の3つの要素が含まれます。コンプライアンス期間は、月単位などのカレンダー、または過去30日などのローリングが可能"
 "です。"
