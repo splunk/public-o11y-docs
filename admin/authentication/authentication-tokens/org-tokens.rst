@@ -201,8 +201,6 @@ To finish creating the token, select an expiration date for the token.
 
    * :menuselection:`Only admins can receive alert`: Only admins receive an alert when the token is close to its expiration date.
    * :menuselection:`Admins and users or teams with token permissions can receive alert`: Admins and any users with token permissions receive an alert when the token is close to its expiration date.
-
-#. (Optional) Set a time for when Splunk Observability Cloud sends an expiration alert. For example, a value of 7 days means Splunk Observability Cloud will send an alert 7 days before the token expires.
 #. Select :guilabel:`Create` to finish creating the new token.
 
 .. _access-token-rotate:
