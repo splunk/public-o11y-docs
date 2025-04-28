@@ -373,12 +373,22 @@ You can also collect data from any custom service you've created in AWS, or from
   * - AWS/SageMaker
     - Amazon SageMaker
     - :strong:`X`
-    - 
+    - :strong:`X`
 
   * - AWS/sagemaker/Endpoints
     - Amazon SageMaker Endpoints
     - :strong:`X`
-    - 
+    - :strong:`X`
+
+  * - AWS/sagemaker/InferenceComponents
+    - Amazon SageMaker Inference Components
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/sagemaker/InferenceRecommendationsJobs
+    - Amazon SageMaker Inference Recommendations Jobs
+    - :strong:`X`
+    - :strong:`X`
 
   * - AWS/sagemaker/TrainingJobs
     - Amazon SageMaker Training Jobs

@@ -171,56 +171,24 @@ Learn more about advanced configuration options (including Service Logging) usin
 * :ref:`otel-install-windows-manual`
 * :ref:`otel-windows-config`
 
-.. _windows-manual-fluentd:
-
-Install Fluentd MSI for log collection
-==================================================
-
-If you have a wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
-
-.. note:: You need to be an Admin to configure log collection with Fluentd.
-
-Perform the following steps to install Fluentd and forward ``collected`` log events to the Collector:
-
-1. Install :new-page:`Fluentd MSI <https://docs.fluentd.org/installation/install-by-msi#td-agent-v4>` version 4.0 or higher.
-
-2. Configure Fluentd to collect log events and forward them to the Collector:
-  
-    - Option 1: Update the default config file provided by the Fluentd MSI at ``\opt\td-agent\etc\td-agent\td-agent.conf`` to collect the desired log events and forward them to ``127.0.0.1:8006``.
-  
-    - Option 2: The installed Collector package provides a custom Fluentd config file ``\Program Files\Splunk\OpenTelemetry Collector\fluentd\td-agent.conf`` to collect log events from the Windows Event Log ``\Program Files\Splunk\OpenTelemetry Collector\fluentd\conf.d\eventlog.conf`` and forwards them to ``127.0.0.1:8006``. 
-  
-    To use these files, backup the ``\opt\td-agent\etc\td-agent``` directory, and copy the contents from ``\Program Files\Splunk\OpenTelemetry Collector\fluentd``` to ``\opt\td-agent\etc\td-agent```.
-
-3. To apply any changes made to the Fluentd config files, restart the system, or restart ``fluentdwinsvc`` .
-
-  .. code-block:: PowerShell
-
-    - Stop-Service fluentdwinsvc
-    - Start-Service fluentdwinsvc
-
-4. View the Fluentd service logs and errors in ``\opt\td-agent\td-agent.log``.
-
-Learn more about general Fluentd configuration details in the :new-page:`official Fluentd documentation <https://docs.fluentd.org/configuration>`.
 
 Custom MSI URLs
 ==================================================
 
-By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>` and
-the Fluentd MSI is downloaded from :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`.  
+By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>`. 
 
-To specify custom URLs for these downloads, replace ``COLLECTOR_MSI_URL`` and ``FLUENTD_MSI_URL`` with the URLs to the desired MSI packages to install:
+To specify custom URLs for these downloads, replace ``COLLECTOR_MSI_URL`` with the URL to the desired MSI packages to install:
 
 .. code-block:: PowerShell
 
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; collector_msi_url = "<COLLECTOR_MSI_URL>"; fluentd_msi_url = "<FLUENTD_MSI_URL>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; collector_msi_url = "<COLLECTOR_MSI_URL>"; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 .. _windows-chocolatey:
 
 Install the Collector using a Chocolatey package
 ======================================================
 
-A :new-page:`Chocolatey package <https://community.chocolatey.org/packages/splunk-otel-collector>` is available to download, install, and configure the Collector and Fluentd with the following PowerShell command:  
+A :new-page:`Chocolatey package <https://community.chocolatey.org/packages/splunk-otel-collector>` is available to download, install, and configure the Collector with the following PowerShell command:  
 
 .. code-block:: PowerShell
 

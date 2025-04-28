@@ -14,7 +14,7 @@ Follow these instructions to uninstall the Splunk Distribution of the OpenTeleme
 Uninstall using the Windows Control Panel
 ====================================================
 
-If you installed the Collector with the installer script, the Collector and td-agent (Fluentd) can be uninstalled from **Programs and Features** in the Windows Control Panel. The configuration files might persist in ``\ProgramData\Splunk\OpenTelemetry Collector`` and ``\opt\td-agent`` after uninstall.
+If you installed the Collector with the installer script, the Collector can be uninstalled from **Programs and Features** in the Windows Control Panel. The configuration files might persist in ``\ProgramData\Splunk\OpenTelemetry Collector`` and ``\opt\td-agent`` after uninstall.
 
 .. _otel-windows-uninstall-powershell:
 

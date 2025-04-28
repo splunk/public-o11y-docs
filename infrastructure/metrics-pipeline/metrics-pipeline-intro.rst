@@ -68,6 +68,8 @@ Archived metrics
 
 You can scale your metric data by sending and storing low-value, infrequently accessed metrics in a cheaper archival tier. Metrics stored in archived metrics are kept, but you cannot use them in charts or detectors directly. 
 
+Archived metrics are available in realms ``us0``, ``us1``, ``us2``, ``eu0``, ``au0``, and ``jp0``. 
+
 .. note:: Archived Metrics cost one-tenth of real-time metrics.
 
 If you need to use a metric that you've sent to archived metrics you can route it back to real-time metrics and access it in charts or detectors. You can also backfill historical data from up to 8 days and restore it to the real-time tier if you need to. 
@@ -165,19 +167,15 @@ MPM is not available for the following types of metrics:
 Aggregation rules limitations
 --------------------------------------------------------------------------------
 
-You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+* You can only create aggregation rules using your metrics dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+* New aggregation rules are applied to new MTS only. Existing MTS are only used as a reference to create the rule and display the projected outcome.
 
 Histogram metrics limitations
 --------------------------------------------------------------------------------
 
-You cannot archive or aggregate histogram metrics. By default, they are routed to the real-time tier, and you can drop them with rules as well.
+You can't archive or aggregate histogram metrics. By default, they are routed to the real-time tier, and you can drop them with rules as well.
 
 .. _metrics-pipeline-intro-more:
-
-Aggregation rules limitations
---------------------------------------------------------------------------------
-
-You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
 
 Learn more
 ===============================================================================

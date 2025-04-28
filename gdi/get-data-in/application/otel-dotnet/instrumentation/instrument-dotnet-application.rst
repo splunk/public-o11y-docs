@@ -404,6 +404,64 @@ To install the .NET zero-code instrumentation on Windows hosts that are offline,
 
       Install-OpenTelemetryCore -LocalPath "C:\Users\Administrator\Downloads\splunk-opentelemetry-dotnet-windows.zip"
 
+
+Deploy the .NET zero-code instrumentation in Kubernetes
+----------------------------------------------------------
+
+To deploy the .NET zero-code instrumentation in Kubernetes, follow these steps:
+
+#. Build a Docker image by following the instructions for configuring instrumentation with the NuGet package for Linux or Windows. 
+   Refer to :ref:`otel-dotnet-nuget-pkg`.
+
+#. Modify the Entrypoint to adjust it to call the appropriate script based on your operating system:
+
+   **For Linux:**
+
+   .. code-block:: shell
+
+   splunk-launch.sh dotnet <application>.
+
+   **For Windows:**
+
+   .. code-block:: powershell
+
+   splunk-launch.cmd dotnet <application>.   
+
+   Example:
+
+   .. code-block:: docker
+
+   ENTRYPOINT ["./splunk-launch.sh", "dotnet", "myapp.dll"]
+
+#. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
+
+   .. code-block:: yaml
+      
+      apiVersion: apps/v1
+      kind: Deployment
+      spec:
+         selector:
+            matchLabels:
+               app: your-application
+         template:
+            spec:
+               containers:
+                  - name: myapp
+                    env:
+                        - name: SPLUNK_OTEL_AGENT
+                          valueFrom:
+                            fieldRef:
+                              fieldPath: status.hostIP
+                        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                          value: "http://$(SPLUNK_OTEL_AGENT):4318"
+                        - name: OTEL_SERVICE_NAME
+                          value: "<serviceName>"
+                        - name: OTEL_RESOURCE_ATTRIBUTES
+                          value: "deployment.environment=<environmentName>"
+
+Based on the Collector deployment mode, modify the deployment manifest, setting the correct value for ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable. In case of daemonset deployment mode, Kubernetes Downward API can be used to obtain an address of a collector.
+
+.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`k8s-backend-auto-discovery` for more information.
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Splunk Observability Cloud

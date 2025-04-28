@@ -109,14 +109,6 @@ The following table describes the variables that can be configured for this role
      - The amount of allocated memory in MiB. The default value is ``512``, or 500 x 2^20 bytes, of memory .
    * - ``splunk_ballast_size_mib``
      - ``splunk_ballast_size_mib`` is deprecated starting on Collector version 0.97.0. If you're using it, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`.
-   * - ``install_fluentd``
-     - The option to install or manage Fluentd and dependencies for log collection. The default value is ``false``.
-   * - ``td_agent_version``
-     - The version of td-agent (Fluentd package) that is installed.
-   * - ``splunk_fluentd_config``
-     - The path to the Fluentd configuration file on the remote host. The default is ``%SYSTEMDRIVE%\opt\td-agent\etc\td-agent\td-agent.conf``.
-   * - ``splunk_fluentd_config_source``
-     - The source path to a Fluentd configuration file on your control host that is uploaded and set in place of the value set in ``splunk_fluentd_config`` on remote hosts. Use this variable to submit a custom Fluentd configuration, for example, ``./custom_fluentd_config.conf``. The default value is ``""``, which means that nothing is copied and the configuration file set with ``splunk_otel_collector_config`` is used.
 
 Next steps
 ==================================

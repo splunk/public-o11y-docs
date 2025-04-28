@@ -41,7 +41,6 @@ Included packages
 The installer script deploys and configures these elements:
 
 * The Splunk Distribution of the OpenTelemetry Collector for Linux
-* Fluentd, using the td-agent. Turned off by default. See :ref:`fluentd-manual-config-linux` and :ref:`fluentd-receiver` for more information
 * JMX metric gatherer
   
 .. _linux-scripts:
@@ -87,15 +86,15 @@ To configure proxy settings to install and run the OpenTelemetry Collector, see 
 Use configured repos
 --------------------------------
 
-By default, apt/yum/zypper repo definition files are created to download the package and Fluentd deb/rpm packages from
+By default, apt/yum/zypper repo definition files are created to download the package from
 :new-page:`https://splunk.jfrog.io/splunk <https://splunk.jfrog.io/splunk>` and :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`, respectively.
 
-To skip these steps and use configured repos on the target system that provide the ``splunk-otel-collector`` and ``td-agent`` deb/rpm packages, specify the ``--skip-collector-repo`` or ``--skip-fluentd-repo`` options. For example:
+To skip these steps and use configured repos on the target system that provide the ``splunk-otel-collector`` packages, use the ``--skip-collector-repo``  option. For example:
 
 .. code-block:: bash
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-   sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
+   sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo \
     -- $SPLUNK_ACCESS_TOKEN
 
 .. _configure-auto-instrumentation-linux:
@@ -156,7 +155,7 @@ To use host bindings, run this command:
 Options of the installer script of the Collector for Linux
 ==================================================================
 
-The Linux installer script supports the following options for the Collector, automatic discovery with zero-code instrumentation for back-end services, and Fluentd.
+The Linux installer script supports the following options for the Collector, automatic discovery with zero-code instrumentation for back-end services.
 
 To display all the configuration options supported by the script, use the ``-h`` flag.
 
@@ -282,28 +281,8 @@ Automatic discovery with zero-code instrumentation for back-end services
      - The ``splunk-otel-auto-instrumentation`` package version to install. Note: The minimum supported version for Java and Node.js zero-code instrumentation is 0.87.0, and the minimum supported version for .NET zero-code instrumentation is 0.99.0.
      - ``latest``
 
-Fluentd
---------------------------------------------------------------------
-
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 30 40 30
-
-   * - Option
-     - Description
-     - Default value
-   * - ``--with[out]-fluentd``
-     - Whether to install and configure fluentd to forward log events to the Collector. See :ref:`fluentd-manual-config-linux` for more information.
-     - ``--without-fluentd``
-   * - ``--skip-fluentd-repo``
-     - By default, a apt/yum repo definition file will be created to download the fluentd deb/rpm package from ``https://packages.treasuredata.com``. Use this option to skip the previous step and use a pre-configured repo on the target system that provides the ``td-agent`` deb/rpm package.
-     -
-
 Next steps
 ==================================
-
-
 
 .. raw:: html
 
