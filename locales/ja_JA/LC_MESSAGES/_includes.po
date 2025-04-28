@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
@@ -7,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 18:45+0000\n"
-"PO-Revision-Date: 2025-02-27 12:03+0000\n"
+"POT-Creation-Date: 2025-03-13 09:38+0000\n"
+"PO-Revision-Date: 2025-04-10 14:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../_includes/activate-deactivate-native-metrics.rst:2
 msgid "Activate or deactivate specific metrics"
@@ -50,28 +49,28 @@ msgstr "ホストベースのプランの場合、このドキュメントでア
 msgid "Learn more at :ref:`monitor-imm-billing-usage`."
 msgstr "詳しくは :ref:`monitor-imm-billing-usage` を参照してください。"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:7 ../../_includes/admin/roles_apm.rst:5 ../../_includes/admin/roles_dashbds_only.rst:6 ../../_includes/admin/roles_data_configuration.rst:5 ../../_includes/admin/roles_help_support.rst:6 ../../_includes/admin/roles_log_observer.rst:7 ../../_includes/admin/roles_mpm.rst:7 ../../_includes/admin/roles_navigation.rst:7 ../../_includes/admin/roles_navs_dashbds.rst:6
-#: ../../_includes/admin/rum-roles-caps.rst:5 ../../_includes/admin/synth-roles-caps.rst:5
+#: ../../_includes/admin/roles_alerts_detectors.rst:7 ../../_includes/admin/roles_apm.rst:5 ../../_includes/admin/roles_dashbds_only.rst:6 ../../_includes/admin/roles_data_configuration.rst:5 ../../_includes/admin/roles_help_support.rst:6 ../../_includes/admin/roles_log_observer.rst:7 ../../_includes/admin/roles_mpm.rst:7
+#: ../../_includes/admin/roles_navigation.rst:7 ../../_includes/admin/roles_navs_dashbds.rst:6 ../../_includes/admin/rum-roles-caps.rst:5 ../../_includes/admin/synth-roles-caps.rst:5
 msgid ":strong:`Permission`"
 msgstr ":strong:`権限`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:8 ../../_includes/admin/roles_apm.rst:6 ../../_includes/admin/roles_dashbds_only.rst:7 ../../_includes/admin/roles_data_configuration.rst:6 ../../_includes/admin/roles_help_support.rst:7 ../../_includes/admin/roles_log_observer.rst:8 ../../_includes/admin/roles_mpm.rst:8 ../../_includes/admin/roles_navigation.rst:8 ../../_includes/admin/roles_navs_dashbds.rst:7
-#: ../../_includes/admin/rum-roles-caps.rst:6 ../../_includes/admin/synth-roles-caps.rst:6
+#: ../../_includes/admin/roles_alerts_detectors.rst:8 ../../_includes/admin/roles_apm.rst:6 ../../_includes/admin/roles_dashbds_only.rst:7 ../../_includes/admin/roles_data_configuration.rst:6 ../../_includes/admin/roles_help_support.rst:7 ../../_includes/admin/roles_log_observer.rst:8 ../../_includes/admin/roles_mpm.rst:8
+#: ../../_includes/admin/roles_navigation.rst:8 ../../_includes/admin/roles_navs_dashbds.rst:7 ../../_includes/admin/rum-roles-caps.rst:6 ../../_includes/admin/synth-roles-caps.rst:6
 msgid ":strong:`admin`"
 msgstr ":strong:`admin`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:9 ../../_includes/admin/roles_apm.rst:7 ../../_includes/admin/roles_dashbds_only.rst:8 ../../_includes/admin/roles_data_configuration.rst:7 ../../_includes/admin/roles_help_support.rst:8 ../../_includes/admin/roles_log_observer.rst:9 ../../_includes/admin/roles_mpm.rst:9 ../../_includes/admin/roles_navigation.rst:9 ../../_includes/admin/roles_navs_dashbds.rst:8
-#: ../../_includes/admin/rum-roles-caps.rst:7 ../../_includes/admin/synth-roles-caps.rst:7
+#: ../../_includes/admin/roles_alerts_detectors.rst:9 ../../_includes/admin/roles_apm.rst:7 ../../_includes/admin/roles_dashbds_only.rst:8 ../../_includes/admin/roles_data_configuration.rst:7 ../../_includes/admin/roles_help_support.rst:8 ../../_includes/admin/roles_log_observer.rst:9 ../../_includes/admin/roles_mpm.rst:9
+#: ../../_includes/admin/roles_navigation.rst:9 ../../_includes/admin/roles_navs_dashbds.rst:8 ../../_includes/admin/rum-roles-caps.rst:7 ../../_includes/admin/synth-roles-caps.rst:7
 msgid ":strong:`power`"
 msgstr ":strong:`power`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:10 ../../_includes/admin/roles_apm.rst:8 ../../_includes/admin/roles_dashbds_only.rst:9 ../../_includes/admin/roles_data_configuration.rst:8 ../../_includes/admin/roles_help_support.rst:9 ../../_includes/admin/roles_log_observer.rst:10 ../../_includes/admin/roles_mpm.rst:10 ../../_includes/admin/roles_navigation.rst:10 ../../_includes/admin/roles_navs_dashbds.rst:9
-#: ../../_includes/admin/rum-roles-caps.rst:8 ../../_includes/admin/synth-roles-caps.rst:8
+#: ../../_includes/admin/roles_alerts_detectors.rst:10 ../../_includes/admin/roles_apm.rst:8 ../../_includes/admin/roles_dashbds_only.rst:9 ../../_includes/admin/roles_data_configuration.rst:8 ../../_includes/admin/roles_help_support.rst:9 ../../_includes/admin/roles_log_observer.rst:10 ../../_includes/admin/roles_mpm.rst:10
+#: ../../_includes/admin/roles_navigation.rst:10 ../../_includes/admin/roles_navs_dashbds.rst:9 ../../_includes/admin/rum-roles-caps.rst:8 ../../_includes/admin/synth-roles-caps.rst:8
 msgid ":strong:`usage`"
 msgstr ":strong:`usage`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:11 ../../_includes/admin/roles_apm.rst:9 ../../_includes/admin/roles_dashbds_only.rst:10 ../../_includes/admin/roles_data_configuration.rst:9 ../../_includes/admin/roles_help_support.rst:10 ../../_includes/admin/roles_log_observer.rst:11 ../../_includes/admin/roles_mpm.rst:11 ../../_includes/admin/roles_navigation.rst:11 ../../_includes/admin/roles_navs_dashbds.rst:10
-#: ../../_includes/admin/rum-roles-caps.rst:9 ../../_includes/admin/synth-roles-caps.rst:9
+#: ../../_includes/admin/roles_alerts_detectors.rst:11 ../../_includes/admin/roles_apm.rst:9 ../../_includes/admin/roles_dashbds_only.rst:10 ../../_includes/admin/roles_data_configuration.rst:9 ../../_includes/admin/roles_help_support.rst:10 ../../_includes/admin/roles_log_observer.rst:11 ../../_includes/admin/roles_mpm.rst:11
+#: ../../_includes/admin/roles_navigation.rst:11 ../../_includes/admin/roles_navs_dashbds.rst:10 ../../_includes/admin/rum-roles-caps.rst:9 ../../_includes/admin/synth-roles-caps.rst:9
 msgid ":strong:`read_only`"
 msgstr ":strong:`read_only`"
 
@@ -79,75 +78,96 @@ msgstr ":strong:`read_only`"
 msgid ":strong:`View alerts`"
 msgstr ":strong:`アラートを表示する`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:15 ../../_includes/admin/roles_alerts_detectors.rst:16 ../../_includes/admin/roles_alerts_detectors.rst:17 ../../_includes/admin/roles_alerts_detectors.rst:18 ../../_includes/admin/roles_alerts_detectors.rst:22 ../../_includes/admin/roles_alerts_detectors.rst:23 ../../_includes/admin/roles_alerts_detectors.rst:28 ../../_includes/admin/roles_alerts_detectors.rst:29
-#: ../../_includes/admin/roles_alerts_detectors.rst:34 ../../_includes/admin/roles_alerts_detectors.rst:35 ../../_includes/admin/roles_alerts_detectors.rst:40 ../../_includes/admin/roles_alerts_detectors.rst:41 ../../_includes/admin/roles_alerts_detectors.rst:42 ../../_includes/admin/roles_alerts_detectors.rst:43 ../../_includes/admin/roles_alerts_detectors.rst:46 ../../_includes/admin/roles_alerts_detectors.rst:47
-#: ../../_includes/admin/roles_alerts_detectors.rst:52 ../../_includes/admin/roles_alerts_detectors.rst:53 ../../_includes/admin/roles_alerts_detectors.rst:58 ../../_includes/admin/roles_alerts_detectors.rst:59 ../../_includes/admin/roles_alerts_detectors.rst:64 ../../_includes/admin/roles_alerts_detectors.rst:65 ../../_includes/admin/roles_alerts_detectors.rst:70 ../../_includes/admin/roles_alerts_detectors.rst:71
-#: ../../_includes/admin/roles_alerts_detectors.rst:76 ../../_includes/admin/roles_alerts_detectors.rst:77 ../../_includes/admin/roles_alerts_detectors.rst:78 ../../_includes/admin/roles_alerts_detectors.rst:79 ../../_includes/admin/roles_alerts_detectors.rst:82 ../../_includes/admin/roles_alerts_detectors.rst:83 ../../_includes/admin/roles_alerts_detectors.rst:88 ../../_includes/admin/roles_alerts_detectors.rst:89
-#: ../../_includes/admin/roles_alerts_detectors.rst:94 ../../_includes/admin/roles_alerts_detectors.rst:95 ../../_includes/admin/roles_alerts_detectors.rst:96 ../../_includes/admin/roles_alerts_detectors.rst:97 ../../_includes/admin/roles_apm.rst:12 ../../_includes/admin/roles_apm.rst:13 ../../_includes/admin/roles_apm.rst:14 ../../_includes/admin/roles_apm.rst:15 ../../_includes/admin/roles_apm.rst:18
-#: ../../_includes/admin/roles_apm.rst:24 ../../_includes/admin/roles_apm.rst:25 ../../_includes/admin/roles_apm.rst:26 ../../_includes/admin/roles_apm.rst:27 ../../_includes/admin/roles_apm.rst:30 ../../_includes/admin/roles_apm.rst:36 ../../_includes/admin/roles_apm.rst:37 ../../_includes/admin/roles_apm.rst:38 ../../_includes/admin/roles_apm.rst:39 ../../_includes/admin/roles_apm.rst:42
-#: ../../_includes/admin/roles_dashbds_only.rst:13 ../../_includes/admin/roles_dashbds_only.rst:14 ../../_includes/admin/roles_dashbds_only.rst:15 ../../_includes/admin/roles_dashbds_only.rst:16 ../../_includes/admin/roles_dashbds_only.rst:19 ../../_includes/admin/roles_dashbds_only.rst:20 ../../_includes/admin/roles_dashbds_only.rst:25 ../../_includes/admin/roles_dashbds_only.rst:26
-#: ../../_includes/admin/roles_data_configuration.rst:12 ../../_includes/admin/roles_data_configuration.rst:13 ../../_includes/admin/roles_data_configuration.rst:14 ../../_includes/admin/roles_data_configuration.rst:15 ../../_includes/admin/roles_data_configuration.rst:18 ../../_includes/admin/roles_data_configuration.rst:25 ../../_includes/admin/roles_data_configuration.rst:26
-#: ../../_includes/admin/roles_data_configuration.rst:27 ../../_includes/admin/roles_data_configuration.rst:28 ../../_includes/admin/roles_help_support.rst:13 ../../_includes/admin/roles_help_support.rst:14 ../../_includes/admin/roles_help_support.rst:15 ../../_includes/admin/roles_help_support.rst:16 ../../_includes/admin/roles_help_support.rst:19 ../../_includes/admin/roles_help_support.rst:20
-#: ../../_includes/admin/roles_help_support.rst:21 ../../_includes/admin/roles_help_support.rst:22 ../../_includes/admin/roles_log_observer.rst:15 ../../_includes/admin/roles_log_observer.rst:16 ../../_includes/admin/roles_log_observer.rst:17 ../../_includes/admin/roles_log_observer.rst:18 ../../_includes/admin/roles_log_observer.rst:22 ../../_includes/admin/roles_log_observer.rst:23
-#: ../../_includes/admin/roles_log_observer.rst:24 ../../_includes/admin/roles_log_observer.rst:25 ../../_includes/admin/roles_log_observer.rst:28 ../../_includes/admin/roles_log_observer.rst:29 ../../_includes/admin/roles_log_observer.rst:30 ../../_includes/admin/roles_log_observer.rst:31 ../../_includes/admin/roles_log_observer.rst:34 ../../_includes/admin/roles_log_observer.rst:35
-#: ../../_includes/admin/roles_log_observer.rst:36 ../../_includes/admin/roles_log_observer.rst:37 ../../_includes/admin/roles_log_observer.rst:40 ../../_includes/admin/roles_log_observer.rst:41 ../../_includes/admin/roles_log_observer.rst:46 ../../_includes/admin/roles_log_observer.rst:47 ../../_includes/admin/roles_log_observer.rst:48 ../../_includes/admin/roles_log_observer.rst:49
-#: ../../_includes/admin/roles_log_observer.rst:52 ../../_includes/admin/roles_log_observer.rst:53 ../../_includes/admin/roles_log_observer.rst:58 ../../_includes/admin/roles_log_observer.rst:59 ../../_includes/admin/roles_log_observer.rst:64 ../../_includes/admin/roles_log_observer.rst:65 ../../_includes/admin/roles_log_observer.rst:70 ../../_includes/admin/roles_log_observer.rst:71
-#: ../../_includes/admin/roles_log_observer.rst:72 ../../_includes/admin/roles_log_observer.rst:76 ../../_includes/admin/roles_log_observer.rst:77 ../../_includes/admin/roles_log_observer.rst:82 ../../_includes/admin/roles_log_observer.rst:83 ../../_includes/admin/roles_log_observer.rst:88 ../../_includes/admin/roles_log_observer.rst:94 ../../_includes/admin/roles_log_observer.rst:100
-#: ../../_includes/admin/roles_log_observer.rst:102 ../../_includes/admin/roles_log_observer.rst:106 ../../_includes/admin/roles_mpm.rst:15 ../../_includes/admin/roles_mpm.rst:16 ../../_includes/admin/roles_mpm.rst:17 ../../_includes/admin/roles_mpm.rst:18 ../../_includes/admin/roles_mpm.rst:22 ../../_includes/admin/roles_mpm.rst:23 ../../_includes/admin/roles_mpm.rst:24 ../../_includes/admin/roles_mpm.rst:25
-#: ../../_includes/admin/roles_mpm.rst:28 ../../_includes/admin/roles_mpm.rst:34 ../../_includes/admin/roles_mpm.rst:35 ../../_includes/admin/roles_mpm.rst:40 ../../_includes/admin/roles_mpm.rst:41 ../../_includes/admin/roles_mpm.rst:46 ../../_includes/admin/roles_mpm.rst:47 ../../_includes/admin/roles_mpm.rst:52 ../../_includes/admin/roles_mpm.rst:53 ../../_includes/admin/roles_mpm.rst:58
-#: ../../_includes/admin/roles_mpm.rst:59 ../../_includes/admin/roles_mpm.rst:64 ../../_includes/admin/roles_mpm.rst:65 ../../_includes/admin/roles_mpm.rst:70 ../../_includes/admin/roles_navigation.rst:14 ../../_includes/admin/roles_navigation.rst:20 ../../_includes/admin/roles_navigation.rst:26 ../../_includes/admin/roles_navigation.rst:27 ../../_includes/admin/roles_navigation.rst:28
-#: ../../_includes/admin/roles_navigation.rst:29 ../../_includes/admin/roles_navigation.rst:32 ../../_includes/admin/roles_navigation.rst:38 ../../_includes/admin/roles_navigation.rst:40 ../../_includes/admin/roles_navigation.rst:44 ../../_includes/admin/roles_navigation.rst:45 ../../_includes/admin/roles_navigation.rst:46 ../../_includes/admin/roles_navigation.rst:47 ../../_includes/admin/roles_navigation.rst:50
-#: ../../_includes/admin/roles_navigation.rst:56 ../../_includes/admin/roles_navigation.rst:57 ../../_includes/admin/roles_navigation.rst:58 ../../_includes/admin/roles_navigation.rst:59 ../../_includes/admin/roles_navigation.rst:62 ../../_includes/admin/roles_navigation.rst:68 ../../_includes/admin/roles_navigation.rst:69 ../../_includes/admin/roles_navigation.rst:74 ../../_includes/admin/roles_navigation.rst:81
-#: ../../_includes/admin/roles_navigation.rst:87 ../../_includes/admin/roles_navs_dashbds.rst:13 ../../_includes/admin/roles_navs_dashbds.rst:14 ../../_includes/admin/roles_navs_dashbds.rst:15 ../../_includes/admin/roles_navs_dashbds.rst:16 ../../_includes/admin/roles_navs_dashbds.rst:19 ../../_includes/admin/roles_navs_dashbds.rst:20 ../../_includes/admin/roles_navs_dashbds.rst:25
-#: ../../_includes/admin/rum-roles-caps.rst:12 ../../_includes/admin/rum-roles-caps.rst:13 ../../_includes/admin/rum-roles-caps.rst:14 ../../_includes/admin/rum-roles-caps.rst:15 ../../_includes/admin/rum-roles-caps.rst:18 ../../_includes/admin/rum-roles-caps.rst:19 ../../_includes/admin/rum-roles-caps.rst:24 ../../_includes/admin/rum-roles-caps.rst:25 ../../_includes/admin/rum-roles-caps.rst:26
-#: ../../_includes/admin/rum-roles-caps.rst:27 ../../_includes/admin/rum-roles-caps.rst:30 ../../_includes/admin/rum-roles-caps.rst:31 ../../_includes/admin/rum-roles-caps.rst:32 ../../_includes/admin/rum-roles-caps.rst:33 ../../_includes/admin/rum-roles-caps.rst:36 ../../_includes/admin/rum-roles-caps.rst:37 ../../_includes/admin/rum-roles-caps.rst:38 ../../_includes/admin/rum-roles-caps.rst:39
-#: ../../_includes/admin/rum-roles-caps.rst:42 ../../_includes/admin/rum-roles-caps.rst:43 ../../_includes/admin/rum-roles-caps.rst:44 ../../_includes/admin/rum-roles-caps.rst:45 ../../_includes/admin/rum-roles-caps.rst:48 ../../_includes/admin/rum-roles-caps.rst:49 ../../_includes/admin/rum-roles-caps.rst:50 ../../_includes/admin/rum-roles-caps.rst:51 ../../_includes/admin/rum-roles-caps.rst:54
-#: ../../_includes/admin/rum-roles-caps.rst:55 ../../_includes/admin/rum-roles-caps.rst:60 ../../_includes/admin/rum-roles-caps.rst:61 ../../_includes/admin/synth-roles-caps.rst:12 ../../_includes/admin/synth-roles-caps.rst:13 ../../_includes/admin/synth-roles-caps.rst:18 ../../_includes/admin/synth-roles-caps.rst:19 ../../_includes/admin/synth-roles-caps.rst:20 ../../_includes/admin/synth-roles-caps.rst:21
-#: ../../_includes/admin/synth-roles-caps.rst:25 ../../_includes/admin/synth-roles-caps.rst:31 ../../_includes/admin/synth-roles-caps.rst:32 ../../_includes/admin/synth-roles-caps.rst:33 ../../_includes/admin/synth-roles-caps.rst:34 ../../_includes/admin/synth-roles-caps.rst:37 ../../_includes/admin/synth-roles-caps.rst:43 ../../_includes/admin/synth-roles-caps.rst:49 ../../_includes/admin/synth-roles-caps.rst:54
-#: ../../_includes/admin/synth-roles-caps.rst:55 ../../_includes/admin/synth-roles-caps.rst:56 ../../_includes/admin/synth-roles-caps.rst:57 ../../_includes/collector-env-vars.rst:13 ../../_includes/collector-env-vars.rst:16 ../../_includes/collector-env-vars.rst:22 ../../_includes/collector-env-vars.rst:25 ../../_includes/collector-env-vars.rst:37 ../../_includes/collector-env-vars.rst:40
-#: ../../_includes/collector-env-vars.rst:43 ../../_includes/collector-env-vars.rst:46 ../../_includes/collector-env-vars.rst:58 ../../_includes/gdi/processor-architecture-native.rst:15 ../../_includes/gdi/processor-architecture-native.rst:16 ../../_includes/gdi/processor-architecture-native.rst:17 ../../_includes/gdi/processor-architecture-native.rst:18 ../../_includes/gdi/processor-architecture-native.rst:20
-#: ../../_includes/gdi/processor-architecture-native.rst:21 ../../_includes/gdi/processor-architecture-native.rst:22 ../../_includes/gdi/processor-architecture-native.rst:23 ../../_includes/gdi/processor-architecture-native.rst:25 ../../_includes/gdi/processor-architecture-native.rst:26 ../../_includes/gdi/processor-architecture-native.rst:27 ../../_includes/gdi/processor-architecture-native.rst:28
-#: ../../_includes/gdi/processor-architecture-native.rst:30 ../../_includes/gdi/processor-architecture-native.rst:31 ../../_includes/gdi/processor-architecture-native.rst:32 ../../_includes/gdi/processor-architecture-native.rst:33 ../../_includes/gdi/processor-architecture-native.rst:35 ../../_includes/gdi/processor-architecture-native.rst:36 ../../_includes/gdi/processor-architecture-native.rst:37
-#: ../../_includes/gdi/processor-architecture-native.rst:38 ../../_includes/gdi/processor-architecture-native.rst:40 ../../_includes/gdi/processor-architecture-native.rst:41 ../../_includes/gdi/processor-architecture-native.rst:42 ../../_includes/gdi/processor-architecture-native.rst:43 ../../_includes/gdi/processor-architecture-native.rst:45 ../../_includes/gdi/processor-architecture-native.rst:46
-#: ../../_includes/gdi/processor-architecture-native.rst:47 ../../_includes/gdi/processor-architecture-native.rst:48 ../../_includes/gdi/processor-architecture-native.rst:50 ../../_includes/gdi/processor-architecture-native.rst:51 ../../_includes/gdi/processor-architecture-native.rst:52 ../../_includes/gdi/processor-architecture-native.rst:53 ../../_includes/gdi/processor-architecture-native.rst:55
-#: ../../_includes/gdi/processor-architecture-native.rst:56 ../../_includes/gdi/processor-architecture-native.rst:57 ../../_includes/gdi/processor-architecture-native.rst:60 ../../_includes/gdi/processor-architecture-native.rst:61 ../../_includes/gdi/processor-architecture-native.rst:62 ../../_includes/gdi/processor-architecture-native.rst:63 ../../_includes/gdi/processor-architecture-native.rst:65
-#: ../../_includes/gdi/processor-architecture-native.rst:66 ../../_includes/gdi/processor-architecture-native.rst:67 ../../_includes/gdi/processor-architecture-native.rst:68 ../../_includes/gdi/processor-architecture-native.rst:70 ../../_includes/gdi/processor-architecture-native.rst:71 ../../_includes/gdi/processor-architecture-native.rst:72 ../../_includes/gdi/processor-architecture-native.rst:73
-#: ../../_includes/gdi/processor-architecture-native.rst:75 ../../_includes/gdi/processor-architecture-native.rst:76 ../../_includes/gdi/processor-architecture-native.rst:77 ../../_includes/gdi/processor-architecture-native.rst:78 ../../_includes/gdi/processor-architecture-native.rst:80 ../../_includes/gdi/processor-architecture-native.rst:81 ../../_includes/gdi/processor-architecture-native.rst:82
-#: ../../_includes/gdi/processor-architecture-native.rst:83 ../../_includes/gdi/processor-architecture-native.rst:85 ../../_includes/gdi/processor-architecture-native.rst:86 ../../_includes/gdi/processor-architecture-native.rst:87 ../../_includes/gdi/processor-architecture-native.rst:88 ../../_includes/gdi/processor-architecture-native.rst:90 ../../_includes/gdi/processor-architecture-native.rst:91
-#: ../../_includes/gdi/processor-architecture-native.rst:92 ../../_includes/gdi/processor-architecture-native.rst:93 ../../_includes/gdi/processor-architecture-native.rst:95 ../../_includes/gdi/processor-architecture-native.rst:96 ../../_includes/gdi/processor-architecture-native.rst:97 ../../_includes/gdi/processor-architecture-native.rst:98 ../../_includes/gdi/processor-architecture-native.rst:100
-#: ../../_includes/gdi/processor-architecture-native.rst:101 ../../_includes/gdi/processor-architecture-native.rst:102 ../../_includes/gdi/processor-architecture-native.rst:103 ../../_includes/gdi/processor-architecture-native.rst:105 ../../_includes/gdi/processor-architecture-native.rst:106 ../../_includes/gdi/processor-architecture-native.rst:107 ../../_includes/gdi/processor-architecture-native.rst:108
-#: ../../_includes/gdi/processor-architecture-native.rst:110 ../../_includes/gdi/processor-architecture-native.rst:111 ../../_includes/gdi/processor-architecture-native.rst:112 ../../_includes/gdi/processor-architecture-native.rst:113 ../../_includes/gdi/processor-architecture-native.rst:115 ../../_includes/gdi/processor-architecture-native.rst:116 ../../_includes/gdi/processor-architecture-native.rst:117
-#: ../../_includes/gdi/processor-architecture-native.rst:118 ../../_includes/gdi/processor-architecture-native.rst:120 ../../_includes/gdi/processor-architecture-native.rst:121 ../../_includes/gdi/processor-architecture-native.rst:122 ../../_includes/gdi/processor-architecture-native.rst:123 ../../_includes/gdi/processor-architecture-native.rst:125 ../../_includes/gdi/processor-architecture-native.rst:126
-#: ../../_includes/gdi/processor-architecture-native.rst:127 ../../_includes/gdi/processor-architecture-native.rst:128 ../../_includes/gdi/processor-architecture-native.rst:130 ../../_includes/gdi/processor-architecture-native.rst:131 ../../_includes/gdi/processor-architecture-native.rst:132 ../../_includes/gdi/processor-architecture-native.rst:133 ../../_includes/gdi/processor-architecture-native.rst:135
-#: ../../_includes/gdi/processor-architecture-native.rst:136 ../../_includes/gdi/processor-architecture-native.rst:137 ../../_includes/gdi/processor-architecture-native.rst:138 ../../_includes/gdi/processor-architecture-native.rst:140 ../../_includes/gdi/processor-architecture-native.rst:141 ../../_includes/gdi/processor-architecture-native.rst:142 ../../_includes/gdi/processor-architecture-native.rst:143
-#: ../../_includes/gdi/processor-architecture-native.rst:145 ../../_includes/gdi/processor-architecture-native.rst:146 ../../_includes/gdi/processor-architecture-native.rst:147 ../../_includes/gdi/processor-architecture-native.rst:148 ../../_includes/gdi/processor-architecture-native.rst:150 ../../_includes/gdi/processor-architecture-native.rst:151 ../../_includes/gdi/processor-architecture-native.rst:152
-#: ../../_includes/gdi/processor-architecture-native.rst:153 ../../_includes/gdi/processor-architecture-native.rst:155 ../../_includes/gdi/processor-architecture-native.rst:156 ../../_includes/gdi/processor-architecture-native.rst:157 ../../_includes/gdi/processor-architecture-native.rst:158 ../../_includes/gdi/processor-architecture-native.rst:160 ../../_includes/gdi/processor-architecture-native.rst:161
-#: ../../_includes/gdi/processor-architecture-native.rst:162 ../../_includes/gdi/processor-architecture-native.rst:163 ../../_includes/gdi/processor-architecture-native.rst:165 ../../_includes/gdi/processor-architecture-native.rst:166 ../../_includes/gdi/processor-architecture-native.rst:167 ../../_includes/gdi/processor-architecture-native.rst:168 ../../_includes/gdi/processor-architecture-native.rst:170
-#: ../../_includes/gdi/processor-architecture-native.rst:171 ../../_includes/gdi/processor-architecture-native.rst:172 ../../_includes/gdi/processor-architecture-native.rst:173 ../../_includes/gdi/processor-architecture-native.rst:175 ../../_includes/gdi/processor-architecture-native.rst:176 ../../_includes/gdi/processor-architecture-native.rst:177 ../../_includes/gdi/processor-architecture-native.rst:178
-#: ../../_includes/gdi/processor-architecture-native.rst:180 ../../_includes/gdi/processor-architecture-native.rst:181 ../../_includes/gdi/processor-architecture-native.rst:182 ../../_includes/gdi/processor-architecture-native.rst:183 ../../_includes/gdi/processor-architecture-native.rst:185 ../../_includes/gdi/processor-architecture-native.rst:186 ../../_includes/gdi/processor-architecture-native.rst:187
-#: ../../_includes/gdi/processor-architecture-native.rst:188 ../../_includes/gdi/processor-architecture-native.rst:190 ../../_includes/gdi/processor-architecture-native.rst:191 ../../_includes/gdi/processor-architecture-native.rst:192 ../../_includes/gdi/processor-architecture-native.rst:193 ../../_includes/gdi/processor-architecture-native.rst:195 ../../_includes/gdi/processor-architecture-native.rst:196
-#: ../../_includes/gdi/processor-architecture-native.rst:197 ../../_includes/gdi/processor-architecture-native.rst:198 ../../_includes/gdi/processor-architecture-native.rst:200 ../../_includes/gdi/processor-architecture-native.rst:201 ../../_includes/gdi/processor-architecture-native.rst:202 ../../_includes/gdi/processor-architecture-native.rst:203 ../../_includes/gdi/processor-architecture-native.rst:219
-#: ../../_includes/gdi/processor-architecture-native.rst:220 ../../_includes/gdi/processor-architecture-native.rst:221 ../../_includes/gdi/processor-architecture-native.rst:222 ../../_includes/gdi/processor-architecture-native.rst:224 ../../_includes/gdi/processor-architecture-native.rst:225 ../../_includes/gdi/processor-architecture-native.rst:226 ../../_includes/gdi/processor-architecture-native.rst:227
-#: ../../_includes/gdi/processor-architecture-native.rst:229 ../../_includes/gdi/processor-architecture-native.rst:230 ../../_includes/gdi/processor-architecture-native.rst:231 ../../_includes/gdi/processor-architecture-native.rst:232 ../../_includes/gdi/processor-architecture-native.rst:234 ../../_includes/gdi/processor-architecture-native.rst:235 ../../_includes/gdi/processor-architecture-native.rst:236
-#: ../../_includes/gdi/processor-architecture-native.rst:237 ../../_includes/gdi/processor-architecture-native.rst:239 ../../_includes/gdi/processor-architecture-native.rst:240 ../../_includes/gdi/processor-architecture-native.rst:241 ../../_includes/gdi/processor-architecture-native.rst:242 ../../_includes/gdi/processor-architecture-native.rst:244 ../../_includes/gdi/processor-architecture-native.rst:245
-#: ../../_includes/gdi/processor-architecture-native.rst:246 ../../_includes/gdi/processor-architecture-native.rst:247 ../../_includes/gdi/processor-architecture-native.rst:249 ../../_includes/gdi/processor-architecture-native.rst:250 ../../_includes/gdi/processor-architecture-native.rst:251 ../../_includes/gdi/processor-architecture-native.rst:252 ../../_includes/gdi/processor-architecture-native.rst:254
-#: ../../_includes/gdi/processor-architecture-native.rst:255 ../../_includes/gdi/processor-architecture-native.rst:256 ../../_includes/gdi/processor-architecture-native.rst:257 ../../_includes/gdi/processor-architecture-native.rst:259 ../../_includes/gdi/processor-architecture-native.rst:260 ../../_includes/gdi/processor-architecture-native.rst:261 ../../_includes/gdi/processor-architecture-native.rst:262
-#: ../../_includes/gdi/processor-architecture-native.rst:264 ../../_includes/gdi/processor-architecture-native.rst:265 ../../_includes/gdi/processor-architecture-native.rst:266 ../../_includes/gdi/processor-architecture-native.rst:267 ../../_includes/gdi/processor-architecture-native.rst:269 ../../_includes/gdi/processor-architecture-native.rst:270 ../../_includes/gdi/processor-architecture-native.rst:271
-#: ../../_includes/gdi/processor-architecture-native.rst:272 ../../_includes/gdi/processor-architecture-native.rst:274 ../../_includes/gdi/processor-architecture-native.rst:275 ../../_includes/gdi/processor-architecture-native.rst:276 ../../_includes/gdi/processor-architecture-native.rst:277 ../../_includes/gdi/processor-architecture-native.rst:293 ../../_includes/gdi/processor-architecture-native.rst:294
-#: ../../_includes/gdi/processor-architecture-native.rst:295 ../../_includes/gdi/processor-architecture-native.rst:296 ../../_includes/gdi/processor-architecture-native.rst:298 ../../_includes/gdi/processor-architecture-native.rst:299 ../../_includes/gdi/processor-architecture-native.rst:300 ../../_includes/gdi/processor-architecture-native.rst:301 ../../_includes/gdi/processor-architecture-native.rst:303
-#: ../../_includes/gdi/processor-architecture-native.rst:304 ../../_includes/gdi/processor-architecture-native.rst:305 ../../_includes/gdi/processor-architecture-native.rst:306 ../../_includes/gdi/processor-architecture-native.rst:308 ../../_includes/gdi/processor-architecture-native.rst:309 ../../_includes/gdi/processor-architecture-native.rst:310 ../../_includes/gdi/processor-architecture-native.rst:311
-#: ../../_includes/gdi/processor-architecture-native.rst:313 ../../_includes/gdi/processor-architecture-native.rst:314 ../../_includes/gdi/processor-architecture-native.rst:315 ../../_includes/gdi/processor-architecture-native.rst:316 ../../_includes/gdi/processor-architecture-native.rst:318 ../../_includes/gdi/processor-architecture-native.rst:319 ../../_includes/gdi/processor-architecture-native.rst:320
-#: ../../_includes/gdi/processor-architecture-native.rst:321 ../../_includes/gdi/processor-architecture-native.rst:324 ../../_includes/gdi/processor-architecture-native.rst:328 ../../_includes/gdi/processor-architecture-native.rst:329 ../../_includes/gdi/processor-architecture-native.rst:330 ../../_includes/gdi/processor-architecture-native.rst:331 ../../_includes/gdi/processor-architecture-native.rst:333
-#: ../../_includes/gdi/processor-architecture-native.rst:334 ../../_includes/gdi/processor-architecture-native.rst:335 ../../_includes/gdi/processor-architecture-native.rst:336 ../../_includes/gdi/processor-architecture-native.rst:338 ../../_includes/gdi/processor-architecture-native.rst:339 ../../_includes/gdi/processor-architecture-native.rst:340 ../../_includes/gdi/processor-architecture-native.rst:341
-#: ../../_includes/gdi/processor-architecture-native.rst:343 ../../_includes/gdi/processor-architecture-native.rst:344 ../../_includes/gdi/processor-architecture-native.rst:345 ../../_includes/gdi/processor-architecture-native.rst:346 ../../_includes/gdi/processor-architecture-native.rst:349 ../../_includes/gdi/processor-architecture-native.rst:354 ../../_includes/gdi/processor-architecture-native.rst:359
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:15 ../../_includes/gdi/processor-architecture-subprocess.rst:20 ../../_includes/gdi/processor-architecture-subprocess.rst:25 ../../_includes/gdi/processor-architecture-subprocess.rst:30 ../../_includes/gdi/processor-architecture-subprocess.rst:35 ../../_includes/gdi/processor-architecture-subprocess.rst:40
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:45 ../../_includes/gdi/processor-architecture-subprocess.rst:50 ../../_includes/gdi/processor-architecture-subprocess.rst:55 ../../_includes/gdi/processor-architecture-subprocess.rst:60 ../../_includes/gdi/processor-architecture-subprocess.rst:79 ../../_includes/gdi/processor-architecture-subprocess.rst:84
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:89 ../../_includes/gdi/processor-architecture-subprocess.rst:94 ../../_includes/gdi/processor-architecture-subprocess.rst:99 ../../_includes/gdi/processor-architecture-subprocess.rst:104 ../../_includes/gdi/processor-architecture-subprocess.rst:123 ../../_includes/gdi/processor-architecture-subprocess.rst:124
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:128 ../../_includes/gdi/processor-architecture-subprocess.rst:129 ../../_includes/gdi/processor-architecture-subprocess.rst:133 ../../_includes/gdi/processor-architecture-subprocess.rst:134 ../../_includes/gdi/processor-architecture-subprocess.rst:138 ../../_includes/gdi/processor-architecture-subprocess.rst:139
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:143 ../../_includes/gdi/processor-architecture-subprocess.rst:144 ../../_includes/gdi/processor-architecture-subprocess.rst:148 ../../_includes/gdi/processor-architecture-subprocess.rst:149 ../../_includes/gdi/processor-architecture-subprocess.rst:153 ../../_includes/gdi/processor-architecture-subprocess.rst:154
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:158 ../../_includes/gdi/processor-architecture-subprocess.rst:159 ../../_includes/gdi/processor-architecture-subprocess.rst:163 ../../_includes/gdi/processor-architecture-subprocess.rst:164 ../../_includes/gdi/processor-architecture-subprocess.rst:168 ../../_includes/gdi/processor-architecture-subprocess.rst:169
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:173 ../../_includes/gdi/processor-architecture-subprocess.rst:174 ../../_includes/gdi/processor-architecture-subprocess.rst:178 ../../_includes/gdi/processor-architecture-subprocess.rst:179 ../../_includes/gdi/processor-architecture-subprocess.rst:183 ../../_includes/gdi/processor-architecture-subprocess.rst:184
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:188 ../../_includes/gdi/processor-architecture-subprocess.rst:189 ../../_includes/gdi/processor-architecture-subprocess.rst:207
+#: ../../_includes/admin/roles_alerts_detectors.rst:15 ../../_includes/admin/roles_alerts_detectors.rst:16 ../../_includes/admin/roles_alerts_detectors.rst:17 ../../_includes/admin/roles_alerts_detectors.rst:18 ../../_includes/admin/roles_alerts_detectors.rst:22 ../../_includes/admin/roles_alerts_detectors.rst:23
+#: ../../_includes/admin/roles_alerts_detectors.rst:28 ../../_includes/admin/roles_alerts_detectors.rst:29 ../../_includes/admin/roles_alerts_detectors.rst:34 ../../_includes/admin/roles_alerts_detectors.rst:35 ../../_includes/admin/roles_alerts_detectors.rst:40 ../../_includes/admin/roles_alerts_detectors.rst:41
+#: ../../_includes/admin/roles_alerts_detectors.rst:42 ../../_includes/admin/roles_alerts_detectors.rst:43 ../../_includes/admin/roles_alerts_detectors.rst:46 ../../_includes/admin/roles_alerts_detectors.rst:47 ../../_includes/admin/roles_alerts_detectors.rst:52 ../../_includes/admin/roles_alerts_detectors.rst:53
+#: ../../_includes/admin/roles_alerts_detectors.rst:58 ../../_includes/admin/roles_alerts_detectors.rst:59 ../../_includes/admin/roles_alerts_detectors.rst:64 ../../_includes/admin/roles_alerts_detectors.rst:65 ../../_includes/admin/roles_alerts_detectors.rst:70 ../../_includes/admin/roles_alerts_detectors.rst:71
+#: ../../_includes/admin/roles_alerts_detectors.rst:76 ../../_includes/admin/roles_alerts_detectors.rst:77 ../../_includes/admin/roles_alerts_detectors.rst:78 ../../_includes/admin/roles_alerts_detectors.rst:79 ../../_includes/admin/roles_alerts_detectors.rst:82 ../../_includes/admin/roles_alerts_detectors.rst:83
+#: ../../_includes/admin/roles_alerts_detectors.rst:88 ../../_includes/admin/roles_alerts_detectors.rst:89 ../../_includes/admin/roles_alerts_detectors.rst:94 ../../_includes/admin/roles_alerts_detectors.rst:95 ../../_includes/admin/roles_alerts_detectors.rst:96 ../../_includes/admin/roles_alerts_detectors.rst:97
+#: ../../_includes/admin/roles_apm.rst:12 ../../_includes/admin/roles_apm.rst:13 ../../_includes/admin/roles_apm.rst:14 ../../_includes/admin/roles_apm.rst:15 ../../_includes/admin/roles_apm.rst:18 ../../_includes/admin/roles_apm.rst:24 ../../_includes/admin/roles_apm.rst:25 ../../_includes/admin/roles_apm.rst:26
+#: ../../_includes/admin/roles_apm.rst:27 ../../_includes/admin/roles_apm.rst:30 ../../_includes/admin/roles_apm.rst:36 ../../_includes/admin/roles_apm.rst:37 ../../_includes/admin/roles_apm.rst:38 ../../_includes/admin/roles_apm.rst:39 ../../_includes/admin/roles_apm.rst:42 ../../_includes/admin/roles_dashbds_only.rst:13
+#: ../../_includes/admin/roles_dashbds_only.rst:14 ../../_includes/admin/roles_dashbds_only.rst:15 ../../_includes/admin/roles_dashbds_only.rst:16 ../../_includes/admin/roles_dashbds_only.rst:19 ../../_includes/admin/roles_dashbds_only.rst:20 ../../_includes/admin/roles_dashbds_only.rst:25
+#: ../../_includes/admin/roles_dashbds_only.rst:26 ../../_includes/admin/roles_data_configuration.rst:12 ../../_includes/admin/roles_data_configuration.rst:13 ../../_includes/admin/roles_data_configuration.rst:14 ../../_includes/admin/roles_data_configuration.rst:15 ../../_includes/admin/roles_data_configuration.rst:18
+#: ../../_includes/admin/roles_data_configuration.rst:25 ../../_includes/admin/roles_data_configuration.rst:26 ../../_includes/admin/roles_data_configuration.rst:27 ../../_includes/admin/roles_data_configuration.rst:28 ../../_includes/admin/roles_help_support.rst:13 ../../_includes/admin/roles_help_support.rst:14
+#: ../../_includes/admin/roles_help_support.rst:15 ../../_includes/admin/roles_help_support.rst:16 ../../_includes/admin/roles_help_support.rst:19 ../../_includes/admin/roles_help_support.rst:20 ../../_includes/admin/roles_help_support.rst:21 ../../_includes/admin/roles_help_support.rst:22
+#: ../../_includes/admin/roles_log_observer.rst:15 ../../_includes/admin/roles_log_observer.rst:16 ../../_includes/admin/roles_log_observer.rst:17 ../../_includes/admin/roles_log_observer.rst:18 ../../_includes/admin/roles_log_observer.rst:21 ../../_includes/admin/roles_log_observer.rst:22
+#: ../../_includes/admin/roles_log_observer.rst:23 ../../_includes/admin/roles_log_observer.rst:24 ../../_includes/admin/roles_log_observer.rst:27 ../../_includes/admin/roles_log_observer.rst:28 ../../_includes/admin/roles_log_observer.rst:29 ../../_includes/admin/roles_log_observer.rst:30
+#: ../../_includes/admin/roles_log_observer.rst:33 ../../_includes/admin/roles_log_observer.rst:34 ../../_includes/admin/roles_log_observer.rst:39 ../../_includes/admin/roles_log_observer.rst:40 ../../_includes/admin/roles_log_observer.rst:41 ../../_includes/admin/roles_log_observer.rst:42
+#: ../../_includes/admin/roles_log_observer.rst:45 ../../_includes/admin/roles_log_observer.rst:46 ../../_includes/admin/roles_log_observer.rst:47 ../../_includes/admin/roles_log_observer.rst:48 ../../_includes/admin/roles_log_observer.rst:51 ../../_includes/admin/roles_log_observer.rst:52
+#: ../../_includes/admin/roles_log_observer.rst:57 ../../_includes/admin/roles_log_observer.rst:58 ../../_includes/admin/roles_log_observer.rst:59 ../../_includes/admin/roles_log_observer.rst:63 ../../_includes/admin/roles_log_observer.rst:65 ../../_includes/admin/roles_log_observer.rst:69 ../../_includes/admin/roles_mpm.rst:15
+#: ../../_includes/admin/roles_mpm.rst:16 ../../_includes/admin/roles_mpm.rst:17 ../../_includes/admin/roles_mpm.rst:18 ../../_includes/admin/roles_mpm.rst:22 ../../_includes/admin/roles_mpm.rst:23 ../../_includes/admin/roles_mpm.rst:24 ../../_includes/admin/roles_mpm.rst:25 ../../_includes/admin/roles_mpm.rst:28
+#: ../../_includes/admin/roles_mpm.rst:34 ../../_includes/admin/roles_mpm.rst:35 ../../_includes/admin/roles_mpm.rst:40 ../../_includes/admin/roles_mpm.rst:41 ../../_includes/admin/roles_mpm.rst:46 ../../_includes/admin/roles_mpm.rst:47 ../../_includes/admin/roles_mpm.rst:52 ../../_includes/admin/roles_mpm.rst:53
+#: ../../_includes/admin/roles_mpm.rst:58 ../../_includes/admin/roles_mpm.rst:59 ../../_includes/admin/roles_mpm.rst:64 ../../_includes/admin/roles_mpm.rst:65 ../../_includes/admin/roles_mpm.rst:70 ../../_includes/admin/roles_navigation.rst:14 ../../_includes/admin/roles_navigation.rst:20
+#: ../../_includes/admin/roles_navigation.rst:26 ../../_includes/admin/roles_navigation.rst:27 ../../_includes/admin/roles_navigation.rst:28 ../../_includes/admin/roles_navigation.rst:29 ../../_includes/admin/roles_navigation.rst:32 ../../_includes/admin/roles_navigation.rst:38 ../../_includes/admin/roles_navigation.rst:40
+#: ../../_includes/admin/roles_navigation.rst:44 ../../_includes/admin/roles_navigation.rst:45 ../../_includes/admin/roles_navigation.rst:46 ../../_includes/admin/roles_navigation.rst:47 ../../_includes/admin/roles_navigation.rst:50 ../../_includes/admin/roles_navigation.rst:56 ../../_includes/admin/roles_navigation.rst:57
+#: ../../_includes/admin/roles_navigation.rst:58 ../../_includes/admin/roles_navigation.rst:59 ../../_includes/admin/roles_navigation.rst:62 ../../_includes/admin/roles_navigation.rst:68 ../../_includes/admin/roles_navigation.rst:69 ../../_includes/admin/roles_navigation.rst:74 ../../_includes/admin/roles_navigation.rst:81
+#: ../../_includes/admin/roles_navigation.rst:87 ../../_includes/admin/roles_navs_dashbds.rst:13 ../../_includes/admin/roles_navs_dashbds.rst:14 ../../_includes/admin/roles_navs_dashbds.rst:15 ../../_includes/admin/roles_navs_dashbds.rst:16 ../../_includes/admin/roles_navs_dashbds.rst:19
+#: ../../_includes/admin/roles_navs_dashbds.rst:20 ../../_includes/admin/roles_navs_dashbds.rst:25 ../../_includes/admin/rum-roles-caps.rst:12 ../../_includes/admin/rum-roles-caps.rst:13 ../../_includes/admin/rum-roles-caps.rst:14 ../../_includes/admin/rum-roles-caps.rst:15 ../../_includes/admin/rum-roles-caps.rst:18
+#: ../../_includes/admin/rum-roles-caps.rst:19 ../../_includes/admin/rum-roles-caps.rst:24 ../../_includes/admin/rum-roles-caps.rst:25 ../../_includes/admin/rum-roles-caps.rst:26 ../../_includes/admin/rum-roles-caps.rst:27 ../../_includes/admin/rum-roles-caps.rst:30 ../../_includes/admin/rum-roles-caps.rst:31
+#: ../../_includes/admin/rum-roles-caps.rst:32 ../../_includes/admin/rum-roles-caps.rst:33 ../../_includes/admin/rum-roles-caps.rst:36 ../../_includes/admin/rum-roles-caps.rst:37 ../../_includes/admin/rum-roles-caps.rst:38 ../../_includes/admin/rum-roles-caps.rst:39 ../../_includes/admin/rum-roles-caps.rst:42
+#: ../../_includes/admin/rum-roles-caps.rst:43 ../../_includes/admin/rum-roles-caps.rst:44 ../../_includes/admin/rum-roles-caps.rst:45 ../../_includes/admin/rum-roles-caps.rst:48 ../../_includes/admin/rum-roles-caps.rst:49 ../../_includes/admin/rum-roles-caps.rst:50 ../../_includes/admin/rum-roles-caps.rst:51
+#: ../../_includes/admin/rum-roles-caps.rst:54 ../../_includes/admin/rum-roles-caps.rst:55 ../../_includes/admin/rum-roles-caps.rst:60 ../../_includes/admin/rum-roles-caps.rst:61 ../../_includes/admin/synth-roles-caps.rst:12 ../../_includes/admin/synth-roles-caps.rst:13 ../../_includes/admin/synth-roles-caps.rst:18
+#: ../../_includes/admin/synth-roles-caps.rst:19 ../../_includes/admin/synth-roles-caps.rst:20 ../../_includes/admin/synth-roles-caps.rst:21 ../../_includes/admin/synth-roles-caps.rst:25 ../../_includes/admin/synth-roles-caps.rst:31 ../../_includes/admin/synth-roles-caps.rst:32 ../../_includes/admin/synth-roles-caps.rst:33
+#: ../../_includes/admin/synth-roles-caps.rst:34 ../../_includes/admin/synth-roles-caps.rst:37 ../../_includes/admin/synth-roles-caps.rst:43 ../../_includes/admin/synth-roles-caps.rst:49 ../../_includes/admin/synth-roles-caps.rst:54 ../../_includes/admin/synth-roles-caps.rst:55 ../../_includes/admin/synth-roles-caps.rst:56
+#: ../../_includes/admin/synth-roles-caps.rst:57 ../../_includes/collector-env-vars.rst:13 ../../_includes/collector-env-vars.rst:16 ../../_includes/collector-env-vars.rst:22 ../../_includes/collector-env-vars.rst:25 ../../_includes/collector-env-vars.rst:37 ../../_includes/collector-env-vars.rst:40
+#: ../../_includes/collector-env-vars.rst:43 ../../_includes/collector-env-vars.rst:46 ../../_includes/collector-env-vars.rst:58 ../../_includes/gdi/processor-architecture-native.rst:15 ../../_includes/gdi/processor-architecture-native.rst:16 ../../_includes/gdi/processor-architecture-native.rst:17
+#: ../../_includes/gdi/processor-architecture-native.rst:18 ../../_includes/gdi/processor-architecture-native.rst:20 ../../_includes/gdi/processor-architecture-native.rst:21 ../../_includes/gdi/processor-architecture-native.rst:22 ../../_includes/gdi/processor-architecture-native.rst:23
+#: ../../_includes/gdi/processor-architecture-native.rst:25 ../../_includes/gdi/processor-architecture-native.rst:26 ../../_includes/gdi/processor-architecture-native.rst:27 ../../_includes/gdi/processor-architecture-native.rst:28 ../../_includes/gdi/processor-architecture-native.rst:30
+#: ../../_includes/gdi/processor-architecture-native.rst:31 ../../_includes/gdi/processor-architecture-native.rst:32 ../../_includes/gdi/processor-architecture-native.rst:33 ../../_includes/gdi/processor-architecture-native.rst:35 ../../_includes/gdi/processor-architecture-native.rst:36
+#: ../../_includes/gdi/processor-architecture-native.rst:37 ../../_includes/gdi/processor-architecture-native.rst:38 ../../_includes/gdi/processor-architecture-native.rst:40 ../../_includes/gdi/processor-architecture-native.rst:41 ../../_includes/gdi/processor-architecture-native.rst:42
+#: ../../_includes/gdi/processor-architecture-native.rst:43 ../../_includes/gdi/processor-architecture-native.rst:45 ../../_includes/gdi/processor-architecture-native.rst:46 ../../_includes/gdi/processor-architecture-native.rst:47 ../../_includes/gdi/processor-architecture-native.rst:48
+#: ../../_includes/gdi/processor-architecture-native.rst:50 ../../_includes/gdi/processor-architecture-native.rst:51 ../../_includes/gdi/processor-architecture-native.rst:52 ../../_includes/gdi/processor-architecture-native.rst:53 ../../_includes/gdi/processor-architecture-native.rst:55
+#: ../../_includes/gdi/processor-architecture-native.rst:56 ../../_includes/gdi/processor-architecture-native.rst:57 ../../_includes/gdi/processor-architecture-native.rst:60 ../../_includes/gdi/processor-architecture-native.rst:61 ../../_includes/gdi/processor-architecture-native.rst:62
+#: ../../_includes/gdi/processor-architecture-native.rst:63 ../../_includes/gdi/processor-architecture-native.rst:65 ../../_includes/gdi/processor-architecture-native.rst:66 ../../_includes/gdi/processor-architecture-native.rst:67 ../../_includes/gdi/processor-architecture-native.rst:68
+#: ../../_includes/gdi/processor-architecture-native.rst:70 ../../_includes/gdi/processor-architecture-native.rst:71 ../../_includes/gdi/processor-architecture-native.rst:72 ../../_includes/gdi/processor-architecture-native.rst:73 ../../_includes/gdi/processor-architecture-native.rst:75
+#: ../../_includes/gdi/processor-architecture-native.rst:76 ../../_includes/gdi/processor-architecture-native.rst:77 ../../_includes/gdi/processor-architecture-native.rst:78 ../../_includes/gdi/processor-architecture-native.rst:80 ../../_includes/gdi/processor-architecture-native.rst:81
+#: ../../_includes/gdi/processor-architecture-native.rst:82 ../../_includes/gdi/processor-architecture-native.rst:83 ../../_includes/gdi/processor-architecture-native.rst:85 ../../_includes/gdi/processor-architecture-native.rst:86 ../../_includes/gdi/processor-architecture-native.rst:87
+#: ../../_includes/gdi/processor-architecture-native.rst:88 ../../_includes/gdi/processor-architecture-native.rst:90 ../../_includes/gdi/processor-architecture-native.rst:91 ../../_includes/gdi/processor-architecture-native.rst:92 ../../_includes/gdi/processor-architecture-native.rst:93
+#: ../../_includes/gdi/processor-architecture-native.rst:95 ../../_includes/gdi/processor-architecture-native.rst:96 ../../_includes/gdi/processor-architecture-native.rst:97 ../../_includes/gdi/processor-architecture-native.rst:98 ../../_includes/gdi/processor-architecture-native.rst:100
+#: ../../_includes/gdi/processor-architecture-native.rst:101 ../../_includes/gdi/processor-architecture-native.rst:102 ../../_includes/gdi/processor-architecture-native.rst:103 ../../_includes/gdi/processor-architecture-native.rst:105 ../../_includes/gdi/processor-architecture-native.rst:106
+#: ../../_includes/gdi/processor-architecture-native.rst:107 ../../_includes/gdi/processor-architecture-native.rst:108 ../../_includes/gdi/processor-architecture-native.rst:110 ../../_includes/gdi/processor-architecture-native.rst:111 ../../_includes/gdi/processor-architecture-native.rst:112
+#: ../../_includes/gdi/processor-architecture-native.rst:113 ../../_includes/gdi/processor-architecture-native.rst:115 ../../_includes/gdi/processor-architecture-native.rst:116 ../../_includes/gdi/processor-architecture-native.rst:117 ../../_includes/gdi/processor-architecture-native.rst:118
+#: ../../_includes/gdi/processor-architecture-native.rst:120 ../../_includes/gdi/processor-architecture-native.rst:121 ../../_includes/gdi/processor-architecture-native.rst:122 ../../_includes/gdi/processor-architecture-native.rst:123 ../../_includes/gdi/processor-architecture-native.rst:125
+#: ../../_includes/gdi/processor-architecture-native.rst:126 ../../_includes/gdi/processor-architecture-native.rst:127 ../../_includes/gdi/processor-architecture-native.rst:128 ../../_includes/gdi/processor-architecture-native.rst:130 ../../_includes/gdi/processor-architecture-native.rst:131
+#: ../../_includes/gdi/processor-architecture-native.rst:132 ../../_includes/gdi/processor-architecture-native.rst:133 ../../_includes/gdi/processor-architecture-native.rst:135 ../../_includes/gdi/processor-architecture-native.rst:136 ../../_includes/gdi/processor-architecture-native.rst:137
+#: ../../_includes/gdi/processor-architecture-native.rst:138 ../../_includes/gdi/processor-architecture-native.rst:140 ../../_includes/gdi/processor-architecture-native.rst:141 ../../_includes/gdi/processor-architecture-native.rst:142 ../../_includes/gdi/processor-architecture-native.rst:143
+#: ../../_includes/gdi/processor-architecture-native.rst:145 ../../_includes/gdi/processor-architecture-native.rst:146 ../../_includes/gdi/processor-architecture-native.rst:147 ../../_includes/gdi/processor-architecture-native.rst:148 ../../_includes/gdi/processor-architecture-native.rst:150
+#: ../../_includes/gdi/processor-architecture-native.rst:151 ../../_includes/gdi/processor-architecture-native.rst:152 ../../_includes/gdi/processor-architecture-native.rst:153 ../../_includes/gdi/processor-architecture-native.rst:155 ../../_includes/gdi/processor-architecture-native.rst:156
+#: ../../_includes/gdi/processor-architecture-native.rst:157 ../../_includes/gdi/processor-architecture-native.rst:158 ../../_includes/gdi/processor-architecture-native.rst:160 ../../_includes/gdi/processor-architecture-native.rst:161 ../../_includes/gdi/processor-architecture-native.rst:162
+#: ../../_includes/gdi/processor-architecture-native.rst:163 ../../_includes/gdi/processor-architecture-native.rst:165 ../../_includes/gdi/processor-architecture-native.rst:166 ../../_includes/gdi/processor-architecture-native.rst:167 ../../_includes/gdi/processor-architecture-native.rst:168
+#: ../../_includes/gdi/processor-architecture-native.rst:170 ../../_includes/gdi/processor-architecture-native.rst:171 ../../_includes/gdi/processor-architecture-native.rst:172 ../../_includes/gdi/processor-architecture-native.rst:173 ../../_includes/gdi/processor-architecture-native.rst:175
+#: ../../_includes/gdi/processor-architecture-native.rst:176 ../../_includes/gdi/processor-architecture-native.rst:177 ../../_includes/gdi/processor-architecture-native.rst:178 ../../_includes/gdi/processor-architecture-native.rst:180 ../../_includes/gdi/processor-architecture-native.rst:181
+#: ../../_includes/gdi/processor-architecture-native.rst:182 ../../_includes/gdi/processor-architecture-native.rst:183 ../../_includes/gdi/processor-architecture-native.rst:185 ../../_includes/gdi/processor-architecture-native.rst:186 ../../_includes/gdi/processor-architecture-native.rst:187
+#: ../../_includes/gdi/processor-architecture-native.rst:188 ../../_includes/gdi/processor-architecture-native.rst:190 ../../_includes/gdi/processor-architecture-native.rst:191 ../../_includes/gdi/processor-architecture-native.rst:192 ../../_includes/gdi/processor-architecture-native.rst:193
+#: ../../_includes/gdi/processor-architecture-native.rst:195 ../../_includes/gdi/processor-architecture-native.rst:196 ../../_includes/gdi/processor-architecture-native.rst:197 ../../_includes/gdi/processor-architecture-native.rst:198 ../../_includes/gdi/processor-architecture-native.rst:200
+#: ../../_includes/gdi/processor-architecture-native.rst:201 ../../_includes/gdi/processor-architecture-native.rst:202 ../../_includes/gdi/processor-architecture-native.rst:203 ../../_includes/gdi/processor-architecture-native.rst:219 ../../_includes/gdi/processor-architecture-native.rst:220
+#: ../../_includes/gdi/processor-architecture-native.rst:221 ../../_includes/gdi/processor-architecture-native.rst:222 ../../_includes/gdi/processor-architecture-native.rst:224 ../../_includes/gdi/processor-architecture-native.rst:225 ../../_includes/gdi/processor-architecture-native.rst:226
+#: ../../_includes/gdi/processor-architecture-native.rst:227 ../../_includes/gdi/processor-architecture-native.rst:229 ../../_includes/gdi/processor-architecture-native.rst:230 ../../_includes/gdi/processor-architecture-native.rst:231 ../../_includes/gdi/processor-architecture-native.rst:232
+#: ../../_includes/gdi/processor-architecture-native.rst:234 ../../_includes/gdi/processor-architecture-native.rst:235 ../../_includes/gdi/processor-architecture-native.rst:236 ../../_includes/gdi/processor-architecture-native.rst:237 ../../_includes/gdi/processor-architecture-native.rst:239
+#: ../../_includes/gdi/processor-architecture-native.rst:240 ../../_includes/gdi/processor-architecture-native.rst:241 ../../_includes/gdi/processor-architecture-native.rst:242 ../../_includes/gdi/processor-architecture-native.rst:244 ../../_includes/gdi/processor-architecture-native.rst:245
+#: ../../_includes/gdi/processor-architecture-native.rst:246 ../../_includes/gdi/processor-architecture-native.rst:247 ../../_includes/gdi/processor-architecture-native.rst:249 ../../_includes/gdi/processor-architecture-native.rst:250 ../../_includes/gdi/processor-architecture-native.rst:251
+#: ../../_includes/gdi/processor-architecture-native.rst:252 ../../_includes/gdi/processor-architecture-native.rst:254 ../../_includes/gdi/processor-architecture-native.rst:255 ../../_includes/gdi/processor-architecture-native.rst:256 ../../_includes/gdi/processor-architecture-native.rst:257
+#: ../../_includes/gdi/processor-architecture-native.rst:259 ../../_includes/gdi/processor-architecture-native.rst:260 ../../_includes/gdi/processor-architecture-native.rst:261 ../../_includes/gdi/processor-architecture-native.rst:262 ../../_includes/gdi/processor-architecture-native.rst:264
+#: ../../_includes/gdi/processor-architecture-native.rst:265 ../../_includes/gdi/processor-architecture-native.rst:266 ../../_includes/gdi/processor-architecture-native.rst:267 ../../_includes/gdi/processor-architecture-native.rst:269 ../../_includes/gdi/processor-architecture-native.rst:270
+#: ../../_includes/gdi/processor-architecture-native.rst:271 ../../_includes/gdi/processor-architecture-native.rst:272 ../../_includes/gdi/processor-architecture-native.rst:274 ../../_includes/gdi/processor-architecture-native.rst:275 ../../_includes/gdi/processor-architecture-native.rst:276
+#: ../../_includes/gdi/processor-architecture-native.rst:277 ../../_includes/gdi/processor-architecture-native.rst:293 ../../_includes/gdi/processor-architecture-native.rst:294 ../../_includes/gdi/processor-architecture-native.rst:295 ../../_includes/gdi/processor-architecture-native.rst:296
+#: ../../_includes/gdi/processor-architecture-native.rst:298 ../../_includes/gdi/processor-architecture-native.rst:299 ../../_includes/gdi/processor-architecture-native.rst:300 ../../_includes/gdi/processor-architecture-native.rst:301 ../../_includes/gdi/processor-architecture-native.rst:303
+#: ../../_includes/gdi/processor-architecture-native.rst:304 ../../_includes/gdi/processor-architecture-native.rst:305 ../../_includes/gdi/processor-architecture-native.rst:306 ../../_includes/gdi/processor-architecture-native.rst:308 ../../_includes/gdi/processor-architecture-native.rst:309
+#: ../../_includes/gdi/processor-architecture-native.rst:310 ../../_includes/gdi/processor-architecture-native.rst:311 ../../_includes/gdi/processor-architecture-native.rst:313 ../../_includes/gdi/processor-architecture-native.rst:314 ../../_includes/gdi/processor-architecture-native.rst:315
+#: ../../_includes/gdi/processor-architecture-native.rst:316 ../../_includes/gdi/processor-architecture-native.rst:318 ../../_includes/gdi/processor-architecture-native.rst:319 ../../_includes/gdi/processor-architecture-native.rst:320 ../../_includes/gdi/processor-architecture-native.rst:321
+#: ../../_includes/gdi/processor-architecture-native.rst:324 ../../_includes/gdi/processor-architecture-native.rst:328 ../../_includes/gdi/processor-architecture-native.rst:329 ../../_includes/gdi/processor-architecture-native.rst:330 ../../_includes/gdi/processor-architecture-native.rst:331
+#: ../../_includes/gdi/processor-architecture-native.rst:333 ../../_includes/gdi/processor-architecture-native.rst:334 ../../_includes/gdi/processor-architecture-native.rst:335 ../../_includes/gdi/processor-architecture-native.rst:336 ../../_includes/gdi/processor-architecture-native.rst:338
+#: ../../_includes/gdi/processor-architecture-native.rst:339 ../../_includes/gdi/processor-architecture-native.rst:340 ../../_includes/gdi/processor-architecture-native.rst:341 ../../_includes/gdi/processor-architecture-native.rst:343 ../../_includes/gdi/processor-architecture-native.rst:344
+#: ../../_includes/gdi/processor-architecture-native.rst:345 ../../_includes/gdi/processor-architecture-native.rst:346 ../../_includes/gdi/processor-architecture-native.rst:349 ../../_includes/gdi/processor-architecture-native.rst:354 ../../_includes/gdi/processor-architecture-native.rst:359
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:15 ../../_includes/gdi/processor-architecture-subprocess.rst:20 ../../_includes/gdi/processor-architecture-subprocess.rst:25 ../../_includes/gdi/processor-architecture-subprocess.rst:30 ../../_includes/gdi/processor-architecture-subprocess.rst:35
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:40 ../../_includes/gdi/processor-architecture-subprocess.rst:45 ../../_includes/gdi/processor-architecture-subprocess.rst:50 ../../_includes/gdi/processor-architecture-subprocess.rst:55 ../../_includes/gdi/processor-architecture-subprocess.rst:60
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:79 ../../_includes/gdi/processor-architecture-subprocess.rst:84 ../../_includes/gdi/processor-architecture-subprocess.rst:89 ../../_includes/gdi/processor-architecture-subprocess.rst:94 ../../_includes/gdi/processor-architecture-subprocess.rst:99
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:104 ../../_includes/gdi/processor-architecture-subprocess.rst:123 ../../_includes/gdi/processor-architecture-subprocess.rst:124 ../../_includes/gdi/processor-architecture-subprocess.rst:128 ../../_includes/gdi/processor-architecture-subprocess.rst:129
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:133 ../../_includes/gdi/processor-architecture-subprocess.rst:134 ../../_includes/gdi/processor-architecture-subprocess.rst:138 ../../_includes/gdi/processor-architecture-subprocess.rst:139 ../../_includes/gdi/processor-architecture-subprocess.rst:143
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:144 ../../_includes/gdi/processor-architecture-subprocess.rst:148 ../../_includes/gdi/processor-architecture-subprocess.rst:149 ../../_includes/gdi/processor-architecture-subprocess.rst:153 ../../_includes/gdi/processor-architecture-subprocess.rst:154
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:158 ../../_includes/gdi/processor-architecture-subprocess.rst:159 ../../_includes/gdi/processor-architecture-subprocess.rst:163 ../../_includes/gdi/processor-architecture-subprocess.rst:164 ../../_includes/gdi/processor-architecture-subprocess.rst:168
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:169 ../../_includes/gdi/processor-architecture-subprocess.rst:173 ../../_includes/gdi/processor-architecture-subprocess.rst:174 ../../_includes/gdi/processor-architecture-subprocess.rst:178 ../../_includes/gdi/processor-architecture-subprocess.rst:179
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:183 ../../_includes/gdi/processor-architecture-subprocess.rst:184 ../../_includes/gdi/processor-architecture-subprocess.rst:188 ../../_includes/gdi/processor-architecture-subprocess.rst:189 ../../_includes/gdi/processor-architecture-subprocess.rst:207
 msgid "Yes"
 msgstr "あり"
 
@@ -155,31 +175,36 @@ msgstr "あり"
 msgid ":strong:`Create a new detector`"
 msgstr ":strong:`新しいディテクターを作成する`"
 
-#: ../../_includes/admin/roles_alerts_detectors.rst:24 ../../_includes/admin/roles_alerts_detectors.rst:25 ../../_includes/admin/roles_alerts_detectors.rst:30 ../../_includes/admin/roles_alerts_detectors.rst:31 ../../_includes/admin/roles_alerts_detectors.rst:36 ../../_includes/admin/roles_alerts_detectors.rst:37 ../../_includes/admin/roles_alerts_detectors.rst:48 ../../_includes/admin/roles_alerts_detectors.rst:49
-#: ../../_includes/admin/roles_alerts_detectors.rst:54 ../../_includes/admin/roles_alerts_detectors.rst:55 ../../_includes/admin/roles_alerts_detectors.rst:60 ../../_includes/admin/roles_alerts_detectors.rst:61 ../../_includes/admin/roles_alerts_detectors.rst:66 ../../_includes/admin/roles_alerts_detectors.rst:67 ../../_includes/admin/roles_alerts_detectors.rst:72 ../../_includes/admin/roles_alerts_detectors.rst:73
-#: ../../_includes/admin/roles_alerts_detectors.rst:84 ../../_includes/admin/roles_alerts_detectors.rst:85 ../../_includes/admin/roles_alerts_detectors.rst:90 ../../_includes/admin/roles_alerts_detectors.rst:91 ../../_includes/admin/roles_apm.rst:19 ../../_includes/admin/roles_apm.rst:20 ../../_includes/admin/roles_apm.rst:21 ../../_includes/admin/roles_apm.rst:31 ../../_includes/admin/roles_apm.rst:32
-#: ../../_includes/admin/roles_apm.rst:33 ../../_includes/admin/roles_apm.rst:43 ../../_includes/admin/roles_apm.rst:44 ../../_includes/admin/roles_apm.rst:45 ../../_includes/admin/roles_dashbds_only.rst:21 ../../_includes/admin/roles_dashbds_only.rst:22 ../../_includes/admin/roles_dashbds_only.rst:27 ../../_includes/admin/roles_dashbds_only.rst:28 ../../_includes/admin/roles_data_configuration.rst:19
-#: ../../_includes/admin/roles_data_configuration.rst:20 ../../_includes/admin/roles_data_configuration.rst:21 ../../_includes/admin/roles_log_observer.rst:42 ../../_includes/admin/roles_log_observer.rst:43 ../../_includes/admin/roles_log_observer.rst:54 ../../_includes/admin/roles_log_observer.rst:55 ../../_includes/admin/roles_log_observer.rst:60 ../../_includes/admin/roles_log_observer.rst:61
-#: ../../_includes/admin/roles_log_observer.rst:66 ../../_includes/admin/roles_log_observer.rst:67 ../../_includes/admin/roles_log_observer.rst:73 ../../_includes/admin/roles_log_observer.rst:78 ../../_includes/admin/roles_log_observer.rst:79 ../../_includes/admin/roles_log_observer.rst:84 ../../_includes/admin/roles_log_observer.rst:85 ../../_includes/admin/roles_log_observer.rst:89
-#: ../../_includes/admin/roles_log_observer.rst:90 ../../_includes/admin/roles_log_observer.rst:91 ../../_includes/admin/roles_log_observer.rst:96 ../../_includes/admin/roles_log_observer.rst:97 ../../_includes/admin/roles_log_observer.rst:101 ../../_includes/admin/roles_log_observer.rst:103 ../../_includes/admin/roles_log_observer.rst:107 ../../_includes/admin/roles_log_observer.rst:108
-#: ../../_includes/admin/roles_log_observer.rst:109 ../../_includes/admin/roles_mpm.rst:29 ../../_includes/admin/roles_mpm.rst:30 ../../_includes/admin/roles_mpm.rst:31 ../../_includes/admin/roles_mpm.rst:36 ../../_includes/admin/roles_mpm.rst:37 ../../_includes/admin/roles_mpm.rst:42 ../../_includes/admin/roles_mpm.rst:43 ../../_includes/admin/roles_mpm.rst:48 ../../_includes/admin/roles_mpm.rst:49
-#: ../../_includes/admin/roles_mpm.rst:54 ../../_includes/admin/roles_mpm.rst:55 ../../_includes/admin/roles_mpm.rst:60 ../../_includes/admin/roles_mpm.rst:61 ../../_includes/admin/roles_mpm.rst:66 ../../_includes/admin/roles_mpm.rst:67 ../../_includes/admin/roles_mpm.rst:74 ../../_includes/admin/roles_mpm.rst:75 ../../_includes/admin/roles_navigation.rst:15 ../../_includes/admin/roles_navigation.rst:16
-#: ../../_includes/admin/roles_navigation.rst:17 ../../_includes/admin/roles_navigation.rst:21 ../../_includes/admin/roles_navigation.rst:22 ../../_includes/admin/roles_navigation.rst:23 ../../_includes/admin/roles_navigation.rst:33 ../../_includes/admin/roles_navigation.rst:34 ../../_includes/admin/roles_navigation.rst:35 ../../_includes/admin/roles_navigation.rst:39 ../../_includes/admin/roles_navigation.rst:41
-#: ../../_includes/admin/roles_navigation.rst:51 ../../_includes/admin/roles_navigation.rst:52 ../../_includes/admin/roles_navigation.rst:53 ../../_includes/admin/roles_navigation.rst:63 ../../_includes/admin/roles_navigation.rst:64 ../../_includes/admin/roles_navigation.rst:65 ../../_includes/admin/roles_navigation.rst:70 ../../_includes/admin/roles_navigation.rst:71 ../../_includes/admin/roles_navigation.rst:77
-#: ../../_includes/admin/roles_navigation.rst:78 ../../_includes/admin/roles_navigation.rst:83 ../../_includes/admin/roles_navigation.rst:84 ../../_includes/admin/roles_navigation.rst:88 ../../_includes/admin/roles_navigation.rst:89 ../../_includes/admin/roles_navigation.rst:90 ../../_includes/admin/roles_navs_dashbds.rst:21 ../../_includes/admin/roles_navs_dashbds.rst:22 ../../_includes/admin/roles_navs_dashbds.rst:26
-#: ../../_includes/admin/roles_navs_dashbds.rst:27 ../../_includes/admin/roles_navs_dashbds.rst:28 ../../_includes/admin/rum-roles-caps.rst:20 ../../_includes/admin/rum-roles-caps.rst:21 ../../_includes/admin/rum-roles-caps.rst:56 ../../_includes/admin/rum-roles-caps.rst:57 ../../_includes/admin/rum-roles-caps.rst:62 ../../_includes/admin/rum-roles-caps.rst:63 ../../_includes/admin/synth-roles-caps.rst:14
-#: ../../_includes/admin/synth-roles-caps.rst:15 ../../_includes/admin/synth-roles-caps.rst:26 ../../_includes/admin/synth-roles-caps.rst:27 ../../_includes/admin/synth-roles-caps.rst:28 ../../_includes/admin/synth-roles-caps.rst:38 ../../_includes/admin/synth-roles-caps.rst:39 ../../_includes/admin/synth-roles-caps.rst:40 ../../_includes/admin/synth-roles-caps.rst:44 ../../_includes/admin/synth-roles-caps.rst:45
-#: ../../_includes/admin/synth-roles-caps.rst:46 ../../_includes/admin/synth-roles-caps.rst:50 ../../_includes/admin/synth-roles-caps.rst:51 ../../_includes/admin/synth-roles-caps.rst:52 ../../_includes/collector-env-vars.rst:19 ../../_includes/collector-env-vars.rst:28 ../../_includes/collector-env-vars.rst:31 ../../_includes/collector-env-vars.rst:34 ../../_includes/collector-env-vars.rst:49
-#: ../../_includes/collector-env-vars.rst:52 ../../_includes/collector-env-vars.rst:55 ../../_includes/gdi/processor-architecture-native.rst:58 ../../_includes/gdi/processor-architecture-native.rst:323 ../../_includes/gdi/processor-architecture-native.rst:325 ../../_includes/gdi/processor-architecture-native.rst:326 ../../_includes/gdi/processor-architecture-native.rst:348
-#: ../../_includes/gdi/processor-architecture-native.rst:350 ../../_includes/gdi/processor-architecture-native.rst:351 ../../_includes/gdi/processor-architecture-native.rst:353 ../../_includes/gdi/processor-architecture-native.rst:355 ../../_includes/gdi/processor-architecture-native.rst:356 ../../_includes/gdi/processor-architecture-native.rst:358 ../../_includes/gdi/processor-architecture-native.rst:360
-#: ../../_includes/gdi/processor-architecture-native.rst:361 ../../_includes/gdi/processor-architecture-subprocess.rst:16 ../../_includes/gdi/processor-architecture-subprocess.rst:18 ../../_includes/gdi/processor-architecture-subprocess.rst:21 ../../_includes/gdi/processor-architecture-subprocess.rst:23 ../../_includes/gdi/processor-architecture-subprocess.rst:26
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:28 ../../_includes/gdi/processor-architecture-subprocess.rst:31 ../../_includes/gdi/processor-architecture-subprocess.rst:33 ../../_includes/gdi/processor-architecture-subprocess.rst:36 ../../_includes/gdi/processor-architecture-subprocess.rst:38 ../../_includes/gdi/processor-architecture-subprocess.rst:41
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:43 ../../_includes/gdi/processor-architecture-subprocess.rst:46 ../../_includes/gdi/processor-architecture-subprocess.rst:48 ../../_includes/gdi/processor-architecture-subprocess.rst:51 ../../_includes/gdi/processor-architecture-subprocess.rst:53 ../../_includes/gdi/processor-architecture-subprocess.rst:56
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:58 ../../_includes/gdi/processor-architecture-subprocess.rst:61 ../../_includes/gdi/processor-architecture-subprocess.rst:63 ../../_includes/gdi/processor-architecture-subprocess.rst:80 ../../_includes/gdi/processor-architecture-subprocess.rst:82 ../../_includes/gdi/processor-architecture-subprocess.rst:85
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:87 ../../_includes/gdi/processor-architecture-subprocess.rst:90 ../../_includes/gdi/processor-architecture-subprocess.rst:92 ../../_includes/gdi/processor-architecture-subprocess.rst:95 ../../_includes/gdi/processor-architecture-subprocess.rst:97 ../../_includes/gdi/processor-architecture-subprocess.rst:100
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:102 ../../_includes/gdi/processor-architecture-subprocess.rst:105 ../../_includes/gdi/processor-architecture-subprocess.rst:107 ../../_includes/gdi/processor-architecture-subprocess.rst:126 ../../_includes/gdi/processor-architecture-subprocess.rst:131 ../../_includes/gdi/processor-architecture-subprocess.rst:136
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:141 ../../_includes/gdi/processor-architecture-subprocess.rst:146 ../../_includes/gdi/processor-architecture-subprocess.rst:151 ../../_includes/gdi/processor-architecture-subprocess.rst:156 ../../_includes/gdi/processor-architecture-subprocess.rst:161 ../../_includes/gdi/processor-architecture-subprocess.rst:166
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:171 ../../_includes/gdi/processor-architecture-subprocess.rst:176 ../../_includes/gdi/processor-architecture-subprocess.rst:181 ../../_includes/gdi/processor-architecture-subprocess.rst:186 ../../_includes/gdi/processor-architecture-subprocess.rst:191 ../../_includes/gdi/processor-architecture-subprocess.rst:210
+#: ../../_includes/admin/roles_alerts_detectors.rst:24 ../../_includes/admin/roles_alerts_detectors.rst:25 ../../_includes/admin/roles_alerts_detectors.rst:30 ../../_includes/admin/roles_alerts_detectors.rst:31 ../../_includes/admin/roles_alerts_detectors.rst:36 ../../_includes/admin/roles_alerts_detectors.rst:37
+#: ../../_includes/admin/roles_alerts_detectors.rst:48 ../../_includes/admin/roles_alerts_detectors.rst:49 ../../_includes/admin/roles_alerts_detectors.rst:54 ../../_includes/admin/roles_alerts_detectors.rst:55 ../../_includes/admin/roles_alerts_detectors.rst:60 ../../_includes/admin/roles_alerts_detectors.rst:61
+#: ../../_includes/admin/roles_alerts_detectors.rst:66 ../../_includes/admin/roles_alerts_detectors.rst:67 ../../_includes/admin/roles_alerts_detectors.rst:72 ../../_includes/admin/roles_alerts_detectors.rst:73 ../../_includes/admin/roles_alerts_detectors.rst:84 ../../_includes/admin/roles_alerts_detectors.rst:85
+#: ../../_includes/admin/roles_alerts_detectors.rst:90 ../../_includes/admin/roles_alerts_detectors.rst:91 ../../_includes/admin/roles_apm.rst:19 ../../_includes/admin/roles_apm.rst:20 ../../_includes/admin/roles_apm.rst:21 ../../_includes/admin/roles_apm.rst:31 ../../_includes/admin/roles_apm.rst:32
+#: ../../_includes/admin/roles_apm.rst:33 ../../_includes/admin/roles_apm.rst:43 ../../_includes/admin/roles_apm.rst:44 ../../_includes/admin/roles_apm.rst:45 ../../_includes/admin/roles_dashbds_only.rst:21 ../../_includes/admin/roles_dashbds_only.rst:22 ../../_includes/admin/roles_dashbds_only.rst:27
+#: ../../_includes/admin/roles_dashbds_only.rst:28 ../../_includes/admin/roles_data_configuration.rst:19 ../../_includes/admin/roles_data_configuration.rst:20 ../../_includes/admin/roles_data_configuration.rst:21 ../../_includes/admin/roles_log_observer.rst:35 ../../_includes/admin/roles_log_observer.rst:36
+#: ../../_includes/admin/roles_log_observer.rst:53 ../../_includes/admin/roles_log_observer.rst:54 ../../_includes/admin/roles_log_observer.rst:60 ../../_includes/admin/roles_log_observer.rst:64 ../../_includes/admin/roles_log_observer.rst:66 ../../_includes/admin/roles_log_observer.rst:70
+#: ../../_includes/admin/roles_log_observer.rst:71 ../../_includes/admin/roles_log_observer.rst:72 ../../_includes/admin/roles_mpm.rst:29 ../../_includes/admin/roles_mpm.rst:30 ../../_includes/admin/roles_mpm.rst:31 ../../_includes/admin/roles_mpm.rst:36 ../../_includes/admin/roles_mpm.rst:37
+#: ../../_includes/admin/roles_mpm.rst:42 ../../_includes/admin/roles_mpm.rst:43 ../../_includes/admin/roles_mpm.rst:48 ../../_includes/admin/roles_mpm.rst:49 ../../_includes/admin/roles_mpm.rst:54 ../../_includes/admin/roles_mpm.rst:55 ../../_includes/admin/roles_mpm.rst:60 ../../_includes/admin/roles_mpm.rst:61
+#: ../../_includes/admin/roles_mpm.rst:66 ../../_includes/admin/roles_mpm.rst:67 ../../_includes/admin/roles_mpm.rst:74 ../../_includes/admin/roles_mpm.rst:75 ../../_includes/admin/roles_navigation.rst:15 ../../_includes/admin/roles_navigation.rst:16 ../../_includes/admin/roles_navigation.rst:17
+#: ../../_includes/admin/roles_navigation.rst:21 ../../_includes/admin/roles_navigation.rst:22 ../../_includes/admin/roles_navigation.rst:23 ../../_includes/admin/roles_navigation.rst:33 ../../_includes/admin/roles_navigation.rst:34 ../../_includes/admin/roles_navigation.rst:35 ../../_includes/admin/roles_navigation.rst:39
+#: ../../_includes/admin/roles_navigation.rst:41 ../../_includes/admin/roles_navigation.rst:51 ../../_includes/admin/roles_navigation.rst:52 ../../_includes/admin/roles_navigation.rst:53 ../../_includes/admin/roles_navigation.rst:63 ../../_includes/admin/roles_navigation.rst:64 ../../_includes/admin/roles_navigation.rst:65
+#: ../../_includes/admin/roles_navigation.rst:70 ../../_includes/admin/roles_navigation.rst:71 ../../_includes/admin/roles_navigation.rst:77 ../../_includes/admin/roles_navigation.rst:78 ../../_includes/admin/roles_navigation.rst:83 ../../_includes/admin/roles_navigation.rst:84 ../../_includes/admin/roles_navigation.rst:88
+#: ../../_includes/admin/roles_navigation.rst:89 ../../_includes/admin/roles_navigation.rst:90 ../../_includes/admin/roles_navs_dashbds.rst:21 ../../_includes/admin/roles_navs_dashbds.rst:22 ../../_includes/admin/roles_navs_dashbds.rst:26 ../../_includes/admin/roles_navs_dashbds.rst:27
+#: ../../_includes/admin/roles_navs_dashbds.rst:28 ../../_includes/admin/rum-roles-caps.rst:20 ../../_includes/admin/rum-roles-caps.rst:21 ../../_includes/admin/rum-roles-caps.rst:56 ../../_includes/admin/rum-roles-caps.rst:57 ../../_includes/admin/rum-roles-caps.rst:62 ../../_includes/admin/rum-roles-caps.rst:63
+#: ../../_includes/admin/synth-roles-caps.rst:14 ../../_includes/admin/synth-roles-caps.rst:15 ../../_includes/admin/synth-roles-caps.rst:26 ../../_includes/admin/synth-roles-caps.rst:27 ../../_includes/admin/synth-roles-caps.rst:28 ../../_includes/admin/synth-roles-caps.rst:38 ../../_includes/admin/synth-roles-caps.rst:39
+#: ../../_includes/admin/synth-roles-caps.rst:40 ../../_includes/admin/synth-roles-caps.rst:44 ../../_includes/admin/synth-roles-caps.rst:45 ../../_includes/admin/synth-roles-caps.rst:46 ../../_includes/admin/synth-roles-caps.rst:50 ../../_includes/admin/synth-roles-caps.rst:51 ../../_includes/admin/synth-roles-caps.rst:52
+#: ../../_includes/collector-env-vars.rst:19 ../../_includes/collector-env-vars.rst:28 ../../_includes/collector-env-vars.rst:31 ../../_includes/collector-env-vars.rst:34 ../../_includes/collector-env-vars.rst:49 ../../_includes/collector-env-vars.rst:52 ../../_includes/collector-env-vars.rst:55
+#: ../../_includes/gdi/processor-architecture-native.rst:58 ../../_includes/gdi/processor-architecture-native.rst:323 ../../_includes/gdi/processor-architecture-native.rst:325 ../../_includes/gdi/processor-architecture-native.rst:326 ../../_includes/gdi/processor-architecture-native.rst:348
+#: ../../_includes/gdi/processor-architecture-native.rst:350 ../../_includes/gdi/processor-architecture-native.rst:351 ../../_includes/gdi/processor-architecture-native.rst:353 ../../_includes/gdi/processor-architecture-native.rst:355 ../../_includes/gdi/processor-architecture-native.rst:356
+#: ../../_includes/gdi/processor-architecture-native.rst:358 ../../_includes/gdi/processor-architecture-native.rst:360 ../../_includes/gdi/processor-architecture-native.rst:361 ../../_includes/gdi/processor-architecture-subprocess.rst:16 ../../_includes/gdi/processor-architecture-subprocess.rst:18
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:21 ../../_includes/gdi/processor-architecture-subprocess.rst:23 ../../_includes/gdi/processor-architecture-subprocess.rst:26 ../../_includes/gdi/processor-architecture-subprocess.rst:28 ../../_includes/gdi/processor-architecture-subprocess.rst:31
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:33 ../../_includes/gdi/processor-architecture-subprocess.rst:36 ../../_includes/gdi/processor-architecture-subprocess.rst:38 ../../_includes/gdi/processor-architecture-subprocess.rst:41 ../../_includes/gdi/processor-architecture-subprocess.rst:43
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:46 ../../_includes/gdi/processor-architecture-subprocess.rst:48 ../../_includes/gdi/processor-architecture-subprocess.rst:51 ../../_includes/gdi/processor-architecture-subprocess.rst:53 ../../_includes/gdi/processor-architecture-subprocess.rst:56
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:58 ../../_includes/gdi/processor-architecture-subprocess.rst:61 ../../_includes/gdi/processor-architecture-subprocess.rst:63 ../../_includes/gdi/processor-architecture-subprocess.rst:80 ../../_includes/gdi/processor-architecture-subprocess.rst:82
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:85 ../../_includes/gdi/processor-architecture-subprocess.rst:87 ../../_includes/gdi/processor-architecture-subprocess.rst:90 ../../_includes/gdi/processor-architecture-subprocess.rst:92 ../../_includes/gdi/processor-architecture-subprocess.rst:95
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:97 ../../_includes/gdi/processor-architecture-subprocess.rst:100 ../../_includes/gdi/processor-architecture-subprocess.rst:102 ../../_includes/gdi/processor-architecture-subprocess.rst:105 ../../_includes/gdi/processor-architecture-subprocess.rst:107
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:126 ../../_includes/gdi/processor-architecture-subprocess.rst:131 ../../_includes/gdi/processor-architecture-subprocess.rst:136 ../../_includes/gdi/processor-architecture-subprocess.rst:141 ../../_includes/gdi/processor-architecture-subprocess.rst:146
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:151 ../../_includes/gdi/processor-architecture-subprocess.rst:156 ../../_includes/gdi/processor-architecture-subprocess.rst:161 ../../_includes/gdi/processor-architecture-subprocess.rst:166 ../../_includes/gdi/processor-architecture-subprocess.rst:171
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:176 ../../_includes/gdi/processor-architecture-subprocess.rst:181 ../../_includes/gdi/processor-architecture-subprocess.rst:186 ../../_includes/gdi/processor-architecture-subprocess.rst:191 ../../_includes/gdi/processor-architecture-subprocess.rst:210
 msgid "No"
 msgstr "なし"
 
@@ -291,67 +316,39 @@ msgstr ":strong:`トレーニング`"
 msgid ":strong:`View Timeline`"
 msgstr ":strong:`タイムラインを表示する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:21
-msgid ":strong:`Live Tail`"
-msgstr ":strong:`Live Tail`"
-
-#: ../../_includes/admin/roles_log_observer.rst:27
+#: ../../_includes/admin/roles_log_observer.rst:20
 msgid ":strong:`Search and filter logs`"
 msgstr ":strong:`ログを検索およびフィルターする`"
 
-#: ../../_includes/admin/roles_log_observer.rst:33
+#: ../../_includes/admin/roles_log_observer.rst:26
 msgid ":strong:`Aggregate logs`"
 msgstr ":strong:`ログを集計する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:39
+#: ../../_includes/admin/roles_log_observer.rst:32
 msgid ":strong:`Create and manage field aliases`"
 msgstr ":strong:`フィールドエイリアスを作成および管理する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:45
+#: ../../_includes/admin/roles_log_observer.rst:38
+msgid ":strong:`View field aliases`"
+msgstr ":strong:`フィールドエイリアスを表示する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:44
 msgid ":strong:`View individual log details`"
 msgstr ":strong:`個々のログの詳細を表示する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:51
-msgid ":strong:`Create and manage log processing rules`"
-msgstr ":strong:`ログ処理ルールを作成および管理する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:57
-msgid ":strong:`Apply processing rules across historical data`"
-msgstr ":strong:`過去のデータに処理ルールを適用する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:63
+#: ../../_includes/admin/roles_log_observer.rst:50
 msgid ":strong:`Save and share Log Observer queries`"
 msgstr ":strong:`Log Observer クエリを保存および共有する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:69
+#: ../../_includes/admin/roles_log_observer.rst:56
 msgid ":strong:`Add logs data to Splunk Observability Cloud dashboards`"
 msgstr ":strong:`ログデータを Splunk Observability Cloud ダッシュボードに追加する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:75
-msgid ":strong:`Transform data with log processing rules`"
-msgstr ":strong:`ログ処理ルールでデータを変換する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:81
-msgid ":strong:`Create and manage log metricization rules`"
-msgstr ":strong:`ログのメトリクス化ルールを作成および管理する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:87
-msgid ":strong:`Create new S3 connection to allow infinite logging rules`"
-msgstr ":strong:`無限のロギングルールを可能にする新しい S3 接続を作成する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:93
-msgid ":strong:`Create and manage infinite logging rules`"
-msgstr ":strong:`無限のロギングルールを作成および管理する`"
-
-#: ../../_includes/admin/roles_log_observer.rst:95
-msgid "Yes - after admin creates S3 connection"
-msgstr "権限あり - 管理者がS3接続を作成した後"
-
-#: ../../_includes/admin/roles_log_observer.rst:99 ../../_includes/admin/roles_navigation.rst:37
+#: ../../_includes/admin/roles_log_observer.rst:62 ../../_includes/admin/roles_navigation.rst:37
 msgid ":strong:`View org subscription usage`"
 msgstr ":strong:`組織のサブスクリプション使用状況を表示する`"
 
-#: ../../_includes/admin/roles_log_observer.rst:105
+#: ../../_includes/admin/roles_log_observer.rst:68
 msgid ":strong:`Set up Log Observer Connect connection to Splunk platform`"
 msgstr ":strong:`Splunk プラットフォームに Log Observer Connect 接続をセットアップする`"
 
@@ -397,7 +394,9 @@ msgstr ":strong:`メトリクスパイプライン管理ルールセット全体
 
 #: ../../_includes/admin/roles_mpm.rst:71
 msgid "Yes, if default routing is real-time storage and the user deletes all aggregation rules. No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management doesn't delete the ruleset. An Admin needs to change the routing to real-time storage and delete the ruleset."
-msgstr "デフォルトのルーティングがリアルタイムストレージで、ユーザーがすべての集計ルールを削除する場合は、権限あり。デフォルトのルーティングが［Drop Data］で、ユーザーがすべての集計ルールを削除する場合は、権限なし。メトリクスパイプライン管理は、ルールセットの削除はしません。管理者がルーティングをリアルタイムストレージに変更して、ルールセットを削除する必要があります。"
+msgstr ""
+"デフォルトのルーティングがリアルタイムストレージで、ユーザーがすべての集計ルールを削除する場合は、権限あり。デフォルトのルーティングが［Drop Data］で、ユーザーがすべての集計ルールを削除する場合は、権限なし。メトリクスパイプライン管理は、ルールセットの削除はしません。管理者がルーティングをリアルタイムストレージに変更して、ルー"
+"ルセットを削除する必要があります。"
 
 #: ../../_includes/admin/roles_navigation.rst:13
 msgid ":strong:`View General Settings`"
@@ -597,53 +596,67 @@ msgstr "シグナル内で処理されるメトリック時系列の最大数"
 
 #: ../../_includes/chart-mts-count.rst:10
 msgid ""
-"To maximize responsiveness when processing incoming metric data, Splunk Observability Cloud limits the number of :term:`metric time series` (MTS) processed in a signal (single plot line) on a chart or detector. If the total number of time series for the metric specified in your signal exceeds this limit, Splunk Observability Cloud displays an orange border around the MTS number. This border notifies you that the "
-"processed data reflects only a subset of the time series in the data."
+"To maximize responsiveness when processing incoming metric data, Splunk Observability Cloud limits the number of :term:`metric time series` (MTS) processed in a signal (single plot line) on a chart, detector, or navigator. If the total number of time series for the metric specified in your signal exceeds this limit, Splunk "
+"Observability Cloud displays a message at the top of the chart, detector, or navigator. This message notifies you that the processed data reflects only a subset of the time series in the data."
 msgstr ""
-"受信したメトリクスデータを処理する際の応答性を最大化するため、Splunk Observability Cloudは、チャートまたはディテクター上のシグナル（単一のプロット線）で処理される :term:`metric time series` （MTS）の数を制限しています。シグナル内で指定したメトリクスの時系列の総数がこの制限を超えると、Splunk Observability Cloudは、MTS番号の周囲にオレンジ色の境界線を表示します。この境界線が表示されている場合は、処理済みのデータが反映し"
-"ているのはデータ内の時系列のサブセットのみであることを意味します。"
+"受信したメトリクスデータを処理する際の応答性を最大化するため、Splunk Observability Cloudでは、チャート、ディテクター、またはナビゲーター上のシグナル (単一のプロットライン) で処理される :term:`metric time series` (MTS) の数を制限しています。シグナルで指定したメトリクスの時系列の合計数がこの制限を超えると、Splunk Observability "
+"Cloudはチャート、ディテクター、またはナビゲーターの上部にメッセージを表示します。このメッセージは、処理されたデータがデータ内の時系列のサブセットのみを反映していることを通知します。"
+
+#: ../../_includes/chart-mts-count.rst:12
+msgid "To ensure that your charts, detectors, and navigators are processing all the time series in the data, apply as many filters as necessary to make the MTS number less than the maximum. You'll know you've succeeded when the message at the top of the chart, detector, or navigator no longer appears."
+msgstr "チャート、ディテクター、ナビゲーターがデータ内のすべての時系列を処理していることを確認するには、MTS数が最大値以下になるように必要な数のフィルターを適用します。チャート、ディテクター、またはナビゲーターの上部にあるメッセージが表示されなくなれば、成功したことがわかります。"
 
 #: ../../_includes/chart-mts-count.rst:14
-msgid "To ensure that your charts and detectors are processing all the time series in the data, apply as many filters as necessary to make the MTS number less than the maximum. You'll know you've succeeded when the orange outline around the MTS number and the message at the top of the chart or detector no longer appear."
-msgstr "チャートやディテクターがデータ内のすべての時系列を処理していることを保証するには、MTSの数が最大値より小さくなるようにするために必要な数のフィルターを適用します。MTS番号の周囲のオレンジ色の囲い線と、チャートまたはディテクターの上部のメッセージが表示されなくなれば、成功です。"
-
-#: ../../_includes/chart-mts-count.rst:17
 msgid ""
-"For example, suppose you want to display the sum of available disk capacity per availability zone. You might use ``df.complex.free`` as your signal, then apply the Sum analytics function, grouped by availability zone. If you have a large number of disks, the number of MTS returned by this signal might exceed the limit. To reduce the number of MTS, use filters and multiple plots instead of the group-by option in the "
-"Sum analytics function."
-msgstr "例えば、アベイラビリティゾーンごとに利用可能なディスク容量の合計を表示したいとします。この場合、``df.complex.free`` をシグナルとして使用し、アベイラビリティゾーンごとにグループ化してSum分析関数を適用するかもしれません。ディスクの数が多い場合、このシグナルが返すMTSの数が制限を超える可能性があります。MTSの数を減らすには、Sum分析関数の「group-by」オプションの代わりに、フィルターと複数のプロットを使用します。"
+"For example, suppose you want to display the sum of available disk capacity per availability zone. You might use ``df.complex.free`` as your signal, then apply the Sum analytics function, grouped by availability zone. If you have a large number of disks, the number of MTS returned by this signal might exceed the limit. To "
+"reduce the number of MTS, use filters and multiple plots instead of the group-by option in the Sum analytics function."
+msgstr ""
+"例えば、アベイラビリティゾーンごとに利用可能なディスク容量の合計を表示したいとします。この場合、``df.complex.free`` をシグナルとして使用し、アベイラビリティゾーンごとにグループ化してSum分析関数を適用するかもしれません。ディスクの数が多い場合、このシグナルが返すMTSの数が制限を超える可能性があります。MTSの数を減らすには、Sum分"
+"析関数の「group-by」オプションの代わりに、フィルターと複数のプロットを使用します。"
 
-#: ../../_includes/chart-mts-count.rst:21
+#: ../../_includes/chart-mts-count.rst:18
+msgid "Use filters and multiple plots on charts and detectors"
+msgstr "チャートとディテクターでフィルターと複数のプロットを使用する"
+
+#: ../../_includes/chart-mts-count.rst:20
 msgid "To use filters and multiple plots instead of the group-by option, follow these steps:"
 msgstr "「group-by」オプションの代わりにフィルターと複数のプロットを使用するには、以下の手順に従います。"
 
-#: ../../_includes/chart-mts-count.rst:23
+#: ../../_includes/chart-mts-count.rst:22
 msgid "Apply a filter for the plot that selects a single availability zone, then use the Sum analytic function without the group-by option."
 msgstr "単一のアベイラビリティゾーンを選択するフィルターをプロットに適用し、「group-by」オプションを使用せずにSum分析関数を使用します。"
 
-#: ../../_includes/chart-mts-count.rst:24
+#: ../../_includes/chart-mts-count.rst:23
 msgid "At the end of the plot row, select :guilabel:`Configure plot` to open :guilabel:`Visualization Options`, then select a color from :guilabel:`Plot Color`."
 msgstr "プロット行の最後で、:guilabel:`Configure plot` を選択して :guilabel:`Visualization Options` を開き、:guilabel:`Plot Color` から色を選択します。"
 
-#: ../../_includes/chart-mts-count.rst:25
-msgid "Clone the plot. To do this, open the :guilabel:`plot actions` menu at the end of the plot row in the :guilabel:`Plot Editor`, then select :menuselection:`Clone`."
-msgstr "このプロットを複製します。これを行うには、:guilabel:`Plot Editor` のプロット行の最後にある :guilabel:`plot actions` メニューを開き、:menuselection:`Clone` を選択します。"
+#: ../../_includes/chart-mts-count.rst:24
+msgid "Clone the plot. To do this, open the :guilabel:`Plot actions` menu at the end of the plot row in the :guilabel:`Plot Editor`, then select :menuselection:`Clone`."
+msgstr "このプロットを複製します。これを行うには、:guilabel:`Plot Editor` のプロット行の最後にある :guilabel:`Plot actions` メニューを開き、:menuselection:`Clone` を選択します。"
 
-#: ../../_includes/chart-mts-count.rst:27
+#: ../../_includes/chart-mts-count.rst:26
 msgid "In the cloned plot, change the availability zone filter to select another availability zone, and change the :guilabel:`Plot Color` to give the cloned plot a color that's different from the original plot."
 msgstr "複製したプロット内で、アベイラビリティゾーンフィルターを変更して別のアベイラビリティゾーンを選択し、:guilabel:`Plot Color` を変更して、複製したプロットに元のプロットとは異なる色を付けます。"
 
-#: ../../_includes/chart-mts-count.rst:29
+#: ../../_includes/chart-mts-count.rst:28
 msgid "Continue to clone plots, change the availability zone filter, and change the plot color until you have one plot for each availability zone."
 msgstr "各アベイラビリティゾーンにつきプロットが1つずつ作成されるまで、プロットの複製、アベイラビリティゾーンフィルターの変更、プロットカラーの変更を繰り返します。"
 
-#: ../../_includes/chart-mts-count.rst:31
+#: ../../_includes/chart-mts-count.rst:30
 msgid "The result is one chart with a separate plot line for each availability zone. Each plot line has a distinct color."
 msgstr "この手順を完了すると、各アベイラビリティゾーンごとに異なるプロットラインを持つ1つのチャートが出来上がります。それぞれのプロットラインには、異なる色が付いています。"
 
-#: ../../_includes/chart-mts-count.rst:33
+#: ../../_includes/chart-mts-count.rst:32
 msgid "For more information on filtering, see :ref:`filter-signal`."
 msgstr "フィルタリングの詳細については、:ref:`filter-signal` を参照してください。"
+
+#: ../../_includes/chart-mts-count.rst:35
+msgid "Use filters on navigators"
+msgstr "ナビゲーターでフィルターを使用する"
+
+#: ../../_includes/chart-mts-count.rst:37
+msgid "To use filters on navigators, see :ref:`add-filter`."
+msgstr "ナビゲーターでフィルターを使用するには、:ref:`add-filter` を参照してください。"
 
 #: ../../_includes/collector-components.rst:1
 msgid "The Splunk Distribution of the OpenTelemetry Collector has the following components and services:"
@@ -789,7 +802,8 @@ msgstr "Splunk 固有の環境変数を以下の表に示します："
 msgid "Name"
 msgstr "Name"
 
-#: ../../_includes/collector-env-vars.rst:9 ../../_includes/gdi/collector-available-connectors.rst:7 ../../_includes/gdi/collector-available-exporters.rst:7 ../../_includes/gdi/collector-available-extensions.rst:7 ../../_includes/gdi/collector-available-processors.rst:7 ../../_includes/gdi/lambda-configuration.rst:17 ../../_includes/gdi/otel-receivers-table.rst:7
+#: ../../_includes/collector-env-vars.rst:9 ../../_includes/gdi/collector-available-connectors.rst:7 ../../_includes/gdi/collector-available-exporters.rst:7 ../../_includes/gdi/collector-available-extensions.rst:7 ../../_includes/gdi/collector-available-processors.rst:7 ../../_includes/gdi/lambda-configuration.rst:17
+#: ../../_includes/gdi/otel-receivers-table.rst:7
 msgid "Description"
 msgstr "説明"
 
@@ -858,8 +872,12 @@ msgid "``SPLUNK_DEBUG_CONFIG_SERVER``"
 msgstr "``SPLUNK_DEBUG_CONFIG_SERVER``"
 
 #: ../../_includes/collector-env-vars.rst:33
-msgid "By default, the Collector provides a sensitive value-redacting, local config server listening at http://localhost:55554/debug/configz/effective, which is helpful in troubleshooting. To disable it, set ``SPLUNK_DEBUG_CONFIG_SERVER`` to any value other than ``true``. To set the desired port to listen to, use ``SPLUNK_DEBUG_CONFIG_SERVER_PORT``"
-msgstr "デフォルトでは、Collector は http://localhost:55554/debug/configz/effective でリッスンしている、センシティブな値を再編集するローカルコンフィグサーバーを提供し、トラブルシューティングに役立ちます。これを無効にするには、``SPLUNK_DEBUG_CONFIG_SERVER`` を ``true`` 以外の値に設定します。リッスンする希望のポートを設定するには ``SPLUNK_DEBUG_CONFIG_SERVER_PORT`` を使用します。"
+msgid ""
+"By default, the Collector provides a sensitive value-redacting, local config server listening at http://localhost:55554/debug/configz/effective, which is helpful in troubleshooting. To disable it, set ``SPLUNK_DEBUG_CONFIG_SERVER`` to any value other than ``true``. To set the desired port to listen to, use "
+"``SPLUNK_DEBUG_CONFIG_SERVER_PORT``"
+msgstr ""
+"デフォルトでは、Collector は http://localhost:55554/debug/configz/effective でリッスンしている、センシティブな値を再編集するローカルコンフィグサーバーを提供し、トラブルシューティングに役立ちます。これを無効にするには、``SPLUNK_DEBUG_CONFIG_SERVER`` を ``true`` 以外の値に設定します。リッスンする希望のポートを設定するには "
+"``SPLUNK_DEBUG_CONFIG_SERVER_PORT`` を使用します。"
 
 #: ../../_includes/collector-env-vars.rst:35
 msgid "``SPLUNK_HEC_TOKEN``"
@@ -973,23 +991,15 @@ msgstr "Splunk Distribution of OpenTelemetry Collectorを再起動します。"
 msgid "Deploy the Splunk Distribution of OpenTelemetry Collector to your host:"
 msgstr "Splunk Distribution of OpenTelemetry Collector をホストにデプロイします："
 
-#: ../../_includes/collector-upgrade.rst:1
-msgid "The installer script uses one of the supported package managers to install the Collector."
-msgstr "インストーラスクリプトは、サポートされているパッケージマネージャーのいずれかを使用してCollectorをインストールします。"
-
-#: ../../_includes/collector-upgrade.rst:3
-msgid "When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped."
-msgstr "公式パッケージを使用してCollectorをアップデートする場合、設定ファイルが上書きされることはありません。更新後に設定を更新する必要がある場合は、下位互換性が失われる前に手動で編集してください。"
-
-#: ../../_includes/collector-upgrade.rst:6
+#: ../../_includes/collector-upgrade.rst:2
 msgid "General guidelines"
 msgstr "一般的なガイドライン"
 
 #: ../../_includes/collector-upgrade.rst:8
-msgid "Apply the following changes to the Collector configuration files for specific version upgrades."
-msgstr "特定のバージョンアップのために、Collector 構成ファイルに以下の変更を適用します。"
+msgid "Apply the following changes to the Collector configuration files for specific version upgrades. For more details refer to the :new-page:`Upgrade guidelines <https://github.com/signalfx/splunk-otel-collector?tab=readme-ov-file#upgrade-guidelines>` in GitHub."
+msgstr "特定のバージョンアップのために、Collector設定ファイルに以下の変更を適用します。詳細については、GitHubの :new-page:`アップグレードガイドライン<https://github.com/signalfx/splunk-otel-collector?tab=readme-ov-file#upgrade-guidelines>` を参照してください。"
 
-#: ../../_includes/collector-upgrade.rst:15
+#: ../../_includes/collector-upgrade.rst:11
 msgid "From 0.96.1 to 0.97.0"
 msgstr "0.96.1から0.97.0"
 
@@ -1021,43 +1031,45 @@ msgstr "ガベージコレクションの頻度を減らすには、``GOMEMLIMIT
 msgid "For more information, see :new-page:`Go environment variables <https://pkg.go.dev/runtime>`."
 msgstr "詳細は :new-page:`Go 環境変数<https://pkg.go.dev/runtime>` を参照してください。"
 
-#: ../../_includes/collector-upgrade.rst:33
+#: ../../_includes/collector-upgrade.rst:24
 msgid "From 0.68.0 to 0.69.0"
 msgstr "0.68.0から0.69.0"
 
-#: ../../_includes/collector-upgrade.rst:35
+#: ../../_includes/collector-upgrade.rst:26
 msgid "The ``gke`` and ``gce`` resource detectors in the ``resourcedetection`` processor have been replaced with the ``gcp`` resource detector. If you have ``gke`` and ``gce`` detectors configured in the ``resourcedetection`` processor, update your configuration accordingly."
-msgstr "``resourcedetection``  プロセッサーの ``gke``  および  ``gce`` リソースディテクターは、``gcp`` リソースディテクターに置き換えられました。  ``resourcedetection``  プロセッサーに   ``gke``  および  ``gce``   ディテクターを設定している場合は、それに応じて設定を更新してください。"
+msgstr "``resourcedetection``  プロセッサーの ``gke``  および  ``gce`` リソースディテクターは、``gcp`` リソースディテクターに置き換えられました。   ``resourcedetection``  プロセッサーに   ``gke``  および  ``gce``   ディテクターを設定している場合は、それに応じて設定を更新してください。"
 
-#: ../../_includes/collector-upgrade.rst:37
+#: ../../_includes/collector-upgrade.rst:28
 msgid "For more information, see :ref:`resourcedetection-processor`."
 msgstr "詳細は :ref:`resourcedetection-processor` を参照してください。"
 
-#: ../../_includes/collector-upgrade.rst:40
+#: ../../_includes/collector-upgrade.rst:31
 msgid "From 0.41.0 to 0.42.0"
 msgstr "0.41.0 から 0.42.0"
 
-#: ../../_includes/collector-upgrade.rst:42
-msgid "The Splunk Distribution of the OpenTelemetry Collector used to evaluate user configuration twice and this required escaping of each ``$`` symbol with ``$$`` to prevent unwanted environment variable expansion. The issue was fixed in the 0.42.0 version. Any occurrences of ``$$`` in your configuration need to be replaced with ``$``."
+#: ../../_includes/collector-upgrade.rst:33
+msgid ""
+"The Splunk Distribution of the OpenTelemetry Collector used to evaluate user configuration twice and this required escaping of each ``$`` symbol with ``$$`` to prevent unwanted environment variable expansion. The issue was fixed in the 0.42.0 version. Any occurrences of ``$$`` in your configuration need to be replaced with "
+"``$``."
 msgstr "The Splunk Distribution of OpenTelemetry Collectorは、ユーザー設定を2回評価していため、不要な環境変数の展開を防ぐために各 ``$``  記号を  ``$$``  でエスケープする必要がありました。この問題は、0.42.0バージョンで修正されました。設定に  ``$$``  が出現する場合は、 ``$``  に置き換える必要があります。"
 
-#: ../../_includes/collector-upgrade.rst:45
+#: ../../_includes/collector-upgrade.rst:36
 msgid "From 0.35.0 to 0.36.0"
 msgstr "0.35.0 から 0.36.0"
 
-#: ../../_includes/collector-upgrade.rst:47
+#: ../../_includes/collector-upgrade.rst:38
 msgid "Move the config parameter ``exporters -> otlp -> insecure`` to ``exporters -> otlp -> tls -> insecure``."
 msgstr "コンフィグパラメーター ``exporters -> otlp -> insecure`` を ``exporters -> otlp -> tls -> insecure`` に移動します。"
 
-#: ../../_includes/collector-upgrade.rst:49
+#: ../../_includes/collector-upgrade.rst:40
 msgid "The ``otlp`` exporter configuration must look like this:"
 msgstr "``otlp`` エクスポーターのコンフィギュレーションは次のようになっている必要があります："
 
-#: ../../_includes/collector-upgrade.rst:61
+#: ../../_includes/collector-upgrade.rst:52
 msgid "From 0.34.0 to 0.35.0"
 msgstr "0.34.0 から 0.35.0"
 
-#: ../../_includes/collector-upgrade.rst:63
+#: ../../_includes/collector-upgrade.rst:54
 msgid "Move the ``ballast_size_mib`` parameter from the ``memory_limiter`` processor to the ``memory_ballast`` extension, and rename it to ``size_mib``."
 msgstr "``ballast_size_mib`` パラメータを ``memory_limiter`` プロセッサーから ``memory_ballast`` エクステンションに移動し、名前を ``size_mib`` に変更します。"
 
@@ -1067,19 +1079,19 @@ msgstr "OpenTelemetry Collectorは、テレメトリーデータを受信、処�
 
 #: ../../_includes/collector-works.rst:3
 msgid ""
-"After you've installed the Collector in your platform, update your config file to define the different Collector components (receivers, processors, and exporters) you want to use. However, receivers and exporters are not enabled until they are in a pipeline, as explained in the next paragraph. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and "
-"health checks. Find the available components at :ref:`otel-components`."
+"After you've installed the Collector in your platform, update your config file to define the different Collector components (receivers, processors, and exporters) you want to use. However, receivers and exporters are not enabled until they are in a pipeline, as explained in the next paragraph. You can also add extensions "
+"that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and health checks. Find the available components at :ref:`otel-components`."
 msgstr ""
-"プラットフォームにCollectorをインストールしたら、設定ファイルを更新して、使用するCollectorコンポーネント（レシーバー、プロセッサー、エクスポーター）を定義します。ただし、レシーバーとエクスポーターは、次の段落で説明するように、パイプラインに入るまで有効になりません。診断やヘルスチェックなど、OpenTelemetry Collector に追加機能を提供する拡張機能を追加することもできます。使用可能なコンポーネントは、:ref:`otel-"
-"components` を参照してください。"
+"プラットフォームにCollectorをインストールしたら、設定ファイルを更新して、使用するCollectorコンポーネント（レシーバー、プロセッサー、エクスポーター）を定義します。ただし、レシーバーとエクスポーターは、次の段落で説明するように、パイプラインに入るまで有効になりません。診断やヘルスチェックなど、OpenTelemetry Collector に追加機能"
+"を提供する拡張機能を追加することもできます。使用可能なコンポーネントは、:ref:`otel-components` を参照してください。"
 
 #: ../../_includes/collector-works.rst:5
 msgid ""
-"Next, you need to configure your service pipelines to determine how to process your data. In the pipelines section you tie together the receivers, processors and exporters, designing the path your data takes. Multiple pipelines can be defined, and a single receiver or exporter definition can be used in multiple pipelines. A single pipeline can also have multiple receivers or exporters within it. Learn more at :ref:"
-"`otel-data-processing`."
+"Next, you need to configure your service pipelines to determine how to process your data. In the pipelines section you tie together the receivers, processors and exporters, designing the path your data takes. Multiple pipelines can be defined, and a single receiver or exporter definition can be used in multiple pipelines. A "
+"single pipeline can also have multiple receivers or exporters within it. Learn more at :ref:`otel-data-processing`."
 msgstr ""
-"次に、データの処理方法を決定するために、サービスパイプラインを設定する必要があります。パイプラインセクションでは、レシーバー、プロセッサー、エクスポーターを結びつけ、データが通る経路を設計します。パイプラインは複数定義することができ、1つのレシーバーまたはエクスポーターの定義を複数のパイプラインで使用することができます。また、1つのパイプラインに複数のレシーバーやエクスポーターを含めることもできます。詳しくは :ref:"
-"`otel-data-processing` を参照してください。"
+"次に、データの処理方法を決定するために、サービスパイプラインを設定する必要があります。パイプラインセクションでは、レシーバー、プロセッサー、エクスポーターを結びつけ、データが通る経路を設計します。パイプラインは複数定義することができ、1つのレシーバーまたはエクスポーターの定義を複数のパイプラインで使用することができます。また、"
+"1つのパイプラインに複数のレシーバーやエクスポーターを含めることもできます。詳しくは :ref:`otel-data-processing` を参照してください。"
 
 #: ../../_includes/configuration.rst:1
 msgid "To use this integration of a Smart Agent monitor with the Collector:"
@@ -1110,8 +1122,12 @@ msgid "Learn more about the Collector at :ref:`otel-understand-use`."
 msgstr "Collectorの詳細は、:ref:`otel-understand-use` を参照してください。"
 
 #: ../../_includes/event-sending-functionality.rst:1
-msgid "This monitor includes event-sending functionality to let you post your own custom events to Splunk Observability Cloud. For example, you can send your own custom event when you deploy a new version of your software or update other parts of your infrastructure. You can then view these events in the Splunk Observability Cloud user interface (UI)."
-msgstr "このモニターには、独自のカスタムイベントをSplunk Observability Cloudにポストすることを可能にするイベント送信機能が含まれます。たとえば、ソフトウェアの新しいバージョンのデプロイ時や、ご利用のインフラストラクチャの他の部分の更新時に、独自のカスタムイベントを送信できます。そして、Splunk Observability Cloudのユーザーインターフェイス（UI）でそれらのイベントを表示できます。"
+msgid ""
+"This monitor includes event-sending functionality to let you post your own custom events to Splunk Observability Cloud. For example, you can send your own custom event when you deploy a new version of your software or update other parts of your infrastructure. You can then view these events in the Splunk Observability Cloud "
+"user interface (UI)."
+msgstr ""
+"このモニターには、独自のカスタムイベントをSplunk Observability Cloudにポストすることを可能にするイベント送信機能が含まれます。たとえば、ソフトウェアの新しいバージョンのデプロイ時や、ご利用のインフラストラクチャの他の部分の更新時に、独自のカスタムイベントを送信できます。そして、Splunk Observability Cloudのユーザーインターフェ"
+"イス（UI）でそれらのイベントを表示できます。"
 
 #: ../../_includes/event-sending-functionality.rst:7
 msgid "Make monitors with event-sending functionality members of a logs pipeline that uses a SignalFx exporter to make the event submission requests. Use a Resource Detection processor to ensure that host identity and other useful information is made available as event dimensions."
@@ -1535,11 +1551,13 @@ msgstr "サードパーティサービス用のオートディスカバリーは
 
 #: ../../_includes/gdi/auto-discovery-intro.rst:5
 msgid ""
-"Via automatic discovery you can also enable zero-code instrumentation of back-end applications, which allows the Collector to retrieve data from application language runtimes without having to modify the source application code or adding any new installation or configuration steps. With this option you won't have to install and configure your instrumentation agents separately. Zero-code instrumentation using the "
-"Collector's automatic discovery feature is only available for the Java, Node.js, and .NET language runtimes. Alternatively you can deploy zero-code instrumentation independently from the Collector for 8 back-end languages, as described in :ref:`get-started-application`."
+"Via automatic discovery you can also enable zero-code instrumentation of back-end applications, which allows the Collector to retrieve data from application language runtimes without having to modify the source application code or adding any new installation or configuration steps. With this option you won't have to install "
+"and configure your instrumentation agents separately. Zero-code instrumentation using the Collector's automatic discovery feature is only available for the Java, Node.js, and .NET language runtimes. Alternatively you can deploy zero-code instrumentation independently from the Collector for 8 back-end languages, as described "
+"in :ref:`get-started-application`."
 msgstr ""
-"オートディスカバリーを使用すると、バックエンドアプリケーションのゼロコードインストルメンテーションを有効にすることもできます。これにより、Collectorは、ソースアプリケーションコードを変更したり、新しいインストールや設定手順を追加したりすることなく、アプリケーションの言語ランタイムからデータを取得できます。このオプションを使用すると、インストルメンテーション・エージェントを個別にインストールおよび構成する必要がなくなり"
-"ます。Collectorのオートディスカバリー機能を使用したゼロコードインストルメンテーションは、Java、Node.js、および.NETの言語ランタイムでのみ使用できます。他の方法として、:ref:`get-started-application` で説明するように、8つのバックエンド言語に対して、Collectorからは独立してゼロコードインストルメンテーションをデプロイすることもできます。"
+"オートディスカバリーを使用すると、バックエンドアプリケーションのゼロコードインストルメンテーションを有効にすることもできます。これにより、Collectorは、ソースアプリケーションコードを変更したり、新しいインストールや設定手順を追加したりすることなく、アプリケーションの言語ランタイムからデータを取得できます。このオプションを使用す"
+"ると、インストルメンテーション・エージェントを個別にインストールおよび構成する必要がなくなります。Collectorのオートディスカバリー機能を使用したゼロコードインストルメンテーションは、Java、Node.js、および.NETの言語ランタイムでのみ使用できます。他の方法として、:ref:`get-started-application` で説明するように、8つのバックエンド言"
+"語に対して、Collectorからは独立してゼロコードインストルメンテーションをデプロイすることもできます。"
 
 #: ../../_includes/gdi/available-aws.rst:1
 msgid "For trace monitoring see :ref:`apm-gdi`."
@@ -1573,24 +1591,31 @@ msgstr "AWS/ACMPrivateCA"
 msgid "ACM Private CA"
 msgstr "ACMプライベートCA"
 
-#: ../../_includes/gdi/available-aws.rst:18 ../../_includes/gdi/available-aws.rst:23 ../../_includes/gdi/available-aws.rst:28 ../../_includes/gdi/available-aws.rst:29 ../../_includes/gdi/available-aws.rst:33 ../../_includes/gdi/available-aws.rst:34 ../../_includes/gdi/available-aws.rst:38 ../../_includes/gdi/available-aws.rst:43 ../../_includes/gdi/available-aws.rst:48 ../../_includes/gdi/available-aws.rst:49
-#: ../../_includes/gdi/available-aws.rst:53 ../../_includes/gdi/available-aws.rst:58 ../../_includes/gdi/available-aws.rst:63 ../../_includes/gdi/available-aws.rst:64 ../../_includes/gdi/available-aws.rst:68 ../../_includes/gdi/available-aws.rst:69 ../../_includes/gdi/available-aws.rst:73 ../../_includes/gdi/available-aws.rst:74 ../../_includes/gdi/available-aws.rst:78 ../../_includes/gdi/available-aws.rst:83
-#: ../../_includes/gdi/available-aws.rst:88 ../../_includes/gdi/available-aws.rst:93 ../../_includes/gdi/available-aws.rst:98 ../../_includes/gdi/available-aws.rst:103 ../../_includes/gdi/available-aws.rst:108 ../../_includes/gdi/available-aws.rst:113 ../../_includes/gdi/available-aws.rst:114 ../../_includes/gdi/available-aws.rst:118 ../../_includes/gdi/available-aws.rst:119 ../../_includes/gdi/available-aws.rst:123
-#: ../../_includes/gdi/available-aws.rst:124 ../../_includes/gdi/available-aws.rst:128 ../../_includes/gdi/available-aws.rst:129 ../../_includes/gdi/available-aws.rst:133 ../../_includes/gdi/available-aws.rst:134 ../../_includes/gdi/available-aws.rst:138 ../../_includes/gdi/available-aws.rst:143 ../../_includes/gdi/available-aws.rst:144 ../../_includes/gdi/available-aws.rst:148 ../../_includes/gdi/available-aws.rst:149
-#: ../../_includes/gdi/available-aws.rst:154 ../../_includes/gdi/available-aws.rst:158 ../../_includes/gdi/available-aws.rst:159 ../../_includes/gdi/available-aws.rst:163 ../../_includes/gdi/available-aws.rst:164 ../../_includes/gdi/available-aws.rst:168 ../../_includes/gdi/available-aws.rst:173 ../../_includes/gdi/available-aws.rst:174 ../../_includes/gdi/available-aws.rst:178 ../../_includes/gdi/available-aws.rst:183
-#: ../../_includes/gdi/available-aws.rst:184 ../../_includes/gdi/available-aws.rst:188 ../../_includes/gdi/available-aws.rst:189 ../../_includes/gdi/available-aws.rst:193 ../../_includes/gdi/available-aws.rst:198 ../../_includes/gdi/available-aws.rst:199 ../../_includes/gdi/available-aws.rst:203 ../../_includes/gdi/available-aws.rst:208 ../../_includes/gdi/available-aws.rst:213 ../../_includes/gdi/available-aws.rst:214
-#: ../../_includes/gdi/available-aws.rst:218 ../../_includes/gdi/available-aws.rst:219 ../../_includes/gdi/available-aws.rst:223 ../../_includes/gdi/available-aws.rst:228 ../../_includes/gdi/available-aws.rst:233 ../../_includes/gdi/available-aws.rst:238 ../../_includes/gdi/available-aws.rst:239 ../../_includes/gdi/available-aws.rst:243 ../../_includes/gdi/available-aws.rst:244 ../../_includes/gdi/available-aws.rst:248
-#: ../../_includes/gdi/available-aws.rst:249 ../../_includes/gdi/available-aws.rst:253 ../../_includes/gdi/available-aws.rst:258 ../../_includes/gdi/available-aws.rst:263 ../../_includes/gdi/available-aws.rst:264 ../../_includes/gdi/available-aws.rst:268 ../../_includes/gdi/available-aws.rst:273 ../../_includes/gdi/available-aws.rst:278 ../../_includes/gdi/available-aws.rst:283 ../../_includes/gdi/available-aws.rst:288
-#: ../../_includes/gdi/available-aws.rst:293 ../../_includes/gdi/available-aws.rst:298 ../../_includes/gdi/available-aws.rst:303 ../../_includes/gdi/available-aws.rst:304 ../../_includes/gdi/available-aws.rst:308 ../../_includes/gdi/available-aws.rst:309 ../../_includes/gdi/available-aws.rst:313 ../../_includes/gdi/available-aws.rst:314 ../../_includes/gdi/available-aws.rst:318 ../../_includes/gdi/available-aws.rst:319
-#: ../../_includes/gdi/available-aws.rst:323 ../../_includes/gdi/available-aws.rst:324 ../../_includes/gdi/available-aws.rst:328 ../../_includes/gdi/available-aws.rst:329 ../../_includes/gdi/available-aws.rst:333 ../../_includes/gdi/available-aws.rst:338 ../../_includes/gdi/available-aws.rst:343 ../../_includes/gdi/available-aws.rst:344 ../../_includes/gdi/available-aws.rst:348 ../../_includes/gdi/available-aws.rst:349
-#: ../../_includes/gdi/available-aws.rst:353 ../../_includes/gdi/available-aws.rst:358 ../../_includes/gdi/available-aws.rst:359 ../../_includes/gdi/available-aws.rst:363 ../../_includes/gdi/available-aws.rst:364 ../../_includes/gdi/available-aws.rst:368 ../../_includes/gdi/available-aws.rst:373 ../../_includes/gdi/available-aws.rst:378 ../../_includes/gdi/available-aws.rst:383 ../../_includes/gdi/available-aws.rst:388
-#: ../../_includes/gdi/available-aws.rst:393 ../../_includes/gdi/available-aws.rst:398 ../../_includes/gdi/available-aws.rst:403 ../../_includes/gdi/available-aws.rst:404 ../../_includes/gdi/available-aws.rst:408 ../../_includes/gdi/available-aws.rst:409 ../../_includes/gdi/available-aws.rst:413 ../../_includes/gdi/available-aws.rst:414 ../../_includes/gdi/available-aws.rst:418 ../../_includes/gdi/available-aws.rst:423
-#: ../../_includes/gdi/available-aws.rst:428 ../../_includes/gdi/available-aws.rst:433 ../../_includes/gdi/available-aws.rst:438 ../../_includes/gdi/available-aws.rst:443 ../../_includes/gdi/available-aws.rst:448 ../../_includes/gdi/available-aws.rst:449 ../../_includes/gdi/available-aws.rst:453 ../../_includes/gdi/available-aws.rst:458 ../../_includes/gdi/available-aws.rst:463 ../../_includes/gdi/available-aws.rst:464
-#: ../../_includes/gdi/available-aws.rst:468 ../../_includes/gdi/available-aws.rst:473 ../../_includes/gdi/available-aws.rst:478 ../../_includes/gdi/available-aws.rst:483 ../../_includes/gdi/available-aws.rst:488 ../../_includes/gdi/available-gcp.rst:15 ../../_includes/gdi/available-gcp.rst:20 ../../_includes/gdi/available-gcp.rst:25 ../../_includes/gdi/available-gcp.rst:30 ../../_includes/gdi/available-gcp.rst:31
-#: ../../_includes/gdi/available-gcp.rst:35 ../../_includes/gdi/available-gcp.rst:40 ../../_includes/gdi/available-gcp.rst:41 ../../_includes/gdi/available-gcp.rst:45 ../../_includes/gdi/available-gcp.rst:50 ../../_includes/gdi/available-gcp.rst:55 ../../_includes/gdi/available-gcp.rst:56 ../../_includes/gdi/available-gcp.rst:60 ../../_includes/gdi/available-gcp.rst:65 ../../_includes/gdi/available-gcp.rst:70
-#: ../../_includes/gdi/available-gcp.rst:75 ../../_includes/gdi/available-gcp.rst:80 ../../_includes/gdi/available-gcp.rst:85 ../../_includes/gdi/available-gcp.rst:90 ../../_includes/gdi/available-gcp.rst:95 ../../_includes/gdi/available-gcp.rst:100 ../../_includes/gdi/available-gcp.rst:105 ../../_includes/gdi/available-gcp.rst:106 ../../_includes/gdi/available-gcp.rst:110 ../../_includes/gdi/available-gcp.rst:115
-#: ../../_includes/gdi/available-gcp.rst:120 ../../_includes/gdi/available-gcp.rst:125 ../../_includes/gdi/available-gcp.rst:130 ../../_includes/gdi/available-gcp.rst:131 ../../_includes/gdi/available-gcp.rst:135 ../../_includes/gdi/available-gcp.rst:140 ../../_includes/gdi/available-gcp.rst:145 ../../_includes/gdi/available-gcp.rst:146 ../../_includes/gdi/available-gcp.rst:150 ../../_includes/gdi/available-gcp.rst:155
-#: ../../_includes/gdi/available-gcp.rst:156 ../../_includes/gdi/available-gcp.rst:160 ../../_includes/gdi/available-gcp.rst:161 ../../_includes/gdi/available-gcp.rst:165
+#: ../../_includes/gdi/available-aws.rst:18 ../../_includes/gdi/available-aws.rst:23 ../../_includes/gdi/available-aws.rst:28 ../../_includes/gdi/available-aws.rst:29 ../../_includes/gdi/available-aws.rst:33 ../../_includes/gdi/available-aws.rst:34 ../../_includes/gdi/available-aws.rst:38
+#: ../../_includes/gdi/available-aws.rst:43 ../../_includes/gdi/available-aws.rst:48 ../../_includes/gdi/available-aws.rst:49 ../../_includes/gdi/available-aws.rst:53 ../../_includes/gdi/available-aws.rst:58 ../../_includes/gdi/available-aws.rst:63 ../../_includes/gdi/available-aws.rst:64
+#: ../../_includes/gdi/available-aws.rst:68 ../../_includes/gdi/available-aws.rst:69 ../../_includes/gdi/available-aws.rst:73 ../../_includes/gdi/available-aws.rst:74 ../../_includes/gdi/available-aws.rst:78 ../../_includes/gdi/available-aws.rst:83 ../../_includes/gdi/available-aws.rst:88
+#: ../../_includes/gdi/available-aws.rst:93 ../../_includes/gdi/available-aws.rst:98 ../../_includes/gdi/available-aws.rst:103 ../../_includes/gdi/available-aws.rst:108 ../../_includes/gdi/available-aws.rst:113 ../../_includes/gdi/available-aws.rst:114 ../../_includes/gdi/available-aws.rst:118
+#: ../../_includes/gdi/available-aws.rst:119 ../../_includes/gdi/available-aws.rst:123 ../../_includes/gdi/available-aws.rst:124 ../../_includes/gdi/available-aws.rst:128 ../../_includes/gdi/available-aws.rst:129 ../../_includes/gdi/available-aws.rst:133 ../../_includes/gdi/available-aws.rst:134
+#: ../../_includes/gdi/available-aws.rst:138 ../../_includes/gdi/available-aws.rst:143 ../../_includes/gdi/available-aws.rst:144 ../../_includes/gdi/available-aws.rst:148 ../../_includes/gdi/available-aws.rst:149 ../../_includes/gdi/available-aws.rst:154 ../../_includes/gdi/available-aws.rst:158
+#: ../../_includes/gdi/available-aws.rst:159 ../../_includes/gdi/available-aws.rst:163 ../../_includes/gdi/available-aws.rst:164 ../../_includes/gdi/available-aws.rst:168 ../../_includes/gdi/available-aws.rst:173 ../../_includes/gdi/available-aws.rst:174 ../../_includes/gdi/available-aws.rst:178
+#: ../../_includes/gdi/available-aws.rst:183 ../../_includes/gdi/available-aws.rst:184 ../../_includes/gdi/available-aws.rst:188 ../../_includes/gdi/available-aws.rst:189 ../../_includes/gdi/available-aws.rst:193 ../../_includes/gdi/available-aws.rst:198 ../../_includes/gdi/available-aws.rst:199
+#: ../../_includes/gdi/available-aws.rst:203 ../../_includes/gdi/available-aws.rst:208 ../../_includes/gdi/available-aws.rst:213 ../../_includes/gdi/available-aws.rst:214 ../../_includes/gdi/available-aws.rst:218 ../../_includes/gdi/available-aws.rst:219 ../../_includes/gdi/available-aws.rst:223
+#: ../../_includes/gdi/available-aws.rst:228 ../../_includes/gdi/available-aws.rst:233 ../../_includes/gdi/available-aws.rst:238 ../../_includes/gdi/available-aws.rst:239 ../../_includes/gdi/available-aws.rst:243 ../../_includes/gdi/available-aws.rst:244 ../../_includes/gdi/available-aws.rst:248
+#: ../../_includes/gdi/available-aws.rst:249 ../../_includes/gdi/available-aws.rst:253 ../../_includes/gdi/available-aws.rst:258 ../../_includes/gdi/available-aws.rst:263 ../../_includes/gdi/available-aws.rst:264 ../../_includes/gdi/available-aws.rst:268 ../../_includes/gdi/available-aws.rst:273
+#: ../../_includes/gdi/available-aws.rst:278 ../../_includes/gdi/available-aws.rst:283 ../../_includes/gdi/available-aws.rst:288 ../../_includes/gdi/available-aws.rst:293 ../../_includes/gdi/available-aws.rst:298 ../../_includes/gdi/available-aws.rst:303 ../../_includes/gdi/available-aws.rst:304
+#: ../../_includes/gdi/available-aws.rst:308 ../../_includes/gdi/available-aws.rst:309 ../../_includes/gdi/available-aws.rst:313 ../../_includes/gdi/available-aws.rst:314 ../../_includes/gdi/available-aws.rst:318 ../../_includes/gdi/available-aws.rst:319 ../../_includes/gdi/available-aws.rst:323
+#: ../../_includes/gdi/available-aws.rst:324 ../../_includes/gdi/available-aws.rst:328 ../../_includes/gdi/available-aws.rst:329 ../../_includes/gdi/available-aws.rst:333 ../../_includes/gdi/available-aws.rst:338 ../../_includes/gdi/available-aws.rst:343 ../../_includes/gdi/available-aws.rst:344
+#: ../../_includes/gdi/available-aws.rst:348 ../../_includes/gdi/available-aws.rst:349 ../../_includes/gdi/available-aws.rst:353 ../../_includes/gdi/available-aws.rst:358 ../../_includes/gdi/available-aws.rst:359 ../../_includes/gdi/available-aws.rst:363 ../../_includes/gdi/available-aws.rst:364
+#: ../../_includes/gdi/available-aws.rst:368 ../../_includes/gdi/available-aws.rst:373 ../../_includes/gdi/available-aws.rst:378 ../../_includes/gdi/available-aws.rst:383 ../../_includes/gdi/available-aws.rst:388 ../../_includes/gdi/available-aws.rst:393 ../../_includes/gdi/available-aws.rst:398
+#: ../../_includes/gdi/available-aws.rst:403 ../../_includes/gdi/available-aws.rst:404 ../../_includes/gdi/available-aws.rst:408 ../../_includes/gdi/available-aws.rst:409 ../../_includes/gdi/available-aws.rst:413 ../../_includes/gdi/available-aws.rst:414 ../../_includes/gdi/available-aws.rst:418
+#: ../../_includes/gdi/available-aws.rst:423 ../../_includes/gdi/available-aws.rst:428 ../../_includes/gdi/available-aws.rst:433 ../../_includes/gdi/available-aws.rst:438 ../../_includes/gdi/available-aws.rst:443 ../../_includes/gdi/available-aws.rst:448 ../../_includes/gdi/available-aws.rst:449
+#: ../../_includes/gdi/available-aws.rst:453 ../../_includes/gdi/available-aws.rst:458 ../../_includes/gdi/available-aws.rst:463 ../../_includes/gdi/available-aws.rst:464 ../../_includes/gdi/available-aws.rst:468 ../../_includes/gdi/available-aws.rst:473 ../../_includes/gdi/available-aws.rst:478
+#: ../../_includes/gdi/available-aws.rst:483 ../../_includes/gdi/available-aws.rst:488 ../../_includes/gdi/available-gcp.rst:15 ../../_includes/gdi/available-gcp.rst:20 ../../_includes/gdi/available-gcp.rst:25 ../../_includes/gdi/available-gcp.rst:30 ../../_includes/gdi/available-gcp.rst:31
+#: ../../_includes/gdi/available-gcp.rst:35 ../../_includes/gdi/available-gcp.rst:40 ../../_includes/gdi/available-gcp.rst:41 ../../_includes/gdi/available-gcp.rst:45 ../../_includes/gdi/available-gcp.rst:50 ../../_includes/gdi/available-gcp.rst:55 ../../_includes/gdi/available-gcp.rst:56
+#: ../../_includes/gdi/available-gcp.rst:60 ../../_includes/gdi/available-gcp.rst:65 ../../_includes/gdi/available-gcp.rst:70 ../../_includes/gdi/available-gcp.rst:75 ../../_includes/gdi/available-gcp.rst:80 ../../_includes/gdi/available-gcp.rst:85 ../../_includes/gdi/available-gcp.rst:90
+#: ../../_includes/gdi/available-gcp.rst:95 ../../_includes/gdi/available-gcp.rst:100 ../../_includes/gdi/available-gcp.rst:105 ../../_includes/gdi/available-gcp.rst:106 ../../_includes/gdi/available-gcp.rst:110 ../../_includes/gdi/available-gcp.rst:115 ../../_includes/gdi/available-gcp.rst:120
+#: ../../_includes/gdi/available-gcp.rst:125 ../../_includes/gdi/available-gcp.rst:130 ../../_includes/gdi/available-gcp.rst:131 ../../_includes/gdi/available-gcp.rst:135 ../../_includes/gdi/available-gcp.rst:140 ../../_includes/gdi/available-gcp.rst:145 ../../_includes/gdi/available-gcp.rst:146
+#: ../../_includes/gdi/available-gcp.rst:150 ../../_includes/gdi/available-gcp.rst:155 ../../_includes/gdi/available-gcp.rst:156 ../../_includes/gdi/available-gcp.rst:160 ../../_includes/gdi/available-gcp.rst:161 ../../_includes/gdi/available-gcp.rst:165
 msgid ":strong:`X`"
 msgstr ":strong:`X`"
 
@@ -2971,8 +2996,12 @@ msgid "Add additional services"
 msgstr "その他のサービスの追加"
 
 #: ../../_includes/gdi/available-azure.rst:257
-msgid "If you want to collect data from other Azure services you need to add them as a custom service in the UI, or with the field ``additionalServices`` if you're using the API. Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk Observability Cloud ignores the duplication."
-msgstr "他のAzureサービスからデータを収集したい場合は、UI でカスタムサービスとして追加するか、APIを使用する場合はフィールド ``additionalServices`` を使用して追加する必要があります。Splunk Observability Cloudは、サービスおよびカスタムサービスで指定したリソースタイプを同期します。両方のフィールドにリソースタイプを追加した場合、Splunk Observability Cloudは、重複を無視します。"
+msgid ""
+"If you want to collect data from other Azure services you need to add them as a custom service in the UI, or with the field ``additionalServices`` if you're using the API. Splunk Observability Cloud syncs resource types that you specify in services and custom services. If you add a resource type to both fields, Splunk "
+"Observability Cloud ignores the duplication."
+msgstr ""
+"他のAzureサービスからデータを収集したい場合は、UI でカスタムサービスとして追加するか、APIを使用する場合はフィールド ``additionalServices`` を使用して追加する必要があります。Splunk Observability Cloudは、サービスおよびカスタムサービスで指定したリソースタイプを同期します。両方のフィールドにリソースタイプを追加した場合、Splunk "
+"Observability Cloudは、重複を無視します。"
 
 #: ../../_includes/gdi/available-azure.rst:259
 msgid "Any resource type you specify as a custom service must meet the following criteria:"
@@ -3330,9 +3359,10 @@ msgstr ":ref:`awss3-exporter` ( ``awss3`` )"
 msgid "This exporter targets to support proto/json format."
 msgstr "このエクスポータは proto/json 形式をサポートすることを目標としています。"
 
-#: ../../_includes/gdi/collector-available-exporters.rst:11 ../../_includes/gdi/collector-available-exporters.rst:14 ../../_includes/gdi/collector-available-exporters.rst:17 ../../_includes/gdi/collector-available-exporters.rst:20 ../../_includes/gdi/collector-available-exporters.rst:23 ../../_includes/gdi/collector-available-exporters.rst:26 ../../_includes/gdi/collector-available-exporters.rst:29
-#: ../../_includes/gdi/collector-available-exporters.rst:41 ../../_includes/gdi/collector-available-processors.rst:14 ../../_includes/gdi/collector-available-processors.rst:23 ../../_includes/gdi/collector-available-processors.rst:26 ../../_includes/gdi/collector-available-processors.rst:29 ../../_includes/gdi/collector-available-processors.rst:41 ../../_includes/gdi/collector-available-processors.rst:44
-#: ../../_includes/gdi/collector-available-processors.rst:47 ../../_includes/gdi/collector-available-processors.rst:56 ../../_includes/gdi/otel-receivers-table.rst:65 ../../_includes/gdi/otel-receivers-table.rst:101 ../../_includes/gdi/otel-receivers-table.rst:143
+#: ../../_includes/gdi/collector-available-exporters.rst:11 ../../_includes/gdi/collector-available-exporters.rst:14 ../../_includes/gdi/collector-available-exporters.rst:17 ../../_includes/gdi/collector-available-exporters.rst:20 ../../_includes/gdi/collector-available-exporters.rst:23
+#: ../../_includes/gdi/collector-available-exporters.rst:26 ../../_includes/gdi/collector-available-exporters.rst:29 ../../_includes/gdi/collector-available-exporters.rst:41 ../../_includes/gdi/collector-available-processors.rst:14 ../../_includes/gdi/collector-available-processors.rst:23
+#: ../../_includes/gdi/collector-available-processors.rst:26 ../../_includes/gdi/collector-available-processors.rst:29 ../../_includes/gdi/collector-available-processors.rst:44 ../../_includes/gdi/collector-available-processors.rst:47 ../../_includes/gdi/collector-available-processors.rst:50
+#: ../../_includes/gdi/collector-available-processors.rst:59 ../../_includes/gdi/otel-receivers-table.rst:65 ../../_includes/gdi/otel-receivers-table.rst:101 ../../_includes/gdi/otel-receivers-table.rst:143
 msgid "Metrics, logs, traces"
 msgstr "メトリクス、ログ、トレース"
 
@@ -3416,7 +3446,8 @@ msgstr ":ref:`splunk-apm-exporter` ( ``sapm`` )"
 msgid "Exports traces from multiple nodes or services in a single batch."
 msgstr "複数のノードまたはサービスのトレースを一括してエクスポートします。"
 
-#: ../../_includes/gdi/collector-available-exporters.rst:38 ../../_includes/gdi/collector-available-processors.rst:38 ../../_includes/gdi/collector-available-processors.rst:50 ../../_includes/gdi/collector-available-processors.rst:53 ../../_includes/gdi/otel-receivers-table.rst:56 ../../_includes/gdi/otel-receivers-table.rst:125 ../../_includes/gdi/otel-receivers-table.rst:176
+#: ../../_includes/gdi/collector-available-exporters.rst:38 ../../_includes/gdi/collector-available-processors.rst:41 ../../_includes/gdi/collector-available-processors.rst:53 ../../_includes/gdi/collector-available-processors.rst:56 ../../_includes/gdi/otel-receivers-table.rst:56
+#: ../../_includes/gdi/otel-receivers-table.rst:125 ../../_includes/gdi/otel-receivers-table.rst:176
 msgid "Traces"
 msgstr "トレース"
 
@@ -3576,11 +3607,13 @@ msgstr ":ref:`cumulative-to-delta-processor` ( ``cumulativetodelta`` )"
 msgid "Convert cumulative monotonic metrics to delta aggregation temporality. This enhances the usage of cumulative metrics in Splunk Observability Cloud."
 msgstr "累積単調メトリクスをデルタ集計の一時性に変換します。これにより、Splunk Observability Cloudでの累積メトリクスの利用が向上します。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:17 ../../_includes/gdi/collector-available-processors.rst:20 ../../_includes/gdi/collector-available-processors.rst:32 ../../_includes/gdi/otel-receivers-table.rst:11 ../../_includes/gdi/otel-receivers-table.rst:14 ../../_includes/gdi/otel-receivers-table.rst:17 ../../_includes/gdi/otel-receivers-table.rst:23 ../../_includes/gdi/otel-receivers-table.rst:26
-#: ../../_includes/gdi/otel-receivers-table.rst:29 ../../_includes/gdi/otel-receivers-table.rst:32 ../../_includes/gdi/otel-receivers-table.rst:38 ../../_includes/gdi/otel-receivers-table.rst:47 ../../_includes/gdi/otel-receivers-table.rst:50 ../../_includes/gdi/otel-receivers-table.rst:53 ../../_includes/gdi/otel-receivers-table.rst:59 ../../_includes/gdi/otel-receivers-table.rst:68
-#: ../../_includes/gdi/otel-receivers-table.rst:71 ../../_includes/gdi/otel-receivers-table.rst:80 ../../_includes/gdi/otel-receivers-table.rst:83 ../../_includes/gdi/otel-receivers-table.rst:86 ../../_includes/gdi/otel-receivers-table.rst:89 ../../_includes/gdi/otel-receivers-table.rst:92 ../../_includes/gdi/otel-receivers-table.rst:95 ../../_includes/gdi/otel-receivers-table.rst:98
-#: ../../_includes/gdi/otel-receivers-table.rst:104 ../../_includes/gdi/otel-receivers-table.rst:107 ../../_includes/gdi/otel-receivers-table.rst:110 ../../_includes/gdi/otel-receivers-table.rst:113 ../../_includes/gdi/otel-receivers-table.rst:116 ../../_includes/gdi/otel-receivers-table.rst:122 ../../_includes/gdi/otel-receivers-table.rst:128 ../../_includes/gdi/otel-receivers-table.rst:134
-#: ../../_includes/gdi/otel-receivers-table.rst:137 ../../_includes/gdi/otel-receivers-table.rst:140 ../../_includes/gdi/otel-receivers-table.rst:146 ../../_includes/gdi/otel-receivers-table.rst:149 ../../_includes/gdi/otel-receivers-table.rst:152 ../../_includes/gdi/otel-receivers-table.rst:164 ../../_includes/gdi/otel-receivers-table.rst:167 ../../_includes/gdi/otel-receivers-table.rst:173
+#: ../../_includes/gdi/collector-available-processors.rst:17 ../../_includes/gdi/collector-available-processors.rst:20 ../../_includes/gdi/collector-available-processors.rst:32 ../../_includes/gdi/collector-available-processors.rst:35 ../../_includes/gdi/otel-receivers-table.rst:11
+#: ../../_includes/gdi/otel-receivers-table.rst:14 ../../_includes/gdi/otel-receivers-table.rst:17 ../../_includes/gdi/otel-receivers-table.rst:23 ../../_includes/gdi/otel-receivers-table.rst:26 ../../_includes/gdi/otel-receivers-table.rst:29 ../../_includes/gdi/otel-receivers-table.rst:32
+#: ../../_includes/gdi/otel-receivers-table.rst:38 ../../_includes/gdi/otel-receivers-table.rst:47 ../../_includes/gdi/otel-receivers-table.rst:50 ../../_includes/gdi/otel-receivers-table.rst:53 ../../_includes/gdi/otel-receivers-table.rst:59 ../../_includes/gdi/otel-receivers-table.rst:68
+#: ../../_includes/gdi/otel-receivers-table.rst:71 ../../_includes/gdi/otel-receivers-table.rst:80 ../../_includes/gdi/otel-receivers-table.rst:83 ../../_includes/gdi/otel-receivers-table.rst:86 ../../_includes/gdi/otel-receivers-table.rst:89 ../../_includes/gdi/otel-receivers-table.rst:92
+#: ../../_includes/gdi/otel-receivers-table.rst:95 ../../_includes/gdi/otel-receivers-table.rst:98 ../../_includes/gdi/otel-receivers-table.rst:104 ../../_includes/gdi/otel-receivers-table.rst:107 ../../_includes/gdi/otel-receivers-table.rst:110 ../../_includes/gdi/otel-receivers-table.rst:113
+#: ../../_includes/gdi/otel-receivers-table.rst:116 ../../_includes/gdi/otel-receivers-table.rst:122 ../../_includes/gdi/otel-receivers-table.rst:128 ../../_includes/gdi/otel-receivers-table.rst:134 ../../_includes/gdi/otel-receivers-table.rst:137 ../../_includes/gdi/otel-receivers-table.rst:140
+#: ../../_includes/gdi/otel-receivers-table.rst:146 ../../_includes/gdi/otel-receivers-table.rst:149 ../../_includes/gdi/otel-receivers-table.rst:152 ../../_includes/gdi/otel-receivers-table.rst:164 ../../_includes/gdi/otel-receivers-table.rst:167 ../../_includes/gdi/otel-receivers-table.rst:173
 msgid "Metrics"
 msgstr "メトリクス"
 
@@ -3617,78 +3650,86 @@ msgid "Prevents out of memory situations on the Splunk Distribution of OpenTelem
 msgstr "Splunk Distribution of OpenTelemetry Collector でのメモリ不足を防止します。"
 
 #: ../../_includes/gdi/collector-available-processors.rst:30
+msgid ":ref:`metrics-generation-processor` (``metricsgeneration``)"
+msgstr ":ref:`metrics-generation-processor` ( ``metricsgeneration`` )"
+
+#: ../../_includes/gdi/collector-available-processors.rst:31
+msgid "Creates new metrics using existing metrics following a given rule."
+msgstr "特定のルールに続いて既存のメトリクスを使用して新しいメトリクスを作成します。"
+
+#: ../../_includes/gdi/collector-available-processors.rst:33
 msgid ":ref:`metrics-transform-processor` (``metricstransform``)"
 msgstr ":ref:`metrics-transform-processor` ( ``metricstransform`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:31
+#: ../../_includes/gdi/collector-available-processors.rst:34
 msgid "Renames metrics, and adds, renames, or deletes label keys and values."
 msgstr "メトリクスの名前を変更し、ラベル・キーと値を追加、変更、または削除します。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:33
+#: ../../_includes/gdi/collector-available-processors.rst:36
 msgid ":ref:`probabilistic-sampler-processor` (``probabilisticsampler``)"
 msgstr ":ref:`probabilistic-sampler-processor` ( ``probabilisticsampler`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:34
+#: ../../_includes/gdi/collector-available-processors.rst:37
 msgid "Supports several modes of sampling for spans and log records."
 msgstr "スパンおよびログレコードのサンプリングに複数のモードをサポートします。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:35
+#: ../../_includes/gdi/collector-available-processors.rst:38
 msgid "Traces, logs"
 msgstr "トレース、ログ"
 
-#: ../../_includes/gdi/collector-available-processors.rst:36
+#: ../../_includes/gdi/collector-available-processors.rst:39
 msgid ":ref:`redaction-processor` (``redaction``)"
 msgstr ":ref:`redaction-processor` ( ``redaction`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:37
+#: ../../_includes/gdi/collector-available-processors.rst:40
 msgid "Deletes span attributes that don't match a list of allowed attributes. It also masks span attribute values that match a blocked value list."
 msgstr "許可された属性のリストと一致しないスパン属性を削除します。また、ブロックされた値リストと一致するスパン属性の値をマスクします。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:39
+#: ../../_includes/gdi/collector-available-processors.rst:42
 msgid ":ref:`resource-processor` (``resource``)"
 msgstr ":ref:`resource-processor` ( ``resource`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:40
+#: ../../_includes/gdi/collector-available-processors.rst:43
 msgid "Applies changes to resource attributes. Attributes represent actions that can be applied on resources."
 msgstr "リソース属性に変更を適用します。属性は、リソースに適用できるアクションを表します。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:42
+#: ../../_includes/gdi/collector-available-processors.rst:45
 msgid ":ref:`resourcedetection-processor` (``resourcedetection``)"
 msgstr ":ref:`resourcedetection-processor` ( ``resourcedetection`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:43
+#: ../../_includes/gdi/collector-available-processors.rst:46
 msgid "Detects resource information from the host, in a format that conforms to the OpenTelemetry resource semantic conventions, and appends or overrides the resource value in telemetry data with this information."
 msgstr "ホストからのリソース情報を、OpenTelemetry リソースの意味上の規約に準拠したフォーマットで検出し、テレメトリデータのリソース値をこの情報で追加または上書きします。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:45
+#: ../../_includes/gdi/collector-available-processors.rst:48
 msgid ":ref:`routing-processor` (``routing``)"
 msgstr ":ref:`routing-processor` ( ``routing`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:46
+#: ../../_includes/gdi/collector-available-processors.rst:49
 msgid "Reads a header from the incoming HTTP request or reads a resource attribute, and then directs the trace information to specific exporters based on the value."
 msgstr "受信 HTTP リクエストからヘッダーを読み取るか、リソース属性を読み取り、その値に基づいてトレース情報を特定のエクスポーターに向けます。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:48
+#: ../../_includes/gdi/collector-available-processors.rst:51
 msgid ":ref:`span-processor` (``span``)"
 msgstr ":ref:`span-processor` ( ``span`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:49
+#: ../../_includes/gdi/collector-available-processors.rst:52
 msgid "Modifies either the span name or attributes of a span based on the span name."
 msgstr "スパン名またはスパン名に基づくスパンの属性を変更します。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:51
+#: ../../_includes/gdi/collector-available-processors.rst:54
 msgid ":ref:`tail-sampling-processor` (``tail_sampling``)"
 msgstr ":ref:`tail-sampling-processor` ( ``tail_sampling`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:52
+#: ../../_includes/gdi/collector-available-processors.rst:55
 msgid "Samples traces based on a set of defined policies. All spans for a given trace must be received by the same Collector instance for effective sampling decisions."
 msgstr "定義されたポリシーのセットに基づいてトレースをサンプリングします。与えられたトレースのすべてのスパンは、効果的なサンプリング決定のために同じCollectorインスタンスによって受信される必要があります。"
 
-#: ../../_includes/gdi/collector-available-processors.rst:54
+#: ../../_includes/gdi/collector-available-processors.rst:57
 msgid ":ref:`transform-processor` (``transform``)"
 msgstr ":ref:`transform-processor` ( ``transform`` )"
 
-#: ../../_includes/gdi/collector-available-processors.rst:55
+#: ../../_includes/gdi/collector-available-processors.rst:58
 msgid "Modifies telemetry based on OpenTelemetry Transformation Language functions."
 msgstr "OpenTelemetry Transformation Language 関数に基づいてテレメトリを変更します。"
 
@@ -4220,8 +4261,8 @@ msgstr ":ref:`azureeventhub-receiver` ( ``azureeventhub`` )"
 msgid "Pulls logs from an Azure event hub."
 msgstr "Azure イベントハブからログをプルします。"
 
-#: ../../_includes/gdi/otel-receivers-table.rst:20 ../../_includes/gdi/otel-receivers-table.rst:35 ../../_includes/gdi/otel-receivers-table.rst:41 ../../_includes/gdi/otel-receivers-table.rst:44 ../../_includes/gdi/otel-receivers-table.rst:62 ../../_includes/gdi/otel-receivers-table.rst:74 ../../_includes/gdi/otel-receivers-table.rst:77 ../../_includes/gdi/otel-receivers-table.rst:155
-#: ../../_includes/gdi/otel-receivers-table.rst:158 ../../_includes/gdi/otel-receivers-table.rst:161 ../../_includes/gdi/otel-receivers-table.rst:170
+#: ../../_includes/gdi/otel-receivers-table.rst:20 ../../_includes/gdi/otel-receivers-table.rst:35 ../../_includes/gdi/otel-receivers-table.rst:41 ../../_includes/gdi/otel-receivers-table.rst:44 ../../_includes/gdi/otel-receivers-table.rst:62 ../../_includes/gdi/otel-receivers-table.rst:74
+#: ../../_includes/gdi/otel-receivers-table.rst:77 ../../_includes/gdi/otel-receivers-table.rst:155 ../../_includes/gdi/otel-receivers-table.rst:158 ../../_includes/gdi/otel-receivers-table.rst:161 ../../_includes/gdi/otel-receivers-table.rst:170
 msgid "Logs"
 msgstr "ログ"
 
@@ -4649,23 +4690,28 @@ msgstr ":ref:`zipkin-receiver` ( ``zipkin`` )"
 msgid "Receives spans from Zipkin versions 1 and 2."
 msgstr "Zipkin・バージョン1と2のスパンを受信します。"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:9 ../../_includes/gdi/processor-architecture-native.rst:213 ../../_includes/gdi/processor-architecture-native.rst:287 ../../_includes/gdi/processor-architecture-subprocess.rst:9 ../../_includes/gdi/processor-architecture-subprocess.rst:73 ../../_includes/gdi/processor-architecture-subprocess.rst:117 ../../_includes/gdi/processor-architecture-subprocess.rst:201
+#: ../../_includes/gdi/processor-architecture-native.rst:9 ../../_includes/gdi/processor-architecture-native.rst:213 ../../_includes/gdi/processor-architecture-native.rst:287 ../../_includes/gdi/processor-architecture-subprocess.rst:9 ../../_includes/gdi/processor-architecture-subprocess.rst:73
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:117 ../../_includes/gdi/processor-architecture-subprocess.rst:201
 msgid "Monitor"
 msgstr "モニター"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:10 ../../_includes/gdi/processor-architecture-native.rst:214 ../../_includes/gdi/processor-architecture-native.rst:288 ../../_includes/gdi/processor-architecture-subprocess.rst:10 ../../_includes/gdi/processor-architecture-subprocess.rst:74 ../../_includes/gdi/processor-architecture-subprocess.rst:118 ../../_includes/gdi/processor-architecture-subprocess.rst:202
+#: ../../_includes/gdi/processor-architecture-native.rst:10 ../../_includes/gdi/processor-architecture-native.rst:214 ../../_includes/gdi/processor-architecture-native.rst:288 ../../_includes/gdi/processor-architecture-subprocess.rst:10 ../../_includes/gdi/processor-architecture-subprocess.rst:74
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:118 ../../_includes/gdi/processor-architecture-subprocess.rst:202
 msgid "Support for AMD64 Linux"
 msgstr "AMD64 Linuxのサポート"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:11 ../../_includes/gdi/processor-architecture-native.rst:215 ../../_includes/gdi/processor-architecture-native.rst:289 ../../_includes/gdi/processor-architecture-subprocess.rst:11 ../../_includes/gdi/processor-architecture-subprocess.rst:75 ../../_includes/gdi/processor-architecture-subprocess.rst:119 ../../_includes/gdi/processor-architecture-subprocess.rst:203
+#: ../../_includes/gdi/processor-architecture-native.rst:11 ../../_includes/gdi/processor-architecture-native.rst:215 ../../_includes/gdi/processor-architecture-native.rst:289 ../../_includes/gdi/processor-architecture-subprocess.rst:11 ../../_includes/gdi/processor-architecture-subprocess.rst:75
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:119 ../../_includes/gdi/processor-architecture-subprocess.rst:203
 msgid "Support for AMD64 Windows"
 msgstr "AMD64 Windowsのサポート"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:12 ../../_includes/gdi/processor-architecture-native.rst:216 ../../_includes/gdi/processor-architecture-native.rst:290 ../../_includes/gdi/processor-architecture-subprocess.rst:12 ../../_includes/gdi/processor-architecture-subprocess.rst:76 ../../_includes/gdi/processor-architecture-subprocess.rst:120 ../../_includes/gdi/processor-architecture-subprocess.rst:204
+#: ../../_includes/gdi/processor-architecture-native.rst:12 ../../_includes/gdi/processor-architecture-native.rst:216 ../../_includes/gdi/processor-architecture-native.rst:290 ../../_includes/gdi/processor-architecture-subprocess.rst:12 ../../_includes/gdi/processor-architecture-subprocess.rst:76
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:120 ../../_includes/gdi/processor-architecture-subprocess.rst:204
 msgid "Support for ARM64 Linux"
 msgstr "ARM64 Linuxのサポート"
 
-#: ../../_includes/gdi/processor-architecture-native.rst:13 ../../_includes/gdi/processor-architecture-native.rst:217 ../../_includes/gdi/processor-architecture-native.rst:291 ../../_includes/gdi/processor-architecture-subprocess.rst:13 ../../_includes/gdi/processor-architecture-subprocess.rst:77 ../../_includes/gdi/processor-architecture-subprocess.rst:121 ../../_includes/gdi/processor-architecture-subprocess.rst:205
+#: ../../_includes/gdi/processor-architecture-native.rst:13 ../../_includes/gdi/processor-architecture-native.rst:217 ../../_includes/gdi/processor-architecture-native.rst:291 ../../_includes/gdi/processor-architecture-subprocess.rst:13 ../../_includes/gdi/processor-architecture-subprocess.rst:77
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:121 ../../_includes/gdi/processor-architecture-subprocess.rst:205
 msgid "Support for ppc64le Linux"
 msgstr "ppc64le Linuxのサポート"
 
@@ -4929,11 +4975,12 @@ msgstr "``telegraf/win_services``"
 msgid "``collectd/apache``"
 msgstr "``collectd/apache``"
 
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:17 ../../_includes/gdi/processor-architecture-subprocess.rst:22 ../../_includes/gdi/processor-architecture-subprocess.rst:27 ../../_includes/gdi/processor-architecture-subprocess.rst:32 ../../_includes/gdi/processor-architecture-subprocess.rst:37 ../../_includes/gdi/processor-architecture-subprocess.rst:42
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:47 ../../_includes/gdi/processor-architecture-subprocess.rst:52 ../../_includes/gdi/processor-architecture-subprocess.rst:57 ../../_includes/gdi/processor-architecture-subprocess.rst:62 ../../_includes/gdi/processor-architecture-subprocess.rst:81 ../../_includes/gdi/processor-architecture-subprocess.rst:86
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:91 ../../_includes/gdi/processor-architecture-subprocess.rst:96 ../../_includes/gdi/processor-architecture-subprocess.rst:101 ../../_includes/gdi/processor-architecture-subprocess.rst:106 ../../_includes/gdi/processor-architecture-subprocess.rst:125 ../../_includes/gdi/processor-architecture-subprocess.rst:130
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:135 ../../_includes/gdi/processor-architecture-subprocess.rst:140 ../../_includes/gdi/processor-architecture-subprocess.rst:145 ../../_includes/gdi/processor-architecture-subprocess.rst:150 ../../_includes/gdi/processor-architecture-subprocess.rst:155 ../../_includes/gdi/processor-architecture-subprocess.rst:160
-#: ../../_includes/gdi/processor-architecture-subprocess.rst:165 ../../_includes/gdi/processor-architecture-subprocess.rst:170 ../../_includes/gdi/processor-architecture-subprocess.rst:175 ../../_includes/gdi/processor-architecture-subprocess.rst:180 ../../_includes/gdi/processor-architecture-subprocess.rst:185 ../../_includes/gdi/processor-architecture-subprocess.rst:190
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:17 ../../_includes/gdi/processor-architecture-subprocess.rst:22 ../../_includes/gdi/processor-architecture-subprocess.rst:27 ../../_includes/gdi/processor-architecture-subprocess.rst:32 ../../_includes/gdi/processor-architecture-subprocess.rst:37
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:42 ../../_includes/gdi/processor-architecture-subprocess.rst:47 ../../_includes/gdi/processor-architecture-subprocess.rst:52 ../../_includes/gdi/processor-architecture-subprocess.rst:57 ../../_includes/gdi/processor-architecture-subprocess.rst:62
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:81 ../../_includes/gdi/processor-architecture-subprocess.rst:86 ../../_includes/gdi/processor-architecture-subprocess.rst:91 ../../_includes/gdi/processor-architecture-subprocess.rst:96 ../../_includes/gdi/processor-architecture-subprocess.rst:101
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:106 ../../_includes/gdi/processor-architecture-subprocess.rst:125 ../../_includes/gdi/processor-architecture-subprocess.rst:130 ../../_includes/gdi/processor-architecture-subprocess.rst:135 ../../_includes/gdi/processor-architecture-subprocess.rst:140
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:145 ../../_includes/gdi/processor-architecture-subprocess.rst:150 ../../_includes/gdi/processor-architecture-subprocess.rst:155 ../../_includes/gdi/processor-architecture-subprocess.rst:160 ../../_includes/gdi/processor-architecture-subprocess.rst:165
+#: ../../_includes/gdi/processor-architecture-subprocess.rst:170 ../../_includes/gdi/processor-architecture-subprocess.rst:175 ../../_includes/gdi/processor-architecture-subprocess.rst:180 ../../_includes/gdi/processor-architecture-subprocess.rst:185 ../../_includes/gdi/processor-architecture-subprocess.rst:190
 #: ../../_includes/gdi/processor-architecture-subprocess.rst:209
 msgid "Experimental"
 msgstr "実験的"
@@ -5163,12 +5210,20 @@ msgid "Ensure that certificates are available for use. Use the following command
 msgstr "証明書が使用可能であることを確認します。以下のコマンドを使用して、証明書を検索します："
 
 #: ../../_includes/log-observer-transition.rst:1
-msgid "Customers with a Splunk Log Observer entitlement in Splunk Observability Cloud must transition from Log Observer to Log Observer Connect by December 2023. With Log Observer Connect, you can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging. See :ref:`lo-transition` to learn how."
-msgstr "Splunk Observability Cloud の Splunk Log Observer エンタイトルメントをお持ちのお客様は、2023年12月までに Log Observer から Log Observer Connect に移行する必要があります。Log Observer Connect を使用すると、より多様なデータソースからより多くのログをインジェストし、より高度なログパイプラインを利用し、セキュリティロギングに拡張できます。その方法については、:ref:`lo-transition` を参照してください。"
+msgid ""
+"Customers with a Splunk Log Observer entitlement in Splunk Observability Cloud must transition from Log Observer to Log Observer Connect by December 2023. With Log Observer Connect, you can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging. "
+"See :ref:`lo-transition` to learn how."
+msgstr ""
+"Splunk Observability Cloud の Splunk Log Observer エンタイトルメントをお持ちのお客様は、2023年12月までに Log Observer から Log Observer Connect に移行する必要があります。Log Observer Connect を使用すると、より多様なデータソースからより多くのログをインジェストし、より高度なログパイプラインを利用し、セキュリティロギングに拡張で"
+"きます。その方法については、:ref:`lo-transition` を参照してください。"
 
 #: ../../_includes/logs/loc-availability.rst:1
-msgid "Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, eu1, eu2, jp0, and au0, and in the GCP region us2. Splunk Log Observer Connect is compatible with Splunk Enterprise versions 9.0.1 and higher, and Splunk Cloud Platform versions 9.0.2209 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials."
-msgstr "Splunk Log Observer Connectは、AWSリージョンのus0、us1、eu0、eu1、eu2、jp0、au0、およびGCPリージョンのus2で利用できます。Splunk Log Observer Connectは、Splunk Enterpriseのバージョン9.0.1以降、およびSplunk Cloud Platformのバージョン9.0.2209以降と互換性があります。Log Observer Connectは、Splunk Cloud Platformのトライアル版ではご利用いただけません。"
+msgid ""
+"Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, eu1, eu2, jp0, and au0, and in the GCP region us2. Splunk Log Observer Connect is compatible with Splunk Enterprise versions 9.0.1 and higher, and Splunk Cloud Platform versions 9.0.2209 and higher. Log Observer Connect is not available for Splunk "
+"Cloud Platform trials."
+msgstr ""
+"Splunk Log Observer Connectは、AWSリージョンのus0、us1、eu0、eu1、eu2、jp0、au0、およびGCPリージョンのus2で利用できます。Splunk Log Observer Connectは、Splunk Enterpriseのバージョン9.0.1以降、およびSplunk Cloud Platformのバージョン9.0.2209以降と互換性があります。Log Observer Connectは、Splunk Cloud Platformのトライアル版では"
+"ご利用いただけません。"
 
 #: ../../_includes/logs/loc-availability.rst:3
 msgid "You cannot access logs from a GovCloud environment through Log Observer Connect. However, you can use global data links to link from Log Observer Connect to your GovCloud environment where you can access your logs. For more information on global data links, see :ref:`link-metadata-to-content`."
@@ -5176,10 +5231,11 @@ msgstr "Log Observer Connectを通じてGovCloud環境のログにアクセス�
 
 #: ../../_includes/logs/query-logs.rst:1
 msgid ""
-"Navigate to :guilabel:`Log Observer`. Upon opening, Log Observer runs an initial search of all indexes you have access to and returns the most recent 150,000 logs. The search then defaults to Pause in order to save Splunk Virtual Compute (SVC) resources. Control your SVC resources, which impact performance and cost, by leaving your search on Pause when you are not monitoring incoming logs, and select Play when you "
-"want to see more incoming logs."
+"Navigate to :guilabel:`Log Observer`. Upon opening, Log Observer runs an initial search of all indexes you have access to and returns the most recent 150,000 logs. The search then defaults to Pause in order to save Splunk Virtual Compute (SVC) resources. Control your SVC resources, which impact performance and cost, by "
+"leaving your search on Pause when you are not monitoring incoming logs, and select Play when you want to see more incoming logs."
 msgstr ""
-":guilabel:`Log Observer` に移動します。開くと、Log Observerはアクセス可能なすべてのインデックスの初期検索を実行し、最新の150,000件のログを返します。その後、Splunk Virtual Compute (SVC)リソースを節約するために、検索はデフォルトで一時停止になります。受信ログを監視していないときは検索を一時停止のままにし、より多くの受信ログを見たいときは再生を選択することで、パフォーマンスとコストに影響するSVCリソースを制御します。"
+":guilabel:`Log Observer` に移動します。開くと、Log Observerはアクセス可能なすべてのインデックスの初期検索を実行し、最新の150,000件のログを返します。その後、Splunk Virtual Compute (SVC)リソースを節約するために、検索はデフォルトで一時停止になります。受信ログを監視していないときは検索を一時停止のままにし、より多くの受信ログを見"
+"たいときは再生を選択することで、パフォーマンスとコストに影響するSVCリソースを制御します。"
 
 #: ../../_includes/logs/query-logs.rst
 msgid "The Log Observer UI is displayed."
@@ -5190,24 +5246,35 @@ msgid "To increase performance and help control cost, search jobs originating fr
 msgstr "パフォーマンスを向上させ、コストを制御するために、関連コンテンツに由来する検索ジョブは、非アクティブ状態が2分間になると実行を停止します。他のすべての検索ジョブは、15分後に実行を停止します。"
 
 #: ../../_includes/logs/query-logs.rst:9
-msgid "In the content control bar, enter a time range in the time picker if you want to see logs from a specific historical period. To select a time range, you must select :guilabel:`Infinite` from the :guilabel:`Search Records` field in step 5 below. When you select :guilabel:`150,000`, Log Observer returns only the most recent 150,000 logs regardless of the time range you select."
-msgstr "コンテンツコントロールバーで、特定の過去の期間のログを見たい場合は、タイムピッカーに時間範囲を入力します。時間範囲を選択するには、下のステップ5で :guilabel:`Search Records` フィールドから :guilabel:`Infinite` を選択する必要があります。:guilabel:`150,000` を選択すると、Log Observerは、選択する時間範囲に関係なく、最新の150,000件のログのみを返します。"
+msgid ""
+"In the content control bar, enter a time range in the time picker if you want to see logs from a specific historical period. To select a time range, you must select :guilabel:`Unlimited` from the :guilabel:`Search Records` field in step 5 below. When you select :guilabel:`150,000`, Log Observer returns only the most recent "
+"150,000 logs regardless of the time range you select."
+msgstr ""
+"コンテンツコントロールバーで、特定の過去の期間のログを見たい場合は、タイムピッカーに時間範囲を入力します。時間範囲を選択するには、下のステップ5で :guilabel:`Search Records` フィールドから :guilabel:`Unlimited` を選択する必要があります。:guilabel:`150,000` を選択すると、Log Observerは、選択する時間範囲に関係なく、最新の150,000"
+"件のログのみを返します。"
 
 #: ../../_includes/logs/query-logs.rst:11
 msgid ""
-"Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. When you do not select an index, Log Observer runs your query on all indexes to which you have access. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select which index you want to query in "
-"Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions."
+"Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. When you do not select an index, Log Observer runs your query on all indexes to which you have access. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for "
+"the appropriate Splunk platform instance first, then select which index you want to query in Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions."
 msgstr ""
-":guilabel:`Saved Queries` の横にある :guilabel:`Index` を選択し、クエリするインデックスを選択します。インデックスを選択しない場合、Log Observerは、アクセス可能なすべてのインデックスに対してクエリを実行します。Splunkプラットフォーム（Splunk Cloud PlatformまたはSplunk Enterprise）のデータを検索する場合は、最初に適切なSplunkプラットフォームインスタンスのインテグレーションを選択し、次にLog Observerでクエリするインデック"
-"スを選択します。一度にクエリできるのは、1つのSplunkプラットフォームインスタンスまたはSplunk Observability Cloudインスタンスからのインデックスのみです。適切なロールおよび権限を持っている場合にのみ、Splunkプラットフォームのインデックスをクエリできます。"
+":guilabel:`Saved Queries` の横にある :guilabel:`Index` を選択し、クエリするインデックスを選択します。インデックスを選択しない場合、Log Observerは、アクセス可能なすべてのインデックスに対してクエリを実行します。Splunkプラットフォーム（Splunk Cloud PlatformまたはSplunk Enterprise）のデータを検索する場合は、最初に適切なSplunkプ"
+"ラットフォームインスタンスのインテグレーションを選択し、次にLog Observerでクエリするインデックスを選択します。一度にクエリできるのは、1つのSplunkプラットフォームインスタンスまたはSplunk Observability Cloudインスタンスからのインデックスのみです。適切なロールおよび権限を持っている場合にのみ、Splunkプラットフォームのインデックス"
+"をクエリできます。"
 
 #: ../../_includes/logs/query-logs.rst:13
 msgid "In the content control bar next to the index picker, select :guilabel:`Add Filter`. Select the :guilabel:`Keyword` tab to search on a keyword or phrase. Select the :guilabel:`Fields` tab to search on a field. Then press Enter. To continue adding keywords or fields to the search, select :guilabel:`Add Filter` again."
-msgstr "インデックスピッカーの隣にあるコンテンツコントロールバーで、 :guilabel:`Add Filter`  を選択します。キーワードまたはフレーズで検索するには、:guilabel:`Keyword` タブを選択します。フィールドを検索するには、:guilabel:`Fields` タブを選択します。その後、Enterを押します。検索にキーワードやフィールドを続けて追加するには、再度 :guilabel:`Add Filter`  を選択します。"
+msgstr ""
+"インデックスピッカーの隣にあるコンテンツコントロールバーで、 :guilabel:`Add Filter`  を選択します。キーワードまたはフレーズで検索するには、:guilabel:`Keyword` タブを選択します。フィールドを検索するには、:guilabel:`Fields` タブを選択します。その後、Enterを押します。検索にキーワードやフィールドを続けて追加するには、再"
+"度 :guilabel:`Add Filter`  を選択します。"
 
 #: ../../_includes/logs/query-logs.rst:15
-msgid "Next, select :guilabel:`Unlimited` or :guilabel:`150,000` from the :guilabel:`Search Records` field to determine the number of logs you want to return on a single search. Select :guilabel:`150,000` to optimize your Splunk Virtual Compute (SVC) resources and control performance and cost. However, only the most recent 150,000 logs display. To see a specific time range, you must select :guilabel:`Infinite`."
-msgstr "次に、:guilabel:`Search Records` フィールドから :guilabel:`Unlimited` または :guilabel:`150,000`  を選択し、1回の検索で返すログの数を決定します。  :guilabel:`150,000`  を選択すると、Splunk Virtual Compute (SVC)リソースを最適化し、パフォーマンスとコストを制御できます。ただし、最新の150,000件のログのみが表示されます。特定の時間範囲を表示するには、:guilabel:`Infinite` を選択する必要があります。"
+msgid ""
+"Next, select :guilabel:`Unlimited` or :guilabel:`150,000` from the :guilabel:`Search Records` field to determine the number of logs you want to return on a single search. Select :guilabel:`150,000` to optimize your Splunk Virtual Compute (SVC) resources and control performance and cost. However, only the most recent 150,000 "
+"logs display. To see a specific time range, you must select :guilabel:`Infinite`."
+msgstr ""
+"次に、:guilabel:`Search Records` フィールドから :guilabel:`Unlimited` または :guilabel:`150,000`  を選択し、1回の検索で返すログの数を決定します。  :guilabel:`150,000`  を選択すると、Splunk Virtual Compute (SVC)リソースを最適化し、パフォーマンスとコストを制御できます。ただし、最新の150,000件のログのみが表示されます。特定の時間"
+"範囲を表示するには、:guilabel:`Infinite` を選択する必要があります。"
 
 #: ../../_includes/logs/query-logs.rst:17
 msgid "To narrow your search, use the :guilabel:`Group by` drop-down list to select the field or fields by which you want to group your results, then select :guilabel:`Apply`. To learn more about aggregations, see :ref:`logs-aggregations`."
@@ -5219,13 +5286,19 @@ msgstr ":guilabel:`Run search` を選択します。"
 
 #: ../../_includes/logs/query-logs.rst:21
 msgid ""
-"Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select ``=``. To exclude log records with a particular value from your results, select the field name, then select ``!=``. To see the full list of values and distribution for this field, select :"
-"guilabel:`Explore all values`."
-msgstr "右側の :guilabel:`Fields` パネルで、クエリの上位の値を確認します。このリストには、ログレコード内の各値のカウントが含まれます。特定の値のログレコードを含めるには、フィールド名を選択し、``=`` を選択します。特定の値を持つログレコードを結果から除外するには、フィールド名を選択し、``!=`` を選択します。このフィールドの値と分布の完全なリストを表示するには、:guilabel:`Explore all values` を選択します。"
+"Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select ``=``. To exclude log records with a particular value from your results, select the field name, "
+"then select ``!=``. To see the full list of values and distribution for this field, select :guilabel:`Explore all values`."
+msgstr ""
+"右側の :guilabel:`Fields` パネルで、クエリの上位の値を確認します。このリストには、ログレコード内の各値のカウントが含まれます。特定の値のログレコードを含めるには、フィールド名を選択し、``=`` を選択します。特定の値を持つログレコードを結果から除外するには、フィールド名を選択し、``!=`` を選択します。このフィールドの値と分布の完全"
+"なリストを表示するには、:guilabel:`Explore all values` を選択します。"
 
 #: ../../_includes/logs/query-logs.rst:23
-msgid "Optionally, if you are viewing Splunk platform data, you can open your query results in the Splunk platform and use SPL to further query the resulting logs. You must have an account in Splunk platform. To open the log results in the Splunk platform, select the :guilabel:`Open in Splunk platform` icon at the top of the Logs table."
-msgstr "オプションとして、Splunkプラットフォームのデータを表示している場合は、Splunkプラットフォームでクエリ結果を開き、SPLを使用して結果ログをさらにクエリできます。Splunkプラットフォームのアカウントが必要です。Splunkプラットフォームでログ結果を開くには、「ログ」テーブルの上部にある :guilabel:`Open in Splunk platform` アイコンを選択します。"
+msgid ""
+"Optionally, if you are viewing Splunk platform data, you can open your query results in the Splunk platform and use SPL to further query the resulting logs. You must have an account in Splunk platform. To open the log results in the Splunk platform, select the :guilabel:`Open in Splunk platform` icon at the top of the Logs "
+"table."
+msgstr ""
+"オプションとして、Splunkプラットフォームのデータを表示している場合は、Splunkプラットフォームでクエリ結果を開き、SPLを使用して結果ログをさらにクエリできます。Splunkプラットフォームのアカウントが必要です。Splunkプラットフォームでログ結果を開くには、「ログ」テーブルの上部にある :guilabel:`Open in Splunk platform` アイコンを選択"
+"します。"
 
 #: ../../_includes/logs/query-logs.rst
 msgid "The Open in Splunk platform icon is at the top, right-hand side of the Logs table."
@@ -5317,7 +5390,9 @@ msgstr "Splunk Observability Cloudで利用可能なメトリクスタイプの�
 
 #: ../../_includes/metric-defs.rst:3
 msgid "In host-based subscription plans, default metrics are those metrics included in host-based subscriptions in Splunk Observability Cloud, such as host, container, or bundled metrics. Custom metrics are not provided by default and might be subject to charges. See :ref:`metric-categories` for more information."
-msgstr "ホストベースのサブスクリプションプランでは、デフォルトのメトリクスは、ホスト、コンテナ、バンドルメトリクスなど、Splunk Observability Cloudのホストベースのサブスクリプションに含まれるメトリクスです。カスタムメトリクスはデフォルトでは提供されず、料金が発生する場合があります。詳細については、:ref:`metric-categories` を参照してください。"
+msgstr ""
+"ホストベースのサブスクリプションプランでは、デフォルトのメトリクスは、ホスト、コンテナ、バンドルメトリクスなど、Splunk Observability Cloudのホストベースのサブスクリプションに含まれるメトリクスです。カスタムメトリクスはデフォルトでは提供されず、料金が発生する場合があります。詳細については、:ref:`metric-categories` を参照してく"
+"ださい。"
 
 #: ../../_includes/metric-defs.rst:8
 msgid "In MTS-based subscription plans, all metrics are custom."
@@ -5336,8 +5411,12 @@ msgid "This error happens when a component (receiver, processor, or exporter) ha
 msgstr "このエラーは、コンポーネント（レシーバー、プロセッサー、エクスポーター）が設定されているにもかかわらず、レシーバー パイプラインで使用されていない場合に発生します。たとえば、次のエラー メッセージは、``smartagent/http`` レシーバーが構成されていますが、どのパイプラインでも使用されていないことを示します："
 
 #: ../../_includes/missing_pipeline_configuration.rst:15
-msgid "Once configured, all components must be turned on by using pipelines in the service section. The service section is used to configure what components are activated based on the configuration found in the components sections of your configuration file. If a component is configured, but not defined within the service section, then it is not activated."
-msgstr "一度設定したら、サービスセクションのパイプラインを使用して、すべてのコンポーネントをオンにする必要があります。サービスセクションは、コンフィギュレーションファイルのコンポーネントセクションにあるコンフィギュレーションに基づいて、どのコンポーネントをアクティブにするかを設定するために使用されます。コンポーネントが設定されていても、サービスセクションで定義されていない場合、そのコンポーネントは有効になりません。"
+msgid ""
+"Once configured, all components must be turned on by using pipelines in the service section. The service section is used to configure what components are activated based on the configuration found in the components sections of your configuration file. If a component is configured, but not defined within the service section, "
+"then it is not activated."
+msgstr ""
+"一度設定したら、サービスセクションのパイプラインを使用して、すべてのコンポーネントをオンにする必要があります。サービスセクションは、コンフィギュレーションファイルのコンポーネントセクションにあるコンフィギュレーションに基づいて、どのコンポーネントをアクティブにするかを設定するために使用されます。コンポーネントが設定されていて"
+"も、サービスセクションで定義されていない場合、そのコンポーネントは有効になりません。"
 
 #: ../../_includes/missing_pipeline_configuration.rst:22
 msgid "Here is a sample configuration:"
@@ -5346,6 +5425,14 @@ msgstr "以下に設定例を示します："
 #: ../../_includes/missing_pipeline_configuration.rst:35
 msgid "See :ref:`otel-data-processing` for more information."
 msgstr "詳細は、:ref:`otel-data-processing` を参照してください。"
+
+#: ../../_includes/network-explorer-info.rst:3
+msgid "While Splunk Observability Cloud fully supports the Network Explorer navigator, the upstream OpenTelemetry eBPF Helm chart is not covered under official Splunk support. Any feature updates, security, or bug fixes to it are not bound by any SLAs."
+msgstr "Splunk Observability CloudはNetwork Explorerナビゲーターを完全にサポートしていますが、アップストリームのOpenTelemetry eBPF HelmチャートはSplunk公式サポートの対象外です。このチャートの機能アップデート、セキュリティ、バグフィックスは、いかなるSLAにも拘束されません。"
+
+#: ../../_includes/network-explorer-info.rst:5
+msgid "If you wish to continue using Network Explorer to see data in Splunk Observability Cloud, point the upstream eBPF Helm chart to the OpenTelemetry Collector running as a gateway."
+msgstr "Network Explorerを引き続き使用してSplunk Observability Cloudでデータを確認したい場合は、アップストリームのeBPF Helmチャートをゲートウェイとして実行されているOpenTelemetry Collectorに向けます。"
 
 #: ../../_includes/out_of_memory_error.rst:1
 msgid "**The Splunk Distribution of OpenTelemetry Collector is out of memory**"
@@ -5404,8 +5491,12 @@ msgid "Preview: Role-based access"
 msgstr "プレビュー：ロールベースのアクセス"
 
 #: ../../_includes/private-preview.rst:3
-msgid "Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
-msgstr "プレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止することができます。プレビュー機能の使用は、:new-page:`Splunk一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
+msgid ""
+"Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://"
+"www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+msgstr ""
+"プレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止することができます。プレビュー機能の使用は、:new-page:`Splunk一般規約<https://"
+"www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
 
 #: ../../_includes/private-preview.rst:5
 msgid "Use these links to navigate to the topics for role-based access control (RBAC):"
@@ -5428,16 +5519,20 @@ msgid "About realms"
 msgstr "レルムについて"
 
 #: ../../_includes/realm-note.rst:3
-msgid "A realm is a self-contained deployment of Splunk Observability Cloud in which your organization is hosted. Different realms have different API endpoints. For example, the endpoint for sending data in the ``us1`` realm is ``https://ingest.us1.signalfx.com``, while the endpoint for sending data in the ``eu0`` realm is ``https://ingest.eu0.signalfx.com``."
-msgstr "レルムとは、あなたの組織がホストされているSplunk Observability Cloudの自己完結型のデプロイメントのことです。異なるレルムには異なるAPIエンドポイントがあります。例えば、``us1`` レルムでデータを送信するためのエンドポイントは ``https://ingest.us1.signalfx.com`` で、``eu0`` レルムでデータを送信するためのエンドポイントは ``https://ingest.eu0.signalfx.com``、というようになります。"
+msgid ""
+"A realm is a self-contained deployment of Splunk Observability Cloud in which your organization is hosted. Different realms have different API endpoints. For example, the endpoint for sending data in the ``us1`` realm is ``https://ingest.us1.signalfx.com``, while the endpoint for sending data in the ``eu0`` realm is "
+"``https://ingest.eu0.signalfx.com``."
+msgstr ""
+"レルムとは、あなたの組織がホストされているSplunk Observability Cloudの自己完結型のデプロイメントのことです。異なるレルムには異なるAPIエンドポイントがあります。例えば、``us1`` レルムでデータを送信するためのエンドポイントは ``https://ingest.us1.signalfx.com`` で、``eu0`` レルムでデータを送信するためのエンドポイントは ``https://"
+"ingest.eu0.signalfx.com``、というようになります。"
 
 #: ../../_includes/realm-note.rst:5
 msgid ""
-"When you see a placeholder realm name in the documentation, such as ``<YOUR_REALM>``, replace it with your actual realm name. To find your realm name, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. Locate the realm name in the :guilabel:`Organizations` section If you don't include the realm name when specifying an endpoint, Splunk Observability "
-"Cloud defaults to the ``us0`` realm."
+"When you see a placeholder realm name in the documentation, such as ``<YOUR_REALM>``, replace it with your actual realm name. To find your realm name, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. Locate the realm name in "
+"the :guilabel:`Organizations`section If you don't include the realm name when specifying an endpoint, Splunk Observability Cloud defaults to the ``us0`` realm."
 msgstr ""
-" ``<YOUR_REALM>`` のようなプレースホルダのレルム名がドキュメントに記載されている場合は、実際のレルム名に置き換えてください。自分のレルム名を見つけるには、Splunk Observability Cloudのナビゲーションメニューを開き、:menuselection:`Settings` を選択し、ユーザー名を選択します。レルム名は :guilabel:`Organizations` セクションにあります。エンドポイントを指定する際にレルム名を含めない場合は、Splunk Observability Cloudがデフォ"
-"ルトで ``us0`` レルムを設定します。"
+"``<YOUR_REALM>`` のようなプレースホルダのレルム名がドキュメントに記載されている場合は、実際のレルム名に置き換えてください。自分のレルム名を見つけるには、Splunk Observability Cloudのナビゲーションメニューを開き、:menuselection:`Settings` を選択し、ユーザー名を選択します。レルム名は :guilabel:`Organizations` セクションにありま"
+"す。エンドポイントを指定する際にレルム名を含めない場合は、Splunk Observability Cloudがデフォルトで ``us0`` レルムを設定します。"
 
 #: ../../_includes/report-issue.rst:2
 msgid "Report an issue"
@@ -5476,8 +5571,8 @@ msgid "To get help, see :ref:`support`."
 msgstr "サポートを受ける方法は、:ref:`support` を参照してください。"
 
 #: ../../_includes/requirements/android.rst:1
-msgid "Splunk RUM for Mobile supports Java and Kotlin applications for Android API Level 21 and higher. API levels 21 to 25 require core library desugaring activated. See :ref:`enable-desugaring`."
-msgstr "Splunk RUM for Mobile は、Android API レベル21以上の Java および Kotlin アプリケーションをサポートしています。API レベル21～25では、コアライブラリの desugaring を有効にする必要があります。:ref:`enable-desugaring` を参照してください。"
+msgid "Splunk RUM for Mobile supports Java and Kotlin applications for Android API level 21 and higher. API levels 21 to 25 require core library desugaring activated. See :ref:`enable-desugaring`. Android 7.0 (also known as Nougat) corresponds to API level 24."
+msgstr "Splunk RUM for Mobileは、Android APIレベル21以上のJavaおよびKotlinアプリケーションをサポートしています。APIレベル21～25では、コアライブラリのdesugaringを有効にする必要があります。:ref:`enable-desugaring` を参照してください。Android 7.0 (別名Nougat) はAPIレベル24に対応します。"
 
 #: ../../_includes/requirements/browser.rst:1
 msgid "The Browser RUM agent instruments all front-end experiences that run in modern browsers, regardless of the JavaScript library or framework you use, with the following requirements:"
@@ -5624,12 +5719,12 @@ msgid "Instrumentation for traces and metrics:"
 msgstr "トレースとメトリクスのためのインストルメンテーション："
 
 #: ../../_includes/requirements/dotnet.rst:5 ../../_includes/requirements/dotnet.rst:12
-msgid ".NET 8.0 (End of Support: November 10, 2026)"
-msgstr ".NET 8.0（サポート終了：2026年11月10日）"
+msgid ".NET 9.0 (End of Support: May 12, 2026)"
+msgstr ".NET 9.0（サポート終了：2026年5月12日）"
 
 #: ../../_includes/requirements/dotnet.rst:6 ../../_includes/requirements/dotnet.rst:13
-msgid ".NET 6.0 (End of Support: November 12, 2024)"
-msgstr ".NET 6.0（サポート終了：2024年11月12日）"
+msgid ".NET 8.0 (End of Support: November 10, 2026)"
+msgstr ".NET 8.0（サポート終了：2026年11月10日）"
 
 #: ../../_includes/requirements/dotnet.rst:7
 msgid ".NET Framework 4.7 and higher"
@@ -5647,23 +5742,27 @@ msgstr "AlwaysOn Profiling:"
 msgid ".NET Framework is not supported for AlwaysOn Profiling."
 msgstr ".NET FrameworkはAlwaysOn Profilingに対応していません。"
 
-#: ../../_includes/requirements/dotnet.rst:17
-msgid ".NET 7 reached End of Life on May 14, 2024. Best effort support is provided for the last version only, 7.0.19, which was tested using Splunk Distribution of OpenTelemetry .NET version 1.5.0."
-msgstr ".NET 7 は2024年5月14日にサポート終了となりました。Splunk Distribution of OpenTelemetry .NETのバージョン1.5.0を使用してテストされた最後のバージョン7.0.19に対してのみ、ベストエフォートのサポートが提供されます。"
-
 #: ../../_includes/requirements/dotnet.rst:19
+msgid ""
+"The Splunk Distribution of OpenTelemetry .NET version 1.9.0 is not compatible with .NET 6 or .NET 7 since both have reached End of Life. If you want to continue instrumenting .NET 6 or .NET 7 services use the Splunk Distribution of OpenTelemetry .NET version 1.8.0 or lower. Best effort support for Splunk Distribution of "
+"OpenTelemetry .NET is provided up to November 12, 2025 only for the last versions of .NET 6 (version 6.0.36) and .NET 7 (version 7.0.20)."
+msgstr ""
+"Splunk Distribution of OpenTelemetry .NETバージョン1.9.0は、.NET 6または.NET 7と互換性がありません。.NET 6または.NET 7サービスのインストルメンテーションを継続したい場合は、Splunk Distribution of OpenTelemetry .NET バージョン1.8.0以下を使用してください。Splunk Distribution of OpenTelemetry .NETのベストエフォートサポート"
+"は、.NET 6 (バージョン 6.0.36) と.NET 7 (バージョン7.0.20) の最終バージョンに対してのみ、2025年11月12日まで提供されます。"
+
+#: ../../_includes/requirements/dotnet.rst:22
 msgid "The distribution supports the following architectures:"
 msgstr "このディストリビューションは以下のアーキテクチャをサポートしています："
 
-#: ../../_includes/requirements/dotnet.rst:21
+#: ../../_includes/requirements/dotnet.rst:24
 msgid "x86"
 msgstr "x86"
 
-#: ../../_includes/requirements/dotnet.rst:22
+#: ../../_includes/requirements/dotnet.rst:25
 msgid "AMD64 (x86-64)"
 msgstr "AMD64 (x86-64)"
 
-#: ../../_includes/requirements/dotnet.rst:24
+#: ../../_includes/requirements/dotnet.rst:27
 msgid "ARM architectures are not supported."
 msgstr "ARMアーキテクチャはサポートされていません。"
 
@@ -5676,8 +5775,8 @@ msgid "Splunk RUM for Mobile supports the following versions:"
 msgstr "Splunk RUM for Mobile は以下のバージョンをサポートしています："
 
 #: ../../_includes/requirements/ios.rst:3
-msgid "iOS 11 and higher"
-msgstr "iOS 11以上"
+msgid "iOS 15 and higher"
+msgstr "iOS 15以上"
 
 #: ../../_includes/requirements/ios.rst:4
 msgid "iPadOS 13 and higher"
@@ -5796,8 +5895,8 @@ msgid "For more information, search for Lambda runtimes and other system require
 msgstr "詳細については、AWSのドキュメントサイトでLambdaのランタイムやその他のシステム要件を検索してください。"
 
 #: ../../_includes/requirements/nodejs.rst:1
-msgid "The Splunk Distribution of OpenTelemetry JS requires Node.js 14 and higher. To activate AlwaysOn Profiling, you need Node.js 16 or higher."
-msgstr "Splunk Distribution of OpenTelemetry JS には、Node.js 14 以上が必要です。AlwaysOn Profiling を有効にするには、Node.js 16 以上が必要です。"
+msgid "The Splunk Distribution of OpenTelemetry JS requires Node.js 18 and higher. To activate AlwaysOn Profiling, you need Node.js 18 or higher."
+msgstr "Splunk Distribution of OpenTelemetry JSには、Node.js 18以上が必要です。AlwaysOn Profilingを有効にするには、Node.js 18以上が必要です。"
 
 #: ../../_includes/requirements/php.rst:1
 msgid "The OpenTelemetry instrumentation for PHP supports PHP version 8.0 or higher."
@@ -5861,18 +5960,19 @@ msgstr "トレース"
 
 #: ../../_includes/rum-data-model.rst:7
 msgid ""
-"A set of events triggered as a result of a single logical operation, distributed across various components of an application. Traces contain events that cross process, network, and security boundaries. A RUM trace can, for example, initiate when someone taps on a button to start an action on a website. If you use RUM and APM together, traces represent calls made between the downstream services that handle the "
-"requests initiated by the user action."
+"A set of events triggered as a result of a single logical operation, distributed across various components of an application. Traces contain events that cross process, network, and security boundaries. A RUM trace can, for example, initiate when someone taps on a button to start an action on a website. If you use RUM and APM "
+"together, traces represent calls made between the downstream services that handle the requests initiated by the user action."
 msgstr ""
-"アプリケーションの様々なコンポーネントに分散された、1つの論理操作の結果としてトリガーされるイベントのセット。トレースには、プロセス、ネットワーク、セキュリティの境界を越えるイベントが含まれます。RUM のトレースは、例えば、誰かがウェブサイト上でアクションを開始するためにボタンをタップしたときに開始することができます。RUMとAPMを併用する場合、トレースは、ユーザーアクションによって開始されたリクエストを処理するダウンスト"
-"リームサービス間のコールを表します。"
+"アプリケーションの様々なコンポーネントに分散された、1つの論理操作の結果としてトリガーされるイベントのセット。トレースには、プロセス、ネットワーク、セキュリティの境界を越えるイベントが含まれます。RUM のトレースは、例えば、誰かがウェブサイト上でアクションを開始するためにボタンをタップしたときに開始することができます。RUMとAPMを"
+"併用する場合、トレースは、ユーザーアクションによって開始されたリクエストを処理するダウンストリームサービス間のコールを表します。"
 
 #: ../../_includes/rum-data-model.rst:8
 msgid "Span"
 msgstr "スパン"
 
 #: ../../_includes/rum-data-model.rst:9
-msgid "An operation within a transaction. A single span includes the logical name, the start and end timestamp of the operation, and the events and attributes linked to the captured data. A span might have a reference to its parent span and zero or more causally-related spans. Spans have universal attributes and custom attributes."
+msgid ""
+"An operation within a transaction. A single span includes the logical name, the start and end timestamp of the operation, and the events and attributes linked to the captured data. A span might have a reference to its parent span and zero or more causally-related spans. Spans have universal attributes and custom attributes."
 msgstr "トランザクション内の操作。1つのスパンには、論理名、操作の開始と終了のタイムスタンプ、取り込まれたデータにリンクされたイベントと属性が含まれます。スパンは、その親スパンへの参照と、0個以上の因果関係のあるスパンを持つことがあります。スパンには、ユニバーサル属性とカスタム属性があります。"
 
 #: ../../_includes/rum-data-model.rst:10
@@ -5896,7 +5996,8 @@ msgid "User"
 msgstr "ユーザー"
 
 #: ../../_includes/rum-data-model.rst:15
-msgid "By default, Splunk RUM doesn't collect identity data. Mapping a trace to a specific user requires manual instrumentation. Users can be represented by their username, email addresses, or using a synthetic identifier. Synthetic representation is useful in situations where PII regulations do not allow users to be identified."
+msgid ""
+"By default, Splunk RUM doesn't collect identity data. Mapping a trace to a specific user requires manual instrumentation. Users can be represented by their username, email addresses, or using a synthetic identifier. Synthetic representation is useful in situations where PII regulations do not allow users to be identified."
 msgstr "デフォルトでは、Splunk RUM は ID データを収集しません。トレースを特定のユーザーにマッピングするには、手作業によるインストルメンテーションが必要です。ユーザーは、ユーザー名、メールアドレス、または合成識別子で表すことができます。合成識別子は、PII の規制によりユーザーを特定できない場合に便利です。"
 
 #: ../../_includes/synthetics/chrome-flags.rst:6
@@ -6017,11 +6118,11 @@ msgstr "スパンタグ"
 
 #: ../../_includes/synthetics/metricset-def.rst:4
 msgid ""
-"Use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. To get additional value from a span tag or process, an  administrator can run an action known as indexing, which activates additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated metrics, called MetricSets, across all spans that contain a specified indexed "
-"tag or process."
+"Use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. To get additional value from a span tag or process, an  administrator can run an action known as indexing, which activates additional analysis of the indexed span tag or process. One benefit of indexing is to "
+"get aggregated metrics, called MetricSets, across all spans that contain a specified indexed tag or process."
 msgstr ""
-"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行することができます。これにより、インデックス化したスパンタグやプロセスの追加的分析が有効になります。インデックス化のメリットの1つは、指定したインデックス済みタグまたはプロセスを含むすべてのスパンを対象にして、MetricSets"
-"と呼ばれる集約メトリクスを取得できることです。"
+"スパンタグやプロセスを使用して、サービスやサービス間コールをトレースの特性や属性に沿って分解します。スパンタグまたはプロセスから付加価値を得るために、管理者は、インデックス化と呼ばれるアクションを実行することができます。これにより、インデックス化したスパンタグやプロセスの追加的分析が有効になります。インデックス化のメリットの1"
+"つは、指定したインデックス済みタグまたはプロセスを含むすべてのスパンを対象にして、MetricSetsと呼ばれる集約メトリクスを取得できることです。"
 
 #: ../../_includes/synthetics/metricset-def.rst:8
 msgid "MetricSets"
@@ -6077,14 +6178,16 @@ msgstr "アプリケーションのインストルメンテーション経由で
 
 #: ../../_includes/tag-decision-support.rst:5
 msgid ""
-"Adding span tags in a downstream OpenTelemetry Collector can save time, at the cost of granularity. If a tag is applicable to 100% of the data received by the OpenTelemetry Collector in which you are adding it, adding the tag in your OpenTelemetry Collector config file is fastest. But if you need to apply logic to differentiate the spans that receive a tag via the OpenTelemetry Collector, it is likely faster to add "
-"the tags at the application level via instrumentation."
+"Adding span tags in a downstream OpenTelemetry Collector can save time, at the cost of granularity. If a tag is applicable to 100% of the data received by the OpenTelemetry Collector in which you are adding it, adding the tag in your OpenTelemetry Collector config file is fastest. But if you need to apply logic to "
+"differentiate the spans that receive a tag via the OpenTelemetry Collector, it is likely faster to add the tags at the application level via instrumentation."
 msgstr ""
-"ダウンストリームのOpenTelemetry Collectorでスパンタグを追加すると、粒度を犠牲にして時間を節約できます。タグを追加するOpenTelemetry Collectorが受信するデータの100%にタグが適用される場合は、OpenTelemetry Collectorの設定ファイルでタグを追加するのが最速です。ただし、OpenTelemetry Collector経由でタグを受信するスパンを区別するロジックを適用する必要がある場合は、インストルメンテーション経由でアプリケーションレベルでタグを追"
-"加する方が速いでしょう。"
+"ダウンストリームのOpenTelemetry Collectorでスパンタグを追加すると、粒度を犠牲にして時間を節約できます。タグを追加するOpenTelemetry Collectorが受信するデータの100%にタグが適用される場合は、OpenTelemetry Collectorの設定ファイルでタグを追加するのが最速です。ただし、OpenTelemetry Collector経由でタグを受信するスパンを区別するロ"
+"ジックを適用する必要がある場合は、インストルメンテーション経由でアプリケーションレベルでタグを追加する方が速いでしょう。"
 
 #: ../../_includes/tag-decision-support.rst:7
-msgid "For instance, if multiple applications exist on the same host in a K8s deployment, but in different environments (for instance, ``production``, ``development``, and ``staging``), setting the ``deployment.environment`` tag using the instrumentation library allows you to differentiate environments among spans from the same host."
+msgid ""
+"For instance, if multiple applications exist on the same host in a K8s deployment, but in different environments (for instance, ``production``, ``development``, and ``staging``), setting the ``deployment.environment`` tag using the instrumentation library allows you to differentiate environments among spans from the same "
+"host."
 msgstr "例えば、K8sのデプロイメントにおいて、複数のアプリケーションが同じホスト上に存在するが、異なる環境（例えば ``production``、``development``、``staging`` ）にある場合、インストルメンテーションライブラリを使用して ``deployment.environment`` タグを設定することで、同じホストのスパン間で環境を区別することができます。"
 
 #: ../../_includes/troubleshooting-components.rst:1
@@ -6112,8 +6215,12 @@ msgid "Ask a question and get answers through community support at :new-page:`Sp
 msgstr ":new-page:`Splunk Answers<https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx>` のコミュニティサポートで質問し、回答を得る"
 
 #: ../../_includes/troubleshooting-components.rst:13
-msgid "Join the Splunk :new-page:`#observability <https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` user group Slack channel to communicate with customers, partners, and Splunk employees worldwide. To join, see :new-page:`Chat groups <https://docs.splunk.com/Documentation/Community/current/community/Chat>` in the *Get Started with Splunk Community* manual."
-msgstr "Splunk :new-page:`#observability<https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` ユーザーグループの Slack チャンネルに参加して、世界中の顧客、パートナー、Splunk 社員とのコミュニケーションを図る。参加するには、*Get Started with Splunk Community* マニュアルの :new-page:`チャットグループ<https://docs.splunk.com/Documentation/Community/current/community/Chat>` を参照してください。"
+msgid ""
+"Join the Splunk :new-page:`#observability <https://splunkcommunity.slack.com/archives/C01AK4CCWR4>` user group Slack channel to communicate with customers, partners, and Splunk employees worldwide. To join, see :new-page:`Chat groups <https://docs.splunk.com/Documentation/Community/current/community/Chat>` in the *Get "
+"Started with Splunk Community* manual."
+msgstr ""
+"Splunk :new-page:`#observability<https://splunkcommunity.slack.com/archives/C01AK4CCWR4>` ユーザーグループの Slack チャンネルに参加して、世界中の顧客、パートナー、Splunk 社員とのコミュニケーションを図る。参加するには、*Get Started with Splunk Community* マニュアルの :new-page:`チャットグループ<https://docs.splunk.com/"
+"Documentation/Community/current/community/Chat>` を参照してください。"
 
 #: ../../_includes/zero-code-info.rst:1
 msgid "Due to changes in the upstream OpenTelemetry documentation, \"automatic instrumentation\" has been changed to \"zero-code instrumentation\". For more information, see :ref:`zero-code-overview`."
@@ -6143,7 +6250,9 @@ msgstr "アップストリームのOpenTelemetryのドキュメントに変更�
 #~ msgid "See [How the OpenTelemetry Collector uses pipelines to process data](https://docs.splunk.com/observability/gdi/opentelemetry/data-processing.html#common-processing-scenarios) for more information."
 #~ msgstr "詳細は[How OpenTelemetry Collector uses pipelines to process data](https://docs.splunk.com/observability/gdi/opentelemetry/data-processing.html#common-processing-scenarios) を参照。"
 
-#~ msgid "Try to reproduce the error and collect a heap dump close to the point where the memory kill occurs: a. Add the `pprof` extension to the component configuration that is failing. Make sure you enable this extension in a pipeline in the services section.  b. Capture the output of the following commands against the problematic pod:"
+#~ msgid ""
+#~ "Try to reproduce the error and collect a heap dump close to the point where the memory kill occurs: a. Add the `pprof` extension to the component configuration that is failing. Make sure you enable this extension in a pipeline in the services section.  b. Capture the output of the following commands against the "
+#~ "problematic pod:"
 #~ msgstr "a. 失敗しているコンポーネント構成に`pprof` 拡張を追加する。b. 問題のあるポッドに対して、以下のコマンドの出力をキャプチャする："
 
 #~ msgid "Gather additional [support information](https://docs.splunk.com/Observability/gdi/opentelemetry/support-checklist.html#nav-Gather-information-to-open-a-support-request), including your end-to-end architecture information."
@@ -6209,10 +6318,12 @@ msgstr "アップストリームのOpenTelemetryのドキュメントに変更�
 #~ msgid "Preview: Splunk Zero Config Auto Instrumentation"
 #~ msgstr "プレビュー：Splunk Zero Config自動インストルメンテーション"
 
-#~ msgid "Preview features described in this document are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service-level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+#~ msgid ""
+#~ "Preview features described in this document are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service-level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-"
+#~ "page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
 #~ msgstr ""
-#~ "本ドキュメントで説明するプレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止することができます。プレビュー機能の使用は、:new-page:`Splunk一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとしま"
-#~ "す。"
+#~ "本ドキュメントで説明するプレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止することができます。プレビュー機能の使用は、:new-"
+#~ "page:`Splunk一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
 
 #~ msgid "Chrome and Chrome Android 51 and higher"
 #~ msgstr "ChromeおよびChrome Android 51以上"
@@ -6494,7 +6605,9 @@ msgstr "アップストリームのOpenTelemetryのドキュメントに変更�
 #~ msgstr "``collectd/etcd``"
 
 #~ msgid "Automatic instrumentation is only available for applications using supported Java libraries. See :ref:`supported-java-libraries`. If your application isn't supported, manually instrument your service to generate trace data. See :ref:`java-manual-instrumentation` ."
-#~ msgstr "自動インストルメンテーションは、サポートされているJavaライブラリを使用するアプリケーションでのみ利用可能です。:ref:`supported-java-libraries` を参照してください。アプリケーションがサポートされていない場合は、手動でサービスをインストルメンテーションしてトレース・データを生成してください。:ref:`java-manual-instrumentation` を参照してください。"
+#~ msgstr ""
+#~ "自動インストルメンテーションは、サポートされているJavaライブラリを使用するアプリケーションでのみ利用可能です。:ref:`supported-java-libraries` を参照してください。アプリケーションがサポートされていない場合は、手動でサービスをインストルメンテーションしてトレース・データを生成してください。:ref:`java-manual-instrumentation`を"
+#~ "参照してください。"
 
 #~ msgid ":ref:`java-requirements`."
 #~ msgstr ":ref:`java-requirements`。"
@@ -6523,8 +6636,12 @@ msgstr "アップストリームのOpenTelemetryのドキュメントに変更�
 #~ msgid "Preview: Metrics pipeline management/Archived Metrics"
 #~ msgstr "プレビュー：メトリクスパイプライン管理／アーカイブされたメトリクス"
 
-#~ msgid "Preview features are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
-#~ msgstr "プレビュー機能は、いかなる保証、メンテナンス、サポート、サービスレベルの約束もなく、Splunk からお客様に「現状のまま」提供されます。Splunk は独自の判断でこのプレビュー機能を提供し、いつでも中止することができます。プレビュー機能の使用は、:new-page:`Splunk 一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
+#~ msgid ""
+#~ "Preview features are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://"
+#~ "www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+#~ msgstr ""
+#~ "プレビュー機能は、いかなる保証、メンテナンス、サポート、サービスレベルの約束もなく、Splunk からお客様に「現状のまま」提供されます。Splunk は独自の判断でこのプレビュー機能を提供し、いつでも中止することができます。プレビュー機能の使用は、:new-page:`Splunk 一般規約<https://www.splunk.com/en_us/legal/splunk-general-"
+#~ "terms.html>` に従うものとします。"
 
 #~ msgid "See :ref:`mpm-arm-preview-sitemap` for the complete list of topics, or use these links to navigate to the high-level topics for metrics pipeline management with archived metrics:"
 #~ msgstr "トピックの全リストは :ref:`mpm-arm-preview-sitemap` を参照するか、以下のリンクを使用して、アーカイブされたメトリクスを使用したメトリクスパイプライン管理に関する大まかなトピックに移動します："
@@ -6696,3 +6813,42 @@ msgstr "アップストリームのOpenTelemetryのドキュメントに変更�
 
 #~ msgid ":ref:`oracledb-receiver`"
 #~ msgstr ":ref:`oracledb-receiver`"
+
+#~ msgid ":strong:`Live Tail`"
+#~ msgstr ":strong:`Live Tail`"
+
+#~ msgid ":strong:`Create and manage log processing rules`"
+#~ msgstr ":strong:`ログ処理ルールを作成および管理する`"
+
+#~ msgid ":strong:`Apply processing rules across historical data`"
+#~ msgstr ":strong:`過去のデータに処理ルールを適用する`"
+
+#~ msgid ":strong:`Transform data with log processing rules`"
+#~ msgstr ":strong:`ログ処理ルールでデータを変換する`"
+
+#~ msgid ":strong:`Create and manage log metricization rules`"
+#~ msgstr ":strong:`ログのメトリクス化ルールを作成および管理する`"
+
+#~ msgid ":strong:`Create new S3 connection to allow infinite logging rules`"
+#~ msgstr ":strong:`無限のロギングルールを可能にする新しい S3 接続を作成する`"
+
+#~ msgid ":strong:`Create and manage infinite logging rules`"
+#~ msgstr ":strong:`無限のロギングルールを作成および管理する`"
+
+#~ msgid "Yes - after admin creates S3 connection"
+#~ msgstr "権限あり - 管理者がS3接続を作成した後"
+
+#~ msgid "The installer script uses one of the supported package managers to install the Collector."
+#~ msgstr "インストーラスクリプトは、サポートされているパッケージマネージャーのいずれかを使用してCollectorをインストールします。"
+
+#~ msgid "When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped."
+#~ msgstr "公式パッケージを使用してCollectorをアップデートする場合、設定ファイルが上書きされることはありません。更新後に設定を更新する必要がある場合は、下位互換性が失われる前に手動で編集してください。"
+
+#~ msgid "Apply the following changes to the Collector configuration files for specific version upgrades."
+#~ msgstr "特定のバージョンアップのために、Collector 構成ファイルに以下の変更を適用します。"
+
+#~ msgid ".NET 6.0 (End of Support: November 12, 2024)"
+#~ msgstr ".NET 6.0（サポート終了：2024年11月12日）"
+
+#~ msgid ".NET 7 reached End of Life on May 14, 2024. Best effort support is provided for the last version only, 7.0.19, which was tested using Splunk Distribution of OpenTelemetry .NET version 1.5.0."
+#~ msgstr ".NET 7 は2024年5月14日にサポート終了となりました。Splunk Distribution of OpenTelemetry .NETのバージョン1.5.0を使用してテストされた最後のバージョン7.0.19に対してのみ、ベストエフォートのサポートが提供されます。"
