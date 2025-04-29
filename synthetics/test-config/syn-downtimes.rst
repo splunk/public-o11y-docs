@@ -46,16 +46,16 @@ Modify a downtime configuration
 
 * Before a downtime configuration has run: 
 
-   * If it's non-recurring you can edit it, and if it's still in "scheduled" state you can delete it.
-   * If it's recurring you can edit it, but you can only delete it before its first run. 
-
+   * If it's non-recurring you can edit or delete it.
+   * If it's recurring you can edit it, but you can only delete it before its first run. Its status may still be displayed as :guilabel:`Scheduled`, but it's functionally locked after the first occurrence. 
+   * To delete a downtime configuration, select the :guilabel:`Delete` action from the vertical dot menu (|verticaldots|).
 
 * While a downtime configuration is active: 
 
    * If it's non-recurring you can't edit or delete it, but you can extend it or end it immediately.
    * If it's recurring you can't edit, delete, or extend it, but you can end it immediately. 
    
-* After the first run of a recurring downtime configuration, you can't edit or extend it, regardless of its current status; you can only delete it or stop it manually. To delete it, select the :guilabel:`Delete` action from the vertical dot menu (|verticaldots|). Its status may still be displayed as :guilabel:`Scheduled`, but it's functionally locked.
+* After the first run of a downtime configuration, whether it's recurring or not, you can't delete or edit it.
 
 
 Preview the downtime schedule
