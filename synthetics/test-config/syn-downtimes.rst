@@ -28,8 +28,8 @@ The best practice is to schedule a downtime configuration with a 15 to 30 minute
 
 Schedule requirements: 
 
-* Downtimes configurations must be at least fifteen minutes long.
-* Downtimes configurations can be a maximum of one year in advance and one year in duration. 
+* Downtime configurations must be at least fifteen minutes long.
+* Downtime configurations can be a maximum of one year in advance and one year in duration. 
 
 How to schedule a downtime configuration: 
 
@@ -39,6 +39,12 @@ How to schedule a downtime configuration:
 #. In the :guilabel:`Schedule` section, set a start and end date and time.
 #. Select from the options in :guilabel:`Recurrence`.
 #. Select :guilabel:`Create`. 
+
+
+Preview the downtime schedule
+------------------------------------------------------------
+
+If you selected a value other than :guilabel:`Does not repeat` in the :guilabel:`Recurrence` menu, the :guilabel:`Create a downtime configuration` form displays a preview of the first ten downtime configurations.
 
 
 Modify a downtime configuration
@@ -56,12 +62,6 @@ Modify a downtime configuration
    * If it's recurring you can't edit, delete, or extend it, but you can end it immediately. 
    
 * After the first run of a downtime configuration, whether it's recurring or not, you can't delete or edit it.
-
-
-Preview the downtime schedule
-------------------------------------------------------------
-
-If you selected a value other than :guilabel:`Does not repeat` in the :guilabel:`Recurrence` menu, the :guilabel:`Create a downtime configuration` form displays a preview of the first ten downtime configurations.
 
 
 Mute alerts during downtime
