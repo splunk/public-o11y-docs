@@ -48,7 +48,7 @@ If you selected a value other than :guilabel:`Does not repeat` in the :guilabel:
 
 
 Modify a downtime configuration
-------------------------------------------------------------
+============================================================
 
 * Before a downtime configuration has run: 
 
