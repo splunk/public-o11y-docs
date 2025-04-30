@@ -222,7 +222,7 @@ To add a new user to Splunk Observability Cloud after the integration is complet
 
 The user can now log in to Splunk Observability Cloud with their Splunk Cloud Platform permissions.
 
-.. _centralized-rbac:
+.. uid-central-rbac:
 
 Centralized user and role management
 ------------------------------------------------------------------------------------------
