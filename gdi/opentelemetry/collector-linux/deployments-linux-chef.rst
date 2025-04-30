@@ -112,18 +112,6 @@ For Linux, the cookbook accepts the attributes described in the following table:
    * - ``package_stage``
      - The Collector package repository stage to use. Can be ``release``, ``beta``, or ``test``.
      - ``release``
-   * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
-     - ``false``
-   * - ``fluentd_version``
-     -  Version of the td-agent (Fluentd) package to install 
-     -  ``3.7.1`` for Debian stretch and ``4.3.1`` for all other Linux distros 
-   * - ``fluentd_config_source``
-     - Source path to the Fluentd configuration file. This file is copied to the ``$fluentd_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package. Only applicable if ``$with_fluentd`` is set to ``true``.
-     - ``/etc/otel/collector/fluentd/fluent.conf``
-   * - ``fluentd_config_dest``
-     - Destination path to the Fluentd configuration file on the node. Only applicable if ``$with_fluentd`` is set to ``true``.
-     - ``/etc/otel/collector/fluentd/fluent.conf``
 
 .. _chef-zero-config:
 

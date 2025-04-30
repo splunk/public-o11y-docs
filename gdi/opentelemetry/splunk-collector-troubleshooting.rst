@@ -196,11 +196,6 @@ No response means the request was sent successfully. You can also pass ``-v`` to
 Error codes and messages
 ==================================================================================
 
-You're getting a "pattern not matched" error message
-------------------------------------------------------------
-
-If you see an error message such as "pattern not matched", this message is from Fluentd, and means that the ``<parser>`` was unable to match based on the log message. As a result, the log message is not collected. Check the Fluentd configuration and update as required.
-
 You're receiving an HTTP error code
 ------------------------------------------------------------
 

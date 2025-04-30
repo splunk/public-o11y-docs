@@ -32,8 +32,6 @@ Alternatively, you can also install the Collector for Windows:
 Prerequisites
 ==========================
 
-
-
 .. raw:: html
 
    <div class="include-start" id="requirements/collector-windows.rst"></div>
@@ -44,9 +42,6 @@ Prerequisites
 
    <div class="include-stop" id="requirements/collector-windows.rst"></div>
 
-
-
-
 .. _windows-otel-packages:
 
 Included packages
@@ -55,7 +50,6 @@ Included packages
 The Windows installer script installs the following packages:
 
 * Dotnet autoinstrumentation, if enabled. See :ref:`get-started-dotnet-otel`.
-* Fluentd, if enabled. See :ref:`fluentd-manual-config-windows`.
 * JMX metric gatherer.
 * For Docker environments only, Java JDK and JRE.
 
@@ -64,10 +58,7 @@ The Windows installer script installs the following packages:
 Install the Collector for Windows using the installer script
 ================================================================
 
-The installer script is available for Windows 64-bit environments, and deploys and configures: 
-
-* The Splunk Distribution of the OpenTelemetry Collector for Windows 
-* Fluentd through the ``td-agent``, which is deactivated by default
+The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of the OpenTelemetry Collector for Windows. 
 
 To install the package using the installer script, follow these steps:
 
@@ -109,81 +100,73 @@ Options of the installer script for Windows
 The Windows installer script supports the following options:
 
 .. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 30 40 30
+  :header-rows: 1
+  :width: 100%
+  :widths: 30 40 30
 
-   * - Option
-     - Description
-     - Default value
-   * - ``access_token``
-     - The token used to send metric data to Splunk.
-     -
-   * - ``realm``
-     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
-     - ``us0``
-   * - ``memory``
-     - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
-     - ``512``
-   * - ``mode``
-     - Configure the Collectorservice to run in host monitoring (``agent``) or data forwarding (``gateway``).
-     - ``agent``
-   * - ``network_interface``
-     - The network interface the Collectorreceivers listen on.
-     - ``0.0.0.0``
-   * - ``ingest_url``
-     - Set the base ingest URL explicitly instead of the URL inferred from the specified realm.
-     - ``https://ingest.REALM.signalfx.com``
-   * - ``api_url``
-     - Set the base API URL explicitly instead of the URL inferred from the specified realm.
-     - ``https://api.REALM.signalfx.com``
-   * - ``trace_url``
-     - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm.
-     - ``https://ingest.REALM.signalfx.com/v2/trace``
-   * - ``hec_url``
-     - Set the HEC endpoint URL explicitly instead of the endpoint inferred from the specified realm.
-     - ``https://ingest.REALM.signalfx.com/v1/log``
-   * - ``hec_token``
-     - Set the HEC token if it's different than the specified Splunk access token.
-     -
-   * - ``with_fluentd``
-     - Whether to install and configure fluentd to forward log events to the collector. See :ref:`fluentd-manual-config-windows` for more information.
-     - ``$false``
-   * - ``with_dotnet_instrumentation``
-     - Whether to install and configure .NET tracing to forward .NET application traces to the local collector.
-     - ``$false``
-   * - ``deployment_env``
-     - A system-wide environment tag used by .NET instrumentation. Sets the ``SIGNALFX_ENV`` environment variable. Ignored if ``-with_dotnet_instrumentation`` is set to ``false``.
-     -
-   * - ``bundle_dir``
-     - The location of your Smart Agent bundle for monitor functionality.
-     - ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``
-   * - ``insecure``
-     - If true then certificates aren't checked when downloading resources.
-     - ``$false``
-   * - ``collector_version``
-     - Specify a specific version of the Collector to install.
-     - Latest version available
-   * - ``stage``
-     - The package stage to install from [``test``, ``beta``, ``release``].
-     - ``release``
-   * - ``collector_msi_url``
-     - When installing the Collector, instead of downloading the package, use this local path to a Splunk OpenTelemetry Collector MSI package. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
-     - ``https://dl.signalfx.com/splunk-otel-collector/`` |br| ``msi/release/splunk-otel-collector-<version>-amd64.msi``
-   * - ``fluentd_msi_url``
-     - Specify the URL to the Fluentd MSI package to install.
-     - ``https://packages.treasuredata.com/4/windows/td-agent-4.1.0-x64.msi``
-   * - ``msi_path``
-     - Specify a local path to a Splunk OpenTelemetry Collector MSI package to install instead of downloading the package. If specified, the ``-collector_version`` and ``-stage`` parameters will be ignored.
-     -
-   * - ``msi_public_properties``
-     - Specify public MSI properties to be used when installing the Splunk OpenTelemetry Collector MSI package.
-     -
+  * - Option
+    - Description
+    - Default value
+  * - ``access_token``
+    - The token used to send metric data to Splunk.
+    -
+  * - ``realm``
+    - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value. To find your Splunk realm see :ref:`Note about realms <about-realms>`.
+    - ``us0``
+  * - ``memory``
+    - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
+    - ``512``
+  * - ``mode``
+    - Configure the Collectorservice to run in host monitoring (``agent``) or data forwarding (``gateway``).
+    - ``agent``
+  * - ``network_interface``
+    - The network interface the Collectorreceivers listen on.
+    - ``0.0.0.0``
+  * - ``ingest_url``
+    - Set the base ingest URL explicitly instead of the URL inferred from the specified realm.
+    - ``https://ingest.REALM.signalfx.com``
+  * - ``api_url``
+    - Set the base API URL explicitly instead of the URL inferred from the specified realm.
+    - ``https://api.REALM.signalfx.com``
+  * - ``trace_url``
+    - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm.
+    - ``https://ingest.REALM.signalfx.com/v2/trace``
+  * - ``hec_url``
+    - Set the HEC endpoint URL explicitly instead of the endpoint inferred from the specified realm.
+    - ``https://ingest.REALM.signalfx.com/v1/log``
+  * - ``hec_token``
+    - Set the HEC token if it's different than the specified Splunk access token.
+    -
+  * - ``with_dotnet_instrumentation``
+    - Whether to install and configure .NET tracing to forward .NET application traces to the local collector.
+    - ``$false``
+  * - ``deployment_env``
+    - A system-wide environment tag used by .NET instrumentation. Sets the ``SIGNALFX_ENV`` environment variable. Ignored if ``-with_dotnet_instrumentation`` is set to ``false``.
+    -
+  * - ``bundle_dir``
+    - The location of your Smart Agent bundle for monitor functionality.
+    - ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``
+  * - ``insecure``
+    - If true then certificates aren't checked when downloading resources.
+    - ``$false``
+  * - ``collector_version``
+    - Specify a specific version of the Collector to install.
+    - Latest version available
+  * - ``stage``
+    - The package stage to install from [``test``, ``beta``, ``release``].
+    - ``release``
+  * - ``collector_msi_url``
+    - When installing the Collector, instead of downloading the package, use this local path to a Splunk OpenTelemetry Collector MSI package. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
+    - ``https://dl.signalfx.com/splunk-otel-collector/`` |br| ``msi/release/splunk-otel-collector-<version>-amd64.msi``
+  * - ``msi_path``
+    - Specify a local path to a Splunk OpenTelemetry Collector MSI package to install instead of downloading the package. If specified, the ``-collector_version`` and ``-stage`` parameters will be ignored.
+    -
+  * - ``msi_public_properties``
+    - Specify public MSI properties to be used when installing the Splunk OpenTelemetry Collector MSI package.
+    -
 
 Next steps
 ==================================
-
-
 
 .. raw:: html
 

@@ -105,11 +105,20 @@ After you choose which type of test you want to use, follow these steps to set u
        * :ref:`api-test-metrics`
 
 
+
+.. _synthetics-get-audit-logs:
+
+Get audit logs
+============================================================
+
+Use the Synthetics API to retrieve audit logs. These logs provide a detailed history of any changes made to Synthetics resources, such as tests, downtime configurations, TOTP tokens, private locations, and more. Audit logs enable you to track every change within your environment for regulatory and compliance needs and to identify the root cause of performance issues or failures. 
+
+
+
 .. _synthetics-link-to-apm:
 
 (Optional) Link Synthetic spans to APM spans
-=============================================
-
+============================================================
 
 If you link Synthetic spans to APM spans, you can follow the story of your data from front-end to back-end. Splunk Synthetics uses server timing to calculate the response time between the front end and back end of your application, and to join the front-end and back-end traces for end-to-end visibility. 
 
@@ -138,7 +147,7 @@ For more examples on Java instrumentation, see :ref:`server-trace-information-ja
 .. _third-step-config:
 
 (Optional) Integrate with Splunk RUM 
-------------------------------------
+------------------------------------------------------------
 
 Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
 

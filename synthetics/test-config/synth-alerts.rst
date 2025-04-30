@@ -105,12 +105,21 @@ In the detector dialog box, enter the following fields:
     * :guilabel:`Orientation`: Only available for uptime metric. Specify whether the metric must fall below or exceed the threshold to trigger the alert.
     * :guilabel:`Violates threshold`: How many times the metric must violate the threshold to trigger the alert.
     * :guilabel:`Split by location`: Select whether to split the detector by test location. If you don't filter by location, the detector monitors the average value across all locations. 
+    * :guilabel:`Auto-clear alerts`: Select the check box and a time duration from the list if you want active alerts to automatically clear after the metric hasn't reported new data for the specified period. To learn more, see :ref:`auto-clearing-alerts`.
 
 #. Use the severity selector to select the severity of the alert.
 #. Add recipients.
 #. Select :guilabel:`Activate`. 
 
 .. _page-level-detector:
+
+Set up reminders for alerts
+----------------------------------------------------
+To receive reminders for alerts triggered by your detectors, do the following while creating your detector:
+
+#. Select the alert severity that will trigger a notification and the channel used to receive the reminder notification. For example, select :guilabel:`Email` to receive email notifications.
+#. Select the :guilabel:`+` button labeled :guilabel:`Scope alerts to`.
+#. Under :guilabel:`Find a key`, select the ``page_position`` dimension.
 
 Create a page-level detector for a Browser test
 ----------------------------------------------------

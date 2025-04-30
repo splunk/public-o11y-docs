@@ -20,7 +20,7 @@ To learn more about write permissions, see :ref:`about-write-permissions`.
 
 If you want to get write permission for a detector, or if you want to modify permissions,
 first determine who already has permissions by displaying the :strong:`Permissions` list.
-You can then ask a user who has permission to add you to the permissions list.
+You need a user who has write permission to add you to the permissions list.
 
 .. _display-write-permissions-detectors:
 
@@ -45,10 +45,10 @@ for users or teams. To grant or revoke permissions for a detector, you need writ
 
 .. _procedure-grant-write-permissions:
 
-Grant write permissions for detectors
+Grant write permission for detectors
 ---------------------------------------------------------
 
-To grant write permissions for a detector, follow these steps:
+To grant write permission for a detector, follow these steps:
 
 #. Display the permissions for the item by selecting the detector's actions menu (|more|) and selecting :guilabel:`Permissions`.
 #. To start using specific write permissions for a detector,
@@ -71,11 +71,8 @@ To revoke write permissions for a detector, follow these steps:
 
 .. note:: Important
 
-   You can remove your own write permission from a detector.
-   If you do this deliberately or by accident, and you're not an administrator,
-   you can't grant yourself write permission again.
-   Instead, you have to find someone else with write permission to grant you
-   write permission.
+   You can remove your own write permission from a detector. However, if you're not an administrator, you can't grant yourself write permission again.
+   Instead, you have to find someone else with write permission to grant you write permission.
 
    
 .. _detector-action-table:
