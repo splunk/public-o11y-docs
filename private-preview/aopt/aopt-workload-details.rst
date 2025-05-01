@@ -20,7 +20,7 @@ When you select a workload in the :guilabel:`Kubernetes Workloads` table, you na
 Efficiency Analysis
 ==========================================================
 
-:guilabel:`Efficiency Analysis` is based on the workload's configuration settings and its operations metrics, such as its average pod (replica) count and actual resource usage usage.
+:guilabel:`Efficiency Analysis` is based on the workload's resource efficiency.
 
 * :guilabel:`Confidence level`: Look for the confidence level under the Efficiency Analysis label. If the confidence level is something other than high, this probably means that your cluster hasn't sent enough metrics to Splunk IM since you created the workload. In this case, for highly critical business workflows or those that have high variations, wait a few days for the confidence level to increase before you apply the recommendations. :ref:`See details on how this is calculated <aopt-glossary>`.
 

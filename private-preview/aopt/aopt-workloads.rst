@@ -43,7 +43,7 @@ This is a good tile to check first to see if any of your workloads are at high r
 Resource Footprint
 ==========================================================
 
-A workload's resource footprint is the sum of its pods' ``request`` settings for that resource plus its actual overage utilization of that resource. This tile displays the sum of all resource footprints of all the pods of all your workloads. It then compares your current ``request`` settings for CPU and memory to  recommended CPU and memory ``request`` settings based on data from the past 14 days. 
+A workload's resource footprint is the sum of its pods' ``request`` settings for that resource (or utilization if resources are unset or average usage exceeds requests) plus its actual overage utilization of that resource. This tile displays the sum of all resource footprints of all the pods of all your workloads. It then compares your current ``request`` settings for CPU and memory to  recommended CPU and memory ``request`` settings based on data from the past 14 days. 
 
 .. note::
     This tile aggregates data from all of your workloads, so you may not find a direct correlation to individual workloads in the :guilabel:`Kubernetes Workloads` table.
