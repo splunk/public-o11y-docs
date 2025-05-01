@@ -11,19 +11,25 @@ The Application Optimization dashboard
 
 To load the dashboard, select :guilabel:`Application Optimization` in the left navigation menu.
 
+
+..  image:: /private-preview/aopt/aopt-dashboard-sorted-scaled.png
+    :width: 90%
+    :alt: Application Optimization workloads
+
+
 The :guilabel:`Application Optimization` dashboard provides a high-level view of metrics from your Kubernetes infrastructure and a table of Kubernetes workloads. Metrics are grouped into tiles which are described below.
 
 
 Workloads
 ==========================================================
 
-* :guilabel:`Total`: This is the total number of workloads, of all kinds, for which you're sending metrics to Splunk IM. 
+* :guilabel:`Total`: The total number of workloads, of all kinds, for which you're sending metrics to Splunk IM. 
 
-* :guilabel:`Processed`: This is the number of workloads processed by Application Optimization and older than 24 hours. This number doesn't include 
+* :guilabel:`Processed`: The number of workloads that Application Optimization has processed and that are older than 24 hours. This number doesn't include: 
 
-  * Workload kinds that Application Optimization doesn't support (cronjobs and jobs)
+  * Workload kinds that Application Optimization doesn't support (cronjobs and jobs).
 
-  * Workloads that Application Optimization had an error in processing
+  * Workloads that Application Optimization had an error in processing.
 
   * Workloads that you added less than 24 hours ago; since Application Optimization processes data once a day, new workloads might have missed the processsing window.
 
@@ -31,7 +37,7 @@ Workloads
 Workloads by Starvation Risk
 ==========================================================
 
-This is a good tile to check first to see if any of your workloads are at high risk of starvation. Those are the workloads that need immediate attention. You can find them by sorting the :guilabel:`Kubernetes Workloads` table by :guilabel:`Starvation Risk`.
+This is a good tile to check first to see if any of your workloads are at high risk of starvation. Those are the workloads that need immediate attention. You can also find starving workloads by sorting the :guilabel:`Kubernetes Workloads` table by :guilabel:`Starvation Risk`. :ref:`See details on how this risk is calculated <aopt-glossary>`.
 
 
 Resource Footprint

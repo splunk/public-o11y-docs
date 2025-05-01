@@ -29,7 +29,7 @@ Requirements
 
 * Supported Kubernetes workload kinds: Deployment, StatefulSet, DaemonSet
 
-* Minimum amount of infrastructure metrics sent to Splunk IM: 14 days
+* Minimum amount of infrastructure metrics you must send to Splunk IM: 14 contiguous days
 
 * All metrics that the :new-page:`Splunk IM Kubernetes cluster receiver collects by default <https://docs.splunk.com/observability/en/gdi/opentelemetry/collector-kubernetes/install-k8s.html#helm-chart-supported-distros>` must be present in your data. Since these metrics are enabled by default on your Kubernetes collector you don't need to take any action unless you've disabled them. 
 
