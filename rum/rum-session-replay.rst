@@ -40,8 +40,8 @@ This example shows the order in which to initialize the scripts:
 
 .. code-block:: html
 
-    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossOrigin="anonymous"></script>
+    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web-session-recorder.js" crossOrigin="anonymous"></script>
     <script>
     SplunkRum.init({
         realm: '<realm>',
@@ -63,7 +63,7 @@ Initialize this code snippet to set up session replay through Splunk CDN.
 
 .. code-block:: html
 
-    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web-session-recorder.js" crossOrigin="anonymous"></script>
     <script>
     SplunkSessionRecorder.init({
         realm: '<realm>',
@@ -82,7 +82,7 @@ Self-hosted
 
    .. code-block:: html
 
-      <script src="<your-self-hosted-path>/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
+      <script src="<your-self-hosted-path>/splunk-otel-web-session-recorder.js" crossOrigin="anonymous"></script>
 
 
 To avoid gaps in your data, load and initialize the Splunk JavaScript Agent asynchronously and as early as possible.
