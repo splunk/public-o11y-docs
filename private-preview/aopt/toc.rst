@@ -9,8 +9,8 @@
     Splunk makes this preview feature available in its sole discretion and may 
     discontinue it at any time. These documents are not yet publicly available and 
     we ask that you keep such information confidential. Use of preview features is 
-    subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services 
-    <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
+    subject to the Splunk Pre-Release Agreement for Hosted Services 
+    (https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html)`.
 
 
 .. admonition:: Table of contents
