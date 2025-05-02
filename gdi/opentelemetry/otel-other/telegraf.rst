@@ -39,7 +39,7 @@ Follow these steps to scrape Telegraf metrics with the OTel Collector:
 3. Set up the Telegraf OpenTelemetry Output plugin
 4. Configure the OpenTelemetry Collector
 
-5. Install Telegraf 
+1. Install Telegraf 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Run the following commands to install Telegraf from the InfluxData repository:
