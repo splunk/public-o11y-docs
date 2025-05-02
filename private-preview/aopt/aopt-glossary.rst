@@ -32,7 +32,7 @@ Efficiency
 
 The balance between over-provisioning and under-provisioning to optimize resource utilization without compromising performance or stability. Highly efficient workloads use resources in a way that aligns closely with their actual consumption, reducing waste and maximizing your cluster's capacity to run other workloads. 
 
-Application Optimization is a powerful tool for achieving and maintaining efficiency. It calculates efficiency as the average of the pod-wide usage of a resource's ``request`` setting, capped at 100%. Its calculation only includes metrics within the analysis window, which is the lesser of 14 days and the time since the last resource change (or the initial deployment). Note that the averages are taken from the pod-level sums of absolute usage and ``request`` settings, so that they are properly weighted. The averages for each CPU and memory ``request`` setting are then weight-averaged based on the assumed resource cost weights.
+Application Optimization is a powerful tool for achieving and maintaining efficiency. It calculates efficiency as the average of the pod-wide usage of a resource's ``request`` setting, capped at 100%. Its calculation only includes metrics within the analysis window, which is the lesser of 14 days and the time since the last resource change (or the initial deployment). Note that rather than finding the utilization (usage over requests) of each container within a pod, all of the containers' usage and requests are added up first. The averages for each CPU and memory ``request`` setting are then weight-averaged based on the assumed resource cost weights.
 
 When values are unset for a particular resource, this tool assumes those ``request`` settings to be at usage (in other words, 100% efficient) to more accurately weigh multi-container rates.
 
@@ -48,7 +48,7 @@ A workload's average risk of running out of CPU or memory:
 
 * :guilabel:`Medium`: At least one resource (CPU or memory) of one container is not defined OR (all ``request`` settings are defined AND actual usage of at least one resource of one container exceeds its ``request`` setting for any time slot).
 
-* :guilabel:`Low`: For either CPU or memory, the rec is greater than the baseline value. For example, the usage is greater than target utilization (0.85).
+* :guilabel:`Low`: For either CPU or memory, the recommendation is greater than the baseline value. For example, the usage is greater than target utilization (0.85).
 
 * :guilabel:`Minimal`: None of the above conditions are detected. In other words, all containers have ``request`` settings for both CPU and memory, and neither of these resources has had usage exceeding its target utilization. 
 
