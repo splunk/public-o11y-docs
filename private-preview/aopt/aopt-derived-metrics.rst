@@ -299,7 +299,7 @@ Note: memory is specified in GiB.
 †Cost value metrics may have an additional dimension attribute, ``cost_currency_code``, which represents the currency in which the value is provided (for example, USD). This further allows for values to be emitted for multiple currencies.
 
 
-.. _aopt-derived-metrics_dimensions::
+.. _aopt-derived-metrics_dimensions:
 
 Dimensions
 ==========================================================
@@ -395,13 +395,7 @@ The following dimensions are applied to all metrics (both workload and container
       - Whether there is a valid recommendation
       - 0 or 1
 
-.. list-table::
-   :widths: 72
-   :header-rows: 1
 
-   - 
-
-      - ``sf_organizationId`` # unless this is automatically assigned/generated
 
 
 
