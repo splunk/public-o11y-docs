@@ -14,7 +14,7 @@ Glossary
 Confidence level
 ==========================================================
 
-The ratio of how many days of information is available for a workload compared to how many days worth of information Application Optimization needs in order to analyze it (14 contiguous days). If your data spans 14 contiguous days, the confidence will be high. If your data spans a shorter timespan than 14 days (for example, if you've made a configuration change such as a change to CPU or memory limits, an addition of a container, and so on), or since the initial deployment, the confidence level will be lower. Definition of confidence levels:
+The ratio of how many days of information is available for a workload compared to how many days worth of information Application Optimization needs in order to analyze it (14 contiguous days). If your data spans 14 contiguous days, the confidence will be high. If your data spans fewer than 14 days or since the initial deployment, the confidence level will be lower. For example, if you've made a configuration change such as a change to CPU or memory limits, an addition of a container, and so on. Definition of confidence levels:
 
 * :guilabel:`High`: Greater than 90% of needed information is available.
 
