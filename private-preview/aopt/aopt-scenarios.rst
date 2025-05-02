@@ -39,10 +39,10 @@ To see actual usage metrics for an individual workload:
 
 #. Navigate to the :guilabel:`Application Optimization` dashboard.
 
-#. Find the target workload in the :guilabel:`Kubernetes Workloads` table. :ref:`Sort, search, or filter this table <aopt-workloads>` as needed.  
+#. Find the target workload in the :guilabel:`Kubernetes Workloads` table. :ref:`Sort, search, or filter this table <aopt-workloads-sort-search>` as needed.  
 
-#. Select the target workload in the table to navigate to the :guilabel:`Workloads Details` page. This page displays actual usage metrics for the target workload.
+#. Select the target workload in the table to navigate to the :guilabel:`Workloads Details` page. This page displays actual usage metrics for the target workload, divided into sections for each container in the workload.
 
-#. In the :guilabel:`Instant Recommendations` section, copy the YAML snippets in the far right column and apply them to the corresponding containers in your workload.
+#. In the :guilabel:`Instant Recommendations` section, expand each container's section and apply the YAML snippets in the rightmost column to that container's configuration.
 
 

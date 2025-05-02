@@ -16,9 +16,10 @@
 .. admonition:: Table of contents
 
     Use these links to navigate to topics within this private preview: 
-        * :ref:`What is Application Optimization <aopt-intro>`
+        * :ref:`What is Application Optimization? <aopt-intro>`
         * :ref:`The Application Optimization dashboard <aopt-workloads>`
         * :ref:`Workload Details <aopt-workload-details>`
         * :ref:`Scenarios <aopt-scenarios>`
-        * :ref:`Derived metrics <aopt-derived-metrics>`
         * :ref:`Glossary <aopt-glossary>`
+        * :ref:`Derived metrics <aopt-derived-metrics>`
+

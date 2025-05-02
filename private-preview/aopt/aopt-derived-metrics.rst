@@ -13,7 +13,8 @@ Application Optimization's workload analysis produces the following metics. All 
 
 All metric names are constructed as ``<prefix>.<section>.<metric>``, where ``<prefix>`` is a prefix (likely either ``sf`` or ``o11y``), and ``<section>`` and ``<metric>`` correspond to columns in the table below.
 
-Note: memory is specified in GiB.
+.. note::
+    Memory is specified in GiB.
 
 
 
@@ -30,7 +31,7 @@ Note: memory is specified in GiB.
       - **Notes**
    - 
 
-      - report
+      - ``report``
       - 
       - 
       - 
@@ -55,7 +56,7 @@ Note: memory is specified in GiB.
       - ``coverage_ratio``
       - W
       - Window coverage with metrics: the ratio of number of actual metrics values found compared to the number of timeslots in the window. This should represent the worst case value (in other words, the minimum of the coverage of each input timeseries we use).
-      - This is used to determine the validity & confidence level of the report.
+      - This is used to determine the validity and confidence level of the report.
    - 
 
       - 
@@ -423,7 +424,7 @@ The following additional dimensions are applied to per-container metrics (any me
 
       - ``k8s.container.pseudo_qos``
       - Container-level pseudo-QoS
-      - to be considered, probably doesn't exist in the input metrics
+      - 
 
 Note: this set of additional attributes matches the set of additional attributes that per-container ``k8s`` metrics (such as memory and CPU utilization), provide on top of workload-level metrics (such as replica count). This excludes metadata attributes that are per pod instance (such ``as k8s.replica.set`` and ``k8s.pod.id``, since we always aggregate
 metrics across instances), as well as per container instance (such as ``k8s.container.id``) for the same reason.

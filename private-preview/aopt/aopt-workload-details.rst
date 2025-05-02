@@ -22,7 +22,7 @@ Efficiency Analysis
 
 :guilabel:`Efficiency Analysis` is based on the workload's resource efficiency.
 
-* :guilabel:`Confidence level`: Look for the confidence level under the Efficiency Analysis label. If the confidence level is something other than high, this probably means that your cluster hasn't sent enough metrics to Splunk IM since you created the workload. In this case, for highly critical business workflows or those that have high variations, wait a few days for the confidence level to increase before you apply the recommendations. :ref:`See details on how this is calculated <aopt-glossary>`.
+* :guilabel:`Confidence level`: Look for the confidence level under the :guilabel:`Efficiency Analysis` label. If the confidence level is something other than high, this probably means that your cluster hasn't sent enough metrics to Splunk IM since you created the workload. In this case, for highly critical business workflows or those that have high variations, wait a few days for the confidence level to increase before you apply the recommendations. :ref:`See details on how this is calculated <aopt-glossary-confidence-level>`.
 
 * :guilabel:`Resource Starvation Risk`: This workload's average risk of running out of CPU or memory.
 
@@ -30,7 +30,7 @@ Efficiency Analysis
 
 * :guilabel:`Resource Footprint`: The percentage of CPU and memory that this workload's pods requested, averaged over the analysis period. The footprint may exceed 100% when the pods use more than their requested values.
 
-* :guilabel:`Resource Efficiency`: The ratio of resource usage to resource allocation. This is a percentage relative to allocated resources. The higher the percentage, the better. :ref:`See details on how this is calculated <aopt-glossary>`.
+* :guilabel:`Resource Efficiency`: The ratio of resource usage to resource allocation. This is a percentage relative to allocated resources. The higher the percentage, the better. :ref:`See details on how this is calculated <aopt-glossary-efficiency>`.
 
 
 Instant Recommendations
@@ -48,7 +48,7 @@ If a workload has had a medium or high starvation risk over the past 14 days, ig
 Workload Breakdown
 ==========================================================
 
-Your workload is broken down into its containers, and within the section for each container, there are specific recommendations for CPU and memory adjustments, a chart visualizing its historical resource usage, and on the far right, YAML snippets you can copy to improve its settings. 
+Your workload is broken down into its containers, and within the section for each container, there are specific recommendations for CPU and memory adjustments, a chart visualizing its historical resource usage, and in the rightmost column (:guilabel:`Recommended K8s Spec`), YAML snippets you can copy to improve its settings. 
 
 
 HPA Recommendation

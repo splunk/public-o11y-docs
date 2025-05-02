@@ -37,7 +37,7 @@ Workloads
 Workloads by Starvation Risk
 ==========================================================
 
-This is a good tile to check first to see if any of your workloads are at high risk of starvation. Those are the workloads that need immediate attention. You can also find starving workloads by sorting the :guilabel:`Kubernetes Workloads` table by :guilabel:`Starvation Risk`. :ref:`See details on how this risk is calculated <aopt-glossary>`.
+This is a good tile to check first to see if any of your workloads are at high risk of starvation. Those are the workloads that need immediate attention. You can also find starving workloads by sorting the :guilabel:`Kubernetes Workloads` table by :guilabel:`Starvation Risk`. :ref:`See details on how this risk is calculated <aaopt-glossary-starvation-risk>`.
 
 
 Resource Footprint
@@ -48,6 +48,8 @@ A workload's resource footprint is the sum of its pods' ``request`` settings for
 .. note::
     This tile aggregates data from all of your workloads, so you may not find a direct correlation to individual workloads in the :guilabel:`Kubernetes Workloads` table.
 
+
+.. _aopt-workloads-sort-search:
 
 Kubernetes Workloads
 ==========================================================
