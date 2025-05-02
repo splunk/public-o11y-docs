@@ -9,6 +9,7 @@
 Glossary
 **********************************************************
 
+.. _aopt-glossary-confidence-level:
 
 Confidence level
 ==========================================================
@@ -27,6 +28,8 @@ The ratio of how many days of information is available for a workload compared t
 Application Optimization calculates an overall confidence level by taking the lowest confidence level across all containers, where each container's confidence level is an average of the separate confidence levels for CPU and memory.
 
 
+.. _aopt-glossary-efficiency:
+
 Efficiency
 ==========================================================
 
@@ -38,6 +41,8 @@ When values are unset for a particular resource, this tool assumes those ``reque
 
 When the main container has an unset resource, this tool considers the efficiency rate to be nullified.
 
+
+.. _aopt-glossary-starvation-risk:
 
 Starvation risk
 ==========================================================
