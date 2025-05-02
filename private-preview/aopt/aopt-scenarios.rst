@@ -32,8 +32,8 @@ To gain a comprehensive overview of all workloads and identify optimization oppo
    #. If the :guilabel:`Confidence level` at the top of the page is high, copy and paste the YAML snippets in :guilabel:`Instant Recommendations` into that workload's container configuration.
 
 
-What are some modifcations that I can make to improve efficiency and performance by right-sizing workloads based on actual usage metrics?
-==============================================================================================================================================================================
+How can I improve efficiency and performance by right-sizing workloads based on actual usage metrics?
+=========================================================================================================
 
 To see actual usage metrics for an individual workload:
 

@@ -23,7 +23,7 @@ The :guilabel:`Application Optimization` dashboard provides a high-level view of
 Workloads
 ==========================================================
 
-* :guilabel:`Total`: The total number of workloads, of all kinds, for which you're sending metrics to Splunk IM. 
+* :guilabel:`Total`: The total number of workloads, of all kinds, for which you're sending metrics to :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>`. 
 
 * :guilabel:`Processed`: The number of workloads that Application Optimization has processed and that are older than 24 hours. This number doesn't include: 
 
@@ -37,7 +37,7 @@ Workloads
 Workloads by Starvation Risk
 ==========================================================
 
-This is a good tile to check first to see if any of your workloads are at high risk of starvation. Those are the workloads that need immediate attention. You can also find starving workloads by sorting the :guilabel:`Kubernetes Workloads` table by :guilabel:`Starvation Risk`. :ref:`See details on how this risk is calculated <aopt-glossary-starvation-risk>`.
+This is a good tile to check first to see if any of your workloads are at high risk of starvation and need immediate attention. You can also find starving workloads by sorting the :guilabel:`Kubernetes Workloads` table by :guilabel:`Starvation Risk`. :ref:`See details on how this risk is calculated <aopt-glossary-starvation-risk>`.
 
 
 Resource Footprint

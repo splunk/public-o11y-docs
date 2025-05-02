@@ -22,7 +22,7 @@ Efficiency Analysis
 
 :guilabel:`Efficiency Analysis` is based on the workload's resource efficiency.
 
-* :guilabel:`Confidence level`: Look for the confidence level under the :guilabel:`Efficiency Analysis` label. If the confidence level is something other than high, this probably means that your cluster hasn't sent enough metrics to Splunk IM since you created the workload. In this case, for highly critical business workflows or those that have high variations, wait a few days for the confidence level to increase before you apply the recommendations. :ref:`See details on how this is calculated <aopt-glossary-confidence-level>`.
+* :guilabel:`Confidence level`: Look for the confidence level under the :guilabel:`Efficiency Analysis` label. If the confidence level is something other than high, this probably means that your cluster hasn't sent enough metrics to :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>` since you created the workload. In this case, for highly critical business workflows or those that have high variations, wait a few days for the confidence level to increase before you apply the recommendations. :ref:`See details on how this is calculated <aopt-glossary-confidence-level>`.
 
 * :guilabel:`Resource Starvation Risk`: This workload's average risk of running out of CPU or memory.
 
