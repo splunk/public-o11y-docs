@@ -11,7 +11,7 @@ What is Application Optimization?
 
 Application Optimization is a component within Splunk Observability Cloud. It provides insights into the way you're allocating cloud-native infrastructure :new-page:`resources <https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/>` to your cloud-based services. With Application Optimization, you can identify resource overprovisioning that may be costing your organization extra money and underprovisioning that may be causing performance or reliability problems and costing your organization lost revenue or customer loyalty. Along with insights in the form of metrics, Application Optimization offers simple, immediate actions which you can take to right-size your resource allocations and to improve the overall performance and reliability of your services.
 
-By using Application Optimization together with :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>`, FinOps teams, DevOps teams, and business leaders are empowered with a holistic view into the correlation between their cloud spend and their business objectives.
+By using Application Optimization together with :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>`, FinOps teams, DevOps teams, and business leaders are empowered with a holistic view into the correlation between their cloud costs and their business objectives.
 
 
 Key features
