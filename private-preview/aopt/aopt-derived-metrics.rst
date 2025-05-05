@@ -19,7 +19,7 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
 
 .. list-table::
-   :widths: 40 10 30 20
+   :widths: 30 10 40 20
    :header-rows: 1
 
    - 
@@ -28,12 +28,6 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
       - **Scope\***
       - **Description**
       - **Notes**
-   - 
-
-      - 
-      - 
-      - 
-      - 
    - 
 
       - ``report.available``
@@ -172,12 +166,6 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
       - May be 0 / missing / NaN if requests are not defined.
    - 
 
-      - 
-      - 
-      - 
-      - 
-   - 
-
       - ``baseline.pod.cpu_request``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed.
@@ -223,12 +211,6 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
       - ``baseline.container.memory_limit``
       - C
       - Per-container baseline for the configuration being analyzed.
-      - 
-   - 
-
-      - 
-      - 
-      - 
       - 
    - 
 
