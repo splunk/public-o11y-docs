@@ -180,6 +180,10 @@ In Splunk Cloud Platform, create the custom role ``o11y_access`` and assign it t
 
 .. note:: If you do not create and assign the custom role ``o11y_access``, users receive the following error message when trying to log in to Splunk Observability Cloud: "You do not have access to Splunk Observability Cloud. Contact your Splunk Cloud Platform administrator for assistance."
 
+NOTE: When a new user from Splunk Support is added to your organization for troubleshooting an issue, they will appear as int_* in your organization. This is normal and is not an issue and is not a bug but a feature of Unified Identity. They will all normally have the same IP Address as well, since they are on a VPN. 
+
+
+
 If the user does not exist in Splunk Observability Cloud, the integration automatically creates a user in Splunk Observability Cloud and maps Splunk Cloud Platform roles to the following Splunk Observability Cloud roles:
 
 .. list-table::
