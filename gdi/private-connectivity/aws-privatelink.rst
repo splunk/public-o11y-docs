@@ -22,8 +22,8 @@ Prerequisites
 
 To connect Splunk Observability Cloud to AWS using AWS PrivateLink, you need the following:
 
-* An active AWS account
-* A basic understanding of VPC concepts and networking principles
+* An active AWS account.
+* A basic understanding of VPC concepts and networking principles.
 
 Connect different accounts within or accross regions
 ==============================================================
@@ -33,7 +33,7 @@ Connect different accounts in the same region using AWS PrivateLink
 
 You can use AWS PrivateLink to connect different accounts in the same AWS region. The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
 
-.. image:: /_images/gdi/aws-privatelink-schema2.png
+.. image:: /_images/gdi/AWS_PL_region1.png
   :width: 80%
   :alt: AWS Private Link schema.
 
@@ -47,6 +47,12 @@ AWS PrivateLink also provides cross region private link connectivity if the sour
 * ``eu-west-1`` (Ireland). Splunk Observability Cloud realm: ``eu0``.
 * ``ap-southeast-1`` (Sydney). Splunk Observability Cloud realm: ``au0``.
 * ``ap-northeast-1`` (Tokyo). Splunk Observability Cloud realm: ``jp0``.
+
+.. image:: /_images/gdi/AWS_PL_region2.png
+  :width: 80%
+  :alt: AWS Private Link schema.
+
+.. caution:: Cross-region connectivity is not supported if either the source or target account is in the ``eu-central-1`` (eu1) or ``eu-west-2`` (eu2) regions. For the latest list of supported AWS regions for cross-region PrivateLink connectivity refer to the :new-page:`official AWS announcement <https://aws.amazon.com/about-aws/whats-new/2024/11/aws-privatelink-across-region-connectivity/>`.
 
 If your workloads or Splunk Observability Cloud accounts are in regions not listed above, cross-region PrivateLink is not supported. In such cases, you should either:
 
@@ -226,6 +232,8 @@ Reach out to Splunk Customer Support with the following information to include y
 
 * AWS region
 
+  * If you're connecting between two regions you need to provide both the source region (where your workloads are hosted) and the target account region (where your Splunk Observability Cloud account is located).
+
 * Endpoint type
   
   * Ingest
@@ -316,11 +324,8 @@ To delete an endpoint, follow these steps:
 #. Select the VPC endpoint you want to delete.
 #. Confirm the deletion when prompted.
 
-Advanced configuration 
-==========================================================================
-
 Use AWS PrivateLink with the Collector 
---------------------------------------------------
+==========================================================================
 
 To use AWS PrivateLink URLs in your Collector instance, update the necessary variables in your Collector configuration to point to the given endpoint type: 
 
@@ -351,15 +356,25 @@ See all PrivateLink URLs at :ref:`aws-privatelink-endpoint-urls`.
 For information about the Collector's environment variables see :ref:`collector-env-var`.
 
 Use AWS PrivateLink with VPC peering 
+==========================================================================
+
+VPC peering in US regions
 --------------------------------------------------
 
-Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
+If your monitored workloads in Splunk Observability Cloud are located in the AWS regions ``eu-central-1`` (eu1) or ``eu-west-2`` (eu2), or if you need to enable connectivity to the Splunk Observability Cloud accounts in those regions, use VPC peering instead of AWS PrivateLink since cross-region connectivity via AWS PrivateLink is not currently supported in these regions.
 
-In this scenario, carry out the following steps:
+For the latest list of supported AWS regions for cross-region PrivateLink connectivity refer to the :new-page:`official AWS announcement <https://aws.amazon.com/about-aws/whats-new/2024/11/aws-privatelink-across-region-connectivity/>`.
+
+Scenario: Connect your workloads to a Splunk Observability Cloud account in a different region
+----------------------------------------------------------------------------------------------------
+
+Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are running in the AWS region ``eu-central-1``, and your Splunk Observability Cloud account is hosted in ``us-east-1``. You want to use AWS PrivateLink to ingest observability data, but AWS PrivateLink cross-region connectivity is not currently supported in these regions. 
+
+Use VPC Peering instead with the following steps:
 
 #. Ensure that you have a VPC set up in the destination region, in this example ``us-east-1``. If you don't have a VPC in that region, create a new one.
 
-#. Use AWS VPC peering to peer the ``ap-south-1`` and the ``us-east-1`` VPCs together.
+#. Use AWS VPC peering to peer the ``eu-central-1`` and the ``us-east-1`` VPCs together in the source account with the workloads you want to monitor with Splunk Observability Cloud.
 
 #. Activate AWS PrivateLink in the ``us-east-1`` VPC.
 
