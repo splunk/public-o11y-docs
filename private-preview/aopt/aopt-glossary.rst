@@ -57,4 +57,3 @@ A workload's average risk of running out of CPU or memory:
 
 * :guilabel:`Minimal`: None of the above conditions are detected. In other words, all containers have ``request`` settings for both CPU and memory, and neither of these resources has had usage exceeding its target utilization. 
 
-

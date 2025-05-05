@@ -11,7 +11,7 @@ Derived metrics
 
 Application Optimization's workload analysis produces the following metics. All metrics have at least the same dimensions as the workload metrics (for example ``aws-region`` and so on) and use the same attribute names and values.
 
-All metric names are constructed as ``<prefix>.<section>.<metric>``, where ``<prefix>`` is a prefix (likely either ``sf`` or ``o11y``), and ``<section>`` and ``<metric>`` correspond to columns in the table below.
+All metric names have a prefix of either ``sf`` or ``o11y``.
 
 .. note::
     Memory is specified in GiB.
@@ -19,83 +19,72 @@ All metric names are constructed as ``<prefix>.<section>.<metric>``, where ``<pr
 
 
 .. list-table::
-   :widths: 11 20 5 13 23
+   :widths: 40 10 30 20
    :header-rows: 1
 
    - 
 
-      - **Section**
       - **Metric**
       - **Scope\***
       - **Description**
       - **Notes**
    - 
 
-      - ``report``
       - 
       - 
       - 
       - 
    - 
 
-      - 
-      - ``available``
+      - ``report.available``
       - W
       - Synthetic metric, 0 for failed, 1 for success.
       - This metric may have additional attributes that represent the report outcome as a whole. At least a          ``aopt.profile_report.error_reason`` code.
    - 
 
-      - 
-      - ``window_days``
+      - ``report.window_days``
       - W
       - Number of days (possibly fractional) that were considered in the analysis. In general, this is the smaller of 14 and the number of days since the last resource configuration change for the workload.
       - This is used to determine the validity and confidence level of the report.
    - 
 
-      - 
-      - ``coverage_ratio``
+      - ``report.coverage_ratio``
       - W
       - Window coverage with metrics: the ratio of number of actual metrics values found compared to the number of timeslots in the window. This should represent the worst case value (in other words, the minimum of the coverage of each input timeseries we use).
       - This is used to determine the validity and confidence level of the report.
    - 
 
-      - 
-      - ``average_replicas``
+      - ``report.average_replicas``
       - W
       - Average number of replicas during the analysis window. 
       - Does not include pods that allocate resources (such as those scheduled but not started).
    - 
 
-      - 
-      - ``pod.qos_class``
+      - ``report.pod.qos_class``
       - W
       - Pod's quality of service (QoS) class, as defined in Kubernetes docs, encoded as integer.
       - 
    - 
 
-      - 
-      - ``footprint.cpu_cores``
+      - ``report.footprint.cpu_cores``
       - W
       - Number of the allocated CPU cores for all replicas (averaged based on average_replicas).
       - Does not account for usage above request (bursting).
    - 
 
-      - 
-      - ``footprint.memory_gib``
+      - ``report.footprint.memory_gib``
       - W
       - GiB allocated memory for all replicas (averaged based on the average_replicas).
       - Does not account for usage above request (bursting).
    - 
 
-      - 
-      - ``efficiency_rate``
+      - ``report.efficiency_rate``
       - W
       - Resource efficiency rate, as percent.
       - Weighted average of resource utilization of CPU and memory. CPU and memory weights according to AWS on-demand cost. Capped at 100%, rounded to whole percent.
    - 
 
-      - 
-      - ``starvation_risk``
+      - ``report.starvation_risk``
       - W
       - Resource starvation risk: Minimal, Low, Medium, High (encoded 0, 1, 2, 3 respectively).
       - Risk levels defined elsewhere:
@@ -105,190 +94,163 @@ All metric names are constructed as ``<prefix>.<section>.<metric>``, where ``<pr
          - High: CPU throttled and/or at resource limits.
    - 
 
-      - ``recommendation``
       - 
       - 
       - 
       - Consider alternatively, ``instant_recommendation``.
    - 
 
-      - 
-      - ``available``
+      - ``recommendation.available``
       - W
       - Indicates whether a recommendation is available for at least one container, 0 or 1.
       - 
    - 
 
-      - 
-      - ``confidence_level``
+      - ``recommendation.confidence_level``
       - W
       - Recommendations overall confidence level: Low, Medium, High (likely encoded as numbers).
       - Aggregated from container.confidence_level, by taking the lowest confidence value (or the confidence value of the main/largest container).
    - 
 
-      - 
-      - ``container.available``
+      - ``recommendation.container.available``
       - C
       - Indicates whether a recommendation is available, 0 or 1. A recommendation that matches the baseline is considered available.
       - 
    - 
 
-      - 
-      - ``container.confidence_level``
+      - ``recommendation.container.confidence_level``
       - C
       - Recommendation confidence level: Low, Medium, High (encoded as numbers).
       - 
    - 
 
-      - 
-      - ``container.cpu_request``
+      - ``recommendation.container.cpu_request``
       - C
       - Per-container recommendation.
       - 
    - 
 
-      - 
-      - ``container.memory_request``
+      - ``recommendation.container.memory_request``
       - C
       - Per-container recommendation.
       - 
    - 
 
-      - 
-      - ``container.cpu_limit``
+      - ``recommendation.container.cpu_limit``
       - C
       - Per-container recommendation.
       - 
    - 
 
-      - 
-      - ``container.memory_limit``
+      - ``recommendation.container.memory_limit``
       - C
       - Per-container recommendation.
       - 
    - 
 
-      - 
-      - ``footprint.cpu_cores``
+      - ``recommendation.footprint.cpu_cores``
       - W
       - Total footprint of recommendation.
       - 
    - 
 
-      - 
-      - ``footprint.memory_gib``
+      - ``recommendation.footprint.memory_gib``
       - W
       - Total footprint of recommendation.
       - 
    - 
 
-      - 
-      - ``footprint_change.cpu_cores``
+      - ``recommendation.footprint_change.cpu_cores``
       - W
       - Footprint change of CPU requests, assuming the CPU request recommendations are applied for all containers.
       - May be 0 / missing / NaN if requests are not defined.
    - 
 
-      - 
-      - ``footprint_change.memory_gib``
+      - ``recommendation.footprint_change.memory_gib``
       - W
       - Footprint change of memory requests, assuming the memory request recommendations are applied for all containers.
       - May be 0 / missing / NaN if requests are not defined.
    - 
 
-      - ``baseline``
       - 
       - 
       - 
       - 
    - 
 
-      - 
-      - ``pod.cpu_request``
+      - ``baseline.pod.cpu_request``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed.
       - . Note that the request for a container is considered defined if the limit is defined, even if the request is reported as missing/0.
    - 
 
-      - 
-      - ``pod.memory_request``
+      - ``baseline.pod.memory_request``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed.
       - Note that the request for a container is considered defined if the limit is defined, even if the request is reported as missing/0.
    - 
 
-      - 
-      - ``pod.cpu_limit``
+      - ``baseline.pod.cpu_limit``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed.
       - 0 / NaN if at least one limit is missing: as a result, the whole pod doesn't have a limit for this resource.
    - 
 
-      - 
-      - ``pod.memory_limit``
+      - ``baseline.pod.memory_limit``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed.
       - 0 / NaN if at least one limit is missing: as a result, the whole pod doesn't have a limit for this resource.
    - 
 
+      - ``baseline.container.cpu_request``
+      - C
+      - Per-container baseline for the configuration being analyzed.
       - 
-      - ``container.cpu_request``
+   - 
+
+      - ``baseline.container.memory_request``
+      - C
+      - Per-container baseline for the configuration being analyzed.
+      - 
+   - 
+
+      - ``baseline.container.cpu_limit``
+      - C
+      - Per-container baseline for the configuration being analyzed.
+      - 
+   - 
+
+      - ``baseline.container.memory_limit``
       - C
       - Per-container baseline for the configuration being analyzed.
       - 
    - 
 
       - 
-      - ``container.memory_request``
-      - C
-      - Per-container baseline for the configuration being analyzed.
-      - 
-   - 
-
-      - 
-      - ``container.cpu_limit``
-      - C
-      - Per-container baseline for the configuration being analyzed.
-      - 
-   - 
-
-      - 
-      - ``container.memory_limit``
-      - C
-      - Per-container baseline for the configuration being analyzed.
-      - 
-   - 
-
-      - ``cost``
-      - 
       - 
       - 
       - 
    - 
 
-      - 
-      - ``available``
+      - ``cost.available``
       - W
       - Indicates whether the cost is populated correctly, 0 or 1
       - An additional attribute on this metric defines the ``error_reason_code`` in case of failure.
    - 
 
-      - 
-      - ``monthly_value``
+      - ``cost.monthly_value``
       - 
       - 
       - 
    - 
 
-      - 
-      - ``savings.percent``
+      - ``cost.savings.percent``
       - W
       - Projected savings percent 1-(rec cost / baseline cost) \* 100, using the per-pod values, assuming all recommendations are applied. Note that this value may be populated even if ``cost.available`` is ``0`` (see note).
       - This ratio is (a) period-neutral (in other words, can be applied to hourly, monthly, etc. costs), (b) currency-neutral and (c) discount-neutral (assuming linear costs, of course). It does, however, rely on CPU-to-memory cost weight.
    - 
 
-      - 
-      - ``savings.monthly_value``
+      - ``cost.savings.monthly_value``
       - W†
       - Projected savings per month, extrapolated from the analysis period and assuming that all recommendations are applied.
       - An additional attribute on this metric defines the currency. This allows multiple values to be created, one for each currency of interest.
