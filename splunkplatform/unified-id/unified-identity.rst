@@ -222,6 +222,14 @@ To add a new user to Splunk Observability Cloud after the integration is complet
 
 The user can now log in to Splunk Observability Cloud with their Splunk Cloud Platform permissions.
 
+.. uid-central-rbac:
+
+Centralized user and role management
+------------------------------------------------------------------------------------------
+Administrators of organizations that have Splunk Cloud Platform and Splunk Observability Cloud can centrally manage users and roles for both in Splunk Cloud Platform. Splunk Cloud Platform becomes the role based access control (RBAC) store for Splunk Observability Cloud. 
+
+All customers who have Unified Identity can access centralized user and role management in Splunk Cloud Platform. For more information, see :ref:`centralized-rbac`.
+
 
 After initial user provisioning
 -------------------------------------------------------------------------------------------
@@ -259,6 +267,8 @@ Contact your Splunk Cloud Platform administrator if you receive the following :s
      :alt: This screenshot shows the no access error.
 
 Users receive this error message if their Splunk Cloud Platform administrator did not give them the custom role ``o11y_access``. The ``o11y_access`` role is required to access Splunk Observability Cloud.
+
+If you set up centralized user and role access, make sure to assign the ``o11y_access`` role to all roles that should access Splunk Observability Cloud, not just the user role.
 
 
 Working in Splunk Observability Cloud after the integration

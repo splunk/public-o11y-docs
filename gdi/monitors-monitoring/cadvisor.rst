@@ -8,27 +8,49 @@ cAdvisor
 
 The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 cAdvisor monitor type to pull metrics directly from cAdvisor. By
-default, it runs on port 4194, but it can be configured to any other
-port.
+default, it runs on port 4193, but it can be configured to any other
+port. 
+
+This integration is available on Kubernetes, Linux, and Windows.
+
+cAdvisor with Kubernetes
+------------------------
 
 If you are using Kubernetes, consider the
 :ref:`kubelet-stats-receiver` because many Kubernetes nodes do not
 expose cAdvisor on a network port, even though they are running it
 within Kubelet.
 
+If you are using Kubernetes, consider the Kubelet stats receiver 
+because many Kubernetes nodes do not expose cAdvisor on a network port, 
+even though they are running it within Kubelet. 
+
+In some managed Kubernetes environments, such as Amazon EKS, you cannot 
+directly access cAdvisor metrics due to the cluster provider's  
+security and control design. For example, in Amazon EKS, 
+the ``kubeletstats`` receiver cannot directly collect cAdvisor metrics. 
+This constraint is specific to managed environments and is not a restriction 
+of the Splunk Distribution of OpenTelemetry Collector.
+
+You can, however, indirectly collect cAdvisor metrics exposed through 
+the Kubernetes proxy metric server using a receiver with the required configuration.
+We recommend using the :ref:`Prometheus receiver <prometheus_receiver>` 
+to scrape metrics from the proxy metric server. 
+
+
+cAdvisor with Docker
+---------------------
+
 If you are running containers with Docker, retrieved metrics might
-overlap with ``docker-container-stats``\ '. Consider not enabling the
+overlap with ``docker-container-stats``. Consider not enabling the
 Docker monitor in a Kubernetes environment, or else use filtering to
 allow only certain metrics. This will cause the built-in Docker
 dashboards to be blank, but container metrics will be available on the
 Kubernetes dashboards instead.
 
-This integration is available on Kubernetes, Linux, and Windows.
 
 Benefits
 --------
-
-
 
 .. raw:: html
 
@@ -41,12 +63,8 @@ Benefits
    <div class="include-stop" id="benefits.rst"></div>
 
 
-
-
 Installation
 ------------
-
-
 
 .. raw:: html
 
@@ -59,12 +77,8 @@ Installation
    <div class="include-stop" id="collector-installation-linux.rst"></div>
 
 
-
-
 Configuration
 -------------
-
-
 
 .. raw:: html
 
@@ -77,10 +91,11 @@ Configuration
    <div class="include-stop" id="configuration.rst"></div>
 
 
+Examples
+^^^^^^^^
 
-
-Example
-~~~~~~~
+Activate integration
+####################
 
 To activate this integration, add the following to your Collector
 configuration:
@@ -102,8 +117,60 @@ section of your configuration file:
        metrics:
          receivers: [smartagent/cadvisor]
 
+.. _prometheus_receiver:
+
+Prometheus receiver
+###################
+
+The following example shows how to configure a Prometheus receiver 
+to scrape cAdvisor metrics securely from Kubernetes nodes using TLS and authorization 
+credentials.
+
+.. code:: yaml
+
+   agent:
+     config:
+       receivers:
+         prometheus/cadvisor:
+           config:
+             scrape_configs:
+               - job_name: cadvisor
+                 tls_config:
+                   ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+                 authorization:
+                   credentials_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+                 scheme: https
+                 kubernetes_sd_configs:
+                   - role: node
+                 relabel_configs:
+                   - replacement: 'kubernetes.default.svc.cluster.local:443'
+                     target_label: __address__
+                   - regex: (.+)
+                     replacement: '/api/v1/nodes/$${1}/proxy/metrics/cadvisor'
+                     source_labels:
+                       - __meta_kubernetes_node_name
+                     target_label: __metrics_path__
+       service:
+         pipelines:
+           metrics:
+             exporters:
+               - signalfx
+             processors:
+               - memory_limiter
+               - batch
+               - resourcedetection
+               - resource
+             receivers:
+               - hostmetrics
+               - kubeletstats
+               - otlp
+               - prometheus/cadvisor
+               - receiver_creator
+               - signalfx
+   
+
 Configuration settings
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 The following table shows the configuration options for this receiver:
 
@@ -135,9 +202,7 @@ The following metrics are available for this integration:
       <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/cadvisor/metadata.yaml"></div>
 
 Notes
-~~~~~
-
-
+^^^^^
 
 .. raw:: html
 
@@ -154,8 +219,6 @@ Notes
 
 Troubleshooting
 ---------------
-
-
 
 .. raw:: html
 

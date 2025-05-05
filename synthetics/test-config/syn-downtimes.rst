@@ -28,8 +28,8 @@ The best practice is to schedule a downtime configuration with a 15 to 30 minute
 
 Schedule requirements: 
 
-* Downtimes configurations must be at least fifteen minutes long.
-* Downtimes configurations can be a maximum of one year in advance and one year in duration. 
+* Downtime configurations must be at least fifteen minutes long.
+* Downtime configurations can be a maximum of one year in advance and one year in duration. 
 
 How to schedule a downtime configuration: 
 
@@ -41,13 +41,27 @@ How to schedule a downtime configuration:
 #. Select :guilabel:`Create`. 
 
 
-When a recurring downtime configuration is active, you can't edit, delete, or extend it, but you can end it immediately. When a non-recurring downtime configuration is active, you can't edit or delete it, but you can extend its duration or end it immediately.
-
-
 Preview the downtime schedule
-----------------------------------------
+------------------------------------------------------------
 
 If you selected a value other than :guilabel:`Does not repeat` in the :guilabel:`Recurrence` menu, the :guilabel:`Create a downtime configuration` form displays a preview of the first ten downtime configurations.
+
+
+Modify a downtime configuration
+============================================================
+
+* Before a downtime configuration has run: 
+
+   * If it's non-recurring you can edit or delete it.
+   * If it's recurring you can edit it, but you can only delete it before its first run. Its status may still be displayed as :guilabel:`Scheduled`, but it's functionally locked after the first occurrence. 
+   * To delete a downtime configuration, select the :guilabel:`Delete` action from the vertical dot menu (|verticaldots|).
+
+* While a downtime configuration is active: 
+
+   * If it's non-recurring you can't edit or delete it, but you can extend it or end it immediately.
+   * If it's recurring you can't edit, delete, or extend it, but you can end it immediately. 
+   
+* After the first run of a downtime configuration, whether it's recurring or not, you can't delete or edit it.
 
 
 Mute alerts during downtime
