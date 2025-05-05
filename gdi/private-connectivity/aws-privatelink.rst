@@ -17,15 +17,6 @@ AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, 
   
   To send logs securely, use :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
 
-The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
-
-.. source in Lucidchart: https://lucid.app/lucidchart/21f1cd02-7b2c-4654-a1b8-18c80a903fee/edit?shared=true&page=0_0&invitationId=inv_2f660037-6a85-4b98-9025-212b16c6b5a2#
-
-.. image:: /_images/gdi/aws-privatelink-schema2.png
-  :width: 80%
-  :alt: AWS Private Link schema.
-  
-
 Prerequisites
 ==================================================
 
@@ -33,6 +24,34 @@ To connect Splunk Observability Cloud to AWS using AWS PrivateLink, you need the
 
 * An active AWS account
 * A basic understanding of VPC concepts and networking principles
+
+Connect different accounts within or accross regions
+==============================================================
+
+Connect different accounts in the same region using AWS PrivateLink
+----------------------------------------------------------------------------------------------------
+
+You can use AWS PrivateLink to connect different accounts in the same AWS region. The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
+
+.. image:: /_images/gdi/aws-privatelink-schema2.png
+  :width: 80%
+  :alt: AWS Private Link schema.
+
+Connect different accounts across different regions using AWS PrivateLink
+----------------------------------------------------------------------------------------------------
+
+AWS PrivateLink also provides cross region private link connectivity if the source and destination region is one of the following:
+
+* ``us-east-1`` (N. Virginia). Splunk Observability Cloud realm: ``us0``.
+* ``us-west-2`` (Oregon). Splunk Observability Cloud realm: ``us1``. 
+* ``eu-west-1`` (Ireland). Splunk Observability Cloud realm: ``eu0``.
+* ``ap-southeast-1`` (Sydney). Splunk Observability Cloud realm: ``au0``.
+* ``ap-northeast-1`` (Tokyo). Splunk Observability Cloud realm: ``jp0``.
+
+If your workloads or Splunk Observability Cloud accounts are in regions not listed above, cross-region PrivateLink is not supported. In such cases, you should either:
+
+* Use PrivateLink within the same AWS region.
+* Set up VPC peering.
 
 .. _aws-privatelink-endpoint-types:
 
