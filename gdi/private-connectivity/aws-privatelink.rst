@@ -9,13 +9,13 @@ Private Connectivity using AWS PrivateLink
 
 You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the internet. 
 
-AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
+AWS PrivateLink connects your Virtual Private Cloud (VPC) to the AWS-hosted services that you use, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS-hosted services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
 .. note:: 
   
   To send logs to Splunk Observability Cloud, use :ref:`lo-connect-landing`. 
   
-  To send logs securely, use :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
+  To send logs with AWS PrivateLink see :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
 
 Prerequisites
 ==================================================
@@ -40,13 +40,52 @@ You can use AWS PrivateLink to connect different accounts in the same AWS region
 Connect different accounts across different regions using AWS PrivateLink
 ----------------------------------------------------------------------------------------------------
 
-AWS PrivateLink also provides cross region private link connectivity if the source and destination region is one of the following:
+AWS PrivateLink also provides cross region private link connectivity for the following regions:
 
-* ``us-east-1`` (N. Virginia). Splunk Observability Cloud realm: ``us0``.
-* ``us-west-2`` (Oregon). Splunk Observability Cloud realm: ``us1``. 
-* ``eu-west-1`` (Ireland). Splunk Observability Cloud realm: ``eu0``.
-* ``ap-southeast-1`` (Sydney). Splunk Observability Cloud realm: ``au0``.
-* ``ap-northeast-1`` (Tokyo). Splunk Observability Cloud realm: ``jp0``.
+.. list-table::
+  :header-rows: 1
+  :width: 100
+  :widths: 30, 30, 20, 20
+
+  * - Splunk Observability Cloud realm
+    - AWS region
+    - Use as source region?
+    - Use as destination region?
+
+  * - us0
+    - us-east-1 (N. Virginia)
+    - Yes
+    - Yes
+
+  * - us1
+    - us-west-1 (Oregon)
+    - Yes
+    - Yes
+
+  * - eu0
+    - eu-west-1 (Ireland)
+    - Yes
+    - Yes
+
+  * - au0
+    - ap-southeast-1 (Sydney)
+    - Yes
+    - Yes    
+
+  * - jp0
+    - ap-northeast-1 (Tokyo)
+    - Yes
+    - Yes
+
+  * - ??
+    - ap-southeast-1 (Singapore)
+    - Yes
+    - No
+
+  * - ??
+    - sa-east-1 (São Paulo)
+    - Yes
+    - No
 
 .. image:: /_images/gdi/AWS_PL_region2.png
   :width: 80%
