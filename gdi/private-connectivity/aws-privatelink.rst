@@ -45,45 +45,37 @@ AWS PrivateLink also provides cross region private link connectivity for the fol
 .. list-table::
   :header-rows: 1
   :width: 100
-  :widths: 30, 30, 20, 20
+  :widths: 60, 20, 20
 
-  * - Splunk Observability Cloud realm
-    - AWS region
+  * - AWS region / Splunk Observability Cloud realm
     - Use as source region?
     - Use as destination region?
 
-  * - us0
-    - us-east-1 (N. Virginia)
+  * - us-east-1 (N. Virginia) / us0
     - Yes
     - Yes
 
-  * - us1
-    - us-west-1 (Oregon)
+  * - us-west-1 (Oregon) / us1
     - Yes
     - Yes
 
-  * - eu0
-    - eu-west-1 (Ireland)
+  * - eu-west-1 (Ireland) / eu0
     - Yes
     - Yes
 
-  * - au0
-    - ap-southeast-1 (Sydney)
+  * - ap-southeast-1 (Sydney) / au0
     - Yes
     - Yes    
 
-  * - jp0
-    - ap-northeast-1 (Tokyo)
+  * - ap-northeast-1 (Tokyo) / jp0
     - Yes
     - Yes
 
-  * - ??
-    - ap-southeast-1 (Singapore)
+  * - ap-southeast-1 (Singapore)
     - Yes
     - No
 
-  * - ??
-    - sa-east-1 (São Paulo)
+  * - sa-east-1 (São Paulo)
     - Yes
     - No
 
