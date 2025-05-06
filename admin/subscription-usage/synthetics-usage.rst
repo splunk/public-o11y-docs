@@ -11,6 +11,8 @@ Synthetic Monitoring subscription usage
 
 Splunk Synthetic Monitoring offers metrics you can use to track your subscription usage. You can use these metrics to create charts, dashboards, and set alerts. 
 
+Use the following to create your own charts, or search the Dashboards section of the platform for the ``Synthetic usage`` out-of-the-box dashboard, which will automatically start to populate after Synthetic tests start to run.
+
 
 
 .. list-table:: 
