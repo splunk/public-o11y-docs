@@ -17,9 +17,13 @@ By using Application Optimization together with :new-page:`Splunk Infrastructure
 Key features
 ==========================================================
 
-* :guilabel:`Kubernetes Profiler` (the :guilabel:`Application Optimization` dashboard) provides comprehensive insights into the efficiency of your CPU and memory settings for your Kubernetes workloads.	
+* :guilabel:`Kubernetes Profiler` (the :guilabel:`Application Optimization` dashboard) provides insights into the efficiency of your CPU and memory settings for your Kubernetes workloads.	You can use the profiler to
+   * Obtain insight summaries by applying filters of your choice (environment, cluster, namespace, and so on).
+   * Find the workloads most in need of attention based on your priorities, which could be performance, reliability, or cost savings.
 
-* :guilabel:`Instant Recommendations` provide suggestions for CPU and memory settings based on historical utilization data (metrics you've sent to Splunk IM). You can apply these suggestions directly to your pods using the YAML snippets it provides. 
+* :guilabel:`Instant Recommendations` provide suggestions for CPU and memory settings based on historical utilization across all pods of a workload. Utilization data comes from the metrics you've sent to Splunk IM. You can apply these suggestions directly to your workloads using the YAML snippets it provides. 
+
+* :guilabel:`Horizontal Pod Autoscaler (HPA) recommendations` provide PLACEHOLDER.
 
 
 Requirements

@@ -20,17 +20,21 @@ When you select a workload in the :guilabel:`Kubernetes Workloads` table, you na
 Efficiency Analysis
 ==========================================================
 
-:guilabel:`Efficiency Analysis` is based on the workload's resource efficiency.
+:guilabel:`Efficiency Analysis` is based on the workload's resource utilization efficiency.
 
 * :guilabel:`Confidence level`: Look for the confidence level under the :guilabel:`Efficiency Analysis` label. If the confidence level is something other than high, this probably means that your cluster hasn't sent enough metrics to :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>` since you created the workload. In this case, for highly critical business workflows or those that have high variations, wait a few days for the confidence level to increase before you apply the recommendations. :ref:`See details on how this is calculated <aopt-glossary-confidence-level>`.
 
-* :guilabel:`Resource Starvation Risk`: This workload's average risk of running out of CPU or memory.
+* :guilabel:`Resource Starvation Risk`: This workload's average risk of running out of CPU or memory. :ref:`See details on how this is calculated <aopt-glossary-starvation-risk>`. Workloads that have a high risk of starvation are also at high risk of performance degradation and decreased reliability and resilience.
 
 * :guilabel:`Average Pod Count`: The number of pods (:new-page:`replicas <https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/>`) running for this workload averaged over the analysis period. 
 
-* :guilabel:`Resource Footprint`: The percentage of CPU and memory that this workload's pods requested, averaged over the analysis period. The footprint may exceed 100% when the pods use more than their requested values.
+* :guilabel:`Resource Footprint`: The sum of all of the workload's pods' ``request`` settings for that resource (or utilization if resources are unset or average usage exceeds requests) plus its actual overage utilization of that resource. The percentages represent how much you can increase or decrease the footprint:
 
-* :guilabel:`Resource Efficiency`: The ratio of resource usage to resource allocation. This is a percentage relative to allocated resources. The higher the percentage, the better. :ref:`See details on how this is calculated <aopt-glossary-efficiency>`.
+   * Current footprint
+   * Projected footprint if all recommendations are applied
+   * Change of footprint (impact of applying the recommendation), in absolute units and in percentage between the recommended and current.
+
+* :guilabel:`Resource Efficiency`: The ratio of resource usage to resource allocation. This is a percentage relative to allocated resources. Best practices call for resource utilization in the 60-80% range. Having efficiency above 70-80% presents resource starvation risks. :ref:`See details on how this is calculated <aopt-glossary-efficiency>`.
 
 
 Instant Recommendations
