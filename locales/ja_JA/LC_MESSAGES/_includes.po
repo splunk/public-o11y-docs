@@ -5910,8 +5910,8 @@ msgid "Java 8.al2, 11, 17, and 21"
 msgstr "Java 8.al2、11、17、21"
 
 #: ../../_includes/requirements/lambda.rst:4
-msgid "Python 3.8 and higher"
-msgstr "Python 3.8以上"
+msgid "Python 3.9 and higher"
+msgstr "Python 3.9以上"
 
 #: ../../_includes/requirements/lambda.rst:5
 msgid "Node.js 14 and higher"
