@@ -40,7 +40,92 @@ You can use AWS PrivateLink to connect different accounts in the same AWS region
 Connect different accounts across different regions using AWS PrivateLink
 ----------------------------------------------------------------------------------------------------
 
-AWS PrivateLink also provides cross region private link connectivity for the following regions:
+You can also connect different accounts from different regions with AWS PrivateLink as displayed in the image:
+
+.. image:: /_images/gdi/AWS_PL_region2.png
+  :width: 80%
+  :alt: AWS Private Link schema.
+
+The following regions are supported:
+
+.. list-table::
+  :header-rows: 1
+  :width: 100
+  :widths: 30, 10, 10, 10, 10, 10, 10, 10
+
+  * - Source AWS region / Splunk Observability Cloud realm
+    - Target region: ap-southeast-2 (Sydney) / au0
+    - Target region: ap-northeast-1 (Tokyo) / jp0
+    - Target region: eu-west-1 (Dublin) / eu0
+    - Target region: eu-central-1 (Frankfurt) / eu1
+    - Target region: eu-west-2 (London) / eu2
+    - Target region: us-east-1 (East Virginia) / us0
+    - Target region: us-west-2 (West Oregon) / us1
+
+  * - ap-southeast-2 (Sydney) 
+    - Yes
+    - Yes
+    - Yes
+    - No
+    - No
+    - Yes
+    - Yes
+
+  * - ap-northeast-1 (Tokyo) 
+    - Yes
+    - Yes
+    - Yes
+    - No
+    - No
+    - Yes
+    - Yes
+
+  * - eu-west-1 (Dublin)
+    - Yes
+    - Yes
+    - Yes
+    - No
+    - No
+    - Yes
+    - Yes
+
+  * - us-east-1 (East Virginia)
+    - Yes
+    - Yes
+    - Yes
+    - No
+    - No
+    - Yes
+    - Yes
+
+  * - us-west-2 (West Oregon)
+    - Yes
+    - Yes
+    - Yes
+    - No
+    - No
+    - Yes
+    - Yes
+
+  * - ap-southeast-1 (Singapore)
+    - Yes
+    - Yes
+    - Yes
+    - No
+    - No
+    - Yes
+    - Yes
+
+  * - sa-east-1 (Sao Paolo)
+    - Yes
+    - Yes
+    - Yes
+    - No
+    - No
+    - Yes
+    - Yes
+
+OLD:
 
 .. list-table::
   :header-rows: 1
@@ -63,7 +148,7 @@ AWS PrivateLink also provides cross region private link connectivity for the fol
     - Yes
     - Yes
 
-  * - ap-southeast-1 (Sydney) / au0
+  * - ap-southeast-2 (Sydney) / au0
     - Yes
     - Yes    
 
@@ -78,10 +163,6 @@ AWS PrivateLink also provides cross region private link connectivity for the fol
   * - sa-east-1 (São Paulo)
     - Yes
     - No
-
-.. image:: /_images/gdi/AWS_PL_region2.png
-  :width: 80%
-  :alt: AWS Private Link schema.
 
 .. caution:: Cross-region connectivity is not supported if either the source or target account is in the ``eu-central-1`` (eu1) or ``eu-west-2`` (eu2) regions. For the latest list of supported AWS regions for cross-region PrivateLink connectivity refer to the :new-page:`official AWS announcement <https://aws.amazon.com/about-aws/whats-new/2024/11/aws-privatelink-across-region-connectivity/>`.
 
