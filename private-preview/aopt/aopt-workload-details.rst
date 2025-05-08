@@ -20,9 +20,7 @@ When you select a workload in the :guilabel:`Kubernetes Workloads` table, you na
 Efficiency Analysis
 ==========================================================
 
-:guilabel:`Efficiency Analysis` is based on the workload's resource utilization efficiency.
-
-* :guilabel:`Confidence level`: Look for the confidence level under the :guilabel:`Efficiency Analysis` label. If the confidence level is something other than high, this probably means that your cluster hasn't sent enough metrics to :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>` since you created the workload. In this case, for highly critical business workflows or those that have high variations, wait a few days for the confidence level to increase before you apply the recommendations. :ref:`See details on how this is calculated <aopt-glossary-confidence-level>`.
+:guilabel:`Efficiency Analysis` is based on the workload's resource utilization efficiency. This section contains the following tiles:
 
 * :guilabel:`Resource Starvation Risk`: This workload's average risk of running out of CPU or memory. :ref:`See details on how this is calculated <aopt-glossary-starvation-risk>`. Workloads that have a high risk of starvation are also at high risk of performance degradation and decreased reliability and resilience.
 
@@ -33,9 +31,24 @@ Efficiency Analysis
    * Current footprint
    * Projected footprint if all recommendations are applied
    * Change of footprint (impact of applying the recommendation), in absolute units and in percentage between the recommended and current.
-
+   
+   :ref:`See details on how the resource footprint is calculated <aopt-glossary-resource-footprint>`.
 
 * :guilabel:`Resource Efficiency`: The ratio of resource usage to resource allocation. This is a percentage relative to allocated resources. Best practices call for resource utilization in the 60-80% range. Having efficiency above 70-80% presents resource starvation risks. :ref:`See details on how this is calculated <aopt-glossary-efficiency>`.
+
+
+Analysis window and confidence Level
+----------------------------------------------------------
+
+Directly under the :guilabel:`Efficiency Analysis` label, there are two important pieces of information: 
+
+* The analysis window (:guilabel:`Analysis is based on ___ days of workload metrics`) is the metric lookback window that was actually used in the analysis of this workload. This window may be less than 14 days if this workload is new or if its resources have been reconfigured recently.
+
+* The :guilabel:`Confidence level` rates the degree of confidence in the analysis. :ref:`See details on how this is calculated <aopt-glossary-confidence-level>`.
+
+
+.. note:: 
+    If :guilabel:`Confidence level` is something other than high, this probably means that your cluster hasn't sent enough metrics to :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>` since you created the workload. In this case, if the workload is a highly critical business workflows or one with high variations, wait a few days for the confidence level to increase before you apply the recommendations.
 
 
 Instant Recommendations

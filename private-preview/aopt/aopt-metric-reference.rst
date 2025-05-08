@@ -1,12 +1,12 @@
 :orphan:
 
-.. _aopt-derived-metrics:
+.. _aopt-metric-reference:
 
 .. include:: /private-preview/aopt/toc.rst
     :start-after: :orphan:
 
 **********************************************************
-Derived metrics
+Metric reference
 **********************************************************
 
 Application Optimization's workload analysis produces the following metics. All metrics have at least the same dimensions as the workload metrics (for example ``aws-region`` and so on) and use the same attribute names and values.
@@ -16,12 +16,13 @@ Application Optimization's workload analysis produces the following metics. All 
 All metric names have a prefix of either ``sf`` or ``o11y``.
 
 .. note::
-    Memory is specified in GiB.
+    Memory is specified in GiB. CPU is specified in cores.
 
 
 
 .. list-table::
    :widths: 32 5 35
+   :width: 100%
    :header-rows: 1
 
    - 
@@ -199,6 +200,7 @@ The following dimensions are applied to all metrics (both workload and container
 
 .. list-table::
    :widths: 32 40
+   :width: 100%
    :header-rows: 1
 
    - 
@@ -278,12 +280,14 @@ The following additional dimensions are applied to per-container metrics (any me
 
 .. list-table::
    :widths: 32 40
+   :width: 100%
    :header-rows: 1
 
    - 
 
       - **Attribute name**
       - **Description**
+
    - 
 
       - ``k8s.container.name``
@@ -296,3 +300,4 @@ The following additional dimensions are applied to per-container metrics (any me
 
 .. note:: 
    This set of additional attributes matches the set of additional attributes that per-container ``k8s`` metrics (such as memory and CPU utilization), provide on top of workload-level metrics (such as replica count). This excludes metadata attributes that are per pod instance (such ``as k8s.replica.set`` and ``k8s.pod.id``, since we always aggregate metrics across instances), as well as per container instance (such as ``k8s.container.id``) for the same reason.
+

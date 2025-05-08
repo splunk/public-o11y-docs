@@ -42,6 +42,20 @@ When values are unset for a particular resource, this tool assumes those ``reque
 When the main container has an unset resource, this tool considers the efficiency rate to be nullified.
 
 
+.. _aopt-glossary-resource-footprint:
+
+Resource Footprint
+==========================================================
+
+The resource footprint represents the total amount of CPU and memory that a workload has on the cluster at any given time. For workloads that have a varying number of pods (perhaps due to the autoscaler), this tile displays the average footprint over the past 14 days. 
+
+.. move this middle paragraph to glossary and link to glossary entry here. Do same on aopt-workload-details
+
+A workload's resource footprint is the sum of its pods' ``request`` settings for that resource or its average usage if it exceeds its ``request`` settings. If the ``request`` value is not set, the footprint represents the sum of actual usage instead. This tile displays the sum of all resource footprints of all the pods of all your workloads. 
+
+The tile also compares the projected footprint (assuming you apply the recommended settings) as well as the difference between the projected and the current footprint. This highlights how much you can save or add to your resources.
+
+
 .. _aopt-glossary-starvation-risk:
 
 Starvation risk
