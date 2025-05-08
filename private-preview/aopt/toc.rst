@@ -21,5 +21,5 @@
         * :ref:`Workload Details <aopt-workload-details>`
         * :ref:`Scenarios <aopt-scenarios>`
         * :ref:`Glossary <aopt-glossary>`
-        * :ref:`Derived metrics <aopt-metric-reference>`
+        * :ref:`Metric reference <aopt-metric-reference>`
 

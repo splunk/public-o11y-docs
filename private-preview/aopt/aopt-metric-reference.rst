@@ -21,7 +21,7 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
 
 .. list-table::
-   :widths: 32 5 35
+   :widths: 40 5 55
    :width: 100%
    :header-rows: 1
 
@@ -199,7 +199,7 @@ Workload-level attributes
 The following dimensions are applied to all metrics (both workload and container scope):
 
 .. list-table::
-   :widths: 32 40
+   :widths: 40 60
    :width: 100%
    :header-rows: 1
 
@@ -279,7 +279,7 @@ The following additional dimensions are applied to per-container metrics (any me
 
 
 .. list-table::
-   :widths: 32 40
+   :widths: 40 60
    :width: 100%
    :header-rows: 1
 

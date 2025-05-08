@@ -26,13 +26,11 @@ Efficiency Analysis
 
 * :guilabel:`Average Pod Count`: The number of pods (:new-page:`replicas <https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/>`) running for this workload averaged over the analysis period. 
 
-* :guilabel:`Resource Footprint`: The resource footprint represents the total amount of CPU and memory that this workload has on the cluster at any given time. For workloads that have a varying number of pods (perhaps due to the autoscaler), this tile displays the average footprint over the past 14 days. The tile includes the following values for each resource:
+* :guilabel:`Resource Footprint`: The resource footprint represents the total amount of CPU and memory that this workload has on the cluster at any given time. For workloads that have a varying number of pods (perhaps due to the autoscaler), this tile displays the average footprint over the past 14 days. :ref:`See details on how the resource footprint is calculated <aopt-glossary-resource-footprint>`. The tile includes the following values for each resource:
 
    * Current footprint
    * Projected footprint if all recommendations are applied
    * Change of footprint (impact of applying the recommendation), in absolute units and in percentage between the recommended and current.
-   
-   :ref:`See details on how the resource footprint is calculated <aopt-glossary-resource-footprint>`.
 
 * :guilabel:`Resource Efficiency`: The ratio of resource usage to resource allocation. This is a percentage relative to allocated resources. Best practices call for resource utilization in the 60-80% range. Having efficiency above 70-80% presents resource starvation risks. :ref:`See details on how this is calculated <aopt-glossary-efficiency>`.
 
@@ -54,7 +52,7 @@ Directly under the :guilabel:`Efficiency Analysis` label, there are two importan
 Instant Recommendations
 ==========================================================
 
-:guilabel:`Instant Recommendations` offers simple, actionable changes to a workload's pods which you can implement quickly and easily to improve its resource utilization. 
+:guilabel:`Instant Recommendations` offers simple, actionable changes to a workload's pods which you can implement quickly and easily to improve its resource utilization. The recommendations address both under-provisioning as well as over-provisioning. For example, if a workload doesn't use all of the resources it requested, :guilabel:`Instant Recommendations` reduces its footprint and, ultimately, your costs for the Kubernetes cluster.
 
 
 Why are these recommendations given?
@@ -68,7 +66,8 @@ Workload Breakdown
 
 Your workload is broken down into its containers, and within the section for each container, there are specific recommendations for CPU and memory adjustments, a chart visualizing its historical resource usage, and in the rightmost column (:guilabel:`Recommended K8s Spec`), YAML snippets you can copy to improve its settings. 
 
-.. add note: if you apply CPU recs and you have HPA enabled, please apply the HPA recs also in order to get the benefits
+.. note::
+    If you apply CPU recommendations to a cluster that has HPA enabled, you must also apply the HPA recommendations. These two recommendations must always be applied together. Otherwise, your HPA configuration might undo your new CPU settings.
 
 
 HPA Recommendation
