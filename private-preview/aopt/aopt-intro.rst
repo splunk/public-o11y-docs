@@ -21,9 +21,7 @@ Key features
    * Obtain insight summaries by applying filters of your choice (environment, cluster, namespace, and so on).
    * Find the workloads most in need of attention based on your priorities, which could be performance, reliability, or cost savings.
 
-* :guilabel:`Instant Recommendations` provide suggestions for CPU and memory settings based on historical utilization across all pods of a workload. Utilization data comes from the metrics you've sent to Splunk IM. You can apply these suggestions directly to your workloads using the YAML snippets it provides. 
-
-* :guilabel:`Horizontal Pod Autoscaler (HPA) recommendations` provide PLACEHOLDER.
+* :guilabel:`Instant Recommendations` provide suggestions for CPU and memory settings based on historical utilization across all pods of a workload. Utilization data comes from the metrics you've sent to Splunk IM. You can apply these suggestions directly to your workloads using the YAML snippets it provides. For workloads that use autoscaling, it also suggests how to update the autoscaling configuration.
 
 
 Requirements

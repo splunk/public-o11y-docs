@@ -11,6 +11,8 @@ Derived metrics
 
 Application Optimization's workload analysis produces the following metics. All metrics have at least the same dimensions as the workload metrics (for example ``aws-region`` and so on) and use the same attribute names and values.
 
+.. find out what the prefix is and add it to the metric name. ask daniel for the name.
+
 All metric names have a prefix of either ``sf`` or ``o11y``.
 
 .. note::
@@ -86,12 +88,6 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
          - Low: could benefit from more overhead
          - Medium: actually bursting but not being limited
          - High: CPU throttled and/or at resource limits.
-   - 
-
-      - 
-      - 
-      - 
-      - Consider alternatively, ``instant_recommendation``.
    - 
 
       - ``recommendation.available``
@@ -212,36 +208,11 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
       - C
       - Per-container baseline for the configuration being analyzed.
       - 
-   - 
-
-      - ``cost.available``
-      - W
-      - Indicates whether the cost is populated correctly, 0 or 1
-      - An additional attribute on this metric defines the ``error_reason_code`` in case of failure.
-   - 
-
-      - ``cost.monthly_value``
-      - 
-      - 
-      - 
-   - 
-
-      - ``cost.savings.percent``
-      - W
-      - Projected savings percent 1-(rec cost / baseline cost) \* 100, using the per-pod values, assuming all recommendations are applied. Note that this value may be populated even if ``cost.available`` is ``0`` (see note).
-      - This ratio is (a) period-neutral (in other words, can be applied to hourly, monthly, etc. costs), (b) currency-neutral and (c) discount-neutral (assuming linear costs, of course). It does, however, rely on CPU-to-memory cost weight.
-   - 
-
-      - ``cost.savings.monthly_value``
-      - W†
-      - Projected savings per month, extrapolated from the analysis period and assuming that all recommendations are applied.
-      - An additional attribute on this metric defines the currency. This allows multiple values to be created, one for each currency of interest.
 
 
 
 \*Scope is W for workload and C for container. See :ref:`Dimensions <aopt-derived-metrics_dimensions>` for attributes that apply to each scope.
 
-†Cost value metrics may have an additional dimension attribute, ``cost_currency_code``, which represents the currency in which the value is provided (for example, USD). This further allows for values to be emitted for multiple currencies.
 
 
 .. _aopt-derived-metrics_dimensions:

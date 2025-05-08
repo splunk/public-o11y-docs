@@ -28,11 +28,12 @@ Efficiency Analysis
 
 * :guilabel:`Average Pod Count`: The number of pods (:new-page:`replicas <https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/>`) running for this workload averaged over the analysis period. 
 
-* :guilabel:`Resource Footprint`: The sum of all of the workload's pods' ``request`` settings for that resource (or utilization if resources are unset or average usage exceeds requests) plus its actual overage utilization of that resource. The percentages represent how much you can increase or decrease the footprint:
+* :guilabel:`Resource Footprint`: The resource footprint represents the total amount of CPU and memory that this workload has on the cluster at any given time. For workloads that have a varying number of pods (perhaps due to the autoscaler), this tile displays the average footprint over the past 14 days. The tile includes the following values for each resource:
 
    * Current footprint
    * Projected footprint if all recommendations are applied
    * Change of footprint (impact of applying the recommendation), in absolute units and in percentage between the recommended and current.
+
 
 * :guilabel:`Resource Efficiency`: The ratio of resource usage to resource allocation. This is a percentage relative to allocated resources. Best practices call for resource utilization in the 60-80% range. Having efficiency above 70-80% presents resource starvation risks. :ref:`See details on how this is calculated <aopt-glossary-efficiency>`.
 

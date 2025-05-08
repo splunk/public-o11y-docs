@@ -15,6 +15,8 @@ Here are common use case scenarios and how to use Application Optimization for t
 Which workloads need to be optimized?
 ==========================================================
 
+.. redo the scenarios: (1) [SRE or FinOps engineer] which workloads need to be made more resilient (i.e. we can reduce starvation risk) (2) which workloads can I release unnecessary resources from? make these steps just about "finding" 
+
 To gain a comprehensive overview of all workloads and identify optimization opportunities by detecting over-provisioned or under-provisioned resources:
 
 #. Navigate to the :guilabel:`Application Optimization` dashboard.

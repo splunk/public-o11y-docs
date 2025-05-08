@@ -43,9 +43,14 @@ This is a good tile to check first to see if any of your workloads are at high r
 Resource Footprint
 ==========================================================
 
-A workload's resource footprint is the sum of its pods' ``request`` settings for that resource (or utilization if resources are unset or average usage exceeds requests) plus its actual overage utilization of that resource. This tile displays the sum of all resource footprints of all the pods of all your workloads. It then compares your current ``request`` settings for CPU and memory to  recommended CPU and memory ``request`` settings based on data from the past 14 days. 
+The resource footprint represents the total amount of CPU and memory that a workload has on the cluster at any given time. For workloads that have a varying number of pods (perhaps due to the autoscaler), this tile displays the average footprint over the past 14 days. 
 
-.. The resource footprint represents the total amount of CPU and memory resources that a workload has on the cluster at any given time. For workloads that have a varying number of pods (perhaps due to the autoscaler), this tile displays the average footprint over the past 14 days. <Then we can follow with the more specific method of what "has" means>
+.. move this middle paragraph to glossary and link to glossary entry here. Do same on aopt-workload-details
+
+A workload's resource footprint is the sum of its pods' ``request`` settings for that resource or its average usage if it exceeds its ``request`` settings. If the ``request`` value is not set, the footprint represents the sum of actual usage instead. This tile displays the sum of all resource footprints of all the pods of all your workloads. 
+
+The tile also compares the projected footprint (assuming you apply the recommended settings) as well as the difference between the projected and the current footprint. This highlights how much you can save or add to your resources.
+
 
 .. note::
     This tile aggregates data from all of your workloads, so if you want to see data from a specific workload, filter the data in the :guilabel:`Kubernetes Workloads` table until only that workload is visible.
