@@ -55,8 +55,12 @@ Workload Breakdown
 
 Your workload is broken down into its containers, and within the section for each container, there are specific recommendations for CPU and memory adjustments, a chart visualizing its historical resource usage, and in the rightmost column (:guilabel:`Recommended K8s Spec`), YAML snippets you can copy to improve its settings. 
 
+.. add note: if you apply CPU recs and you have HPA enabled, please apply the HPA recs also in order to get the benefits
+
 
 HPA Recommendation
 ==========================================================
 
-If you have a horizontal pod autoscaler (HPA) associated with this workload and you're sending HPA metrics to Splunk IM, this section will provide any recommended adjustments to your HPA.
+If you have a horizontal pod autoscaler (HPA) associated with this workload and you're sending HPA metrics to Splunk IM, this section provides any recommended adjustments to your HPA.
+
+.. work with John and Raunaq to include more details here

@@ -53,7 +53,10 @@ The tile also compares the projected footprint (assuming you apply the recommend
 
 
 .. note::
-    This tile aggregates data from all of your workloads, so if you want to see data from a specific workload, filter the data in the :guilabel:`Kubernetes Workloads` table until only that workload is visible.
+    This tile aggregates data from all of your workloads, so if you want to see data from a subset of workloads, filter the data in the :guilabel:`Kubernetes Workloads` table until only that workload is visible.
+
+
+.. summary panels change based on what you filter
 
 
 .. _aopt-workloads-sort-search:
