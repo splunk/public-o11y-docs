@@ -12,11 +12,6 @@ Scenarios
 Here are common use case scenarios and how to use Application Optimization for them.
 
 
-.. redo the scenarios: (1) [SRE or FinOps engineer] which workloads need to be made more resilient (i.e. we can reduce starvation risk) (2) which workloads can I release unnecessary resources from? make these steps just about "finding" 
-
-.. 4.1. Which workloads need to be optimized: The intro specifies that we will find which workloads need to be optimized: either under-provisioned or over-provisioned. However, items 2 & 3 seem to limit the action to only under-provisioned. We may want to split this into the two different cases: (i) fix starvation which may lead to performance/reliability problems and (ii) release unnecessary resources (to make them available to others or to allow reducing compute costs). Alternatively, you have to also offer sorting by the CPU or memory "footprint change" columns in the proposed sequence: start first by addressing any under-provisioned apps (as they are high risk and performance/reliability is always higher priority than cost) and then look for over-provisioned ones. Note that even in the optimization cases, we can suggest to the user that they can use the filters to limit the scope of their search to what they are interested in or responsible for (i.e., if I am responsible for North America, I will filter only to such clusters).
-
-
 Which workloads need to be made more resilient?
 ==========================================================
 

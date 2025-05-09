@@ -54,6 +54,9 @@ Instant Recommendations
 
 :guilabel:`Instant Recommendations` offers simple, actionable changes to a workload's pods which you can implement quickly and easily to improve its resource utilization. The recommendations address both under-provisioning as well as over-provisioning. For example, if a workload doesn't use all of the resources it requested, :guilabel:`Instant Recommendations` reduces its footprint and, ultimately, your costs for the Kubernetes cluster.
 
+.. warn::
+    If you apply CPU recommendations to a cluster that has HPA enabled, you must also apply the HPA recommendations. These two recommendations must always be applied together. Otherwise, your HPA configuration might undo your new CPU settings. You must also specify your HPA configuration either through metrics or manually. See :ref:`aopt-workload-hpa`.
+
 
 Why are these recommendations given?
 ----------------------------------------------------------
@@ -62,24 +65,22 @@ If a workload has had a medium or high starvation risk over the past 14 days, ig
 
 
 Workload Breakdown
-==========================================================
+----------------------------------------------------------
 
 Your workload is broken down into its containers, and within the section for each container, there are specific recommendations for CPU and memory adjustments, a chart visualizing its historical resource usage, and in the rightmost column (:guilabel:`Recommended K8s Spec`), YAML snippets you can copy to improve its settings. 
 
-.. note::
-    If you apply CPU recommendations to a cluster that has HPA enabled, you must also apply the HPA recommendations. These two recommendations must always be applied together. Otherwise, your HPA configuration might undo your new CPU settings.
+
+.. _aopt-workload-hpa:
+
+Horizontal Pod Autoscaler (HPA) target recommendation
+----------------------------------------------------------
+
+If you have a horizontal pod autoscaler (HPA) associated with this workload, this section provides compatible adjustments to your HPA configuration. You can specify your HPA configuration by sending HPA metrics to Splunk IM. If we cannot detect your HPA configuration, you can manually specify the configuration:
 
 
-HPA Recommendation
-==========================================================
+#. Select the scope: 
+   * :guilabel:`Pod` means that your HPA's CPU utilization target applies to the CPU utilization of the pod as a whole (the only option available for HPA v1 resources).
+   * :guilabel:`Container`means that your HPA's CPU utilization target applies to a particular container only (new capability for HPA v2 resources).
 
-If you have a horizontal pod autoscaler (HPA) associated with this workload, this section provides any recommended adjustments to your HPA. Its recommendations depend on the HPA metrics you're sending to Splunk IM. If you aren't sending HPA metrics to Splunk IM, you must manually specify your current HPA configuration manually using the menu in this section. Application Optimization needs this information to generate a matching pair of Instant Recommendations and HPA Recommendation for this workload. These two recommendations must always be compatible.
+#. Enter the value (percentage) that matches your current CPU utilization target value (from your HPA configuration file).
 
-To manually specify your HPA configuration:
-
-#. Select whether your HPA's CPU utilization target applies to the CPU utilization of the pod as a whole (the only option available for HPA v1 resources) or to a particular container only (new capability for HPA v2 resources).
-
-#. Select the value that matches your current CPU utilization target value (from your HPA resource).
-
-
-.. work with John and Raunaq to include more details here
