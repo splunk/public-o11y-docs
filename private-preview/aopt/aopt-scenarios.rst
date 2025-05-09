@@ -15,7 +15,7 @@ Here are common use case scenarios and how to use Application Optimization for t
 Which workloads need to be made more resilient?
 ==========================================================
 
-Under-provisioned workloads (those that really need to have their starvation risk reduced) are at risk of performance or reliability problems. If you're an SRE or FinOps engineer you might not be the owner of these workloads but you need to find them and notify their owners ASAP. Here's how to find them:
+Under-provisioned workloads (those that need to have their starvation risk reduced) are at risk of performance or reliability problems. If you're a site reliability engineer (SRE) or you handle financial operations (FinOps) you might not be the owner of these workloads but you need to find them and notify their owners ASAP. Here's how to find them:
 
 #. Navigate to the :guilabel:`Application Optimization` dashboard.
 

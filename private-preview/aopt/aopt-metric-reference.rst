@@ -59,7 +59,7 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
       - ``sf.report.footprint.cpu_cores``
       - W
-      - Number of the allocated CPU cores for all replicas (averaged based on average_replicas). Does not account for usage above request (bursting).
+      - Number of the allocated CPU cores for all replicas (averaged based on ``average_replicas``). Does not account for usage above request (bursting).
    - 
 
       - ``sf.report.footprint.memory_gib``
@@ -134,12 +134,12 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
       - ``sf.recommendation.footprint_change.cpu_cores``
       - W
-      - Footprint change of CPU requests, assuming the CPU request recommendations are applied for all containers. May be 0 / missing / NaN if requests are not defined.
+      - Footprint change of CPU requests, assuming the CPU request recommendations are applied for all containers. May be ``0``, ``missing``, or ``NaN`` if requests are not defined.
    - 
 
       - ``sf.recommendation.footprint_change.memory_gib``
       - W
-      - Footprint change of memory requests, assuming the memory request recommendations are applied for all containers. May be 0 / missing / NaN if requests are not defined.
+      - Footprint change of memory requests, assuming the memory request recommendations are applied for all containers. May be ``0``, ``missing``, or ``NaN`` if requests are not defined.
    - 
 
       - ``sf.baseline.pod.cpu_request``
@@ -214,7 +214,7 @@ The following dimensions are applied to all metrics (both workload and container
    - 
 
       - ``k8s.cluster.name``
-      - 
+      - Kubernetes cluster name.
    - 
 
       - ``k8s.namespace.name``

@@ -77,8 +77,8 @@ Horizontal Pod Autoscaler (HPA) target recommendation
 
 If you have a horizontal pod autoscaler (HPA) associated with this workload, this section provides compatible adjustments to your HPA configuration. You can specify your HPA configuration by sending HPA metrics to Splunk IM. If we cannot detect your HPA configuration, you can manually specify the configuration:
 
-
 #. Select the scope: 
+
    * :guilabel:`Pod` means that your HPA's CPU utilization target applies to the CPU utilization of the pod as a whole (the only option available for HPA v1 resources).
    * :guilabel:`Container`means that your HPA's CPU utilization target applies to a particular container only (new capability for HPA v2 resources).
 

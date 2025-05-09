@@ -31,7 +31,7 @@ Application Optimization calculates an overall confidence level by taking the lo
 Why the confidence level matters
 ----------------------------------------------------------
 
-It's a good idea to match the confidence level to your workload's importance or criticality. In other words, if your workload is a test or you just need to preview the recommendations, a low confidence level is okay. But if your workload is a production or business critical workload, it's best to wait for a high confidence level before applying the recommendations.
+It's a good idea to match the confidence level to your workload's importance or criticality. In other words, if your workload is a test or you just need to preview the recommendations, a confidence level of :guilabel:`Low` is okay. But if your workload is a production or business critical workload, it's best to wait for a confidence level of :guilabel:`High` before applying the recommendations.
 
 
 .. _aopt-glossary-efficiency:
@@ -67,7 +67,13 @@ A workload's average risk of running out of CPU or memory:
 
 * :guilabel:`High`: The workload has tried to use more resources than were available, so its performance and reliability have likely been impacted. Application Optimization marks any container in which usage is greater than or equal to 95% of its ``limit`` settings as :guilabel:`High`.
 
-* :guilabel:`Medium`: The workload has used more than its allocated resources (``request`` settings). While this may not have impacted its performance and reliability (due to Kubernetes bursting into additional resources), future occurrences may result in an impact, since extra resources are not guaranteed to exist. Application Optimization marks any container in which at least one resource (CPU or memory) of one container is undefined OR (all ``request`` settings are defined AND actual usage of at least one resource of one container exceeds its ``request`` setting for any time slot).
+* :guilabel:`Medium`: The workload has used more than its allocated resources (``request`` settings). While this may not have an impact on its performance and reliability due to Kubernetes bursting into additional resources, future occurrences of overusage may have an impact, since extra resources are not guaranteed to exist. 
+  
+  Application Optimization sets :guilabel:`Starvation risk` to :guilabel:`Medium` for any container in which either of these is true:
+  
+    * At least one resource (CPU or memory) of is undefined.
+    
+    * All ``request`` settings are defined and actual usage of at least one resource of exceeds its ``request`` setting for any time slot.
 
 * :guilabel:`Low`: The workload hasn't exceeded its allocated resources but doesn't have enough headroom to absorb spikes or delays in scale-out when traffic increases. Application Optimization marks any container in which, for either CPU or memory, the recommendation is greater than the baseline value. For example, the usage is greater than target utilization (0.85).
 

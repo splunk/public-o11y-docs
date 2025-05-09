@@ -17,7 +17,8 @@ By using Application Optimization together with :new-page:`Splunk Infrastructure
 Key features
 ==========================================================
 
-* :guilabel:`Kubernetes Profiler` (the :guilabel:`Application Optimization` dashboard) provides insights into the efficiency of your CPU and memory settings for your Kubernetes workloads.	You can use the profiler to
+* :guilabel:`Kubernetes Profiler` (the :guilabel:`Application Optimization` dashboard) provides insights into the efficiency of your CPU and memory settings for your Kubernetes workloads. You can use the profiler to:
+
    * Obtain insight summaries by applying filters of your choice (environment, cluster, namespace, and so on).
    * Find the workloads most in need of attention based on your priorities, which could be performance, reliability, or cost savings.
 
