@@ -57,7 +57,7 @@ MMS are available for the APM components listed in the following table. Each MMS
        * ``service.name`` - This dimension is only available for histogram MMS.
        * ``sf_error``
      - Yes
-   * - ``inferred.services`` - 
+   * - ``inferred.services`` - the requests to a service that has not yet been instrumented
      - * ``sf_service``
        * ``service.name`` - This dimension is only available for histogram MMS.
        * ``sf_environment``

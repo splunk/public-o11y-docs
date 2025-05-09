@@ -95,8 +95,7 @@ Customizing mirrored dashboard filters
 Customize dashboard variables
 =========================================
 
-You can define various dashboard variable settings that take effect for any dashboard in this dashboard group.
-Select :guilabel:`Dashboard Variables` from the dashboard's Actions menu.
+You can define various dashboard variable settings that take effect for any chart in this dashboard. Select :guilabel:`Dashboard variables` from the dashboard actions menu.
 
 When you save these settings, the dashboard variable and the suggested values now reflect the customizations you
 specified.
@@ -105,12 +104,12 @@ Customizing mirrored dashboard variables
 ----------------------------------------
 
 - You can make changes directly on the :guilabel:`Overrides` bar; if you save the mirror, these settings become
-  default values in the :guilabel:`Variable Details` section of the :guilabel:`Dashboard Variables` tab.
+  default values in the :guilabel:`Variable details` section of the :guilabel:`Dashboard variables` tab.
 
-- When you save customization options that you set in the :guilabel:`Dashboard Variables` tab, these changes are
+- When you save customization options that you set in the :guilabel:`Dashboard variables` tab, these changes are
   automatically saved as default settings for this mirror.
 
-- On the :guilabel:`Dashboard Variables` tab, anyone with dashboard write permissions can add, delete, and edit
+- On the :guilabel:`Dashboard variables` tab, anyone with dashboard write permissions can add, delete, and edit
   dashboard variables and their settings. These variables affect all mirrors that don't have variable
   customizations applied.
 

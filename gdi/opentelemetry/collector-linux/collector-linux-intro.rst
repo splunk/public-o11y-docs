@@ -48,7 +48,7 @@ To install the Splunk Distribution of the OpenTelemetry Collector for Linux you 
 See the default settings and configuration options at:
 
 * :ref:`linux-config-ootb`
-* By default, you'll obtain these :ref:`metrics <ootb-metrics-windows>` 
+* By default, you'll obtain these :ref:`metrics <ootb-metrics-linux>` 
 * :ref:`otel-linux-config`
 * :ref:`linux-config-logs`
 
