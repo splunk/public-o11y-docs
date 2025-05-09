@@ -17,7 +17,10 @@ To load the dashboard, select :guilabel:`Application Optimization` in the left n
     :alt: Application Optimization workloads
 
 
-The :guilabel:`Application Optimization` dashboard provides insights and recommendations which it derives from Kubernetes infrastructure metrics you've sent to :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>`. It groups insights into tiles which are described below. It also provides a table of Kubernetes workloads at the bottom of the page. 
+The :guilabel:`Application Optimization` dashboard provides insights and recommendations which it derives from Kubernetes infrastructure metrics you've sent to :new-page:`Splunk Infrastructure Monitoring (IM) <https://docs.splunk.com/observability/en/infrastructure/intro-to-infrastructure.html>`. It groups insights into summary tiles which are described below. It also provides a table of Kubernetes workloads at the bottom of the page. 
+
+.. note::
+    The contents of the table and summary tiles change based on the filters you select. 
 
 
 Workloads
@@ -50,9 +53,6 @@ The tile also compares the projected footprint (assuming you apply the recommend
 
 .. note::
     This tile aggregates data from all of your workloads, so if you want to see data from a subset of workloads, filter the data in the :guilabel:`Kubernetes Workloads` table until only that workload is visible.
-
-
-.. summary panels change based on what you filter
 
 
 .. _aopt-workloads-sort-search:

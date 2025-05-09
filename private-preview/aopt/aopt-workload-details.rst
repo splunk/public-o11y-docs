@@ -73,6 +73,13 @@ Your workload is broken down into its containers, and within the section for eac
 HPA Recommendation
 ==========================================================
 
-If you have a horizontal pod autoscaler (HPA) associated with this workload and you're sending HPA metrics to Splunk IM, this section provides any recommended adjustments to your HPA.
+If you have a horizontal pod autoscaler (HPA) associated with this workload, this section provides any recommended adjustments to your HPA. Its recommendations depend on the HPA metrics you're sending to Splunk IM. If you aren't sending HPA metrics to Splunk IM, you must manually specify your current HPA configuration manually using the menu in this section. Application Optimization needs this information to generate a matching pair of Instant Recommendations and HPA Recommendation for this workload. These two recommendations must always be compatible.
+
+To manually specify your HPA configuration:
+
+#. Select whether your HPA's CPU utilization target applies to the CPU utilization of the pod as a whole (the only option available for HPA v1 resources) or to a particular container only (new capability for HPA v2 resources).
+
+#. Select the value that matches your current CPU utilization target value (from your HPA resource).
+
 
 .. work with John and Raunaq to include more details here
