@@ -80,7 +80,7 @@ If you have a horizontal pod autoscaler (HPA) associated with this workload, thi
 #. Select the scope: 
 
    * :guilabel:`Pod` means that your HPA's CPU utilization target applies to the CPU utilization of the pod as a whole (the only option available for HPA v1 resources).
-   * :guilabel:`Container`means that your HPA's CPU utilization target applies to a particular container only (new capability for HPA v2 resources).
+   * :guilabel:`Container` means that your HPA's CPU utilization target applies to a particular container only (new capability for HPA v2 resources).
 
 #. Enter the value (percentage) that matches your current CPU utilization target value (from your HPA configuration file).
 
