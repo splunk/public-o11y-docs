@@ -37,10 +37,7 @@ To gain a comprehensive overview of all workloads and identify optimization oppo
 How can I improve efficiency and performance by right-sizing workloads?
 =========================================================================================================
 
-If you're a workload owner who wants to right-size the workloads you're responsible for (rather than just searching for them in the previous scenarios). I would also get rid of "based on actual usage metrics" in the title. We can leave it in the description below (it seems a bit out of place, since we use actual metrics for all scenarios). I think we can focus this on "actual usage" (remove "metrics")... i.e., rightsize my workload based on its actual resource use; in the process, making sure it is neither starving nor wasteful. In item 4, can we just copy what you have in item 4 in the previous scenario -- it's the same steps.
-
-
-To see actual usage metrics for an individual workload:
+If you're a workload owner who wants to right-size the workloads you're responsible for (rather than just searching for them in the previous scenarios), you're probably more interested in right-sizing a particular workload based on its actual resource use. Right-sizing ensures that the workload is neither starving nor wasteful. To do this, follow these steps for an individual workload:
 
 #. Navigate to the :guilabel:`Application Optimization` dashboard.
 
