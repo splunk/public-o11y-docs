@@ -32,47 +32,47 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
       - **Description**
    - 
 
-      - ``report.available``
+      - ``sf.report.available``
       - W
       - Synthetic metric, 0 for failed, 1 for success. This metric may have additional attributes that represent the report outcome as a whole. At least a ``aopt.profile_report.error_reason`` code.
    - 
 
-      - ``report.window_days``
+      - ``sf.report.window_days``
       - W
       - Number of days (possibly fractional) that were considered in the analysis. In general, this is the smaller of 14 and the number of days since the last resource configuration change for the workload. This is used to determine the validity and confidence level of the report.
    - 
 
-      - ``report.coverage_ratio``
+      - ``sf.report.coverage_ratio``
       - W
       - Window coverage with metrics: the ratio of number of actual metrics values found compared to the number of timeslots in the window. This should represent the worst case value (in other words, the minimum of the coverage of each input timeseries we use). This is used to determine the validity and confidence level of the report.
    - 
 
-      - ``report.average_replicas``
+      - ``sf.report.average_replicas``
       - W
       - Average number of replicas during the analysis window. Does not include pods that allocate resources (such as those scheduled but not started).
    - 
 
-      - ``report.pod.qos_class``
+      - ``sf.report.pod.qos_class``
       - W
       - Pod's quality of service (QoS) class, as defined in Kubernetes docs, encoded as integer.
    - 
 
-      - ``report.footprint.cpu_cores``
+      - ``sf.report.footprint.cpu_cores``
       - W
       - Number of the allocated CPU cores for all replicas (averaged based on average_replicas). Does not account for usage above request (bursting).
    - 
 
-      - ``report.footprint.memory_gib``
+      - ``sf.report.footprint.memory_gib``
       - W
       - GiB allocated memory for all replicas (averaged based on the average_replicas). Does not account for usage above request (bursting).
    - 
 
-      - ``report.efficiency_rate``
+      - ``sf.report.efficiency_rate``
       - W
       - Resource efficiency rate, as percent. Weighted average of resource utilization of CPU and memory. CPU and memory weights according to AWS on-demand cost. Capped at 100%, rounded to whole percent.
    - 
 
-      - ``report.starvation_risk``
+      - ``sf.report.starvation_risk``
       - W
       - Resource starvation risk: Minimal, Low, Medium, High (encoded 0, 1, 2, 3 respectively). 
          Risk levels defined elsewhere:
@@ -82,102 +82,102 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
           - High: CPU throttled and/or at resource limits.
    - 
 
-      - ``recommendation.available``
+      - ``sf.recommendation.available``
       - W
       - Indicates whether a recommendation is available for at least one container, 0 or 1.
    - 
 
-      - ``recommendation.confidence_level``
+      - ``sf.recommendation.confidence_level``
       - W
       - Recommendations overall confidence level: Low, Medium, High (likely encoded as numbers). Aggregated from container.confidence_level, by taking the lowest confidence value (or the confidence value of the main/largest container).
    - 
 
-      - ``recommendation.container.available``
+      - ``sf.recommendation.container.available``
       - C
       - Indicates whether a recommendation is available, 0 or 1. A recommendation that matches the baseline is considered available.
    - 
 
-      - ``recommendation.container.confidence_level``
+      - ``sf.recommendation.container.confidence_level``
       - C
       - Recommendation confidence level: Low, Medium, High (encoded as numbers).
    - 
 
-      - ``recommendation.container.cpu_request``
+      - ``sf.recommendation.container.cpu_request``
       - C
       - Per-container recommendation.
    - 
 
-      - ``recommendation.container.memory_request``
+      - ``sf.recommendation.container.memory_request``
       - C
       - Per-container recommendation.
    - 
 
-      - ``recommendation.container.cpu_limit``
+      - ``sf.recommendation.container.cpu_limit``
       - C
       - Per-container recommendation.
    - 
 
-      - ``recommendation.container.memory_limit``
+      - ``sf.recommendation.container.memory_limit``
       - C
       - Per-container recommendation.
    - 
 
-      - ``recommendation.footprint.cpu_cores``
+      - ``sf.recommendation.footprint.cpu_cores``
       - W
       - Total footprint of recommendation.
    - 
 
-      - ``recommendation.footprint.memory_gib``
+      - ``sf.recommendation.footprint.memory_gib``
       - W
       - Total footprint of recommendation.
    - 
 
-      - ``recommendation.footprint_change.cpu_cores``
+      - ``sf.recommendation.footprint_change.cpu_cores``
       - W
       - Footprint change of CPU requests, assuming the CPU request recommendations are applied for all containers. May be 0 / missing / NaN if requests are not defined.
    - 
 
-      - ``recommendation.footprint_change.memory_gib``
+      - ``sf.recommendation.footprint_change.memory_gib``
       - W
       - Footprint change of memory requests, assuming the memory request recommendations are applied for all containers. May be 0 / missing / NaN if requests are not defined.
    - 
 
-      - ``baseline.pod.cpu_request``
+      - ``sf.baseline.pod.cpu_request``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed. Note that the request for a container is considered defined if the limit is defined, even if the request is reported as missing/0.
    - 
 
-      - ``baseline.pod.memory_request``
+      - ``sf.baseline.pod.memory_request``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed.  Note that the request for a container is considered defined if the limit is defined, even if the request is reported as missing/0.
    - 
 
-      - ``baseline.pod.cpu_limit``
+      - ``sf.baseline.pod.cpu_limit``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed. 0 / NaN if at least one limit is missing: as a result, the whole pod doesn't have a limit for this resource.
    - 
 
-      - ``baseline.pod.memory_limit``
+      - ``sf.baseline.pod.memory_limit``
       - W
       - Pod-level sum of the baseline for the configuration being analyzed. 0 / NaN if at least one limit is missing: as a result, the whole pod doesn't have a limit for this resource.
    - 
 
-      - ``baseline.container.cpu_request``
+      - ``sf.baseline.container.cpu_request``
       - C
       - Per-container baseline for the configuration being analyzed.
    - 
 
-      - ``baseline.container.memory_request``
+      - ``sf.baseline.container.memory_request``
       - C
       - Per-container baseline for the configuration being analyzed.
    - 
 
-      - ``baseline.container.cpu_limit``
+      - ``sf.baseline.container.cpu_limit``
       - C
       - Per-container baseline for the configuration being analyzed.
    - 
 
-      - ``baseline.container.memory_limit``
+      - ``sf.baseline.container.memory_limit``
       - C
       - Per-container baseline for the configuration being analyzed.
 

@@ -34,8 +34,11 @@ To gain a comprehensive overview of all workloads and identify optimization oppo
    #. If the :guilabel:`Confidence level` at the top of the page is high, copy and paste the YAML snippets in :guilabel:`Instant Recommendations` into that workload's container configuration.
 
 
-How can I improve efficiency and performance by right-sizing workloads based on actual usage metrics?
+How can I improve efficiency and performance by right-sizing workloads?
 =========================================================================================================
+
+If you're a workload owner who wants to right-size the workloads you're responsible for (rather than just searching for them in the previous scenarios). I would also get rid of "based on actual usage metrics" in the title. We can leave it in the description below (it seems a bit out of place, since we use actual metrics for all scenarios). I think we can focus this on "actual usage" (remove "metrics")... i.e., rightsize my workload based on its actual resource use; in the process, making sure it is neither starving nor wasteful. In item 4, can we just copy what you have in item 4 in the previous scenario -- it's the same steps.
+
 
 To see actual usage metrics for an individual workload:
 
