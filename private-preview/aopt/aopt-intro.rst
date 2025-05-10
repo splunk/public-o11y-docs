@@ -36,7 +36,7 @@ Requirements
 
 * All metrics that the :new-page:`Splunk IM Kubernetes cluster receiver collects by default <https://docs.splunk.com/observability/en/gdi/opentelemetry/collector-kubernetes/install-k8s.html#helm-chart-supported-distros>` must be present in your data. Since these metrics are enabled by default on your Kubernetes collector you don't need to take any action unless you've disabled them. 
 
-* Horizontal pod autoscaler (HPA) telemetry: Optional, but if you do have HPAs and you send :new-page:`k8s.hpa.* metrics <https://docs.splunk.com/observability/en/gdi/opentelemetry/components/kubernetes-cluster-receiver.html>` to Splunk IM, :guilabel:`Instant Recommendations` can help you to improve them.  See :ref:`aopt-workload-hpa`.
+* Horizontal pod autoscaler (HPA) telemetry: Optional, but if you do have HPAs and you send :new-page:`k8s.hpa.* metrics <https://docs.splunk.com/observability/en/gdi/opentelemetry/components/kubernetes-cluster-receiver.html>` to Splunk IM, :guilabel:`Instant Recommendations` can help you to improve them.  See :ref:`<aopt-workload-hpa>`.
 
 
 Enable Application Optimization
