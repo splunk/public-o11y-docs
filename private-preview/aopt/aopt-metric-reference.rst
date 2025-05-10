@@ -34,7 +34,7 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
       - ``sf.report.available``
       - W
-      - Synthetic metric, 0 for failed, 1 for success. This metric may have additional attributes that represent the report outcome as a whole. At least a ``aopt.profile_report.error_reason`` code.
+      - Synthetic metric. The value is ``0`` for failed, ``1`` for success. This metric may have additional attributes that represent the report outcome as a whole. At least a ``aopt.profile_report.error_reason`` code.
    - 
 
       - ``sf.report.window_days``
@@ -49,12 +49,12 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
       - ``sf.report.average_replicas``
       - W
-      - Average number of replicas during the analysis window. Does not include pods that allocate resources (such as those scheduled but not started).
+      - Average number of replicas during the analysis window. Does not include pods that allocate resources, such as those scheduled but not started.
    - 
 
       - ``sf.report.pod.qos_class``
       - W
-      - Pod's quality of service (QoS) class, as defined in Kubernetes docs, encoded as integer.
+      - Pod's quality of service (QoS) class, as defined in Kubernetes docs, encoded as an integer.
    - 
 
       - ``sf.report.footprint.cpu_cores``
@@ -74,7 +74,7 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
       - ``sf.report.starvation_risk``
       - W
-      - Resource starvation risk: Minimal, Low, Medium, High (encoded 0, 1, 2, 3 respectively). 
+      - Resource starvation risk: Minimal, Low, Medium, High (encoded as ``0``, ``1``, ``2``, ``3`` respectively). 
          Risk levels defined elsewhere:
           - Minimal: no starvation detected
           - Low: could benefit from more overhead
@@ -84,22 +84,22 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
       - ``sf.recommendation.available``
       - W
-      - Indicates whether a recommendation is available for at least one container, 0 or 1.
+      - Indicates whether a recommendation is available for at least one container. This value is ``0`` or ``1``.
    - 
 
       - ``sf.recommendation.confidence_level``
       - W
-      - Recommendations overall confidence level: Low, Medium, High (likely encoded as numbers). Aggregated from container.confidence_level, by taking the lowest confidence value (or the confidence value of the main/largest container).
+      - Recommendations overall confidence level: Unknown, Low, Medium, High (encoded as ``0``, ``1``, ``2``, ``3`` respectively). Aggregated from ``container.confidence_level``, by taking the lowest confidence value (or the confidence value of the main or largest container).
    - 
 
       - ``sf.recommendation.container.available``
       - C
-      - Indicates whether a recommendation is available, 0 or 1. A recommendation that matches the baseline is considered available.
+      - Indicates whether a recommendation is available: ``0`` or ``1``. A recommendation that matches the baseline is considered available.
    - 
 
       - ``sf.recommendation.container.confidence_level``
       - C
-      - Recommendation confidence level: Low, Medium, High (encoded as numbers).
+      - Recommendation confidence level: Unknown, Low, Medium, High (encoded as ``0``, ``1``, ``2``, ``3`` respectively).
    - 
 
       - ``sf.recommendation.container.cpu_request``
@@ -144,22 +144,22 @@ All metric names have a prefix of either ``sf`` or ``o11y``.
 
       - ``sf.baseline.pod.cpu_request``
       - W
-      - Pod-level sum of the baseline for the configuration being analyzed. Note that the request for a container is considered defined if the limit is defined, even if the request is reported as missing/0.
+      - Pod-level sum of the baseline for the configuration being analyzed. The ``request`` for a container is considered defined if its ``limit`` is defined, even if the ``request`` is reported as missing or ``0``.
    - 
 
       - ``sf.baseline.pod.memory_request``
       - W
-      - Pod-level sum of the baseline for the configuration being analyzed.  Note that the request for a container is considered defined if the limit is defined, even if the request is reported as missing/0.
+      - Pod-level sum of the baseline for the configuration being analyzed.  The ``request`` for a container is considered defined if its ``limit`` is defined, even if the ``request`` is reported as missing or ``0``.
    - 
 
       - ``sf.baseline.pod.cpu_limit``
       - W
-      - Pod-level sum of the baseline for the configuration being analyzed. 0 / NaN if at least one limit is missing: as a result, the whole pod doesn't have a limit for this resource.
+      - Pod-level sum of the baseline for the configuration being analyzed. This value is ``0`` or ``NaN`` if at least one ``limit`` is missing; as a result, the whole pod doesn't have a ``limit`` for this resource.
    - 
 
       - ``sf.baseline.pod.memory_limit``
       - W
-      - Pod-level sum of the baseline for the configuration being analyzed. 0 / NaN if at least one limit is missing: as a result, the whole pod doesn't have a limit for this resource.
+      - Pod-level sum of the baseline for the configuration being analyzed. This value is ``0`` or ``NaN`` if at least one ``limit`` is missing; as a result, the whole pod doesn't have a ``limit`` for this resource.
    - 
 
       - ``sf.baseline.container.cpu_request``
@@ -234,27 +234,27 @@ The following dimensions are applied to all metrics (both workload and container
    - 
 
       - ``k8s.deployment.name``
-      - Present only for ``workload.kind`` == ``deployment``. The same as ``k8s.workload.name``.
+      - Present only for ``workload.kind`` == ``deployment``. Same as ``k8s.workload.name``.
    - 
 
       - ``k8s.deployment.uid``
-      - Present only for ``workload.kind`` == ``deployment``. The same as ``k8s.object_uid``.
+      - Present only for ``workload.kind`` == ``deployment``. Same as ``k8s.object_uid``.
    - 
 
       - ``k8s.statefulset.name``
-      - Present only for ``workload.kind`` == ``statefulset``. The same as ``k8s.workload.name``.
+      - Present only for ``workload.kind`` == ``statefulset``. Same as ``k8s.workload.name``.
    - 
 
       - ``k8s.statefulset.uid``
-      - Present only for ``workload.kind`` == ``statefulset``. The same as ``k8s.object_uid``.
+      - Present only for ``workload.kind`` == ``statefulset``. Same as ``k8s.object_uid``.
    - 
 
       - ``k8s.daemonset.name``
-      - Present only for ``workload.kind`` == ``daemonset``. The same as ``k8s.workload.name``.
+      - Present only for ``workload.kind`` == ``daemonset``. Same as ``k8s.workload.name``.
    - 
 
       - ``k8s.daemonset.uid``
-      - Present only for ``workload.kind`` == ``daemonset``. The same as ``k8s.object_uid``.
+      - Present only for ``workload.kind`` == ``daemonset``. Same as ``k8s.object_uid``.
    - 
 
       - ``k8s.pod.qos``
@@ -262,11 +262,11 @@ The following dimensions are applied to all metrics (both workload and container
    - 
 
       - ``aopt.profiler_report.success``
-      - Whether the analysis was successful and a report is provided. Values: 0 or 1.
+      - Whether the analysis was successful and a report is provided. Values: ``0`` or ``1``.
    - 
 
       - ``aopt.instant_recommendation.present``
-      - Whether there is a valid recommendation. Values: 0 or 1.
+      - Whether there is a valid recommendation. Values: ``0`` or ``1``.
 
 
 
@@ -275,7 +275,7 @@ The following dimensions are applied to all metrics (both workload and container
 Container-level attributes
 ----------------------------------------------------------
 
-The following additional dimensions are applied to per-container metrics (any metric with ``.container.`` name element):
+The following additional dimensions are applied to per-container metrics (in other words, any metric named ``*.container.*``):
 
 
 .. list-table::
@@ -295,7 +295,7 @@ The following additional dimensions are applied to per-container metrics (any me
    - 
 
       - ``k8s.container.pseudo_qos``
-      - Container-level pseudo-QoS
+      - Container-level pseudo-QoS.
 
 
 .. note:: 
