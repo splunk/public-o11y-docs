@@ -17,9 +17,12 @@ By using Application Optimization together with :new-page:`Splunk Infrastructure
 Key features
 ==========================================================
 
-* :guilabel:`Kubernetes Profiler` (the :guilabel:`Application Optimization` dashboard) provides comprehensive insights into the efficiency of your CPU and memory settings for your Kubernetes workloads.	
+* :guilabel:`Kubernetes Profiler` (the :guilabel:`Application Optimization` dashboard) provides insights into the efficiency of your CPU and memory settings for your Kubernetes workloads. You can use the profiler to:
 
-* :guilabel:`Instant Recommendations` provide suggestions for CPU and memory settings based on historical utilization data (metrics you've sent to Splunk IM). You can apply these suggestions directly to your pods using the YAML snippets it provides. 
+   * Obtain insight summaries by applying filters of your choice (environment, cluster, namespace, and so on).
+   * Find the workloads most in need of attention based on your priorities, which could be performance, reliability, or cost savings.
+
+* :guilabel:`Instant Recommendations` provide suggestions for CPU and memory settings based on historical utilization across all pods of a workload. Utilization data comes from the metrics you've sent to Splunk IM. You can apply these suggestions directly to your workloads using the YAML snippets it provides. For workloads that use autoscaling, it also suggests how to update the autoscaling configuration.
 
 
 Requirements
@@ -33,7 +36,7 @@ Requirements
 
 * All metrics that the :new-page:`Splunk IM Kubernetes cluster receiver collects by default <https://docs.splunk.com/observability/en/gdi/opentelemetry/collector-kubernetes/install-k8s.html#helm-chart-supported-distros>` must be present in your data. Since these metrics are enabled by default on your Kubernetes collector you don't need to take any action unless you've disabled them. 
 
-* Horizontal pod autoscaler (HPA) telemetry: Optional, but if you do have HPAs and you send :new-page:`k8s.hpa.* metrics <https://docs.splunk.com/observability/en/gdi/opentelemetry/components/kubernetes-cluster-receiver.html>` to Splunk IM, :guilabel:`Instant Recommendations` can help you to improve them.
+* Horizontal pod autoscaler (HPA) telemetry: Optional, but if you do have HPAs and you send :new-page:`k8s.hpa.* metrics <https://docs.splunk.com/observability/en/gdi/opentelemetry/components/kubernetes-cluster-receiver.html>` to Splunk IM, :guilabel:`Instant Recommendations` can help you to improve them.  See :ref:`aopt-workload-hpa`.
 
 
 Enable Application Optimization
