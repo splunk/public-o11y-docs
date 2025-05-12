@@ -179,7 +179,6 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
       export SPLUNK_ACCESS_TOKEN=<access_token>
       export SPLUNK_REALM=<realm>
-      export OTEL_METRICS_EXPORTER=none
 
    .. code-tab:: shell Windows PowerShell
 
