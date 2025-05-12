@@ -55,7 +55,7 @@ Instant Recommendations
 :guilabel:`Instant Recommendations` offers simple, actionable changes to a workload's pods which you can implement quickly and easily to improve its resource utilization. The recommendations address both under-provisioning as well as over-provisioning. For example, if a workload doesn't use all of the resources it requested, :guilabel:`Instant Recommendations` reduces its footprint and, ultimately, your costs for the Kubernetes cluster.
 
 .. warning::
-    If you apply CPU recommendations to a cluster that has HPA enabled, you must also apply the HPA recommendations. These two recommendations must always be applied together. Otherwise, your HPA configuration might undo your new CPU settings. You must also specify your HPA configuration either through metrics or manually. See :ref:`<aopt-workload-hpa>`.
+    If you apply CPU recommendations to a cluster that has HPA enabled, you must also apply the HPA recommendations. These two recommendations must always be applied together. Otherwise, your HPA configuration might undo your new CPU settings. You must also specify your HPA configuration either through metrics or manually. See :ref:`aopt-workload-hpa`.
 
 
 Why are these recommendations given?
