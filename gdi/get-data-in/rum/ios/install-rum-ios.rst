@@ -7,7 +7,7 @@ Install the iOS RUM library for Splunk RUM
 .. meta::
    :description: Instrument your iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM library from the Splunk OpenTelemetry Instrumentation for iOS.
 
-To instrument your iOS application using the iOS RUM library and get data into Splunk RUM, follow the instructions on this page. You can install the library using Swift Package Manager, CocoaPods, or by building an XCFramework.
+To instrument your iOS application using the iOS RUM library and get data into Splunk RUM, follow the instructions on this page. You can install the library using Swift Package Manager, or by building an XCFramework.
 
 .. note:: Splunk APM is not required to instrument Splunk RUM for iOS.
 
@@ -156,18 +156,6 @@ To install the iOS RUM library using the Swift Package Manager (SPM) follow thes
 
 2. Select :guilabel:`Add Package` to install the package.
 
-CocoaPods
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To install the iOS Crash Reporting package using CocoaPods follow these steps:
-
-1. Make sure your project is using CocoaPods.
-
-2. Add ``pod 'SplunkOtelCrashReporting`` to your Podfile.
-
-3. Run ``pod install --repo-update`` in the directory where the Podfile is located.
-
-4. After installing the pod, make sure to open the .xcworkspace file instead of the .xcodeproj file.
 
 Initialize Crash Reporting
 ---------------------------------------------------

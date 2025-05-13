@@ -11,8 +11,6 @@ Add a mapping file
 
 When you set the ``minifyEnabled`` property to true in your Android application source code, your build process minifies, optimizes, and obfuscates the code and generates a single mapping file, ``mapping.txt``. This mapping file contains the information Splunk RUM needs to convert stack traces containing obfuscated classes and filenames back into a human readable form. This conversion is called deobfuscation in Android.
 
-Deobfuscation is available for Android application crashes only. 
-
 
  .. note::
     Make sure that the mapping file you upload to Splunk RUM matches the binary you deploy to production. To ensure this, the best practice is to integrate the ``splunk-rum`` usage into your CI pipeline so that whenever you re-build your Android application, you also re-upload its mapping file.
