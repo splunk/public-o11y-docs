@@ -217,8 +217,26 @@ When data is sampled, you can see a message like this on the chart:
 .. image:: /_images/images-charts/sampling.png
     :width: 65%
 
-If you click :guilabel:`Click here to disable sampling`, or check the :guilabel:`Disable sampling` checkbox in the chart options tab, the sampling message is no longer displayed, and any time series data previously omitted is shown. Depending on the number of time series, disabling sampling might cause the chart to render more slowly.
+If you select :guilabel:`Click here to disable sampling`, or select the :guilabel:`Disable sampling` check box in the chart options tab, the sampling message is no longer displayed, and any time series data previously omitted is shown. Depending on the number of time series, disabling sampling might cause the chart to render more slowly.
 
+.. _chart-drilldown-link:
+
+Drilldown link
+=============================================================================
+
+This option lets you add a drilldown link to the chart header when you view the chart in a dashboard.
+
+.. image:: /_images/images-charts/charts-drilldown-link.png
+    :width: 65%
+
+Providing a drilldown link helps other users in your organization navigate to other parts of Splunk Observability Cloud or external resources containing data related to the chart.
+
+You can include dashboard variables and time range in the URL using curly brackets, such as ``startTime={{{-15m}}}``. For more information on dashboard variables, see :ref:`customize-dashboard-variables`.
+
+For example, you can configure a link to go from a chart to a RUM instance during a specific time window for the same metric.
+
+.. image:: /_images/images-charts/drilldown-example.png
+    :width: 65%
 
 .. _heatmap-group-by:
 
@@ -258,7 +276,7 @@ Max delay
 
 By default, the :strong:`Max delay` field is set to ``Auto``, which allows data to come in with as little delay as possible.
 
-If you know that some of your data is delayed and you want to wait for that data to arrive before your charts are updated, click the drop-down menu and choose a new value from the list. For more information, see :ref:`delayed-datapoints`.
+If you know that some of your data is delayed and you want to wait for that data to arrive before your charts are updated, select the dropdown menu and select a new value from the list. For more information, see :ref:`delayed-datapoints`.
 
 The value you specify is applied whenever you open the chart or view it in a dashboard, unless there is a max delay override. To learn more, see :ref:`dashboard-max-delay`.
 
@@ -321,7 +339,7 @@ To learn more about rollups, see :ref:`rollups`.
 No active metrics message
 =============================================================================
 
-This option allows you to add an optional message on graph charts, heatmap charts, list charts, and single value charts to indicate when metrics used in a chart either don't exist or are inactive. 
+This option lets you add an optional message on graph charts, heatmap charts, list charts, and single value charts to indicate when metrics used in a chart either don't exist or are inactive. 
 
 A metric is considered inactive by Splunk Observability Cloud in the following cases: 
 
