@@ -1,4 +1,3 @@
-# Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
@@ -6,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-13 09:38+0000\n"
-"PO-Revision-Date: 2025-04-10 14:10+0100\n"
+"POT-Creation-Date: 2025-04-18 13:59+0000\n"
+"PO-Revision-Date: 2025-05-14 21:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ../../admin/admin.rst:-1
 msgid "Overview of the Splunk Observability Cloud organization admin tasks and links to the documentation."
@@ -223,11 +222,11 @@ msgstr "レルムについて"
 
 #: ../../_includes/realm-note.rst:3
 msgid ""
-"A realm is a self-contained deployment of Splunk Observability Cloud in which your organization is hosted. Different realms have different API endpoints. For example, the endpoint for sending data in the ``us1`` realm is ``https://ingest.us1.signalfx.com``, while the endpoint for sending data in the ``eu0`` realm is ``https://"
-"ingest.eu0.signalfx.com``."
+"A realm is a self-contained deployment of Splunk Observability Cloud in which your organization is hosted. Different realms have different API endpoints. For example, the endpoint for sending data in the ``us1`` realm is ``https://ingest.us1.signalfx.com``, while the endpoint for sending data in the ``eu0`` realm is ``https://ingest."
+"eu0.signalfx.com``."
 msgstr ""
-"レルムとは、あなたの組織がホストされているSplunk Observability Cloudの自己完結型のデプロイメントのことです。異なるレルムには異なるAPIエンドポイントがあります。例えば、``us1`` レルムでデータを送信するためのエンドポイントは ``https://ingest.us1.signalfx.com`` で、``eu0`` レルムでデータを送信するためのエンドポイントは ``https://"
-"ingest.eu0.signalfx.com``、というようになります。"
+"レルムとは、あなたの組織がホストされているSplunk Observability Cloudの自己完結型のデプロイメントのことです。異なるレルムには異なるAPIエンドポイントがあります。例えば、``us1`` レルムでデータを送信するためのエンドポイントは ``https://ingest.us1.signalfx.com`` で、``eu0`` レルムでデータを送信するためのエンドポイントは ``https://ingest."
+"eu0.signalfx.com``、というようになります。"
 
 #: ../../_includes/realm-note.rst:5
 msgid ""
@@ -265,7 +264,35 @@ msgstr "組織の管理者のメールアドレス"
 msgid "Give your login service integration a name that your users recognize. On your custom login page, this name appears in the button your users select to sign in. For example, use the name \"Log in with Okta\" for an Okta login service integration."
 msgstr "ログインサービスのインテグレーションに、ユーザーが認識できる名前を付けます。カスタムログインページでは、この名前はユーザーがサインインするために選択するボタンに表示されます。例えば、Oktaログインサービスのインテグレーションに「Oktaでログイン」という名前を使用します。"
 
-#: ../../admin/authentication/SSO/sso.rst:86
+#: ../../admin/authentication/SSO/sso.rst:87
+msgid ""
+"When you set up SSO, the default role for a user signing in to Splunk Observability Cloud through SSO is the :guilabel:`power` role. You can change the default SSO role to any of the available roles in Splunk Observability Cloud. These are :guilabel:`admin`, :guilabel:`power`, :guilabel:`usage`, and :guilabel:`read_only`. To learn "
+"more about roles, see :ref:`roles-and-capabilities`."
+msgstr ""
+"SSOを設定すると、SSOを通じてSplunk Observability Cloudにサインインするユーザーのデフォルトのロールは :guilabel:`power` ロールです。デフォルトのSSOロールは、Splunk Observability Cloudで利用可能なロールに変更できます。これらは :guilabel:`admin`、 :guilabel:`power` 、:guilabel:`usage`、:guilabel:`read_only` です。ロールの詳細について"
+"は、:ref:`roles-and-capabilities` を参照してください。"
+
+#: ../../admin/authentication/SSO/sso.rst:89
+msgid "Changing the default SSO role affects only new SSO users. If a user already has an existing role defined by the previous default SSO role, you must change it manually. To change a user's role, see :ref:`assign-role-existing`."
+msgstr "デフォルトのSSOロールを変更すると、新しいSSOユーザーのみに影響します。ユーザーが以前のデフォルトSSOロールによって定義された既存のロールをすでに持っている場合は、手動で変更する必要があります。ユーザーのロールを変更するには、:ref:`assign-role-existing` を参照してください。"
+
+#: ../../admin/authentication/SSO/sso.rst:91
+msgid "To change the default SSO role, do the following:"
+msgstr "デフォルトのSSOロールを変更するには、以下を実行します："
+
+#: ../../admin/authentication/SSO/sso.rst:93
+msgid "Go to :guilabel:`Settings` then select :guilabel:`General Settings`."
+msgstr ":guilabel:`Settings` にアクセスし、:guilabel:`General Settings` を選択します。"
+
+#: ../../admin/authentication/SSO/sso.rst:95
+msgid ""
+"In the :guilabel:`User Management` section, set a default role for SSO login by selecting a role from the drop-down list. The drop-down list defaults to the :guilabel:`power` role. The role you select becomes the role of any new user logging in through an SSO service. You can return to :guilabel:`General Settings` and update the "
+"default role for SSO login at any time."
+msgstr ""
+":guilabel:`User Management` セクションで、ドロップダウンリストからロールを選択して、SSOログイン用のデフォルトのロールを設定します。ドロップダウンリストのデフォルト値は :guilabel:`power` ロールです。選択したロールは、SSOサービスを通じてログインする新規ユーザーのロールになります。いつでも :guilabel:`General Settings` に戻って、SSOログ"
+"イン用のデフォルトロールを更新できます。"
+
+#: ../../admin/authentication/SSO/sso.rst:106
 msgid ""
 "When you integrate a login service with Splunk Observability Cloud, you need to provide information about the integration to the login service. Infrastructure Monitoring gives you an entity identifier (entity ID) that you provide when you configure the login service itself. The service uses the entity ID and other information to "
 "connect with Splunk Observability Cloud."
@@ -273,32 +300,32 @@ msgstr ""
 "ログインサービスをSplunk Observability Cloudと統合する場合、インテグレーションに関する情報をそのログインサービスに提供する必要があります。Infrastructure Monitoringは、そのログインサービス自体を構成する際に指定するエンティティの識別子（エンティティID）を提供します。当該のログインサービスは、このエンティティIDとその他の情報を使用して"
 "Splunk Observability Cloudと接続します。"
 
-#: ../../admin/authentication/SSO/sso.rst:92
+#: ../../admin/authentication/SSO/sso.rst:112
 msgid "For multiple organizations, the login service needs an entity ID and other information for each organization. Splunk Observability Cloud can provide you with an integration-specific entity ID for the integration in each organization."
 msgstr "組織が複数ある場合、当該のログインサービスは、組織ごとにエンティティIDとその他の情報を必要とします。Splunk Observability Cloudは、各組織でのインテグレーションに対して、インテグレーション固有のエンティティIDを提供できます。"
 
-#: ../../admin/authentication/SSO/sso.rst:96
+#: ../../admin/authentication/SSO/sso.rst:116
 msgid "When you configure the login service, you provide the entity ID along with other information for each organization you want to connect using the login service. The steps for integrating with each supported login service include the optional steps for using integration-specific entity IDs."
 msgstr "ログインサービスを構成する際に、ログインサービスを使用して接続する各組織のエンティティIDとその他情報を提供してください。サポート対象の各ログインサービスとの統合手順には、インテグレーション固有のエンティティIDを使用するためのオプションの手順が含まれています。"
 
-#: ../../admin/authentication/SSO/sso-Google.rst:11 ../../admin/authentication/SSO/sso.rst:101
+#: ../../admin/authentication/SSO/sso-Google.rst:11 ../../admin/authentication/SSO/sso.rst:121
 msgid "The Google SSO integration doesn't support integration-specific entity IDs."
 msgstr "Google SSOのインテグレーションは、インテグレーション固有のエンティティIDをサポートしていません。"
 
-#: ../../admin/authentication/SSO/sso.rst:103
+#: ../../admin/authentication/SSO/sso.rst:123
 msgid "You only need an integration-specific entity ID if you want to use the same IdP for multiple organizations."
 msgstr "インテグレーション固有のエンティティIDが必要になるのは、複数の組織で同じIdPを使用する場合のみです。"
 
-#: ../../admin/authentication/SSO/sso.rst:105
+#: ../../admin/authentication/SSO/sso.rst:125
 msgid "General integration-specific entity ID steps"
 msgstr "インテグレーション固有のエンティティIDの一般的な手順"
 
-#: ../../admin/authentication/SSO/sso.rst:114
+#: ../../admin/authentication/SSO/sso.rst:134
 msgid "To get an integration-specific entity ID for an integration, do the following when you create the integration:"
 msgstr "インテグレーションに際してインテグレーション固有のエンティティIDを取得するには、インテグレーションの作成時に以下の手順を実行します："
 
 #: ../../admin/authentication/SSO/sso-ADSF.rst:50 ../../admin/authentication/SSO/sso-GeneralSAML.rst:103 ../../admin/authentication/SSO/sso-Google.rst:25 ../../admin/authentication/SSO/sso-Google.rst:45 ../../admin/authentication/SSO/sso-Okta.rst:25 ../../admin/authentication/SSO/sso-OneLogin.rst:32
-#: ../../admin/authentication/SSO/sso.rst:116 ../../admin/notif-services/amazoneventbridge.rst:37 ../../admin/notif-services/bigpanda.rst:51 ../../admin/notif-services/jira.rst:46 ../../admin/notif-services/microsoftteams.rst:65 ../../admin/notif-services/opsgenie.rst:56 ../../admin/notif-services/pagerduty.rst:44
+#: ../../admin/authentication/SSO/sso.rst:136 ../../admin/notif-services/amazoneventbridge.rst:37 ../../admin/notif-services/bigpanda.rst:51 ../../admin/notif-services/jira.rst:46 ../../admin/notif-services/microsoftteams.rst:65 ../../admin/notif-services/opsgenie.rst:56 ../../admin/notif-services/pagerduty.rst:44
 #: ../../admin/notif-services/servicenow.rst:95 ../../admin/notif-services/slack.rst:31 ../../admin/notif-services/splunkoncall.rst:66 ../../admin/notif-services/splunkplatform.rst:28 ../../admin/notif-services/webhook.rst:57 ../../admin/notif-services/xmatters.rst:42 ../../admin/user-management/teams/configure-page.rst:30
 #: ../../admin/user-management/teams/configure-page.rst:40 ../../admin/user-management/teams/enhanced-team-security.rst:36 ../../admin/user-management/teams/manage-membership.rst:22 ../../admin/user-management/teams/manage-membership.rst:48 ../../admin/user-management/teams/manage-membership.rst:70
 #: ../../admin/user-management/teams/manage-membership.rst:94 ../../admin/user-management/teams/manage-membership.rst:117 ../../admin/user-management/teams/manage-membership.rst:137 ../../admin/user-management/teams/team-notifications.rst:21
@@ -306,28 +333,28 @@ msgid "Log in to Splunk Observability Cloud."
 msgstr "Splunk Observability Cloudにログインします。"
 
 #: ../../admin/authentication/SSO/sso-ADSF.rst:53 ../../admin/authentication/SSO/sso-GeneralSAML.rst:106 ../../admin/authentication/SSO/sso-Google.rst:26 ../../admin/authentication/SSO/sso-Google.rst:46 ../../admin/authentication/SSO/sso-Okta.rst:28 ../../admin/authentication/SSO/sso-OneLogin.rst:35
-#: ../../admin/authentication/SSO/sso.rst:117 ../../admin/notif-services/amazoneventbridge.rst:40 ../../admin/notif-services/bigpanda.rst:54 ../../admin/notif-services/jira.rst:49 ../../admin/notif-services/microsoftteams.rst:68 ../../admin/notif-services/opsgenie.rst:59 ../../admin/notif-services/pagerduty.rst:47
+#: ../../admin/authentication/SSO/sso.rst:137 ../../admin/notif-services/amazoneventbridge.rst:40 ../../admin/notif-services/bigpanda.rst:54 ../../admin/notif-services/jira.rst:49 ../../admin/notif-services/microsoftteams.rst:68 ../../admin/notif-services/opsgenie.rst:59 ../../admin/notif-services/pagerduty.rst:47
 #: ../../admin/notif-services/servicenow.rst:98 ../../admin/notif-services/slack.rst:34 ../../admin/notif-services/splunkoncall.rst:69 ../../admin/notif-services/xmatters.rst:45
 msgid "In the left navigation menu, select :menuselection:`Data Management`."
 msgstr "左のナビゲーションメニューで、:menuselection:`Data Management` を選択します。"
 
-#: ../../admin/authentication/SSO/sso-ADSF.rst:55 ../../admin/authentication/SSO/sso-Google.rst:27 ../../admin/authentication/SSO/sso-Google.rst:47 ../../admin/authentication/SSO/sso-Okta.rst:30 ../../admin/authentication/SSO/sso-OneLogin.rst:37 ../../admin/authentication/SSO/sso.rst:118
+#: ../../admin/authentication/SSO/sso-ADSF.rst:55 ../../admin/authentication/SSO/sso-Google.rst:27 ../../admin/authentication/SSO/sso-Google.rst:47 ../../admin/authentication/SSO/sso-Okta.rst:30 ../../admin/authentication/SSO/sso-OneLogin.rst:37 ../../admin/authentication/SSO/sso.rst:138
 #: ../../admin/notif-services/amazoneventbridge.rst:42 ../../admin/notif-services/bigpanda.rst:56 ../../admin/notif-services/jira.rst:51 ../../admin/notif-services/microsoftteams.rst:70 ../../admin/notif-services/opsgenie.rst:61 ../../admin/notif-services/pagerduty.rst:49 ../../admin/notif-services/servicenow.rst:100
 #: ../../admin/notif-services/slack.rst:36 ../../admin/notif-services/splunkoncall.rst:71 ../../admin/notif-services/splunkplatform.rst:32 ../../admin/notif-services/webhook.rst:61 ../../admin/notif-services/xmatters.rst:47
 msgid "Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab."
 msgstr ":guilabel:`Available integrations` タブに移動するか、:guilabel:`Add Integration` タブで :guilabel:`Deployed integrations` を選択します。"
 
 #: ../../admin/authentication/SSO/sso-ADSF.rst:57 ../../admin/authentication/SSO/sso-GeneralSAML.rst:110 ../../admin/authentication/SSO/sso-Google.rst:28 ../../admin/authentication/SSO/sso-Google.rst:48 ../../admin/authentication/SSO/sso-Okta.rst:32 ../../admin/authentication/SSO/sso-OneLogin.rst:39
-#: ../../admin/authentication/SSO/sso.rst:119 ../../admin/notif-services/amazoneventbridge.rst:44 ../../admin/notif-services/bigpanda.rst:58 ../../admin/notif-services/microsoftteams.rst:72 ../../admin/notif-services/opsgenie.rst:63 ../../admin/notif-services/pagerduty.rst:51 ../../admin/notif-services/servicenow.rst:102
+#: ../../admin/authentication/SSO/sso.rst:139 ../../admin/notif-services/amazoneventbridge.rst:44 ../../admin/notif-services/bigpanda.rst:58 ../../admin/notif-services/microsoftteams.rst:72 ../../admin/notif-services/opsgenie.rst:63 ../../admin/notif-services/pagerduty.rst:51 ../../admin/notif-services/servicenow.rst:102
 #: ../../admin/notif-services/slack.rst:38 ../../admin/notif-services/splunkoncall.rst:73 ../../admin/notif-services/splunkplatform.rst:33 ../../admin/notif-services/webhook.rst:62 ../../admin/notif-services/xmatters.rst:49
 msgid "In the integration filter menu, select :guilabel:`All`."
 msgstr "インテグレーションのフィルターメニューで、:guilabel:`All` を選択します。"
 
-#: ../../admin/authentication/SSO/sso.rst:120
+#: ../../admin/authentication/SSO/sso.rst:140
 msgid "In the :guilabel:`Search` field, search for the login service, and select it."
 msgstr ":guilabel:`Search` フィールドで、ログインサービスを検索し、選択します。"
 
-#: ../../admin/authentication/SSO/sso.rst:121
+#: ../../admin/authentication/SSO/sso.rst:141
 msgid "Select the :guilabel:`Integration-specific Entity ID` option. Next to this option, the entity ID displays in the form of a URI. Copy this URI and provide it when you configure the login service to communicate with Splunk Observability Cloud."
 msgstr ":guilabel:`Integration-specific Entity ID` オプションを選択します。このオプションの横に、エンティティIDがURIの形で表示されます。このURIをコピーして、Splunk Observability Cloudと通信するログインサービスを構成する際に、これを指定します。"
 
@@ -1858,7 +1885,7 @@ msgid ""
 "See whether :guilabel:`Entity ID`, also called :guilabel:`Metadata URL` or :guilabel:`SAML audience`, is the same in the IdP and Splunk Observability Cloud.  The :guilabel:`Entity ID` can contain the integration ID or not. Whether it is included is controlled by a checkbox in the Splunk Observability Cloud integration setup page. "
 "Make sure that the same Entity ID is configured in the IdP."
 msgstr ""
-":guilabel:`Entity ID`  （ :guilabel:`Metadata URL` または :guilabel:`SAML audience` ）が、IdPとSplunk Observability Cloudで同じかどうかを確認します。     :guilabel:`Entity ID`  にはインテグレーションIDが含まれている場合とそうでない場合があります。含まれるかどうかは、Splunk Observability Cloudのインテグレーション設定ページのチェック"
+":guilabel:`Entity ID`  （ :guilabel:`Metadata URL` または :guilabel:`SAML audience` ）が、IdPとSplunk Observability Cloudで同じかどうかを確認します。      :guilabel:`Entity ID`  にはインテグレーションIDが含まれている場合とそうでない場合があります。含まれるかどうかは、Splunk Observability Cloudのインテグレーション設定ページのチェック"
 "ボックスで制御します。IdPで同じエンティティIDが設定されていることを確認してください。"
 
 #: ../../admin/authentication/SSO/sso-troubleshoot.rst:17
@@ -3897,8 +3924,8 @@ msgid ""
 "For information about how to accept Splunk Observability Cloud as a partner event source in Amazon EventBridge, see :new-page:`Receive events from a SaaS partner with Amazon EventBridge <https://docs.aws.amazon.com/eventbridge/latest/userguide/create-partner-event-bus.html>`. In the \"Supported SaaS partner integrations\" section, "
 "select :strong:`SignalFx`."
 msgstr ""
-"Amazon EventBridgeでパートナーイベントソースとしてSplunk Observability Cloudを許可する方法については、:new-page:`Amazon EventBridgeでのSaaSパートナーからのイベントの受信<https://docs.aws.amazon.com/eventbridge/latest/userguide/create-partner-event-bus.html>` を参照してください。「サポートされるSaaSパートナー統合」のセクション"
-"で、:strong:`SignalFx` を選択します。"
+"Amazon EventBridgeでパートナーイベントソースとしてSplunk Observability Cloudを許可する方法については、:new-page:`Amazon EventBridgeでのSaaSパートナーからのイベントの受信<https://docs.aws.amazon.com/eventbridge/latest/userguide/create-partner-event-bus.html>` を参照してください。「サポートされるSaaSパートナー統合」のセクションで、:"
+"strong:`SignalFx` を選択します。"
 
 #: ../../admin/notif-services/amazoneventbridge.rst:73
 msgid "Step 3: Add an Amazon EventBridge integration as a detector alert recipient in Splunk Observability Cloud"
@@ -4128,7 +4155,7 @@ msgid ""
 "If there are any name collisions between Splunk Observability Cloud dimensions and BigPanda ``status`` or ``check`` properties, Splunk Observability Cloud creates a new custom property in BigPanda. For example, if there is a Splunk Observability Cloud dimension named ``status``, Splunk Observability Cloud creates a custom property "
 "named ``sfx_status`` and stores the value of the ``status`` dimension there."
 msgstr ""
-"Splunk Observability CloudのディメンションとBigPandaの  ``status``   または ``check`` のプロパティの間に名前衝突がある場合、Splunk Observability Cloudは、BigPandaに新しいカスタムプロパティを作成します。例えば、  ``status``   という名前のSplunk Observability Cloudのディメンションがある場合、Splunk Observability Cloudは、"
+"Splunk Observability CloudのディメンションとBigPandaの  ``status``   または ``check`` のプロパティの間に名前衝突がある場合、Splunk Observability Cloudは、BigPandaに新しいカスタムプロパティを作成します。例えば、  ``status``   という名前のSplunk Observability Cloudのディメンションがある場合、Splunk Observability Cloudは、 "
 "``sfx_status`` という名前のカスタムプロパティを作成し、そこに  ``status``   ディメンションの値を格納します。"
 
 #: ../../admin/notif-services/jira.rst:-1
@@ -4811,7 +4838,7 @@ msgstr ":strong:`新規` を選択します。"
 
 #: ../../admin/notif-services/servicenow.rst:71
 msgid "Enter :strong:`User ID`, :strong:`First name`, and :strong:`Last name` values that clearly communicate that the user is associated with Splunk Observability Cloud notifications. Make note of the :strong:`User ID` value for use in subsequent steps."
-msgstr ":strong:`ユーザーID` 、:strong:`名`、および :strong:`姓` の値に、このユーザーがSplunk Observability Cloudの通知に関連付けられることを明確に伝える値を入力します。     :strong:`ユーザーID` の値は、以降の手順で使用するためメモしておきます。"
+msgstr ":strong:`ユーザーID` 、:strong:`名`、および :strong:`姓` の値に、このユーザーがSplunk Observability Cloudの通知に関連付けられることを明確に伝える値を入力します。      :strong:`ユーザーID` の値は、以降の手順で使用するためメモしておきます。"
 
 #: ../../admin/notif-services/servicenow.rst:73
 msgid "Enter a :strong:`Password` value. Make note of this value for use in :ref:`servicenow3`."
@@ -4912,8 +4939,8 @@ msgid ""
 "For :strong:`Incident` and :strong:`Problem` issues, the ServiceNow integration sets the :strong:`Impact` and :strong:`Urgency` fields on the ServiceNow issue based on the Splunk Observability Cloud alert severity (see :ref:`severity`). When you clear alerts for :strong:`Problem` and :strong:`Incident` issues, Splunk Observability "
 "Cloud marks them as :strong:`Resolved`."
 msgstr ""
-":strong:`インシデント`  および :strong:`問題`  の課題の場合、ServiceNowインテグレーションは、Splunk Observability Cloudのアラート重大度に基づいて、ServiceNow課題の :strong:`影響度` および :strong:`緊急度` フィールドを設定します（ :ref:`severity` を参照してください）。 :strong:`問題`  および    :strong:`インシデント`  の課題に対するア"
-"ラートを解除すると、Splunk Observability Cloudは、それらを :strong:`解決済み` としてマークします。"
+":strong:`インシデント`  および :strong:`問題`  の課題の場合、ServiceNowインテグレーションは、Splunk Observability Cloudのアラート重大度に基づいて、ServiceNow課題の :strong:`影響度` および :strong:`緊急度` フィールドを設定します（ :ref:`severity` を参照してください）。 :strong:`問題`  および     :strong:`インシデント`  の課題に対する"
+"アラートを解除すると、Splunk Observability Cloudは、それらを :strong:`解決済み` としてマークします。"
 
 #: ../../admin/notif-services/servicenow.rst:143
 msgid "The following table shows the Splunk Observability Cloud severity for :strong:`Incident` and :strong:`Problem` issues:"
@@ -4931,7 +4958,7 @@ msgstr ":strong:`ServiceNowの「影響」フィールドと「緊急度」フ�
 msgid "Critical"
 msgstr "クリティカル"
 
-#: ../../admin/notif-services/servicenow.rst:152 ../../admin/notif-services/servicenow.rst:175 ../../admin/references/system-limits/sys-limits-infra.rst:295
+#: ../../admin/notif-services/servicenow.rst:152 ../../admin/notif-services/servicenow.rst:175 ../../admin/references/system-limits/sys-limits-infra.rst:298
 msgid "1"
 msgstr "1"
 
@@ -4953,7 +4980,7 @@ msgstr "3"
 
 #: ../../admin/notif-services/servicenow.rst:161
 msgid "For :strong:`Event` issues, the ServiceNow integration sets the :strong:`Severity` of the issue based on the Splunk Observability Cloud alert severity (see :ref:`severity`). The :strong:`Event` integration also creates an event whenever an alert is sent or cleared."
-msgstr ":strong:`イベント`  の課題の場合、ServiceNowインテグレーションは、Splunk Observability Cloudのアラート重大度に基づいて、課題の :strong:`重大度` を設定します（ :ref:`severity` を参照してください）。また    :strong:`イベント`  のインテグレーションは、アラートが送信または解除されると常にイベントを作成します。"
+msgstr ":strong:`イベント`  の課題の場合、ServiceNowインテグレーションは、Splunk Observability Cloudのアラート重大度に基づいて、課題の :strong:`重大度` を設定します（ :ref:`severity` を参照してください）。また     :strong:`イベント`  のインテグレーションは、アラートが送信または解除されると常にイベントを作成します。"
 
 #: ../../admin/notif-services/servicenow.rst:163
 msgid "The following table shows the Splunk Observability Cloud severity for :strong:`Event` issues:"
@@ -6323,8 +6350,8 @@ msgid ""
 "``sf.org.limit.customMetricMaxLimit`` (gauge): Maximum number of active custom MTS, within a moving window of the previous 60 minutes, that can send data to your organization. **If you exceed this limit, Infrastructure Monitoring drops data points** for the custom MTS that exceeded the limit, but it continues to accept data points "
 "for custom MTS that already existed. See the custom metrics you've defined with ``sf.org.numCustomMetrics``."
 msgstr ""
-"``sf.org.limit.customMetricMaxLimit`` （ゲージ）：過去60分間の移動窓内で、組織にデータを送信できるアクティブなカスタムMTSの最大数。**この制限を超えると、Infrastructure Monitoringは、制限を超えたカスタムMTSのデータポイント** を除外しますが、すでに存在していたカスタムMTSのデータポイントの受け入れは継続します。"
-"``sf.org.numCustomMetrics`` で定義したカスタムメトリクスを参照してください。"
+"``sf.org.limit.customMetricMaxLimit`` （ゲージ）：過去60分間の移動窓内で、組織にデータを送信できるアクティブなカスタムMTSの最大数。**この制限を超えると、Infrastructure Monitoringは、制限を超えたカスタムMTSのデータポイント** を除外しますが、すでに存在していたカスタムMTSのデータポイントの受け入れは継続します。``sf.org."
+"numCustomMetrics`` で定義したカスタムメトリクスを参照してください。"
 
 #: ../../admin/org-metrics.rst:142
 msgid "To learn more about custom MTS, see :ref:`About custom and bundled metrics <about-custom>`"
@@ -6355,8 +6382,8 @@ msgid ""
 "``sf.org.limit.metricTimeSeriesCreatedPerMinute`` (gauge): Maximum rate at which you can create new MTS in your organization, measured in MTS per minute. If you exceed this rate, Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS. To monitor the number of metrics "
 "you've created overall, use the metric ``sf.org.numMetricTimeSeriesCreated``."
 msgstr ""
-"``sf.org.limit.metricTimeSeriesCreatedPerMinute`` （ゲージ）：組織での新規MTS作成の最大レート。1分あたりのMTSで測定されます。このレートを超えると、Infrastructure Monitoringは新しいMTSのデータポイントの受け入れを停止しますが、既存のMTSのデータポイントの受け入れは継続します。作成したメトリクスの総数を監視するには、"
-"``sf.org.numMetricTimeSeriesCreated`` のメトリクスを使用します。"
+"``sf.org.limit.metricTimeSeriesCreatedPerMinute`` （ゲージ）：組織での新規MTS作成の最大レート。1分あたりのMTSで測定されます。このレートを超えると、Infrastructure Monitoringは新しいMTSのデータポイントの受け入れを停止しますが、既存のMTSのデータポイントの受け入れは継続します。作成したメトリクスの総数を監視するには、``sf.org."
+"numMetricTimeSeriesCreated`` のメトリクスを使用します。"
 
 #: ../../admin/org-metrics.rst:175
 msgid "Metrics that track data throttling"
@@ -6780,7 +6807,7 @@ msgstr ":strong:`さらに詳しく`"
 msgid "Infrastructure Monitoring"
 msgstr "Infrastructure Monitoring"
 
-#: ../../admin/references/per-product-limits.rst:39 ../../admin/references/per-product-limits.rst:43 ../../admin/references/per-product-limits.rst:47 ../../admin/references/per-product-limits.rst:51 ../../admin/references/system-limits/sys-limits-infra.rst:70 ../../admin/references/system-limits/sys-limits-infra.rst:179
+#: ../../admin/references/per-product-limits.rst:39 ../../admin/references/per-product-limits.rst:43 ../../admin/references/per-product-limits.rst:47 ../../admin/references/per-product-limits.rst:51 ../../admin/references/system-limits/sys-limits-infra.rst:70 ../../admin/references/system-limits/sys-limits-infra.rst:182
 msgid "6,000 or determined by your subscription"
 msgstr "6,000、またはサブスクリプションにより決定"
 
@@ -7000,14 +7027,14 @@ msgstr "サブスクリプションにはEnterpriseとStandardの2つのタイ�
 msgid "Span and trace limits"
 msgstr "スパンとトレースに関する制限"
 
-#: ../../admin/references/system-limits/sys-limits-apm.rst:31 ../../admin/references/system-limits/sys-limits-apm.rst:67 ../../admin/references/system-limits/sys-limits-apm.rst:85 ../../admin/references/system-limits/sys-limits-infra.rst:50 ../../admin/references/system-limits/sys-limits-infra.rst:85
-#: ../../admin/references/system-limits/sys-limits-infra.rst:170 ../../admin/references/system-limits/sys-limits-infra.rst:200 ../../admin/references/system-limits/sys-limits-infra.rst:228 ../../admin/references/system-limits/sys-limits-infra.rst:275 ../../admin/references/system-limits/sys-limits-infra.rst:291
+#: ../../admin/references/system-limits/sys-limits-apm.rst:31 ../../admin/references/system-limits/sys-limits-apm.rst:67 ../../admin/references/system-limits/sys-limits-apm.rst:85 ../../admin/references/system-limits/sys-limits-infra.rst:50 ../../admin/references/system-limits/sys-limits-infra.rst:88
+#: ../../admin/references/system-limits/sys-limits-infra.rst:173 ../../admin/references/system-limits/sys-limits-infra.rst:203 ../../admin/references/system-limits/sys-limits-infra.rst:231 ../../admin/references/system-limits/sys-limits-infra.rst:278 ../../admin/references/system-limits/sys-limits-infra.rst:294
 #: ../../admin/references/system-limits/sys-limits-rum.rst:20 ../../admin/references/system-limits/sys-limits-rum.rst:42
 msgid ":strong:`Limit name`"
 msgstr ":strong:`制限名`"
 
-#: ../../admin/references/system-limits/sys-limits-apm.rst:32 ../../admin/references/system-limits/sys-limits-apm.rst:68 ../../admin/references/system-limits/sys-limits-apm.rst:86 ../../admin/references/system-limits/sys-limits-infra.rst:51 ../../admin/references/system-limits/sys-limits-infra.rst:86
-#: ../../admin/references/system-limits/sys-limits-infra.rst:171 ../../admin/references/system-limits/sys-limits-infra.rst:201 ../../admin/references/system-limits/sys-limits-infra.rst:229 ../../admin/references/system-limits/sys-limits-infra.rst:276 ../../admin/references/system-limits/sys-limits-infra.rst:292
+#: ../../admin/references/system-limits/sys-limits-apm.rst:32 ../../admin/references/system-limits/sys-limits-apm.rst:68 ../../admin/references/system-limits/sys-limits-apm.rst:86 ../../admin/references/system-limits/sys-limits-infra.rst:51 ../../admin/references/system-limits/sys-limits-infra.rst:89
+#: ../../admin/references/system-limits/sys-limits-infra.rst:174 ../../admin/references/system-limits/sys-limits-infra.rst:204 ../../admin/references/system-limits/sys-limits-infra.rst:232 ../../admin/references/system-limits/sys-limits-infra.rst:279 ../../admin/references/system-limits/sys-limits-infra.rst:295
 #: ../../admin/references/system-limits/sys-limits-rum.rst:21 ../../admin/references/system-limits/sys-limits-rum.rst:43
 msgid ":strong:`Default limit value`"
 msgstr ":strong:`制限のデフォルト値`"
@@ -7141,7 +7168,7 @@ msgstr "ユーザーインターフェイスの制限"
 msgid "Number of nodes in the service map"
 msgstr "サービスマップのノード数"
 
-#: ../../admin/references/system-limits/sys-limits-apm.rst:88 ../../admin/references/system-limits/sys-limits-infra.rst:107
+#: ../../admin/references/system-limits/sys-limits-apm.rst:88 ../../admin/references/system-limits/sys-limits-infra.rst:110
 msgid "200"
 msgstr "200"
 
@@ -7325,374 +7352,378 @@ msgstr "制限を超えた際に見られる影響"
 msgid "Main system limits"
 msgstr "メインシステムの制限"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:53 ../../admin/references/system-limits/sys-limits-infra.rst:231
+#: ../../admin/references/system-limits/sys-limits-infra.rst:53 ../../admin/references/system-limits/sys-limits-infra.rst:234
 msgid ":ref:`amts-limit`"
 msgstr ":ref:`amts-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:54 ../../admin/references/system-limits/sys-limits-infra.rst:176 ../../admin/references/system-limits/sys-limits-infra.rst:232 ../../admin/references/system-limits/sys-limits-infra.rst:238 ../../admin/references/system-limits/sys-limits-infra.rst:262
+#: ../../admin/references/system-limits/sys-limits-infra.rst:54 ../../admin/references/system-limits/sys-limits-infra.rst:179 ../../admin/references/system-limits/sys-limits-infra.rst:235 ../../admin/references/system-limits/sys-limits-infra.rst:241 ../../admin/references/system-limits/sys-limits-infra.rst:265
 #: ../../admin/references/system-limits/sys-limits-rum.rst:45 ../../admin/references/system-limits/sys-limits-rum.rst:47
 msgid "Determined by your subscription"
 msgstr "サブスクリプションにより決定"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:56 ../../admin/references/system-limits/sys-limits-infra.rst:112
+#: ../../admin/references/system-limits/sys-limits-infra.rst:56 ../../admin/references/system-limits/sys-limits-infra.rst:115
 msgid ":ref:`maximum-number-of-detectors-per-org`"
 msgstr ":ref:`maximum-number-of-detectors-per-org`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:57 ../../admin/references/system-limits/sys-limits-infra.rst:113 ../../admin/references/system-limits/sys-limits-infra.rst:116 ../../admin/references/system-limits/sys-limits-infra.rst:310
+#: ../../admin/references/system-limits/sys-limits-infra.rst:57 ../../admin/references/system-limits/sys-limits-infra.rst:116 ../../admin/references/system-limits/sys-limits-infra.rst:119 ../../admin/references/system-limits/sys-limits-infra.rst:313
 msgid "1,000"
 msgstr "1,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:59 ../../admin/references/system-limits/sys-limits-infra.rst:118
+#: ../../admin/references/system-limits/sys-limits-infra.rst:59 ../../admin/references/system-limits/sys-limits-infra.rst:121
 msgid ":ref:`maximum-number-of-mts-allowed-per-chart-data-function`"
 msgstr ":ref:`maximum-number-of-mts-allowed-per-chart-data-function`"
 
-#: ../../admin/references/system-limits/sys-limits-infra-details.rst:65 ../../admin/references/system-limits/sys-limits-infra-details.rst:83 ../../admin/references/system-limits/sys-limits-infra.rst:61 ../../admin/references/system-limits/sys-limits-infra.rst:66 ../../admin/references/system-limits/sys-limits-infra.rst:121
-#: ../../admin/references/system-limits/sys-limits-infra.rst:130
+#: ../../admin/references/system-limits/sys-limits-infra-details.rst:65 ../../admin/references/system-limits/sys-limits-infra-details.rst:83 ../../admin/references/system-limits/sys-limits-infra.rst:61 ../../admin/references/system-limits/sys-limits-infra.rst:66 ../../admin/references/system-limits/sys-limits-infra.rst:124
+#: ../../admin/references/system-limits/sys-limits-infra.rst:133
 msgid "10,000 for standard subscriptions"
 msgstr "Standardサブスクリプションの場合、10,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra-details.rst:66 ../../admin/references/system-limits/sys-limits-infra-details.rst:84 ../../admin/references/system-limits/sys-limits-infra.rst:62 ../../admin/references/system-limits/sys-limits-infra.rst:67 ../../admin/references/system-limits/sys-limits-infra.rst:122
-#: ../../admin/references/system-limits/sys-limits-infra.rst:131
+#: ../../admin/references/system-limits/sys-limits-infra-details.rst:66 ../../admin/references/system-limits/sys-limits-infra-details.rst:84 ../../admin/references/system-limits/sys-limits-infra.rst:62 ../../admin/references/system-limits/sys-limits-infra.rst:67 ../../admin/references/system-limits/sys-limits-infra.rst:125
+#: ../../admin/references/system-limits/sys-limits-infra.rst:134
 msgid "30,000 for enterprise subscriptions"
 msgstr "Enterpriseサブスクリプションの場合、30,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:64 ../../admin/references/system-limits/sys-limits-infra.rst:127
+#: ../../admin/references/system-limits/sys-limits-infra.rst:64 ../../admin/references/system-limits/sys-limits-infra.rst:130
 msgid ":ref:`maximum-number-of-mts-per-detector-data-function`"
 msgstr ":ref:`maximum-number-of-mts-per-detector-data-function`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:69 ../../admin/references/system-limits/sys-limits-infra.rst:178
+#: ../../admin/references/system-limits/sys-limits-infra.rst:69 ../../admin/references/system-limits/sys-limits-infra.rst:181
 msgid ":ref:`mts-creations-per-minute-limit`"
 msgstr ":ref:`mts-creations-per-minute-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:72 ../../admin/references/system-limits/sys-limits-infra.rst:151
+#: ../../admin/references/system-limits/sys-limits-infra.rst:72 ../../admin/references/system-limits/sys-limits-infra.rst:154
 msgid ":ref:`number-of-input-mts-per-job`"
 msgstr ":ref:`number-of-input-mts-per-job`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:73 ../../admin/references/system-limits/sys-limits-infra.rst:152
+#: ../../admin/references/system-limits/sys-limits-infra.rst:73 ../../admin/references/system-limits/sys-limits-infra.rst:155
 msgid "250,000"
 msgstr "250,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:78
+#: ../../admin/references/system-limits/sys-limits-infra.rst:75
+msgid "In most cases, you should use the default system limits. To adjust the limit values for your org, contact Splunk Observability Cloud Support. See :ref:`support`."
+msgstr "ほとんどの場合、デフォルトのシステム制限値を使用する必要があります。組織の制限値を調整するには、Splunk Observability Cloudサポートに連絡してください。:ref:`support` を参照してください。"
+
+#: ../../admin/references/system-limits/sys-limits-infra.rst:81
 msgid "Charts, detectors, and SignalFlow limits"
 msgstr "チャート、ディテクター、SignalFlowの制限"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:88
+#: ../../admin/references/system-limits/sys-limits-infra.rst:91
 msgid ":ref:`maximum-alerts-rate`"
 msgstr ":ref:`maximum-alerts-rate`"
 
-#: ../../admin/references/system-limits/sys-limits-infra-details.rst:116 ../../admin/references/system-limits/sys-limits-infra.rst:91
+#: ../../admin/references/system-limits/sys-limits-infra-details.rst:116 ../../admin/references/system-limits/sys-limits-infra.rst:94
 msgid "10,000 alerts/minute for a detector with resolution smaller or equal to 1 minute"
 msgstr "解像度が1分以下のディテクターの場合、10,000アラート/分"
 
-#: ../../admin/references/system-limits/sys-limits-infra-details.rst:117 ../../admin/references/system-limits/sys-limits-infra.rst:92
+#: ../../admin/references/system-limits/sys-limits-infra-details.rst:117 ../../admin/references/system-limits/sys-limits-infra.rst:95
 msgid "20,000 or (job resolution/1m)*10,000)) for a detector with resolution larger than 1 minute, whichever is smaller"
 msgstr "解像度が1分を超えるディテクターの場合、20,000または(ジョブ解像度/1分)*10,000のいずれか小さい方。"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:94
+#: ../../admin/references/system-limits/sys-limits-infra.rst:97
 msgid ":ref:`maximum-max-delay-setting-for-signalflow-programs`"
 msgstr ":ref:`maximum-max-delay-setting-for-signalflow-programs`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:95 ../../admin/references/system-limits/sys-limits-infra.rst:98
+#: ../../admin/references/system-limits/sys-limits-infra.rst:98 ../../admin/references/system-limits/sys-limits-infra.rst:101
 msgid "15 min"
 msgstr "15分"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:97
+#: ../../admin/references/system-limits/sys-limits-infra.rst:100
 msgid ":ref:`maximum-min-delay-setting-for-signalflow-programs`"
 msgstr ":ref:`maximum-min-delay-setting-for-signalflow-programs`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:100
+#: ../../admin/references/system-limits/sys-limits-infra.rst:103
 msgid ":ref:`maximum-number-of-active-alerts-per-detector`"
 msgstr ":ref:`maximum-number-of-active-alerts-per-detector`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:101
+#: ../../admin/references/system-limits/sys-limits-infra.rst:104
 msgid "200,000"
 msgstr "200,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:103
+#: ../../admin/references/system-limits/sys-limits-infra.rst:106
 msgid ":ref:`maximum-number-of-allocated-datapoints-per-signalflow-program`"
 msgstr ":ref:`maximum-number-of-allocated-datapoints-per-signalflow-program`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:104
+#: ../../admin/references/system-limits/sys-limits-infra.rst:107
 msgid "60,000,000"
 msgstr "60,000,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:106
+#: ../../admin/references/system-limits/sys-limits-infra.rst:109
 msgid ":ref:`maximum-number-of-data-graphite-functions-per-signalflow-program`"
 msgstr ":ref:`maximum-number-of-data-graphite-functions-per-signalflow-program`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:109
+#: ../../admin/references/system-limits/sys-limits-infra.rst:112
 msgid ":ref:`maximum-number-of-derived-mts-per-signalflow-program`"
 msgstr ":ref:`maximum-number-of-derived-mts-per-signalflow-program`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:110
+#: ../../admin/references/system-limits/sys-limits-infra.rst:113
 msgid "500,000"
 msgstr "500,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:115
+#: ../../admin/references/system-limits/sys-limits-infra.rst:118
 msgid ":ref:`maximum-number-of-functions-and-methods-per-signalflow-program`"
 msgstr ":ref:`maximum-number-of-functions-and-methods-per-signalflow-program`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:124
+#: ../../admin/references/system-limits/sys-limits-infra.rst:127
 msgid ":ref:`maximum-number-of-mts-analyzed-across-all-signalflow-programs`"
 msgstr ":ref:`maximum-number-of-mts-analyzed-across-all-signalflow-programs`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:125
+#: ../../admin/references/system-limits/sys-limits-infra.rst:128
 msgid "The larger of 10,000,000 AMTS or 20% of your total AMTS."
 msgstr "10,000,000AMTSまたは総AMTSの20％のいずれか大きい方。"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:133
+#: ../../admin/references/system-limits/sys-limits-infra.rst:136
 msgid ":ref:`maximum-number-of-prefix-wildcards-per-filter-function`"
 msgstr ":ref:`maximum-number-of-prefix-wildcards-per-filter-function`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:134
+#: ../../admin/references/system-limits/sys-limits-infra.rst:137
 msgid "150"
 msgstr "150"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:136
+#: ../../admin/references/system-limits/sys-limits-infra.rst:139
 msgid ":ref:`maximum-number-of-query-arguments-in-a-filter-function`"
 msgstr ":ref:`maximum-number-of-query-arguments-in-a-filter-function`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:137 ../../admin/references/system-limits/sys-limits-infra.rst:204
+#: ../../admin/references/system-limits/sys-limits-infra.rst:140 ../../admin/references/system-limits/sys-limits-infra.rst:207
 msgid "256"
 msgstr "256"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:139
+#: ../../admin/references/system-limits/sys-limits-infra.rst:142
 msgid ":ref:`maximum-number-of-wildcards-per-filter-function`"
 msgstr ":ref:`maximum-number-of-wildcards-per-filter-function`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:140
+#: ../../admin/references/system-limits/sys-limits-infra.rst:143
 msgid "35"
 msgstr "35"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:142
+#: ../../admin/references/system-limits/sys-limits-infra.rst:145
 msgid ":ref:`maximum-signalflow-program-stack-size`"
 msgstr ":ref:`maximum-signalflow-program-stack-size`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:143
+#: ../../admin/references/system-limits/sys-limits-infra.rst:146
 msgid "64"
 msgstr "64"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:145
+#: ../../admin/references/system-limits/sys-limits-infra.rst:148
 msgid ":ref:`maximum-signalflow-program-text-size`"
 msgstr ":ref:`maximum-signalflow-program-text-size`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:146
+#: ../../admin/references/system-limits/sys-limits-infra.rst:149
 msgid "50,000"
 msgstr "50,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:148
+#: ../../admin/references/system-limits/sys-limits-infra.rst:151
 msgid ":ref:`maximum-signalflow-programs-per-minute`"
 msgstr ":ref:`maximum-signalflow-programs-per-minute`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:149
+#: ../../admin/references/system-limits/sys-limits-infra.rst:152
 msgid "1,000 SignalFlow programs per minute"
 msgstr "1,000 SignalFlowプログラム/分"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:154
+#: ../../admin/references/system-limits/sys-limits-infra.rst:157
 msgid ":ref:`maximum-number-of-signalflow-jobs-per-org`"
 msgstr ":ref:`maximum-number-of-signalflow-jobs-per-org`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:155
+#: ../../admin/references/system-limits/sys-limits-infra.rst:158
 msgid "5,000 per minute"
 msgstr "5,000/分"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:157
+#: ../../admin/references/system-limits/sys-limits-infra.rst:160
 msgid ":ref:`maximum-number-of-signalflow-jobs-per-connection`"
 msgstr ":ref:`maximum-number-of-signalflow-jobs-per-connection`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:158
+#: ../../admin/references/system-limits/sys-limits-infra.rst:161
 msgid "300"
 msgstr "300"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:163 ../../admin/references/system-limits/sys-limits-rum.rst:33
+#: ../../admin/references/system-limits/sys-limits-infra.rst:166 ../../admin/references/system-limits/sys-limits-rum.rst:33
 msgid "Data ingestion limits"
 msgstr "データ取り込み制限"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:172
+#: ../../admin/references/system-limits/sys-limits-infra.rst:175
 msgid ":ref:`new-dimension-or-property-key-name-limit`"
 msgstr ":ref:`new-dimension-or-property-key-name-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:173
+#: ../../admin/references/system-limits/sys-limits-infra.rst:176
 msgid "40 per week"
 msgstr "40/週"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:175
+#: ../../admin/references/system-limits/sys-limits-infra.rst:178
 msgid ":ref:`events-per-minute`"
 msgstr ":ref:`events-per-minute`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:181
+#: ../../admin/references/system-limits/sys-limits-infra.rst:184
 msgid ":ref:`mts-creations-per-hour-limit`"
 msgstr ":ref:`mts-creations-per-hour-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:182
+#: ../../admin/references/system-limits/sys-limits-infra.rst:185
 msgid "60 times your MTS per minute limit"
 msgstr "1分あたりのMTS制限の60倍"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:184
+#: ../../admin/references/system-limits/sys-limits-infra.rst:187
 msgid ":ref:`mts-creations-burst-per-minute-limit`"
 msgstr ":ref:`mts-creations-burst-per-minute-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:185
+#: ../../admin/references/system-limits/sys-limits-infra.rst:188
 msgid "10 times your MTS per minute limit, with a maximum of 20 minutes worth of bursting capacity in an hour."
 msgstr "1分あたりのMTS制限の10倍、1時間の最大バースト容量は20分相当"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:187
+#: ../../admin/references/system-limits/sys-limits-infra.rst:190
 msgid ":ref:`maximum-number-of-api-calls-per-minute`"
 msgstr ":ref:`maximum-number-of-api-calls-per-minute`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:188
+#: ../../admin/references/system-limits/sys-limits-infra.rst:191
 msgid "100,000"
 msgstr "100,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:193
+#: ../../admin/references/system-limits/sys-limits-infra.rst:196
 msgid "MTS metadata limits"
 msgstr "MTSメタデータの制限"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:203
+#: ../../admin/references/system-limits/sys-limits-infra.rst:206
 msgid ":ref:`dimensionmetric-value-length`"
 msgstr ":ref:`dimensionmetric-value-length`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:206
+#: ../../admin/references/system-limits/sys-limits-infra.rst:209
 msgid ":ref:`number-of-properties-per-dimension`"
 msgstr ":ref:`number-of-properties-per-dimension`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:207
+#: ../../admin/references/system-limits/sys-limits-infra.rst:210
 msgid "75"
 msgstr "75"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:209
+#: ../../admin/references/system-limits/sys-limits-infra.rst:212
 msgid ":ref:`number-of-tags-per-dimension`"
 msgstr ":ref:`number-of-tags-per-dimension`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:210
+#: ../../admin/references/system-limits/sys-limits-infra.rst:213
 msgid "50"
 msgstr "50"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:212
+#: ../../admin/references/system-limits/sys-limits-infra.rst:215
 msgid ":ref:`number-of-dimensions-per-mts`"
 msgstr ":ref:`number-of-dimensions-per-mts`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:213
+#: ../../admin/references/system-limits/sys-limits-infra.rst:216
 msgid "36"
 msgstr "36"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:215
+#: ../../admin/references/system-limits/sys-limits-infra.rst:218
 msgid ":ref:`maximum-dimension-name-length`"
 msgstr ":ref:`maximum-dimension-name-length`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:216
+#: ../../admin/references/system-limits/sys-limits-infra.rst:219
 msgid "128"
 msgstr "128"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:221
+#: ../../admin/references/system-limits/sys-limits-infra.rst:224
 msgid "Subscription limits"
 msgstr "サブスクリプションの制限"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:234
+#: ../../admin/references/system-limits/sys-limits-infra.rst:237
 msgid ":ref:`burst-dpm-limit`"
 msgstr ":ref:`burst-dpm-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:235 ../../admin/references/system-limits/sys-limits-infra.rst:241 ../../admin/references/system-limits/sys-limits-infra.rst:250 ../../admin/references/system-limits/sys-limits-infra.rst:256
+#: ../../admin/references/system-limits/sys-limits-infra.rst:238 ../../admin/references/system-limits/sys-limits-infra.rst:244 ../../admin/references/system-limits/sys-limits-infra.rst:253 ../../admin/references/system-limits/sys-limits-infra.rst:259
 msgid "Multiples of entitlement"
 msgstr "エンタイトルメントの倍数"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:237
+#: ../../admin/references/system-limits/sys-limits-infra.rst:240
 msgid ":ref:`bundled-mts-limit`"
 msgstr ":ref:`bundled-mts-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:240
+#: ../../admin/references/system-limits/sys-limits-infra.rst:243
 msgid ":ref:`container-burstoverage-limit`"
 msgstr ":ref:`container-burstoverage-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:243
+#: ../../admin/references/system-limits/sys-limits-infra.rst:246
 msgid ":ref:`container-entitlement`"
 msgstr ":ref:`container-entitlement`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:244 ../../admin/references/system-limits/sys-limits-infra.rst:247 ../../admin/references/system-limits/sys-limits-infra.rst:253
+#: ../../admin/references/system-limits/sys-limits-infra.rst:247 ../../admin/references/system-limits/sys-limits-infra.rst:250 ../../admin/references/system-limits/sys-limits-infra.rst:256
 msgid "Set by your contract entitlement"
 msgstr "契約のエンタイトルメントにより設定"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:246
+#: ../../admin/references/system-limits/sys-limits-infra.rst:249
 msgid ":ref:`contract-dpm-limit`"
 msgstr ":ref:`contract-dpm-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:249
+#: ../../admin/references/system-limits/sys-limits-infra.rst:252
 msgid ":ref:`custom-mts-burstoverage-limit`"
 msgstr ":ref:`custom-mts-burstoverage-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:252
+#: ../../admin/references/system-limits/sys-limits-infra.rst:255
 msgid ":ref:`custom-mts-entitlement`"
 msgstr ":ref:`custom-mts-entitlement`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:255
+#: ../../admin/references/system-limits/sys-limits-infra.rst:258
 msgid ":ref:`host-burstoverage-limit`"
 msgstr ":ref:`host-burstoverage-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:258
+#: ../../admin/references/system-limits/sys-limits-infra.rst:261
 msgid ":ref:`host-entitlement`"
 msgstr ":ref:`host-entitlement`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:259
+#: ../../admin/references/system-limits/sys-limits-infra.rst:262
 msgid "Contract entitlement"
 msgstr "契約のエンタイトルメント"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:261
+#: ../../admin/references/system-limits/sys-limits-infra.rst:264
 msgid ":ref:`imts-limit`"
 msgstr ":ref:`imts-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:268
+#: ../../admin/references/system-limits/sys-limits-infra.rst:271
 msgid "Time Series Window API limits"
 msgstr "時系列ウィンドウAPI制限"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:277
+#: ../../admin/references/system-limits/sys-limits-infra.rst:280
 msgid ":ref:`timeserieswindow-api-datapoint-limit`"
 msgstr ":ref:`timeserieswindow-api-datapoint-limit`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:278
+#: ../../admin/references/system-limits/sys-limits-infra.rst:281
 msgid "1,000,000"
 msgstr "1,000,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:284
+#: ../../admin/references/system-limits/sys-limits-infra.rst:287
 msgid "Web app limits"
 msgstr "ウェブアプリの制限"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:294
+#: ../../admin/references/system-limits/sys-limits-infra.rst:297
 msgid ":ref:`email-address-invitations-per-minute`"
 msgstr ":ref:`email-address-invitations-per-minute`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:297
+#: ../../admin/references/system-limits/sys-limits-infra.rst:300
 msgid ":ref:`organization-invitations-per-day`"
 msgstr ":ref:`organization-invitations-per-day`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:298
+#: ../../admin/references/system-limits/sys-limits-infra.rst:301
 msgid "5,000"
 msgstr "5,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:300
+#: ../../admin/references/system-limits/sys-limits-infra.rst:303
 msgid ":ref:`maximum-number-of-dashboards-you-can-retrieve`"
 msgstr ":ref:`maximum-number-of-dashboards-you-can-retrieve`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:301
+#: ../../admin/references/system-limits/sys-limits-infra.rst:304
 msgid "20,000"
 msgstr "20,000"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:303
+#: ../../admin/references/system-limits/sys-limits-infra.rst:306
 msgid ":ref:`maximum-rendered-mts-for-area-or-stacked-column-visualizations`"
 msgstr ":ref:`maximum-rendered-mts-for-area-or-stacked-column-visualizations`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:304
+#: ../../admin/references/system-limits/sys-limits-infra.rst:307
 msgid "500"
 msgstr "500"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:306
+#: ../../admin/references/system-limits/sys-limits-infra.rst:309
 msgid ":ref:`maximum-rendered-MTS-for-column-chart-visualizations`"
 msgstr ":ref:`maximum-rendered-MTS-for-column-chart-visualizations`"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:307
+#: ../../admin/references/system-limits/sys-limits-infra.rst:310
 msgid "20"
 msgstr "20"
 
-#: ../../admin/references/system-limits/sys-limits-infra.rst:309
+#: ../../admin/references/system-limits/sys-limits-infra.rst:312
 msgid ":ref:`maximum-rendered-mts-for-line-histogram-or-heatmap-visualizations`"
 msgstr ":ref:`maximum-rendered-mts-for-line-histogram-or-heatmap-visualizations`"
 
@@ -7774,10 +7805,10 @@ msgstr ":strong:`デフォルトの制限値`：500,000"
 
 #: ../../admin/references/system-limits/sys-limits-infra-details.rst:55
 msgid ""
-":strong:`Notes`: Maximum number of derived MTS per SignalFlow program, where derived MTS are temporary MTS that a SignalFlow function or method has to maintain in memory. For example, if there are 20,000 MTS for the metric ``jvm.load``, and each MTS comes from a unique host, then ``\"data('jvm.load').sum(by=['host']).publish()"
-"\"``tracks 40,000 derived MTS. The ``data()`` SignalFlow function or method uses 20,000, and the ``sum()`` uses another 20,000. The number of input MTS is still 20,000."
+":strong:`Notes`: Maximum number of derived MTS per SignalFlow program, where derived MTS are temporary MTS that a SignalFlow function or method has to maintain in memory. For example, if there are 20,000 MTS for the metric ``jvm.load``, and each MTS comes from a unique host, then ``\"data('jvm.load').sum(by=['host']).publish()\"`` "
+"tracks 40,000 derived MTS. The ``data()`` SignalFlow function or method uses 20,000, and the ``sum()`` uses another 20,000. The number of input MTS is still 20,000."
 msgstr ""
-":strong:`注意`：派生MTSが一時的なMTSでSignalFlow関数またはメソッドによってメモリに保持される必要がある場合の、SignalFlowプログラムあたりの派生MTSの最大数です。例えば、メトリクス ``jvm.load`` のMTSが20,000個あり、各MTSが一意のホストに由来する場合、``\"data('jvm.load').sum(by=['host']).publish()\"`` は40,000個の派生MTSを追跡します。"
+":strong:`注意`：派生MTSが一時的なMTSでSignalFlow関数またはメソッドによってメモリに保持される必要がある場合の、SignalFlowプログラムあたりの派生MTSの最大数です。例えば、メトリクス ``jvm.load`` のMTSが20,000個あり、各MTSが一意のホストに由来する場合、``\"data('jvm.load').sum(by=['host']).publish()\"`` は40,000個の派生MTSを追跡します。 "
 "``data()`` SignalFlow関数またはメソッドは20,000個を使用し、``sum()`` はさらに20,000個を使用します。入力MTSの数は20,000のままです。"
 
 #: ../../admin/references/system-limits/sys-limits-infra-details.rst:56
@@ -8111,8 +8142,8 @@ msgstr ":strong:`注意`：SignalFlowフィルターのクエリ引数の上限�
 
 #: ../../admin/references/system-limits/sys-limits-infra-details.rst:249
 msgid ""
-":strong:`Customer impact`: Maximum number of derived MTS per SignalFlow program, where derived MTS are temporary MTS that a SignalFlow function or method has to maintain in memory. For example, if there are 20,000 MTS for the metric ``jvm.load``, and each MTS comes from a unique host , then "
-"``\"data('jvm.load').sum(by=['host']).publish()\"`` tracks 40,000 derived MTS. The ``data()`` function uses 20,000, and the ``sum()`` uses another 20,000. The number of input MTS is still 20,000."
+":strong:`Customer impact`: Maximum number of derived MTS per SignalFlow program, where derived MTS are temporary MTS that a SignalFlow function or method has to maintain in memory. For example, if there are 20,000 MTS for the metric ``jvm.load``, and each MTS comes from a unique host , then ``\"data('jvm.load').sum(by=['host'])."
+"publish()\"`` tracks 40,000 derived MTS. The ``data()`` function uses 20,000, and the ``sum()`` uses another 20,000. The number of input MTS is still 20,000."
 msgstr ""
 ":strong:`お客様への影響`：派生MTSが一時的なMTSでSignalFlow関数またはメソッドによってメモリに保持される必要がある場合の、SignalFlowプログラムあたりの派生MTSの最大数です。例えば、メトリクス ``jvm.load`` のMTSが20,000個あり、各MTSが一意のホストに由来する場合、``\"data('jvm.load').sum(by=['host']).publish()\"`` は40,000個の派生MTSを追跡"
 "します。``data()`` 関数は20,000個を使用し、``sum()`` はさらに20,000個を使用します。入力MTSの数は20,000のままです。"
@@ -8912,8 +8943,8 @@ msgid ""
 "The APM subscription usage page displays a panel for Monitoring MetricSets (MMS), but the metric that powers the chart is not available on the subscription usage page. Select :guilabel:`View Detailed Usage Reports` to view your current histogram MMS data. For more information about detailed usage reports, see :ref:`download-apm-"
 "usage-reports`."
 msgstr ""
-"APMのサブスクリプション使用状況ページには、Monitoring MetricSets（MMS）のパネルが表示されますが、サブスクリプションの使用状況ページでは、チャートの動力となるメトリクスは使用できません。:guilabel:`View Detailed Usage Reports` を選択すると、現在のヒストグラムMMSデータが表示されます。詳細な使用状況レポートに関する詳しい情報"
-"は、:ref:`download-apm-usage-reports` を参照してください。"
+"APMのサブスクリプション使用状況ページには、Monitoring MetricSets（MMS）のパネルが表示されますが、サブスクリプションの使用状況ページでは、チャートの動力となるメトリクスは使用できません。:guilabel:`View Detailed Usage Reports` を選択すると、現在のヒストグラムMMSデータが表示されます。詳細な使用状況レポートに関する詳しい情報は、:ref:"
+"`download-apm-usage-reports` を参照してください。"
 
 #: ../../admin/subscription-usage/apm-billing-usage-index.rst:94
 msgid "For questions about subscription usage, contact tech support or your sales representative."
@@ -9028,8 +9059,8 @@ msgid ""
 "For host subscription plans, you can download reports that show which hosts and containers are sending APM data over a specific minute. Use this report to identify which hosts and containers are contributing to your subscription usage. You can generate and download reports within the retention period for traces. See :ref:`apm-data-"
 "retention` for more information."
 msgstr ""
-"ホストサブスクリプションプランでは、特定の1分間においてどのホストとコンテナがAPMデータを送信しているかを示すレポートをダウンロードできます。このレポートを使用して、どのホストとコンテナがサブスクリプションの使用量に寄与しているかを特定します。レポートは、トレースの保存期間内に生成およびダウンロードが可能です。詳細について"
-"は、:ref:`apm-data-retention` を参照してください。"
+"ホストサブスクリプションプランでは、特定の1分間においてどのホストとコンテナがAPMデータを送信しているかを示すレポートをダウンロードできます。このレポートを使用して、どのホストとコンテナがサブスクリプションの使用量に寄与しているかを特定します。レポートは、トレースの保存期間内に生成およびダウンロードが可能です。詳細については、:ref:"
+"`apm-data-retention` を参照してください。"
 
 #: ../../admin/subscription-usage/apm-billing-usage-index.rst:158
 msgid "To download a subscription usage report, do the following steps:"
@@ -9911,8 +9942,8 @@ msgid "Go to :menuselection:`Settings > Subscription Usage > Infrastructure Moni
 msgstr ":menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` に移動すると、ホスト、コンテナ、カスタムメトリクスの現在の使用数を示すチャートが表示されます。チャートの下には、使用傾向を表す追加のチャートが表示される場合があり、これらは異なるデータや異なる期間を表示するようにカスタマイズできます。"
 
 #: ../../admin/subscription-usage/monitor-imm-billing-usage.rst:90
-msgid "In :guilabel:`View detailed usage reports`, select the :guilabel:`Usage` or :guilabel:`Usage Breakdown` tabs to download available reports as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report."
-msgstr ":guilabel:`View detailed usage reports` で、:guilabel:`Usage` または :guilabel:`Usage Breakdown` タブを選択すると、利用可能なレポートをタブ区切りのテキストファイルとしてダウンロードできます。ブラウザによっては、レポートを右クリックして保存する必要があります。"
+msgid "Under the :guilabel:`Current Usage` chart, select :guilabel:`Usage Reports` to view the :guilabel:`Usage` or :guilabel:`Usage Breakdown` tabs to download available reports as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report."
+msgstr ":guilabel:`Current Usage` チャートの下で、:guilabel:`Usage Reports` を選択し、:guilabel:`Usage` または :guilabel:`Usage Breakdown` タブを表示すると、利用可能なレポートをタブ区切りのテキストファイルとしてダウンロードできます。ブラウザによっては、レポートを右クリックして保存する必要があります。"
 
 #: ../../admin/subscription-usage/monitor-imm-billing-usage.rst:92
 msgid ""
@@ -10208,8 +10239,8 @@ msgstr "カスタムメトリクスレポート"
 
 #: ../../admin/subscription-usage/monitor-imm-billing-usage.rst:248
 msgid ""
-"Available on the :guilabel:`Usage Breakdown` tab, custom metric report shows the information on MTS associated with data points sent from hosts or containers, as well as information related to custom and bundled MTS, for a specified date. The content of most columns in this report represents the same kinds of values as "
-"the :ref:`dimension-report`, except that the information is broken down by metric name instead of by dimension name and value. Therefore, you can see how Infrastructure Monitoring is categorizing data associated with each metric."
+"Available on the :guilabel:`Usage Breakdown` tab, custom metric report shows the information on MTS associated with data points sent from hosts or containers, as well as information related to custom and bundled MTS, for a specified date. The content of most columns in this report represents the same kinds of values as the :ref:"
+"`dimension-report`, except that the information is broken down by metric name instead of by dimension name and value. Therefore, you can see how Infrastructure Monitoring is categorizing data associated with each metric."
 msgstr ""
 "カスタムメトリクスレポートは、:guilabel:`Usage Breakdown` タブで使用でき、指定した日付の、ホストまたはコンテナから送信されたデータポイントに関連付けられたMTSに関する情報、およびカスタムMTSとバンドルMTSに関連する情報を表示します。このレポートの大部分の列の内容は、:ref:`dimension-report` と同じ種類の値を表しますが、情報の内訳がディメン"
 "ション名と値ごとではなく、メトリクス名ごとになっている点が異なります。したがって、Infrastructure Monitoringが各メトリクスに関連するデータをどのように分類しているかを確認できます。"
@@ -11259,7 +11290,7 @@ msgstr "ユーザーに割り当てられたロールを表示する"
 msgid "To see the roles assigned to users in your organization, follow these steps:"
 msgstr "組織内のユーザーに割り当てられたロールを確認するには、以下の手順に従います："
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:25 ../../admin/user-management/roles/users-assign-roles.rst:35 ../../admin/user-management/roles/users-assign-roles.rst:47 ../../admin/user-management/roles/users-assign-roles.rst:61 ../../admin/user-management/roles/users-assign-roles.rst:75
+#: ../../admin/user-management/roles/users-assign-roles.rst:25 ../../admin/user-management/roles/users-assign-roles.rst:35 ../../admin/user-management/roles/users-assign-roles.rst:49 ../../admin/user-management/roles/users-assign-roles.rst:63 ../../admin/user-management/roles/users-assign-roles.rst:77
 msgid "From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`."
 msgstr "左のナビゲーションメニューから、:menuselection:`Settings`、:menuselection:`Users` の順に選択します。"
 
@@ -11291,87 +11322,87 @@ msgstr ":guilabel:`Roles` フィールドを選択して、利用可能なロー
 msgid "Select :guilabel:`Send Invitation` to confirm."
 msgstr ":guilabel:`Send Invitation` を選択して確定します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:43
+#: ../../admin/user-management/roles/users-assign-roles.rst:45
 msgid "Assign roles to an existing user"
 msgstr "既存のユーザーにロールを割り当てる"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:45
+#: ../../admin/user-management/roles/users-assign-roles.rst:47
 msgid "To assign roles to a user that's already a member of your organization, follow these steps:"
 msgstr "すでに組織のメンバーであるユーザーにロールを割り当てるには、以下の手順に従います："
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:48 ../../admin/user-management/roles/users-assign-roles.rst:62 ../../admin/user-management/users/manage-users.rst:71 ../../admin/user-management/users/manage-users.rst:80
+#: ../../admin/user-management/roles/users-assign-roles.rst:50 ../../admin/user-management/roles/users-assign-roles.rst:64 ../../admin/user-management/users/manage-users.rst:71 ../../admin/user-management/users/manage-users.rst:80
 msgid "Find the name of the user."
 msgstr "ユーザー名を検索します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:49
+#: ../../admin/user-management/roles/users-assign-roles.rst:51
 msgid "Select the :guilabel:`Actions` (|verticaldots|) menu icon next to the username, then select :menuselection:`Manage Roles`."
 msgstr "ユーザー名の隣にある :guilabel:`Actions` （|verticaldots|）メニューアイコンを選択し、次に :menuselection:`Manage Roles` を選択します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:50 ../../admin/user-management/users/manage-users.rst:73
-msgid "In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles, then select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel."
-msgstr ":guilabel:`Manage Roles` ダイアログボックスで、利用可能なロールを1つまたは複数選択し、右向き矢印を選択してロールを :guilabel:`Selected Roles` パネルに移動します。"
+#: ../../admin/user-management/roles/users-assign-roles.rst:52
+msgid "In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles. Make sure to deselect any roles, including the default SSO role, :guilabel:`power`, if you no longer want the user to have that role. Select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel."
+msgstr ":guilabel:`Manage Roles` ダイアログボックスで、利用可能なロールを1つ以上選択します。デフォルトのSSOロールである :guilabel:`power` を含め、ユーザーにそのロールを持たせたくない場合は、必ずロールの選択を解除してください。右向きの矢印を選択して、ロールを :guilabel:`Selected Roles` パネルに移動します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:51 ../../admin/user-management/roles/users-assign-roles.rst:65 ../../admin/user-management/users/manage-users.rst:74
+#: ../../admin/user-management/roles/users-assign-roles.rst:53 ../../admin/user-management/roles/users-assign-roles.rst:67 ../../admin/user-management/users/manage-users.rst:74
 msgid "Select :guilabel:`Assign Roles` to confirm."
 msgstr ":guilabel:`Assign Roles` を選択して確定します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:53
+#: ../../admin/user-management/roles/users-assign-roles.rst:55
 msgid "You can use the :guilabel:`Add All` link to add all available roles to a user."
 msgstr ":guilabel:`Add All` リンクを使用して、あるユーザーが利用可能なすべてのロールを追加することができます。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:57
+#: ../../admin/user-management/roles/users-assign-roles.rst:59
 msgid "Remove roles from an existing user"
 msgstr "既存のユーザーからロールを削除する"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:59
+#: ../../admin/user-management/roles/users-assign-roles.rst:61
 msgid "To remove roles from a user that's already a member of your organization, follow these steps:"
 msgstr "すでに組織のメンバーであるユーザーからロールを削除するには、以下の手順に従います："
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:63
+#: ../../admin/user-management/roles/users-assign-roles.rst:65
 msgid "Select the :guilabel:`Actions` (|verticaldots|) menu icon next the username, then select :menuselection:`Manage Roles`."
 msgstr "ユーザー名の隣にある :guilabel:`Actions` (|verticaldots|) メニューアイコンを選択し、次に :menuselection:`Manage Roles` を選択します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:64
+#: ../../admin/user-management/roles/users-assign-roles.rst:66
 msgid "In the :guilabel:`Manage Roles` dialog box, select one or more of the selected roles, then select the left-pointing arrow to move the roles back to the :guilabel:`Available Roles` panel."
 msgstr ":guilabel:`Manage Roles` ダイアログボックスで、現在選択されているロールを1つまたは複数選択し、左向き矢印を選択してロールを :guilabel:`Available Roles` パネルに戻します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:67
+#: ../../admin/user-management/roles/users-assign-roles.rst:69
 msgid "You can use the :guilabel:`Remove All` link to add all available roles to a user."
 msgstr ":guilabel:`Remove All` リンクを使用して、あるユーザーが利用可能なすべてのロールを追加することができます。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:71
+#: ../../admin/user-management/roles/users-assign-roles.rst:73
 msgid "Edit roles for multiple users"
 msgstr "複数のユーザーのロールを編集する"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:73
+#: ../../admin/user-management/roles/users-assign-roles.rst:75
 msgid "To edit roles for multiple users at the same time, follow these steps:"
 msgstr "複数のユーザーのロールを同時に編集するには、以下の手順に従います："
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:76
+#: ../../admin/user-management/roles/users-assign-roles.rst:78
 msgid "Find users using the search bar."
 msgstr "検索バーを使用してユーザーを検索します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:77
+#: ../../admin/user-management/roles/users-assign-roles.rst:79
 msgid "Select the users you want to edit."
 msgstr "編集するユーザーを選択します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:78
+#: ../../admin/user-management/roles/users-assign-roles.rst:80
 msgid "Select ``-`` or ``+`` in the :guilabel:`Roles` bar at the bottom of the table to remove or add roles."
 msgstr "テーブル下部の :guilabel:`Roles` バーで ``-`` または ``+`` を選択して、ロールを削除または追加します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:79
+#: ../../admin/user-management/roles/users-assign-roles.rst:81
 msgid "In the dialog box, select the roles you want to remove or add, depending on your previous choice."
 msgstr "ダイアログボックスで、前回の選択状況に応じて、削除または追加するロールを選択します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:80
+#: ../../admin/user-management/roles/users-assign-roles.rst:82
 msgid "Confirm your selection."
 msgstr "選択を確定します。"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:85
+#: ../../admin/user-management/roles/users-assign-roles.rst:87
 msgid "Edit user roles using the API"
 msgstr "APIを使用してユーザーロールを編集する"
 
-#: ../../admin/user-management/roles/users-assign-roles.rst:87
+#: ../../admin/user-management/roles/users-assign-roles.rst:89
 msgid "To view, add, or remove roles using the Splunk Observability Cloud REST API, see :new-page:`Organizations <https://dev.splunk.com/observability/reference/api/organizations/latest>` in the developer documentation."
 msgstr "Splunk Observability CloudのREST APIを使用してロールを表示、追加、削除するには、開発者向けドキュメントの :new-page:`「組織」<https://dev.splunk.com/observability/reference/api/organizations/latest>` を参照してください。"
 
@@ -12347,6 +12378,10 @@ msgstr "左のナビゲーションメニューから、:menuselection:`Settings
 #: ../../admin/user-management/users/manage-users.rst:72
 msgid "Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Manage Roles`."
 msgstr "ユーザー名の隣にある :guilabel:`Actions` （|more| ）メニューアイコンを選択し、次に :menuselection:`Manage Roles` を選択します。"
+
+#: ../../admin/user-management/users/manage-users.rst:73
+msgid "In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles, then select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel."
+msgstr ":guilabel:`Manage Roles` ダイアログボックスで、利用可能なロールを1つまたは複数選択し、右向き矢印を選択してロールを :guilabel:`Selected Roles` パネルに移動します。"
 
 #: ../../admin/user-management/users/manage-users.rst:76
 msgid "To revoke administrator privileges from a user, follow these steps:"
