@@ -26,16 +26,20 @@ Sample configuration
 To activate the Active Directory Domain Services receiver, add ``active_directory_ds`` to the ``receivers`` section of your configuration file:
 
 .. code-block:: yaml
-  receivers:
-    active_directory_ds:
-      collection_interval: 10s
+
+    receivers:
+      active_directory_ds:
+        collection_interval: 10s
+
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
-.. code:: yaml
-  service:
-    pipelines:
-      metrics:
-        receivers: [active_directory_ds]
+.. code-block:: yaml
+
+    service:
+      pipelines:
+        metrics:
+          receivers: [active_directory_ds]
+
 Configuration options
 -----------------------
 
