@@ -20,6 +20,8 @@ You can upload dSYMs from your main application code and from third-party framew
 Prerequisites
 =====================================================================
 
+* Build your applications with ``DEBUG_INFORMATION_FORMAT`` set to ``dwarf-with-dsym`` and ``DEBUG_INFORMATION_VERSION`` set to ``dwarf4``. Splunk RUM doesn't fully support the dwarf5 value for iOS symbolication. For more information on these settings, see :new-page:`Apple developer documentation on Debug Information Version <https://developer.apple.com/documentation/xcode/build-settings-reference#Debug-Information-Version>`.
+
 * Upgrade the following Splunk components:
 
   * :new-page:`SplunkOtelCrashReporting<https://github.com/signalfx/splunk-otel-ios-crashreporting>`:  v0.7.0 
