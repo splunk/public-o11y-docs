@@ -31,7 +31,12 @@ The AI Assistant has access only to data from Splunk APM and Splunk Infrastructu
 
 The AI Assistant understands and supports natural language. The AI Assistant responds in natural language with a summary of insights synthesized from multiple sources. Currently, the AI Assistant supports only English. 
 
-The AI Assistant is available in AWS US East Virginia (us-east-1), AWS US West Oregon (us-west-2), AWS EU Dublin (eu-west-1), and AWS AP Sydney (ap-southeast-2).
+The AI Assistant is available in the following Splunk Observability Cloud realms:
+
+* us0
+* us1
+* eu0
+* au0
 
 .. raw:: html
   
