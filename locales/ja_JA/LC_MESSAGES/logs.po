@@ -1,4 +1,3 @@
-# Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
@@ -6,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-13 09:38+0000\n"
-"PO-Revision-Date: 2025-04-10 10:46+0100\n"
+"POT-Creation-Date: 2025-04-18 13:59+0000\n"
+"PO-Revision-Date: 2025-05-14 21:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ../../logs/LOconnect-default-index.rst:5 ../../logs/LOconnect-default-index.rst:21
 msgid "Reset the default Log Observer Connect index"
@@ -79,11 +78,11 @@ msgstr "シナリオ：Aisha がLog Observer Connectでワークフローの障�
 
 #: ../../logs/LOconnect-scenario.rst:12
 msgid ""
-"Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They analyze logs in Splunk Cloud Platform. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure. They purchased Splunk Observability Cloud as their observability solution. Buttercup Games analyzes their Splunk Cloud "
-"Platform logs in Log Observer, a point-and-click Splunk Observability Cloud tool, which they set up through Log Observer Connect."
+"Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They analyze logs in Splunk Cloud Platform. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure. They purchased Splunk Observability Cloud as their observability solution. Buttercup Games analyzes "
+"their Splunk Cloud Platform logs in Log Observer, a point-and-click Splunk Observability Cloud tool, which they set up through Log Observer Connect."
 msgstr ""
-"Buttercup Games は架空の企業で、自社製品を販売するための e コマースサイトを運営しています。彼らは Splunk Cloud Platform でログを分析しています。彼らは最近、サイトをリファクタリングし、マイクロサービスアーキテクチャと Kubernetes をインフラに使用したクラウドネイティブなアプローチを採用しました。彼らは観測ソリューションとして Splunk Observability Cloud を購入しました。Buttercup Games は、"
-"Splunk Cloud Platform のログを、Log Observer Connect を通じて設定した、ポイント＆クリックの Splunk ObservabilityCloud ツールである Log Observer で分析しています。"
+"Buttercup Games は架空の企業で、自社製品を販売するための e コマースサイトを運営しています。彼らは Splunk Cloud Platform でログを分析しています。彼らは最近、サイトをリファクタリングし、マイクロサービスアーキテクチャと Kubernetes をインフラに使用したクラウドネイティブなアプローチを採用しました。彼らは観測ソリューションとして Splunk Observability Cloud を購入しました。"
+"Buttercup Games は、Splunk Cloud Platform のログを、Log Observer Connect を通じて設定した、ポイント＆クリックの Splunk ObservabilityCloud ツールである Log Observer で分析しています。"
 
 #: ../../logs/LOconnect-scenario.rst:14
 msgid "Buttercup Games site reliability engineers and service owners collaborate to monitor and maintain the site to ensure that people have a great experience when they visit. They use Splunk Observability Cloud to find and solve problems that cause outages or failures in purchases from their online store."
@@ -143,11 +142,11 @@ msgstr "このスクリーンショットは、Splunk APM のサービスマッ�
 
 #: ../../logs/LOconnect-scenario.rst:50
 msgid ""
-"Aisha decides to look at the log details. They select the Related Content tile, :strong:`Logs for paymentservice`. Log Observer opens, and Aisha's view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer does not ingest the logs, but displays the logs "
-"from their storage in Splunk Cloud Platform."
+"Aisha decides to look at the log details. They select the Related Content tile, :strong:`Logs for paymentservice`. Log Observer opens, and Aisha's view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer does not ingest the logs, but "
+"displays the logs from their storage in Splunk Cloud Platform."
 msgstr ""
-"Aisha はログの詳細を見ることにしました。彼らは関連コンテンツタイル、:strong:`paymentserviceのログ` を選択します。Log Observer が開き、Aisha のビューは自動的に絞り込まれ、 :strong:`paymentservice` のログのみが表示されます。Log Observer は、Splunk Cloud Platform に送信された :strong:`paymentservice` のログを表示します。Log Observer はログを取り込まず、Splunk Cloud Platform のストレージから"
-"ログを表示します。"
+"Aisha はログの詳細を見ることにしました。彼らは関連コンテンツタイル、:strong:`paymentserviceのログ` を選択します。Log Observer が開き、Aisha のビューは自動的に絞り込まれ、 :strong:`paymentservice` のログのみが表示されます。Log Observer は、Splunk Cloud Platform に送信された :strong:`paymentservice` のログを表示します。Log Observer はログを取り込まず、Splunk Cloud Platform "
+"のストレージからログを表示します。"
 
 #: ../../logs/LOconnect-scenario.rst:52
 msgid "Because Aisha first tracked the workflow problems in Splunk APM, they were able to narrow their search down to only logs coming from :strong:`paymentservice`. Now Aisha can use Log Observer to analyze the logs."
@@ -235,18 +234,19 @@ msgstr "概要"
 
 #: ../../logs/LOconnect-scenario.rst:114
 msgid ""
-"When Buttercup Games' e-commerce site began having a slow checkout completion rate and saw a drop in the number of purchases, a site reliability engineer, Aisha, looked at the :strong:`/cart/checkout` business workflow on the Splunk APM service map. They saw that APM identified the :strong:`paymentservice` as the root cause of errors. Aisha decided to look into the log details by linking "
-"from APM to related logs through the Related Content bar."
+"When Buttercup Games' e-commerce site began having a slow checkout completion rate and saw a drop in the number of purchases, a site reliability engineer, Aisha, looked at the :strong:`/cart/checkout` business workflow on the Splunk APM service map. They saw that APM identified the :strong:`paymentservice` as the root cause of errors. Aisha decided to look into the log "
+"details by linking from APM to related logs through the Related Content bar."
 msgstr ""
-"Buttercup Games の e-コマースサイトでチェックアウト完了率が遅くなり、購入件数が減少し始めたとき、サイトの信頼性エンジニアのAisha は Splunk APM サービスマップの :strong:`/cart/checkout` ビジネスワークフローに注目しました。彼らは APM が :strong:`paymentservice` をエラーの根本原因として特定しているのを見ました。Aisha は、APM から関連コンテンツバーを通じて関連ログにリンクすることで、ログの詳"
-"細を調べることにしました。"
+"Buttercup Games の e-コマースサイトでチェックアウト完了率が遅くなり、購入件数が減少し始めたとき、サイトの信頼性エンジニアのAisha は Splunk APM サービスマップの :strong:`/cart/checkout` ビジネスワークフローに注目しました。彼らは APM が :strong:`paymentservice` をエラーの根本原因として特定しているのを見ました。Aisha は、APM から関連コンテンツバーを通じて関連ログにリンクする"
+"ことで、ログの詳細を調べることにしました。"
 
 #: ../../logs/LOconnect-scenario.rst:116
 msgid ""
-"In Log Observer, Aisha noticed that several logs coming from :strong:`paymentservice` had the same error. The common error messages indicated that the API token started with “test”. They figured that the test token was the problem. They ruled out other possible problems by filtering and aggregating logs. They correlated the suspicious test token error message with only logs in v350.10."
+"In Log Observer, Aisha noticed that several logs coming from :strong:`paymentservice` had the same error. The common error messages indicated that the API token started with “test”. They figured that the test token was the problem. They ruled out other possible problems by filtering and aggregating logs. They correlated the suspicious test token error message with only "
+"logs in v350.10."
 msgstr ""
-"Log Observer でAisha は、:strong:`paymentservice` から送られてくるいくつかのログに同じエラーがあることに気づきました。共通のエラーメッセージは、APIトークンが 「テスト」で始まっていることを示していました。彼らはテストトークンが問題だと考えました。ログのフィルタリングと集計によって、他の可能性のある問題を除外しました。彼らは疑わしいテストトークンのエラーメッセージをv350.10のログのみと関連付"
-"けました。"
+"Log Observer でAisha は、:strong:`paymentservice` から送られてくるいくつかのログに同じエラーがあることに気づきました。共通のエラーメッセージは、APIトークンが 「テスト」で始まっていることを示していました。彼らはテストトークンが問題だと考えました。ログのフィルタリングと集計によって、他の可能性のある問題を除外しました。彼らは疑わしいテストトークンのエラーメッセージをv350.10"
+"のログのみと関連付けました。"
 
 #: ../../logs/LOconnect-scenario.rst:118
 msgid "Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. Aisha rolled back the code to the previous version because v350.9 logs did not contain the test token error message. Then Deepu replaced the test token with a token that works in production."
@@ -326,11 +326,11 @@ msgstr "Splunk プラットフォームインスタンスの管理者として�
 
 #: ../../logs/LOconnect-troubleshoot.rst:29
 msgid ""
-"Splunk Cloud Platform administrators can skip this step. If the ``indexes_list_all`` capability is not present in your Splunk Enterprise instance, create a ``[capability::indexes_list_all]`` stanza in ``authorize.conf``. Once the configuration is set in ``authorize.conf``, the ``indexes_list_all`` capability is deactivated for all roles. The administrator can then add this capability for "
-"select roles in the UI or in ``authorize.conf``."
+"Splunk Cloud Platform administrators can skip this step. If the ``indexes_list_all`` capability is not present in your Splunk Enterprise instance, create a ``[capability::indexes_list_all]`` stanza in ``authorize.conf``. Once the configuration is set in ``authorize.conf``, the ``indexes_list_all`` capability is deactivated for all roles. The administrator can then add "
+"this capability for select roles in the UI or in ``authorize.conf``."
 msgstr ""
-"Splunk Cloud Platform 管理者はこのステップを省略できます。Splunk Enterprise インスタンスに ``indexes_list_all`` 機能が存在しない場合は、 ``authorize.conf`` に ``[capability::indexes_list_all]`` スタンザを作成します。 ``authorize.conf`` で設定を行うと、すべてのロールに対して ``indexes_list_all`` 機能が非アクティブになります。その後、管理者は UI または ``authorize.conf`` で選択したロールに"
-"この機能を追加できます。"
+"Splunk Cloud Platform 管理者はこのステップを省略できます。Splunk Enterprise インスタンスに ``indexes_list_all`` 機能が存在しない場合は、 ``authorize.conf`` に ``[capability::indexes_list_all]`` スタンザを作成します。 ``authorize.conf`` で設定を行うと、すべてのロールに対して ``indexes_list_all`` 機能が非アクティブになります。その後、管理者は UI または ``authorize.conf`` で"
+"選択したロールにこの機能を追加できます。"
 
 #: ../../logs/LOconnect-troubleshoot.rst:30
 msgid "Enable ``indexes_list_all`` capability for the admin role and any other roles that need to access the indexes. For more information about adding capabilities to a role, see :new-page:`Define roles on the Splunk platform with capabilities <https://docs.splunk.com/Documentation/Splunk/9.0.4/Security/Rolesandcapabilities>`."
@@ -590,11 +590,11 @@ msgstr "ログ詳細のフライアウトにフィールドを個別に表示す
 
 #: ../../logs/alias.rst:35
 msgid ""
-"For convenience, your team can choose to always display a particular field separately at the top of the log details flyout. To display the field of your choice separately, alias the desired field to the ``message`` field. The log details flyout in Log Observer always displays the ``message`` field at the top. When you alias another field to the ``message`` field, it appears in the "
-"standalone section called :strong:`MESSAGE` at the top of the log details flyout."
+"For convenience, your team can choose to always display a particular field separately at the top of the log details flyout. To display the field of your choice separately, alias the desired field to the ``message`` field. The log details flyout in Log Observer always displays the ``message`` field at the top. When you alias another field to the ``message`` field, it "
+"appears in the standalone section called :strong:`MESSAGE` at the top of the log details flyout."
 msgstr ""
-"便宜上、チームは、ログの詳細のフライアウトの上部に、特定のフィールドを常に個別に表示するように選択できます。希望のフィールドを個別に表示するには、  ``message`` フィールドにエイリアスを付けます。Log Observerのログ詳細フライアウトは、常に  ``message`` フィールドを一番上に表示します。他のフィールドを  ``message`` フィールドにエイリアスすると、そのフィールドは、ログ詳細フライアウトの上部にあ"
-"る :strong:`MESSAGE` という独立したセクションに表示されます。"
+"便宜上、チームは、ログの詳細のフライアウトの上部に、特定のフィールドを常に個別に表示するように選択できます。希望のフィールドを個別に表示するには、  ``message`` フィールドにエイリアスを付けます。Log Observerのログ詳細フライアウトは、常に  ``message`` フィールドを一番上に表示します。他のフィールドを  ``message`` フィールドにエイリアスすると、そのフィールドは、ログ詳細フライ"
+"アウトの上部にある :strong:`MESSAGE` という独立したセクションに表示されます。"
 
 #: ../../logs/alias.rst:37
 msgid "For example, say your team most frequently uses the ``summary`` field. Add an alias for the ``summary`` field called ``message``. The ``summary`` field still exists but is also known as ``message`` and appears in the :strong:`MESSAGE` section of the log details flyout on the right side of the screen."
@@ -622,11 +622,11 @@ msgstr "Splunk Log Observer は、メタデータフィールド ``trace.id:2b78
 
 #: ../../logs/alias.rst:50
 msgid ""
-"Although these refer to the same trace ID value, the log and the trace cannot be correlated in Splunk Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, alias your log metadata field ``trace.id`` to ``trace_id`` using Field Aliasing. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value "
-"can be correlated in Splunk Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer."
+"Although these refer to the same trace ID value, the log and the trace cannot be correlated in Splunk Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, alias your log metadata field ``trace.id`` to ``trace_id`` using Field Aliasing. When the field names in APM and Log Observer match, the trace and the log with the same "
+"trace ID value can be correlated in Splunk Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer."
 msgstr ""
-"これらは同じトレース ID 値を参照していますが、``trace_id`` と ``trace.id`` というフィールド名が一致しないため、Splunk Observability Cloud ではログとトレースを関連付けることができません。この場合、フィールドエイリアシングを使用して、ログのメタデータフィールド ``trace.id`` を ``trace_id`` にエイリアスします。APM と Log Observer のフィールド名が一致すると、同じトレース ID 値を持つトレースと"
-"ログを Observability Cloud で関連付けることができます。APM でトレースを表示しているときに、同じトレース ID 値を持つログを直接クリックして、Log Observer で相関ログを表示できます。"
+"これらは同じトレース ID 値を参照していますが、``trace_id`` と ``trace.id`` というフィールド名が一致しないため、Splunk Observability Cloud ではログとトレースを関連付けることができません。この場合、フィールドエイリアシングを使用して、ログのメタデータフィールド ``trace.id`` を ``trace_id`` にエイリアスします。APM と Log Observer のフィールド名が一致すると、同じトレース ID 値"
+"を持つトレースとログを Observability Cloud で関連付けることができます。APM でトレースを表示しているときに、同じトレース ID 値を持つログを直接クリックして、Log Observer で相関ログを表示できます。"
 
 #: ../../logs/alias.rst:52
 msgid "To ensure full functionality of both Log Observer and Related Content, verify that your log fields are correctly mapped to the required key names as listed at :ref:`relatedcontent-log-observer`."
@@ -642,11 +642,11 @@ msgstr "あるデータソースに ``http_referrer`` というフィールド�
 
 #: ../../logs/alias.rst:58
 msgid ""
-"You may have two data sources that call the same field by somewhat different names. For example, one data source might have a field called ``EventID`` while another data source might have a field called ``EventRecordID``. You can tell by the values that these fields represent the same thing. You can create a field alias that maps ``EventID`` to ``EventRecordID`` to aggregate all logs "
-"with either of those field names to the field ``EventRecordID`` for analysis in Log Observer."
+"You may have two data sources that call the same field by somewhat different names. For example, one data source might have a field called ``EventID`` while another data source might have a field called ``EventRecordID``. You can tell by the values that these fields represent the same thing. You can create a field alias that maps ``EventID`` to ``EventRecordID`` to "
+"aggregate all logs with either of those field names to the field ``EventRecordID`` for analysis in Log Observer."
 msgstr ""
-"同じフィールドを多少異なる名前で呼び出す2つのデータソースがあるかもしれません。例えば、あるデータソースには ``EventID`` というフィールドがあり、別のデータソースには   ``EventRecordID`` というフィールドがあります。これらのフィールドが同じものを表していることは、値によってわかります。 ``EventID`` を   ``EventRecordID`` にマップするフィールドエイリアスを作成し、Log Observerで分析するために、"
-"これらのフィールド名のどちらかを持つすべてのログを   ``EventRecordID`` フィールドに集約することができます。"
+"同じフィールドを多少異なる名前で呼び出す2つのデータソースがあるかもしれません。例えば、あるデータソースには ``EventID`` というフィールドがあり、別のデータソースには   ``EventRecordID`` というフィールドがあります。これらのフィールドが同じものを表していることは、値によってわかります。 ``EventID`` を   ``EventRecordID`` にマップするフィールドエイリアスを作成し、Log Observer"
+"で分析するために、これらのフィールド名のどちらかを持つすべてのログを   ``EventRecordID`` フィールドに集約することができます。"
 
 #: ../../logs/alias.rst:61
 msgid "Create a new field alias"
@@ -922,11 +922,11 @@ msgstr ":guilabel:`Save and Activate` を選択すると、新しい受信 Log O
 
 #: ../../logs/forward-logs.rst:117
 msgid ""
-"To verify that your HEC ingest token is functional and that Splunk Observability Cloud is forwarding logs successfully, go to :guilabel:`Search & Reporting` in your Splunk platform instance and verify that logs from Splunk Observability Cloud appear in the index you selected in step 8 of the previous section. To continue working with the forwarded logs in Splunk Observability Cloud, use "
-"Log Observer Connect to connect to the Splunk platform index that contains the forwarded logs."
+"To verify that your HEC ingest token is functional and that Splunk Observability Cloud is forwarding logs successfully, go to :guilabel:`Search & Reporting` in your Splunk platform instance and verify that logs from Splunk Observability Cloud appear in the index you selected in step 8 of the previous section. To continue working with the forwarded logs in Splunk "
+"Observability Cloud, use Log Observer Connect to connect to the Splunk platform index that contains the forwarded logs."
 msgstr ""
-"HEC インジェストトークンが機能し、Splunk Observability Cloud がログを正常に転送していることを確認するには、Splunk プラットフォームインスタンスの :guilabel:`Search & Reporting` にアクセスし、前のセクションのステップ 8 で選択したインデックスに Splunk Observability Cloud からのログが表示されていることを確認します。転送されたログを Splunk Observability Cloud で引き続き操作するには、Log "
-"Observer Connect を使用して、転送されたログを含む Splunk プラットフォームインデックスに接続します。"
+"HEC インジェストトークンが機能し、Splunk Observability Cloud がログを正常に転送していることを確認するには、Splunk プラットフォームインスタンスの :guilabel:`Search & Reporting` にアクセスし、前のセクションのステップ 8 で選択したインデックスに Splunk Observability Cloud からのログが表示されていることを確認します。転送されたログを Splunk Observability Cloud で引き続き操作す"
+"るには、Log Observer Connect を使用して、転送されたログを含む Splunk プラットフォームインデックスに接続します。"
 
 #: ../../logs/forward-logs.rst:121 ../../logs/scp.rst:188 ../../logs/set-up-logconnect.rst:152
 msgid "Troubleshooting"
@@ -954,11 +954,11 @@ msgstr "Splunk Log Observer Connectの概要"
 
 #: ../../logs/intro-logconnect.rst:13
 msgid ""
-"Splunk Log Observer Connect is an integration that allows you to query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities of Splunk Log Observer and :ref:`Related Content <get-started-relatedcontent>` in Splunk Observability Cloud. With Log Observer Connect, you can troubleshoot your application and infrastructure behavior using high-context logs. Perform "
-"codeless queries on your Splunk Enterprise or Splunk Cloud Platform logs to detect the source of problems in your systems, then jump to Related Content throughout Splunk Observability Cloud in one click. Seeing your logs data correlated with metrics and traces in Splunk Observability Cloud helps your team to locate and resolve problems exponentially faster."
+"Splunk Log Observer Connect is an integration that allows you to query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities of Splunk Log Observer and :ref:`Related Content <get-started-relatedcontent>` in Splunk Observability Cloud. With Log Observer Connect, you can troubleshoot your application and infrastructure behavior using high-context "
+"logs. Perform codeless queries on your Splunk Enterprise or Splunk Cloud Platform logs to detect the source of problems in your systems, then jump to Related Content throughout Splunk Observability Cloud in one click. Seeing your logs data correlated with metrics and traces in Splunk Observability Cloud helps your team to locate and resolve problems exponentially faster."
 msgstr ""
-"Splunk Log Observer Connect は、Splunk Observability Cloud の Splunk Log Observer および :ref:`関連コンテンツ<get-started-relatedcontent>` の機能を使用して、Splunk Enterprise または Splunk Cloud Platform のログをクエリできるインテグレーションです。Log Observer Connect を使用すると、ハイコンテキストのログを使用してアプリケーションやインフラの動作をトラブルシューティングできます。Splunk "
-"Enterprise または Splunk Cloud Platform のログに対してコードレスクエリを実行してシステムの問題の原因を検出し、Splunk Observability Cloud 全体の関連コンテンツにワンクリックでジャンプします。ログデータが Observability Cloud のメトリクスやトレースと相関していることを確認することで、チームは問題の特定と解決を飛躍的に迅速に行うことができます。"
+"Splunk Log Observer Connect は、Splunk Observability Cloud の Splunk Log Observer および :ref:`関連コンテンツ<get-started-relatedcontent>` の機能を使用して、Splunk Enterprise または Splunk Cloud Platform のログをクエリできるインテグレーションです。Log Observer Connect を使用すると、ハイコンテキストのログを使用してアプリケーションやインフラの動作をトラブルシューティングで"
+"きます。Splunk Enterprise または Splunk Cloud Platform のログに対してコードレスクエリを実行してシステムの問題の原因を検出し、Splunk Observability Cloud 全体の関連コンテンツにワンクリックでジャンプします。ログデータが Observability Cloud のメトリクスやトレースと相関していることを確認することで、チームは問題の特定と解決を飛躍的に迅速に行うことができます。"
 
 #: ../../logs/intro-logconnect.rst:16 ../../logs/scp.rst:17
 msgid "Region and version availability"
@@ -1110,11 +1110,11 @@ msgstr "キーワード、フィールド名、またはフィールド値を検
 
 #: ../../_includes/logs/query-logs.rst:1
 msgid ""
-"Navigate to :guilabel:`Log Observer`. Upon opening, Log Observer runs an initial search of all indexes you have access to and returns the most recent 150,000 logs. The search then defaults to Pause in order to save Splunk Virtual Compute (SVC) resources. Control your SVC resources, which impact performance and cost, by leaving your search on Pause when you are not monitoring incoming "
-"logs, and select Play when you want to see more incoming logs."
+"Navigate to :guilabel:`Log Observer`. Upon opening, Log Observer runs an initial search of all indexes you have access to and returns the most recent 150,000 logs. The search then defaults to Pause in order to save Splunk Virtual Compute (SVC) resources. Control your SVC resources, which impact performance and cost, by leaving your search on Pause when you are not "
+"monitoring incoming logs, and select Play when you want to see more incoming logs."
 msgstr ""
-":guilabel:`Log Observer` に移動します。開くと、Log Observerはアクセス可能なすべてのインデックスの初期検索を実行し、最新の150,000件のログを返します。その後、Splunk Virtual Compute (SVC)リソースを節約するために、検索はデフォルトで一時停止になります。受信ログを監視していないときは検索を一時停止のままにし、より多くの受信ログを見たいときは再生を選択することで、パフォーマンスとコストに影響する"
-"SVCリソースを制御します。"
+":guilabel:`Log Observer` に移動します。開くと、Log Observerはアクセス可能なすべてのインデックスの初期検索を実行し、最新の150,000件のログを返します。その後、Splunk Virtual Compute (SVC)リソースを節約するために、検索はデフォルトで一時停止になります。受信ログを監視していないときは検索を一時停止のままにし、より多くの受信ログを見たいときは再生を選択することで、パフォーマンスと"
+"コストに影響するSVCリソースを制御します。"
 
 #: ../../_includes/logs/query-logs.rst
 msgid "The Log Observer UI is displayed."
@@ -1125,50 +1125,60 @@ msgid "To increase performance and help control cost, search jobs originating fr
 msgstr "パフォーマンスを向上させ、コストを管理するために、関連コンテンツから発信される検索ジョブは、2分間操作がないと実行を停止します。他のすべての検索ジョブは15分後に実行を停止します。"
 
 #: ../../_includes/logs/query-logs.rst:9
-msgid "In the content control bar, enter a time range in the time picker if you want to see logs from a specific historical period. To select a time range, you must select :guilabel:`Unlimited` from the :guilabel:`Search Records` field in step 5 below. When you select :guilabel:`150,000`, Log Observer returns only the most recent 150,000 logs regardless of the time range you select."
+msgid ""
+"In the content control bar, enter a time range in the time picker if you want to see logs from a specific historical period. To select a time range, you must select :guilabel:`Unlimited` from the :guilabel:`Search Records` field in step 5 below. When you select :guilabel:`150,000`, Log Observer returns only the most recent 150,000 logs regardless of the time range you "
+"select."
 msgstr "コンテンツコントロールバーで、特定の過去の期間のログを見たい場合は、タイムピッカーに時間範囲を入力します。時間範囲を選択するには、下のステップ5で :guilabel:`Search Records` フィールドから :guilabel:`Unlimited` を選択する必要があります。:guilabel:`150,000` を選択すると、Log Observerは、選択する時間範囲に関係なく、最新の150,000件のログのみを返します。"
 
 #: ../../_includes/logs/query-logs.rst:11
-msgid ""
-"Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. When you do not select an index, Log Observer runs your query on all indexes to which you have access. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select "
-"which index you want to query in Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions."
-msgstr ""
-":guilabel:`Index` の横にある :guilabel:`Saved Queries` を選択し、クエリするインデックスを選択します。インデックスを選択しない場合、Log Observerは、アクセス可能なすべてのインデックスに対してクエリを実行します。Splunkプラットフォーム（Splunk Cloud PlatformまたはSplunk Enterprise）のデータを検索する場合は、最初に適切なSplunkプラットフォームインスタンスのインテグレーションを選択し、次にLog "
-"Observerでクエリするインデックスを選択します。一度にクエリできるのは、1つのSplunkプラットフォームインスタンスまたはSplunk Observability Cloudインスタンスからのインデックスのみです。適切なロールおよび権限を持っている場合にのみ、Splunkプラットフォームのインデックスをクエリできます。"
+msgid "Select :guilabel:`Index` next to :guilabel:`Saved Queries`. In the pop-up window, first select a Splunk platform (Splunk Cloud Platform or Splunk Enterprise) connection in the :guilabel:`Connection selection` section. Then, in the :guilabel:`Index selection` section, select which index you want to query in Log Observer Connect."
+msgstr ":guilabel:`Saved Queries` の隣にある :guilabel:`Index` を選択します。ポップアップウィンドウで、まず :guilabel:`Connection selection` セクションでSplunkプラットフォーム (Splunk Cloud PlatformまたはSplunk Enterprise) 接続を選択します。次に、:guilabel:`Index selection` セクションで、Log Observer Connectでクエリするインデックスを選択します。"
 
-#: ../../_includes/logs/query-logs.rst:13
+#: ../../_includes/logs/query-logs.rst
+msgid "The Log Observer index selection pop-up is displayed."
+msgstr "Log Observerインデックス選択ポップアップが表示されます。"
+
+#: ../../_includes/logs/query-logs.rst:17
+msgid "You can query indexes from only one Splunk platform instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions in Splunk platform."
+msgstr "一度に照会できるインデックスは1つのSplunkプラットフォームインスタンスのみです。Splunkプラットフォームのインデックスを照会できるのは、Splunkプラットフォームで適切なロールと権限を持っている場合のみです。"
+
+#: ../../_includes/logs/query-logs.rst:19
 msgid "In the content control bar next to the index picker, select :guilabel:`Add Filter`. Select the :guilabel:`Keyword` tab to search on a keyword or phrase. Select the :guilabel:`Fields` tab to search on a field. Then press Enter. To continue adding keywords or fields to the search, select :guilabel:`Add Filter` again."
 msgstr "インデックスピッカーの隣にあるコンテンツコントロールバーで、:guilabel:`Add Filter`  を選択します。キーワードまたはフレーズで検索するには、:guilabel:`Keyword` タブを選択します。フィールドを検索するには、:guilabel:`Fields` タブを選択します。その後でEnterを押します。検索にキーワードやフィールドを続けて追加するには、:guilabel:`Add Filter`  を再度選択します。"
 
-#: ../../_includes/logs/query-logs.rst:15
+#: ../../_includes/logs/query-logs.rst:21
 msgid ""
-"Next, select :guilabel:`Unlimited` or :guilabel:`150,000` from the :guilabel:`Search Records` field to determine the number of logs you want to return on a single search. Select :guilabel:`150,000` to optimize your Splunk Virtual Compute (SVC) resources and control performance and cost. However, only the most recent 150,000 logs display. To see a specific time range, you must "
-"select :guilabel:`Infinite`."
+"Next, select :guilabel:`Unlimited` or :guilabel:`150,000` from the :guilabel:`Search Records` field to determine the number of logs you want to return on a single search. Select :guilabel:`150,000` to optimize your Splunk Virtual Compute (SVC) resources and control performance and cost. However, only the most recent 150,000 logs display. To see a specific time range, you "
+"must select :guilabel:`Infinite`."
 msgstr ""
-"次に、 :guilabel:`Search Records` フィールドから  :guilabel:`Unlimited` または :guilabel:`150,000` を選択し、1回の検索で返したいログの数を決定します。  :guilabel:`150,000`  を選択すると、Splunk Virtual Compute (SVC)リソースを最適化し、パフォーマンスとコストを制御できます。ただし、表示されるのは最新の 150,000件のログのみです。特定の時間範囲を表示するには、:guilabel:`Infinite` を選択する必"
-"要があります。"
+"次に、 :guilabel:`Search Records` フィールドから  :guilabel:`Unlimited` または :guilabel:`150,000` を選択し、1回の検索で返したいログの数を決定します。  :guilabel:`150,000`  を選択すると、Splunk Virtual Compute (SVC)リソースを最適化し、パフォーマンスとコストを制御できます。ただし、表示されるのは最新の 150,000件のログのみです。特定の時間範囲を表示するには、:guilabel:"
+"`Infinite` を選択する必要があります。"
 
-#: ../../_includes/logs/query-logs.rst:17
+#: ../../_includes/logs/query-logs.rst:23
 msgid "To narrow your search, use the :guilabel:`Group by` drop-down list to select the field or fields by which you want to group your results, then select :guilabel:`Apply`. To learn more about aggregations, see :ref:`logs-aggregations`."
 msgstr "検索結果を絞り込むには、:guilabel:`Group by` ドロップダウンリストを使用して、結果をグループ化するフィールドを選択し、:guilabel:`Apply` を選択します。集計の詳細については、:ref:`logs-aggregations` を参照してください。"
 
-#: ../../_includes/logs/query-logs.rst:19
+#: ../../_includes/logs/query-logs.rst:25
 msgid "Select :guilabel:`Run search`."
 msgstr ":guilabel:`Run search` を選択します。"
 
-#: ../../_includes/logs/query-logs.rst:21
+#: ../../_includes/logs/query-logs.rst:27
+msgid "[Optional] If you want to stop the current search, select :guilabel:`Cancel search`. Partial results do  not display. To continue your search, select :guilabel:`Run search` again."
+msgstr "[オプション] 現在の検索を停止したい場合は、:guilabel:`Cancel search` を選択します。部分的な結果は表示されません。検索を続行するには、:guilabel:`Run search` を再度選択します。"
+
+#: ../../_includes/logs/query-logs.rst:29
 msgid ""
-"Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select ``=``. To exclude log records with a particular value from your results, select the field name, then select ``!=``. To see the full list of values and "
-"distribution for this field, select :guilabel:`Explore all values`."
+"Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select ``=``. To exclude log records with a particular value from your results, select the field name, then select ``!=``. To see the full list of "
+"values and distribution for this field, select :guilabel:`Explore all values`."
 msgstr ""
-"右側の :guilabel:`Fields` パネルで、クエリの上位の値を確認します。このリストには、ログレコード内の各値のカウントが含まれます。特定の値のログレコードを含めるには、フィールド名を選択し、``=`` を選択します。特定の値を持つログレコードを結果から除外するには、フィールド名を選択し、``!=`` を選択します。このフィールドの値と分布の完全なリストを表示するには、:guilabel:`Explore all values` を選択し"
-"ます。"
+"右側の :guilabel:`Fields` パネルで、クエリの上位の値を確認します。このリストには、ログレコード内の各値のカウントが含まれます。特定の値のログレコードを含めるには、フィールド名を選択し、``=`` を選択します。特定の値を持つログレコードを結果から除外するには、フィールド名を選択し、``!=`` を選択します。このフィールドの値と分布の完全なリストを表示するには、:guilabel:`Explore all "
+"values` を選択します。"
 
-#: ../../_includes/logs/query-logs.rst:23
-msgid "Optionally, if you are viewing Splunk platform data, you can open your query results in the Splunk platform and use SPL to further query the resulting logs. You must have an account in Splunk platform. To open the log results in the Splunk platform, select the :guilabel:`Open in Splunk platform` icon at the top of the Logs table."
-msgstr "オプションとして、Splunkプラットフォームのデータを表示している場合は、Splunkプラットフォームでクエリ結果を開き、SPLを使用して結果ログをさらにクエリできます。Splunkプラットフォームのアカウントが必要です。Splunkプラットフォームでログ結果を開くには、「ログ」テーブルの上部にある :guilabel:`Open in Splunk platform` アイコンを選択します。"
+#: ../../_includes/logs/query-logs.rst:31
+msgid "[Optional] If you are viewing Splunk platform data, you can open your query results in the Splunk platform and use SPL to further query the resulting logs. You must have an account in Splunk platform. To open the log results in the Splunk platform, select the :guilabel:`Open in Splunk platform` icon at the top of the Logs table."
+msgstr "[オプション] Splunkプラットフォームのデータを表示している場合は、Splunkプラットフォームでクエリ結果を開き、SPLを使用して結果ログをさらにクエリできます。Splunkプラットフォームのアカウントが必要です。Splunkプラットフォームでログ結果を開くには、ログテーブルの上部にある :guilabel:`Open in Splunk platform` アイコンを選択します。"
 
-#: ../../_includes/logs/query-logs.rst
+#: ../../_includes/logs/query-logs.rst:33
 msgid "The Open in Splunk platform icon is at the top, right-hand side of the Logs table."
 msgstr "[Splunk プラットフォームで開く] アイコンは、[ログ] テーブルの上部右側にあります。"
 
@@ -1322,11 +1332,11 @@ msgstr "その他の制限"
 
 #: ../../logs/lo-connect-limits.rst:52
 msgid ""
-"Each Log Observer Connect user is also subject to the limits of their Splunk platform role. A user can only access Splunk platform resources that their Splunk platform role allows them to access. See :new-page:`About configuring role-based user access <https://docs.splunk.com/Documentation/Splunk/9.0.2/Security/Aboutusersandroles#Set_permission_granularity_with_custom_roles>` for more "
-"information."
+"Each Log Observer Connect user is also subject to the limits of their Splunk platform role. A user can only access Splunk platform resources that their Splunk platform role allows them to access. See :new-page:`About configuring role-based user access <https://docs.splunk.com/Documentation/Splunk/9.0.2/Security/"
+"Aboutusersandroles#Set_permission_granularity_with_custom_roles>` for more information."
 msgstr ""
-"各 Log Observer Connect ユーザーは、Splunk プラットフォームロールの制限にも従います。ユーザーは、Splunk platform の役割によってアクセスできる Splunk platform リソースにのみアクセスできます。詳細は :new-page:`ロールベースのユーザーアクセスの設定について<https://docs.splunk.com/Documentation/Splunk/9.0.2/Security/Aboutusersandroles#Set_permission_granularity_with_custom_roles>` を参照してく"
-"ださい。"
+"各 Log Observer Connect ユーザーは、Splunk プラットフォームロールの制限にも従います。ユーザーは、Splunk platform の役割によってアクセスできる Splunk platform リソースにのみアクセスできます。詳細は :new-page:`ロールベースのユーザーアクセスの設定について<https://docs.splunk.com/Documentation/Splunk/9.0.2/Security/"
+"Aboutusersandroles#Set_permission_granularity_with_custom_roles>` を参照してください。"
 
 #: ../../logs/lo-transition.rst:-1
 msgid "Discover how you can transition from Splunk Log Observer to Splunk Log Observer Connect where you can ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and expand into security logging by the January 2024 deadline."
@@ -1338,7 +1348,8 @@ msgstr "Splunk プラットフォームでログのパイプラインを完成�
 
 #: ../../logs/lo-transition.rst:12
 msgid "All customers who ingest logs into Splunk Observability Cloud now use Log Observer Connect, a bridge between Splunk Observability Cloud and Splunk platform. Using the Splunk platform allows you to ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and use logging for security use cases."
-msgstr "Splunk Observability Cloudにログを取り込むすべての顧客は、Splunk Observability CloudとSplunkプラットフォームの間のブリッジであるLog Observer Connectを使用するようになりました。Splunkプラットフォームを使用することで、さまざまなデータソースからより多くのログをインジェストし、より高度なログパイプラインを使用し、セキュリティのユースケースにログを使用することができます。"
+msgstr ""
+"Splunk Observability Cloudにログを取り込むすべての顧客は、Splunk Observability CloudとSplunkプラットフォームの間のブリッジであるLog Observer Connectを使用するようになりました。Splunkプラットフォームを使用することで、さまざまなデータソースからより多くのログをインジェストし、より高度なログパイプラインを使用し、セキュリティのユースケースにログを使用することができます。"
 
 #: ../../logs/lo-transition.rst:14
 msgid "The following sections explain how to achieve all logging pipeline features in Splunk platform."
@@ -1406,11 +1417,11 @@ msgstr "Live Tail"
 
 #: ../../logs/lo-transition.rst:48
 msgid ""
-"To achieve Live Tail functionality, adjust the time range picker in the Splunk platform Search & Reporting app to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events because live events do not stream in unprompted. For more information, see :new-page:`Select time ranges to apply "
-"to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`"
+"To achieve Live Tail functionality, adjust the time range picker in the Splunk platform Search & Reporting app to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events because live events do not stream in unprompted. For more information, see :new-page:`Select "
+"time ranges to apply to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`"
 msgstr ""
-"Live Tail機能を実現するには、SplunkプラットフォームSearch & Reportingアプリで、時間範囲ピッカーを :guilabel:`All time (real-time)` または :guilabel:`30 second window` に調整します。ライブイベントはプロンプトなしでストリームされないため、最新のログイベントを表示するには、再度 :guilabel:`Search` を選択し、検索を再実行する必要があります。詳細については、:new-page:`検索に適用する時間範囲を選"
-"択する<https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>` を参照してください。"
+"Live Tail機能を実現するには、SplunkプラットフォームSearch & Reportingアプリで、時間範囲ピッカーを :guilabel:`All time (real-time)` または :guilabel:`30 second window` に調整します。ライブイベントはプロンプトなしでストリームされないため、最新のログイベントを表示するには、再度 :guilabel:`Search` を選択し、検索を再実行する必要があります。詳細については、:new-page:`検索に適用"
+"する時間範囲を選択する<https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>` を参照してください。"
 
 #: ../../logs/logs-individual-log-connect.rst:-1
 msgid "View the contents of an individual log, then create a field extraction to drill down further. See message, error, span ID, trace ID, and other fields."
@@ -1454,11 +1465,11 @@ msgstr "ログテーブルの新しい列としてフィールドを追加する
 
 #: ../../logs/logs-individual-log-connect.rst:27
 msgid ""
-"Select :menuselection:`View <field_name>` to go to the appropriate view in the Splunk Observability Cloud. For example, if you select a field related to Kubernetes, Splunk Observability Cloud displays related data in the Kubernetes Navigator. If you select fields related to APM, such as :menuselection:`View trace_id` or :menuselection:`View span_id`, Splunk Observability Cloud displays "
-"the trace or span in the APM Navigator."
+"Select :menuselection:`View <field_name>` to go to the appropriate view in the Splunk Observability Cloud. For example, if you select a field related to Kubernetes, Splunk Observability Cloud displays related data in the Kubernetes Navigator. If you select fields related to APM, such as :menuselection:`View trace_id` or :menuselection:`View span_id`, Splunk Observability "
+"Cloud displays the trace or span in the APM Navigator."
 msgstr ""
-":menuselection:`View <field_name>` を選択すると、Splunk Observability Cloudの適切なビューに移動します。例えば、Kubernetesに関連するフィールドを選択すると、Splunk Observability CloudはKubernetes Navigatorに関連データを表示します。:menuselection:`View trace_id` や :menuselection:`View span_id` など、APMに関連するフィールドを選択すると、Splunk Observability CloudはAPM Navigatorにトレースまた"
-"はスパンを表示します。"
+":menuselection:`View <field_name>` を選択すると、Splunk Observability Cloudの適切なビューに移動します。例えば、Kubernetesに関連するフィールドを選択すると、Splunk Observability CloudはKubernetes Navigatorに関連データを表示します。:menuselection:`View trace_id` や :menuselection:`View span_id` など、APMに関連するフィールドを選択すると、Splunk Observability CloudはAPM "
+"Navigatorにトレースまたはスパンを表示します。"
 
 #: ../../logs/logs-save-share.rst:-1
 msgid "Collaborate with team members by sharing Log Observer Connect queries. Saved queries include filters, aggregations, and search-time rules."
@@ -1749,8 +1760,12 @@ msgid "Delete"
 msgstr "削除"
 
 #: ../../logs/logviews.rst:68
-msgid "You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align logs charts with metrics charts on the same dashboard <field-aliasing>` to learn more."
-msgstr "ログチャートの内容を編集するには、Log Observerでクエリを更新する必要があります。:strong:`Log Observer でView` を選択すると、Log Observer でログチャートを表示および編集できます。Log Observerでは、フィールドエイリアスを含むログチャートのフィルターを更新できます。詳細については、:ref:`同じダッシュボードのメトリクススチャートとログチャートを並べる<field-aliasing>` を参照してください。"
+msgid ""
+"You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align logs charts with metrics charts on the same dashboard <field-aliasing>` to "
+"learn more."
+msgstr ""
+"ログチャートの内容を編集するには、Log Observerでクエリを更新する必要があります。:strong:`Log Observer でView` を選択すると、Log Observer でログチャートを表示および編集できます。Log Observerでは、フィールドエイリアスを含むログチャートのフィルターを更新できます。詳細については、:ref:`同じダッシュボードのメトリクススチャートとログチャートを並べる<field-aliasing>` を参照して"
+"ください。"
 
 #: ../../logs/logviews.rst:70
 msgid "For more information on the actions you can take from the :strong:`Chart actions` menu, see :ref:`work-with-charts`."
@@ -1786,11 +1801,11 @@ msgstr ":ref:`create-logviews-chart` の手順に従って、新しいクエリ�
 
 #: ../../logs/logviews.rst:88
 msgid ""
-"Now you can efficiently cross reference data in your logs chart with data in any other charts on the same dashboard. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster. Field aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its "
-"original name or by any of its aliases."
+"Now you can efficiently cross reference data in your logs chart with data in any other charts on the same dashboard. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster. Field aliasing does not rename or remove your original logs field name. When you alias a logs field, you can "
+"search for it by its original name or by any of its aliases."
 msgstr ""
-"ログチャートのデータを、同じダッシュボード上の他のチャートのデータと効率的に相互参照できるようになりました。同じダッシュボードのメトリクスフィールドに対応するログフィールドは、同じフィールド名を使用するようになったため、問題をより迅速にドリルダウンできます。フィールド エイリアシングは、元のログフィールド名を変更または削除しません。ログフィールドをエイリアスにすると、元の名前またはエイリア"
-"スのいずれかで検索できます。"
+"ログチャートのデータを、同じダッシュボード上の他のチャートのデータと効率的に相互参照できるようになりました。同じダッシュボードのメトリクスフィールドに対応するログフィールドは、同じフィールド名を使用するようになったため、問題をより迅速にドリルダウンできます。フィールド エイリアシングは、元のログフィールド名を変更または削除しません。ログフィールドをエイリアスにすると、元の"
+"名前またはエイリアスのいずれかで検索できます。"
 
 #: ../../logs/message-field.rst:-1
 msgid "Display the message field from your logs in an easy-to-access flyout in each individual log record."
@@ -1822,11 +1837,11 @@ msgstr "Splunk プラットフォームでログを開く"
 
 #: ../../logs/open-logs-splunk.rst:11
 msgid ""
-"You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. If your organization has integrated its Splunk platform (Splunk Cloud Platform or Splunk Enterprise) instance with its Splunk Observability Cloud instance, you can search Splunk platform logs that your Splunk platform role has permissions to see in Splunk platform. You can also open "
-"the logs in Splunk platform for additional SPL querying."
+"You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. If your organization has integrated its Splunk platform (Splunk Cloud Platform or Splunk Enterprise) instance with its Splunk Observability Cloud instance, you can search Splunk platform logs that your Splunk platform role has permissions to see in Splunk platform. "
+"You can also open the logs in Splunk platform for additional SPL querying."
 msgstr ""
-"Splunk Observability Cloud インスタンスがログをインジェストしている場合、Splunk Observability Cloud のログを検索できます。組織で Splunk プラットフォーム (Splunk Cloud Platform または Splunk Enterprise) インスタンスを Splunk Observability Cloud インスタンスと統合している場合、Splunk プラットフォームで表示する権限を持つ Splunk プラットフォームロールのログを検索できます。また、SPL クエリを追"
-"加するために Splunk platform でログを開くこともできます。"
+"Splunk Observability Cloud インスタンスがログをインジェストしている場合、Splunk Observability Cloud のログを検索できます。組織で Splunk プラットフォーム (Splunk Cloud Platform または Splunk Enterprise) インスタンスを Splunk Observability Cloud インスタンスと統合している場合、Splunk プラットフォームで表示する権限を持つ Splunk プラットフォームロールのログを検索できます。ま"
+"た、SPL クエリを追加するために Splunk platform でログを開くこともできます。"
 
 #: ../../logs/open-logs-splunk.rst:14
 msgid "To open your logs in Splunk platform, follow these steps:"
@@ -1846,11 +1861,11 @@ msgstr "Log Observer Connectでログをクエリする"
 
 #: ../../logs/queries.rst:11
 msgid ""
-"You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. Many Splunk platform (Splunk Cloud Platform and Splunk Enterprise) users can access their Splunk platform logs in Splunk Observability Cloud because their organization has integrated its Splunk platform and Splunk Observability Cloud instances. If you are using the integration, you "
-"can only access Splunk platform logs in Splunk Observability Cloud if your Splunk platform role has permissions to see that log's index in Splunk platform. Your Splunk platform admin controls your permissions to see Splunk platform logs in Splunk Observability Cloud."
+"You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. Many Splunk platform (Splunk Cloud Platform and Splunk Enterprise) users can access their Splunk platform logs in Splunk Observability Cloud because their organization has integrated its Splunk platform and Splunk Observability Cloud instances. If you are using the "
+"integration, you can only access Splunk platform logs in Splunk Observability Cloud if your Splunk platform role has permissions to see that log's index in Splunk platform. Your Splunk platform admin controls your permissions to see Splunk platform logs in Splunk Observability Cloud."
 msgstr ""
-"Splunk Observability Cloud インスタンスがログを取り込んでいる場合、Splunk Observability Cloud のログを検索できます。多くの Splunk プラットフォーム (Splunk Cloud Platform および Splunk Enterprise) ユーザーは、Splunk プラットフォームと Splunk Observability Cloud インスタンスを統合しているため、Splunk Observability Cloud で Splunk プラットフォームのログにアクセスできます。インテグレーション"
-"を使用している場合、Splunk プラットフォームのロールに Splunk プラットフォームのログのインデックスを参照する権限がある場合にのみ、Splunk Observability Cloud で Splunk プラットフォームのログにアクセスできます。Splunk Observability Cloud で Splunk プラットフォームログを参照する権限は、Splunk プラットフォーム管理者が管理します。"
+"Splunk Observability Cloud インスタンスがログを取り込んでいる場合、Splunk Observability Cloud のログを検索できます。多くの Splunk プラットフォーム (Splunk Cloud Platform および Splunk Enterprise) ユーザーは、Splunk プラットフォームと Splunk Observability Cloud インスタンスを統合しているため、Splunk Observability Cloud で Splunk プラットフォームのログにアクセスできます。イ"
+"ンテグレーションを使用している場合、Splunk プラットフォームのロールに Splunk プラットフォームのログのインデックスを参照する権限がある場合にのみ、Splunk Observability Cloud で Splunk プラットフォームのログにアクセスできます。Splunk Observability Cloud で Splunk プラットフォームログを参照する権限は、Splunk プラットフォーム管理者が管理します。"
 
 #: ../../logs/queries.rst:13
 msgid "Click any of the following documents to learn more about each way you can explore, query, filter, and drill down into your logs:"
@@ -2002,7 +2017,7 @@ msgstr "Splunk Observability Cloud で以下を実行します："
 
 #: ../../logs/scp.rst:66
 msgid "Go to :guilabel:`Settings` then  :guilabel:`Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration."
-msgstr ":guilabel:`Settings`、 :guilabel:`Log Observer Connect` の順にアクセスし、:guilabel:`Add new connection` を選択します。 :guilabel:`Log Observer Connect` に   :guilabel:`Settings` が表示されない場合は、Splunk Observability Cloud の管理者ではありません。組織の Splunk Observability Cloud 管理者に連絡して、このインテグレーションを実行してください。"
+msgstr ":guilabel:`Settings`、 :guilabel:`Log Observer Connect` の順にアクセスし、:guilabel:`Add new connection` を選択します。 :guilabel:`Log Observer Connect` に    :guilabel:`Settings` が表示されない場合は、Splunk Observability Cloud の管理者ではありません。組織の Splunk Observability Cloud 管理者に連絡して、このインテグレーションを実行してください。"
 
 #: ../../logs/scp.rst:68
 msgid "Select :guilabel:`Splunk Cloud Platform`. Next, log in to Splunk Cloud Platform as an administrator and follow the instructions in the next section."
@@ -2049,7 +2064,8 @@ msgid "On the :guilabel:`Resources` tab, enter a :guilabel:`Standard search limi
 msgstr ":guilabel:`Resources` タブで、:guilabel:`Role search job limit` と :guilabel:`User search job limit` の両方に40の :guilabel:`Standard search limit` を入力します。:guilabel:`Real-time search limit` には、ロールおよびユーザー検索ジョブ制限の両方に 0 を入力します。"
 
 #: ../../logs/scp.rst:99 ../../logs/set-up-logconnect.rst:96
-msgid "The limit of 40 assumes that you have 10 Log Observer Connect users. To determine your ideal :guilabel:`Standard search limit`, multiply the number of Log Observer Connect users you have by 4. For example, if you have 20 Log Observer users, enter a :guilabel:`Standard search limit` of 80 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`."
+msgid ""
+"The limit of 40 assumes that you have 10 Log Observer Connect users. To determine your ideal :guilabel:`Standard search limit`, multiply the number of Log Observer Connect users you have by 4. For example, if you have 20 Log Observer users, enter a :guilabel:`Standard search limit` of 80 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`."
 msgstr "40という制限は、10人のLog Observer Connectユーザーを想定しています。理想的な   :guilabel:`Standard search limit`  を決定するには、Log Observer Connectのユーザー数に4を掛けます。例えば、20人のLog Observerユーザーがいる場合、:guilabel:`Role search job limit` と :guilabel:`User search job limit` の両方に80の :guilabel:`Standard search limit` を入力します。"
 
 #: ../../logs/scp.rst:101 ../../logs/set-up-logconnect.rst:98
@@ -2058,11 +2074,11 @@ msgstr "このスクリーンショットは、ロール検索ジョブ制限と
 
 #: ../../logs/scp.rst:105
 msgid ""
-"Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. Do not use commas when entering numbers. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In "
-"the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB. Select :guilabel:`Save`."
+"Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. Do not use commas when entering numbers. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7776000 seconds "
+"(90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB. Select :guilabel:`Save`."
 msgstr ""
-"次に、:guilabel:`Role search time window limit` タブの :guilabel:`Resources` セクションで、:guilabel:`Custom time` を選択し、このロールの検索の最大時間ウィンドウに 2592000 秒(30 日)を入力します。数字を入力するときはカンマを使用しないでください。このロールの検索可能な最も古いイベント時間には、:guilabel:`Custom time` を選択し、7776000 秒(90 日)と入力します。:guilabel:`Disk space limit` セク"
-"ションでは、:guilabel:`Standard search limit` 1000 MBと入力します。:guilabel:`Save` を選択します。"
+"次に、:guilabel:`Role search time window limit` タブの :guilabel:`Resources` セクションで、:guilabel:`Custom time` を選択し、このロールの検索の最大時間ウィンドウに 2592000 秒(30 日)を入力します。数字を入力するときはカンマを使用しないでください。このロールの検索可能な最も古いイベント時間には、:guilabel:`Custom time` を選択し、7776000 秒(90 日)と入力します。:guilabel:`Disk "
+"space limit` セクションでは、:guilabel:`Standard search limit` 1000 MBと入力します。:guilabel:`Save` を選択します。"
 
 #: ../../logs/scp.rst:107 ../../logs/set-up-logconnect.rst:104
 msgid "This screenshot shows recommended configuration for role search time window limit and disk space limit."
@@ -2138,11 +2154,11 @@ msgstr ":guilabel:`Save and activate` を選択します。"
 
 #: ../../logs/scp.rst:157
 msgid ""
-"Manage concurrent search limits using your current strategy in Splunk Cloud Platform. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Cloud Platform. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in Log Observer Connect. For example, if there are three users accessing Log "
-"Observer Connect at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Cloud Platform."
+"Manage concurrent search limits using your current strategy in Splunk Cloud Platform. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Cloud Platform. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in Log Observer Connect. For example, if there are three users "
+"accessing Log Observer Connect at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Cloud Platform."
 msgstr ""
-"Splunk Cloud Platform の現在の戦略を使用して、同時検索の制限を管理します。Log Observer Connect ユーザーが開始するすべての検索は、Splunk Cloud Platform で作成したサービスアカウントを経由します。各アクティブ Log Observer Connect ユーザーに対して、ユーザーが Log Observer Connect で検索を実行すると、4 つのバックエンド検索が発生します。例えば、Log Observer Connect に同時にアクセスするユーザー"
-"が 3 人いる場合、Log Observer Connect のサービスアカウントは Splunk Cloud Platform で約 12 回の検索を開始します。"
+"Splunk Cloud Platform の現在の戦略を使用して、同時検索の制限を管理します。Log Observer Connect ユーザーが開始するすべての検索は、Splunk Cloud Platform で作成したサービスアカウントを経由します。各アクティブ Log Observer Connect ユーザーに対して、ユーザーが Log Observer Connect で検索を実行すると、4 つのバックエンド検索が発生します。例えば、Log Observer Connect に同時にアク"
+"セスするユーザーが 3 人いる場合、Log Observer Connect のサービスアカウントは Splunk Cloud Platform で約 12 回の検索を開始します。"
 
 #: ../../logs/scp.rst:162
 msgid "Submit a support ticket"
@@ -2150,11 +2166,11 @@ msgstr "サポートチケットを送信する"
 
 #: ../../logs/scp.rst:164
 msgid ""
-"If you were not able to independently secure a connection to your Splunk Cloud Platform instance in step 9 in the previous section, you may submit a support ticket from your Splunk Cloud Platform instance to do this on your behalf. Submit a ticket to Splunk Support to configure your Splunk Cloud Platform instance's IP allow list. Configuring your allow list properly opens your Splunk "
-"Cloud Platform instance management port to Log Observer Connect, which can then search your Splunk Cloud Platform instance log data. After Splunk Support prepares your Splunk Cloud Platform instance, you can securely create a connection to Log Observer Connect."
+"If you were not able to independently secure a connection to your Splunk Cloud Platform instance in step 9 in the previous section, you may submit a support ticket from your Splunk Cloud Platform instance to do this on your behalf. Submit a ticket to Splunk Support to configure your Splunk Cloud Platform instance's IP allow list. Configuring your allow list properly "
+"opens your Splunk Cloud Platform instance management port to Log Observer Connect, which can then search your Splunk Cloud Platform instance log data. After Splunk Support prepares your Splunk Cloud Platform instance, you can securely create a connection to Log Observer Connect."
 msgstr ""
-"前のセクションのステップ 9 でSplunk Cloud Platform インスタンスへの接続を独自に確保できなかった場合は、Splunk Cloud Platform インスタンスからサポートチケットを送信して代行させることができます。Splunk サポートにチケットを提出して、Splunk Cloud Platform インスタンスの IP 許可リストを設定します。許可リストを適切に設定すると、Splunk Cloud Platform インスタンスの管理ポートが Log Observer "
-"Connect に開放され、Splunk Cloud Platform インスタンスのログデータを検索できるようになります。Splunk サポートがSplunk CloudPlatform インスタンスを準備した後、Log Observer Connect への接続を安全に作成できます。"
+"前のセクションのステップ 9 でSplunk Cloud Platform インスタンスへの接続を独自に確保できなかった場合は、Splunk Cloud Platform インスタンスからサポートチケットを送信して代行させることができます。Splunk サポートにチケットを提出して、Splunk Cloud Platform インスタンスの IP 許可リストを設定します。許可リストを適切に設定すると、Splunk Cloud Platform インスタンスの管理ポートが "
+"Log Observer Connect に開放され、Splunk Cloud Platform インスタンスのログデータを検索できるようになります。Splunk サポートがSplunk CloudPlatform インスタンスを準備した後、Log Observer Connect への接続を安全に作成できます。"
 
 #: ../../logs/scp.rst:166
 msgid "To submit a support ticket, follow these steps:"
@@ -2237,7 +2253,9 @@ msgid "us2: ``35.247.113.38/32``, ``35.247.32.72/32``, ``35.247.86.219/32``"
 msgstr "us2: ``35.247.113.38/32``、``35.247.32.72/32``、``35.247.86.219/32``"
 
 #: ../../logs/set-up-logconnect.rst:58
-msgid "Expose port ``8089`` to all the IPs of the realms you're using. Log Observer Connect needs to be able to access the search head on port ``8089``. It doesn't need to directly access the deployer or indexers. For example, if you have a search head cluster with load balancer in front of the members of the search head cluster, you allow the incoming traffic to the load balancer."
+msgid ""
+"Expose port ``8089`` to all the IPs of the realms you're using. Log Observer Connect needs to be able to access the search head on port ``8089``. It doesn't need to directly access the deployer or indexers. For example, if you have a search head cluster with load balancer in front of the members of the search head cluster, you allow the incoming traffic to the load "
+"balancer."
 msgstr "使用しているレルムのすべてのIPにポート ``8089`` を公開します。Log Observer Connectは、ポート ``8089`` の検索ヘッドにアクセスできる必要があります。DeployerやINDEXERに直接アクセスする必要はありません。例えば、サーチヘッドクラスターのメンバーの前にロードバランサーがある場合、ロードバランサーへのトラフィックを許可します。"
 
 #: ../../logs/set-up-logconnect.rst:60
@@ -2250,7 +2268,7 @@ msgstr "Log Observer Connect for Splunk Enterprise をセットアップする�
 
 #: ../../logs/set-up-logconnect.rst:70
 msgid "Go to :guilabel:`Settings` then :guilabel:` Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration."
-msgstr ":guilabel:`Settings`、:guilabel:` Log Observer Connect` の順にアクセスし、:guilabel:`Add new connection` を選択します。 :guilabel:`Log Observer Connect` に   :guilabel:`Settings` が表示されない場合は、Splunk Observability Cloud の管理者ではありません。組織の Splunk Observability Cloud 管理者に連絡して、このインテグレーションを実行してください。"
+msgstr ":guilabel:`Settings`、:guilabel:` Log Observer Connect` の順にアクセスし、:guilabel:`Add new connection` を選択します。 :guilabel:`Log Observer Connect` に    :guilabel:`Settings` が表示されない場合は、Splunk Observability Cloud の管理者ではありません。組織の Splunk Observability Cloud 管理者に連絡して、このインテグレーションを実行してください。"
 
 #: ../../logs/set-up-logconnect.rst:72
 msgid "Select :guilabel:`Splunk Enterprise`. Next, log in to Splunk Enterprise as an administrator and follow the instructions in the next section."
@@ -2274,11 +2292,11 @@ msgstr "Log Observer Connect のサービスアカウントをセットアップ
 
 #: ../../logs/set-up-logconnect.rst:102
 msgid ""
-"Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role, select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space limit` section enter "
-"a :guilabel:`Standard search limit` of 1000 MB."
+"Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role, select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space "
+"limit` section enter a :guilabel:`Standard search limit` of 1000 MB."
 msgstr ""
-"次に、:guilabel:`Role search time window limit` タブの :guilabel:`Resources` セクションで、:guilabel:`Custom time` を選択し、このロールの検索の最大時間ウィンドウに2592000秒（30日）を入力します。この役割の最も早い検索可能イベント時間には、:guilabel:`Custom time` を選択し、7776000秒（90日）と入力します。:guilabel:`Disk space limit` セクションで、:guilabel:`Standard search limit` に1000 MBを"
-"入力します。"
+"次に、:guilabel:`Role search time window limit` タブの :guilabel:`Resources` セクションで、:guilabel:`Custom time` を選択し、このロールの検索の最大時間ウィンドウに2592000秒（30日）を入力します。この役割の最も早い検索可能イベント時間には、:guilabel:`Custom time` を選択し、7776000秒（90日）と入力します。:guilabel:`Disk space limit` セクションで、:guilabel:`Standard search "
+"limit` に1000 MBを入力します。"
 
 #: ../../logs/set-up-logconnect.rst:108
 msgid "Next, create a user in Splunk Enterprise. Go to :guilabel:`Settings` then :guilabel:`Users`. Select :guilabel:`New user` to create the user for the Log Observer Connect service account. Assign to the user the role you created in the preceeding steps for the Log Observer Connect service account."
@@ -2298,11 +2316,11 @@ msgstr ""
 
 #: ../../logs/set-up-logconnect.rst:128
 msgid ""
-"Complete the steps on the :guilabel:`Secure a connection to the Splunk platform` section to get certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. "
-"Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance. When finished, select :guilabel:`Next` in the guided setup. When finished, select :guilabel:`Next`."
+"Complete the steps on the :guilabel:`Secure a connection to the Splunk platform` section to get certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` "
+"to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance. When finished, select :guilabel:`Next` in the guided setup. When finished, select :guilabel:`Next`."
 msgstr ""
-":guilabel:`Secure a connection to the Splunk platform` セクションのステップを完了して Splunk 間通信を保護するための証明書を取得します。方法については、:new-page:`Splunk Log Observer Connect 用に Splunk Enterprise で証明書を設定およびインストールする<https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` を参照してください。"
-"Log Observer Connect と Splunk Enterprise インスタンスを安全に接続するために、チェーン内の最初の証明書のみをコピーし、ガイド付きセットアップの次のページに貼り付けます。終了したら、:guilabel:`Next` を選択します。終了したら、:guilabel:`Next` を選択します。"
+":guilabel:`Secure a connection to the Splunk platform` セクションのステップを完了して Splunk 間通信を保護するための証明書を取得します。方法については、:new-page:`Splunk Log Observer Connect 用に Splunk Enterprise で証明書を設定およびインストールする<https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` を参"
+"照してください。Log Observer Connect と Splunk Enterprise インスタンスを安全に接続するために、チェーン内の最初の証明書のみをコピーし、ガイド付きセットアップの次のページに貼り付けます。終了したら、:guilabel:`Next` を選択します。終了したら、:guilabel:`Next` を選択します。"
 
 #: ../../logs/set-up-logconnect.rst:130
 msgid "On the Set up Observability Cloud page of the guided setup, enter the following:"
@@ -2330,11 +2348,11 @@ msgstr "ガイド付きセットアップの Configure permissions ページで�
 
 #: ../../logs/set-up-logconnect.rst:149
 msgid ""
-"Manage concurrent search limits using your current strategy in Splunk Enterprise. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Enterprise. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in the Log Observer Connect UI. For example, if there are three concurrent users "
-"accessing the Log Observer Connect UI at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Enterprise."
+"Manage concurrent search limits using your current strategy in Splunk Enterprise. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Enterprise. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in the Log Observer Connect UI. For example, if there are three "
+"concurrent users accessing the Log Observer Connect UI at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Enterprise."
 msgstr ""
-"Splunk Enterprise の現在の戦略を使用して、同時検索の制限を管理します。Log Observer Connect ユーザーが開始するすべての検索は、Splunk Enterprise で作成したサービスアカウントを経由します。各アクティブ Log Observer Connect ユーザーに対して、ユーザーが Log Observer Connect UI で検索を実行すると、4 つのバックエンド検索が発生します。たとえば、Log Observer Connect UI に同時にアクセスするユーザー"
-"が 3 人いる場合、Log Observer Connect のサービスアカウントは Splunk Enterprise で約 12回の検索を開始します。"
+"Splunk Enterprise の現在の戦略を使用して、同時検索の制限を管理します。Log Observer Connect ユーザーが開始するすべての検索は、Splunk Enterprise で作成したサービスアカウントを経由します。各アクティブ Log Observer Connect ユーザーに対して、ユーザーが Log Observer Connect UI で検索を実行すると、4 つのバックエンド検索が発生します。たとえば、Log Observer Connect UI に同時にアク"
+"セスするユーザーが 3 人いる場合、Log Observer Connect のサービスアカウントは Splunk Enterprise で約 12回の検索を開始します。"
 
 #: ../../logs/severity-key.rst:-1
 msgid "Log Observer Connect relies on the correct mapping of the severity key. Confirm that your severity key is correctly mapped."
@@ -2346,47 +2364,87 @@ msgstr "重大度キーが正しくマッピングされていることを確認
 
 #: ../../logs/severity-key.rst:10
 msgid ""
-"The Log Observer Connect timeline displays a histogram of logged events over time, grouped by values of the message field :guilabel:`severity`. The severity key is a field that all logs contain. It has the values :guilabel:`DEBUG`, :guilabel:`ERROR`, :guilabel:`INFO`, :guilabel:`UNKNOWN`, and :guilabel:`WARNING`. Your logs might use a different field name for the severity key. Because "
-"the severity key in many logs is called :guilabel:`level`, Log Observer Connect automatically remaps the log field :guilabel:`level` to :guilabel:`severity`."
+"The Log Observer Connect timeline displays a histogram of logged events over time, grouped by values of the message field :guilabel:`severity`. The severity key is a field that all logs contain. It has the values :guilabel:`debug`, :guilabel:`error`, :guilabel:`info`, :guilabel:`unknown`, and :guilabel:`warning`. Your logs might use a different field name for the "
+"severity key."
 msgstr ""
-"Log Observer Connectのタイムラインは、メッセージフィールド  :guilabel:`severity`  の値でグループ化された、時間の経過とともにログされたイベントのヒストグラムを表示します。重大度キーはすべてのログに含まれるフィールドです。これには、:guilabel:`DEBUG`、:guilabel:`ERROR`、:guilabel:`INFO`、:guilabel:`UNKNOWN`、:guilabel:`WARNING` の値があります。ログは、重大度キーに異なるフィールド名を使用して"
-"いる可能性があります。多くのログの重大度キーは  :guilabel:`level`  と呼ばれるため、Log Observer Connectは自動的にログフィールド  :guilabel:`level`  を  :guilabel:`severity`  に再マップします。"
+"Log Observer Connectのタイムラインは、メッセージフィールド :guilabel:`severity` の値でグループ化された、時間の経過とともにログされたイベントのヒストグラムを表示します。重大度キーはすべてのログに含まれるフィールドです。これには、:guilabel:`debug`、:guilabel:`error`、:guilabel:`info`、:guilabel:`unknown`、:guilabel:`warning` の値があります。ログは、重大度キーに異なるフィー"
+"ルド名を使用している可能性があります。"
 
 #: ../../logs/severity-key.rst:12
-msgid ""
-"If your logs call the severity key by a different name, that's okay. To ensure that Log Observer Connect can read your field, transform your field name to :guilabel:`severity` or add a :guilabel:`severity` alias to your field name. To transform your field name, see :new-page:`Extract fields from event data using Ingest Processor <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/"
-"IngestProcessor/FieldExtractionPipeline>`. To add an alias to your field name, see :ref:`logs-alias`."
-msgstr ""
-"ログが重大度キーを別の名前で呼んでいても、大丈夫です。Log Observer Connectがフィールドを読めるようにするには、フィールド名を  :guilabel:`severity`  に変換するか、フィールド名に  :guilabel:`severity`  エイリアスを追加してください。フィールド名を変換するには、:new-page:`Extract fields from event data using Ingest Processor <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/"
-"IngestProcessor/FieldExtractionPipeline>` を参照してください。フィールド名にエイリアスを追加するには、:ref:`logs-alias` を参照してください。"
+msgid "If your logs call the severity key or its values by different names, that's okay. Ensure that Log Observer Connect can read your field and value names. Log Observer Connect assigns :guilabel:`unknown` to all values that it does not recognize."
+msgstr "ログが重大度キーやその値を異なる名前で呼んでいても、問題ありません。Log Observer Connectがフィールド名と値名を読めることを確認してください。Log Observer Connectは、認識できないすべての値に :guilabel:`unknown` を割り当てます。"
 
 #: ../../logs/severity-key.rst:14
-msgid "The mapping of your severity key and its values is case sensitive. The key and its values must appear exactly as follows:"
-msgstr "重大度キーとその値の対応付けは、大文字と小文字を区別します。キーと値は以下のように正確に記述してください："
+msgid "The names of your severity key and its values are not case sensitive."
+msgstr "重大度キーの名前とその値は、大文字と小文字を区別しません。"
 
 #: ../../logs/severity-key.rst:16
+msgid "Your severity key can have any of the following names:"
+msgstr "重大度キーには、以下のいずれかの名前を付けることができます："
+
+#: ../../logs/severity-key.rst:18 ../../logs/severity-key.rst:31
 msgid "severity"
 msgstr "重大度"
 
-#: ../../logs/severity-key.rst:17
-msgid "DEBUG"
-msgstr "DEBUG"
+#: ../../logs/severity-key.rst:19 ../../logs/severity-key.rst:38
+msgid "level"
+msgstr "レベル"
 
-#: ../../logs/severity-key.rst:18
-msgid "ERROR"
-msgstr "エラー"
+#: ../../logs/severity-key.rst:20 ../../logs/severity-key.rst:43
+msgid "otel.log.severity.text"
+msgstr "otel.log.severity.text"
 
-#: ../../logs/severity-key.rst:19
-msgid "INFO"
-msgstr "INFO"
+#: ../../logs/severity-key.rst:22
+msgid "The following table lists the values that Log Observer Connect recognizes for each severity name:"
+msgstr "以下の表は、Log Observer Connectが各重大度名に対して認識する値の一覧です："
 
-#: ../../logs/severity-key.rst:20
-msgid "UNKNOWN"
-msgstr "UNKNOWN"
+#: ../../logs/severity-key.rst:28
+msgid ":guilabel:`Severity field names`"
+msgstr ":guilabel:`Severity field names`"
 
-#: ../../logs/severity-key.rst:21
-msgid "WARNING"
-msgstr "警告"
+#: ../../logs/severity-key.rst:29
+msgid ":guilabel:`Severity value names`"
+msgstr ":guilabel:`Severity value names`"
+
+#: ../../logs/severity-key.rst
+msgid "info, information"
+msgstr "info、information"
+
+#: ../../logs/severity-key.rst
+msgid "err, error"
+msgstr "err、error"
+
+#: ../../logs/severity-key.rst
+msgid "warn, warning"
+msgstr "warn、warning"
+
+#: ../../logs/severity-key.rst
+msgid "debug"
+msgstr "debug"
+
+#: ../../logs/severity-key.rst
+msgid "critical"
+msgstr "critical"
+
+#: ../../logs/severity-key.rst
+msgid "normal"
+msgstr "normal"
+
+#: ../../logs/severity-key.rst:48
+msgid "If your severity key or values do not match any of the names in the previous table, do one of the following to turn them to names that Log Observer Connect recognizes:"
+msgstr "重大度キーや値が前の表のどの名前とも一致しない場合は、以下のいずれかを行って、Log Observer Connectが認識できる名前に変更してください："
+
+#: ../../logs/severity-key.rst:50
+msgid "Use a field extraction to transform your field name. See :new-page:`Extract fields from event data using Ingest Processor <https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/IngestProcessor/FieldExtractionPipeline>` to learn how."
+msgstr "フィールド名を変換するには、フィールド抽出を使用します。その方法については、:new-page:`Ingest Processorを使用してイベントデータからフィールドを抽出する<https://docs.splunk.com/Documentation/SplunkCloud/9.3.2408/IngestProcessor/FieldExtractionPipeline>` を参照してください。"
+
+#: ../../logs/severity-key.rst:52
+msgid "Add a :guilabel:`severity` alias to your field name.  See :ref:`logs-alias` to learn how."
+msgstr "フィールド名に :guilabel:`severity` エイリアスを追加します。方法については :ref:`logs-alias` を参照してください。"
+
+#: ../../logs/severity-key.rst:54
+msgid "When you create an alias for your severity key name, the original key name and its aliases continue to function for Log Observer queries. On the Log Observer timeline histogram, the severity key name and all its aliases are combined into one and represented as \"severity\"."
+msgstr "重大度キー名のエイリアスを作成すると、元のキー名とそのエイリアスはLog Observerクエリで機能し続けます。Log Observerのタイムラインヒストグラムでは、重大度キー名とそのエイリアスは1つにまとめられ、\"severity \"として表示されます。"
 
 #: ../../logs/timeline.rst:-1
 msgid "The Log Observer timeline displays a histogram chart of logged events over time, grouped by values of the “message” field. See the spread of error severity levels."
@@ -2399,7 +2457,8 @@ msgstr "タイムラインを使用してシステム全体の健全性を表示
 #: ../../logs/timeline.rst:11
 msgid "The Log Observer timeline displays a histogram of logged events over time, grouped by values of the message field ``severity``. Note that Log Observer Connect has no default aggregation. You can change Log Observer's default aggregation by changing the value in the :strong:`Group by` field. To learn more, see :new-page-ref:`logs-aggregations`."
 msgstr ""
-"Log Observer Timelineは、メッセージフィールド ``severity`` の値によってグループ化された、時間の経過とともにログされたイベントのヒストグラムを表示します。Log Observer Connectにはデフォルトの集約がないことに注意してください。:strong:`Group by` フィールドの値を変更することで、Log Observerのデフォルト集計を変更できます。詳細については、:new-page-ref:`logs-aggregations` を参照してください。"
+"Log Observer Timelineは、メッセージフィールド ``severity`` の値によってグループ化された、時間の経過とともにログされたイベントのヒストグラムを表示します。Log Observer Connectにはデフォルトの集約がないことに注意してください。:strong:`Group by` フィールドの値を変更することで、Log Observerのデフォルト集計を変更できます。詳細については、:new-page-ref:`logs-aggregations` を参照"
+"してください。"
 
 #: ../../logs/timeline.rst:13
 msgid "These features help you use the Timeline to review the health of your systems:"
@@ -2454,8 +2513,11 @@ msgid "Where does a log's logical time come from?"
 msgstr "ログの論理的な時間はどこから来るのでしょうか？"
 
 #: ../../logs/timestamp.rst:11
-msgid "A log's logical time can come from different places, depending on what data is available for the log. Your logs may have fields, such as ``timestamp`` or ``Time``, that sound like the log's logical time. However, Log Observer determines the log's logical time and assigns it to the field, ``_time``. If your logs already contain the field ``_time``, Log Observer overwrites it."
-msgstr "ログの論理時間は、そのログで利用可能なデータによって、異なる場所から得ることができます。ログには、``timestamp`` や ``Time`` のような、ログの論理時間のようなフィールドがあるかもしれません。しかし、Log Observerはログの論理時間を決定し、それを  ``_time`` というフィールドに割り当てます。ログが既に  ``_time`` というフィールドを含んでいる場合、Log Observerはそれを上書きします。"
+msgid ""
+"A log's logical time can come from different places, depending on what data is available for the log. Your logs may have fields, such as ``timestamp`` or ``Time``, that sound like the log's logical time. However, Log Observer determines the log's logical time and assigns it to the field, ``_time``. If your logs already contain the field ``_time``, Log Observer overwrites "
+"it."
+msgstr ""
+"ログの論理時間は、そのログで利用可能なデータによって、異なる場所から得ることができます。ログには、``timestamp`` や ``Time`` のような、ログの論理時間のようなフィールドがあるかもしれません。しかし、Log Observerはログの論理時間を決定し、それを  ``_time`` というフィールドに割り当てます。ログが既に  ``_time`` というフィールドを含んでいる場合、Log Observerはそれを上書きします。"
 
 #: ../../logs/timestamp.rst:13
 msgid "Log Observer applies the following two rules, in priority order, to determine each log's logical time:"
@@ -2500,11 +2562,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "Splunk プラットフォームインスタンスにログインし、:guilabel:`Settings`を選択し、:guilabel:`Add Data` を選択します。"
 
 #~ msgid ""
-#~ "Ensure that the source type and index are correct. It is best practice to create a new index for Log Observer logs data. Ensure that the index for Log Observer logs data is in the :guilabel:`Allowed indexes` list and select it as the default index. For more information on source types and indexes, see :new-page:`Modify input settings <https://docs.splunk.com/Documentation/Splunk/9.0.4/"
-#~ "Data/Modifyinputsettings>`."
+#~ "Ensure that the source type and index are correct. It is best practice to create a new index for Log Observer logs data. Ensure that the index for Log Observer logs data is in the :guilabel:`Allowed indexes` list and select it as the default index. For more information on source types and indexes, see :new-page:`Modify input settings <https://docs.splunk.com/"
+#~ "Documentation/Splunk/9.0.4/Data/Modifyinputsettings>`."
 #~ msgstr ""
-#~ "ソースのタイプとインデックスが正しいことを確認します。Log Observer ログデータ用に新しいインデックスを作成するのがベストプラクティスです。Log Observer ログデータのインデックスが :guilabel:`Allowed indexes`リストにあることを確認し、デフォルトインデックスとして選択します。ソースタイプとインデックスの詳細については、:new-page:`入力設定の変更<https://docs.splunk.com/Documentation/Splunk/"
-#~ "9.0.4/Data/Modifyinputsettings>` を参照してください。"
+#~ "ソースのタイプとインデックスが正しいことを確認します。Log Observer ログデータ用に新しいインデックスを作成するのがベストプラクティスです。Log Observer ログデータのインデックスが :guilabel:`Allowed indexes`リストにあることを確認し、デフォルトインデックスとして選択します。ソースタイプとインデックスの詳細については、:new-page:`入力設定の変更<https://docs.splunk.com/"
+#~ "Documentation/Splunk/9.0.4/Data/Modifyinputsettings>` を参照してください。"
 
 #~ msgid "Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create infinite logging rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration."
 #~ msgstr "Splunk Observability Cloud で Splunk Log Observer エンタイトルメントを持つお客様のみが、無限のロギングルールを作成できます。Log Observer エンタイトルメントがなく、代わりに Splunk Log Observer Connect を使用している場合は、:ref:`logs-intro-logconnect` を参照して Splunk Enterprise インテグレーションで何ができるかを確認してください。"
@@ -2513,18 +2575,18 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "Live Tail でシステムを監視できるのは、Splunk Observability Cloud で Splunk Log Observer エンタイトルメントを持つお客様のみです。Log Observer エンタイトルメントを持っておらず、代わりに Splunk Log Observer Connect を使用している場合は、:ref:`logs-intro-logconnect` を参照して Splunk Enterprise インテグレーションで何ができるかを確認してください。"
 
 #~ msgid ""
-#~ "All Splunk Log Observer customers must transition to Splunk Log Observer Connect by January 2024. Log Observer customers can now use Splunk Cloud Platform and Splunk Enterprise for logging and data analytics. Using the Splunk platform allows you to ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and use logging for security use cases. You can "
-#~ "still use Splunk Observability Cloud for observability. Migrating from Log Observer to the Splunk platformforlogging does not have any impact on your ability to use Splunk Observability Cloud to correlate logs, metrics, and traces."
+#~ "All Splunk Log Observer customers must transition to Splunk Log Observer Connect by January 2024. Log Observer customers can now use Splunk Cloud Platform and Splunk Enterprise for logging and data analytics. Using the Splunk platform allows you to ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and use logging for security "
+#~ "use cases. You can still use Splunk Observability Cloud for observability. Migrating from Log Observer to the Splunk platformforlogging does not have any impact on your ability to use Splunk Observability Cloud to correlate logs, metrics, and traces."
 #~ msgstr ""
-#~ "すべての Splunk Log Observer のお客様は、2024年1月までに Splunk Log Observer Connect に移行する必要があります。Log Observer のお客様は、ロギングとデータ分析に Splunk Cloud Platform と Splunk Enterprise を使用できるようになります。Splunk プラットフォームを使用することで、より多様なデータソースからより多くのログを取り込み、より高度なログパイプラインを使用し、セキュリティのユースケースに"
-#~ "ログを使用することができます。観測可能性については、引き続き Splunk Observability Cloud を使用できます。LogObserver からロギング用の Splunk プラットフォームに移行しても、Splunk Observability Cloud を使用してログ、メトリクス、トレースを相関させる機能に影響はありません。"
+#~ "すべての Splunk Log Observer のお客様は、2024年1月までに Splunk Log Observer Connect に移行する必要があります。Log Observer のお客様は、ロギングとデータ分析に Splunk Cloud Platform と Splunk Enterprise を使用できるようになります。Splunk プラットフォームを使用することで、より多様なデータソースからより多くのログを取り込み、より高度なログパイプラインを使用し、セキュリティ"
+#~ "のユースケースにログを使用することができます。観測可能性については、引き続き Splunk Observability Cloud を使用できます。LogObserver からロギング用の Splunk プラットフォームに移行しても、Splunk Observability Cloud を使用してログ、メトリクス、トレースを相関させる機能に影響はありません。"
 
 #~ msgid ""
-#~ "All pipeline management rules, including log metricization rules, apply only to logs that are sent to Splunk Observability Cloud.  You can't apply log metricization rules, or any pipeline management rules, to logs viewed in Log Observer Connect because logs are not ingested into Observability Cloud. Log Observer Connect lets users view and analyze Splunk Platform logs but can't "
-#~ "transform them."
+#~ "All pipeline management rules, including log metricization rules, apply only to logs that are sent to Splunk Observability Cloud.  You can't apply log metricization rules, or any pipeline management rules, to logs viewed in Log Observer Connect because logs are not ingested into Observability Cloud. Log Observer Connect lets users view and analyze Splunk Platform logs "
+#~ "but can't transform them."
 #~ msgstr ""
-#~ "ログのメトリクス化ルールを含むすべてのパイプライン管理ルールは、Splunk Observability Cloud に送信されるログにのみ適用されます。ログは Observability Cloud に取り込まれないため、Log Observer Connect で表示されるログには、ログのメトリクス化ルールやパイプライン管理ルールを適用できません。Log Observer Connect を使用すると、ユーザーは Splunk Platform ログを表示および分析できますが、変換する"
-#~ "ことはできません。"
+#~ "ログのメトリクス化ルールを含むすべてのパイプライン管理ルールは、Splunk Observability Cloud に送信されるログにのみ適用されます。ログは Observability Cloud に取り込まれないため、Log Observer Connect で表示されるログには、ログのメトリクス化ルールやパイプライン管理ルールを適用できません。Log Observer Connect を使用すると、ユーザーは Splunk Platform ログを表示および分析でき"
+#~ "ますが、変換することはできません。"
 
 #~ msgid "To add more control to processors, you can add filters that determine which logs a processor will be applied to."
 #~ msgstr "プロセッサーをさらに制御するために、プロセッサーを適用するログを決定するフィルターを追加することができます。"
@@ -2536,11 +2598,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "パッケージ化されたプロセッサーを編集したり削除したりすることはできません。"
 
 #~ msgid ""
-#~ "Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, open the third section in the guided setup called :guilabel:`Secure connection to the Splunk platform`. Copy the script from the guided setup, then paste it into a shell script and run it. When "
-#~ "you run the script, the Admin Config Service API does the following:"
+#~ "Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, open the third section in the guided setup called :guilabel:`Secure connection to the Splunk platform`. Copy the script from the guided setup, then paste it into a shell script "
+#~ "and run it. When you run the script, the Admin Config Service API does the following:"
 #~ msgstr ""
-#~ "Splunk Observability Cloud の Splunk Cloud Platform インスタンスへの接続を確保します。Splunk サポートからサポートを受けるには、:ref:`サポートチケットを送信する<support-ticket>`。自分で行うには、:guilabel:`Secure connection to the Splunk platform`というガイド付きセットアップの3番目のセクションを開きます。ガイドされたセットアップからスクリプトをコピーし、シェルスクリプトに貼り付けて実行"
-#~ "します。スクリプトを実行すると、Admin Config Service API は以下の処理を行います："
+#~ "Splunk Observability Cloud の Splunk Cloud Platform インスタンスへの接続を確保します。Splunk サポートからサポートを受けるには、:ref:`サポートチケットを送信する<support-ticket>`。自分で行うには、:guilabel:`Secure connection to the Splunk platform`というガイド付きセットアップの3番目のセクションを開きます。ガイドされたセットアップからスクリプトをコピーし、シェルスクリプト"
+#~ "に貼り付けて実行します。スクリプトを実行すると、Admin Config Service API は以下の処理を行います："
 
 #~ msgid "Adds Splunk Observability Cloud IPs and your local machine's IP to your Splunk Cloud Platform allow list to allow Log Observer Connect services and your machine to connect to your Splunk Cloud Platform instance through the management port"
 #~ msgstr "Splunk Observability Cloud の IP とローカルマシンの IP を Splunk Cloud Platform の許可リストに追加し、Log Observer Connect サービスとマシンが管理ポートを介して Splunk Cloud Platform インスタンスに接続できるようにします。"
@@ -2551,24 +2613,26 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgid "Removes your local machine's IP from the allow list"
 #~ msgstr "許可リストからローカルマシンのIPを削除します。"
 
-#~ msgid "Copy the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance. The script returns 3 certificates. Be sure to copy only the first certificate and include ``-----BEGIN CERTIFICATE-----`` and ``-----END CERTIFICATE-----``. The following is an example of a certificate."
+#~ msgid ""
+#~ "Copy the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance. The script returns 3 certificates. Be sure to copy only the first certificate and include ``-----BEGIN CERTIFICATE-----`` and ``-----END CERTIFICATE-----``. The following is an example of a "
+#~ "certificate."
 #~ msgstr "チェーンの最初の証明書をコピーし、Log Observer Connect と Splunk Cloud Platform インスタンスを安全に接続するためのガイド付きセットアップの次のページに貼り付けます。スクリプトは3つの証明書を返します。必ず最初の証明書のみをコピーし、``-----BEGIN CERTIFICATE-----`` と ``-----END CERTIFICATE-----`` を含めてください。以下は証明書の例です。"
 
 #~ msgid "``-----BEGIN CERTIFICATE-----``"
 #~ msgstr "``-----BEGIN CERTIFICATE-----``"
 
 #~ msgid ""
-#~ "``MIIEiDCCA3CgAwIBAgIQYtRkQZS4gkQSqEN/3NaYgjANBgkqhkiG9w0BAQsFADBG MQswCQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExM QzETMBEGA1UEAxMKR1RTIENBIDFDMzAeFw0yMzAyMjAwOTE1MzRaFw0yMzA1MTUw OTE1MzNaMBkxFzAVBgNVBAMTDnd3dy5nb29nbGUuY29tMFkwEwYHKoZIzj0CAQYI KoZIzj0DAQcDQgAEOU31sc6basWKjNmWj0gWF9ewzDavJK3QKASkQ/V7XwatprPh /vnuEzWx8vYY1Rlfcy5Yhsxpa/Cb9Iomn+wIaqOCAmgwggJkMA4GA1UdDwEB/"
-#~ "wQE AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQW BBQilv+CDxMpP/SuW5VTeT4rzLTAoTAfBgNVHSMEGDAWgBSKdH+vhc3ulc09nNDi RhTzcTUdJzBqBggrBgEFBQcBAQReMFwwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3Nw LnBraS5nb29nL2d0czFjMzAxBggrBgEFBQcwAoYlaHR0cDovL3BraS5nb29nL3Jl cG8vY2VydHMvZ3RzMWMzLmRlcjAZBgNVHREEEjAQgg53d3cuZ29vZ2xlLmNvbTAh "
-#~ "BgNVHSAEGjAYMAgGBmeBDAECATAMBgorBgEEAdZ5AgUDMDwGA1UdHwQ1MDMwMaAv oC2GK2h0dHA6Ly9jcmxzLnBraS5nb29nL2d0czFjMy9tb1ZEZklTaWEyay5jcmwwggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdwCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYZuUlZbAAAEAwBIMEYCIQDlwIgI7EnPSD21IsDsf1botxy/ Blfi2jKy60WpGq+XNgIhAI8L2XYzQ8OEGsw7JmpWC/hOKSB18n6wqB3EMWYFoaRc AHYAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGGblJWVQAABAMA "
-#~ "RzBFAiBd+rIH4lPny35N5OmGqOEYNXl3rK7pfzfjZH0sFF30TwIhAKK4pgWZO0IN fTzqnyWKEbmqy6lyNvl/khtYreqsvE0eMA0GCSqGSIb3DQEBCwUAA4IBAQCyw1us +cEBWh7HglwAoU1TMStbdNrugviDQ3DoBnGL4N+sCjOfXzCXGhINLwzv8KfAZV+Y0IX4nGNyliDu7Gd6vt+pnyLUsI2fTfPZq6Po14rNGaC8vRHcN+Yo317ylo6sQD6EZ04CmlIA4JUzEtj1H6tj69RjyxDqV5EXsGLJ+DIJ4JYAm5xi6gEvFkdhnVYvHV5W 0BNRR+EO4Vw/tOkpyisemMt9L9aFZ4HaEuiSvL3R/HGU94uCxXc+TFwmVTelVFZN "
-#~ "eP4Q0ck4ooUOd7XgCc5qdvCiCiD/268+gBNSHhJSPZXeuzC6vL7mMKVY4I80sKKP F+4goIJZUyLdHZ+a``"
+#~ "``MIIEiDCCA3CgAwIBAgIQYtRkQZS4gkQSqEN/3NaYgjANBgkqhkiG9w0BAQsFADBG MQswCQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExM QzETMBEGA1UEAxMKR1RTIENBIDFDMzAeFw0yMzAyMjAwOTE1MzRaFw0yMzA1MTUw OTE1MzNaMBkxFzAVBgNVBAMTDnd3dy5nb29nbGUuY29tMFkwEwYHKoZIzj0CAQYI KoZIzj0DAQcDQgAEOU31sc6basWKjNmWj0gWF9ewzDavJK3QKASkQ/V7XwatprPh /vnuEzWx8vYY1Rlfcy5Yhsxpa/"
+#~ "Cb9Iomn+wIaqOCAmgwggJkMA4GA1UdDwEB/wQE AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQW BBQilv+CDxMpP/SuW5VTeT4rzLTAoTAfBgNVHSMEGDAWgBSKdH+vhc3ulc09nNDi RhTzcTUdJzBqBggrBgEFBQcBAQReMFwwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3Nw LnBraS5nb29nL2d0czFjMzAxBggrBgEFBQcwAoYlaHR0cDovL3BraS5nb29nL3Jl cG8vY2VydHMvZ3RzMWMzLmRlcjAZBgNVHREEEjAQgg53d3cuZ29vZ2xlLmNvbTAh "
+#~ "BgNVHSAEGjAYMAgGBmeBDAECATAMBgorBgEEAdZ5AgUDMDwGA1UdHwQ1MDMwMaAv oC2GK2h0dHA6Ly9jcmxzLnBraS5nb29nL2d0czFjMy9tb1ZEZklTaWEyay5jcmwwggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdwCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYZuUlZbAAAEAwBIMEYCIQDlwIgI7EnPSD21IsDsf1botxy/ Blfi2jKy60WpGq+XNgIhAI8L2XYzQ8OEGsw7JmpWC/hOKSB18n6wqB3EMWYFoaRc "
+#~ "AHYAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGGblJWVQAABAMA RzBFAiBd+rIH4lPny35N5OmGqOEYNXl3rK7pfzfjZH0sFF30TwIhAKK4pgWZO0IN fTzqnyWKEbmqy6lyNvl/khtYreqsvE0eMA0GCSqGSIb3DQEBCwUAA4IBAQCyw1us "
+#~ "+cEBWh7HglwAoU1TMStbdNrugviDQ3DoBnGL4N+sCjOfXzCXGhINLwzv8KfAZV+Y0IX4nGNyliDu7Gd6vt+pnyLUsI2fTfPZq6Po14rNGaC8vRHcN+Yo317ylo6sQD6EZ04CmlIA4JUzEtj1H6tj69RjyxDqV5EXsGLJ+DIJ4JYAm5xi6gEvFkdhnVYvHV5W 0BNRR+EO4Vw/tOkpyisemMt9L9aFZ4HaEuiSvL3R/HGU94uCxXc+TFwmVTelVFZN eP4Q0ck4ooUOd7XgCc5qdvCiCiD/268+gBNSHhJSPZXeuzC6vL7mMKVY4I80sKKP F+4goIJZUyLdHZ+a``"
 #~ msgstr ""
-#~ "``MIIEiDCCA3CgAwIBAgIQYtRkQZS4gkQSqEN/3NaYgjANBgkqhkiG9w0BAQsFADBG MQswCQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExM QzETMBEGA1UEAxMKR1RTIENBIDFDMzAeFw0yMzAyMjAwOTE1MzRaFw0yMzA1MTUw OTE1MzNaMBkxFzAVBgNVBAMTDnd3dy5nb29nbGUuY29tMFkwEwYHKoZIzj0CAQYI KoZIzj0DAQcDQgAEOU31sc6basWKjNmWj0gWF9ewzDavJK3QKASkQ/V7XwatprPh /vnuEzWx8vYY1Rlfcy5Yhsxpa/Cb9Iomn+wIaqOCAmgwggJkMA4GA1UdDwEB/"
-#~ "wQE AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQW BBQilv+CDxMpP/SuW5VTeT4rzLTAoTAfBgNVHSMEGDAWgBSKdH+vhc3ulc09nNDi RhTzcTUdJzBqBggrBgEFBQcBAQReMFwwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3Nw LnBraS5nb29nL2d0czFjMzAxBggrBgEFBQcwAoYlaHR0cDovL3BraS5nb29nL3Jl cG8vY2VydHMvZ3RzMWMzLmRlcjAZBgNVHREEEjAQgg53d3cuZ29vZ2xlLmNvbTAh "
-#~ "BgNVHSAEGjAYMAgGBmeBDAECATAMBgorBgEEAdZ5AgUDMDwGA1UdHwQ1MDMwMaAv oC2GK2h0dHA6Ly9jcmxzLnBraS5nb29nL2d0czFjMy9tb1ZEZklTaWEyay5jcmwwggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdwCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYZuUlZbAAAEAwBIMEYCIQDlwIgI7EnPSD21IsDsf1botxy/ Blfi2jKy60WpGq+XNgIhAI8L2XYzQ8OEGsw7JmpWC/hOKSB18n6wqB3EMWYFoaRc AHYAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGGblJWVQAABAMA "
-#~ "RzBFAiBd+rIH4lPny35N5OmGqOEYNXl3rK7pfzfjZH0sFF30TwIhAKK4pgWZO0IN fTzqnyWKEbmqy6lyNvl/khtYreqsvE0eMA0GCSqGSIb3DQEBCwUAA4IBAQCyw1us +cEBWh7HglwAoU1TMStbdNrugviDQ3DoBnGL4N+sCjOfXzCXGhINLwzv8KfAZV+Y0IX4nGNyliDu7Gd6vt+pnyLUsI2fTfPZq6Po14rNGaC8vRHcN+Yo317ylo6sQD6EZ04CmlIA4JUzEtj1H6tj69RjyxDqV5EXsGLJ+DIJ4JYAm5xi6gEvFkdhnVYvHV5W 0BNRR+EO4Vw/tOkpyisemMt9L9aFZ4HaEuiSvL3R/HGU94uCxXc+TFwmVTelVFZN "
-#~ "eP4Q0ck4ooUOd7XgCc5qdvCiCiD/268+gBNSHhJSPZXeuzC6vL7mMKVY4I80sKKP F+4goIJZUyLdHZ+a``"
+#~ "``MIIEiDCCA3CgAwIBAgIQYtRkQZS4gkQSqEN/3NaYgjANBgkqhkiG9w0BAQsFADBG MQswCQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExM QzETMBEGA1UEAxMKR1RTIENBIDFDMzAeFw0yMzAyMjAwOTE1MzRaFw0yMzA1MTUw OTE1MzNaMBkxFzAVBgNVBAMTDnd3dy5nb29nbGUuY29tMFkwEwYHKoZIzj0CAQYI KoZIzj0DAQcDQgAEOU31sc6basWKjNmWj0gWF9ewzDavJK3QKASkQ/V7XwatprPh /vnuEzWx8vYY1Rlfcy5Yhsxpa/"
+#~ "Cb9Iomn+wIaqOCAmgwggJkMA4GA1UdDwEB/wQE AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQW BBQilv+CDxMpP/SuW5VTeT4rzLTAoTAfBgNVHSMEGDAWgBSKdH+vhc3ulc09nNDi RhTzcTUdJzBqBggrBgEFBQcBAQReMFwwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3Nw LnBraS5nb29nL2d0czFjMzAxBggrBgEFBQcwAoYlaHR0cDovL3BraS5nb29nL3Jl cG8vY2VydHMvZ3RzMWMzLmRlcjAZBgNVHREEEjAQgg53d3cuZ29vZ2xlLmNvbTAh "
+#~ "BgNVHSAEGjAYMAgGBmeBDAECATAMBgorBgEEAdZ5AgUDMDwGA1UdHwQ1MDMwMaAv oC2GK2h0dHA6Ly9jcmxzLnBraS5nb29nL2d0czFjMy9tb1ZEZklTaWEyay5jcmwwggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdwCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYZuUlZbAAAEAwBIMEYCIQDlwIgI7EnPSD21IsDsf1botxy/ Blfi2jKy60WpGq+XNgIhAI8L2XYzQ8OEGsw7JmpWC/hOKSB18n6wqB3EMWYFoaRc "
+#~ "AHYAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGGblJWVQAABAMA RzBFAiBd+rIH4lPny35N5OmGqOEYNXl3rK7pfzfjZH0sFF30TwIhAKK4pgWZO0IN fTzqnyWKEbmqy6lyNvl/khtYreqsvE0eMA0GCSqGSIb3DQEBCwUAA4IBAQCyw1us "
+#~ "+cEBWh7HglwAoU1TMStbdNrugviDQ3DoBnGL4N+sCjOfXzCXGhINLwzv8KfAZV+Y0IX4nGNyliDu7Gd6vt+pnyLUsI2fTfPZq6Po14rNGaC8vRHcN+Yo317ylo6sQD6EZ04CmlIA4JUzEtj1H6tj69RjyxDqV5EXsGLJ+DIJ4JYAm5xi6gEvFkdhnVYvHV5W 0BNRR+EO4Vw/tOkpyisemMt9L9aFZ4HaEuiSvL3R/HGU94uCxXc+TFwmVTelVFZN eP4Q0ck4ooUOd7XgCc5qdvCiCiD/268+gBNSHhJSPZXeuzC6vL7mMKVY4I80sKKP F+4goIJZUyLdHZ+a``"
 
 #~ msgid "``-----END CERTIFICATE-----``"
 #~ msgstr "``-----END CERTIFICATE-----``"
@@ -2580,26 +2644,26 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "使用しているレルムのすべてのIPにポート ``8089`` を公開します。"
 
 #~ msgid ""
-#~ "Ensure that token authentication is enabled for your Log Observer Connect service account in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. To configure the Splunk Cloud service account user in the "
-#~ "following section you must have the sc_admin role."
+#~ "Ensure that token authentication is enabled for your Log Observer Connect service account in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. To configure the Splunk Cloud service account "
+#~ "user in the following section you must have the sc_admin role."
 #~ msgstr ""
-#~ "Splunk Cloud Platform インスタンスの Log Observer Connect サービスアカウントでトークン認証が有効になっていることを確認します。その方法については、:new-page:`Splunk Cloud Platformの保護：トークン認証を有効または無効にする<https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` を参照してください。以下のセクションで Splunk Cloud サービスアカウントユーザーを設"
-#~ "定するには、sc_admin ロールが必要です。"
+#~ "Splunk Cloud Platform インスタンスの Log Observer Connect サービスアカウントでトークン認証が有効になっていることを確認します。その方法については、:new-page:`Splunk Cloud Platformの保護：トークン認証を有効または無効にする<https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` を参照してください。以下のセクションで Splunk Cloud サービスアカウ"
+#~ "ントユーザーを設定するには、sc_admin ロールが必要です。"
 
 #~ msgid ""
-#~ "Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days). In the :guilabel:`Disk space "
-#~ "limit`section enter a :guilabel:`Standard search limit` of 1000 MB."
+#~ "Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days). In the :guilabel:`Disk "
+#~ "space limit`section enter a :guilabel:`Standard search limit` of 1000 MB."
 #~ msgstr ""
-#~ "次に、:guilabel:`Resources` タブの :guilabel:`Role search time window limit` セクションで、:guilabel:`Custom time` を選択し、このロールの検索の最大時間ウィンドウに 2,592,000秒（30日）を入力します。この役割の最も早い検索可能イベント時間には、:guilabel:`Custom time` を選択し、7,776,000秒（90日）と入力します。:guilabel:`Disk space limit` セクションで、:guilabel:`Standard search limit` に "
-#~ "1000 MB を入力します。"
+#~ "次に、:guilabel:`Resources` タブの :guilabel:`Role search time window limit` セクションで、:guilabel:`Custom time` を選択し、このロールの検索の最大時間ウィンドウに 2,592,000秒（30日）を入力します。この役割の最も早い検索可能イベント時間には、:guilabel:`Custom time` を選択し、7,776,000秒（90日）と入力します。:guilabel:`Disk space limit` セクションで、:guilabel:`Standard "
+#~ "search limit` に 1000 MB を入力します。"
 
 #~ msgid "Allow these IPs:"
 #~ msgstr "これらのIPを許可します："
 
 #~ msgid "Customers with a Splunk Log Observer entitlement in Splunk Observability Cloud must transition from Log Observer to Log Observer Connect by December 2023. With Log Observer Connect, you can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging. See :ref:`lo-transition` to learn how."
 #~ msgstr ""
-#~ "Splunk Observability Cloud の Splunk Log Observer エンタイトルメントをお持ちのお客様は、2023年12月までに Log Observer から Log Observer Connect に移行する必要があります。Log Observer Connect を使用すると、より多様なデータソースからより多くのログをインジェストし、より高度なログパイプラインを利用し、セキュリティロギングに拡張できます。その方法については、:ref:`lo-transition` を参照してく"
-#~ "ださい。"
+#~ "Splunk Observability Cloud の Splunk Log Observer エンタイトルメントをお持ちのお客様は、2023年12月までに Log Observer から Log Observer Connect に移行する必要があります。Log Observer Connect を使用すると、より多様なデータソースからより多くのログをインジェストし、より高度なログパイプラインを利用し、セキュリティロギングに拡張できます。その方法については、:ref:`lo-"
+#~ "transition` を参照してください。"
 
 #~ msgid "Learn how you can forward Log Observer logs to the Splunk platform as part of the Log Observer transition."
 #~ msgstr "Log Observer 移行の一環として、Log Observer のログを Splunk プラットフォームに転送する方法について説明します。"
@@ -2626,7 +2690,9 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "Log Observer Connect"
 
 #~ msgid "In Log Observer, you can perform codeless queries on logs to detect the source of problems in your systems. You can also extract fields from logs to set up log processing rules and transform your data as it arrives or send data to Infinite Logging S3 buckets for future use. See :ref:`LogObserverFeatures` to learn more about Log Observer capabilities."
-#~ msgstr "Log Observerでは、ログに対してコードレスでクエリを実行し、システム内の問題の原因を検出することができます。また、ログからフィールドを抽出してログ処理ルールを設定し、データが到着したときにデータを変換したり、将来の使用のためにデータを Infinite Logging S3バケットに送信したりすることもできます。Log Observer機能の詳細については、:ref:`LogObserverFeatures` を参照してください。"
+#~ msgstr ""
+#~ "Log Observerでは、ログに対してコードレスでクエリを実行し、システム内の問題の原因を検出することができます。また、ログからフィールドを抽出してログ処理ルールを設定し、データが到着したときにデータを変換したり、将来の使用のためにデータを Infinite Logging S3バケットに送信したりすることもできます。Log Observer機能の詳細については、:ref:`LogObserverFeatures` を参照してくださ"
+#~ "い。"
 
 #~ msgid "In Log Observer Connect, you can perform codeless queries on your Splunk Enterprise or Splunk Cloud Platform logs. See :ref:`logs-intro-logconnect` to learn what you can do with the Splunk platform integration."
 #~ msgstr "Log Observer Connect では、Splunk Enterprise または Splunk Cloud Platform のログに対してコードレスクエリを実行できます。Splunk プラットフォームインテグレーションで何ができるかは、:ref:`logs-intro-logconnect` を参照してください。"
@@ -2785,22 +2851,24 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "インデックスを作成するデータ量を減らす"
 
 #~ msgid "Some logs may not be useful on a day-to-day basis but may still be important in case of a future incident. For example, you might not always want to index logs from a non-production environment, or index every debug message. In either case, you can create an infinite logging rule to archive those logs in S3 buckets that your team owns in AWS."
-#~ msgstr "ログの中には、日常的には有用でなくても、将来インシデントが発生した場合に重要なものがあります。例えば、非本番環境からのログを常にインデックス化したいとは思わないかもしれないし、すべてのデバッグメッセージをインデックス化したいとは思わないかもしれません。どちらの場合でも、チームがAWSに所有するS3バケットにこれらのログをアーカイブする無限ログルールを作成することができます。"
+#~ msgstr ""
+#~ "ログの中には、日常的には有用でなくても、将来インシデントが発生した場合に重要なものがあります。例えば、非本番環境からのログを常にインデックス化したいとは思わないかもしれないし、すべてのデバッグメッセージをインデックス化したいとは思わないかもしれません。どちらの場合でも、チームがAWSに所有するS3バケットにこれらのログをアーカイブする無限ログルールを作成することができます。"
 
 #~ msgid ""
-#~ "If you want to keep a sample of your archived logs to analyze in Log Observer, you can set the sampling rate in your infinite logging rule so that some amount of the data you archive will also be indexed. You pay for only the logs that you index and analyze in Log Observer. This way, you can monitor trends across all your logs while reducing the impact on your indexing capacity. "
-#~ "See :ref:`order-of-execution` in the next section to learn more about using pipeline rules to help reduceyourindexing capacity."
+#~ "If you want to keep a sample of your archived logs to analyze in Log Observer, you can set the sampling rate in your infinite logging rule so that some amount of the data you archive will also be indexed. You pay for only the logs that you index and analyze in Log Observer. This way, you can monitor trends across all your logs while reducing the impact on your "
+#~ "indexing capacity. See :ref:`order-of-execution` in the next section to learn more about using pipeline rules to help reduceyourindexing capacity."
 #~ msgstr ""
-#~ "Log Observerで分析するためにアーカイブされたログのサンプルを保持したい場合は、アーカイブしたデータのある程度の量もインデックス化されるように、無限ロギングルールでサンプリングレートを設定できます。Log Observerでインデックスを作成し、分析するログに対してのみ料金を支払います。このようにして、インデックス作成容量への影響を減らしながら、すべてのログにわたって傾向を監視することができます。イ"
-#~ "ンデックス作成容量を削減するためのパイプラインルールの使用については、次のセクションの :ref:`order-of-execution` を参照してください。"
+#~ "Log Observerで分析するためにアーカイブされたログのサンプルを保持したい場合は、アーカイブしたデータのある程度の量もインデックス化されるように、無限ロギングルールでサンプリングレートを設定できます。Log Observerでインデックスを作成し、分析するログに対してのみ料金を支払います。このようにして、インデックス作成容量への影響を減らしながら、すべてのログにわたって傾向を監視する"
+#~ "ことができます。インデックス作成容量を削減するためのパイプラインルールの使用については、次のセクションの :ref:`order-of-execution` を参照してください。"
 
 #~ msgid "Retain logs longer than 30 days"
 #~ msgstr "ログデータを30日以上保持する"
 
 #~ msgid ""
-#~ "Storing logs in S3 buckets gives you full control over retention time, which can, for example, help you meet compliance and audit requirements. To retain logs longer than Log Observer's 30-day retention period, you can archive and index 100% of your logs. Logs that are archived and indexed will be available for analysis in Log Observer for 30 days and will also be stored in S3 buckets "
-#~ "for as long as you want them."
-#~ msgstr "S3バケットにログを保存することで、保存期間を完全にコントロールすることができ、例えば、コンプライアンスや監査要件を満たすのに役立ちます。Log Observerの30日間の保持期間よりも長くログを保持するには、ログの100％をアーカイブし、インデックス化することができます。アーカイブされインデックス化されたログは、Log Observerで30日間分析が可能で、S3バケットにも必要な期間保存されます。"
+#~ "Storing logs in S3 buckets gives you full control over retention time, which can, for example, help you meet compliance and audit requirements. To retain logs longer than Log Observer's 30-day retention period, you can archive and index 100% of your logs. Logs that are archived and indexed will be available for analysis in Log Observer for 30 days and will also be "
+#~ "stored in S3 buckets for as long as you want them."
+#~ msgstr ""
+#~ "S3バケットにログを保存することで、保存期間を完全にコントロールすることができ、例えば、コンプライアンスや監査要件を満たすのに役立ちます。Log Observerの30日間の保持期間よりも長くログを保持するには、ログの100％をアーカイブし、インデックス化することができます。アーカイブされインデックス化されたログは、Log Observerで30日間分析が可能で、S3バケットにも必要な期間保存されます。"
 
 #~ msgid "Order of execution of logs pipeline rules"
 #~ msgstr "ログのパイプラインルールの実行順序"
@@ -2820,7 +2888,8 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgid "Because infinite logging rules run last, you can create field extraction rules, then use the resulting fields in infinite logging rules. You can also metricize logs, then archive them through infinite logging without impacting your ingest capacity. For more information, see :ref:`logs-pipeline-sequence`."
 #~ msgstr "無限のロギングルールは最後に実行されるため、フィールド抽出ルールを作成し、その結果のフィールドを無限のロギングルールで使用することができます。また、インジェスト容量に影響を与えることなく、ログをメトリクス化し、無限のロギングによってアーカイブすることもできます。詳細については、:ref:`logs-pipeline-sequence` を参照してください。"
 
-#~ msgid "To create new infinite logging S3 connections, You must have an administrator role in Splunk Observability Cloud. If you have a power user role, you can send data to S3 buckets using an existing infinite logging S3 connection, but you cannot create new S3 connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console."
+#~ msgid ""
+#~ "To create new infinite logging S3 connections, You must have an administrator role in Splunk Observability Cloud. If you have a power user role, you can send data to S3 buckets using an existing infinite logging S3 connection, but you cannot create new S3 connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console."
 #~ msgstr "新しい無限のロギング S3 接続を作成するには、Splunk Observability Cloud の管理者ロールが必要です。パワーユーザー権限を持っている場合、既存の無限のロギング S3 接続を使用して S3 バケットにデータを送信できますが、新しい S3 接続を作成することはできません。AWS Management Console で S3 バケットを作成するために必要な権限については、AWS のドキュメントを参照してください。"
 
 #~ msgid "If you have a read_only or usage role, you cannot create new S3 connections or use existing connections to send data to S3 buckets."
@@ -2893,11 +2962,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr ":guilabel:`Next` を選択します。"
 
 #~ msgid ""
-#~ "On the :strong:`Filter Data` page, create a filter that matches the log lines you want to archive in your S3 bucket. Only logs matching the filter are archived. If you want to index a sample of the logs going to the archive, select a percentage in :guilabel:`Define indexing behavior`. Indexing a small percentage of logs in Log Observer lets you see trends in logs that are in S3 "
-#~ "buckets. Select :guilabel:`Next`."
+#~ "On the :strong:`Filter Data` page, create a filter that matches the log lines you want to archive in your S3 bucket. Only logs matching the filter are archived. If you want to index a sample of the logs going to the archive, select a percentage in :guilabel:`Define indexing behavior`. Indexing a small percentage of logs in Log Observer lets you see trends in logs that "
+#~ "are in S3 buckets. Select :guilabel:`Next`."
 #~ msgstr ""
-#~ ":strong:`Filter Data` ページで、S3バケットにアーカイブしたいログ行にマッチするフィルターを作成します。フィルターに一致するログのみがアーカイブされます。アーカイブに行くログのサンプルをインデックス化したい場合は、:guilabel:`Define indexing behavior` でパーセンテージを選択します。Log Observerでログの小さなパーセンテージをインデックス化することで、S3バケットにあるログの傾向を見ることがで"
-#~ "きます。:guilabel:`Next` を選択します。"
+#~ ":strong:`Filter Data` ページで、S3バケットにアーカイブしたいログ行にマッチするフィルターを作成します。フィルターに一致するログのみがアーカイブされます。アーカイブに行くログのサンプルをインデックス化したい場合は、:guilabel:`Define indexing behavior` でパーセンテージを選択します。Log Observerでログの小さなパーセンテージをインデックス化することで、S3バケットにあるログの傾"
+#~ "向を見ることができます。:guilabel:`Next` を選択します。"
 
 #~ msgid "Add a name and description for your infinite logging rule."
 #~ msgstr "無限のロギングルールの名前と説明を追加します。"
@@ -2921,11 +2990,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr ":ref:`logs-individual-log`"
 
 #~ msgid ""
-#~ "You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. If your organization has integrated its Splunk platform (Splunk Cloud Platform or Splunk Enterprise) instance with its Splunk Observability Cloud instance, you can search Splunk platform logs that your Splunk platform role has permissions to see in Splunk platform. If you cannot "
-#~ "access a log in your Splunk platform instance, you cannot access it in Splunk Observability Cloud."
+#~ "You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. If your organization has integrated its Splunk platform (Splunk Cloud Platform or Splunk Enterprise) instance with its Splunk Observability Cloud instance, you can search Splunk platform logs that your Splunk platform role has permissions to see in Splunk platform. "
+#~ "If you cannot access a log in your Splunk platform instance, you cannot access it in Splunk Observability Cloud."
 #~ msgstr ""
-#~ "Splunk Observability Cloud インスタンスがログを取り込んでいる場合、Splunk Observability Cloud のログを検索できます。組織で Splunk platform (Splunk Cloud Platform または Splunk Enterprise) インスタンスを Splunk Observability Cloud インスタンスと統合している場合、Splunk platform で表示する権限を持つ Splunk platform ロールのログを検索できます。Splunk platform インスタンスでログにアクセス"
-#~ "できない場合は、Splunk Observability Cloud でもログにアクセスできません。"
+#~ "Splunk Observability Cloud インスタンスがログを取り込んでいる場合、Splunk Observability Cloud のログを検索できます。組織で Splunk platform (Splunk Cloud Platform または Splunk Enterprise) インスタンスを Splunk Observability Cloud インスタンスと統合している場合、Splunk platform で表示する権限を持つ Splunk platform ロールのログを検索できます。Splunk platform インスタンス"
+#~ "でログにアクセスできない場合は、Splunk Observability Cloud でもログにアクセスできません。"
 
 #~ msgid "You can search logs that you have permissions to see for particular keywords, field names, or field values."
 #~ msgstr "特定のキーワード、フィールド名、またはフィールド値について、閲覧権限のあるログを検索することができます。"
@@ -2970,11 +3039,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "月間インデックス作成 MB"
 
 #~ msgid ""
-#~ "The :guilabel:`Log volume ingestion` entitlement is determined by your organization's contract. It can be translated from Host purchased, or can be based on GB usage per month. The amount of this monthly capacity that you can use per hour or per minute, or \"burst limit\", is a multiple of your contractual limit. You can increase your contract limit MB/month. You cannot increase the "
-#~ "burst limit MB/hour or MB/minute as it is a system limit to ensure the protection of your data."
+#~ "The :guilabel:`Log volume ingestion` entitlement is determined by your organization's contract. It can be translated from Host purchased, or can be based on GB usage per month. The amount of this monthly capacity that you can use per hour or per minute, or \"burst limit\", is a multiple of your contractual limit. You can increase your contract limit MB/month. You "
+#~ "cannot increase the burst limit MB/hour or MB/minute as it is a system limit to ensure the protection of your data."
 #~ msgstr ""
-#~ ":guilabel:`Log volume ingestion` エンタイトルメントは、お客様の組織の契約によって決定されます。これは、購入されたホストから換算することもできますし、月あたりのGB使用量に基づくこともできます。この月間容量のうち、1時間または1分あたりに使用できる量、つまり「バースト制限」は、契約上の制限の倍数です。MB/月の契約容量を増やすことができます。バーストリミットのMB/時またはMB/分は、お客様のデータ"
-#~ "保護を保証するためのシステム制限であるため、増やすことはできません。"
+#~ ":guilabel:`Log volume ingestion` エンタイトルメントは、お客様の組織の契約によって決定されます。これは、購入されたホストから換算することもできますし、月あたりのGB使用量に基づくこともできます。この月間容量のうち、1時間または1分あたりに使用できる量、つまり「バースト制限」は、契約上の制限の倍数です。MB/月の契約容量を増やすことができます。バーストリミットのMB/時またはMB/分"
+#~ "は、お客様のデータ保護を保証するためのシステム制限であるため、増やすことはできません。"
 
 #~ msgid ":guilabel:`Important:` This limit is a system protection limit and is subject to change based on system availability and fine-tuning."
 #~ msgstr ":guilabel:`Important:` この制限はシステム保護の制限であり、システムの可用性と微調整に基づいて変更されることがあります。"
@@ -2986,11 +3055,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "Splunk は顧客の要求に応じてこの上限を増やすことができます。お客様は超過料金の対象となります。"
 
 #~ msgid ""
-#~ "The :guilabel:`Log volume indexed` entitlement is determined by your organization's contract. It can be translated from Host purchased, or can be based on GB usage per month. The amount of this monthly capacity that you can use per hour or per minute, or \"burst limit\", is a multiple of your contractual limit. You can increase your contract limit MB/month. You cannot increase the "
-#~ "burst limit MB/hour or MB/minute as it is a system limit to ensure the protection of your data."
+#~ "The :guilabel:`Log volume indexed` entitlement is determined by your organization's contract. It can be translated from Host purchased, or can be based on GB usage per month. The amount of this monthly capacity that you can use per hour or per minute, or \"burst limit\", is a multiple of your contractual limit. You can increase your contract limit MB/month. You cannot "
+#~ "increase the burst limit MB/hour or MB/minute as it is a system limit to ensure the protection of your data."
 #~ msgstr ""
-#~ ":guilabel:`Log volume indexed` エンタイトルメントは、お客様の組織の契約によって決定されます。これは、購入されたホストから換算することもできますし、月あたりのGB使用量に基づくこともできます。この月間容量のうち、1時間または1分あたりに使用できる量、つまり「バースト制限」は、契約上の制限の倍数です。MB/月の契約容量を増やすことができます。バーストリミットのMB/時またはMB/分は、お客様のデータ保"
-#~ "護を保証するためのシステム制限であるため、増やすことはできません。"
+#~ ":guilabel:`Log volume indexed` エンタイトルメントは、お客様の組織の契約によって決定されます。これは、購入されたホストから換算することもできますし、月あたりのGB使用量に基づくこともできます。この月間容量のうち、1時間または1分あたりに使用できる量、つまり「バースト制限」は、契約上の制限の倍数です。MB/月の契約容量を増やすことができます。バーストリミットのMB/時またはMB/分"
+#~ "は、お客様のデータ保護を保証するためのシステム制限であるため、増やすことはできません。"
 
 #~ msgid "Any log data that exceeds the limit in that bucket (hourly and minutely) will be dropped and not indexed.ß"
 #~ msgstr "そのバケット（1時間ごと、1分ごと）の制限を超えたログデータはすべて削除され、インデックス化されません。"
@@ -3167,11 +3236,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "Splunk Log Observer の移行"
 
 #~ msgid ""
-#~ "All Splunk Log Observer customers, who are sending log data to Splunk Observability cloud today, must transition to using Splunk Cloud Platform or Splunk Enterprise as the central platform for logs by the end of December 2023. Splunk Observability Cloud will continue to support Log Observer functionality and user experience with Splunk Log Observer Connect as a bridge between Splunk "
-#~ "Observability Cloud and Splunk Cloud Platform. Transitioning to the Splunk platform, whether it is SplunkCloudPlatform or Splunk Enterprise, as the back-end for log storage does not impact your ability to use Splunk Observability Cloud to correlate logs, metrics, and traces."
+#~ "All Splunk Log Observer customers, who are sending log data to Splunk Observability cloud today, must transition to using Splunk Cloud Platform or Splunk Enterprise as the central platform for logs by the end of December 2023. Splunk Observability Cloud will continue to support Log Observer functionality and user experience with Splunk Log Observer Connect as a bridge "
+#~ "between Splunk Observability Cloud and Splunk Cloud Platform. Transitioning to the Splunk platform, whether it is SplunkCloudPlatform or Splunk Enterprise, as the back-end for log storage does not impact your ability to use Splunk Observability Cloud to correlate logs, metrics, and traces."
 #~ msgstr ""
-#~ "現在 Splunk Observability クラウドにログデータを送信しているすべての Splunk Log Observer のお客様は、2023 年 12 月末までにログの中心プラットフォームとして Splunk Cloud Platform または Splunk Enterprise を使用するように移行する必要があります。Splunk Observability Cloud は、Splunk Observability Cloud と Splunk Cloud Platform 間のブリッジとして Splunk Log Observer Connect を使用し、Log "
-#~ "Observer の機能とユーザーエクスペリエンスを引き続きサポートします。ログストレージのバックエンドとして SplunkCloudPlatform または Splunk Enterprise のいずれかを Splunk プラットフォームに移行しても、Splunk Observability Cloud を使用してログ、メトリクス、トレースを相関させる機能に影響はありません。"
+#~ "現在 Splunk Observability クラウドにログデータを送信しているすべての Splunk Log Observer のお客様は、2023 年 12 月末までにログの中心プラットフォームとして Splunk Cloud Platform または Splunk Enterprise を使用するように移行する必要があります。Splunk Observability Cloud は、Splunk Observability Cloud と Splunk Cloud Platform 間のブリッジとして Splunk Log Observer "
+#~ "Connect を使用し、Log Observer の機能とユーザーエクスペリエンスを引き続きサポートします。ログストレージのバックエンドとして SplunkCloudPlatform または Splunk Enterprise のいずれかを Splunk プラットフォームに移行しても、Splunk Observability Cloud を使用してログ、メトリクス、トレースを相関させる機能に影響はありません。"
 
 #~ msgid "How to transition to Log Observer Connect"
 #~ msgstr "Log Observer Connectへの移行方法"
@@ -3246,11 +3315,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr ":new-page:`Splunk Web でフィールドエイリアスを作成する<https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Knowledge/Addaliasestofields>` を参照してください。"
 
 #~ msgid ""
-#~ "The Live Tail feature of Log Observer ends in January 2024. In Splunk Cloud Platform, you can achieve similar functionality by adjusting the time range picker to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events because live events do not stream in unprompted. For more "
-#~ "information, see :new-page:`Select time ranges to apply to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`"
+#~ "The Live Tail feature of Log Observer ends in January 2024. In Splunk Cloud Platform, you can achieve similar functionality by adjusting the time range picker to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events because live events do not stream in "
+#~ "unprompted. For more information, see :new-page:`Select time ranges to apply to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`"
 #~ msgstr ""
-#~ "Log Observer の Live Tail 機能は2024年1月に終了します。Splunk Cloud Platform では、時間範囲ピッカーを :guilabel:`All time (real-time)` または :guilabel:`30 second window` に調整することで、同様の機能を実現できます。ライブイベントはプロンプトなしでストリームされないため、最新のログイベントを表示するには、再度 :guilabel:`Search` を選択して検索を再実行する必要があります。詳細について"
-#~ "は、:new-page:`検索に適用する時間範囲を選択する<https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>` を参照してください。"
+#~ "Log Observer の Live Tail 機能は2024年1月に終了します。Splunk Cloud Platform では、時間範囲ピッカーを :guilabel:`All time (real-time)` または :guilabel:`30 second window` に調整することで、同様の機能を実現できます。ライブイベントはプロンプトなしでストリームされないため、最新のログイベントを表示するには、再度 :guilabel:`Search` を選択して検索を再実行する必要があります。"
+#~ "詳細については、:new-page:`検索に適用する時間範囲を選択する<https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>` を参照してください。"
 
 #~ msgid "The Log Observer landing page lists and describes all capabilities. Investigate logs in context with metrics and traces in Splunk Log Observer."
 #~ msgstr "Log Observer のランディングページには、すべての機能が一覧表示され、説明されています。Splunk Log Observer でメトリクスとトレースを使用してログのコンテキストを調査します。"
@@ -3283,11 +3352,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "Observability Cloud に Log Observer エンタイトルメントがある場合は、このページの手順を完了してください。Observability Cloud に Log Observer エンタイトルメントがない場合は、:ref:`logs-intro-logconnect` を参照してインテグレーションをセットアップし、Splunk プラットフォームのログをクエリするために Log Observer の使用を開始してください。"
 
 #~ msgid ""
-#~ "By default, Log Observer indexes and stores all logs data that you send to Observability Cloud unless you choose to archive some of your logs data in Amazon S3 buckets. See :ref:`logs-infinite` to learn how to archive logs until you want to index and analyze them in Log Observer. If you use Log Observer Connect, your logs data remains in your Splunk platform instance and is never "
-#~ "stored in Log Observer or Observability Cloud."
+#~ "By default, Log Observer indexes and stores all logs data that you send to Observability Cloud unless you choose to archive some of your logs data in Amazon S3 buckets. See :ref:`logs-infinite` to learn how to archive logs until you want to index and analyze them in Log Observer. If you use Log Observer Connect, your logs data remains in your Splunk platform instance "
+#~ "and is never stored in Log Observer or Observability Cloud."
 #~ msgstr ""
-#~ "デフォルトでは、ログデータの一部をAmazon S3バケットにアーカイブすることを選択しない限り、Log Observerは、Observability Cloudに送信したすべてのログデータをインデックス化して保存します。Log Observerでインデックスを作成し分析するまでログをアーカイブする方法については、:ref:`logs-infinite` を参照してください。Log Observer Connect を使用する場合、ログデータは Splunk プラットフォームインスタ"
-#~ "ンスに残り、Log Observer や Observability Cloud に保存されることはありません。"
+#~ "デフォルトでは、ログデータの一部をAmazon S3バケットにアーカイブすることを選択しない限り、Log Observerは、Observability Cloudに送信したすべてのログデータをインデックス化して保存します。Log Observerでインデックスを作成し分析するまでログをアーカイブする方法については、:ref:`logs-infinite` を参照してください。Log Observer Connect を使用する場合、ログデータは Splunk プラッ"
+#~ "トフォームインスタンスに残り、Log Observer や Observability Cloud に保存されることはありません。"
 
 #~ msgid "What type of data is supported?"
 #~ msgstr "どのようなデータに対応していますか？"
@@ -3308,11 +3377,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "Log Observer の使用を開始する"
 
 #~ msgid ""
-#~ "You can use Observability Cloud guided setups to send logs to Log Observer from your hosts, containers, and cloud providers. Use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` to capture logs from your resources and applications. Decide whether you want to see logs from each data source, only one, or any combination of data sources. The more complete your log "
-#~ "collection in Log Observer, the more effective your use of Log Observer can be for troubleshooting yourentireenvironment using logs. You can complete step 1, step 2, or both in the following list, depending on which logs you want to see."
+#~ "You can use Observability Cloud guided setups to send logs to Log Observer from your hosts, containers, and cloud providers. Use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` to capture logs from your resources and applications. Decide whether you want to see logs from each data source, only one, or any combination of data sources. The more "
+#~ "complete your log collection in Log Observer, the more effective your use of Log Observer can be for troubleshooting yourentireenvironment using logs. You can complete step 1, step 2, or both in the following list, depending on which logs you want to see."
 #~ msgstr ""
-#~ "Observabilityクラウドガイドセットアップを使用して、ホスト、コンテナ、クラウドプロバイダーからLog Observerにログを送信することができます。:ref:`Splunk Distribution of OpenTelemetry Collector<otel-intro>` を使用して、リソースとアプリケーションからログを取得します。各データソースからのログを表示するか、1つだけ表示するか、任意のデータソースの組み合わせを表示するかを決定します。Log Observer"
-#~ "でのログ収集が完全であればあるほど、ログを使用した環境全体のトラブルシューティングにLog Observerをより効果的に使用できます。どのログを見たいかによって、次のリストのステップ1、ステップ2、または両方を完了できます。"
+#~ "Observabilityクラウドガイドセットアップを使用して、ホスト、コンテナ、クラウドプロバイダーからLog Observerにログを送信することができます。:ref:`Splunk Distribution of OpenTelemetry Collector<otel-intro>` を使用して、リソースとアプリケーションからログを取得します。各データソースからのログを表示するか、1つだけ表示するか、任意のデータソースの組み合わせを表示するかを決定し"
+#~ "ます。Log Observerでのログ収集が完全であればあるほど、ログを使用した環境全体のトラブルシューティングにLog Observerをより効果的に使用できます。どのログを見たいかによって、次のリストのステップ1、ステップ2、または両方を完了できます。"
 
 #~ msgid "To start using Log Observer, complete the following tasks:"
 #~ msgstr "Log Observerの使用を開始するには、以下のタスクを完了します："
@@ -3422,7 +3491,9 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgid "The resulting logs appear in the Logs table. You can add more filters, enable and disable existing filters, and select individual logs to learn more."
 #~ msgstr "結果のログは、ログテーブルに表示されます。さらにフィルターを追加したり、既存のフィルターを有効または無効にしたり、個々のログを選択して詳細を知ることができます。"
 
-#~ msgid "Perform aggregations on logs to visualize problems in a histogram that shows averages, sums, and other statistics related to logs. Aggregations group related data by one field and then perform statistical calculation on other fields. Find the aggregations controls in the control bar at the top of the Log Observer UI. The default aggregation shows all logs grouped by severity."
+#~ msgid ""
+#~ "Perform aggregations on logs to visualize problems in a histogram that shows averages, sums, and other statistics related to logs. Aggregations group related data by one field and then perform statistical calculation on other fields. Find the aggregations controls in the control bar at the top of the Log Observer UI. The default aggregation shows all logs grouped by "
+#~ "severity."
 #~ msgstr "ログに対して集計を実行し、ログに関連する平均、合計、その他の統計値を表示するヒストグラムで問題を視覚化します。集計は、関連するデータを1つのフィールドでグループ化し、他のフィールドで統計計算を実行します。Log Observer UIの上部にあるコントロールバーで集計コントロールを見つけます。デフォルトの集計は、すべてのログを重大度別にグループ化して表示します。"
 
 #~ msgid "See :ref:`logs-aggregations` to learn how to perform more aggregations."
@@ -3519,21 +3590,21 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "ログのメトリクス化ルールでログからメトリクスを作成する"
 
 #~ msgid ""
-#~ "Log metricization rules allow you to create a log-derived metric showing an aggregate count of logs grouped by the dimension of your choice. While Log Observer visual analysis allows you to dynamically view aggregate metrics in the context of your query, log metricization rules allow you to embed metrics from log data in charts, dashboards, and detectors. Log metricization rules "
-#~ "enable you to see trends in your full logs data set without paying to index all of your logs data."
+#~ "Log metricization rules allow you to create a log-derived metric showing an aggregate count of logs grouped by the dimension of your choice. While Log Observer visual analysis allows you to dynamically view aggregate metrics in the context of your query, log metricization rules allow you to embed metrics from log data in charts, dashboards, and detectors. Log "
+#~ "metricization rules enable you to see trends in your full logs data set without paying to index all of your logs data."
 #~ msgstr ""
-#~ "ログのメトリクス化ルールを使用すると、選択したディメンションでグループ化されたログの集計カウントを示すログ由来のメトリクスを作成できます。Log Observerのビジュアル分析では、クエリのコンテキストで集計メトリクスを動的に表示できますが、ログメトリクス化ルールでは、ログデータからメトリクスをチャート、ダッシュボード、およびディテクターに埋め込むことができます。ログメトリクス化ルールを使用する"
-#~ "と、すべてのログデータのインデックスを作成することなく、ログデータセットの傾向を確認できます。"
+#~ "ログのメトリクス化ルールを使用すると、選択したディメンションでグループ化されたログの集計カウントを示すログ由来のメトリクスを作成できます。Log Observerのビジュアル分析では、クエリのコンテキストで集計メトリクスを動的に表示できますが、ログメトリクス化ルールでは、ログデータからメトリクスをチャート、ダッシュボード、およびディテクターに埋め込むことができます。ログメトリクス"
+#~ "化ルールを使用すると、すべてのログデータのインデックスを作成することなく、ログデータセットの傾向を確認できます。"
 
 #~ msgid "Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create log metricization rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration."
 #~ msgstr "Splunk Observability Cloud で Splunk Log Observer エンタイトルメントを持つお客様のみが、ログのメトリクス化ルールを作成できます。Log Observer エンタイトルメントがなく、代わりに Splunk Log Observer Connect を使用している場合は、:ref:`logs-intro-logconnect` を参照して Splunk Enterprise インテグレーションでできることを確認してください。"
 
 #~ msgid ""
-#~ "Log Observer indexes your logs data only after executing all pipeline management rules. When you metricize then archive a set of logs, metricized logs count against your ingest capacity but not against your indexing capacity. Like any other metric, a metric derived from log metricization rules counts toward your metrics quota per your contract. For more information, see :ref:`logs-"
-#~ "pipeline-sequence`."
+#~ "Log Observer indexes your logs data only after executing all pipeline management rules. When you metricize then archive a set of logs, metricized logs count against your ingest capacity but not against your indexing capacity. Like any other metric, a metric derived from log metricization rules counts toward your metrics quota per your contract. For more information, "
+#~ "see :ref:`logs-pipeline-sequence`."
 #~ msgstr ""
-#~ "Log Observerは、すべてのパイプライン管理ルールを実行した後にのみ、ログデータにインデックスを作成します。ログのセットをメトリクス化してからアーカイブすると、メトリクス化されたログは取り込み容量にカウントされますが、インデックス作成容量にはカウントされません。他のメトリクスと同様に、ログのメトリクス化ルールから派生したメトリクスは、契約に従ってメトリクスのクオータにカウントされます。詳細"
-#~ "については、:ref:`logs-pipeline-sequence` を参照してください。"
+#~ "Log Observerは、すべてのパイプライン管理ルールを実行した後にのみ、ログデータにインデックスを作成します。ログのセットをメトリクス化してからアーカイブすると、メトリクス化されたログは取り込み容量にカウントされますが、インデックス作成容量にはカウントされません。他のメトリクスと同様に、ログのメトリクス化ルールから派生したメトリクスは、契約に従ってメトリクスのクオータにカウ"
+#~ "ントされます。詳細については、:ref:`logs-pipeline-sequence` を参照してください。"
 
 #~ msgid "To create log metricization rules, you must have an administrator or power user role in Splunk Observability Cloud."
 #~ msgstr "ログのメトリクス化ルールを作成するには、Splunk Observability Cloud の Admin または Power ユーザーのロールが必要です。"
@@ -3563,11 +3634,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "マッチング条件を定義します。メトリクス化ルールの結果、一致するログのみがチャートに含まれます。"
 
 #~ msgid ""
-#~ "To configure a metric, perform a Log Observer aggregation query. Select a function, an aggregate, and a dimension for this query. You can choose from the following functions: :guilabel:`Count`, :guilabel:`AVG`, :guilabel:`MAX`, :guilabel:`MIN`, and :guilabel:`SUM`. The default function is :guilabel:`Count`. The default aggregate for Log Observer is :guilabel:`All(*)`, and the default "
-#~ "dimension is :guilabel:`severity`. Log Observer Connect has no default aggregation. To change the dimensionofthe aggregation, select another dimension in the :guilabel:`Group by` field. To See :ref:`logs-aggregations` for a thorough explanation of aggregation queries."
+#~ "To configure a metric, perform a Log Observer aggregation query. Select a function, an aggregate, and a dimension for this query. You can choose from the following functions: :guilabel:`Count`, :guilabel:`AVG`, :guilabel:`MAX`, :guilabel:`MIN`, and :guilabel:`SUM`. The default function is :guilabel:`Count`. The default aggregate for Log Observer is :guilabel:`All(*)`, "
+#~ "and the default dimension is :guilabel:`severity`. Log Observer Connect has no default aggregation. To change the dimensionofthe aggregation, select another dimension in the :guilabel:`Group by` field. To See :ref:`logs-aggregations` for a thorough explanation of aggregation queries."
 #~ msgstr ""
-#~ "メトリクスを設定するには、Log Observer集計クエリを実行します。このクエリの関数、集約、およびディメンションを選択します。以下の関数から選択できます：  :guilabel:`Count` :guilabel:`AVG` 、:guilabel:`MAX` 、:guilabel:`MIN` 、および :guilabel:`SUM` から選択できます。既定の関数は  :guilabel:`Count` です。Log Observer のデフォルトの集約は :guilabel:`All(*)` で、デフォルトのディメンション"
-#~ "は :guilabel:`severity` です。Log Observer Connectにはデフォルトの集約はありません。集約のディメンションを変更するには、:guilabel:`Group by` フィールドで別のディメンションを選択します。集計クエリの詳細については、:ref:`logs-aggregations` を参照してください。"
+#~ "メトリクスを設定するには、Log Observer集計クエリを実行します。このクエリの関数、集約、およびディメンションを選択します。以下の関数から選択できます：  :guilabel:`Count` :guilabel:`AVG` 、:guilabel:`MAX` 、:guilabel:`MIN` 、および :guilabel:`SUM` から選択できます。既定の関数は  :guilabel:`Count` です。Log Observer のデフォルトの集約は :guilabel:`All(*)` で、デフォルトの"
+#~ "ディメンションは :guilabel:`severity` です。Log Observer Connectにはデフォルトの集約はありません。集約のディメンションを変更するには、:guilabel:`Group by` フィールドで別のディメンションを選択します。集計クエリの詳細については、:ref:`logs-aggregations` を参照してください。"
 
 #~ msgid "Next, select a target field by which you want to aggregate logs. For example, you can choose :guilabel:`services` as your target field, then group logs by :guilabel:`status`. Fields with \"#\", such as :guilabel:`amount`, require a numerical value to aggregate logs."
 #~ msgstr "次に、ログを集約する対象フィールドを選択します。例えば、:guilabel:`services` をターゲットフィールドとして選択し、:guilabel:`status` でログをグループ化することができます。:guilabel:`amount` のような「#」の付いたフィールドは、ログを集計するために数値が必要です。"
@@ -3585,11 +3656,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "ルールに名前と説明をつけます。"
 
 #~ msgid ""
-#~ "Review your configuration, then click :guilabel:`Save`. Your rule appears in the list of Metricization Rules on the Logs Pipeline Management page. Click the name of your rule to view a summary of the rule. To view the output of your rule, click :guilabel:`view your new metric in a chart`. This takes you to chart builder populated with your new metric. In less than 60 seconds, you will "
-#~ "see metrics reported within the chart."
+#~ "Review your configuration, then click :guilabel:`Save`. Your rule appears in the list of Metricization Rules on the Logs Pipeline Management page. Click the name of your rule to view a summary of the rule. To view the output of your rule, click :guilabel:`view your new metric in a chart`. This takes you to chart builder populated with your new metric. In less than 60 "
+#~ "seconds, you will see metrics reported within the chart."
 #~ msgstr ""
-#~ "設定を確認し、:guilabel:`Save` をクリックします。ルールが［ログパイプライン管理］ページの［メトリクス化ルール］リストに表示されます。ルールの名前をクリックすると、ルールの概要が表示されます。ルールの出力を表示するには、:guilabel:`view your new metric in a chart` をクリックします。これにより、新しいメトリクスが入力されたチャートビルダーが表示されます。60 秒以内に、チャート内にレポートさ"
-#~ "れたメトリクスが表示されます。"
+#~ "設定を確認し、:guilabel:`Save` をクリックします。ルールが［ログパイプライン管理］ページの［メトリクス化ルール］リストに表示されます。ルールの名前をクリックすると、ルールの概要が表示されます。ルールの出力を表示するには、:guilabel:`view your new metric in a chart` をクリックします。これにより、新しいメトリクスが入力されたチャートビルダーが表示されます。60 秒以内に、"
+#~ "チャート内にレポートされたメトリクスが表示されます。"
 
 #~ msgid "While still in chart builder, click :guilabel:`Save As` to save your new metric as a chart. You can then embed it on a new or existing dashboard."
 #~ msgstr "チャートビルダーで、:guilabel:`Save As` をクリックして、新しいメトリクスをチャートとして保存します。その後、新規または既存のダッシュボードに埋め込むことができます。"
@@ -3655,22 +3726,22 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "カスタムルールの順序は、ルールカテゴリ内でドラッグ＆ドロップして調整します。Log Observerは、3種類のパイプラインルールがすべて実行された後にのみ、ログにインデックスを作成します。無限のロギングルールを通じてアーカイブしたログは、インデックス作成容量にカウントされません。"
 
 #~ msgid ""
-#~ "Because log processing rules execute first, you can create field extraction rules, then use the resulting fields in log metricization rules or Infinite Logging rules or both. For example, say you want to archive and not index all logs that contain the values ‘START', ‘RETRY', ‘FAIL', and ‘SUCCESS' in the :guilabel:`message` field, which also contains other information. Without any "
-#~ "processing, you might need to create a rule with a keyword search for each value. Instead, you can usefieldextraction to make Infinite Logging rules easier and more manageable. First, create a log processing rule to extract a new field called :guilabel:`status` from the portion of the field message that contains the desired values. Then, create an Infinite Logging rule that filters "
-#~ "on :guilabel:`status` to include logs with the values , ‘START', ‘RETRY', ‘FAIL', or ‘REPORT'."
+#~ "Because log processing rules execute first, you can create field extraction rules, then use the resulting fields in log metricization rules or Infinite Logging rules or both. For example, say you want to archive and not index all logs that contain the values ‘START', ‘RETRY', ‘FAIL', and ‘SUCCESS' in the :guilabel:`message` field, which also contains other "
+#~ "information. Without any processing, you might need to create a rule with a keyword search for each value. Instead, you can usefieldextraction to make Infinite Logging rules easier and more manageable. First, create a log processing rule to extract a new field called :guilabel:`status` from the portion of the field message that contains the desired values. Then, "
+#~ "create an Infinite Logging rule that filters on :guilabel:`status` to include logs with the values , ‘START', ‘RETRY', ‘FAIL', or ‘REPORT'."
 #~ msgstr ""
-#~ "ログ処理ルールが最初に実行されるため、フィールド抽出ルールを作成し、次に結果のフィールドをログメトリクス化ルールまたは無限のロギングルール、またはその両方で使用することができます。例えば、:guilabel:`message` フィールドに'START'、'RETRY'、'FAIL'、'SUCCESS'の値を含むすべてのログをアーカイブし、インデックスを作成しないとします。何の処理もしなければ、各値のキーワード検索でルールを作成する"
-#~ "必要がある可能性があります。代わりに、フィールド抽出を使用して、無限のロギングルールをより簡単で管理しやすくすることができます。まず、目的の値を含むフィールドメッセージの部分から、 :guilabel:`status`  という新しいフィールドを抽出するログ処理ルールを作成します。次に、'START'、'RETRY'、'FAIL'、または'REPORT'という値を持つログを含むように :guilabel:`status` 上でフィルタリングする無限ロギ"
-#~ "ングルールを作成します。"
+#~ "ログ処理ルールが最初に実行されるため、フィールド抽出ルールを作成し、次に結果のフィールドをログメトリクス化ルールまたは無限のロギングルール、またはその両方で使用することができます。例えば、:guilabel:`message` フィールドに'START'、'RETRY'、'FAIL'、'SUCCESS'の値を含むすべてのログをアーカイブし、インデックスを作成しないとします。何の処理もしなければ、各値のキーワード検索で"
+#~ "ルールを作成する必要がある可能性があります。代わりに、フィールド抽出を使用して、無限のロギングルールをより簡単で管理しやすくすることができます。まず、目的の値を含むフィールドメッセージの部分から、 :guilabel:`status`  という新しいフィールドを抽出するログ処理ルールを作成します。次に、'START'、'RETRY'、'FAIL'、または'REPORT'という値を持つログを含むように :guilabel:"
+#~ "`status` 上でフィルタリングする無限ロギングルールを作成します。"
 
 #~ msgid ""
-#~ "Because Infinite Logging rules are last in the pipeline, log-derived metrics are based on 100% of ingested logs, not on a sample of logs. Thus, your organization can make use of full and accurate log-derived metrics without needing to index all the logs that you metricize. For example, say you want to create a metric to count the occurrences of “puppies” or “kittens” in the message "
-#~ "field, but you also want to archive the logs containing those occurrences without indexing. First, create alogprocessing rule to extract a new field called pet from the portion of the message field that contains the desired values. Then, create a metricization rule that records the count of all log messages, grouped by pet. You can now graph or alert on the count of each pet from logs "
-#~ "in Observability Cloud dashboards and detectors. If you don't want to see the log messages in Log Observer, create an Infinite Logging rule that archives without indexing all log messages that contain the fieldpet. Nowyou have real-time visibility into logging trends without using index capacity."
+#~ "Because Infinite Logging rules are last in the pipeline, log-derived metrics are based on 100% of ingested logs, not on a sample of logs. Thus, your organization can make use of full and accurate log-derived metrics without needing to index all the logs that you metricize. For example, say you want to create a metric to count the occurrences of “puppies” or “kittens” "
+#~ "in the message field, but you also want to archive the logs containing those occurrences without indexing. First, create alogprocessing rule to extract a new field called pet from the portion of the message field that contains the desired values. Then, create a metricization rule that records the count of all log messages, grouped by pet. You can now graph or alert on "
+#~ "the count of each pet from logs in Observability Cloud dashboards and detectors. If you don't want to see the log messages in Log Observer, create an Infinite Logging rule that archives without indexing all log messages that contain the fieldpet. Nowyou have real-time visibility into logging trends without using index capacity."
 #~ msgstr ""
-#~ "無限のロギングルールはパイプラインの最後にあるため、ログ由来のメトリクスは、ログのサンプルではなく、取り込まれたログの100%に基づいています。したがって、組織は、メトリクス化するすべてのログにインデックスを付ける必要なく、完全で正確なログ由来のメトリクスを利用できます。たとえば、メッセージフィールドに「puppies（子犬）」または「kittens（子猫）」が出現した回数をカウントするメトリクスを作成"
-#~ "したいとします。まず、メッセージフィールドの必要な値を含む部分からpetという新しいフィールドを抽出するログ処理ルールを作成します。次に、petでグループ化された全ログメッセージのカウントを記録するメトリクス化ルールを作成します。これで、Observability Cloudのダッシュボードやディテクターで、ログから各ペットのカウントをグラフ化したり、アラートしたりできるようになります。Log Observerでログメッ"
-#~ "セージを見たくない場合は、ペットというフィールドを含むすべてのログメッセージをインデックス化せずにアーカイブする無限のロギングルールを作成します。これで、インデックス容量を使用せずに、ロギング傾向をリアルタイムで可視化できます。"
+#~ "無限のロギングルールはパイプラインの最後にあるため、ログ由来のメトリクスは、ログのサンプルではなく、取り込まれたログの100%に基づいています。したがって、組織は、メトリクス化するすべてのログにインデックスを付ける必要なく、完全で正確なログ由来のメトリクスを利用できます。たとえば、メッセージフィールドに「puppies（子犬）」または「kittens（子猫）」が出現した回数をカウントす"
+#~ "るメトリクスを作成したいとします。まず、メッセージフィールドの必要な値を含む部分からpetという新しいフィールドを抽出するログ処理ルールを作成します。次に、petでグループ化された全ログメッセージのカウントを記録するメトリクス化ルールを作成します。これで、Observability Cloudのダッシュボードやディテクターで、ログから各ペットのカウントをグラフ化したり、アラートしたりできるよう"
+#~ "になります。Log Observerでログメッセージを見たくない場合は、ペットというフィールドを含むすべてのログメッセージをインデックス化せずにアーカイブする無限のロギングルールを作成します。これで、インデックス容量を使用せずに、ロギング傾向をリアルタイムで可視化できます。"
 
 #~ msgid "Logs pipeline rules limits"
 #~ msgstr "パイプラインルールの制限を記録"
@@ -3808,7 +3879,8 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr ":guilabel:`New Processing Rule` をクリックします。"
 
 #~ msgid "Alternatively, you can launch the processor wizard from Log Observer. To do this, click into a log in the Logs table. The :guilabel:`Log Details` panel appears on the right. Click a field value then select :menuselection:`Extract field`. This takes you to :guilabel:`Define Processor`, the second step of the processor wizard. Skip to step 7."
-#~ msgstr "または、Log Observerからプロセッサーウィザードを起動することもできます。これを行うには、ログテーブルのログをクリックします。:guilabel:`Log Details` パネルが右側に表示されます。フィールド値をクリックし、:menuselection:`Extract field` を選択します。これで、プロセッサーウィザードの2番目のステップである :guilabel:`Define Processor` に進みます。ステップ7にスキップします。"
+#~ msgstr ""
+#~ "または、Log Observerからプロセッサーウィザードを起動することもできます。これを行うには、ログテーブルのログをクリックします。:guilabel:`Log Details` パネルが右側に表示されます。フィールド値をクリックし、:menuselection:`Extract field` を選択します。これで、プロセッサーウィザードの2番目のステップである :guilabel:`Define Processor` に進みます。ステップ7にスキップします。"
 
 #~ msgid "Select :menuselection:`Field Extraction` as the processor type, then click :guilabel:`Continue`. This takes you to :menuselection:`Select sample`, the first step in the processor wizard."
 #~ msgstr "プロセッサータイプとして :menuselection:`Field Extraction` を選択し、:guilabel:`Continue` をクリックします。プロセッサーウィザードの最初のステップである :menuselection:`Select sample` が表示されます。"
@@ -3872,8 +3944,8 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 
 #~ msgid "To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`."
 #~ msgstr ""
-#~ "新しいプロセッサーを見るには、:guilabel:`Data Configuration > Logs Pipeline Management` にアクセスし、:guilabel:`Processing Rules` セクションを展開し、リストの中から見つけてください。プリパッケージされているプロセッサー（ロックが表示されている）以外のすべてのプロセッサーを、並べ替え、編集、または削除することができます。プロセッサーを無効にするには、:guilabel:`Inactive` をクリックしま"
-#~ "す。"
+#~ "新しいプロセッサーを見るには、:guilabel:`Data Configuration > Logs Pipeline Management` にアクセスし、:guilabel:`Processing Rules` セクションを展開し、リストの中から見つけてください。プリパッケージされているプロセッサー（ロックが表示されている）以外のすべてのプロセッサーを、並べ替え、編集、または削除することができます。プロセッサーを無効にするには、:guilabel:"
+#~ "`Inactive` をクリックします。"
 
 #~ msgid "Create a JSON processor"
 #~ msgstr "JSONプロセッサーを作成する"
@@ -4053,11 +4125,11 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr "検索時間ルールとは？"
 
 #~ msgid ""
-#~ "Search-time rules are the application of log processing rules across historical data. Log processing rules can occur at index time or at search time. Index-time rules can only be applied to data that streams in after the index-time rule was created. To learn more about index-time rules, see :ref:`logs-processors`. It can be helpful to apply an index-time rule to data that streamed in "
-#~ "before the index-time rule existed. To do so, create a search-time rule."
+#~ "Search-time rules are the application of log processing rules across historical data. Log processing rules can occur at index time or at search time. Index-time rules can only be applied to data that streams in after the index-time rule was created. To learn more about index-time rules, see :ref:`logs-processors`. It can be helpful to apply an index-time rule to data "
+#~ "that streamed in before the index-time rule existed. To do so, create a search-time rule."
 #~ msgstr ""
-#~ "検索時間ルールとは、履歴データ全体にログ処理ルールを適用することです。ログ処理ルールはインデックス時または検索時に発生します。インデックス時間ルールは、インデックス時間ルールが作成された後に流入するデータにのみ適用できます。インデックス時間ルールの詳細については、:ref:`logs-processors` を参照してください。インデックス時間ルールが存在する前に流れ込んできたデータに対して、 インデックス時"
-#~ "間ルールを適用すると便利なことがあります。そのためには、検索時間ルールを作成します。"
+#~ "検索時間ルールとは、履歴データ全体にログ処理ルールを適用することです。ログ処理ルールはインデックス時または検索時に発生します。インデックス時間ルールは、インデックス時間ルールが作成された後に流入するデータにのみ適用できます。インデックス時間ルールの詳細については、:ref:`logs-processors` を参照してください。インデックス時間ルールが存在する前に流れ込んできたデータに対し"
+#~ "て、 インデックス時間ルールを適用すると便利なことがあります。そのためには、検索時間ルールを作成します。"
 
 #~ msgid "The following table compares search-time rules and index-time rules."
 #~ msgstr "次の表は、検索時間ルールとインデックス時間ルールの比較です。"
@@ -4090,21 +4162,22 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 #~ msgstr ":guilabel:`Data Configuration > Logs Pipeline Management` でアクティブまたは非アクティブにします。"
 
 #~ msgid ""
-#~ "Do not activate search-time rules except when you are intentionally applying index-time rules to historical data. Applying search-time rules does not impact the subscription usage, but does impact performance. Search-time rules are transformations that increase the time it takes to complete a search. Applying index-time rules can impact index subscription usage, but does not impact "
-#~ "performance."
+#~ "Do not activate search-time rules except when you are intentionally applying index-time rules to historical data. Applying search-time rules does not impact the subscription usage, but does impact performance. Search-time rules are transformations that increase the time it takes to complete a search. Applying index-time rules can impact index subscription usage, but "
+#~ "does not impact performance."
 #~ msgstr ""
-#~ "意図的に過去のデータにインデックス時間ルールを適用する場合を除き、検索時間ルールを有効にしないでください。サーチタイムルールを適用しても、サブスクリプションの使用量には影響しませんが、パフォーマンスには影響します。検索時間ルールは、検索を完了するのにかかる時間を増加させる変換です。インデックスタイムルールを適用すると、インデックスサブスクリプションの使用量に影響することがありますが、パ"
-#~ "フォーマンスには影響しません。"
+#~ "意図的に過去のデータにインデックス時間ルールを適用する場合を除き、検索時間ルールを有効にしないでください。サーチタイムルールを適用しても、サブスクリプションの使用量には影響しませんが、パフォーマンスには影響します。検索時間ルールは、検索を完了するのにかかる時間を増加させる変換です。インデックスタイムルールを適用すると、インデックスサブスクリプションの使用量に影響するこ"
+#~ "とがありますが、パフォーマンスには影響しません。"
 
 #~ msgid "Use case for applying search-time rules"
 #~ msgstr "検索時間ルールを適用するユースケース"
 
 #~ msgid ""
-#~ "You can apply search-time rules when you discover a problem after the fact. For example, suppose an error occurred between 2 am and 5 am last night and no one was on duty to track down the cause. This morning at 9 am, you discover the error occurred and try to figure out what went wrong. You create field extractions to define a few fields to make filtering easier. The new fields, "
-#~ "which were created with index-time rules, can only be applied to logs that stream in after you created thefields at9 am. To apply your newly created fields to logs that streamed in between 2 am and 5 am, create a search-time rule based on the index-time rule you created at 9 am, then activate it as a search-time rule and apply it to logs that came in between 2 am and 5 am."
+#~ "You can apply search-time rules when you discover a problem after the fact. For example, suppose an error occurred between 2 am and 5 am last night and no one was on duty to track down the cause. This morning at 9 am, you discover the error occurred and try to figure out what went wrong. You create field extractions to define a few fields to make filtering easier. The "
+#~ "new fields, which were created with index-time rules, can only be applied to logs that stream in after you created thefields at9 am. To apply your newly created fields to logs that streamed in between 2 am and 5 am, create a search-time rule based on the index-time rule you created at 9 am, then activate it as a search-time rule and apply it to logs that came in "
+#~ "between 2 am and 5 am."
 #~ msgstr ""
-#~ "事後的に問題を発見した場合、検索時間ルールを適用することができます。例えば、昨夜午前2時から午前5時の間にエラーが発生し、その原因を突き止めるために誰も勤務していなかったとします。今朝9時にエラーが発生したことを発見し、何が問題だったのかを突き止めようとします。フィルタリングを簡単にするために、フィールド抽出を作成し、いくつかのフィールドを定義します。インデックス時間ルールで作成した新し"
-#~ "いフィールドは、午前9時にフィールドを作成した後に流れてきたログにのみ適用できます。午前2時から午前5時の間に流れ込んできたログに新しく作成したフィールドを適用するには、午前9時に作成したインデックス時間ルールに基づいて検索時間ルールを作成し、それを検索時間ルールとして有効化し、午前2時から午前5時の間に流れ込んできたログに適用します。"
+#~ "事後的に問題を発見した場合、検索時間ルールを適用することができます。例えば、昨夜午前2時から午前5時の間にエラーが発生し、その原因を突き止めるために誰も勤務していなかったとします。今朝9時にエラーが発生したことを発見し、何が問題だったのかを突き止めようとします。フィルタリングを簡単にするために、フィールド抽出を作成し、いくつかのフィールドを定義します。インデックス時間ルー"
+#~ "ルで作成した新しいフィールドは、午前9時にフィールドを作成した後に流れてきたログにのみ適用できます。午前2時から午前5時の間に流れ込んできたログに新しく作成したフィールドを適用するには、午前9時に作成したインデックス時間ルールに基づいて検索時間ルールを作成し、それを検索時間ルールとして有効化し、午前2時から午前5時の間に流れ込んできたログに適用します。"
 
 #~ msgid "Create and activate a search-time rule"
 #~ msgstr "検索時間ルールを作成および有効化する"
@@ -4180,3 +4253,16 @@ msgstr "HEC プロトコルのタイムスタンプがない場合、Log Observe
 
 #~ msgid "To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`."
 #~ msgstr "Splunk Enterprise で Log Observer Connect サービスアカウントのロールを設定するには、:guilabel:`Settings > Roles` にアクセスしてください。"
+
+#~ msgid ""
+#~ "Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. When you do not select an index, Log Observer runs your query on all indexes to which you have access. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance "
+#~ "first, then select which index you want to query in Log Observer. You can query indexes from only one Splunk platform instance or Splunk Observability Cloud instance at a time. You can query Splunk platform indexes only if you have the appropriate role and permissions."
+#~ msgstr ""
+#~ ":guilabel:`Index` の横にある :guilabel:`Saved Queries` を選択し、クエリするインデックスを選択します。インデックスを選択しない場合、Log Observerは、アクセス可能なすべてのインデックスに対してクエリを実行します。Splunkプラットフォーム（Splunk Cloud PlatformまたはSplunk Enterprise）のデータを検索する場合は、最初に適切なSplunkプラットフォームインスタンスのインテグレーション"
+#~ "を選択し、次にLog Observerでクエリするインデックスを選択します。一度にクエリできるのは、1つのSplunkプラットフォームインスタンスまたはSplunk Observability Cloudインスタンスからのインデックスのみです。適切なロールおよび権限を持っている場合にのみ、Splunkプラットフォームのインデックスをクエリできます。"
+
+#~ msgid "INFO"
+#~ msgstr "INFO"
+
+#~ msgid "UNKNOWN"
+#~ msgstr "UNKNOWN"
