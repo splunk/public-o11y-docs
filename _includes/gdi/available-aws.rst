@@ -55,6 +55,11 @@ You can also collect data from any custom service you've created in AWS, or from
     - :strong:`X`
     - 
 
+  * - AWS/BedRock
+    - Amazon BedRock
+    - :strong:`X`
+    - 
+
   * - AWS/Billing
     - AWS Billing
     - :strong:`X`
