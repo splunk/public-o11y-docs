@@ -224,6 +224,10 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"airflow:GetEnvironment"``
 - ``"apigateway:GET"``
 - ``"autoscaling:DescribeAutoScalingGroups"``
+- ``"bedrock:ListTagsForResource"`` 
+- ``"bedrock:ListFoundationModels"`` 
+- ``"bedrock:GetFoundationModel"`` 
+- ``"bedrock:ListInferenceProfiles"``
 - ``"cloudformation:ListResources"``
 - ``"cloudformation:GetResource"``
 - ``"cloudfront:GetDistributionConfig"``
