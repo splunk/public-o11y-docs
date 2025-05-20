@@ -22,6 +22,13 @@ In order to associate a specific mapping file with a specific application build,
 Prerequisites
 =====================================================================
 
+* To support de-obfuscation of your application's stack traces, ensure that your ``proguard-rule.pro`` has the following two lines enabled:
+
+   .. code-block::
+
+      -keepattributes LineNumberTable,SourceFile
+      -renamesourcefileattribute SourceFile
+
 * Upgrade the following Splunk components:
 
   * :new-page:`splunk-otel-android<https://central.sonatype.com/artifact/com.splunk/splunk-otel-android>`: v1.10.0
