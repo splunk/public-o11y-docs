@@ -54,6 +54,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
+     .. note:: This setting applies only to metrics and traces and does not work for logs.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Lets you add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
    * - ``OTEL_LOG_LEVEL``
@@ -104,6 +105,8 @@ The following settings control trace exporters and their endpoints:
      - The traces exporter to use. The default value is ``otlp``. Acceptable values are ``otlp`` and ``none``. Setting ``none`` deactivates trace exports.
    * - ``OTEL_METRICS_EXPORTER``
      - The metrics exporter to use. The default value is ``otlp``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates metric exports.
+   * - ``OTEL_LOGS_EXPORTER``
+     - The logs exporter to use. The default value is ``otlp``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates logs exports.
    * - ``OTEL_METRIC_EXPORT_INTERVAL``
      - Interval, in milliseconds, between the start of two export attempts. The default value is ``60000``.
    * - ``OTEL_METRIC_EXPORT_TIMEOUT``
@@ -114,7 +117,8 @@ The following settings control trace exporters and their endpoints:
      - The OTLP endpoint for traces. The default value is ``http://localhost:4317``.
    * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
      - The OTLP endpoint. The default value is ``http://localhost:4317``.
-
+   * - ``OTEL_EXPORTER_OTLP_LOGS_ENDPOINT``
+     - The OTLP endpoint. The default value is ``http://localhost:4317``.
 To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-go`.
 
 .. _trace-sampling-settings-go-otel:
