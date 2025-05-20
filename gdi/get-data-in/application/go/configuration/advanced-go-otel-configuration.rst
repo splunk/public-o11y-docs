@@ -53,8 +53,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_ACCESS_TOKEN``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_REALM``
-     - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
-     .. note:: This setting applies only to metrics and traces and does not work for logs.
+     - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector. This setting applies only to metrics and traces and does not work for logs.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Lets you add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
    * - ``OTEL_LOG_LEVEL``
