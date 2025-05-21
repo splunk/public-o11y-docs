@@ -11,12 +11,13 @@ Add a mapping file
 
 When you set the ``minifyEnabled`` property to true in your Android application source code, your build process minifies, optimizes, and obfuscates the code and generates a single mapping file, ``mapping.txt``. This mapping file contains the information Splunk RUM needs to convert stack traces containing obfuscated classes and filenames back into a human readable form. This conversion is called deobfuscation in Android.
 
-
- .. note::
-    Make sure that the mapping file you upload to Splunk RUM matches the binary you deploy to production. To ensure this, the best practice is to integrate the ``splunk-rum`` usage into your CI pipeline so that whenever you re-build your Android application, you also re-upload its mapping file.
-
-
 In order to associate a specific mapping file with a specific application build, Splunk RUM compares the ``applicationId`` and ``versionCode`` properties of the application to the parameters that you specify for the mapping file upload. You specify these parameters either as ``--app-id`` and ``--version-code`` in the ``splunk-rum android upload`` command or by including your application's merged or packaged manifest (``AndroidManifest.xml``), which includes these properties by default, in the ``splunk-rum android upload-with-manifest`` command. 
+
+
+.. note::
+    Splunk recommends that you follow the steps on this page to upload your mapping files to Splunk RUM before you distribute corresponding binaries. To ensure that the mapping files you upload to Splunk RUM match the binaries you deploy to production, the best practice is to integrate the ``splunk-rum`` commands below into your CI pipeline so that whenever you re-build your Android application, you automatically re-upload its mapping file. Alternatively, you can :ref:`upload source maps on demand<mobile-connect-source-files>`.
+
+    Splunk RUM stores your mapping files permanently. You cannot delete them from Splunk RUM at this time. 
 
 
 Prerequisites

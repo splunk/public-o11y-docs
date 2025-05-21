@@ -19,10 +19,16 @@ Setting up JavaScript source mapping involves these steps:
 * Deploying your minified files to your production environment.
 
 
+.. note::
+    Splunk recommends that you follow the steps on this page to upload your source maps to Splunk RUM before you distribute corresponding binaries. To ensure this, the best practice is to integrate these steps into your CI pipeline so that whenever you build your application, your pipeline automatically uploads the corresponding source maps to Splunk RUM. Alternatively, you can :ref:`upload source maps on demand<browser-connect-source-maps>`.
+
+    Splunk RUM stores your source maps permanently. You cannot delete them from Splunk RUM at this time. 
+
+
 Prerequisites
 =====================================================================
 
-* Update your browser RUM agent to v0.19.2 or later. Otherwise, Splunk RUM can't symbolicate stack traces from browser apps.
+* Update your browser RUM agent (``splunk-otel-web.js``) to v0.20.2 or later. Otherwise, Splunk RUM can't symbolicate stack traces from browser apps.
 * :ref:`Install the splunk-rum CLI<rum-gdi-install-cli>`.
 
 
