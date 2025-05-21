@@ -293,9 +293,9 @@ To create a VPC endpoint, follow these steps:
 
 1. Log in to the AWS Management Console, and open :guilabel:`Amazon VPC service` within the specific region where you intend to set up AWS PrivateLink. If you have a VPC peering configuration, keep in mind the destination region of VPC peering.
 
-2. On the left navigation pane, select :guilabel:`Endpoints`.
+2. On the left navigation pane, select :guilabel:`PrivateLink and Lattice`.
 
-3. Select :guilabel:`Create Endpoint`, and then select endpoint services that use NLBs and GWLBs. 
+3. Select :guilabel:`PrivateLink and Lattice > Endpoints`, and select endpoint services that use NLBs and GWLBs. 
 
 4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
 
