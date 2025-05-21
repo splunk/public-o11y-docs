@@ -48,123 +48,33 @@ You can also connect different accounts from different regions with AWS PrivateL
 
 The following regions are supported:
 
-.. list-table::
-  :header-rows: 1
-  :width: 100
-  :widths: 30, 10, 10, 10, 10, 10, 10, 10
-
-  * - Source AWS region / Splunk Observability Cloud realm
-    - Target region: ap-southeast-2 (Sydney) / au0
-    - Target region: ap-northeast-1 (Tokyo) / jp0
-    - Target region: eu-west-1 (Dublin) / eu0
-    - Target region: eu-central-1 (Frankfurt) / eu1
-    - Target region: eu-west-2 (London) / eu2
-    - Target region: us-east-1 (East Virginia) / us0
-    - Target region: us-west-2 (West Oregon) / us1
-
-  * - ap-southeast-2 (Sydney) 
-    - Yes
-    - Yes
-    - Yes
-    - No
-    - No
-    - Yes
-    - Yes
-
-  * - ap-northeast-1 (Tokyo) 
-    - Yes
-    - Yes
-    - Yes
-    - No
-    - No
-    - Yes
-    - Yes
-
-  * - eu-west-1 (Dublin)
-    - Yes
-    - Yes
-    - Yes
-    - No
-    - No
-    - Yes
-    - Yes
-
-  * - us-east-1 (East Virginia)
-    - Yes
-    - Yes
-    - Yes
-    - No
-    - No
-    - Yes
-    - Yes
-
-  * - us-west-2 (West Oregon)
-    - Yes
-    - Yes
-    - Yes
-    - No
-    - No
-    - Yes
-    - Yes
-
-  * - ap-southeast-1 (Singapore)
-    - Yes
-    - Yes
-    - Yes
-    - No
-    - No
-    - Yes
-    - Yes
-
-  * - sa-east-1 (Sao Paolo)
-    - Yes
-    - Yes
-    - Yes
-    - No
-    - No
-    - Yes
-    - Yes
-
-OLD:
-
-.. list-table::
-  :header-rows: 1
-  :width: 100
-  :widths: 60, 20, 20
-
-  * - AWS region / Splunk Observability Cloud realm
-    - Use as source region?
-    - Use as destination region?
-
-  * - us-east-1 (N. Virginia) / us0
-    - Yes
-    - Yes
-
-  * - us-west-1 (Oregon) / us1
-    - Yes
-    - Yes
-
-  * - eu-west-1 (Ireland) / eu0
-    - Yes
-    - Yes
-
-  * - ap-southeast-2 (Sydney) / au0
-    - Yes
-    - Yes    
-
-  * - ap-northeast-1 (Tokyo) / jp0
-    - Yes
-    - Yes
-
-  * - ap-southeast-1 (Singapore)
-    - Yes
-    - No
-
-  * - sa-east-1 (São Paulo)
-    - Yes
-    - No
-
-.. caution:: Cross-region connectivity is not supported if either the source or target account is in the ``eu-central-1`` (eu1) or ``eu-west-2`` (eu2) regions. For the latest list of supported AWS regions for cross-region PrivateLink connectivity refer to the :new-page:`official AWS announcement <https://aws.amazon.com/about-aws/whats-new/2024/11/aws-privatelink-across-region-connectivity/>`.
+* US East (N. Virginia)	``us-east-1``
+* US East (Ohio)	``us-east-2``
+* US West (N. California)	``us-west-1``
+* US West (Oregon)	``us-west-2``
+* Africa (Cape Town)	``af-south-1``
+* Asia Pacific (Hong Kong)	``ap-east-1``
+* Asia Pacific (Hyderabad)	``ap-south-2``
+* Asia Pacific (Jakarta)	``ap-southeast-3``
+* Asia Pacific (Melbourne)	``ap-southeast-4``
+* Asia Pacific (Mumbai)	``ap-south-1``
+* Asia Pacific (Osaka)	``ap-northeast-3``
+* Asia Pacific (Seoul)	``ap-northeast-2``
+* Asia Pacific (Singapore)	``ap-southeast-1``
+* Asia Pacific (Sydney)	``ap-southeast-2``
+* Asia Pacific (Tokyo)	``ap-northeast-1``
+* Canada (Central)	``ca-central-1``
+* Canada West (Calgary)	``ca-west-1``
+* Europe (Frankfurt)	``eu-central-1``
+* Europe (Zurich)	``eu-central-2``
+* Europe (Ireland)	``eu-west-1``
+* Europe (London)	``eu-west-2``
+* Europe (Paris)	``eu-west-3``
+* Europe (Milan)	``eu-south-1``
+* Europe (Stockholm)	``eu-north-1``
+* Middle East (Bahrain)	``me-south-1``
+* Middle East (UAE)	``me-central-1``
+* South America (São Paulo)	``sa-east-1``
 
 If your workloads or Splunk Observability Cloud accounts are in regions not listed above, cross-region PrivateLink is not supported. In such cases, you should either:
 
@@ -365,9 +275,9 @@ To verify your AWS Account ID has been allowed, follow these steps:
 
 1. Log in to the AWS Management Console, and open the :guilabel:`Amazon VPC service` in the specific region where you intend to set up AWS PrivateLink.
 
-2. On the left navigation pane, select :guilabel:`Endpoints`.
+2. On the left navigation pane, select :guilabel:`PrivateLink and Lattice`.
 
-3. Select :guilabel:`Endpoint`, and then :guilabel:`Other endpoint services`.
+3. Select :guilabel:`PrivateLink and Lattice > Endpoints`, and select endpoint services that use NLBs and GWLBs. 
 
 4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
 
@@ -385,7 +295,7 @@ To create a VPC endpoint, follow these steps:
 
 2. On the left navigation pane, select :guilabel:`Endpoints`.
 
-3. Select :guilabel:`Create Endpoint`, and then :guilabel:`Other endpoint` services.
+3. Select :guilabel:`Create Endpoint`, and then select endpoint services that use NLBs and GWLBs. 
 
 4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
 
