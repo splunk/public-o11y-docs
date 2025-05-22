@@ -207,7 +207,7 @@ Reach out to Splunk Customer Support with the following information to include y
 
 * AWS region
 
-  * Same region connectivity: If you're connecting between two regions you need to provide both the source region (where your workloads are hosted) and the target account region (where your Splunk Observability Cloud account is located).
+  * Same region connectivity: If you're connecting in the same region, provide the service AWS region.
 
   * Cross-region connectivity: If you're connecting between two regions you need to provide both the source (or customer) region and the target (or Observability Cloud account) region. The following regions are supported:
 
@@ -262,7 +262,7 @@ To verify your AWS Account ID has been allowed, follow these steps:
 
 2. On the left navigation pane, select :guilabel:`PrivateLink and Lattice > Endpoints`, and select endpoint services that use NLBs and GWLBs. 
 
-3. Enable PrivateLink:
+3. Create the endpoint:
 
   * Same region connectivity: 
     
@@ -273,6 +273,10 @@ To verify your AWS Account ID has been allowed, follow these steps:
   
     1. Sepcify service name from the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
     2. Enable Cross Region endpoint checkbox and select the AWS region of the above selected service. 
+
+.. image:: /_images/gdi/AWS_PL_region3.png
+  :width: 80%
+  :alt: Verify account.
 
 4. Ensure the service name is accurate by selecting :strong:`Verify Service`.
 
@@ -291,7 +295,7 @@ To create a VPC endpoint, follow these steps:
 
 2. On the left navigation pane, select :guilabel:`PrivateLink and Lattice > Endpoints`, and select endpoint services that use NLBs and GWLBs. 
 
-3. Enable PrivateLink:
+3. Create the endpoint:
 
   * Same region connectivity: 
     
@@ -302,6 +306,10 @@ To create a VPC endpoint, follow these steps:
   
     1. Sepcify service name from the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
     2. Enable Cross Region endpoint checkbox and select the AWS region of the above selected service. 
+
+.. image:: /_images/gdi/AWS_PL_region3.png
+  :width: 80%
+  :alt: Verify account.
 
 4. Ensure the service name is accurate by selecting :strong:`Verify Service`.
 
