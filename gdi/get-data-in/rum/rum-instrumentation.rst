@@ -60,7 +60,7 @@ You can instrument the following types of application:
 Install the splunk-rum CLI
 =====================================================================
 
-The ``splunk-rum`` CLI is a tool for enabling automatic source mapping of your browser, iOS, and Android applications at instrumentation time. Although you can prepare and upload source mapping information "on demand" manually through the UI, the best practice is to integrate the use of this CLI into the CI pipeline of your application. By integrating ``splunk-rum`` commands into your CI pipeline, you automate the steps you need to take to enable Splunk RUM to convert stack traces from your browser and mobile applications into human-readable form, and you ensure that this source mapping information always matches your production binaries.
+The ``splunk-rum`` CLI is a tool for enabling automatic source mapping of your browser, iOS, and Android applications at instrumentation time. Although you can upload source mapping information "on demand" manually through the UI, the best practice is to integrate the use of this CLI into the CI pipeline of your application. By integrating ``splunk-rum`` commands into your CI pipeline, you automate the steps you need to take to enable Splunk RUM to convert stack traces from your browser and mobile applications into human-readable form, and you ensure that this source mapping information always matches your production binaries.
 
 
 Prerequisites

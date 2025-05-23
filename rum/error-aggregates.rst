@@ -38,7 +38,7 @@ About the error ID
 Splunk RUM groups errors based on an error ID (labeled :guilabel:`ErrorID`) that it computes for each error. Its computation is based on a hash of the error's stack trace, the error's message, and the error's type. It computes each error ID only once. The stack trace component of the hash is different depending on whether the stack trace is symbolicated or not. Therefore, the computed error ID, and hence the grouping of errors, is different depending on when you upload source maps:
 
 * If you never upload source maps, the error IDs are based on the unreadable stack traces.
-* If you upload source maps at instrumentation time, the error IDs are based on the readable stack traces.
+* If you upload source maps at the time that you update your application with a new version, the error IDs are based on the readable stack traces.
 * If you upload source maps "on-demand" (in other words, after Splunk RUM has already ingested some errors) through the UI, the error IDs of existing errors are unchanged (still based on unreadable stack traces) but the error IDs, and hence error groupings, of future errors will be different (based on  readable stack traces). If you're looking at a large enough time range to include errors ingested before and after you uploaded your source map, you will see that your application's errors are grouped differently, and the :guilabel:`Error summary` displays a message to alert you to this fact. The message varies depending on the application's platform, but is something like  :guilabel:`..older instances of this crash remain in their original groupings, but newer instances are grouped based on the deobfuscation now available`.
 
 
@@ -94,11 +94,11 @@ To learn more about Tag Spotlight, see:
 Connect source files
 ------------------------------------------------------------------------------------------
 
-The information in most raw crash stack traces is not fully human-readable. To make a stack trace readable, you must provide platform-specific mapping information that translates that stack trace into human-readable form. You can either upload mapping information now ("on-demand”) or at the time that you instrument your mobile application:
+The information in most raw crash stack traces is not fully human-readable. To make a stack trace readable, you must provide platform-specific mapping information that translates that stack trace into human-readable form. You can either upload mapping information now ("on-demand”) or as part of your application's CI pipeline:
 
 
 * To upload mapping files now, select :guilabel:`Add dSYMs` for iOS applications or :guilabel:`Add a mapping file` for Android applications on this dashboard. 
-* To upload mapping files at instrumentation time, see :ref:`add-dsyms` for iOS applications or :ref:`add-mapping-file` for Android applications.
+* To upload mapping files as part of your application's CI pipeline, see :ref:`add-dsyms` for iOS applications or :ref:`add-mapping-file` for Android applications.
 
 
 
@@ -121,11 +121,11 @@ To see errors from a specific browser application:
 Upload source maps for readable stack traces
 ------------------------------------------------------------------------------------------
 
-The information in most raw stack traces is not fully human readable. To make your raw stack traces easier for you to read, you need to provide source maps that correspond to this browser application. Source maps enable Splunk RUM to translate raw stack traces back into a human-readable form. You can either upload source maps now ("on-demand”) or at the time that you instrument your browser application:
+The information in most raw stack traces is not fully human readable. To make your raw stack traces easier for you to read, you need to provide source maps that correspond to this browser application. Source maps enable Splunk RUM to translate raw stack traces back into a human-readable form. You can either upload source maps now ("on-demand”) or as part of your application's CI pipeline:
 
 
 * To upload source maps now, select :guilabel:`Upload` on this dashboard.
-* To upload source maps at instrumentation time, see :ref:`set-up-javascript-source-mapping`. 
+* To upload source maps as part of your application's CI pipeline, see :ref:`set-up-javascript-source-mapping`. 
 
 
 Find the top JavaScript errors across your applications in Tag Spotlight 
