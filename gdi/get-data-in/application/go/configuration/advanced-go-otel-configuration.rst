@@ -105,7 +105,7 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_METRICS_EXPORTER``
      - The metrics exporter to use. The default value is ``otlp``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates metric exports.
    * - ``OTEL_LOGS_EXPORTER``
-     - The logs exporter to use. The default value is ``otlp``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates logs exports.
+     - The logs exporter to use. The default value is ``none``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates logs exports.
    * - ``OTEL_METRIC_EXPORT_INTERVAL``
      - Interval, in milliseconds, between the start of two export attempts. The default value is ``60000``.
    * - ``OTEL_METRIC_EXPORT_TIMEOUT``
