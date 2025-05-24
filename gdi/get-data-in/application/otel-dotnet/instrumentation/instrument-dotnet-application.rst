@@ -419,19 +419,19 @@ To deploy the .NET zero-code instrumentation in Kubernetes, follow these steps:
 
    .. code-block:: shell
 
-   splunk-launch.sh dotnet <application>.
+      splunk-launch.sh dotnet <application>.
 
    **For Windows:**
 
    .. code-block:: powershell
 
-   splunk-launch.cmd dotnet <application>.   
+      splunk-launch.cmd dotnet <application>.   
 
    Example:
 
    .. code-block:: docker
 
-   ENTRYPOINT ["./splunk-launch.sh", "dotnet", "myapp.dll"]
+      ENTRYPOINT ["./splunk-launch.sh", "dotnet", "myapp.dll"]
 
 #. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources. The following example demonstrates how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
