@@ -30,9 +30,7 @@ Connect different accounts within or across regions
 
 You can use AWS PrivateLink to connect different accounts in the same AWS region. The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
 
-NEW IMAGE TBC
-
-.. image:: /_images/gdi/AWS_PL_region1.png
+.. image:: /_images/gdi/AWS_PL_region1.jpg  
   :width: 80%
   :alt: AWS Private Link schema.
 
@@ -54,7 +52,7 @@ You can use any of these endpoints with AWS PrivateLink:
 AWS PrivateLink availability and service name
 ==================================================
 
-See the following tables for information on the available AWS source account regions, AWS PrivateLink endpoint URLs and service names for each AWS region.
+See the following sections for information on the available AWS source account regions, AWS PrivateLink endpoint URLs and service names for each AWS region.
 
 .. _aws-source-regions:
 
@@ -254,11 +252,13 @@ Reach out to :ref:`Splunk Customer Support <support>` with the following informa
 
 * Splunk Observability AWS account region. Must be one of the regions listed in :ref:`aws-privatelink-service-names`.
 
-The following applies:
+.. note::
 
-* If you're setting up same-region PrivateLink connectivity, your AWS source account region is the same as the Splunk Observability AWS account region.
+  The following applies:
 
-* If you're setting up cross-region PrivateLink connectivity, your AWS source account region is different from the Splunk Observability AWS account region.
+    * If you're setting up same-region PrivateLink connectivity, your AWS source account region is the same as the Splunk Observability AWS account region.
+
+    * If you're setting up cross-region PrivateLink connectivity, your AWS source account region is different from the Splunk Observability AWS account region.
 
 .. caution:: If your workloads are deployed in AWS regions not listed in :ref:`aws-source-regions`, then cross-region PrivateLink connectivity is not supported. In such cases, you should consider setting up VPC peering as described in :ref:`aws-privatelink-vpc-peering`.
 
@@ -277,7 +277,7 @@ To verify your AWS Account ID has been allowed, follow these steps:
 
 3. Select :guilabel:`Create endpoint`, then :guilabel:`Endpoint services that use NLBs and GWLBs`. 
 
-4. Under :guilabel:`Service Settings`, enter the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
+4. Under :guilabel:`Service Settings`, enter the :guilabel:`Service Name` based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
 
 5. If you are setting up cross-region PrivateLink connectivity, check the :guilabel:`Enable Cross Region endpoint` checkbox. Based on the service name you used in point 4, select the appropriate Splunk Observability region.
 
