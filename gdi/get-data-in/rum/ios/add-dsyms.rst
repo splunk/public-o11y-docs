@@ -55,9 +55,13 @@ To upload dSYMs use the ``splunk-rum`` CLI as follows.
 
 #. Upload your application's dSYMs: 
 
+   .. note::
+      If you didn't set the ``SPLUNK_REALM`` and ``SPLUNK_ACCESS_TOKEN`` environment variables, you must also add the ``--realm <value>`` and ``--token <your-splunk-org-access-token>`` parameters to this command.
+
+
    .. code-block:: bash
     
-    splunk-rum ios upload --path <path-to-dSYMs>
+    splunk-rum ios upload --path <path-to-dSYMs> [optional-parameters]
 
 #. (Optional) Verify that your uploads succeeded:
 
