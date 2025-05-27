@@ -51,7 +51,7 @@ To create an Amazon EventBridge integration in Splunk Observability Cloud:
 #. In the :strong:`AWS Account Id` field, enter the ID of the AWS account that you want to send Splunk Observability Cloud alert notifications to.
 #. The :strong:`Event Source` field displays the name of the partner event source. This value has a one-to-one mapping with the name of the partner event bus you see in :ref:`amazoneventbridge2`.
 #. In the :strong:`AWS Region` list, select the region where you want to create the partner event source.
-#. :strong:`Save and Enable`.
+#. Select :strong:`Save` or :strong:`Save and enable`.
 
 
 .. _amazoneventbridge2:

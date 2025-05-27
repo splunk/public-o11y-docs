@@ -1,4 +1,3 @@
-# Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
@@ -6,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-13 09:38+0000\n"
-"PO-Revision-Date: 2025-04-10 14:58+0100\n"
+"POT-Creation-Date: 2025-04-18 13:59+0000\n"
+"PO-Revision-Date: 2025-05-14 21:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ../../synthetics/api-test/api-test.rst:-1 ../../synthetics/uptime-test/uptime-test.rst:-1
 msgid "Use API tests in Splunk Synthetic Monitoring to monitor the API requests that provide core functionality for your applications, and track performance of your endpoints."
@@ -34,8 +33,8 @@ msgid "The ongoing shift toward API-first development has magnified the necessit
 msgstr "APIファースト開発への継続的なシフトにより、フロントエンドのコア機能を提供するバックエンドサービスをモニタリングする必要性が高まっています。複数ステップのAPIインタラクションをテストすることに興味があるにしても、エンドポイントのパフォーマンスを可視化したいにしても、APIテストは目標を達成するのに役立ちます。"
 
 #: ../../synthetics/api-test/api-test.rst:22
-msgid "Splunk Synthetic Monitoring API tests support REST APIs only. SOAP APIs are not supported."
-msgstr "Splunk Synthetic Monitoring API テストは REST API のみをサポートしています。SOAP API はサポートしていません。"
+msgid "Splunk Synthetic Monitoring API tests support REST APIs only. Although the API tests may allow certain SOAP interactions (such as sending SOAP messages over HTTP/S), SOAP is not officially supported."
+msgstr "Splunk Synthetic Monitoring APIテストはREST APIのみをサポートしています。APIテストでは特定のSOAPインタラクション (HTTP/SでのSOAPメッセージの送信など) を許可する場合がありますが、SOAPは公式にはサポートされていません。"
 
 #: ../../synthetics/api-test/api-test.rst:31
 msgid "In an API test, you can:"
@@ -106,8 +105,8 @@ msgid "JavaScript"
 msgstr "JavaScript"
 
 #: ../../synthetics/api-test/api-test.rst:78 ../../synthetics/api-test/api-test.rst:118
-msgid "Run custom JavaScript code"
-msgstr "カスタムJavaScriptコードを実行する"
+msgid "Run custom JavaScript code. Splunk Synthetics only supports some JavaScript functions. For details, see :ref:`api-test-javascript`."
+msgstr "カスタムJavaScriptコードを実行します。Splunk Syntheticsは一部のJavaScript関数のみをサポートしています。詳細は、:ref:`api-test-javascript` を参照してください。"
 
 #: ../../synthetics/api-test/api-test.rst:87
 msgid "The request steps forms the body of the API request. This is where you enter the API request URL. You can create a GET, POST, PUT, PATCH, DELETE, HEAD, or OPTIONS request."
@@ -136,6 +135,14 @@ msgstr "アサート"
 #: ../../synthetics/api-test/api-test.rst:109
 msgid "Make an assertion on two values, which can be either strings or numeric"
 msgstr "2つの値（文字列または数値）についてアサーションを行います。"
+
+#: ../../synthetics/api-test/api-test.rst:124
+msgid "Synthetics support for JavaScript"
+msgstr "JavaScriptのSyntheticsサポート"
+
+#: ../../synthetics/api-test/api-test.rst:126
+msgid "Splunk Synthetics only provides the V8 engine for script execution. It doesn't provide a Node.js runtime environment. This means that it doesn't support Node.js features. For example, there is no support for file system access using ``fs``, HTTP requests using ``http``, event loops using ``setTimeout`` or similar functions, modules such as ``require`` or ``module.exports``, and so on."
+msgstr "Splunk Syntheticsが提供するのは、スクリプト実行用のV8エンジンのみです。Node.jsの実行環境は提供しません。つまり、Node.jsの機能をサポートしていません。例えば、``fs`` を使用したファイルシステムへのアクセス、``http`` を使用したHTTPリクエスト、``setTimeout`` や同様の関数を使用したイベントループ、``require`` や ``module.exports`` などのモジュールはサポートされていません。"
 
 #: ../../synthetics/api-test/api-test-metrics.rst:-1
 msgid "Reference and definitions of available metrics captured by API tests in Splunk Synthetic Monitoring."
@@ -539,11 +546,11 @@ msgstr ":guilabel:`Steps` の横で、:guilabel:`Add requests` を選択し、AP
 msgid "Add as many requests as you would like to include in your test, including setup and validation steps."
 msgstr "セットアップと検証ステップを含め、テストに含めたい数のリクエストを追加します。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:22 ../../synthetics/browser-test/set-up-browser-test.rst:39
+#: ../../synthetics/api-test/set-up-api-test.rst:22
 msgid "As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don’t impact persisted run metrics. For more, see :ref:`try-now`."
 msgstr "テストを構築するときに、:guilabel:`Try now` を使用して、テストの構成が有効であることを確認できます。Try now の結果は一時的であり、永続化された run メトリクスには影響しません。詳細については、:ref:`try-now` を参照してください。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:23 ../../synthetics/browser-test/set-up-browser-test.rst:42 ../../synthetics/uptime-test/set-up-uptime-test.rst:31
+#: ../../synthetics/api-test/set-up-api-test.rst:23 ../../synthetics/uptime-test/set-up-uptime-test.rst:31
 msgid "(Optional) Turn on automatic test retry in the event a test initially fails."
 msgstr "（オプション）テストが最初に失敗した場合に自動テスト再試行をオンにします。"
 
@@ -555,11 +562,11 @@ msgstr "自動再試行"
 msgid "Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like a network issue, timeouts, or other issues. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your subscription usage. Auto-retry requires at least runner version 0.9.29."
 msgstr "ユーザーの介入なしでテストが失敗した場合、自動的に再実行します。ネットワークの問題やタイムアウトなどの一時的な中断による不要な失敗を減らすために、自動再試行をオンにするのがベストプラクティスです。自動再試行の実行はサブスクリプションの使用量には影響せず、完了した実行結果のみがサブスクリプションの使用量にカウントされます。自動再試行には、少なくともランナーバージョン 0.9.29 が必要です。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:34 ../../synthetics/browser-test/set-up-browser-test.rst:563 ../../synthetics/uptime-test/set-up-uptime-test.rst:90
+#: ../../synthetics/api-test/set-up-api-test.rst:34 ../../synthetics/browser-test/set-up-browser-test.rst:598 ../../synthetics/uptime-test/set-up-uptime-test.rst:90
 msgid "Custom properties"
 msgstr "カスタムプロパティ"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:35 ../../synthetics/browser-test/set-up-browser-test.rst:564 ../../synthetics/uptime-test/set-up-uptime-test.rst:91
+#: ../../synthetics/api-test/set-up-api-test.rst:35 ../../synthetics/browser-test/set-up-browser-test.rst:599 ../../synthetics/uptime-test/set-up-uptime-test.rst:91
 msgid ""
 "Add custom properties in the test creation page in advanced settings. Use key-value pairs to create custom properties to filter and group dashboards, charts, and create alerts. A list of suggested custom properties is available for each test based on the tags associated with your test. For example: ``env:test``, ``role:developer``, ``product:rum``. When you have multiple key-value pairs the logic is AND among the results. So in this "
 "case, the results show all tests for the RUM product with a developer role in the environment test."
@@ -567,35 +574,35 @@ msgstr ""
 "詳細設定のテスト作成ページでカスタムプロパティを追加します。キーと値のペアを使用してカスタムプロパティを作成し、ダッシュボード、チャートをフィルタリングおよびグループ化し、アラートを作成します。テストに関連付けられているタグに基づいて、テストごとにカスタムプロパティの候補リストが表示されます。例: ``env:test``、``role:developer``、``product:rum``。複数のキーと値のペアがある場合、ロジックは結果間の AND になります。つまり、この場合、環境"
 "テストで開発者ロールを持つ RUM 製品のすべてのテストが結果に表示されます。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:34 ../../synthetics/browser-test/set-up-browser-test.rst:563 ../../synthetics/uptime-test/set-up-uptime-test.rst:90
+#: ../../synthetics/api-test/set-up-api-test.rst:34 ../../synthetics/browser-test/set-up-browser-test.rst:598 ../../synthetics/uptime-test/set-up-uptime-test.rst:90
 msgid "This image shows two custom property key value pairs, env:prod and role:developer."
 msgstr "この画像は、env:prodとrole:developer という 2 つのカスタムプロパティキー値のペアを示しています。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:42 ../../synthetics/browser-test/set-up-browser-test.rst:571 ../../synthetics/uptime-test/set-up-uptime-test.rst:98
+#: ../../synthetics/api-test/set-up-api-test.rst:42 ../../synthetics/uptime-test/set-up-uptime-test.rst:98
 msgid "Custom properties are single-valued and don’t support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``."
 msgstr "カスタムプロパティは単一値であり、``region:eu, us`` のような複数値には対応していません。各テストで使用できるキーは一意です。例えば、``env1:test`` と ``env:test`` を同じテスト内に持つことはできますが、``env:test`` と ``env:prod`` を持つことはできません。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:45 ../../synthetics/browser-test/set-up-browser-test.rst:574 ../../synthetics/uptime-test/set-up-uptime-test.rst:101
+#: ../../synthetics/api-test/set-up-api-test.rst:45 ../../synthetics/browser-test/set-up-browser-test.rst:609 ../../synthetics/uptime-test/set-up-uptime-test.rst:101
 msgid "Key requirements:"
 msgstr "主な要件："
 
-#: ../../synthetics/api-test/set-up-api-test.rst:47 ../../synthetics/browser-test/set-up-browser-test.rst:576 ../../synthetics/uptime-test/set-up-uptime-test.rst:103
+#: ../../synthetics/api-test/set-up-api-test.rst:47 ../../synthetics/browser-test/set-up-browser-test.rst:611 ../../synthetics/uptime-test/set-up-uptime-test.rst:103
 msgid "Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers."
 msgstr "キーは大文字または小文字で始めなければなりません。特殊文字や数字でキーを始めることはできません。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:48 ../../synthetics/browser-test/set-up-browser-test.rst:577 ../../synthetics/uptime-test/set-up-uptime-test.rst:104
+#: ../../synthetics/api-test/set-up-api-test.rst:48 ../../synthetics/browser-test/set-up-browser-test.rst:612 ../../synthetics/uptime-test/set-up-uptime-test.rst:104
 msgid "The remainder of the key can contain letters, numbers, underscores and hyphens."
 msgstr "キーの残りの部分には、文字、数字、アンダースコア、ハイフンを含めることができます。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:49 ../../synthetics/browser-test/set-up-browser-test.rst:578 ../../synthetics/uptime-test/set-up-uptime-test.rst:105
+#: ../../synthetics/api-test/set-up-api-test.rst:49 ../../synthetics/uptime-test/set-up-uptime-test.rst:105
 msgid "Keys can’t be named ``test_id`` or ``test``."
 msgstr "キーに ``test_id`` や ``test`` という名前を付けることはできません。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:50 ../../synthetics/browser-test/set-up-browser-test.rst:579 ../../synthetics/uptime-test/set-up-uptime-test.rst:106
+#: ../../synthetics/api-test/set-up-api-test.rst:50 ../../synthetics/browser-test/set-up-browser-test.rst:614 ../../synthetics/uptime-test/set-up-uptime-test.rst:106
 msgid "Key size can't exceed 128 characters."
 msgstr "キーサイズは128文字以内です。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:52 ../../synthetics/browser-test/set-up-browser-test.rst:581 ../../synthetics/uptime-test/set-up-uptime-test.rst:108
+#: ../../synthetics/api-test/set-up-api-test.rst:52 ../../synthetics/browser-test/set-up-browser-test.rst:616 ../../synthetics/uptime-test/set-up-uptime-test.rst:108
 msgid "See, :ref:`custom-properties`."
 msgstr ":ref:`custom-properties` を参照してください。"
 
@@ -691,7 +698,7 @@ msgstr "テストを実行できる場所については、:ref:`public-location
 msgid "See :ref:`synth-alerts` to learn more about detector options."
 msgstr "ディテクターのオプションについては、:ref:`synth-alerts` を参照してください。"
 
-#: ../../synthetics/api-test/set-up-api-test.rst:86 ../../synthetics/browser-test/set-up-browser-test.rst:591 ../../synthetics/test-config/try-now.rst:36 ../../synthetics/uptime-test/set-up-uptime-test.rst:151
+#: ../../synthetics/api-test/set-up-api-test.rst:86 ../../synthetics/browser-test/set-up-browser-test.rst:626 ../../synthetics/test-config/try-now.rst:36 ../../synthetics/uptime-test/set-up-uptime-test.rst:151
 msgid "Example"
 msgstr "例"
 
@@ -720,8 +727,8 @@ msgid ""
 "During a Browser test, Splunk Synthetic Monitoring continuously collects performance data including metrics, network data, and custom user timings. All requests and responses that occur in the test are captured in a HAR file, which is represented visually in a waterfall chart that illustrates the latency of specific resources on the page. See :ref:`waterfall-chart` to learn more about the waterfall chart, and see :ref:`browser-"
 "metrics` to learn about the metrics in a Browser test."
 msgstr ""
-"ブラウザテスト中、Splunk Synthetic Monitoring はメトリクス、ネットワークデータ、カスタムユーザータイミングを含むパフォーマンスデータを継続的に収集します。テスト中に発生したすべてのリクエストとレスポンスは HAR ファイルにキャプチャされ、ページ上の特定のリソースのレイテンシを示すウォーターフォールチャートで視覚的に表現されます。ウォーターフォール チャートについては :ref:`waterfall-chart` を、ブラウザテストのメトリクスについて"
-"は :ref:`browser-metrics` を参照してください。"
+"ブラウザテスト中、Splunk Synthetic Monitoring はメトリクス、ネットワークデータ、カスタムユーザータイミングを含むパフォーマンスデータを継続的に収集します。テスト中に発生したすべてのリクエストとレスポンスは HAR ファイルにキャプチャされ、ページ上の特定のリソースのレイテンシを示すウォーターフォールチャートで視覚的に表現されます。ウォーターフォール チャートについては :ref:`waterfall-chart` を、ブラウザテストのメトリクスについては :ref:"
+"`browser-metrics` を参照してください。"
 
 #: ../../synthetics/browser-test/browser-test.rst:29
 msgid "During a test, Splunk Synthetic Monitoring also creates a filmstrip and video of all actions executed in the test so that teams can see first-hand what the page looks like to a user. See :ref:`filmstrip` to learn more."
@@ -1639,27 +1646,27 @@ msgid "Steps to set up a browser test to track the performance of specific site 
 msgstr "Splunk Synthetic Monitoring で、特定のサイトリソースのパフォーマンスや複数ステップのユーザーフローを追跡するためのブラウザテストをセットアップするステップ。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:6 ../../synthetics/browser-test/set-up-browser-test.rst:24
-msgid "Set up a Browser test"
+msgid "Set up a browser test"
 msgstr "ブラウザテストをセットアップする"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:12
-msgid "Use a Browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`."
+msgid "Use a browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`."
 msgstr "ブラウザテストを使用して、提供するURLの合成テストを実行することにより、単一ページまたは複数ステップのユーザーフローのユーザーエクスペリエンスをモニターします。このタイプのテストは、コンバージョン経路、または複数のステップを必要とする経路、あるいはJavaScriptを実行する経路を監視するために使用します。例については、:ref:`browser-test-scenario` を参照してください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:15
-msgid "For each page checked in a Browser test, Splunk Synthetic Monitoring captures an HTTP Archive (HAR) file, represented in a waterfall chart, which illustrates the performance of specific resources within the page. Browser tests also capture a set of 40+ metrics. See :ref:`waterfall-chart` and :ref:`browser-metrics` to learn more."
-msgstr "ブラウザテストでチェックされた各ページについて、Splunk Synthetic Monitoring は HTTP Archive (HAR) ファイルをキャプチャし、ウォーターフォールチャートで表します。ブラウザテストでは、40以上のメトリクスも取得できます。詳しくは :ref:`waterfall-chart` と :ref:`browser-metrics` を参照してください。"
+msgid "For each page checked in a browser test, Splunk Synthetic Monitoring captures an HTTP Archive (HAR) file, represented in a waterfall chart, which illustrates the performance of specific resources within the page. Browser tests also capture a set of 40+ metrics. See :ref:`waterfall-chart` and :ref:`browser-metrics` to learn more."
+msgstr "ブラウザテストでチェックされた各ページについて、Splunk Synthetic MonitoringはHTTP Archive (HAR) ファイルをキャプチャし、ウォーターフォールチャートで表します。ブラウザテストでは、40以上のメトリクスも取得できます。詳しくは :ref:`waterfall-chart` と :ref:`browser-metrics` を参照してください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:18
 msgid "If the site or application you are monitoring uses allow lists or block lists for visitors or an analytics tool to measure traffic, check that it's configured to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for instructions."
 msgstr "監視対象のサイトやアプリケーションが、訪問者の許可リストやブロックリスト、またはトラフィックを測定するための分析ツールを使用している場合は、Splunk Synthetic Monitoring からのトラフィックに対応するように設定されていることを確認してください。手順については :ref:`synth-configure-app` を参照してください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:27
-msgid "For optimal experience, synthetics browser tests use a stable version of Google Chrome: ``116.0.5845.96-1`` to simulate user activity."
-msgstr "最適な体験のために、Syntheticsのブラウザテストでは、Google Chromeの安定版( ``116.0.5845.96-1`` )を使用して、ユーザーのアクティビティをシミュレートしています。"
+msgid "For optimal experience, browser tests use a stable version of Google Chrome: ``116.0.5845.96-1`` to simulate user activity."
+msgstr "最適な体験のために、ブラウザテストでは、Google Chromeの安定版( ``116.0.5845.96-1`` )を使用して、ユーザーのアクティビティをシミュレートしています。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:29
-msgid "Follow these steps to set up a Browser test:"
+msgid "Follow these steps to set up a browser test:"
 msgstr "以下の手順に従って、ブラウザテストをセットアップしてください："
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:33
@@ -1667,12 +1674,20 @@ msgid "Under :guilabel:`Tests`, select :guilabel:`Create new test` and then sele
 msgstr ":guilabel:`Tests` で :guilabel:`Create new test` を選択し、ドロップダウンリストから :guilabel:`Browser test` を選択します。テスト作成ビューが開きます。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:37
-msgid "To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more."
-msgstr "ブラウザテストにステップと合成トランザクションを追加するには、:guilabel:`Edit steps or synthetic transactions` を選択します。詳しくは :ref:`add-transactions` を参照してください。"
+msgid "To add steps and synthetic transactions to your browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more."
+msgstr "ブラウザテストにステップと合成トランザクションを追加するには、:guilabel:`Edit steps or synthetic transactions` を選択します。詳しくは、:ref:`add-transactions` を参照してください。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:39
+msgid "As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don't impact persisted run metrics. See :ref:`try-now`."
+msgstr "テストを構築するときに、:guilabel:`Try now` を使用して、テストの構成が有効であることを確認できます。Try nowの結果は一時的であり、永続化されたrunメトリクスには影響しません。:ref:`try-now` を参照してください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:41
-msgid "(Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`."
+msgid "(Optional) Add a wait time before a step executes. See :ref:`browser-wait-times`."
 msgstr "(オプション) ステップが実行されるまでの待ち時間を追加します。:ref:`browser-wait-times` を参照してください。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:42
+msgid "(Optional) Enable automatic test retry in the event a test initially fails."
+msgstr "（オプション）テストが最初に失敗した場合に自動テスト再試行を有効にします。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:45
 msgid "Save your test."
@@ -1711,11 +1726,11 @@ msgid "Import a Google Chrome Recorder JSON file"
 msgstr "Google Chrome RecorderのJSONファイルをインポートする"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:83
-msgid "Included within recordings from Google Chrome Recorder is the specific viewport size of the browser window used in the recording. When imported, this recorded viewport is not imported into the Synthetics Browser test. Check that the Synthetics Browser test device selection accurately represents the viewport size used by the recorded browser window."
-msgstr "Google Chrome Recorder の録画には、録画で使用したブラウザ ウィンドウのビューポート サイズが含まれています。インポートした場合、この記録されたビューポートは Synthetics Browser テストにはインポートされません。Synthetics Browserテストのデバイス選択が、録画されたブラウザウィンドウで使用されているビューポートサイズを正確に表していることを確認してください。"
+msgid "Recordings from Google Chrome Recorder include the specific viewport size of the browser window used in the recording. When you import a recording, Splunk RUM doesn't import the viewport size into the browser test. Therefore, you must check that the test's device setting matches the viewport size used by the recorded browser window."
+msgstr "Google Chrome Recorderからの録画には、録画で使用されたブラウザウィンドウの特定のビューポートサイズが含まれています。記録をインポートする際、Splunk RUMはビューポートサイズをブラウザテストにインポートしません。そのため、テストのデバイス設定が、記録されたブラウザウィンドウで使用されているビューポートサイズと一致していることを確認する必要があります。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:86
-msgid "Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing Browser test."
+msgid "Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing browser test."
 msgstr "Google Chrome Recorderから新規または既存のブラウザ テストにJSONファイルをインポートするには、以下の手順に従ってください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:89
@@ -1723,16 +1738,16 @@ msgid "In Splunk Synthetic Monitoring, select :guilabel:`Edit` on an existing Br
 msgstr "Splunk Synthetic Monitoring で、既存のブラウザ テストで :guilabel:`Edit` を選択してテスト設定ページを開くか、新しいテストを作成します。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:90
-msgid "Select Import."
-msgstr "インポートを選択します。"
+msgid "Select :guilabel:`Import`."
+msgstr ":guilabel:`Import` を選択します。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:91
 msgid "Upload the Google Chrome Recorder JSON file."
 msgstr "Google Chrome RecorderのJSONファイルをアップロードします。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:92
-msgid "If a step is not supported, you need to edit or delete the step in the test configuration page."
-msgstr "ステップがサポートされていない場合は、テスト設定ページでステップを編集または削除する必要があります。"
+msgid "If a step is not supported, edit or delete that step in the test configuration page."
+msgstr "ステップがサポートされていない場合は、テスト設定ページでそのステップを編集または削除してください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:93
 msgid "(Optional) Add a name to each step."
@@ -1747,8 +1762,8 @@ msgid "Troubleshoot unsupported steps"
 msgstr "サポートされていないステップをトラブルシューティングする"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:99
-msgid "If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company."
-msgstr "記録に未対応のステップが含まれている場合は、そのステップを編集して、サポートされている Synthetic Browser ステップタイプのいずれかにフォーマットし直す必要があります。次の表は、Google Chrome Recorder のステップ名とコードスニペットが、Splunk Synthetic Browser テストでどのように対応するかを示しています。これらの例では、Buttercup Games という架空のゲーム会社を使用しています。"
+msgid "If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in browser tests. These examples use Buttercup Games, a fictitious gaming company."
+msgstr "録画に未対応のステップが含まれている場合は、そのステップを編集して、サポートされているブラウザのステップタイプのいずれかにフォーマットし直す必要があります。次の表は、Google Chrome Recorderのステップ名とコードスニペットが、ブラウザテストでどのように対応するかを示しています。これらの例では、Buttercup Games（架空のゲーム会社）を使用しています。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:104
 msgid "``navigate``"
@@ -1807,7 +1822,7 @@ msgid "``run_javascript``:"
 msgstr "``run_javascript``:"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:354
-msgid "View your Browser test"
+msgid "View your browser test"
 msgstr "ブラウザテストを表示する"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:356 ../../synthetics/uptime-test/set-up-uptime-test.rst:64
@@ -1823,15 +1838,15 @@ msgid "Select the test you're interested in to open the :guilabel:`Test history`
 msgstr "関心のあるテストを選択すると、:guilabel:`Test history` のビューが表示され、最近のテスト結果とメトリクスの視覚化を見ることができます。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:361
-msgid "See :ref:`browser-test-results` to learn more about Browser test results."
+msgid "See :ref:`browser-test-results` to learn more about browser test results."
 msgstr "ブラウザのテスト結果については、:ref:`browser-test-results` を参照してください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:365
-msgid "Edit your Browser test"
+msgid "Edit your browser test"
 msgstr "ブラウザテストを編集する"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:367
-msgid "To edit your Browser test, do the following:"
+msgid "To edit your browser test, do the following:"
 msgstr "ブラウザテストを編集するには、以下のようにします："
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:369
@@ -1843,7 +1858,7 @@ msgid "If you change the name of your test or the name of a synthetic transactio
 msgstr "テスト名や合成トランザクション名を変更した場合、更新された名前がチャートとディテクターに表示されるまでに最大20分かかることがあります。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:377
-msgid "Advanced settings for Browser tests"
+msgid "Advanced settings for browser tests"
 msgstr "ブラウザテストの詳細設定"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:379 ../../synthetics/uptime-test/set-up-uptime-test.rst:80
@@ -1891,7 +1906,7 @@ msgid "Time to interactive: This measures the time until the page responds to us
 msgstr "インタラクティブまでの時間：ページがユーザーの入力に素早く反応するまでの時間を測定します。ページのロードが完了したように見えるだけでなく、ページが実際に使用できるようになるタイミングを特定するために使用されます。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:398
-msgid "Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v10 of the Lighthouse desktop scoring algorithm. See :new-page:`https://developer.chrome.com/docs/lighthouse/performance/performance-scoring#lighthouse_10` in the Google developer documentation to learn more about Lighthouse scoring."
+msgid "Lighthouse score: A weighted aggregation of several browser test metric values calculated using v10 of the Lighthouse desktop scoring algorithm. See :new-page:`https://developer.chrome.com/docs/lighthouse/performance/performance-scoring#lighthouse_10` in the Google developer documentation to learn more about Lighthouse scoring."
 msgstr "Lighthouseスコア：Lighthouseデスクトップスコアリングアルゴリズムのv10を使用して計算された、複数のブラウザテストメトリクス値の加重集約。Lighthouseスコアリングの詳細については、Google開発者向けドキュメントの :new-page:`https://developer.chrome.com/docs/lighthouse/performance/performance-scoring#lighthouse_10` を参照してください。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:406
@@ -2009,11 +2024,11 @@ msgid "Wait times"
 msgstr "待ち時間"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:476
-msgid "Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a Browser test to fail. If you know that there are certain steps in a workflow that take longer than 10 seconds, add a custom wait time to your Browser test."
-msgstr "カスタム待ち時間を追加してテストカバレッジを最適化し、より長いページロードをキャプチャして、実行結果の精度を向上させます。ロード時間の長いアプリケーションは、ブラウザテストを失敗させる可能性があります。ワークフローに 10 秒以上かかる特定のステップがあることがわかっている場合は、ブラウザ テストにカスタム待ち時間を追加します。"
+msgid "Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a browser test to fail. If you know that there are certain steps in a workflow that take longer than 10 seconds, add a custom wait time to your browser test."
+msgstr "カスタム待ち時間を追加してテストカバレッジを最適化し、より長いページロードをキャプチャして、実行結果の精度を向上させます。ロード時間の長いアプリケーションは、ブラウザテストを失敗させる可能性があります。ワークフローに10秒以上かかる特定のステップがあることがわかっている場合は、ブラウザテストにカスタム待ち時間を追加します。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:478
-msgid "Wait times are available with Browser tests only."
+msgid "Wait times are available with browser tests only."
 msgstr "待ち時間はブラウザテストでのみ使用できます。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:479
@@ -2021,12 +2036,12 @@ msgid "The maximum custom wait time for each test is 200 seconds."
 msgstr "各テストの最大カスタム待ち時間は200秒です。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:481
-msgid "Follow these steps to configure custom wait times for your Browser tests:"
+msgid "Follow these steps to configure custom wait times for your browser tests:"
 msgstr "以下の手順に従って、ブラウザテストのカスタム待機時間を設定してください："
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:483
-msgid "In Splunk Synthetic Monitoring, select :guilabel:`Edit` on the Browser test to open the configuration panel."
-msgstr "Splunk Synthetic Monitoring で、ブラウザテストの :guilabel:`Edit` を選択し、設定パネルを開きます。"
+msgid "In Splunk Synthetic Monitoring, select :guilabel:`Edit` on the browser test to open the configuration panel."
+msgstr "Splunk Synthetic Monitoringで、ブラウザテストで :guilabel:`Edit` を選択し、設定パネルを開きます。"
 
 #: ../../synthetics/browser-test/set-up-browser-test.rst:484
 msgid "Select :guilabel:`New step > Wait`, from the step type drop down."
@@ -2092,23 +2107,23 @@ msgstr "10秒"
 msgid "2 seconds"
 msgstr "2秒"
 
-#: ../../synthetics/browser-test/set-up-browser-test.rst:532
+#: ../../synthetics/browser-test/set-up-browser-test.rst:531
 msgid "Chrome flags"
 msgstr "Chromeフラグ"
 
-#: ../../synthetics/browser-test/set-up-browser-test.rst:533
+#: ../../synthetics/browser-test/set-up-browser-test.rst:532
 msgid "Google Chrome flags are a helpful tool for troubleshooting. Activate browser features that are not available by default to test custom browser configurations and specialized use cases, like a proxy server."
 msgstr "Google Chrome のフラグはトラブルシューティングに役立つツールです。デフォルトでは利用できないブラウザの機能を有効にして、カスタムブラウザの設定やプロキシサーバーのような特殊なユースケースをテストします。"
 
-#: ../../synthetics/browser-test/set-up-browser-test.rst:535
+#: ../../synthetics/browser-test/set-up-browser-test.rst:534
 msgid "For more, see :new-page:`What are Chrome flags? <https://developer.chrome.com/docs/web-platform/chrome-flags>` in the Google Chrome Developer guide."
 msgstr "詳しくは、Google Chrome Developer Guide の :new-page:`Chrome フラグとは？<https://developer.chrome.com/docs/web-platform/chrome-flags>` を参照してください。"
 
-#: ../../synthetics/browser-test/set-up-browser-test.rst:538
+#: ../../synthetics/browser-test/set-up-browser-test.rst:537
 msgid "Note: Global variables are incompatible with Chrome flags."
 msgstr "注意：グローバル変数は Chromeフラグと互換性がありません。"
 
-#: ../../synthetics/browser-test/set-up-browser-test.rst:540
+#: ../../synthetics/browser-test/set-up-browser-test.rst:539
 msgid "These are the flags available:"
 msgstr "これらは利用可能なフラッグです："
 
@@ -2172,7 +2187,99 @@ msgstr "``--no-proxy-server``"
 msgid "Don't use a proxy server, always make direct connections. This flag can be used to override any other proxy server flags that you may have set up in a private location."
 msgstr "プロキシサーバーを使用せず、常に直接接続を行います。このフラグは、プライベートロケーションに設定した他のプロキシサーバーフラグを上書きするために使用できます。"
 
-#: ../../synthetics/browser-test/set-up-browser-test.rst:592
+#: ../../synthetics/browser-test/set-up-browser-test.rst:556
+msgid "Excluded files"
+msgstr "除外ファイル"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:558
+msgid "You can configure your browser test to ignore specific file types or patterns so that it skips all HTTP requests that match those file types or patterns."
+msgstr "特定のファイルタイプやパターンを無視するようにブラウザテストを設定することで、それらのファイルタイプやパターンに一致するHTTPリクエストをすべてスキップすることができます。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:560
+msgid "Exclusion rules are useful to:"
+msgstr "除外ルールは次のような場合に有用です："
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:563
+msgid "Prevent false alerts from test analytics."
+msgstr "テスト分析からの誤ったアラートを防ぎます。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:564
+msgid "Test the performance of a page with or without specific resources loading."
+msgstr "特定のリソースのロードの有無にかかわらず、ページのパフォーマンスをテストします。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:565
+msgid "Prevent specific third-party services from loading, such as random pop-ups from third-party services."
+msgstr "サードパーティサービスからのランダムなポップアップなど、特定のサードパーティサービスが読み込まれないようにします。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:566
+msgid "Ignore files that are known to cause performance problems."
+msgstr "パフォーマンスの問題を引き起こすことが知られているファイルは無視します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:569
+msgid "To create an exclusion rule:"
+msgstr "除外ルールを作成するには："
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:571 ../../synthetics/test-config/auth.rst:112
+msgid "On the browser test's configuration page, select the :guilabel:`Advanced` toggle."
+msgstr "ブラウザテストの設定ページで、:guilabel:`Advanced` トグルを選択します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:572
+msgid "Scroll down to the :guilabel:`Custom content` section."
+msgstr ":guilabel:`Custom content` セクションに下にスクロールします。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:573
+msgid "Select :guilabel:`Add excluded file`."
+msgstr ":guilabel:`Add excluded file` を選択します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:574
+msgid "Select a value in :guilabel:`File type`:"
+msgstr ":guilabel:`File type` で値を選択します："
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst
+msgid "This image shows an exclusion rule for all files of type Crazy Egg."
+msgstr "この画像は、Crazy Eggタイプのすべてのファイルに対する除外ルールを示しています。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:580
+msgid "To exclude all files of a common predefined type, select that type."
+msgstr "事前に定義された共通のタイプのファイルをすべて除外するには、そのタイプを選択します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:581
+msgid "To exclude all file types except those that match the value you specify, select :guilabel:`All Except` and specify a value or regular expression."
+msgstr "指定した値に一致するファイルタイプ以外のすべてのファイルタイプを除外するには、:guilabel:`All Except` を選択し、値または正規表現を指定します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:582
+msgid "To use regular expressions, select :guilabel:`Custom` and specify a value or regular expression. For example:"
+msgstr "正規表現を使用するには、:guilabel:`Custom` を選択し、値または正規表現を指定します。例："
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:585
+msgid "To exclude a specific domain, including all of its subdomains, enter ``domainname\\.com``"
+msgstr "すべてのサブドメインを含む特定のドメインを除外するには、``domainname\\.com`` を入力します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:586
+msgid "To exclude only the subdomains of a specific domain, but not the domain itself, enter ``.+\\.domainname\\.com``"
+msgstr "ドメインそのものではなく、特定のドメインのサブドメインだけを除外するには、``.+\\.domainname\\.com`` を入力します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:587
+msgid "To exclude a JavaScript app, enter ``domainname\\.com/appname\\.js``"
+msgstr "JavaScriptアプリを除外するには、``domainname\\.com/appname\\.js`` を入力します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:588
+msgid "To exclude entire directories, enter ``domainname\\.com/directoryname\\/.+``"
+msgstr "ディレクトリ全体を除外するには、``domainname\\.com/directoryname\\/.+`` を入力します。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:591
+msgid ":guilabel:`All Except` inclusions take precedence over other exclusions. The order in which you specify exclusions doesn't matter except when you're using a combination of :guilabel:`All Except` and :guilabel:`Custom`."
+msgstr ":guilabel:`All Except`  除外項目は他の除外項目より優先されます。 :guilabel:`All Except`  と :guilabel:`Custom` を組み合わせて使用する場合を除き、除外項目を指定する順番は重要ではありません。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:606
+msgid "Custom properties are single valued and don't support multiple values, like ``region:eu, us``. For each test, you can only use one and unique key. For example, you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``."
+msgstr "カスタムプロパティは単一値であり、``region:eu, us`` のような複数値には対応していません。各テストで使用できるキーは一意です。例えば、``env1:test`` と ``env:test``  を同じテスト内に持つことはできますが、 ``env:test``  と ``env:prod`` を持つことはできません。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:613
+msgid "Keys can't be named ``test_id`` or ``test``."
+msgstr "キーに ``test_id`` や ``test`` という名前を付けることはできません。"
+
+#: ../../synthetics/browser-test/set-up-browser-test.rst:627
 msgid "For an example, see :ref:`browser-test-scenario`."
 msgstr "例については、:ref:`browser-test-scenario` を参照してください。"
 
@@ -2314,7 +2421,7 @@ msgstr "フィールドに入力する"
 
 #: ../../synthetics/browser-test/set-up-transactional-browser-test.rst:72
 msgid "Fill in the field you identify under :guilabel:`Selector` with a value you provide in the :guilabel:`Value` field. For security and reusability, you may want to use a :ref:`built-in  <built-in-variables>`, :ref:`custom <custom-variables>`, or :ref:`global <global-variables>` variable in the :guilabel:`Value` field. Reference a custom variable as ``{{custom.your-variable-name}}``. Optionally, wait for navigation."
-msgstr ":guilabel:`Value`  フィールドに指定した値で、:guilabel:`Selector` で指定したフィールドを埋めます。セキュリティと再利用性のために、 :guilabel:`Value`  フィールドに :ref:`組み込み変数<built-in-variables>`、:ref:`カスタム変数<custom-variables>`、:ref:`グローバル変数<global-variables>` を使用するとよいでしょう。カスタム変数を ``{{custom.your-variable-name}}`` として参照します。オプションで、ナビゲーションを待機します。"
+msgstr ":guilabel:`Value`  フィールドに指定した値で、:guilabel:`Selector` で指定したフィールドを埋めます。セキュリティと再利用性のために、  :guilabel:`Value`  フィールドに :ref:`組み込み変数<built-in-variables>`、:ref:`カスタム変数<custom-variables>`、:ref:`グローバル変数<global-variables>` を使用するとよいでしょう。カスタム変数を ``{{custom.your-variable-name}}`` として参照します。オプションで、ナビゲーションを待機します。"
 
 #: ../../synthetics/browser-test/set-up-transactional-browser-test.rst:74
 msgid "Go to URL"
@@ -2635,8 +2742,8 @@ msgstr "プライベートランナー"
 #: ../../synthetics/key-concepts.rst:61 ../../synthetics/test-config/private-locations.rst:97
 msgid "A private runner queries Splunk Synthetic Monitoring for tests configured to run in its inherent private location, performs the test's steps on your private target, and reports the results back to Splunk Synthetic Monitoring. Because a private runner must have access to your private target, it is a Docker image which you deploy on your own infrastructure, within your own internal network. See :ref:`private-locations`."
 msgstr ""
-"プライベートランナーは、固有のプライベートロケーション内で実行するように構成されたテストのためにSplunk Synthetic Monitoringにクエリし、プライベートターゲット上でそのテストの手順を実行し、結果をSplunk Synthetic Monitoringに報告します。プライベートランナーはプライベートターゲットにアクセスできる必要があるため、プライベートランナーはDockerイメージであり、自分の内部ネットワーク内の独自のインフラストラクチャ上にデプロイしま"
-"す。:ref:`private-locations` を参照してください。"
+"プライベートランナーは、固有のプライベートロケーション内で実行するように構成されたテストのためにSplunk Synthetic Monitoringにクエリし、プライベートターゲット上でそのテストの手順を実行し、結果をSplunk Synthetic Monitoringに報告します。プライベートランナーはプライベートターゲットにアクセスできる必要があるため、プライベートランナーはDockerイメージであり、自分の内部ネットワーク内の独自のインフラストラクチャ上にデプロイします。:ref:"
+"`private-locations` を参照してください。"
 
 #: ../../synthetics/key-concepts.rst:66 ../../synthetics/syn-ottb-dashboards.rst:53 ../../synthetics/synth-scenarios/browser-test-scenario.rst:68 ../../synthetics/synth-scenarios/uptime-test-scenario.rst:24
 msgid "Learn more"
@@ -3430,10 +3537,6 @@ msgstr "HTTPヘッダーによる基本認証"
 msgid "If your test target expects login credentials to be included in an HTTP header, configure your browser test as follows."
 msgstr "テスト対象がHTTPヘッダーにログイン認証情報が含まれることを期待している場合、ブラウザテストを以下のように設定します。"
 
-#: ../../synthetics/test-config/auth.rst:112
-msgid "On the browser test's configuration page, select the :guilabel:`Advanced` toggle."
-msgstr "ブラウザテストの設定ページで、:guilabel:`Advanced` トグルを選択します。"
-
 #: ../../synthetics/test-config/auth.rst:114
 msgid "Scroll down to the :guilabel:`Security` section."
 msgstr ":guilabel:`Security` セクションに下にスクロールします。"
@@ -3559,8 +3662,8 @@ msgid "Some services may not be accessible during Synthetics tests due to violat
 msgstr "Content-Security-Policy (CSP)の違反により、Syntheticsテスト中にアクセスできないサービスがある場合があります。このような場合の回避策は、サードパーティのサービスをサーバーに実装し、``connect-src`` を許可するようにCSPで設定されたエンドポイントを提供することです。"
 
 #: ../../synthetics/test-config/auth.rst:223
-msgid "Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a global variable named ``otp``."
-msgstr "タイプ :guilabel:`Save return value from JavaScript` のステップを追加し、コードフィールドに以下のJavaScriptを貼り付けます。このスクリプトは、``XMLHttpRequest`` を使用して指定したURLからデータを取得し、そのデータからOTPを抽出します。このOTPを ``otp`` というグローバル変数に保存するようにテストを設定します。"
+msgid "Add a step of type :guilabel:`Save return value from JavaScript`, and in the :guilabel:`code` field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a global variable named ``otp``."
+msgstr "タイプ :guilabel:`Save return value from JavaScript` のステップを追加し、:guilabel:`code` フィールドに以下のJavaScriptを貼り付けます。このスクリプトは、``XMLHttpRequest`` を使用して指定したURLからデータを取得し、そのデータからOTPを抽出します。このOTPを ``otp`` というグローバル変数に保存するようにテストを設定します。"
 
 #: ../../synthetics/test-config/auth.rst:226
 msgid "In the script, set the variable url to the URL of your own virtual phone number's SMS service."
@@ -3603,8 +3706,8 @@ msgid "Your email service must be accessible through an API. Some services may n
 msgstr "メールサービスは、APIを介してアクセスできる必要があります。サービスによっては、Content-Security-Policy（CSP）違反により、Syntheticsテスト中にアクセスできない場合があります。このような場合は、サードパーティのサービスをサーバーに実装し、connect-srcを許可するようにCSPで設定されたエンドポイントを提供することで回避できます。"
 
 #: ../../synthetics/test-config/auth.rst:310
-msgid "Add a step of type :guilabel:`Save return value from JavaScript`, and in the code field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a custom variable named ``otp``."
-msgstr "タイプ :guilabel:`Save return value from JavaScript` のステップを追加し、コードフィールドに以下のJavaScriptを貼り付けます。このスクリプトは、``XMLHttpRequest`` を使用して指定したURLからデータを取得し、そのデータからOTPを抽出します。このOTPを ``otp`` というカスタム変数に保存するようにテストを設定します。"
+msgid "Add a step of type :guilabel:`Save return value from JavaScript`, and in the :guilabel:`code` field, paste the following JavaScript. This script retrieves data from a specified URL using ``XMLHttpRequest`` and extracts the OTP from that data. You configure your test to save this OTP in a custom variable named ``otp``."
+msgstr "タイプ :guilabel:`Save return value from JavaScript` のステップを追加し、:guilabel:`code` フィールドに以下のJavaScriptを貼り付けます。このスクリプトは、``XMLHttpRequest`` を使用して指定したURLからデータを取得し、そのデータからOTPを抽出します。このOTPを ``otp`` というカスタム変数に保存するようにテストを設定します。"
 
 #: ../../synthetics/test-config/auth.rst:313
 msgid "In the script, set the variable url to the URL of your own email inbox API endpoint."
@@ -3674,7 +3777,7 @@ msgstr "プレーンテキストの秘密鍵。QRコードをURL文字列とし�
 msgid "Save the secret key in a global variable of type TOTP"
 msgstr "秘密鍵をタイプTOTPのグローバル変数に保存します。"
 
-#: ../../synthetics/test-config/auth.rst:424 ../../synthetics/test-config/global-variables.rst:28
+#: ../../synthetics/test-config/auth.rst:424 ../../synthetics/test-config/global-variables.rst:31
 msgid "There are two ways to create a global variable:"
 msgstr "グローバル変数を作成するには2つの方法があります："
 
@@ -3686,7 +3789,7 @@ msgstr "Splunk Synthetic Monitoringランディングページから："
 msgid "From the Splunk Synthetic Monitoring landing page, select the settings icon, and then select :guilabel:`Global variables`."
 msgstr "Splunk Synthetic Monitoringランディングページから、設定アイコンを選択し、:guilabel:`Global variables` を選択します。"
 
-#: ../../synthetics/test-config/auth.rst:429
+#: ../../synthetics/test-config/auth.rst:429 ../../synthetics/test-config/global-variables.rst:36
 msgid "Select :guilabel:`Create variable`."
 msgstr ":guilabel:`Create variable` を選択します。"
 
@@ -3730,7 +3833,7 @@ msgstr ":guilabel:`QR code` タブを選択し、そこにQRコード画像を�
 msgid "Selecting the :guilabel:`Manual input` tab and pasting the ``<long-string>`` you retrieved from the QR code."
 msgstr ":guilabel:`Manual input` タブを選択し、QRコードから取得した ``<long-string>`` を貼り付けます。"
 
-#: ../../synthetics/test-config/auth.rst:451 ../../synthetics/test-config/global-variables.rst:43
+#: ../../synthetics/test-config/auth.rst:451 ../../synthetics/test-config/global-variables.rst:49
 msgid "(Optional) In the :guilabel:`Description` field, enter a description to explain the purpose of the variable for future reference. A description is particularly helpful when you conceal the variable and cannot reveal its value."
 msgstr "(オプション) :guilabel:`Description` フィールドに、将来の参照のために変数の目的を説明する説明を入力します。説明文は、変数を隠してその値を明らかにできない場合に特に役立ちます。"
 
@@ -3750,7 +3853,7 @@ msgstr "(オプション) :guilabel:`TOTP expiration` をTOTPの有効期間を�
 msgid "(Optional) To validate the secret key you entered, select :guilabel:`Generate TOTP`."
 msgstr "（オプション）入力した秘密鍵を検証するには、:guilabel:`Generate TOTP` を選択します。"
 
-#: ../../synthetics/test-config/auth.rst:458 ../../synthetics/test-config/global-variables.rst:45
+#: ../../synthetics/test-config/auth.rst:458 ../../synthetics/test-config/global-variables.rst:41 ../../synthetics/test-config/global-variables.rst:51
 msgid "Select :guilabel:`Add`."
 msgstr ":guilabel:`Add` を選択します。"
 
@@ -4170,131 +4273,131 @@ msgstr "グローバル変数は、事前に保存済みかつ再利用可能な
 msgid "How can you use a global variable?"
 msgstr "グローバル変数はどのように使用できますか？"
 
-#: ../../synthetics/test-config/global-variables.rst:15
-msgid "Use global variables to store non-sensitive information for your browser and API tests. Splunk Synthetic Monitoring saves your global variables, but note that their values are visible to all users in your account."
-msgstr "グローバル変数は、ブラウザテストおよびAPIテスト用の非機密の情報を保存するために使用します。Splunk Synthetic Monitoringはグローバル変数を保存しますが、アカウント内のすべてのユーザーが変数値を表示できることに注意してください。"
+#: ../../synthetics/test-config/global-variables.rst:16
+msgid "Use global variables to store non-sensitive information for your browser and API tests. Splunk Synthetics saves your global variables, but note that their values are visible to all users in your account."
+msgstr "グローバル変数は、ブラウザテストおよびAPIテスト用の非機密の情報を保存するために使用します。Splunk Syntheticsはグローバル変数を保存しますが、アカウント内のすべてのユーザーが変数値を表示できることに注意してください。"
 
-#: ../../synthetics/test-config/global-variables.rst:17
+#: ../../synthetics/test-config/global-variables.rst:18
 msgid "To preserve your account's security, don't use global variables to store sensitive information such as login credentials, API keys, or credit card information."
 msgstr "アカウントのセキュリティを保持するため、ログイン認証情報、APIキー、クレジットカード情報などの機密情報を保存するためにグローバル変数を使用しないでください。"
 
-#: ../../synthetics/test-config/global-variables.rst:22
+#: ../../synthetics/test-config/global-variables.rst:23
 msgid "What happens when you conceal a global variable?"
 msgstr "グローバル変数を隠すとどうなりますか？"
 
-#: ../../synthetics/test-config/global-variables.rst:23
-msgid "When you conceal a global variable, Splunk Synthetic Monitoring encrypts the variable's value in its database and scrubs its value from the Splunk Synthetic Monitoring UI, from test results, and from alert messages. However, concealed global variables were not designed to safeguard sensitive information or critical data; do not misuse them for such purposes."
-msgstr "グローバル変数を隠す際、Splunk Synthetic Monitoringは、データベース内で変数の値を暗号化し、Splunk Synthetic MonitoringのUI、テスト結果、アラートメッセージからその値をスクラブします。ただし、隠されたグローバル変数は機密情報や重要なデータを保護するために設計されたものではありません。隠されたグローバル変数をそのような目的のために誤用しないでください。"
+#: ../../synthetics/test-config/global-variables.rst:25
+msgid "When you conceal a global variable, Splunk Synthetics encrypts the variable's value in its database and scrubs its value from the Splunks UI, from test results, and from alert messages. However, concealed global variables were not designed to safeguard sensitive information or critical data; do not misuse them for such purposes."
+msgstr "グローバル変数を隠す際、Splunk Syntheticsは、データベース内で変数の値を暗号化し、SplunkのUI、テスト結果、アラートメッセージからその値をスクラブします。ただし、隠されたグローバル変数は機密情報や重要なデータを保護するために設計されたものではありません。隠されたグローバル変数をそのような目的のために誤用しないでください。"
 
-#: ../../synthetics/test-config/global-variables.rst:27
+#: ../../synthetics/test-config/global-variables.rst:29
 msgid "Create a global variable"
 msgstr "グローバル変数を作成する"
 
-#: ../../synthetics/test-config/global-variables.rst:30
+#: ../../synthetics/test-config/global-variables.rst:33
 msgid "Add a new global variable in the vault:"
 msgstr "ボールトに新しいグローバル変数を追加する："
 
-#: ../../synthetics/test-config/global-variables.rst:32
-msgid "From the Splunk Synthetic Monitoring landing page, select :guilabel:`Synthetics configuration`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab."
-msgstr "Splunk Synthetic Monitoring ランディングページから、  :guilabel:`Synthetics configuration` を選択します。  :guilabel:`Global variables` タブの :guilabel:`Synthetics configuration` ページが開きます。"
-
-#: ../../synthetics/test-config/global-variables.rst:33
-msgid "Select :guilabel:`+ Add` to open the creation dialog box."
-msgstr ":guilabel:`+ Add` を選択し、作成ダイアログボックスを開きます。"
-
 #: ../../synthetics/test-config/global-variables.rst:35
+msgid "On the Splunk Synthetics landing page, select the settings icon, and then select :guilabel:`Global variables`. The :guilabel:`Synthetics configuration` page opens onto its :guilabel:`Global variables` tab."
+msgstr "Splunk Syntheticsランディングページで、設定アイコンを選択し、 :guilabel:`Global variables`  を選択します。:guilabel:`Synthetics configuration` ページが :guilabel:`Global variables`  タブに開きます。"
+
+#: ../../synthetics/test-config/global-variables.rst:38
 msgid "Add a new global variable while editing a test:"
 msgstr "テストの編集中に新しいグローバル変数を追加する："
 
-#: ../../synthetics/test-config/global-variables.rst:37
-msgid "In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global variables` and select :guilabel:`Add`."
-msgstr "右側の :guilabel:`Variables` 列で、:guilabel:`Global variables` までスクロールし、:guilabel:`Add` を選択します。"
+#: ../../synthetics/test-config/global-variables.rst:40
+msgid "Expand the :guilabel:`Variables` pane on the right."
+msgstr "右側の :guilabel:`Variables` ペインを展開します。"
 
-#: ../../synthetics/test-config/global-variables.rst:39
-msgid "When you're in the :guilabel:`Add global variable` dialog box, enter the following:"
-msgstr ":guilabel:`Add global variable` ダイアログボックスで、次のように入力します："
+#: ../../synthetics/test-config/global-variables.rst:44
+msgid "When you're in the :guilabel:`Add variable` dialog box, enter the following:"
+msgstr ":guilabel:`Add variable` ダイアログボックスで、次のように入力します："
 
-#: ../../synthetics/test-config/global-variables.rst:41
+#: ../../synthetics/test-config/global-variables.rst:46
+msgid "Set :guilabel:`Variable type` to :guilabel:`Environment`."
+msgstr ":guilabel:`Variable type` を :guilabel:`Environment` に設定します。"
+
+#: ../../synthetics/test-config/global-variables.rst:47
 msgid "In the :guilabel:`env` field, enter the name of the variable. You will use this key to access your variable within a test."
 msgstr ":guilabel:`env` フィールドに、変数名を入力します。このキーを使用して、テスト内で変数にアクセスします。"
 
-#: ../../synthetics/test-config/global-variables.rst:42
+#: ../../synthetics/test-config/global-variables.rst:48
 msgid "In the :guilabel:`value` field, enter the value that will replace the variable when the test is run."
 msgstr ":guilabel:`value` フィールドに、テスト実行時に変数を置き換える値を入力します。"
 
-#: ../../synthetics/test-config/global-variables.rst:44
+#: ../../synthetics/test-config/global-variables.rst:50
 msgid "(Optional) Select :guilabel:`Conceal value`."
 msgstr "（オプション） :guilabel:`Conceal value` を選択します。"
 
-#: ../../synthetics/test-config/global-variables.rst:49
+#: ../../synthetics/test-config/global-variables.rst:55
 msgid "Edit a global variable"
 msgstr "グローバル変数を編集する"
 
-#: ../../synthetics/test-config/global-variables.rst:50
-msgid "To edit the key or description of a global variable, visit the :guilabel:`Global variables` page and edit within the field. Select :guilabel:`Save` when you're finished editing."
-msgstr "グローバル変数のキーまたは説明を編集するには、:guilabel:`Global variables` ページにアクセスし、フィールド内で編集します。編集が終わったら、:guilabel:`Save` を選択します。"
+#: ../../synthetics/test-config/global-variables.rst:57
+msgid "To edit the key or description of a global variable, navigate to the :guilabel:`Global variables` page and edit within the field. Select :guilabel:`Save` when you're finished editing."
+msgstr "グローバル変数のキーまたは説明を編集するには、:guilabel:`Global variables` ページに移動し、フィールド内で編集します。編集が終わったら、:guilabel:`Save` を選択します。"
 
-#: ../../synthetics/test-config/global-variables.rst:52
+#: ../../synthetics/test-config/global-variables.rst:59
 msgid "Editing the value of a saved concealed global variable clears the previous value. You must provide a new value and select :guilabel:`Save` to apply it."
 msgstr "保存された隠しグローバル変数の値を編集すると、以前の値はクリアされます。新しい値を指定し、:guilabel:`Save` を選択して適用する必要があります。"
 
-#: ../../synthetics/test-config/global-variables.rst:57
+#: ../../synthetics/test-config/global-variables.rst:64
 msgid "Use a global variable in a synthetic test"
 msgstr "合成テストでグローバル変数を使用する"
 
-#: ../../synthetics/test-config/global-variables.rst:58
+#: ../../synthetics/test-config/global-variables.rst:66
 msgid "You can use a global variable to fill in fields in the :guilabel:`Steps` and :guilabel:`synthetic transactions` of a browser test, or in the requests of an API test. Global variables cannot be used in cookies."
 msgstr "グローバル変数を使用して、ブラウザテストの :guilabel:`Steps` や :guilabel:`synthetic transactions` のフィールド、あるいは API テストのリクエストのフィールドを埋めることができます。グローバル変数は Cookie では使用できません。"
 
-#: ../../synthetics/test-config/global-variables.rst:60
+#: ../../synthetics/test-config/global-variables.rst:68
 msgid "While creating or editing a test, the right-hand :guilabel:`Variables` tab provides list of built-in variables and global variables you can use. Select the name of a variable to copy it to your keyboard."
 msgstr "テストの作成または編集中、右側の :guilabel:`Variables` タブには、使用できる組み込み変数とグローバル変数のリストが表示されます。変数名を選択すると、キーボードにコピーされます。"
 
-#: ../../synthetics/test-config/global-variables.rst:65
+#: ../../synthetics/test-config/global-variables.rst:73
 msgid "Use a global variable in a browser test"
 msgstr "ブラウザテストでグローバル変数を使用する"
 
-#: ../../synthetics/test-config/global-variables.rst:66
+#: ../../synthetics/test-config/global-variables.rst:75
 msgid "Follow these steps to add a variable to your browser test:"
 msgstr "以下の手順に従って、ブラウザテストに変数を追加してください："
 
-#: ../../synthetics/test-config/global-variables.rst:68
+#: ../../synthetics/test-config/global-variables.rst:77
 msgid "While creating or editing a transactional browser test, go to your :guilabel:`Steps`."
 msgstr "トランザクションブラウザテストの作成または編集中に、:guilabel:`Steps` に移動します。"
 
-#: ../../synthetics/test-config/global-variables.rst:69
+#: ../../synthetics/test-config/global-variables.rst:78
 msgid "Under :guilabel:`Action`, select :guilabel:`Fill in field` from the dropdown menu."
 msgstr ":guilabel:`Action` で、ドロップダウンメニューから :guilabel:`Fill in field` を選択します。"
 
-#: ../../synthetics/test-config/global-variables.rst:70
+#: ../../synthetics/test-config/global-variables.rst:79
 msgid "Under :guilabel:`Value`, enter the key for the global variable you want to use, prefixed with ``env.`` and enclosed in double curly braces. For example, to use a global variable with the key ``dev-username``, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field."
-msgstr ":guilabel:`Value` の下に、使用したいグローバル変数のキーを入力します。プレフィックスに ``env.`` を使用し、二重中括弧で囲みます。例えば、``dev-username`` というキーのグローバル変数を参照するには、 ``{{env.dev-username}}`` フィールドに   :guilabel:`Value` と入力します。"
+msgstr ":guilabel:`Value` の下に、使用したいグローバル変数のキーを入力します。プレフィックスに ``env.`` を使用し、二重中括弧で囲みます。例えば、``dev-username`` というキーのグローバル変数を参照するには、 ``{{env.dev-username}}`` フィールドに    :guilabel:`Value` と入力します。"
 
-#: ../../synthetics/test-config/global-variables.rst:71 ../../synthetics/test-config/global-variables.rst:85
+#: ../../synthetics/test-config/global-variables.rst:80 ../../synthetics/test-config/global-variables.rst:94
 msgid "Finish editing or creating the test."
 msgstr "テストの編集または作成を終了します。"
 
-#: ../../synthetics/test-config/global-variables.rst:72 ../../synthetics/test-config/global-variables.rst:86
+#: ../../synthetics/test-config/global-variables.rst:81 ../../synthetics/test-config/global-variables.rst:95
 msgid ":guilabel:`Save` your test."
 msgstr "テストを :guilabel:`Save` します。"
 
-#: ../../synthetics/test-config/global-variables.rst:77
+#: ../../synthetics/test-config/global-variables.rst:86
 msgid "Use a global variable in an API Test"
 msgstr "API テストでグローバル変数を使用する"
 
-#: ../../synthetics/test-config/global-variables.rst:79
+#: ../../synthetics/test-config/global-variables.rst:88
 msgid "You can also use a global variable to fill in any field in an API test. For instance, you can use a global variable to provide a URL for any request, a header value, or any other value."
 msgstr "グローバル変数を使用して、APIテストの任意のフィールドを埋めることもできます。例えば、グローバル変数を使って、リクエストのURLやヘッダー値、その他の値を提供することができます。"
 
-#: ../../synthetics/test-config/global-variables.rst:81
+#: ../../synthetics/test-config/global-variables.rst:90
 msgid "Follow these steps to add a variable to your API test:"
 msgstr "以下の手順に従って、APIテストに変数を追加してください："
 
-#: ../../synthetics/test-config/global-variables.rst:83
+#: ../../synthetics/test-config/global-variables.rst:92
 msgid "While creating or editing an API test, go to your :guilabel:`Requests`."
 msgstr "APIテストを作成または編集している間に、:guilabel:`Requests` に移動します。"
 
-#: ../../synthetics/test-config/global-variables.rst:84
+#: ../../synthetics/test-config/global-variables.rst:93
 msgid "In a variable field for any setup, request, or validation step, enter the key for the global variable you want to use, prefixed with ``env.`` and enclosed in double curly braces.  For example, to use a global variable with the key ``staging-url``, enter ``{{env.staging-url}}`` in the field."
 msgstr "セットアップ、リクエスト、または検証ステップの変数フィールドに、使用したいグローバル変数のキーを入力します。プレフィックスに ``env.`` を使用し、二重中括弧で囲みます。例えば、``staging-url`` というキーのグローバル変数を使用するには、フィールドに ``{{env.staging-url}}`` を入力します。"
 
@@ -4800,7 +4903,7 @@ msgstr "Dockerホスト上で、コマンドラインからWatchtowerコンテ�
 msgid "Using the ``label-enable`` flag ensures that only containers with the correct label, like the Splunk private runner, are auto-updated."
 msgstr "``label-enable`` フラグを使用すると、Splunkプライベートランナーのような正しいラベルを持つコンテナのみが自動更新されるようになります。"
 
-#: ../../synthetics/test-config/private-locations.rst:332
+#: ../../synthetics/test-config/private-locations.rst:332 ../../synthetics/test-config/private-locations.rst:520
 msgid "There are additional options available in the :new-page:`Watchtower documentation <https://github.com/v2tec/watchtower#options>` that you can explore, including auto-cleanup of old images to ensure that your Docker host does not hold onto outdated images."
 msgstr "Docker ホストが古いイメージを保持しないようにするための古いイメージの自動クリーンアップなど、:new-page:`Watchtower ドキュメント<https://github.com/v2tec/watchtower#options>` では、探索できる追加オプションが利用可能です。"
 
@@ -4879,11 +4982,11 @@ msgstr "以下のフラグでDockerコンテナを起動します："
 
 #: ../../synthetics/test-config/private-locations.rst:504
 msgid ""
-"You can automate the upgrade of the private location Docker images by using an automated upgrade solution such as `Watchtower <https://github.com/v2tec/watchtower>`, a third party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker images "
-"you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality."
+"You can automate the upgrade of the private location Docker images by using an automated upgrade solution such as :new-page:`Watchtower <https://github.com/v2tec/watchtower>`, a third-party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to "
+"Docker images, you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality."
 msgstr ""
-"`Watchtower <https://github.com/v2tec/watchtower>` のような自動アップグレードソリューションを使用することで、プライベートロケーションのDockerイメージのアップグレードを自動化することができます。これはサードパーティのオープンソースDockerコンテナで、スケジュールに従ってリモートのDockerリポジトリに接続し、アップデートをチェックします。このセクションではWatchtowerの使い方を説明しますが、運用チームがすでにDockerイメージにアップデートをデプロ"
-"イする仕組みを確立している場合は、プライベートランナーの設定を変更することなく、既存の仕組みを利用することができます。ベストプラクティスは、少なくとも24時間に1回はアップグレードの自動化を実行することです。プライベートランナーを最新の利用可能なイメージに更新しないと、データの不整合や機能の喪失につながる可能性があります。"
+":new-page:`Watchtower<https://github.com/v2tec/watchtower>` のような自動アップグレードソリューションを使用することで、プライベートロケーションのDockerイメージのアップグレードを自動化することができます。これはサードパーティのオープンソースDockerコンテナで、スケジュールに従ってリモートのDockerリポジトリに接続し、アップデートをチェックします。このセクションではWatchtowerの使い方を説明しますが、運用チームがすでにDockerイメージにアップデー"
+"トをデプロイする仕組みを確立している場合は、プライベートランナーの設定を変更することなく、既存の仕組みを利用することができます。ベストプラクティスは、少なくとも24時間に1回はアップグレードの自動化を実行することです。プライベートランナーを最新の利用可能なイメージに更新しないと、データの不整合や機能の喪失につながる可能性があります。"
 
 #: ../../synthetics/test-config/private-locations.rst:509
 msgid "On your Docker host, launch the Watchtower container from the command line:"
@@ -4892,10 +4995,6 @@ msgstr "Dockerホスト上で、コマンドラインからWatchtowerコンテ�
 #: ../../synthetics/test-config/private-locations.rst:518
 msgid "Using the ``label-enable`` flag ensures that only containers with the correct label, like the Splunk private runner, are be auto-updated."
 msgstr "``label-enable`` フラグを使用すると、Splunkプライベートランナーのような正しいラベルを持つコンテナのみが自動更新されるようになります。"
-
-#: ../../synthetics/test-config/private-locations.rst:520
-msgid "There are additional options available in the `Watchtower documentation <https://github.com/v2tec/watchtower#options>` that you can explore, including auto-cleanup of old images to ensure that your Docker host does not hold onto outdated images."
-msgstr "Docker ホストが古いイメージを保持しないようにするための古いイメージの自動クリーンアップなど、`Watchtower ドキュメント <https://github.com/v2tec/watchtower#options>` では、探索できる追加オプションが利用可能です。"
 
 #: ../../synthetics/test-config/private-locations.rst:523
 msgid "In order for Watchtower to issue commands to the Docker host, it requires the ``docker.sock`` volume or TCP connection, which provides Watchtower with full administrative access to your Docker host. If you are unable to provide Watchtower with this level of access you can explore other options for automating updates."
@@ -4967,7 +5066,7 @@ msgstr ":guilabel:`Task definition name` ページで、削除するリビジョ
 
 #: ../../synthetics/test-config/private-locations.rst:683
 msgid "Verify the information in the :guilabel:`Deregister` window, and then select :guilabel:`Deregister` to finish."
-msgstr ":guilabel:`Deregister`  ウィンドウの情報を確認し、 :guilabel:`Deregister`  を選択して終了します。"
+msgstr ":guilabel:`Deregister`  ウィンドウの情報を確認し、  :guilabel:`Deregister`  を選択して終了します。"
 
 #: ../../synthetics/test-config/private-locations.rst:687
 msgid "Private runners deployed with Helm"
@@ -9879,3 +9978,28 @@ msgstr "アップタイム テストのテストタイプディメンション�
 
 #~ msgid "When a downtime configuration is active, you can't edit, or delete it. You can extend the duration, or cancel while it is active."
 #~ msgstr "ダウンタイム設定が有効な場合、編集または削除することはできません。アクティブな状態であれば、期間の延長やキャンセルは可能です。"
+
+#~ msgid "Splunk Synthetic Monitoring API tests support REST APIs only. SOAP APIs are not supported."
+#~ msgstr "Splunk Synthetic Monitoring API テストは REST API のみをサポートしています。SOAP API はサポートしていません。"
+
+#~ msgid "Run custom JavaScript code"
+#~ msgstr "カスタムJavaScriptコードを実行する"
+
+#~ msgid "Select Import."
+#~ msgstr "インポートを選択します。"
+
+#~ msgid "Select :guilabel:`+ Add` to open the creation dialog box."
+#~ msgstr ":guilabel:`+ Add` を選択し、作成ダイアログボックスを開きます。"
+
+#~ msgid "In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global variables` and select :guilabel:`Add`."
+#~ msgstr "右側の :guilabel:`Variables` 列で、:guilabel:`Global variables` までスクロールし、:guilabel:`Add` を選択します。"
+
+#~ msgid ""
+#~ "You can automate the upgrade of the private location Docker images by using an automated upgrade solution such as `Watchtower <https://github.com/v2tec/watchtower>`, a third party open source Docker container that connects to remote Docker repositories on a schedule and checks for updates. This section explains how to use Watchtower, but if your operations team already has a mechanism established for deploying updates to Docker "
+#~ "images you can use your existing mechanism without making any configuration changes to the private runner. The best practice is to run your upgrade automation at least once every 24 hours. Failing to update the private runner to the latest available image may result in inconsistent data and loss of functionality."
+#~ msgstr ""
+#~ "`Watchtower <https://github.com/v2tec/watchtower>` のような自動アップグレードソリューションを使用することで、プライベートロケーションのDockerイメージのアップグレードを自動化することができます。これはサードパーティのオープンソースDockerコンテナで、スケジュールに従ってリモートのDockerリポジトリに接続し、アップデートをチェックします。このセクションではWatchtowerの使い方を説明しますが、運用チームがすでにDockerイメージにアップデートをデ"
+#~ "プロイする仕組みを確立している場合は、プライベートランナーの設定を変更することなく、既存の仕組みを利用することができます。ベストプラクティスは、少なくとも24時間に1回はアップグレードの自動化を実行することです。プライベートランナーを最新の利用可能なイメージに更新しないと、データの不整合や機能の喪失につながる可能性があります。"
+
+#~ msgid "There are additional options available in the `Watchtower documentation <https://github.com/v2tec/watchtower#options>` that you can explore, including auto-cleanup of old images to ensure that your Docker host does not hold onto outdated images."
+#~ msgstr "Docker ホストが古いイメージを保持しないようにするための古いイメージの自動クリーンアップなど、`Watchtower ドキュメント <https://github.com/v2tec/watchtower#options>` では、探索できる追加オプションが利用可能です。"

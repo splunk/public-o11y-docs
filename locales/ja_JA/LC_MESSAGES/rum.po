@@ -1,4 +1,3 @@
-# Copyright (C) 2023 Splunk, Inc
 # This file is distributed under the same license as the Splunk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
@@ -6,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-13 09:38+0000\n"
-"PO-Revision-Date: 2025-04-10 10:44+0100\n"
+"POT-Creation-Date: 2025-04-18 13:59+0000\n"
+"PO-Revision-Date: 2025-05-14 21:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ../../rum/RUM-custom-events.rst:-1
 msgid "Use custom events to capture metrics (errors, page loads, and core web vitals) specific to your organization's use cases, such as understanding drop off rates during a checkout workflow."
@@ -960,7 +959,7 @@ msgstr "左のナビゲーションメニューから、:strong:`設定`、:stro
 msgid "Choose the tag you want to index to trigger the cardinality analyzer. If the cardinality check passes, select :strong:`Add MetricSet` and confirm with the check mark."
 msgstr "インデックス化するタグを選択して、カーディナリティアナライザーをトリガーします。カーディナリティチェックにパスしたら、:strong:`MetricSetの追加` を選択し、チェックマークで確定します。"
 
-#: ../../rum/rum-custom-indexed-tags.rst:75 ../../rum/rum-session-replay.rst:177
+#: ../../rum/rum-custom-indexed-tags.rst:75 ../../rum/rum-session-replay.rst:194
 msgid "Troubleshooting"
 msgstr "トラブルシューティング"
 
@@ -2411,110 +2410,126 @@ msgstr "セッションを再生することで、ユーザーが体験したこ
 msgid "You are responsible for using Splunk Observability Cloud in compliance with applicable laws, including but not limited to providing notice to and obtaining any necessary consent from individuals whose data will be collected by Customer's use of the services."
 msgstr "お客様は、適用法を遵守してSplunk Observability Cloudを使用する責任を負います。これには、お客様がサービスを使用することによってデータの収集対象となる個人への通知および必要な同意の取得が含まれますが、これに限定されません。"
 
-#: ../../rum/rum-session-replay.rst:16
+#: ../../rum/rum-session-replay.rst:17
 msgid "There are many reasons why you might want to replay sessions. Here are a few:"
 msgstr "セッションを再生したい理由はたくさんあります。そのいくつかをご紹介しましょう："
 
-#: ../../rum/rum-session-replay.rst:18
+#: ../../rum/rum-session-replay.rst:19
 msgid ""
 "Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend a long time investigating a variety of possible causes based on an incomplete description of the "
 "problem."
 msgstr ""
 "サポートチームが問題のトラブルシューティングに要する時間を短縮します。実際のユーザーの視点からエラーを確認することで、サポートチームは何が起こったかを迅速に特定し、対策を講じることができます。セッションの再生がなければ、サポートチームは、問題の不完全な説明に基づいて、さまざまな可能性のある原因を調査するために長い時間を費やす可能性があります。"
 
-#: ../../rum/rum-session-replay.rst:19
+#: ../../rum/rum-session-replay.rst:20
 msgid "Introduce fast fixes to your applications by honing in on errors and seeing what errors impact users."
 msgstr "エラーに焦点を当て、どのようなエラーがユーザーに影響を与えるかを確認することで、アプリケーションに迅速な修正を導入できます。"
 
-#: ../../rum/rum-session-replay.rst:20
+#: ../../rum/rum-session-replay.rst:21
 msgid "Improve UX by seeing how users interact with your applications and following their navigation path. For example, if customers aren't adding promo codes from a targeted ad campaign, review the checkout workflow to see if customers can even find the dropdown to add a promo code."
 msgstr "ユーザーがアプリケーションをどのように操作し、ナビゲーションパスをたどるかを確認することで、UXを改善しましょう。例えば、ターゲット広告キャンペーンから顧客がプロモコードを追加していない場合、チェックアウトのワークフローを見直し、顧客がプロモコードを追加するドロップダウンを見つけられるかどうかを確認します。"
 
-#: ../../rum/rum-session-replay.rst:24
+#: ../../rum/rum-session-replay.rst:25
 msgid "Prerequisite"
 msgstr "前提条件"
 
-#: ../../rum/rum-session-replay.rst:26
+#: ../../rum/rum-session-replay.rst:27
 msgid "Session replay is available for enterprise customers only. For more information on each type of subscription, see :new-page:`Splunk RUM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-rum>`."
 msgstr "セッションの再生は、企業のお客様のみご利用いただけます。各サブスクリプションタイプの詳細については、:new-page:`Splunk RUM 価格設定<https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-rum>` を参照してください。"
 
-#: ../../rum/rum-session-replay.rst:30
+#: ../../rum/rum-session-replay.rst:31
 msgid "Set up session replay"
 msgstr "セッション再生をセットアップする"
 
-#: ../../rum/rum-session-replay.rst:31
-msgid "There are two ways to set up session replay: CDN or NPM."
-msgstr "セッション再生の設定には、CDNまたはNPMの2つの方法があります。"
-
 #: ../../rum/rum-session-replay.rst:33
-msgid "Note"
-msgstr "注"
+msgid "There are three ways to set up session replay: CDN, self-hosted, or NPM."
+msgstr "セッション再生の設定には、CDN、セルフホスト、NPMの3つの方法があります。"
 
-#: ../../rum/rum-session-replay.rst:35
+#: ../../rum/rum-session-replay.rst:36
 msgid "Initialize Splunk Browser RUM before you initialize the session recorder package."
 msgstr "セッションレコーダーパッケージを初期化する前に Splunk Browser RUM を初期化します。"
 
-#: ../../rum/rum-session-replay.rst:37
+#: ../../rum/rum-session-replay.rst:39
 msgid "This example shows the order in which to initialize the scripts:"
 msgstr "この例では、スクリプトを初期化する順番を示している："
 
-#: ../../rum/rum-session-replay.rst:58
+#: ../../rum/rum-session-replay.rst:60
 msgid "CDN"
 msgstr "CDN"
 
-#: ../../rum/rum-session-replay.rst:60
+#: ../../rum/rum-session-replay.rst:62
 msgid "Initialize this code snippet to set up session replay through Splunk CDN."
 msgstr "このコードスニペットを初期化して、Splunk CDN 経由のセッション再生を設定します。"
 
-#: ../../rum/rum-session-replay.rst:75
+#: ../../rum/rum-session-replay.rst:77
+msgid "Self-hosted"
+msgstr "セルフホスト"
+
+#: ../../rum/rum-session-replay.rst:79
+msgid "Download the desired version of :new-page:`splunk-otel-web-session-recorder.js <https://github.com/signalfx/splunk-otel-js-web/releases/latest/download/splunk-otel-web-session-recorder.js>`."
+msgstr ":new-page:`splunk-otel-web-session-recorder.js<https://github.com/signalfx/splunk-otel-js-web/releases/latest/download/splunk-otel-web-session-recorder.js>` の希望のバージョンをダウンロードしてください。"
+
+#: ../../rum/rum-session-replay.rst:80
+msgid "Deploy the file in a location accessible by the users of your application."
+msgstr "アプリケーションのユーザーがアクセスできる場所にファイルをデプロイします。"
+
+#: ../../rum/rum-session-replay.rst:81
+msgid "Add the following session replay snippet after the ``SplunkRum.init`` snippet:"
+msgstr "``SplunkRum.init`` スニペットの後に、以下のセッション再生スニペットを追加します："
+
+#: ../../rum/rum-session-replay.rst:88
+msgid "To avoid gaps in your data, load and initialize the Splunk JavaScript Agent asynchronously and as early as possible."
+msgstr "データのギャップを避けるには、Splunk JavaScript Agentを非同期でできるだけ早い段階でロードし、初期化します。"
+
+#: ../../rum/rum-session-replay.rst:92
 msgid "NPM"
 msgstr "NPM"
 
-#: ../../rum/rum-session-replay.rst:77
+#: ../../rum/rum-session-replay.rst:94
 msgid "Use the following command to set up session replay with NPM through a package named ``@splunk/otel-web-session-recorder``."
 msgstr "次のコマンドを使用して、``@splunk/otel-web-session-recorder`` という名前のパッケージを使用して NPM でセッション再生をセットアップします。"
 
-#: ../../rum/rum-session-replay.rst:84
+#: ../../rum/rum-session-replay.rst:100
 msgid "Next, initialize this code snippet:"
 msgstr "次に、このコードスニペットを初期化します："
 
-#: ../../rum/rum-session-replay.rst:97
+#: ../../rum/rum-session-replay.rst:113
 msgid "Deactivate session replay"
 msgstr "セッション再生を非アクティブにする"
 
-#: ../../rum/rum-session-replay.rst:98
+#: ../../rum/rum-session-replay.rst:115
 msgid "To deactivate session replay you can either:"
 msgstr "セッション再生を非アクティブにするには、以下のいずれかを行います："
 
-#: ../../rum/rum-session-replay.rst:100
+#: ../../rum/rum-session-replay.rst:117
 msgid "Turn it off for the particular session replay."
 msgstr "特定のセッション再生ではオフにします。"
 
-#: ../../rum/rum-session-replay.rst:101
+#: ../../rum/rum-session-replay.rst:118
 msgid "Remove the instrumentation if you want to deactivate it completely."
 msgstr "インストルメンテーションを完全に無効にしたい場合は、インストルメンテーションを削除します。"
 
-#: ../../rum/rum-session-replay.rst:105
+#: ../../rum/rum-session-replay.rst:122
 msgid "Additional instrumentation settings"
 msgstr "追加のインストルメンテーション設定"
 
-#: ../../rum/rum-session-replay.rst:107
+#: ../../rum/rum-session-replay.rst:124
 msgid "For more information on configuration options, see :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#guide>` on GitHub."
 msgstr "設定オプションの詳細については、GitHubの :new-page:`rrwebガイド<https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#guide>` 。"
 
-#: ../../rum/rum-session-replay.rst:110
+#: ../../rum/rum-session-replay.rst:127
 msgid "Redact information"
 msgstr "情報の再編集"
 
-#: ../../rum/rum-session-replay.rst:111
+#: ../../rum/rum-session-replay.rst:128
 msgid "Text and inputs are redacted by default. You can optionally configure image redaction as well. The following image illustrates what the Splunk RUM homepage looks with text redaction enabled. All text is replaced by ``*`` characters."
 msgstr "テキストと入力はデフォルトで再編集されますが、オプションで画像も再編集するように設定できます。以下の画像は、テキストの再編集を有効にした状態のSplunk RUMホームページです。テキストはすべて ``*`` の文字で置き換えられています。"
 
-#: ../../rum/rum-session-replay.rst:110
+#: ../../rum/rum-session-replay.rst:127
 msgid "Example home screen of a website with the text replaced by the star symbol to show redacted text."
 msgstr "ウェブサイトのホーム画面の例で、テキストを星印に置き換えて再編集されたテキストを表示したもの。"
 
-#: ../../rum/rum-session-replay.rst:118
+#: ../../rum/rum-session-replay.rst:135
 msgid ""
 "To disable all text redaction, set ``maskTextSelector: false``. To customize which elements are redacted, you can use the ``rr-mask`` class. Any element with this class will have its text redacted. Additionally, you can customize the class name by setting ``maskTextClass`` or ``maskTextSelector`` to a custom value. The custom value can be a "
 "regular expression."
@@ -2522,73 +2537,73 @@ msgstr ""
 "テキストの再編集をすべて無効にするには、``maskTextSelector: false`` を設定します。どの要素を再編集するかをカスタマイズするには、``rr-mask`` クラスを使用します。このクラスを持つ要素はすべて、そのテキストが再編集されるようになります。さらに、``maskTextClass`` または ``maskTextSelector`` をカスタム値に設定することで、クラス名をカスタマイズできます。"
 "カスタム値には正規表現を使用できます。"
 
-#: ../../rum/rum-session-replay.rst:120
+#: ../../rum/rum-session-replay.rst:137
 msgid "Input redaction is handled separately. To disable all input redaction, set ``maskAllInputs: false``. To customize which inputs are redacted use the ``maskInputOptions`` option."
 msgstr "入力の再編集は個別に処理されます。入力の再編集をすべて無効にするには、``maskAllInputs: false`` を設定します。どの入力を再編集するかをカスタマイズするには、``maskInputOptions`` オプションを使用します。"
 
-#: ../../rum/rum-session-replay.rst:123
+#: ../../rum/rum-session-replay.rst:140
 msgid ""
-"In the rrweb documentation, the default value of ``maskTextSelector`` is ``null`` and the default value of ``maskAllInputs`` is ``false``. However, Splunk RUM changes these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or "
-"``maskAllInputs``to ``false`` when no redaction is desired."
+"In the rrweb documentation, the default value of ``maskTextSelector`` is ``null`` and the default value of ``maskAllInputs`` is ``false``. However, Splunk RUM changes these default values in our configuration to ensure that all text and inputs are redacted by default. As a result, you must explicitly set ``maskTextSelector`` or ``maskAllInputs`` "
+"to ``false`` when no redaction is desired."
 msgstr ""
-"rrwebのドキュメントでは、 ``maskTextSelector``  のデフォルト値は ``null`` であり、  ``maskAllInputs``  のデフォルト値は  ``false``  です。しかし、Splunk RUMでは、構成内でこれらのデフォルト値を変更して、デフォルトですべてのテキストと入力が再編集されるようにしています。そのため、再編集を希望しない場合は、明示的に ``maskTextSelector``  または "
+"rrwebのドキュメントでは、 ``maskTextSelector``  のデフォルト値は ``null`` であり、 ``maskAllInputs``  のデフォルト値は  ``false``  です。しかし、Splunk RUMでは、構成内でこれらのデフォルト値を変更して、デフォルトですべてのテキストと入力が再編集されるようにしています。そのため、再編集を希望しない場合は、明示的に ``maskTextSelector``  または "
 "``maskAllInputs``  を  ``false``  に設定する必要があります。"
 
-#: ../../rum/rum-session-replay.rst:125
+#: ../../rum/rum-session-replay.rst:142
 msgid "Examples:"
 msgstr "例"
 
-#: ../../rum/rum-session-replay.rst:160
+#: ../../rum/rum-session-replay.rst:177
 msgid "Image redaction"
 msgstr "画像の再編集"
 
-#: ../../rum/rum-session-replay.rst:162
+#: ../../rum/rum-session-replay.rst:179
 msgid "To redact images, set ``inlineImages: false`` in  the ``SplunkSessionRecorder.init`` function."
 msgstr "画像を再編集するには、``inlineImages: false`` 機能で ``SplunkSessionRecorder.init`` を設定します。"
 
-#: ../../rum/rum-session-replay.rst:164
+#: ../../rum/rum-session-replay.rst:181
 msgid "For more information on how to customize your instrumentation, see the Privacy section of the :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#privacy>` on GitHub."
 msgstr "インスツルメンテーションのカスタマイズ方法の詳細については、GitHubの :new-page:`rrwebガイド<https://github.com/rrweb-io/rrweb/blob/rrweb%401.1.3/guide.md#privacy>` のプライバシーセクションを参照してください。"
 
-#: ../../rum/rum-session-replay.rst:168
+#: ../../rum/rum-session-replay.rst:185
 msgid "Replay a session"
 msgstr "セッションを再生する"
 
-#: ../../rum/rum-session-replay.rst:169
+#: ../../rum/rum-session-replay.rst:186
 msgid "To replay a session,  open the session you're interested in session waterfall, and if there's a replay option available, click :strong:`Replay`. Here are a few controls you can configure:"
 msgstr "セッションを再生するには、セッションウォーターフォールに関心のあるセッションを開き、再生オプションがあれば、:strong:`再生` をクリックします。以下に、設定できるいくつかのコントロールを示します："
 
-#: ../../rum/rum-session-replay.rst:171
+#: ../../rum/rum-session-replay.rst:188
 msgid "Adjust the speed of the session and the size of the window."
 msgstr "セッションの速度とウィンドウのサイズを調整します。"
 
-#: ../../rum/rum-session-replay.rst:172
+#: ../../rum/rum-session-replay.rst:189
 msgid "Toggle the timeline to see multiple replay segments if the user had multiple instances of the application open at the same time."
 msgstr "ユーザーが同時に複数のアプリケーションを開いていた場合、タイムラインを切り替えて複数の再生セグメントを表示します。"
 
-#: ../../rum/rum-session-replay.rst:178
+#: ../../rum/rum-session-replay.rst:195
 msgid "Try these methods:"
 msgstr "これらの方法を試してみましょう："
 
-#: ../../rum/rum-session-replay.rst:180
+#: ../../rum/rum-session-replay.rst:197
 msgid "If a session is incomplete, it might be because the network bandwidth isn't strong enough, which can cause part of a session to drop off."
 msgstr "セッションが不完全な場合、ネットワークの帯域幅が十分でないため、セッションの一部が切断される可能性があります。"
 
-#: ../../rum/rum-session-replay.rst:181
+#: ../../rum/rum-session-replay.rst:198
 msgid ""
 "If a user has multiple tabs of the same application open, then there is a session replay available for each tab. Make sure to open the tab below session replay and navigate to the tab you're interested in. For example, in the following image, the blue tabs at the top of the chart represent a user loading the page again, or opening the app in a "
 "different page."
 msgstr "ユーザーが同じアプリケーションの複数のタブを開いている場合、各タブで利用可能なセッション再生があります。必ずセッション再生の下のタブを開き、興味のあるタブに移動してください。例えば、以下の画像では、チャート上部の青いタブは、ユーザーがページを再度読み込んだり、別のページでアプリを開いたりしたことを表しています。"
 
-#: ../../rum/rum-session-replay.rst:177
+#: ../../rum/rum-session-replay.rst:194
 msgid "This image shows eight tabs in a chart where a user could have loaded the page again, or opened the app in a different tab."
 msgstr "この画像は、ユーザーがページを再度読み込んだり、別のタブでアプリを開いたりした可能性のあるチャート内の8つのタブを示しています。"
 
-#: ../../rum/rum-session-replay.rst:188
+#: ../../rum/rum-session-replay.rst:205
 msgid "Elements or images aren't appearing in your session replay. It's possible that the images or elements are blocked by a content security policy. Review the policy and CDN provider to confirm."
 msgstr "セッション 再生に要素や画像が表示されません。画像または要素がコンテンツセキュリティポリシーによってブロックされている可能性があります。ポリシーとCDNプロバイダーを確認してください。"
 
-#: ../../rum/rum-session-replay.rst:190
+#: ../../rum/rum-session-replay.rst:207
 msgid "Aspect ratio is distorted. The aspect ratio is dependent on the user's window size."
 msgstr "アスペクト比が歪んでいます。アスペクト比はユーザーのウィンドウサイズに依存します。"
 
@@ -3667,3 +3682,6 @@ msgstr "RUM がアプリケーションについて収集するデータのタ�
 
 #~ msgid "First input delay (FID)"
 #~ msgstr "初回入力遅延（FID）"
+
+#~ msgid "Note"
+#~ msgstr "注"
