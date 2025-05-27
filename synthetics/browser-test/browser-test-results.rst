@@ -139,7 +139,7 @@ Filmstrip
 
 The filmstrip is at the top of the :guilabel:`Run results` for a single run. It offers frames  from the video taken at the frequency you choose and filtered by synthetic transaction, page, or step:
 
-* To set the frequency of screenshots, select a value from the :guilabel:`Frequency` pull-down menu. Supported frequencies are 100 milliseconds, 500 milliseconds, and one second.
+* To set the frequency of screenshots, select a value from the :guilabel:`Frequency` pull-down menu. Supported frequencies are 100 milliseconds, 500 milliseconds, and 1 second.
 * To filter the filmstrip to show a subset of images, select a value from the Filter by synthetic transaction, page, or step menu.
 
 For optimal performance and display in the filmstrip, limit your browser test to a maximum  of 35 steps.
