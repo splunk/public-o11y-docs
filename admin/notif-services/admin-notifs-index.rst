@@ -169,3 +169,6 @@ The following table contains a list of the IP addresses that you can use to allo
     - * 35.247.113.38/32
       * 35.247.32.72/32
       * 35.247.86.219/32
+      * 35.212.245.144/32\ :sup:`*`
+      * 35.212.164.197/32\ :sup:`*`
+      * 35.212.148.158/32\ :sup:`*`
