@@ -28,7 +28,7 @@ To connect Splunk Observability Cloud to AWS using AWS PrivateLink, you need the
 Connect different accounts within or across regions
 ==============================================================
 
-You can use AWS PrivateLink to connect different accounts in the same AWS region. The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
+You can use AWS PrivateLink to connect different accounts within or across AWS regions. The following diagram shows diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
 
 .. image:: /_images/gdi/AWS_PL_region1.jpg  
   :width: 80%
