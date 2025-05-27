@@ -46,13 +46,13 @@ Interpret Browser test run results
 
 Browser test run results include:
 
-* :ref:`A waterfall chart that shows all the requests for the run by default<run-results-waterfall-chart>`
+* :ref:`A waterfall chart that shows all the requests for the run by default<waterfall-chart>`
 * :ref:`Metrics related to performance, user experience, resources, and errors<run-results-metrics>`
 * :ref:`Video (only in Enterprise Edition)<video>`
 * :ref:`Filmstrip (only in Enterprise Edition)<filmstrip>`
 
 
-.. _run-results-waterfall-chart:
+.. _waterfall-chart:
 
 Waterfall chart
 ------------------------------------------------------------------
