@@ -7,55 +7,61 @@ Interpret Browser test results
 .. meta::
     :description: Understand the results of browser tests run in Splunk Synthetic Monitoring and learn how to interpret the data in visualizations, such as the waterfall chart. 
 
-Every run of a Browser Test in Splunk Synthetic Monitoring produces a set of diagnostics that help you understand the performance of your application in real time. 
+Every run of a browser test produces a set of diagnostics that help you understand the performance of your application in real time. 
 
 * :ref:`browser-test-history`
 * :ref:`browser-run-results`
 
 .. _browser-test-history:
 
-View Browser test history
-==========================
+View browser test history
+==================================================================
 
-On the :guilabel:`Test History` page, view a customizable summary of recent run results so you can assess the performance of your test at a glance. 
+On the :guilabel:`Test History` page, view a customizable summary of recent run results so that you can assess the performance of your test at a glance. 
 
-#. To open the :guilabel:`Test History` view for a test, select its row in the :guilabel:`Tests` list.
-#. You can take the following actions in the Test History page:
+To open the :guilabel:`Test History` view for a test, select its row in the :guilabel:`Tests` list.
 
-    - Select :guilabel:`Edit test` to edit your test configuration. Note that if you change the name of your test or the name of a synthetic transaction, it may take up to 20 minutes for the updated name to appear in your charts and detectors. 
-    - Select :guilabel:`Create detector` to create a detector based on your test. See :ref:`synth-alerts` to learn more. 
-    - Select :guilabel:`Actions > Pause test` to pause your test.
-    - Select :guilabel:`Actions > Copy test` to make a copy of your test. This opens the :guilabel:`New Browser test` page with the details of the test pre-filled. 
-
-Customize the Performance KPIs chart 
---------------------------------------------------
-See :ref:`test-kpis`.
 
 View results for a specific run
----------------------------------
-To navigate to the :guilabel:`Run results` view for a single run, select a data point within the :guilabel:`Performance KPIs` chart with the visualization interval at :strong:`Run level` and the segmentation set to :strong:`Location`. 
+------------------------------------------------------------------
 
-If you're viewing aggregate data (for example, at a 20-minute interval instead of run level), selecting a data point zooms you in to see run-level detail. Then you can select a specific run to see the :guilabel:`Run results` from there. 
+To view the :guilabel:`Run results` for a single run, do any of the following:
 
-You can also select a row in the :guilabel:`Recent run results` table below the :guilabel:`Performance KPIs` chart.
+* On the :guilabel:`Run results` page, select :guilabel:`Go to all run results` and then select the specific run you're interested in.
+* Select a data point within the :guilabel:`Availability` or :guilabel:`Performance KPIs` chart.
+* If you're viewing aggregate data (for example, at a resolution higher than the run frequency), select a data point to zoom in. Then select a specific run.
+* Select a row in the :guilabel:`Recent run results` table below the chart.
+
+
+Customize the Performance KPIs chart 
+==================================================================
+
+See :ref:`test-kpis`.
 
 
 .. _browser-run-results:
 
 Interpret Browser test run results
-=============================================
-Every run of a Browser test generates a set of results including a waterfall chart and metrics.
+==================================================================
 
-* For a single-page Browser test, you get a single waterfall chart with all requests from that run. 
-* For a transactional Browser test, the waterfall chart is divided into sections based on the synthetic transactions in your test. Select the name of a synthetic transaction to expand the list of steps involved in that synthetic transaction. Select the name of a step within a synthetic transaction to expand the list of requests involved in each step.  
+Browser test run results include:
+
+* :ref:`A waterfall chart that shows all the requests for the run by default<waterfall-chart:>`
+* :ref:`Metrics related to performance, user experience, resources, and errors<metrics>`
+* :ref:`Video (only in Enterprise Edition)<video>`
+* :ref:`Filmstrip (only in Enterprise Edition)<filmstrip>`
+
 
 .. _waterfall-chart:
 
 Waterfall chart
------------------
-Every run of a Browser test in Splunk Synthetic Monitoring also generates a HTTP archive format (HAR) file that logs the interaction between the test runner and the site being tested. This file records the time it takes for each resource in the site to load.
+------------------------------------------------------------------
 
-A waterfall chart is a visual representation of the data in a HAR file. The chart contains a horizontal bar for each resource in the page. To provide detail on these resources, the chart contains the following columns:
+Browser test run results include an HTTP archive format (HAR) file that logs the interaction between the test runner and the site being tested. This file records the time it takes for each resource in the site to load. A waterfall chart is the visual representation of the data in a HAR file. The chart contains a timeline on a  horizontal bar for each resource in the page.
+
+The waterfall chart displays all the requests for the run by default. You can filter it to show corresponding entries for a transaction, page, or step. Some steps or transactions might not have any waterfall entries associated with them.
+
+To provide detail on these resources, the waterfall chart contains the following columns:
 
 .. list-table::
    :header-rows: 1
@@ -90,8 +96,6 @@ A waterfall chart is a visual representation of the data in a HAR file. The char
      - Timeline for the page load. This timeline begins at ``0 ms`` and ends at the time at which the last request in the page finished loading. A multicolored horizontal bar in each row represents the loading time of the resource. Each color represents a different part of the loading process of the resource. Hover over the timeline to view a pop-up message with detailed request timings. 
 
 
-|
-
 Using the waterfall chart, you can do the following:
 
 - Expand the details in a row to show the request and response headers for that resource.
@@ -99,39 +103,61 @@ Using the waterfall chart, you can do the following:
 - Search resources in a page by keywords in the URL.
 - Follow a direct link to related back-end spans if the same app is instrumented with APM. See :ref:`Link Synthetic spans to APM spans <synthetics-link-to-apm>`.
 - Use the tabs to filter the waterfall chart by resource type, including JS, CSS, Image, Media, JSON, and XML.
-- Download the raw HAR file, using the :new-page:`API <https://dev.splunk.com/observability/reference/api/synthetics_artifacts/latest#endpoint-getartifactsbytestid>`.
-- Show or hide columns in the chart
+- Download all of the run's artifacts including the video and HAR using the Download button dropdown or use  the :new-page:`API <https://dev.splunk.com/observability/reference/api/synthetics_artifacts/latest#endpoint-getartifactsbytestid>`.
+- Show or hide columns in the chart.
+
 
 .. - Customize the statistics displayed for each request inline in the waterfall chart
 .. - Filter the waterfall chart by key browser events: Before Start Render, Before Onload, After Onload, Before Fully Loaded.
 
-.. _filmstrip:
 
-Filmstrip
------------
-:strong:`Available in Enterprise Edition.`
+.. _metrics:
 
-The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. The maximum number of steps for optimal performance is 35. The maximum data per filmstrip is 3GB. If your filmstrip is larger than 2GB, the remaining video isn't colleceted but all the other metrics are still stored.
+Browser test metrics
+------------------------------------------------------------------
+Every run of a browser test produces a set of 40+ metrics that offer a picture of website performance. See :ref:`browser-metrics` for a complete list of these metrics. 
+
 
 .. _video:
 
 Video
--------
-:strong:`Available in Enterprise Edition.`
+------------------------------------------------------------------
 
-In the filmstrip view, you can also view a video of the site loading in real time. This lets you see exactly what a user trying to load your site from the location and device of a particular test run would experience. You can use the :guilabel:`Download Video` button to download this video as an .mp4 file for later reference.  
+.. note::
+  Available in Enterprise Edition.
 
-.. Post-GA version: In the filmstrip view, you can also view a video of the site loading in real time, or at a faster or slower speed of your choosing. This lets you see exactly what a user trying to load your site from the location and device of a particular test run would experience. You can use the :guilabel:`Download Video` button to download this video as an .mp4 file for later reference.  
+The video of the site loading in real time shows you what users would experience from the location and device of a particular test run. To download this video as an .mp4 file select the video's vertical dot menu and then select :guilabel:`Download`.  
 
-Browser test metrics
-----------------------
-In addition to these diagnostics, every run of a Browser Test produces a set of 40+ metrics that offer a picture of website performance. See :ref:`browser-metrics` for a complete list of these metrics. 
+
+.. _filmstrip:
+
+Filmstrip
+------------------------------------------------------------------
+
+.. note::
+  Available in Enterprise Edition.
+
+The filmstrip is at the top of the :guilabel:`Run results` for a single run. It offers frames  from the video taken at the frequency you choose and filtered by synthetic transaction, page, or step:
+
+* To set the frequency of screenshots, select a value from the :guilabel:`Frequency` pull-down menu. Supported frequencies are 100 milliseconds, 500 milliseconds, and one second.
+* To filter the filmstrip to show a subset of images, select a value from the Filter by synthetic transaction, page, or step menu.
+
+For optimal performance and display in the filmstrip, limit your browser test to a maximum  of 35 steps.
+
+The filmstrip frames are  annotated with step details (step name and duration). If a  step began within the frame's captured time and the next frame's captured time, the step's start frame contains an annotation for that step along with any other steps that match the criteria. For example, if step 4 started 3.5 seconds into the run and the filmstrip is showing images for every 1s, the frame at 3s is annotated with  step 4's details as it began after the 3 second mark and before the 4 second mark.
+
+The filmstrip is derived from the video, which has a maximum size of 3GB. If the video exceeds that limit, the filmstrip will also not contain anything captured after the limit is reached, but all the other metrics are still stored.
+
+If the run result was a failure, the step that failed the run is highlighted in the filmstrip with error styling. A failing step is always  shown on its own frame even if the frequency of the filmstrip frames would have included it in a preceding frame.
+
+You can also view a video of the site loading in real time. The video of the site loading in real time shows you what users would experience from the location and device of a particular test run. To download this video as an ``.mp4`` file select the video's vertical dot menu and then select :guilabel:`Download`.
 
 
 .. _detector-browser-test:
 
 Detect and report on your synthetic metrics
-------------------------------------------------------------------
+==================================================================
+
 To get even more value out of your synthetic metrics, use the metrics engine to create custom metrics, charts, and detectors. See the following links for more information:
 
 * To build charts and dashboards using your metrics, see :ref:`dashboards`.
@@ -141,6 +167,7 @@ To get even more value out of your synthetic metrics, use the metrics engine to 
 
 
 
-(Optional) Splunk RUM integration 
-------------------------------------
-Splunk Synthetic Monitoring automatically collects web vitals for Browser tests. If you also want to measure web vital metrics against your run results, then integrate with Splunk RUM. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
+(Optional) Integrate with Splunk RUM 
+==================================================================
+
+Splunk Synthetics automatically collects web vitals for browser tests. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. If you also want to measure web vital metrics against your run results, integrate with Splunk RUM. For instructions, see :ref:`rum-synth`.
