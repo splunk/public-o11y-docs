@@ -248,13 +248,11 @@ Reach out to :ref:`Splunk Customer Support <support>` with the following informa
   * API
   * Stream
 
-* AWS source account region. Must be one of the regions listed in :ref:`aws-source-regions`.
+* AWS source account region: It must be one of the regions listed in :ref:`aws-source-regions`.
 
-* Splunk Observability AWS account region. Must be one of the regions listed in :ref:`aws-privatelink-service-names`.
+* Splunk Observability AWS account region: It must be one of the regions listed in :ref:`aws-privatelink-service-names`.
 
 .. note::
-
-  The following applies:
 
     * If you're setting up same-region PrivateLink connectivity, your AWS source account region is the same as the Splunk Observability AWS account region.
 
