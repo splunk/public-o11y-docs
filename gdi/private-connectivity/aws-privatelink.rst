@@ -322,7 +322,7 @@ To enable Private DNS Name, follow these steps:
 #. On the left navigation pane, select :guilabel:`Endpoints`.
 #. Select the VPC endpoint you want to modify.
 #. Under the :guilabel:`Actions` dropdown, select :guilabel:`Modify private DNS name`.
-#. Under :guilabel:`Modify private DNS name settings`, check the :guilabel:Enable private DNS names > Enable for this endpoint` checkbox.
+#. Under :guilabel:`Modify private DNS name settings`, check the :guilabel:`Enable private DNS names > Enable for this endpoint` checkbox.
 #. Select :guilabel:`Save Changes`.
 
 Delete a VPC endpoint
@@ -337,7 +337,22 @@ To delete an endpoint, follow these steps:
 #. Select the VPC endpoint you want to delete.
 #. Confirm the deletion when prompted.
 
-Use AWS PrivateLink with the Collector 
+.. _aws-privatelink-vpc-peering:
+
+Use AWS PrivateLink with VPC peering 
+==========================================================================
+
+If the workloads that you're monitoring with Splunk Observability Cloud are not in the :ref:`aws-source-regions` list, follow the steps below:
+
+1. In your AWS account, either use an existing VPC or create a new VPC in one of Splunk Observability's AWS account regions mentioned in the :ref:`aws-privatelink-service-names`.
+
+2. Set up AWS VPC peering between the regions where the workloads are being monitored and the region where the VPC used in step 1 is located.
+
+3. Follow :ref:`aws-privatelink-configure-vpc` to activate the AWS PrivateLink endpoint connection from the region where the VPC used in step 1 is located.
+
+Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
+
+Use AWS PrivateLink with the OpenTelemetry Collector 
 ==========================================================================
 
 To use AWS PrivateLink URLs in your Collector instance, update the necessary variables in your Collector configuration to point to the given endpoint type: 
@@ -367,21 +382,6 @@ To use AWS PrivateLink URLs in your Collector instance, update the necessary var
 See all PrivateLink URLs at :ref:`aws-privatelink-endpoint-urls`.
 
 For information about the Collector's environment variables see :ref:`collector-env-var`.
-
-.. _aws-privatelink-vpc-peering:
-
-Use AWS PrivateLink with VPC peering 
-==========================================================================
-
-If the workloads that you're monitoring with Splunk Observability Cloud are not in the :ref:`aws-source-regions` list, follow the steps below:
-
-1. In your AWS account, either use an existing VPC or create a new VPC in one of Splunk Observability's AWS account regions mentioned in the :ref:`aws-privatelink-service-names`.
-
-2. Set up AWS VPC peering between the regions where the workloads are being monitored and the region where the VPC used in step 1 is located.
-
-3. Follow :ref:`aws-privatelink-configure-vpc` to activate the AWS PrivateLink endpoint connection from the region where the VPC used in step 1 is located.
-
-Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
 
 .. _aws-privatelink-support:
 
