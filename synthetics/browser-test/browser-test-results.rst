@@ -144,7 +144,7 @@ The filmstrip is at the top of the :guilabel:`Run results` for a single run. It 
 
 For optimal performance and display in the filmstrip, limit your browser test to a maximum  of 35 steps.
 
-The filmstrip frames are  annotated with step details (step name and duration). If a  step began within the frame's captured time and the next frame's captured time, the step's start frame contains an annotation for that step along with any other steps that match the criteria. For example, if step 4 started 3.5 seconds into the run and the filmstrip is showing images for every 1s, the frame at 3s is annotated with  step 4's details as it began after the 3 second mark and before the 4 second mark.
+The filmstrip frames are  annotated with step details (step name and duration). If a  step began within the frame's captured time and the next frame's captured time, the step's start frame contains an annotation for that step along with any other steps that match the criteria. For example, if step 4 started 3.5 seconds into the run and the filmstrip is showing images for every 1s, the frame at 3s is annotated with step 4's details as it began after the 3-second mark and before the 4-second mark.
 
 The filmstrip is derived from the video, which has a maximum size of 3GB. If the video exceeds that limit, the filmstrip will also not contain anything captured after the limit is reached, but all the other metrics are still stored.
 
