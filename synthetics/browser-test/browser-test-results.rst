@@ -46,13 +46,13 @@ Interpret Browser test run results
 
 Browser test run results include:
 
-* :ref:`A waterfall chart that shows all the requests for the run by default<waterfall-chart:>`
-* :ref:`Metrics related to performance, user experience, resources, and errors<metrics>`
+* :ref:`A waterfall chart that shows all the requests for the run by default<run-results-waterfall-chart>`
+* :ref:`Metrics related to performance, user experience, resources, and errors<run-results-metrics>`
 * :ref:`Video (only in Enterprise Edition)<video>`
 * :ref:`Filmstrip (only in Enterprise Edition)<filmstrip>`
 
 
-.. _waterfall-chart:
+.. _run-results-waterfall-chart:
 
 Waterfall chart
 ------------------------------------------------------------------
@@ -111,7 +111,7 @@ Using the waterfall chart, you can do the following:
 .. - Filter the waterfall chart by key browser events: Before Start Render, Before Onload, After Onload, Before Fully Loaded.
 
 
-.. _metrics:
+.. _run-results-metrics:
 
 Browser test metrics
 ------------------------------------------------------------------
