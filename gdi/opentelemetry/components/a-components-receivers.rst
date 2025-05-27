@@ -12,6 +12,7 @@ Collector components: Receivers
     :titlesonly:
     :hidden:
 
+    activedirectory-ds-receiver
     apache-receiver
     apache-spark-receiver
     awsecscontainermetrics-receiver
