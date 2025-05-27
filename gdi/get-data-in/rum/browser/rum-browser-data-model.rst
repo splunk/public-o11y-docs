@@ -229,6 +229,17 @@ The browser agent sends the IP addresses of all beacon connections to Splunk Obs
 
 .. note:: Splunk Observability Cloud calculates only geographical metadata from the IPs, and drops IP addresses within 6 hours.
 
+
+Additions to the RUM browser model by splunk-rum
+========================================================
+If you're using the ``splunk-rum`` CLI or the Webpack build plugin to upload your source map, those tools will add a new attribute named ``error.sourceMapIds`` to your RUM browser data model. This attribute contains a mapping of file URL and ``sourceMapId`` pairs, where:
+
+* You must have already injected the ``sourceMapId`` attribute into your source map (using the ``splunk-rum`` CLI or the Webpack build plugin). See :ref:`set-up-javascript-source-mapping`. 
+* Only files mentioned in the error's ``error.stack``  appear in ``error.sourceMapIds``.
+
+This attribute is only in your RUM browser data model if you're using the ``splunk-rum`` CLI or the Webpack build plugin.
+
+
 Instrumentation-specific data
 ==============================================
 
