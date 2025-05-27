@@ -133,6 +133,9 @@ Uploads for pre-production builds
 
    * Run the upload command with the ``--app-id``, ``--version-code``, and ``--splunk-build-id`` parameters. This option only works if you added ``splunk.build_id`` to your Gradle build script (in step 1). Get the build ID from the Gradle build output or from the merged manifest:
 
+     .. note::
+        If you didn't set the ``SPLUNK_REALM`` and ``SPLUNK_ACCESS_TOKEN`` environment variables, you must also add the ``--realm <value>`` and ``--token <your-splunk-org-access-token>`` parameters to this command.
+
       .. code-block:: shell
 
         splunk-rum android upload \
@@ -143,6 +146,9 @@ Uploads for pre-production builds
 
 
     * Run the ``upload-with-manifest`` command with the path to the application's merged or packaged ``AndroidManifest.xml`` file, along with path to the mapping file. Be sure to include the correct manifest, which is the one that's created when your application is built, and is located in the build output directory: 
+
+      .. note::
+        If you didn't set the ``SPLUNK_REALM`` and ``SPLUNK_ACCESS_TOKEN`` environment variables, you must also add the ``--realm <value>`` and ``--token <your-splunk-org-access-token>`` parameters to this command.
 
       .. code-block:: shell
 
