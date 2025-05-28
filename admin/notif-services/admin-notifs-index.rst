@@ -102,7 +102,7 @@ The following table contains a list of the IP addresses that you can use to allo
 
 .. note:: New SignalFx IP addresses
 
-   As part of our ongoing infrastructure expansion, Splunk is adding new IP addresses (marked with an asterisk * in the table referenced below) to SignalFx realms. These IP addresses will become active by November 1st, 2025.
+   As part of our ongoing infrastructure expansion, Splunk is adding new IP addresses (marked with :sup:`*` in the table referenced below) to SignalFx realms. These IP addresses will become active by November 1st, 2025.
    If your organization uses IP allow lists to control network traffic, please add these new IP addresses to your existing allow lists before the advised date, while keeping the current IP addresses in your allow lists.
 
 .. list-table::
