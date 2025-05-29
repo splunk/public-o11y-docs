@@ -30,7 +30,8 @@ Common data types
 .. _rum-ios-metrics:
 
 Metrics
-=============================================
+==============================================
+
 The following tables list all of the metrics available in Splunk RUM for iOS.
 
 .. list-table::
@@ -73,8 +74,9 @@ The following tables list all of the metrics available in Splunk RUM for iOS.
 
 .. _ios-rum-basic-properties:
 
+
 Basic properties
-===================
+==============================================
 
 The following properties are common to all applications instrumented for Splunk RUM:
 
@@ -145,8 +147,10 @@ The following table describes each value of ``SpanKind``:
    * - ``Consumer``
      - Indicates that the span describes consumer receiving a message from a broker.
 
+
+
 Default attributes
-===================
+==============================================
 
 By default, the iOS RUM library adds the following attributes to all spans:
 
@@ -173,6 +177,7 @@ By default, the iOS RUM library adds the following attributes to all spans:
    * - ``net.host.connection.type``
      - String
      - Connection type used by the device. Possible values include ``wifi``, ``cell``, ``unavailable``, and ``unknown``.
+
 
 Resource attributes
 ==============================================
@@ -206,10 +211,12 @@ By default, the iOS RUM library adds the following resource attributes to all sp
      - String
      - Name of the thread. ``SplunkRum.initialize`` only applies to the main thread.
 
+
 Instrumentation attributes
 ==============================================
 
 The iOS RUM library collects the following data using its instrumentations. To activate or deactivate specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
+
 
 Crash reporting
 ----------------------------------------------------
@@ -227,30 +234,52 @@ The iOS RUM library adds the following crash reporting attributes to spans that 
    * - ``thread.id``
      - Integer
      - ID of the current managed thread, as opposed to the operating system thread ID.
-   * - ``thread.name``
-     - String
-     - Name of the thread.
    * - ``exception.message``
      - String
      - The message of the exception.
    * - ``exception.type``
      - String
      - The type of the exception.
-   * - ``exception.stacktrace``
-     - String
-     - The stack trace for the exception.
+   * - ``exception.threads``
+     - Array
+     - An array of elements containing data about one thread in the process, including a ``stackFrame`` array.
+   * - ``exception.images``
+     - Array
+     - An array of elements containing data about the code image.  There is one element for each image referenced in ``exception.threads``.
    * - ``component``
      - String
      - Always ``crash``.
-   * - ``status``
-     - String
-     - Always ``Error``.
    * - ``crash.timestamp``
      - NSDate
      - Date and time when the crash report is generated.
+   * - ``crash.observedTimestamp``
+     - NSDate
+     - Date and time when the crash report is sent.
+   * - ``crash.isNative``
+     - Boolean
+     - If ``false``, code is being executed in an emulator such as Rosetta.
    * - ``crash.address``
      - Integer
      - Address of the faulty instruction.
+   * - ``crash.processPath``
+     - String
+     - The full path to the crashed app on the device.
+   * - ``crash.batteryLevel``
+     - String
+     - Formatted battery level. For example, ``"87.3%"``.
+   * - ``crash.freeMemory``
+     - String
+     - Formatted free memory available. For example, ``"31.88 GB"``.
+   * - ``crash.freeDiskSpace``
+     - String
+     - Formatted free disk space available. For example, ``"691.96 GB"``.
+   * - ``crash.app.version``
+     - String
+     - Full version of the crashed application. For example, ``"1.0"``.
+   * - ``crash.os.version``
+     - String
+     - Version of iOS in use. For example, ``"16.4"``.
+
 
 Network monitoring
 ----------------------------------------------------

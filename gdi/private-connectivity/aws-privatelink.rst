@@ -9,30 +9,30 @@ Private Connectivity using AWS PrivateLink
 
 You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the internet. 
 
-AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
+AWS PrivateLink connects your Virtual Private Cloud (VPC) to the AWS-hosted services that you use, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS-hosted services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
 .. note:: 
   
   To send logs to Splunk Observability Cloud, use :ref:`lo-connect-landing`. 
   
-  To send logs securely, use :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
-
-The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
-
-.. source in Lucidchart: https://lucid.app/lucidchart/21f1cd02-7b2c-4654-a1b8-18c80a903fee/edit?shared=true&page=0_0&invitationId=inv_2f660037-6a85-4b98-9025-212b16c6b5a2#
-
-.. image:: /_images/gdi/aws-privatelink-schema2.png
-  :width: 80%
-  :alt: AWS Private Link schema.
-  
+  To send logs with AWS PrivateLink see :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
 
 Prerequisites
 ==================================================
 
 To connect Splunk Observability Cloud to AWS using AWS PrivateLink, you need the following:
 
-* An active AWS account
-* A basic understanding of VPC concepts and networking principles
+* An active AWS account.
+* A basic understanding of VPC concepts and networking principles.
+
+Connect different accounts within or across regions
+==============================================================
+
+You can use AWS PrivateLink to connect different accounts within or across AWS regions. The following diagram shows diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
+
+.. image:: /_images/gdi/AWS_PL_region1.jpg  
+  :width: 80%
+  :alt: AWS Private Link schema.
 
 .. _aws-privatelink-endpoint-types:
 
@@ -52,7 +52,42 @@ You can use any of these endpoints with AWS PrivateLink:
 AWS PrivateLink availability and service name
 ==================================================
 
-See the following tables for the AWS PrivateLink endpoint URLs and service names for each AWS region.
+See the following sections for information on the available AWS source account regions, AWS PrivateLink endpoint URLs and service names for each AWS region.
+
+.. _aws-source-regions:
+
+AWS source account regions
+--------------------------------------------------
+
+See the following list for the supported AWS source account regions. Your AWS account region must be one of these regions:
+
+    * US East (N. Virginia)	``us-east-1``
+    * US East (Ohio)	``us-east-2``
+    * US West (N. California)	``us-west-1``
+    * US West (Oregon)	``us-west-2``
+    * Africa (Cape Town)	``af-south-1``
+    * Asia Pacific (Hong Kong)	``ap-east-1``
+    * Asia Pacific (Hyderabad)	``ap-south-2``
+    * Asia Pacific (Jakarta)	``ap-southeast-3``
+    * Asia Pacific (Melbourne)	``ap-southeast-4``
+    * Asia Pacific (Mumbai)	``ap-south-1``
+    * Asia Pacific (Osaka)	``ap-northeast-3``
+    * Asia Pacific (Seoul)	``ap-northeast-2``
+    * Asia Pacific (Singapore)	``ap-southeast-1``
+    * Asia Pacific (Sydney)	``ap-southeast-2``
+    * Asia Pacific (Tokyo)	``ap-northeast-1``
+    * Canada (Central)	``ca-central-1``
+    * Canada West (Calgary)	``ca-west-1``
+    * Europe (Frankfurt)	``eu-central-1``
+    * Europe (Zurich)	``eu-central-2``
+    * Europe (Ireland)	``eu-west-1``
+    * Europe (London)	``eu-west-2``
+    * Europe (Paris)	``eu-west-3``
+    * Europe (Milan)	``eu-south-1``
+    * Europe (Stockholm)	``eu-north-1``
+    * Middle East (Bahrain)	``me-south-1``
+    * Middle East (UAE)	``me-central-1``
+    * South America (São Paulo)	``sa-east-1``
 
 .. _aws-privatelink-endpoint-urls:
 
@@ -186,6 +221,8 @@ AWS PrivateLink service names
     - Coming soon
     - com.amazonaws.vpce.us-west-2.vpce-svc-0d78b8dec1a837389
 
+.. _aws-privatelink-configure-vpc:
+
 Configure your AWS PrivateLink VPC endpoints
 =================================================================
 
@@ -201,11 +238,9 @@ Follow these steps to create, use, and manage your AWS PrivateLink VPC endpoint:
 Step 1: Request to add your AWS Account ID to the allow list
 --------------------------------------------------------------------
 
-Reach out to Splunk Customer Support with the following information to include your AWS Account ID to the allow list:
+Reach out to :ref:`Splunk Customer Support <support>` with the following information to include your AWS Account ID to the allow list:
 
 * AWS Account ID
-
-* AWS region
 
 * Endpoint type
   
@@ -213,26 +248,47 @@ Reach out to Splunk Customer Support with the following information to include y
   * API
   * Stream
 
-Review the ways you can contact Splunk Customer Support at :ref:`Splunk Observability Cloud support <support>`.
+* AWS source account region: It must be one of the regions listed in :ref:`aws-source-regions`.
+
+* Splunk Observability AWS account region: It must be one of the regions listed in :ref:`aws-privatelink-service-names`.
+
+.. note::
+
+    * If you're setting up same-region PrivateLink connectivity, your AWS source account region is the same as the Splunk Observability AWS account region.
+
+    * If you're setting up cross-region PrivateLink connectivity, your AWS source account region is different from the Splunk Observability AWS account region.
+
+.. caution:: If your workloads are deployed in AWS regions not listed in :ref:`aws-source-regions`, then cross-region PrivateLink connectivity is not supported. In such cases, you should consider setting up VPC peering as described in :ref:`aws-privatelink-vpc-peering`.
 
 .. _aws-privatelink-step2:
 
-Step 2: Verify AWS Account ID is added to allow list
------------------------------------------------------------
+Step 2: Verify your AWS Account ID is added to the allow list
+--------------------------------------------------------------------
 
 .. caution:: Wait for Splunk Customer Support's confirmation that your AWS Account ID was added to the allow list before performing these steps. Support might take up to 24 hours.
 
 To verify your AWS Account ID has been allowed, follow these steps:
 
-1. Log in to the AWS Management Console, and open the :guilabel:`Amazon VPC service` in the specific region where you intend to set up AWS PrivateLink.
+1. Log in to the AWS Management Console and open the :guilabel:`Amazon VPC service` in the specific region where you intend to set up AWS PrivateLink.
 
-2. On the left navigation pane, select :guilabel:`Endpoints`.
+2. On the left navigation pane, navigate to :guilabel:`PrivateLink and Lattice > Endpoints`.
 
-3. Select :guilabel:`Endpoint`, and then :guilabel:`Other endpoint services`.
+3. Select :guilabel:`Create endpoint`, then :guilabel:`Endpoint services that use NLBs and GWLBs`. 
 
-4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
+4. Under :guilabel:`Service Settings`, enter the :guilabel:`Service Name` based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
+
+5. If you are setting up cross-region PrivateLink connectivity, check the :guilabel:`Enable Cross Region endpoint` checkbox. Based on the service name you used in point 4, select the appropriate Splunk Observability region.
+
+.. image:: /_images/gdi/AWS_PL_region3.png
+  :width: 80%
+  :alt: Verify account.
+
+.. caution:: If you are setting up PrivateLink connectivity in the same region do not check the Enable Cross Region endpoint checkbox.
+
+6. Select :strong:`Verify Service`.
 
   * If you see the "Service name verified" message, proceed with :ref:`aws-privatelink-step3`. 
+
   * If you see the "Service name could not be verified" error message, your account ID is not yet allowed for the given service name. Reach out to Splunk Customer Support to check the status of your request from :ref:`aws-privatelink-step1`. 
 
 .. _aws-privatelink-step3:
@@ -242,48 +298,30 @@ Step 3: Create a VPC endpoint
 
 To create a VPC endpoint, follow these steps:
 
-1. Log in to the AWS Management Console, and open :guilabel:`Amazon VPC service` within the specific region where you intend to set up AWS PrivateLink. If you have a VPC peering configuration, keep in mind the destination region of VPC peering.
+1. Under :guilabel:`Network settings` select the VPC where the endpoint will reside.
 
-2. On the left navigation pane, select :guilabel:`Endpoints`.
+.. caution:: Under :guilabel:`Additional settings` do not select :guilabel:`Enable DNS name` at this point. Select this option after the VPC endpoint has been successfully created in :ref:`aws-privatelink-step4`.
 
-3. Select :guilabel:`Create Endpoint`, and then :guilabel:`Other endpoint` services.
+2. Under :guilabel:`Subnets` select the subnet(s) where the endpoint will reside.
 
-4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the :ref:`AWS PrivateLink service names table <aws-privatelink-service-names>`.
+3. Under :guilabel:`Security groups` select the security group(s) controlling traffic for the endpoint. Make sure to set the outbound rule to HTTPS protocol and the ``443`` port.
 
-5. Select the VPC in which you want to create the endpoint. 
-
-6. Select the subnet or subnets within the VPC where the endpoint will reside. Make sure to select the subnets from the appropriate availability zones.
-
-7. Set the IP address type to ``IPv4``.
-
-8. Specify the security group controlling traffic for the endpoint. Set the outbound rule to HTTPS protocol and the ``443`` port.
-  
-  The following image shows the security options for AWS PrivateLink: 
-
-  .. image:: /_images/gdi/aws-privatelink-secgroups2.png
-      :width: 80%
-      :alt: Specify security groups that control traffic.
-
-9. Review the configuration details and select :guilabel:`Create Endpoint`.
-
-10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has activated the endpoint urls.
+4. Select :guilabel:`Create endpoint`.
 
 .. _aws-privatelink-step4:
 
 Step 4: Modify the endpoint to activate a Private DNS Name
 ----------------------------------------------------------------
 
-To modify the endpoint to activate a Private DNS Name, follow these steps:
+To enable Private DNS Name, follow these steps:
 
 #. Log in to the AWS Management Console.
 #. Navigate to the :guilabel:`Amazon VPC service` in the region where you have created the VPC endpoint.
 #. On the left navigation pane, select :guilabel:`Endpoints`.
 #. Select the VPC endpoint you want to modify.
-#. Select :guilabel:`Actions`, and then :guilabel:`Modify Endpoint`.
-#. Turn on the private DNS names under the :guilabel:`Modify private DNS name` settings.
-#. After the process is completed, select :guilabel:`Save Changes`.
-
-You can now start using the AWS PrivateLink URL mentioned in the :ref:`AWS PrivateLink endpoint URLs table <aws-privatelink-endpoint-urls>`.
+#. Under the :guilabel:`Actions` dropdown, select :guilabel:`Modify private DNS name`.
+#. Under :guilabel:`Modify private DNS name settings`, check the :guilabel:`Enable private DNS names > Enable for this endpoint` checkbox.
+#. Select :guilabel:`Save Changes`.
 
 Delete a VPC endpoint
 --------------------------------------------------
@@ -297,11 +335,23 @@ To delete an endpoint, follow these steps:
 #. Select the VPC endpoint you want to delete.
 #. Confirm the deletion when prompted.
 
-Advanced configuration 
+.. _aws-privatelink-vpc-peering:
+
+Use AWS PrivateLink with VPC peering 
 ==========================================================================
 
-Use AWS PrivateLink with the Collector 
---------------------------------------------------
+If the workloads that you're monitoring with Splunk Observability Cloud are not in the :ref:`aws-source-regions` list, follow the steps below:
+
+1. In your AWS account, either use an existing VPC or create a new VPC in one of Splunk Observability's AWS account regions mentioned in the :ref:`aws-privatelink-service-names`.
+
+2. Set up AWS VPC peering between the regions where the workloads are being monitored and the region where the VPC used in step 1 is located.
+
+3. Follow :ref:`aws-privatelink-configure-vpc` to activate the AWS PrivateLink endpoint connection from the region where the VPC used in step 1 is located.
+
+Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
+
+Use AWS PrivateLink with the OpenTelemetry Collector 
+==========================================================================
 
 To use AWS PrivateLink URLs in your Collector instance, update the necessary variables in your Collector configuration to point to the given endpoint type: 
 
@@ -331,32 +381,7 @@ See all PrivateLink URLs at :ref:`aws-privatelink-endpoint-urls`.
 
 For information about the Collector's environment variables see :ref:`collector-env-var`.
 
-Use AWS PrivateLink with VPC peering 
---------------------------------------------------
-
-Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
-
-In this scenario, carry out the following steps:
-
-#. Ensure that you have a VPC set up in the destination region, in this example ``us-east-1``. If you don't have a VPC in that region, create a new one.
-
-#. Use AWS VPC peering to peer the ``ap-south-1`` and the ``us-east-1`` VPCs together.
-
-#. Activate AWS PrivateLink in the ``us-east-1`` VPC.
-
-Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
-
-.. Next steps
-.. ================
-
-.. After you connect Splunk Observability Cloud with AWS, you can use Splunk Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
-
-.. - See the AWS official documentation for a list of the available AWS resources.
-..  - See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
-
 .. _aws-privatelink-support:
-
-
 
 .. raw:: html
 

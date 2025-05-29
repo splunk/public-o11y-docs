@@ -169,7 +169,9 @@ The following example shows how to update a deployment to expose environment var
 Send data directly to Splunk Observability Cloud
 ==================================================================
 
-By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
+By default, all telemetry is sent to the local OpenTelemetry Collector before being forwarded to Splunk Observability Cloud.
+It is also possible to send data directly to Splunk Observability Cloud without using the OpenTelemetry Collector.
+.. note:: Sending data directly to Splunk Observability Cloud is supported only for traces and metrics. Logs cannot be sent using this method.
 
 If you need to send data directly to Splunk Observability Cloud, set the following environment variables:
 

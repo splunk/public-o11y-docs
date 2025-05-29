@@ -228,9 +228,16 @@ The Android RUM agent adds the following crash reporting attributes to spans tha
    * - ``component``
      - String
      - Always ``crash``.
-   * - ``status``
+   * - ``service.application_id``
      - String
-     - Always ``Error``.
+     - Application ID of the app: Refer to definition of ``applicationId`` in the :new-page:`Android Studio developer documentation <https://developer.android.com/build/configure-app-module#set-application-id>`.
+   * - ``service.version_code``
+     - String
+     - Version code of the application: Refer to definition of ``versionCode`` in the :new-page:`Android Studio developer documentation <https://developer.android.com/studio/publish/versioning#versioningsettings>`.
+   * - ``splunk.build_id``
+     - String
+     - This is an optional attribute. This is added when minification is enabled for pre-production builds where version code is not updated across app builds, in which case this attribute is used to uniquely identify each build.
+
 
 Network monitoring
 ----------------------------------------------------
