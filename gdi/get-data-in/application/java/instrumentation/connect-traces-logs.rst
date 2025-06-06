@@ -105,7 +105,7 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service.name=%X{service.name}, deployment.environment=%X{deployment.environment} trace_flags=%X{trace_flags} %n
 
    .. tab:: Logback
 
@@ -118,7 +118,7 @@ The following examples show how to include additional metadata in log statements
          <configuration>
             <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
                <encoder>
-                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n</pattern>
+                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service.name=%X{service.name}, deployment.environment=%X{deployment.environment} trace_flags=%X{trace_flags} %n</pattern>
                </encoder>
             </appender>
             <root level="info">
@@ -130,7 +130,7 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service.name=%X{service.name}, deployment.environment=%X{deployment.environment} trace_flags=%X{trace_flags} %n %n
 
    .. tab:: JBoss LogManager
 
@@ -141,7 +141,7 @@ The following examples show how to include additional metadata in log statements
          formatter.PATTERN=org.jboss.logmanager.formatters.PatternFormatter
          formatter.PATTERN.properties=pattern
          formatter.PATTERN.constructorProperties=pattern
-         formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags}: %m%n
+         formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service.name=%X{service.name}, deployment.environment=%X{deployment.environment} trace_flags=%X{trace_flags}: %m%n
 
 If you're instrumenting a serverless service or application, use environment variables instead. The deployment environment requires that you set an arbitrary environment variable, for example ``OTEL_ENV_NAME``.
 
@@ -158,10 +158,10 @@ If you're instrumenting a serverless service or application, use environment var
    .. code-tab:: xml Logback
 
       <pattern>
-         service: ${OTEL_SERVICE_NAME}, env: ${OTEL_ENV_NAME}: %m%n
+         service.name: ${OTEL_SERVICE_NAME}, deployment.environment: ${OTEL_ENV_NAME}: %m%n
       </pattern>
 
    .. code-tab:: text JBoss LogManager
 
-      formatter.PATTERN.pattern=service=${OTEL_SERVICE_NAME}, env=${OTEL_ENV_NAME}
+      formatter.PATTERN.pattern=service.name=${OTEL_SERVICE_NAME}, deployment.environment=${OTEL_ENV_NAME}
 
