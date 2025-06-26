@@ -20,7 +20,7 @@ jobs:
       - name: Add PR Comment
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.MY_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const { owner, repo, number } = context.issue;
             const pr = await github.rest.pulls.get({
