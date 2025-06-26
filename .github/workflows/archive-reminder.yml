@@ -1,0 +1,39 @@
+name: Splunk Observability Cloud GitHub repository archive reminder
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      actions: read
+      issues: write
+      checks: write
+      pull-requests: write
+
+
+    steps:
+      - name: Add PR Comment
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.MY_TOKEN }}
+          script: |
+            const { owner, repo, number } = context.issue;
+            const pr = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: number,
+            });
+
+            const author = pr.data.user.login;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: number,
+              body: `@${author}, please note this GitHub repository will be archived on August 30, 2025. On July 1st, no new contributors will be added to the repository, and only contributors with prior contributions will be able to make pull requests (PRs). From August 1st to August 30th, only Collaborators and Organization members will be able to create PRs.`
+            })
