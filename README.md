@@ -39,7 +39,7 @@ Once the repository is archived:
 
 ## Providing feedback in the future
 
-We encourage all contributors to refer to the new platform for future contributions and updates. If you have any questions regarding this transition or require assistance, please contact us at splunk-o11y-cloud-docs@cisco.com. 
+We encourage all contributors to refer to the new platform for future contributions and updates. If you have any questions regarding this transition or require assistance, please get in touch with us at splunk-o11y-cloud-docs@cisco.com.
 
 We sincerely appreciate your understanding and cooperation during this transition period.
 
