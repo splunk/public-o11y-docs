@@ -1,5 +1,6 @@
-# Splunk Observability Cloud Documentation - Archived
+# DEPRECATED: Splunk Observability Cloud Documentation
 
+[![status: archive](https://github.com/GIScience/badges/raw/master/status/archive.svg)](https://github.com/GIScience/badges#archive)
 [![ARCHIVED/NO LONGER MAINTAINED](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 > [!IMPORTANT]
