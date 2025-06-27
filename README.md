@@ -8,7 +8,7 @@
 > state as part of our migration to a new authoring and publishing platform. We would 
 > like to take this opportunity to thank all contributors, collaborators, and organization 
 > members for their valuable contributions to this project. Your efforts have played 
-> a critical role in its development and success.
+> a critical role in its development and success. We encourage you to explore our new documentation  available at https://help.splunk.com/en/splunk-observability-cloud.
 
 ## Key Dates and Timeline
 
