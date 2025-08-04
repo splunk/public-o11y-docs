@@ -16,6 +16,7 @@ Instrument browser-based web applications for Splunk RUM
    Migrate manual instrumentation <migrate-manual-instrumentation>
    Data collected <rum-browser-data-model>
    Instrumentation-specific data <browser-rum-instrumentations>
+   Set up JavaScript source mapping <set-up-javascript-source-mapping>
    Errors collected <browser-rum-errors>
    API reference <browser-rum-api-reference>
    Troubleshooting <troubleshooting>

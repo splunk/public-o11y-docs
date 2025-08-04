@@ -12,6 +12,9 @@
    * - :ref:`apache-spark-receiver` (``apachespark``) 
      - Fetches metrics for an Apache Spark cluster through the Apache Spark REST API. 
      - Metrics
+   * - :ref:`activedirectory-ds-receiver` (``active_directory_ds``)
+     - Metrics
+     - Scrapes metrics relating to an Active Directory domain controller using the Windows Performance Counters.
    * - :ref:`awsecscontainermetrics-receiver` (``awsecscontainermetrics``) 
      - Reads task metadata and docker stats from Amazon ECS and generates resource usage metrics.
      - Metrics
