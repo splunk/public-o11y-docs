@@ -13,19 +13,12 @@ Matching conditions for the Rule Engine
 
 Matching conditions determine when a rule is applied. You can choose any field that exists within the payload of an alert and match on a specific value for that field using a direct match, wildcard matching, or by using a regular expression.
 
-By default, the Rules Engine only uses wildcard matching. If you want to turn on regular expressions, contact Splunk On-Call support.
-
 Requirements
 ==================
 
 This integration is compatible with the following versions of Splunk On-Call:
 
 - Enterprise
-
-All users have the ability to reach out to Splunk On-Call support at any time with questions.
-
-Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
-
 
 Field names
 ==================
@@ -116,6 +109,13 @@ Regular expression examples
      - ``cat`` |br| ``car`` |br| ``catalyst`` |br| ``carbon`` |br| ``a la carte``
      - ``chart`` |br| ``clark``
 
+Routing Key matching
+===================================
+
+In addition to Wildcard and Regular expression matching, you can explicitly define routing key matching via the :guilabel:`Associated routing key` selector.  This provides AND logic to the matching parameters specified in your Wildcard or RegEx matching section.
+
+.. note:: Routing Key matching via the :guilabel:`Associated routing key` selector is unable to match on other routing keys via the top-bar Wildcard or RegEx matching criteria or manipulate routing keys via the :guilabel:`Transform these alert fields` section.  It only provides an AND matching condition, specifically for a routing key, for use alongside your other matching and transformation parameters.
+
 Boolean logic
 ===================================
 
@@ -139,3 +139,12 @@ The matching condition for the second rule, which you must position below the fi
 .. image:: /_images/spoc/matching4.png
     :width: 100%
     :alt: VictorOps Alert Rules Engine, when new_matching_field matches *stage-db-26* set message_type to INFO
+
+Rule processing order
+===================================
+Alert Rules uses three criteria to determine the processing order:
+* Top-to-bottom order of the alert rules
+* The optional :guilabel:`Stop after this rule has been applied` setting on each rule
+* Rules with a matching routing key based on the :guilabel:`Associated routing key` 
+
+For each ingested alert, all rules without a matching :guilabel:`Associated routing key` will process based on the top-to-bottom order.  If a rule matches with the :guilabel:`Stop after this rule has been applied` setting, it will stop the application of alert rules for that alert.  Lastly, rules with a specific matching routing key based on the :guilabel:`Associated routing key` are applied. These rules are applied last so they can match on the final routing key of an alert, in case this value is changed by a different alert rule.
